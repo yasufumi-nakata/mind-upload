@@ -1,18 +1,18 @@
-title: Mind-Upload
-description: Core site for practical, evidence-based work toward mind uploading
+title: マインドアップロード
+description: マインドアップロードへ向けた実践的で証拠に基づく作業の中核サイト
 url: https://mind-upload.com
 baseurl: ""
 wiki_mode: github
 github_wiki_url: https://github.com/yasufumi-nakata/mind-upload/wiki
 
-# Build settings
+# ビルド設定
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
 
-# Defaults
+# 既定値
 defaults:
   - scope:
       path: ""
@@ -20,7 +20,7 @@ defaults:
     values:
       layout: "default"
 
-# Exclude from processing
+# 処理対象から除外
 exclude:
   - automation
   - github-wiki-export

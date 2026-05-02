@@ -420,8 +420,8 @@ required_exporter_selftest_snippets = [
   'TEST_ROOT="$ROOT/ignore/github-wiki-exporter-selftest-$PPID-$$"',
   'GITHUB_WIKI_EXPORT_SRC_DIR="$SRC_DIR"',
   'GITHUB_WIKI_EXPORT_DEST_DIR="$DEST_DIR"',
-  'assert_contains "$DEST_DIR/Home.md" "[Guide](${GITHUB_WIKI}/guide)"',
-  'assert_contains "$DEST_DIR/_Sidebar.md" "## Other"',
+  'assert_contains "$DEST_DIR/Home.md" "[ガイド](${GITHUB_WIKI}/guide)"',
+  'assert_contains "$DEST_DIR/_Sidebar.md" "## その他"',
   'assert_not_contains "$DEST_DIR/_Sidebar.md" "mind-upload-basics"',
   '[[ ! -e "$DEST_DIR/generated/demo/.DS_Store" ]] || fail "Noise file copied into export: .DS_Store"'
 ]
@@ -492,7 +492,7 @@ required_export_script_snippets = [
   'DEST_DIR = File.expand_path(ENV.fetch("GITHUB_WIKI_EXPORT_DEST_DIR", File.join(ROOT, "github-wiki-export")))',
   'available_slugs = slugs.select { |slug| front_matters.key?(slug) }',
   'next if available_slugs.empty?',
-  'lines << "## Other"'
+  'lines << "## その他"'
 ]
 
 required_export_script_snippets.each do |snippet|

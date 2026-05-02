@@ -1,80 +1,80 @@
-# Wiki: U7-2 timing-metric route packet
+# Wiki: U7-2 タイミング メトリック ルート パケット
 
-> An adjacent synchronization packet outside the current public six
+> 現在のパブリック 6 の外側にある隣接同期パケット
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-02 / Role: U7-2 route packet
+- Updated: 2026-04-02 / Role: U7-2 ルート パケット
 
-## Role Of This Page
-This page records one narrow row just outside the current public six at the level of one question, one public-open EEG anchor, one bounded first artifact, and one funding bridge.
+## このページの役割
+このページには、1 つの質問のレベルで現在のパブリック 6 のすぐ外にある 1 つの狭い行、1 つのパブリックオープン EEG アンカー、1 つの境界付き最初のアーティファクト、および 1 つのファンディング ブリッジが記録されています。
 
-## Accuracy Notes
-This page does not change the active public six-question batch. It only records what the present U7-2 timing-metric route can honestly close first.
+## 正確性に関する注記
+このページでは、アクティブな公開 6 つの質問のバッチは変更されません。現在の U7-2 タイミング メトリック ルートが最初に正直に閉じることができるものだけを記録します。
 
-## Back To Public Pages
-- [Issue page](https://mind-upload.com/issue.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
+## 公開ページへ戻る
+- [発行ページ](https://mind-upload.com/issue.html)
+- [データとベンチ](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
-- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact six-row public route that still stays unchanged.
-- [Wiki: U7-1 synchronization-contract route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route) - The contract-first row that sits immediately next to this metric-first packet.
-- [Wiki: Event synchronization and measurement logs](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - The timing-log page that keeps this row grounded in observable fields.
-- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
+## 関連 Wiki ページ
+- [Wiki: 現在公開されている 6 つのルート概要](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - 今も変わらぬコンパクトな6列パブリックルート。
+- [Wiki: U7-1 同期契約ルート パケット](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route) - このメトリックファーストパケットのすぐ隣にあるコントラクトファースト行。
+- [Wiki: イベント同期と測定ログ](https://github.com/yasufumi-nakata/mind-upload/wiki/event-sync-and-measurement-logs) - この行を観察可能なフィールドに固定するタイミング ログ ページ。
+- [Wiki: 助成金とデータセットのプレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - 固定資金とアンカーマップ。
 
 ---
 
-# U7-2 timing-metric route packet
+# U7-2 タイミング メトリック ルート パケット
 
-This page does not change the current public six-question batch. It records one narrow row just outside that batch, so readers can see why `U7-2` is the cleanest adjacent packet after `U7-1`, why `D11` stays the strongest public-open anchor for this row, and what the first release-block timing artifact can honestly close.
+このページでは、現在の公開されている 6 つの質問のバッチは変更されません。このバッチのすぐ外側に 1 つの狭い行が記録されているため、読者は、`U7-2` が `U7-1` に次いで最もクリーンな隣接パケットである理由、`D11` がこの行に対して最も強力なパブリック オープン アンカーであり続ける理由、および最初のリリース ブロック タイミング アーティファクトが正確に閉じることができる理由を理解できます。
 
-## What was rechecked for this row
+## この行で再チェックされた内容
 
-- `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` still remains the strongest public-open first anchor for `U7-2`, because it exposes simultaneous multimodal runs, session structure, and BIDS-side provenance that make `offset`, `jitter`, and `reanalysis agreement` auditable inside one disclosed protocol family.
-- `D01 Acquisition delay of wireless EEG` still remains the cleanest device-delay support family once this row needs a separate floor for hardware-side acquisition latency rather than only event-log alignment.
-- `CastillosCVEP40 (MOABB)` remains a useful but secondary timing-stress family when the row needs an additional event-locked waveform check for peak-latency drift, but it still stays `check-needed` rather than a first public anchor.
-- The current public six-question batch still stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
-- The next-watch headline queue also stays unchanged: `U7-1 / U1-2 / U4-2 / U8-1`. This row is an adjacent support packet inside the same synchronization family, not a batch switch.
-- The practical funding bridge for this row still stays watch-first rather than current-public-six: `Okawa Foundation research grant` remains the cleanest fit, and existing Todoist watch tasks already cover that lane.
+- `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` は、依然として `U7-2` にとって最も強力なパブリック オープンのファースト アンカーであり続けています。これは、`offset`、`jitter`、および `reanalysis agreement` を 1 つの開示されたプロトコル ファミリ内で監査可能にする同時マルチモーダル実行、セッション構造、および BIDS 側の出自を公開するためです。
+- この行がイベント ログの調整のみではなく、ハードウェア側の取得レイテンシー用に別のフロアを必要とする場合でも、`D01 Acquisition delay of wireless EEG` は依然として最もクリーンなデバイス遅延サポート ファミリであり続けます。
+- `CastillosCVEP40 (MOABB)` は、行のピーク レイテンシ ドリフトに対して追加のイベント ロック波形チェックが必要な場合に便利ではありますが、二次的なタイミング ストレス ファミリとして機能しますが、最初のパブリック アンカーではなく `check-needed` のままです。
+- 現在公開されている 6 つの質問のバッチは、`U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2` のままです。
+- 次に視聴するヘッドライン キューも変更されず、`U7-1 / U1-2 / U4-2 / U8-1` となります。この行は、バッチ スイッチではなく、同じ同期ファミリー内の隣接するサポート パケットです。
+- この列の実際的な資金調達ブリッジは、現在のパブリック 6 ではなくウォッチ ファーストのままです。`Okawa Foundation research grant` が最もクリーンに適合しており、既存の Todoist ウォッチ タスクはすでにそのレーンをカバーしています。
 
-## Why `U7-2` is worth packetizing now
+## `U7-2` を今パケット化する価値がある理由
 
-- It is an `A` row: the main claim can stay inside `EEG-DATA` without needing theory, law, or identity overreading.
-- It is metric-first: the first artifact is not a broader multimodal standard claim but a release-block rule that maps `offset/jitter` into explicit pass/fail timing numbers.
-- It naturally follows `U7-1`. `U7-1` fixes what fields must exist; `U7-2` fixes which synchronization errors become operationally unacceptable once those fields exist.
-- It helps `U0` and `U14` without widening them. Identity-drift timing floors and rerun contracts both become easier to read when timing error already has a named metric bundle and a downgrade rule.
+- これは `A` 行です。主なクレームは、理論、法則、またはアイデンティティを読み込む必要がなく、`EEG-DATA` 内にとどまることができます。
+- これはメトリックファーストです。最初の成果物は、より広範なマルチモーダル標準クレームではなく、`offset/jitter` を明示的な合否タイミング番号にマッピングするリリース ブロック ルールです。
+- 当然`U7-1`に続きます。 `U7-1` は、どのフィールドが存在しなければならないかを修正します。 `U7-2` は、これらのフィールドが存在すると操作上許容できなくなる同期エラーを修正します。
+- `U0` と `U14` を広げることなく使用できます。タイミング エラーにすでに名前付きメトリック バンドルとダウングレード ルールがある場合、アイデンティティ ドリフト タイミング フロアと再実行コントラクトの両方が読みやすくなります。
 
-## Why `D11` stays the main public-open anchor
+## `D11` がパブリックオープンのメインアンカーであり続ける理由
 
-| Candidate | What it helps with | Why it is not the first public anchor |
+| 候補者 | 何に役立つのか | なぜこれが最初の公共アンカーではないのか |
 |---|---|---|
-| `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | It gives `47 sessions`, `186 EEG runs`, simultaneous EEG-fMRI, run-level timing structure, and BIDS-side provenance, which makes it the strongest public-open route for mapping `offset median`, `jitter p95`, `peak-latency drift`, and `reanalysis agreement` inside one disclosed family. | None in this run. It is the strongest public-open first anchor for `U7-2`. |
-| `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, immediate DOI route) | It is the clearest nearby support family once the row needs a separate hardware-side delay floor that is not reducible to BIDS logs alone. | It is a device-delay floor rather than the first multimodal reanalysis family, so it stays support rather than primary. |
-| `CastillosCVEP40 (MOABB)` (`check-needed`) | It is a useful event-locked stress family when the row needs an explicit waveform-side `peak-latency drift` check. | It is still catalog-style and check-needed on the present public route, so it stays secondary rather than primary. |
+| `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`、即時) | これにより、`47 sessions`、`186 EEG runs`、同時 EEG-fMRI、ランレベル タイミング構造、BIDS 側の出所が得られ、公開された 1 つのファミリー内で `offset median`、`jitter p95`、`peak-latency drift`、および `reanalysis agreement` をマッピングするための最も強力な公開ルートになります。 | 今回の実行では何もありませんでした。 `U7-2`用最強の公開ファーストアンカーです。 |
+| `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`、即時 DOI ルート) | 行に BIDS ログのみに還元できない別のハードウェア側の遅延フロアが必要な場合、これは最も明確な近くのサポート ファミリになります。 | これは、最初のマルチモーダル再解析ファミリーではなくデバイス遅延フロアであるため、プライマリではなくサポートのままです。 |
+| `CastillosCVEP40 (MOABB)`(`check-needed`) | これは、行で波形側の明示的な `peak-latency drift` チェックが必要な場合に便利なイベント ロック ストレス ファミリです。 | それはまだカタログ形式であり、現在の公共ルートではチェックが必要であるため、主要なものではなく二次的なもののままです。 |
 
-## What the first artifact can honestly close now
+## 最初のアーティファクトが今正直に閉じることができるもの
 
-| Artifact piece | What it closes now | What still stays outside the claim |
+| アーティファクトの欠片 | 今閉店しているもの | まだ主張の範囲外にあるもの |
 |---|---|---|
-| `Timing-metric specification note` | A bounded rule that fixes the public metric bundle as `offset median`, `jitter p95`, `peak-latency drift`, and `reanalysis agreement` rather than leaving synchronization quality implicit. | Any statement that one metric bundle already establishes a field-wide synchronization standard. |
-| `Release-block threshold note` | A public-safe rule that keeps the row at warning-only whenever corrected event-alignment error `p95 > 15 ms` or `reanalysis agreement < 0.90` remains. | Any claim that one threshold generalizes across devices, loop classes, and all ERP families. |
-| `Device-versus-pipeline separation note` | A narrow distinction between acquisition-delay failure, event-log failure, and downstream pipeline failure so the route does not overread one error source as the whole explanation. | Any claim that one successful audit already resolves broader multimodal validity, identity continuity, or deployment readiness. |
+| `Timing-metric specification note` | 同期品質を暗黙的に残すのではなく、パブリック メトリック バンドルを `offset median`、`jitter p95`、`peak-latency drift`、および `reanalysis agreement` として固定する制限付きルール。 | 1 つのメトリック バンドルがフィールド全体の同期標準をすでに確立しているという記述。 |
+| `Release-block threshold note` | 修正されたイベント アライメント エラー `p95 > 15 ms` または `reanalysis agreement < 0.90` が残っている場合は常に、行を警告のみに保つパブリック セーフ ルール。 | 1 つのしきい値がデバイス、ループ クラス、およびすべての ERP ファミリにわたって一般化されるという主張。 |
+| `Device-versus-pipeline separation note` | 取得遅延エラー、イベント ログ障害、およびダウンストリーム パイプライン障害の間の狭い区別。ルートが 1 つのエラー ソースを全体の説明としてオーバーリードしないようにします。 | 1 回の監査の成功により、広範なマルチモーダルの有効性、ID の継続性、または導入の準備がすでに解決されているという主張はすべてあります。 |
 
-## Funding wording that still fits
+## まだ適切な資金調達の文言
 
-| Route | Submission wording that stays honest | Why it still fits this row |
+| ルート | 正直さを保つ提出文言 | それでもこの行に適合する理由 |
 |---|---|---|
-| `Okawa Foundation research grant` (`watch`) | `Metric-based synchronization audit and release-block thresholds for multimodal EEG reproducibility in the mind-upload route` | The row reads naturally as an information / standards / reproducibility package rather than a stronger neuroscience claim. |
-| `Kura Fund` (`secondary only`) | `A young-researcher timing-metric package for synchronization error control in public EEG verification` | It fits only as a bounded young-researcher infrastructure package, not as a batch switch or a stronger mind-upload claim. |
+| `Okawa Foundation research grant`(`watch`) | `Metric-based synchronization audit and release-block thresholds for multimodal EEG reproducibility in the mind-upload route` | この行は、より強力な神経科学の主張ではなく、情報/標準/再現性のパッケージとして自然に読み取れます。 |
+| `Kura Fund`(`secondary only`) | `A young-researcher timing-metric package for synchronization error control in public EEG verification` | これは、限定された若手研究者のインフラストラクチャ パッケージとしてのみ適合し、バッチ スイッチやより強力なマインド アップロードの主張としては適合しません。 |
 
-## External dependency tasks that stay outside this session
+## このセッションの外にある外部依存タスク
 
-- Cross-device truth for absolute latency still needs broader hardware validation beyond the present dataset family.
-- Wider community adoption of any release-block threshold still remains outside the present repository-level artifact.
-- Any interpretation that one timing metric bundle already resolves multimodal common-state, identity, or deployment questions remains outside the present route.
+- 絶対レイテンシーに関するクロスデバイスの真実性を得るには、現在のデータセット ファミリを超えた広範なハードウェア検証が依然として必要です。
+- リリース ブロックしきい値の広範なコミュニティの採用は、依然として現在のリポジトリ レベルのアーティファクトの範囲外にあります。
+- 1 つのタイミング メトリック バンドルがマルチモーダルな共通状態、アイデンティティ、または展開の問題をすでに解決しているという解釈は、現在のルートの外に残ります。
 
-## What changed in this run
+## 今回の実行で変わったこと
 
-- The public batch did not change.
-- The main change is that `U7-2` now has a public packet that records the strongest public-open anchor, the first metric bundle, and the watch-level funding bridge without widening the current public six or the next-watch headline queue.
-- This remains a route-setting update, not a solved-claim update.
+- パブリックバッチは変更されませんでした。
+- 主な変更点は、`U7-2` に、現在のパブリック 6 または次のウォッチ ヘッドライン キューを拡張することなく、最も強力なパブリック オープン アンカー、最初のメトリック バンドル、ウォッチ レベルのファンディング ブリッジを記録するパブリック パケットが追加されたことです。
+- これはルート設定の更新であり、解決済みのクレームの更新ではありません。

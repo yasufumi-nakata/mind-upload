@@ -1,222 +1,202 @@
 ---
 layout: default
-title: 'Wiki: How to read “What we know / What we don’t know”'
-description: This is an auxiliary guide to help you avoid misreading the ``What we
-  know now'', ``What we don't know yet'', ``Assumptions of accuracy'', and ``External
-  dependencies'' on the public page.
-article_type: Wiki
-subtitle: Aligning the boundaries between assertion and reservation to read as an
-  information portal
-author: Mind Uploading Research Project
+title: Wiki:「知っていること・知らないこと」の読み方
+description: 公開ページの「現在わかっていること」「まだわかっていないこと」「正確性の前提」「外部依存関係」を誤読しないための補助ガイドです。
+article_type: ウィキ
+subtitle: 主張と留保の境界を調整して情報ポータルとして読む
+author: マインドアップロード研究プロジェクト
 last_updated: '2026-03-14'
-note: Reading status and scope
-audience: People who are confused about how to read "Known / Unknown / Pending" on
-  the public page
-reading_time: 8-12 minutes
-page_intro: This page is an auxiliary guide to help you avoid misreading the ``What
-  we know now'', ``What we don't know yet'', and ``What we can/can't say on this page''
-  on the Mind-Upload public page. As an information portal, the public page first
-  indicates what can be asserted and what should be reserved. It is used to read the
-  meanings.
-accuracy_note: This article deals with how to read public pages. To check the authenticity
-  of individual theories and techniques, be sure to return to the original page text
-  and evidence.
+note: 読み取りステータスと範囲
+audience: 公開ページの「既知・不明・保留中」の見方がわからない人
+reading_time: 8～12分
+page_intro: このページは、Mind-Upload 公開ページの「現在わかっていること」「まだわかっていないこと」「このページで言えること/言えないこと」を誤読しないための補助ガイドです。情報ポータルとして、公開ページがまず主張できることと留保すべきことをどう示すのかを読み取るために使います。
+accuracy_note: この記事では、公開ページを読む方法について説明します。個々の理論やテクニックの信頼性を確認するには、必ず元のページのテキストと証拠に戻ってください。
 page_highlights:
-- Let's look at the basics to avoid misreading ``I know'' as ``I've solved everything.''
-- Let's look at the basics to avoid misreading ``I don't know'' as ``I've proven that
-  it's impossible.''
-- You can check the known/unknown status of public pages, accuracy assumptions, and
-  role differences in external dependencies on a single page.
+- 「わかっている」を「すべて解決した」と誤読しないための基本を確認します。
+- 「わかっていない」を「不可能だと証明した」と誤読しないための基本を確認します。
+- 公開ページの既知/不明ステータス、精度の前提、外部依存関係の役割の違いを1つのページで確認できます。
 known_points:
-- The public page is designed as an information portal that indicates the strength
-  of your assertions and the extent of your reservations.
-- '``What we know now'''' refers to what can be said relatively strongly within the
-  scope of that page.'
-- By separating ``things we don't know yet'' and ``external dependencies,'' we can
-  reduce excessive expectations and misinterpretations.
+- 公開ページは、あなたの主張の強さと留保の範囲を示す情報ポータルとして設計されています。
+- 「現在わかっていること」とは、そのページの範囲内で比較的強く言えることを指します。
+- 「まだわかっていないこと」と「外部依存関係」を分離することで、過度の期待や誤解を減らせます。
 unknown_points:
-- The extent to which issues can be moved to ``known'' in the future will depend on
-  the progress of research and development.
-- Strong claims like L4 and L5 continue to have many unresolved issues.
+- 今後、課題がどこまで「既知」に移行できるかは、研究開発の進展次第だ。
+- L4 や L5 のような強力な主張には、依然として多くの未解決の問題があります。
 wiki_links:
-- label: 'Wiki: Guide to reading public pages'
+- label: 'Wiki: 公開ページを読むためのガイド'
   url: /wiki/public-page-reading-guide.html
-  description: This is for people who want to decide in advance which public page
-    to read from.
-- label: 'Wiki: How to read partial solution/exploration stage/undeveloped'
+  description: これは、どの公開ページから読むかを事前に決めたい人向けです。
+- label: 'Wiki: 部分解決/探索段階/未開発の見方'
   url: /wiki/progress-labels-and-open-problem-status.html
-  description: This is for people who want to see the meaning of progress labels in
-    more detail.
-- label: 'Wiki: What to do first in-house and external dependencies'
+  description: 進捗ラベルの意味を詳しく知りたい方向けです。
+- label: 'Wiki: 社内および外部の依存関係について最初に行うべきこと'
   url: /wiki/internal-prework-and-external-dependencies.html
-  description: This is for people who want to take a closer look at separating external
-    dependencies from changes that can be made now.
+  description: これは、現在実行できる変更から外部の依存関係を分離する方法を詳しく知りたい人向けです。
 recommended_pages:
-- label: Start page
+- label: スタートページ
   url: /index.html
-- label: Verification platform
+- label: 検証プラットフォーム
   url: /verification.html
-- label: Public content integration hub
+- label: パブリック コンテンツ統合ハブ
   url: /content_hub.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Public page has separate "place to affirm" and "place to hold"</h2>
+<h2>公開ページには「肯定する場」と「保留する場」が分かれている</h2>
 <p>
-The public pages of this site are not the place to make any assertions. Rather, I separate what I can say relatively strongly now, what I can't say yet, and what is not the role of this page, so that readers don't mistakenly jump to strong conclusions.
+このサイトの公開ページは、いかなる主張をする場所でもありません。むしろ、読者が誤って強い結論に飛びつかないように、今比較的強く言えること、まだ言えないこと、このページの役割ではないことを分けています。
 </p>
 </div>
 
 <section class="section" id="four-boxes">
-<h2 class="section-title">Read the four sections first</h2>
+<h2 class="section-title">最初に 4 つのセクションをお読みください</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Display</th>
-<th>How to read</th>
-<th>Easy to misread</th>
+<th>ディスプレイ</th>
+<th></th>の読み方
+<th>読み間違えやすい</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>What we know now</strong></td>
-<td>This can be said relatively strongly within the scope of that page. </td>
-<td>It is a stretch to read that the entire field has been finalized. </td>
+<td><strong>現在わかっていること</strong></td>
+<td>これはそのページの範囲内では比較的強く言えます。 </td>
+<td>フィールド全体が完成したと読むのは無理があります。 </td>
 </tr>
 <tr>
-<td><strong>What we don't know yet</strong></td>
-<td>These are the parts that remain unresolved, lack of conditions, lack of evidence, lack of agreement, etc. </td>
-<td>Reading it as "proved impossible" is another story. </td>
+<td><strong>まだわかっていないこと</strong></td>
+<td>未解決の部分、条件不足、証拠不足、合意不足など。
+<td>これを「不可能であることが証明された」と読むのは別の話です。 </td>
 </tr>
 <tr>
-<td><strong>Accuracy Assumption</strong></td>
-<td>Indicates what this page does not assert and the scope of its defense. </td>
-<td>It should be read as a demarcation line, not a cautionary tale. </td>
+<td><strong>精度の仮定</strong></td>
+<td>このページが主張しない内容とその防御範囲を示します。 </td>
+<td>これは警告ではなく、境界線として読まれるべきです。 </td>
 </tr>
 <tr>
-<td><strong>External dependencies</strong></td>
-<td>These are tasks or conditions that cannot be completed using this repository alone. </td>
-<td>It is incorrect to read that ``I can't do anything right now.'' You can make the preparations first. </td>
+<td><strong>外部依存関係</strong></td>
+<td>これらは、このリポジトリだけを使用して完了できないタスクまたは条件です。 </td>
+<td>「今は何もできない」と読むのは間違いで、先に準備をしておけば大丈夫です。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="known-does-not-mean-solved">
-<h2 class="section-title">"I know" does not mean "I have it all solved"</h2>
+<h2 class="section-title">「知っています」は「すべて解決しました」という意味ではありません</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>How to say public page</th>
-<th>Actual meaning</th>
+<th>公開ページの言い方</th>
+<th>実際の意味</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Requires standards, shared infrastructure, evaluation, and auditing</td>
-<td>It means that the arrangement of requirements is relatively stable. This does not mean the implementation is complete. </td>
+<td>標準、共有インフラストラクチャ、評価、監査が必要</td>
+<td>要件の整理が比較的安定していることを意味します。これは実装が完了したことを意味するものではありません。 </td>
 </tr>
 <tr>
-<td>Conditional advancement can be created with EEG</td>
-<td>It means that comparable progress can be made within a limited range. The whole WBE thing is not a proven story. </td>
+<td>条件付き昇格はEEG</td>で作成可能
+<td> 限られた範囲内で同等の進歩が可能であることを意味します。 WBE のすべてが証明された話ではありません。 </td>
 </tr>
 <tr>
-<td>Do not assert your identity or consciousness on the entrance page</td>
-<td>It means that it is not an entrance role. That doesn't mean it's unnecessary. </td>
+<td>入り口ページで自分のアイデンティティや意識を主張しないでください</td>
+<td>は玄関役ではないということです。それは不必要だという意味ではありません。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="unknown-does-not-mean-impossible">
-<h2 class="section-title">'I don't know' doesn't mean 'impossible'</h2>
+<h2 class="section-title">「わからない」は「不可能」という意味ではない </h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Unknown type</th>
-<th>What kind of shortage is it?</th>
-<th>Where to look next</th>
+<th>タイプ不明</th>
+<th>不足は何ですか？</th>
+<th>次に探す場所</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Insufficient evidence</strong></td>
-<td>Necessary data, comparison, and disproval conditions are missing. </td>
-<td><a href="../verification.html">Verification</a></td>
+<td><strong>証拠が不十分</strong></td>
+<td>必要なデータ、比較条件、反証条件が欠落しています。 </td>
+<td><a href="../verification.html">検証</a></td>
 </tr>
 <tr>
-<td><strong>Conditions undetermined</strong></td>
-<td>It is unclear what needs to be met to move forward, and what needs to be met to be put on hold. </td>
-<td><a href="../tech_roadmap.html">Roadmap</a> / <a href="../verification.html">Verification</a></td>
+<td><strong>条件未定</strong></td>
+<td>前進するために何を満たさなければならないのか、何を保留するために満たさなければならないのかは不明です。 </td>
+<td><a href="../tech_roadmap.html">ロードマップ</a> / <a href="../verification.html">検証</a></td>
 </tr>
 <tr>
-<td><strong>Lack of consensus</strong></td>
-<td>There is still no cross-disciplinary agreement on issues such as identity and system design. </td>
-<td><a href="../wbe_101.html">WBE 101</a> / <a href="../issue.html#external-collaboration">Collaborations</a></td>
+<td><strong>コンセンサスの欠如</strong></td>
+<td>アイデンティティやシステム設計などの問題については、分野を超えた合意がまだありません。 </td>
+<td><a href="../wbe_101.html">WBE 101</a> / <a href="../issue.html#external-collaboration">コラボレーション</a></td>
 </tr>
 <tr>
-<td><strong>External dependencies</strong></td>
-<td>External conditions such as IRB, equipment, contract, collaborative research partners, etc. are required. </td>
-<td><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies</a></td>
+<td><strong>外部依存関係</strong></td>
+<td>治験審査委員会、設備、契約、共同研究先等の外部条件が必要です。 </td>
+<td><a href="internal-prework-and-external-dependencies.html">社内生産と外部依存関係</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="how-to-read-page-top">
-<h2 class="section-title">How to use the beginning of the page</h2>
+<h2 class="section-title">ページ冒頭の使い方</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>First element</th>
-<th>What is it used for</th>
+<th>最初の要素</th>
+<th></th>何に使うのですか
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>page intro</strong></td>
-<td>Check the role of the page. First, decide whether it will be a theoretical text, practical work, or an operational hub. </td>
+<td><strong>ページの紹介</strong></td>
+<td>ページの役割を確認してください。まず、理論的なテキストにするか、実践的な作業にするか、それとも運用上のハブにするかを決定します。 </td>
 </tr>
 <tr>
-<td><strong>accuracy note</strong></td>
-<td>Check the extent to which the page intentionally makes no claims. </td>
+<td><strong>精度注記</strong></td>
+<td>ページが意図的にノークレームをどの程度行っているかを確認してください。 </td>
 </tr>
 <tr>
-<td><strong>known / unknown</strong></td>
-<td>Separate what is a relatively stable foundation and what remains unresolved. </td>
+<td><strong>既知 / 不明</strong></td>
+<td>比較的安定した基盤と未解決の基盤を分離します。 </td>
 </tr>
 <tr>
-<td><strong>wiki links</strong></td>
-<td>We supplement the assumptions that tend to stop there with study pages. </td>
+<td><strong>wiki リンク</strong></td>
+<td>そこで止まりがちな前提を学習ページで補足します。 </td>
 </tr>
 <tr>
-<td><strong>recommended pages</strong></td>
-<td>Determine the public page to return to after that page. </td>
+<td><strong>おすすめページ</strong></td>
+<td>そのページの後に戻る公開ページを決定します。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-mistakes">
-<h2 class="section-title">Common misreadings</h2>
+<h2 class="section-title">よくある間違い</h2>
 <div class="key-points">
-<h4>Mistake</h4>
+<h4>間違い</h4>
 <ul>
-<li><strong>Reading “I know” as a completion report:</strong> Most of the time it is an arrangement of necessary conditions or relatively stable assumptions. </li>
-<li><strong>Reading "I don't know" as negative proof:</strong> Unresolved or insufficient evidence is different from proof of impossibility. </li>
-<li><strong>Read accuracy note as decoration:</strong> It is actually important information that determines the boundaries of the assertion. </li>
-<li><strong>Leave external dependencies as a hold box:</strong> First, you need to cut out the preparations that can be made in-house. </li>
+<li><strong>完了レポートとして「知っています」を読む:</strong> ほとんどの場合、それは必要な条件や比較的安定した仮定を整理したものです。 </li>
+<li><strong>「わかりません」を否定的証明として読む:</strong> 未解決または不十分な証拠は、不可能性の証明とは異なります。 </li>
+<li><strong>装飾としての精度に関する注意事項を読む:</strong> これは実際には主張の境界を決定する重要な情報です。 </li>
+<li><strong>外部依存関係を保留ボックスとして残す:</strong> まず、社内でできる準備を切り出す必要があります。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">Where to return next</h2>
+<h2 class="section-title">次に戻る場所</h2>
 <p>
-If you want to go back to the role differences of public pages, go back to <a href="public-page-reading-guide.html">Guide to how to read public pages</a>. If you go back to the detailed meaning of progress labels, go back to <a href="progress-labels-and-open-problem-status.html">How to read partial solutions, exploration stages, and undeveloped</a>. If you go back to separating external dependencies, go back to <a Use href="internal-prework-and-external-dependencies.html">Internal prework and external dependencies</a>.
+公開ページの役割の違いに戻りたい場合は、<a href="public-page-reading-guide.html">公開ページの見方ガイド</a>に戻ってください。進捗ラベルの詳しい意味については<a href="progress-labels-and-open-problem-status.html">部分解、探索段階、未開発の見方</a>に戻ってください。外部依存関係の分離に戻る場合は、<a Use href="internal-prework-and-external-dependencies.html"> 内部事前作業と外部依存関係 </a> に戻ります。
 </p>
 </section>
 
@@ -224,19 +204,19 @@ If you want to go back to the role differences of public pages, go back to <a hr
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="public-page-reading-guide.html">Public page reading guide →</a></li>
-<li><a href="progress-labels-and-open-problem-status.html">How to read partial solution/exploration stage/undeveloped →</a></li>
-<li><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies →</a></li>
+<li><a href="public-page-reading-guide.html">公開ページの閲覧ガイド→</a></li>
+<li><a href="progress-labels-and-open-problem-status.html">部分解決・探索段階・未開発の見方→</a></li>
+<li><a href="internal-prework-and-external-dependencies.html">社内生産と外部依存関係 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../index.html">Start page →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
-<li><a href="../content_hub.html">Public content integration hub →</a></li>
+<li><a href="../index.html">スタートページ→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../content_hub.html">パブリックコンテンツ統合ハブ→</a></li>
 </ul>
 </div>
 </aside>

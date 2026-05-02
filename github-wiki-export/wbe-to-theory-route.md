@@ -1,147 +1,147 @@
-# Wiki: 4 routes to deepen the theory from introduction to WBE
+# Wiki:WBE入門から理論を深める4つのルート
 
-> Next page guide to avoid mixing argument strength, design principles, long notes, and dependency maps
+> 次のページは、引数の強さ、設計原則、長いメモ、依存関係マップの混合を避けるためのガイドです。
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-14 / Role: Theory route
+- Updated: 2026-03-14 / Role: 理論ルート
 
-## Role Of This Page
-This page is an auxiliary guide to help you decide which direction to dig deeper into theory after reading WBE 101. The next page will change depending on whether you want to avoid misreading the news, know the design principles, follow the supporting points and limitations of the main theory in a long text, or find out which technical problem the theory falls into.
+## このページの役割
+このページは、WBE 101 を読んだ後に理論をどの方向に深く掘り下げるべきかを決定するのに役立つ補助的なガイドです。次のページは、ニュースの誤読を避けたいか、設計原理を知りたいか、長文で主要な理論の支持点と限界に従いたいか、理論がどの技術的問題に該当するかを確認したいかによって変わります。
 
-## Accuracy Notes
-What is shown here is the next entrance to WBE 101. Please be sure to check the main text of the original page for each theory and design conditions themselves.
+## 正確性に関する注記
+ここで紹介するのは、WBE 101 への次の入り口です。各理論や設計条件自体は、必ず原ページの本文をご確認ください。
 
-## Back To Public Pages
-- [Introduction to WBE](https://mind-upload.com/wbe_101.html)
-- [Research Notes](https://mind-upload.com/perspective.html)
-- [Theoretical Frame](https://mind-upload.com/perspective.html#design-principles)
+## 公開ページへ戻る
+- [WBE の概要](https://mind-upload.com/wbe_101.html)
+- [研究ノート](https://mind-upload.com/perspective.html)
+- [理論的フレーム](https://mind-upload.com/perspective.html#design-principles)
 
-## Related Wiki Pages
-- [Wiki: Guide to reading theory pages](https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide) - For those who want to return to the role differences across the theory pages.
-- [Wiki: Theory of Consciousness Map](https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map) - This is for people who are stopped by the difference between IIT, GNWT, FEP, and PCI.
-- [Wiki: Identity and copying issues](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem) - This is for people who are stopped due to identity issues or copying issues.
+## 関連 Wiki ページ
+- [Wiki: 理論ページを読むためのガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide) - 理論ページ全体の役割の違いに戻りたい人向け。
+- [Wiki: 意識理論マップ](https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map) - IIT、GNWT、FEP、PCIの違いで止まっている人向けです。
+- [Wiki: ID とコピーの問題](https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem) - これは、身元の問題またはコピーの問題により停止された人向けです。
 
-## What Is Currently Known
-- The theory page you should read next after WBE 101 will change depending on what you want to know.
-- FAQ is a list of misconceptions, Idea is a design principle, Perspective is a long note, and Roadmap is a map of dependencies.
-- Even when digging deeply into theory, if you fix the role differences between pages first, you will reduce misreadings.
+## 現在わかっていること
+- WBE 101 の次に読むべき理論ページは、何を知りたいかによって変わります。
+- FAQ は誤解のリスト、アイデアは設計原則、展望は長いメモ、ロードマップは依存関係の地図です。
+- 理論を深く掘り下げる場合でも、ページ間の役割の違いを先に修正しておくと読み間違いが減ります。
 
-## What Is Still Unknown
-- Which combination of theories will ultimately be a sufficient condition is still undetermined.
-- Which theory pages will be expanded independently in the future will change depending on the accumulation of points.
+## まだわかっていないこと
+- 最終的にどの理論の組み合わせが十分条件となるかはまだ決まっていません。
+- 今後どの理論ページが独立して展開されるかはポイントの蓄積に応じて変わります。
 
 ---
 
-<h2>Decide the next page</h2>
+<h2>次のページを決める</h2>
 <p>
-WBE 101 is important as an entry point, but the theory pages you read next seem broad. Here, we will divide it into four paths based on <strong>What do you want to know next</strong> and pin the next page.
+WBE 101 は入り口として重要ですが、次に読む理論のページは広範囲にわたるようです。ここでは<strong>・知りたいことは次</strong>をベースに4つのパスに分けて次のページを固定していきます。
 </p>
 
-<h2>Four paths to follow after getting started with WBE</h2>
+<h2>WBE</h2> を使い始めた後にたどるべき 4 つの道
 <table>
 <thead>
 <tr>
-<th>What I want to know</th>
-<th>Next page</th>
-<th>What you can find out</th>
+<th>知りたい</th>
+<th>次のページ</th>
+<th>わかること</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I want to reduce news misreading and terminology confusion</strong></td>
-<td><a href="https://mind-upload.com/faq.html">FAQ</a> / <a href="https://mind-upload.com/glossary.html">Glossary</a></td>
-<td>You can first get a foothold on common misconceptions and terms that frequently appear in theoretical fields. </td>
+<td><strong>ニュースの誤読や用語の混乱を減らしたい</strong></td>
+<td><a href="https://mind-upload.com/faq.html">FAQ</a> / <a href="https://mind-upload.com/glossary.html">用語集</a></td>
+<td>まず、理論分野で頻繁に登場する一般的な誤解や用語についての足掛かりを得ることができます。 </td>
 </tr>
 <tr>
-<td><strong>I want to know why "dynamic migration" is used instead of "static copy"</strong></td>
-<td><a href="https://mind-upload.com/perspective.html#design-principles">Idea</a></td>
-<td>You can see the design principles this site uses and how they relate to copying issues. </td>
+<td><strong>「静的コピー」ではなく「動的移行」が使用される理由を知りたい</strong></td>
+<td><a href="https://mind-upload.com/perspective.html#design-principles">アイデア</a></td>
+<td>このサイトで使用されている設計原則と、それがコピーの問題にどのように関連しているかを確認できます。 </td>
 </tr>
 <tr>
-<td><strong>I want to follow the supporting points and limitations of the main theories in a long text</strong></td>
-<td><a href="https://mind-upload.com/perspective.html">Perspective</a></td>
-<td>It can be read as a long note listing IIT, GNWT, FEP, measurements, counterarguments, and limitations. </td>
+<td><strong>主要な理論の裏付けとなる点と限界を長文で追跡したい</strong></td>
+<td><a href="https://mind-upload.com/perspective.html">遠近感</a></td>
+<td>IIT、GNWT、FEP、測定、反論、制限をリストした長いメモとして読むことができます。 </td>
 </tr>
 <tr>
-<td><strong>I want to know which technical issue the theoretical issue falls into</strong></td>
-<td><a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a></td>
-<td>You can check the dependencies of theory, measurement, reconstruction, implementation, and verification as a map. </td>
+<td><strong>I 理論上の問題がどの技術的問題に該当するかを知りたい</strong></td>
+<td><a href="https://mind-upload.com/tech_roadmap.html">ロードマップ</a></td>
+<td>理論、測定、再構成、実装、検証の依存関係をマップとして確認できます。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Why this division</h2>
+<h2>なぜこの部門なのか</h2>
 <table>
 <thead>
 <tr>
 <th>way</th>
-<th>Why go to that page after WBE 101</th>
+<th>WBE 101</th> の後にそのページにアクセスする理由
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Correcting misconceptions</strong></td>
-<td>Before delving into the theory, it will be easier to read if you switch between L1 and L4 and reduce confusion in terminology. </td>
+<td><strong>誤解を正す</strong></td>
+<td>理論を掘り下げる前に、L1 と L4 を切り替えて用語の混乱を軽減すると読みやすくなります。 </td>
 </tr>
 <tr>
-<td><strong>Design principles</strong></td>
-<td>Idea is the shortest way to determine which position this site takes. </td>
+<td><strong>設計原則</strong></td>
+<td>Idea は、このサイトがどの位置にあるかを決定する最短の方法です。 </td>
 </tr>
 <tr>
-<td><strong>Long notes</strong></td>
-<td>Perspective is a long text that allows you to summarize the supporting points and limitations of each theory. </td>
+<td><strong>長音符</strong></td>
+<td>Perspective は、各理論の支持点と限界を要約できる長いテキストです。 </td>
 </tr>
 <tr>
-<td><strong>Dependency map</strong></td>
-<td>Roadmap allows you to organize where theoretical issues connect to implementation and verification. </td>
+<td><strong>依存関係マップ</strong></td>
+<td>Roadmap を使用すると、理論的な問題が実装や検証にどのようにつながるかを整理できます。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Assistance wiki when you stop midway</h2>
+<h2>途中でやめるときのサポートwiki</h2>
 <table>
 <thead>
 <tr>
-<th>Place to stop</th>
-<th>Go back to wiki</th>
+<th>停車場所</th>
+<th>ウィキに戻る</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Stops due to difference in theory name</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map">Consciousness theory map</a></td>
+<td>理論名違いによる停止</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/consciousness-theory-map">意識理論マップ</a></td>
 </tr>
 <tr>
-<td>Stopped due to identity or copying problem</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem">Personhood and copy problem</a></td>
+<td>ID またはコピーの問題により停止しました</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem">人物像とコピーの問題</a></td>
 </tr>
 <tr>
-<td>Stops due to role difference between theory pages</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide">Reading guide for theory pages</a></td>
+<td>理論ページ間の役割の違いにより停止</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide">理論ページの読書ガイド</a></td>
 </tr>
 <tr>
-<td>It stops depending on the level of the theoretical argument</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes">How to read each L0 to L5</a></td>
+<td>理論的議論のレベルに応じて停止</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes">各L0～L5の見方</a></td>
 </tr>
 <tr>
-<td>Measurement word and model word mix and stop</td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms">Terminology guide from measurement to modeling</a></td>
+<td>測定ワードとモデルワードをミックスして停止</td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms">測定からモデリングまでの用語解説</a></td>
 </tr>
 </tbody>
 </table>
 
-<h2>Common ways to get lost</h2>
+<h2>よくある迷い方</h2>
 
-<h4>Mistake</h4>
+<h4>間違い</h4>
 <ul>
-<li><strong>Starting with WBE 101, then suddenly entering the full text of Perspective:</strong> It may be easier to get lost if you include FAQ or Idea first. </li>
-<li><strong>Reading an Idea as a Proven Conclusion:</strong> This is a summary of design principles, not a declaration that proof is complete. </li>
-<li><strong>Read Roadmap instead of theory text:</strong> This is a dependency map, with condensed theory background. </li>
-<li><strong>Finish your theoretical judgment with just the FAQ:</strong> The stronger the argument, the more you need to return to the Perspective and Roadmap. </li>
+<li><strong>WBE 101から始まり、いきなりPerspectiveの全文を入力:</strong> 最初にFAQやアイデアを入れておくと迷いやすいかもしれません。 </li>
+<li><strong>アイデアを証明された結論として読む:</strong> これは設計原則の要約であり、証明が完了したという宣言ではありません。 </li>
+<li><strong>理論テキストの代わりにロードマップを読む:</strong> これは、理論の背景が凝縮された依存関係マップです。 </li>
+<li><strong>FAQ だけで理論的な判断を終えてください:</strong> 議論が強ければ強いほど、展望とロードマップに戻る必要があります。 </li>
 </ul>
 
-<h2>Where to return next</h2>
+<h2>次に戻る場所</h2>
 <p>
-If you want to go back to the introduction to WBE, please use <a href="https://mind-upload.com/wbe_101.html">Introduction to WBE</a>. If you want to go back to the role differences among theory-related pages as a whole, please use <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide">Reading guide for theory-related pages</a>. If you want to go back to role differences among public pages as a whole, please use <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">Reading guide for public pages</a>.
+WBE 入門に戻りたい場合は、<a href="https://mind-upload.com/wbe_101.html">WBE</a> 入門をご利用ください。理論関連ページ全体の役割の違いを遡りたい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/theory-pages-reading-guide">理論関連ページの読み方</a>をご利用ください。公開ページ全体の役割の違いを遡りたい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">公開ページの読み方ガイド</a>をご利用ください。
 </p>

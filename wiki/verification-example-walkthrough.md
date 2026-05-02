@@ -1,471 +1,472 @@
 ---
 layout: default
-title: "Wiki: Verification example walkthrough"
-description: "A worked EEG example showing how a small benchmark now needs not only data standard, benchmark, registry, and model card, but also an event contract, shortcut audit, temporal-validity note, and calibration / abstention note."
-article_type: Wiki
-subtitle: "Read the blueprint through one small EEG example without overreading timing, identity, or stability"
-author: Mind Uploading Research Project
-last_updated: "2026-03-28"
-note: "Worked example / technical refresh"
-audience: "People who find Verification too abstract, and people who want one concrete EEG example that already respects the site's newer stop lines"
-reading_time: "12-18 minutes"
-page_intro: "This page turns the Verification Commons into one small EEG example. The goal is still not to chase a large score. The goal is to show what has to be frozen before a small public EEG result can be read honestly: input contract, benchmark object, split regime, shortcut audit, temporal scope, calibration logic, and stopped claim."
-accuracy_note: "This is a bounded L0/L1 tutorial. It does not support causal, source-identification, or WBE-level claims by itself. It shows how to build one small EEG result without silently overreading timing, subject identity, or temporal stability."
+title: 'Wiki: 検証例のウォークスルー'
+description: 機能する EEG の例は、小規模なベンチマークにデータ標準、ベンチマーク、レジストリ、モデル カードだけでなく、イベント コントラクト、ショートカット監査、一時的有効性メモ、および校正 / 棄権メモも必要になる様子を示しています。
+article_type: ウィキ
+subtitle: タイミング、アイデンティティ、安定性を読みすぎることなく、1 つの小さな EEG サンプルを通じてブループリントを読み取ります。
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-03-28'
+note: 動作例 / 技術的なリフレッシュ
+audience: 検証が抽象的すぎると感じる人、およびサイトの新しい停止線をすでに尊重している 1 つの具体的な EEG 例が必要な人
+reading_time: 12～18分
+page_intro: このページでは、Verification Commons を 1 つの小さな EEG サンプルに変えます。目標はやはり大きなスコアを追うことではない。目標は、小規模な公開 EEG 結果を正確に読み取る前に、入力コントラクト、ベンチマーク
+  オブジェクト、分割レジーム、ショートカット監査、時間スコープ、キャリブレーション ロジック、および停止されたクレームなど、何を凍結する必要があるかを示すことです。
+accuracy_note: これは、制限された L0/L1 チュートリアルです。それ自体は、因果関係、情報源の特定、または WBE レベルの主張をサポートしません。タイミング、被験者の身元、または時間的安定性を黙って読み過ぎることなく、1 つの小さな
+  EEG 結果を構築する方法を示します。
 page_highlights:
-  - "This worked example is no longer just data standard + benchmark + registry + model card; it now also carries an event contract, a shortcut audit, a temporal-validity note, and a calibration / abstention note."
-  - "BIDS events, HED semantics, and LSL synchronization answer different questions and should not be compressed into one checkbox."
-  - "A subject/session split is not enough if raw-recording ancestry, identity confounding, or acquisition-distribution shortcuts remain unresolved."
-  - "Same-session success is not cross-day durability; fixed decoder interval and recalibration burden stay explicit."
-  - "The safe ceiling of this example is a bounded reproducible EEG decode under a named observation contract, not a stable biomarker or hidden-state readout."
+- この実際に機能する例は、単なるデータ標準 + ベンチマーク + レジストリ + モデル カードではなくなりました。イベント契約、ショートカット監査、一時的有効性メモ、および調整/棄権メモも含まれるようになりました。
+- BIDS イベント、HED セマンティクス、および LSL 同期はさまざまな質問に答えるため、1 つのチェックボックスに圧縮すべきではありません。
+- 未加工の録音の祖先、アイデンティティの交絡、または取得と配布のショートカットが未解決の場合、サブジェクト/セッションの分割だけでは十分ではありません。
+- 同一セッションの成功は、一日を超えて持続するものではありません。固定デコーダ間隔と再キャリブレーション負担は明示的なままです。
+- この例の安全上限は、安定したバイオマーカーや隠れ状態の読み出しではなく、名前付き観察契約に基づく制限された再現可能な EEG デコードです。
 known_points:
-  - "A small public EEG example can already teach most of the core verification logic if input contract, benchmark object, and stopped claim are frozen explicitly."
-  - "Event timing, event meaning, split hygiene, shortcut resistance, and temporal scope are separate technical questions."
-  - "High score alone is not enough; the site now asks where predictive information came from and how far the result can be extrapolated across time."
-  - "If probabilities, thresholds, or prediction sets are reported, fit / calibration / test separation and abstention policy belong in the worked example."
+- 入力コントラクト、ベンチマーク オブジェクト、および停止されたクレームが明示的に凍結されている場合、小規模な公開 EEG サンプルで、コア検証ロジックのほとんどをすでに学習できます。
+- イベントのタイミング、イベントの意味、分割衛生、ショートカット耐性、および時間的範囲は、別個の技術的な問題です。
+- スコアが高いだけでは十分ではありません。このサイトは現在、予測情報がどこから来たのか、そしてその結果が時間の経過とともにどこまで推定できるのかを尋ねています。
+- 確率、しきい値、または予測セットが報告される場合、適合 / 校正 / テストの分離および棄権ポリシーが実際の例に含まれます。
 unknown_points:
-  - "This page still does not define one site-wide default calibration threshold or one universal temporal benchmark for every EEG task."
-  - "Which backbone object should become the default target for future longitudinal EEG examples remains unsettled."
-  - "This example does not decide which additional cards would be sufficient for stronger L2/L3 claims."
+- このページでは、サイト全体の 1 つのデフォルト キャリブレーションしきい値や、すべての EEG タスクに対する 1 つの普遍的な時間ベンチマークがまだ定義されていません。
+- どのバックボーン オブジェクトが将来の縦方向 EEG サンプルのデフォルト ターゲットになるべきかは、まだ未解決のままです。
+- この例では、どの追加カードがより強力な L2/L3 要求に十分であるかを決定するものではありません。
 wiki_links:
-  - label: "Wiki: Basics of verification infrastructure"
-    url: "/wiki/verification-basics.html"
-    description: "Start here if you want the role of each artifact before the example."
-  - label: "Wiki: Event synchronization and observation logs"
-    url: "/wiki/event-sync-and-measurement-logs.html"
-    description: "Use this when the example reaches event timing, semantics, or clock-domain questions."
-  - label: "Wiki: Data splits and leakage"
-    url: "/wiki/dataset-splits-and-leakage.html"
-    description: "Use this when split naming alone is not enough."
-  - label: "Wiki: State, trait, and drift"
-    url: "/wiki/state-trait-and-drift.html"
-    description: "Use this when the example starts to imply cross-session or cross-day scope."
-  - label: "Wiki: Uncertainty, calibration, and abstention"
-    url: "/wiki/uncertainty-confidence-and-abstention.html"
-    description: "Use this when the example reports probabilities, thresholds, or reject options."
+- label: 'Wiki: 検証インフラストラクチャの基本'
+  url: /wiki/verification-basics.html
+  description: 例の前に各アーティファクトの役割を知りたい場合は、ここから始めてください。
+- label: 'Wiki: イベントの同期と観察ログ'
+  url: /wiki/event-sync-and-measurement-logs.html
+  description: これは、例がイベントのタイミング、セマンティクス、またはクロック ドメインの質問に到達した場合に使用します。
+- label: 'Wiki: データの分割と漏洩'
+  url: /wiki/dataset-splits-and-leakage.html
+  description: 分割命名だけでは不十分な場合にこれを使用します。
+- label: 'Wiki: 状態、特性、およびドリフト'
+  url: /wiki/state-trait-and-drift.html
+  description: これは、例がセッション間または日をまたぐ範囲を暗示し始める場合に使用します。
+- label: 'Wiki: 不確実性、校正、および棄権'
+  url: /wiki/uncertainty-confidence-and-abstention.html
+  description: これは、例で確率、しきい値、または拒否オプションを報告する場合に使用します。
 recommended_pages:
-  - label: "Verification"
-    url: "/verification.html"
-  - label: "Wiki: Minimum artifact pack for L0"
-    url: "/wiki/l0-minimum-artifact-pack.html"
-  - label: "Datasets"
-    url: "/datasets.html"
+- label: 検証
+  url: /verification.html
+- label: 'Wiki: L0 の最小アーティファクト パック'
+  url: /wiki/l0-minimum-artifact-pack.html
+- label: データセット
+  url: /datasets.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>This worked example in one sentence</h2>
+<h2>このうまくいった例を一文で表す</h2>
 <p>
-We use one small public EEG classification task to show what a result has to freeze before the score means anything: <strong>what entered the file</strong>, <strong>what the benchmark object actually is</strong>, <strong>what train/test independence really means</strong>, <strong>which shortcut routes remain open</strong>, <strong>what time scope is being claimed</strong>, and <strong>where the claim must stop</strong>.
+私たちは 1 つの小さな公開 EEG 分類タスクを使用して、スコアが何らかの意味を持つ前に結果がフリーズする必要があることを示します。<strong> ファイルに入力された内容</strong>、<strong> ベンチマーク オブジェクトの実際の意味</strong>、<strong> トレーニング/テストの独立性の実際の意味</strong>、<strong> 開いているショートカット ルートはどれ</strong>、<strong> スコープがクレームされる時間</strong>、<strong> クレームが停止する必要がある場所</strong>。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Why this tutorial needed a 2026-03-28 repair</strong>
+<strong>このチュートリアルに 2026 年 3 月 28 日の修理が必要な理由</strong>
 <p>
-The older walkthrough was useful as a first orientation, but it still taught a weaker recipe than the current site allows. It could leave readers with the impression that <strong>BIDS + split + score + model card</strong> was already most of the work. The current literature and the rest of this site no longer support that shortcut. BIDS events, HED semantics, and LSL synchronization answer different questions; record-wise or weakly grouped splits can still learn identity; same-day success is not cross-day durability; and a score with no calibration or abstention rule is still not operationally interpretable.
+古いウォークスルーは最初のオリエンテーションとして役立ちましたが、それでも現在のサイトで許可されているよりも弱いレシピを教えていました。読者は、<strong>BIDS + スプリット + スコア + モデル カード </strong> ですでに作業の大部分が完了しているという印象を残す可能性があります。現在の文献とこのサイトの残りの部分では、そのショートカットはサポートされなくなりました。 BIDS イベント、HED セマンティクス、LSL 同期はさまざまな質問に答えます。レコードごとの分割または弱くグループ化された分割でも、同一性を学習できます。当日の成功は、一日を超えて持続するものではありません。そして、キャリブレーションや棄権ルールのないスコアは依然として運用上解釈できません。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Safe reading of this example</strong>
+<strong>この例の安全な読み方</strong>
 <p>
-If this example is filled well, the strongest safe outcome is a <strong>bounded reproducible EEG decode under a named observation contract</strong>. It still does <strong>not</strong> become source ground truth, a target-specific biomarker by default, a causal intervention result, or a WBE-relevant hidden-state readout.
+この例が適切に満たされている場合、最も安全な結果は、名前付き観測契約 </strong> に基づく <strong> 境界付きの再現可能な EEG デコードになります。 <strong>not</strong> は依然として、ソース グラウンド トゥルース、デフォルトでのターゲット固有のバイオマーカー、因果関係の介入結果、または WBE 関連の隠れ状態の読み取り値になります。
 </p>
 </div>
 
 <section class="section" id="scaffold">
-<h2 class="section-title">The core scaffold is still four artifacts</h2>
+<h2 class="section-title">コア足場はまだ 4 つのアーティファクト</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Core artifact</th>
-<th>What it does in this example</th>
+<th>コアアーティファクト</th>
+<th>この例での動作</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Data standard</strong></td>
-<td>Fixes the dataset snapshot, BIDS shape, event files, channel metadata, and QC context.</td>
+<td><strong>データスタンダード</strong></td>
+<td>データセットのスナップショット、BIDS 形状、イベント ファイル、チャネル メタデータ、および QC コンテキストを修正します。</td>
 </tr>
 <tr>
-<td><strong>Benchmark</strong></td>
-<td>Fixes the task, target, split family, hold-out unit, metric bundle, and stopped claim.</td>
+<td><strong>ベンチマーク</strong></td>
+<td>タスク、ターゲット、分割ファミリー、ホールドアウト ユニット、メトリック バンドル、および停止された要求を修正します。</td>
 </tr>
 <tr>
-<td><strong>Registry</strong></td>
-<td>Fixes preprocessing, split freeze, baselines, nuisance checks, and success/failure conditions before the result is known.</td>
+<td><strong>レジストリ</strong></td>
+<td>結果が判明する前に、前処理、分割フリーズ、ベースライン、迷惑チェック、成功/失敗条件を修正します。</td>
 </tr>
 <tr>
-<td><strong>Model card / audit log</strong></td>
-<td>Records scores, failures, shortcut checks, calibration behavior, abstention behavior, and what still remains unresolved.</td>
+<td><strong>モデルカード/監査ログ</strong></td>
+<td>スコア、失敗、ショートカット チェック、調整動作、棄権動作、および未解決のままのものを記録します。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="companion-cards">
-<h2 class="section-title">But the current tutorial also stacks companion cards</h2>
+<h2 class="section-title">ただし、現在のチュートリアルではコンパニオン カードもスタックします</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Companion card or note</th>
-<th>Why this example now needs it</th>
-<th>What goes wrong if omitted</th>
+<th>コンパニオンカードまたはノート</th>
+<th>この例にそれが必要な理由</th>
+<th>省略すると問題が発生する</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Observation contract</strong></td>
-<td>Separates event anchor, event semantics, clock domain, timing-validation class, and label provenance.</td>
-<td><code>events.tsv</code>, HED, trigger lines, and synchronized streams are too easily read as one solved timing object.</td>
+<td><strong>観察契約</strong></td>
+<td>イベント アンカー、イベント セマンティクス、クロック ドメイン、タイミング検証クラス、およびラベルの来歴を分離します。</td>
+<td><code>events.tsv</code>、HED、トリガー ライン、同期ストリームは、解決された 1 つのタイミング オブジェクトとして簡単に読み取られます。</td>
 </tr>
 <tr>
-<td><strong>Observability Budget</strong></td>
-<td>Fixes what EEG directly observed: scalp potentials under a named setup, not sources or hidden state by default.</td>
-<td>A small scalp-level classifier is too easily promoted to internal-state evidence.</td>
+<td><strong>可観測性バジェット</strong></td>
+<td>EEG が直接観察した内容を修正します: デフォルトではソースや非表示の状態ではなく、名前付きセットアップの下での頭皮電位。</td>
+<td>A 小さな頭皮レベルの分類子は、内部状態の証拠に簡単に昇格します。</td>
 </tr>
 <tr>
-<td><strong>Specificity &amp; Shortcut note</strong></td>
-<td>Fixes which routes could still explain the score: subject fingerprint, setup distribution, residual movement, or other nuisance paths.</td>
-<td>A clean split can still be mistaken for target-specific neural evidence.</td>
+<td><strong>特異性とショートカットメモ</strong></td>
+<td>どのルートが依然としてスコアを説明できるかを修正します: 被験者の指紋、セットアップ分布、残留移動、またはその他の迷惑パス。</td>
+<td>A クリーン スプリットは依然としてターゲット固有の神経証拠と間違われる可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Temporal-validity note</strong></td>
-<td>Fixes whether the example is within-session, same-day, cross-session, or cross-day, and whether the decoder was fixed or updated.</td>
-<td>Same-session success is silently promoted to durability.</td>
+<td><strong>時間的有効性メモ</strong></td>
+<td>サンプルがセッション内、同日、クロスセッション、クロス日のいずれであるか、およびデコーダが修正されたか更新されたかを修正します。</td>
+<td>同一セッションの成功は、静かに耐久性に昇格します。</td>
 </tr>
 <tr>
-<td><strong>Calibration &amp; Abstention note</strong></td>
-<td>Fixes how probabilities or prediction sets were calibrated, and when the model should abstain instead of forcing output.</td>
-<td>Thresholds, confidence, and coverage become uninterpretable.</td>
+<td><strong>校正と調整棄権届</strong></td>
+<td>確率または予測セットがどのように調整されるか、およびモデルが出力を強制する代わりにいつ出力を控えるべきかを修正します。</td>
+<td>しきい値、信頼性、およびカバレッジが解釈不能になります。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="step1">
-<h2 class="section-title">Step 1: Fix the input and the event contract</h2>
+<h2 class="section-title">ステップ 1: 入力とイベントのコントラクトを修正する</h2>
 <p>
-The first thing this example now freezes is not only <strong>which EEG file</strong> you used, but also <strong>what the time and label columns are allowed to mean</strong>. The current standards and timing literature require a narrower reading here. In BIDS, <code>onset</code> is measured from the <strong>first stored data point</strong>, not from physical screen or speaker onset. HED makes event semantics machine-readable. LSL can synchronize streams across a LAN and compensate offset and jitter, but it does not automatically measure device-side delay truth. Therefore, this site now asks the tutorial to log those pieces separately.
+この例で最初にフリーズするのは、使用した EEG ファイル <strong> </strong> だけでなく、<strong> 許可されている時間とラベルの列の意味 </strong> もフリーズします。現在の規格とタイミングに関する文献では、ここではより狭い解釈が必要です。 BIDS では、<code>onset</code> は、物理的な画面やスピーカーのオンセットではなく、<strong> 最初に保存されたデータ ポイント </strong> から測定されます。 HED により、イベント セマンティクスが機械可読になります。 LSL は LAN 全体でストリームを同期し、オフセットとジッターを補正できますが、デバイス側の遅延の真実は自動的に測定されません。したがって、このサイトでは、チュートリアルでこれらの部分を個別に記録するように求めています。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Input-side item</th>
-<th>What to freeze in this example</th>
-<th>Why it matters</th>
+<th>入力側アイテム</th>
+<th>この例で凍結するもの</th>
+<th>それが重要な理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>dataset identity</strong></td>
-<td>Snapshot or release, DOI or persistent URL, retrieval date, and license.</td>
-<td>The same dataset name can still refer to different content over time.</td>
+<td><strong>データセット ID</strong></td>
+<td>スナップショットまたはリリース、DOIまたは永続的なURL、取得日、ライセンス。</td>
+<td>同じデータセット名でも、時間の経過とともに異なるコンテンツを参照することができます。</td>
 </tr>
 <tr>
-<td><strong>BIDS skeleton</strong></td>
-<td><code>dataset_description.json</code>, participant/session/run layout, <code>*_eeg.json</code>, channel metadata, and electrode metadata when positions exist.</td>
-<td>Without this, later readers cannot reconstruct the same measurement condition.</td>
+<td><strong>BIDS スケルトン</strong></td>
+<td><code>dataset_description.json</code>、参加者/セッション/実行レイアウト、<code>*_eeg.json</code>、チャネル メタデータ、位置が存在する場合の電極メタデータ。</td>
+<td>これがないと、以降のリーダーで同じ測定条件を再現できません。</td>
 </tr>
 <tr>
-<td><strong>event anchor</strong></td>
-<td><code>events.tsv</code>, <code>events.json</code>, onset/duration/sample meaning, and any discarded-sample rule.</td>
-<td>The epoch boundary can look precise while still referring only to stored-file time.</td>
+<td><strong>イベントアンカー</strong></td>
+<td><code>events.tsv</code>、<code>events.json</code>、開始/期間/サンプルの意味、および破棄されたサンプル ルール。</td>
+<td>エポック境界は、保存されたファイルの時間のみを参照しながらも正確に見えることができます。</td>
 </tr>
 <tr>
-<td><strong>event semantics</strong></td>
-<td><code>trial_type</code>, HED tags when available, condition naming, and any manual scoring rule.</td>
-<td>Two datasets can share a label name while meaning different things.</td>
+<td><strong>イベントセマンティクス</strong></td>
+<td><code>trial_type</code>、HED タグ (使用可能な場合)、条件の名前付け、および手動スコアリング ルール。</td>
+<td>2 つのデータセットは、異なる意味を持ちながらラベル名を共有できます。</td>
 </tr>
 <tr>
-<td><strong>clock domain + timing-validation class</strong></td>
-<td>Whether the example has only a stored-data anchor, stream alignment, digital marker capture, or actual physical timing validation.</td>
-<td>The site no longer lets BIDS, HED, LSL, TTL, and photodiode traces collapse into one timing claim.</td>
+<td><strong>クロックドメイン + タイミング検証クラス</strong></td>
+<td>例に保存されたデータ アンカー、ストリーム アライメント、デジタル マーカー キャプチャ、または実際の物理タイミング検証のみがあるかどうか。</td>
+<td>このサイトでは、BIDS、HED、LSL、TTL、フォトダイオード トレースを 1 つのタイミング クレームにまとめることはできなくなりました。</td>
 </tr>
 <tr>
-<td><strong>label provenance</strong></td>
-<td>Whether the target label comes from cue markers, manual scoring, a report-derived rule, or another derived path.</td>
-<td>A signal-only benchmark and a report-assisted benchmark are not the same evidence object.</td>
+<td><strong>ラベルの出所</strong></td>
+<td>ターゲット ラベルがキュー マーカー、手動スコアリング、レポートから派生したルール、または別の派生パスからのものかどうか。</td>
+<td>A 信号のみのベンチマークとレポート支援ベンチマークは同じ証拠オブジェクトではありません。</td>
 </tr>
 <tr>
-<td><strong>QC / exclusions</strong></td>
-<td>Bad channels, bad segments, missing runs, and thresholds used to exclude data.</td>
-<td>The score becomes impossible to audit if exclusions stay implicit.</td>
+<td><strong>QC / 除外品</strong></td>
+<td>不正なチャネル、不正なセグメント、欠落した実行、およびデータの除外に使用されるしきい値。</td>
+<td>除外が暗黙的なままの場合、スコアを監査することができなくなります。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Safe tutorial rule</strong>
+<strong>安全なチュートリアルのルール</strong>
 <p>
-For this worked example, writing only “the data are in BIDS” is no longer enough. The minimum safe wording is: <strong>which event anchor exists</strong>, <strong>which semantics exist</strong>, <strong>which timing-validation rung was actually tested</strong>, and <strong>where the label came from</strong>.
+この実際に動作する例では、「データは BIDS にあります」とだけ記述するだけでは十分ではありません。最小限の安全な文言は次のとおりです。<strong> どのイベント アンカーが存在するか</strong>、<strong> どのセマンティクスが存在するか</strong>、<strong>どのタイミング検証ラングが実際にテストされたか</strong>、<strong>ラベルの由来</strong>。
 </p>
 </div>
 </section>
 
 <section class="section" id="step2">
-<h2 class="section-title">Step 2: Fix the benchmark object and the independence unit</h2>
+<h2 class="section-title">ステップ 2: ベンチマーク オブジェクトと独立ユニットを修正する</h2>
 <p>
-The next weak point in older beginner workflows was to treat a split rule as if it already solved shortcut risk. The current literature does not support that shortcut. Record-wise splits can learn identity rather than the target variable, resting-state EEG can support time-robust person identification, and cross-dataset EEG performance can move with setup differences such as amplifier, cap, sampling rate, or filtering. This example therefore freezes not only <strong>the split</strong>, but also <strong>the independent hold-out unit</strong> and <strong>the shortcut families that remain plausible</strong>.
+古い初心者ワークフローの次の弱点は、分割ルールをショートカットのリスクがすでに解決されているかのように扱うことでした。現在の文献では、そのショートカットはサポートされていません。レコードごとの分割では、ターゲット変数ではなくアイデンティティを学習でき、安静状態の EEG は時間に強い個人識別をサポートでき、データセット間の EEG パフォーマンスは、アンプ、キャップ、サンプリング レート、フィルタリングなどの設定の違いによって変化します。したがって、この例では、<strong> スプリット </strong> だけでなく、<strong> 独立ホールドアウト ユニット </strong> および <strong> もっともらしいショートカット ファミリ </strong> も凍結します。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Benchmark field</th>
-<th>What to write in this example</th>
-<th>What not to overread</th>
+<th>ベンチマークフィールド</th>
+<th>この例で書く内容</th>
+<th>深読みしてはいけないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>target</strong></td>
-<td>One bounded task such as two-state or few-class EEG classification.</td>
-<td>Do not let a small task silently stand in for a general biomarker or latent-state decoder.</td>
+<td><strong>ターゲット</strong></td>
+<td>2 状態または少数クラスの EEG 分類などの 1 つの限定されたタスク。</td>
+<td>一般的なバイオマーカーや潜在状態デコーダーの代わりに小さなタスクを黙らせないでください。</td>
 </tr>
 <tr>
-<td><strong>evaluation family</strong></td>
-<td>Within-session, cross-session, cross-subject, cross-dataset, or adaptation regime.</td>
-<td>The same accuracy means different things in different families.</td>
+<td><strong>評価ファミリー</strong></td>
+<td>セッション内、セッション間、被験者間、データセット間、または適応レジーム。</td>
+<td>同じ精度でもファミリが異なれば意味も異なります。</td>
 </tr>
 <tr>
-<td><strong>independent hold-out unit</strong></td>
-<td>Subject, session, or raw recording, not only windows or epochs.</td>
-<td>A result can stay identity-confounded even when train/test windows are disjoint.</td>
+<td><strong>独立ホールドアウトユニット</strong></td>
+<td>ウィンドウやエポックだけでなく、件名、セッション、または生の録画。</td>
+<td>A の結果は、トレイン/テスト ウィンドウが切り離されている場合でも、同一性が混乱したままになる可能性があります。</td>
 </tr>
 <tr>
-<td><strong>raw-recording ancestry</strong></td>
-<td>Whether windows cut from one raw recording ever cross train/test.</td>
-<td>Window-level separation is not enough if the raw ancestor is shared.</td>
+<td><strong>生録音の祖先</strong></td>
+<td>これまでにクロストレイン/テストを行った 1 つの生の録音からウィンドウを切り取ったかどうか。</td>
+<td>生の祖先が共有されている場合、ウィンドウ レベルの分離だけでは十分ではありません。</td>
 </tr>
 <tr>
-<td><strong>setup disjointness</strong></td>
-<td>Participant, session, site, device, reference system, channel map, and protocol differences.</td>
-<td>A classifier can still read acquisition-distribution structure rather than the intended signal.</td>
+<td><strong>セットアップ不整合</strong></td>
+<td>参加者、セッション、サイト、デバイス、リファレンス システム、チャネル マップ、およびプロトコルの違い。</td>
+<td>A 分類器は、意図した信号ではなく取得分布構造を読み取ることができます。</td>
 </tr>
 <tr>
-<td><strong>shortcut-aware baselines</strong></td>
-<td>Metadata-only, subject-ID, or other nuisance-aware baselines when relevant.</td>
-<td>Without them, the score can still be explained by who, when, or how the EEG was recorded.</td>
+<td><strong>ショートカット対応ベースライン</strong></td>
+<td>メタデータのみ、サブジェクト ID、またはその他の迷惑行為を認識するベースライン (該当する場合)。</td>
+<td>それらがなくても、スコアは脳波が誰が、いつ、どのように記録されたかによって説明できます。</td>
 </tr>
 <tr>
-<td><strong>temporal scope</strong></td>
-<td>Whether the example is same-session only or claims any reuse across time.</td>
-<td>Do not promote a same-session result to cross-day durability after the fact.</td>
+<td><strong>時間スコープ</strong></td>
+<td>例が同じセッションのみであるか、時間を超えた再利用を主張しているか。</td>
+<td>同じセッションの結果を事後的に日をまたがる耐久性を促進しません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="step3">
-<h2 class="section-title">Step 3: Write the registry before training</h2>
+<h2 class="section-title">ステップ 3: トレーニング前にレジストリを書き込む</h2>
 <p>
-The registry is where this example stops becoming a flexible demo and becomes an auditable result. The main point is not fancy formatting. The main point is that preprocessing, splits, baselines, and stopping conditions are fixed before the score appears. If the example will later report probabilities, prediction sets, or an abstain threshold, this is also where the <strong>fit / calibration / test</strong> separation must be frozen.
+レジストリは、この例が柔軟なデモになるのをやめ、監査可能な結果になる場所です。重要なのは派手な書式設定ではありません。重要な点は、スコアが表示される前に、前処理、分割、ベースライン、および停止条件が固定されていることです。サンプルが後で確率、予測セット、または棄権しきい値をレポートする場合、これは <strong>fit / キャリブレーション / test</strong> 分離を凍結する必要がある場所でもあります。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Registry field</th>
-<th>What to freeze here</th>
+<th>レジストリフィールド</th>
+<th>ここに冷凍するもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>preprocessing recipe</strong></td>
-<td>Filtering, referencing, artifact handling, rejected channels/segments, and derivative boundaries.</td>
+<td><strong>前処理レシピ</strong></td>
+<td>フィルタリング、参照、アーティファクト処理、拒否されたチャネル/セグメント、派生境界。</td>
 </tr>
 <tr>
-<td><strong>split freeze</strong></td>
-<td>The exact grouping rule for subjects, sessions, and raw recordings, plus any benchmark version.</td>
+<td><strong>分割フリーズ</strong></td>
+<td>被験者、セッション、生の録画、およびベンチマーク バージョンの正確なグループ化ルール。</td>
 </tr>
 <tr>
-<td><strong>baseline plan</strong></td>
-<td>Simple baseline, shortcut-aware baseline, and what counts as improvement over them.</td>
+<td><strong>基本計画</strong></td>
+<td>シンプルなベースライン、ショートカットを意識したベースライン、およびそれらの改善として重要なもの。</td>
 </tr>
 <tr>
-<td><strong>failure conditions</strong></td>
-<td>What will count as collapse: low sensitivity, shortcut-only win, unstable calibration, or cross-session failure.</td>
+<td><strong>故障条件</strong></td>
+<td>崩壊としてカウントされるもの: 低感度、ショートカットのみの勝利、不安定なキャリブレーション、またはクロスセッションの失敗。</td>
 </tr>
 <tr>
-<td><strong>calibration split</strong></td>
-<td>Whether the model reports only hard labels or also probabilities / prediction sets, and which held-out slice is reserved for threshold or temperature tuning.</td>
+<td><strong>キャリブレーションスプリット</strong></td>
+<td>モデルがハード ラベルのみをレポートするか、確率/予測セットもレポートするかどうか、およびどのホールドアウト スライスがしきい値または温度調整用に予約されているか。</td>
 </tr>
 <tr>
-<td><strong>stopped claim</strong></td>
-<td>Write in advance the strongest safe claim if everything works exactly as planned.</td>
+<td><strong>請求停止</strong></td>
+<td>すべてが計画どおりに機能する場合の最強の安全主張を事前に書き込んでください。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>What the stopped claim should usually look like here</strong>
+<strong>停止された請求は通常次のようになります</strong>
 <p>
-For a minimal public EEG example, the planned stopping point is usually something like: <strong>reproducible classification under a named observation contract and declared split regime</strong>. It is usually <strong>not</strong> stable biomarker evidence, target-specific neural proof, or cross-day deployability.
+最小の公開 EEG の例では、計画された停止点は通常次のようなものになります: <strong> 指定された観察契約および宣言された分割体制に基づく再現可能な分類 </strong>。通常、<strong> ではなく </strong> の安定したバイオマーカーの証拠、ターゲット固有の神経証明、または日をまたぐ展開可能性です。
 </p>
 </div>
 </section>
 
 <section class="section" id="step4">
-<h2 class="section-title">Step 4: Attach the route cards before reading the score</h2>
+<h2 class="section-title">ステップ 4: スコアを読み取る前にルート カードを添付する</h2>
 <p>
-This is the main scientific tightening in the new tutorial. The score is no longer read alone. Before the score is interpreted, the example now stacks four companion checks that answer four different questions.
+これは、新しいチュートリアルにおける主な科学的強化です。スコアを単独で読むことはなくなりました。この例では、スコアが解釈される前に、4 つの異なる質問に答える 4 つのコンパニオン チェックをスタックします。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Companion check</th>
-<th>Question it answers</th>
-<th>Example answer in a small EEG tutorial</th>
+<th>コンパニオンチェック</th>
+<th>質問に答える</th>
+<th>小さな脳波チュートリアルの解答例</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Observability Budget</strong></td>
-<td>What did the sensor directly observe?</td>
-<td>Scalp potentials under a declared montage and preprocessing regime; not hidden state, sources, or causal controller by default.</td>
+<td><strong>可観測性予算</strong></td>
+<td>センサーは何を直接観測したのですか?</td>
+宣言されたモンタージュおよび前処理体制の下での <td>Scalp のポテンシャル。デフォルトでは、非表示の状態、ソース、または因果関係のコントローラーではありません。</td>
 </tr>
 <tr>
-<td><strong>Specificity &amp; Shortcut note</strong></td>
-<td>Which route could still explain the score besides the intended target?</td>
-<td>Subject/session fingerprint, setup distribution, residual behavior, or other nuisance routes may still contribute unless audited separately.</td>
+<td><strong>特異性とショートカットメモ</strong></td>
+<td>意図したターゲット以外のスコアを説明できるルートはどれですか?</td>
+<td>サブジェクト/セッションのフィンガープリント、セットアップの配布、残留動作、またはその他の迷惑ルートは、個別に監査されない限り、依然として寄与する可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Temporal-validity note</strong></td>
-<td>How far across time may the result be extrapolated?</td>
-<td>If the decoder was evaluated only within session, the example stops at within-session evidence even if the score is strong.</td>
+<td><strong>時間的有効性メモ</strong></td>
+<td>結果は時間を超えてどの程度推定できますか?</td>
+<td>デコーダがセッション内でのみ評価された場合、スコアが強力であっても、例はセッション内の証拠で停止します。</td>
 </tr>
 <tr>
-<td><strong>Calibration &amp; Abstention note</strong></td>
-<td>What do the output probabilities or sets mean, and when should output stop?</td>
-<td>Fit/calibration/test are separated, and low-confidence outputs can be rejected instead of forced.</td>
+<td><strong>校正と調整欠席届</strong></td>
+<td>出力の確率またはセットは何を意味しますか?いつ出力を停止する必要がありますか?</td>
+<td>Fit/キャリブレーション/テストが分離されており、信頼性の低い出力を強制する代わりに拒否できます。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Why the temporal note is now mandatory once time enters the story</strong>
+<strong>時間がストーリーに入ったら、なぜ時間メモが必須になったのか</strong>
 <p>
-Egger et al. (2024) showed that hand-gesture EEG decoding moves across a 10-hour day and that a non-updated classifier can degrade steadily over time. On this site, that means a tutorial cannot jump from “clean split” to “stable result” without stating the <strong>fixed decoder interval</strong>, <strong>state annotation</strong>, and any <strong>recalibration burden</strong>.
+エッガーら。 (2024) は、ハンドジェスチャー EEG デコーディングが 1 日 10 時間にわたって移動すること、および更新されていない分類器は時間の経過とともに着実に劣化する可能性があることを示しました。このサイトでは、<strong> 固定デコーダ間隔 </strong>、<strong> 状態アノテーション </strong>、および任意の <strong> 再キャリブレーション負荷 </strong> を明示せずに、チュートリアルを「クリーン スプリット」から「安定した結果」にジャンプすることはできないことを意味します。
 </p>
 </div>
 </section>
 
 <section class="section" id="step5">
-<h2 class="section-title">Step 5: Publish a model card plus calibration and failure logs</h2>
+<h2 class="section-title">ステップ 5: モデルカードとキャリブレーションおよび失敗ログを公開する</h2>
 <p>
-At the end, the model card is still the visible artifact, but it is now narrower and more explicit than the older tutorial implied. The purpose is not only to show where the model wins, but also to expose where the route breaks and what the score is still allowed to mean.
+最後に、モデル カードは依然として目に見えるアーティファクトですが、以前のチュートリアルで暗示されていたものよりも範囲が狭く、より明確になりました。その目的は、モデルがどこで勝つかを示すだけでなく、ルートがどこで途切れるか、そしてスコアがまだ何を意味するのかを明らかにすることです。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Output-side item</th>
-<th>What to include</th>
-<th>Why it matters</th>
+<th>出力側アイテム</th>
+<th>含まれるもの</th>
+<th>それが重要な理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>headline metrics</strong></td>
-<td>Main metric bundle, baseline deltas, and slice-wise results.</td>
-<td>One number alone hides which regime actually carried the result.</td>
+<td><strong>ヘッドライン指標</strong></td>
+<td>メイン メトリック バンドル、ベースライン デルタ、およびスライスごとの結果。</td>
+<td>1 つの数字だけで、どの政権が実際に結果をもたらしたかが隠されます。</td>
 </tr>
 <tr>
-<td><strong>shortcut results</strong></td>
-<td>Nuisance-aware baselines, metadata-only or identity baselines when relevant, and unresolved shortcut gaps.</td>
-<td>The score can otherwise be overread as target-specific evidence.</td>
+<td><strong>ショートカット結果</strong></td>
+<td>迷惑を認識するベースライン、関連する場合はメタデータのみまたは ID ベースライン、および未解決のショートカット ギャップ。</td>
+<td>そうでない場合、スコアはターゲット固有の証拠として読み取られる可能性があります。</td>
 </tr>
 <tr>
-<td><strong>temporal note</strong></td>
-<td>Whether the result is same-session only, same-day only, or tested further, and whether the decoder stayed fixed.</td>
-<td>Prevents silent promotion to durability.</td>
+<td><strong>一時メモ</strong></td>
+<td>結果が同じセッションのみ、同日のみ、またはさらにテストされたかどうか、およびデコーダーが固定されたままかどうか。</td>
+<td>耐久性のサイレント促進を防ぎます。</td>
 </tr>
 <tr>
-<td><strong>calibration report</strong></td>
-<td>Fit/calibration/test split, ECE/Brier/NLL or prediction-set coverage when applicable.</td>
-<td>Confidence without calibration is not yet operationally meaningful.</td>
+<td><strong>校正レポート</strong></td>
+<td>フィット/キャリブレーション/テスト分割、ECE/Brier/NLL、または該当する場合は予測セットのカバレッジ。</td>
+<td>校正なしの信頼性はまだ運用上意味がありません。</td>
 </tr>
 <tr>
-<td><strong>abstention / threshold policy</strong></td>
-<td>Reject option, prediction-set rule, or explicit statement that the example does not yet support one.</td>
-<td>Stops threshold tweaking from hiding inside the test result.</td>
+<td><strong>棄権/閾値ポリシー</strong></td>
+<td>Reject オプション、予測セット ルール、または例がまだサポートしていない明示的なステートメント。</td>
+<td>閾値調整がテスト結果内に隠れることを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>failure ledger</strong></td>
-<td>Subjects, sessions, states, or setup slices where the example collapses.</td>
-<td>Without this, only favorable conditions survive into the narrative.</td>
+<td><strong>障害台帳</strong></td>
+<td>例が折りたたまれているサブジェクト、セッション、状態、またはセットアップ スライス。</td>
+<td>これがなければ、有利な条件だけが物語に生き残ることになります。</td>
 </tr>
 <tr>
-<td><strong>stopped claim</strong></td>
-<td>One or two lines stating what the result supports and what it still does not support.</td>
-<td>Prevents the example from being reused as stronger evidence than it earned.</td>
+<td><strong>請求停止</strong></td>
+<td>結果が何をサポートし、何がまだサポートしていないのかを 1 行または 2 行で示します。</td>
+<td>例が得たものよりも強力な証拠として再利用されるのを防ぎます。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="boundary">
-<h2 class="section-title">What this example now supports, and what it still does not support</h2>
+<h2 class="section-title">この例で現在サポートされているものとまだサポートされていないもの</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>What this example can support</th>
-<th>What it still does not support</th>
+<th>この例でサポートできること</th>
+<th>まだ対応していないもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>A reproducible small EEG benchmark with a named event contract and a declared split regime.</td>
-<td>Physical timing truth unless the highest timing-validation rung was actually measured.</td>
+<td>A 名前付きイベント コントラクトと宣言された分割レジームを備えた再現可能な小型 EEG ベンチマーク。</td>
+<td>最高のタイミング検証ラングが実際に測定されていない限り、物理的なタイミングは真実です。</td>
 </tr>
 <tr>
-<td>A bounded score comparison against declared baselines under a declared independence unit.</td>
-<td>Target-specific neural evidence if shortcut routes remain unresolved.</td>
+<td>A 宣言された独立性単位に基づく宣言されたベースラインに対する制限付きスコアの比較。</td>
+<td>ショートカット ルートが未解決の場合のターゲット固有の神経証拠。</td>
 </tr>
 <tr>
-<td>A same-session or explicitly bounded temporal result.</td>
-<td>Cross-day durability, fixed-decoder stability, or deployability unless those were directly audited.</td>
+<td>A 同一セッションまたは明示的に制限された一時的な結果。</td>
+<td>一日を超えた耐久性、固定デコーダの安定性、または展開可能性（これらが直接監査されていない場合）。</td>
 </tr>
 <tr>
-<td>A calibrated or abstaining output only if calibration and abstention were frozen and reported explicitly.</td>
-<td>Causal, source-identification, or WBE-level hidden-state claims.</td>
+<td>A は、キャリブレーションと棄権が凍結され、明示的に報告された場合にのみ、出力をキャリブレーションまたは棄権しました。</td>
+<td>因果関係、情報源の特定、または WBE レベルの隠れた状態の主張。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="minimum-pack">
-<h2 class="section-title">One small pack this page now expects</h2>
+<h2 class="section-title">このページでは 1 つの小さなパックが </h2> を想定しています
 <div class="key-points">
-<h4>Minimum pack</h4>
+<h4>ミニマムパック</h4>
 <ul>
-<li><strong>Dataset identity:</strong> snapshot, DOI or URL, retrieval date, and license.</li>
-<li><strong>Observation contract:</strong> event anchor, event semantics, timing-validation class, label provenance, and QC.</li>
-<li><strong>Benchmark object:</strong> task, target, metric bundle, split family, and independent hold-out unit.</li>
-<li><strong>Shortcut note:</strong> plausible shortcut families, shortcut-aware baselines, and unresolved shortcut gap.</li>
-<li><strong>Temporal note:</strong> same-session or beyond, fixed decoder or updated decoder, and stopped time claim.</li>
-<li><strong>Registry:</strong> preprocessing, split freeze, baselines, failure conditions, and calibration split when needed.</li>
-<li><strong>Model card:</strong> results, failures, calibration behavior, abstention behavior, and stopped claim.</li>
+<li><strong>データセット ID:</strong> スナップショット、DOI または URL、取得日、およびライセンス。</li>
+<li><strong>Observation コントラクト:</strong> イベント アンカー、イベント セマンティクス、タイミング検証クラス、ラベルの出自、および QC.</li>
+<li><strong>ベンチマーク オブジェクト:</strong> タスク、ターゲット、メトリック バンドル、スプリット ファミリ、および独立したホールドアウト ユニット。</li>
+<li><strong>ショートカットのメモ:</strong> 妥当なショートカット ファミリ、ショートカット対応ベースライン、および未解決のショートカット ギャップ。</li>
+<li><strong>一時的なメモ:</strong> 同一セッション以降、修正されたデコーダまたは更新されたデコーダ、および停止時間の主張。</li>
+<li><strong>Registry:</strong> 前処理、分割フリーズ、ベースライン、障害状態、必要に応じたキャリブレーション分割。</li>
+<li><strong>モデルカード:</strong> の結果、失敗、校正動作、棄権動作、および停止された要求。</li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="return">
-<h2 class="section-title">Where to go next</h2>
+<h2 class="section-title">次の行き先</h2>
 <p>
-If you want the full blueprint again, return to <a href="../verification.html">Verification</a>. If you want the stricter L0 checklist, go next to <a href="l0-minimum-artifact-pack.html">Wiki: Minimum artifact pack for L0</a>. If the main uncertainty is event timing or label meaning, use <a href="event-sync-and-measurement-logs.html">Wiki: Event synchronization and observation logs</a>. If the problem is shortcut resistance or hold-out ancestry, use <a href="dataset-splits-and-leakage.html">Wiki: Data splits and leakage</a>. If the claim starts to cross sessions or days, continue to <a href="state-trait-and-drift.html">Wiki: State, trait, and drift</a>.
+もう一度完全なブループリントが必要な場合は、<a href="../verification.html">Verification</a> に戻ってください。より厳格な L0 チェックリストが必要な場合は、「<a href="l0-minimum-artifact-pack.html">Wiki: L0</a> の最小アーティファクト パック」に進んでください。主な不確実性がイベントのタイミングやラベルの意味である場合は、<a href="event-sync-and-measurement-logs.html">Wiki: イベントの同期と観察ログ</a> を使用してください。問題がショートカット抵抗またはホールドアウト祖先である場合は、<a href="dataset-splits-and-leakage.html">Wiki: データ分割と漏洩</a> を使用してください。クレームがセッションまたは日数をまたぎ始めた場合は、「<a href="state-trait-and-drift.html">Wiki: 状態、特性、およびドリフト</a>」に進んでください。
 </p>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">References behind this correction</h2>
+<h2 class="section-title">この訂正の背景となる参考文献</h2>
 <ol>
-<li>Brain Imaging Data Structure. <em>Events</em>. <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS specification</a>.</li>
-<li>Hermes D, Pal Attia T, Beniczky S, et al. Hierarchical Event Descriptor library schema for EEG data annotation. <em>Scientific Data</em>. 2025. <a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">doi:10.1038/s41597-025-05791-2</a></li>
-<li>Kothe C, et al. The Lab Streaming Layer for synchronized multimodal recording. <em>Imaging Neuroscience</em>. 2025. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
-<li>Lepauvre A, Hirschhorn R, Bendtz K, Mudrik L, Melloni L. A standardized framework to test event-based experiments. <em>Behavior Research Methods</em>. 2024. <a href="https://doi.org/10.3758/s13428-024-02508-y" target="_blank">doi:10.3758/s13428-024-02508-y</a></li>
-<li>Chaibub Neto E, et al. Detecting the impact of subject characteristics on machine learning-based diagnostic applications. <em>npj Digital Medicine</em>. 2019;2:99. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
-<li>Xu L, et al. Cross-Dataset Variability Problem in EEG Decoding With Deep Learning. <em>Frontiers in Human Neuroscience</em>. 2020;14:103. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
-<li>Di Y, et al. The Time-Robustness Analysis of Individual Identification Based on Resting-State EEG. <em>Frontiers in Human Neuroscience</em>. 2021;15:672946. <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
-<li>Egger J, et al. Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <em>Scientific Reports</em>. 2024;14:20247. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
-<li>Lei J, G'Sell M, Rinaldo A, Tibshirani RJ, Wasserman L. Distribution-Free Predictive Inference for Regression. <em>Journal of the American Statistical Association</em>. 2018;113(523):1094-1111. <a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">doi:10.1080/01621459.2017.1307116</a></li>
+<li>Brain イメージング データ構造。 <em>イベント</em>。 <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS仕様</a>.</li>
+<li>エルメス D、パル アティア T、ベニツキー S 他EEG データ注釈用の階層型イベント記述子ライブラリ スキーマ。 <em>科学データ</em>。 2025.<a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">doi:10.1038/s41597-025-05791-2</a></li>
+<li>Kothe C 他同期されたマルチモーダル記録のための Lab Streaming Layer。 <em>画像神経科学</em>。 2025.<a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Lepauvre A、Hirschhorn R、Bendtz K、Mudrik L、Melloni L。イベントベースの実験をテストするための標準化されたフレームワーク。 <em>行動研究方法</em>。 2024.<a href="https://doi.org/10.3758/s13428-024-02508-y" target="_blank">doi:10.3758/s13428-024-02508-y</a></li>
+<li>Chaibub Neto E 他機械学習ベースの診断アプリケーションに対する被験者の特性の影響を検出します。 <em>npjデジタルメディシン</em>。 2019;2:99。 <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
+<li>Xu L, et al.深層学習による EEG デコードにおけるデータセット間変動の問題。 <em>人間の神経科学のフロンティア</em>。 2020;14:103。 <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
+<li>Di Y 他安静状態脳波に基づく個人識別の時間ロバスト性分析。 <em>人間の神経科学のフロンティア</em>。 2021;15:672946。 <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
+<li>Egger J 他手のジェスチャーの解読に影響を与える時間脳波ダイナミクス: 10 時間の研究。 <em>科学レポート</em>。 2024;14:20247。 <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
+<li>Lei J、G'Sell M、Rinaldo A、Tibshirani RJ、Wasserman L. 回帰に対する分布フリーの予測推論。 <em>米国統計協会のジャーナル</em>。 2018;113(523):1094-1111。 <a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">doi:10.1080/01621459.2017.1307116</a></li>
 </ol>
 </section>
 
@@ -473,20 +474,20 @@ If you want the full blueprint again, return to <a href="../verification.html">V
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="verification-basics.html">Basics of verification infrastructure -&gt;</a></li>
-<li><a href="event-sync-and-measurement-logs.html">Event synchronization and observation logs -&gt;</a></li>
-<li><a href="dataset-splits-and-leakage.html">Data splits and leakage -&gt;</a></li>
-<li><a href="state-trait-and-drift.html">State, trait, and drift -&gt;</a></li>
+<li><a href="verification-basics.html">検証インフラストラクチャの基本 -> </a></li>
+<li><a href="event-sync-and-measurement-logs.html">イベントの同期と観察ログ -> </a></li>
+<li><a href="dataset-splits-and-leakage.html">データの分割と漏洩 -> </a></li>
+<li><a href="state-trait-and-drift.html">状態、特性、ドリフト -> </a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../verification.html">Verification -&gt;</a></li>
-<li><a href="../datasets.html#l0-practice">Hands-on -&gt;</a></li>
-<li><a href="../datasets.html">Datasets -&gt;</a></li>
+<li><a href="../verification.html">検証 -> </a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン -> </a></li>
+<li><a href="../datasets.html">データセット -></a></li>
 </ul>
 </div>
 </aside>

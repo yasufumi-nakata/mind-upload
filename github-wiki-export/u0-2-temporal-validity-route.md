@@ -1,120 +1,120 @@
-# Wiki: U0-2 temporal-validity route packet
+# Wiki: U0-2 時間的有効性ルート パケット
 
-> A row-specific packet for the first active identity-drift RQ
+> 最初のアクティブな ID ドリフト RQ の行固有のパケット
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-04 / Role: U0-2 route packet
+- Updated: 2026-04-04 / Role: U0-2 ルート パケット
 
-## Role Of This Page
-This page fixes the current public route for U0-2 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge.
+## このページの役割
+このページは、1 つの質問、1 つの意図された EEG ルート アンカー、1 つの境界付き最初のアーティファクト、および 1 つのファンディング ブリッジのレベルで、U0-2 の現在のパブリック ルートを修正します。
 
-## Accuracy Notes
-This page does not claim legal, philosophical, or normative continuity. It only records what the present EEG route can honestly close first.
+## 正確性に関する注記
+このページは、法的、哲学的、規範的な継続性を主張するものではありません。現在の EEG ルートが最初に正直に閉じることができるものだけを記録します。
 
-## Back To Public Pages
-- [Issue page](https://mind-upload.com/issue.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
+## 公開ページへ戻る
+- [発行ページ](https://mind-upload.com/issue.html)
+- [データとベンチ](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
-- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact six-row public route.
-- [Wiki: Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - The wider six-row working note.
-- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
+## 関連 Wiki ページ
+- [Wiki: 現在公開されている 6 つのルート概要](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - コンパクトな6列パブリックルート。
+- [Wiki: ディープ フォーカス ノート](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - 幅広の6列ワーキングノート。
+- [Wiki: 助成金とデータセットのプレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - 固定資金とアンカーマップ。
 
 ---
 
-# U0-2 temporal-validity route packet
+# U0-2 一時的有効性ルート パケット
 
-This page does not change the current public six-question batch. It makes only the third active row more explicit, so readers can see why `U0-2` stays next after `U13-5`, why `D02 CSTE` now stays only as a gated support anchor, and what the next public-safe artifact can honestly close.
+このページでは、現在の公開されている 6 つの質問のバッチは変更されません。これにより、3 番目のアクティブな行のみがより明確になるため、読者は、`U0-2` が `U13-5` の次に留まる理由、`D02 CSTE` がゲート サポート アンカーとしてのみ留まる理由、および次のパブリック セーフ アーティファクトが正直に閉じることができるものを理解できるようになります。
 
-## What still stays fixed after the 14:10 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 14:10 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 14:10 JST` after `mind-upload@cafeab4bc2a5`, `EEG-DATA@e0695bcac83d`, and `auto-research-funds@a4852d89376c` still keeps `U0-2` third and still keeps `D02` only as the planned gated-support anchor for the present timing-floor question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` tightens glossary excitability and ionic terms on top of the earlier EEG foundation-model source-status split without widening the route, `EEG-DATA` still reports `30,930` merged-unique rows, `28,893` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the newest metadata deep dives, and `auto-research-funds` adds `JELA Diakonia` scholarship cards without changing the practical shortlist.
-- None of those additions replaces the intended identity-drift floor. The newest carry-forwards still do not supply the `cross-session / cross-task` human-biometrics framing that keeps `D02` primary in planning, while `ds004148` and `ds007216` still stay the best public-open stress-test ladders nearby.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT`; the checked front-door pages already surfaced `2026-04-04 12:02 JST` wording while this row packet still surfaced `2026-04-04 09:05 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Doumei=0`, `Kenkyu no Susume=0`), so no new Todoist item was justified for this row in this sync.
+- `mind-upload@cafeab4bc2a5`、`EEG-DATA@e0695bcac83d`、`auto-research-funds@a4852d89376c` の後の `2026-04-04 14:10 JST` での実際のプル再チェックでは、依然として `U0-2` が 3 位を維持し、`D02` が現在のタイミングフロアの質問の計画されたゲート サポート アンカーとしてのみ維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、ルートを広げることなく、以前の EEG 基礎モデルのソースとステータスの分割に加えて、用語集の興奮性とイオン用語を強化します。`EEG-DATA` は、最新のメタデータの詳細を調査した後も、`30,930` マージされた一意の行、`28,893` 高信頼性の行、`24,909` 即時行、および `24,539` 高信頼性の即時行を報告し、`auto-research-funds` は、実質的な最終候補リストを変更せずに、`JELA Diakonia` 奨学金カードを追加します。
+- これらの追加はいずれも、意図されたアイデンティティ ドリフト フロアを置き換えるものではありません。最新の繰り越しは、`D02` を計画の主要な位置に保つ `cross-session / cross-task` 人体生体認証フレームワークをまだ提供していない一方で、`ds004148` と `ds007216` は依然として、近くで公開されている最良のストレステストのはしごであることに変わりはありません。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT` が返されました。チェックされたフロントドア ページにはすでに `2026-04-04 12:02 JST` の文言が表示されていますが、この行パケットにはこのソース同期の前にまだ `2026-04-04 09:05 JST` の文言が表示されています。新しい読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Doumei=0`、`Kenkyu no Susume=0`)、この同期ではこの行に対して新しい Todoist アイテムは正当化されませんでした。
 
-## What still stays fixed after the 09:05 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 09:05 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 09:05 JST` after `mind-upload@e571567f017d`, `EEG-DATA@fbbb0d8c01e0`, and `auto-research-funds@d7f6fb9bc158` still keeps `U0-2` third and still keeps `D02` only as the planned gated-support anchor for the present timing-floor question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `08:07 JST` route-hold sync on top of a recent pretraining-overlap audit, `EEG-DATA` still reports `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the `OpenNeuro ds007020` deep dive, and `auto-research-funds` adds deeply reviewed April 4 scholarship updates without changing the practical shortlist.
-- None of those additions replaces the intended identity-drift floor. The newest carry-forwards still do not supply the `cross-session / cross-task` human-biometrics framing that keeps `D02` primary in planning, while `ds004148` and `ds007216` still stay the best public-open stress-test ladders nearby.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT`; the checked front-door pages already surfaced `2026-04-04 08:07 JST` wording while this row packet still surfaced `2026-04-04 01:04 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`), so no new Todoist item was justified for this row in this sync.
+- `mind-upload@e571567f017d`、`EEG-DATA@fbbb0d8c01e0`、`auto-research-funds@d7f6fb9bc158` の後の `2026-04-04 09:05 JST` での実際のプル再チェックでは、依然として `U0-2` が 3 位を維持し、`D02` が現在のタイミングフロアの質問の計画されたゲート サポート アンカーとしてのみ維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、最近のトレーニング前オーバーラップ監査に加えて、以前の `08:07 JST` ルートホールド同期を保持するだけです。`EEG-DATA` は、`OpenNeuro ds007020` の詳細な調査後に、`30,929` マージされた一意の行、`28,892` 高信頼行、`24,909` 即時行、および `24,539` 高信頼即時行を引き続き報告し、`auto-research-funds` は、実質的な候補者リストを変更することなく、深く検討された 4 月 4 日の奨学金の更新を追加します。
+- これらの追加はいずれも、意図されたアイデンティティ ドリフト フロアを置き換えるものではありません。最新の繰り越しは、`D02` を計画の主要な位置に保つ `cross-session / cross-task` 人体生体認証フレームワークをまだ提供していない一方で、`ds004148` と `ds007216` は依然として、近くで公開されている最良のストレステストのはしごであることに変わりはありません。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT` が返されました。チェックされたフロントドア ページにはすでに `2026-04-04 08:07 JST` の文言が表示されていますが、この行パケットにはこのソース同期の前にまだ `2026-04-04 01:04 JST` の文言が表示されています。新しい読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジがまだ十分であることが示されたため (`items=206`、`projects=2`)、この同期ではこの行に対して新しい Todoist アイテムは正当化されませんでした。
 
-## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 01:04 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still keeps `U0-2` third and still keeps `D02` only as the planned gated-support anchor for the present timing-floor question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now carries the earlier `00:06 JST` route reread plus field-level artifact-stack disclosure tightening, `EEG-DATA` still reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows after deepening `Numbers` and `PRIOS`, and `auto-research-funds` adds current coverage for `同盟育成会` and `研究のすゝめ奨学金` without changing the practical shortlist.
-- None of those additions replaces the intended identity-drift floor. The newest carry-forwards still do not supply the `cross-session / cross-task` human-biometrics framing that keeps `D02` primary in planning, while `ds004148` and `ds007216` still stay the best public-open stress-test ladders nearby.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Fri, 03 Apr 2026 21:11:06 GMT`; the checked row packet still surfaced `Updated: 2026-04-02` before this source sync even though the front-door pages already surfaced the `2026-04-04 01:04 JST` basis. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=1`, `同盟会=0`, `研究のすゝめ=0`), so no new Todoist item was justified for this row in this sync.
+- `mind-upload@9b6a8b971ba0`、`EEG-DATA@56d765da60b`、`auto-research-funds@3c8569e28` の後の `2026-04-04 01:04 JST` での実際のプル再チェックでは、依然として `U0-2` が 3 位を維持し、`D02` が現在のタイミングフロアの質問の計画されたゲート サポート アンカーとしてのみ維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、以前の `00:06 JST` ルートの再読み取りとフィールド レベルのアーティファクト スタック開示の厳格化を実行し、`EEG-DATA` は、`Numbers` および `PRIOS` を深化した後も、`30,921` マージされた一意の行、`28,884` 高信頼行、`24,900` 即時行、および `24,530` 高信頼即時行を引き続き報告し、`auto-research-funds` は、実際的な内容を変更せずに、`同盟育成会` および `研究のすゝめ奨学金` の現在のカバレッジを追加します。候補者リスト。
+- これらの追加はいずれも、意図されたアイデンティティ ドリフト フロアを置き換えるものではありません。最新の繰り越しは、`D02` を計画の主要な位置に保つ `cross-session / cross-task` 人体生体認証フレームワークをまだ提供していない一方で、`ds004148` と `ds007216` は依然として、近くで公開されている最良のストレステストのはしごであることに変わりはありません。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Fri, 03 Apr 2026 21:11:06 GMT` が返されました。フロントドア ページがすでに `2026-04-04 01:04 JST` ベースで浮上しているにもかかわらず、チェックされた行パケットはこのソース同期の前に依然として `Updated: 2026-04-02` で浮上しています。新しい読み取り専用 Todoist 監査では、既存のファンディング タスクのカバレッジが十分であることが示されました (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Keio graduate scholarship=2`、`G-7=1`、`ENEOS=1`、`同盟会=0`、`研究のすゝめ=0`)。そのため、これに対して正当な新しい Todoist アイテムはありませんでした。この同期の行。
 
-## What still stays fixed after the 23:08 JST actual-pull reread on April 2, 2026
+## 2026 年 4 月 2 日の 23:08 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-02 23:08 JST` after `mind-upload@f5d1d1dd1683`, `EEG-DATA@ee1463d28288`, and `auto-research-funds@ec24a355abbc` still keeps `U0-2` third and still keeps `D02` only as the planned gated-support anchor for the present timing-floor question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` clarifies the causal-versus-human-proxy bridge outside the current six, `EEG-DATA` now reports `30,896` merged-unique rows, `28,859` high-confidence rows, and `24,882` directly usable rows after candidate-curation refinement plus the `OpenNeuro ds007615` deep dive, and `auto-research-funds` adds `Geo-Kagaku` current cards without changing the practical shortlist.
-- None of those additions replaces the intended identity-drift floor. The latest public-open carry-forwards still do not supply the `cross-session / cross-task` human biometrics framing that keeps `D02` primary in planning, and `ds004148` plus `ds007216` still stay the best public-open stress-test ladders nearby.
-- Browser-level live checks still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
+- `mind-upload@f5d1d1dd1683`、`EEG-DATA@ee1463d28288`、`auto-research-funds@ec24a355abbc` の後の `2026-04-02 23:08 JST` での実際のプル再チェックでは、依然として `U0-2` が 3 位を維持し、`D02` が現在のタイミングフロアの質問の計画されたゲート サポート アンカーとしてのみ維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、現在の 6 つ以外の因果関係と人間のプロキシ ブリッジを明確にし、`EEG-DATA` は、統合された固有の行 `30,896`、信頼性の高い行 `28,859`、および候補キュレーションの絞り込みと `OpenNeuro ds007615` の詳細調査後の直接使用可能な行 `24,882` を報告するようになり、`auto-research-funds` は、実質的な候補リストを変更せずに `Geo-Kagaku` の現在のカードを追加します。
+- これらの追加はいずれも、意図されたアイデンティティ ドリフト フロアを置き換えるものではありません。最新の一般公開キャリーフォワードは、`D02` を計画の主要な要素に保つ `cross-session / cross-task` 人体生体認証フレームワークをまだ提供しておらず、`ds004148` と `ds007216` は依然として、近くにある最良の一般公開ストレステストのはしごのままです。
+- ブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT` が引き続き `HTTP/2 200` として返され、新たな読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため、このページでは行固有のルート ホールドの文言のみが更新されます。
 
-## What still stays fixed after the 12:04 JST actual-pull reread on April 2, 2026
+## 2026 年 4 月 2 日の 12:04 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-02 12:04 JST` after `mind-upload@dceb8bc`, `EEG-DATA@04b7fda167e`, and `auto-research-funds@4442e348a` still keeps `U0-2` third and still keeps `D02` only as the planned gated-support anchor for the present timing-floor question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` syncs a spectroscopy front door outside the current six, `EEG-DATA` now reports `30,888` merged-unique rows, `28,851` high-confidence rows, and `24,506` immediate rows after `THINGS-EEG`, an OSF orientation route, and a rat ECoG deep dive, and `auto-research-funds` only refreshes repository stats.
-- None of those additions replaces the intended identity-drift floor. PhysioNet `auditory-eeg` is public-open but still a single-day `4-channel` auditory-biometric family, while `THINGS-EEG` and the rat ECoG carry-forward do not supply the `cross-session / cross-task` human biometrics framing that keeps `D02` primary in planning. `ds004148` and `ds007216` still stay the best public-open stress-test ladders nearby.
-- Browser-level live checks still returned `200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 02:37:04 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
+- `mind-upload@dceb8bc`、`EEG-DATA@04b7fda167e`、`auto-research-funds@4442e348a` の後の `2026-04-02 12:04 JST` での実際のプル再チェックでは、依然として `U0-2` が 3 位を維持し、`D02` が現在のタイミングフロアの質問の計画されたゲート サポート アンカーとしてのみ維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は現在の 6 行の外側にある分光分析フロント ドアを同期し、`EEG-DATA` は `30,888` マージされた固有行、`28,851` 高信頼行、`THINGS-EEG` の直後の `24,506` 行、OSF オリエンテーション ルート、およびラット ECoG ディープ ダイブを報告するようになり、`auto-research-funds` はリポジトリ統計のみを更新します。
+- これらの追加はいずれも、意図されたアイデンティティ ドリフト フロアを置き換えるものではありません。 PhysioNet `auditory-eeg` は一般に公開されていますが、依然として 1 日限りの `4-channel` 聴覚生体認証ファミリーですが、`THINGS-EEG` とラット ECoG キャリーフォワードは、`D02` を計画の主要な要素に保つ `cross-session / cross-task` ヒト生体認証フレームワークを提供しません。 `ds004148` と `ds007216` は、現在でも近くで公開されているストレステスト用のはしごとしては最高のものです。
+- ブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `Last-Modified: Thu, 02 Apr 2026 02:37:04 GMT` が引き続き `200` として返され、新たな読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため、このページでは行固有のルート ホールドの文言のみが更新されます。
 
-## What was rechecked for this row
+## この行で再チェックされた内容
 
-- `D02 CSTE` still fixes the intended `10 participants` cross-session / cross-task EEG biometrics route, but the current IEEE DataPort page is subscription-gated, so it can no longer be described here as an immediate public route.
-- The current funding bridge remains narrow and unchanged: `Nakatani Foundation graduate scholarship` stays first and `Kashinome Scholarship` stays second as a runway-support route.
-- The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- `D02 CSTE` は、目的の `10 participants` クロスセッション/クロスタスク EEG 生体認証ルートを依然として修正しますが、現在の IEEE DataPort ページはサブスクリプションゲート型であるため、ここで即時のパブリック ルートとして説明することはできなくなります。
+- 現在の資金調達ブリッジは狭く、変更されていません。滑走路支援ルートとして `Nakatani Foundation graduate scholarship` が 1 位、`Kashinome Scholarship` が 2 位のままです。
+- 公開されている 6 つの質問のバッチも変更されず、`U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2` です。
 
-## Why `U0-2` still stays third
+## `U0-2`が依然として3位に留まる理由
 
-- It is the first identity-drift row that can close a bounded timing floor before the route moves to threshold governance in `U0-3`.
-- If this row fails, stronger threshold-stability wording should stay blocked because the timing floor itself would still be unbounded.
-- The row can audit measurement error before identity-like wording expands into a broader continuity claim.
+- これは、ルートが `U0-3` のしきい値ガバナンスに移行する前に、制限されたタイミング フロアを閉じることができる最初の ID ドリフト行です。
+- この行が失敗した場合、タイミング フロア自体はまだ制限されていないため、より強力なしきい値安定性の文言はブロックされたままになるはずです。
+- この行は、アイデンティティのような文言がより広範な連続性の主張に拡張される前に、測定エラーを監査できます。
 
-## Why `D02` stays in scope only as a gated support anchor
+## `D02` がゲート サポート アンカーとしてのみ範囲内に留まる理由
 
-| Candidate | What it helps with | Why it is not the first public anchor |
+| 候補者 | 何に役立つのか | なぜこれが最初の公共アンカーではないのか |
 |---|---|---|
-| `D02 CSTE` (`10.21227/j162-nh61`, subscription-gated support) | It still fixes the intended `cross-session / cross-task` biometric floor with `10 participants`, which keeps the bounded `offset / jitter + state-feature collapse` question in scope if access is available. | The current IEEE DataPort page is subscription-gated, so it no longer counts as an immediate public anchor in this run. |
-| `A test-retest resting and cognitive state EEG dataset` (`10.18112/openneuro.ds004148.v1.0.1`, immediate) | It gives a richer test-retest state ladder and a larger cohort that may help later stress-test timing-validity assumptions. | It is not framed as a direct cross-task EEG biometrics route, so it stays a support anchor rather than the first public anchor for `U0-2`. |
-| `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | It gives denser multi-session logging and a strong secondary route for synchronization and state-label auditing. | It is multimodal and experience-sampling oriented rather than a clean EEG biometrics floor, so it should not replace `D02` as the first public anchor for `U0-2`. |
+| `D02 CSTE` (`10.21227/j162-nh61`、サブスクリプションゲート型サポート) | 意図した `cross-session / cross-task` バイオメトリック フロアを `10 participants` で修正し、アクセスが利用可能な場合には、制限された `offset / jitter + state-feature collapse` の質問を範囲内に保ちます。 | 現在の IEEE DataPort ページはサブスクリプションゲート型であるため、この実行では直接のパブリック アンカーとしてカウントされなくなりました。 |
+| `A test-retest resting and cognitive state EEG dataset` (`10.18112/openneuro.ds004148.v1.0.1`、即時) | これにより、より豊富なテストと再テストの状態ラダーと、後のストレス テストのタイミング妥当性の仮定に役立つ可能性のあるより大きなコホートが得られます。 | これは、直接のクロスタスク EEG 生体認証ルートとして構成されていないため、`U0-2` の最初のパブリック アンカーではなく、サポート アンカーのままです。 |
+| `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`、即時) | これにより、より高密度のマルチセッション ログが提供され、同期と状態ラベルの監査のための強力なセカンダリ ルートが提供されます。 | これはクリーンな EEG バイオメトリクス フロアではなく、マルチモーダルでエクスペリエンス サンプリング指向であるため、`U0-2` の最初のパブリック アンカーとして `D02` に代わるべきではありません。 |
 
-Among public-open backups, `ds004148` still stays the cleanest retest ladder and `ds007216` still stays the cleanest multi-session provenance ladder. They are strong stress-test families, but they still do not replace the direct `cross-session / cross-task biometrics` framing that keeps `D02` primary in planning.
+一般に公開されているバックアップの中で、`ds004148` は依然として最もクリーンな再テスト ラダーであり、`ds007216` は依然として最もクリーンなマルチセッション来歴ラダーです。これらは強力なストレステスト ファミリですが、依然として `D02` を計画の主要な要素として維持する直接的な `cross-session / cross-task biometrics` フレームワークに代わるものではありません。
 
-## What the first artifact can honestly close now
+## 最初のアーティファクトが今正直に閉じることができるもの
 
-| Artifact piece | What it closes now | What still stays outside the claim |
+| アーティファクトの欠片 | 今閉店しているもの | まだ主張の範囲外にあるもの |
 |---|---|---|
-| `Offset/jitter distribution` | A bounded report of timing deviation across sessions and tasks before identity-like wording absorbs measurement error. | Any statement that timing stability alone settles continuity, personhood, or legal identity. |
-| `State-feature collapse audit` | A narrow audit of how identity-like features fail once timing drift grows beyond the chosen floor. | Any claim that a partial drift-resistant feature set proves preserved identity. |
-| `Timing-floor note` | A public-safe stop rule for whether `U0-3` threshold work should proceed on the current anchor. | Any theory-level conclusion that goes beyond the present EEG artifact. |
+| `Offset/jitter distribution` | ID に似た文言が測定誤差を吸収する前に、セッションおよびタスク間のタイミング偏差を限定的にレポートします。 | タイミングの安定性のみが継続性、人格、または法的アイデンティティを決定するというあらゆる声明。 |
+| `State-feature collapse audit` | タイミング ドリフトが選択した下限を超えて増大すると、アイデンティティに似た機能がどのように失敗するかを限定的に監査します。 | 部分的なドリフト耐性機能セットが保存された同一性を証明するというあらゆる主張。 |
+| `Timing-floor note` | 現在のアンカーで `U0-3` しきい値作業を続行するかどうかに関する公衆安全停止ルール。 | 現在の EEG アーチファクトを超える理論レベルの結論。 |
 
-## First-pass KPI bundle and stop rule
+## ファーストパス KPI バンドルと停止ルール
 
-| Item | Current row-level fixation |
+| アイテム | 現在の行レベルの固定 |
 |---|---|
-| `First-pass KPI bundle` | `clock-offset p95`, `jitter p95`, `state-feature collapse rate` |
-| `Stop rule` | Do not widen this row if re-synchronization does not shrink the drift floor or if the `state-feature collapse rate` remains above the bounded ceiling across sessions. |
+| `First-pass KPI bundle` | `clock-offset p95`、`jitter p95`、`state-feature collapse rate` |
+| `Stop rule` | 再同期によってドリフトフロアが縮小しない場合、またはセッション間で `state-feature collapse rate` が境界上限より上に留まる場合は、この行を広げないでください。 |
 
-## Funding wording that still fits
+## まだ適切な資金調達の文言
 
-| Route | Submission wording that stays honest | Why it still fits this row |
+| ルート | 正直さを保つ提出文言 | それでもこの行に適合する理由 |
 |---|---|---|
-| `Nakatani Foundation graduate scholarship` | `Doctoral-track temporal-validity and identity-drift audit for the mind-upload route` | The row still fits a student-facing continuity / biometrics route when kept narrow and benchmark-first. |
-| `Kashinome Scholarship` | `Master's-stage timing-validity and identity-drift rerun pack for the mind-upload route` | It still fits only as a runway-support layer rather than the main long-horizon route. |
+| `Nakatani Foundation graduate scholarship` | `Doctoral-track temporal-validity and identity-drift audit for the mind-upload route` | この列は、狭くしてベンチマークを優先した場合でも、学生向けの継続性 / 生体認証ルートに適合します。 |
+| `Kashinome Scholarship` | `Master's-stage timing-validity and identity-drift rerun pack for the mind-upload route` | それは依然として、主要な長距離ルートではなく、滑走路支持層としてのみ適合します。 |
 
-## External dependency tasks that stay outside this session
+## このセッションの外にある外部依存タスク
 
-- Longer-horizon timing logs are still needed before the row can support a stronger temporal-validity claim.
-- Larger cohorts are still needed before the row can be read as more than a bounded drift benchmark.
-- Any legal, philosophical, or normative continuity interpretation remains outside the present EEG-only route.
+- 行がより強力な時間的有効性の主張をサポートできるようになる前に、より長い期間のタイミング ログが依然として必要です。
+- 行を有界ドリフト ベンチマーク以上のものとして読み取るには、さらに大きなコホートが必要です。
+- 法的、哲学的、または規範的な連続性の解釈は、現在の EEG のみのルートの範囲外にあります。
 
-## What changed in this run
+## 今回の実行で変わったこと
 
-- The public batch did not change.
-- The main change in this sync is that `U0-2` now carries the same `2026-04-04 09:05 JST` route basis as the latest front-door reading and records that the live row packet had still been stuck at the earlier `2026-04-04 01:04 JST` wording before this source update.
-- The row still records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
-- This is still a route-setting update, not a solved-claim update.
+- パブリックバッチは変更されませんでした。
+- この同期の主な変更点は、`U0-2` が最新のフロントドア読み取り値と同じ `2026-04-04 09:05 JST` ルート ベースを保持し、ライブ行パケットがこのソース更新前の初期の `2026-04-04 01:04 JST` 文言でまだスタックしていたことを記録することです。
+- この行には、アンカー選択の根拠、1 つのコンパクトな初回パス KPI バンドル、および 1 つの明示的な停止ルールが暗黙的に残されるのではなく、引き続き記録されます。
+- これは依然としてルート設定の更新であり、解決された請求の更新ではありません。

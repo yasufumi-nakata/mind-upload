@@ -1,728 +1,728 @@
 ---
 layout: default
-title: "Wiki: Closed Loop, Delay, Jitter, Safe Stop"
-description: "Delay, jitter, biomarker/controller family, fixed-decoder durability, recalibration burden, deployment eligibility, and the body/environment boundary are organized from primary literature for each type of closed loop."
-article_type: Wiki
-subtitle: "Closed-loop time requirements are not a single number; they vary by loop type"
-author: Mind Uploading Research Project
-last_updated: "2026-03-31"
-note: "Learning guide / evidence refresh"
-audience: "People who want to read about L3 closed-loop evaluation and real-time operation based on literature rather than general information"
-reading_time: "14-22 minutes"
-page_intro: "This page is a wiki that organizes delay, jitter, drift, safety stop, body/environment boundary, and long-horizon deployability in Mind-Upload's L3 'closed loop' using primary literature. The purpose is to clarify that even when offline accuracy is high, the required timing budget depends on the loop band and actuator, and low latency alone does not tell you which sensory, motor, interoceptive, reafferent, or slow internal-milieu routes were actually preserved, whether a fixed decoder survived across time, how much rescue-mode programming was needed, or, for burst-driven neuromodulation, which biomarker and controller were actually operating."
-accuracy_note: "Here, we do not set a ``fixed threshold common to all loops.'' We also do not treat a fast loop as boundary-complete, temporally durable, or chronically deployable by default. Judgments are written on the premise that end-to-end timing indicators, retained/substituted body/environment routes, slow internal-milieu routes, fixed-decoder interval, co-adaptation regime, rescue-mode adaptation burden, deployment slices, and, for phase-targeting loops, oscillation estimability plus causal-versus-post-hoc targeting benchmarks, and, for burst-driven loops, biomarker family plus controller policy are disclosed explicitly."
+title: 'Wiki: 閉ループ、遅延、ジッター、安全停止'
+description: 遅延、ジッター、バイオマーカー/コントローラー ファミリ、固定デコーダーの耐久性、再キャリブレーションの負担、展開の適格性、および身体/環境の境界が、閉ループのタイプごとに一次文献から整理されています。
+article_type: ウィキ
+subtitle: 閉ループ時間要件は単一の数値ではありません。ループのタイプによって異なります
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-03-31'
+note: 学習ガイド/証拠の更新
+audience: 一般的な情報ではなく、文献に基づいたL3クローズドループ評価やリアルタイム運用について読みたい人
+reading_time: 14～22分
+page_intro: このページは、一次文献を使用して、Mind-Upload の L3 'クローズド ループ' における遅延、ジッター、ドリフト、安全停止、物体/環境境界、および長期展開可能性を整理する Wiki です。その目的は、オフライン精度が高い場合でも、必要なタイミング
+  バジェットはループ バンドとアクチュエーターに依存し、低遅延だけではどの感覚、運動、内受容、再求心性、または遅い内部環境のルートが実際に保存されたか、固定デコーダーが時間の経過とともに生き残ったかどうか、どれだけのレスキュー モード プログラミングが必要か、またはバースト駆動の神経変調の場合はどのバイオマーカーとコントローラーが実際に動作していたかを明らかにすることができないことを明確にすることです。
+accuracy_note: ここでは、「すべてのループに共通の固定しきい値」を設定しません。また、デフォルトで高速ループを境界完全、一時的に耐久性、または慢性的に展開可能として扱いません。判定は、エンドツーエンドのタイミング指標、保持/置換された身体/環境ルート、遅い内部環境ルート、固定デコーダ間隔、共適応レジーム、レスキューモード適応負荷、展開スライス、位相ターゲティングループの場合は、発振推定可能性と因果対ポストホックターゲティングベンチマーク、バースト駆動ループの場合は、バイオマーカーファミリーとコントローラーポリシーを前提として書かれています。明示的に開示されています。
 page_highlights:
-  - "Closed-loop time requirements vary by loop type, not by a single ms value."
-  - "Low latency is not the same as reproducing the relevant body/environment boundary, because the fast loop and the slow internal milieu are different audits."
-  - "A same-session fast loop, a fixed decoder that survives across days, an adaptively rescued loop, and a chronically deployable loop are different achievements."
-  - "Online improvement is not one object: user-side learning, decoder updates, and application-side shaping must be separated before gains are read as stability."
-  - "Even if the event marker is less than 1 ms, it is a different matter from guaranteeing end-to-end for the entire system."
-  - "Phase error is more important than ms for phase-targeting, and for adaptive DBS the timing story now has to be separated from fixed-decoder durability, programming burden, and eligibility."
-  - "For phase-targeted stimulation, low mean latency is still not enough: oscillation presence / power / SNR gate, causal estimator benchmark, circular targeting error, and no-stim / missed-trigger rates must be separated."
-  - "For burst-driven neuromodulation, the main question is no longer burst timing alone: biomarker family, controller mode, movement / medication state, sensing compatibility, and biomarker-linked comparator have to be separated."
-  - "Streaming speech BCI needs to record not only average delay but also tail latency, output-path audit, silence/hold-last-output, and fixed-decoder horizon in separate logs."
-  - "Adaptive-DBS papers need to log rescue-mode optimization, clinic/home transfer, eligibility, continuation, and biomarker/controller choice separately from symptom benefit."
+- 閉ループ時間要件は、単一のミリ秒値によってではなく、ループのタイプによって異なります。
+- 高速ループと低速の内部環境は異なる監査であるため、低遅延は、関連する身体/環境の境界を再現することと同じではありません。
+- 同一セッションの高速ループ、数日にわたって存続する固定デコーダ、適応的にレスキューされるループ、および慢性的に展開可能なループは、異なる成果です。
+- オンラインの改善は 1 つの目的ではありません。ゲインを安定性として読み取る前に、ユーザー側の学習、デコーダーの更新、およびアプリケーション側のシェーピングを分離する必要があります。
+- たとえイベント マーカーが 1 ミリ秒未満であっても、システム全体のエンドツーエンドを保証することとは異なります。
+- 位相目標設定では、ms よりも位相誤差の方が重要であり、アダプティブ DBS の場合、タイミングの話は、固定デコーダの耐久性、プログラミングの負担、適格性から切り離す必要があります。
+- 位相ターゲット刺激の場合、平均待ち時間が低いだけではまだ十分ではありません。発振の存在 / パワー / SNR ゲート、原因推定ベンチマーク、循環ターゲティング誤差、刺激なし / トリガーミス率を分離する必要があります。
+- バースト駆動型神経調節の場合、主な問題はもはやバースト タイミングだけではありません。バイオマーカー ファミリ、コントローラー モード、動作/投薬状態、センシング互換性、およびバイオマーカーにリンクされたコンパレーターを分離する必要があります。
+- ストリーミング音声 BCI では、平均遅延だけでなく、テール レイテンシ、出力パスの監査、沈黙/最後の出力の保持、および固定デコーダの期間も別のログに記録する必要があります。
+- アダプティブ DBS 論文では、レスキュー モードの最適化、診療所/自宅への移動、資格、継続、バイオマーカー/コントローラーの選択を症状の利点とは別に記録する必要があります。
 known_points:
-  - "Offline accuracy and closed-loop stability are separate claims and cannot be audited with the same score."
-  - "Even a fast loop can remain boundary-incomplete if self-motion, predicted reafference, tactile feedback, respiration, arousal, circadian phase, glucocorticoid state, insulin / metabolic regime, or other subject-defining routes stay omitted or undisclosed."
-  - "Latency and jitter tolerances vary for state feedback, ERP/command BCI, streaming communication, phase-locked stimulation, and burst-driven neuromodulation."
-  - "Unless you actually measure input, processing, output, and return end-to-end, you won't know the timing of actual operation."
-  - "Closed-loop gains can come from co-adaptation of the user, decoder, and application rather than from a stable fixed decoder alone."
-  - "Fixed-decoder durability and rescue-mode recalibration are separate evidence objects; one can fail while the other still rescues behavior."
-  - "Reliable phase locking is not the same as a reliable physiological or behavioral effect, and neither one fixes a stable optimal phase across sessions."
-  - "Burst-driven neuromodulation is not one controller family: beta power, beta burst duration, entrained gamma, dyskinesia-linked narrowband gamma, and movement-responsive decoder policies do not constrain the same symptom axis or operate on the same timescale."
-  - "Subthalamic beta is modulated by movement, dopaminergic medication, and stimulation itself, so a beta feedback signal tuned in one regime is not automatically valid in another."
-  - "Speed-up within-session alone is not enough; it also leaves fixed-decoder horizon, recalibration burden, clinic/home transition, and programming burden."
-  - "Chronic adaptive-DBS symptom benefit, eligibility, and long-run continuation are different axes and should not be collapsed into one deployment verdict."
+- オフラインの精度と閉ループの安定性は別個の主張であり、同じスコアで監査することはできません。
+- 高速ループであっても、自己運動、予測された再参照、触覚フィードバック、呼吸、覚醒、概日位相、糖質コルチコイドの状態、インスリン/代謝レジーム、またはその他の対象を定義するルートが省略または未公開のままであれば、境界が不完全なままになる可能性があります。
+- レイテンシーとジッターの許容値は、状態フィードバック、ERP/コマンド BCI、ストリーミング通信、フェーズロック刺激、バースト駆動の神経変調によって異なります。
+- 実際に入力、処理、出力、返却をエンドツーエンドで計測してみないと、実際の動作のタイミングは分かりません。
+- 閉ループ ゲインは、安定した固定デコーダ単独からではなく、ユーザー、デコーダ、アプリケーションの協調適応から得られます。
+- 固定デコーダの耐久性とレスキューモードの再キャリブレーションは別個の証拠オブジェクトです。一方は失敗する可能性がありますが、もう一方はまだ動作を救済しています。
+- 信頼性の高い位相ロックは、信頼性の高い生理学的効果や行動的効果と同じではなく、どちらもセッション全体で安定した最適な位相を固定するものではありません。
+- バースト駆動型の神経調節は、1 つのコントローラー ファミリではありません。ベータ パワー、ベータ バースト持続時間、同調ガンマ、ジスキネジア関連狭帯域ガンマ、および運動応答デコーダー ポリシーは、同じ症状軸を制約したり、同じタイムスケールで動作したりすることはありません。
+- 視床下ベータは、運動、ドーパミン作動薬、刺激そのものによって調節されるため、あるレジームで調整されたベータフィードバック信号が、別のレジームでは自動的に有効になるわけではありません。
+- セッション内の高速化だけでは十分ではありません。また、固定デコーダーの期間、再キャリブレーションの負担、診療所/自宅への移行、およびプログラミングの負担も残ります。
+- 慢性適応型 DBS 症状の利点、適格性、および長期継続は別の軸であり、1 つの導入判断にまとめるべきではありません。
 unknown_points:
-  - "It is unclear how far the closed-loop bandwidth required for WBE spans which loop types."
-  - "It is not yet possible to generalize the precision required for phase-specific control to all tasks in non-invasive human experiments."
-  - "It is not yet fixed which biomarker/controller pairing best generalizes across bradykinesia, gait impairment, dyskinesia control, and chronic home use in adaptive DBS."
-  - "What counts as an acceptable fixed-decoder horizon before rescue-mode adaptation becomes a different operating regime still depends on task and modality."
-  - "How fast or slow co-adaptation should be to help the user without hiding instability still depends on loop type, modality, and task."
-  - "How a phase-targeting protocol should adapt when the optimal phase drifts within-session or across sessions still depends on band, task, and subject."
-  - "How burst-driven loops should adapt when biomarker controllability changes with movement, medication cycle, contact choice, or artifact remains unsettled."
-  - "What is considered 'unstable' or 'impractical' in terms of drift, recalibration frequency, eligibility, continuation, and programming burden during long-term operation depends on the task."
+- WBE に必要な閉ループ帯域幅がどのループ タイプにどれだけ及ぶかは不明です。
+- 非侵襲的な人体実験におけるすべてのタスクに対して、位相固有の制御に必要な精度を一般化することはまだ不可能です。
+- どのバイオマーカーとコントローラーの組み合わせが、適応型 DBS における運動緩慢、歩行障害、ジスキネジアの制御、慢性的な家庭での使用を最も一般化するかはまだ決まっていません。
+- レスキューモードの適応が異なる動作体制になる前に、何が許容可能な固定デコーダの範囲としてカウントされるかは、依然としてタスクとモダリティに依存します。
+- 不安定性を隠さずにユーザーを支援するために、協調適応がどれくらい速いか遅いかは、やはりループのタイプ、モダリティ、およびタスクによって異なります。
+- 最適な位相がセッション内またはセッション間でドリフトする場合に位相ターゲティング プロトコルがどのように適応するかは、やはり帯域、タスク、および対象によって異なります。
+- バイオマーカーの制御性が動き、投薬サイクル、連絡先の選択、またはアーティファクトによって変化する場合に、バースト駆動ループがどのように適応すべきかが未解決のままである。
+- ドリフト、再キャリブレーション頻度、適格性、継続性、長期運用時のプログラミング負担の観点から、何が「不安定」または「非現実的」とみなされるかはタスクによって異なります。
 wiki_links:
-  - label: "Wiki: Event synchronization and observation log"
-    url: "/wiki/event-sync-and-measurement-logs.html"
-    description: "Compensates for delay, jitter, and drift."
-  - label: "Wiki: Uncertainty, proofreading, abstaining"
-    url: "/wiki/uncertainty-confidence-and-abstention.html"
-    description: "Complements the design concept of 'not releasing' when reliability is low."
-  - label: "Wiki: State, trait, and drift"
-    url: "/wiki/state-trait-and-drift.html"
-    description: "Separates same-session success from cross-day durability and rescue-mode adaptation."
-  - label: "Wiki: Update/branch/stop rules"
-    url: "/wiki/update-branching-and-stop-rules.html"
-    description: "Complements how to separate freeze and stop rules as operations."
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "You can return to other auxiliary pages."
+- label: 'Wiki: イベント同期と監視ログ'
+  url: /wiki/event-sync-and-measurement-logs.html
+  description: 遅延、ジッター、ドリフトを補正します。
+- label: 'Wiki: 不確実性、校正、棄権'
+  url: /wiki/uncertainty-confidence-and-abstention.html
+  description: 信頼性が低い場合は「リリースしない」という設計コンセプトを補完します。
+- label: 'Wiki: 状態、特性、およびドリフト'
+  url: /wiki/state-trait-and-drift.html
+  description: 同一セッションの成功と、日をまたぐ耐久性およびレスキュー モードの適応を区別します。
+- label: 'Wiki: 更新/分岐/停止ルール'
+  url: /wiki/update-branching-and-stop-rules.html
+  description: 凍結ルールと停止ルールを操作として分離する方法を補完します。
+- label: ウィキホーム
+  url: /wiki/
+  description: 他の補助ページに戻ることができます。
 recommended_pages:
-  - label: "Verification base"
-    url: "/verification.html"
-  - label: "Introduction to EEG"
-    url: "/eeg_101.html"
-  - label: "Technology Roadmap"
-    url: "/tech_roadmap.html"
+- label: 検証ベース
+  url: /verification.html
+- label: 脳波検査の概要
+  url: /eeg_101.html
+- label: テクノロジーロードマップ
+  url: /tech_roadmap.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>The shortest conclusion</h2>
+<h2>最短の結論</h2>
 <p>
-A <strong>closed loop</strong> is a system in which the output changes the next input. However, there is more than one timing required. The dominant time scales and breakdown methods are different for<strong>alpha neurofeedback</strong>,<strong>P300/ERP BCI</strong>,<strong>streaming speech neuroprosthesis</strong>,<strong>phase-locked stimulation</strong>, and<strong>adaptive DBS</strong>. Therefore, it is dangerous to place a <strong>common 1 ms threshold</strong> or <strong>common 10 ms threshold</strong> as the correct answer for the whole site.
+<strong>クローズドループ</strong>は、出力が次の入力を変化させるシステムです。ただし、複数のタイミングが必要です。支配的な時間スケールと分解方法は、<strong> アルファ ニューロフィードバック </strong>、<strong>P300/ERP BCI</strong>、<strong> ストリーミング音声ニューロプロテーゼ </strong>、<strong> 位相ロック刺激 </strong>、および <strong> アダプティブ DBS</strong> では異なります。したがって、サイト全体の正解として <strong>common 1ms しきい値 </strong> または <strong>common 10ms しきい値 </strong> を設定するのは危険です。
 </p>
 </div>
 
 <div class="note-box">
-<strong>What was fixed first in this organization</strong>
+<strong>この組織で最初に修正されたもの</strong>
 <p>
-On this page, instead of talking about "how fast is enough" in an abstract way, we first fix <strong>which loop type we are dealing with</strong>, <strong>what is the delay that breaks in the loop</strong>, and <strong>what was actually measured with hardware</strong>. Event marker acceleration, LSL synchronization, phase tracking, and stopping rules are separate layers.
+このページでは、抽象的な方法で「どの程度の速度があれば十分か」について話すのではなく、まず <strong> 扱っているループ タイプ </strong>、<strong> ループ内で中断される遅延とは何か </strong>、<strong> ハードウェアで実際に測定されたもの </strong> を修正します。イベント マーカーの高速化、LSL 同期、フェーズ トラッキング、および停止ルールは別のレイヤーです。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Timing audit is not the whole loop audit</strong>
+<strong>タイミング監査はループ全体の監査ではありません</strong>
 <p>
-This page now keeps <strong>timing logs</strong> separate from <strong>body/environment boundary logs</strong>. A loop can be fast and still remain boundary-incomplete if the paper does not say which sensory, action, interoceptive, self-generated-feedback, and slow internal-milieu routes were preserved, substituted, matched, perturbed, or omitted. On this site, low latency without that disclosure does not rise above a task-specific local controller or surrogate-body result.
+このページでは、<strong>timing ログ </strong> を <strong>body/environment 境界ログ </strong> とは別に保持するようになりました。どの感覚ルート、行動ルート、内受容ルート、自己生成フィードバックルート、遅い内部環境ルートが保存、置換、一致、摂動、または省略されたのかが論文に記載されていない場合、ループは高速であっても境界が不完全なままである可​​能性があります。このサイトでは、その開示がない場合の低遅延は、タスク固有のローカル コントローラーまたはサロゲート本体の結果を超えることはありません。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Three public cards are stacked here, not one timing score</strong>
+<strong> ここには 3 枚の公開カードがスタックされており、タイミング スコアは 1 枚ではありません</strong>
 <p>
-On this site, once a closed-loop claim leaves the narrow same-session timing question, it has to stack the <a href="../verification.html#temporal-validity-card">Verification: Temporal Validity Card</a> with the <a href="../verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>, and add the <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> whenever silence, abstention, or fallback behavior matters. A fast loop without those companion cards stays a bounded local-controller result.
+このサイトでは、クローズド ループの主張が同一セッションのタイミングに関する狭い問題を離れると、<a href="../verification.html#temporal-validity-card">Verification: 時間的有効性カード</a> を <a href="../verification.html#body-environment-boundary-card">Verification: 身体 / 環境境界カード</a> とスタックし、<a href="../verification.html#calibration-abstention-card">Calibration &amp; を追加する必要があります。沈黙、棄権、またはフォールバック行動が重要な場合は、棄権 Card</a> を使用します。これらのコンパニオン カードがない高速ループは、制限されたローカル コントローラーの結果のままになります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-28 re-audit: co-adaptation is a separate evidence wall</strong>
+<strong>2026-03-28 再監査: 共同適応は別個の証拠である壁</strong>
 <p>
-The remaining blind spot was that the page could still let readers treat <strong>any online improvement</strong> as if it primarily reflected timing quality or long-horizon stability. The primary literature does not support that compression. <a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">Orsborn et al. (2014)</a> showed that combined neural and decoder adaptation can itself shape neural representations. <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis et al. (2018)</a> and <a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">Abu-Rmileh et al. (2019)</a> showed that user learning and classifier adaptation evolve on different timescales in longitudinal EEG BCIs, and that adaptation that is too frequent can hinder subject learning. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> then showed that modern speech and cursor loops still rely on per-session retraining, blockwise decoder updates, and explicit open-loop probes to estimate performance without closed-loop correction. Therefore, this site now treats <strong>co-adaptation / credit assignment</strong> as a separate wall rather than hiding it inside latency or recalibration.
+残りの盲点は、このページでは、読者が <strong> のあらゆるオンライン改善 </strong> を、主にタイミングの品質や長期的な安定性を反映しているかのように扱うことができるということでした。一次文献ではその圧縮はサポートされていません。 <a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">オルスボーンら(2014) </a> は、ニューラルとデコーダの適応を組み合わせることで、それ自体でニューラル表現を形成できることを示しました。 <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis ら。 (2018)</a> および <a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">Abu-Rmileh 他(2019) </a> は、ユーザーの学習と分類器の適応が縦方向 EEG BCI の異なるタイムスケールで進化すること、および適応が頻繁すぎると被験者の学習が妨げられる可能性があることを示しました。 <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">ワイラグカールら(2025)</a> および <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> は、現代の音声ループとカーソル ループが依然としてセッションごとの再トレーニング、ブロックごとのデコーダー更新、および閉ループ補正なしでパフォーマンスを推定する明示的な開ループ プローブに依存していることを示しました。したがって、このサイトでは、<strong> の共適応 / クレジット割り当て </strong> をレイテンシや再キャリブレーション内に隠すのではなく、別の壁として扱うようになりました。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-28 second re-audit: phase-targeting needs an estimability wall</strong>
+<strong>2026-03-28 2 回目の再監査: フェーズターゲティングには推定可能性の壁が必要</strong>
 <p>
-One more shortcut remained. The page still allowed a reader to think that once a phase-targeted loop reports <strong>low latency</strong> and some <strong>phase error distribution</strong>, the main technical burden is already satisfied. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> showed that meaningful phase estimation itself degrades when oscillatory amplitude and SNR are low. <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> then showed that prefrontal theta targeting required extra constraints to avoid low-amplitude and phase-reset epochs. <a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigué-Guix et al. (2022)</a> achieved reliable trial-to-trial alpha phase locking yet did not obtain a consistent behavioral benefit, which means targeting success and functional effect must be kept separate. <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">Kim et al. (2023)</a> showed across 11 public datasets that higher power and SNR improve prediction accuracy and that waiting for eligible epochs matters more than forcing one cognitive state. Finally, <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland et al. (2025)</a> showed within-session fluctuations and low test-retest reliability of the optimal mu-phase. Therefore, phase-targeted stimulation on this site is now read through an <strong>estimability / targeting / effect / stability stack</strong>, not one timing number.
+ショートカットがもう一つ残った。このページでは、位相ターゲット ループが <strong> 低遅延 </strong> とある程度の <strong> 位相エラー分布 </strong> を報告すると、主要な技術的負担はすでに満たされていると読者に考えることができました。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrennerら(2020)</a> は、振動振幅と SNR が低い場合、意味のある位相推定自体が低下することを示しました。 <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">ゴードンら(2021)</a> はその後、前頭前野シータ ターゲティングには、低振幅および位相リセット エポックを回避するために追加の制約が必要であることを示しました。 <a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigué-Guix 他(2022) </a> は信頼性の高い試験間のアルファ位相ロックを達成しましたが、一貫した行動上の利点は得られませんでした。これは、ターゲティングの成功と機能的効果を分離しておく必要があることを意味します。 <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">キムら。 (2023) </a> は、11 の公開データセット全体で、パワーと SNR が高いほど予測精度が向上し、1 つの認知状態を強制するよりも適格なエポックを待つことが重要であることを示しました。最後に、<a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland ら。 (2025) </a> は、最適ミューフェーズのセッション内変動とテスト再テストの信頼性が低いことを示しました。したがって、このサイトのフェーズ ターゲット刺激は、1 つのタイミング番号ではなく、<strong> 推定性 / ターゲティング / 効果 / 安定性スタック </strong> を通じて読み取られるようになりました。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-31 re-audit: burst-driven neuromodulation needs a controller wall too</strong>
+<strong>2026-03-31 再監査: バースト駆動の神経調節にはコントローラー ウォールも必要</strong>
 <p>
-Another shortcut remained on the adaptive-DBS side. The page still let a reader treat <strong>burst timing</strong> or <strong>beta-trigger latency</strong> as if that were the main technical burden once phase-targeting had already been split more carefully. The newer primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou et al. (2024)</a> showed that subthalamic beta is modulated differently by movement, medication, and stimulation. <a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> showed that single-threshold and dual-threshold aDBS are different control modes with different timescales and therapeutic goals. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a>, <a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou et al. (2025)</a> then showed that <strong>entrained gamma</strong>, <strong>dyskinesia-linked narrowband gamma</strong>, and <strong>personalized high-versus-low dopaminergic-state markers</strong> do not constrain the same symptom axis. <a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">Busch et al. (2025)</a> and <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a> further showed that sensing compatibility, threshold setting, signal artifacts, and patient eligibility remain concrete bottlenecks. Therefore, burst-driven neuromodulation on this site is now read through a <strong>biomarker / controller / delivery / effect / deployability stack</strong>, not one burst-timing story.
+もう 1 つのショートカットが適応 DBS 側に残されました。このページでは、フェーズ ターゲティングがすでにより慎重に分割されている後でも、読者が <strong> バースト タイミング </strong> または <strong> ベータ トリガー レイテンシー </strong> を主要な技術的負担であるかのように扱うことができました。新しい一次文献では、そのショートカットはサポートされていません。 <a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou 他(2024) </a> は、視床下ベータが運動、薬物療法、および刺激によって異なるように調節されることを示しました。 <a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024) </a> は、単一閾値 aDBS と二重閾値 aDBS は、異なるタイムスケールと治療目標を持つ異なる制御モードであることを示しました。 <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a>、<a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru 他(2024)</a>、<a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou 他。 (2025) </a> はその後、<strong> 同調ガンマ </strong>、<strong> ジスキネジア関連狭帯域ガンマ </strong>、および <strong> 個別化された高対低ドーパミン作動性状態マーカー </strong> が同じ症状軸を制約しないことを示しました。 <a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">ブッシュ他(2025)</a> および <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino ら。 (2026) </a> はさらに、センシングの互換性、閾値設定、信号アーチファクト、および患者の適格性が依然として具体的なボトルネックであることを示しました。したがって、このサイトのバースト駆動の神経調節は、1 つのバースト タイミング ストーリーではなく、<strong>biomarker/コントローラー/デリバリー/エフェクト/デプロイアビリティ スタック </strong> を通じて読み取られるようになりました。
 </p>
 </div>
 
 <section class="section" id="why-fixed-threshold-is-dangerous">
-<h2 class="section-title">Why fixed thresholds are dangerous</h2>
+<h2 class="section-title">固定しきい値が危険な理由</h2>
 <p>
-Wilson et al. (2010) showed that for relatively slow BCI indicators such as mu rhythm amplitude, a small delay of about 10 ms does not necessarily destroy the essence, but if the latency/jitter of the entire system is not measured, the output path and display become rate-limiting. Conversely, Belinskaia et al. (2020) showed that with parietal alpha neurofeedback, an<strong>additional 250 ms / 500 ms delay</strong> worsened the learning effect. Furthermore, in phase-targeting systems such as Mansouri et al. (2018) and Zrenner et al. (2018), the delay should be evaluated as<strong>the phase error relative to the frequency of interest</strong>and not simply as a ms value.
+ウィルソンら。 (2010) は、μ リズム振幅などの比較的遅い BCI 指標の場合、約 10 ms の小さな遅延は必ずしも本質を破壊するわけではありませんが、システム全体のレイテンシー/ジッターが測定されない場合、出力パスと表示が速度制限になることを示しました。逆に、Belinskaia et al。 (2020) は、頭頂アルファニューロフィードバックでは、<strong> の追加の 250 ミリ秒 / 500 ミリ秒の遅延、</strong> が学習効果を悪化させることを示しました。さらに、Mansouri et al. のようなフェーズターゲティングシステムでは、 (2018) および Zrenner et al。 (2018) では、遅延は単に ms 値としてではなく、<strong> 対象の周波数に対する位相誤差 </strong> として評価される必要があります。
 </p>
 <div class="note-box">
-<strong>Reading principles</strong>
+<strong>読み取り原理</strong>
 <p>
-"Low latency is good" is generally correct, but it cannot immediately be said that "microsecond-level delay is required for all loops" or "1 ms or less is required for all loops." The correct question is<strong>in what loop band, what error breaks what</strong>.
+「レイテンシが低いことが良い」というのは一般的には正しいのですが、「すべてのループでマイクロ秒レベルの遅延が必要」「すべてのループで1ms以下が必要」とはすぐには言えません。正しい質問は、<strong> がどのループ帯域にあり、どのエラーがどの </strong> を破壊するかです。
 </p>
 </div>
 <div class="note-box">
-<strong>If you want the row-level route</strong>
+<strong>行レベルのルートが必要な場合</strong>
 <p>
-If you want the one-row operational packet that turns this principle into a public-safe route, continue with the <a href="u8-1-closed-loop-delay-tolerance-route.html">U8-1 closed-loop delay-tolerance route packet</a>. That packet keeps the question at the level of one named loop class, one KPI bundle, and one downgrade rule rather than a universal latency threshold.
+この原理を公衆に安全なルートに変える 1 行の動作パケットが必要な場合は、<a href="u8-1-closed-loop-delay-tolerance-route.html">U8-1 閉ループ遅延耐性ルート パケット </a> に進みます。このパケットは、普遍的な遅延しきい値ではなく、質問を 1 つの名前付きループ クラス、1 つの KPI バンドル、および 1 つのダウングレード ルールのレベルに保ちます。
 </p>
 </div>
 </section>
 
 <section class="section" id="boundary-before-latency">
-<h2 class="section-title">Before milliseconds, fix which loop boundary was actually preserved</h2>
+<h2 class="section-title">ミリ秒前に、どのループ境界が実際に保存されていたかを修正</h2>
 <p>
-The weakness of the older timing-only reading was that it could still let a reader say, <strong>"the loop was fast, therefore the closed-loop problem is close to solved."</strong> That is too weak. Primary literature shows that sensory cortex and higher-order dynamics are continuously reshaped by self-motion, predicted sensory consequences, multisensory navigation cues, respiration, arousal, tactile feedback, circadian timing, glucocorticoid exposure, and metabolic state. Therefore, a low-latency controller is not automatically a boundary-complete controller.
+古いタイミングのみの読み取りの弱点は、読者に「<strong> ループが高速だったので、閉ループ問題は解決に近づいている」と言わせてしまう可能性があることでした。</strong> それは弱すぎます。一次文献によると、感覚皮質と高次のダイナミクスは、自己運動、予測される感覚の結果、多感覚ナビゲーションの合図、呼吸、覚醒、触覚フィードバック、概日タイミング、グルココルチコイド曝露、代謝状態によって継続的に再形成されることが示されています。したがって、低遅延コントローラーは自動的に境界完全コントローラーにはなりません。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Boundary component</th>
-<th>What primary literature shows</th>
-<th>Why timing alone is insufficient</th>
+<th>境界成分</th>
+<th>一次文献で示されている内容</th>
+<th>タイミングだけでは不十分な理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>self-motion / optic flow / proprioceptive coupling</strong></td>
-<td><a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a> showed that V1 neurons combine visual speed with run speed during navigation.</td>
-<td>A fast visual loop still differs from the biological loop if locomotion- and proprioception-linked inputs were absent, simulated, or silently simplified.</td>
+<td><strong>セルフモーション / オプティカルフロー / 固有受容結合</strong></td>
+<td><a href="https://doi.org/10.1038/nn.3567" target="_blank">サリーム他(2013)</a> は、V1 ニューロンがナビゲーション中に視覚速度と走行速度を組み合わせていることを示しました。</td>
+<td>A の高速視覚ループは、運動および固有受容に関連した入力が存在しないか、シミュレートされているか、静かに単純化されている場合でも、生物学的ループとは異なります。</td>
 </tr>
 <tr>
-<td><strong>predicted reafference / sensorimotor mismatch</strong></td>
-<td><a href="https://doi.org/10.1016/j.neuron.2012.03.040" target="_blank">Keller et al. (2012)</a> showed mismatch-sensitive responses in behaving-mouse V1, supporting the idea that expected sensory feedback matters beyond passive stimulation.</td>
-<td>The loop is not characterized only by delay; it also depends on whether self-generated sensory consequences and mismatch signals were available at all.</td>
+<td><strong>予測された再屈折/感覚運動の不一致</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuron.2012.03.040" target="_blank">ケラーら(2012) </a> は、行動マウス V1 においてミスマッチに敏感な反応を示し、受動的刺激を超えて期待される感覚フィードバックが重要であるという考えを裏付けました。
+<td>ループの特徴は遅延だけではありません。また、自己生成された感覚結果と不一致シグナルがまったく利用可能かどうかにも依存します。</td>
 </tr>
 <tr>
-<td><strong>vestibular and multisensory navigation cues</strong></td>
-<td><a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a> showed that removing real-world multisensory cues changes hippocampal spatiotemporal selectivity in virtual reality.</td>
-<td>A low-latency virtual loop can still be a different loop class if vestibular and other navigation cues were missing or remapped.</td>
+<td><strong>前庭および多感覚ナビゲーションキュー</strong></td>
+<td><a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a> は、現実世界の多感覚キューを除去すると、仮想現実における海馬の時空間選択性が変化することを示しました。</td>
+<td>A 低遅延仮想ループは、前庭およびその他のナビゲーション キューが欠落しているか再マップされている場合でも、別のループ クラスである可能性があります。</td>
 </tr>
 <tr>
-<td><strong>corollary discharge of self-generated sensory consequences</strong></td>
-<td><a href="https://doi.org/10.1038/nature13724" target="_blank">Schneider et al. (2014)</a> showed a motor-to-auditory cortical circuit that suppresses sensory responses during movement.</td>
-<td>If a system does not disclose whether corollary-discharge-like routes or self-generated sensory predictions were preserved, timing alone cannot tell you whether the sensory loop is comparable.</td>
+<td><strong>自己生成の感覚結果の当然の結果</strong></td>
+<td><a href="https://doi.org/10.1038/nature13724" target="_blank">Sシュナイダーら(2014)</a> は、運動中の感覚反応を抑制する運動から聴覚への皮質回路を示しました。</td>
+<td>システムが、必然的な放電のようなルートまたは自己生成された感覚予測が保存されているかどうかを明らかにしない場合、タイミングだけでは感覚ループが同等であるかどうかを判断できません。</td>
 </tr>
 <tr>
-<td><strong>respiration / arousal / organism-wide physiology</strong></td>
-<td><a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a> showed nasal-respiration coupling to human limbic oscillations, and <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">Raut et al. (2025)</a> showed that neural activity, physiology, and behavior share a structured arousal manifold.</td>
-<td>A brain-only fast controller can still omit organism-wide state variables that co-organize the loop in vivo.</td>
+<td><strong>呼吸/覚醒/生物全体の生理機能</strong></td>
+<td><a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano 他(2016) </a> は、ヒトの大脳辺縁系振動への鼻呼吸の結合を示しました。また、<a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">Raut et al. (2025)</a> は、神経活動、生理機能、行動が構造化された覚醒多様体を共有していることを示しました。</td>
+<td>A 脳専用高速コントローラーは、生体内でループを組織化する生物全体の状態変数を省略できます。</td>
 </tr>
 <tr>
-<td><strong>slow endocrine / circadian / metabolic milieu</strong></td>
-<td><a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> showed glucocorticoid-dependent memory-retrieval impairment, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed hydrocortisone-linked decreases in human hippocampal and prefrontal retrieval activity, <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a> plus <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a> showed circadian gating of hippocampal plasticity, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a>, <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>, <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> showed that corticosteroid rhythm, insulin signaling, and circadian-rhythm consistency can shift hippocampal plasticity, human memory, or hippocampal activity.</td>
-<td>The same visible input-output loop can still be a different biological loop class if clock phase, steroid state, or feeding / insulin regime were unmatched or left latent.</td>
+<td><strong>遅い内分泌 / 概日リズム / 代謝環境</strong></td>
+<td><a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998) </a> はグルココルチコイド依存性の記憶想起障害を示しました。<a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007) </a> は、ヒトの海馬および前頭前野の回復活動におけるヒドロコルチゾン関連の減少を示しました。<a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a> プラス <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023) </a> は海馬可塑性の概日ゲーティングを示し、<a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a>、<a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">ベネディクトら。 (2004)</a>、<a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al。 (2008)</a>、および <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al。 (2015)</a> は、コルチコステロイド リズム、インスリン シグナル伝達、概日リズムの一貫性が海馬の可塑性、人間の記憶、または海馬の活動を変化させる可能性があることを示しました。</td>
+<td>同じ目に見える入出力ループでも、時計の位相、ステロイドの状態、または摂食/インスリン療法が一致していないか、潜在的なままになっている場合は、依然として異なる生物学的ループクラスである可能性があります。</td>
 </tr>
 <tr>
-<td><strong>tactile contact feedback</strong></td>
-<td><a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that adding tactile feedback improves robotic-arm control in a bidirectional BCI.</td>
-<td>The main issue is not only whether the loop is fast, but which feedback channels were restored and which still remained absent.</td>
+<td><strong>触覚接触フィードバック</strong></td>
+<td><a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> は、触覚フィードバックの追加により、双方向 BCI におけるロボット アームの制御が向上することを示しました。</td>
+<td>主な問題は、ループが速いかどうかだけではなく、どのフィードバック チャネルが復元され、どのチャネルが依然として存在しないのかということです。</td>
 </tr>
 <tr>
-<td><strong>movement-linked latent structure</strong></td>
-<td><a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> and <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a> showed that ongoing behavior explains a large fraction of cortical and brainwide neural variance.</td>
-<td>Without a boundary card, a fast controller can overfit a narrow behavioral contract while still being read as a general closed-loop success.</td>
+<td><strong>運動連動型潜在構造</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> および <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a> は、進行中の行動が皮質および脳全体の神経分散の大部分を説明することを示しました。</td>
+<td>境界カードがないと、高速コントローラーは一般的な閉ループの成功として読み取られながら、狭い動作コントラクトをオーバーフィットする可能性があります。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Operating rule on this site</strong>
+<strong>このサイトの運用ルール</strong>
 <p>
-If the paper does not disclose which sensory, action, interoceptive, self-generated-feedback, and slow internal-milieu routes were retained, substituted, matched, perturbed, or omitted, this site does not promote the result from <strong>fast local loop</strong> to <strong>boundary-complete L3 evidence</strong>. The formal public rule is the <a href="../verification.html#body-environment-boundary-card">Verification: Body / Environment Boundary Card</a>; this wiki supplies the timing-side companion logic.
+論文が、どの感覚経路、行動経路、内受容経路、自己生成フィードバック経路、および遅い内部環境経路が保持、置換、一致、摂動、または省略されたかを明らかにしていない場合、このサイトは <strong> 高速ローカル ループ </strong> から <strong> 境界完全 L3 証拠 </strong> への結果を宣伝しません。正式な公開ルールは <a href="../verification.html#body-environment-boundary-card">Verification: Body / Environmental Boundary Card</a> です。この Wiki はタイミング側のコンパニオン ロジックを提供します。
 </p>
 </div>
 </section>
 
 <section class="section" id="loop-classes">
-<h2 class="section-title">First, divide into 5 loop types</h2>
+<h2 class="section-title">まずループタイプを5つに分ける</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Loop type</th>
-<th>Typical example</th>
-<th>What the literature shows</th>
-<th>Logs that should be left first on this site</th>
+<th>Lループタイプ</th>
+<th>代表例</th>
+<th>文献で示されていること</th>
+<th>このサイトに最初に残すべきログ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>state feedback / neurofeedback</strong></td>
-<td>alpha This is a system that looks at the power and gives visual feedback. </td>
-<td>Belinskaia et al. (2020) showed that an additional 250/500 ms delay worsens alpha neurofeedback learning. Shorter delays were more beneficial for learning. </td>
-<td>Performance degradation curves for median/P95/P99 feedback latency, display path, and additional delay. </td>
+<td><strong>状態フィードバック / ニューロフィードバック</strong></td>
+<td>alpha パワーを見て視覚的にフィードバックするシステムです。 </td>
+<td>Belinskaia et al. (2020) は、追加の 250/500 ミリ秒の遅延がアルファ ニューロフィードバック学習を悪化させることを示しました。遅延が短いほど学習には有益です。 </td>
+<td> 中央値/P95/P99 フィードバック レイテンシー、表示パス、および追加の遅延のパフォーマンス低下曲線。 </td>
 </tr>
 <tr>
-<td><strong>ERP / command BCI</strong></td>
-<td>P300 speller or event-related control. </td>
-<td>Wilson et al. (2010) showed that it is necessary to decompose timing and measure hardware, and Mowla et al. (2017) showed that latency jitter lowers classification, so even if it is corrected, the negative effects cannot be completely eliminated. </td>
-<td>Correspondence with block jitter, stimulus onset measurement, trial-to-trial latency variance, and classification performance. </td>
+<td><strong>ERP / コマンド BCI</strong></td>
+<td>P300 スペルまたはイベント関連のコントロール。 </td>
+<td>ウィルソンら(2010) は、タイミングを分解してハードウェアを測定する必要があることを示しました。 (2017) は、レイテンシー ジッターが分類を低下させるため、たとえ補正されたとしても悪影響を完全に排除することはできないことを示しました。 </td>
+<td>Cブロックジッター、刺激開始測定、トライアル間の待ち時間の分散、および分類パフォーマンスに対応します。 </td>
 </tr>
 <tr>
-<td><strong>streaming communication / speech neuroprosthesis</strong></td>
-<td>It is a system that continuously returns brain-to-text or brain-to-voice as audio or text. </td>
-<td>Littlejohn et al. (2025) demonstrated streaming brain-to-voice in 80 ms increments, and Wairagkar et al. (2025) demonstrated a loop that returns speech synthesis from raw neural input in less than 10 ms while returning silence for non-speech and overlapping speech. The key metrics here are not only average latency, but also tail latency, audio output path, and silence/abstention. </td>
-<td>per-step inference latency, cue-to-output latency distribution, audio driver latency, silence / false-speech rate, dropout, recalibration event. </td>
+<td><strong>ストリーミング通信/音声ニューロプロテーゼ</strong></td>
+<td> Brain-to-Text、または Brain-to-Voice を音声またはテキストとして継続的に返すシステムです。 </td>
+<td>Lリトルジョンら(2025) は、脳から音声へのストリーミングを 80 ミリ秒単位で実証しました。 (2025) は、生の神経入力からの音声合成を 10 ミリ秒未満で返す一方、非音声および重複する音声に対しては沈黙を返すループを実証しました。ここでの重要な指標は、平均レイテンシだけでなく、テール レイテンシ、オーディオ出力パス、および沈黙/棄権も含まれます。 </td>
+<td> のステップごとの推論レイテンシー、キューから出力までのレイテンシー分布、オーディオ ドライバーのレイテンシー、無音/誤話率、ドロップアウト、再キャリブレーション イベント。 </td>
 </tr>
 <tr>
-<td><strong>phase-locked stimulation</strong></td>
-<td>This is a system that delivers TMS/tES in accordance with the EEG phase. </td>
-<td>Mansouri et al. (2018) and Zrenner et al. (2018) demonstrated real-time phase targeting, but Zrenner et al. (2020), Gordon et al. (2021), Kim et al. (2023), and Hougland et al. (2025) show that the real bottleneck is not latency alone but whether the oscillation is estimable now, how the causal estimate is benchmarked, and whether the optimal phase is stable. </td>
-<td>Target band and spatial filter, power/SNR gate, no-stim rate, causal-versus-post-hoc benchmark, mean phase offset / circular spread, missed trigger, and any fixed-versus-adaptive phase policy. </td>
+<td><strong>フェーズロック刺激</strong></td>
+<td>脳波位相に応じてTMS/tESを配信するシステムです。 </td>
+<td>マンスーリ他(2018) および Zrenner et al。 (2018) はリアルタイム位相ターゲティングを実証しましたが、Zrenner et al。 (2020)、ゴードンら。 (2021)、キムら。 (2023)、および Hougland et al。 (2025) は、本当のボトルネックは待ち時間だけではなく、振動が現在推定可能かどうか、因果推定がどのようにベンチマークされるか、最適な位相が安定しているかどうかであることを示しています。 </td>
+<td>Tターゲット バンドと空間フィルター、パワー/SNR ゲート、刺激なしレート、コーザル対ポストホック ベンチマーク、平均位相オフセット / 循環スプレッド、ミス トリガー、および固定対適応位相ポリシー。 </td>
 </tr>
 <tr>
-<td><strong>burst/state-triggered neuromodulation</strong></td>
-<td>Adaptive DBS using beta burst. </td>
-<td>Little et al. (2013) and Tinkhauser et al. (2017) established beta-based feedback, but Mathiopoulou et al. (2024), Stanslaski et al. (2024), Oehrn et al. (2024), Olaru et al. (2024), Busch et al. (2025), Mathiopoulou et al. (2025), and Cascino et al. (2026) show that the main burden is no longer burst timing alone but <strong>which biomarker is being controlled</strong>, <strong>which controller mode is used</strong>, and <strong>whether sensing and programming remain viable</strong>. </td>
-<td>biomarker family / symptom target, sensing contacts / signal-to-noise, controller mode, update interval / onset duration / ramp policy, false positive/negative, artifact-triggered resets, comparator condition, and rescue/programming burden. </td>
+<td><strong>バースト/状態誘発神経調節</strong></td>
+<td>ベータバーストを使用するアダプティブ DBS。 </td>
+<td>リトルら(2013) および Tinkhauser et al。 (2017) はベータベースのフィードバックを確立しましたが、Mathiopooulou et al. (2024)、Stanslaski et al。 (2024)、オーンら。 (2024)、Olaru et al。 (2024)、ブッシュら。 (2025)、Mathiopolou 他。 (2025)、Cascino et al. (2026) は、主な負担はもはやバースト タイミングだけではなく、<strong> どのバイオマーカーが制御されているか、</strong>、<strong> どのコントローラ モードが使用されているか、</strong>、<strong> センシングとプログラミングが実行可能であるかどうか</strong> であることを示しています。 </td>
+<td>バイオマーカーファミリー/症状ターゲット、センシング接触/S/N、コントローラーモード、更新間隔/オンセット期間/ランプポリシー、偽陽性/陰性、アーティファクトトリガーリセット、コンパレーター状態、レスキュー/プログラミング負荷。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="phase-targeting-wall">
-<h2 class="section-title">Phase-targeting is estimability-limited, not latency-limited</h2>
+<h2 class="section-title">フェーズターゲティングは推定可能性が制限されており、レイテンシは制限されていません</h2>
 <p>
-The older wording on this page already separated <strong>phase error</strong> from plain milliseconds. That was necessary, but it was not yet sufficient. Current primary literature shows that a phase-targeted loop can fail for at least five different reasons: the target oscillation may not be estimable in the current epoch, the causal estimator may not match the post-hoc benchmark, the circular targeting precision may be too weak, the loop may phase-lock without producing a reliable physiological or behavioral effect, or the best phase may drift within and across sessions. Therefore, this site now reads phase-targeted stimulation through the following stack rather than a single timing figure.
+このページの古い表現では、<strong>phase error</strong> と普通のミリ秒が既に分離されていました。それは必要でしたが、まだ十分ではありませんでした。現在の主な文献は、位相ターゲット ループが少なくとも 5 つの異なる理由で失敗する可能性があることを示しています。つまり、ターゲットの振動が現在のエポックでは推定できない可能性がある、原因推定量がポストホック ベンチマークと一致しない可能性がある、循環ターゲット精度が低すぎる可能性がある、信頼できる生理学的または行動的効果を生成せずにループが位相ロックする可能性がある、またはセッション内およびセッション間で最適な位相がドリフトする可能性があります。したがって、このサイトでは、単一のタイミング図ではなく、次のスタックを通じて位相ターゲット刺激を読み取るようになりました。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Layer to separate</th>
-<th>What the primary literature supports</th>
-<th>What must be logged</th>
-<th>What it still does not prove</th>
+<th>レイヤーを分離</th>
+<th>一次文献がサポートしていること</th>
+<th>何を記録する必要があるか</th>
+<th>まだ証明されていないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>oscillation gate / estimability</strong></td>
-<td><a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> showed that phase estimability worsens when oscillatory amplitude and SNR are low, <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> improved prefrontal theta targeting by excluding low-theta and phase-reset epochs, and <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">Kim et al. (2023)</a> showed across 11 public datasets that high power and SNR are the main practical conditions for better phase prediction.</td>
-<td>Target band, channel or spatial filter, spectral peak criterion, amplitude/SNR threshold, no-stim or wait rate, and any phase-reset rejection rule.</td>
-<td>That the loop really stimulated the intended phase in every eligible epoch, or that a functional effect followed.</td>
+<td><strong>発振ゲート/推定可能</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner 他(2020)</a> は、振動振幅と SNR が低い場合に位相推定能力が悪化することを示しました。<a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021) </a> は、低シータおよびフェーズリセット エポックを除外することで前頭前野シータ ターゲティングを改善しました。<a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">Kim et al. (2023)</a> は、11 の公開データセットにわたって、より優れた位相予測のための主な実際的な条件は高出力と SNR であることを示しました。</td>
+<td>ターゲット バンド、チャネルまたは空間フィルター、スペクトル ピーク基準、振幅/SNR しきい値、非刺激または待機レート、および位相リセット拒否ルール。</td>
+<td>ループがすべての適格なエポックで意図したフェーズを実際に刺激したこと、または機能的な効果が続いたこと。</td>
 </tr>
 <tr>
-<td><strong>causal estimator benchmark</strong></td>
-<td><a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">Mansouri et al. (2018)</a> and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> made real-time phase-triggering feasible, while <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> and <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> showed why the causal estimate has to be benchmarked against a non-causal or post-hoc phase estimate under the same signal class.</td>
-<td>Causal algorithm family, training window, forecast horizon, artifact blanking rule, post-hoc benchmark procedure, and whether the benchmark was run on non-stimulated or artifact-free matched epochs.</td>
-<td>That the chosen causal estimator is uniquely best, or that the phase effect is biologically meaningful.</td>
+<td><strong>因果推定ベンチマーク</strong></td>
+<td><a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">マンスーリら(2018)</a> および <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> はリアルタイム位相トリガーを実現可能にしました。一方、<a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> および <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> は、同じ信号クラスの下で因果推定を非因果または事後位相推定に対してベンチマークする必要がある理由を示しました。</td>
+<td>因果関係アルゴリズム ファミリ、トレーニング ウィンドウ、予測ホライズン、アーティファクト ブランキング ルール、ポストホック ベンチマーク手順、およびベンチマークが非刺激またはアーティファクトのない一致したエポックで実行されたかどうか。</td>
+<td>選択された因果推定量が独自に最適であること、または位相効果が生物学的に意味があること。</td>
 </tr>
 <tr>
-<td><strong>targeting precision</strong></td>
-<td><a href="https://doi.org/10.1016/j.jneumeth.2021.109288" target="_blank">Bruegger &amp; Abegg (2021)</a> compared methods using mean phase offset, circular standard deviation, and prediction latency, and <a href="https://doi.org/10.1523/JNEUROSCI.1913-18.2018" target="_blank">Holt et al. (2019)</a> showed that narrower phase bins and repeated phase-consistent pulses materially change effect size.</td>
-<td>Mean phase offset, circular spread or equivalent circular error metric, phase-locking statistic at trigger, missed-trigger rate, and any phase-bin width or consecutive-cycle rule.</td>
-<td>That the targeted phase is the most effective phase for the claimed physiological or behavioral endpoint.</td>
+<td><strong>ターゲット精度</strong></td>
+<td><a href="https://doi.org/10.1016/j.jneumeth.2021.109288" target="_blank">ブルッガー＆アンプ; Abegg (2021)</a> は、平均位相オフセット、円形標準偏差、予測待ち時間を使用した方法を比較しました。また、<a href="https://doi.org/10.1523/JNEUROSCI.1913-18.2018" target="_blank">Holt et al. (2019)</a> は、より狭い位相ビンと位相一貫性パルスの繰り返しが効果サイズを実質的に変化させることを示しました。</td>
+<td>平均位相オフセット、循環スプレッドまたは同等の循環誤差メトリック、トリガー時の位相ロック統計、ミストリガー率、および任意の位相ビン幅または連続サイクルルール。</td>
+<td>対象となるフェーズが、主張される生理学的または行動的エンドポイントにとって最も効果的なフェーズであること。</td>
 </tr>
 <tr>
-<td><strong>functional effect versus targeting success</strong></td>
-<td><a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigué-Guix et al. (2022)</a> achieved reliable trial-to-trial alpha phase locking in a real-time BCI yet found no consistent reaction-time modulation, showing that accurate targeting and useful behavioral control are different evidence objects.</td>
-<td>Off-target or random-phase comparator, sham or surrogate comparator when available, effect-size distribution for the downstream endpoint, and the stopped claim if targeting succeeded but the endpoint did not.</td>
-<td>That a phase-targeted loop improves cognition, therapy, or plasticity simply because phase locking worked.</td>
+<td><strong>機能的効果とターゲティングの成功</strong></td>
+<td><a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigué-Guix et al. (2022)</a> は、リアルタイム BCI で信頼性の高いトライアル間のアルファ位相ロックを達成しましたが、一貫した反応時間変調は見つかりませんでした。これは、正確なターゲティングと有用な行動制御が異なる証拠オブジェクトであることを示しています。</td>
+<td>オフターゲットまたはランダム位相コンパレータ、利用可能な場合は偽コンパレータまたはサロゲート コンパレータ、下流エンドポイントの効果サイズ分布、およびターゲティングが成功したがエンドポイントが成功しなかった場合の停止されたクレーム。</td>
+<td>フェーズ ロックが機能したという理由だけで、フェーズ ターゲット ループが認知、治療、または可塑性を改善するということ。</td>
 </tr>
 <tr>
-<td><strong>phase stability and adaptation policy</strong></td>
-<td><a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland et al. (2025)</a> showed within-session fluctuations and low test-retest reliability of the optimal mu-phase, which limits the generalizability of fixed-phase targeting across sessions.</td>
-<td>Whether the preferred phase was fixed or updated, within-session drift audit, across-session reliability, retuning trigger, and whether adaptation changes the claim from fixed-policy targeting to adaptive targeting.</td>
-<td>That one fixed phase generalizes across people, sessions, or task states without re-validation.</td>
+<td><strong>位相安定性と適応ポリシー</strong></td>
+<td><a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland et al. (2025)</a> は、セッション内の変動と、最適ミューフェーズのテストと再テストの信頼性が低いことを示しました。これにより、セッション全体にわたる固定フェーズのターゲティングの一般化可能性が制限されます。</td>
+<td>優先フェーズが修正されたか更新されたか、セッション内ドリフト監査、セッション間の信頼性、再調整トリガー、および適応によりクレームが固定ポリシーのターゲティングから適応ターゲティングに変更されるかどうか。</td>
+<td>その 1 つの固定フェーズは、再検証なしで人、セッション、またはタスクの状態全体に一般化されます。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Revision rule on this site</strong>
+<strong>このサイトの改訂ルール</strong>
 <p>
-If a phase-targeted loop reports only milliseconds or only a single average phase error, this page does not promote it to validated phase-specific control. The minimum readable object is a <strong>declared target band with an estimability gate</strong>, a <strong>causal-versus-post-hoc benchmark</strong>, <strong>circular targeting metrics</strong>, a <strong>functional comparator</strong>, and a <strong>fixed-versus-adaptive phase policy</strong>.
+位相ターゲット ループがミリ秒のみ、または 1 つの平均位相誤差のみを報告する場合、このページでは検証済みの位相固有の制御に昇格しません。最小の読み取り可能なオブジェクトは、<strong> 推定可能性ゲートを備えた宣言されたターゲット バンド</strong>、<strong>因果対ポストホック ベンチマーク</strong>、<strong>循環ターゲティング メトリクス</strong>、<strong>機能的比較器</strong>、および<strong>固定対適応フェーズ ポリシー</strong>です。
 </p>
 </div>
 </section>
 
 <section class="section" id="burst-controller-wall">
-<h2 class="section-title">Burst-driven neuromodulation is controller-limited, not just burst-timed</h2>
+<h2 class="section-title">バースト駆動のニューロモジュレーションは、バーストタイミングだけでなくコントローラーに制限されます</h2>
 <p>
-The older wording on this page already said that burst-triggered neuromodulation is slower than phase-locking. That was directionally correct, but it was still too coarse. Current primary literature shows that an adaptive-DBS loop can fail or change meaning for at least five different reasons: the chosen biomarker may track a different symptom axis, the biomarker may be modulated by movement / medication / stimulation state, the controller law may operate on a different timescale, sensing contacts and artifacts may constrain whether the loop can even run, and a biomarker-linked control signal may still fail to show unique clinical superiority over an energy-matched comparator. Therefore, this site now reads burst-driven neuromodulation through the following stack rather than a single burst-timing figure.
+このページの古い文言では、バーストトリガー神経変調は位相ロックよりも遅いとすでに述べられています。方向的には正しいのですが、それでも粗すぎました。現在の主要文献は、適応型 DBS ループが少なくとも 5 つの異なる理由で失敗したり、意味が変わったりする可能性があることを示しています。選択されたバイオマーカーが異なる症状軸を追跡する可能性があること、バイオマーカーが運動 / 投薬 / 刺激状態によって調整される可能性があること、コントローラーの法則が異なるタイムスケールで動作する可能性があること、接触やアーティファクトの検出によってループが実行できるかどうかが制約される可能性があること、バイオマーカーにリンクされた制御信号がエネルギー整合コンパレータに対して独自の臨床的優位性を依然として示せない可能性があることです。したがって、このサイトでは、単一のバースト タイミング図ではなく、次のスタックを通じてバースト駆動のニューロモジュレーションを読み取るようになりました。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Layer to separate</th>
-<th>What the primary literature supports</th>
-<th>What must be logged</th>
-<th>What it still does not prove</th>
+<th>レイヤーを分離</th>
+<th>一次文献がサポートしていること</th>
+<th>ログに記録する必要がある内容</th>
+<th>まだ証明されていないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>biomarker family / symptom target</strong></td>
-<td><a href="https://doi.org/10.1002/ana.23951" target="_blank">Little et al. (2013)</a> and <a href="https://doi.org/10.1093/brain/awx010" target="_blank">Tinkhauser et al. (2017)</a> constrain a <strong>beta-burst antikinetic route</strong>, <a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru et al. (2024)</a> constrains a <strong>dyskinesia-linked narrowband-gamma route</strong>, <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> used <strong>personalized high-versus-low dopaminergic-state markers</strong>, and <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou et al. (2025)</a> constrains <strong>entrained gamma as a prokinetic biomarker candidate</strong>. Those are not the same control object.</td>
-<td>Signal family, frequency band, anatomical source, intended symptom axis, and whether the signal is read as antikinetic beta, dyskinesia-linked gamma, entrained prokinetic gamma, or another personalized state marker.</td>
-<td>That one adaptive-DBS signal generalizes across bradykinesia, gait impairment, dyskinesia, and medication-state control.</td>
+<td><strong>バイオマーカーファミリー / 症状標的</strong></td>
+<td><a href="https://doi.org/10.1002/ana.23951" target="_blank">リトルら(2013)</a> および <a href="https://doi.org/10.1093/brain/awx010" target="_blank">Tinkhauser et al。 (2017) </a> は <strong> ベータバースト抗運動経路を制約します </strong>、<a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru et al。 (2024) </a> は、<strong> ジスキネジア関連の狭帯域ガンマ ルートを制約します。</strong>、<a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> は、<strong> パーソナライズされた高ドーパミン作動性状態マーカーと低ドーパミン作動性状態マーカー </strong> を使用し、<a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou et al。 (2025) </a> は、<strong> 同調ガンマを運動促進バイオマーカー候補 </strong> として制約します。これらは同じコントロール オブジェクトではありません。</td>
+<td>シグナルファミリー、周波数帯域、解剖学的ソース、対象となる症状軸、およびシグナルが抗運動性ベータ、ジスキネジア関連ガンマ、同調運動促進性ガンマ、または別の個人化された状態マーカーとして読み取られるかどうか。</td>
+<td>その 1 つの適応 DBS 信号は、運動緩慢、歩行障害、ジスキネジア、投薬状態の制御を全般的にカバーします。</td>
 </tr>
 <tr>
-<td><strong>state dependence / controllability</strong></td>
-<td><a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou et al. (2024)</a> showed that movement, dopaminergic medication, and DBS each modulate subthalamic beta differently, while <a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">Busch et al. (2025)</a> documented that useful beta-threshold setting depends on patient-specific long-term modulation and can be misread by in-clinic snapshots alone.</td>
-<td>Medication state, rest versus movement slices, controllability test of the candidate signal, band-width or peak-selection rule, and whether thresholds were derived from clinic-only or chronic home data.</td>
-<td>That a signal tuned at rest or in one medication state stays equally informative during naturalistic behavior.</td>
+<td><strong>状態依存性・制御性</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou 他(2024) </a> は、運動、ドーパミン作動薬、DBS がそれぞれ視床下ベータを異なる方法で調節することを示しました。 (2025)</a> は、有用なベータ閾値設定は患者固有の長期変調に依存し、クリニック内のスナップショットだけでは誤って読み取られる可能性があることを文書化しました。</td>
+<td>投薬状態、安静と運動のスライス、候補信号の制御性テスト、帯域幅またはピーク選択ルール、および閾値がクリニックのみのデータから導出されたのか、それとも慢性的な在宅データから導出されたのか。</td>
+<td>安静時またはある投薬状態で調整された信号は、自然主義的な行動中も同等の情報を提供します。</td>
 </tr>
 <tr>
-<td><strong>controller mode / timescale</strong></td>
-<td><a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> showed that ADAPT-PD uses <strong>single-threshold</strong> control with <strong>250 ms</strong> amplitude changes and <strong>dual-threshold</strong> control with <strong>2.5 min up / 5 min down</strong> adjustment plus a programmable <strong>1.2–2 s onset</strong>, while <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">Wilkins et al. (2025)</a> used a <strong>beta-burst-duration controller</strong> with a therapeutic floor, ceiling, and slow ramp policy for gait / freezing-of-gait.</td>
-<td>Controller family, single- versus dual-threshold or other policy class, update interval, onset duration, floor/ceiling amplitude, ramp rate, and whether one or both hemispheres drive the control law.</td>
-<td>That two aDBS papers used the same control strategy simply because both were called adaptive or beta-based.</td>
+<td><strong>コントローラーモード/タイムスケール</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">スタンスラスキら。 (2024)</a> は、ADAPT-PD が、<strong>250 ms</strong> 振幅変化を備えた <strong> 単一しきい値 </strong> 制御と、<strong> 2.5 分上昇 / 5 分下降</strong> 調整とプログラム可能な <strong>1.2 ～ 2 秒のオンセット</strong> を備えた <strong> 二重しきい値 </strong> 制御を使用していることを示しました。 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">Wilkins et al. (2025)</a> は、<strong> ベータ バースト持続時間コントローラーを使用しました。</strong> は、歩行 / すくみ足の治療用の床、天井、スロー ランプ ポリシーを備えています。</td>
+<td>Controller ファミリ、シングルしきい値とデュアルしきい値、またはその他のポリシー クラス、更新間隔、オンセット期間、下限/上限振幅、ランプ レート、および一方または両方の半球が制御則を駆動するかどうか。</td>
+<td>その 2 つの aDBS 論文は、単に両方とも適応型またはベータベースと呼ばれていたため、同じ制御戦略を使用していました。</td>
 </tr>
 <tr>
-<td><strong>sensing compatibility / artifact burden</strong></td>
-<td><a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> reported that participants could exit ADAPT-PD because of <strong>signal artifact</strong>, inadequate LFP signal, or no acceptable aDBS mode, and <a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">Busch et al. (2025)</a> showed no visible beta peak in <strong>3/16 hemispheres</strong>, unilateral sensing in <strong>4/8 patients</strong>, threshold drift, and outlier distortion during setup. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">Wilkins et al. (2025)</a> likewise required sense-friendly configurations and slower ramps to reduce stimulation artefacts.</td>
-<td>Sensing contacts, signal-to-noise, unilateral versus bilateral sensing, excluded hemispheres, artifact-detection rule, threshold reset events, and whether the signal remained usable during movement and stimulation.</td>
-<td>That the controller would have been available under ordinary contact settings or chronic use without extra debugging and exclusions.</td>
+<td><strong>センシング互換性/アーティファクト負担</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">スタンスラスキら(2024)</a> は、<strong> 信号アーチファクト</strong>、不適切な LFP 信号、または許容可能な aDBS モードがないために、参加者が ADAPT-PD を終了する可能性があると報告しました。 (2025)</a> は、<strong>3/16 半球</strong> では目に見えるベータピークを示さず、<strong>4/8 患者</strong> では片側センシング、閾値ドリフト、およびセットアップ中の異常値の歪みを示しました。 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">Wilkins et al. (2025)</a> も同様に、刺激アーティファクトを軽減するために感覚に優しい構成とより遅いランプを必要としました。</td>
+<td>センシング接点、信号対雑音比、片側センシングと両側センシング、除外された半球、アーティファクト検出ルール、閾値リセットイベント、および運動中および刺激中に信号が使用可能なままであるかどうか。</td>
+<td>コントローラーは、追加のデバッグや除外を行わずに、通常の連絡先設定または慢性的な使用でも使用できたはずです。</td>
 </tr>
 <tr>
-<td><strong>biomarker-linked control versus clinical effect</strong></td>
-<td><a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> showed improved motor symptoms and quality of life with personalized adaptive DBS in a four-patient pilot, but <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">Wilkins et al. (2025)</a> found that a <strong>randomly adapting</strong> DBS control with matched therapeutic window and TEED still performed similarly to cDBS and aDBS at group level on several acute metrics, which means biomarker linkage and clinical superiority are separate evidence objects.</td>
-<td>cDBS comparator, random / inverted / surrogate comparator when available, TEED or duty-cycle matching rule, chosen symptom endpoint, and the stopped claim when the biomarker tracks a state but does not show unique clinical benefit.</td>
-<td>That better biomarker tracking or a cleaner controller trace automatically produced unique symptom-level superiority.</td>
+<td><strong>バイオマーカー関連対照と臨床効果</strong></td>
+<td><a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024) </a> は 4 人の患者のパイロットで個別化された適応 DBS により運動症状と生活の質の改善を示しましたが、<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">Wilkins et al. (2025) </a> は、治療ウィンドウと TEED が一致した <strong> ランダムに適応した </strong> DBS 対照が、いくつかの急性指標においてグループ レベルで cDBS および aDBS と同様に機能することを発見しました。これは、バイオマーカーの関連性と臨床的優位性が別個の証拠の対象であることを意味します。</td>
+<td>cDBS コンパレータ、ランダム/反転/サロゲート コンパレータ (利用可能な場合)、TEED またはデューティ サイクル マッチング ルール、選択された症状エンドポイント、およびバイオマーカーが状態を追跡しているが固有の臨床効果を示さない場合の停止されたクレーム。</td>
+<td>より優れたバイオマーカー追跡またはよりクリーンなコントローラー追跡により、特有の症状レベルの優位性が自動的に生成されました。</td>
 </tr>
 <tr>
-<td><strong>deployability / programming burden</strong></td>
-<td><a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">Busch et al. (2025)</a>, <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a>, and <a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">Dixon et al. (2026)</a> show that home use still depends on programming workflow, remote or manual rescue, eligibility, and continuation. In ADAPT-START, only <strong>9 of 20</strong> consecutive chronic cDBS patients were eligible and <strong>5</strong> remained on chronic aDBS by July 2025.</td>
-<td>Screened n, exclusion reasons, programming visits, remote or manual optimization route, home slice, continuation, and the manpower / time burden of maintaining the controller.</td>
-<td>That a controller with an interesting biomarker is already routine, broadly eligible, or low-burden clinical care.</td>
+<td><strong>展開性/プログラミングの負担</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">ブッシュら(2025)</a>、<a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a>、<a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">Dixon et al. (2026)</a> は、家庭での使用が依然としてプログラミング ワークフロー、遠隔または手動レスキュー、資格、継続に依存していることを示しています。 ADAPT-STARTでは、</strong>連続慢性cDBS患者20名のうち<strong>9名のみが対象となり、<strong>5</strong>は2025年7月までに慢性aDBSを継続した。</td>
+<td>Sスクリーンn、除外理由、プログラミング訪問、リモートまたは手動の最適化ルート、ホームスライス、継続、およびコントローラーのメンテナンスの人的/時間的負担。</td>
+<td>興味深いバイオマーカーを備えたコントローラーは、すでに日常的で、広く適格であるか、負担の少ない臨床ケアになっているということ。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Revision rule on this site</strong>
+<strong>このサイトの改訂ルール</strong>
 <p>
-If a burst-driven loop reports only burst duration or only one average timing number, this page does not promote it to validated symptom-linked adaptive control. The minimum readable object is a <strong>named biomarker family and symptom target</strong>, a <strong>state-dependence / controllability audit</strong>, a <strong>declared controller mode with timescale</strong>, a <strong>sensing / artifact burden audit</strong>, a <strong>biomarker-linked comparator</strong>, and a <strong>deployment slice</strong>.
+バースト駆動ループがバースト期間のみ、または 1 つの平均タイミング数値のみを報告する場合、このページは、そのループを検証済みの症状にリンクした適応制御に昇格させません。最小の読み取り可能なオブジェクトは、<strong> 名前付きバイオマーカー ファミリと症状ターゲット </strong>、<strong> 状態依存性 / 制御性監査 </strong>、<strong> タイムスケール付きの宣言されたコントローラー モード </strong>、<strong> センシング / アーティファクト負荷監査 </strong>、<strong> バイオマーカーにリンクされたコンパレーター </strong>、および <strong> デプロイメント スライス </strong> です。
 </p>
 </div>
 </section>
 
 <section class="section" id="co-adaptation-wall">
-<h2 class="section-title">Co-adaptation must be separated before online gains are interpreted</h2>
+<h2 class="section-title"> オンライン ゲインを解釈する前に、共適応を分離する必要があります</h2>
 <p>
-A remaining weakness at the L3 entry point was that "online performance improved" could still be read as if the same decoder had simply become more durable. Current primary literature does not support that shortcut. In closed-loop BCIs, improvement can come from <strong>user-side neural strategy learning</strong>, <strong>decoder-weight updates or pseudo-label self-training</strong>, and <strong>application / interaction redesign</strong>. If these are mixed, a fast loop is not yet evidence of a stable fixed decoder.
+L3 エントリ ポイントに残る弱点は、「オンライン パフォーマンスの向上」が、同じデコーダの耐久性が単に向上しただけであるかのように解釈できることです。現在の一次文献はそのショートカットをサポートしていません。閉ループ BCI では、<strong> ユーザー側のニューラル戦略学習 </strong>、<strong> デコーダーの重み更新または擬似ラベルの自己トレーニング </strong>、<strong> アプリケーション/インタラクションの再設計 </strong> から改善がもたらされます。これらが混在している場合、高速ループはまだ安定した固定デコーダである証拠にはなりません。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Source of apparent improvement</th>
-<th>What the primary literature supports</th>
-<th>What must be logged</th>
-<th>What it still does not prove</th>
+<th>明らかな改善の源</th>
+<th>一次文献がサポートしていること</th>
+<th>ログに記録する必要がある内容</th>
+<th>まだ証明されていないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>user-side learning</strong></td>
-<td><a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">Abu-Rmileh et al. (2019)</a> compared a fixed classifier against regular adaptation over four days and showed different within-day versus between-day behaviour, while <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis et al. (2018)</a> showed longitudinal subject learning and warned that frequent recalibration can hinder it.</td>
-<td>Fixed versus updated decoder schedule, practice dose, instruction changes, and within-day versus between-day curves.</td>
-<td>That the decoder itself was stable, or that gains will survive with no update.</td>
+<td><strong>ユーザー側の学習</strong></td>
+<td><a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">Abu-Rmileh 他(2019) </a> は、固定分類子と通常の適応を 4 日間にわたって比較し、日内と日間の挙動が異なることを示しました。 (2018)</a> は長期的な主題学習を示し、頻繁な再校正がそれを妨げる可能性があると警告しました。</td>
+<td>デコーダのスケジュールの修正と更新、練習量、指示の変更、および日内と日間の曲線。</td>
+<td>デコーダー自体が安定していること、またはゲインが更新されずに存続すること。</td>
 </tr>
 <tr>
-<td><strong>decoder-side adaptation</strong></td>
-<td><a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">Orsborn et al. (2014)</a> showed that combined neural and decoder adaptation can yield skillful control while reshaping neural representations, and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> updated decoder weights after each closed-loop block while using open-loop probes to estimate performance without closed-loop effects.</td>
-<td>Update trigger, cadence, pseudo-label or supervision route, open-loop probe blocks, and frozen-comparator performance.</td>
-<td>That online gains came from a fixed decoder, or that they reflect user learning alone.</td>
+<td><strong>デコーダ側適応</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">オルスボーンら(2014) </a> は、ニューラルとデコーダの適応を組み合わせることで、ニューラル表現を再形成しながら巧みな制御を実現できることを示しました。 (2025)</a> は、開ループ プローブを使用して閉ループ効果なしでパフォーマンスを推定しながら、各閉ループ ブロック後のデコーダの重みを更新しました。</td>
+<td>トリガ、ケイデンス、擬似ラベルまたは監視ルート、開ループプローブブロック、およびフリーズコンパレータのパフォーマンスを更新します。</td>
+<td>オンラインの利益は固定デコーダーから来ている、またはユーザーの学習のみを反映しているということ。</td>
 </tr>
 <tr>
-<td><strong>application / interaction shaping</strong></td>
-<td><a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis et al. (2018)</a> showed that control-paradigm refinement can facilitate subject learning, while <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> reported that participant engagement and enunciation influenced synthesis quality and retrained the decoder using previous-session data.</td>
-<td>Feedback policy, smoothing or evidence-accumulation rules, prompt or task scaffold, session-to-session interface changes, and engagement / fatigue notes.</td>
-<td>That the neural controller alone improved independent of interface or task redesign.</td>
+<td><strong>アプリケーション/インタラクションの形成</strong></td>
+<td><a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis ら。 (2018) </a> は、制御パラダイムの改良により被験者の学習が促進されることを示しました。 (2025) </a> は、参加者の関与と発音が合成品質に影響を与え、前のセッション データを使用してデコーダを再トレーニングしたことを報告しました。</td>
+<td>フィードバック ポリシー、スムージングまたは証拠蓄積ルール、プロンプトまたはタスク スキャフォールド、セッション間のインターフェイスの変更、エンゲージメント/疲労に関するメモ。</td>
+<td>インターフェイスやタスクの再設計とは関係なく、ニューラル コントローラーだけが改善されたこと。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Revision rule on this site</strong>
+<strong>このサイトの改訂ルール</strong>
 <p>
-A same-session online result must now name whether it is a <strong>fixed-policy loop</strong> or a <strong>co-adaptive loop</strong>. If the paper mixes user learning, decoder updates, and interface redesign without a frozen comparator or open-loop probe, this site does not promote the gain to fixed-decoder durability or portable deployment evidence.
+同一セッションのオンライン結果には、<strong> 固定ポリシー ループ </strong> か、<strong> 共適応ループ </strong> かを指定する必要があります。この論文が、フリーズされたコンパレータや開ループ プローブを使用せずに、ユーザーの学習、デコーダの更新、インターフェイスの再設計を混合している場合、このサイトは、固定デコーダの耐久性やポータブル展開の証拠を促進するものではありません。
 </p>
 </div>
 </section>
 
 <section class="section" id="longitudinal-bottlenecks">
-<h2 class="section-title">2026-03 literature audit: five barriers that appear once a loop first works online</h2>
+<h2 class="section-title">2026-03 文献監査: ループが初めてオンラインで動作すると現れる 5 つの障壁</h2>
 <p>
-The remaining weakness of the previous version was that it still let readers compress long-horizon closed-loop evidence into a <strong>same-session timing problem</strong>. Looking at the primary literature for 2014-2025, the scientific bottlenecks after a loop first "moves" are not one axis. Closed-loop BCIs now force at least <strong>(1) co-adaptation / credit assignment</strong>, <strong>(2) output-path timing</strong>, <strong>(3) fixed-decoder durability</strong>, <strong>(4) rescue-mode recalibration / remote optimization burden</strong>, and <strong>(5) eligibility / continuation / clinic-home transfer</strong> to be logged separately. Therefore, this site does not raise L3 just because the loop runs online; it asks for the following five barriers as distinct evidence objects.
+以前のバージョンの残りの弱点は、リーダーが依然として長期にわたる閉ループの証拠を <strong> 同じセッションのタイミング問題 </strong> に圧縮できることでした。 2014 年から 2025 年の一次文献を見ると、ループが最初に「移動」した後の科学的なボトルネックは 1 つの軸ではありません。閉ループ BCI は、少なくとも <strong>(1) 同時適応 / クレジット割り当て</strong>、<strong>(2) 出力パス タイミング</strong>、<strong>(3) 固定デコーダ耐久性</strong>、<strong>(4) レスキュー モード再校正 / リモート最適化負担</strong>、<strong>(5) 資格 / 継続 / 診療所から自宅への転送</strong> のログ記録を強制するようになりました。別に。したがって、このサイトでは、ループがオンラインで実行されているという理由だけで L3 が発生するわけではありません。それは、明確な証拠の対象として、次の 5 つの障壁を要求します。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Wall</th>
-<th>What the primary literature now supports</th>
-<th>Revision policy on this page</th>
+<th>壁</th>
+<th>一次文献で現在サポートされている内容</th>
+<th>このページの改訂ポリシー</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>co-adaptation / credit assignment</strong></td>
-<td><a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">Orsborn et al. (2014)</a>, <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis et al. (2018)</a>, <a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">Abu-Rmileh et al. (2019)</a>, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> show that online gains can reflect mixed changes in user strategy, decoder weights, and application policy. A loop that improves online is therefore not automatically a durable fixed decoder.</td>
-<td>Record whether the decoder / thresholds / interaction policy were frozen or updated, when each change occurred, what open-loop or frozen-comparator probe was kept, and what part of the gain is attributed to user learning versus decoder adaptation.</td>
+<td><strong>共同適応/クレジット割り当て</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">オルスボーンら(2014)</a>、<a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">Perdikis et al。 (2018)</a>、<a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">Abu-Rmileh 他(2019)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">ワイラグカール 他(2025)</a>、<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> は、オンラインの利益がユーザー戦略、デコーダーの重み、およびアプリケーション ポリシーの混合変化を反映している可能性があることを示しています。したがって、オンラインで改善するループは、自動的に耐久性のある固定デコーダーになるわけではありません。</td>
+<td>デコーダ/しきい値/インタラクションポリシーが凍結または更新されたかどうか、各変更がいつ発生したか、どの開ループまたは凍結されたコンパレータプローブが保持されたか、ゲインのどの部分がユーザー学習とデコーダ適応に起因するかを記録します。</td>
 </tr>
 <tr>
-<td><strong>tail latency / output path</strong></td>
-<td>Littlejohn et al. (2025) showed streaming brain-to-voice in <strong>80 ms steps</strong> and reported cue-to-audio timing rather than just decoder timing. Wairagkar et al. (2025) demonstrated <strong>sub-10 ms</strong> neural-to-voice synthesis while returning <strong>silence for non-speech and overlapping speech</strong>, which means output-path latency and fallback policy are part of the loop rather than post-processing detail.</td>
-<td>The average latency of the reasoner is not enough, and we leave the behavior of module-wise latency, cue-to-output tail, audio playback path, and silence/abstention separately. </td>
+<td><strong>テールレイテンシ/出力パス</strong></td>
+<td>リトルジョンら。 (2025) は、脳から音声へのストリーミングを <strong>80 ミリ秒ステップ </strong> で示し、単なるデコーダのタイミングではなくキューからオーディオへのタイミングを報告しました。ワイラグカールら。 (2025) は、<strong>sub-10 ms</strong> ニューラル音声合成を実証し、非音声および重複音声に対して <strong>silence を返します</strong>。これは、出力パスの遅延とフォールバック ポリシーが、後処理の詳細ではなくループの一部であることを意味します。</td>
+<td> 推論器の平均レイテンシーでは十分ではないため、モジュールごとのレイテンシー、キューから出力テールまでの動作、オーディオ再生パス、および沈黙/棄権の動作を個別に残しておきます。 </td>
 </tr>
 <tr>
-<td><strong>fixed-decoder durability</strong></td>
-<td>Wilson et al. (2025) made explicit that accumulating neural changes create periods in which users cannot use a static intracortical BCI reliably, and evaluated one-month operation against fixed-decoder comparators rather than hiding every failure behind adaptive rescue. That means a same-session fast loop and a fixed decoder that still works days later are not the same achievement.</td>
-<td>Report the <strong>fixed decoder interval</strong>, time since last supervised calibration, degradation curve under no-update conditions, and when the claim ceiling has to drop from durable fixed-decoder evidence to rescue-mode evidence.</td>
+<td><strong>固定デコーダ耐久性</strong></td>
+<td>ウィルソンら(2025) は、神経の変化が蓄積すると、ユーザーが静的な皮質内 BCI を確実に使用できない期間が生じることを明らかにし、すべての失敗を適応型レスキューの背後に隠すのではなく、固定デコーダのコンパレータに対して 1 か月の動作を評価しました。つまり、同じセッションの高速ループと、数日後でも機能する固定デコーダーは同じ成果ではありません。</td>
+<td><strong>固定デコーダ間隔</strong>、最後に監視されたキャリブレーションからの時間、更新なし条件下での劣化曲線、およびクレームの上限が耐久性のある固定デコーダの証拠からレスキューモードの証拠に引き下げられる必要がある時期をレポートします。</td>
 </tr>
 <tr>
-<td><strong>rescue-mode recalibration / remote optimization burden</strong></td>
-<td>Wilson et al. (2025) also showed multi-timescale unsupervised recalibration, Dixon et al. (2026) reported a machine-learning pipeline capable of <strong>remotely optimizing</strong> movement-responsive aDBS parameters in a <strong>home setting</strong>, and Busch et al. (2025) documented biomarker-selection, threshold-definition, and artifact-related maladaptation as programming burdens. Rescue is therefore a separate operating regime, not a free extension of fixed-decoder success.</td>
-<td>Log whether rescue was <strong>manual, unsupervised, or remotely optimized</strong>, what data and staff time it required, which parameters changed, how long recovery took, and whether performance after rescue is being compared fairly against the pre-rescue fixed-decoder slice.</td>
+<td><strong>レスキューモード再調整/リモート最適化負荷</strong></td>
+<td>ウィルソンらDixon et al. (2025) は、マルチタイムスケールの教師なし再校正も示しました。 (2026) は、<strong> ホーム設定</strong> で <strong> の動きに応答する aDBS パラメータをリモートで最適化できる機械学習パイプラインを報告しました。 (2025) は、バイオマーカーの選択、閾値の定義、およびアーチファクト関連の不適応をプログラミングの負担として文書化しました。したがって、レスキューは別の運用体制であり、固定デコーダの成功を自由に拡張するものではありません。</td>
+<td>レスキューが<strong>手動、監視なし、またはリモートで最適化された</strong>かどうか、必要なデータとスタッフの時間、変更されたパラメータ、回復にかかった時間、レスキュー後のパフォーマンスがレスキュー前の固定デコーダスライスと公正に比較されているかどうかをログします。</td>
 </tr>
 <tr>
-<td><strong>eligibility / continuation / naturalistic transfer</strong></td>
-<td>Oehrn et al. (2024) evaluated chronic adaptive DBS with both <strong>in-clinic and at-home</strong> recordings. Busch et al. (2025) reported that <strong>6 of 8</strong> patients chose to remain on adaptive DBS after two-week home evaluation, while Cascino et al. (2026) reported that only <strong>9 of 20</strong> consecutive chronic cDBS patients were eligible and <strong>5</strong> remained on chronic aDBS by July 2025. Eligibility and continuation therefore remain separate bottlenecks even after technical proof-of-principle.</td>
-<td>Not only lab success, but also <strong>screened n</strong>, exclusion reasons, clinic/home slice, continuation rate, programming visits, and stimulation-duty-cycle changes are recorded as required logs on the deployment side.</td>
+<td><strong>資格・継続・自然主義編入</strong></td>
+<td>Oehrn et al. (2024) クリニック内の <strong> 記録と在宅の </strong> 記録の両方で慢性適応 DBS を評価しました。ブッシュら。 (2025) は、8</strong> 患者のうち <strong>6 が 2 週間の自宅評価後に適応 DBS を継続することを選択したと報告しました。 (2026) は、20</strong> 連続慢性 cDBS 患者のうち <strong>9 のみが適格であり、<strong>5</strong> は 2025 年 7 月までに慢性 aDBS を継続したと報告しました。したがって、技術的原理証明後も、適格性と継続は別個のボトルネックのままです。</td>
+<td>ラボの成功だけでなく、<strong>スクリーニングされたn</strong>、除外理由、クリニック/自宅スライス、継続率、プログラミング訪問、および刺激デューティサイクルの変更も必要なログとして展開側に記録されます。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Points of criticism here</strong>
+<strong>ここでの批判点</strong>
 <p>
-Therefore, just because "the fast loop worked once" or "the adaptive controller reduced the symptoms a little" does not mean that it can be used for a long time. A same-session online gain is not yet a <strong>credit-assigned fixed-policy result</strong>; a same-session fast loop is not yet a <strong>fixed decoder that still works tomorrow</strong>; a rescued loop is not yet an <strong>easy-to-program chronic controller</strong>; and a programmable chronic controller is not yet a <strong>broadly eligible and maintainable home-use route</strong>. Only after those barriers are passed separately can we read that we are approaching a deployable closed loop.
+そのため、「一度高速ループが効いた」「アダプティブコントローラーで症状が少し軽減された」からといって、長く使えるとは限りません。同一セッションのオンライン利益はまだ <strong> クレジットに割り当てられた固定ポリシーの結果 </strong> ではありません。同一セッション高速ループはまだ <strong> 固定デコーダではなく、明日 </strong> でも動作します。レスキューされたループはまだ <strong> プログラムが簡単な慢性コントローラー </strong> ではありません。また、プログラマブル 慢性コントローラーはまだ <strong> に広く適格で保守可能な家庭用ルート </strong> にはなっていません。これらの障壁を個別に通過した後でのみ、展開可能な閉ループに近づいていることがわかります。
 </p>
 </div>
 </section>
 
 <section class="section" id="card-stack">
-<h2 class="section-title">Which public card gets stacked when the loop leaves same-session</h2>
+<h2 class="section-title">ループが同じセッションを離れるときにどのパブリック カードがスタックされるか</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Evidence slice</th>
-<th>What it safely supports</th>
-<th>What it still does not support</th>
-<th>Public card stack on this site</th>
+<th>証拠スライス</th>
+<th>安全サポートとは</th>
+<th>まだ対応していないもの</th>
+<th>このサイトの公開カードスタック</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>same-session fixed-policy local loop</strong></td>
-<td>That the declared subsystem can run online with measured timing under a frozen decoder / interaction policy and an explicit fallback policy.</td>
-<td>Cross-day durability, boundary completeness, easy clinical deployment.</td>
-<td>Timing log plus <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> when relevant.</td>
+<td><strong>同一セッション固定ポリシーのローカル ループ</strong></td>
+<td>宣言されたサブシステムは、凍結されたデコーダ/インタラクション ポリシーおよび明示的なフォールバック ポリシーの下で、測定されたタイミングでオンラインで実行できること。</td>
+<td>一日を超えた耐久性、境界の完全性、簡単な臨床展開。</td>
+<td>タイミングログと<a href="../verification.html#calibration-abstention-card">キャリブレーション＆アンプ。棄権カード</a> (該当する場合)。</td>
 </tr>
 <tr>
-<td><strong>same-session co-adaptive local loop</strong></td>
-<td>That the coupled human + decoder + interface package can be trained online under a declared update policy and credit-assignment log.</td>
-<td>Fixed-decoder durability, user-independent stability, broad deployment.</td>
-<td>Timing log plus co-adaptation log plus <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a> when relevant.</td>
+<td><strong>同一セッション協調適応ローカル ループ</strong></td>
+<td>ヒューマン + デコーダー + インターフェイスの組み合わせパッケージは、宣言された更新ポリシーとクレジット割り当てログに基づいてオンラインでトレーニングできること。</td>
+<td>固定デコーダーの耐久性、ユーザーに依存しない安定性、幅広い展開。</td>
+<td>タイミングログと同時適応ログと<a href="../verification.html#calibration-abstention-card">キャリブレーションと棄権カード</a> (該当する場合)。</td>
 </tr>
 <tr>
-<td><strong>cross-day fixed-decoder loop</strong></td>
-<td>That a decoder survives a declared no-update interval under declared state annotation and drift conditions.</td>
-<td>Adaptive rescue benefit, broad home-use scalability, solved embodiment.</td>
-<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> plus timing log.</td>
+<td><strong>日をまたぐ固定デコーダ ループ</strong></td>
+<td>宣言された状態の注釈およびドリフト条件の下で、デコーダが宣言された非更新期間を存続すること。</td>
+<td>適応型レスキューの利点、幅広い家庭用拡張性、解決された実施形態。</td>
+<td><a href="../verification.html#temporal-validity-card">時間的有効性カード</a> プラス タイミング ログ.</td>
 </tr>
 <tr>
-<td><strong>rescued / adaptively maintained loop</strong></td>
-<td>That performance can be recovered under a declared update policy.</td>
-<td>That the original fixed decoder was durable, or that rescue burden is negligible.</td>
-<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> plus update / rescue log and <a href="../verification.html#calibration-abstention-card">Calibration &amp; Abstention Card</a>.</td>
+<td><strong>レスキュー/適応的に維持されたループ</strong></td>
+<td>そのパフォーマンスは、宣言された更新ポリシーの下で回復できます。</td>
+<td>元の固定デコーダーが耐久性があること、または救助の負担が無視できること。</td>
+<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> プラスアップデート/レスキューログと <a href="../verification.html#calibration-abstention-card">Calibration &amp;棄権カード</a>.</td>
 </tr>
 <tr>
-<td><strong>naturalistic chronic therapeutic loop</strong></td>
-<td>That the loop can remain useful under declared clinic/home and continuation constraints for the screened population.</td>
-<td>That the route is broadly eligible, easy to program, or body/environment complete by default.</td>
-<td><a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> plus <a href="../verification.html#body-environment-boundary-card">Body / Environment Boundary Card</a> plus deployment-burden log.</td>
+<td><strong>自然主義的慢性治療ループ</strong></td>
+<td>ループは、スクリーニングされた集団に対して宣言された診療所/在宅および継続の制約の下でも有用であり続けることができること。</td>
+<td>ルートが広範囲に適格であること、プログラムが簡単であること、または本体/環境がデフォルトで完了していること。</td>
+<td><a href="../verification.html#temporal-validity-card">時間的有効性カード</a>プラス<a href="../verification.html#body-environment-boundary-card">身体/環境境界カード</a>プラス導入負荷ログ</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Reading rule</strong>
+<strong>ルールの読み方</strong>
 <p>
-This page now blocks a common shortcut: <strong>same-session online</strong> is not quietly promoted to <strong>co-adaptation-aware</strong>, <strong>durable</strong>, <strong>rescued</strong>, or <strong>deployable</strong>. Those are five different evidence slices with different public cards and different failure modes.
+このページでは、一般的なショートカットがブロックされるようになりました。<strong>same-session online</strong> は、<strong>co-adaptation-aware</strong>、<strong>durable</strong>、<strong>rescued</strong>、または <strong>deployable</strong> に静かに昇格されません。これらは、異なる公開カードと異なる障害モードを備えた 5 つの異なる証拠スライスです。
 </p>
 </div>
 </section>
 
 <section class="section" id="end-to-end">
-<h2 class="section-title">What is measured end-to-end</h2>
+<h2 class="section-title">エンドツーエンドで測定されるもの</h2>
 <p>
-Wilson et al.'s (2010) key point is that it is insufficient to measure signal processing latency alone. A closed loop is the entire path from the input to the output. The display, OS, driver, audio system, and stimulator may be different rate-limiting factors.
+Wilson et al. (2010) の重要なポイントは、信号処理遅延だけを測定するだけでは不十分であるということです。閉ループは、入力から出力までのパス全体です。ディスプレイ、OS、ドライバー、オーディオ システム、および刺激装置は、異なる速度制限要因となる可能性があります。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Interval</th>
-<th>What you need to know</th>
-<th>Typical measurement method</th>
+<th>インターバル</th>
+<th>知っておきたいこと</th>
+<th>代表的な測定方法</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Input</strong></td>
-<td>This is when the sensor actually detected a change. </td>
-<td>TTL, known pulse, DAQ input, stimulator marker output. </td>
+<td><strong>入力</strong></td>
+<td>センサーが実際に変化を検知したときです。 </td>
+<td>TTL、既知のパルス、DAQ 入力、刺激マーカ出力。 </td>
 </tr>
 <tr>
-<td><strong>Processing</strong></td>
-<td>This is how much time it took for preprocessing, estimation, and decision making. </td>
-<td>software timestamp, block duration, CPU/GPU logs. </td>
+<td><strong>処理中</strong></td>
+<td>前処理、見積もり、意思決定に要した時間です。 </td>
+<td> ソフトウェアのタイムスタンプ、ブロック期間、CPU/GPU ログ。 </td>
 </tr>
 <tr>
-<td><strong>Output</strong></td>
-<td>It is when a display, sound, stimulus, or control signal really occurs. </td>
-<td>Photodiode, microphone, loopback, stimulus artifact onset. </td>
+<td><strong>出力</strong></td>
+<td>表示、音声、刺激、制御信号が実際に発生したときです。 </td>
+<td>フォトダイオード、マイク、ループバック、刺激アーティファクトの発生。 </td>
 </tr>
 <tr>
-<td><strong>Return</strong></td>
-<td>When the influence of the output is returned to the next input. </td>
-<td>Redetection, environmental sensor, and body response logs within a closed-loop task. </td>
+<td><strong>戻る</strong></td>
+<td>出力の影響が次の入力に戻る場合。 </td>
+閉ループタスク内の<td>R検出、環境センサー、および身体反応のログ。 </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Average is not enough</strong>
+<strong>平均では不十分</strong>
 <p>
-In a closed loop, <strong>P95/P99/worst-case</strong> and <strong>trial-to-trial jitter</strong> can be more destructive than average delay. Especially in phase-targeting and safety-critical loops, just showing the average value does not provide any reassurance.
+閉ループでは、<strong>P95/P99/最悪のケースの </strong> および <strong> トライアル間のジッター </strong> は、平均遅延よりも有害になる可能性があります。特に、位相をターゲットにしたループやセーフティクリティカルなループでは、平均値を示すだけでは何の安心感も得られません。
 </p>
 </div>
 </section>
 
 <section class="section" id="synchronization">
-<h2 class="section-title">What LSL and event markers do and don't guarantee</h2>
+<h2 class="section-title">LSL およびイベント マーカーが行うことと保証しないこと</h2>
 <p>
-Kothe et al.'s (2025) LSL paper shows that LSL is useful for <strong>millisecond-scale synchronization in sufficient neurobehavioral research</strong> to provide offset correction and jitter compensation. On the other hand, this is <strong>software-based synchronization on LAN</strong> and does not automatically guarantee when the physical output of the stimulator or indicator occurs.
+Kothe et al. (2025) の LSL 論文は、LSL がオフセット補正とジッター補償を提供するのに十分な神経行動研究</strong> における <strong> ミリ秒スケールの同期に役立つことを示しています。一方、これは LAN</strong> 上の <strong> ソフトウェア ベースの同期であり、スティミュレータまたはインジケータの物理出力がいつ発生するかを自動的に保証するものではありません。
 </p>
 <p>
-Appelhoff and Stenner (2021) showed that event marking with a USB microcontroller can produce <strong>latencies of less than 1 ms. However, this is also primarily a <strong>marker path</strong> accuracy. Even if the marker is fast, the end-to-end loop that includes the display, audio path, stimulator, and estimator does not necessarily have the same accuracy.
+Appelhoff と Stenner (2021) は、USB マイクロコントローラーを使用したイベント マーキングにより 1 ミリ秒未満の <strong>latency が生成される可能性があることを示しました。ただし、これも主に <strong> マーカー パス </strong> の精度です。マーカーが高速であっても、ディスプレイ、オーディオ パス、刺激装置、推定装置を含むエンドツーエンド ループの精度が必ずしも同じであるとは限りません。
 </p>
 <div class="key-points">
-<h4>Things to be divided here</h4>
+<h4>ここで分けるもの</h4>
 <ul>
-<li><strong>LSL: Helps with common time system and offset correction for multiple streams. </li>
-<li><strong>TTL / MCU marker:</strong>Improve the accuracy of marking events to the acquisition side. </li>
-<li><strong>Photodiode / microphone / loopback: Externally verify the actual output onset. </li>
-<li><strong>Phase tracker:</strong>Separately audits how much phase shift remains for the target frequency. </li>
+<li><strong>LSL: 複数のストリームの共通の時間システムとオフセット補正に役立ちます。 </li>
+<li><strong>TTL / MCU マーカー:</strong> 取得側へのマーキングイベントの精度を向上させます。 </li>
+<li><strong>フォトダイオード/マイク/ループバック: 実際の出力の開始を外部で検証します。 </li>
+<li><strong>位相トラッカー:</strong>ターゲット周波数に対してどれだけの位相シフトが残っているかを個別に監査します。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="stops">
-<h2 class="section-title">Abstain, freeze and safety stop are different things</h2>
+<h2 class="section-title">アブステン、フリーズ、安全停止は別のもの</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>How it works</th>
-<th>Main purpose</th>
-<th>Typical trigger</th>
-<th>What to keep at a minimum</th>
+<th>仕組み</th>
+<th>主目的</th>
+<th>一般的なトリガー</th>
+<th>最低限抑えておきたいこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Abstain</strong></td>
-<td>This is to avoid unreasonable output when reliability is low. </td>
-<td>Insufficient classification probability, insufficient phase estimation reliability, OOD detection. </td>
-<td>Abstention rate, confidence threshold at the time of abstention, and state after abstention. </td>
+<td><strong>棄権</strong></td>
+<td>信頼性が低い場合に無理な出力を避けるためです。 </td>
+<td>分類確率が不十分、位相推定の信頼性が不十分、OOD 検出。 </td>
+<td>棄権率、棄権時の信頼閾値、棄権後の状態。 </td>
 </tr>
 <tr>
-<td><strong>hold-last-output / silence fallback</strong></td>
-<td>This is to maintain continuity without increasing erroneous output during short uncertainties or non-speech intervals. </td>
-<td>non-speech interval, decoder blank, short dropout, audio buffer underrun. </td>
-<td>Trigger rate, maximum duration, false speech suppression rate, and release delay. </td>
+<td><strong>最後の出力をホールド/サイレントフォールバック</strong></td>
+<td>これは、短い不確実性または非音声間隔中に誤った出力を増やすことなく連続性を維持するためです。 </td>
+<td> 非スピーチ間隔、デコーダ ブランク、ショート ドロップアウト、オーディオ バッファ アンダーラン。 </td>
+<td>トリガ率、最大継続時間、誤話抑制率、リリースディレイ。 </td>
 </tr>
 <tr>
-<td><strong>freeze / pause</strong></td>
-<td>This is for recalibration and confirmation of the cause. </td>
-<td>Clock offset increase, packet loss, drift deviation, resynchronization request. </td>
-<td>Invocation reason, duration, restart conditions, and recalibration details. </td>
+<td><strong>フリーズ/一時停止</strong></td>
+<td>再校正と原因確認用です。 </td>
+<td>Clock オフセット増加、パケット損失、ドリフト偏差、再同期要求。 </td>
+<td>呼び出しの理由、期間、再起動条件、および再調整の詳細。 </td>
 </tr>
 <tr>
-<td><strong>Safety stop / containment</strong></td>
-<td>To stop a dangerous actuation. </td>
-<td>P99 latency budget exceeded, abnormal amplitude, stimulation prohibited phase, output saturation. </td>
-<td>Stop conditions, number of stops, previous latency/phase/error, and manual return conditions. </td>
+<td><strong>安全停止/封じ込め</strong></td>
+<td>危険な作動を止めるために。 </td>
+<td>P99 遅延バジェットの超過、異常な振幅、刺激禁止位相、出力飽和。 </td>
+<td>S 停止条件、停止数、以前のレイテンシ/位相/エラー、および手動復帰条件。 </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Do not mix performance and safety issues</strong>
+<strong>パフォーマンスと安全性の問題を混同しないでください</strong>
 <p>
-Whether it's ``I didn't get it right so I won't output it'', ``I'm going to use silence to connect short spaces'', ``I'm going to put it on hold because the system seems to be broken'', or ``I'm going to stop it because it's dangerous'' are completely different in operational terms. If you combine everything into one "outage", you will not be able to trace the cause during review.
+「`I didn't get it right so I won't output it'', ``I'm going to use silence to connect short spaces'', ``I'm going to put it on hold because the system seems to be broken'', or `『危ないからやめます』」なのかと、運用的には全く違います。すべてを 1 つの「停止」にまとめてしまうと、調査中に原因を追跡できなくなります。
 </p>
 </div>
 </section>
 
 <section class="section" id="logs">
-<h2 class="section-title">The minimum log you want to keep</h2>
+<h2 class="section-title">保持したい最小限のログ</h2>
 <div class="key-points">
-<h4>Checklist</h4>
+<h4>チェックリスト</h4>
 <ul>
-<li><strong>loop class: One of</strong>state feedback, ERP/command, speech/streaming, phase-locked, burst-triggered. </li>
-<li><strong>co-adaptation regime:</strong>State whether the decoder, thresholds, smoothing, evidence accumulation, or interface rules were frozen or updated, and what triggered each change.</li>
-<li><strong>declared boundary / target subsystem:</strong>State whether the loop is speech, grasp, navigation, memory-task, symptom-control, or another subsystem, and state the maximum claim ceiling. </li>
-<li><strong>retained / substituted sensory and self-generated-feedback routes:</strong>List which visual, tactile, auditory, proprioceptive, vestibular, respiration-linked, or predicted reafferent cues were present, simulated, or omitted. </li>
-<li><strong>retained / substituted action channels:</strong>Name the actual plant or actuator, such as cursor, robotic hand, speech synthesizer, avatar, or stimulator, together with its controllable degrees of freedom. </li>
-<li><strong>interoceptive / arousal logs:</strong>Record whether respiration, pupil, HR / HRV, effort, fatigue, or similar organism-wide covariates were logged, manipulated, or left latent. </li>
-<li><strong>slow internal-milieu logs:</strong>Record whether circadian phase or clock time, recent sleep-wake schedule, cortisol / glucocorticoid assay or steroid treatment, feeding / fasting or glucose-insulin regime, and similar slow body-state covariates were controlled, measured, perturbed, or left latent. </li>
-<li><strong>end-to-end latency:</strong>Leave median, P95, P99, worst-case separate. </li>
-<li><strong>Module-wise latency:</strong> Separate input, inference, output, and recursive input, leaving what is rate-limiting. </li>
-<li><strong>Definition of jitter:</strong>Specify SD, IQR, or peak-to-peak. </li>
-<li><strong>clock offset / drift: Leave before and after the LSL and hardware marker correction. </li>
-<li><strong>Marker verification method:</strong>Write which of TTL, MCU, photodiode, microphone, or loopback was used for actual measurement. </li>
-<li><strong>loop-removal / ablation test:</strong>Report what happened when tactile feedback, self-motion cues, predicted sensory consequences, or another decisive route was removed, scrambled, or delayed. </li>
-<li><strong>credit-assignment probe:</strong>Keep fixed-policy or open-loop probe blocks so gains can be compared with and without closed-loop correction or online updates.</li>
-<li><strong>Additional metrics for speech / streaming: </strong>Leave cue-to-output tail latency, audio driver latency, silence / hold-last-output rate, and false speech rate. </li>
-<li><strong>Additional metrics for phase-targeting systems:</strong>Target band and spatial filter, power/SNR gate, no-stim rate, causal-versus-post-hoc benchmark, mean phase offset, circular spread or equivalent circular metric, trigger-time phase-locking statistic, missed trigger, and any fixed-versus-adaptive phase policy. </li>
-<li><strong>Additional metrics for burst systems:</strong>Name biomarker family and symptom target, sensing contacts and signal-to-noise, controller mode, medication / movement state, floor/ceiling amplitude, update interval / onset duration / ramp policy, false positive/negative, artifact-triggered resets, comparator condition, and any TEED / duty-cycle matching rule. </li>
-<li><strong>residual omitted loops / abstention boundary:</strong>State which body/environment routes remain absent and what stronger claim therefore remains forbidden. </li>
-<li><strong>Abstain/freeze/safety stop:</strong>Leave the number of activations, previous state, and return conditions. </li>
-<li><strong>fixed decoder interval / training-free horizon:</strong>State how long the system was required to run before any supervised or unsupervised update was allowed. </li>
-<li><strong>user/application training changes:</strong>Record practice dose, instruction changes, control-paradigm refinements, prompt or task-scaffold changes, and engagement / fatigue notes across sessions.</li>
-<li><strong>rescue-mode policy:</strong>Record whether unsupervised adaptation, manual reprogramming, or remote optimization was used, which parameters changed, and what manpower/time was required. </li>
-<li><strong>eligibility / continuation / naturalistic deployment:</strong>Leave clinic/home performance difference, screened n, exclusion reasons, continuation, programming visits, and duty cycle. </li>
-<li><strong>Performance degradation curve:</strong> Leaves the point at which it collapses when artificially adding delay. </li>
+<li><strong>loop クラス:</strong> 状態フィードバック、ERP/コマンド、音声/ストリーミング、位相ロック、バースト トリガーの 1 つ。 </li>
+<li><strong>相互適応レジーム:</strong>デコーダ、しきい値、平滑化、証拠の蓄積、またはインターフェイス ルールが凍結または更新されたかどうか、およびそれぞれの変更のトリガーは何かについて説明します。</li>
+<li><strong>宣言された境界/ターゲット サブシステム:</strong>ループが音声、把握、ナビゲーション、記憶タスク、症状制御、または別のサブシステムであるかどうかを述べ、最大要求上限を述べます。 </li>
+<li><strong>感覚および自己生成フィードバック経路の保持/置換:</strong>どの視覚、触覚、聴覚、固有受容、前庭、呼吸関連、または予測された再求心性手がかりが存在するか、シミュレートされるか、または省略されたかをリストします。 </li>
+<li><strong>保持/置換アクション チャネル:</strong>カーソル、ロボット ハンド、音声合成装置、アバター、刺激装置などの実際のプラントまたはアクチュエータとその制御可能な自由度を指定します。 </li>
+<li><strong>内受容/覚醒ログ:</strong>呼吸、瞳孔、HR/HRV、努力、疲労、または同様の生物全体の共変量が記録されたか、操作されたか、または潜在的に残されたかを記録します。 </li>
+<li><strong>遅い内部環境ログ:</strong>概日位相または時計時間、最近の睡眠-覚醒スケジュール、コルチゾール/グルココルチコイドアッセイまたはステロイド治療、摂食/絶食またはグルコース-インスリン療法、および同様の遅い身体状態の共変量が制御、測定、撹乱、または潜在化されたかどうかを記録します。 </li>
+<li><strong>エンドツーエンドのレイテンシー:</strong>中央値、P95、P99、ワーストケースを分離します。 </li>
+<li><strong>モジュールごとのレイテンシ:</strong> 入力、推論、出力、再帰入力を分離し、レート制限を残す。 </li>
+<li><strong>ジッターの定義:</strong>SD、IQR、またはピークツーピークを指定します。 </li>
+<li><strong>クロック オフセット/ドリフト: LSL およびハードウェア マーカー補正の前後を残します。 </li>
+<li><strong>マーカー検証方法：</strong>実際の測定にTTL、MCU、フォトダイオード、マイク、ループバックのどれを使用したかを書き込みます。 </li>
+<li><strong>ループ除去/アブレーションテスト:</strong>触覚フィードバック、自己運動の合図、予測された感覚的結果、または別の決定的なルートが除去、スクランブル、または遅延されたときに何が起こったかを報告します。 </li>
+<li><strong>クレジット割り当てプローブ:</strong>固定ポリシーまたは開ループ プローブ ブロックを保持し、閉ループ補正またはオンライン アップデートの有無でゲインを比較できるようにします。</li>
+<li><strong>音声/ストリーミングの追加メトリクス: </strong>Leave cue-to-output tail latency、オーディオ ドライバー レイテンシ、無音/hold-last-output rate、および false speech rate。 </li>
+<li><strong>位相ターゲティング システムの追加メトリクス:</strong>ターゲット バンドおよび空間フィルター、パワー/SNR ゲート、刺激なしレート、因果対ポストホック ベンチマーク、平均位相オフセット、循環スプレッドまたは同等の循環メトリック、トリガー時間位相ロック統計、トリガーミス、および固定対適応位相ポリシー。 </li>
+<li><strong>バースト システムの追加メトリクス:</strong>名前バイオマーカー ファミリと症状ターゲット、センシング接触と信号対雑音比、コントローラー モード、投薬/動作状態、床/天井振幅、更新間隔/オンセット期間/ランプ ポリシー、偽陽性/陰性、アーティファクト トリガー リセット、コンパレーター条件、および任意の TEED/デューティ サイクル マッチング ルール。 </li>
+<li><strong>残りの省略されたループ/棄権境界:</strong>どの本体/環境ルートが欠落したままであり、したがってどのより強力な主張が禁止されたままであるかを述べます。 </li>
+<li><strong>アブステン/フリーズ/安全停止:</strong>起動回数、以前の状態、復帰条件を残します。 </li>
+<li><strong>固定デコーダ間隔/トレーニングフリーホライズン:</strong>監視ありまたは監視なしの更新が許可されるまでにシステムの実行に必要な時間を示します。 </li>
+<li><strong>ユーザー/アプリケーショントレーニングの変更:</strong>セッション全体にわたる練習用量、指示の変更、制御パラダイムの改良、プロンプトまたはタスク足場の変更、取り組み/疲労メモを記録します。</li>
+<li><strong>レスキューモードポリシー:</strong>教師なし適応、手動再プログラミング、またはリモート最適化が使用されたかどうか、変更されたパラメータ、および必要な人員/時間が記録されます。 </li>
+<li><strong>適格性/継続/自然主義的展開:</strong>クリニック/在宅パフォーマンスの差、スクリーニングされたn、除外理由、継続、プログラミング訪問、勤務サイクルを残します。 </li>
+<li><strong>性能劣化曲線:</strong>人為的に遅延を追加すると崩れるポイントを残します。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">16 questions when reading L3 arguments</h2>
+L3 引数を読み取る際の <h2 class="section-title">16 の質問</h2>
 <ol>
-<li><strong>Does it say which loop class it deals with?</strong> Check whether slow feedback, speech streaming, phase-locked, and aDBS are mentioned in the same table. </li>
-<li><strong>Does it declare which body/environment boundary it actually used?</strong> Check whether the paper fixes the target subsystem and names preserved, substituted, and omitted loops instead of only saying "closed loop."</li>
-<li><strong>Are sensory, action, interoceptive, and slow internal-milieu routes disclosed?</strong> Look for tactile, proprioceptive, vestibular, respiration-linked, arousal-linked, circadian, glucocorticoid, and metabolic-state channels, not only the main output stream. </li>
-<li><strong>Was any decisive loop component removed or scrambled?</strong> Check whether feedback-removal or sensory-ablation tests were run, rather than assuming robustness. </li>
-<li><strong>Are there module-wise measurements, not just end-to-end?</strong> Don't just rely on software timestamps; check which of the input, inference, and output paths are rate-limiting. </li>
-<li><strong>For speech / streaming, are silence and output path displayed?</strong> Check whether false speech, audio driver, or hold-last-output are hidden. </li>
-<li><strong>Is delay mapped to phase error, burst timing, or controller-update timescale?</strong> Check whether the paper goes beyond a single ms value when phase targeting or adaptive stimulation policy is what matters. </li>
-<li><strong>For phase-targeted loops, does it show the oscillation was estimable before triggering?</strong> Check whether power/SNR thresholds, no-stim epochs, and phase-reset rejection were declared rather than assuming every band-passed epoch has meaningful phase.</li>
-<li><strong>For phase-targeted loops, does it separate targeting success from functional effect and from phase stability?</strong> Check whether the paper reports circular targeting precision, off-target or random-phase comparators, and whether the preferred phase was fixed or drifted across time. </li>
-<li><strong>For burst-driven loops, does it name the biomarker family and symptom target?</strong> Check whether the paper distinguishes beta, beta-burst duration, entrained gamma, dyskinesia-linked gamma, or another personalized marker rather than saying only "adaptive DBS."</li>
-<li><strong>For burst-driven loops, does it disclose controller mode, state dependence, and comparator?</strong> Check whether medication / movement dependence, single versus dual threshold or other policy, artifact burden, and cDBS or random / surrogate comparators are shown rather than only burst-trigger timing. </li>
-<li><strong>Does it separate user learning, decoder updates, and interface redesign?</strong> Check whether the gain could come from co-adaptation rather than from a stable fixed decoder. </li>
-<li><strong>Does it separate fixed-decoder durability from adaptive rescue?</strong> Check whether the paper shows the no-update slice rather than reporting only the post-update result. </li>
-<li><strong>If rescue happened, is the rescue cost shown?</strong> Check whether staff time, parameter changes, remote optimization, or unsupervised adaptation are hidden. </li>
-<li><strong>Are eligibility, continuation, and clinic/home transfer shown separately from symptom benefit?</strong> Check that deployability is not inferred from a small set of successfully programmed cases alone. </li>
-<li><strong>Are abstentions, silence fallbacks, freezes, and safety stops separated?</strong> Confirm that danger-handling and low-confidence handling are not collapsed into one outage label. </li>
+<li><strong>どのループ クラスを扱っているかを示していますか?</strong>スロー フィードバック、音声ストリーミング、位相ロック、および aDBS が同じ表に記載されているかどうかを確認してください。 </li>
+<li><strong>実際に使用した本体/環境の境界を宣言していますか?</strong>論文がターゲット サブシステムを修正し、「閉じたループ」とだけ言うのではなく、保存、置換、および省略されたループに名前を付けているかどうかを確認してください。</li>
+<li><strong>感覚、行動、内受容、および遅い内部環境の経路は開示されていますか?</strong>主要な出力ストリームだけでなく、触覚、固有受容、前庭、呼吸関連、覚醒関連、概日チャネル、糖質コルチコイド、および代謝状態チャネルを探します。 </li>
+<li><strong>決定的なループ コンポーネントが削除またはスクランブルされましたか?</strong>堅牢性を仮定するのではなく、フィードバック除去テストまたは感覚アブレーション テストが実行されたかどうかを確認します。 </li>
+<li><strong>エンドツーエンドだけでなく、モジュールごとの測定はありますか?</strong>ソフトウェアのタイムスタンプだけに依存しないでください。入力パス、推論パス、出力パスのどれがレート制限を行っているかを確認します。 </li>
+<li><strong>音声/ストリーミングの場合、無音と出力パスが表示されますか?</strong>誤った音声、オーディオドライバー、またはホールドラスト出力が非表示になっているかどうかを確認します。 </li>
+<li><strong>遅延は位相エラー、バースト タイミング、またはコントローラー更新タイムスケールにマッピングされていますか?</strong>位相ターゲットまたは適応刺激ポリシーが重要である場合、論文が単一のミリ秒値を超えているかどうかを確認します。 </li>
+<li><strong>位相ターゲット ループの場合、トリガ前に発振が推定可能であったことを示していますか?</strong>すべてのバンドパス エポックに意味のある位相があると仮定するのではなく、電力/SNR しきい値、非刺激エポック、および位相リセット拒否が宣言されているかどうかを確認します。</li>
+<li><strong>位相ターゲット ループの場合、ターゲティングの成功と機能的効果および位相の安定性は区別されますか?</strong>論文で循環ターゲティング精度、オフターゲットまたはランダム位相コンパレーターが報告されているかどうか、および優先位相が固定されていたか、時間の経過とともにドリフトしたかどうかを確認してください。 </li>
+<li><strong>バースト駆動ループの場合、バイオマーカーファミリーと症状のターゲットに名前を付けていますか?</strong>論文が「適応型 DBS」だけを言うのではなく、ベータ、ベータバースト持続時間、同調ガンマ、ジスキネジア関連ガンマ、または別の個人化されたマーカーを区別しているかどうかを確認してください。</li>
+<li><strong>バースト駆動ループの場合、コントローラー モード、状態依存性、およびコンパレーターが開示されていますか?</strong> バースト トリガー タイミングのみではなく、投薬 / 動作依存性、単一しきい値とデュアルしきい値またはその他のポリシー、アーティファクト負荷、および cDBS またはランダム / サロゲート コンパレーターが表示されているかどうかを確認します。 </li>
+<li><strong>ユーザー学習、デコーダーの更新、インターフェイスの再設計は分離されていますか?</strong>安定した固定デコーダーからではなく、共適応からゲインが得られるかどうかを確認してください。 </li>
+<li><strong>固定デコーダの耐久性とアダプティブ レスキューは区別されますか?</strong> 論文が更新後の結果のみを報告するのではなく、更新なしのスライスを示しているかどうかを確認します。 </li>
+<li><strong>救助が発生した場合、救助コストは表示されますか?</strong>スタッフ時間、パラメータ変更、リモート最適化、または教師なし適応が非表示になっているかどうかを確認します。 </li>
+<li><strong>資格、継続、クリニック/自宅への移行は、症状の利点とは別に示されていますか?</strong>展開可能性が、プログラムが成功した少数のケースのみから推測されていないことを確認してください。 </li>
+<li><strong>棄権、沈黙フォールバック、フリーズ、および安全停止は分離されていますか?</strong>危険対応と信頼性の低い対応が 1 つの停止ラベルにまとめられていないことを確認します。 </li>
 </ol>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">References</h2>
+<h2 class="section-title">参考資料</h2>
 <ol>
-<li>Wilson JA, Mellinger J, Schalk G, Williams JC. A procedure for measuring latencies in brain-computer interfaces. <em>IEEE Trans Biomed Eng.</em> 2010;57(7):1785-1797. <a href="https://doi.org/10.1109/TBME.2010.2047259" target="_blank">doi:10.1109/TBME.2010.2047259</a></li>
-<li>Thompson DE, Warschausky SA, Huggins JE. Classifier-based latency estimation: a novel way to estimate and predict BCI accuracy. <em>J Neural Eng.</em> 2013;10(1):016006. <a href="https://doi.org/10.1088/1741-2560/10/1/016006" target="_blank">doi:10.1088/1741-2560/10/1/016006</a></li>
-<li>Mowla MR, Huggins JE, Thompson DE. Enhancing P300-BCI performance using latency estimation. <em>Brain Comput Interfaces.</em> 2017;4(3):137-145. <a href="https://doi.org/10.1080/2326263X.2017.1338010" target="_blank">doi:10.1080/2326263X.2017.1338010</a></li>
-<li>Belinskaia A, Smetanin N, Lebedev M, Ossadtchi A. Short-delay neurofeedback facilitates training of the parietal alpha rhythm. <em>J Neural Eng.</em> 2020;17(6):066012. <a href="https://doi.org/10.1088/1741-2552/abc8d7" target="_blank">doi:10.1088/1741-2552/abc8d7</a></li>
-<li>Mansouri F, Fettes P, Schulze L, et al. A Real-Time Phase-Locking System for Non-invasive Brain Stimulation. <em>Front Neurosci.</em> 2018;12:877. <a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">doi:10.3389/fnins.2018.00877</a></li>
-<li>Zrenner C, Desideri D, Belardinelli P, Ziemann U. Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. <em>Brain Stimul.</em> 2018;11(2):374-389. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
-<li>Holt AB, Kormann E, Gulberti A, et al. Phase-Dependent Suppression of Beta Oscillations in Parkinson's Disease Patients. <em>J Neurosci.</em> 2019;39(6):1119-1134. <a href="https://doi.org/10.1523/JNEUROSCI.1913-18.2018" target="_blank">doi:10.1523/JNEUROSCI.1913-18.2018</a></li>
-<li>Zrenner C, Galevska D, Nieminen JO, Baur D, Stefanou MI, Ziemann U. The shaky ground truth of real-time phase estimation. <em>Neuroimage.</em> 2020;214:116761. <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">doi:10.1016/j.neuroimage.2020.116761</a></li>
-<li>Gordon PC, Dörre S, Belardinelli P, Stenroos M, Zrenner B, Ziemann U, Zrenner C. Prefrontal Theta-Phase Synchronized Brain Stimulation With Real-Time EEG-Triggered TMS. <em>Front Hum Neurosci.</em> 2021;15:691821. <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">doi:10.3389/fnhum.2021.691821</a></li>
-<li>Bruegger D, Abegg M. Prediction of cortical theta oscillations in humans for phase-locked visual stimulation. <em>J Neurosci Methods.</em> 2021;361:109288. <a href="https://doi.org/10.1016/j.jneumeth.2021.109288" target="_blank">doi:10.1016/j.jneumeth.2021.109288</a></li>
-<li>Vigué-Guix I, Morís Fernández L, Torralba Cuello M, Ruzzoli M, Soto-Faraco S. Can the occipital alpha-phase speed up visual detection through a real-time EEG-based brain-computer interface (BCI)? <em>Eur J Neurosci.</em> 2022;55(11-12):3224-3240. <a href="https://doi.org/10.1111/ejn.14931" target="_blank">doi:10.1111/ejn.14931</a></li>
-<li>Kim B, Erickson BA, Fernandez-Nunez G, Rich R, Mentzelopoulos G, Vitale F, Medaglia JD. EEG Phase Can Be Predicted with Similar Accuracy across Cognitive States after Accounting for Power and Signal-to-Noise Ratio. <em>eNeuro.</em> 2023;10(9):ENEURO.0050-23.2023. <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">doi:10.1523/ENEURO.0050-23.2023</a></li>
-<li>Hougland JR, Kirchhoff M, Vetter DE, Ahola O, Jooß A, Humaidan D, Ziemann U. Fluctuations in the optimal sensorimotor mu-rhythm phase associated with high corticospinal excitability during TMS-EEG. <em>Brain Stimul.</em> 2025;18(6):1843-1851. <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">doi:10.1016/j.brs.2025.09.019</a></li>
-<li>Little S, Pogosyan A, Neal S, et al. Adaptive deep brain stimulation in advanced Parkinson disease. <em>Ann Neurol.</em> 2013;74(3):449-457. <a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
-<li>Tinkhauser G, Pogosyan A, Little S, et al. The modulatory effect of adaptive deep brain stimulation on beta bursts in Parkinson's disease. <em>Brain.</em> 2017;140(4):1053-1067. <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
-<li>Mathiopoulou V, Lofredi R, Feldmann LK, et al. Modulation of subthalamic beta oscillations by movement, dopamine, and deep brain stimulation in Parkinson's disease. <em>npj Parkinsons Dis.</em> 2024;10:77. <a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">doi:10.1038/s41531-024-00693-3</a></li>
-<li>Stanslaski S, Summers RLS, Tonder L, et al. Sensing data and methodology from the Adaptive DBS Algorithm for Personalized Therapy in Parkinson's Disease (ADAPT-PD) clinical trial. <em>npj Parkinsons Dis.</em> 2024;10:174. <a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">doi:10.1038/s41531-024-00772-5</a></li>
-<li>Olaru M, et al. Motor network gamma oscillations in chronic home recordings predict dyskinesia in Parkinson's disease. <em>Brain.</em> 2024;147:2038-2052. <a href="https://doi.org/10.1093/brain/awae004" target="_blank">doi:10.1093/brain/awae004</a></li>
-<li>Appelhoff S, Stenner T. In COM we trust: Feasibility of USB-based event marking. <em>Behav Res Methods.</em> 2021;53(6):2450-2455. <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
-<li>Kothe C, Shirazi SY, Stenner T, et al. The lab streaming layer for synchronized multimodal recording. <em>Imaging Neurosci.</em> 2025;3:IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
-<li>Keller GB, Bonhoeffer T, Hubener M. Sensorimotor mismatch signals in primary visual cortex of the behaving mouse. <em>Neuron.</em> 2012;74(5):809-815. <a href="https://doi.org/10.1016/j.neuron.2012.03.040" target="_blank">doi:10.1016/j.neuron.2012.03.040</a></li>
-<li>Saleem AB, Ayaz A, Jeffery KJ, Harris KD, Carandini M. Integration of visual motion and locomotion in mouse visual cortex. <em>Nat Neurosci.</em> 2013;16(12):1864-1869. <a href="https://doi.org/10.1038/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
-<li>Ravassard P, Kees A, Willers B, et al. Multisensory control of hippocampal spatiotemporal selectivity. <em>Science.</em> 2013;340(6138):1342-1346. <a href="https://doi.org/10.1126/science.1232655" target="_blank">doi:10.1126/science.1232655</a></li>
-<li>Schneider DM, Nelson A, Mooney R. A synaptic and circuit basis for corollary discharge in the auditory cortex. <em>Nature.</em> 2014;513(7517):189-194. <a href="https://doi.org/10.1038/nature13724" target="_blank">doi:10.1038/nature13724</a></li>
-<li>Zelano C, Jiang H, Zhou G, et al. Nasal respiration entrains human limbic oscillations and modulates cognitive function. <em>J Neurosci.</em> 2016;36(49):12448-12467. <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">doi:10.1523/JNEUROSCI.2586-16.2016</a></li>
-<li>Musall S, Kaufman MT, Juavinett AL, Gluf S, Churchland AK. Single-trial neural dynamics are dominated by richly varied movements. <em>Nat Neurosci.</em> 2019;22:1677-1686. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
-<li>Stringer C, Pachitariu M, Steinmetz N, et al. Spontaneous behaviors drive multidimensional, brainwide activity. <em>Science.</em> 2019;364(6437):eaav7893. <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
-<li>Flesher SN, Downey JE, Weiss JM, et al. A brain-computer interface that evokes tactile sensations improves robotic arm control. <em>Science.</em> 2021;372(6544):831-836. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
-<li>Raut RV, Rosenthal ZP, Wang X, et al. Arousal as a universal embedding for spatiotemporal brain dynamics. <em>Nature.</em> 2025;647:454-461. <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">doi:10.1038/s41586-025-09544-4</a></li>
-<li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nat Neurosci.</em> 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
-<li>Wairagkar M, Card NS, Singer-Clark T, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature.</em> 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
-<li>Mathiopoulou V, Habets J, Feldmann LK, et al. Gamma entrainment induced by deep brain stimulation as a biomarker for motor improvement with neuromodulation. <em>Nat Commun.</em> 2025;16:2956. <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">doi:10.1038/s41467-025-58132-7</a></li>
-<li>Wilkins KB, Melbourne JA, Akella P, et al. Beta burst-driven adaptive deep brain stimulation for gait impairment and freezing of gait in Parkinson's disease. <em>Brain Commun.</em> 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">PMCID: PMC12268161</a></li>
-<li>Wilson GH, Stein EA, Kamdar F, et al. Long-term unsupervised recalibration of intracortical brain-computer interfaces using a hidden Markov model. <em>Nat Biomed Eng.</em> 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
-<li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <em>Nat Med.</em> 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
-<li>Cascino S, Roediger J, Oehrn C, et al. Chronic adaptive deep brain stimulation in Parkinson's disease: ADAPT-START findings and programming principles. <em>npj Parkinsons Dis.</em> 2026. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
-<li>Dixon TC, Strandquist G, Zeng A, et al. Movement-responsive deep brain stimulation for Parkinson’s disease using a remotely optimized neural decoder. <em>Nat Biomed Eng.</em> 2026;10:110-124. <a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">doi:10.1038/s41551-025-01438-0</a></li>
-<li>Busch JL, Kaplan J, Behnke JK, et al. Chronic adaptive deep brain stimulation for Parkinson’s disease: clinical outcomes and programming strategies. <em>npj Parkinsons Dis.</em> 2025;11:264. <a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">doi:10.1038/s41531-025-01124-7</a></li>
-<li>Orsborn AL, Moorman HG, Overduin SA, Shanechi MM, Dimitrov DF, Carmena JM. Closed-loop decoder adaptation shapes neural plasticity for skillful neuroprosthetic control. <em>Neuron.</em> 2014;82(6):1380-1393. <a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">doi:10.1016/j.neuron.2014.04.048</a></li>
-<li>Perdikis S, Tonin L, Saeedi S, et al. The Cybathlon BCI race: successful longitudinal mutual learning with two tetraplegic users. <em>PLoS Biol.</em> 2018;16(5):e2003787. <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">doi:10.1371/journal.pbio.2003787</a></li>
-<li>Abu-Rmileh A, Zakkay E, Shmuelof L, Shriki O. Co-adaptive training improves efficacy of a multi-day EEG-based motor imagery BCI training. <em>Front Hum Neurosci.</em> 2019;13:362. <a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">doi:10.3389/fnhum.2019.00362</a></li>
-<li>Lin CY, Lu CF, Jao CW, Wang PS, Wu YT. Toward consistency between humans and classifiers: improved performance of a real-time brain-computer interface using a mutual learning system. <em>Expert Syst Appl.</em> 2023;226:120205. <a href="https://doi.org/10.1016/j.eswa.2023.120205" target="_blank">doi:10.1016/j.eswa.2023.120205</a></li>
+<li>ウィルソンJA、メリンジャーJ、シャルクG、ウィリアムズJC。ブレイン・コンピューター・インターフェースのレイテンシーを測定する手順。 <em>IEEE Trans Biomed Eng.</em> 2010;57(7):1785-1797。 <a href="https://doi.org/10.1109/TBME.2010.2047259" target="_blank">doi:10.1109/TBME.2010.2047259</a></li>
+<li>Tトンプソン DE、ワルシャウスキー SA、ハギンズ JE。分類子ベースのレイテンシー推定: BCI 精度を推定および予測する新しい方法。 <em>J 神経工学 </em> 2013;10(1):016006。 <a href="https://doi.org/10.1088/1741-2560/10/1/016006" target="_blank">ドイ:10.1088/1741-2560/10/1/016006</a></li>
+<li>モウラ MR、ハギンズ JE、トンプソン DE。遅延推定を使用して P300-BCI のパフォーマンスを強化します。 <em>Brain コンピューティング インターフェイス。</em> 2017;4(3):137-145。 <a href="https://doi.org/10.1080/2326263X.2017.1338010" target="_blank">doi:10.1080/2326263X.2017.1338010</a></li>
+<li>Belinskaia A、Smetanin N、Lebedev M、Ossadtchi A. 短遅延ニューロフィードバックは、頭頂部のアルファ リズムのトレーニングを促進します。 <em>J 神経工学 </em> 2020;17(6):066012。 <a href="https://doi.org/10.1088/1741-2552/abc8d7" target="_blank">doi:10.1088/1741-2552/abc8d7</a></li>
+<li>Mansouri F、Fettes P、Schulze L、他。非侵襲的な脳刺激のためのリアルタイム位相ロック システム。 <em>フロント神経科学。</em> 2018;12:877。 <a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">doi:10.3389/fnins.2018.00877</a></li>
+<li>Zrenner C、Desideri D、Belardinelli P、Ziemann U. リアルタイムの EEG で定義された興奮状態は、人間の運動皮質における TMS 誘発可塑性の有効性を決定します。 <em>脳刺激。</em> 2018;11(2):374-389。 <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
+<li>Holt AB、Kormann E、Gulberti A、他。パーキンソン病患者におけるベータ振動の位相依存性抑制。 <em>J Neurosci.</em> 2019;39(6):1119-1134。 <a href="https://doi.org/10.1523/JNEUROSCI.1913-18.2018" target="_blank">doi:10.1523/JNEUROSCI.1913-18.2018</a></li>
+<li>Zrenner C、Galevska D、Nieminen JO、Baur D、Stefanou MI、Ziemann U. リアルタイム位相推定の不安定な真実。 <em>神経画像.</em> 2020;214:116761。 <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">doi:10.1016/j.neuroimage.2020.116761</a></li>
+<li>Gordon PC、Dörre S、Belardinelli P、Stenroos M、Zrenner B、Ziemann U、Zrenner C. リアルタイム EEG トリガー TMS による前頭前野シータ相同期脳刺激。 <em>フロントハム神経科学.</em> 2021;15:691821。 <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">doi:10.3389/fnhum.2021.691821</a></li>
+<li>Bruegger D、Abegg M. 位相ロック視覚刺激に対する人間の皮質シータ振動の予測。 <em>J 神経科学手法。</em> 2021;361:109288。 <a href="https://doi.org/10.1016/j.jneumeth.2021.109288" target="_blank">doi:10.1016/j.jneumeth.2021.109288</a></li>
+<li>Vigué-Guix I、Morís Fernández L、Torralba Cuello M、Ruzzoli M、Soto-Faraco S. 後頭アルファ相は、リアルタイム EEG ベースのブレイン コンピューター インターフェイス (BCI) を介して視覚検出を高速化できますか? <em>Eur J Neurosci.</em> 2022;55(11-12):3224-3240。 <a href="https://doi.org/10.1111/ejn.14931" target="_blank">doi:10.1111/ejn.14931</a></li>
+<li>キム B、エリクソン BA、フェルナンデス ヌネス G、リッチ R、メンツェロプロス G、ヴィターレ F、メダリア JD。 EEG 位相は、電力と信号対雑音比を考慮した後、認知状態全体で同様の精度で予測できます。 <em>eNeuro.</em> 2023;10(9):ENEURO.0050-23.2023。 <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">doi:10.1523/ENEURO.0050-23.2023</a></li>
+<li>Hougland JR、Kirchhoff M、Vetter DE、Ahola O、Jooß A、Humaidan D、Ziemann U. TMS-EEG 中の高い皮質脊髄興奮性に関連する最適な感覚運動ミューリズム位相の変動。 <em>脳刺激。</em> 2025;18(6):1843-1851。 <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">doi:10.1016/j.brs.2025.09.019</a></li>
+<li>Little S、Pogosyan A、Neal S 他進行パーキンソン病における適応型脳深部刺激。 <em>アン ニューロル。</em> 2013;74(3):449-457。 <a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
+<li>Tinkhauser G、Pogosyan A、Little S 他。パーキンソン病におけるベータバーストに対する適応的脳深部刺激の調節効果。 <em>Brain.</em> 2017;140(4):1053-1067。 <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/ブレイン/awx010</a></li>
+<li>Mathiopoulou V、Lofredi R、Feldmann LK 他パーキンソン病における運動、ドーパミン、脳深部刺激による視床下ベータ振動の調節。 <em>npj パーキンソン病 ディス.</em> 2024;10:77。 <a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">doi:10.1038/s41531-024-00693-3</a></li>
+<li>Stanslaski S、サマーズ RLS、トンダー L 他パーキンソン病における個別化治療のための適応 DBS アルゴリズム (ADAPT-PD) 臨床試験からのセンシング データと方法論。 <em>npj パーキンソン病ディス.</em> 2024;10:174。 <a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">doi:10.1038/s41531-024-00772-5</a></li>
+<li>Olaru M 他慢性的な家庭録音における運動ネットワークのガンマ振動は、パーキンソン病におけるジスキネジアを予測します。 <em>Brain.</em> 2024;147:2038-2052。 <a href="https://doi.org/10.1093/brain/awae004" target="_blank">doi:10.1093/ブレイン/awae004</a></li>
+<li>Appelhoff S、Stenner T. COM では、USB ベースのイベント マーキングの実現可能性を信頼しています。 <em>Behav Res Methods.</em> 2021;53(6):2450-2455。 <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
+<li>Kothe C、Shirazi SY、Stenner T、他。同期されたマルチモーダル記録のためのラボ ストリーミング レイヤー。 <em>Imaging Neurosci.</em> 2025;3:IMAG.a.136。 <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Keller GB、Bonhoeffer T、Hubener M. 行動するマウスの一次視覚野における感覚運動シグナルの不一致。 <em>ニューロン.</em> 2012;74(5):809-815。 <a href="https://doi.org/10.1016/j.neuron.2012.03.040" target="_blank">doi:10.1016/j.neuron.2012.03.040</a></li>
+<li>Saleem AB、Ayaz A、Jeffery KJ、Harris KD、Carandini M. マウス視覚野における視覚運動と移動運動の統合。 <em>Nat Neurosci.</em> 2013;16(12):1864-1869。 <a href="https://doi.org/10.1038/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
+<li>Ravassard P、Kees A、Willers B、他。海馬の時空間選択性の多感覚制御。 <em>Science.</em> 2013;340(6138):1342-1346。 <a href="https://doi.org/10.1126/science.1232655" target="_blank">doi:10.1126/science.1232655</a></li>
+<li>Schneider DM、Nelson A、Mooney R. 聴覚皮質における必然的な放電のシナプスおよび回路の基礎。 <em>Nature.</em> 2014;513(7517):189-194。 <a href="https://doi.org/10.1038/nature13724" target="_blank">ドイ:10.1038/nature13724</a></li>
+<li>Zelano C、Jiang H、Zhou G、他鼻呼吸は人間の大脳辺縁系の振動を同調させ、認知機能を調節します。 <em>J Neurosci.</em> 2016;36(49):12448-12467。 <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">doi:10.1523/JNEUROSCI.2586-16.2016</a></li>
+<li>ミューソール S、カウフマン MT、ジュアビネット AL、グルフ S、チャーチランド AK。単一試行の神経力学は、豊富に変化した動きによって支配されます。 <em>Nat Neurosci.</em> 2019;22:1677-1686。 <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Stringer C、Pachitariu M、Steinmetz N、他。自発的な行動は、多次元の脳全体の活動を促進します。 <em>Science.</em> 2019;364(6437):eaav7893。 <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
+<li>フレッシャー SN、ダウニー JE、ワイス JM 他触覚を呼び起こすブレイン コンピューター インターフェイスにより、ロボット アームの制御が向上します。 <em>Science.</em> 2021;372(6544):831-836。 <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>Raut RV、ローゼンタール ZP、Wang X、他時空間的な脳のダイナミクスの普遍的な埋め込みとしての覚醒。 <em>Nature.</em> 2025;647:454-461。 <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">doi:10.1038/s41586-025-09544-4</a></li>
+<li>Llittlejohn KT、Dabagia M、Ladwig A 他自然なコミュニケーションを復元するためのストリーミング脳から音声へのニューロプロテーゼ。 <em>Nat Neurosci.</em> 2025。<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar M、Card NS、Singer-Clark T、他瞬間的に音声を合成する神経人工器官。 <em>Nature.</em> 2025.<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Mathiopoulou V、Habets J、Feldmann LK 他神経調節による運動改善のバイオマーカーとしての脳深部刺激によって誘発されるガンマ同調。 <em>Nat Commun.</em> 2025;16:2956。 <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">doi:10.1038/s41467-025-58132-7</a></li>
+<li>Wilkins KB、メルボルン JA、Akella P、他。パーキンソン病における歩行障害および歩行のすくみに対するベータバースト駆動の適応的深部脳刺激。 <em>Brain Commun.</em> 2025.<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">PMCID: PMC12268161</a></li>
+<li>Wilson GH、Stein EA、Kamdar F、他。隠れマルコフモデルを使用した、皮質内の脳とコンピューターのインターフェースの長期にわたる教師なしの再調整。 <em>Nat Biomed Eng.</em> 2025.<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Oehrn CR、Roediger J、Diehl A、他。パーキンソン病における慢性適応脳深部刺激と従来の刺激の比較: 盲検ランダム化実現可能性試験。 <em>Nat Med.</em> 2024.<a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
+<li>Cascino S、Roediger J、Oehrn C 他パーキンソン病における慢性適応性脳深部刺激：ADAPT-START の発見とプログラミング原理。 <em>npj パーキンソン病 ディス.</em> 2026。<a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
+<li>Dixon TC、Strandquist G、Zeng A、他リモートで最適化されたニューラル デコーダーを使用した、パーキンソン病に対する運動応答性の脳深部刺激。 <em>Nat Biomed Eng.</em> 2026;10:110-124。 <a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">doi:10.1038/s41551-025-01438-0</a></li>
+<li>ブッシュ JL、カプラン J、ベンケ JK 他パーキンソン病に対する慢性適応型脳深部刺激：臨床転帰とプログラミング戦略。 <em>npj パーキンソン病 ディス.</em> 2025;11:264。 <a href="https://doi.org/10.1038/s41531-025-01124-7" target="_blank">doi:10.1038/s41531-025-01124-7</a></li>
+<li>オルスボーン AL、ムアマン HG、オーバードゥイン SA、シャネチ MM、ディミトロフ DF、カルメナ JM。閉ループ デコーダの適応により、神経可塑性が形成され、神経人工器官の巧みな制御が可能になります。 <em>ニューロン.</em> 2014;82(6):1380-1393。 <a href="https://doi.org/10.1016/j.neuron.2014.04.048" target="_blank">doi:10.1016/j.neuron.2014.04.048</a></li>
+<li>Perdikis S、Tonin L、Saeedi S 他サイバスロン BCI レース: 2 人の四肢麻痺ユーザーとの縦断的な相互学習に成功。 <em>PLoS バイオ.</em> 2018;16(5):e2003787。 <a href="https://doi.org/10.1371/journal.pbio.2003787" target="_blank">doi:10.1371/journal.pbio.2003787</a></li>
+<li>Abu-Rmileh A、Zakkay E、Shmuelof L、Shriki O. 同時適応トレーニングにより、複数日間にわたる EEG ベースの運動イメージ BCI トレーニングの有効性が向上します。 <em>フロントハム神経科学。</em> 2019;13:362。 <a href="https://doi.org/10.3389/fnhum.2019.00362" target="_blank">doi:10.3389/fnhum.2019.00362</a></li>
+<li>Lin CY、Lu CF、Jao CW、Wang PS、Wu YT。人間と分類器間の一貫性を目指して: 相互学習システムを使用したリアルタイム ブレイン コンピューター インターフェイスのパフォーマンスの向上。 <em>エキスパート システム アプリケーション</em> 2023;226:120205。 <a href="https://doi.org/10.1016/j.eswa.2023.120205" target="_blank">doi:10.1016/j.eswa.2023.120205</a></li>
 </ol>
 </section>
 
 <section class="section" id="return">
-<h2 class="section-title">Where to go back next</h2>
+<h2 class="section-title">次に戻る場所</h2>
 <p>
-If you want to go back to the overall design of L3, please use <a href="../verification.html">Verification Platform</a>, if you want to go back to EEG and synchronization practices, please use <a href="../eeg_101.html">Introduction to EEG</a>, and if you want to go back to Roadmap I1/I8, please use <a href="../tech_roadmap.html">Technology Roadmap</a>.
+L3 の全体設計に戻りたい場合は <a href="../verification.html">Verification Platform</a>、EEG と同期の実践に戻りたい場合は <a href="../eeg_101.html">EEG</a> の紹介、ロードマップ I1/I8 に戻りたい場合は <a href="../tech_roadmap.html">Technology Roadmap</a> をご利用ください。
 </p>
 </section>
 
@@ -730,19 +730,19 @@ If you want to go back to the overall design of L3, please use <a href="../verif
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="event-sync-and-measurement-logs.html">Event synchronization and observation logs →</a></li>
-<li><a href="uncertainty-confidence-and-abstention.html">Uncertainty/proofreading/abstention →</a></li>
-<li><a href="update-branching-and-stop-rules.html">Update/branching/stop rules →</a></li>
+<li><a href="event-sync-and-measurement-logs.html">イベント同期および観測ログ →</a></li>
+<li><a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権 →</a></li>
+<li><a href="update-branching-and-stop-rules.html">ルール更新・分岐・停止→</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
-<li><a href="../eeg_101.html">Introduction to EEG →</a></li>
-<li><a href="../tech_roadmap.html">Technology roadmap →</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../eeg_101.html">脳波入門→</a></li>
+<li><a href="../tech_roadmap.html">技術ロードマップ→</a></li>
 </ul>
 </div>
 </aside>

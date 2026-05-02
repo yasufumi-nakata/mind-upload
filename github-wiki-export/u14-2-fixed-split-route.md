@@ -1,121 +1,121 @@
-# Wiki: U14-2 fixed-split route packet
+# Wiki: U14-2 固定分割ルート パケット
 
-> A row-specific packet for the exploration-versus-confirmation rerun row
+> 探索対確認の再実行行の行固有のパケット
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-04 / Role: U14-2 route packet
+- Updated: 2026-04-04 / Role: U14-2 ルート パケット
 
-## Role Of This Page
-This page fixes the current public route for U14-2 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge.
+## このページの役割
+このページは、1 つの質問、1 つの意図された EEG ルート アンカー、1 つの境界付き最初のアーティファクト、および 1 つのファンディング ブリッジのレベルで、U14-2 の現在のパブリック ルートを修正します。
 
-## Accuracy Notes
-This page does not claim broad rerun robustness or confirmatory readiness. It only records what the present EEG route can honestly close first.
+## 正確性に関する注記
+このページは、広範な再実行の堅牢性や確認の準備性を主張するものではありません。現在の EEG ルートが最初に正直に閉じることができるものだけを記録します。
 
-## Back To Public Pages
-- [Issue page](https://mind-upload.com/issue.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
+## 公開ページへ戻る
+- [発行ページ](https://mind-upload.com/issue.html)
+- [データとベンチ](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
-- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact six-row public route.
-- [Wiki: Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - The wider six-row working note.
-- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
+## 関連 Wiki ページ
+- [Wiki: 現在公開されている 6 つのルート概要](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - コンパクトな6列パブリックルート。
+- [Wiki: ディープ フォーカス ノート](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - 幅広の6列ワーキングノート。
+- [Wiki: 助成金とデータセットのプレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - 固定資金とアンカーマップ。
 
 ---
 
-# U14-2 fixed-split route packet
+# U14-2 固定分割ルート パケット
 
-This page does not change the current public six-question batch. It makes only the sixth active row more explicit, so readers can see why `U14-2` stays after `U14-4`, why `D01 Acquisition delay of wireless EEG` now stays only as a gated support entry point, and what the next public-safe artifact can honestly close.
+このページでは、現在の公開されている 6 つの質問のバッチは変更されません。これにより、6 番目のアクティブな行のみがより明確になるため、読者は、`U14-2` が `U14-4` の後に残る理由、`D01 Acquisition delay of wireless EEG` がゲート サポートのエントリ ポイントとしてのみ残る理由、および次のパブリック セーフ アーティファクトが正直に閉じることができるものを理解できるようになります。
 
-## What still stays fixed after the 14:10 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 14:10 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 14:10 JST` after `mind-upload@cafeab4bc2a5`, `EEG-DATA@e0695bcac83d`, and `auto-research-funds@a4852d89376c` still keeps `U14-2` sixth and still keeps `D01` only as the planned gated-support split-governance floor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` tightens glossary excitability and ionic terms on top of the earlier EEG foundation-model source-status split without widening the route, `EEG-DATA` still reports `30,930` merged-unique rows, `28,893` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the newest metadata deep dives, and `auto-research-funds` adds `JELA Diakonia` scholarship cards without changing the practical shortlist.
-- None of those additions replaces the present rerun-entry structure. The newest carry-forwards do not change the fact that `D01` still sets only the latency / split-boundary floor, `D13` still stays the first public-open rerun support family, and `D08` still stays the validation-heavy support family kept one step later.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT`; the checked front-door pages already surfaced `2026-04-04 12:02 JST` wording while this row packet still surfaced `2026-04-04 09:05 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Doumei=0`, `Kenkyu no Susume=0`), so no new Todoist item was justified for this row in this sync.
+- `mind-upload@cafeab4bc2a5`、`EEG-DATA@e0695bcac83d`、および `auto-research-funds@a4852d89376c` の後の `2026-04-04 14:10 JST` での実際のプル再チェックでは、依然として `U14-2` が 6 番目に維持され、この行の計画されたゲート サポート スプリット ガバナンス フロアとして `D01` のみが維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、ルートを広げることなく、以前の EEG 基礎モデルのソースとステータスの分割に加えて、用語集の興奮性とイオン用語を強化します。`EEG-DATA` は、最新のメタデータの詳細を調査した後も、`30,930` マージされた一意の行、`28,893` 高信頼性の行、`24,909` 即時行、および `24,539` 高信頼性の即時行を報告し、`auto-research-funds` は、実質的な最終候補リストを変更せずに、`JELA Diakonia` 奨学金カードを追加します。
+- これらの追加はいずれも、現在の再実行エントリ構造を置き換えるものではありません。最新の繰り越しでも、`D01` はまだレイテンシー/分割境界の下限のみを設定しており、`D13` はまだ最初の公開オープン再実行サポート ファミリのままであり、`D08` はまだ 1 ステップ後に保持される検証重視のサポート ファミリのままであるという事実は変わりません。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT` が返されました。チェックされたフロントドア ページにはすでに `2026-04-04 12:02 JST` の文言が表示されていますが、この行パケットにはこのソース同期の前にまだ `2026-04-04 09:05 JST` の文言が表示されています。新しい読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Doumei=0`、`Kenkyu no Susume=0`)、この同期ではこの行に対して新しい Todoist アイテムは正当化されませんでした。
 
-## What still stays fixed after the 09:05 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 09:05 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 09:05 JST` after `mind-upload@e571567f017d`, `EEG-DATA@fbbb0d8c01e0`, and `auto-research-funds@d7f6fb9bc158` still keeps `U14-2` sixth and still keeps `D01` only as the planned gated-support split-governance floor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `08:07 JST` route-hold sync on top of a recent pretraining-overlap audit, `EEG-DATA` still reports `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the `OpenNeuro ds007020` deep dive, and `auto-research-funds` adds deeply reviewed April 4 scholarship updates without changing the practical shortlist.
-- None of those additions replaces the present rerun-entry structure. The newest carry-forwards do not change the fact that `D01` still sets only the latency / split-boundary floor, `D13` still stays the first public-open rerun support family, and `D08` still stays the validation-heavy support family kept one step later.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT`; the checked front-door pages already surfaced `2026-04-04 08:07 JST` wording while this row packet still surfaced `2026-04-04 01:04 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`), so no new Todoist item was justified for this row in this sync.
+- `mind-upload@e571567f017d`、`EEG-DATA@fbbb0d8c01e0`、および `auto-research-funds@d7f6fb9bc158` の後の `2026-04-04 09:05 JST` での実際のプル再チェックでは、依然として `U14-2` が 6 番目に維持され、この行の計画されたゲート サポート スプリット ガバナンス フロアとして `D01` のみが維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、最近のトレーニング前オーバーラップ監査に加えて、以前の `08:07 JST` ルートホールド同期を保持するだけです。`EEG-DATA` は、`OpenNeuro ds007020` の詳細な調査後に、`30,929` マージされた一意の行、`28,892` 高信頼行、`24,909` 即時行、および `24,539` 高信頼即時行を引き続き報告し、`auto-research-funds` は、実質的な候補者リストを変更することなく、深く検討された 4 月 4 日の奨学金の更新を追加します。
+- これらの追加はいずれも、現在の再実行エントリ構造を置き換えるものではありません。最新の繰り越しでも、`D01` はまだレイテンシー/分割境界の下限のみを設定しており、`D13` はまだ最初の公開オープン再実行サポート ファミリのままであり、`D08` はまだ 1 ステップ後に保持される検証重視のサポート ファミリのままであるという事実は変わりません。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT` が返されました。チェックされたフロントドア ページにはすでに `2026-04-04 08:07 JST` の文言が表示されていますが、この行パケットにはこのソース同期の前にまだ `2026-04-04 01:04 JST` の文言が表示されています。新しい読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジがまだ十分であることが示されたため (`items=206`、`projects=2`)、この同期ではこの行に対して新しい Todoist アイテムは正当化されませんでした。
 
-## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 01:04 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still keeps `U14-2` sixth and still keeps `D01` only as the planned gated-support split-governance floor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now carries the earlier `00:06 JST` route reread plus field-level artifact-stack disclosure tightening, `EEG-DATA` still reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows after deepening `Numbers` and `PRIOS`, and `auto-research-funds` adds current coverage for `同盟育成会` and `研究のすゝめ奨学金` without changing the practical shortlist.
-- None of those additions replaces the present rerun-entry structure. The newest carry-forwards do not change the fact that `D01` still sets only the latency / split-boundary floor, `D13` still stays the first public-open rerun support family, and `D08` still stays the validation-heavy support family kept one step later.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Fri, 03 Apr 2026 21:11:06 GMT`; the checked row packet still surfaced `Updated: 2026-04-02` before this source sync even though the front-door pages already surfaced the `2026-04-04 01:04 JST` basis. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=1`, `同盟会=0`, `研究のすゝめ=0`), so no new Todoist item was justified for this row in this sync.
+- `mind-upload@9b6a8b971ba0`、`EEG-DATA@56d765da60b`、および `auto-research-funds@3c8569e28` の後の `2026-04-04 01:04 JST` での実際のプル再チェックでは、依然として `U14-2` が 6 番目に維持され、この行の計画されたゲート サポート スプリット ガバナンス フロアとして `D01` のみが維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、以前の `00:06 JST` ルートの再読み取りとフィールド レベルのアーティファクト スタック開示の厳格化を実行し、`EEG-DATA` は、`Numbers` および `PRIOS` を深化した後も、`30,921` マージされた一意の行、`28,884` 高信頼行、`24,900` 即時行、および `24,530` 高信頼即時行を引き続き報告し、`auto-research-funds` は、実際的な内容を変更せずに、`同盟育成会` および `研究のすゝめ奨学金` の現在のカバレッジを追加します。候補者リスト。
+- これらの追加はいずれも、現在の再実行エントリ構造を置き換えるものではありません。最新の繰り越しでも、`D01` はまだレイテンシー/分割境界の下限のみを設定しており、`D13` はまだ最初の公開オープン再実行サポート ファミリのままであり、`D08` はまだ 1 ステップ後に保持される検証重視のサポート ファミリのままであるという事実は変わりません。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Fri, 03 Apr 2026 21:11:06 GMT` が返されました。フロントドア ページがすでに `2026-04-04 01:04 JST` ベースで浮上しているにもかかわらず、チェックされた行パケットはこのソース同期の前に依然として `Updated: 2026-04-02` で浮上しています。新しい読み取り専用 Todoist 監査では、既存のファンディング タスクのカバレッジが十分であることが示されました (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Keio graduate scholarship=2`、`G-7=1`、`ENEOS=1`、`同盟会=0`、`研究のすゝめ=0`)。そのため、これに対して正当な新しい Todoist アイテムはありませんでした。この同期の行。
 
-## What still stays fixed after the 23:08 JST actual-pull reread on April 2, 2026
+## 2026 年 4 月 2 日の 23:08 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-02 23:08 JST` after `mind-upload@f5d1d1dd1683`, `EEG-DATA@ee1463d28288`, and `auto-research-funds@ec24a355abbc` still keeps `U14-2` sixth and still keeps `D01` only as the planned gated-support split-governance floor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` clarifies the causal-versus-human-proxy bridge outside the current six, `EEG-DATA` now reports `30,896` merged-unique rows, `28,859` high-confidence rows, and `24,882` directly usable rows after candidate-curation refinement plus the `OpenNeuro ds007615` deep dive, and `auto-research-funds` adds `Geo-Kagaku` current cards without changing the practical shortlist.
-- None of those additions replaces the present rerun-entry structure. The latest carry-forwards do not change the fact that `D01` still sets only the latency / split-boundary floor, `D13` still stays the first public-open rerun support family, and `D08` still stays the validation-heavy support family kept one step later.
-- Browser-level live checks still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
+- `mind-upload@f5d1d1dd1683`、`EEG-DATA@ee1463d28288`、および `auto-research-funds@ec24a355abbc` の後の `2026-04-02 23:08 JST` での実際のプル再チェックでは、依然として `U14-2` が 6 番目に維持され、この行の計画されたゲート サポート スプリット ガバナンス フロアとして `D01` のみが維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、現在の 6 つ以外の因果関係と人間のプロキシ ブリッジを明確にし、`EEG-DATA` は、統合された固有の行 `30,896`、信頼性の高い行 `28,859`、および候補キュレーションの絞り込みと `OpenNeuro ds007615` の詳細調査後の直接使用可能な行 `24,882` を報告するようになり、`auto-research-funds` は、実質的な候補リストを変更せずに `Geo-Kagaku` の現在のカードを追加します。
+- これらの追加はいずれも、現在の再実行エントリ構造を置き換えるものではありません。最新の繰り越しでは、`D01` がまだレイテンシー/分割境界の下限のみを設定しており、`D13` がまだ最初の公開オープン再実行サポート ファミリのままであり、`D08` がまだ 1 ステップ後に保持されている検証重視のサポート ファミリのままであるという事実は変わりません。
+- ブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT` が引き続き `HTTP/2 200` として返され、新たな読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため、このページでは行固有のルート ホールドの文言のみが更新されます。
 
-## What still stays fixed after the 12:04 JST actual-pull reread on April 2, 2026
+## 2026 年 4 月 2 日の 12:04 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-02 12:04 JST` after `mind-upload@dceb8bc`, `EEG-DATA@04b7fda167e`, and `auto-research-funds@4442e348a` still keeps `U14-2` sixth and still keeps `D01` only as the planned gated-support split-governance floor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` syncs a spectroscopy front door outside the current six, `EEG-DATA` now reports `30,888` merged-unique rows, `28,851` high-confidence rows, and `24,506` immediate rows after `THINGS-EEG`, an OSF orientation route, and a rat ECoG deep dive, and `auto-research-funds` only refreshes repository stats.
-- None of those additions replaces the present rerun-entry structure. The newest visual, auditory, and animal carry-forwards do not change the fact that `D01` still sets only the latency / split-boundary floor, `D13` still stays the first public-open rerun support family, and `D08` still stays the validation-heavy support family kept one step later.
-- Browser-level live checks still returned `200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 02:37:04 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
+- `mind-upload@dceb8bc`、`EEG-DATA@04b7fda167e`、および `auto-research-funds@4442e348a` の後の `2026-04-02 12:04 JST` での実際のプル再チェックでは、依然として `U14-2` が 6 番目に維持され、この行の計画されたゲート サポート スプリット ガバナンス フロアとして `D01` のみが維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は現在の 6 行の外側にある分光分析フロント ドアを同期し、`EEG-DATA` は `30,888` マージされた固有行、`28,851` 高信頼行、`THINGS-EEG` の直後の `24,506` 行、OSF オリエンテーション ルート、およびラット ECoG ディープ ダイブを報告するようになり、`auto-research-funds` はリポジトリ統計のみを更新します。
+- これらの追加はいずれも、現在の再実行エントリ構造を置き換えるものではありません。最新の視覚、聴覚、および動物のキャリーフォワードは、`D01` が依然としてレイテンシ/分割境界フロアのみを設定し、`D13` がまだ最初の公開オープン再実行サポート ファミリーであり、`D08` が 1 ステップ後に保持される検証重視のサポート ファミリーであり続けるという事実を変更しません。
+- ブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `Last-Modified: Thu, 02 Apr 2026 02:37:04 GMT` が引き続き `200` として返され、新たな読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため、このページでは行固有のルート ホールドの文言のみが更新されます。
 
-## What was rechecked for this row
+## この行で再チェックされた内容
 
-- `D01 Acquisition delay of wireless EEG` still fixes the intended latency-first measurement route, but the current IEEE DataPort page is subscription-gated and its visible package is still a delay/synchronization dataset with `README_en` plus device/run `.mat` files rather than a rerun family by itself.
-- The current funding bridge remains narrow and unchanged: `Kura Fund` stays first, `Nakatani Foundation research grant` stays next-cycle watch, and `Secom General Research Grant` stays an urgency-watch route only.
-- The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- `D01 Acquisition delay of wireless EEG` は依然として意図した遅延優先の測定ルートを修正していますが、現在の IEEE DataPort ページはサブスクリプションゲートであり、その表示パッケージは依然として、再実行ファミリー自体ではなく、`README_en` とデバイス/実行 `.mat` ファイルを含む遅延/同期データセットです。
+- 現在の資金調達ブリッジは狭く、変化はありません。`Kura Fund` が第一位に留まり、`Nakatani Foundation research grant` が次サイクル監視ルートに留まり、`Secom General Research Grant` が緊急監視ルートのみに留まります。
+- 公開されている 6 つの質問のバッチも変更されず、`U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2` です。
 
-## Why `U14-2` still stays sixth
+## `U14-2`が依然として6位に留まる理由
 
-- It is the operational rerun-governance row that should come only after `U14-4` has already made the disclosure fields concrete.
-- If this row fails, broader confirmatory-readiness wording should stay blocked because the route would still be missing a measurable split boundary.
-- The row can close a narrow contract artifact with EEG alone before any stronger rerun-robustness language is attempted.
+- これは、`U14-4` がすでに開示フィールドを具体化した後にのみ、運用上の再実行ガバナンスの行を入力する必要があります。
+- この行が失敗した場合、ルートには測定可能な分割境界がまだ欠けているため、より広範な確認準備の文言はブロックされたままになるはずです。
+- この行は、より強力な再実行堅牢性言語が試行される前に、EEG のみで狭いコントラクト アーティファクトを閉じることができます。
 
-## Why `D01` stays in scope only as a gated support anchor
+## `D01` がゲート サポート アンカーとしてのみ範囲内に留まる理由
 
-| Candidate | What it helps with | Why it is not the first public anchor |
+| 候補者 | 何に役立つのか | なぜこれが最初の公共アンカーではないのか |
 |---|---|---|
-| `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | It still fixes the intended latency-first split boundary, which is enough to keep the `exploration vs confirmation` question in scope if access is available. | The current IEEE DataPort page is subscription-gated, and the visible package is still a latency floor rather than a rerun family, so it no longer counts as an immediate public anchor in this run. |
-| `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`, immediate) | It is the first required public-open support family for richer split-violation examples and a broader rerun family once the first contract has been fixed. | It is better as a rerun support family than as the first bounded split anchor, so it stays secondary. |
-| `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` (`10.21227/7may-9q56`, immediate) | It gives a stronger validation-style benchmark that may later support more explicit negative-case and rerun-audit examples. | It is too validation-heavy and not as direct a split-governance entry point as the current latency route, so it stays support rather than primary for `U14-2`. |
+| `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`、サブスクリプションゲート型サポート) | 意図した遅延優先の分割境界は依然として修正されており、アクセスが利用可能な場合に `exploration vs confirmation` の質問を範囲内に保つのに十分です。 | 現在の IEEE DataPort ページはサブスクリプションゲート型であり、表示されるパッケージは再実行ファミリーではなく依然としてレイテンシーフロアであるため、この実行では直接のパブリックアンカーとしてカウントされなくなりました。 |
+| `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`、即時) | これは、より豊富なスプリット違反の例と、最初の契約が確定した後のより広範な再実行ファミリーのために最初に必要とされる公開サポートファミリーです。 | これは、最初の境界付きスプリット アンカーとしてよりも再実行サポート ファミリとして優れているため、二次的なままになります。 |
+| `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` (`10.21227/7may-9q56`、即時) | これは、後でより明示的な否定的なケースと再実行監査の例をサポートする可能性のある、より強力な検証スタイルのベンチマークを提供します。 | これは検証が多すぎて、現在のレイテンシ ルートほど直接的な分割ガバナンスのエントリ ポイントではないため、`U14-2` のプライマリではなくサポートのままです。 |
 
-The public-open rerun family and the validation-heavy family should not be read as interchangeable here either. `D13` is the first split-violation example family this row would need next, while `D08` is better kept for stronger validation-style failure trails after the first fixed-split contract is already frozen.
+ここでも、公開再実行ファミリーと検証重視のファミリーを互換性があるものとして解釈すべきではありません。 `D13` は、この行が次に必要とする最初のスプリット違反サンプル ファミリですが、`D08` は、最初の固定スプリット コントラクトがすでに凍結された後、より強力な検証スタイルの失敗の証跡のために保持することをお勧めします。
 
-## What the first artifact can honestly close now
+## 最初のアーティファクトが今正直に閉じることができるもの
 
-| Artifact piece | What it closes now | What still stays outside the claim |
+| アーティファクトの欠片 | 今閉店しているもの | まだ主張の範囲外にあるもの |
 |---|---|---|
-| `Fixed-split rerun contract` | A bounded rule for freezing the split between exploratory and confirmatory outputs on the current public route. | Any statement that the route already supports broad confirmatory readiness or rerun robustness. |
-| `Negative-case trail` | A narrow record of what happens when the split rule is violated or the rerun fails to hold under the fixed contract. | Any claim that a few logged failures already generalize into a field-wide rerun policy. |
-| `Split-violation checklist` | A public-safe checklist for what evidence must be logged when exploratory outputs are kept outside confirmatory wording. | Any theory-level conclusion that goes beyond the present EEG artifact. |
+| `Fixed-split rerun contract` | 現在のパブリックルート上の探索的出力と確認的出力の間の分割を凍結するための制限付きルール。 | ルートがすでに広範な確認準備や再実行の堅牢性をサポートしているという記述。 |
+| `Negative-case trail` | スプリットルールに違反した場合、または再実行が固定契約に基づいて保持されなかった場合に何が起こるかを示す狭い記録。 | ログに記録されたいくつかの失敗がすでにフィールド全体の再実行ポリシーに一般化しているという主張。 |
+| `Split-violation checklist` | 探索的出力が確認的な文言の外に保管されている場合に、どのような証拠を記録する必要があるかについての公衆安全チェックリスト。 | 現在の EEG アーチファクトを超える理論レベルの結論。 |
 
-## First-pass KPI bundle and stop rule
+## ファーストパス KPI バンドルと停止ルール
 
-| Item | Current row-level fixation |
+| アイテム | 現在の行レベルの固定 |
 |---|---|
-| `First-pass KPI bundle` | `fixed-split compliance rate`, `rerun success rate`, `explore-to-confirm carryover gap` |
-| `Stop rule` | Do not widen this row if split violations remain necessary to preserve the result or if the `explore-to-confirm carryover gap` collapses on rerun. |
+| `First-pass KPI bundle` | `fixed-split compliance rate`、`rerun success rate`、`explore-to-confirm carryover gap` |
+| `Stop rule` | 結果を保存するために分割違反がまだ必要な場合、または再実行時に `explore-to-confirm carryover gap` が折りたたまれる場合は、この行を広げないでください。 |
 
-## Funding wording that still fits
+## まだ適切な資金調達の文言
 
-| Route | Submission wording that stays honest | Why it still fits this row |
+| ルート | 正直さを保つ提出文言 | それでもこの行に適合する理由 |
 |---|---|---|
-| `Kura Fund` | `A fixed-split rerun contract for a bounded EEG verification route toward the mind-upload hypothesis` | The row still reads as a young-researcher rerun-discipline package rather than a solved reproducibility claim. |
-| `Nakatani Foundation research grant` (`next-cycle watch`) | `Exploration-versus-confirmation contract design for bounded EEG reruns` | The row remains plausible only as a later-cycle reproducibility package once the current closed cycle reopens. |
-| `Secom General Research Grant` (`next-cycle watch only`) | `Latency-aware fixed-split and failure-trail auditing for EEG reruns` | The March 31, 2026 `12:00 JST` deadline has already passed in this run, so the route remains useful only as a carried-forward watch note rather than a live planning lane. |
+| `Kura Fund` | `A fixed-split rerun contract for a bounded EEG verification route toward the mind-upload hypothesis` | この行は依然として、解決された再現性の主張ではなく、若手研究者の再実行と規律のパッケージとして読み取れます。 |
+| `Nakatani Foundation research grant`(`next-cycle watch`) | `Exploration-versus-confirmation contract design for bounded EEG reruns` | この行は、現在の閉じられたサイクルが再開された後、後のサイクルの再現性パッケージとしてのみ妥当性を保ちます。 |
+| `Secom General Research Grant`(`next-cycle watch only`) | `Latency-aware fixed-split and failure-trail auditing for EEG reruns` | この実行では 2026 年 3 月 31 日の `12:00 JST` 期限がすでに過ぎているため、このルートは、ライブ計画レーンではなく、繰り越しの監視メモとしてのみ役に立ちます。 |
 
-## External dependency tasks that stay outside this session
+## このセッションの外にある外部依存タスク
 
-- `D13`-backed split-violation examples across richer public benchmarks are still needed before the row can support broader rerun wording.
-- A broader rerun family is still needed before the route can claim stronger confirmatory readiness.
-- Any broad rerun-robustness or confirmatory-readiness interpretation remains outside the present EEG-only route.
+- 行がより広範な再実行文言をサポートできるようになる前に、`D13` に裏付けられた、より豊富な公開ベンチマークにわたる分割違反の例がまだ必要です。
+- ルートがより強力な確認準備を整えていると宣言するには、より広範な再実行ファミリーが依然として必要です。
+- 広範な再実行堅牢性または確認準備性の解釈は、現在の EEG のみのルートの範囲外にあります。
 
-## What changed in this run
+## 今回の実行で変わったこと
 
-- The public batch did not change.
-- The main change in this sync is that `U14-2` now carries the same `2026-04-04 09:05 JST` route basis as the latest front-door reading and records that the live row packet had still been stuck at the earlier `2026-04-04 01:04 JST` wording before this source update.
-- The row still records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
-- This is still a route-setting update, not a solved-claim update.
+- パブリックバッチは変更されませんでした。
+- この同期の主な変更点は、`U14-2` が最新のフロントドア読み取り値と同じ `2026-04-04 09:05 JST` ルート ベースを保持し、ライブ行パケットがこのソース更新前の初期の `2026-04-04 01:04 JST` 文言でまだスタックしていたことを記録することです。
+- この行には、アンカー選択の根拠、1 つのコンパクトな初回パス KPI バンドル、および 1 つの明示的な停止ルールが暗黙的に残されるのではなく、引き続き記録されます。
+- これは依然としてルート設定の更新であり、解決された請求の更新ではありません。

@@ -1,603 +1,604 @@
 ---
 layout: default
-title: "Wiki: Standards, Repositories, Validators, and Benchmarks"
-description: "Separates BIDS, OpenNeuro/PhysioNet, HED, LSL, BIDS Derivatives, MNE-BIDS, workflow / pipeline recipes, MOABB, and benchmark-governance artifacts so reproducibility failures are not hidden inside one label."
-article_type: Wiki
-subtitle: "Separate standards, repositories, derivatives, workflow recipes, validators, benchmark harnesses, and benchmark provenance"
-author: Mind Uploading Research Project
-last_updated: "2026-04-02"
-note: "Operational guide"
-audience: "People who see BIDS, OpenNeuro, PhysioNet, MNE-BIDS, MNE-BIDS-Pipeline, and MOABB as the same kind of thing"
-reading_time: "10-15 minutes"
-page_intro: "This page organizes the roles of ``Standards,'' ``Repositories,'' ``Validators,'' ``Derivatives,'' ``Workflow / model recipes,'' ``Benchmarks,'' and ``benchmark provenance / governance,'' together with version freezing, event semantics, synchronization middleware, and loader / benchmark tooling. The goal is not to memorize product names but to understand where reproducibility actually breaks."
-accuracy_note: "What I will explain here is a basic organization of roles. BIDS vessels, HED semantics, and LSL synchronization are complementary, and the final validity of any one is not guaranteed."
+title: 'Wiki: 標準、リポジトリ、バリデータ、ベンチマーク'
+description: BIDS、OpenNeuro/PhysioNet、HED、LSL、BIDS デリバティブ、MNE-BIDS、ワークフロー/パイプライン レシピ、MOABB、およびベンチマーク ガバナンス アーティファクトを分離するため、再現性の障害が
+  1 つのラベル内に隠れることはありません。
+article_type: ウィキ
+subtitle: 個別の標準、リポジトリ、派生製品、ワークフロー レシピ、バリデータ、ベンチマーク ハーネス、およびベンチマークの来歴
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-04-02'
+note: 操作ガイド
+audience: BIDS、OpenNeuro、PhysioNet、MNE-BIDS、MNE-BIDS-Pipeline、および MOABB を同じ種類のものとして見ている人々
+reading_time: 10～15分
+page_intro: このページでは、「`Standards,'' ``Repositories,'' ``Validators,'' ``Derivatives,'' ``Workflow / model recipes,'' ``Benchmarks,''
+  and `「ベンチマークの来歴 / ガバナンス」」の役割を、バージョンの凍結、イベント セマンティクス、同期ミドルウェア、ローダー / ベンチマーク ツールとともに整理します。目標は、製品名を覚えることではなく、再現性が実際にどこで損なわれるかを理解することです。
+accuracy_note: ここで説明するのは、基本的な役割の構成です。 BIDS ベッセル、HED セマンティクス、および LSL 同期は補完的であり、いずれかの最終的な有効性は保証されません。
 page_highlights:
-  - "BIDS is a standard, OpenNeuro and PhysioNet are storage areas, Validator is a mechanical inspection, and Benchmark is a comparison rule."
-  - "BIDS Derivatives and result provenance are separate from raw-data layout: processed outputs need their own lineage and pipeline description."
-  - "If you do not fix the OpenNeuro snapshot or the PhysioNet version, you will not be able to reproduce the same data name."
-  - "HED and Motion-BIDS are extensions to BIDS that carry machine-readable semantics and additional metadata."
-  - "LSL is a synchronization middleware and is not a replacement for BIDS or benchmark."
-  - "BIDS/HED/LSL do not by themselves validate multimodal biological fusion; that requires a separate Fusion Card."
-  - "A loader like MNE-BIDS, a workflow like MNE-BIDS-Pipeline or BIDS Apps, a model recipe like BIDS Stats Models, and a benchmark harness like MOABB have different roles."
-  - "Benchmark harness and benchmark provenance are different objects: official rules, split/randomization, extra-data policy, pretrained-checkpoint policy, inference-stage restrictions, and later organizer postmortems can all change what the score means."
-  - "Official challenge homepages, rules pages, submission constraints, and leaderboard corrections count as part of the benchmark object rather than as administrative footnotes."
-  - "A pipeline name alone is still too coarse: derivative lineage, config, skipped steps, software version, and runtime container remain separate reproducibility fields."
+- BIDS は標準、OpenNeuro と PhysioNet はストレージ領域、Validator は機械的検査、Benchmark は比較ルールです。
+- BIDS デリバティブと結果の来歴は生データのレイアウトとは別のものです。処理された出力には独自の系統とパイプラインの説明が必要です。
+- OpenNeuro スナップショットまたは PhysioNet のバージョンを修正しないと、同じデータ名を再現できなくなります。
+- HED と Motion-BIDS は、機械可読なセマンティクスと追加のメタデータを運ぶ BIDS の拡張機能です。
+- LSL は同期ミドルウェアであり、BIDS やベンチマークに代わるものではありません。
+- BIDS/HED/LSL は、それ自体では多峰性の生物学的融合を検証しません。別途 Fusion カードが必要です。
+- MNE-BIDS のようなローダー、MNE-BIDS-Pipeline や BIDS Apps のようなワークフロー、BIDS Stats Models のようなモデル レシピ、MOABB のようなベンチマーク ハーネスには、それぞれ異なる役割があります。
+- ベンチマークのハーネスとベンチマークの来歴は異なるオブジェクトです。公式ルール、分割/ランダム化、追加データ ポリシー、事前トレーニングされたチェックポイント ポリシー、推論段階の制限、およびその後のオーガナイザーによる事後分析はすべて、スコアの意味を変更する可能性があります。
+- 公式チャレンジのホームページ、ルール ページ、提出の制約、およびリーダーボードの修正は、管理上の脚注としてではなく、ベンチマーク オブジェクトの一部としてカウントされます。
+- パイプライン名だけではまだ大まかすぎます。派生リネージ、構成、スキップされたステップ、ソフトウェア バージョン、およびランタイム コンテナーは別個の再現性フィールドのままです。
 known_points:
-  - "To make research comparable, it is necessary to separate the data format, publication destination, derivative lineage, workflow recipe, testing methods, and evaluation rules."
-  - "BIDS and EEG-BIDS are standards for 'how to place' them, not scoring rules themselves."
-  - "Event semantics like HED have the role of supplementing the meaning of events listed in BIDS in a machine-readable manner."
-  - "LSL helps with clock alignment between streams, but is not the ground truth for hardware delays."
-  - "Even if clocks are aligned and metadata are standardized, multimodal claims still need a separate audit of fusion model, co-registration, and calibration."
-  - "OpenNeuro and PhysioNet are public platforms, but they do not automatically guarantee all input formats and evaluation procedures."
-  - "Raw BIDS and BIDS derivatives are separate layers; processed data should carry explicit lineage rather than silently replacing raw."
-  - "A workflow name alone is not a frozen recipe: config files, skipped stages, model graph, and software / container versions can all change outputs."
-  - "Even if the dataset name is the same, it cannot be compared if the snapshot / version and evaluation family are different."
-  - "A benchmark title alone is still insufficient: benchmark meaning can move with current rule snapshot, split construction, hidden grouping, extra-data / pretrained-model policy, inference-stage budget, and organizer postmortems."
-  - "MOABB fixes evaluation families such as within-session / cross-session / cross-subject, but challenge operations can add additional constraints that are not visible in the harness name alone."
-  - "Containerized execution helps software portability, but it does not by itself freeze benchmark meaning or full result provenance."
+- 研究を比較可能にするためには、データ形式、公開先、派生系統、ワークフローレシピ、テスト方法、評価ルールを分離する必要があります。
+- BIDS と EEG-BIDS は、スコアリング ルールそのものではなく、「配置方法」の基準です。
+- HED のようなイベント セマンティクスは、BIDS にリストされているイベントの意味を機械可読な方法で補足する役割を果たします。
+- LSL はストリーム間のクロック調整に役立ちますが、ハードウェア遅延の正確な情報ではありません。
+- 時計が調整され、メタデータが標準化されている場合でも、マルチモーダル クレームでは、依然として融合モデル、共同登録、および調整の個別の監査が必要です。
+- OpenNeuro と PhysioNet はパブリック プラットフォームですが、すべての入力形式と評価手順が自動的に保証されるわけではありません。
+- 未処理の BIDS と BIDS 派生データは別個のレイヤーです。処理されたデータは、生のデータを黙って置き換えるのではなく、明示的な系統を伝える必要があります。
+- ワークフロー名だけではレシピが凍結されるわけではありません。構成ファイル、スキップされたステージ、モデル グラフ、ソフトウェア/コンテナーのバージョンはすべて、出力を変更する可能性があります。
+- データセット名が同じでも、スナップショット/バージョン、評価ファミリーが異なる場合は比較できません。
+- ベンチマークのタイトルだけではまだ不十分です。ベンチマークの意味は、現在のルールのスナップショット、分割構築、非表示のグループ化、追加データ/事前トレーニング済みモデルのポリシー、推論段階の予算、オーガナイザーの事後分析に応じて変化します。
+- MOABB は、セッション内/セッション間/被験者間などの評価ファミリーを修正しますが、チャレンジ操作では、ハーネス名だけでは表示されない追加の制約が追加される可能性があります。
+- コンテナー化された実行はソフトウェアの移植性に役立ちますが、それ自体ではベンチマークの意味や結果の完全な来歴を凍結するわけではありません。
 unknown_points:
-  - "It is unclear what granularity the final common benchmark for WBE should be."
-  - "Which validators and audit items will become the final standard will depend on future operational design."
-  - "The best common schema for workflow provenance across decoding, source imaging, and multimodal pipelines is still evolving."
+- WBE の最終的な共通ベンチマークがどのような粒度であるべきかは不明です。
+- どのバリデータと監査項目が最終的な標準となるかは、今後の運用設計によって決まります。
+- デコード、ソース イメージング、マルチモーダル パイプラインにわたるワークフローの来歴に最適な共通スキーマは、現在も進化しています。
 wiki_links:
-  - label: "Wiki: Basics of verification infrastructure"
-    url: "/wiki/verification-basics.html"
-    description: "Return to the larger map of Standards, Bench, Registration, and Audit."
-  - label: "Wiki: Baseline/Pre-registration/Model Card"
-    url: "/wiki/baselines-prereg-and-model-cards.html"
-    description: "Compensates for differences in operational language beyond Benchmark."
-  - label: "Wiki: Event synchronization and observation log"
-    url: "/wiki/event-sync-and-measurement-logs.html"
-    description: "Add specific examples of log information you want to include in the standard."
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "You can return to other auxiliary pages."
+- label: 'Wiki: 検証インフラストラクチャの基本'
+  url: /wiki/verification-basics.html
+  description: 標準、ベンチ、登録、監査の大きなマップに戻ります。
+- label: 'Wiki: ベースライン/事前登録/モデルカード'
+  url: /wiki/baselines-prereg-and-model-cards.html
+  description: ベンチマークを超えた操作言語の違いを補います。
+- label: 'Wiki: イベント同期と監視ログ'
+  url: /wiki/event-sync-and-measurement-logs.html
+  description: 標準に含めたいログ情報の具体例を追加します。
+- label: ウィキホーム
+  url: /wiki/
+  description: 他の補助ページに戻ることができます。
 recommended_pages:
-  - label: "Data & Bench"
-    url: "/datasets.html"
-  - label: "Verification base"
-    url: "/verification.html"
-  - label: "Casework"
-    url: "/verification.html#casework"
+- label: データとベンチ
+  url: /datasets.html
+- label: 検証ベース
+  url: /verification.html
+- label: ケースワーク
+  url: /verification.html#casework
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>The shortest distinction</h2>
+<h2>最短の区別</h2>
 <p>
-<strong>Standards</strong> fix raw-data layout, <strong>repositories</strong> fix where a versioned dataset is published, <strong>validators</strong> check schema compliance, <strong>derivative specifications</strong> fix how processed outputs stay linked to their sources, <strong>workflow / model recipes</strong> fix how outputs are produced, and <strong>benchmark harnesses</strong> plus <strong>benchmark provenance / governance</strong> fix what the score means. Even though they all look like ``research infrastructure,'' their roles are different.
+<strong>標準</strong>生データのレイアウトを修正、<strong>リポジトリ</strong>バージョン管理されたデータセットが公開される場所を修正、<strong>バリデータ</strong>スキーマ準拠をチェック、<strong>派生仕様</strong>処理された出力がソースにリンクされた状態を維持する方法を修正、<strong>ワークフロー/モデルレシピ</strong>出力が生成される方法を修正、<strong>ベンチマークハーネス</strong>プラス<strong>ベンチマークの来歴/ガバナンス</strong>スコアの意味を修正。どれも「研究インフラ」に見えますが、その役割は異なります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-26 correction: benchmark provenance is part of the benchmark</strong>
+<strong>2026-03-26 修正: ベンチマークの出自はベンチマーク</strong> の一部です
 <p>
-The old version of this page still let <strong>benchmark</strong> sound like a stable comparison label once the harness name was known. That is too weak. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> states that the original challenge preprint became <strong>out of date</strong> during execution and that the website should be treated as current. The official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> then fix <strong>downsampling after 0.5-50 Hz filtering</strong>, <strong>additional-data disclosure</strong>, <strong>pretrained-model disclosure</strong>, and a <strong>single-GPU 20 GB inference-stage constraint</strong>. The official <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> further fixes that it is an <strong>inference-only code submission</strong>, and the final <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> later disclosed a <strong>Challenge 2 randomization error</strong> and separated the final awards. Recent benchmark papers make the same point in more general form: <a href="https://doi.org/10.48550/arXiv.2508.17742" target="_blank">Xiong et al. (2025/2026)</a> argue that inconsistent evaluation protocols make EEG-foundation-model comparisons unreliable, and <a href="https://doi.org/10.48550/arXiv.2601.17883" target="_blank">Liu et al. (2026)</a> show across <strong>12 open-source foundation models</strong> and <strong>13 datasets</strong> that the reading of transfer quality depends materially on protocol choice. Therefore, on this site, <strong>benchmark provenance / governance</strong> is treated as a first-class part of reproducibility rather than as after-the-fact administration.
+このページの古いバージョンでは、ハーネス名が判明すると、<strong>benchmark</strong> が安定した比較ラベルのように聞こえます。それは弱すぎます。 <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) の公式ホームページ </a> には、元のチャレンジのプレプリントが実行中に <strong> 期限切れ</strong> になったため、Web サイトを最新のものとして扱う必要があると記載されています。公式の <a href="https://eeg2025.github.io/rules/" target="_blank"> ルール </a> では、<strong> 0.5 ～ 50 Hz フィルタリング後のダウンサンプリング </strong>、<strong> 追加データ開示 </strong>、<strong> 事前トレーニング済みモデル開示 </strong>、<strong> シングル GPU 20 GB 推論ステージ制約 </strong> が修正されています。公式<a href="https://eeg2025.github.io/submission/" target="_blank">提出ページ</a>は、<strong>推論のみのコード提出</strong>であることをさらに修正し、最終的な<a href="https://eeg2025.github.io/leaderboard/" target="_blank">リーダーボード</a>は後に<strong>チャレンジ2ランダム化エラー</strong>を明らかにし、最終賞を分けました。最近のベンチマーク論文では、より一般的な形式で同じ点が述べられています。<a href="https://doi.org/10.48550/arXiv.2508.17742" target="_blank">Xiong et al. (2025/2026)</a> は、一貫性のない評価プロトコルにより脳波基礎モデルの比較の信頼性が低くなると主張し、<a href="https://doi.org/10.48550/arXiv.2601.17883" target="_blank">Liu らは (2025/2026) (2026)</a> は、<strong>12 オープンソース基盤モデル </strong> および <strong>13 データセット </strong> にわたって、転送品質の読み取りがプロトコルの選択に大きく依存することを示しています。したがって、このサイトでは、<strong>benchmark 来歴 / ガバナンス</strong> を事後管理としてではなく、再現性の第一級の部分として扱います。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-04-02 correction: BIDS plus a benchmark name still do not fix derivatives, workflow recipe, or result provenance</strong>
+<strong>2026-04-02 修正: BIDS にベンチマーク名を追加しても、デリバティブ、ワークフロー レシピ、または結果の来歴が修正されない</strong>
 <p>
-The remaining weakness on this page was subtler. It still let <strong>BIDS + repository + benchmark name</strong> sound almost sufficient for reproducibility. Current official and primary sources do not support that reading. <a href="https://doi.org/10.7554/eLife.71774" target="_blank">Markiewicz et al. (2021)</a> show that OpenNeuro plus BIDS helps freeze a shareable, versioned raw input. But the BIDS specification separately requires derived datasets to carry <strong>GeneratedBy</strong> and <strong>SourceDatasets</strong>, and derivative files to keep explicit <strong>Sources</strong>. <a href="https://doi.org/10.1371/journal.pcbi.1005209" target="_blank">Gorgolewski et al. (2017)</a> show that BIDS Apps solve deployment and interface portability, not automatic benchmark meaning; <a href="https://mne.tools/mne-bids-pipeline/stable/" target="_blank">MNE-BIDS-Pipeline</a> explicitly exposes a text-file configuration, cached intermediate steps, and summary reports; <a href="https://bids-standard.github.io/stats-models/index.html" target="_blank">BIDS Stats Models</a> defines a separate machine-readable model recipe; and <a href="https://doi.org/10.1038/sdata.2016.102" target="_blank">Maumet et al. (2016)</a> show that result provenance itself can be packaged as a separate standardized object. Therefore, on this site, <strong>derivative specification</strong>, <strong>workflow / model recipe</strong>, and <strong>execution / result provenance</strong> are now treated as distinct layers rather than as details hidden inside ``BIDS'' or ``benchmark.''
+このページに残っている弱点はさらに微妙なものでした。 <strong>BIDS + リポジトリ + ベンチマーク名 </strong> でも再現性としてはほぼ十分です。現在の公式情報源および一次情報源は、その解釈をサポートしていません。 <a href="https://doi.org/10.7554/eLife.71774" target="_blank">Markiewicz et al. (2021)</a> は、OpenNeuro と BIDS が、共有可能でバージョン管理された生の入力を凍結するのに役立つことを示しています。ただし、BIDS 仕様では、<strong>GeneratedBy</strong> および <strong>SourceDatasets</strong> を保持する派生データセットと、明示的な <strong>Sources</strong> を保持する派生ファイルが別途必要です。 <a href="https://doi.org/10.1371/journal.pcbi.1005209" target="_blank">ゴルゴレフスキーら。 (2017)</a> は、BIDS アプリが自動ベンチマークの意味ではなく、展開とインターフェイスの移植性を解決することを示しています。 <a href="https://mne.tools/mne-bids-pipeline/stable/" target="_blank">MNE-BIDS-Pipeline</a> は、テキスト ファイル構成、キャッシュされた中間ステップ、および概要レポートを明示的に公開します。 <a href="https://bids-standard.github.io/stats-models/index.html" target="_blank">BIDS 統計モデル</a> は、別の機械可読モデル レシピを定義します。および<a href="https://doi.org/10.1038/sdata.2016.102" target="_blank">Maumetら。 (2016)</a> は、結果の来歴自体を別の標準化されたオブジェクトとしてパッケージ化できることを示しています。したがって、このサイトでは、<strong> 派生仕様 </strong>、<strong> ワークフロー / モデル レシピ </strong>、および <strong> 実行 / 結果の出所 </strong> は、「`BIDS'' or `」ベンチマーク内に隠された詳細としてではなく、別個のレイヤーとして扱われるようになりました。
 </p>
 </div>
 
 <section class="section" id="why-separate">
-<h2 class="section-title">Why consider separately</h2>
+<h2 class="section-title">なぜ分けて検討するのか</h2>
 <p>
-If you confuse these layers, you'll get the wrong impression, such as, ``There's a benchmark because you uploaded it to OpenNeuro,'' ``Because it's BIDS, the processed outputs are already traceable,'' ``Because the pipeline name was given, the recipe is already frozen,'' or ``Because MOABB was named, the benchmark meaning is already fixed.'' In reality, the tasks of aligning raw data, naming derivative lineage, freezing workflow and model recipes, defining comparison rules, and freezing the exact benchmark governance are different things.
+これらのレイヤーを混同すると、「`There's a benchmark because you uploaded it to OpenNeuro,'' ``Because it's BIDS, the processed outputs are already traceable,'' ``Because the pipeline name was given, the recipe is already frozen,'' or `「MOABB という名前が付けられたので、ベンチマークの意味はすでに決まっている」などの誤った印象を与えることになります。実際には、生データの調整、派生リネージの命名、ワークフローとモデルのレシピの凍結、比較ルールの定義、および正確なベンチマーク ガバナンスの凍結というタスクは別のものです。
 </p>
 </section>
 
 <section class="section" id="terms">
-<h2 class="section-title">First, separate terms</h2>
+<h2 class="section-title">最初に個別の条件</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>What it does</th>
-<th>Example</th>
+<th>期間</th>
+<th>機能</th>
+<th>例</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>standard (raw layout)</strong></td>
-<td>The way to place the file, name it, and write the metadata will be the same. </td>
-<td>BIDS, EEG-BIDS. </td>
+<td><strong>標準（生レイアウト）</strong></td>
+<td> ファイルの配置、名前の付け方、メタデータの書き込み方法は同じです。 </td>
+<td>BIDS、EEG-BIDS。 </td>
 </tr>
 <tr>
-<td><strong>Storage/shared infrastructure (repository)</strong></td>
-<td>Publish your data so others can retrieve it. </td>
-<td>OpenNeuro, PhysioNet, PDB, etc. </td>
+<td><strong>ストレージ/共有インフラストラクチャ (リポジトリ)</strong></td>
+<td>他の人がデータを取得できるようにデータを公開します。 </td>
+<td>OpenNeuro、PhysioNet、PDBなど </td>
 </tr>
 <tr>
-<td><strong>Validator</strong></td>
-<td>Mechanically inspects for standard violations and missing metadata. </td>
-<td>BIDS Validator. </td>
+<td><strong>バリデーター</strong></td>
+<td> 標準違反やメタデータの欠落を機械的に検査します。 </td>
+<td>BIDS バリデーター。 </td>
 </tr>
 <tr>
-<td><strong>derivative specification / lineage</strong></td>
-<td>Keep processed outputs separate from raw and link them back to their direct sources and generating pipeline. </td>
-<td>BIDS Derivatives, <code>GeneratedBy</code>, <code>SourceDatasets</code>, <code>Sources</code>. </td>
+<td><strong>派生仕様/系統</strong></td>
+<td>処理された出力を生の出力から分離し、直接のソースと生成パイプラインにリンクして戻します。 </td>
+<td>BIDS デリバティブ、<code>GeneratedBy</code>、<code>SourceDatasets</code>、<code>Sources</code>。 </td>
 </tr>
 <tr>
-<td><strong>loader / converter</strong></td>
-<td>Read or write datasets in a standardized way and bridge them into the analysis library. </td>
-<td>MNE-BIDS. </td>
+<td><strong>ローダー/コンバーター</strong></td>
+<td>標準化された方法でデータセットの読み取りまたは書き込みを行い、それらを分析ライブラリにブリッジします。 </td>
+<td>MNE-入札。 </td>
 </tr>
 <tr>
-<td><strong>workflow / model recipe</strong></td>
-<td>Fix the ordered steps, config values, optional branches, grouping logic, and analysis graph that generate the outputs. </td>
-<td>MNE-BIDS-Pipeline config, BIDS Apps CLI, BIDS Stats Models JSON. </td>
+<td><strong>ワークフロー/モデルレシピ</strong></td>
+<td>出力を生成する順序付けされたステップ、構成値、オプションの分岐、グループ化ロジック、および分析グラフを修正します。 </td>
+<td>MNE-BIDS-パイプライン構成、BIDS アプリ CLI、BIDS 統計モデル JSON。 </td>
 </tr>
 <tr>
-<td><strong>execution / result provenance</strong></td>
-<td>Record which software, version, container, code, and activity actually produced the reported outputs and reports. </td>
-<td>NIDM-Results, pipeline reports, DataLad / BABS audit trail. </td>
+<td><strong>実行/結果の出所</strong></td>
+<td>どのソフトウェア、バージョン、コンテナ、コード、アクティビティが実際に報告された出力とレポートを生成したかを記録します。 </td>
+<td>NIDM - 結果、パイプライン レポート、DataLad / BABS 監査証跡。 </td>
 </tr>
 <tr>
-<td><strong>benchmark harness</strong></td>
-<td>Fix issues, divisions, indicators, and prohibitions to make them comparable. </td>
-<td>MOABB, MLPerf, ImageNet type operation. </td>
+<td><strong>ベンチマークハーネス</strong></td>
+<td>問題、区分、指標、禁止事項を修正して比較できるようにします。 </td>
+<td>MOABB、MLPerf、ImageNet タイプの動作。 </td>
 </tr>
 <tr>
-<td><strong>benchmark provenance / governance</strong></td>
-<td>Fix which exact rule snapshot, split construction, hidden grouping, extra-data policy, pretrained-checkpoint policy, execution constraints, and postmortems defined the score. </td>
-<td>Official challenge homepage / rules / submission / leaderboard, benchmark postmortems. </td>
+<td><strong>ベンチマーク来歴/ガバナンス</strong></td>
+<td>スコアを定義する正確なルール スナップショット、分割構築、非表示グループ化、追加データ ポリシー、事前トレーニング済みチェックポイント ポリシー、実行制約、および事後検証を修正しました。 </td>
+<td>公式チャレンジのホームページ/ルール/サブミッション/リーダーボード、ベンチマーク事後分析。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="operational-stack">
-<h2 class="section-title">In practice, the short labels are not enough, so we look at 11 layers</h2>
+<h2 class="section-title">実際には、短いラベルでは十分ではないため、11 個のレイヤーを調べます</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>layer</th>
-<th>Representative examples</th>
-<th>What to fix here</th>
-<th>No guarantees yet</th>
+<th>レイヤー</th>
+<th>代表例</th>
+<th>ここを修正する必要があります</th>
+<th>まだ保証はありません</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. Standards</strong></td>
-<td>BIDS, EEG-BIDS</td>
-<td>File name, required metadata, coordinate system, events/channels/electrodes format. </td>
-<td>train/test Splits and indicators are not determined. </td>
+<td><strong>1。規格</strong></td>
+<td>BIDS、EEG-BIDS</td>
+<td>ファイル名、必要なメタデータ、座標系、イベント/チャネル/電極の形式。 </td>
+<td>train/test スプリットとインジケーターは未定です。 </td>
 </tr>
 <tr>
-<td><strong>2. Public version</strong></td>
-<td>OpenNeuro snapshot, PhysioNet version</td>
-<td>A third party can return to the same input to know which version was obtained. </td>
-<td>The version does not necessarily fix the benchmark split or preprocessing conditions. </td>
+<td><strong>2。公開バージョン</strong></td>
+<td>OpenNeuro スナップショット、PhysioNet バージョン</td>
+<td>A サードパーティは、同じ入力に戻って、どのバージョンが取得されたかを知ることができます。 </td>
+<td>このバージョンでは、ベンチマークの分割や前処理の条件が必ずしも修正されているわけではありません。 </td>
 </tr>
 <tr>
-<td><strong>3. Event semantics/extension schema</strong></td>
-<td>HED, Motion-BIDS</td>
-<td><code>trial_type</code> meaning, event tag, additional sensor metadata, and coordinate frame. </td>
-<td>Clock alignment and benchmark split are not determined automatically. </td>
+<td><strong>3。イベントセマンティクス/拡張スキーマ</strong></td>
+<td>HED、モーション-BIDS</td>
+<td><code>trial_type</code> の意味、イベント タグ、追加のセンサー メタデータ、および座標フレーム。 </td>
+<td>クロックのアライメントとベンチマークの分割は自動的には決定されません。 </td>
 </tr>
 <tr>
-<td><strong>4. Synchronization middleware</strong></td>
+<td><strong>4。同期ミドルウェア</strong></td>
 <td>LSL</td>
-<td>Time alignment of multiple streams, clock offset estimation, and stream metadata. </td>
-<td>We do not guarantee the true value of device-side delay or stimulus presentation delay. </td>
+<td>複数のストリームの時間調整、クロック オフセット推定、およびストリーム メタデータ。 </td>
+<td>デバイス側遅延や刺激提示遅延などの真値は保証しておりません。 </td>
 </tr>
 <tr>
-<td><strong>5. Derivative specification / lineage</strong></td>
-<td>BIDS Derivatives, <code>GeneratedBy</code>, <code>SourceDatasets</code>, <code>Sources</code></td>
-<td>Keep processed outputs separate from raw and make source ancestry plus generating pipeline explicit. </td>
-<td>A clean or epoched file can still be overread as self-explanatory if lineage is missing. </td>
+<td><strong>5。派生仕様/リネージュ</strong></td>
+<td>BIDS デリバティブ、<code>GeneratedBy</code>、<code>SourceDatasets</code>、<code>Sources</code></td>
+<td>処理された出力を生の出力から分離し、ソースの祖先と生成パイプラインを明示的にします。 </td>
+<td>A クリーンまたはエポックされたファイルでも、リネージが欠落している場合は自明のとおりオーバーリードされる可能性があります。 </td>
 </tr>
 <tr>
-<td><strong>6. Conversion/Reading</strong></td>
+<td><strong>6。変換・読み取り</strong></td>
 <td>MNE-BIDS</td>
-<td>BIDSPath, metadata extraction, reading path to MNE, format conversion when necessary. </td>
-<td>Comparison indicators and evaluation families are not fixed. </td>
+<td>BIDSPath、メタデータ抽出、MNE への読み取りパス、必要に応じてフォーマット変換。 </td>
+<td>比較指標と評価ファミリーは固定されていません。 </td>
 </tr>
 <tr>
-<td><strong>7. Workflow / model recipe</strong></td>
-<td>MNE-BIDS-Pipeline config, BIDS Apps CLI, BIDS Stats Models JSON</td>
-<td>Fix step order, skipped or optional stages, model graph, and config values that determine derived outputs. </td>
-<td>The same raw input can still produce different derivatives when the recipe changes. </td>
+<td><strong>7。ワークフロー/モデルレシピ</strong></td>
+<td>MNE-BIDS-パイプライン構成、BIDS アプリ CLI、BIDS 統計モデル JSON</td>
+<td>ステップ順序、スキップされたステージまたはオプションのステージ、モデル グラフ、および派生出力を決定する構成値を修正します。 </td>
+<td>レシピが変更されると、同じ生の入力でも異なる導関数が生成される可能性があります。 </td>
 </tr>
 <tr>
-<td><strong>8. Execution / result provenance</strong></td>
-<td>NIDM-Results, pipeline reports, DataLad / BABS run records</td>
-<td>Record which software, version, container, commands, and activities actually produced the outputs being reported. </td>
-<td>A figure or score table can still be detached from the software state that created it. </td>
+<td><strong>8。実行/結果の出自</strong></td>
+<td>NIDM - 結果、パイプライン レポート、DataLad / BABS 実行レコード</td>
+<td>どのソフトウェア、バージョン、コンテナ、コマンド、アクティビティがレポート対象の出力を実際に生成したかを記録します。 </td>
+<td>A の図またはスコア テーブルは、それを作成したソフトウェアの状態から切り離すことができます。 </td>
 </tr>
 <tr>
-<td><strong>9. Benchmark harness</strong></td>
+<td><strong>9。ベンチマークハーネス</strong></td>
 <td>MOABB</td>
-<td>paradigm, evaluation family, statistical comparison, cross-sectional evaluation of the same pipeline. </td>
-<td>Current rule snapshot, hidden grouping, extra-data policy, and execution constraints are not fixed unless governance documents are also frozen. </td>
+<td>パラダイム、評価ファミリー、統計的比較、同じパイプラインの横断的評価。 </td>
+<td>現在のルールのスナップショット、非表示のグループ化、追加データ ポリシー、実行制約は、ガバナンス文書も凍結されない限り修正されません。 </td>
 </tr>
 <tr>
-<td><strong>10. Benchmark provenance / governance</strong></td>
-<td>Official homepage, rules page, submission page, leaderboard / postmortem</td>
-<td>Current benchmark version, split / randomization, hidden grouping, extra-data and pretrained-model policy, inference-stage restrictions, and later corrections. </td>
-<td>This still does not prove target-signal specificity, source-imaging truth, or operational safety outside the stated benchmark. </td>
+<td><strong>10。ベンチマークの来歴 / ガバナンス</strong></td>
+<td>公式ホームページ、ルールページ、投稿ページ、リーダーボード/事後分析</td>
+<td>現在のベンチマーク バージョン、分割/ランダム化、非表示グループ化、追加データおよび事前トレーニング済みモデルのポリシー、推論段階の制限、および後の修正。 </td>
+<td>これは依然として、ターゲット信号の特異性、ソースイメージングの真実性、または規定のベンチマークを超えた動作の安全性を証明するものではありません。 </td>
 </tr>
 <tr>
-<td><strong>11. Learner / runtime environment</strong></td>
-<td>Linear classifier, Riemannian pipeline, deep model, container image, lockfile</td>
-<td>Which estimator was run with which preprocessing, random numbers, runtime image, and hyperparameters. </td>
-<td>If 1-10 above are not fixed, it will not be a fair comparison. </td>
+<td><strong>11。学習者/実行環境</strong></td>
+<td>線形分類器、リーマン パイプライン、ディープ モデル、コンテナ イメージ、ロックファイル</td>
+<td>どの推定器がどの前処理、乱数、実行時イメージ、ハイパーパラメータで実行されたか。 </td>
+<td>上記1～10を修正しないと公平な比較になりません。 </td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>2026-03 site rule</strong>
+<strong>2026-03 サイトルール</strong>
 <p>
-OpenNeuro treats the snapshot as a git tag of the semantic version, and PhysioNet also explicitly cites the version for each project. Therefore, on this site, we include not only the dataset name but also the <strong>snapshot / version / DOI or persistent URL</strong> in the artifact. Additionally, BIDS is a raw-data container, BIDS Derivatives is the processed-data layer, HED/Motion-BIDS is semantics and additional metadata, LSL is synchronization, MNE-BIDS is an input/output path, MNE-BIDS-Pipeline or a BIDS App is a workflow recipe, BIDS Stats Models is a model recipe, NIDM-Results is result provenance packaging, and MOABB is a comparison rule. Please don't mix these up and read that ``Since I used BIDS, I was able to get past the benchmark'' or ``Since I installed LSL, I was able to solve the hardware delay.''
+OpenNeuro はスナップショットをセマンティック バージョンの git タグとして扱い、PhysioNet も各プロジェクトのバージョンを明示的に引用します。したがって、このサイトでは、データセット名だけでなく、<strong> スナップショット / バージョン / DOI または永続 URL</strong> もアーティファクトに含めます。さらに、BIDS は生データ コンテナー、BIDS デリバティブは処理されたデータ レイヤー、HED/Motion-BIDS はセマンティクスと追加メタデータ、LSL は同期、MNE-BIDS は入力/出力パス、MNE-BIDS-Pipeline または BIDS アプリはワークフロー レシピ、BIDS Stats Models はモデル レシピ、NIDM-Results は結果来歴パッケージ化、MOABB は比較ルール。これらを混同しないでください。「`Since I used BIDS, I was able to get past the benchmark'' or `「LSL をインストールしたので、ハードウェアの遅延を解決できました。」」と読んでください。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-20 addendum: synchronization infrastructure is not a Fusion Card</strong>
+<strong>2026-03-20 追記: 同期インフラストラクチャは Fusion Card</strong> ではありません
 <p>
-The remaining weakness was to let <strong>BIDS + HED + LSL</strong> sound like a complete multimodal validity package. That is too strong. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> made clear that LSL solves synchronized stream transport rather than device-side delay truth. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020)</a> showed that EEG-fMRI fusion remains model-conditioned, and <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> plus <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous multimodal recordings can retain modality-specific structure even when acquired together. Therefore, on this site, standards and synchronization infrastructure are necessary inputs to a multimodal study, but a separate <a href="../verification.html#fusion-card">Fusion Card</a> is still required before the claim ceiling is raised.
+残りの弱点は、<strong>BIDS + HED + LSL</strong> が完全なマルチモーダル有効性パッケージのように聞こえることでした。それは強すぎます。 <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> は、デバイス側の遅延の真実ではなく、LSL が同期ストリーム トランスポートを解決することを明らかにしました。 <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020)</a> は、EEG-fMRI 融合がモデル条件付けされたままであることを示しました。 (2024)</a> プラス <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025) </a> は、同時マルチモーダル記録が一緒に取得された場合でもモダリティ固有の構造を保持できることを示しました。したがって、このサイトでは、標準と同期インフラストラクチャはマルチモーダルな調査に必要なインプットですが、請求上限が引き上げられる前に、別途 <a href="../verification.html#fusion-card">Fusion Card</a> が依然として必要です。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-26 addendum: a benchmark name is not yet a fixed benchmark object</strong>
+<strong>2026-03-26 追記: ベンチマーク名はまだ固定ベンチマーク オブジェクトではありません</strong>
 <p>
-<a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB</a> correctly fixes evaluation families such as <strong>within-session</strong>, <strong>cross-session</strong>, and <strong>cross-subject</strong>, but current EEG challenge operations show that this is only one part of the benchmark object. The official <a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge rules</a> fixed the filter / downsample route, additional-data policy, pretrained-model disclosure, and inference-stage memory budget, the official <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> fixed that the competition was <strong>inference-only</strong>, and the final <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> disclosed a <strong>non-randomized Challenge 2 split</strong> that changed the prize structure. Therefore, on this site, a benchmark claim is incomplete unless the <strong>harness</strong> and the <strong>current governance / provenance documents</strong> are frozen together.
+<a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB</a> は、<strong>within-session</strong>、<strong>cross-session</strong>、<strong>cross-subject</strong> などの評価ファミリーを正しく修正しますが、現在の EEG チャレンジ操作では、これがベンチマーク オブジェクトの一部にすぎないことが示されています。公式の <a href="https://eeg2025.github.io/rules/" target="_blank">EEG チャレンジ ルール </a> は、フィルター/ダウンサンプリング ルート、追加データ ポリシー、事前トレーニング済みモデルの開示、および推論段階のメモリ バジェットを修正しました。公式 <a href="https://eeg2025.github.io/submission/" target="_blank"> 提出ページ </a> は、コンテストが <strong> 推論のみであることを修正しました </strong>、そして最終的な <a href="https://eeg2025.github.io/leaderboard/" target="_blank"> リーダーボード </a> は、賞品を変更した <strong> 非ランダム化チャレンジ 2 の分割を明らかにしました </strong>構造。したがって、このサイトでは、<strong>harness</strong> と <strong> の現在のガバナンス/来歴文書 </strong> が一緒に凍結されない限り、ベンチマークの主張は不完全になります。
 </p>
 </div>
 </section>
 
 <section class="section" id="benchmark-provenance">
-<h2 class="section-title">Benchmark provenance is part of reproducibility</h2>
+<h2 class="section-title">ベンチマークの出自は再現性の一部</h2>
 <p>
-The practical weakness on this page was to stop at <strong>benchmark harness</strong>. Recent official and primary sources do not support that shortcut. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge homepage</a> explicitly says the original preprint became outdated during execution, the official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> fix operational constraints, the official <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> narrows the executable object to <strong>inference-only code</strong>, and the final <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> discloses a split-construction failure that changed how the ranking had to be interpreted. In parallel, <a href="https://doi.org/10.48550/arXiv.2508.17742" target="_blank">Xiong et al. (2025/2026)</a> and <a href="https://doi.org/10.48550/arXiv.2601.17883" target="_blank">Liu et al. (2026)</a> both argue that fair EEG-foundation-model comparison requires standardized protocols and that rankings still depend materially on evaluation choices. Therefore, this site now separates <strong>benchmark provenance / governance</strong> from the harness name itself.
+このページの実質的な弱点は、<strong>ベンチマーク ハーネス</strong>に留まることでした。最近の公式および一次ソースは、そのショートカットをサポートしていません。 <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge の公式ホームページ </a> では、元のプレプリントが実行中に古くなったことが明示されており、公式 <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> では操作上の制約が修正され、公式 <a href="https://eeg2025.github.io/submission/" target="_blank"> 提出ページ </a> では実行可能オブジェクトが <strong> 推論のみのコードに絞り込まれている </strong> と、最後の <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> では、ランキングの解釈方法が変更された分割構築の失敗が明らかにされています。並行して、<a href="https://doi.org/10.48550/arXiv.2508.17742" target="_blank">Xiong ら。 (2025/2026)</a> および <a href="https://doi.org/10.48550/arXiv.2601.17883" target="_blank">Liu ら。 (2026)</a> は両方とも、公正な EEG 基礎モデルの比較には標準化されたプロトコルが必要であり、ランキングは依然として評価の選択に大きく依存していると主張しています。したがって、このサイトでは、<strong>benchmark の来歴 / ガバナンス </strong> をハーネス名自体から分離するようになりました。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Benchmark field</th>
-<th>What it fixes</th>
-<th>Unsafe shortcut if omitted</th>
+<th>ベンチマークフィールド</th>
+<th>修正内容</th>
+<th>省略すると安全でないショートカット</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Current rule snapshot</strong></td>
-<td>Which homepage / rules / starter-kit state was actually in force when the run was made.</td>
-<td>Reading an outdated proposal paper as the final benchmark definition.</td>
+<td><strong>現在のルールのスナップショット</strong></td>
+<td>実行時に実際に適用されていたホームページ/ルール/スターターキットの状態。</td>
+<td>最終的なベンチマーク定義として古い提案書を読む。</td>
 </tr>
 <tr>
-<td><strong>Split / randomization / hidden grouping</strong></td>
-<td>Whether trial order, subject contiguity, session grouping, or other hidden structure could be exploited.</td>
-<td>Reading a leaderboard as if it reflected portable subject-invariant generalization by default.</td>
+<td><strong>分割/ランダム化/非表示グループ化</strong></td>
+<td>治験の順序、被験者の連続性、セッションのグループ化、またはその他の隠れた構造が悪用される可能性があるかどうか。</td>
+<td>デフォルトでポータブルな主語不変の一般化を反映しているかのようにリーダーボードを読み取る。</td>
 </tr>
 <tr>
-<td><strong>Extra-data / pretrained-model policy</strong></td>
-<td>Whether external corpora, checkpoints, or fine-tuning routes were allowed and how they had to be disclosed.</td>
-<td>Comparing runs as if they were trained under the same information budget.</td>
+<td><strong>追加データ/事前トレーニング済みモデルのポリシー</strong></td>
+<td>外部コーパス、チェックポイント、または微調整ルートが許可されているかどうか、およびそれらをどのように開示する必要があるか。</td>
+<td>同じ情報予算の下でトレーニングされたかのように比較が実行されます。</td>
 </tr>
 <tr>
-<td><strong>Inference-stage execution constraints</strong></td>
-<td>Whether the object being compared was a full training pipeline, an inference-only submission, or a memory / hardware-bounded executable.</td>
-<td>Treating challenge rank as a pure representation-learning comparison independent of systems constraints.</td>
+<td><strong>推論段階の実行制約</strong></td>
+<td>比較対象のオブジェクトが完全なトレーニング パイプライン、推論のみの送信、またはメモリ/ハードウェア限定の実行可能ファイルかどうか。</td>
+<td>Tチャレンジ ランクを、システムの制約に依存しない純粋な表現学習比較として扱います。</td>
 </tr>
 <tr>
-<td><strong>Postmortem / correction status</strong></td>
-<td>Whether organizers later disclosed split flaws, score-definition changes, or prize-structure revisions.</td>
-<td>Reading an early leaderboard snapshot as final scientific truth.</td>
+<td><strong>事後/訂正ステータス</strong></td>
+<td>主催者が後にスプリットの欠陥、スコア定義の変更、賞金体系の改訂を明らかにしたかどうか。</td>
+<td>最終的な科学的真実として初期のリーダーボードのスナップショットを読み取る。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="eeg-example">
-<h2 class="section-title">Looking at the example of EEG</h2>
+<h2 class="section-title">EEG</h2>の例を見る
 <table class="data-table">
 <thead>
 <tr>
-<th>stage</th>
-<th>What to do there</th>
+<th>ステージ</th>
+<th>そこで何をするか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. Align to standards</strong></td>
-<td>Align EEG files, events.tsv, channels.tsv, and metadata to BIDS format. </td>
+<td><strong>1。標準に準拠</strong></td>
+<td>EEG ファイル、events.tsv、channels.tsv、およびメタデータを BIDS 形式に調整します。 </td>
 </tr>
 <tr>
-<td><strong>2. Add event semantics</strong></td>
-<td>Specify <code>trial_type</code>, condition description, HED tags, manual scoring rule, and report usage flag. </td>
+<td><strong>2。イベントセマンティクスを追加</strong></td>
+<td><code>trial_type</code>、条件の説明、HED タグ、手動スコアリング ルール、レポート使用フラグを指定します。 </td>
 </tr>
 <tr>
-<td><strong>3. Audit synchronization</strong></td>
-<td>How to measure clock domain, LSL / TTL / photodiode, delay / jitter / drift will be left. </td>
+<td><strong>3。監査同期</strong></td>
+<td>クロックドメイン、LSL/TTL/フォトダイオード、遅延/ジッター/ドリフトの測定方法はお任せします。 </td>
 </tr>
 <tr>
-<td><strong>4. Check with Validator</strong></td>
-<td>Mechanically identifies violations of standards and missing items. </td>
+<td><strong>4。 Validator</strong></td>で確認する
+<td>規格違反や欠品を機械的に識別します。 </td>
 </tr>
 <tr>
-<td><strong>5. Publish to storage</strong></td>
-<td>Put it on a shared platform like OpenNeuro or PhysioNet so it can be retrieved by third parties. </td>
+<td><strong>5。ストレージに公開</strong></td>
+<td>OpenNeuro や PhysioNet などの共有プラットフォームに配置すると、サードパーティが取得できるようになります。 </td>
 </tr>
 <tr>
-<td><strong>6. Freeze derivative lineage</strong></td>
-<td>Keep preprocessed outputs, epochs, features, and reports as derivatives with explicit source ancestry. </td>
+<td><strong>6。フリーズ派生系統</strong></td>
+<td>前処理された出力、エポック、機能、およびレポートを、明示的なソースの祖先を持つ派生情報として保持します。 </td>
 </tr>
 <tr>
-<td><strong>7. Freeze workflow / model recipe</strong></td>
-<td>Record the pipeline config, optional branches, model graph, and software settings that generated the outputs. </td>
+<td><strong>7。ワークフロー/モデルレシピをフリーズ</strong></td>
+<td> パイプライン構成、オプションのブランチ、モデル グラフ、および出力を生成したソフトウェア設定を記録します。 </td>
 </tr>
 <tr>
-<td><strong>8. Compare with benchmarks</strong></td>
-<td>Compare models with the same train/test split, the same metrics, and the same baseline. </td>
+<td><strong>8。ベンチマークとの比較</strong></td>
+<td>同じトレーニング/テスト分割、同じメトリクス、同じベースラインを持つモデルを比較します。 </td>
 </tr>
 <tr>
-<td><strong>9. Freeze benchmark provenance</strong></td>
-<td>Record the active rules page, split/randomization policy, extra-data / pretrained-model policy, inference-stage restrictions, and postmortem status together with the score. </td>
+<td><strong>9。フリーズベンチマークの由来</strong></td>
+<td>アクティブなルール ページ、分割/ランダム化ポリシー、追加データ/事前トレーニング済みモデル ポリシー、推論段階の制限、および事後ステータスをスコアとともに記録します。 </td>
 </tr>
 <tr>
-<td><strong>10. Freeze runtime / result provenance</strong></td>
-<td>Record software versions, container or lockfile, commands, reports, and result bundles so the published figure or score can be traced back to the run that made it. </td>
+<td><strong>10。フリーズのランタイム/結果の来歴</strong></td>
+<td>ソフトウェアのバージョン、コンテナまたはロックファイル、コマンド、レポート、および結果バンドルを記録し、公開された数値やスコアを実行時に追跡できるようにします。 </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>This is important</strong>
+<strong>これは重要</strong>
 <p>
-Just by aligning to the standard, there is still no "rule for comparison." But even if there is a benchmark, the comparison can still break if derivative lineage, workflow recipe, or runtime provenance are left implicit. All of those layers matter.
+基準に合わせただけでは、まだ「比較するためのルール」がありません。ただし、たとえベンチマークがあったとしても、派生リネージ、ワークフロー レシピ、または実行時の来歴が暗黙的に残されている場合、比較は依然として失敗する可能性があります。それらすべての層が重要です。
 </p>
 </div>
 </section>
 
 <section class="section" id="missing-piece">
-<h2 class="section-title">What is missing?</h2>
+<h2 class="section-title">何が足りないのですか？</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>What is missing</th>
-<th>Problems that are likely to occur</th>
+<th>足りないもの</th>
+<th>起こりやすい問題</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Standards</strong></td>
-<td>The file name and metadata are different for each person, and it stops at the entrance to the supplementary exam. </td>
+<td><strong>規格</strong></td>
+<td>ファイル名やメタデータが人それぞれ異なり、追試の入り口で止まっています。 </td>
 </tr>
 <tr>
-<td><strong>Storage place</strong></td>
-<td>Even if you know about its existence, you will not be able to obtain it or reuse it, and the circle of comparison will not expand. </td>
+<td><strong>保管場所</strong></td>
+<td>の存在は知っていても、手に入れることも再利用することもできず、比較の輪は広がりません。 </td>
 </tr>
 <tr>
-<td><strong>Validator</strong></td>
-<td>Notice of violation of standards is delayed, and accidents occur immediately before sharing or during reanalysis. </td>
+<td><strong>バリデーター</strong></td>
+<td>規格違反の通知が遅れ、共有直前や再解析中に事故が発生する。 </td>
 </tr>
 <tr>
-<td><strong>Derivative specification / lineage</strong></td>
-<td>Processed outputs can be mistaken for raw or for each other, and later readers cannot tell which source files or branches generated them. </td>
+<td><strong>派生仕様・系統</strong></td>
+<td>Processed 出力は raw 出力または他の出力と間違われる可能性があり、後で読む人はどのソース ファイルまたはブランチが出力を生成したかを区別できません。 </td>
 </tr>
 <tr>
-<td><strong>Workflow / model recipe</strong></td>
-<td>The same pipeline name can hide different optional steps, configs, and model graphs, so the rerun does not actually reproduce the same analysis. </td>
+<td><strong>ワークフロー/モデルレシピ</strong></td>
+<td>同じパイプライン名では、さまざまなオプションのステップ、構成、モデル グラフが非表示になる可能性があるため、再実行では実際には同じ分析が再現されません。 </td>
 </tr>
 <tr>
-<td><strong>Execution / result provenance</strong></td>
-<td>A figure, table, or derivative can no longer be traced back to the exact software, version, container, and commands that created it. </td>
+<td><strong>実行/結果の出所</strong></td>
+<td>A の図、表、または派生物は、それを作成した正確なソフトウェア、バージョン、コンテナー、コマンドまで遡ることができなくなりました。 </td>
 </tr>
 <tr>
-<td><strong>Benchmark</strong></td>
-<td>Each person evaluates using different divisions and indicators, and the meaning of "winning" fluctuates. </td>
+<td><strong>ベンチマーク</strong></td>
+<td>人それぞれ異なる部門や指標で評価し、「勝つ」の意味は変動します。 </td>
 </tr>
 <tr>
-<td><strong>Benchmark provenance / governance</strong></td>
-<td>The same benchmark name hides different rule snapshots, hidden grouping, inference limits, or later corrections, so the score is overread. </td>
+<td><strong>ベンチマークの来歴/ガバナンス</strong></td>
+<td>同じベンチマーク名では、異なるルールのスナップショット、非表示のグループ化、推論制限、またはその後の修正が非表示になるため、スコアが読み取られます。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="raw-is-not-enough">
-<h2 class="section-title">Why raw files alone are not enough</h2>
+<h2 class="section-title">生ファイルだけでは不十分な理由</h2>
 <p>
-Just having a waveform file is not enough for standards or benchmarks. At the very least, without event definitions, stimulus logs, synchronization information, QC logs, and reasons for exclusion, it will be difficult to repeat the same challenge.
+波形ファイルがあるだけでは、標準やベンチマークとしては十分ではありません。少なくとも、イベント定義、刺激ログ、同期情報、QC ログ、除外理由がなければ、同じ課題を繰り返すことは困難です。
 </p>
 <div class="note-box">
-<strong>Safe reading</strong>
+<strong>安全な読書</strong>
 <p>
-Being "publicly available" and being "comparable" are two different things. Publication is the first step, comparability is the next step in design.
+「公開されている」ということと「比較可能である」ということは別のことです。出版はデザインの最初のステップであり、比較可能性は次のステップです。
 </p>
 </div>
 </section>
 
 <section class="section" id="common-confusions">
-<h2 class="section-title">Common confusion</h2>
+<h2 class="section-title">よくある混乱</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Things I tend to say</th>
-<th>More accurate paraphrase</th>
+<th>よく言いがちなこと</th>
+<th>より正確な言い換え</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>“Since we chose BIDS, there is a benchmark”</td>
-<td>BIDS is an input format standard, not a comparison rule itself. </td>
+<td>「BIDSにしたからにはベンチマークがある」</td>
+<td>BIDS は入力形式の標準であり、比較ルールそのものではありません。 </td>
 </tr>
 <tr>
-<td>“It was standardized because it was placed in OpenNeuro”</td>
-<td>Even if it is posted in the storage area, the standards and metadata are not necessarily sufficient. </td>
+<td>「OpenNeuroに載せたから標準化した」</td>
+<td>保管領域に掲載する場合でも、規格やメタデータが必ずしも十分とは限りません。 </td>
 </tr>
 <tr>
-<td>"We used the same input because the dataset name is the same"</td>
-<td>Unless you fix OpenNeuro snapshot or PhysioNet version, it cannot be said that it is the same input. </td>
+<td>「データセット名が同じなので同じ入力を使用しました」</td>
+<td>OpenNeuroスナップショットやPhysioNetのバージョンを直さないと同じ入力とは言えません。 </td>
 </tr>
 <tr>
-<td>"The benchmark name alone fixes what the score means"</td>
-<td>You still need the active rules snapshot, split / randomization / hidden grouping policy, extra-data / pretrained-model policy, execution constraints, and postmortem status. </td>
+<td>「ベンチマーク名だけでスコアの意味が決まる」</td>
+<td>アクティブなルールのスナップショット、分割/ランダム化/非表示のグループ化ポリシー、追加データ/事前トレーニング済みモデルのポリシー、実行制約、事後分析ステータスが引き続き必要です。 </td>
 </tr>
 <tr>
-<td>"Validator passed, so it's enough for research"</td>
-<td>Validator is a formal check and does not guarantee the validity of the research or the strength of the benchmark. </td>
+<td>「バリデーターは通ったので研究には十分です」</td>
+<td>Validator は正式なチェックであり、調査の有効性やベンチマークの強度を保証するものではありません。 </td>
 </tr>
 <tr>
-<td>"It became a benchmark because I could read it with MNE-BIDS"</td>
-<td>MNE-BIDS is a reading/conversion aid; fixing evaluation families and comparison statistics is a separate task. </td>
+<td>「MNE-BIDSで読み込めたのでベンチマークになりました」</td>
+<td>MNE-BIDS は読み取り/変換補助ツールです。評価ファミリーと比較統計の修正は別のタスクです。 </td>
 </tr>
 <tr>
-<td>"Because the data are in BIDS, the processed outputs are already self-explanatory"</td>
-<td>Raw BIDS and BIDS derivatives are separate layers, and processed outputs still need explicit lineage and source ancestry. </td>
+<td>「データは BIDS にあるため、処理された出力はすでに一目瞭然です」</td>
+<td>Raw BIDS と BIDS 派生は別個のレイヤーであり、処理された出力には依然として明示的なリネージとソースの祖先が必要です。 </td>
 </tr>
 <tr>
-<td>"Naming MNE-BIDS-Pipeline or a BIDS App already freezes the workflow"</td>
-<td>The pipeline name alone is still too coarse; config values, skipped stages, model recipe, and software version have to be frozen as well. </td>
+<td>「MNE-BIDS-Pipeline または BIDS アプリに名前を付けると、すでにワークフローがフリーズします」</td>
+<td>パイプライン名だけではまだ大まかすぎます。設定値、スキップされたステージ、モデルレシピ、ソフトウェアバージョンも凍結する必要があります。 </td>
 </tr>
 <tr>
-<td>"A containerized run already captures what the score means"</td>
-<td>Container and runtime pin help software portability, but benchmark harness and benchmark governance still remain separate objects. </td>
+<td>「コンテナ化された実行により、スコアの意味がすでに把握されています」</td>
+<td>Container とランタイム ピンはソフトウェアの移植性に役立ちますが、ベンチマーク ハーネスとベンチマーク ガバナンスは依然として別個のオブジェクトのままです。 </td>
 </tr>
 <tr>
-<td>“Event semantics are fixed because there is `events.tsv`”</td>
-<td><code>events.tsv</code> is a container for time and columns, and condition meanings and scorer rules must be fixed separately in <code>events.json</code>, HED, and auxiliary logs. </td>
+<td>「`events.tsv` があるため、イベントのセマンティクスは修正されています」</td>
+<td><code>events.tsv</code> は時間と列のコンテナーであり、条件の意味とスコアラー ルールは <code>events.json</code>、HED、および補助ログで個別に修正する必要があります。 </td>
 </tr>
 <tr>
-<td>"Using LSL even solved the hardware delay"</td>
-<td>LSL helps with stream synchronization, but device-side delay for display/audio/amplifier requires separate measurement. </td>
+<td>「LSLを使うことでハードウェア遅延も解決」</td>
+<td>LSL はストリーム同期に役立ちますが、ディスプレイ/オーディオ/アンプのデバイス側の遅延については別の測定が必要です。 </td>
 </tr>
 <tr>
-<td>“MOABB scores can be directly compared across tasks”</td>
-<td>Within-session, cross-session, and cross-subject are different evaluation families and cannot be treated equally. </td>
+<td>「MOABB スコアはタスク間で直接比較可能」</td>
+<td>セッション内、セッション間、および被験者間は異なる評価ファミリーであり、同等に扱うことはできません。 </td>
 </tr>
 <tr>
-<td>"It's safe to convert preprocessed files back to raw BIDS"</td>
-<td>BIDS and MNE-BIDS basically assume unprocessed or minimally processed data, and it is safer to treat modified data as derivatives by specifying the lineage. </td>
+<td>「前処理されたファイルを生の BIDS に変換しても安全です」</td>
+<td>BIDS や MNE-BIDS は基本的に未加工または最小限の加工を施したデータを想定しており、改変データは系統を指定して派生データとして扱う方が安全です。 </td>
 </tr>
 <tr>
-<td>"We won the benchmark, so it's good enough for actual operation"</td>
-<td>Benchmark is a yardstick for comparison and does not automatically guarantee actual operation or the establishment of L4/L5. </td>
+<td>「ベンチマークは勝てたので実運用には十分です」</td>
+<td>Benchmarkは比較のための目安であり、実際の動作やL4/L5の確立を自動的に保証するものではありません。 </td>
 </tr>
 <tr>
-<td>"The challenge proposal paper is the final benchmark specification"</td>
-<td>Execution-phase websites, rules, starter kits, and final postmortems can supersede the original proposal and must be frozen with the result. </td>
+<td>「チャレンジ提案書が最終ベンチマーク仕様です」</td>
+<td>実行フェーズの Web サイト、ルール、スターター キット、および最終事後分析は、元の提案に取って代わられる可能性があるため、結果とともに凍結する必要があります。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="freeze-ids">
-<h2 class="section-title">Minimum 7 IDs that you want to fix</h2>
+<h2 class="section-title">修正する必要がある最小 7 つの ID</h2>
 <table class="data-table">
 <thead>
 <tr>
 <th>ID</th>
-<th>What I want at least</th>
-<th>What happens when it is missing</th>
+<th>最低限欲しいもの</th>
+<th>紛失した場合</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Input ID</strong></td>
-<td>OpenNeuro snapshot tag, PhysioNet version, DOI, acquisition date. </td>
-<td>If you mix different versions with the same dataset name, you will not be able to try again. </td>
+<td><strong>入力ID</strong></td>
+<td>OpenNeuro スナップショット タグ、PhysioNet バージョン、DOI、取得日。 </td>
+<td>同じデータセット名の異なるバージョンを混在させると、再試行できなくなります。 </td>
 </tr>
 <tr>
-<td><strong>Schema ID</strong></td>
-<td>The version of BIDS/EEG-BIDS, the version of Validator, and the reason for the warning left. </td>
-<td>It is not possible to distinguish between standard differences and implementation differences. </td>
+<td><strong>SスキーマID</strong></td>
+<td>BIDS/EEG-BIDS のバージョン、Validator のバージョン、および警告が残された理由。 </td>
+<td>規格の違いと実装の違いを区別することはできません。 </td>
 </tr>
 <tr>
-<td><strong>Derivative ID</strong></td>
-<td>Derived dataset name, <code>GeneratedBy</code>, <code>SourceDatasets</code>, and direct <code>Sources</code> lineage. </td>
-<td>Preprocessed outputs can be confused with raw or with another derivative branch. </td>
+<td><strong>派生ID</strong></td>
+<td>派生データセット名、<code>GeneratedBy</code>、<code>SourceDatasets</code>、および直接の<code>Sources</code>系統。 </td>
+<td>前処理された出力は、生の出力または別の派生ブランチと混同される可能性があります。 </td>
 </tr>
 <tr>
-<td><strong>Workflow ID</strong></td>
-<td>MNE-BIDS-Pipeline / BIDS App / config file / model-graph version and settings. </td>
-<td>Even with the same input version, a different recipe can still generate a different result. </td>
+<td><strong>ワークフローID</strong></td>
+<td>MNE-BIDS-パイプライン / BIDS アプリ / 構成ファイル / モデル グラフのバージョンと設定。 </td>
+<td>同じ入力バージョンであっても、異なるレシピでは異なる結果が生成される可能性があります。 </td>
 </tr>
 <tr>
-<td><strong>Evaluation ID</strong></td>
-<td>Within-session / cross-session / cross-subject, indicators, split seed, and prohibitions. </td>
-<td>The meaning of score will be different and fair comparison will be broken. </td>
+<td><strong>評価ID</strong></td>
+<td>セッション内/セッション間/主題間、インジケーター、分割シード、禁止事項。 </td>
+<td>スコアの意味が異なり、公平な比較が崩れてしまいます。 </td>
 </tr>
 <tr>
-<td><strong>Benchmark Governance ID</strong></td>
-<td>Rules URL or archived snapshot, split / randomization policy, hidden grouping note, extra-data / pretrained-model policy, inference-stage restrictions, and postmortem status. </td>
-<td>The benchmark title will stay too coarse, and the same leaderboard name may hide different scientific meanings. </td>
+<td><strong>ベンチマーク ガバナンス ID</strong></td>
+<td>Rules URL またはアーカイブされたスナップショット、分割/ランダム化ポリシー、非表示のグループ化メモ、追加データ/事前トレーニング済みモデルのポリシー、推論段階の制限、および事後ステータス。 </td>
+<td> ベンチマークのタイトルは粗すぎるままになり、同じリーダーボード名に異なる科学的意味が隠される可能性があります。 </td>
 </tr>
 <tr>
-<td><strong>Runtime / Result Provenance ID</strong></td>
-<td>Software version, container or lockfile, command log, and result bundle or report identifier. </td>
-<td>The published figure or score cannot be traced back to the exact run that created it. </td>
+<td><strong>Rランタイム/結果の出所ID</strong></td>
+<td>ソフトウェアのバージョン、コンテナまたはロックファイル、コマンドログ、および結果バンドルまたはレポート識別子。 </td>
+<td>公開された数値やスコアは、それを作成した正確な実行まで遡ることができません。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">9 questions when reading strong arguments</h2>
+強い議論を読むときの <h2 class="section-title">9 つの質問</h2>
 <ol>
-<li><strong>What is the input standard?</strong> Check to see if the format is consistent using BIDS, etc. </li>
-<li><strong>What version was used:</strong>See if the snapshot, version, DOI, and acquisition date are fixed. </li>
-<li><strong>What are the event semantics and clock domain: </strong>Look at <code>trial_type</code>, HED, scorer rule, LSL/TTL/photodiode, delay/jitter audits. </li>
-<li><strong>Did they separate raw and derivative?</strong>See if processed outputs remain explicit derivatives with followable lineage. </li>
-<li><strong>What was used to read/write:</strong>Look at the loader/transformer and see if its version is specified. </li>
-<li><strong>What workflow or model recipe generated the outputs?</strong>Look for config files, optional branches, model graph, and software settings. </li>
-<li><strong>What runtime or result-provenance record exists?</strong>Check container / lockfile, command logs, reports, or result bundles. </li>
-<li><strong>What benchmark harness was used?</strong>See if evaluation family, metrics, and comparison statistics are fixed. </li>
-<li><strong>What benchmark provenance was in force?</strong>Check the active rules snapshot, split/randomization, extra-data / checkpoint policy, inference-stage restrictions, and postmortem status. </li>
+<li><strong>入力規格は何ですか?</strong>BIDSなどでフォーマットが合っているか確認してください。</li>
+<li><strong>使用されたバージョン:</strong>スナップショット、バージョン、DOI、および取得日が修正されているかどうかを確認します。 </li>
+<li><strong>イベント セマンティクスとクロック ドメインとは: </strong><code>trial_type</code>、HED、スコアラー ルール、LSL/TTL/フォトダイオード、遅延/ジッター監査について説明します。 </li>
+<li><strong>生と派生を区別しましたか?</strong>処理された出力が、追跡可能な系統を持つ明示的な派生のままであるかどうかを確認してください。 </li>
+<li><strong>読み取り/書き込みに使用されたもの:</strong>ローダー/トランスフォーマーを調べて、そのバージョンが指定されているかどうかを確認します。 </li>
+<li><strong>出力を生成したワークフローまたはモデル レシピは何ですか?</strong>構成ファイル、オプションのブランチ、モデル グラフ、およびソフトウェア設定を探します。 </li>
+<li><strong>どのようなランタイムまたは結果の出所レコードが存在しますか?</strong>コンテナ/ロックファイル、コマンドログ、レポート、または結果バンドルを確認してください。 </li>
+<li><strong>どのベンチマーク ハーネスが使用されましたか?</strong>評価ファミリ、メトリクス、および比較統計が修正されているかどうかを確認します。 </li>
+<li><strong>どのベンチマークの出所が有効でしたか?</strong>アクティブなルールのスナップショット、分割/ランダム化、追加データ/チェックポイント ポリシー、推論段階の制限、および事後ステータスを確認します。 </li>
 </ol>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">References and official pages</h2>
+<h2 class="section-title">参考資料と公式ページ</h2>
 <ul>
-<li><a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">Gorgolewski et al. (2016), BIDS</a></li>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS Specification: Task events</a></li>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS Specification: Electroencephalography</a></li>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">BIDS Specification: dataset_description, GeneratedBy, and SourceDatasets</a></li>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html" target="_blank">BIDS Derivatives: common data types and lineage metadata</a></li>
-<li><a href="https://bids-standard.github.io/stats-models/index.html" target="_blank">BIDS Stats Models Specification</a></li>
-<li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
-<li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">Robbins et al. (2021), HED for FAIR event annotation</a></li>
-<li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">Hermes et al. (2025), HED library schema for EEG data annotation</a></li>
-<li><a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025), The lab streaming layer for synchronized multimodal recording</a></li>
-<li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024), Motion-BIDS</a></li>
-<li><a href="https://doi.org/10.7554/eLife.71774" target="_blank">Markiewicz et al. (2021), OpenNeuro</a></li>
-<li><a href="https://docs.openneuro.org/git.html" target="_blank">OpenNeuro Docs: Git access and snapshots</a></li>
-<li><a href="https://docs.openneuro.org/user_guide.html" target="_blank">OpenNeuro Docs: Dataset landing page and snapshot metadata</a></li>
-<li><a href="https://physionet.org/about/" target="_blank">PhysioNet: About and citation policy</a></li>
-<li><a href="https://physionet.org/about/content/" target="_blank">PhysioNet: Resources and citation guidance</a></li>
-<li><a href="https://doi.org/10.21105/joss.01896" target="_blank">Appelhoff et al. (2019), MNE-BIDS</a></li>
-<li><a href="https://mne.tools/mne-bids/stable/generated/mne_bids.write_raw_bids.html" target="_blank">MNE-BIDS Docs: write_raw_bids</a></li>
-<li><a href="https://mne.tools/mne-bids-pipeline/stable/" target="_blank">MNE-BIDS-Pipeline Docs</a></li>
-<li><a href="https://doi.org/10.1371/journal.pcbi.1005209" target="_blank">Gorgolewski et al. (2017), BIDS Apps</a></li>
-<li><a href="https://doi.org/10.1162/imag_a_00074" target="_blank">Zhao et al. (2024), BABS and large-scale BIDS-App audit trails</a></li>
-<li><a href="https://doi.org/10.1038/sdata.2016.102" target="_blank">Maumet et al. (2016), NIDM-Results</a></li>
-<li><a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018), MOABB</a></li>
-<li><a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB Docs</a></li>
-<li><a href="https://moabb.neurotechx.com/docs/auto_examples/paradigm_examples/index.html" target="_blank">MOABB Docs: paradigm and evaluation examples</a></li>
-<li><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025): homepage</a></li>
-<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025): rules</a></li>
-<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG Challenge (2025): submission</a></li>
-<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG Challenge (2025): final leaderboard and organizer correction</a></li>
-<li><a href="https://doi.org/10.48550/arXiv.2508.17742" target="_blank">Xiong et al. (2025/2026), EEG-FM-Bench</a></li>
-<li><a href="https://doi.org/10.48550/arXiv.2601.17883" target="_blank">Liu et al. (2026), EEG Foundation Models: Progresses, Benchmarking, and Open Problems</a></li>
-<li><a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020), Bayesian fusion and multimodal DCM for EEG and fMRI</a></li>
-<li><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024), multimodal spontaneous brain-activity organization</a></li>
-<li><a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025), simultaneous EEG-PET-MRI across wakefulness and NREM sleep</a></li>
+<li><a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">ゴルゴレフスキーら。 (2016)、BIDS</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS 仕様: タスクイベント</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS 仕様: 脳波検査</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">BIDS 仕様: dataset_description、GeneratedBy、および SourceDatasets</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html" target="_blank">BIDS デリバティブ: 一般的なデータ型と系統メタデータ</a></li>
+<li><a href="https://bids-standard.github.io/stats-models/index.html" target="_blank">BIDS 統計モデル仕様</a></li>
+<li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">パーネットら(2019)、EEG-BIDS</a></li>
+<li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">Robbins et al. (2021)、FAIR イベント注釈用 HED</a></li>
+<li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">エルメス他(2025)、EEG データ注釈用の HED ライブラリ スキーマ</a></li>
+<li><a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)、同期マルチモーダル記録用のラボ ストリーミング レイヤー</a></li>
+<li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024)、モーション-BIDS</a></li>
+<li><a href="https://doi.org/10.7554/eLife.71774" target="_blank">Markiewicz et al. (2021)、OpenNeuro</a></li>
+<li><a href="https://docs.openneuro.org/git.html" target="_blank">OpenNeuro ドキュメント: Git アクセスとスナップショット</a></li>
+<li><a href="https://docs.openneuro.org/user_guide.html" target="_blank">OpenNeuro Docs: データセットのランディング ページとスナップショット メタデータ</a></li>
+<li><a href="https://physionet.org/about/" target="_blank">PhysioNet: 概要と引用ポリシー</a></li>
+<li><a href="https://physionet.org/about/content/" target="_blank">PhysioNet: リソースと引用に関するガイダンス</a></li>
+<li><a href="https://doi.org/10.21105/joss.01896" target="_blank">アペルホフら。 (2019)、MNE-BIDS</a></li>
+<li><a href="https://mne.tools/mne-bids/stable/generated/mne_bids.write_raw_bids.html" target="_blank">MNE-BIDS ドキュメント: write_raw_bids</a></li>
+<li><a href="https://mne.tools/mne-bids-pipeline/stable/" target="_blank">MNE-BIDS-パイプライン ドキュメント</a></li>
+<li><a href="https://doi.org/10.1371/journal.pcbi.1005209" target="_blank">ゴルゴレフスキーら。 (2017)、BIDS アプリ</a></li>
+<li><a href="https://doi.org/10.1162/imag_a_00074" target="_blank">Zhao ら。 (2024)、BABS および大規模な BIDS-App 監査証跡</a></li>
+<li><a href="https://doi.org/10.1038/sdata.2016.102" target="_blank">マウメットら(2016)、NIDM-結果</a></li>
+<li><a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">ジャヤラム＆amp;バラチャント (2018)、MOABB</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB ドキュメント</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/auto_examples/paradigm_examples/index.html" target="_blank">MOABB ドキュメント: パラダイムと評価の例</a></li>
+<li><a href="https://eeg2025.github.io/" target="_blank">EEG チャレンジ (2025): ホームページ</a></li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG チャレンジ (2025): ルール</a></li>
+<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG チャレンジ (2025): 提出</a></li>
+<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG チャレンジ (2025): 最終リーダーボードと主催者の修正</a></li>
+<li><a href="https://doi.org/10.48550/arXiv.2508.17742" target="_blank">Xiong ら(2025/2026)、EEG-FM-ベンチ</a></li>
+<li><a href="https://doi.org/10.48550/arXiv.2601.17883" target="_blank">Liu et al. (2026)、EEG 基礎モデル: 進捗状況、ベンチマーク、未解決の問題</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020)、EEG および fMRI</a></li> 用のベイジアン融合およびマルチモーダル DCM
+<li><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii ら(2024)、多峰性自発的脳活動組織</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">チェンら(2025)、覚醒時とノンレム睡眠時の同時 EEG-PET-MRI</a></li>
 </ul>
 </section>
 
 <section class="section" id="return">
-<h2 class="section-title">Where to go back next</h2>
+<h2 class="section-title">次に戻る場所</h2>
 <p>
-Please use <a href="../datasets.html">Data & Bench</a> to return to the practical entry point, <a href="../verification.html">Verification Platform</a> to return to overall design, and <a href="../verification.html#casework">Casework</a> to return to examples from other fields.
+<a href="../datasets.html">Data & Bench</a> を使用して実用的なエントリ ポイントに戻り、<a href="../verification.html">Verification Platform</a> を使用して全体設計に戻り、<a href="../verification.html#casework">Casework</a> を使用して他の分野の例に戻ってください。
 </p>
 </section>
 
@@ -605,19 +606,19 @@ Please use <a href="../datasets.html">Data & Bench</a> to return to the practica
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="verification-basics.html">Basics of verification infrastructure →</a></li>
-<li><a href="baselines-prereg-and-model-cards.html">Baselines/preregistration/model cards →</a></li>
-<li><a href="event-sync-and-measurement-logs.html">Event synchronization and observation logs →</a></li>
+<li><a href="verification-basics.html">検証基盤の基礎 →</a></li>
+<li><a href="baselines-prereg-and-model-cards.html">ベースライン/事前登録/モデルカード→</a></li>
+<li><a href="event-sync-and-measurement-logs.html">イベント同期および観測ログ →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../datasets.html">Data & Bench →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
-<li><a href="../verification.html#casework">Casework →</a></li>
+<li><a href="../datasets.html">データ＆ベンチ→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../verification.html#casework">ケースワーク→</a></li>
 </ul>
 </div>
 </aside>

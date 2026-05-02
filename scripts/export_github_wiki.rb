@@ -14,7 +14,7 @@ IGNORED_NOISE_FILES = [".DS_Store"].freeze
 IGNORED_NOISE_PREFIXES = ["._"].freeze
 
 SIDEBAR_GROUPS = {
-  "Start and Navigation" => %w[
+  "開始とナビゲーション" => %w[
     Home
     public-page-reading-guide
     page-header-reading-guide
@@ -22,7 +22,7 @@ SIDEBAR_GROUPS = {
     first-30-minutes-by-goal
     claim-level-reading-routes
   ],
-  "Foundations" => %w[
+  "基礎" => %w[
     mind-upload-basics
     claims-and-evidence
     eeg-basics
@@ -30,7 +30,7 @@ SIDEBAR_GROUPS = {
     known-unknown-and-status-reading
     facts-hypotheses-proposals-and-tasks
   ],
-  "Theory and Verification" => %w[
+  "理論と検証" => %w[
     roadmap-reading-guide
     theory-pages-reading-guide
     practical-pages-reading-guide
@@ -38,7 +38,7 @@ SIDEBAR_GROUPS = {
     counterfactual-and-perturbation-verification
     identity-and-continuity-tests
   ],
-  "Literature and Participation" => %w[
+  "文献と参加" => %w[
     literature-and-evidence-reading
     paper-source-types-and-evidence-status
     proposal-status-reading
@@ -172,7 +172,7 @@ def render_page(front_matter, body, slug)
   lines << ""
   lines << "> #{front_matter["subtitle"]}" if front_matter["subtitle"]
   lines << ">"
-  lines << "> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](#{PUBLIC_SITE})."
+  lines << "> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](#{PUBLIC_SITE}) で管理しています。"
   lines << ""
 
   meta = []
@@ -182,37 +182,37 @@ def render_page(front_matter, body, slug)
   lines << ""
 
   if front_matter["page_intro"]
-    lines << "## Role Of This Page"
+    lines << "## このページの役割"
     lines << front_matter["page_intro"].to_s
     lines << ""
   end
 
   if front_matter["accuracy_note"]
-    lines << "## Accuracy Notes"
+    lines << "## 正確性に関する注記"
     lines << front_matter["accuracy_note"].to_s
     lines << ""
   end
 
   if front_matter["recommended_pages"]
-    lines << "## Back To Public Pages"
+    lines << "## 公開ページへ戻る"
     lines.concat(render_link_list(front_matter["recommended_pages"]))
     lines << ""
   end
 
   if front_matter["wiki_links"]
-    lines << "## Related Wiki Pages"
+    lines << "## 関連 Wiki ページ"
     lines.concat(render_link_list(front_matter["wiki_links"]))
     lines << ""
   end
 
   if front_matter["known_points"]
-    lines << "## What Is Currently Known"
+    lines << "## 現在わかっていること"
     Array(front_matter["known_points"]).each { |item| lines << "- #{item}" }
     lines << ""
   end
 
   if front_matter["unknown_points"]
-    lines << "## What Is Still Unknown"
+    lines << "## まだわかっていないこと"
     Array(front_matter["unknown_points"]).each { |item| lines << "- #{item}" }
     lines << ""
   end
@@ -224,7 +224,7 @@ def render_page(front_matter, body, slug)
 end
 
 def build_sidebar(front_matters)
-  lines = ["# Sidebar", ""]
+  lines = ["# サイドバー", ""]
   rendered = []
 
   SIDEBAR_GROUPS.each do |heading, slugs|
@@ -246,7 +246,7 @@ def build_sidebar(front_matters)
   end
 
   unless remaining.empty?
-    lines << "## Other"
+    lines << "## その他"
     remaining.each do |slug|
       title = front_matters.fetch(slug, {})["title"] || slug
       url = slug == "Home" ? GITHUB_WIKI : github_wiki_url(slug)
@@ -255,10 +255,10 @@ def build_sidebar(front_matters)
     lines << ""
   end
 
-  lines << "## Public Site"
-  lines << "- [Start Page](#{PUBLIC_SITE}/index.html)"
-  lines << "- [Verification Commons](#{PUBLIC_SITE}/verification.html)"
-  lines << "- [Public Content Integration Hub](#{PUBLIC_SITE}/content_hub.html)"
+  lines << "## 公開サイト"
+  lines << "- [開始ページ](#{PUBLIC_SITE}/index.html)"
+  lines << "- [検証コモンズ](#{PUBLIC_SITE}/verification.html)"
+  lines << "- [公開コンテンツ統合ハブ](#{PUBLIC_SITE}/content_hub.html)"
   lines.join("\n").strip + "\n"
 end
 
@@ -266,11 +266,11 @@ def build_footer
   <<~FOOTER
   ---
 
-  The source files for this learning wiki are managed under `wiki/` in the repository.
+  この学習 Wiki のソースファイルは、リポジトリ内の `wiki/` で管理しています。
 
-  - Public portal: [mind-upload.com](#{PUBLIC_SITE})
-  - Integration routing: [Public Content Integration Hub](#{PUBLIC_SITE}/content_hub.html)
-  - Error reports and improvement proposals: [GitHub Issues](https://github.com/yasufumi-nakata/mind-upload/issues)
+  - 公開ポータル: [mind-upload.com](#{PUBLIC_SITE})
+  - 統合先ルーティング: [公開コンテンツ統合ハブ](#{PUBLIC_SITE}/content_hub.html)
+  - 誤りの報告と改善提案: [GitHub Issues](https://github.com/yasufumi-nakata/mind-upload/issues)
   FOOTER
 end
 
@@ -309,4 +309,4 @@ end
 File.write(File.join(DEST_DIR, "_Sidebar.md"), build_sidebar(front_matters))
 File.write(File.join(DEST_DIR, "_Footer.md"), build_footer)
 
-puts "Exported #{pages.length} wiki pages to #{DEST_DIR}"
+puts "#{pages.length} 件の Wiki ページを #{DEST_DIR} へエクスポートしました"

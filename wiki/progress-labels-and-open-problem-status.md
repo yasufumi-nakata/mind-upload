@@ -1,215 +1,214 @@
 ---
 layout: default
-title: "Wiki: How to read partial solution/exploration stage/undeveloped"
-description: "From the beginning, we will clarify what progress labels such as partial solution, exploration stage, unstandardized, insufficient, and undeveloped mean and what they do not mean."
-article_type: Wiki
-subtitle: "Auxiliary page to accurately read 'What's still missing?'"
-author: Mind Uploading Research Project
-last_updated: "2026-03-06"
-note: "Reading guide"
-audience: "People who don't want to misread the ``current status'' column on bibliographic maps and roadmaps, and people who want to check progress words in everyday language."
-reading_time: "8-12 minutes"
-page_intro: "This is a supplementary page that organizes words such as 'partial solution', 'exploratory stage', 'unstandardized', 'undeveloped', and 'insufficient' that appear in literature maps, technology roadmaps, verification platforms, and research notes for beginners. The purpose here is not to be optimistic or pessimistic, but to specifically read 'what is still missing'."
-accuracy_note: "Progress labels are not meant to praise or devalue the value of a topic. Read them as management labels that indicate what is in place and what is not yet."
+title: 'Wiki: 部分解決/探索段階/未開発の見方'
+description: 部分解決、模索段階、未標準、不十分、未開発などの進捗ラベルが何を意味し、何を意味しないのかを最初から明確にしていきます。
+article_type: ウィキ
+subtitle: 「まだ足りないものは何ですか?」を正確に読み取るための補助ページ。
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-03-06'
+note: 読書ガイド
+audience: 書誌地図やロードマップの「現状」欄を読み間違えたくない人、進捗状況の単語を日常語で確認したい人。
+reading_time: 8～12分
+page_intro: 文献マップ、技術ロードマップ、検証プラットフォーム、初心者向け研究ノートなどに登場する「部分解決」「模索段階」「未標準」「未開発」「不十分」などの用語を整理した補足ページです。ここでの目的は楽観的でも悲観的でもなく、「何がまだ足りないのか」を具体的に読み取ることです。
+accuracy_note: 進捗ラベルは、トピックの価値を賞賛したり、評価を下げたりすることを目的としたものではありません。何が整備されていて、何がまだ整備されていないのかを示す管理ラベルとして読み取ってください。
 page_highlights:
-  - "Explain the difference between partial solution and exploration stages in both everyday language and research operations."
-  - "You can check in the table what kind of deficiencies are indicated by unstandardized, undeveloped, insufficient, and undetermined."
-  - "I'll show you how far you can read by using examples such as U0, U10, and U15."
+- 部分的な解決段階と探索段階の違いを、日常用語と研究活動の両方で説明します。
+- 標準化されていない、未開発、不十分、未確定とはどのような不備を指すのかを表で確認できます。
+- U0、U10、U15などを例にどこまで読めるかを紹介します。
 known_points:
-  - "Even the same word 'unresolved' has different meanings depending on whether there is no standard, there is weak evidence, or the threshold has not been determined."
-  - "Partial resolution is not 'all parts were solved', but a state in which at least part of the problem is progressing."
-  - "The exploratory stage does not mean that the question itself is meaningless; it is a state in which the type of comparison and verification is still weak."
+- 同じ「未解決」という言葉でも、基準がない、証拠が弱い、閾値が決まっていないなどでは意味が異なります。
+- 部分解決とは「すべての部分が解決した」のではなく、問題の少なくとも一部が進行している状態を指します。
+- 探索段階は、質問自体が無意味であることを意味するものではありません。比較検証の種類がまだ弱い状態です。
 unknown_points:
-  - "There is still room for future updates regarding which quantitative standards should be used to unify the boundaries of each label."
-  - "Even in the same area, the current label may change due to the appearance of new benches or standards."
+- 各ラベルの境界を統一するためにどのような定量的基準を使用すべきかについては、今後の更新の余地がまだあります。
+- 同じエリアでも、新しいベンチや規格の登場により、現在のラベルが変わる場合があります。
 wiki_links:
-  - label: "Wiki: U number guide"
-    url: "/wiki/u-number-guide.html"
-    description: "First, organize the objects that are currently labeled."
-  - label: "Wiki: How to read the roadmap"
-    url: "/wiki/roadmap-reading-guide.html"
-    description: "This is a supplementary page to read along with P/M/R/I/V/D dependencies."
-  - label: "Wiki: Basics of verification infrastructure"
-    url: "/wiki/verification-basics.html"
-    description: "We'll help you understand from the beginning what it takes to make comparable progress."
+- label: 'Wiki: U 番号ガイド'
+  url: /wiki/u-number-guide.html
+  description: まず、現在ラベルが付けられているオブジェクトを整理します。
+- label: 'Wiki: ロードマップの見方'
+  url: /wiki/roadmap-reading-guide.html
+  description: これは、P/M/R/I/V/D の依存関係と合わせて読むための補足ページです。
+- label: 'Wiki: 検証インフラストラクチャの基本'
+  url: /wiki/verification-basics.html
+  description: 私たちは、同等の進歩を遂げるために何が必要かを最初から理解できるようお手伝いします。
 recommended_pages:
-  - label: "Literature map"
-    url: "/research_harvest_50.html"
-  - label: "Technology Roadmap"
-    url: "/tech_roadmap.html"
-  - label: "Verification base"
-    url: "/verification.html"
+- label: 文学地図
+  url: /research_harvest_50.html
+- label: テクノロジーロードマップ
+  url: /tech_roadmap.html
+- label: 検証ベース
+  url: /verification.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>First, fix your mindset</h2>
+<h2>まず考え方を修正する</h2>
 <p>
-Progress labels are not words that judge a research theme as ``pass/fail.'' Its role is to briefly show<strong>what you already have</strong> and <strong>what is still missing</strong>.
+進捗ラベルは、研究テーマを「合否」で判断する言葉ではなく、<strong>すでにあるもの</strong>と<strong>まだ足りないもの</strong>を簡潔に示すのが役割です。
 </p>
 </div>
 
 <section class="section" id="core-labels">
-<h2 class="section-title">Meanings of frequently used labels</h2>
+<h2 class="section-title">よく使われるラベルの意味</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Label</th>
-<th>In everyday language</th>
-<th>At least what you can say</th>
-<th>Things I can't say yet</th>
+<th>ラベル</th>
+<th>日常用語</th>
+<th>少なくとも言えること</th>
+<th>まだ言えないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Partial solution</strong></td>
-<td>While progress has been made in some core areas, all conditions are not yet in place. </td>
-<td>At least some of the methods, measurements, and comparison axes are working. </td>
-<td>It cannot be said that the final victory condition has been reached. </td>
+<td><strong>部分解決</strong></td>
+<td>いくつかの中核分野では進歩が見られますが、すべての条件はまだ整っていません。 </td>
+<td>メソッド、測定、および比較軸の少なくとも一部は機能しています。 </td>
+<td>最終的な勝利条件に達したとは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Exploration stage</strong></td>
-<td>This is an important question, but evaluation methods and public benches are still weak. </td>
-<td>It is worth addressing as an issue, and there are initial evidence and hypotheses. </td>
-<td>It cannot be said that stable comparison, reproduction, and standardization have been achieved. </td>
+<td><strong>探索ステージ</strong></td>
+<td>これは重要な質問ですが、評価方法と公的ベンチはまだ脆弱です。 </td>
+<td>は問題として取り組む価値があり、初期の証拠と仮説があります。 </td>
+<td>は安定した比較・再現・標準化ができているとは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Unstandardized</strong></td>
-<td>Measurement methods and formats vary depending on the person and team. </td>
-<td>Although individual studies exist, the common yardstick is still weak. </td>
-<td>It is not possible to make fair comparisons between different studies. </td>
+<td><strong>規格外</strong></td>
+<td>測定方法や測定形式は人やチームによって異なります。 </td>
+<td> 個別の研究は存在しますが、共通の尺度はまだ弱いです。 </td>
+<td>異なる研究間で公正な比較を行うことは不可能です。 </td>
 </tr>
 <tr>
-<td><strong>Undeveloped</strong></td>
-<td>Operational rules, audit procedures, division of responsibility, disclosure format, etc. have not yet been finalized. </td>
-<td>Practical conditions other than technology remain. </td>
-<td>We cannot say that it will cover long-term operation or third-party audits. </td>
+<td><strong>未開発</strong></td>
+<td>運用規定、監査手順、責任分担、開示形式等は未定。 </td>
+<td>技術以外の実用的な条件は残っています。 </td>
+<td>長期運用や第三者監査をカバーするとは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Lack</strong></td>
-<td>We still lack the necessary data, benches, error bounds, comparison tests, etc. </td>
-<td>I can see what needs to be added. </td>
-<td>It cannot be said that the current materials are sufficient. </td>
+<td><strong>ラック</strong></td>
+<td>必要なデータ、ベンチ、誤差範囲、比較テストなどがまだ不足しています。 </td>
+<td>I は追加する必要があるものを確認できます。 </td>
+<td>現状の素材では十分とは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Undefined</strong></td>
-<td>How to determine thresholds, boundaries, and sufficient conditions has not yet been determined. </td>
-<td>The problem setting is visible, but the line drawing is not fixed. </td>
-<td>It cannot be said that everyone will get the same judgment. </td>
+<td><strong>未定義</strong></td>
+<td>閾値、境界、十分条件の決め方はまだ決まっていない。 </td>
+<td>問題の設定は表示されていますが、線画が修正されていません。 </td>
+<td>誰もが同じ判定になるとは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Insufficient</strong></td>
-<td>Although there is a minimum, it is still not enough for third-party comparisons or strong claims. </td>
-<td>There is some foundation. </td>
-<td>It cannot be said that the strict verification conditions have been met. </td>
+<td><strong>不十分</strong></td>
+<td> 最小値はありますが、第三者による比較や強力な主張にはまだ十分ではありません。 </td>
+<td>下地あり。 </td>
+<td>厳しい検証条件を満たしているとは言えません。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="lack-types">
-<h2 class="section-title">There are different types of "not enough"</h2>
+<h2 class="section-title">「足りない」にはさまざまなタイプがある</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Expression</th>
-<th>What's missing</th>
-<th>Example</th>
-<th>What you need next</th>
+<th>表現</th>
+<th>足りないもの</th>
+<th>例</th>
+<th>次に必要なもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Not enough benches</strong></td>
-<td>There is no place to compare the same issues and the same indicators. </td>
-<td>``Lack of unified bench''</td>
-<td>Public data, fixed indicators, baseline, and failure examples. </td>
+<td><strong>ベンチが足りません</strong></td>
+<td>同じ銘柄、同じ指標を比較する場所がありません。 </td>
+<td>「統一感のないベンチ」</td>
+<td>公開データ、修正された指標、ベースライン、および失敗例。 </td>
 </tr>
 <tr>
-<td><strong>Standards not yet developed</strong></td>
-<td>Format, logging, naming, and auditing procedures are not consistent. </td>
-<td>“Common audit regulations are insufficient”</td>
-<td>Standards, Validators, Templates, and Checklists. </td>
+<td><strong>未開発の規格</strong></td>
+<td>Format、ロギング、命名、および監査手順に一貫性がありません。 </td>
+<td>「共通の監査規定では不十分」 </td>
+<td>標準、バリデータ、テンプレート、チェックリスト。 </td>
 </tr>
 <tr>
-<td><strong>Insufficient error bounds</strong></td>
-<td>We do not know how far it can be generalized and the uncertainty. </td>
-<td>"Insufficient generalized error bound"</td>
-<td>Confidence interval, subject difference evaluation, OOD evaluation. </td>
+<td><strong>エラー範囲が不十分です</strong></td>
+<td>どこまで一般化できるかは分かりませんし、不確実性もあります。 </td>
+<td>「一般化エラー範囲が不十分です」</td>
+<td>信頼区間、被験者差評価、OOD評価。 </td>
 </tr>
 <tr>
-<td><strong>Threshold not determined</strong></td>
-<td>It has not been decided where to start calling things ``same'', ``sufficient'', and ``safe''. </td>
-<td>"Threshold value not determined"</td>
-<td>This is a comparison test with pre-registered judgment rules. </td>
+<td><strong>しきい値が決定されていません</strong></td>
+<td> をどこから「`same'', ``sufficient'', and `」と呼ぶかは決まっていません。 </td>
+<td>「閾値が決まっていない」</td>
+<td>あらかじめ登録された判定ルールによる比較テストです。 </td>
 </tr>
 <tr>
-<td><strong>Undeveloped public operation</strong></td>
-<td>There is no way to go beyond third-party supplementary examinations, responsibility sharing, and suspension criteria. </td>
-<td>“Operating regulations not yet in place”</td>
-<td>Registry, audit log, suspension rules, and publishing procedures. </td>
+<td><strong>未開発の公共運用</strong></td>
+<td>第三者による追審査、責任分担、停止基準を超えることはできません。 </td>
+<td>「運用規定未整備」 </td>
+<td>レジストリ、監査ログ、一時停止ルール、および公開手順。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="examples">
-<h2 class="section-title">Read with examples</h2>
+<h2 class="section-title">例を読む</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Example</th>
-<th>What you want to read in this way</th>
-<th>Questions that remain</th>
+<th>例</th>
+<th>こう読みたい</th>
+<th>残っている質問</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>U0: Partial resolution/identity evaluation bench unstandardized</strong></td>
-<td>There are attempts to measure identity, and there are also partial evaluation axes. </td>
-<td>A common bench and thresholds that include interventions are not yet available. </td>
+<td><strong>U0: 部分解像度/アイデンティティ評価ベンチ非標準化</strong></td>
+<td>アイデンティティを測る試みもあり、部分的な評価軸もある。 </td>
+<td>A の共通ベンチと介入を含むしきい値はまだ利用できません。 </td>
 </tr>
 <tr>
-<td><strong>U10: Exploration stage / limited actual measurement research</strong></td>
-<td>Thermodynamic grounding exists as an issue and there are candidate indicators. </td>
-<td>The comparison between the actual measured pipeline and the published pipeline is still weak, and its generalization is still uncertain. </td>
+<td><strong>U10: 探査段階・限定実測研究</strong></td>
+<td>熱力学的接地が問題として存在し、指標の候補があります。 </td>
+<td>実際に測定されたパイプラインと公開されたパイプラインの比較はまだ不十分であり、その一般化はまだ不確実です。 </td>
 </tr>
 <tr>
-<td><strong>U15: Exploration stage / lack of implementation standards</strong></td>
-<td>The need for system integration is clear, and the problem set is clear. </td>
-<td>There is still no specific standard that connects technical KPIs and stopping criteria. </td>
+<td><strong>U15: 探索段階/実装基準の欠如</strong></td>
+<td>システム統合の必要性は明らかであり、一連の問題も明確です。 </td>
+<td>技術的なKPIと停止基準を結び付ける特定の基準はまだありません。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>Labels are not just about hierarchical relationships</strong>
+<strong>ラベルは階層関係だけを意味するものではありません</strong>
 <p>
-It is not a simple matter that "partial solution" is always better than "exploration stage". Partial solution indicates that there is some foundation, and the exploration stage indicates that the comparative basis for the whole question is still weak. You need to read up to the types of what is missing.
+「部分的解決」が常に「探索段階」よりも優れているという単純な問題ではありません。部分的な解決策は、何らかの基礎があることを示し、探索段階は、質問全体の比較基礎がまだ弱いことを示します。何が欠けているのかをタイプまで読む必要があります。
 </p>
 </div>
 
 <section class="section" id="common-misreads">
-<h2 class="section-title">Common misreadings</h2>
+<h2 class="section-title">よくある間違い</h2>
 <div class="key-points">
-<h4>Misread</h4>
+<h4>誤読</h4>
 <ul>
-<li><strong>"It's only a partial solution, so it's almost finished":</strong> Depending on the remaining conditions, rather heavy work remains behind. </li>
-<li><strong>"It's only in the exploratory stage so it's meaningless":</strong> There are things that are important, but the basis for comparison is still weak. </li>
-<li><strong>“It says “deficiency, so don’t do everything”:</strong> If you don’t read what’s missing separately, you’ll miss the progress. </li>
-<li><strong>“There is no research because it is not standardized”:</strong> Even if there is research, there may be no common format or common bench. </li>
-<li><strong>“Underdeveloped means only a lack of technology”:</strong> It is often a lack of systems, audits, and open operations. </li>
+<li><strong>「部分的な解決なので、ほぼ完成です」：</strong> 残りの条件によっては、かなり大変な作業が残っています。 </li>
+<li><strong>「まだ模索段階なので意味がない」：</strong> 重要なことはあるが、比較する根拠がまだ弱い。 </li>
+<li><strong>「不足と書いてあるので全部やらないでください」：</strong>何が足りないのかを分けて読まないと進歩を見逃してしまいます。
+<li><strong>「標準化されていないので研究がない」：</strong> 研究はあっても共通フォーマットや共通ベンチがない可能性があります。 </li>
+<li><strong>「開発が遅れているということは、テクノロジーが不足しているだけである」:</strong> 多くの場合、システム、監査、オープンな運用が欠如していることが原因です。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">Where to return next</h2>
+<h2 class="section-title">次に戻る場所</h2>
 <p>
-If you want to read the current status of each U, please go back to <a href="../research_harvest_50.html">Literature Map</a>. If you want to see the progress with dependencies, go back to <a href="../tech_roadmap.html">Technology Roadmap</a>. If you want to distinguish between designed and unimplemented projects, go back to <a href="../verification.html">Verification Platform</a>.
+各Uの現在の状況を読みたい場合は、<a href="../research_harvest_50.html">Literature Map</a>に戻ってください。依存関係の進行状況を確認したい場合は、<a href="../tech_roadmap.html"> テクノロジー ロードマップ</a> に戻ってください。設計されたプロジェクトと未実装のプロジェクトを区別したい場合は、<a href="../verification.html">Verification Platform</a> に戻ってください。
 </p>
 </section>
 
@@ -217,19 +216,19 @@ If you want to read the current status of each U, please go back to <a href="../
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="u-number-guide.html">U number guide →</a></li>
-<li><a href="roadmap-reading-guide.html">How to read the roadmap →</a></li>
-<li><a href="verification-basics.html">Basics of verification infrastructure →</a></li>
+<li><a href="u-number-guide.html">U番号案内→</a></li>
+<li><a href="roadmap-reading-guide.html">ロードマップの見方→</a></li>
+<li><a href="verification-basics.html">検証基盤の基礎→</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../research_harvest_50.html">Bibliography map →</a></li>
-<li><a href="../tech_roadmap.html">Technology roadmap →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
+<li><a href="../research_harvest_50.html">書誌マップ→</a></li>
+<li><a href="../tech_roadmap.html">テクノロジーロードマップ→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
 </ul>
 </div>
 </aside>

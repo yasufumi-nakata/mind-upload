@@ -1,180 +1,180 @@
-# Wiki: Guide to reading practical pages
+# Wiki: 実用的なページを読むためのガイド
 
-> Map to avoid mixing victory conditions, entrance data, work procedures, reference examples, and proposal organization
+> 勝利条件、入場データ、作業手順、参考例、提案体制の混在回避マップ
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-14 / Role: Reading guide
+- Updated: 2026-03-14 / Role: 読書ガイド
 
-## Role Of This Page
-This page is an auxiliary guide to help you distinguish between Mind-Upload's practice-oriented public pages. Verification is a victory condition, Datasets is entry data, L0 practice section in Datasets is a minimum loop procedure, casework section in Verification is a reference example, and proposal integration section in Issue is a proposal organization. Although they may look similar, they have different roles.
+## このページの役割
+このページは、Mind-Upload の実践指向の公開ページを区別するのに役立つ補助ガイドです。検証は勝利条件、データセットはエントリーデータ、データセットのL0実践編はミニマムループ手順、検証のケースワーク編は参考例、課題の提案統合編は提案組織です。似ているように見えても役割が異なります。
 
-## Accuracy Notes
-What we are dealing with here is the difference in the roles of pages. Please check the details of the actual verification conditions and procedures on each main page.
+## 正確性に関する注記
+ここで扱っているのは、ページの役割の違いです。実際の検証条件や手順の詳細は各トップページでご確認ください。
 
-## Back To Public Pages
-- [Verification base](https://mind-upload.com/verification.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
-- [L0 practice](https://mind-upload.com/datasets.html#l0-practice)
+## 公開ページへ戻る
+- [検証ベース](https://mind-upload.com/verification.html)
+- [データとベンチ](https://mind-upload.com/datasets.html)
+- [L0の練習](https://mind-upload.com/datasets.html#l0-practice)
 
-## Related Wiki Pages
-- [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - This is for people who want to see the role differences across public pages.
-- [Wiki: Minimum artifact pack for L0](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack) - This is for people who want to check their L0 practice section submissions in one page.
-- [Wiki: Standards/Location/Validator/Benchmark](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks) - Compensates for differences in casework clauses in Verification and operational words that appear in Verification.
-- [Wiki: Baseline/Pre-registration/Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Organize what should remain on the practice page by role.
+## 関連 Wiki ページ
+- [Wiki: 公開ページを読むためのガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - これは、公開ページ全体での役割の違いを確認したい人向けです。
+- [Wiki: L0 の最小アーティファクト パック](https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack) - これは、L0 演習セクションの提出物を 1 ページで確認したい人向けです。
+- [Wiki: 標準/場所/バリデータ/ベンチマーク](https://github.com/yasufumi-nakata/mind-upload/wiki/standards-repositories-validators-and-benchmarks) - 検証のケースワーク条項と検証に表示される運用上の用語の違いを補います。
+- [Wiki: ベースライン/事前登録/モデルカード](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - 練習ページに残すべきものを役割ごとに整理します。
 
-## What Is Currently Known
-- Verification, Datasets, L0 practice section within Datasets, casework section within Verification, and proposal integration section within Issues are all practical-oriented, but their roles are different.
-- Verification is the definition of progress, Datasets is the entry selection, the L0 practice section in Datasets is the procedure, the casework section in Verification is the design reference, and the proposal integration section in Issue is the proposal organization.
-- If you separate the roles of pages first, it will be difficult to misread the practical guidance.
+## 現在わかっていること
+- 検証、データセット、データセット内の L0 実践セクション、検証内のケースワーク セクション、および課題内の提案統合セクションはすべて実践指向ですが、それぞれの役割は異なります。
+- 検証は進捗の定義、データセットはエントリの選択、データセットの L0 実践セクションは手順、検​​証のケースワーク セクションは設計参照、および課題の提案統合セクションは提案組織です。
+- 最初にページの役割を分けておくと、実践ガイドを読み間違えにくくなります。
 
-## What Is Still Unknown
-- We have not yet determined which practical route will be most effective for future L2 and L3.
-- Which practice pages will be expanded independently in the future will change depending on the accumulation of operations.
+## まだわかっていないこと
+- 将来の L2 および L3 については、どの実際的なルートが最も効果的であるかはまだ決定されていません。
+- 今後、どの練習ページを独自に拡張するかは、運用の蓄積によって変わります。
 
 ---
 
-<h2>First divide into 5 parts</h2>
+<h2>まずは5分割</h2>
 <p>
-All of the practical pages are ``pages that are useful for work,'' but the difference is in what pages you decide on. If you first divide it into <strong>victory conditions</strong>, <strong>entry data</strong>, <strong>work procedures</strong>, <strong>reference examples</strong>, and <strong>proposal organization</strong>, the practical guidance will become much more stable.
+実用ページはどれも「仕事に役立つページ」ですが、どのページに決めるかが違います。まず<strong>勝利条件</strong>、<strong>エントリーデータ</strong>、<strong>作業手順</strong>、<strong>参考例</strong>、<strong>提案組織</strong>に分けると実践指導がより安定します。
 </p>
 
-<strong>When you want to see only the order from EEG to L0 in a straight line</strong>
+<strong>脳波からL0までの順番だけを直線的に見たい場合</strong>
 <p>
-If you would like to follow the sequence from EEG introduction to Datasets, L0 practice section, and Verification rather than looking at the role differences on the practical page, please see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route">One ​​straight path from EEG to L0</a>.
+実践ページで役割の違いを見るのではなく、EEG 入門からデータセット、L0 実践セクション、検証までの流れをたどりたい場合は、EEG から L0</a> への <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route">One のストレート パスを参照してください。
 </p>
 
-<strong>When you just want to decide what to see after Verification</strong>
+<strong>検証後に何を確認するかを決めたい場合</strong>
 <p>
-After understanding the differences in the roles of practical pages, if you want to see in one page just which route to take next from Verification, please see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/verification-next-routes">Four paths to take after Verification</a>.
+実践ページの役割の違いを理解した上で、検証から次に進むべきルートだけを1ページで確認したい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/verification-next-routes">検証後の4つのパス</a>をご覧ください。
 </p>
 
-<h2>Differences in the roles of practical pages</h2>
+<h2>実践ページの役割の違い</h2>
 <table>
 <thead>
 <tr>
-<th>Page</th>
-<th>Main role</th>
-<th>First question</th>
-<th>What is not enough here</th>
+<th>ページ</th>
+<th>主役</th>
+<th>最初の質問</th>
+<th>ここが足りない</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="https://mind-upload.com/verification.html">Verification</a></strong></td>
-<td>This is a blueprint that determines victory conditions and counter-conditions. </td>
-<td>This is when you want to fix "what needs to be met to move forward" first. </td>
-<td>Actual entry data and work procedures must be supplemented with Datasets and L0 practice sections. </td>
+<td><strong><a href="https://mind-upload.com/verification.html">検証</a></strong></td>
+<td>勝利条件と反撃条件を決める設計図です。 </td>
+<td>まず「先に進むために満たすべきこと」を解決したいとき。 </td>
+<td>実際の入力データと作業手順は、データセットと L0 実践セクションで補足する必要があります。 </td>
 </tr>
 <tr>
-<td><strong><a href="https://mind-upload.com/datasets.html">Datasets</a></strong></td>
-<td>This is the page for selecting entrance data. </td>
-<td>The first thing you want to do is decide which public data to start L0 with. </td>
-<td>What to leave behind as a deliverable must be supplemented with L0 practice section and Verification. </td>
+<td><strong><a href="https://mind-upload.com/datasets.html">データセット</a></strong></td>
+<td>こちらは入口データ選択のページです。 </td>
+<td>最初に行うことは、L0 を開始するパブリック データを決定することです。 </td>
+<td>成果物として残すものは、L0演習セクションと検証で補足する必要があります。 </td>
 </tr>
 <tr>
-<td><strong><a href="https://mind-upload.com/datasets.html#l0-practice">L0 Practice Section</a></strong></td>
-<td>This is a procedure manual for creating a minimum loop. </td>
-<td>Now is the time to connect analyzes that can be reproduced right here and now. </td>
-<td>The design reason why the step is necessary should be supplemented with Verification. </td>
+<td><strong><a href="https://mind-upload.com/datasets.html#l0-practice">L0 練習セクション</a></strong></td>
+<td>ミニマムループを作成するための手順書です。 </td>
+<td>今ここで再現できる分析をつなげるときです。 </td>
+<td>このステップが必要な設計上の理由は、検証によって補足される必要があります。 </td>
 </tr>
 <tr>
-<td><strong><a href="https://mind-upload.com/verification.html#casework">Casework section</a></strong></td>
-<td>A reference collection for learning design patterns from successful examples in other fields. </td>
-<td>Now is the time to see an example of why Standard, Storage, Bench, and Pre-registration worked. </td>
-<td>This example alone cannot prove that WBE holds true. </td>
+<td><strong><a href="https://mind-upload.com/verification.html#casework">ケースワークセクション</a></strong></td>
+<td>A 他分野の成功事例からデザインパターンを学ぶための参考書集。 </td>
+<td>今こそ、標準、ストレージ、ベンチ、事前登録が機能する理由の例を見てみましょう。 </td>
+<td>この例だけでは、WBE が成り立つことを証明できません。 </td>
 </tr>
 <tr>
-<td><strong><a href="https://mind-upload.com/issue.html#proposal-integration">Proposal integration section</a></strong></td>
-<td>This is a summary table that summarizes the status and basis of the proposal group. </td>
-<td>This is the time to track which proposals were aimed at and to what extent they were reflected. </td>
-<td>It is not possible to say that the implementation is complete just by looking at the summary; it is necessary to return to the issue and the original text. </td>
+<td><strong><a href="https://mind-upload.com/issue.html#proposal-integration">提案統合セクション</a></strong></td>
+<td>提案グループの現状と根拠をまとめた概要表です。 </td>
+<td>どのような提案を目指し、どの程度反映されたのかを追跡する時期です。 </td>
+<td>概要だけを見ただけでは実装が完了したとは言えません。問題と原文に戻る必要があります。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>If you have this question, please check this page</h2>
+<h2>ご質問のある方はこちらのページをご確認ください</h2>
 <table>
 <thead>
 <tr>
-<th>What I want to know now</th>
-<th>First page to open</th>
-<th>Next page</th>
+<th>今知りたいこと</th>
+<th>最初に開くページ</th>
+<th>次のページ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>I want to know what needs to be met to call progress</td>
-<td><a href="https://mind-upload.com/verification.html">Verification</a></td>
-View dependencies in <td><a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a>. </td>
+<td>進捗状況を呼び出すために満たす必要があるものを知りたい</td>
+<td><a href="https://mind-upload.com/verification.html">検証</a></td>
+<td><a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a> で依存関係を表示します。 </td>
 </tr>
 <tr>
-<td>I want to decide which public data to use first</td>
-<td><a href="https://mind-upload.com/datasets.html">Datasets</a></td>
-<td><a href="https://mind-upload.com/datasets.html#l0-practice">L0 practice section</a> Proceed to work on L0. </td>
+<td>最初にどの公開データを使用するかを決めたい</td>
+<td><a href="https://mind-upload.com/datasets.html">データセット</a></td>
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">L0 練習セクション</a> L0 の作業に進みます。 </td>
 </tr>
 <tr>
-<td>I want to know what to actually keep as a set</td>
-<td><a href="https://mind-upload.com/datasets.html#l0-practice">L0 practice section</a></td>
-Complements <td><a href="https://mind-upload.com/verification.html">Verification</a> and <a href="https://mind-upload.com/datasets.html">Datasets</a>. </td>
+<td>実際に何をセットで揃えればいいのか知りたい</td>
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">L0 練習セクション</a></td>
+<td><a href="https://mind-upload.com/verification.html">Verification</a> および <a href="https://mind-upload.com/datasets.html">Datasets</a> を補完します。 </td>
 </tr>
 <tr>
-<td>I would like to see historical examples of why standards and benches are necessary</td>
-<td><a href="https://mind-upload.com/verification.html#casework">Casework section</a></td>
-Go back to <td><a href="https://mind-upload.com/verification.html">Verification</a> and check against the current design. </td>
+<td>I 標準とベンチが必要な理由の歴史的な例を知りたい</td>
+<td><a href="https://mind-upload.com/verification.html#casework">ケースワークセクション</a></td>
+<td><a href="https://mind-upload.com/verification.html">Verification</a> に戻り、現在の設計と比較して確認します。 </td>
 </tr>
 <tr>
-<td>I want to distinguish between proposed and implemented ones</td>
-<td><a href="https://mind-upload.com/issue.html#proposal-integration">Proposal integration section</a></td>
-Return to <td><a href="https://mind-upload.com/issue.html">Issue</a> and the original clause. </td>
+<td>提案されたものと実装されたものを区別したい</td>
+<td><a href="https://mind-upload.com/issue.html#proposal-integration">提案統合セクション</a></td>
+<td><a href="https://mind-upload.com/issue.html">Issue</a> と元の条項に戻ります。 </td>
 </tr>
 <tr>
-<td>I want to decide where to add/update</td>
-<td><a href="https://mind-upload.com/content_hub.html">Content Hub</a></td>
-<td><a href="https://mind-upload.com/issue.html">Issue</a> down to executable tasks. </td>
+<td>どこに追加/アップデートするかを決めたい</td>
+<td><a href="https://mind-upload.com/content_hub.html">コンテンツハブ</a></td>
+<td><a href="https://mind-upload.com/issue.html"></a> を実行可能なタスクまで発行します。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Differences between pages that look similar</h2>
+<h2>似ているページ間の違い</h2>
 <table>
 <thead>
 <tr>
-<th>Groups that look alike</th>
-<th>The difference in one word</th>
+<th>似ているグループ</th>
+<th>一言で言えば違い</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Verification / L0 practice section</strong></td>
-<td>Verification is the passing condition, and L0 practice clause is the working order of the minimum loop. </td>
+<td><strong>検証・L0実践編</strong></td>
+<td>Verification が合格条件で、L0 練習句が最小ループの動作順序です。 </td>
 </tr>
 <tr>
-<td><strong>Datasets / L0 Practice Section</strong></td>
-<td>What to start with Datasets, and how to go around it in the L0 practice section. </td>
+<td><strong>データセット / L0 実践セクション</strong></td>
+<td> データセットで何を始めるべきか、そして L0 実践セクションでそれをどのように進めるか。 </td>
 </tr>
 <tr>
-<td><strong>Verification / Casework Section</strong></td>
-<td>Verification is the current design, Casework section is a type borrowed from other fields. </td>
+<td><strong>検証/ケースワークセクション</strong></td>
+<td>Verification は現在のデザインで、ケースワーク セクションは他の分野から借用したタイプです。 </td>
 </tr>
 <tr>
-<td><strong>Proposal integration section / Issue</strong></td>
-<td>The proposal integration section organizes the main text of the proposal, and the issue section deals with cutting tasks here and now and managing external dependencies. </td>
+<td><strong>提案統合セクション/問題</strong></td>
+<td>提案統合セクションは提案の本文を整理し、問題セクションは現時点でのタスクの削減と外部依存関係の管理を扱います。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Common ways to get lost</h2>
+<h2>よくある迷い方</h2>
 
-<h4>Mistake</h4>
+<h4>間違い</h4>
 <ul>
-<li><strong>I feel like I've progressed just by looking at Datasets:</strong> What to leave as a deliverable must be fixed in the L0 practice section and Verification. </li>
-<li><strong>Misreading the L0 practice section as the definition of victory conditions:</strong> The procedure manual alone does not determine what is called progress. </li>
-<li><strong>Read the casework section as direct evidence:</strong> This is a design reference, not a proof that WBE holds. </li>
-<li><strong>Read the proposal integration section as a list of implementation completion:</strong> Proposal acceptance and document reflection are different from implementation completion and external agreement. </li>
+<li><strong>I Datasets:</strong> 見ているだけで上達した気がする 成果物として残すものはL0実践編と検証で修正する必要がある。 </li>
+<li><strong>L0練習セクションを勝利条件の定義と誤読:</strong>手順書だけではいわゆる上達を決定するものではありません。 </li>
+<li><strong>直接証拠としてケースワークのセクションをお読みください:</strong> これは設計の参考資料であり、WBE が保持している証拠ではありません。 </li>
+<li><strong>実装完了のリストとして提案統合セクションをお読みください:</strong> 提案の受諾と文書反映は、実装完了と外部合意とは異なります。 </li>
 </ul>
 
-<h2>Where to return next</h2>
+<h2>次に戻る場所</h2>
 <p>
-If you want to go back to the practical entry point, please use <a href="https://mind-upload.com/verification.html">Verification Platform</a>. If you want to go back to the actual L0 work, please use <a href="https://mind-upload.com/datasets.html#l0-practice">L0 Practice</a>. If you want to decide where to update, please use <a href="https://mind-upload.com/content_hub.html">Public Content Integration Hub</a>.
+実践的なエントリーポイントに戻りたい場合は、<a href="https://mind-upload.com/verification.html">Verification Platform</a>をご利用ください。実際のL0作業に戻りたい場合は<a href="https://mind-upload.com/datasets.html#l0-practice">L0 Practice</a>をご利用ください。どこにアップデートするかを決めたい場合は、<a href="https://mind-upload.com/content_hub.html">Public Content Integration Hub</a>をご利用ください。
 </p>

@@ -1,685 +1,689 @@
 ---
 layout: default
-title: "Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation"
-description: "A learning roadmap for viewing mind uploading and WBE from the technical side, organized as a question tree from measurement to reconstruction, implementation, and verification."
-article_type: "Roadmap (Definition #1)"
-subtitle: "Break 'what counts as progress' into a question tree with reading order and minimum arrival conditions"
-last_updated: "2026-04-03"
-note: "Provisional draft (updated continuously; summary-layer astrocyte PET route sync on 2026-04-03)"
-audience: "Readers who want the big picture, need a learning order, or want claim strength organized by level"
-reading_time: "20-30 min (5 min for the index only)"
-page_intro: "This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and social deployment. Its purpose is to keep the reader from losing track of which problems are foundational and which remain unresolved."
-accuracy_note: "This page organizes the research landscape. It does not mean that the listed items are already solved."
+title: '技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する'
+description: マインドアップロードとWBEを技術面から見るための学習ロードマップで、測定から再構成、実装、検証まで質問ツリーとして整理されています。
+article_type: 'ロードマップ (定義 #1)'
+subtitle: 「何を進捗としてカウントするか」を、読む順序と最小到達条件を含む質問ツリーに分割します。
+last_updated: '2026-04-03'
+note: 暫定ドラフト (継続的に更新; 概要層アストロ サイト PET ルートは 2026 年 4 月 3 日に同期)
+audience: 全体像を知りたい、学習順序が必要、またはレベル別に整理された主張の強さを知りたい読者
+reading_time: 20～30分（インデックスのみ5分）
+page_intro: このページは、WBEの質問を測定、再構築、実装、検証、社会展開に分けて整理したマップです。その目的は、どの問題が根本的なもので、どの問題が未解決のままなのかを読者が見失わないようにすることです。
+accuracy_note: このページでは研究状況を整理します。記載されている項目がすでに解決されているわけではありません。
 page_highlights:
-  - "P0-P2 fix what counts as success before measurement or implementation work is discussed."
-  - "The index allows readers to jump directly to a specific question family."
-  - "Stronger claims are deliberately placed later so earlier levels are not skipped."
-  - "V8 now splits invasive language BCIs into throughput / expressivity, transfer-assisted initialization, fixed-decoder durability slices, and adaptive rescue, so one speech-BCI result is not silently promoted to all four."
-  - "R0 now separates structural scaffold, fast executable state, and maintenance-state families, so `connectome + state` is not treated as one knob."
-  - "R3 / R5 separate latent-state and maintenance-state questions by evidence tier and timescale, so same-day fit and multiday maintenance do not collapse into one success."
-  - "R3 / R5 now force maintenance-relevant claims to name whether phospho-signaling, local proteostasis, and cargo-routing were measured, externally calibrated, model-estimated, or omitted, so a generic latent-state label is not treated as maintenance-complete evidence."
-  - "M2 separates hardware latency from biological timing-state, so a fast device loop is not confused with timing-complete reconstruction."
-  - "For phase-targeted closed loops, M2 / I1 now separate oscillation estimability, causal-versus-post-hoc targeting benchmark, circular targeting precision, downstream effect, and phase stability, so phase error alone is not treated as sufficient evidence."
-  - "M1 / M5 keep neural state distinct from vascular transfer state, so a BOLD amplitude difference is not silently promoted to a neural difference."
-  - "M1 / M3 now treat human in vivo evidence as a split ladder, so proxy class, operational maturity, calibrator role, and family-internal quantity / target / transport differences are kept separate instead of being collapsed into one observability score."
-  - "M1 / M3 now also keep human barrier-side evidence split inside the blood-CSF-barrier lane itself, so choroid-plexus perfusion, blood-to-CSF transport, water cycling, and apparent BCSFB exchange are not silently merged into BBB water-exchange or tracer-specific BBB transport."
-  - "M1 / M3 now also separate human local clinical-unit allocation from noninvasive perturbation-conditioned excitability routes, so `human excitability evidence` is not treated as one row."
-  - "M1 / M3 now also split human astrocyte-related PET into SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution routes, SL25.1188 MAO-B quantification / severity-conditioned routes, and I2BS routes, so `astrocyte PET` is not treated as one interchangeable human row."
-  - "M3 now also keeps cohort / physiological regime compatibility and row robustness / availability separate from those three per-row axes, so a proxy-rich bundle is not silently treated as one matched human baseline or one stable stack."
-  - "M4 / I6 now treat the body / environment boundary as an explicit scientific audit item across fast loop routes and slow internal-milieu routes, so a fast local loop is not silently promoted to solved embodiment."
-  - "M7 / V4 now separate state annotation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden, so same-day success and adaptive rescue do not collapse into one longitudinal claim."
-  - "Wearable OPM-MEG is treated as movement-tolerant macro measurement only when shielding, field control, sensor calibration, and anatomy choice are disclosed."
-  - "R6 treats personalization not as a pure performance trick, but as a verification problem that must separate target signal from subject fingerprint and setup shortcuts."
-  - "R1 / R2 now separate focal posterior-support, sparse debiased inference, extended-source extent reconstruction, forward-model uncertainty, and validation board, so a newer inverse family is not silently treated as one generic truth upgrade."
-  - "R4 now treats DCM / effective-connectivity outputs as route-card claims that must disclose model space, observed-subsystem closure / latent-confound audit, node-definition policy, sampling / transformation sensitivity, observation assumptions, validation, reliability, and abstention."
-  - "R7 now separates observability, structural identifiability, practical identifiability, ambiguity class, and minimum-sufficiency stop rules, so richer proxies or more modalities are not silently promoted to uniqueness."
+- P0 ～ P2 は、測定や実装作業について議論する前に、何が成功としてカウントされるかを修正します。
+- 索引を使用すると、読者は特定の質問ファミリーに直接ジャンプできます。
+- より強い主張は意図的に後に配置されるため、以前のレベルがスキップされません。
+- V8 では、侵襲的言語 BCI がスループット/表現力、転送支援初期化、固定デコーダ耐久性スライス、アダプティブ レスキューに分割されるようになりました。そのため、1 つの音声 BCI 結果が 4 つすべてに暗黙的に昇格されることはありません。
+- R0 は構造スキャフォールド、高速実行可能状態、およびメンテナンス状態ファミリを分離するようになりました。そのため、`connectome + state` は 1 つのノブとして扱われません。
+- R3 / R5 は、潜在状態と保守状態の質問を証拠層とタイムスケールによって分離しているため、同日の適合と複数日の保守が 1 つの成功に崩れることはありません。
+- R3 / R5は現在、メンテナンス関連の主張に、リン酸シグナル伝達、局所プロテオスタシス、およびカーゴルーティングが測定されたか、外部校正されたか、モデル推定されたか、または省略されたかを明記することを強制しているため、一般的な潜在状態ラベルはメンテナンスが完了した証拠として扱われません。
+- M2 はハードウェア レイテンシを生物学的なタイミング状態から分離するため、高速デバイス ループがタイミング完全な再構築と混同されません。
+- 位相ターゲット閉ループの場合、M2 / I1 は発振推定可能性、因果ターゲット対ポストホックターゲットベンチマーク、循環ターゲット精度、ダウンストリーム効果、および位相安定性を分離するようになったため、位相誤差だけでは十分な証拠として扱われません。
+- M1 / M5 は神経状態を血管伝達状態とは区別して維持するため、BOLD の振幅の違いが黙って神経の違いに促進されることはありません。
+- M1 / M3 は、ヒトの in vivo 証拠を分割ラダーとして扱うようになりました。そのため、代理クラス、運用の成熟度、キャリブレーターの役割、および家族内の量/ターゲット/輸送の違いは、1 つの可観測性スコアにまとめられるのではなく、別々に保たれます。
+- M1 / M3 はまた、ヒトのバリア側の証拠を血液 CSF バリアレーン自体の内側に分割して保持するため、脈絡叢灌流、血液から CSF への輸送、水循環、および見かけの BCSFB 交換が、黙って BBB 水交換またはトレーサー特異的な BBB
+  輸送に統合されることはありません。
+- M1 / M3 は、人間の局所臨床ユニットの割り当てを非侵襲的な摂動条件付き興奮性ルートから分離するようになりました。そのため、`human excitability evidence` は 1 つの行として扱われません。
+- また、M1 / M3 は、ヒト星状細胞関連 PET を SMBT-1 MAO-B ターゲット検証 / 疾患コンテキスト / 定量 / 生体内分布ルート、SL25.1188 MAO-B 定量 / 重症度条件付きルート、および I2BS ルートに分割するため、`astrocyte
+  PET` は 1 つの交換可能なヒト行として扱われません。
+- M3 は、コホート/生理学的レジームの互換性と行の堅牢性/可用性を行ごとの 3 つの軸とは別に保持するようになりました。そのため、プロキシが豊富なバンドルが、1 つの一致するヒトベースラインまたは 1 つの安定したスタックとして黙って扱われることはありません。
+- M4 / I6 は、高速ループ ルートと低速内部環境ルートにわたる明示的な科学的監査項目として身体と環境の境界を扱うようになりました。そのため、高速ローカル ループが解決済みの実施形態に暗黙的に昇格されることはありません。
+- M7 / V4 では、状態のアノテーション、特性のようなバックボーン、生物学的ドリフト、インターフェイス/デコーダのドリフト、および再調整の負荷が分離されるようになりました。そのため、即日成功と適応型救助が 1 つの縦断的な主張に崩れることはありません。
+- ウェアラブル OPM-MEG は、シールド、フィールド制御、センサーの校正、および解剖学的構造の選択が開示されている場合にのみ、動きに耐えるマクロ測定として扱われます。
+- R6 は、パーソナライゼーションを純粋なパフォーマンス トリックとしてではなく、対象の指紋やセットアップ ショートカットからターゲット信号を分離する必要がある検証問題として扱います。
+- R1 / R2 は、焦点事後サポート、スパース偏りのない推論、拡張ソース範囲再構成、フォワードモデルの不確実性、および検証ボードを分離するようになりました。そのため、新しい逆ファミリが 1 つの一般的な真実のアップグレードとして黙って扱われることはありません。
+- R4 は、DCM / 有効接続出力を、モデル空間、観察されたサブシステムの閉鎖 / 潜在交絡監査、ノード定義ポリシー、サンプリング / 変換の感度、観察の仮定、検証、信頼性、および棄権を開示する必要があるルートカード クレームとして扱うようになりました。
+- R7 では、可観測性、構造的識別可能性、実用的な識別可能性、あいまい性クラス、および最小十分性停止ルールが分離されるようになりました。そのため、より豊富なプロキシまたはより多くのモダリティが黙って一意性に昇格されることはありません。
 known_points:
-  - "Splitting the problem into P/M/R/I/V/D makes it easier to see which questions are foundational and which sit higher up."
-  - "The dependency structure that prevents strong claims from skipping earlier layers is fairly clear."
-  - "This page should be read as a dependency map, not as a checklist of solved items."
-  - "Invasive language BCI progress is multi-route: throughput, transfer initialization, fixed-decoder durability, and adaptive rescue need separate labels."
-  - "A restoration target is not one dial; scaffold, fast state, and maintenance-state layers place different ceilings on what can be claimed."
-  - "Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements."
-  - "A prediction-useful latent variable is not automatically a maintenance-complete state estimate; phospho-signaling, local proteostasis, and cargo-routing can still remain omitted families."
-  - "For hemodynamic modalities, neural interpretation and vascular transfer / CVR audit are separate requirements."
-  - "Closed-loop device timing and biological conduction timing are different audits; passing one does not auto-pass the other."
-  - "For phase-targeted loops, a low mean phase error still does not prove that the target oscillation was estimable, that the causal estimator matched a post-hoc benchmark, that the physiological or behavioral effect followed, or that one preferred phase stayed stable across time."
-  - "A disclosed body / environment boundary, including slow internal-milieu disclosure, is a separate audit from low latency or online accuracy."
-  - "Human-side advances reduce different error terms and remain differently deployment-limited; proxy-rich evidence is not yet same-subject, same-session, externally calibrated state identification."
-  - "Proxy class, operational maturity, and calibrator role are different questions; a real human route may still calibrate only one bounded hidden-state family."
-  - "A human route family name is not yet one row; 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, localized functional 31P NAD-dynamics, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, tract-scale transmission-speed estimation, quantity-defined myelin MRI / tissue-health-sensitive ratios, BBB water-exchange, tracer-specific BBB PET transport, blood-CSF barrier / choroid-plexus perfusion / blood-to-CSF transport / water-cycling / apparent-exchange routes, SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution routes, SL25.1188 MAO-B quantification / severity-conditioned routes, and I2BS routes remain separate routes with different ceilings."
-  - "Human clinical single-unit allocation, sleep-homeostasis / plasticity recalibration, and state-gated perturbation are also separate human routes with different direct observables and different ceilings."
-  - "A named astrocyte-related PET paper is not yet one route family; MAO-B target validation, MAO-B disease-context contrast, MAO-B quantification / biodistribution burden, SL25.1188 covariate ceilings, and I2BS routes remain separate questions."
-  - "Even when human proxy rows look complementary, cohort / physiological regime mismatch, route-local repeatability, cross-centre transfer, and complete-case availability still remain separate gates."
-  - "Longitudinal success is not one axis; within-day state fluctuation, trait-like backbone, biological drift, interface / decoder drift, and recalibration burden answer different questions."
-  - "OPM-MEG motion tolerance still depends on magnetic shielding, active nulling, calibration, and source-model disclosure."
-  - "The fact that personalization helps performance is not the same as showing a population-level neural signal; subject-fingerprint and acquisition-distribution audits are still required."
-  - "For ESI, source regime / target object, uncertainty object, forward-model uncertainty route, and validation board remain separate requirements; a stronger inverse family is not one universal answer type."
-  - "Richer observability and better fit do not by themselves collapse the compatible solution set; ambiguity class, candidate-space, bridge / composition validity, experiment-design leverage, and minimum-sufficiency stop rules remain separate."
+- 問題を P/M/R/I/V/D に分割すると、どの質問が基礎的なもので、どの質問が上位に位置するのかがわかりやすくなります。
+- 強力なクレームが以前の層をスキップするのを防ぐ依存構造は非常に明確です。
+- このページは、解決された項目のチェックリストとしてではなく、依存関係マップとして読まれる必要があります。
+- 侵襲的言語の BCI の進行状況は複数ルートです。スループット、転送の初期化、固定デコーダの耐久性、および適応型レスキューには個別のラベルが必要です。
+- 復元対象は 1 つのダイヤルではありません。足場層、高速状態層、および保守状態層は、要求できる内容に異なる上限を設定します。
+- コネクトームまたはローカルアクティビティの証拠が改善されたとしても、潜在状態と保守状態の監査は依然として別個の要件です。
+- 予測に役立つ潜在変数は、自動的にメンテナンス完了状態の推定値になるわけではありません。リン酸シグナル伝達、局所プロテオスタシス、およびカーゴルーティングは依然として省略されたファミリーのままである可​​能性があります。
+- 血行動態モダリティの場合、神経解釈と血管移動 / CVR 監査は別個の要件です。
+- 閉ループデバイスのタイミングと生体伝導のタイミングは異なる監査です。一方を渡しても、もう一方は自動的に渡されません。
+- 位相ターゲット ループの場合、平均位相誤差が低いことは、ターゲットの振動が推定可能であること、原因推定量が事後ベンチマークと一致すること、生理学的または行動的効果が続いたこと、または 1 つの優先位相が時間の経過とともに安定していることを証明するものではありません。
+- 遅い内部環境の開示を含む、開示された身体/環境の境界は、低遅延またはオンラインの正確性とは別の監査です。
+- 人間側の進歩により、さまざまなエラー条件が減少し、展開上の制限が異なるままになります。代理豊富な証拠は、同じ被験者、同じセッション、外部で調整された状態の識別ではまだありません。
+- プロキシ クラス、運用の成熟度、およびキャリブレータの役割は別の問題です。実際の人間のルートでは、依然として 1 つの境界付き隠れ状態ファミリーのみを調整する可能性があります。
+- ヒューマン ルート ファミリ名はまだ 1 行ではありません。 1H-MRSI類似性、高分解能1H-MRSI代謝物分布マッピング、31P代謝物/pHバランス、31P MT交換フラックス、31P NAD含有量マッピング、局所機能的31P NADダイナミクス、重水素代謝物マッピング/絶対定量ルート、重水素速度イメージング、管スケールの伝達速度推定、量定義ミエリンMRI
+  /組織健康感受性比、BBB水交換、トレーサー特異的BBB PET輸送、血液CSF関門/脈絡叢潅流/血液-CSF輸送/水循環/見かけの交換ルート、SMBT-1 MAO-Bターゲット検証/疾患コンテキスト/定量化/生体内分布ルート、SL25.1188
+  MAO-B定量化/重症度条件付きルート、およびI2BSルートは別個のルートのまま天井が異なります。
+- 人間の臨床シングルユニットの割り当て、睡眠恒常性/可塑性の再調整、および状態ゲート摂動も、異なる直接観察可能性と異なる上限を備えた別個の人間のルートです。
+- 名前付き星状細胞関連 PET 論文はまだ 1 つのルートファミリーではありません。 MAO-B ターゲットの検証、MAO-B 疾患状況の対比、MAO-B の定量化 / 生体内分布負荷、SL25.1188 共変量の上限、および I2BS ルートは別個の質問のままです。
+- 人間の代理行が相補的であるように見えても、コホート/生理学的レジームの不一致、ルートローカル再現性、中心間移動、および完全な症例の利用可能性は依然として別個のゲートのままです。
+- 長期的な成功は 1 つの軸ではありません。日内の状態変動、形質のようなバックボーン、生物学的ドリフト、インターフェース/デコーダのドリフト、および再キャリブレーションの負荷が、さまざまな質問に答えます。
+- OPM-MEG の動作耐性は、依然として磁気シールド、アクティブ ヌリング、キャリブレーション、およびソース モデルの開示に依存します。
+- パーソナライゼーションがパフォーマンスに役立つという事実は、集団レベルの神経信号を示すことと同じではありません。対象者指紋と取得配布の監査は引き続き必要です。
+- ESI の場合、ソース レジーム / ターゲット オブジェクト、不確実性オブジェクト、フォワード モデルの不確実性ルート、および検証ボードは引き続き個別の要件となります。より強力な逆族は、1 つの普遍的な答えのタイプではありません。
+- 可観測性が強化され、適合性が向上しても、それ自体で互換性のあるソリューション セットが崩壊するわけではありません。曖昧性クラス、候補空間、ブリッジ/構成の妥当性、実験計画の活用、および最小十分性停止ルールは別個のままです。
 unknown_points:
-  - "It is still unsettled which measurement granularity will ultimately be sufficient for WBE."
-  - "V5 identity questions and D-series social deployment conditions remain unresolved."
-  - "The shortest practical route may change as data and benchmark infrastructure improve."
-  - "How specialized human routes can be fused into same-subject, same-session, externally calibrated evidence without recreating latent-state ambiguity remains unresolved."
-  - "It also remains unsettled which backbone object should be the default target for WBE-relevant longitudinal claims: latent dynamics, representational geometry, or another cross-modal invariant."
+- 最終的にどの測定粒度が WBE に十分であるかはまだ決まっていません。
+- V5 のアイデンティティに関する疑問と D シリーズの社会展開の条件は未解決のままです。
+- データとベンチマークのインフラストラクチャが改善されるにつれて、実用的な最短ルートは変わる可能性があります。
+- 潜在状態のあいまいさを再作成することなく、特殊化された人間のルートを同じ被験者、同じセッションの外部で調整された証拠にどのように融合できるかは未解決のままです。
+- また、どのバックボーン オブジェクトを WBE 関連の縦断的クレーム (潜在力学、表現幾何学、または別のクロスモーダル不変式) のデフォルトのターゲットにするかについても未解決のままです。
 wiki_links:
-  - label: "Wiki: How To Read The Roadmap"
-    url: "/wiki/roadmap-reading-guide.html"
-    description: "A supporting page for following P/M/R/I/V/D from the basics."
-  - label: "Wiki: Reading Routes By L0-L5 Level"
-    url: "/wiki/claim-level-reading-routes.html"
-    description: "Shows which page to visit next from each level of the claim ladder."
-  - label: "Wiki: Reading Partial Solutions, Exploratory Stages, And Unfinished Areas"
-    url: "/wiki/progress-labels-and-open-problem-status.html"
-    description: "Explains what the status labels on this page are saying is still missing."
-  - label: "Wiki: Reading Claims And Evidence"
-    url: "/wiki/claims-and-evidence.html"
-    description: "Explains in plain language why stronger claims cannot skip earlier layers."
-  - label: "Wiki: Why A Connectome Is Not Enough"
-    url: "/wiki/connectome-is-not-enough.html"
-    description: "Organizes the state variables often missed in the R-series, including synapses, delays, neuromodulation, and glia."
-  - label: "Wiki: Observability And Claim Ceiling By Measurement Stack"
-    url: "/wiki/measurement-stack-and-claim-ceiling.html"
-    description: "Explains what each modality directly observes and where its claim ceiling appears."
-  - label: "Wiki: EEG Preprocessing And QC"
-    url: "/wiki/eeg-preprocessing-and-qc.html"
-    description: "Supplies the basics of preprocessing and quality control that show up in the M-series."
-  - label: "Wiki: Identity Evaluation And Continuity Tests"
-    url: "/wiki/identity-and-continuity-tests.html"
-    description: "Organizes V5 identity through the entry points of memory, values, learning, branching, and longitudinal change."
-  - label: "Wiki: State, Trait, And Drift"
-    url: "/wiki/state-trait-and-drift.html"
-    description: "Explains the longitudinal evaluations important for M7/V4 through the differences among state, trait, and drift."
-  - label: "Wiki: State-Continuity Bridge"
-    url: "/wiki/state-continuity-bridge.html"
-    description: "Explains why same-subject or same-brain sequential workflows still need a bridge audit before same-state language is allowed."
-  - label: "Wiki: Update, Branching, And Stop Rules"
-    url: "/wiki/update-branching-and-stop-rules.html"
-    description: "Covers update operations, branch management, and stop conditions needed in I5/I8/V7."
-  - label: "Wiki: Closed Loops, Latency, Jitter, And Safety Stops"
-    url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
-    description: "Covers latency, jitter, and real-time stability needed in I1/I8."
+- label: 'Wiki: ロードマップの読み方'
+  url: /wiki/roadmap-reading-guide.html
+  description: P/M/R/I/V/Dを基礎からフォローするためのサポートページです。
+- label: 'Wiki: L0 ～ L5 レベルごとのルートの読み取り'
+  url: /wiki/claim-level-reading-routes.html
+  description: 請求のはしごの各レベルから次にどのページにアクセスするかを示します。
+- label: 'Wiki: 部分的な解決策、探索段階、および未完成の領域を読む'
+  url: /wiki/progress-labels-and-open-problem-status.html
+  description: このページのステータス ラベルがまだ欠落していることを示しているものについて説明します。
+- label: 'Wiki: 主張と証拠を読む'
+  url: /wiki/claims-and-evidence.html
+  description: より強力な主張が以前の層をスキップできない理由を平易な言葉で説明します。
+- label: 'Wiki: コネクトームだけでは不十分な理由'
+  url: /wiki/connectome-is-not-enough.html
+  description: シナプス、遅延、神経変調、グリアなど、R シリーズでは見逃されがちな状態変数を整理します。
+- label: 'Wiki: 測定スタックごとの可観測性とクレームの上限'
+  url: /wiki/measurement-stack-and-claim-ceiling.html
+  description: 各モダリティが直接観察する内容と、その請求上限がどこに現れるかを説明します。
+- label: 'Wiki: EEG の前処理と QC'
+  url: /wiki/eeg-preprocessing-and-qc.html
+  description: M シリーズに登場する前処理と品質管理の基本を提供します。
+- label: 'Wiki: アイデンティティ評価と連続性テスト'
+  url: /wiki/identity-and-continuity-tests.html
+  description: 記憶、価値観、学習、分岐、長期的な変化の入口点を通じて V5 アイデンティティを組織します。
+- label: 'Wiki: 状態、特性、ドリフト'
+  url: /wiki/state-trait-and-drift.html
+  description: M7/V4にとって重要な長期的な評価を、状態、特性、ドリフトの違いを通して説明します。
+- label: 'Wiki: 状態継続ブリッジ'
+  url: /wiki/state-continuity-bridge.html
+  description: 同じ状態の言語が許可される前に、同じ主題または同じ脳の順次ワークフローで依然としてブリッジ監査が必要な理由を説明します。
+- label: 'Wiki: 更新、分岐、および停止ルール'
+  url: /wiki/update-branching-and-stop-rules.html
+  description: I5/I8/V7 で必要な更新操作、ブランチ管理、および停止条件をカバーします。
+- label: 'Wiki: 閉ループ、レイテンシー、ジッター、安全停止'
+  url: /wiki/closed-loop-latency-jitter-and-safety-stops.html
+  description: I1/I8 で必要なレイテンシー、ジッター、リアルタイム安定性をカバーします。
 recommended_pages:
-  - label: "WBE 101"
-    url: "/wbe_101.html"
-  - label: "EEG 101"
-    url: "/eeg_101.html"
-  - label: "Verification"
-    url: "/verification.html"
+- label: WBE101
+  url: /wbe_101.html
+- label: 脳波101
+  url: /eeg_101.html
+- label: 検証
+  url: /verification.html
 ---
-<!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
+<!-- 重要: この情報を削除したり上書きしたりしないでください。これはプロジェクトの恒久的な知識ベースです。 -->
 
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Summary</h2>
-<p>This page is the map of mind-uploading research. Instead of jumping straight to conclusions, it organizes in sequence <strong>what to measure</strong>, <strong>what to reconstruct</strong>, <strong>how to run it</strong>, and <strong>how to verify it</strong>. In practice, it visualizes where the field currently stands across <strong>measurement -> reconstruction -> implementation -> verification -> social deployment</strong>.</p>
+<h2>概要</h2>
+<p>このページはマインドアップロード研究のマップです。いきなり結論に向かうのではなく、<strong>何を測定するか</strong>、<strong>何を再構築するか</strong>、<strong>実行方法</strong>、<strong>検証方法</strong>の順序で整理します。実際には<strong>測定→再構築→導入→検証→社会展開まで現場の現状を可視化</strong>.</p>
 </div>
 
 <div class="note-box">
-<strong>For New Readers</strong>
+<strong>初めての方へ</strong>
 <p>
-This page is dense. It is usually easier to read after <a href="wbe_101.html">WBE 101</a> and <a href="eeg_101.html">EEG 101</a>, with the <a href="glossary.html">Glossary</a> nearby if needed.
-</p>
-</div>
-
-<div class="note-box">
-<strong>If The Index Notation Feels Unclear</strong>
-<p>
-If you want a beginner explanation of the P/M/R/I/V/D notation and their dependency structure, start with <a href="wiki/roadmap-reading-guide.html">Wiki: How To Read The Roadmap</a>. The main text is closer to a map than a dictionary, so a supporting guide helps.
-</p>
-</div>
-<div class="note-box">
-<strong>If You Want To Know This Page's Role Among The Theory Pages</strong>
-<p>
-This page is less a theory essay than a map of dependencies among questions. The entry point for claim levels is <a href="wbe_101.html">WBE 101</a>, the long-form discussion of theory and limits is the <a href="perspective.html">research note</a>, and design principles live in the <a href="perspective.html#design-principles">framework section inside Perspective</a>. For a one-page view of the theory pages as a whole, see <a href="wiki/theory-pages-reading-guide.html">Wiki: Theory Page Reading Guide</a>.
+このページは濃いですね。通常、<a href="wbe_101.html">WBE 101</a> および <a href="eeg_101.html">EEG 101</a> の後で、必要に応じて <a href="glossary.html"> 用語集 </a> を近くに置いておくと読みやすくなります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>If You Want Only The V5 Identity Entry Point First</strong>
+<strong>インデックス表記がわかりにくい場合</strong>
 <p>
-Identity questions span V5, V7, M7, R5, and related nodes in this roadmap. If you want to sort out in advance how to think about memory, values, learning, branching, and longitudinal continuity, start with <a href="wiki/identity-and-continuity-tests.html">Wiki: Identity Evaluation and Continuity Tests</a>.
+P/M/R/I/V/D 表記法とその依存関係構造についての初心者向けの説明が必要な場合は、<a href="wiki/roadmap-reading-guide.html">Wiki: ロードマップの読み方</a> から始めてください。本文は辞書というより地図に近いので、サポートガイドが役立ちます。
+</p>
+</div>
+<div class="note-box">
+<strong>理論ページの中でのこのページの役割を知りたい場合</strong>
+<p>
+このページは理論エッセイというよりは、質問間の依存関係のマップです。クレーム レベルのエントリ ポイントは <a href="wbe_101.html">WBE 101</a> で、理論と限界に関する長文の議論は <a href="perspective.html"> リサーチ ノート </a> で、設計原則は Perspective</a> 内の <a href="perspective.html#design-principles"> フレームワーク セクションにあります。理論ページ全体を 1 ページで表示するには、<a href="wiki/theory-pages-reading-guide.html">Wiki: 理論ページ閲覧ガイド</a> を参照してください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>If You Get Stuck On Longitudinal Evaluation In M7 / V4</strong>
+<strong>最初に V5 ID エントリ ポイントのみが必要な場合</strong>
 <p>
-State on a given day, relatively stable trait, and drift caused by learning or updates are not the same thing. If you want to sort out the difference between short-term fluctuation and long-term continuity first, see <a href="wiki/state-trait-and-drift.html">Wiki: State, Trait, and Drift</a>.
+アイデンティティに関する質問は、このロードマップの V5、V7、M7、R5、および関連ノードに及びます。記憶、価値観、学習、分岐、縦方向の連続性についてどのように考えるかを事前に整理したい場合は、<a href="wiki/identity-and-continuity-tests.html">Wiki: Identity Evaluation and Continuity Tests</a> から始めてください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>If You Get Stuck On Operations In I5 / I8 / V7</strong>
+<strong>M7 / V4で縦断評価に行き詰まったら</strong>
 <p>
-If the differences among safe updates, branch handling, stop rules, and kill switches are unclear, start with <a href="wiki/update-branching-and-stop-rules.html">Wiki: Update, Branching, and Stop Rules</a>. The roadmap points to the issues; the wiki supplies the operational basics.
+特定の日の状態、比較的安定した特性、学習や更新によって生じるドリフトは同じものではありません。まず短期的な変動と長期的な継続性の違いを整理したい場合は、<a href="wiki/state-trait-and-drift.html">Wiki: State、Trait、および Drift</a> を参照してください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>If You Get Stuck On Closed Loops In I1 / L3</strong>
+<strong>I5 / I8 / V7 で操作に行き詰まった場合</strong>
 <p>
-Even when something is called "real-time," the difficulty depends on how latency, jitter, end-to-end return, and safety stops are measured. For a beginner entry point to that distinction, see <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed Loops, Latency, Jitter, and Safety Stops</a>.
+安全な更新、分岐処理、停止ルール、キル スイッチの違いが不明瞭な場合は、「<a href="wiki/update-branching-and-stop-rules.html">Wiki: 更新、分岐、停止ルール</a>」から始めてください。ロードマップは問題を指摘しています。 Wiki には操作の基本が記載されています。
+</p>
+</div>
+
+<div class="note-box">
+<strong>I1 / L3 の閉ループで行き詰まった場合</strong>
+<p>
+何かが「リアルタイム」と呼ばれる場合でも、その難しさは、遅延、ジッター、エンドツーエンドのリターン、および安全停止をどのように測定するかによって異なります。この区別に関する初心者向けのエントリ ポイントについては、<a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ、レイテンシー、ジッター、および安全停止</a> を参照してください。
 </p>
 </div>
 <div class="note-box">
-<strong>If You Get Stuck On "Isn't A Connectome Enough?"</strong>
+<strong>「コネクトームでは十分ではないの？」という場合には </strong>
 <p>
-In the R-series, the branching point is not only the wiring diagram but also how cell types, intrinsic excitability/homeostatic set points, synaptic efficiency, delay and myelination, neuromodulation, and glia are treated. If you want to see from primary literature which claims fail when those state variables are missing, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic Plasticity and Maintenance State</a>.
+R シリーズでは、分岐点は配線図だけでなく、細胞の種類、固有の興奮性/恒常性の設定値、シナプス効率、遅延と髄鞘形成、神経調節、グリアの処理方法も含まれます。これらの状態変数が欠落しているときにどの主張が失敗するかを一次文献から確認したい場合は、<a href="wiki/connectome-is-not-enough.html">Wiki: Why a Connectome Is Not Enough</a> および <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性と維持状態</a> を参照してください。
 </p>
 </div>
 <div class="note-box">
-<strong>If You Want The Current Human In Vivo Measurement Ladder First</strong>
+<strong>現行のヒト生体内測定ラダーが欲しいならまずは</strong>
 <p>
-This roadmap now distinguishes not only <strong>which variable class a human route constrains</strong> but also <strong>how specialized or model-heavy that route still is</strong>. The site's current rule is stricter than a simple three-axis ladder: per-row <strong>proxy class / operational maturity / calibrator role</strong> still has to be combined with bundle-level checks on <strong>cohort / physiological regime compatibility</strong> and <strong>row robustness / availability disclosure</strong>. For the front-door ladder, start with <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>; for stack-specific ceilings and stop rules, see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling by measurement stack</a> and <a href="verification.html#observability-budget">Verification: Observability Budget</a>. If the argument also bridges live measurement to later fixation / ex vivo follow-up or cross-day reacquisition, add the <a href="verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a> and <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a> instead of reading <strong>same-subject</strong> or <strong>same-brain</strong> as <strong>same-state</strong> by default.
+このロードマップでは、人間のルートがどの変数クラスを制約する <strong> </strong> だけでなく、<strong> そのルートがどのように特殊化されているか、またはモデルが多用されているかが </strong> であることも区別されるようになりました。サイトの現在のルールは、単純な 3 軸ラダーよりも厳格です。行ごとの <strong>proxy クラス / 運用の成熟度 / キャリブレーターの役割 </strong> は、<strong> コホート / 生理学的体制の互換性 </strong> および <strong>row の堅牢性 / 可用性の開示 </strong> のバンドルレベルのチェックと組み合わせる必要があります。玄関用はしごの場合は、<a href="wbe_101.html#human-observability-ladder">WBE 101: 人間の可観測性はしご </a> から始めます。スタック固有の上限と停止ルールについては、<a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 測定スタック</a> および <a href="verification.html#observability-budget">Verification: 可観測性バジェット</a> による可観測性と要求上限を参照してください。引数がライブ測定を後の固定 / ex vivo フォローアップまたは日をまたぐ再取得にも橋渡しする場合は、<strong>same-subject</strong> または <strong>same-brain</strong> を <strong>same-state</strong> として読み取る代わりに、<a href="verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a> および <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a> を追加します。デフォルト。
 </p>
 </div>
 <div class="note-box">
-<strong>If You Get Stuck On Terms Like Missing, Unfinished, Or Partially Solved</strong>
+<strong>不足している、未完了、または部分的に解決されているなどの条件で行き詰まった場合</strong>
 <p>
-This page uses short status labels for what is still lacking in each node. If you want to clarify what <strong>partially solved</strong>, <strong>exploratory</strong>, <strong>not yet standardized</strong>, and <strong>unfinished</strong> each mean, start with <a href="wiki/progress-labels-and-open-problem-status.html">Wiki: Reading Partial Solutions, Exploratory Stages, and Unfinished Areas</a>.
+このページでは、各ノードにまだ不足しているものを示す短いステータス ラベルを使用します。 <strong>部分的に解決済み</strong>、<strong>探索的</strong>、<strong>まだ標準化されていない</strong>、<strong>未完成</strong>のそれぞれの意味を明確にしたい場合は、<a href="wiki/progress-labels-and-open-problem-status.html">Wiki: 部分的解決策、探索段階、および未完成領域の読み取り</a>から始めてください。
 </p>
 </div>
 <div class="note-box">
-<strong>If You Want To Organize Return Paths By Claim Ladder Level</strong>
+<strong>クレームラダーレベルごとに返却経路を整理したい場合</strong>
 <p>
-Because Roadmap covers all of L0-L5, the next public page depends on which level you want to inspect now. For a one-page route map by claim level, see <a href="wiki/claim-level-reading-routes.html">Wiki: Reading Routes By L0-L5 Level</a>.
+ロードマップは L0 ～ L5 のすべてをカバーしているため、次の公開ページは現在どのレベルを検査するかによって異なります。クレーム レベル別の 1 ページのルート マップについては、<a href="wiki/claim-level-reading-routes.html">Wiki: Reading Routes By L0-L5 Level</a> を参照してください。
 </p>
 </div>
 <div class="note-box">
-<strong>If You Want To Choose The Next Single Page After This One</strong>
+<strong>このページの次のページを選びたい場合</strong>
 <p>
-If you want a one-page view of where to go next after Roadmap, measurement, reconstruction, implementation, verification, or social deployment, see <a href="wiki/roadmap-next-routes.html">Wiki: Five Routes After the Roadmap</a>.
+ロードマップ、測定、再構築、実装、検証、社会展開の後にどこに進むべきかを 1 ページで確認したい場合は、<a href="wiki/roadmap-next-routes.html">Wiki: ロードマップ後の 5 つのルート</a> を参照してください。
 </p>
 </div>
 
 <div class="key-points">
-<h4>Three Things To Fix First</h4>
+<h4>最初に修正すべき 3 つのこと</h4>
 <ul>
-<li><strong>This page's role:</strong> not to declare conclusions, but to fix where each question lives.</li>
-<li><strong>What this page can do:</strong> organize current research problems with order and dependencies attached.</li>
-<li><strong>What this page cannot do alone:</strong> it cannot prove that the final questions of identity or consciousness are already settled.</li>
+<li><strong>このページの役割:</strong> は結論を宣言するのではなく、各質問の所在を修正することです。</li>
+<li><strong>このページでできること:</strong> 順序と依存関係を付けて現在の研究問題を整理します。</li>
+<li><strong>このページだけではできないこと:</strong>アイデンティティや意識に関する最終的な問題がすでに解決されていることを証明することはできません。</li>
 </ul>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Symbol</th>
-<th>What It Groups Together</th>
-<th>Read It First When...</th>
+<th>シンボル</th>
+<th>グループ化するもの</th>
+<th>次の場合は最初にお読みください...</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>P</strong></td>
-<td>Definition of progress. It decides what counts as success.</td>
-<td>You want to align on the target before entering technical discussion.</td>
+<td>進歩の定義。何が成功とみなされるかを決定します。</td>
+<td>技術的な議論に入る前に目標に合わせて調整したいと考えています。</td>
 </tr>
 <tr>
 <td><strong>M</strong></td>
-<td>Measurement. It covers what can be observed, and at what precision.</td>
-<td>You want to start from the differences among EEG, fMRI, invasive measurement, and related modalities.</td>
+<td>測定。何がどのくらいの精度で観測できるのかをカバーします。</td>
+<td>EEG、fMRI、侵襲的測定、および関連するモダリティの違いから始めたいと考えています。</td>
 </tr>
 <tr>
 <td><strong>R</strong></td>
-<td>Reconstruction. It covers what can be estimated from observations.</td>
-<td>You are interested in inverse problems, latent state, causal models, or uncertainty.</td>
+<td>再構築。観測から推定できることを網羅しています。</td>
+<td>あなたは、逆問題、潜在状態、因果モデル、または不確実性に興味があります。</td>
 </tr>
 <tr>
 <td><strong>I</strong></td>
-<td>Implementation. It covers how models run and where they break.</td>
-<td>You want to inspect closed loops, latency, computational load, or safety design.</td>
+<td>実装。モデルがどのように動作し、どこで壊れるかについて説明します。</td>
+<td>閉ループ、レイテンシー、計算負荷、または安全設計を検査したい。</td>
 </tr>
 <tr>
 <td><strong>V</strong></td>
-<td>Verification. It covers what must be measured for progress and what counts as failure.</td>
-<td>You want benchmarks, causal tests, identity questions, or replication criteria.</td>
+<td>検証。進歩のために何を測定する必要があるか、何が失敗としてカウントされるかをカバーします。</td>
+<td>ベンチマーク、因果関係テスト、同一性に関する質問、または複製基準が必要です。</td>
 </tr>
 <tr>
 <td><strong>D</strong></td>
-<td>Deployment. It covers rights, consent, fairness, and security.</td>
-<td>You want to read beyond the technical layer into operations and institutions.</td>
+<td>展開。権利、同意、公平性、セキュリティをカバーします。</td>
+<td>あなたは技術層を超えて運用と組織まで読み込みたいと考えています。</td>
 </tr>
 </tbody>
 </table>
 
 <section class="section" id="howto">
-<h2 class="section-title">How to Use</h2>
-<p>This page is not a book but a <strong>map</strong> of the full research landscape. First read through the question tree, then deepen each node according to the learning order. Only two operational rules are essential here: <strong>(1) keep the source links</strong> and <strong>(2) explicitly mark what remains provisional or uncertain</strong>.</p>
+<h2 class="section-title">使用方法</h2>
+<p> このページは本ではなく、研究全体の状況をまとめた <strong> マップ </strong> です。まず質問ツリーを読んでから、学習順序に従って各ノードを深めていきます。ここで重要な操作ルールは 2 つだけです。 <strong>(1) ソース リンクを保持する </strong> および <strong>(2) 暫定または不確実なままのものを明示的にマークする </strong>.</p>
 </section>
 
 <section class="section" id="measurement-identifiability-audit">
-<h2 class="section-title">2026-03 Literature audit: Three walls of measurement, identification, and intervention</h2>
+<h2 class="section-title">2026-03 文献監査: 測定、特定、介入の 3 つの壁</h2>
 <p>
-In this re-audit, we focused on updating <strong>M3 (spatial granularity)</strong>, <strong>M6 (intervention design)</strong>, <strong>R7 (identifiability)</strong>, and <strong>V2 (causal testing)</strong> in this roadmap. The reason is simple: the most common misinterpretations in technical discussions surrounding WBE are to read <strong>increase in observables</strong> as <strong>state completeness</strong>, to read <strong>increase in prediction performance</strong> as <strong>obtaining a unique solution</strong>, and to read <strong>introducing one intervention</strong> as <strong>the completion of causal verification</strong>. The following three are lower limits that are relatively consistently supported by primary literature as of March 2026.
+この再監査では、このロードマップの <strong>M3 (空間粒度)</strong>、<strong>M6 (介入設計)</strong>、<strong>R7 (識別可能性)</strong>、および <strong>V2 (因果関係テスト)</strong> の更新に焦点を当てました。理由は簡単です。WBE に関する技術的な議論で最もよくある誤解は、<strong> 観測値の増加 </strong> を <strong> 状態の完全性 </strong> と読むこと、<strong> 予測パフォーマンスの向上 </strong> を <strong> 独自の解決策の取得 </strong> と読むこと、<strong> 1 つの介入の導入 </strong> を <strong> 因果関係の完了と読むことです。検証</strong>。次の 3 つは、2026 年 3 月の時点で一次文献によって比較的一貫して支持されている下限です。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Wall</th>
-<th>What the primary literature now supports</th>
-<th>Revision policy on this page</th>
+<th>壁</th>
+<th>一次文献で現在サポートされている内容</th>
+<th>このページの改訂ポリシー</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Measurement granularity wall</strong></td>
-<td>EEG / MEG provide global current-field measurements, while fMRI provides hemodynamic proxies, so what we obtain non-invasively in humans is basically macroscopic observation. By contrast, Dorkenwald et al. (2024) and MICrONS Consortium et al. (2025) advance structure-function correspondence in model organisms and local cortex, not state-complete measurement of the human whole brain. </td>
-<td>In M3, ``what is directly visible and what remains latent'' is fixed for each granularity, and structural scaffolding and state completeness are written separately. </td>
+<td><strong>測定粒度壁</strong></td>
+<td>EEG / MEG はグローバルな電流場測定を提供し、fMRI は血行動態のプロキシを提供するため、人間において非侵襲的に得られるものは基本的に肉眼的観察です。対照的に、Dorkenwald et al. (2024) および MICrONS コンソーシアムら。 (2025) 人間の脳全体の状態完全な測定ではなく、モデル生物と局所皮質における構造と機能の対応を進歩させます。 </td>
+<td>M3では「直接目に見えるものと潜在的に残るもの」が粒度ごとに固定されており、構造的な足場と状態の完全性が分けて書かれています。 </td>
 </tr>
 <tr>
-<td><strong>Identifiability Wall</strong></td>
-<td>Although progress has been made in direct validation of HD-EEG/ESI, Seeber et al. (2019), Unnwongse et al. (2023), and Hao et al. (2025) demonstrate conditional detectability and auditability of localized errors, not general unique recovery of internal states. The conclusion changes depending on the source depth, conductivity assumption, head model, and stimulation conditions. </td>
-<td>R7 defines predictability, localization, and identity as separate levels, and requires family comparison and abstention conditions. </td>
+<td><strong>識別性の壁</strong></td>
+<td> HD-EEG/ESI の直接検証は進んでいますが、Seeber et al. (2019)、Unnwongse et al。 (2023)、および Hao et al。 (2025) は、内部状態の一般的な一意の回復ではなく、局所的なエラーの条件付きの検出可能性と監査可能性を実証しています。結論は、線源の深さ、伝導率の仮定、頭部モデル、刺激条件に応じて変わります。 </td>
+<td>R7 は、予測可能性、位置特定、同一性を別個のレベルとして定義し、家族比較と棄権条件を必要とします。 </td>
 </tr>
 <tr>
-<td><strong>Intervention validation wall</strong></td>
-<td>TMS-EEG, phase-locked stimulation, adaptive DBS, and BCI closed loops are all strong evidence routes, but as Hernandez-Pavon et al. (2023), Zrenner et al. (2018), and Wilson et al. (2010) show, comparisons fail unless stimulation site, intensity, masking, artifact windows, and latency / jitter measurements are fixed. Intervention evidence is therefore tiered rather than binary. </td>
-<td>In M6 and V2, we stage passive observation, held-out perturbation, online loop, local causal intervention, and long-term closed loop, and make request logs explicit. </td>
+<td><strong>介入検証壁</strong></td>
+<td>TMS-EEG、フェーズロック刺激、適応型 DBS、および BCI 閉ループはすべて強力な証拠ルートですが、Hernandez-Pavon らによると、 (2023)、Zrenner et al。 （2018）、およびウィルソンら。 (2010) によると、刺激部位、強度、マスキング、アーティファクト ウィンドウ、および待ち時間/ジッターの測定値が固定されていない限り、比較は失敗します。したがって、介入の証拠は二値ではなく階層化されます。 </td>
+<td> M6 および V2 では、受動的観測、ホールドアウト摂動、オンライン ループ、局所的因果介入、および長期閉ループを段階的に実行し、リクエスト ログを明示的にします。 </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Points of criticism clarified in this audit</strong>
+<strong>今回の監査で明らかになった批判点</strong>
 <p>
-Therefore, this roadmap will not allow the three short-circuits of <strong>``It's enough because it's multimodal''</strong>, <strong>``It's unique because it's highly accurate''</strong>, and <strong>``It's causal because it's stimulated''</strong>. The stronger the claim is, the closer to the WBE, the earlier the <strong>measurement granularity</strong>, <strong>candidate model space</strong>, <strong>intervention design</strong>, and <strong>abstention in case of failure</strong> should be made public.
+したがって、このロードマップでは、「<strong>」「`It's enough because it's multimodal''PH12X, PH13X``It's unique because it's highly accurate''PH14X, and PH15X`」「刺激されたから因果関係がある」「</strong>」の 3 つの短絡は許可されません。主張が強ければ強いほど、WBEに近づくほど、<strong>測定粒度</strong>、<strong>候補モデル空間</strong>、<strong>介入設計</strong>、<strong>失敗時の棄権</strong>を早く公表する必要がある。
 </p>
 </div>
 <div class="note-box">
-<strong>If You Want The Quantitative Reason Non-invasive Routes Still Stop Early</strong>
+<strong>非侵襲的ルートが依然として早期に停止する定量的な理由が必要な場合</strong>
 <p>
-The updated measurement-stack wiki now makes explicit why EEG / MEG remain conditional for deep sources even after intracranial validation, and why hemodynamic amplitudes remain limited by vascular-transfer and autonomic-state confounds. For the direct-validation numbers and the resulting ceiling, see <a href="wiki/measurement-stack-and-claim-ceiling.html#eeg-meg-validation-wall">Wiki: EEG / MEG visibility, inverse, and validation wall</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html#hemodynamic-transfer-wall">Wiki: hemodynamic transfer wall</a>.
+更新された測定スタック Wiki では、頭蓋内検証後も EEG / MEG が深部信号源に対して条件付きのままである理由、および血行動態の振幅が血管移動と自律神経状態の交絡によって制限されたままである理由が明らかになりました。直接検証の数値と結果の上限については、<a href="wiki/measurement-stack-and-claim-ceiling.html#eeg-meg-validation-wall">Wiki: EEG / MEG の可視性、逆数、および検証 Wall</a> および <a href="wiki/measurement-stack-and-claim-ceiling.html#hemodynamic-transfer-wall">Wiki: 血行動態伝達 Wall</a> を参照してください。
 </p>
 </div>
 </section>
 
 <section class="section" id="roadmap-index">
-<h2 class="section-title">Index (keywords → QA)</h2>
-<p>You can jump directly to the corresponding QA from the term. The QA-ID is in parentheses. The same anchor is attached to the main text side. </p>
+<h2 class="section-title">インデックス (キーワード → QA)</h2>
+<p>用語から該当のQAへ直接ジャンプできます。 QA-ID は括弧内にあります。本文側にも同じアンカーが付いています。 </p>
 
 <div class="note-box">
-<strong>How to use</strong>
-<p>First, use the "Quick Index" to move to the target term, then use the "QA Index by Category" to traverse surrounding nodes. </p>
+<strong>使用方法</strong>
+<p>まず、「クイックインデックス」を使用して目的の用語に移動し、次に「カテゴリ別QAインデックス」を使用して周囲のノードを横断します。 </p>
 </div>
 
-<h3>Quick index</h3>
+<h3>クイックインデックス</h3>
 <ul>
-<li><a href="#qa-p0">Operational definition (P0)</a></li>
-<li><a href="#qa-p1">Claim Stairs (P1)</a></li>
-<li><a href="#qa-p2">Delivery template (P2)</a></li>
-<li><a href="#qa-m0">Measurement line (non-invasive/invasive/destructive) (M0)</a></li>
-<li><a href="#qa-m2">Temporal resolution (M2)</a></li>
-<li><a href="#qa-m3">Spatial resolution (M3)</a></li>
-<li><a href="#qa-m9">BIDS/Standardization (M9)</a></li>
-<li><a href="#qa-r1">Inverse problem (R1)</a></li>
-<li><a href="#qa-r3">Latent state (R3)</a></li>
-<li><a href="#qa-r4">Causal model (R4)</a></li>
-<li><a href="#qa-r7">Identifiability (R7)</a></li>
-<li><a href="#qa-r8">Compression and Fidelity (R8)</a></li>
-<li><a href="#qa-i1">Closed-loop delay (I1)</a></li>
-<li><a href="#qa-i2">Model granularity (I2)</a></li>
-<li><a href="#qa-i3">Computational bottleneck (I3)</a></li>
-<li><a href="#qa-i5">Safe Update (I5)</a></li>
-<li><a href="#qa-i8">containment / stop (I8)</a></li>
-<li><a href="#qa-v1">Evaluation Suite (V1)</a></li>
-<li><a href="#qa-v2">Causal testing (V2)</a></li>
-<li><a href="#qa-v5">Authenticity (V5)</a></li>
-<li><a href="#qa-v7">Copy/Branch (V7)</a></li>
-<li><a href="#qa-v9">Make-up exam possibility (V9)</a></li>
-<li><a href="#qa-d1">Consent and withdrawal (D1)</a></li>
-<li><a href="#qa-d2">Access and Equity (D2)</a></li>
-<li><a href="#qa-d3">Security (D3)</a></li>
+<li><a href="#qa-p0">動作定義(P0)</a></li>
+<li><a href="#qa-p1">クレーム階段 (P1)</a></li>
+<li><a href="#qa-p2">配信テンプレート (P2)</a></li>
+<li><a href="#qa-m0">測定ライン(非侵襲・侵襲・破壊)(M0)</a></li>
+<li><a href="#qa-m2">時間分解能(M2)</a></li>
+<li><a href="#qa-m3">空間解像度(M3)</a></li>
+<li><a href="#qa-m9">BIDS/標準化(M9)</a></li>
+<li><a href="#qa-r1">逆問題(R1)</a></li>
+<li><a href="#qa-r3">潜在状態(R3)</a></li>
+<li><a href="#qa-r4">因果モデル(R4)</a></li>
+<li><a href="#qa-r7">識別性(R7)</a></li>
+<li><a href="#qa-r8">圧縮と忠実度 (R8)</a></li>
+<li><a href="#qa-i1">閉ループ遅延(I1)</a></li>
+<li><a href="#qa-i2">モデル粒度(I2)</a></li>
+<li><a href="#qa-i3">計算ボトルネック (I3)</a></li>
+<li><a href="#qa-i5">安全なアップデート (I5)</a></li>
+<li><a href="#qa-i8">封じ込め/停止(I8)</a></li>
+<li><a href="#qa-v1">評価スイート (V1)</a></li>
+<li><a href="#qa-v2">因果関係テスト (V2)</a></li>
+<li><a href="#qa-v5">認証性 (V5)</a></li>
+<li><a href="#qa-v7">コピー/ブランチ (V7)</a></li>
+<li><a href="#qa-v9">追試験可能(V9)</a></li>
+<li><a href="#qa-d1">同意と撤回(D1)</a></li>
+<li><a href="#qa-d2">アクセスとエクイティ (D2)</a></li>
+<li><a href="#qa-d3">セキュリティ (D3)</a></li>
 </ul>
 
-<h3>QA index by category (all items)</h3>
+<h3>QA カテゴリ別インデックス (全項目)</h3>
 <details class="qa-index-group" open>
-<summary><strong>Meta (definition of progress)</strong></summary>
+<summary><strong>メタ（進捗の定義）</strong></summary>
 <ul>
-<li><a href="#qa-p0"><strong>P0</strong> What is the operational definition of "mind upload"? (What do you want to reproduce?)</a></li>
-<li><a href="#qa-p1"><strong>P1</strong> Where should I place the claim level (claim ladder)? </a></li>
-<li><a href="#qa-p2"><strong>P2</strong> What are the minimum deliverables? (Data, code, evaluation, audit)</a></li>
-</ul>
-</details>
-
-<details class="qa-index-group" open>
-<summary><strong>Measurement</strong></summary>
-<ul>
-<li><a href="#qa-m0"><strong>M0</strong> Prerequisite for measurement: in vivo / invasive / destructive scan? </a></li>
-<li><a href="#qa-m1"><strong>M1</strong> Observed variables: What is the difference between electricity (EEG)/blood flow (fMRI)/spikes (invasive)? </a></li>
-<li><a href="#qa-m2"><strong>M2</strong> Lower bound on time resolution: which time scales should be “saved”? </a></li>
-<li><a href="#qa-m3"><strong>M3</strong> Lower limit of spatial resolution: Which granularity (region/column/neuron/synapse) should we aim for? </a></li>
-<li><a href="#qa-m4"><strong>M4</strong> Whole brain coverage: How much of the “whole” do we need to measure? </a></li>
-<li><a href="#qa-m5"><strong>M5</strong> Multimodal integration: how to guarantee alignment (MRI/EEG/fMRI)? </a></li>
-<li><a href="#qa-m6"><strong>M6</strong> Intervention/stimulus: What is the “experimental design” that increases the possibility of identification? </a></li>
-<li><a href="#qa-m7"><strong>M7</strong> Longitudinal: Are “personal characteristics” stable against intra-day/day-to-day fluctuations? </a></li>
-<li><a href="#qa-m8"><strong>M8</strong> Quality control: How to “quantify” and handle artifacts/missing/noise? </a></li>
-<li><a href="#qa-m9"><strong>M9</strong> Standardization: How can I use BIDS/metadata to make it “possible for others to try again”? </a></li>
+<li><a href="#qa-p0"><strong>P0</strong> 「マインドアップロード」の運用上の定義は何ですか? （何を再現したいのですか？）</a></li>
+<li><a href="#qa-p1"><strong>P1</strong> クレーム レベル (クレーム ラダー) はどこに配置すればよいですか? </a></li>
+<li><a href="#qa-p2"><strong>P2</strong> 最低限の成果物は何ですか? (データ、コード、評価、監査)</a></li>
 </ul>
 </details>
 
 <details class="qa-index-group" open>
-<summary><strong>Reconstruction</strong></summary>
+<summary><strong>測定</strong></summary>
 <ul>
-<li><a href="#qa-r0"><strong>R0</strong> What is the minimum set to restore? (Structure/state/learning rule)</a></li>
-<li><a href="#qa-r1"><strong>R1</strong> Inverse problem: What can be uniquely inferred from observations (M1)? </a></li>
-<li><a href="#qa-r2"><strong>R2</strong> Source estimation: “Which expression” of brain activity do you want from EEG? </a></li>
-<li><a href="#qa-r3"><strong>R3</strong> State estimation: How to define latent state and how to verify it? </a></li>
-<li><a href="#qa-r4"><strong>R4</strong> Causation: What models can predict response to an intervention? </a></li>
-<li><a href="#qa-r5"><strong>R5</strong> Plasticity: What is the boundary between “introducing” and “not including” learning rules? </a></li>
-<li><a href="#qa-r6"><strong>R6</strong> Personalization: general model + individual parameters? Or is it completely individual? </a></li>
-<li><a href="#qa-r7"><strong>R7</strong> Identifiability: Does estimation approach the “unique solution”? What about uncertainty? </a></li>
-<li><a href="#qa-r8"><strong>R8</strong> Compression: Can you maintain the “verification standard” even if you discard any information? </a></li>
-<li><a href="#qa-r9"><strong>R9</strong> Audit: What is the mechanism to “record” model differences and failure examples? </a></li>
-<li><a href="#qa-r10"><strong>R10</strong> Neuromodulation: How to incorporate mood, alertness, and volume transmission? </a></li>
+<li><a href="#qa-m0"><strong>M0</strong> 測定の前提条件: in vivo / 侵襲的 / 破壊的スキャン? </a></li>
+<li><a href="#qa-m1"><strong>M1</strong> 観測変数: 電気 (EEG) / 血流 (fMRI) / スパイク (侵襲的) の違いは何ですか? </a></li>
+<li><a href="#qa-m2"><strong>M2</strong> 時間分解能の下限: どの時間スケールを「保存」する必要がありますか? </a></li>
+<li><a href="#qa-m3"><strong>M3</strong> 空間解像度の下限: どの粒度 (領域/列/ニューロン/シナプス) を目指すべきですか? </a></li>
+<li><a href="#qa-m4"><strong>M4</strong> 脳全体のカバレッジ: 「全体」のうちどの程度を測定する必要があるか? </a></li>
+<li><a href="#qa-m5"><strong>M5</strong> マルチモーダル統合: アライメント (MRI/EEG/fMRI) を保証する方法は? </a></li>
+<li><a href="#qa-m6"><strong>M6</strong> 介入・刺激：特定の可能性を高める「実験計画」とは何ですか？ </a></li>
+<li><a href="#qa-m7"><strong>M7</strong> 縦断：「個人特性」は日内/日内変動に対して安定していますか？ </a></li>
+<li><a href="#qa-m8"><strong>M8</strong> 品質管理: アーティファクト/欠落/ノイズを「定量化」して処理する方法は? </a></li>
+<li><a href="#qa-m9"><strong>M9</strong> 標準化: BIDS/メタデータを使用して「他の人が再試行できるように」するにはどうすればよいですか? </a></li>
 </ul>
 </details>
 
 <details class="qa-index-group" open>
-<summary><strong>Implementation</strong></summary>
+<summary><strong>復興</strong></summary>
 <ul>
-<li><a href="#qa-i0"><strong>I0</strong> Execution platform: Which one are you aiming for: general-purpose computing/GPU/HPC/neuromorphic? </a></li>
-<li><a href="#qa-i10"><strong>I10</strong> Time continuity: Discrete time (RNN) or continuous time (ODE)? </a></li>
-<li><a href="#qa-i1"><strong>I1</strong> Closed loop: How many ms of delay is allowed in real time? </a></li>
-<li><a href="#qa-i2"><strong>I2</strong> Model granularity: where do you fight between spiking/rate/abstraction? </a></li>
-<li><a href="#qa-i3"><strong>I3</strong> Computation amount: Where are the bottlenecks in memory/power/parallelization? </a></li>
-<li><a href="#qa-i4"><strong>I4</strong> Initialization: How to give the “initial state” of the model? </a></li>
-<li><a href="#qa-i5"><strong>I5</strong> Learning and drift: How to design “safe updates” for learning? </a></li>
-<li><a href="#qa-i6"><strong>I6</strong> Embodiment: How much input/output (sensors/movement/language) should we have? </a></li>
-<li><a href="#qa-i7"><strong>I7</strong> Reproducibility: Is there a guarantee that the results will not change due to implementation differences (language/hardware)? </a></li>
-<li><a href="#qa-i8"><strong>I8</strong> Safety: How to create isolation, monitoring, and containment? </a></li>
-<li><a href="#qa-i9"><strong>I9</strong> Thermodynamics: Can digital infrastructure pay for the “physical cost of consciousness”? </a></li>
+<li><a href="#qa-r0"><strong>R0</strong> 復元するための最小セットは何ですか? (構造/状態/学習ルール)</a></li>
+<li><a href="#qa-r1"><strong>R1</strong> 逆問題: 観測 (M1) から一意に推測できるものは何ですか? </a></li>
+<li><a href="#qa-r2"><strong>R2</strong> 出典推定: 脳波から脳活動の「どの表現」を求めますか? </a></li>
+<li><a href="#qa-r3"><strong>R3</strong> 状態推定: 潜在状態を定義する方法とそれを検証する方法? </a></li>
+<li><a href="#qa-r4"><strong>R4</strong> 原因: 介入に対する反応を予測できるモデルは何ですか? </a></li>
+<li><a href="#qa-r5"><strong>R5</strong> 可塑性: 学習ルールを「導入する」ことと「含まない」ことの境界は何ですか? </a></li>
+<li><a href="#qa-r6"><strong>R6</strong> パーソナライゼーション: 一般モデル + 個別パラメータ?それとも完全に個人的なものなのでしょうか？ </a></li>
+<li><a href="#qa-r7"><strong>R7</strong> 識別可能性: 推定は「固有の解」に近づいていますか?不確実性についてはどうでしょうか？ </a></li>
+<li><a href="#qa-r8"><strong>R8</strong> 圧縮：情報を破棄しても「検証基準」は維持できますか？ </a></li>
+<li><a href="#qa-r9"><strong>R9</strong> 監査: モデルの違いや障害例を「記録」するメカニズムは何ですか? </a></li>
+<li><a href="#qa-r10"><strong>R10</strong> 神経調節: 気分、注意力、伝達量をどのように組み込むか? </a></li>
 </ul>
 </details>
 
 <details class="qa-index-group" open>
-<summary><strong>Verification</strong></summary>
+<summary><strong>実装</strong></summary>
 <ul>
-<li><a href="#qa-v0"><strong>V0</strong> Verification target: Which of identity, consciousness, or behavior should be verified “engineeringly”? </a></li>
-<li><a href="#qa-v1"><strong>V1</strong> Evaluation Suite: What should we measure as “progress”? (Pre-registration)</a></li>
-<li><a href="#qa-v2"><strong>V2</strong> Causal testing: Can the stimulus/intervention produce the “same response”? </a></li>
-<li><a href="#qa-v3"><strong>V3</strong> Generalization: Can you maintain your “identity” even in out-of-distribution (OOD)? </a></li>
-<li><a href="#qa-v4"><strong>V4</strong> Long-term: How do you evaluate the handling of learning, drift, and forgetting? </a></li>
-<li><a href="#qa-v5"><strong>V5</strong> Identity: What is “causal identity” that goes beyond psychological continuity? </a></li>
-<li><a href="#qa-v6"><strong>V6</strong> Consciousness: To what extent can theory-dependent predictions be made “testable”? </a></li>
-<li><a href="#qa-v7"><strong>V7</strong> Copy/branch: How should the “principal” be handled if multiple instances run? </a></li>
-<li><a href="#qa-v8"><strong>V8</strong> LLM/Distinction from imitation: How do you judge whether the external appearance is similar but the contents are different? </a></li>
-<li><a href="#qa-v9"><strong>V9</strong> Make-up exam: Is the design designed to allow a third party to reach the “same conclusion”? </a></li>
-<li><a href="#qa-v10"><strong>V10</strong> Model distance: How do we measure the “closeness” between the biological brain and emulation? </a></li>
-<li><a href="#qa-v11"><strong>V11</strong> Topology: Is the “structure” of consciousness conserved? </a></li>
+<li><a href="#qa-i0"><strong>I0</strong> 実行プラットフォーム: 汎用コンピューティング/GPU/HPC/ニューロモーフィックのどれを目指していますか? </a></li>
+<li><a href="#qa-i10"><strong>I10</strong> 時間連続性: 離散時間 (RNN) または連続時間 (ODE)? </a></li>
+<li><a href="#qa-i1"><strong>I1</strong> 閉ループ: リアルタイムで何ミリ秒の遅延が許容されますか? </a></li>
+<li><a href="#qa-i2"><strong>I2</strong> モデルの粒度: スパイク/レート/抽象化の間でどこで戦うか? </a></li>
+<li><a href="#qa-i3"><strong>I3</strong> 計算量: メモリ/電力/並列化のボトルネックはどこですか? </a></li>
+<li><a href="#qa-i4"><strong>I4</strong> 初期化: モデルの「初期状態」を与える方法は? </a></li>
+<li><a href="#qa-i5"><strong>I5</strong> 学習とドリフト: 学習用の「安全な更新」を設計するにはどうすればよいですか? </a></li>
+<li><a href="#qa-i6"><strong>I6</strong> 実施例: どれくらいの入力/出力 (センサー/動き/言語) が必要ですか? </a></li>
+<li><a href="#qa-i7"><strong>I7</strong> 再現性: 実装の違い (言語/ハードウェア) によって結果が変わらないという保証はありますか? </a></li>
+<li><a href="#qa-i8"><strong>I8</strong> 安全性: 隔離、監視、封じ込めをどのように行うか? </a></li>
+<li><a href="#qa-i9"><strong>I9</strong> 熱力学: デジタルインフラは「意識の物理的コスト」を賄えるか? </a></li>
 </ul>
 </details>
 
 <details class="qa-index-group" open>
-<summary><strong>Deployment (social implementation)</strong></summary>
+<summary><strong>検証</strong></summary>
 <ul>
-<li><a href="#qa-d0"><strong>D0</strong> Ethical Framework: What are the rights of emulated beings? </a></li>
-<li><a href="#qa-d1"><strong>D1</strong> Consent and withdrawal: How do we design informed consent? </a></li>
-<li><a href="#qa-d2"><strong>D2</strong> Access and equity: who should have access to WBE? </a></li>
-<li><a href="#qa-d3"><strong>D3</strong> Security: How to design for exploitation risks and controls? </a></li>
+<li><a href="#qa-v0"><strong>V0</strong> 検証対象：アイデンティティ、意識、行動のどれを「工学的に」検証すべきか？ </a></li>
+<li><a href="#qa-v1"><strong>V1</strong> 評価スイート: 「進捗」として何を測定する必要がありますか? (事前登録)</a></li>
+<li><a href="#qa-v2"><strong>V2</strong> 因果関係テスト: 刺激/介入は「同じ反応」を生み出すことができるか? </a></li>
+<li><a href="#qa-v3"><strong>V3</strong> 一般化: 配布外 (OOD) でも「アイデンティティ」を維持できますか? </a></li>
+<li><a href="#qa-v4"><strong>V4</strong> 長期: 学習、ドリフト、忘却の処理をどのように評価しますか? </a></li>
+<li><a href="#qa-v5"><strong>V5</strong> アイデンティティ：心理的連続性を超えた「因果的同一性」とは何か？ </a></li>
+<li><a href="#qa-v6"><strong>V6</strong> 意識: 理論に依存した予測はどの程度まで「検証可能」にできるでしょうか? </a></li>
+<li><a href="#qa-v7"><strong>V7</strong> コピー/ブランチ: 複数のインスタンスが実行されている場合、「プリンシパル」はどのように処理されるべきですか? </a></li>
+<li><a href="#qa-v8"><strong>V8</strong> LLM／模造品との区別：外観は似ていても中身が異なるかどうかはどうやって判断するのですか？ </a></li>
+<li><a href="#qa-v9"><strong>V9</strong> 追試験：第三者が「同じ結論」に到達できるように設計されていますか？ </a></li>
+<li><a href="#qa-v10"><strong>V10</strong> モデルの距離: 生物学的な脳とエミュレーションの間の「近さ」をどのように測定するのでしょうか? </a></li>
+<li><a href="#qa-v11"><strong>V11</strong> トポロジー: 意識の「構造」は保存されていますか? </a></li>
+</ul>
+</details>
+
+<details class="qa-index-group" open>
+<summary><strong>展開（社会実装）</strong></summary>
+<ul>
+<li><a href="#qa-d0"><strong>D0</strong> 倫理的枠組み: エミュレートされた存在の権利は何ですか? </a></li>
+<li><a href="#qa-d1"><strong>D1</strong> 同意と撤回: インフォームド・コンセントをどのように設計するか? </a></li>
+<li><a href="#qa-d2"><strong>D2</strong> アクセスと公平性: WBE にアクセスできるのは誰ですか? </a></li>
+<li><a href="#qa-d3"><strong>D3</strong> セキュリティ: 悪用のリスクと制御をどのように設計するか? </a></li>
 </ul>
 </details>
 
 </section>
 
 <section class="section" id="definition" data-qa-group>
-<h2 class="section-title">Definition of forward movement (fixed at the beginning)</h2>
-<p>In order to claim "progress", it is first necessary to decide <strong>what can be reproduced to win</strong> (=evaluation axis) and<strong>what should happen to lose</strong> (=falsification conditions). Here, we will compress the underlying questions into three questions. </p>
+<h2 class="section-title">前進の定義(先頭固定)</h2>
+<p>「進歩」を主張するには、まず<strong>勝つために何を再現すればよいのか</strong>（＝評価軸）、<strong>どうすれば負けるのか</strong>（＝改竄条件）を決める必要がある。ここでは、根本的な質問を 3 つの質問に圧縮します。 </p>
 
 <details open class="qa" data-tags="meta" id="qa-p0">
 <summary>
 <span class="qa-id">P0</span>
-<span class="qa-title">What is the operational definition of "mind upload"? (What do you want to reproduce?)</span>
-<span class="qa-tags"><span class="tag">META</span></span>
+<span class="qa-title">「マインドアップロード」の運用上の定義は何ですか? （何を再現したいですか？）</span>
+<span class="qa-tags"><span class="tag">メタ</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>How does this site treat “mind uploading / WBE”? (Is it only the behavior that can be seen from the outside? / Is it the internal causal structure? / Does it include the identity and consciousness?)</p>
-<p><strong>Branch (example):</strong>(A) Reproduction of behavior/function (equivalent to black box) / (B) Reproduction of neural dynamics (emphasis on content) / (C) Includes continuity of individuality and subjectivity (strong assertion)</p>
-<p><strong>Falsifiability:</strong>If we talk about results without vague definitions, evaluation becomes an “afterthought” and comparison of progress becomes impossible</p>
-<p><strong>Next:</strong> Use the "Verification" node on this page to determine the <strong>measurable criteria</strong> and <strong>loss conditions</strong> for (A), (B), and (C).</p>
+<p><strong>質問:</strong>このサイトでは「マインド アップロード / WBE」をどのように扱っていますか? （外から見える行動だけなのか？／内部の因果構造なのか？／アイデンティティや意識も含まれるのか？）</p>
+<p><strong>分岐（例）：</strong>（A）行動・機能の再現（ブラックボックスに相当）／（B）神経動態の再現（内容重視）／（C）個性と主観の連続性を含む（強い主張）</p>
+<p><strong>反証可能性:</strong>曖昧な定義なしに結果について語ると、評価が「後付け」になり、進捗状況の比較が不可能になる</p>
+<p><strong>次:</strong> このページの「検証」ノードを使用して、<strong>測定可能な基準</strong>および<strong>損失条件</strong> (A)、(B)、および(C)を決定します。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="meta" id="qa-p1">
 <summary>
 <span class="qa-id">P1</span>
-<span class="qa-title">Where to place the claim level (claim staircase)? </span>
-<span class="qa-tags"><span class="tag">META</span></span>
+<span class="qa-title">クレームレベル(クレーム階段)をどこに配置しますか? </span>
+<span class="qa-tags"><span class="tag">メタ</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>At what level should research results be considered "progress"? </p>
+<p><strong>質問:</strong>研究結果はどのレベルで「進歩」とみなすべきですか? </p>
 <ul>
-<li><strong>L0:</strong>Data collection and reproducible analysis (standardization, quality control, retestability)</li>
-<li><strong>L1:</strong>Decoding/encoding (neural → action/stimulus or vice versa prediction)</li>
-<li><strong>L2:</strong>Generative model (can extrapolate neural/behavioral behavior even under unlearned conditions and predict interventions)</li>
-<li><strong>L3:</strong>Closed-loop implementation (interacts with the environment in real time and operates stably)</li>
-<li><strong>L4:</strong>Assertion of identity (assessing continuity of memory, values, and learning using pre-registered criteria)</li>
-<li><strong>L5:</strong>Social implementation (rights, safety, and governance are established at the same time as technology)</li>
+<li><strong>L0:</strong>データ収集と再現可能な分析 (標準化、品質管理、再テスト可能性)</li>
+<li><strong>L1:</strong>デコード/エンコード (神経→動作/刺激、またはその逆の予測)</li>
+<li><strong>L2:</strong>生成モデル (未学習の条件下でも神経/行動行動を外挿し、介入を予測できます)</li>
+<li><strong>L3:</strong>クローズドループ実装 (リアルタイムで環境と対話し、安定して動作)</li>
+<li><strong>L4:</strong>アイデンティティの主張（事前に登録された基準を使用して記憶、価値観、学習の連続性を評価）</li>
+<li><strong>L5:</strong>社会実装（技術と同時に権利・安全・ガバナンスを確立）</li>
 </ul>
-<p><strong>Falsifiability:</strong>Preventing talking about “achieving L1” as “achieving L4” (switching scope)</p>
-<p><strong>Next:</strong> Match the "required data", "required model", and "evaluation suite" for each level on this page</p>
+<p><strong>反証可能性:</strong>「L1の達成」を「L4の達成」として語ることの防止(範囲の切り替え)</p>
+<p><strong>次へ:</strong> このページの各レベルの「必要なデータ」、「必要なモデル」、「評価スイート」を照合します</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="meta" id="qa-p2">
 <summary>
 <span class="qa-id">P2</span>
-<span class="qa-title">What are the minimum deliverables? (Data/Code/Evaluation/Audit)</span>
-<span class="qa-tags"><span class="tag">META</span></span>
+<span class="qa-title">最低限の成果物は何ですか? (データ/コード/評価/監査)</span>
+<span class="qa-tags"><span class="tag">メタ</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>What must remain in order to make “progress” reproducible? </p>
+<p><strong>質問:</strong>「進歩」を再現可能にするためには何を残さなければなりませんか? </p>
 <ul>
-<li><strong>Data:</strong>Raw data + metadata (BIDS etc.) + anonymization/consent log</li>
-<li><strong>Code:</strong>Fixed version analysis pipeline (including environment and dependencies)</li>
-<li><strong>Evaluation:</strong>Pre-registered indicators/tests/baseline comparison</li>
-<li><strong>Audit:</strong>Model differences, reproduction execution logs, failure examples (negative results)</li>
+<li><strong>データ:</strong>R生データ + メタデータ (BIDS など) + 匿名化/同意ログ</li>
+<li><strong>コード:</strong>修正バージョン分析パイプライン (環境および依存関係を含む)</li>
+<li><strong>評価:</strong>事前登録されたインジケーター/テスト/ベースライン比較</li>
+<li><strong>Audit:</strong>機種差分、再現実行ログ、失敗例(マイナス結果)</li>
 </ul>
-<p><strong>Falsifiability:</strong>Only the “how to present” the results takes precedence, making the claim unverifiable</p>
-<p><strong>Next:</strong> First, lock down the L0-L2 deliverable template for Mind-Upload, including data structure and evaluation scripts.</p>
+<p><strong>反証可能性:</strong>結果の「提示方法」のみが優先され、主張が検証不能になる</p>
+<p><strong>次:</strong> まず、データ構造と評価スクリプトを含む、Mind-Upload 用の L0 ～ L2 成果物テンプレートをロックダウンします。</p>
 </div>
 </details>
 </section>
 
 <section class="section" id="tree">
-<h2 class="section-title">Tree of questions (detailed version: consolidated on one page)</h2>
-<p>Below, we will break down the technical questions into "measurement → reconstruction → implementation → verification → social implementation" and summarize them all on one page. Each item is collapsible (click to expand). </p>
+<h2 class="section-title">質問ツリー（詳細版：1ページに集約）</h2>
+<p>以下では、技術的な疑問を「計測→再構築→実装→検証→社会実装」に分解し、1ページにまとめます。各項目は折りたたむことができます (クリックして展開します)。 </p>
 <div class="key-points">
-<h4>The shortest course for those who are lost</h4>
+<h4>迷った人のための最短コース</h4>
 <ul>
-<li><strong>People who want to know the whole picture first:</strong><a href="#qa-p0">P0</a> → <a href="#qa-m0">M0</a> → <a href="#qa-r1">R1</a> → <a href="#qa-v1">V1</a> If you read them in this order, you will understand in one go what to measure, restore, and verify. </li>
-<li><strong>For those who want to start with EEG:</strong>Reading in the order of <a href="#qa-m0">M0</a> → <a href="#qa-m2">M2</a> → <a href="#qa-m9">M9</a> → <a href="#qa-v1">V1</a> will make it easier to follow from measurement conditions to evaluation. </li>
-<li><strong>For those who want to start with the topic of identity:</strong><a href="#qa-p1">P1</a> → <a href="#qa-v5">V5</a> → <a href="#qa-v7">V7</a> → <a href="#qa-d1">D1</a> If you read in this order, you will see the conditions necessary for a strong argument and the institutional barriers. </li>
+<li><strong>まずは全体像を知りたい人：</strong><a href="#qa-p0">P0</a>→<a href="#qa-m0">M0</a>→<a href="#qa-r1">R1</a>→<a href="#qa-v1">V1</a> この順に読むと、何を測定・復元・検証すればよいのかが一気にわかります。 </li>
+<li><strong>脳波計を始めたい方へ：</strong><a href="#qa-m0">M0</a>→<a href="#qa-m2">M2</a>→<a href="#qa-m9">M9</a>→<a href="#qa-v1">V1</a>の順に読むと測定条件から評価まで分かりやすくなります。 </li>
+<li><strong>アイデンティティの話題から始めたい方へ：</strong><a href="#qa-p1">P1</a>→<a href="#qa-v5">V5</a>→<a href="#qa-v7">V7</a>→<a href="#qa-d1">D1</a>この順に読むと、強い議論に必要な条件や制度的な壁が見えてきます。 </li>
 </ul>
 </div>
 
 <div class="node" id="measurement" data-qa-group>
-<div class="node-kicker">1. Measurement</div>
-<h3>Measurement: What resolution do you need? </h3>
-<p class="mini"><strong>Central question:</strong> "What part of the brain, and at what spatiotemporal resolution, should be taken to arrive at a unique object to be reconstructed?"</p>
+<div class="node-kicker">1。測定</div>
+<h3>Measurement: 必要な解像度はどれくらいですか? </h3>
+<p class="mini"><strong>中心的な質問:</strong>「再構築すべき固有のオブジェクトに到達するには、脳のどの部分を、どの時空間解像度で取得する必要がありますか?」</p>
 
 <details open class="qa" data-tags="measurement" id="qa-m0">
 <summary>
 <span class="qa-id">M0</span>
-<span class="qa-title">Assumptions for measurement: In vivo / invasive / destructive scan? </span>
-<span class="qa-tags"><span class="tag">MEASUREMENT</span></span>
+<span class="qa-title">測定の前提条件: In vivo / 侵襲的 / 破壊的スキャン? </span>
+<span class="qa-tags"><span class="tag">測定</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Based on safety and scale constraints, fix "what to aim for" on which measurement route. </p>
-<p><strong>Branch (example):</strong>(A) Train the model with non-invasive (EEG/MEG/fMRI) / (B) Strengthen causal inference with invasive (ECoG/deep/animal) / (C) Obtain structure with destructive/ultra-high resolution (future vision)</p>
-<p><strong>Conditions for disproving: </strong>Even if only the measurement is “sophisticated” without the purpose (restored object) being defined, identification will become impossible</p>
-<p><strong>Next:</strong> Determine R0 (restore target) and V0 (verification criteria) on this page first</p>
+<p><strong>質問:</strong>安全性と規模の制約を踏まえ、どの測定ルートで「何を目指すか」を決める。 </p>
+<p><strong>分岐(例):</strong>(A) 非侵襲(EEG/MEG/fMRI)でモデルを学習 / (B) 侵襲(ECoG/深部/動物)で因果推論を強化 / (C) 破壊/超高分解能で構造を取得（将来構想）</p>
+<p><strong>反証の条件：</strong>目的（復元対象）が定義されずに測定だけを「高度化」しても識別は不可能となる</p>
+<p><strong>次:</strong> 最初にこのページで R0 (復元対象) と V0 (検証基準) を決定します</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="measurement" id="qa-m1">
 <summary>
 <span class="qa-id">M1</span>
-<span class="qa-title">What is the difference between observed variables: electricity (EEG)/blood flow (fMRI)/spikes (invasive)? </span>
+<span class="qa-title">観測変数: 電気 (EEG)/血流 (fMRI)/スパイク (侵襲) の違いは何ですか? </span>
 <span class="qa-tags"><span class="tag">EEG</span><span class="tag">FMRI</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong> When the observation changes, the recoverable target also changes, whether structure, state, or learning rule. What can be identified from which observations? </p>
-<p><strong>Issues:</strong> Time-series speed, spatial resolution, ease of causal intervention, whole-brain coverage, and cost.</p>
+<p><strong>質問:</strong> 観測が変化すると、構造、状態、学習ルールなど、回復可能なターゲットも変化します。どの観察から何が特定できるでしょうか? </p>
+<p><strong>課題:</strong> 時系列速度、空間分解能、因果関係介入の容易さ、脳全体のカバー範囲、コスト。</p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Observation route</th>
-<th>What is directly observed</th>
-<th>I can say this relatively strongly</th>
-<th>Latent state that remains as it is</th>
+<th>展望ルート</th>
+<th>直接観察するもの</th>
+<th>これは割と強く言える</th>
+<th>そのままの潜在状態</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EEG / MEG</strong></td>
-<td>It is a mixed field of globally synchronized currents. </td>
-<td>You can follow ms-scale state transitions, global dynamics for each frequency band, and closed-loop time constraints. </td>
-<td>The uniqueness of deep sources, cell type, neuromodification, glial status, and current synaptic efficiency are not directly determined. </td>
+<td>グローバルに同期した電流の混合フィールドです。 </td>
+<td>ミリ秒スケールの状態遷移、各周波数帯域のグローバル ダイナミクス、閉ループ時間制約を追跡できます。 </td>
+<td>深部ソースの独自性、細胞の種類、神経修飾、グリアの状態、現在のシナプス効率は直接決定されていません。 </td>
 </tr>
 <tr>
 <td><strong>fMRI</strong></td>
-<td>Hemodynamic proxy. </td>
-<td>Region-scale recruitment, relatively slow network state, and wide coverage within the same individual are easy to see. </td>
-<td>ms-scale timing, excitatory/inhibitory separation, fast intervention responses, and the separation of neural change from vascular transfer state / CVR are not directly visible. </td>
+<td>血行動態プロキシ。 </td>
+<td>地域規模の採用、比較的遅いネットワーク状態、および同じ個人内の広範囲のカバレッジは容易に確認できます。 </td>
+<td>msスケールのタイミング、興奮性/抑制性の分離、高速介入反応、および血管伝達状態/CVRからの神経変化の分離は直接目には見えません。 </td>
 </tr>
 <tr>
-<td><strong>whole-brain spatial transcriptomics / cell atlas</strong></td>
-<td>Ex vivo molecular labels and spatial arrangement. </td>
-<td>You can enhance the cell-type taxonomy, distribution by region, and molecular map on the structural atlas. </td>
-<td>Current firing rules, synaptic efficiency, neuromodulatory/glial state, and sleep-history are not directly determined. </td>
+<td><strong>全脳空間トランスクリプトミクス / 細胞アトラス</strong></td>
+<td>Ex vivo 分子ラベルと空間配置。 </td>
+<td>構造アトラス上の細胞型分類、領域ごとの分布、分子マップを強化できます。 </td>
+<td>現在の発火規則、シナプス効率、神経調節/グリアの状態、睡眠履歴は直接決定されません。 </td>
 </tr>
 <tr>
-<td><strong>Patch-seq / morpho-electric-transcriptomics</strong></td>
-<td>Compatible with single cell transcriptome, morphology, and electrophysiology. </td>
-<td>It bridges the cell-type label and morpho-electric phenotype, and strengthens the parameter prior of the local circuit. </td>
-<td>Whole-brain coverage, same-brain circuit context, current network state, and longitudinal plastic history remain. </td>
+<td><strong>パッチシーケンス / 形態電気トランスクリプトミクス</strong></td>
+<td>単一細胞トランスクリプトーム、形態学、電気生理学と互換性があります。 </td>
+<td> 細胞型ラベルと形態電気表現型を橋渡しし、局所回路の前のパラメーターを強化します。 </td>
+<td>全脳カバレッジ、同一脳回路コンテキスト、現在のネットワーク状態、長期にわたる可塑性履歴が残ります。 </td>
 </tr>
 <tr>
 <td><strong>ECoG / SEEG</strong></td>
-<td>Local field potential of the indwelling site and intervention response. </td>
-<td>In the covered region, we proceed to local dynamics, stimulus response, and relatively strong causal verification. </td>
-<td>Unindwelled areas, whole-brain coverage, and long-term state completeness remain. </td>
+<td>留置部位の局所電場電位と介入反応。 </td>
+<td> カバーされた領域では、局所ダイナミクス、刺激応答、および比較的強力な因果関係の検証に進みます。 </td>
+<td>非居住領域、脳全体のカバー範囲、および長期的な状態の完全性が残ります。 </td>
 </tr>
 <tr>
-<td><strong>connectomics + same-brain function</strong></td>
-<td>Correspondence between structural scaffold and functional response in the same brain. </td>
-<td>Wiring rules for local circuits, cell-type dependent connections, and local correspondence between structure and function can be strengthened. </td>
-<td>Current synaptic efficiency, intrinsic excitability/homeostatic set point, neuromodulatory fields, glial/metabolic state, and longitudinal plastic history are still separate variables. </td>
+<td><strong>コネクトミクス + 同脳機能</strong></td>
+<td>同じ脳内の構造的足場と機能的反応の対応。 </td>
+<td>ローカル回路の配線ルール、セルタイプに依存した接続、構造と機能間のローカル対応を強化できます。 </td>
+<td>現在のシナプス効率、固有の興奮性/恒常性設定値、神経調節領域、グリア/代謝状態、および縦方向の可塑性履歴は、依然として別個の変数です。 </td>
 </tr>
 <tr>
-<td><strong>local transmitter sensor / axon imaging</strong></td>
-<td>Local transmitter-linked fluorescence or cholinergic / neuromodulatory axon activity in a named region. </td>
-<td>Calibrates what mixed arousal proxies do and do not mean, and constrains region-specific chemical timing under an explicit local observable. </td>
-<td>Whole-brain transmitter field, unsampled receptor families, and same-subject human maintenance-state remain unresolved. </td>
+<td><strong>局所送信センサー / 軸索イメージング</strong></td>
+<td>L指定された領域における局所伝達物質関連蛍光またはコリン作動性/神経調節性軸索活動。 </td>
+<td>C は、混合覚醒プロキシが何を意味するのか、何を意味しないのかを調整し、明示的な局所観測値の下で領域固有の化学的タイミングを制限します。 </td>
+<td>全脳伝達物質フィールド、サンプリングされていない受容体ファミリー、および同一被験者のヒト維持状態は未解決のままである。 </td>
 </tr>
 <tr>
-<td><strong>local astrocyte imaging / ensemble readout</strong></td>
-<td>Astrocyte Ca<sup>2+</sup> dynamics, network-state response, or labeled ensemble activity in a local preparation. </td>
-<td>Strengthens slow-state omission audits and local transmitter-to-astrocyte coupling claims without pretending that glia are background noise. </td>
-<td>Human whole-brain astrocyte-state, content-general controller identity, and cross-day maintenance completeness remain unresolved. </td>
+<td><strong>局所星状細胞イメージング/アンサンブル読み出し</strong></td>
+<td>アストロサイト Ca<sup>2+</sup> ダイナミクス、ネットワーク状態応答、または局所調製物における標識アンサンブル活性。 </td>
+<td> は、グリアがバックグラウンドノイズであるかのように装うことなく、低速状態省略の監査と局所伝達物質と星状細胞の結合の主張を強化します。 </td>
+<td>ヒトの全脳星状細胞の状態、コンテンツ全体のコントローラーのアイデンティティ、および日をまたぐメンテナンスの完全性は未解決のままです。 </td>
 </tr>
 <tr>
-<td><strong>human receptor / transporter atlas + occupancy PET + displacement / release PET</strong></td>
-<td>Regional receptor / transporter density priors, administered-drug target engagement, or challenge-linked release proxies. </td>
-<td>Constrains chemoarchitectural prior, selected receptor-target engagement, or bounded endogenous release proxy for named receptor families. </td>
-<td>Instantaneous whole-brain transmitter field, unsampled receptor families, and cell-specific downstream effect remain unresolved. </td>
+<td><strong>ヒト受容体/輸送体アトラス + 占有 PET + 移動/解放 PET</strong></td>
+<td>領域の受容体/トランスポーター密度事前分布、投与薬物標的結合、またはチャレンジ関連放出プロキシ。 </td>
+<td>は、指定された受容体ファミリーに対する、選択された受容体と標的の結合、または限定された内因性放出プロキシの化学構造を事前に制約します。 </td>
+<td>瞬間的な全脳伝達物質フィールド、サンプリングされていない受容体ファミリー、および細胞固有の下流効果は未解決のままです。 </td>
 </tr>
 <tr>
-<td><strong>human astrocyte-related PET: MAO-B target-validation route</strong></td>
-<td>Tracer-family-specific MAO-B binding in healthy humans under named blocker or kinetic-model assumptions. </td>
-<td>Establishes that a named MAO-B tracer family has human brain entry, selective binding, and a bounded astrocyte-related route role. </td>
-<td>Disease contrast, tracer-family transfer, covariate ceiling, local controller identity, and same-subject whole-brain maintenance-state remain unresolved. </td>
+<td><strong>ヒト星状細胞関連 PET: MAO-B ターゲット検証ルート</strong></td>
+指定されたブロッカーまたは動力学モデルの仮定の下での、健康なヒトにおける<td>Tracerファミリー特異的MAO-B結合。 </td>
+<td>は、名前付きMAO-Bトレーサーファミリーがヒトの脳への侵入、選択的結合、および限定された星状細胞関連経路の役割を持っていることを証明します。 </td>
+<td>疾患の対比、トレーサーファミリーの転移、共変量の上限、ローカルコントローラーの同一性、および同一被験者の全脳維持状態は未解決のままである。 </td>
 </tr>
 <tr>
-<td><strong>human astrocyte-related PET: MAO-B disease-context route</strong></td>
-<td>Named-tracer MAO-B contrast across a declared cohort, disease stage, and reference-model choice. </td>
-<td>Constrains a bounded disease- and cohort-conditioned astrocyte-related support-state contrast for that specific tracer family. </td>
-<td>Route-general quantification, cross-cohort generalization, smoking / severity ceiling, local controller identity, and same-subject whole-brain maintenance-state remain unresolved. </td>
+<td><strong>ヒト星状細胞関連 PET: MAO-B 疾患関連ルート</strong></td>
+<td>名前付きトレーサー MAO-B は、宣言されたコホート、疾患ステージ、および参照モデルの選択全体にわたって対比されます。 </td>
+<td> は、その特定のトレーサーファミリーについて、境界のある疾患およびコホート条件付けされた星状細胞関連のサポート状態のコントラストを制約します。 </td>
+<td>Rルート全体の定量化、コホート間の一般化、喫煙/重症度の上限、ローカルコントローラーのアイデンティティ、および同一被験者の全脳維持状態は未解決のままです。 </td>
 </tr>
 <tr>
-<td><strong>human astrocyte-related PET: MAO-B quantification / covariate route</strong></td>
-<td>Arterial or simplified MAO-B quantification behavior plus cohort- or smoking-conditioned binding shift for a named tracer family. </td>
-<td>Constrains scan-window / reference-region / kinetic-model choice and covariate ceilings instead of silently promoting the family to one generic meter. </td>
-<td>Other tracer families, local controller identity, and same-subject whole-brain maintenance-state remain unresolved. </td>
+<td><strong>ヒト星状細胞関連PET:MAO-B定量化/共変量ルート</strong></td>
+<td>動脈または単純化された MAO-B 定量化挙動と、指定されたトレーサーファミリーのコホートまたは喫煙条件付き結合シフト。 </td>
+<td>ファミリーを 1 つの汎用メーターに黙って昇格させるのではなく、スキャン ウィンドウ / 参照領域 / 動力学モデルの選択と共変量の上限を制約します。 </td>
+<td>他のトレーサファミリー、ローカルコントローラーのアイデンティティ、および同一被験者の全脳維持状態は未解決のままです。 </td>
 </tr>
 <tr>
-<td><strong>human astrocyte-related PET: I<sub>2</sub>BS route</strong></td>
-<td>Tracer-specific I<sub>2</sub>BS binding under named pharmacologic and kinetic-model assumptions. </td>
-<td>Constrains a different target-defined astrocyte-related proxy family rather than a drop-in replacement for MAO-B. </td>
-<td>Interchangeability with MAO-B routes, disease-general transfer, local controller identity, and same-subject whole-brain maintenance-state remain unresolved. </td>
+<td><strong>ヒト星状細胞関連PET:I<sub>2</sub>BSルート</strong></td>
+指定された薬理学的および速度論的モデルの仮定の下での<td>Tracer特異的I<sub>2</sub>BS結合。 </td>
+<td>は、MAO-B のドロップイン代替品ではなく、異なるターゲット定義のアストロ サイト関連プロキシ ファミリーを制約します。 </td>
+<td>MAO-B ルートとの互換性、疾患全体の伝達、ローカルコントローラーのアイデンティティ、および同一被験者の全脳維持状態は未解決のままです。 </td>
 </tr>
 <tr>
-<td><strong>human clearance-support proxy</strong></td>
-<td>CSF mobility or biomarker-efflux proxy under named device and model assumptions. </td>
-<td>Constrains macro support-state burden and blocks omission of human clearance routes from human arguments. </td>
-<td>Local immune-controller identity, responsible synapse, and same-subject whole-brain maintenance-state remain unresolved. </td>
+<td><strong>人間のクリアランスサポートプロキシ</strong></td>
+指定されたデバイスおよびモデルの仮定の下での <td>CSF モビリティまたはバイオマーカー排出プロキシ。 </td>
+<td>マクロ支持国の負担を抑制し、人間の議論から人間の清算ルートが省略されることを阻止します。 </td>
+<td>L局所免疫制御因子の正体、責任あるシナプス、および同一被験者の全脳維持状態は未解決のままである。 </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>2026-03-25 addendum: transmitter, astrocyte, receptor-PET, and clearance routes are not one stack</strong>
+<strong>2026-03-25 追記: 伝達物質、アストロサイト、受容体-PET、およびクリアランスルートは 1 つのスタックではありません</strong>
 <p>
-The remaining weakness at M1 was that one row still let <strong>local transmitter sensors</strong>, <strong>astrocyte-state readouts</strong>, <strong>human receptor / transporter PET routes</strong>, and <strong>human astrocyte / clearance proxies</strong> sound closer than they are. The primary literature does not support that compression. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity rather than one transmitter, <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local cortical acetylcholine depends on cholinergic axon activity and local clearance kinetics, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> built a regional receptor / transporter atlas, <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a> constrain occupancy and challenge-limited release, <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed minute-scale cortical astrocyte-network encoding, <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> established a first-in-human SMBT-1 MAO-B route, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> then measured reactive astrogliosis across the AD spectrum within that tracer family, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> showed that SMBT-1 quantification still depends on named scan-window / reference-region choices relative to kinetic modeling, <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al. (2026)</a> added a separate whole-body biodistribution burden for the same tracer family, <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">Matsuoka et al. (2026)</a> showed that 11C-SL25.1188 in AD depends on its own simplified quantification route, <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> plus <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a> showed that a human I<sub>2</sub>BS route is a different target class with region- and stage-dependent behavior, <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> showed that MAO-B binding can shift with cohort severity and daily cigarette use, <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a> showed in postmortem tissue that MAO-B is promising but still bounded as a reactive-astrogliosis biomarker, and <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain human CSF mobility and sleep-linked biomarker efflux. These routes do not share the same direct observable, target class, tracer family, quantity type, or safe claim ceiling. On this roadmap, they therefore stay separated into <strong>local chemical calibration</strong>, <strong>local astrocyte-state readout</strong>, <strong>human neuromodulatory PET prior / engagement</strong>, <strong>human MAO-B target-validation / disease-context / quantification routes</strong>, <strong>human I<sub>2</sub>BS astrocyte-related PET</strong>, and <strong>human support-state proxy</strong> rows.
+M1 の残りの弱点は、1 つの行で <strong> ローカル送信センサー </strong>、<strong> アストロサイト状態読み取り </strong>、<strong> ヒト受容体 / トランスポーター PET ルート </strong>、および <strong> ヒトアストロサイト / クリアランスプロキシ </strong> が実際よりも近くに聞こえることです。一次文献ではその圧縮はサポートされていません。 <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016) </a> は、瞳孔変動が 1 つの伝達物質ではなく、アドレナリン作動性とコリン作動性の両方の活動を追跡することを示しました。<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al。 (2024) </a> は、局所皮質アセチルコリンがコリン作動性軸索活性と局所クリアランス動態に依存することを示しました。<a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022) </a> は、地域受容体/輸送体アトラス、<a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong らを構築しました。 (2013)</a> および <a href="https://doi.org/10.1038/30498" target="_blank">Koepp ら。 (1998) </a> は占有を抑制し、チャレンジ制限された放出を行う、<a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al。 (2024) </a> は、分スケールの皮質星状細胞ネットワークのエンコーディングを示しました。<a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al。 (2022) </a> は、ヒト初の SMBT-1 MAO-B ルートを確立しました。<a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al。 (2022) </a> はその後、そのトレーサー ファミリー内の AD スペクトル全体で反応性星状神経膠症を測定しました。<a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al。 (2025) </a> は、SMBT-1 の定量化が依然として動態モデリングに関連した名前付きスキャン ウィンドウ/参照領域の選択に依存していることを示しました。<a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al. (2026) </a> は、同じトレーサーファミリー、<a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">matsuoka et al. に別の全身生体内分布負荷を追加しました。 (2026) </a> は、AD における 11C-SL25.1188 が独自の単純化された定量化ルートに依存することを示しました。<a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al。 (2018)</a> プラス <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022) </a> は、ヒト I<sub>2</sub>BS ルートが、領域および段階に依存した挙動を持つ異なるターゲット クラスであることを示しました。<a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026) </a> は、MAO-B 結合がコホートの重症度と毎日のタバコの使用によって変化する可能性があることを示しました。<a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024) </a> は、MAO-B が反応性星状神経膠症バイオマーカーとして有望であるものの、まだ限界があることを死後組織で示しました。 (2025) </a> プラス <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026) </a> はヒト CSF の移動性と睡眠に関連したバイオマーカーの流出を抑制します。これらのルートは、同じ直接観測可能値、ターゲット クラス、トレーサー ファミリ、数量タイプ、またはセーフ クレームの上限を共有しません。したがって、このロードマップでは、<strong> 局所化学キャリブレーション</strong>、<strong> 局所星状細胞状態読み取り</strong>、<strong> ヒト神経調節PET事前/関与</strong>、<strong> ヒトMAO-Bターゲット検証/疾患コンテキスト/定量化ルート</strong>、<strong>ヒトI<sub>2</sub>BS星状細胞関連PET</strong>、および <strong>human サポート状態プロキシ </strong> 行。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-04-01 addendum: astrocyte PET family labels are not one roadmap row</strong>
+<strong>2026-04-01 追記: アストロサイト PET ファミリーラベルは 1 つのロードマップ行ではありません</strong>
 <p>
-The remaining weakness after the earlier split was internal to the astrocyte-related PET family itself. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> answered the first-in-human target-validation question for SMBT-1, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> answered an AD-spectrum disease-context question, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> answered a tracer-family quantification question, <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al. (2026)</a> answered a whole-body biodistribution and operational-burden question, <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">Matsuoka et al. (2026)</a> answered a simplified SL25.1188 quantification question in AD, <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> answered a first-in-human I<sub>2</sub>BS target question, and <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a> plus <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> showed that cognitively impaired and AUD cohorts add stage, severity, and smoking ceilings rather than one route-free astrocyte scalar. In parallel, <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a> showed in postmortem tissue that MAO-B is a promising but bounded biomarker of reactive astrogliosis rather than a generic astrocyte-state meter. Therefore this roadmap now forces readers to keep <strong>target class</strong>, <strong>tracer family</strong>, <strong>route role</strong>, <strong>quantification choice</strong>, and <strong>cohort / covariate ceiling</strong> separate before promoting any human astrocyte-related PET result.
+初期の分割後に残った弱点は、アストロサイト関連の PET ファミリー自体の内部にありました。 <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">ヴィルマーニュ他(2022) </a> は SMBT-1、<a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne らのファーストインヒトターゲット検証の質問に答えました。 (2022) </a> は、AD スペクトラム疾患の背景に関する質問に回答しました。<a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al。 (2025) </a> はトレーサーファミリーの定量化に関する質問に答えました。<a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al. (2026)</a> は全身の生体内分布と運用負荷の質問に答えました。<a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">matsuoka et al. (2026) </a> は、AD、<a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. の簡略化された SL25.1188 定量化の質問に回答しました。 (2018)</a> はファーストインヒト I<sub>2</sub>BS ターゲットの質問に答え、<a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a>プラス<a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best他(2026) </a> は、認知障害コホートと AUD コホートが、1 つの経路のない星状細胞スカラーではなく、段階、重症度、および喫煙の上限を追加することを示しました。並行して、<a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aadら。 (2024) </a> は、MAO-B が一般的な星状細胞状態メーターではなく、反応性星状神経膠症の有望だが限界のあるバイオマーカーであることを死後組織で示しました。したがって、このロードマップでは、ヒト星状細胞関連の PET 結果を宣伝する前に、<strong> ターゲットクラス </strong>、<strong> トレーサーファミリー </strong>、<strong> ルートの役割 </strong>、<strong> 定量化の選択 </strong>、および <strong> コホート / 共変量の天井 </strong> を分離しておくことを読者に強制しています。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03 Supplement: multimodal is not a synonym for "I could see everything"</strong>
+<strong>2026-03 補足: マルチモーダルは「すべてが見える」の同義語ではありません </strong>
 <p>
-Mikulan et al. (2020), Seeber et al. (2019), Unnwongse et al. (2023), and Hao et al. (2025) moved forward what can be audited by combining HD-EEG with intracranial ground truth. By contrast, Yao et al. (2023)'s whole-brain spatial atlas, the Patch-seq bridges of Gouwens et al. (2021) and Gamlin et al. (2025), the connectomics of Dorkenwald et al. (2024) and MICrONS Consortium et al. (2025), local transmitter and astrocyte readouts such as Neyhart et al. (2024) and Cahill et al. (2024), and human proxy routes such as Hansen et al. (2022), Villemagne et al. (2022, SMBT-1 target validation / AD-spectrum), Hiraoka et al. (2025), Mesfin et al. (2026), Matsuoka et al. (2026), Tyacke et al. (2018), Livingston et al. (2022), Hirschler et al. (2025), and Dagum et al. (2026) each strengthen different variables while leaving different latent states unresolved. Therefore, this page distinguishes clearly between <strong>increasing the number of observations</strong> and <strong>sufficiently identifying the state variables required for WBE</strong>. For the stack-by-stack layout, see <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: observability and claim ceiling for each measurement stack</a>.
+ミクランら。 (2020)、シーバーら。 (2019)、Unnwongse et al。 (2023)、および Hao et al。 (2025) HD-EEG と頭蓋内のグラウンドトゥルースを組み合わせることによって監査できる内容を前進させました。対照的に、Yao et al。 (2023) の全脳空間アトラス、Gouwens らの Patch-seq ブリッジ。 (2021) および Gamlin et al。 (2025)、Dorkenwald らのコネクトミクス。 (2024) および MICrONS コンソーシアムら。 (2025)、Neyhart et al. などのローカルトランスミッターとアストロサイトの読み取り。 (2024) および Cahill et al。 (2024)、および Hansen et al. などの人間の代理ルート。 (2022)、ヴィルマーニュら。 (2022 年、SMBT-1 ターゲット検証 / AD スペクトル)、Hiraoka et al. (2025)、メスフィンら。 (2026)、松岡ら。 (2026)、Tyacke et al。 (2018)、リビングストンら。 (2022)、ヒルシュラーら。 (2025)、Dagum et al. (2026) それぞれが異なる潜在状態を未解決のままにして、異なる変数を強化します。したがって、このページでは、観測数を増やす <strong> と、WBE</strong> に必要な状態変数を十分に特定する </strong> と <strong> を明確に区別します。スタックごとのレイアウトについては、<a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 各測定スタック</a> の可観測性と要求の上限を参照してください。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-18 addendum: hemodynamic proxy also has a vascular transfer ceiling</strong>
+<strong>2026-03-18 追記: 血行動態プロキシには血管移動の上限もあります</strong>
 <p>
-For hemodynamic modalities, the remaining uncertainty is not only on the neural side. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> showed that inter-subject CBF / CBV differences contribute to BOLD reactivity, <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> showed that task BOLD magnitude corresponds strongly to CVR across multiple cortical regions, <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> showed that baseline CBF partly explains age-related components of BOLD responses, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that significant task BOLD changes can oppose oxygen-metabolism changes across a large fraction of cortex. Therefore, this roadmap does not allow a raw hemodynamic amplitude difference to be promoted directly to a neural difference without a <strong>vascular-state / CVR calibration route</strong> or explicit abstention.
+血行力学的モダリティの場合、残る不確実性は神経面だけではありません。 <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">マーフィーら(2011)</a> は、被験者間の CBF / CBV の違いが BOLD 反応性に寄与することを示しました。<a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023) </a> は、タスク BOLD の大きさが複数の皮質領域にわたる CVR に強く対応することを示しました。<a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023) </a> は、ベースライン CBF が BOLD 反応の年齢関連要素を部分的に説明することを示しました。 (2025) </a> は、重要なタスクの BOLD の変更が皮質の大部分にわたる酸素代謝の変化に対抗できることを示しました。したがって、このロードマップでは、<strong>血管状態/CVRキャリブレーションルート</strong>または明示的な棄権がなければ、生の血行力学的振幅の差を神経の差に直接促進することはできません。
 </p>
 </div>
-<p><strong>Next required:</strong>Same task/same individual, multimodal simultaneous measurement (possible range) + positioning (M5)</p>
+<p><strong>次に必要:</strong>同一作業・同一個人、多峰同時測定(可能範囲)+位置決め(M5)</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="measurement" id="qa-m2">
 <summary>
 <span class="qa-id">M2</span>
-<span class="qa-title">Lower limit on temporal resolution: which time scales should be “saved”? </span>
-<span class="qa-tags"><span class="tag">RESOLUTION</span></span>
+<span class="qa-title">時間分解能の下限: どの時間スケールを「保存」する必要がありますか? </span>
+<span class="qa-tags"><span class="tag">解像度</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>What is the necessary temporal resolution in order not to destroy phenomena related to cognition, learning, and consciousness? </p>
+<p><strong>質問:</strong>認知、学習、意識に関連する現象を破壊しないために必要な時間解像度はどれくらいですか? </p>
 <ul>
-<li><strong>Candidates:</strong>ms (spikes/phase), 10-100ms (coupling dynamics), seconds (state transitions), minutes to days (learning/plasticity)</li>
-<li><strong>Conditions for disproving:</strong>The time resolution is too coarse, making it impossible to reproduce the intervention response or closed-loop control.</li>
-<li><strong>Next:</strong> Measure the acceptable delay in the closed-loop task (I1) and back-calculate the required sampling</li>
+<li><strong>C候補:</strong>ms (スパイク/位相)、10 ～ 100ms (結合ダイナミクス)、秒 (状態遷移)、数分から数日 (学習/可塑性)</li>
+<li><strong>反証の条件:</strong>時間分解能が粗すぎるため、介入応答や閉ループ制御を再現できません。</li>
+<li><strong>次:</strong> 閉ループタスク (I1) で許容可能な遅延を測定し、必要なサンプリングを逆計算する</li>
 </ul>
 <div class="note-box">
-<strong>There is no single closed-loop time requirement</strong>
+<strong>単一閉ループ時間要件はありません</strong>
 <p>
-In the re-audit in March 2026, we decided that closed-loop timing requirements should be handled separately for each <strong>loop class</strong>. Slow neurofeedback, ERP/command BCI, phase-locked stimulation, and adaptive DBS have different dominant time scales. Wilson et al. (2010) showed that it is necessary to actually measure the latency/jitter of the entire system using hardware, and Belinskaia et al. (2020) reported that an additional 250 / 500 ms delay in alpha neurofeedback worsens learning. On the other hand, in the phase-targeting systems of Mansouri et al. (2018) and Zrenner et al. (2018), the delay should be evaluated as the <strong>phase error with respect to the target frequency</strong>, rather than the ms value itself.
+2026 年 3 月の再監査では、閉ループのタイミング要件は <strong>loop クラス </strong> ごとに個別に処理する必要があると決定しました。低速ニューロフィードバック、ERP/コマンド BCI、フェーズロック刺激、および適応 DBS には、異なる主要なタイム スケールがあります。ウィルソンら。 (2010) は、ハードウェアを使用してシステム全体のレイテンシー/ジッターを実際に測定する必要があることを示しました。 (2020) アルファニューロフィードバックにさらに 250 / 500 ミリ秒の遅延が生じると、学習が悪化すると報告しました。一方、Mansouri らのフェーズターゲティング システムでは、 (2018) および Zrenner et al。 (2018) では、遅延は ms 値自体ではなく、ターゲット周波数 </strong> に対する <strong> 位相誤差として評価される必要があります。
 </p>
 <p>
-However, the deeper point is that <strong>biological timing is a separate audit from device latency</strong>. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">Seidl et al. (2015)</a> showed that node and internode geometry can be tuned to adjust action-potential timing, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a> showed that perinodal astrocytes can reversibly alter conduction velocity, <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a> showed that saltatory conduction depends on a periaxonal nanocircuit, and <a href="https://doi.org/10.7554/eLife.73827" target="_blank">Dubey et al. (2022)</a> showed that myelination loss in PV axons disrupts fast inhibition and gamma rhythms. A loop can therefore be hardware-fast while still leaving a timing-state latent on the tissue side.
+ただし、より深い点は、<strong> 生物学的タイミングはデバイス レイテンシ </strong> とは別の監査であるということです。 <a href="https://doi.org/10.1038/ncomms9073" target="_blank">ザイドルら。 (2015)</a> は、ノードとノード間のジオメトリを調整して活動電位のタイミングを調整できることを示しました。<a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018) </a> は、結節周星状細胞が伝導速度を可逆的に変更できることを示しました。<a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al。 (2020)</a> は塩性伝導が軸索周囲ナノ回路に依存することを示し、<a href="https://doi.org/10.7554/eLife.73827" target="_blank">Dubey et al. (2022) </a> は、PV 軸索の髄鞘形成喪失が高速抑制とガンマ リズムを混乱させることを示しました。したがって、組織側にタイミング状態を潜在的に残しておきながら、ループをハードウェア高速にすることができます。
 </p>
 <p>
-The phase-targeting case now needs one more split on this page. <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> showed that phase estimability itself worsens when oscillatory amplitude and SNR are low, <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> improved prefrontal theta targeting by adding amplitude and stability constraints together with a post-hoc benchmark, <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">Kim et al. (2023)</a> showed across <strong>11 public datasets</strong> and <strong>484 participants</strong> that prediction accuracy mostly tracks power and SNR, <a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigué-Guix et al. (2022)</a> achieved reliable trial-to-trial alpha phase locking without a consistent reaction-time benefit, and <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland et al. (2025)</a> showed within-session fluctuation and low test-retest reliability of the optimal mu phase. Therefore, this roadmap no longer treats phase-targeted control as one timing number. It separates <strong>oscillation estimability</strong>, <strong>causal-versus-post-hoc benchmark</strong>, <strong>circular targeting precision</strong>, <strong>downstream effect</strong>, and <strong>phase stability / adaptation policy</strong>.
+フェーズをターゲットにしたケースについては、このページでさらに 1 つ分割する必要があります。 <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrennerら(2020)</a> は、振動振幅と SNR が低い場合、位相推定自体が悪化することを示しました。<a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021) </a> は、事後ベンチマーク <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">Kim et al. とともに振幅と安定性の制約を追加することにより、前頭前部シータ ターゲティングを改善しました。 (2023)</a> は、<strong>11 の公開データセット </strong> と <strong> 484 人の参加者 </strong> にわたって、予測精度が主にパワーと SNR を追跡することを示しました。<a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigué-Guix et al。 (2022) </a> は、一貫した反応時間の利点を持たずに、信頼性の高い試験間のアルファ位相ロックを達成しました。 (2025) </a> は、最適ミューフェーズのセッション内変動とテスト再テストの信頼性が低いことを示しました。したがって、このロードマップでは、位相目標制御を 1 つのタイミング番号として扱うことはなくなりました。これは、<strong> 振動推定可能性 </strong>、<strong> 因果対事後ベンチマーク </strong>、<strong> 円形ターゲティング精度 </strong>、<strong> 下流効果 </strong>、および <strong> 位相安定性 / 適応ポリシー </strong> を分離します。
 </p>
 <ul>
-<li><strong>Do not fix the common gate to 1 ms:</strong>Measure the end-to-end median, P95/P99, and worst-case for each loop type. </li>
-<li><strong>Audit device and tissue separately:</strong>Hardware latency/jitter does not prove that biological timing-state has been recovered. </li>
-<li><strong>For phase-targeting, log the estimability gate:</strong>Target band and spatial filter, spectral peak or power/SNR threshold, no-stim rate, and any phase-reset rejection rule. </li>
-<li><strong>For phase-targeting, keep four extra logs beyond mean phase error:</strong>Causal-versus-post-hoc benchmark, circular spread, off-target or random-phase comparator, and fixed-versus-adaptive phase policy. </li>
-<li><strong>Separate the synchronization system by path:</strong> Separately record where LSL/TTL/photodiode/loopback was measured. </li>
+<li><strong>共通ゲートを 1 ms に固定しないでください:</strong>各ループ タイプのエンドツーエンド中央値、P95/P99、およびワーストケースを測定します。 </li>
+<li><strong>デバイスと組織を個別に監査します:</strong>ハードウェアの遅延/ジッターは、生物学的なタイミング状態が回復したことを証明しません。 </li>
+<li><strong>位相ターゲティングの場合、推定可能性ゲートをログに記録します。</strong>ターゲット帯域と空間フィルター、スペクトル ピークまたはパワー/SNR しきい値、刺激なしレート、および位相リセット拒否ルール。 </li>
+<li><strong>位相ターゲティングの場合、平均位相誤差を超える 4 つの追加ログを保持します:</strong>因果対ポストホック ベンチマーク、循環スプレッド、オフターゲットまたはランダム位相比較器、および固定対適応位相ポリシー。 </li>
+<li><strong>同期システムをパスで分離します:</strong> LSL/TTL/フォトダイオード/ループバックが測定された場所を個別に記録します。 </li>
 </ul>
 <p>
-Therefore, in this roadmap, we first fix ``which loop class is handled and which timing failure mode is audited'' rather than ``judging a completely closed loop using a single threshold.'' For information on organizing entrances, see <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed-loop, delay, jitter, and safety stops</a>.
+したがって、このロードマップでは、まず「単一のしきい値を使用して完全に閉ループを判断する `which loop class is handled and which timing failure mode is audited'' rather than `」を修正します。入口の整理については、<a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ、遅延、ジッター、および安全停止</a> を参照してください。
 </p>
 </div>
 </div>
@@ -688,354 +692,354 @@ Therefore, in this roadmap, we first fix ``which loop class is handled and which
 <details open class="qa" data-tags="measurement" id="qa-m3">
 <summary>
 <span class="qa-id">M3</span>
-<span class="qa-title">Lower limit of spatial resolution: Which granularity (region/column/neuron/synapse) should we aim for? </span>
-<span class="qa-tags"><span class="tag">RESOLUTION</span></span>
+<span class="qa-title">空間解像度の下限:どの粒度(領域/列/ニューロン/シナプス)を目指すべきか? </span>
+<span class="qa-tags"><span class="tag">解像度</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong> At what spatial granularity do you assume that the information necessary for “the person's mental functions” resides? </p>
-<p><strong>Branch (example):</strong>(A) Inter-area connections + states are sufficient / (B) Local circuits are necessary / (C) Synaptic connections are necessary</p>
-<p><strong>Primary literature strongly supports:</strong> Human EEG / MEG / fMRI obtained non-invasively are basically <strong>macro proxies</strong>. EEG / MEG capture globally synchronized current fields, while fMRI captures hemodynamics, so they do not directly observe the state of each neuron or synapse. Conversely, Dorkenwald et al. (2024) and MICrONS Consortium et al. (2025) strengthen the link between high-density connectomics and same-brain function in model organisms and local cortex, but they do not justify claims of “state-complete measurement of the whole human brain.” </p>
+<p><strong>質問:</strong> 「人の精神機能」に必要な情報はどのような空間粒度で存在すると思いますか? </p>
+<p><strong>分岐(例):</strong>(A) エリア間接続+ステートだけで十分 / (B) ローカル回路が必要 / (C) シナプス接続が必要</p>
+<p><strong>主な文献は、</strong>非侵襲的に得られるヒトEEG/MEG/fMRIは基本的に<strong>マクロプロキシ</strong>であることを強く裏付けています。 EEG / MEG はグローバルに同期された電流場をキャプチャしますが、fMRI は血行動態をキャプチャするため、各ニューロンやシナプスの状態を直接観察することはありません。逆に、Dorkenwald et al. (2024) および MICrONS コンソーシアムら。 (2025) 高密度コネクトミクスとモデル生物および局所皮質における同一脳機能との関連性を強化していますが、「人間の脳全体の状態完全な測定」の主張を正当化するものではありません。 </p>
 <ul>
-<li><strong>Upper limit of non-invasive human measurement: </strong>Tracking of region-to-network level state transitions, relatively global timing constraints, and condition differences. </li>
-<li><strong>Upper bound on the connectomics front:</strong>This is an audit of structural scaffolds, sequential same-brain local scaffolds, stimulus-conditioned conditional predictors, and cell-type dependent connections, not a complete observation of current synaptic efficiency and neuromodulation fields. </li>
-<li><strong>Remaining latent states:</strong>Synaptic weight, receptor state, delay / timing-state, intrinsic excitability / homeostatic set point, neuromodulatory field, glial / metabolic state, and plastic history remain as separate variables. </li>
+<li><strong>人間による非侵襲的な測定の上限: </strong>領域からネットワークレベルへの状態遷移、比較的グローバルなタイミング制約、および条件の違いを追跡します。 </li>
+<li><strong>コネクトミクス最前線の上限:</strong>これは、構造足場、連続した同一脳の局所足場、刺激条件付き条件予測因子、および細胞型依存接続の監査であり、現在のシナプス効率と神経調節場の完全な観察ではありません。 </li>
+<li><strong>残りの潜在状態:</strong>Sシナプス重み、受容体状態、遅延/タイミング状態、固有興奮性/恒常性設定値、神経調節野、グリア/代謝状態、および可塑性履歴は別個の変数として残ります。 </li>
 </ul>
 <div class="note-box">
-<strong>2026-03-27 addendum: three per-row axes are still not enough without quantity / target / transport splits, cohort, and robustness gates</strong>
+<strong>2026-03-27 追記: 数量 / ターゲット / 輸送の分割、コホート、堅牢性ゲートがなければ、行ごとに 3 つの軸ではまだ不十分です</strong>
 <p>
-The remaining weakness in this roadmap was that M3 still let very different human-side advances sound like one generic increase in <strong>observability</strong> and still let family names stand in for one route. The primary literature does not support that compression. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> reconstructed a cubic millimeter of surgically resected human temporal cortex at nanoscale resolution, which is a <strong>local ex vivo structural scaffold</strong>. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an in vivo SV2A atlas in healthy humans (<strong>17F/16M</strong>) calibrated with postmortem autoradiography, which is a <strong>regional synaptic-density proxy</strong>. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> aggregated receptor / transporter PET into a <strong>regional chemoarchitectural prior</strong>, while <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> constrains <strong>selected occupancy / target engagement</strong> under an administered drug and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a>, plus <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> constrain <strong>challenge-linked dopamine / serotonin release proxies</strong> rather than a free readout of the whole transmitter field. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a within-subject metabolic similarity matrix from <strong>five</strong> <sup>1</sup>H-MRSI metabolites in <strong>51 healthy participants</strong> with replication in <strong>13</strong>, whereas <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> measured <strong>ATP synthesis, phosphorus metabolites, and intra-/extracellular pH</strong> in <strong>12 resting human brains</strong> with <sup>31</sup>P-MRS, <a href="https://doi.org/10.1002/mrm.26560" target="_blank">Ren et al. (2017)</a> measured <strong>PCr&rarr;&gamma;-ATP and Pi&rarr;&gamma;-ATP exchange flux</strong> in <strong>six subjects</strong> using <strong>three band-inversion modules</strong> plus a <strong>five-pool Bloch-McConnell-Solomon model</strong>, <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al. (2024)</a> mapped <strong>whole-brain intracellular NAD content</strong> at <strong>7 T</strong>, and <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a> measured <strong>task-evoked NAD<sup>+</sup> dynamics</strong> in a <strong>functionally localized occipital voxel</strong>. The deuterium routes split again inside that family: <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> implemented a <strong>7 T absolute-quantification route</strong> for HDO / Glc / Glx / Lac maps under a dedicated quantification pipeline, whereas <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> used <strong>7 T dynamic DMRSI</strong>, <strong>blood-input measurements</strong>, and an <strong>explicit kinetic model</strong> to image metabolic-rate terms. Even that is still not route-free: <a href="https://doi.org/10.1002/jmri.29532" target="_blank">Ahmadian et al. (2025)</a> showed that human-brain DMI signal depends materially on the administered <strong>[6,6'-<sup>2</sup>H<sub>2</sub>]glucose dose</strong>, and <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024)</a> showed that <strong>repeatability at 3 T</strong> depends on a named <strong>acquisition and time-point regime</strong>, with the best repeatability at <strong>120 min</strong> in that protocol. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al. (2023)</a> show that living-human timing-support already splits at the route-family level, because <strong>tract-scale transmission-speed estimation</strong> is not the same quantity as myelin-sensitive contrast. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a>, <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a>, and <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a> show that human myelin MRI is already a <strong>quantity-defined family</strong> rather than one interchangeable meter, while <a href="https://doi.org/10.1007/s00234-025-03875-9" target="_blank">Colaes et al. (2026)</a> show that <strong>T1w/FLAIR</strong> may remain a broader <strong>tissue-health-sensitive ratio</strong> rather than a myelin-specific readout. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> and <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> measure <strong>BBB water exchange</strong> with ASL and expose method- and model-dependent burdens, while <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> measures <strong>tracer-specific BBB permeability-surface-area products</strong> with high-temporal-resolution dynamic PET across <strong>three radiotracers</strong>. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> established a first-in-human SMBT-1 <strong>MAO-B route</strong> with pharmacological blockade, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> then measured reactive astrogliosis across the AD continuum within that tracer family, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> showed that even SMBT-1 depends on scan-window / reference-region versus kinetic-model choices, and <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a>, <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a>, <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a>, plus <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> show that target class, region / stage pattern, tissue expression, and cohort covariates still matter. Meanwhile, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> advanced human-side CSF mobility and sleep-linked clearance routes, but still through <strong>specialized MRI</strong> or an <strong>investigational device plus multicompartment model</strong>. Therefore, this roadmap now asks readers to label not only <strong>(1) proxy class</strong>, <strong>(2) operational maturity / acquisition burden</strong>, and <strong>(3) safe calibrator role</strong>, but also the <strong>family-internal quantity / target / transport definition</strong> before promoting any human in vivo claim.
+このロードマップの残りの弱点は、M3 が依然として人間側の非常に異なる進歩を <strong>observability</strong> の一般的な増加のように聞こえさせ、依然として 1 つのルートの代役をファミリー名にさせていることでした。一次文献ではその圧縮はサポートされていません。 <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024) </a> は、外科的に切除されたヒト側頭葉皮質の立方ミリメートルをナノスケール解像度で再構築しました。これは、<strong> 局所 ex vivo 構造足場 </strong> です。 <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">ヨハンセンら。 (2024) </a> は、死後オートラジオグラフィーで校正された健康なヒト (<strong>17F/16M</strong>) の生体内 SV2A アトラスを構築しました。これは、<strong> 領域シナプス密度プロキシ </strong> です。 <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">ハンセンら(2022) </a> は受容体 / 輸送体 PET を </strong> より前の <strong> 領域化学構造に凝集させ、一方 <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013) </a> は、投与された薬剤の下で <strong> の選択された占有 / ターゲットの関与を抑制します。</strong> と、<a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>、<a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al。 (2019)</a>、プラス <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020) </a> は、送信機フィールド全体の自由な読み取りではなく、<strong> に関連するドーパミン / セロトニン放出プロキシ </strong> にチャレンジします。 <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Llucchetti et al. (2025) </a> は、<strong>51 人の健常参加者 </strong> における <strong>five</strong> <sup>1</sup>H-MRSI 代謝物から被験者内の代謝類似性行列を導き出し、<strong>13</strong> で複製を行いました。 (2015) </a> は、<sup>31</sup>P-MRS、<a href="https://doi.org/10.1002/mrm.26560" target="_blank">Ren et al. を使用して、<strong>12 休止ヒト脳 </strong> における <strong>ATP 合成、リン代謝産物、および細胞内/外 pH</strong> を測定しました。 (2017)</a>は、<strong>3つのバンド反転モジュール</strong>と<strong>5つのプールBloch-McConnell-Solomonモデル</strong>を使用して、<strong>6人の被験者</strong>における<strong>PCrα-γ-ATPおよびPiαα-γ-ATP交換フラックス</strong>を測定した、 <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guoら(2024) </a> は、<strong> 全脳細胞内 NAD 含量 </strong> を <strong>7 T</strong>、および <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. にマッピングしました。 (2026) </a> は、<strong> 機能的に局在化した後頭ボクセル </strong> における <strong> タスク誘発 NAD<sup>+</sup> ダイナミクス </strong> を測定しました。重水素ルートはそのファミリー内で再び分岐します: <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al。 (2026)</a> は、専用の定量パイプラインの下で HDO / Glc / Glx / Lac マップの <strong>7 T 絶対定量ルート </strong> を実装しましたが、<a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> は、<strong>7 T 動的 DMRSI</strong>、<strong> 血液入力測定 </strong>、および <strong> 明示的動力学モデル </strong> を使用して代謝率項を画像化しました。それでもルートフリーではありません:<a href="https://doi.org/10.1002/jmri.29532" target="_blank">Ahmadian et al. (2025) </a> は、ヒト脳 DMI 信号が投与された <strong>[6,6'-<sup>2</sup>H<sub>2</sub>]ブドウ糖用量 </strong> に大きく依存することを示しました。 <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B'gh 他(2024) </a> は、3 T</strong> での <strong> 再現性が、指定された <strong> 取得および時点レジーム </strong> に依存し、そのプロトコルでは <strong>120 分 </strong> で最良の再現性があることを示しました。 <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al. (2023)</a> は、PH100​​Xtract スケールの伝送速度推定 </strong> がミエリン感受性造影剤と同じ量ではないため、生きている人間のタイミングサポートがすでにルートファミリーレベルで分割されていることを示しています。 <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">Hagiwara et al. (2018)</a>、<a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik 他(2024)</a>、<a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025) </a> は、ヒト ミエリン MRI がすでに 1 つの交換可能なメーターではなく、<strong> 量で定義されたファミリー </strong> であることを示しています。 (2026)</a> は、<strong>T1w/FLAIR</strong> がミエリン特異的な読み取り値ではなく、より広範な <strong> 組織健康感受性比 </strong> のままである可​​能性があることを示しています。 <a href="https://doi.org/10.1002/nbm.5256" target="_blank">モーガンら(2024)</a> および <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> は <strong>BBB 水交換 </strong> を ASL と測定し、方法およびモデルに依存する負荷を明らかにしました。 (2025) </a> は、<strong>3 つの放射性トレーサー </strong> にわたる高時間分解能ダイナミック PET を使用して、<strong> トレーサー固有の BBB 透過性表面積積 </strong> を測定します。 <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">ヴィルマーニュ他(2022)</a>は、薬理学的遮断を伴うヒト初のSMBT-1 <strong>MAO-Bルートを確立した</strong>、<a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al。 (2022) </a> はその後、そのトレーサーファミリー内の AD 連続体全体で反応性星状神経膠症を測定しました。<a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al。 (2025) </a> は、SMBT-1 ですらスキャンウィンドウ / 参照領域対速度論モデルの選択に依存することを示しました。 (2018)</a>、<a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Lリビングストン他(2022)</a>、<a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a>、プラス <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best 他(2026)</a> は、ターゲット クラス、領域/ステージ パターン、組織発現、およびコホートの共変量が依然として重要であることを示しています。一方、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschlerら。 (2025) </a> プラス <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026) </a> はヒト側 CSF の可動性と睡眠に関連したクリアランス ルートを進化させましたが、それでも <strong> 特化した MRI</strong> または <strong> 調査装置とマルチコンパートメント モデル </strong> を経由しました。したがって、このロードマップでは、ヒトの in vivo での主張を宣伝する前に、<strong>(1) 代理クラス </strong>、<strong>(2) 運用の成熟度 / 取得負担 </strong>、および <strong>(3) 安全なキャリブレーターの役割 </strong> だけでなく、<strong> ファミリーの内部量 / ターゲット / 輸送の定義 </strong> にもラベルを付けるよう読者に求めています。
 </p>
 <p>
-One more split is necessary inside the human maintenance-state family. <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">Tallman et al. (2025)</a> add a <strong>local human clinical single-unit allocation route</strong> in epilepsy patients, but with firing explicitly treated as only an indirect excitability index and with no whole-brain coverage. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, and <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a> instead define <strong>sleep-homeostasis / plasticity-recalibration routes</strong> through TMS-EEG or PAS outcomes, while <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> plus <a href="https://doi.org/10.1016/j.brs.2024.12.1193" target="_blank">Khatri et al. (2025)</a> define <strong>state-gated perturbation routes</strong> whose direct observables remain bounded plasticity-assay or corticospinal responses. Therefore, this roadmap no longer lets <strong>human excitability evidence</strong> stand in for one row: local clinical-unit allocation and noninvasive perturbation-conditioned routes now stay separate.
+人類維持国家家族の内部には、もう一つの分裂が必要である。 <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">Tallman et al. (2025) </a> は、てんかん患者における <strong> 局所ヒト臨床単一ユニット割り当てルート </strong> を追加しますが、発火は間接的な興奮性指標としてのみ明示的に扱われ、全脳はカバーされません。 <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber ら(2013)</a>、<a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn 他。 (2016)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér 他。 (2026) </a> は、代わりに <strong> 睡眠恒常性 / 可塑性再調整ルート </strong> を TMS-EEG または PAS 結果を通じて定義し、<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> プラス <a href="https://doi.org/10.1016/j.brs.2024.12.1193" target="_blank">Khatri et al. (2025) </a> は、<strong> 状態依存性摂動ルート </strong> を定義します。</strong> の直接観察可能なものは、有界可塑性アッセイまたは皮質脊髄応答のままです。したがって、このロードマップでは、<strong> 人間の興奮性の証拠 </strong> を 1 つの行の代わりにすることはなくなりました。ローカルの臨床ユニットの割り当てと非侵襲性の摂動条件付きルートは分離されたままになります。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Human route</th>
-<th>Proxy class</th>
-<th>Operational maturity / burden</th>
-<th>Safe calibrator role on this page</th>
-<th>Why the ceiling remains</th>
+<th>人のルート</th>
+<th>プロキシクラス</th>
+<th>運用の成熟度/負担</th>
+<th>このページでの安全校正器の役割</th>
+<th>天井が残る理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Local human ultrastructure</strong><br>Shapson-Coe et al. (2024)</td>
-<td>Local ex vivo structural scaffold</td>
-<td>Destructive surgical-fragment route; not repeatable living-human acquisition</td>
-<td>Structural scaffold only</td>
-<td>Ex vivo fragment from one surgical sample, not living whole-brain current state</td>
+<td><strong>ヒトの局所超微細構造</strong><br>Shapson-Coe et al. (2024)</td>
+<td>局所生体外構造足場</td>
+<td> 破壊的な手術片ルート。再現性のない生きた人間の取得</td>
+<td>構造用足場のみ</td>
+<td> 1 つの外科サンプルからの生体外断片、生きた全脳の現在の状態ではない </td>
 </tr>
 <tr>
-<td><strong>SV2A PET atlas</strong><br>Johansen et al. (2024)</td>
-<td>Regional synaptic-density proxy</td>
-<td>Healthy-cohort atlas; tracer and quantification dependent</td>
-<td>Bounded synaptic-density prior</td>
-<td>Tracer-defined atlas; not momentary synaptic efficacy or cell-specific plasticity state</td>
+<td><strong>SV2A PET アトラス</strong><br>Johansen et al. (2024)</td>
+<td>領域シナプス密度プロキシ</td>
+<td>健康コホートアトラス;トレーサーおよび定量依存</td>
+<td>有界シナプス密度事前</td>
+<td>Tracer 定義のアトラス。瞬間的なシナプス効果や細胞固有の可塑性状態ではない</td>
 </tr>
 <tr>
-<td><strong>Receptor / transporter atlas</strong><br>Hansen et al. (2022)</td>
-<td>Regional chemoarchitectural prior</td>
-<td>Aggregated PET atlas across many healthy individuals; receptor-family limited</td>
-<td>Bounded neuromodulatory-family prior</td>
-<td>Does not read out current transmitter release, occupancy, or whole-brain neuromodulatory state</td>
+<td><strong>受容体/輸送体アトラス</strong><br>Hansen et al. (2022)</td>
+<td>地域化学建築以前</td>
+<td>多くの健康な人の集約された PET アトラス。受容体ファミリー限定</td>
+<td>境界神経調節ファミリー以前</td>
+<td> 現在の送信機の解放、占有、または全脳の神経調節状態を読み出しません</td>
 </tr>
 <tr>
-<td><strong>Occupancy PET</strong><br>Wong et al. (2013)</td>
-<td>Ligand- and dose-limited target-engagement proxy</td>
-<td>Administered-drug, receptor-family, and bounded scan-window design</td>
-<td>Selected receptor-target engagement</td>
-<td>Does not recover endogenous transmitter release, the general transmitter field, unsampled receptor families, or cell-specific downstream effect</td>
+<td><strong>占有率 PET</strong><br>Wong et al. (2013)</td>
+<td>Lリガンドおよび用量制限されたターゲットエンゲージメントプロキシ</td>
+<td>投与薬物、受容体ファミリー、および境界付きスキャンウィンドウ設計</td>
+<td>選択された受容体と標的の結合</td>
+<td>内因性伝達物質の放出、一般的な伝達物質フィールド、サンプリングされていない受容体ファミリー、または細胞特異的な下流効果は回復しません</td>
 </tr>
 <tr>
-<td><strong>Displacement / release-sensitive PET</strong><br>Koepp et al. (1998); Lippert et al. (2019); Erritzoe et al. (2020)</td>
-<td>Challenge-linked endogenous release proxy</td>
-<td>Task-, drug-, ligand-, receptor-family-, kinetic-model-, and window-specific design</td>
-<td>Bounded dopamine / serotonin release proxy under a named challenge</td>
-<td>Does not recover a task-general transmitter field, unsampled receptor families, or cell-specific downstream effect outside the measured window</td>
+<td><strong>変位/解放感受性 PET</strong><br>Koepp et al. (1998);リッパートら。 （2019年）;エリッツォーら。 (2020)</td>
+<td>チャレンジリンク型内因性放出プロキシ</td>
+<td>Tタスク、薬物、リガンド、受容体ファミリー、動態モデル、およびウィンドウ固有の設計</td>
+<td>名前付きチャレンジの下で制限されたドーパミン/セロトニン放出プロキシ</td>
+<td> タスク一般的な送信フィールド、サンプリングされていない受容体ファミリー、または測定ウィンドウ外の細胞固有の下流効果は回復しません</td>
 </tr>
 <tr>
-<td><strong><sup>1</sup>H-MRSI metabolic connectome</strong><br>Lucchetti et al. (2025)</td>
-<td>Parcel-level biochemical similarity scaffold</td>
-<td>51 healthy participants with 13-person replication; QC and parceling dependent</td>
-<td>Bounded biochemical scaffold</td>
-<td>Five-metabolite similarity matrix, not high-resolution metabolite distribution, not energetic balance, and not kinetic rate imaging</td>
+<td><strong><sup>1</sup>H-MRSI代謝コネクトーム</strong><br>Lucchetti et al. (2025)</td>
+<td>パーセルレベルの生化学的類似性足場</td>
+<td>51 人の健康な参加者、13 人の複製。 QCと梱包に依存</td>
+<td>境界付き生化学足場</td>
+<td>5 つの代謝物類似性マトリックス、高解像度の代謝物分布ではなく、エネルギーバランスではなく、運動速度イメージングではありません</td>
 </tr>
 <tr>
-<td><strong>Human <sup>31</sup>P-MRS energetic balance</strong><br>Ren et al. (2015)</td>
-<td>Macro <sup>31</sup>P energetic-balance proxy</td>
-<td>7 T resting-brain spectroscopy in 12 subjects; phosphorus-specific acquisition and fitting burden</td>
-<td>Bounded energetic-balance proxy</td>
-<td>ATP synthesis / phosphorus metabolite / pH balance, not branch-local mitochondrial controller state</td>
+<td><strong>ヒト<sup>31</sup>P-MRSエネルギーバランス</strong><br>Ren et al. (2015)</td>
+<td>マクロ<sup>31</sup>Pエネルギーバランスプロキシ</td>
+<td>7 被験者 12 名における T 安静時脳分光法。リン特有の取得とフィッティング負荷</td>
+<td>境界のあるエネルギーバランスプロキシ</td>
+<td>ATP 合成 / リン代謝物 / pH バランス、分岐局所ミトコンドリア コントローラー状態ではない </td>
 </tr>
 <tr>
-<td><strong>Human <sup>31</sup>P MT exchange-flux route</strong><br>Ren et al. (2017)</td>
-<td>Model-conditioned macro <sup>31</sup>P MT exchange-flux proxy</td>
-<td>7 T band-inversion transfer route in 6 subjects with three ~8 min modules and five-pool modeling burden</td>
-<td>Bounded <sup>31</sup>P exchange-flux proxy</td>
-<td>PCr&rarr;&gamma;-ATP and Pi&rarr;&gamma;-ATP exchange-flux under a named MT model, not resting energetic balance, NAD mapping, or branch-local mitochondrial controller state</td>
+<td><strong>ヒト<sup>31</sup>P MT交換フラックスルート</strong><br>Ren et al. (2017)</td>
+<td>モデル条件付きマクロ <sup>31</sup>P MT交換フラックスプロキシ</td>
+<td>7 3 ～ 8 分のモジュールと 5 つのプール モデリング負荷を伴う 6 人の被験者における T バンド反転伝達経路</td>
+<td>有界<sup>31</sup>P交換フラックスプロキシ</td>
+<td>PCr&rarr;γ-ATP および Pi&rarr;γ-ATP 交換フラックスは、名前付き MT モデルの下で、安静時のエネルギーバランス、NAD マッピング、または分岐局所ミトコンドリア コントローラー状態ではありません</td>
 </tr>
 <tr>
-<td><strong>Human <sup>31</sup>P NAD-content mapping</strong><br>Guo et al. (2024)</td>
-<td>Macro <sup>31</sup>P NAD-content map proxy</td>
-<td>7 T whole-brain route with subspace-based denoising, low-concentration spectral fitting, and long acquisition burden</td>
-<td>Bounded whole-brain NAD-content map proxy</td>
-<td>Not task-evoked local NAD dynamics, not branch-local mitochondrial controller state, and not whole-brain moment-to-moment redox control</td>
+<td><strong>ヒト<sup>31</sup>P NAD含有量マッピング</strong><br>Guoら。 (2024)</td>
+<td>マクロ <sup>31</sup>P NAD コンテンツ マップ プロキシ</td>
+<td>7 部分空間ベースのノイズ除去、低濃度スペクトル フィッティング、長時間取得負荷を備えた T 全脳ルート</td>
+<td>境界のある全脳 NAD コンテンツ マップ プロキシ</td>
+<td>タスク誘発性の局所 NAD ダイナミクスではなく、分岐局所のミトコンドリア コントローラー状態ではなく、脳全体の瞬間瞬間の酸化還元制御でもない</td>
 </tr>
 <tr>
-<td><strong>Human <sup>31</sup>P functional NAD dynamics</strong><br>Kaiser et al. (2026)</td>
-<td>Localized functional <sup>31</sup>P NAD-dynamics proxy</td>
-<td>7 T task fMRS in 25 volunteers with prior fMRI localization and one occipital voxel</td>
-<td>Bounded task-locked local NAD-dynamics proxy</td>
-<td>Not whole-brain NAD-content mapping, not task-general energetic-controller identity, and not branch-local mitochondrial controller state</td>
+<td><strong>ヒト<sup>31</sup>P機能的NADダイナミクス</strong><br>Kaiserら。 (2026)</td>
+<td>ローカライズされた機能 <sup>31</sup>P NAD ダイナミクス プロキシ</td>
+<td>7 以前の fMRI 位置特定と 1 つの後頭ボクセルを持つ 25 人のボランティアにおける T タスク fMRS</td>
+<td>境界タスクロックされたローカル NAD ダイナミクス プロキシ</td>
+<td>脳全体の NAD 内容マッピングではなく、タスク一般のエネルギーコントローラーのアイデンティティではなく、枝局所的なミトコンドリアコントローラーの状態ではありません</td>
 </tr>
 <tr>
-<td><strong>Deuterium metabolite-mapping / absolute-quantification route</strong><br>Karkouri et al. (2026)</td>
-<td>Macro deuterium metabolite-mapping / absolute-quantification proxy</td>
-<td>7 T specialized route with absolute-quantification pipeline, dedicated hardware, limited cohorts, and route-specific dose / timing burden</td>
-<td>Bounded deuterium metabolite-mapping proxy</td>
-<td>Not kinetic-rate imaging, not branch-local ATP reserve, and not cell-specific bioenergetic controller state</td>
+<td><strong>重水素代謝物マッピング/絶対定量ルート</strong><br>Karkouri et al. (2026)</td>
+<td>マクロ重水素代謝物マッピング/絶対定量プロキシ</td>
+<td>7 絶対定量パイプライン、専用ハードウェア、限定されたコホート、およびルート固有の用量 / タイミング負荷を備えた T 特化ルート</td>
+<td>有界重水素代謝物マッピング プロキシ</td>
+<td>速度イメージングではなく、分岐局所ATP予備量ではなく、細胞固有の生体エネルギーコントローラー状態ではありません</td>
 </tr>
 <tr>
-<td><strong>Deuterium kinetic-rate imaging</strong><br>Li et al. (2025)</td>
-<td>Model-conditioned macro deuterium kinetic-rate proxy</td>
-<td>7 T dynamic DMRSI with blood-input, explicit kinetic model, very small cohort, and route-specific dose / timing burden</td>
-<td>Bounded deuterium kinetic-rate proxy</td>
-<td>Not one general biochemical meter, not branch-local ATP reserve, and not cell-specific bioenergetic controller state</td>
+<td><strong>重水素速度イメージング</strong><br>Li et al. (2025)</td>
+<td>モデル条件付きマクロ重水素運動速度プロキシ</td>
+<td>7 血液入力、明示的な動態モデル、非常に小さなコホート、および経路固有の用量/タイミング負荷を伴う T 動的 DMRSI</td>
+<td>有界重水素運動速度プロキシ</td>
+<td> 1 つの一般的な生化学メーターではなく、ブランチローカル ATP リザーブではなく、細胞固有の生体エネルギーコントローラー状態でもありません</td>
 </tr>
 <tr>
-<td><strong>Human tract-scale transmission-speed estimation</strong><br>van Blooijs et al. (2023)</td>
-<td>Tract-scale timing-support proxy</td>
-<td>Development-sensitive transfer-time / tract-geometry human route rather than myelin-specific quantification or per-axon measurement</td>
-<td>Bounded tract-scale timing-support proxy</td>
-<td>Not a myelin-specific quantity, not node / internode microgeometry, and not a per-axon conduction controller readout</td>
+<td><strong>人道規模の伝送速度推定</strong><br>van Blooijs et al. (2023)</td>
+<td>Tract スケール タイミング サポート プロキシ</td>
+<td>ミエリン特異的な定量化や軸索ごとの測定ではなく、発生に敏感な移動時間/管形状のヒト経路</td>
+<td>境界付きトラクトスケールタイミングサポートプロキシ</td>
+<td>ミエリン固有の量ではなく、ノード/ノード間の微細形状ではなく、軸索ごとの伝導コントローラーの読み取り値でもありません</td>
 </tr>
 <tr>
-<td><strong>Quantity-defined myelin MRI / tissue-health-sensitive ratio family</strong><br>Hagiwara et al. (2018); Baadsvik et al. (2024); Galbusera et al. (2025); Colaes et al. (2026)</td>
-<td>Quantity-defined macro myelin proxy family plus a tissue-health-sensitive ratio route</td>
-<td>Metric-dependent validity; bilayer mapping remains proof-of-principle, remyelination calibration remains special-case, and T1w/FLAIR may remain broader than myelin</td>
-<td>Bounded myelin / timing-support or broader tissue-health family, depending on route</td>
-<td>MT<sub>sat</sub>, SyMRI, T1w/T2w, qT1, bilayer, and T1w/FLAIR routes do not share one interchangeable claim ceiling, one common quantity, do not collapse into tract-speed estimation, and do not provide a per-axon timing readout</td>
+<td><strong>数量定義ミエリン MRI / 組織健康感受性比率ファミリー</strong><br>Hagiwara et al. （2018年）; Baadsvik et al. (2024);ガルブセラら。 (2025);コラエスら。 (2026)</td>
+<td>量で定義されたマクロミエリンプロキシファミリーと組織の健康に敏感な比率のルート</td>
+<td>メトリック依存の有効性。二重層マッピングは原理証明のままであり、再ミエリン化キャリブレーションは特殊なケースのままであり、T1w/FLAIR はミエリン</td> よりも広いままである可​​能性がある
+<td>境界ミエリン / タイミングサポートまたはより広範な組織健康ファミリー（経路に応じて）</td>
+<td>MT<sub>sat</sub>、SyMRI、T1w/T2w、qT1、二重層、および T1w/FLAIR ルートは、1 つの交換可能なクレーム上限、1 つの共通量を共有せず、管速度推定に崩壊せず、軸索ごとのタイミング読み取りを提供しません</td>
 </tr>
 <tr>
-<td><strong>Human clinical single-unit allocation route</strong><br>Tallman et al. (2025)</td>
-<td>Local clinical-unit allocation-related proxy</td>
-<td>Implanted-human hippocampal single-unit route in epilepsy patients; high-locality and pathology-conditioned</td>
-<td>Bounded local human allocation-related calibrator</td>
-<td>Not a whole-brain excitability meter, not direct AIS / channel-state readout, and not a route-free separation of pre-existing versus learning-induced excitability</td>
+<td><strong>ヒト臨床単一ユニット割り当てルート</strong><br>Tallman et al. (2025)</td>
+<td>ローカル診療ユニット割り当て関連プロキシ</td>
+<td>てんかん患者におけるヒト海馬単一ユニットの移植ルート。局所性が高く病理学的に条件付けされた</td>
+<td>有界ローカル人員割り当て関連キャリブレータ</td>
+<td>脳全体の興奮性メーターではなく、AIS / チャネル状態の直接読み出しではなく、既存の興奮性と学習誘発性の興奮性をルートフリーで分離するものではありません</td>
 </tr>
 <tr>
-<td><strong>Human sleep-homeostasis / plasticity route</strong><br>Huber et al. (2013); Kuhn et al. (2016); Fehér et al. (2026)</td>
-<td>Perturbation-conditioned maintenance proxy</td>
-<td>Noninvasive human TMS-EEG / PAS route with sleep-history manipulation burden</td>
-<td>Bounded excitability / plasticity-support proxy</td>
-<td>Does not identify which cell class, synapse, AIS / channel change, or recovery controller produced the change</td>
+<td><strong>ヒトの睡眠恒常性/可塑性経路</strong><br>Huber et al. (2013);クーンら。 (2016);フェエールら。 (2026)</td>
+<td>摂動条件付きメンテナンス プロキシ</td>
+<td>睡眠履歴操作負担を伴う非侵襲的ヒトTMS-EEG / PASルート</td>
+<td>有界興奮性/可塑性サポートプロキシ</td>
+<td>どのセルクラス、シナプス、AIS/チャネル変更、または回復コントローラーが変更を生成したかを識別しません</td>
 </tr>
 <tr>
-<td><strong>Human state-gated perturbation route</strong><br>Zrenner et al. (2018); Khatri et al. (2025)</td>
-<td>State-gated perturbation proxy</td>
-<td>Closed-loop stimulation route with state-estimator and stimulation-timing burden</td>
-<td>Bounded state-gated excitability / corticospinal proxy</td>
-<td>Does not measure excitability mechanism itself, AIS geometry, channel distribution, or long-horizon recovery control</td>
+<td><strong>ヒト状態依存性摂動ルート</strong><br>Zrenner et al. （2018年）;カトリら。 (2025)</td>
+<td>ステートゲート摂動プロキシ</td>
+<td>状態推定器と刺激タイミング負荷を備えた閉ループ刺激ルート</td>
+<td>有界状態ゲート興奮性/皮質脊髄プロキシ</td>
+<td>興奮メカニズム自体、AISジオメトリ、チャネル分布、または長期回復制御は測定しません</td>
 </tr>
 <tr>
-<td><strong>Human BBB water-exchange MRI</strong><br>Morgan et al. (2024); Padrela et al. (2025)</td>
-<td>Macro BBB water-exchange proxy</td>
-<td>ASL method- and model-dependent route with healthy-adult / lifespan burden</td>
-<td>Bounded BBB water-exchange proxy</td>
-<td>Water-exchange estimates are not tracer-specific transport and do not read out pericyte / endothelial controller identity</td>
+<td><strong>ヒトBBB水交換MRI</strong><br>Morgan et al. (2024);パドレラら。 (2025)</td>
+<td>マクロ BBB 水交換プロキシ</td>
+<td>ASL 法およびモデルに依存した、健康な成人 / 生涯にわたる負担を伴うルート</td>
+<td>有界BBB水交換プロキシ</td>
+<td>水交換の推定値はトレーサー固有の輸送ではなく、周皮細胞/内皮コントローラーのアイデンティティを読み取れません</td>
 </tr>
 <tr>
-<td><strong>Tracer-specific BBB PET transport</strong><br>Chung et al. (2025)</td>
-<td>Tracer-specific BBB transport proxy</td>
-<td>High-temporal-resolution dynamic PET plus kinetic modeling across three radiotracers</td>
-<td>Bounded tracer-specific BBB transport proxy</td>
-<td>Named tracer PS estimate, not one generic BBB permeability scalar or local controller readout</td>
+<td><strong>Tracer 特異的 BBB PET 輸送</strong><br>Chung et al. (2025)</td>
+<td>Tracer 固有の BBB トランスポート プロキシ</td>
+<td>高時間分解能ダイナミック PET と 3 つの放射性トレーサーにわたる動態モデリング</td>
+<td>境界トレーサー固有の BBB トランスポート プロキシ</td>
+<td>名前付きトレーサーの PS 推定値。一般的な BBB 透過率スカラーまたはローカル コントローラーの読み取り値ではありません</td>
 </tr>
 <tr>
-<td><strong>Human blood-CSF barrier / choroid-plexus perfusion / transport family</strong><br>Zhao et al. (2020); Sun et al. (2024); Petitclerc et al. (2021, 2026); Anderson et al. (2022); Wu et al. (2026)</td>
-<td>Choroid-plexus perfusion, blood-to-CSF water transport, choroid-plexus water cycling, apparent BCSFB exchange, or joint BBB-versus-BCSFB ASL exchange</td>
-<td>ASL / ultra-long-TE ASL / DCE-MRI / REXI route family with route-specific model burden, validation ceiling, and small-cohort dependence outside the HCP-Aging perfusion analysis</td>
-<td>Bounded BCSFB / choroid-plexus support-state proxy family</td>
-<td>Perfusion is not blood-to-CSF transport, water cycling is not apparent exchange, and none of these rows identify a generic BBB scalar, a generic clearance truth, or choroid-plexus epithelial controller identity</td>
+<td><strong>ヒト血液CSF関門/脈絡叢灌流/輸送ファミリー</strong><br>Zhao et al. （2020）;サンら。 (2024);プチクレールら。 (2021、2026);アンダーソンら。 (2022);ウーら。 (2026)</td>
+<td>脈絡叢灌流、血液からCSFへの水輸送、脈絡叢の水循環、見かけのBCSFB交換、または共同BBB対BCSFB ASL交換</td>
+<td>ASL / 超長 TE ASL / DCE-MRI / REXI ルートファミリー、ルート固有のモデル負担、検証上限、HCP 老化灌流解析外の小コホート依存性</td>
+<td>境界のあるBCSFB / 脈絡叢サポート状態プロキシファミリー</td>
+<td>灌流は血液からCSFへの輸送ではなく、水の循環は明らかな交換ではなく、これらの行のいずれも一般的なBBBスカラー、一般的なクリアランスの真実、または脈絡叢上皮コントローラーのアイデンティティを特定していません</td>
 </tr>
 <tr>
-<td><strong>Human MAO-B PET: SMBT-1 first-in-human target validation</strong><br>Villemagne et al. (2022)</td>
-<td>Tracer-family-specific MAO-B target-validation proxy</td>
-<td>Dynamic human PET with selegiline block and reversible-binding readout</td>
-<td>Bounded MAO-B target-validation route</td>
-<td>Shows that SMBT-1 can read a human MAO-B route, not that MAO-B disease contrast, quantification transfer, or generic astrocyte-state are solved</td>
+<td><strong>ヒトMAO-B PET：SMBT-1ファーストインヒトターゲット検証</strong><br>Villemagne et al. (2022)</td>
+<td>Tracer ファミリ固有の MAO-B ターゲット検証プロキシ</td>
+<td>セレギリンブロックおよび可逆的結合読み出し機能を備えたダイナミックヒトPET</td>
+<td>境界のある MAO-B ターゲット検証ルート</td>
+<td>SMBT-1 はヒト MAO-B 経路を読み取ることができるが、MAO-B 疾患のコントラスト、定量化転移、または一般的な星状細胞の状態が解決されるわけではないことを示す</td>
 </tr>
 <tr>
-<td><strong>Human MAO-B PET: SMBT-1 AD-spectrum contrast</strong><br>Villemagne et al. (2022)</td>
-<td>Pathology-context MAO-B contrast proxy</td>
-<td>AD-continuum cohort route with subcortical-white-matter reference and cross-sectional cognitive / amyloid / tau comparison</td>
-<td>Bounded AD-spectrum astrocyte-related support-state proxy</td>
-<td>Not a route-free MAO-B meter, not generalizable to all diseases, and not a local controller readout</td>
+<td><strong>ヒトMAO-B PET：SMBT-1 ADスペクトルコントラスト</strong><br>Villemagne et al。 (2022)</td>
+<td>病理学コンテキスト MAO-B コントラスト プロキシ</td>
+<td>AD 皮質下白質参照および断面認知 / アミロイド / タウ比較を含む連続コホート ルート</td>
+<td>境界のある AD スペクトル星状細胞関連サポート状態プロキシ</td>
+<td>ルートフリーの MAO-B メーターではなく、すべての疾患に一般化できるわけではなく、ローカル コントローラーの読み取り値ではありません</td>
 </tr>
 <tr>
-<td><strong>Human MAO-B PET: SMBT-1 quantification / biodistribution burden</strong><br>Hiraoka et al. (2025); Mesfin et al. (2026)</td>
-<td>Tracer-family quantification and biodistribution route</td>
-<td>Quantification depends on named scan-window / reference choice or arterial modeling, while whole-body biodistribution adds organ-distribution and late-gallbladder burden</td>
-<td>Bounded SMBT-1 acquisition / quantification route</td>
-<td>Not interchangeable with disease contrast, not one generic MAO-B number, and not proof that other tracer families or cohorts share the same ceiling</td>
+<td><strong>ヒトMAO-B PET：SMBT-1定量化/生体内分布負荷</strong><br>Hiraoka et al. (2025);メスフィンら。 (2026)</td>
+<td>トレーサーファミリーの定量と生体内分布経路</td>
+<td>定量化は指定されたスキャンウィンドウ/参照の選択または動脈モデリングに依存しますが、全身の生体内分布は臓器の分布と後期胆嚢の負担を追加します</td>
+<td>有界SMBT-1取得・定量ルート</td>
+<td>疾患対比と互換性がなく、一般的な MAO-B 番号が 1 つもなく、他のトレーサーファミリーやコホートが同じ上限を共有していることの証明にもならない</td>
 </tr>
 <tr>
-<td><strong>Human MAO-B PET: SL25.1188 disease / severity route</strong><br>Matsuoka et al. (2026); Best et al. (2026)</td>
-<td>Tracer-family-specific MAO-B disease / covariate proxy</td>
-<td>AD quantification without arterial sampling and AUD severity / smoking-conditioned binding route under named tracer and model assumptions</td>
-<td>Bounded SL25.1188 disease- and covariate-conditioned proxy</td>
-<td>Not a generic MAO-B readout across diseases, not covariate-free, and not interchangeable with SMBT-1 results</td>
+<td><strong>ヒトMAO-B PET：SL25.1188疾患/重症度ルート</strong><br>松岡ら。 (2026);ベストら。 (2026)</td>
+<td>Tracer ファミリー特異的 MAO-B 疾患 / 共変量プロキシ</td>
+<td>AD の定量化（動脈サンプリングなし）および AUD 重症度 / 指定されたトレーサーおよびモデルの仮定に基づく喫煙条件付き結合経路</td>
+<td>有界 SL25.1188 疾患および共変量条件付きプロキシ</td>
+<td>さまざまな疾患にわたる一般的な MAO-B 測定値ではなく、共変量がなく、SMBT-1 の結果と互換性がありません</td>
 </tr>
 <tr>
-<td><strong>Human I<sub>2</sub>BS astrocyte-related PET</strong><br>Tyacke et al. (2018); Livingston et al. (2022)</td>
-<td>I<sub>2</sub>BS target-defined astrocyte-related proxy</td>
-<td>First-in-human idazoxan-blocked PET plus cognitively impaired cohort route with region- and stage-dependent behavior</td>
-<td>Bounded I<sub>2</sub>BS astrocyte-related proxy</td>
-<td>Different target class from MAO-B, not drop-in comparable with MAO-B tracer families, and not a generic astrocyte-state meter</td>
+<td><strong>ヒト I<sub>2</sub>BS 星状細胞関連 PET</strong><br>Tyacke et al. （2018年）;リヴィングストンら。 (2022)</td>
+<td>I<sub>2</sub>BS ターゲット定義アストロサイト関連プロキシ</td>
+<td>ヒト初のイダゾキサンブロックPETと、領域および段階に依存した行動を伴う認知障害コホートルート</td>
+<td>境界のあるI<sub>2</sub>BSアストロサイト関連プロキシ</td>
+<td>MAO-Bとは異なるターゲットクラス、MAO-Bトレーサーファミリーと同等のドロップインではなく、一般的なアストロサイト状態メーターではありません</td>
 </tr>
 <tr>
-<td><strong>Human clearance-support route families</strong><br>Fultz et al. (2019); Kim, Huang, &amp; Liu (2025); Lim et al. (2025); Yoo et al. (2025); Eide et al. (2023); Hirschler et al. (2025); Dagum et al. (2026)</td>
-<td>Macro support-state proxy family</td>
-<td>Sleep-linked CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned net flow, exercise-conditioned contrast influx / meningeal-lymphatic flow, intrathecal tracer / CSF-to-blood clearance, specialized CSF-mobility MRI, or device- and model-heavy overnight biomarker-efflux inference</td>
-<td>Bounded clearance-support proxy family</td>
-<td>These are different clearance-transport rows with different observables, intervention regimes, crossed boundaries, and model burdens, not a route-free glymphatic meter or direct readout of cell-specific immune control, responsible synapse, or local maintenance controller</td>
+<td><strong>ヒトクリアランスサポートルートファミリー</strong><br>Fultzら。 （2019年）;キム、ファン、＆amp;劉 (2025);リムら。 (2025);ユら。 (2025);アイデら。 (2023);ヒルシュラーら。 (2025);ダガムら。 (2026)</td>
+<td>マクロサポート状態プロキシファミリー</td>
+<td>睡眠連動CSF振動、実質-CSF水交換、呼吸条件正味流量、運動条件造影剤流入/髄膜リンパ流、くも膜下腔内トレーサー/CSFから血液へのクリアランス、特殊なCSF移動度MRI、またはデバイスおよびモデルを多用した夜間のバイオマーカー排出推論</td>
+<td>境界クリアランスサポートプロキシファミリー</td>
+<td>これらは、異なる観察対象、介入レジーム、交差境界、およびモデル負荷を備えた異なるクリアランス輸送列であり、ルートフリーのグリンファティックメーターや細胞特異的免疫制御、責任シナプス、または局所維持コントローラーの直接読み取りではありません</td>
 </tr>
 </tbody>
 </table>
 <p>
-However, the per-row axes are still not enough when several human rows are combined in one argument. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derive the main 1H-MRSI route from <strong>adolescents</strong> with a separate <strong>15-35-year</strong> replication cohort, <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> and <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> keep BBB water-exchange claims inside ASL method choices and healthy-adult cohorts, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> report a <strong>7 T healthy-younger-adult</strong> CSF-mobility route, <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> study <strong>healthy older adults</strong> in a randomized sleep-deprivation crossover, <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> remains a <strong>healthy-volunteer first-in-human</strong> SMBT-1 target-validation route, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> remains a <strong>pathology-context MAO-B</strong> astrocyte-related PET route across the AD continuum, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> shows that the SMBT-1 route still depends on scan-window / reference-region versus kinetic-model choice, <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al. (2026)</a> keeps whole-body biodistribution as a separate operational burden, <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">Matsuoka et al. (2026)</a> adds an arterial-free SL25.1188 AD quantification route, <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> shows that MAO-B binding can shift with AUD severity and daily cigarette use, <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a> shows that the I<sub>2</sub>BS route changes with region and impairment stage, and <a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025)</a> constrains remyelination sensitivity in <strong>postmortem multiple-sclerosis cortex</strong> rather than a living-human longitudinal baseline. Those are not one matched human baseline by default. In parallel, <a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">Holiga et al. (2018)</a> showed that MRI repeatability ranges from <strong>poor to excellent</strong> depending on the metric, <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> showed that cross-setup reproducibility has to be demonstrated rather than assumed, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> showed that same-sample multimodal comparison in CONNECT-ME depended on <strong>n = 48</strong> patients with all features and improved sensitivity despite a <strong>markedly decreased sample size</strong>, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> showed that the main French dataset itself was highly unbalanced across rows (<strong>EEG-LG 290</strong>, <strong>dMRI 151</strong>, <strong>aMRI 101</strong>, <strong>FDG-PET 53</strong>, <strong>fMRI-RS 44</strong>), with missing values substituted by <strong>-1</strong> while pairwise disagreements rose in <strong>MCS</strong> and <strong>improved</strong> patients. Therefore, on this page, bundle promotion now also requires two bundle-level gates: <strong>(4) cohort / physiological regime compatibility</strong> and <strong>(5) row robustness / availability disclosure</strong> after any within-family quantity / target / transport split has already been fixed.
+ただし、複数の人間の行が 1 つの引数に結合される場合、行ごとの軸はまだ十分ではありません。 <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Llucchetti et al. (2025) </a> は、別の <strong>15-35 年 </strong> 複製コホート、<a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. を使用して、<strong> 青年 </strong> から主要な 1H-MRSI 経路を導き出します。 (2024)</a> および <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025) </a> は、ASL 法の選択肢と健康な成人コホート内で BBB 水交換の主張を維持する、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al。 (2025) </a> は、<strong>7 T 健康-若年者-成人</strong> CSF 移動性ルートを報告しています。<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026) ランダム化睡眠剥奪クロスオーバーにおける </a> 研究 <strong> 健康な高齢者 </strong>、<a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al。 (2022) </a> は引き続き <strong> 健康ボランティアのファーストインヒト </strong> SMBT-1 ターゲット検証ルート、<a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022) </a> は、AD 連続体全体にわたる <strong> 病理学コンテキスト MAO-B</strong> 星状細胞関連 PET ルートであり続ける、<a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025) </a> は、SMBT-1 経路が依然としてスキャンウィンドウ / 参照領域対速度論モデルの選択に依存していることを示しています。<a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al. (2026) </a> は全身の生体内分布を別の運用負担として保持します。<a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">matsuoka et al. (2026) </a> は、動脈を含まない SL25.1188 AD 定量化ルートを追加します。<a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026) </a> は、MAO-B 結合が AUD 重症度と毎日のタバコの使用によって変化する可能性があることを示しています。<a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a> は、I<sub>2</sub>BS 経路が領域および障害段階によって変化することを示し、<a href="https://doi.org/10.1111/bpa.70010" target="_blank">Galbusera et al. (2025) </a> は、生きているヒトの縦方向のベースラインではなく、<strong> 死後多発性硬化症皮質 </strong> における再ミエリン化感受性を抑制します。デフォルトでは、これらは人間のベースラインと一致するものではありません。並行して、<a href="https://doi.org/10.1371/journal.pone.0206583" target="_blank">Holiga ら。 (2018)</a> は、MRI 再現性が測定基準に応じて <strong>poor から Excellent</strong> の範囲であることを示しました。<a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al。 (2021) </a> は、クロスセットアップの再現性が仮定ではなく実証される必要があることを示しました。<a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> は、CONNECT-ME における同一サンプルのマルチモーダル比較が、<strong> サンプルサイズが大幅に減少したにもかかわらず、すべての特徴を備え、感度が向上した <strong>n = 48</strong> 患者に依存することを示しました。</strong>、および <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al。 (2026) </a> は、フランスの主要なデータセット自体が行 (<strong>EEG-LG 290</strong>、<strong>dMRI 151</strong>、<strong>aMRI 101</strong>、<strong>FDG-PET 53</strong>、<strong>fMRI-RS 44</strong>) 間で非常に不均衡であり、欠損値があることを示しました。 <strong>-1</strong> で置き換えられましたが、<strong>MCS</strong> 患者と <strong> 患者では </strong> 患者でペアごとの不一致が増加しました。したがって、このページでは、バンドル プロモーションには 2 つのバンドル レベル ゲートも必要になります: <strong>(4) コホート / 生理学的レジーム互換性</strong> および <strong>(5) 行の堅牢性 / 可用性の開示ファミリ内の数量 / ターゲット / 輸送分割がすでに修正された後の </strong>。
 </p>
 <ul>
-<li><strong>Cohort / physiological regime compatibility:</strong> name age band, health or pathology regime, and why transfer across cohorts is justified for the claimed latent variable.</li>
-<li><strong>Row robustness / availability disclosure:</strong> name route-local repeatability, cross-centre or cross-scanner transfer window if claimed, the row-overlap geometry, and whether missingness tracks site, severity, tolerance, contraindication, protocol, or only a declared missing-row policy.</li>
+<li><strong>コホート/生理学的レジームの互換性:</strong> 名前の年齢層、健康状態または病理レジーム、および主張される潜在変数についてコホート間での移行が正当化される理由。</li>
+<li><strong>ロウの堅牢性/可用性の開示:</strong> 名前ルートローカル再現性、主張されている場合はクロスセンターまたはクロススキャナ転送ウィンドウ、行オーバーラップ形状、および欠落が部位、重大度、許容範囲、禁忌、プロトコル、または宣言された欠落行ポリシーのみを追跡するかどうか。</li>
 </ul>
 <p>
-If several rows are combined in one argument, this roadmap now asks for <strong>same-subject / same-session / same-perturbation</strong> acquisition, <strong>cohort / regime compatibility</strong>, <strong>row-level repeatability or route-local reproducibility</strong>, <strong>availability / complete-case disclosure</strong>, <strong>external calibration</strong>, and a <a href="verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> before talking about state-complete human measurement. If the bridge is sequential across live and ex vivo or across separated state regimes, it also asks for a <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> plus the longer background rule in <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>. Otherwise the result stays at <strong>proxy-rich but ceiling-limited human evidence</strong>, because proxy class, operational maturity, calibrator role, cohort compatibility, and robustness still remain mismatched. The front-door table is in <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a>, the longer critique is in <a href="wiki/human-proxy-composition.html">Wiki: Human Proxy Composition and Route Maturity</a>, and the submission-side stop rule is <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
+複数の行が 1 つの引数に結合されている場合、このロードマップでは、<strong> 同一被験者 / 同一セッション / 同一摂動</strong> 取得、<strong> コホート / レジーム互換性</strong>、<strong> 行レベルの再現性またはルートローカル再現性</strong>、<strong> 可用性 / 完全なケースの開示</strong>、<strong> 外部状態完全な人間の測定について話す前に、キャリブレーション</strong>、および<a href="verification.html#human-proxy-composition-card">ヒューマンプロキシ構成カード</a>について説明します。ブリッジがライブとエクスビボ、または分離された状態レジーム間で連続している場合、<a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> に加えて、<a href="wiki/state-continuity-bridge.html">Wiki のより長いバックグラウンド ルール: State-Continuity Bridge</a> も要求します。それ以外の場合、プロキシ クラス、運用の成熟度、キャリブレーターの役割、コホートの互換性、および堅牢性が依然として不一致のままであるため、結果は <strong> プロキシは豊富だが上限が制限されたヒトの証拠 </strong> に留まります。フロントドアのテーブルは <a href="wbe_101.html#human-observability-ladder">WBE 101: 人間の可観測性ラダー</a> にあり、より長い批評は <a href="wiki/human-proxy-composition.html">Wiki: 人間のプロキシ構成とルート成熟度</a> にあり、送信側の停止ルールは <a href="verification.html#observability-budget">Verification: Observability Budget</a> です。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-20 addendum: destructive ultrastructure is not a shortcut around the observability wall</strong>
+<strong>2026-03-20 追記: 破壊的な超微細構造は可観測性の壁を巡る近道ではない</strong>
 <p>
-It would still be too strong to read <strong>nanoscale</strong>, <strong>petascale</strong>, or <strong>same-brain EM</strong> as if the route had already preserved native state and solved scaling by itself. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that fixation route materially changes extracellular-space preservation and that even high-pressure freezing remains thickness-limited, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> showed that human nanoscale reconstruction is still a rapidly preserved local surgical fragment, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain function plus EM is a sequential local pipeline rather than simultaneous whole-state capture. Therefore, this roadmap now separates <strong>preservation route</strong>, <strong>registration scope</strong>, and <strong>throughput / proofreading burden</strong> from resolution itself. On this page, destructive ultrastructure without those disclosures stays at <strong>structural scaffold</strong> or <strong>local ex vivo scaffold</strong>, not state-complete measurement.
+ルートがすでにネイティブ状態を保持し、スケーリングを自動的に解決したかのように、<strong>nanoscale</strong>、<strong>petascale</strong>、または <strong>same-brain EM</strong> を読み取るのは依然として強力すぎます。 <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Luら。 (2023)</a> は、固定ルートが細胞外空間の保存を大きく変えること、そして高圧凍結でも厚さ制限が残ることを示しました。<a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024) </a> は、ヒトのナノスケールの再構築が依然として急速に保存された局所的な外科的断片であることを示し、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は、同一脳機能と EM が、同時の全状態キャプチャではなく、逐次的なローカル パイプラインであることを示しました。したがって、このロードマップでは、<strong> 保存ルート </strong>、<strong> 登録範囲 </strong>、および <strong> スループット/校正負担 </strong> を解決そのものから分離しています。このページでは、これらの開示のない破壊的超微細構造は、状態完全な測定ではなく、<strong> 構造足場 </strong> または <strong> 局所生体外足場 </strong> に留まります。
 </p>
 </div>
-<p><strong>Temporary decision rule:</strong>If the observation path stays in the macro proxy, this roadmap first keeps the assertion between <strong>L1 and weak L2</strong>. In order to raise the claim to local circuits and synaptic granularity, we additionally require either structure/function correspondence in the same brain, external ground truth, or intervention response. </p>
-<p><strong>Next, we need:</strong>For each assumption (A), (B), and (C), evaluate observability (M1), identifiability (R7), and computability (I3) in bundles, and disclose what to abstain at which granularity. For background, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams are not enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>. </p>
+<p><strong>一時的な決定ルール:</strong>観測パスがマクロ プロキシ内に留まる場合、このロードマップはまず <strong>L1 と弱い L2</strong> の間のアサーションを保持します。局所回路とシナプスの粒度に対する主張を高めるためには、同じ脳内の構造/機能の対応、外部のグラウンドトゥルース、または介入応答のいずれかをさらに必要とします。 </p>
+<p><strong>次に、</strong>各仮定 (A)、(B)、および (C) について、バンドル内の可観測性 (M1)、識別可能性 (R7)、および計算可能性 (I3) を評価し、どの粒度で何を禁止するかを明らかにする必要があります。背景については、<a href="wiki/connectome-is-not-enough.html">Wiki: 配線図が不十分な理由</a> および <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性とメンテナンス状態</a> を参照してください。 </p>
 </div>
 </details>
 
 <details open class="qa" data-tags="measurement" id="qa-m4">
 <summary>
 <span class="qa-id">M4</span>
-<span class="qa-title">Whole brain coverage: How much of the “whole” do we need to measure? </span>
-<span class="qa-tags"><span class="tag">COVERAGE</span></span>
+<span class="qa-title">全脳カバレッジ: 「全体」のどの程度を測定する必要があるか? </span>
+<span class="qa-tags"><span class="tag">C適用範囲</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>How do we handle “boundaries (what is included in the subject)” with limited measurements? </p>
-<p><strong>2026-03-19 supplement:</strong>Subject boundary is not a philosophical garnish. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> and <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a> showed that ongoing behavior is embedded in large fractions of cortical activity, <a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a> and <a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a> showed that locomotion, optic flow, vestibular, and other sensory cues reshape cortical and hippocampal codes, <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a> and <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">Raut et al. (2025)</a> showed that respiration and arousal couple brain dynamics to organism-wide physiology, and <a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that reintroducing tactile feedback improves a local bidirectional BCI. A slower boundary remains as well: <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> and <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed that glucocorticoid state changes retrieval and hippocampal / prefrontal retrieval activity, while <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed that circadian timing and corticosteroid rhythm alter hippocampal plasticity machinery. Therefore, M4 now treats <strong>body / environment boundary disclosure</strong> as a measurement requirement rather than as a later interpretation issue, and that disclosure includes both <strong>fast loop routes</strong> and <strong>slow internal-milieu routes</strong>.</p>
-<p><strong>Decision rule:</strong>If a submission does not name which sensory, motor, interoceptive, and slow internal-milieu routes were preserved, substituted, matched, perturbed, or omitted, the result stays at <strong>local controller</strong>, <strong>task-specific subsystem loop</strong>, or <strong>brain-side-only proxy</strong> and does not advance to subject-complete L3 language.</p>
-<p><strong>Next:</strong> Operatively place the "boundary of subject" in verification (V0) and publish a boundary card listing retained / substituted channels, slow internal-milieu routes, surrogate body / environment mapping, loop-removal tests, and residual omitted loops.</p>
+<p><strong>質問:</strong>限られた測定値での「境界（主題に含まれるもの）」をどのように扱うか？ </p>
+<p><strong>2026-03-19 補足:</strong>主題の境界は哲学的な飾りではありません。 <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> および <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019) </a> は、進行中の行動が皮質活動の大部分に組み込まれていることを示しました。<a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a> および <a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al。 (2013) </a> は、運動、視神経の流れ、前庭、およびその他の感覚信号が皮質および海馬のコードを再形成することを示しました。<a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al。 (2016)</a> および <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">Raut ら。 (2025) </a> は、呼吸と覚醒が脳の動態を生物全体の生理機能に結びつけることを示しました。また、<a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> は、触覚フィードバックを再導入すると局所的な双方向 BCI が改善されることを示しました。より遅い境界も同様に残っています:<a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> および <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei ら。 (2007) </a> は、グルココルチコイドの状態が回復と海馬/前頭前野の回復活性を変化させることを示しました。一方、<a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>、<a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone 他(2023)</a>、<a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">バーニー他(2023) </a> は、概日タイミングとコルチコステロイドのリズムが海馬の可塑性機構を変化させることを示しました。したがって、M4 は現在、<strong> 身体 / 環境境界の開示 </strong> を後の解釈の問題としてではなく測定要件として扱い、その開示には <strong> 高速ループ ルート </strong> と <strong> 低速内部環境ルート </strong>.</p> の両方が含まれています。
+<p><strong>決定ルール:</strong>提出物でどの感覚経路、運動経路、内受容経路、低速内部環境経路が保存、置換、一致、摂動、または省略されたかが指定されていない場合、結果は<strong>ローカルコントローラー</strong>、<strong>タスク固有のサブシステムループ</strong>、または<strong>脳側のみのプロキシ</strong>に留まり、主題完全L3言語には進みません。</p>
+<p><strong>次へ:</strong> 検証 (V0) で「サブジェクトの境界」を運用的に設定し、保持/置換チャネル、低速内部環境ルート、代理本体/環境マッピング、ループ除去テスト、および残留省略ループをリストした境界カードを公開します。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="measurement" id="qa-m5">
 <summary>
 <span class="qa-id">M5</span>
-<span class="qa-title">Multimodal integration: how to guarantee alignment (MRI/EEG/fMRI)? </span>
-<span class="qa-tags"><span class="tag">FUSION</span><span class="tag">MRI</span></span>
+<span class="qa-title">マルチモーダル統合: アライメント (MRI/EEG/fMRI) を保証する方法は? </span>
+<span class="qa-tags"><span class="tag">フュージョン</span><span class="tag">MRI</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Different measurements have different coordinate systems, delays, and noise structures. Are integration errors destroying the “signal you want to learn”? </p>
-<p><strong>Conditions for disproving: </strong>Reconstruction (R2) becomes unstable due to alignment error and reproducibility (P2) decreases</p>
-<p><strong>2026-03 supplement:</strong> For EEG + fMRI / fNIRS, a shared clock is still not enough. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a> and <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a> show that vascular reactivity alters the meaning of task BOLD amplitude, <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> shows that baseline CBF can partially explain age-related BOLD differences, and <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015)</a> show that fNIRS needs short-separation regression to suppress superficial autonomic contamination. Therefore, M5 now treats <strong>vascular-state / CVR calibration or abstention</strong> as part of multimodal alignment for hemodynamic stacks.</p>
-<p><strong>2026-03-19 supplement:</strong> OPM-MEG adds movement tolerance, but not a free pass on measurement conditions. <a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a> and <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">Seymour et al. (2021)</a> showed motion-tolerant OP-MEG recordings, <a href="https://doi.org/10.1016/j.neuroimage.2023.120157" target="_blank">Holmes et al. (2023)</a> and <a href="https://doi.org/10.3390/s23125454" target="_blank">Holmes et al. (2023)</a> extended this to ambulatory movement and two-person hyperscanning by coupling field nulling to optical tracking, <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025)</a> showed that lighter shielded rooms become plausible only with tSSS plus active compensation, and <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes et al. (2025)</a> showed that pseudo-MRI can help when MRI is difficult but still leaves individual MRI as the gold standard. Therefore, on this roadmap, OPM-MEG is read as <strong>movement-tolerant macro electrophysiology under disclosed magnetic-field control, sensor calibration, and anatomy route</strong>, not as shield-free naturalistic brain readout.</p>
-<p><strong>Next required:</strong>Does the same data match in multiple pipelines (Analysis differential audit)</p>
+<p><strong>質問:</strong>測定値が異なると、座標系、遅延、ノイズ構造も異なります。統合エラーによって「学習したい信号」が破壊されていませんか? </p>
+<p><strong>反証条件：</strong>アライメント誤差により再構成(R2)が不安定になり、再現性(P2)が低下する</p>
+<p><strong>2026-03 補足:</strong> EEG + fMRI / fNIRS の場合、共有クロックではまだ十分ではありません。 <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">マーフィーら(2011)</a> および <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023) </a> は、血管反応性がタスクの BOLD 振幅の意味を変えることを示しています。<a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> は、ベースライン CBF が年齢に関連した BOLD の違いを部分的に説明できることを示しています。 (2015)</a> は、fNIRS が表面の自律神経汚染を抑制するために短い分離回帰を必要とすることを示しています。したがって、M5 は現在、<strong> 血管状態 / CVR キャリブレーションまたは禁欲</strong> を血行動態スタックのマルチモーダル アライメントの一部として扱います。</p>
+<p><strong>2026-03-19 補足:</strong> OPM-MEG は移動許容度を追加しますが、測定条件のフリーパスではありません。 <a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a> および <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">Seymour et al. (2021)</a> はモーショントレラントな OP-MEG 記録を示しました。<a href="https://doi.org/10.1016/j.neuroimage.2023.120157" target="_blank">Holmes et al. (2023)</a> および <a href="https://doi.org/10.3390/s23125454" target="_blank">Holmes et al. (2023) </a> は、フィールド ヌリングを光学追跡に結合することにより、これを歩行移動と 2 人によるハイパースキャンに拡張しました。<a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025) </a> は、tSSS とアクティブ補償を使用した場合にのみ、軽量のシールド ルームが妥当になることを示しました。 (2025) </a> は、MRI が困難な場合には擬似 MRI が役立つことを示しましたが、依然として個別の MRI がゴールドスタンダードであることを示しました。したがって、このロードマップでは、OPM-MEG は、シールドなしの自然主義的な脳読み取り値 </p> ではなく、開示された磁場制御、センサー校正、および解剖学的ルートの下での <strong> 運動耐性マクロ電気生理学 </strong> として読み取られます。
+<p><strong>次に必要:</strong>複数のパイプラインで同じデータが一致するかどうか (分析差分監査)</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="measurement" id="qa-m6">
 <summary>
 <span class="qa-id">M6</span>
-<span class="qa-title">Intervention/Stimulation: What is the “experimental design” that increases the possibility of identification? </span>
+<span class="qa-title">介入・刺激：特定の可能性を高める「実験計画法」とは？ </span>
 <span class="qa-tags"><span class="tag">CAUSAL</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong> When identification is not possible through passive observation alone, what kind of intervention (stimulus / task / environmental change) can increase identifiability? </p>
-<p><strong>Primary literature strongly supports:</strong> Intervention is not a magic trick that automatically reveals causality. Identifiability increases only in designs that specify <strong>where, when, and how much stimulation was applied</strong>, <strong>how the artifact window was defined</strong>, and <strong>how latency / jitter were measured</strong>. </p>
+<p><strong>質問:</strong> 受動的観察だけでは識別できない場合、どのような介入（刺激/課題/環境変化）によって識別可能性を高めることができますか? </p>
+<p><strong>一次文献は次のことを強くサポートしています:</strong> 介入は因果関係を自動的に明らかにする魔法のトリックではありません。識別可能性は、<strong>どこで、いつ、どれだけの刺激を適用したか</strong>、<strong>アーティファクトウィンドウをどのように定義したか</strong>、<strong>どのようにレイテンシー/ジッターを測定したか</strong>を指定するデザインでのみ増加します。 </p>
 <ul>
-<li><strong>State-targeted stimulation:</strong> As in Zrenner et al. (2018), conditioning the stimulation time on brain state makes response differences easier to detect even for the same nominal stimulus. </li>
-<li><strong>Interventions with ground-truth:</strong>Intracranial stimulation, simultaneous SEEG/ECoG, phantoms, and animal experiments can calibrate estimation errors on the scalp side with external standards. </li>
-<li><strong>Closed-loop intervention:</strong>With BCI and adaptive stimulation, response differences cannot be interpreted as causal differences unless we measure not only mean latency but also jitter and worst-case path, as shown by Wilson et al. (2010). </li>
+<li><strong>状態標的刺激:</strong> Zrenner et al.と同様。 (2018) によれば、脳の状態に応じて刺激時間を調整すると、同じ名目上の刺激であっても反応の違いを検出しやすくなります。 </li>
+<li><strong>グラウンドトゥルースによる介入:</strong>頭蓋内刺激、同時SEEG/ECoG、ファントム、動物実験により、外部標準を使用して頭皮側の推定誤差を校正できます。 </li>
+<li><strong>閉ループ介入:</strong>BCI と適応刺激では、Wilson らが示したように、平均待ち時間だけでなくジッターや最悪の場合のパスも測定しない限り、応答の違いを因果関係の違いとして解釈することはできません。 （2010年）。 </li>
 </ul>
-<p><strong>What does not count as an intervention:</strong>Conditional differences in passive tasks, post-hoc cross-modal correlations, and offline analyzes without stimulus logs alone do not count as strong causal evidence on this page. </p>
-<p><strong>Externally dependent tasks:</strong>TMS/DBS/invasive interventions on real subjects require IRB, equipment, and clinical cooperation. The first thing to do in this repository is to prepare the <strong>intervention grammar</strong>, <strong>synchronization log format</strong>, <strong>stop conditions in case of failure</strong>, and <strong>comparison rules</strong>. </p>
-<p><strong>Next, we need:</strong> On the model (R4) side, perform a design back calculation that says ``This intervention will improve the discrimination between families,'' and fix the submission pack that includes where TTL / LSL / photodiode / loopback was measured. </p>
+<p><strong>介入としてカウントされないもの:</strong>受動的タスクにおける条件の違い、事後クロスモーダル相関、刺激ログのみを使用しないオフライン分析は、このページでは強力な因果関係の証拠としてカウントされません。 </p>
+<p><strong>外部依存タスク:</strong>TMS/DBS/実際の被験者に対する侵襲的介入には、IRB、機器、および臨床協力が必要です。このリポジトリで最初に行うことは、<strong> 介入文法 </strong>、<strong> 同期ログ形式 </strong>、<strong> 失敗時の停止条件 </strong>、および <strong> 比較ルール </strong> を準備することです。 </p>
+<p><strong>次に必要なもの：</strong> モデル(R4)側で「この介入によりファミリー間の識別が改善される」という設計逆算を行い、TTL/LSL/フォトダイオード/ループバックを測定した箇所を含む提出パックを修正します。 </p>
 </div>
 </details>
 
 <details open class="qa" data-tags="measurement" id="qa-m7">
 <summary>
 <span class="qa-id">M7</span>
-<span class="qa-title">Longitudinal: Are “personal characteristics” stable against intra-day/day-to-day fluctuations? </span>
-<span class="qa-tags"><span class="tag">LONGITUDINAL</span></span>
+<span class="qa-title">LLongitudinal: 「個人の特性」は日内/日々の変動に対して安定していますか? </span>
+<span class="qa-tags"><span class="tag">縦長</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Even in the same individual, brain states vary across minutes, hours, days, and months. The operational question here is no longer simply “is the person stable?” but <strong>which part of the result reflects state fluctuation, trait-like backbone, biological drift, interface / decoder drift, or adaptive rescue</strong>.</p>
-<p><strong>2026-03-22 addendum:</strong>The older wording here was too weak because it still allowed <strong>same-day success</strong>, <strong>cross-day persistence</strong>, and <strong>algorithmically rescued performance</strong> to sound like one continuous longitudinal achievement. The primary literature does not support that compression. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> showed that trial-to-trial cortical dynamics are strongly shaped by richly varied movements, <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a> showed that spontaneous behavior rapidly changes functional-connectivity structure, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed 10-hour EEG changes that materially alter decoding and motivate adaptive decoders. By contrast, <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a> and <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">Noda et al. (2025)</a> show that a <strong>population-level backbone</strong> can remain more stable than individual units. Finally, <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> show why <strong>stabilized operation</strong> and <strong>fixed-decoder durability</strong> must be reported separately. Therefore, M7 now treats longitudinal evidence as a multi-field audit, not one score.</p>
+<p><strong>質問:</strong>同じ個人であっても、脳の状態は分、時間、日、月ごとに異なります。ここでの運用上の問題は、もはや単に「その人は安定していますか?」ということではありません。ただし、<strong>結果のどの部分が状態変動、形質様バックボーン、生物学的ドリフト、インターフェース/デコーダドリフト、または適応型レスキューを反映するか</strong>.</p>
+<p><strong>2026-03-22 追記:</strong>ここでの古い表現は弱すぎました。なぜなら、<strong>同日の成功</strong>、<strong>日を超えた持続性</strong>、および<strong>アルゴリズム的に救出されたパフォーマンス</strong>が1つの連続した長期的な成果のように聞こえるためです。一次文献ではその圧縮はサポートされていません。 <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019) </a> は、トライアル間の皮質ダイナミクスが豊富に変化する動きによって強く形成されることを示しました。<a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al。 (2024) </a> は、自発的行動が機能的接続構造を急速に変化させることを示しました。 (2024) </a> は、デコーディングを大幅に変更し、適応型デコーダーを動機付ける 10 時間の脳波変化を示しました。対照的に、<a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a>と<a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">野田ら(2025)</a> は、<strong> 集団レベルのバックボーン </strong> が個々のユニットよりも安定した状態を維持できることを示しています。最後に、<a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz ら。 (2025)</a>、<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">ウィルソンら。 (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairragkar et al。 (2025)</a> は、<strong> の安定した動作</strong> と <strong> 固定デコーダの耐久性</strong> を個別に報告する必要がある理由を示しています。したがって、M7 は現在、長期的な証拠を 1 つのスコアではなく複数分野の監査として扱います。</p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Audit field</th>
-<th>What must be named</th>
-<th>What this stops you from overreading</th>
+<th>監査フィールド</th>
+<th>必ず名前を付けてください</th>
+<th>これで読みすぎが防げるのは何か</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>state annotation</strong></td>
-<td>Arousal, spontaneous behavior, movement, task mode, time-of-day, sleep pressure, medication, or stimulation state.</td>
-<td>A same-day or cross-day difference cannot be read as trait instability if the state itself was left unlogged.</td>
+<td><strong>状態の注釈</strong></td>
+<td>覚醒、自発的行動、動き、タスクモード、時刻、睡眠圧、投薬、または刺激状態。</td>
+<td>A 状態自体がログに記録されていない場合、同日または日をまたいだ差異は形質の不安定性として読み取れません。</td>
 </tr>
 <tr>
-<td><strong>trait-like backbone</strong></td>
-<td>The named backbone object that remained stable: for example latent dynamics or representational geometry.</td>
-<td>Do not treat single-unit or single-channel volatility as if it automatically disproved a stable population backbone.</td>
+<td><strong>形質様バックボーン</strong></td>
+<td>安定したままの名前付きバックボーン オブジェクト: 潜在力学や表現幾何学など。</td>
+<td>単一ユニットまたは単一チャネルの変動を、安定した人口バックボーンが自動的に反証されるかのように扱ってはなりません。</td>
 </tr>
 <tr>
-<td><strong>biological drift</strong></td>
-<td>Plasticity, remapping, unit turnover, recovery, or learning-related change in the living system.</td>
-<td>Do not collapse organism-side change into interface or preprocessing failure.</td>
+<td><strong>生物漂流</strong></td>
+<td>生体システムにおける可塑性、再マッピング、ユニットの回転、回復、または学習関連の変化。</td>
+<td>生物体側の変更をインターフェースまたは前処理の失敗に折りたたまないでください。</td>
 </tr>
 <tr>
-<td><strong>interface / decoder drift</strong></td>
-<td>Electrode shift, channel loss, impedance change, feature-distribution shift, or decoder mismatch.</td>
-<td>Do not say the biological representation collapsed when the unstable object was the interface or decoder.</td>
+<td><strong>インターフェース/デコーダードリフト</strong></td>
+<td>電極シフト、チャネル損失、インピーダンス変化、機能分布シフト、またはデコーダーの不一致。</td>
+<td>不安定な物体がインターフェースやデコーダーだった場合、生物学的表現が崩壊したとは言わないでください。</td>
 </tr>
 <tr>
-<td><strong>fixed decoder interval / recalibration burden</strong></td>
-<td>How long the decoder was held unchanged, how often rescue or recalibration occurred, what data it used, and what happened when it failed.</td>
-<td>Do not rephrase adaptive rescue as if the original decoder had remained valid on its own.</td>
+<td><strong>固定デコーダ間隔/再キャリブレーション負担</strong></td>
+<td>デコーダーが変更されなかった期間、レスキューまたは再キャリブレーションが行われた頻度、使用されたデータ、および失敗したときに何が起こったか。</td>
+<td>アダプティブ レスキューを、あたかも元のデコーダが単独で有効であったかのように言い換えないでください。</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Decision rule:</strong>If a result does not report <strong>state annotation</strong>, <strong>fixed decoder interval</strong>, and <strong>recalibration burden</strong> separately, this roadmap stops at <strong>state-conditioned performance</strong> or <strong>participant-specific stabilized operation</strong>. It does not promote the result to trait stability, durable fixed-decoder use, or long-horizon deployability.</p>
-<p><strong>Next:</strong>Bundle <a href="verification.html#temporal-validity-card">Verification: Temporal Validity Card</a> with <a href="wiki/state-trait-and-drift.html">Wiki: State, Trait, and Drift</a>. If the evidence also bridges across acquisition regimes or days as if it were one latent state, add the <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> rather than relying on same-subject wording alone.</p>
+<p><strong>決定ルール:</strong>結果が<strong>状態アノテーション</strong>、<strong>固定デコーダ間隔</strong>、および<strong>再キャリブレーション負担</strong>を個別に報告しない場合、このロードマップは<strong>状態条件付きパフォーマンス</strong>または<strong>参加者固有の安定化操作</strong>で停止します。特性の安定性、耐久性のある固定デコーダーの使用、長期的な展開可能性などの結果を促進するものではありません。</p>
+<p><strong>次：</strong>バンドル<a href="verification.html#temporal-validity-card">検証：時間的有効性カード</a>と<a href="wiki/state-trait-and-drift.html">Wiki：状態、特性、ドリフト</a>。証拠が、あたかも 1 つの潜在的な状態であるかのように、取得体制や日数をまたいで橋渡しされる場合は、同じ主題の文言のみに依存するのではなく、<a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> を追加してください。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="measurement" id="qa-m8">
 <summary>
 <span class="qa-id">M8</span>
-<span class="qa-title">Quality control: How to “quantify” and handle artifacts/missing/noise? </span>
+<span class="qa-title">品質管理: アーティファクト/欠落/ノイズを「定量化」して処理する方法は? </span>
 <span class="qa-tags"><span class="tag">QC</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Define “good data” in advance and make exclusion, complementation, and weighting transparent. In addition, how do we quantify <strong>quality deterioration</strong> caused by hardware, such as impedance/CMRR, noise floor, HMD interference, etc.? </p>
+<p><strong>質問:</strong>「適切なデータ」を事前に定義し、除外、補完、重み付けを透明化します。さらに、インピーダンス/CMRR、ノイズフロア、HMD干渉などのハードウェアによって引き起こされる<strong>品質劣化</strong>をどのように定量化すればよいでしょうか? </p>
 <ul>
-<li><strong>Impedance/CMRR:</strong> Detects imbalance and warns before measurement. </li>
-<li><strong>Noise floor/SNR:</strong> Visualize the effective SNR for each frequency band. </li>
-<li><strong>VR Interference:</strong> Profile HMD electromagnetic and mechanical noise. </li>
+<li><strong>インピーダンス/CMRR:</strong> 不均衡を検出し、測定前に警告します。 </li>
+<li><strong>ノイズフロア/SNR:</strong> 各周波数帯域の実効SNRを視覚化します。 </li>
+<li><strong>VR 干渉:</strong> プロファイル HMD の電磁ノイズおよび機械ノイズ。 </li>
 </ul>
 </div>
 </details>
@@ -1043,461 +1047,461 @@ It would still be too strong to read <strong>nanoscale</strong>, <strong>petasca
 <details open class="qa" data-tags="measurement" id="qa-m9">
 <summary>
 <span class="qa-id">M9</span>
-<span class="qa-title">Standardization: How can BIDS/metadata be used in a format that allows others to retest? </span>
+<span class="qa-title"> 標準化: 他の人が再テストできる形式で BIDS/メタデータを使用するにはどうすればよいですか? </span>
 <span class="qa-tags"><span class="tag">BIDS</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Even if the data can be shared, it is not possible to retest if the metadata is weak. What should be converted into metadata at least? </p>
-<p><strong>Supplement (Issue #46):</strong> If VR/motion measurement is included, specify the coordinate system, time synchronization, and device specifications according to <strong>Motion-BIDS</strong>. </p>
-<p><strong>Next:</strong> Leave the protocol (task/equipment/preprocessing) machine readable (P2)</p>
+<p><strong>質問:</strong>データが共有できても、メタデータが弱いと再テストができません。少なくとも何をメタデータに変換する必要がありますか? </p>
+<p><strong>補足(問題#46):</strong> VR/モーション計測が含まれる場合は、<strong>Motion-BIDS</strong>に従って座標系、時刻同期、デバイス仕様を指定してください。 </p>
+<p><strong>次:</strong> プロトコル (タスク/機器/前処理) を機械可読のままにする (P2)</p>
 </div>
 </details>
 </div>
 
 <div class="node" id="reconstruction" data-qa-group>
-<div class="node-kicker">2. Reconstruction</div>
-<h3>Reconfigure: What to restore? (Circuit/state/learning rule)</h3>
-<p class="mini"><strong>Central question:</strong> "To what extent is structure (coupling), dynamic state (activity), and learning rules (plasticity) necessary for the individual's mental functions?"</p>
+<div class="node-kicker">2。復興</div>
+<h3>Reconfigure: 何を復元するか? (回路/状態/学習ルール)</h3>
+<p class="mini"><strong>中心的な質問：</strong>「個人の精神機能には、構造（結合）、動的状態（活動）、学習規則（可塑性）がどの程度必要ですか？」</p>
 
 <details open class="qa" data-tags="reconstruction" id="qa-r0">
 <summary>
 <span class="qa-id">R0</span>
-<span class="qa-title">What is the minimum set to restore? (Structure/state/learning rule)</span>
-<span class="qa-tags"><span class="tag">RECONSTRUCTION</span></span>
+<span class="qa-title">復元する最小セットは何ですか? (構造/状態/学習ルール)</span>
+<span class="qa-tags"><span class="tag">再構築</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>How far do I have to restore to win in verification (V0)? </p>
-<p><strong>2026-03-19 literature audit:</strong>The older wording here was too weak because it made <strong>structure</strong>, <strong>state</strong>, and <strong>plasticity</strong> sound like three clean knobs. The primary literature does not support that simplification. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> showed that transcriptomic type still leaves morpho-electric spread within a cell class. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a>, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a>, <a href="https://doi.org/10.1038/nature13028" target="_blank">Yang et al. (2014)</a>, and <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a> show that long-term stabilization depends on synapse- and branch-specific tagging, clustered spine stabilization, and proteostatic maintenance rather than on graph structure alone. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1016/j.neuron.2017.06.025" target="_blank">Latchoumane et al. (2017)</a>, and <a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a> show that multi-day retention also depends on sleep / homeostatic / transcriptional programs. <a href="https://doi.org/10.1126/science.1252304" target="_blank">Gibson et al. (2014)</a>, <a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta et al. (2018)</a>, <a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">Cohen et al. (2020)</a>, <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>, and <a href="https://doi.org/10.1126/science.1072699" target="_blank">Pizzorusso et al. (2002)</a> show that myelin / perinodal state, glial metabolic support, and extracellular-matrix state can change timing, plasticity, and memory expression without rewiring. Therefore, this roadmap no longer treats <code>structure + state</code> as one dial.</p>
-<p><strong>Revised branching:</strong>(A) structural scaffold only / (B) structural scaffold + fast executable state / (C) structural scaffold + fast executable state + maintenance / plasticity state</p>
+<p><strong>質問:</strong>検証(V0)で勝つためにはどこまで復元する必要がありますか? </p>
+<p><strong>2026-03-19 文献監査:</strong>ここでの古い表現は弱すぎました。なぜなら、<strong>structure</strong>、<strong>state</strong>、および <strong>lasticity</strong> が 3 つのきれいなノブのように聞こえるからです。一次文献はその単純化を支持していません。 <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">Gouwens et al. (2021)</a> は、トランスクリプトーム型が依然として細胞クラス内で形態電気的広がりを残していることを示しました。 <a href="https://doi.org/10.1038/385533a0" target="_blank">フレイ&アンプ; Morris (1997)</a>、<a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan 他。 (2011)</a>、<a href="https://doi.org/10.1038/nature13028" target="_blank">ヤンら。 (2014)</a>、<a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021) </a> は、長期安定化がグラフ構造のみに依存するのではなく、シナプスおよび分岐に特異的なタグ付け、クラスター化されたスパインの安定化、およびタンパク質の維持に依存することを示しています。 <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1016/j.neuron.2017.06.025" target="_blank">Latchoumane et al. (2017)</a>、<a href="https://doi.org/10.1038/s41586-025-09774-6" target="_blank">Terceros et al. (2026)</a> は、複数日の保持も睡眠 / 恒常性 / 転写プログラムに依存することを示しています。 <a href="https://doi.org/10.1126/science.1252304" target="_blank">ギブソン他(2014)</a>、<a href="https://doi.org/10.1073/pnas.1811013115" target="_blank">Dutta 他(2018)</a>、<a href="https://doi.org/10.1016/j.cell.2019.11.039" target="_blank">コーエンら。 (2020)</a>、<a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">スズキ他(2011)</a>、<a href="https://doi.org/10.1126/science.1072699" target="_blank">Pizzorusso 他。 (2002) </a> は、ミエリン / 結節周囲の状態、グリアの代謝サポート、および細胞外マトリックスの状態が、再配線することなくタイミング、可塑性、および記憶発現を変更できることを示しています。したがって、このロードマップでは、<code> 構造 + 状態</code> を 1 つのダイヤルとして扱いません。</p>
+<p><strong>修正された分岐:</strong>(A) 構造スキャフォールドのみ / (B) 構造スキャフォールド + 高速実行可能状態 / (C) 構造スキャフォールド + 高速実行可能状態 + メンテナンス / 可塑性状態</p>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Layer inside the restoration target</th>
-<th>What has to be named explicitly</th>
-<th>What fails if it is omitted</th>
-<th>Claim ceiling if still omitted</th>
+<th>復元対象内のレイヤー</th>
+<th>明示的に名前を付ける必要があるもの</th>
+<th>省略すると失敗するもの</th>
+<th>まだ省略されている場合は上限を請求</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Structural scaffold</strong></td>
-<td>Cell identity, gross morphology, connection graph, major axonal routing constraints</td>
-<td>Local routing, lesion/perturbation path constraints, and circuit-level intervention matching have no substrate to run on</td>
-<td><strong>Structural prior only</strong>, not an executable person model</td>
+<td><strong>構造足場</strong></td>
+<td>C細胞のアイデンティティ、全体的な形態、接続グラフ、主要な軸索経路の制約</td>
+<td>ローカルルーティング、病変/摂動パス制約、および回路レベルの介入マッチングには、実行する基板がありません</td>
+<td><strong>構造前のみ</strong>、実行可能人モデルではありません</td>
 </tr>
 <tr>
-<td><strong>Fast executable state</strong></td>
-<td>Momentary activity state, effective synaptic efficacy, intrinsic excitability / operating point, and current neuromodulatory regime (<a href="#qa-r10">R10</a>)</td>
-<td>The same scaffold can express different immediate trajectories and intervention responses</td>
-<td><strong>Structure-conditioned simulator</strong> or same-session proxy, not a demonstrated state match</td>
+<td><strong>高速実行可能状態</strong></td>
+<td>瞬間的な活動状態、有効なシナプス効果、固有の興奮性/動作点、および現在の神経調節レジーム (<a href="#qa-r10">R10</a>)</td>
+<td>同じ足場でも異なる即時軌道と介入反応を表現できる</td>
+<td><strong>構造条件付きシミュレーター</strong> または同じセッションのプロキシ、デモされた状態の一致ではない</td>
 </tr>
 <tr>
-<td><strong>Maintenance / eligibility state</strong></td>
-<td>Synaptic tags and capture conditions, local proteostatic support, sleep/replay coupling, transcriptional stabilization, myelin / perinodal state, glial metabolic support, ECM / PNN state</td>
-<td>Learning persistence, day-to-day retention, timing stability, and recovery after perturbation become underdetermined</td>
-<td><strong>Short-window replay only</strong>; no claim here about stable multiday learning or continuity</td>
+<td><strong>メンテナンス/資格ステータス</strong></td>
+<td>Sシナプスタグと捕捉条件、局所タンパク質増殖サポート、睡眠/再生カップリング、転写安定化、ミエリン/結節周囲状態、グリア代謝サポート、ECM/PNN状態</td>
+<td>学習の持続性、日々の記憶力、タイミングの安定性、および摂動が不定になった後の回復</td>
+<td><strong>ショートウィンドウ再生のみ</strong>;安定した複数日間の学習や継続性についてここで主張する必要はありません</td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>Restoration-target card required</strong>
+<strong>復元対象カードが必要</strong>
 <p>
-Every R0 claim on this site must publish a small card that states <strong>(1) which state families were directly measured</strong>, <strong>(2) which were only externally calibrated or model-estimated</strong>, <strong>(3) which were omitted</strong>, <strong>(4) which timescale each family is supposed to cover</strong> (milliseconds / seconds / hours / days / weeks), and <strong>(5) what claim ceiling and abstention boundary follow from those omissions</strong>. Without that card, same-session fit and multiday continuity collapse into one vague success label, which this roadmap no longer allows.
+このサイトのすべての R0 主張は、<strong>(1) どの状態のファミリが直接測定されたのか、</strong>、<strong>(2) は外部的に校正またはモデル推定のみされたのか、</strong>、<strong>(3) は省略された</strong>、<strong>(4) 各ファミリがカバーするタイムスケールは何か</strong> (ミリ秒 / 秒 / 時間 / 日 / 週間)、および <strong>(5) 主張の内容を記載した小さなカードを公開する必要があります。天井と棄権境界はこれらの省略 </strong> から続きます。このカードがなければ、同一セッションの適合性と複数日間の継続性は 1 つの漠然とした成功というラベルに崩れてしまい、このロードマップではそれが認められなくなります。
 </p>
 </div>
 
-<p><strong>Failure condition:</strong>If the chosen restoration target cannot reproduce intervention response at the declared timescale, or if the conclusion changes once omitted maintenance-state families are reintroduced, the target fails. A model that fits same-session data while hiding multiday maintenance burdens is not accepted here as a general restore target.</p>
-<p><strong>Next:</strong>Evaluate identifiability (R7) and computability (I3) simultaneously, but only after publishing the restoration-target card with omitted state families, audited timescales, and claim ceiling. For supporting background, use <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams are not enough</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: Homeostatic plasticity and maintenance state</a>.</p>
+<p><strong>失敗条件:</strong>選択した復元ターゲットが宣言されたタイムスケールで介入応答を再現できない場合、または省略された保守状態ファミリーが再導入されると結論が変わる場合、ターゲットは失敗します。複数日にわたるメンテナンスの負担を隠しながら同じセッションのデータに適合するモデルは、ここでは一般的な復元ターゲットとして受け入れられません。</p>
+<p><strong>次:</strong>識別可能性 (R7) と計算可能性 (I3) を同時に評価しますが、これは省略された状態ファミリー、監査されたタイムスケール、および請求上限を含む復元ターゲット カードを公開した後でのみ行われます。背景をサポートするには、<a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは不十分な理由</a> および <a href="wiki/homeostatic-plasticity-and-maintenance-state.html">Wiki: 恒常性可塑性とメンテナンス状態</a>.</p> を使用してください。
 </div>
 </details>
 
 <details open class="qa" data-tags="reconstruction" id="qa-r1">
 <summary>
 <span class="qa-id">R1</span>
-<span class="qa-title">Inverse problem: What can be uniquely inferred from observation (M1)? </span>
-<span class="qa-tags"><span class="tag">INVERSE</span><span class="tag">BAYES</span></span>
+<span class="qa-title">逆問題: 観察(M1)から一意に何が推測できるか? </span>
+<span class="qa-tags"><span class="tag">インバース</span><span class="tag">ベイズ</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong> An inverse problem such as EEG source estimation is “ill-posed,” meaning the solution is not uniquely determined. Therefore, it is more important to audit <strong>how stable the conclusion remains when geometry, conductivity, electrode coordinates, and prior assumptions change</strong> than to ask <strong>which solver was chosen</strong>. </p>
-<p><strong>Policy:</strong> In this project, no specific solver is fixed as the standard solution. Acceptance requires (1) an explicit uncertainty expression such as a posterior distribution, confidence interval, or bootstrap / ensemble range, (2) sensitivity analysis for individual MRI, FEM / BEM, conductivity assumptions, and electrode geometry, (3) external validation using simulation, phantoms, simultaneous invasive recording, or intracranial stimulation, and now also (4) a named <strong>source regime / target object</strong>, <strong>uncertainty object</strong>, and <strong>validation board / operating regime</strong>. Bayesian or empirical-Bayes approaches are good candidates, but auditability matters more than the method name. </p>
-<p><strong>2026-03-31 addendum:</strong>The remaining weakness in this roadmap was to let <strong>inverse-family progress</strong> sound closer than it is to one shared truth scale. The current primary literature does not support that shortcut. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> sample posterior support for <strong>focal-source hypotheses</strong>, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> target <strong>sparse spatial-temporal source imaging</strong> with debiased estimation and inference, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target <strong>extended-source extent</strong> with empirical-Bayesian uncertainty maps. Upstream uncertainty remains separate: <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> showed that tissue-conductivity uncertainty materially shifts EEG source analysis, and <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a> showed that conductivity estimation can reduce source-localization uncertainty in many presurgical epilepsy scenarios without erasing all depth / location exceptions. Therefore, this roadmap no longer reads <strong>new inverse family</strong> as one generic upgrade. It asks what object is being estimated, which uncertainty object is returned, and which physics and validation regime remain attached.</p>
+<p><strong>質問:</strong> EEG 信号源推定などの逆問題は「不適切な設定」であり、解が一意に決定されないことを意味します。したがって、<strong>どのソルバーが選択されたかを尋ねる</strong>よりも、形状、導電率、電極座標、および事前の仮定が変化したときに結論がどの程度安定しているかを監査する<strong></strong>の方が重要です。 </p>
+<p><strong>Policy:</strong> このプロジェクトでは、標準ソリューションとして特定のソルバーが固定されていません。承認には、(1) 事後分布、信頼区間、またはブートストラップ / アンサンブル範囲などの明示的な不確実性の表現、(2) 個々の MRI、FEM / BEM、導電率の仮定、電極形状の感度分析、(3) シミュレーション、ファントム、同時侵襲的記録、または頭蓋内刺激を使用した外部検証、そして (4) 名前付き <strong> ソース レジーム / ターゲット オブジェクト </strong> が必要です。 <strong>不確実性オブジェクト</strong>、および<strong>検証ボード/運用体制</strong>。ベイジアン アプローチまたは経験ベイズ アプローチが有力な候補ですが、メソッド名よりも監査可能性の方が重要です。 </p>
+<p><strong>2026-03-31 追記:</strong> このロードマップの残りの弱点は、<strong> インバース ファミリの進歩が </strong> が 1 つの共有された真実の尺度よりも近づいているように聞こえることでした。現在の一次文献はそのショートカットをサポートしていません。 <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024) </a> <strong> 焦点源仮説に対する事後サポート</strong>、<a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al。 (2025) </a> ターゲット <strong> 偏りのない推定と推論を備えた疎な時空間ソース イメージング </strong>、および <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al。 (2025) </a> ターゲット <strong> 経験的ベイジアン不確実性マップを使用した拡張ソース範囲 </strong>。上流の不確実性は別のままです: <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024) </a> は、組織伝導率の不確実性が EEG ソース解析を大きく変えることを示しました。 (2026) </a> は、すべての深さ/場所の例外を消去することなく、多くの術前てんかんシナリオにおいて、伝導率推定により発生源位置の不確実性を低減できることを示しました。したがって、このロードマップでは、<strong> 新しいインバース ファミリ </strong> を 1 つの一般的なアップグレードとして捉えることはなくなりました。どのオブジェクトが推定されているか、どの不確実性オブジェクトが返されるか、どの物理学と検証レジームが関連付けられたままであるかを尋ねます。</p>
 <table class="data-table">
 <thead>
 <tr>
-<th>R1 inverse-audit field</th>
-<th>What this roadmap now asks for</th>
-<th>Why it matters</th>
+<th>R1 逆監査フィールド</th>
+<th>このロードマップが今求めているもの</th>
+<th>それが重要な理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Source regime / target object</strong></td>
-<td>Name whether the paper is estimating focal support, a sparse spatial-temporal source set, extended-source extent, or another declared object.</td>
-<td>Different inverse families are not automatically estimating the same scientific target.</td>
+<td><strong>ソースレジーム/ターゲットオブジェクト</strong></td>
+<td>論文が焦点サポート、疎な時空間ソース セット、拡張ソース エクステント、または別の宣言されたオブジェクトを推定しているかどうかの名前。</td>
+<td>異なる逆ファミリは、同じ科学的ターゲットを自動的に推定しません。</td>
 </tr>
 <tr>
-<td><strong>Uncertainty object</strong></td>
-<td>Name whether the method returns posterior support, debiased intervals / tests, extent-overlap maps, or only location spread.</td>
-<td>Uncertainty is not one scalar if the returned object changes with the inverse family.</td>
+<td><strong>不確実性物体</strong></td>
+<td>メソッドが事後サポート、偏りのない間隔/テスト、範囲重複マップ、または位置の広がりのみを返すかどうかを指定します。</td>
+<td>返されたオブジェクトが逆ファミリで変化する場合、Uncertainty は 1 つのスカラーではありません。</td>
 </tr>
 <tr>
-<td><strong>Forward-model uncertainty route</strong></td>
-<td>State whether conductivity, head-model, and electrode-geometry uncertainty were propagated, fixed, or calibrated.</td>
-<td>A sharper posterior does not erase uncertainty that still sits upstream in the physics.</td>
+<td><strong>順モデル不確かさルート</strong></td>
+<td>導電率、ヘッドモデル、電極形状の不確実性が伝播、固定、または校正されたかどうかを説明します。</td>
+<td>A のよりシャープな後方は、物理学の上流に依然として存在する不確実性を消去しません。</td>
 </tr>
 <tr>
-<td><strong>Validation board / operating regime</strong></td>
-<td>Name whether the evidence comes from simulation, phantom, DBS / stimulation ground truth, simultaneous invasive recording, or another board.</td>
-<td>Success on one board does not automatically transfer to all source classes and clinical / experimental regimes.</td>
+<td><strong>検証ボード/運用体制</strong></td>
+<td>証拠がシミュレーション、ファントム、DBS/刺激グラウンドトゥルース、同時侵入記録、または別のボードから来たものであるかどうかを指定します。</td>
+<td>1 つのボードで成功しても、すべてのソース クラスおよび臨床/実験レジームに自動的に転送されるわけではありません。</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Next, we need:</strong> In R2 and R7, isolate how much source depth, cranial conductivity, and candidate model space dominate the error, and disclose abstention conditions rather than forcibly collapsing overlapping solutions into one. </p>
+<p><strong>次に必要なもの: </strong> R2 と R7 では、音源の深さ、頭蓋伝導率、および候補モデル空間が誤差をどの程度支配しているかを分離し、重複する解決策を強制的に 1 つにまとめるのではなく、棄権条件を明らかにします。 </p>
 </div>
 </details>
 
 <details open class="qa" data-tags="reconstruction" id="qa-r2">
 <summary>
 <span class="qa-id">R2</span>
-<span class="qa-title">Source estimation: “Which representation” of brain activity do you want from EEG? </span>
+<span class="qa-title">Source 推定: EEG から脳活動の「どの表現」が必要ですか? </span>
 <span class="qa-tags"><span class="tag">EEG</span><span class="tag">ESI</span><span class="tag">BAYES</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong> EEG source estimation is easy to obtain an expression of "area x time", but neurons/synapses cannot be directly seen. Select the expression according to the restoration target (R0). </p>
-<p><strong>Issue:</strong>In the past, "high-density EEG (128 channels)" was recommended, but recent research has shown that ill-posedness cannot be solved by the number of channels alone. In particular, point estimation methods such as dSPM ignore uncertainty. </p>
-<p><strong>Stricter policy:</strong>Estimation with uncertainty such as the Block-Champagne system, <strong>high-density EEG</strong>, and <strong>FEM/BEM forward model based on individual MRI</strong> are effective means to improve estimation conditions. However, these do not guarantee the accuracy of<strong>deep brain activity</strong>. The hiring condition is not that it can be said to be able to see deeply, but rather that it is able to audit which error sources have been reduced and to what extent. Therefore, submissions must include (1) posterior distributions or confidence intervals, (2) sensitivity analysis of conductivity, electrode coordinates, and head model, (3) validation against external criteria such as simulations/phantoms/concurrent invasive recordings/intracranial stimulation, and (4) conditions for withholding claims regarding deep sources. </p>
-<p><strong>2026-03-31 addendum:</strong>The older wording still made <strong>better source imaging</strong> sound too much like one shared representation goal. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a> compare focal-source validation routes, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> show depth- and skull-conductivity-dependent localization error across <strong>3,619 stimulation locations</strong> in <strong>11 patients</strong>, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> show simultaneous <strong>HD-EEG / SEEG</strong> concordance in a drug-resistant-epilepsy operating regime. Those boards do not yet define one universal scoreboard for focal, sparse, extended, and spontaneous sources. Therefore, R2 now asks the restoration target to say whether it wants <strong>focal support</strong>, <strong>sparse spatial-temporal source activity</strong>, <strong>extended-source extent</strong>, or another declared object before methods are compared.</p>
+<p><strong>質問:</strong> 脳波源推定は「面積×時間」の式を得るのが簡単ですが、ニューロン/シナプスを直接見ることはできません。復元対象(R0)に応じて式を選択してください。 </p>
+<p><strong>問題点：</strong>以前は「高密度脳波計（128チャンネル）」が推奨されていましたが、最近の研究ではチャンネル数だけでは姿勢不良を解決できないことが判明しました。特に、dSPM などの点推定方法は不確実性を無視します。 </p>
+<p><strong>厳格化方針：</strong>ブロックシャンパーニュ方式などの不確実性を伴う推定、<strong>高密度EEG</strong>、<strong>個別MRI</strong>に基づくFEM/BEMフォワードモデルは推定条件を改善する有効な手段です。ただし、これらは<strong>深部脳活動</strong>の精度を保証するものではありません。採用条件は、洞察力があるとは言えず、どのエラー源がどの程度削減されているかを監査できるかどうかです。したがって、提出物には、(1) 事後分布または信頼区間、(2) 導電率、電極座標、および頭部モデルの感度分析、(3) シミュレーション/ファントム/同時侵襲的記録/頭蓋内刺激などの外部基準に対する検証、(4) 深部発生源に関する主張を保留するための条件が含まれなければなりません。 </p>
+<p><strong>2026-03-31 追記:</strong> 古い表現では、依然として <strong> ソース イメージングの向上 </strong> が 1 つの共有表現目標のように聞こえすぎていました。現在の一次文献はそのショートカットをサポートしていません。 <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">パスカレラら(2023) </a> は焦点ソース検証ルートを比較、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al。 (2023)</a> は、<strong>3,619 個の刺激位置にわたる深さと頭蓋骨の伝導率に依存する位置推定誤差を示します。</strong> は、<strong>11 人の患者において</strong>、および<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> は、薬剤耐性てんかんの手術体制において <strong>HD-EEG / SEEG</strong> の同時一致を示しました。これらのボードは、焦点ソース、まばらなソース、拡張ソース、自発的なソースに対する 1 つのユニバーサル スコアボードをまだ定義していません。したがって、R2 は、メソッドが比較される前に、復元ターゲットに、<strong> 焦点サポート </strong>、<strong> スパース時空間ソース アクティビティ </strong>、<strong> 拡張ソース エクステント </strong>、または別の宣言されたオブジェクトを望むかどうかを言うように要求します。</p>
 <table class="data-table">
 <thead>
 <tr>
-<th>R2 representation family</th>
-<th>What it can return relatively directly</th>
-<th>What this roadmap still refuses to infer automatically</th>
+<th>R2 代表ファミリー</th>
+<th>比較的ダイレクトに返せるもの</th>
+<th>このロードマップがまだ自動的に推論することを拒否しているもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Probabilistic focal-source family</strong></td>
-<td>Posterior support and alternative configurations for a small-number focal-source hypothesis.</td>
-<td>It is not promoted automatically to sparse spatial-temporal inference or extended-source extent recovery.</td>
+<td><strong>確率的焦点源ファミリー</strong></td>
+<td>少数の焦点源仮説のための事後サポートと代替構成。</td>
+<td>スパース時空間推論または拡張ソース エクステント リカバリには自動的に昇格されません。</td>
 </tr>
 <tr>
-<td><strong>Sparse spatial-temporal family</strong></td>
-<td>Bias-corrected amplitudes, orientations, depths, and inference for sparse source sets over time.</td>
-<td>It is not promoted automatically to focal-board optimum across all priors or to extended-source validation.</td>
+<td><strong>S疎な時空間家族</strong></td>
+<td>時間の経過に伴うスパースソースセットのバイアス補正された振幅、方向、深さ、および推論。</td>
+<td>すべての以前のフォーカルボード最適化または拡張ソース検証には自動的に昇格されません。</td>
 </tr>
 <tr>
-<td><strong>Extended-source family</strong></td>
-<td>Estimated location-plus-extent with uncertainty for spatially extended activation.</td>
-<td>It is not promoted automatically to focal-source best case or to a universal benchmark win across source regimes.</td>
+<td><strong>拡張ソースファミリー</strong></td>
+<td>空間的に拡張された活性化のための不確実性を伴う推定位置プラス範囲。</td>
+<td>焦点ソースのベストケース、またはソース体制全体にわたるユニバーサルベンチマークの勝利には自動的に昇格しません。</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Next:</strong>Firstly, fix <strong>source imaging verification specifications</strong> and <strong>benchmarks with external standards</strong> without making it unclear whether or not they are publicly implemented. The implementation will then be made public in a form that allows for reproduction, including posterior distribution, sensitivity analysis, and failure examples. </p>
+<p><strong>次：</strong>まず、<strong>ソースイメージング検証仕様</strong>と<strong>ベンチマークを外部標準</strong>で、公的に実装されているかどうかを不明確にすることなく修正します。その後、事後分布、感度解析、失敗例などを再現可能な形で実装を公開します。 </p>
 </div>
 </details>
 
 <details open class="qa" data-tags="reconstruction" id="qa-r3">
 <summary>
 <span class="qa-id">R3</span>
-<span class="qa-title">State estimation: How to define latent state and how to verify it? </span>
-<span class="qa-tags"><span class="tag">STATE</span></span>
+<span class="qa-title">State 推定: 潜在状態を定義する方法とそれを検証する方法? </span>
+<span class="qa-tags"><span class="tag">状態</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Can we separate observation noise from the true state and show that the state is “effective for prediction”? </p>
-<p><strong>2026-03-25 addendum:</strong>The remaining weakness in this roadmap was that <strong>latent state</strong> still sounded too close to one compressed hidden variable. The rest of this site no longer supports that shortcut. <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">Havekes et al. (2016)</a>, <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">Vierra et al. (2023)</a>, and <a href="https://doi.org/10.1016/j.biopsych.2023.12.020" target="_blank">Altas et al. (2024)</a> show that <strong>phospho-signaling / second-messenger routing</strong> can change plasticity expression without collapsing to transcript or bulk protein abundance. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a>, <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a>, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a>, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a>, and <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a> show that <strong>local proteostasis / tag-capture route</strong> is another state family with its own integrative unit and turnover window. <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a>, <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al. (2021)</a>, <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> show that <strong>cargo-transport / cytoskeletal trafficking state</strong> is again a different route: what reaches the relevant spine, branch, bouton, or axon terminal can change plasticity and memory while the graph stays fixed. Therefore, on this page, a latent-state model is no longer accepted as a single unqualified object. It must say <strong>which family it is trying to recover</strong>, <strong>which family remained omitted</strong>, and <strong>what timescale the claimed state is supposed to govern</strong>.</p>
+<p><strong>質問:</strong>観測ノイズを真の状態から分離し、その状態が「予測に有効」であることを示すことはできますか? </p>
+<p><strong>2026-03-25 追記:</strong> このロードマップの残りの弱点は、<strong> 潜在状態</strong> が依然として 1 つの圧縮された隠れ変数に近すぎるように聞こえることでした。このサイトの残りの部分では、そのショートカットはサポートされなくなりました。 <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a>、<a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">Havekes 他。 (2016)</a>、<a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">ビエラ 他(2023)</a>、<a href="https://doi.org/10.1016/j.biopsych.2023.12.020" target="_blank">Altas et al. (2024) </a> は、<strong> リン酸シグナル伝達 / セカンドメッセンジャールーティング </strong> が、転写物やバルクタンパク質の存在量を崩壊させることなく可塑性発現を変化させることができることを示しています。 <a href="https://doi.org/10.1038/385533a0" target="_blank">フレイ&アンプ; Morris (1997)</a>、<a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a>、<a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">ゴビンダラジャン他。 (2011)</a>、<a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey 他(2021)</a>、<a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a> は、<strong> 局所プロテオスタシス / タグ捕捉ルート</strong> が、独自の統合ユニットとターンオーバー ウィンドウを持つ別の状態ファミリーであることを示しています。 <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a>、<a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">Swarnkar et al。 (2021)</a>、<a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">エイケン＆アンプHolzbaur (2024)</a>、<a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> は、<strong> 貨物輸送 / 細胞骨格輸送状態 </strong> が再び異なるルートであることを示しています。関連する脊椎、枝、ボタン、または軸索末端に到達するものは、グラフが固定されたまま可塑性と記憶を変化させる可能性があります。したがって、このページでは、潜在状態モデルは単一の不適格オブジェクトとして受け入れられなくなりました。 <strong> どのファミリーを回復しようとしているのか </strong>、<strong> どのファミリーが省略されたままなのか </strong>、<strong> 主張された状態がどのようなタイムスケールで支配されるのか </strong>.</p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Latent-state family</th>
-<th>What it constrains relatively directly</th>
-<th>What still stays latent if omitted</th>
+<th>潜在状態ファミリー</th>
+<th>比較的直接的に制約するもの</th>
+<th>省略しても潜在的に残るもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Fast executable state</strong></td>
-<td>Immediate activity trajectory, momentary effective synaptic efficacy, and same-session intervention response.</td>
-<td>Why the same scaffold later stabilizes, forgets, or recovers differently across hours to days.</td>
+<td><strong>高速実行可能状態</strong></td>
+<td>即時の活動軌跡、瞬間的な有効シナプス効果、および同一セッションの介入反応。</td>
+<td>同じ足場が、数時間から数日間で後で安定したり、忘れたり、回復したりするのが異なる理由。</td>
 </tr>
 <tr>
-<td><strong>Phospho-signaling / second-messenger route</strong></td>
-<td>Compartment-specific gating, phosphosite occupancy logic, kinase/phosphatase balance, and local signaling nanodomains that modulate plasticity expression.</td>
-<td>A model can fit next-step activity while still missing the controller that decides which plastic change is permitted, blocked, or redirected.</td>
+<td><strong>リンシグナル伝達/セカンドメッセンジャー経路</strong></td>
+<td>コンパートメント特異的なゲーティング、リン酸化サイト占有ロジック、キナーゼ/ホスファターゼバランス、可塑性発現を調節する局所シグナル伝達ナノドメイン。</td>
+<td>A モデルは、どのプラスチック変更を許可するか、ブロックするか、リダイレクトするかを決定するコントローラーを備えていませんが、次のステップのアクティビティに適合できます。</td>
 </tr>
 <tr>
-<td><strong>Local proteostasis / tag-capture route</strong></td>
-<td>Which tagged synapse or branch captures plasticity-related proteins, and which late changes survive local turnover.</td>
-<td>Late stabilization, reconsolidation, and persistence remain underdetermined even if fast-state prediction improves.</td>
+<td><strong>局所プロテオスタシス / タグ捕捉ルート</strong></td>
+<td>どのタグ付きシナプスまたは分岐が可塑性関連タンパク質を捕捉し、どの後期変化が局所代謝回転に耐えるか。</td>
+<td>Late の安定化、再統合、永続性は、高速状態の予測が向上したとしてもまだ未確定のままです。</td>
 </tr>
 <tr>
-<td><strong>Cargo-transport / cytoskeletal trafficking route</strong></td>
-<td>Which receptors, endosomes, RNA cargoes, and presynaptic components actually reach the required compartment in time.</td>
-<td>Compartment-specific maintenance and structural plasticity remain latent even when transcript abundance, ATP support, or weight estimates look adequate.</td>
+<td><strong>貨物輸送・細胞骨格輸送ルート</strong></td>
+<td>どの受容体、エンドソーム、RNA カーゴ、シナプス前成分が時間内に必要なコンパートメントに実際に到達するか。</td>
+<td>転写物の豊富さ、ATPサポート、または重量推定値が適切に見える場合でも、コンパートメント固有の維持と構造可塑性は潜在的なままです。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>State-family card required for maintenance-relevant R3 claims</strong>
+<strong>メンテナンス関連の R3 請求にはステート ファミリー カードが必要</strong>
 <p>
-If an R3 claim is used to support <strong>persistence</strong>, <strong>reconsolidation</strong>, <strong>remote memory</strong>, <strong>recovery after perturbation</strong>, or <strong>same-state language across days or acquisition regimes</strong>, the submission must publish at least <strong>(1) family name</strong>, <strong>(2) direct observable or perturbation route</strong>, <strong>(3) dominant timescale</strong>, <strong>(4) integrative unit</strong> (synapse / branch / neuron / region / whole-brain proxy), <strong>(5) whether that family was directly measured, externally calibrated, model-estimated, or omitted</strong>, and <strong>(6) the abstention boundary that follows</strong>. If regimes or days are bridged, attach the <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a>; if persistence or forgetting is part of the claim, attach the <a href="verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a>. Without that bundle, this roadmap treats the result as a <strong>prediction-useful latent variable</strong> or <strong>same-session proxy model</strong>, not as a maintenance-complete state estimate.
+R3 クレームが <strong> 永続性 </strong>、<strong> 再統合 </strong>、<strong> リモート メモリ </strong>、<strong> 摂動後の回復 </strong>、または <strong> 日数または取得体制にわたる同じ状態の言語 </strong> をサポートするために使用される場合、提出物は少なくとも <strong>(1) ファミリ名 </strong>、<strong>(2) 直接観察可能、または摂動ルート</strong>、<strong>(3) 支配的なタイムスケール</strong>、<strong>(4) 統合ユニット</strong> (シナプス/分岐/ニューロン/領域/全脳プロキシ)、<strong>(5) そのファミリーが直接測定されたか、外部で校正されたか、モデル推定されたか、省略されたか</strong>、<strong>(6) 棄権境界</strong>に続きます。体制または日がブリッジされている場合は、<a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> を取り付けます。永続性または忘却が請求の一部である場合は、<a href="verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a> を添付してください。そのバンドルがない場合、このロードマップは結果をメンテナンス完了状態の推定としてではなく、<strong>予測に役立つ潜在変数</strong>または<strong>同じセッション プロキシ モデル</strong>として扱います。
 </p>
 </div>
-<p><strong>False condition:</strong>The latent state only serves to compress data, fails on held-out perturbations, or changes interpretation once omitted maintenance families such as phospho-signaling, local proteostasis, or cargo-routing are reintroduced.</p>
-<p><strong>Next:</strong>Compare connectome-only, fast-state, and maintenance-augmented models on the same held-out perturbation and longitudinal benchmarks, then publish the omitted-family list and the resulting claim ceiling.</p>
+<p><strong>偽の状態:</strong>潜在状態は、データを圧縮するためだけに機能するか、持続された摂動で失敗するか、リン酸化シグナル伝達、局所プロテオスタシス、またはカーゴルーティングなどの省略された維持ファミリーが再導入されると解釈が変更されます。</p>
+<p><strong>次:</strong>同じ保持された摂動と縦方向のベンチマークでコネクトームのみ、高速状態、およびメンテナンス拡張モデルを比較し、省略されたファミリー リストとその結果のクレーム上限を公開します。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="reconstruction" id="qa-r4">
 <summary>
 <span class="qa-id">R4</span>
-<span class="qa-title">Causation: What models can predict response to intervention? </span>
-<span class="qa-tags"><span class="tag">CAUSAL</span><span class="tag">MULTI-SCALE</span></span>
+<span class="qa-title">Causation: 介入に対する反応を予測できるモデルは何ですか? </span>
+<span class="qa-tags"><span class="tag">CAUSAL</span><span class="tag">マルチスケール</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Rather than just applying correlations, can we say ``what should change'' in response to changes in stimuli or conditions? What chain of evidence should we use to make the leap from decoding (correlation) to emulation (causation)? </p>
-<p><strong>Policy:</strong>This project treats Active Inference, DCM, state-space models, SCM, and mechanistic circuit models as <strong>competitive candidate sets</strong>. DCM is useful for comparing candidate generation models, and SCM is useful for describing interventions and counterfactuals, but neither is an automatic causal detector on its own. If only observational data is used, equivalence classes remain, so we require <strong>clarification of candidate model space</strong>, <strong>family-level comparison</strong>, <strong>model recovery</strong>, and <strong>held-out perturbation prediction</strong>. </p>
-<p><strong>2026-03-19 addendum:</strong>The weakness of the older wording was that <strong>candidate model space</strong> remained a slogan rather than an operational gate. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">Penny et al. (2004)</a> already fixed that DCM inference is relative to the compared models, <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a> showed that very large model spaces can be searched efficiently from a full model, <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021)</a> scaled directed-connectivity estimation to whole-brain human fMRI, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> accelerated regression-style DCM further. But that progress is progress in <strong>tractability</strong>, not an automatic solution to identifiability. Even whole-brain or faster effective-connectivity estimates still depend on the chosen node set, priors, hemodynamic assumptions, omitted alternatives, and validation design.</p>
-<p><strong>Effective-connectivity route card required:</strong>Any R4 claim using DCM or a related effective-connectivity estimator must publish (1) compared node set plus omitted competitors, (2) observed-subsystem closure / latent-confound audit, (3) node-definition / parcellation policy, (4) neural-mass / HRF / prior assumptions plus sampling / transformation sensitivity, (5) family comparison and model recovery, (6) held-out perturbation or external validation, (7) test-retest window and condition dependence, and (8) abstention boundary. If those are missing, this roadmap stops at <strong>model-conditioned causal hypothesis</strong> and does not promote the result to discovered causal wiring or WBE-relevant causal structure.</p>
-<p><strong>Improvement measures (positioning of Multi-scale):</strong> Multi-scale integration is a promising expansion route, but it should not be the default route. Even when passing EEG-derived macroconstraints to a circuit model, acceptance or rejection is not determined by the "theory name" but by prediction improvement for stimuli, lesions, and task perturbations, OOD generalization, and transparency of abstention conditions. </p>
-<p><strong>Stricter implementation (Issue #52):</strong> The uncertainty obtained in the inverse problem (R1/R2) is explicitly propagated to the subsequent model. However, what we are fixing here is not the precision implementation of Active Inference itself, but rather the<strong>upstream uncertainty does not disappear downstream</strong>. The implementation differences between candidate theories are compared on the same bench. </p>
-<p><strong>Next:</strong> Combine the Intervention Premise Evaluation Task (V2), Model Space Declaration, Family Comparison, and Perturbation Bench with External Validation into one deliverable pack. </p>
+<p><strong>質問:</strong>相関関係を単に適用するのではなく、刺激や条件の変化に応じて「何を変化させるべきか」を言うことができますか?デコード (相関関係) からエミュレーション (因果関係) に飛躍するには、どのような一連の証拠を使用する必要がありますか? </p>
+<p><strong>ポリシー:</strong>このプロジェクトは、アクティブ推論、DCM、状態空間モデル、SCM、および機械回路モデルを <strong> 競合候補セット </strong> として扱います。 DCM は候補生成モデルを比較するのに便利で、SCM は介入や反事実を説明するのに役立ちますが、どちらもそれ自体では自動的に因果関係を検出するものではありません。観測データのみを使用する場合、同値クラスが残るため、<strong>候補モデル空間の明確化</strong>、<strong>ファミリーレベルの比較</strong>、<strong>モデル回復</strong>、<strong>ホールドアウト摂動予測</strong>が必要です。 </p>
+<p><strong>2026-03-19 追記:</strong>古い文言の弱点は、<strong>候補モデル空間</strong>が運用ゲートではなくスローガンのままであることでした。 <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">ペニーら(2004)</a> は、DCM 推論が比較モデルに相対的であることをすでに修正しています。<a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a> は、完全なモデルから非常に大きなモデル空間を効率的に検索できることを示しました。<a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021) </a> は全脳ヒト fMRI にスケールされた有向接続性推定、および <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> は回帰スタイルの DCM をさらに加速しました。しかし、その進歩は<strong>tractability</strong>の進歩であり、識別可能性に対する自動的な解決策ではありません。全脳またはより高速な有効接続性の推定であっても、選択したノード セット、事前分布、血行動態の仮定、省略された代替案、および検証設計に依存します。</p>
+<p><strong>有効接続ルート カードが必要:</strong>DCM または関連する有効接続推定器を使用するすべての R4 クレームは、(1) 比較されたノード セットと省略された競合他社、(2) 観察されたサブシステムのクロージャ / 潜在交絡監査、(3) ノード定義 / 分割ポリシー、(4) ニューラルマス / HRF / 事前の仮定とサンプリング / 変換感度、(5) ファミリの比較およびモデルの回復、(6) ホールドアウトを公開する必要があります。摂動または外部検証、(7) テストと再テストのウィンドウおよび条件依存性、および (8) 棄権境界。これらが欠落している場合、このロードマップは <strong> モデル条件付き因果仮説 </strong> で停止し、結果を発見された因果配線または WBE 関連の因果構造に促進しません。</p>
+<p><strong>改善策（マルチスケールの位置付け）：</strong> マルチスケール統合は有望な拡大路線ではあるが、既定路線であってはいけない。 EEG 由来のマクロ制約を回路モデルに渡す場合でも、受け入れまたは拒否は「理論名」によって決定されるのではなく、刺激、病変、課題摂動の予測の改善、OOD の一般化、および棄権条件の透明性によって決定されます。 </p>
+<p><strong>より厳密な実装 (課題 #52):</strong> 逆問題 (R1/R2) で得られた不確実性は、後続のモデルに明示的に伝播されます。ただし、ここで修正しているのは、アクティブ推論自体の正確な実装ではなく、<strong> アップストリームの不確実性がダウンストリーム </strong> で消えないことです。候補理論間の実装の違いは、同じベンチで比較されます。 </p>
+<p><strong>次へ:</strong> 介入前提評価タスク (V2)、モデル空間宣言、ファミリー比較、および外部検証を備えた摂動ベンチを 1 つの成果物パックに結合します。 </p>
 </div>
 </details>
 
 <details open class="qa" data-tags="reconstruction" id="qa-r5">
 <summary>
 <span class="qa-id">R5</span>
-<span class="qa-title">Plasticity: What is the boundary between “introducing” and “not including” learning rules? </span>
-<span class="qa-tags"><span class="tag">PLASTICITY</span></span>
+<span class="qa-title">Plasticity: 学習ルールを「導入する」ことと「含まない」ことの境界は何ですか? </span>
+<span class="qa-tags"><span class="tag">可塑性</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>If we are dealing with long-term identity (V5), we have to include learning (renewal). However, with updates, verification becomes difficult. </p>
-<p><strong>2026-03-25 addendum:</strong>The remaining weakness here was that <strong>plasticity</strong> still read too much like a yes/no switch: either learning is introduced or it is not. The primary literature does not support that simplification. <a href="https://doi.org/10.1038/385533a0" target="_blank">Frey &amp; Morris (1997)</a> and <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012)</a> show <strong>tag / capture eligibility</strong>, <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al. (2011)</a> shows <strong>branch-level integration</strong>, <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al. (2006)</a>, <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al. (2021)</a>, <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang et al. (2024)</a>, and <a href="https://doi.org/10.1111/acel.14492" target="_blank">Parker et al. (2025)</a> show distinct <strong>synthesis-degradation / autophagy / proteasome-capacity routes</strong>, and <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a>, <a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">Havekes et al. (2016)</a>, <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">Vierra et al. (2023)</a>, and <a href="https://doi.org/10.1523/JNEUROSCI.1619-24.2025" target="_blank">Rodriguez et al. (2025)</a> show that phospho-state can be a gate rather than a stable weight itself. In parallel, <a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a>, <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">Aiken &amp; Holzbaur (2024)</a>, and <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> show that delivery routes and local RNA localization constrain what plasticity can actually be expressed. Therefore, R5 is no longer treated here as a yes/no choice. It is a <strong>claim-timescale audit</strong>.</p>
+<p><strong>質問:</strong>長期的なアイデンティティ (V5) を扱う場合は、学習 (更新) を含める必要があります。ただし、アップデートにより検証が困難になります。 </p>
+<p><strong>2026-03-25 追記:</strong> ここでの残りの弱点は、<strong>可塑性</strong> がまだ「はい/いいえ」スイッチのように読み取られすぎていることでした: 学習が導入されるか導入されないかのどちらかです。一次文献はその単純化を支持していません。 <a href="https://doi.org/10.1038/385533a0" target="_blank">フレイ&アンプ; Morris (1997)</a> および <a href="https://doi.org/10.1038/ncomms2250" target="_blank">Shires et al. (2012) </a> は <strong>tag / キャプチャ資格を示します</strong>、<a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">Govindarajan et al。 (2011)</a> は <strong> ブランチレベルの統合を示しています</strong>、<a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">Fonseca et al。 (2006)</a>、<a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">Pandey et al。 (2021)</a>、<a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">Chang 他(2024)</a>、<a href="https://doi.org/10.1111/acel.14492" target="_blank">Parker et al. (2025) </a> は、異なる <strong> 合成分解 / オートファジー / プロテアソーム容量経路を示します。</strong> および <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">Lee et al. (2003)</a>、<a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">Havekes et al。 (2016)</a>、<a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">ビエラ 他(2023)</a>、<a href="https://doi.org/10.1523/JNEUROSCI.1619-24.2025" target="_blank">ロドリゲスら。 (2025) </a> は、リン酸状態がそれ自体の安定重量ではなくゲートになり得ることを示しています。並行して、<a href="https://doi.org/10.1038/nn2063" target="_blank">Correia et al. (2008)</a>、<a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">エイケン＆アンプHolzbaur (2024)</a>、および <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">de Queiroz et al. (2025)</a> は、送達経路と局所的な RNA 局在化が実際にどのような可塑性を発現できるかを制限することを示しています。したがって、R5 はここでは「はい/いいえ」の選択肢として扱われなくなりました。それは<strong>クレームタイムスケール監査</strong>.</p>です
 <table class="data-table">
 <thead>
 <tr>
-<th>Route</th>
-<th>What it permits relatively safely</th>
-<th>Minimum deliverables</th>
+<th>ルート</th>
+<th>比較的安全に許可されるもの</th>
+<th>最小納品物</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>(A) fixed model / no plasticity claim</strong></td>
-<td>Same-session fit, bounded closed-loop control, or a narrow intervention result without persistence claims.</td>
-<td>Fixed decoder horizon, same-session hold-out, abstention on forgetting / reconsolidation / recovery, and an explicit statement that no maintenance-complete claim is being made.</td>
+<td><strong>(A) 固定モデル/塑性主張なし</strong></td>
+<td>同一セッション フィット、有界閉ループ制御、または永続性クレームのない狭い介入結果。</td>
+<td>デコーダー ホライズン、同一セッション ホールドアウト、忘却/再統合/回復の棄権、およびメンテナンス完了の主張は行われないという明示的な声明を修正しました。</td>
 </tr>
 <tr>
-<td><strong>(B) fixed fast-state model + maintenance disclosure</strong></td>
-<td>Cross-day or cross-regime comparison without claiming that the controller of persistence has been identified.</td>
-<td><a href="verification.html#temporal-validity-card">Temporal Validity Card</a>, state annotation, <a href="verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a>, fixed-decoder versus rescue-mode separation, and the relevant family route cards when phospho, proteostasis, cargo, or other maintenance controllers are cited.</td>
+<td><strong>(B) 固定高速状態モデル + メンテナンス公開</strong></td>
+<td>持続性の制御者が特定されたとは主張しない、日をまたいだ比較または体制間の比較。</td>
+<td><a href="verification.html#temporal-validity-card">Temporal Validity Card</a>、状態注釈、<a href="verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a>、固定デコーダとレスキュー モードの分離、およびリン酸化、プロテオスタシス、カーゴ、またはその他のメンテナンス コントローラーが引用されている場合の関連ファミリー ルート カード。</td>
 </tr>
 <tr>
-<td><strong>(C) explicit plasticity / maintenance model</strong></td>
-<td>Named persistence, reconsolidation, recovery, or remote-memory claims with a declared controller family.</td>
-<td>Named plasticity rule, family-level ablations, held-out perturbation prediction, fixed-decoder durability plus recalibration burden, <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> when acquisition regimes are bridged, and a failure / fallback policy if the controller assumptions break.</td>
+<td><strong>(C)明示的可塑性/メンテナンスモデル</strong></td>
+<td>宣言されたコントローラー ファミリを使用した名前付き永続性、再統合、リカバリ、またはリモート メモリ クレーム。</td>
+<td>名前付き可塑性ルール、ファミリーレベルのアブレーション、ホールドアウト摂動予測、固定デコーダの耐久性と再キャリブレーション負荷、<a href="verification.html#state-continuity-bridge-card">取得レジームがブリッジされた場合の状態継続ブリッジカード</a>、およびコントローラの想定が崩れた場合の障害/フォールバックポリシー。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Site rule for plasticity claims</strong>
+<strong>可塑性主張に関するサイトルール</strong>
 <p>
-On this site, the words <strong>plasticity</strong>, <strong>adaptation</strong>, <strong>consolidation</strong>, <strong>recovery</strong>, and <strong>long-term stabilization</strong> are not treated as one achievement. If the claim reaches beyond same-session fit, attach the <a href="verification.html#temporal-validity-card">Temporal Validity Card</a>. If it bridges across acquisition regimes or days as if it were one state sample, attach the <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a>. If the claim depends on maintenance families, attach the <a href="verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a> plus the relevant family route cards for phospho-signaling, local proteostasis, cargo-routing, or other cited controllers. Without that bundle, R5 stops at an <strong>adaptive or learning-capable model</strong>, not a verified continuity-preserving plasticity route.
+このサイトでは、<strong>可塑性</strong>、<strong>適応</strong>、<strong>統合</strong>、<strong>回復</strong>、<strong>長期安定化</strong>という言葉は1つの成果として扱われません。請求が同一セッションの適合を超えた場合は、<a href="verification.html#temporal-validity-card">TTemporal Validity Card</a> を添付してください。 1 つの州サンプルであるかのように取得体制または日数をまたぐ場合は、<a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> を接続します。クレームがメンテナンス ファミリに依存する場合は、<a href="verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a> に加えて、リン酸シグナリング、ローカル プロテオスタシス、カーゴ ルーティング、またはその他の引用されたコントローラーに関連するファミリー ルート カードを添付します。このバンドルがないと、R5 は検証済みの連続性を保持する可塑性ルートではなく、<strong> 適応型または学習機能付きモデル </strong> で停止します。
 </p>
 </div>
-<p><strong>Next required:</strong>When learning is included, report fixed-decoder durability, rescue mode, recalibration burden, family-level ablations, and held-out perturbation response on the same benchmark; then disclose which timescale of plastic claim was actually passed.</p>
+<p><strong>次に必要:</strong>学習が含まれる場合、同じベンチマークで固定デコーダの耐久性、レスキュー モード、再キャリブレーション負荷、家族レベルのアブレーション、およびホールドアウト摂動応答をレポートします。次に、プラスチッククレームが実際に通過したタイムスケールを明らかにします。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="reconstruction" id="qa-r6">
 <summary>
 <span class="qa-id">R6</span>
-<span class="qa-title">Personalization: General model + individual parameters? Or is it completely individual? </span>
-<span class="qa-tags"><span class="tag">PERSONALIZATION</span></span>
+<span class="qa-title">Personalization: 一般モデル + 個別パラメータ?それとも完全に個人的なものなのでしょうか？ </span>
+<span class="qa-tags"><span class="tag">パーソナライゼーション</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Personalization is unavoidable when discussing identity. On the other hand, too much personalization leads to overfitting and broken reproducibility.</p>
-<p><strong>2026-03-18 addendum:</strong>The reason this section was deepened is that if personalization is read only as a trick for improving performance, the distinction between the <strong>target neural variable</strong> and a <strong>subject / session fingerprint</strong> collapses. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> showed that diagnosis learning can absorb subject characteristics when repeated measures are not participant-disjoint, <a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> showed time-robust person identification from resting-state EEG alone, and <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> summarized strong subject-driven EEG variation. The same boundary also extends to acquisition distribution: <a href="https://doi.org/10.1088/1741-2552/aacfe4" target="_blank">Hu et al. (2018)</a> showed that reference montage and electrode setup alter scalp potentials, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that system / subject / session all influence EEG, and <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that cross-dataset variability is driven in part by amplifier, cap, sampling rate, and filtering differences. The real boundary in R6 is therefore <strong>how much individual difference a given claim is allowed to use</strong> and <strong>how population signal is separated from fingerprint and setup routes</strong>.</p>
+<p><strong>質問:</strong>アイデンティティについて議論する場合、パーソナライゼーションは避けられません。一方で、パーソナライゼーションが多すぎると、過剰適合や再現性の低下につながります。</p>
+<p><strong>2026-03-18 追記:</strong>このセクションを深めた理由は、パーソナライゼーションをパフォーマンスを向上させるためのトリックとしてのみ解釈すると、<strong>ターゲットのニューラル変数</strong>と<strong>サブジェクト/セッションのフィンガープリント</strong>の区別が崩れてしまうためです。 <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019) </a> は、反復測定が参加者間で連携していない場合、診断学習が被験者の特性を吸収できることを示しました。<a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> および <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di 他(2021) </a> は、安静状態の EEG のみから時間的に堅牢な個人識別を示しました。<a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022) </a> は、被験者主導の強力な EEG 変動を要約しました。同じ境界は取得分布にも拡張されます: <a href="https://doi.org/10.1088/1741-2552/aacfe4" target="_blank">Hu et al. (2018) </a> は、参照モンタージュと電極設定によって頭皮電位が変化することを示しました。<a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al。 (2017)</a> は、システム / 被験者 / セッションのすべてが EEG に影響を与えることを示しました。 (2020)</a> は、データセット間の変動が増幅器、キャップ、サンプリング レート、およびフィルター処理の違いによって部分的に引き起こされることを示しました。したがって、R6 の実際の境界は、<strong> 特定の主張でどの程度の個人差が許容されるか</strong> および <strong>人口信号が指紋およびセットアップ ルートからどのように分離されるか</strong>.</p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Route</th>
-<th>What can be read relatively safely at this route</th>
-<th>Minimum deliverables</th>
+<th>ルート</th>
+<th>このルートで比較的安全に読めるもの</th>
+<th>最小納品物</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>(A) shared model + subject-disjoint evaluation</strong></td>
-<td>Whether a person-independent signal remains and how far population-level generalization can be established.</td>
-<td>Leave-one-subject-out / leave-one-session-out, raw-recording ancestry, subject/session/site/device/reference-system/electrode-layout metadata-only baselines, a fingerprint classifier, harmonization logs, and an explicit guarantee that windows cut from the same raw recording do not cross train/test.</td>
+<td><strong>(A) 共有モデル+主体素評価</strong></td>
+<td>個人に依存しない信号が残っているかどうか、および集団レベルの一般化がどこまで確立できるか。</td>
+<td>Leave-1-subject-out / Leave-1-session-out、生録画の祖先、件名/セッション/サイト/デバイス/参照システム/電極レイアウトのメタデータのみのベースライン、指紋分類子、調和ログ、および同じ生の録画から切り取られたウィンドウがトレーニング/テストと交差しないことの明示的な保証。</td>
 </tr>
 <tr>
-<td><strong>(B) shared encoder + light subject adaptation</strong></td>
-<td>How much calibration is needed to land a shared representation on the target subject.</td>
-<td>Frozen vs trainable parts, adaptation budget, when target-subject data is introduced, pre/post-adaptation scores, fixed decoder horizon, and cross-day degradation plus recalibration burden.</td>
+<td><strong>(B) 共用エンコーダ + 被写体適応</strong></td>
+<td>対象の主題に共通の表現を着地させるためにどの程度のキャリブレーションが必要か。</td>
+<td>凍結された部分とトレーニング可能な部分、適応予算、いつ対象被験者データが導入されるか、適応前/適応後のスコア、固定デコーダー期間、日をまたぐ劣化と再キャリブレーションの負担。</td>
 </tr>
 <tr>
-<td><strong>(C) fully subject-specific decoder / controller</strong></td>
-<td>How far a participant-conditioned communication / control route works for that individual.</td>
-<td>Training time, cooperation burden, within-subject hold-out, cross-day hold-out, silence / abstention behavior, recalibration burden, and an explicit ceiling that does not claim other-person generalization.</td>
+<td><strong>(C) 完全に主題に特化したデコーダ/コントローラ</strong></td>
+<td>参加者に条件付けされた通信/制御ルートがその個人に対してどの程度機能するか。</td>
+<td>トレーニング時間、協力負担、被験者内ホールドアウト、日をまたいだホールドアウト、沈黙/棄権行動、再調整負担、および他人の一般化を主張しない明示的な上限。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Site rule for this section</strong>
+<strong>このセクションのサイト ルール</strong>
 <p>
-On this site, any result that calls itself a diagnosis model, state biomarker, or general decoder must report at least <strong>(1) split independence unit</strong>, <strong>(2) raw-recording / window ancestry</strong>, <strong>(3) subject / session / site / device / reference-system / electrode-layout disjointness</strong>, <strong>(4) metadata-only or fingerprint baselines</strong>, <strong>(5) the harmonization log for channel map / reference / sample rate / filters</strong>, <strong>(6) when target-subject or target-site data was used</strong>, and <strong>(7) the adaptation budget</strong>. Without that, the result is treated first as a <strong>subject-aware classifier</strong>, <strong>participant-conditioned decoder</strong>, or <strong>fingerprint/setup-unresolved biomarker</strong>, not as a population marker or a subject-independent mechanism.
+このサイトでは、診断モデル、状態バイオマーカー、または一般的なデコーダーを自称する結果は、少なくとも <strong>(1) 分割独立性ユニット</strong>、<strong>(2) 生記録 / ウィンドウ祖先</strong>、<strong>(3) 被験者 / セッション / サイト / デバイス / 参照システム / 電極レイアウトの非結合性</strong>、<strong>(4) メタデータのみまたはフィンガープリントを報告する必要があります。ベースライン</strong>、<strong>(5) チャネルマップ/リファレンス/サンプルレート/フィルターの調和ログ</strong>、<strong>(6) ターゲット被験者またはターゲットサイトデータが使用された場合</strong>、<strong>(7) 適応バジェット</strong>。それがなければ、結果は母集団マーカーや被験者に依存しないメカニズムとしてではなく、まず <strong> 被験者認識分類子 </strong>、<strong> 参加者条件付きデコーダー </strong>、または <strong> 指紋/セットアップ未解決バイオマーカー </strong> として扱われます。
 </p>
 </div>
-<p><strong>Branch example:</strong> Route (A) asks whether any population signal is present, route (B) asks how much transfer plus calibration burden is needed, and route (C) asks whether an individual route is operationally usable. Therefore, the fact that personalization scores higher is neither a success nor a failure by itself; it only becomes interpretable after you state <strong>which claim family you want to support</strong> and <strong>how far fingerprint and setup routes were controlled</strong>.</p>
-<p><strong>Next required:</strong>Bundle the <a href="verification.html#specificity-shortcut-card">Verification: Specificity &amp; Shortcut Card</a>, the evaluation-family and split design on <a href="datasets.html">Datasets</a>, and the <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> so same-subject success, cross-subject generalization, and cross-day maintenance are managed as different deliverables.</p>
+<p><strong>分岐の例:</strong> ルート (A) は人口信号が存在するかどうかを尋ね、ルート (B) はどれだけの転送とキャリブレーション負荷が必要かを尋ね、ルート (C) は個々のルートが運用上使用可能かどうかを尋ねます。したがって、パーソナライゼーションのスコアが高いという事実自体は成功でも失敗でもありません。 <strong>どのクレーム ファミリをサポートしたいかを述べた後でのみ解釈可能になります</strong>および<strong>フィンガープリントとセットアップ ルートがどこまで制御されたか</strong>.</p>
+<p><strong>次に必要:</strong><a href="verification.html#specificity-shortcut-card">のバンドル検証:特異性とショートカット Card</a>、<a href="datasets.html">Datasets</a> の評価ファミリーと分割設計、および <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> により、同じ主題の成功、主題を越えた一般化、および日を越えたメンテナンスが異なる成果物として管理されます。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="reconstruction" id="qa-r7">
 <summary>
 <span class="qa-id">R7</span>
-<span class="qa-title">Identifiability: Does estimation approach the “unique solution”? What about uncertainty? </span>
-<span class="qa-tags"><span class="tag">IDENTIFIABILITY</span></span>
+<span class="qa-title">識別可能性: 推定は「独自の解決策」に近づいていますか?不確実性についてはどうでしょうか？ </span>
+<span class="qa-tags"><span class="tag">識別可能性</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>When there are many different models that explain the same observation, which assumptions can be used to narrow it down? Where does the uncertainty come from: sensor geometry, conductivity, preprocessing, candidate model ensembles, and intervention design? </p>
-<p><strong>Recondition:</strong>If the conclusion is significantly reversed due to small preconditioning differences, conductivity assumptions, or changes in the candidate model space, or cannot be recovered using held-out perturbations or external criteria, we do not consider the identification to be successful. </p>
-<p><strong>Next, we need:</strong>In addition to prior distribution/regularization, we publish all of the <strong>compared and excluded families</strong>, <strong>sensitivity analysis of electrode geometry, head model, and conductivity</strong>, <strong>simulation/phantom/invasive calibration</strong>, and <strong>abstention conditions when models overlap</strong>, and only adopt robust conclusions. The submission-side rule for this node is <a href="verification.html#identifiability-card">Verification: Identifiability Card</a>. </p>
+<p><strong>質問:</strong>同じ観察を説明するさまざまなモデルが多数ある場合、どの仮定を使用してモデルを絞り込むことができますか?不確実性はどこから来るのでしょうか:センサーの形状、導電率、前処理、候補モデルのアンサンブル、介入設計などです。 </p>
+<p><strong>再条件:</strong>事前調整の小さな違い、導電率の仮定、または候補モデル空間の変更により結論が大幅に覆される場合、または保持された摂動や外部基準を使用して回復できない場合、同定は成功したとはみなされません。 </p>
+<p><strong>次に必要なものは次のとおりです:</strong>事前の分布/正規化に加えて、<strong>比較対象および除外されたファミリーのすべてを公開</strong>、<strong>電極形状、頭部モデル、および導電性の感度分析</strong>、<strong>シミュレーション/ファントム/侵襲的校正</strong>、<strong>モデル作成時の棄権条件オーバーラップ</strong>を使用し、堅牢な結論のみを採用します。このノードの送信側ルールは <a href="verification.html#identifiability-card">Verification: Identifiability Card</a> です。 </p>
 <div class="note-box">
-<strong>Separate predictability, localization, and identity</strong>
+<strong>分離された予測可能性、位置特定、アイデンティティ</strong>
 <p>
-This page does not treat <strong>improved held-out prediction</strong>, <strong>reduced localization error</strong>, and <strong>internal-state recovery that approaches a unique solution</strong> as claims of equal strength. The first two are important advances, but the third requires additional conditions before it can be claimed publicly.
+このページでは、<strong>改善されたホールドアウト予測</strong>、<strong>低減された位置推定誤差</strong>、および<strong>独自の解決策に近づく内部状態回復</strong>を同等の強度の主張として扱いません。最初の 2 つは重要な進歩ですが、3 つ目は公に主張する前に追加の条件が必要です。
 </p>
 <ul>
-<li><strong>Predictability:</strong> The ability to conditionally predict the next observation. It is useful for model compression and proxy improvement, but it does not by itself guarantee uniqueness of internal state. </li>
-<li><strong>Localization:</strong> Reduced positional error of a source under specified conditions. This matters for direct validation, but other uncertainties remain in deep, low-amplitude, and unobserved regions. </li>
-<li><strong>Identifiability:</strong> Conclusions remain stable even when candidate families and sensitivity analyses are included, and they can be recovered with held-out perturbations and external criteria. </li>
+<li><strong>予測可能性:</strong> 次の観測を条件付きで予測する機能。これはモデルの圧縮やプロキシの改善に役立ちますが、それ自体では内部状態の一意性が保証されません。 </li>
+<li><strong>Localization:</strong> 指定された条件下でのソースの位置誤差を低減しました。これは直接検証にとって重要ですが、深い領域、低振幅の観測されていない領域には他の不確実性が残ります。 </li>
+<li><strong>識別可能性:</strong> 候補ファミリーと感度分析が含まれている場合でも、結論は安定しており、保留された摂動と外部基準で回復できます。 </li>
 </ul>
 </div>
 <div class="note-box">
-<strong>2026-03 Supplement: Correlation, prediction, and identification are not treated with the same strength</strong>
+<strong>2026-03 補足: 相関、予測、識別は同じ強度で扱われません</strong>
 <p>
-The EEG literature with direct validation is rather revealing of its limitations when read carefully. Seeber et al. (2019) showed that the subcortical signal was <strong>conditionally detectable</strong> in 256ch scalp EEG, but did not claim general unique reconstruction. Unnwongse et al. (2023) showed in direct verification using intracranial stimulation that localization error depends on the conductivity assumption and source depth, and Hao et al. (2025) reported that source power and source depth greatly influenced the error in a patient cohort of simultaneous HD-EEG/SEEG. Therefore, even if a cross-modal correlation or a held-out prediction appears, it is primarily an improvement in predictability / localization, and does not necessarily lead to a unique solution to the internal state.
+直接検証を行った脳波に関する文献は、注意深く読むとむしろその限界を明らかにします。シーバーら。 (2019) は、皮質下信号が 256ch 頭皮脳波で <strong> 条件付き検出可能 </strong> であることを示しましたが、一般的な独自の再構成を主張していませんでした。 Unnwongse et al. (2023) は、頭蓋内刺激を使用した直接検証で、位置特定エラーが導電率の仮定とソースの深さに依存することを示しました。 (2025) は、同時 HD-EEG/SEEG の患者コホートにおける誤差に、線源出力と線源深度が大きく影響することを報告しました。したがって、クロスモーダル相関や予測のホールドアウトが現れたとしても、それは主に予測可能性/局所性の向上であり、必ずしも内部状態の一意な解決につながるわけではありません。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-26 supplement: richer observables are not the same as a collapsed solution set</strong>
+<strong>2026-03-26 補足: より豊富なオブザーバブルは、折りたたまれたソリューション set</strong> と同じではありません
 <p>
-The remaining weak point here was that <strong>more measured variables</strong> could still sound too close to <strong>unique recovery</strong>. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> reviewed that observability and structural identifiability are different questions, and <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> showed that unknown inputs, states, and parameters often have to be analysed jointly. In neuroscience, <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that connectome-constrained dynamics remain degenerate until additional recordings are supplied. A second weakness remained after that: <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed both <strong>common and divergent</strong> organization across simultaneous Ca<sup>2+</sup> and BOLD, <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed tightly coupled global progression plus <strong>two distinct network patterns</strong> in simultaneous EEG-PET-MRI, and <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show why same-brain or same-subject sequential pipelines still remain exposed to preservation change and state drift. Therefore, this roadmap now treats R7 as a five-step audit: <strong>(1) observability budget</strong>, <strong>(2) structural identifiability in the declared model space</strong>, <strong>(3) practical identifiability under the actual dataset and perturbation design</strong>, <strong>(4) bridge / composition validity when multimodal or sequential evidence is invoked</strong>, and <strong>(5) external validation plus abstention when candidate sets still overlap</strong>.
+ここでの残りの弱点は、<strong> より多くの測定変数 </strong> が依然として <strong> 独自の回復 </strong> に近すぎる可能性があるということでした。 <a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> は、可観測性と構造識別可能性は別の問題であるとレビューし、<a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> は、未知の入力、状態、パラメーターを組み合わせて分析する必要があることが多いことを示しました。神経科学では、<a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004) </a> は、同様の回路活性が異なるパラメータから発生する可能性があることを示しました。<a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024) </a> は、同様の人間の活性化パターンが依然として異なる巨視的ネットワーク状態を隠すことができることを示しました。 Litwin-Kumar (2025)</a> は、追加の記録が提供されるまで、コネクトームに制約されたダイナミクスが退化したままであることを示しました。その後も 2 番目の弱点が残りました。<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii ら。 (2024) </a> は、同時の Ca<sup>2+</sup> および BOLD にわたって、<strong> 共通および分岐 </strong> 組織の両方を示しました。<a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al。 (2025) </a> は、同時 EEG-PET-MRI において密結合した全体的進行と <strong> 2 つの異なるネットワーク パターンを示した </strong>、および <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a>、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONSコンソーシアムほか(2025)</a>、<a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> は、同じ脳または同じ被験者のシーケンシャル パイプラインが依然として保存変更と状態ドリフトにさらされている理由を示しています。したがって、このロードマップでは現在、R7 を 5 段階の監査として扱っています: <strong>(1) 可観測性予算</strong>、<strong>(2) 宣言されたモデル空間における構造識別可能性</strong>、<strong>(3) 実際のデータセットおよび摂動設計下での実際的な識別可能性</strong>、<strong>(4) マルチモーダルまたは逐次証拠が呼び出された場合のブリッジ/構成の妥当性</strong>、および <strong>(5) 外部検証と、候補セットがまだ重複する場合の棄権 </strong>。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Ambiguity class</th>
-<th>How it fools the reader</th>
-<th>What would actually raise the claim ceiling</th>
-<th>What this roadmap still refuses to count</th>
+<th>曖昧性クラス</th>
+<th>読者を騙す方法</th>
+<th>実際に保険金請求の上限を引き上げるもの</th>
+<th>このロードマップがまだ数えることを拒否しているもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Symmetry / reparameterization ambiguity</strong></td>
-<td>Several parameter or state transformations still produce the same declared outputs, so a good fit looks unique when it is not.</td>
-<td>Add a symmetry-breaking observable, known input / initial condition, or an explicit reformulation that removes the hidden transformation.</td>
-<td>More optimizer restarts, longer fitting, or more repeats of the same uninformative protocol.</td>
+<td><strong>対称/再パラメータ化の曖昧さ</strong></td>
+<td>いくつかのパラメータまたは状態の変換は、依然として同じ宣言された出力を生成するため、適切な適合は、そうでない場合でも一意に見えます。</td>
+<td>対称性を破るオブザーバブル、既知の入力/初期条件、または隠れた変換を削除する明示的な再定式化を追加します。</td>
+<td>オプティマイザの再起動が多くなり、フィッティングが長くなる、または同じ有益でないプロトコルの繰り返しが増える。</td>
 </tr>
 <tr>
-<td><strong>Regime-restricted degeneracy</strong></td>
-<td>Different internal states or parameter sets agree inside one narrow task, state, or operating regime and only diverge outside it.</td>
-<td>Use state transitions, persistent excitation, targeted recordings, or perturbation contrasts that make the surviving alternatives separate.</td>
-<td>More passive samples from the same narrow regime when the alternatives remain co-linear.</td>
+<td><strong>体制制限型縮退</strong></td>
+<td>異なる内部状態またはパラメータ セットは、1 つの狭いタスク、状態、または動作レジーム内で一致し、その外でのみ分岐します。</td>
+<td>状態遷移、持続的な励起、ターゲットを絞った録音、または摂動コントラストを使用して、生き残った選択肢を分離します。</td>
+<td>代替案が同一直線上にある場合、同じ狭いレジームからのより多くのパッシブ サンプル。</td>
 </tr>
 <tr>
-<td><strong>Model-family / omitted-mechanism ambiguity</strong></td>
-<td>An approximate family looks well identified until a complementary condition reveals systematic residuals or missing mechanisms.</td>
-<td>Run a discrepancy stress test, compare richer / alternative model families, and require held-out falsification instead of post hoc explanation.</td>
-<td>Narrower intervals inside one misspecified family or one headline fit improvement.</td>
+<td><strong>モデルファミリー/省略された機構の曖昧さ</strong></td>
+<td>相補的な条件によって系統的な残差や欠落したメカニズムが明らかになるまで、近似ファミリーはよく特定されているように見えます。</td>
+<td>R不一致ストレス テストを実行し、より豊富な/代替モデル ファミリを比較し、事後説明の代わりに保留された反証を要求します。</td>
+<td>1 つの誤って指定されたファミリーまたは 1 つの見出しの適合性が向上し、内部の間隔が狭くなります。</td>
 </tr>
 <tr>
-<td><strong>Task-variable interaction / representation ambiguity</strong></td>
-<td>A reduced representation predicts correlations while missing the interaction structure that actually drives behavior.</td>
-<td>Preserve or perturb the task-variable interaction and compare intervention-side predictions of the competing representations.</td>
-<td>Correlation-only dimensionality reduction, generic multimodal fusion, or interpretability language without perturbation.</td>
+<td><strong>Tタスク変数の相互作用/表現の曖昧さ</strong></td>
+<td>A の縮小表現は、実際に動作を駆動する相互作用構造を見逃しながら、相関関係を予測します。</td>
+<td>タスク変数の相互作用を保存または撹乱し、競合する表現の介入側の予測を比較します。</td>
+<td>相関のみの次元削減、汎用マルチモーダル融合、または摂動のない解釈可能言語。</td>
 </tr>
 </tbody>
 </table>
 <table class="data-table">
 <thead>
 <tr>
-<th>Evidence pattern</th>
-<th>What it can improve</th>
-<th>What it still does not close</th>
-<th>Required next audit on this page</th>
+<th>証拠パターン</th>
+<th>改善できること</th>
+<th>まだ閉まらないもの</th>
+<th>このページの次回の監査が必要</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Same-session multimodal bundle</strong></td>
-<td>Can tighten observability and expose complementary errors</td>
-<td>Does not by itself remove shared-driver risk, quantity mismatch, or latent-state multiplicity</td>
-<td><a href="verification.html#fusion-card">Fusion Card</a> plus the R7 candidate-space audit</td>
+<td><strong>同一セッションマルチモーダルバンドル</strong></td>
+<td>可観測性を強化し、補完的なエラーを露出できる</td>
+<td>それ自体では、共有ドライバーのリスク、数量の不一致、または潜在状態の多重性は除去されません</td>
+<td><a href="verification.html#fusion-card">Fusion Card</a> と R7 候補スペース監査</td>
 </tr>
 <tr>
-<td><strong>Connectome-constrained predictor</strong></td>
-<td>Can restrict one family of candidate dynamics</td>
-<td>Does not by itself remove dynamical degeneracy or omitted-state families</td>
-<td><a href="verification.html#observability-budget">Observability Budget (Connectome-Constrained Model Card)</a> plus held-out recordings / perturbations</td>
+<td><strong>コネクトーム制約付き予測子</strong></td>
+<td>候補ダイナミクスの 1 つのファミリーを制限可能</td>
+<td> 単独では動的縮退や省略状態ファミリーを削除しません</td>
+<td><a href="verification.html#observability-budget">可観測性バジェット (コネクトーム制約モデル カード)</a> プラスホールドアウト記録 / 摂動</td>
 </tr>
 <tr>
-<td><strong>Same-brain or same-subject sequential pipeline</strong></td>
-<td>Can connect specimen identity across stages</td>
-<td>Does not by itself guarantee same-state continuity across fixation, delay, or regime shift</td>
-<td><a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> plus temporal-validity disclosure</td>
+<td><strong>同一脳または同一主題のシーケンシャル パイプライン</strong></td>
+<td>複数のステージ間で標本のアイデンティティを接続可能</td>
+<td>それ自体は、固定、遅延、またはレジームシフトにわたる同じ状態の連続性を保証しません</td>
+<td><a href="verification.html#state-continuity-bridge-card">状態継続性ブリッジ カード</a> プラス時間的有効性開示</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>2026-03-31 supplement: informative protocols must target ambiguity, stress omitted mechanisms, and declare minimum sufficiency</strong>
+<strong>2026-03-31 補足: 有益なプロトコルは曖昧さを対象にし、省略されたメカニズムを強調し、最小限の十分性を宣言する必要があります</strong>
 <p>
-The remaining weakness after splitting observability from identifiability was that a protocol could still be described with generic words such as <strong>multimodal</strong>, <strong>naturalistic</strong>, or <strong>closed-loop</strong> without saying why that design should actually separate the survivors. The primary literature does not support that shortcut. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">Diop &amp; Fliess (1991)</a> made persistent trajectories explicit, and <a href="https://doi.org/10.1063/1.3528102" target="_blank">Raue et al. (2010)</a> showed that identifiability analysis can guide new experiments rather than only criticize old ones. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">Chis et al. (2016)</a> then showed that <strong>sloppiness is not identifiability</strong> and that design should optimize explicit identifiability criteria rather than proxy uncertainty scores. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that complementary experiments can expose <strong>omitted mechanisms</strong> rather than solve them. In current neuroscience, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that a <strong>small targeted recording set</strong> can remove degeneracy in connectome-constrained networks, and <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Langdon &amp; Engel (2025)</a> showed that preserving <strong>causal interactions among task variables</strong> can recover behaviorally relevant computation that correlation-only reductions miss. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">Gevertz &amp; Kareva (2024)</a> then showed that identifiability analysis can derive a <strong>minimally sufficient</strong> schedule, and <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> showed that active learning can reduce the observations needed to reach practical identifiability. Therefore, this roadmap now asks not only whether a protocol is richer, but <strong>which ambiguity it targeted</strong>, <strong>which identifiability objective chose it</strong>, <strong>whether it exposed omitted-mechanism error</strong>, and <strong>what minimum-sufficiency stop rule would have been enough</strong>.
+可観測性と識別可能性を分離した後に残った弱点は、なぜその設計が実際に生存者を分離する必要があるのか​​を説明せずに、<strong>マルチモーダル</strong>、<strong>自然主義</strong>、または<strong>閉ループ</strong>などの一般的な単語でプロトコルを記述することができるということでした。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">ディオプ＆アンプ; Fliess (1991)</a> は持続的な軌道を明示し、<a href="https://doi.org/10.1063/1.3528102" target="_blank">Raue et al. (2010) </a> は、識別可能性分析が古い実験を批判するだけでなく、新しい実験を導くことができることを示しました。 <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">Chis et al. (2016)</a> は、<strong> のずさんさは識別可能性ではないこと、</strong> の設計では代理不確実性スコアではなく明示的な識別可能性基準を最適化する必要があることを示しました。 <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">ホワイト他(2016) </a> は、相補的な実験により <strong> の省略されたメカニズム </strong> を解決するのではなく明らかにできることを示しました。現在の神経科学では、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">ベイランとLitwin-Kumar (2025)</a> は、<strong> 小規模のターゲット録音セット </strong> がコネクトーム制約のあるネットワークの縮退を除去できることを示しました。 Engel (2025) </a> は、タスク変数 </strong> 間の <strong> 因果的相互作用を保存すると、相関のみの削減では見逃される行動的に関連する計算を回復できることを示しました。 <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">ゲベルツ&アンプ;次に、Kareva (2024)</a> は、識別可能性分析によって <strong> と最小限十分な </strong> スケジュールを導き出すことができることを示しました。 (2025) </a> は、アクティブ ラーニングにより、実用的な識別可能性を達成するために必要な観察を削減できることを示しました。したがって、このロードマップでは、プロトコルがよりリッチであるかどうかだけでなく、<strong>どの曖昧性を対象としたのか</strong>、<strong>どの識別可能性の目的がそれを選択したか</strong>、<strong>省略されたメカニズムのエラーが暴露されたか</strong>、<strong>どの最小十分性停止ルールがあれば十分だったか</strong>も問うようになりました。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Design-side audit field</th>
-<th>What R7 now asks for</th>
-<th>What this stops you from overreading</th>
+<th>設計側監査フィールド</th>
+<th>R7が今求めるもの</th>
+<th>これで読みすぎが防げるのは何か</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Named ambiguity</strong></td>
-<td>State which surviving states, parameters, controllers, or model families remain confusable after the current fit, and which one the next protocol step is trying to separate.</td>
-<td><code>We added another task or modality</code> is not read as targeted ambiguity reduction.</td>
+<td><strong>名前のあいまいさ</strong></td>
+<td>現在のフィット後にどの状態、パラメータ、コントローラー、またはモデル ファミリが混同されやすいのか、また次のプロトコル ステップでどの状態を分離しようとしているのかを示します。</td>
+<td><code>別のタスクまたはモダリティを追加しました</code> は、対象となる曖昧さの削減として読み取られません。</td>
 </tr>
 <tr>
-<td><strong>Identifiability objective</strong></td>
-<td>Name whether the next condition was chosen to optimize practical identifiability, model discrimination, posterior contraction, profile-likelihood width, or another declared criterion.</td>
-<td>A richer protocol is not read as informative merely because a generic optimization score improved.</td>
+<td><strong>識別可能性の目的</strong></td>
+<td>実用的な識別可能性、モデルの識別、事後収縮、プロファイル尤度の幅、または別の宣言された基準を最適化するために次の条件が選択されたかどうかを指定します。</td>
+<td>A のよりリッチなプロトコルは、単に一般的な最適化スコアが向上したという理由だけでは有益とはみなされません。</td>
 </tr>
 <tr>
-<td><strong>Orthogonal regime / targeted recording leverage</strong></td>
-<td>Disclose the stimulus range, state transitions, perturbation timing, or targeted recording subset that should rotate the surviving candidates apart rather than merely resample one narrow regime.</td>
-<td>More samples from the same operating slice are not read as collapsed degeneracy.</td>
+<td><strong>直交レジーム/ターゲットを絞った録画レバレッジ</strong></td>
+<td>単に 1 つの狭いレジームをリサンプリングするのではなく、生き残った候補を別々にローテーションする必要がある刺激範囲、状態遷移、摂動タイミング、またはターゲットを絞った記録サブセットを開示します。</td>
+<td>同じ操作スライスからのそれ以上のサンプルは、崩壊した縮退として読み取られません。</td>
 </tr>
 <tr>
-<td><strong>Model-discrepancy stress</strong></td>
-<td>Report whether the new condition exposed systematic residuals, failed fits, or omitted mechanisms, and what hierarchy of richer or alternative models was checked afterwards.</td>
-<td>Tighter nominal uncertainty is not read as trustworthy when the design only forced hidden model error into view.</td>
+<td><strong>モデル不一致応力</strong></td>
+<td>新しい条件によって系統的な残差、適合の失敗、またはメカニズムの省略が明らかになったかどうか、およびその後、より豊富なモデルまたは代替モデルのどの階層がチェックされたかをレポートします。</td>
+<td>隠れたモデル誤差のみを強制的に可視化した設計では、名目上の不確実性が高くても信頼できるとは見なされません。</td>
 </tr>
 <tr>
-<td><strong>Minimum-sufficiency stop rule</strong></td>
-<td>Predefine the smallest condition / time-point / recording set required to raise the claim, the uncertainty or overlap threshold used to stop, and how much candidate overlap remained once that minimum design was reached.</td>
-<td>Open-ended data accumulation is not read as solved identifiability if the stopping logic was never declared.</td>
+<td><strong>最小十分停止ルール</strong></td>
+<td>クレームを上げるために必要な最小の条件/時点/記録セット、停止するために使用される不確実性またはオーバーラップしきい値、およびその最小設計に達した後に残っている候補オーバーラップの量を事前定義します。</td>
+<td>停止ロジックが宣言されていない場合、オープンエンドのデータ蓄積は解決された識別可能性として読み取られません。</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Operational link:</strong> When this design-side disclosure is missing, this roadmap stops at <strong>predictive fit</strong>, <strong>localized source hypothesis</strong>, or <strong>model-conditioned mechanism</strong>. The submission-side operational version remains <a href="verification.html#experiment-design-leverage">Verification: experiment-design leverage</a>.</p>
+<p><strong>運用リンク:</strong> この設計側の開示が欠落している場合、このロードマップは <strong>予測適合</strong>、<strong>局所発生源仮説</strong>、または<strong>モデル条件付きメカニズム</strong>で停止します。提出側の運用バージョンは <a href="verification.html#experiment-design-leverage"> のままです検証: 実験設計の活用</a>.</p>
 </div>
 </div>
 </details>
@@ -1505,499 +1509,499 @@ The remaining weakness after splitting observability from identifiability was th
 <details open class="qa" data-tags="reconstruction" id="qa-r8">
 <summary>
 <span class="qa-id">R8</span>
-<span class="qa-title">Compression: Can the “verification standard” be maintained no matter what information is discarded? </span>
-<span class="qa-tags"><span class="tag">COMPRESSION</span></span>
+<span class="qa-title">Compression：どんな情報を捨てても「検証基準」は維持できるのか？ </span>
+<span class="qa-tags"><span class="tag">圧縮</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong> It would be ideal to “save everything” for WBE, but that is not realistic. Can we identify the minimum representation that still satisfies the evaluation target (V0)? </p>
-<p><strong>Next:</strong> Vary the compression ratio and measure where the performance of the evaluation suite breaks down</p>
+<p><strong>質問:</strong> WBE 用に「すべてを保存」するのが理想的ですが、それは現実的ではありません。評価目標 (V0) を満たす最小の表現を特定できるでしょうか? </p>
+<p><strong>次へ:</strong> 圧縮率を変更し、評価スイートのパフォーマンスが低下する箇所を測定する</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="reconstruction" id="qa-r9">
 <summary>
 <span class="qa-id">R9</span>
-<span class="qa-title">Audit: What is the mechanism for "keeping" model differences and failure examples? </span>
-<span class="qa-tags"><span class="tag">AUDIT</span></span>
+<span class="qa-title">Audit: モデルの違いや失敗例を「保持」する仕組みは何ですか? </span>
+<span class="qa-tags"><span class="tag">監査</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Because this is an area where the conclusion changes every time it is updated, it is necessary to record differences, failures, and negative results. </p>
-<p><strong>Next:</strong> Connect model/data/evaluation versions so that they can be reproduced by re-running (P2)</p>
+<p><strong>質問:</strong>更新するたびに結論が変わる領域なので、相違点や失敗、否定的な結果を記録する必要があります。 </p>
+<p><strong>次:</strong> モデル/データ/評価バージョンを接続し、再実行で再現できるようにします (P2)</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="reconstruction" id="qa-r10">
 <summary>
 <span class="qa-id">R10</span>
-<span class="qa-title">Neuromodulation: How to incorporate mood, alertness, and volume transmission? </span>
-<span class="qa-tags"><span class="tag">NEUROMODULATION</span></span>
+<span class="qa-title">神経調節: 気分、注意力、音量伝達をどのように組み込むか? </span>
+<span class="qa-tags"><span class="tag">神経調節</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Synaptic connections alone cannot reproduce state-dependent regulation of dopamine, serotonin, acetylcholine, and related volume-transmission systems. The weak point here was that this node still let <strong>pupil / HRV</strong>, <strong>local transmitter imaging</strong>, <strong>receptor maps</strong>, <strong>occupancy PET target engagement</strong>, and <strong>displacement / release-sensitive PET</strong> sound more interchangeable than they are. That was too weak. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity, <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local cortical ACh depends on axon activity and local clearance, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> showed that receptor maps are structured regional priors, <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> showed ligand- and dose-limited D<sub>2</sub> target engagement under administered lurasidone, and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a>, plus <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> showed challenge- and time-window-limited dopamine or serotonin release proxies rather than a free readout of the whole transmitter field. </p>
-<p><strong>Operational rule:</strong>On this site, neuromodulation is not treated as a <code>single mood scalar</code>. It is a ladder with at least five non-equivalent rungs. <strong>(1) mixed arousal proxy</strong> such as pupil / HRV / locomotion is a coarse covariate only. <strong>(2) local axon or transmitter sensor</strong> calibrates a measured region's chemical signal but not the whole brain. <strong>(3) receptor / transporter atlas</strong> is a regional chemoarchitectural prior, not the current state. <strong>(4) occupancy PET</strong> is ligand-, receptor-family-, dose-, and window-limited target engagement under an administered drug. <strong>(5) displacement / release-sensitive PET</strong> is a challenge-, ligand-, receptor-family-, and time-window-limited endogenous release proxy. None of these rungs alone is accepted here as the ground truth of the current whole-brain neuromodulatory state. </p>
-<p><strong>Next:</strong>When an R10 claim is made, publish <strong>which rung was used</strong>, plus receptor family, ligand / challenge, dose when applicable, temporal window, spatial scope, and abstention boundary. Then compare the same baseline with and without that rung under the same held-out state transition. For the stack-level ceiling, see <a href="wiki/measurement-stack-and-claim-ceiling.html#neuromodulatory-proxy-ladder">Wiki: neuromodulatory proxy ladder</a>; for the broader hidden-state argument, see <a href="wiki/connectome-is-not-enough.html">Wiki: Why wiring diagrams alone are not enough</a>. </p>
+<p><strong>質問:</strong>シナプス接続だけでは、ドーパミン、セロトニン、アセチルコリン、および関連する体積伝達システムの状態依存制御を再現できません。ここでの弱点は、このノードでは <strong> 瞳孔 / HRV</strong>、<strong> ローカル送信機イメージング </strong>、<strong> 受容体マップ </strong>、<strong> 占有 PET ターゲットエンゲージメント </strong>、および <strong> 変位 / 解放感知 PET</strong> が実際よりも互換性があるように聞こえることです。それは弱すぎました。 <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016) </a> は、瞳孔変動がアドレナリン作動性活性とコリン作動性活性の両方を追跡することを示しました。<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al。 (2024) </a> は、局所皮質 ACh が軸索活動と局所クリアランスに依存することを示しました。<a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> および <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021) </a> は、受容体マップが構造化された地域事前分布であることを示しました。<a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013) </a> は、ルラシドン投与下でリガンドと用量が制限された D<sub>2</sub> 標的結合を示しました。<a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>、<a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al。 (2019)</a>、プラス <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020) </a> は、送信機フィールド全体を自由に読み出すのではなく、チャレンジおよび時間枠に制限されたドーパミンまたはセロトニン放出プロキシを示しました。 </p>
+<p><strong>運用ルール:</strong>このサイトでは、神経調節は<code>シングルムードスカラー</code>として扱われません。これは、少なくとも 5 つの非同等の横木を持つはしごです。 <strong>(1) 瞳孔 / HRV / 運動などの混合覚醒プロキシ </strong> は粗い共変量のみです。 <strong>(2) 局所軸索または伝達センサー</strong> は、測定領域の化学信号を校正しますが、脳全体を校正するわけではありません。 <strong>(3) 受容体/輸送体アトラス</strong> は、現在の状態ではなく、以前の局所的な化学構造です。 <strong>(4) 占有 PET</strong> は、投与された薬剤の下でリガンド、受容体ファミリー、用量、およびウィンドウ制限された標的結合です。 <strong>(5) 置換/放出感受性 PET</strong> は、チャレンジ、リガンド、受容体ファミリー、および時間枠限定の内因性放出プロキシです。ここでは、これらの段階のいずれも単独では現在の全脳神経調節状態の真実として受け入れられません。 </p>
+<p><strong>次：</strong>R10クレームがなされた場合、<strong>使用されたラングを公表する</strong>、さらに受容体ファミリー、リガンド/チャレンジ、該当する場合の用量、時間枠、空間範囲、および棄権境界を公表する。次に、同じ保持された状態遷移の下で、その横木がある場合とない場合の同じベースラインを比較します。スタックレベルの上限については、<a href="wiki/measurement-stack-and-claim-ceiling.html#neuromodulatory-proxy-ladder">Wiki: 神経調節プロキシ ラダー</a> を参照してください。より広範な隠し状態の議論については、<a href="wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは不十分な理由</a> を参照してください。 </p>
 </div>
 </details>
 </div>
 
 <div class="node" id="implementation" data-qa-group>
-<div class="node-kicker">3. Implementation</div>
-<h3>Implementation: On what basis? What about real-time performance? </h3>
-<p class="mini"><strong>Central question:</strong> "Which computational platform (HPC/cloud/neuromorphic/hybrid) should we use to run the restored model? Can it be put into a closed loop (body/environment)?"</p>
+<div class="node-kicker">3。実装</div>
+<h3>実装: 何を根拠にしていますか?リアルタイムのパフォーマンスについてはどうですか? </h3>
+<p class="mini"><strong>中心的な質問:</strong>「復元されたモデルを実行するにはどの計算プラットフォーム (HPC/クラウド/ニューロモーフィック/ハイブリッド) を使用する必要がありますか?それを閉ループ (本体/環境) に入れることができますか?」</p>
 
 <details open class="qa" data-tags="implementation" id="qa-i0">
 <summary>
 <span class="qa-id">I0</span>
-<span class="qa-title">Execution platform: Which one are you aiming for: general-purpose computing/GPU/HPC/neuromorphic? </span>
-<span class="qa-tags"><span class="tag">IMPLEMENTATION</span></span>
+<span class="qa-title">Execution プラットフォーム: 汎用コンピューティング/GPU/HPC/ニューロモーフィックのどれを目指していますか? </span>
+<span class="qa-tags"><span class="tag">実装</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Can the implementation platform achieve both “sufficient fidelity” and “realistic cost” for the restoration target (R0)? </p>
-<p><strong>Next:</strong>Estimate the model granularity (I2) and calculation amount (I3) as a set</p>
+<p><strong>質問:</strong>実装プラットフォームは復元ターゲット(R0)に対して「十分な忠実度」と「現実的なコスト」を両立できますか? </p>
+<p><strong>次へ:</strong>モデル粒度(I2)と計算量(I3)をセットで見積もる</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="implementation" id="qa-i10">
 <summary>
 <span class="qa-id">I10</span>
-<span class="qa-title">Time continuity: Discrete time (RNN) or continuous time (ODE)? </span>
-<span class="qa-tags"><span class="tag">NEURAL-ODE</span><span class="tag">DYNAMICS</span></span>
+<span class="qa-title">Time 連続性: 離散時間 (RNN) または連続時間 (ODE)? </span>
+<span class="qa-tags"><span class="tag">ニューラル-ODE</span><span class="tag">ダイナミック</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Biological brains operate in continuous time, whereas standard RNNs/Transformers are discrete time. This gap creates distortion in dynamics. </p>
-<p><strong>Suggestion:</strong>Adopt <strong>Neural ODEs (Neural Ordinary Differential Equations)</strong> or <strong>CTRNNs</strong> as the implementation framework. By modeling as $\frac{dh(t)}{dt} = f(h(t), t, \theta)$, sampling at arbitrary time resolution and memory-efficient learning using the adjoint method are possible. </p>
-<p><strong>Next:</strong>Integrating the different time scales of EEG (milliseconds) and fMRI (seconds) in the same system of differential equations</p>
+<p><strong>質問:</strong>標準的な RNN/トランスフォーマーは離散時間であるのに対し、生物の脳は連続時間で動作します。このギャップによりダイナミクスに歪みが生じます。 </p>
+<p><strong>提案:</strong>実装フレームワークとして<strong>ニューラルODE(ニューラル常微分方程式)</strong>または<strong>CTRNNs</strong>を採用します。 $\frac{dh(t)}{dt} = f(h(t), t, \theta)$ としてモデル化することで、任意の時間分解能でのサンプリングやアジョイント法を用いたメモリ効率の高い学習が可能となります。 </p>
+<p><strong>次へ:</strong>EEG (ミリ秒) と fMRI (秒) の異なる時間スケールを同じ微分方程式系に統合する</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="implementation" id="qa-i1">
 <summary>
 <span class="qa-id">I1</span>
-<span class="qa-title">Closed loop: How many ms of delay can be tolerated in real time? </span>
-<span class="qa-tags"><span class="tag">REALTIME</span></span>
+<span class="qa-title">閉ループ: リアルタイムで何ミリ秒の遅延が許容できますか? </span>
+<span class="qa-tags"><span class="tag">リアルタイム</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>If we are to evaluate “personhood”, the essence is interaction with the environment (delay/noise). Tolerable delay is task dependent. </p>
-<p><strong>Redefinition (2026-03):</strong> Instead of a single number, audit acceptable delays for at least <strong>(a) state feedback / neurofeedback</strong>, <strong>(b) ERP / command BCI</strong>, <strong>(c) phase-locked stimulation</strong>, and <strong>(d) burst/state-triggered neuromodulation</strong>. Phase-targeting now focuses first on <strong>oscillation estimability</strong> and then on <strong>phase error</strong>, <strong>causal-versus-post-hoc benchmark</strong>, <strong>circular precision</strong>, <strong>functional comparator</strong>, and <strong>fixed-versus-adaptive phase policy</strong>. Adaptive DBS focuses on biomarker burst detection delay and stopping rules. </p>
-<p><strong>Supplement (Issue #46):</strong> We actually measure the <strong>end-to-end delay and jitter</strong> using CLET, photodiode, loopback, and TTL, and position LSL's time_correction as software offset correction. This is not to say that LSL alone guarantees actuation onset. </p>
-<p><strong>Next:</strong> On the evaluation suite (V1) side, leave the loop class explicit, median/P95/P99/worst-case latency, number of abstentions/freezes/stops, and performance degradation curve for additional delay. For phase-targeted loops specifically, also leave the target band / spatial filter, power-SNR gate, no-stim rate, causal-versus-post-hoc benchmark, mean phase offset plus circular spread, off-target or random-phase comparator, and fixed-versus-adaptive phase policy. For information on organizing entrances, see <a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed-loop, delay, jitter, and safety stops</a>. </p>
+<p><strong>質問:</strong>「らしさ」を評価するなら、その本質は環境とのインタラクション（遅延・ノイズ）です。許容できる遅延はタスクによって異なります。 </p>
+<p><strong>再定義 (2026-03):</strong> 単一の数値の代わりに、少なくとも <strong>(a) 状態フィードバック / ニューロフィードバック </strong>、<strong>(b) ERP / コマンド BCI</strong>、<strong>(c) フェーズロック刺激 </strong>、および <strong>(d) バースト / 状態トリガー神経変調 </strong> の許容可能な遅延を監査します。位相ターゲティングでは、まず <strong> 発振推定可能性 </strong>、次に <strong> 位相誤差 </strong>、<strong> 因果対事後ベンチマーク </strong>、<strong> 円精度 </strong>、<strong> 機能的コンパレータ </strong>、<strong> 固定対適応位相ポリシー </strong> に焦点を当てています。アダプティブ DBS は、バイオマーカー バースト検出の遅延と停止ルールに焦点を当てています。 </p>
+<p><strong>補足(問題#46):</strong> CLET、フォトダイオード、ループバック、TTLを使用して<strong>エンドツーエンド遅延とジッター</strong>を実際に測定し、LSLのtime_correctionをソフトウェアオフセット補正として位置付けます。これは、LSL だけで作動の開始が保証されるということではありません。 </p>
+<p><strong>Next:</strong> 評価スイート (V1) 側では、ループ クラスを明示的に、中央値/P95/P99/ワーストケースのレイテンシー、棄権/フリーズ/停止の数、および追加の遅延に対するパフォーマンス低下曲線をそのままにします。特に位相ターゲット ループの場合は、ターゲット バンド/空間フィルター、パワー SNR ゲート、刺激なしレート、因果ベンチマーク対ポストホック ベンチマーク、平均位相オフセットと循環スプレッド、オフターゲットまたはランダム位相コンパレーター、および固定対適応位相ポリシーも残します。入口の整理については、<a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ、遅延、ジッター、および安全停止</a>を参照してください。 </p>
 </div>
 </details>
 
 <details open class="qa" data-tags="implementation" id="qa-i2">
 <summary>
 <span class="qa-id">I2</span>
-<span class="qa-title">Model granularity: Where do we fight between spiking/rate/abstraction? </span>
-<span class="qa-tags"><span class="tag">GRANULARITY</span></span>
+<span class="qa-title">Model の粒度: スパイク/レート/抽象化の間でどこで争えばよいでしょうか? </span>
+<span class="qa-tags"><span class="tag">粒度</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>While the fidelity increases (tentatively) as the granularity increases, identification (R7) and calculation (I3) break down. What is the granularity to win? </p>
-<p><strong>Next required:</strong>Associate "required measurement (M2/M3)", "required calculation (I3)", and "passing evaluation (V0)" for each granularity</p>
+<p><strong>質問:</strong>粒度が増すにつれて忠実度は（暫定的に）向上しますが、識別（R7）と計算（I3）は機能しません。勝つための粒度はどれくらいですか? </p>
+<p><strong>次必須：</strong>「必要な測定（M2/M3）」「必要な計算（I3）」「合格評価（V0）」を粒度ごとに関連付け</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="implementation" id="qa-i3">
 <summary>
 <span class="qa-id">I3</span>
-<span class="qa-title">Computational amount: Where are the bottlenecks in memory/power/parallelization? </span>
-<span class="qa-tags"><span class="tag">SCALING</span></span>
+<span class="qa-title">計算量: メモリ/電力/並列化のボトルネックはどこですか? </span>
+<span class="qa-tags"><span class="tag">Sスケーリング</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Increasing the fidelity of a model will explode computational resources. Where should approximation/compression (R8) be performed? </p>
-<p><strong>Next:</strong> Measure the boundaries of how the evaluation suite can be compressed without compromising performance</p>
+<p><strong>質問:</strong>モデルの忠実度を高めると、計算リソースが爆発的に増加します。近似/圧縮(R8)はどこで行うべきですか? </p>
+<p><strong>次:</strong> パフォーマンスを損なうことなく評価スイートを圧縮できる限界を測定する</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="implementation" id="qa-i4">
 <summary>
 <span class="qa-id">I4</span>
-<span class="qa-title">Initialization: How to give the “initial state” of the model? </span>
-<span class="qa-tags"><span class="tag">INITIALIZATION</span></span>
+<span class="qa-title">Initialization: モデルの「初期状態」を与えるには? </span>
+<span class="qa-tags"><span class="tag">初期化</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Even if the structure is the same, the behavior will be different if the initial state is different. At what point in measurement (M7) should we “start”? </p>
-<p><strong>Disproval condition: </strong>The result is unstable due to the arbitrariness of the initialization, and the identity evaluation (V5) does not hold.</p>
-<p><strong>Next:</strong> Fix the initialization procedure and measure the sensitivity (robustness) to initialization</p>
+<p><strong>質問:</strong>構造が同じでも初期状態が異なれば動作も異なります。測定のどの時点 (M7) で「開始」すべきでしょうか? </p>
+<p><strong>反証条件：</strong>初期化の恣意性により結果が不安定であり、同一性評価(V5)が成立しません。</p>
+<p><strong>次へ:</strong> 初期化手順を修正し、初期化に対する感度 (堅牢性) を測定する</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="implementation" id="qa-i5">
 <summary>
 <span class="qa-id">I5</span>
-<span class="qa-title">Learning and Drift: How to design “safe updates” for learning? </span>
-<span class="qa-tags"><span class="tag">LEARNING</span></span>
+<span class="qa-title">Learning と Drift: 学習用の「安全なアップデート」を設計するには? </span>
+<span class="qa-tags"><span class="tag">学習</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong> Allowing learning (R5) involves identity (V5) and safety (D2). How do I monitor updates and where do I stop them? </p>
-<p><strong>Next required:</strong>Drift indicator (V4) + kill switch/isolation (I8)</p>
+<p><strong>質問:</strong> 学習を許可する (R5) には、アイデンティティ (V5) と安全性 (D2) が含まれます。更新を監視するにはどうすればよいですか?また更新をどこで停止すればよいですか? </p>
+<p><strong>次に必要なもの:</strong>ドリフトインジケーター (V4) + キルスイッチ/アイソレーション (I8)</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="implementation" id="qa-i6">
 <summary>
 <span class="qa-id">I6</span>
-<span class="qa-title">Embodiment: How much input/output (sensors/movement/language) should we have? </span>
-<span class="qa-tags"><span class="tag">EMBODIMENT</span></span>
+<span class="qa-title">Embodiment: どれくらいの量の入力/出力 (センサー/動き/言語) が必要ですか? </span>
+<span class="qa-tags"><span class="tag">実施形態</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Closed-loop verification (I1/V1) requires an environment and a body (or a substitute thereof). What is the minimum physicality? </p>
-<p><strong>Stricter policy:</strong>The word “embodiment” is too cheap if it only means that some output device existed. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> showed that tactile feedback improves robotic-arm control, but this is evidence for a <strong>local surrogate sensorimotor loop</strong>, not that whole-body coupling is solved. Combined with <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a>, <a href="https://doi.org/10.1126/science.aav7893" target="_blank">Stringer et al. (2019)</a>, <a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem et al. (2013)</a>, <a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a>, and <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano et al. (2016)</a>, this means I6 must disclose which body / environment loops were present rather than talking about embodiment as a yes/no label.</p>
+<p><strong>質問:</strong>クローズドループ検証 (I1/V1) には、環境と本体 (またはその代替物) が必要です。最低限の身体能力とは何ですか？ </p>
+<p><strong>より厳密なポリシー:</strong>「実施形態」という言葉は、何らかの出力デバイスが存在するということだけを意味するのであれば、あまりにも安っぽくなります。 <a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> は、触覚フィードバックによってロボット アームの制御が向上することを示しましたが、これは <strong> 局所代理感覚運動ループ </strong> の証拠であり、全身結合が解決されたというわけではありません。 <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musallらと組み合わせる。 (2019)</a>、<a href="https://doi.org/10.1126/science.aav7893" target="_blank">ストリンガー他(2019)</a>、<a href="https://doi.org/10.1038/nn.3567" target="_blank">Saleem 他(2013)</a>、<a href="https://doi.org/10.1126/science.1232655" target="_blank">Ravassard et al. (2013)</a>、<a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">Zelano 他。 (2016)</a>、これは、I6 がイエス/ノーのラベルとして具体化について話すのではなく、どの身体/環境ループが存在したかを開示する必要があることを意味します。</p>
 <ul>
-<li><strong>Declare retained / substituted channels:</strong> vision, touch, proprioception, vestibular cues, respiration / arousal routes, dialogue partner, and task-state cues.</li>
-<li><strong>Describe the surrogate plant:</strong> robotic hand, cursor, speech synthesizer, virtual avatar, or other actuator, together with latency, noise, and saturation.</li>
-<li><strong>Run removal tests:</strong> feedback-off, sensory-substitution-off, altered environment, or loop perturbation conditions that show what really carries the performance.</li>
+<li><strong>保持/置換チャネルの宣言:</strong>視覚、触覚、固有受容、前庭刺激、呼吸/覚醒ルート、対話パートナー、およびタスク状態刺激。</li>
+<li><strong>代理プラントについて説明します:</strong> ロボット ハンド、カーソル、音声合成装置、仮想アバター、またはその他のアクチュエーターを、遅延、ノイズ、飽和とともに説明します。</li>
+<li><strong>除去テストの実行:</strong> フィードバックオフ、感覚置換オフ、変更された環境、またはループ摂動条件を実行して、実際にパフォーマンスを実現するものを示します。</li>
 </ul>
-<p><strong>Next:</strong> Fix the environment (VR/game/dialogue) and design an evaluation that can be repeated under the same conditions, then publish a body / environment boundary card plus ablation plan.</p>
+<p><strong>次へ:</strong> 環境（VR/ゲーム/対話）を修正し、同じ条件下で繰り返し可能な評価を設計し、身体/環境境界カードとアブレーション計画を公開します。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="implementation" id="qa-i7">
 <summary>
 <span class="qa-id">I7</span>
-<span class="qa-title">Reproducibility: Is there a guarantee that the results will not change due to implementation differences (language/hardware)? </span>
-<span class="qa-tags"><span class="tag">REPRO</span></span>
+<span class="qa-title">再現性: 実装の違い (言語/ハードウェア) によって結果が変わらないという保証はありますか? </span>
+<span class="qa-tags"><span class="tag">リプロ</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Even with the “same model”, the behavior changes depending on numerical errors and parallel order. How much decisiveness do you require? </p>
-<p><strong>Next:</strong> Verify that the error is within tolerance using a fixed random number, fixed environment, and differential test (P2).</p>
+<p><strong>質問:</strong>「同じ機種」でも数値誤差や並列順序によって挙動が変わります。どれくらいの決断力が必要ですか？ </p>
+<p><strong>次:</strong> 固定乱数、固定環境、および差分テスト (P2) を使用して、誤差が許容範囲内であることを検証します。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="implementation" id="qa-i8">
 <summary>
 <span class="qa-id">I8</span>
-<span class="qa-title">Safety: How to create isolation, monitoring, and containment? </span>
-<span class="qa-tags"><span class="tag">SAFETY</span></span>
+<span class="qa-title">Safety: 隔離、監視、封じ込めをどのように行うか? </span>
+<span class="qa-tags"><span class="tag">安全性</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>The closer you get to the strong claims (L4-L5 of P1), the more safety becomes a technical requirement. </p>
-<p><strong>Next:</strong>Include a triad of isolation environments, monitoring metrics, and outage protocols in your L3 and beyond implementation plan</p>
+<p><strong>質問:</strong>強い主張 (P1 の L4 ～ L5) に近づくほど、より安全性が技術的要件になります。 </p>
+<p><strong>次:</strong>L3 以降の実装計画に分離環境、モニタリング メトリクス、停止プロトコルの 3 つを含める</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="implementation" id="qa-i9">
 <summary>
 <span class="qa-id">I9</span>
-<span class="qa-title">Thermodynamics: How to audit implementation costs and irreversibility? </span>
-<span class="qa-tags"><span class="tag">THERMODYNAMICS</span></span>
+<span class="qa-title">熱力学: 導入コストと不可逆性を監査するにはどうすればよいですか? </span>
+<span class="qa-tags"><span class="tag">熱力学</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>To what extent should thermodynamics be included in the evaluation when comparing WBE implementations? Things you should not mix here are <strong>Landauer lower bound</strong>, <strong>organizational-level energy budget</strong>, <strong>time irreversibility of coarse-grained neural dynamics</strong>, and <strong>model-based entropy flow</strong>. The question to ask is not ``Can this prove identity?'' but rather how to audit the physical costs and nonequilibrium indicators without overstating them. </p>
-<p><strong>2026-03 Literature Audit:</strong>Bérut et al. (2012) demonstrated a logically irreversible minimum dissipation lower bound for bit erasure, not wall-power or NESS reproduction conditions for the entire digital brain. What Lynn et al. (2021), de la Fuente et al. (2023), and Nartallo-Kaluarachchi et al. (2025) demonstrate is the usefulness of measuring broken detailed balance and time irreversibility from coarse-grained time series such as fMRI/ECoG/MEG, and is not an acceptance condition for microscopic physical dissipation or identity. Ishihara & Shimazaki (2025) also show that entropy flow estimation is a model-based quantity that requires assumptions such as state-space kinetic ising model, pairwise coupling, and mean-field approximation. A second correction is that the observed trajectory is not automatically thermodynamically closed. <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">Martínez et al. (2019)</a> showed that waiting-time asymmetry can reveal hidden dissipation even when observable current vanishes, <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">Hartich &amp; Godec (2024)</a> showed that this interpretation can fail when coarse-graining and time reversal do not commute, <a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">Martínez et al. (2024)</a> replied by limiting the original claim to local-in-time coarse-grainings and, where needed, second-order semi-Markov constructions, and <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">Blom et al. (2024)</a> showed that coarse lumping can hide dissipative cycles and induce memory so that estimates become far too small when the observed trajectory is naively treated as Markov. </p>
+<p><strong>質問:</strong>WBE 実装を比較する場合、評価に熱力学をどの程度含めるべきですか?ここで混ぜてはいけないのは、<strong>ランダウアーの下限</strong>、<strong>組織レベルのエネルギー予算</strong>、<strong>粗粒ニューラルダイナミクスの時間不可逆性</strong>、<strong>モデルベースのエントロピーフロー</strong>です。問うべき問題は、「これで同一性を証明できるか?」ということではなく、物理的コストと非均衡指標を誇張せずに監査する方法です。 </p>
+<p><strong>2026-03 文献監査:</strong>Bérut et al. (2012) は、デジタル脳全体に対する壁面電源や NESS 再生条件ではなく、論理的に不可逆的なビット消去の最小散逸下限を実証しました。リンらは何をしたのか。 （2021）、デ・ラ・フエンテほか。 (2023)、および Nartallo-Kaluarachchi et al. (2025) は、fMRI/ECoG/MEG などの粗粒時系列から壊れた詳細なバランスと時間の不可逆性を測定することの有用性を実証していますが、これは微視的な物理的散逸や同一性の許容条件ではありません。また、Ishihara & Shimazaki (2025) は、エントロピー フローの推定が、状態空間運動論的アイジング モデル、ペアワイズ カップリング、平均場近似などの仮定を必要とするモデルベースの量であることを示しています。 2 番目の修正は、観測された軌道が自動的に熱力学的に閉じられないことです。 <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">マルティネスら(2019) </a> は、観察可能な電流が消失した場合でも、待機時間の非対称性によって隠れた散逸が明らかになる可能性があることを示しました。 Godec (2024)</a> は、粗視化と時間反転が両立しない場合、この解釈が失敗する可能性があることを示しました。<a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">Martínez et al。 (2024) </a> は、元の主張をローカルインタイムの粗視化と、必要に応じて 2 次の半マルコフ構造に限定することで答えました。 (2024) </a> は、粗いランピングが散逸サイクルを隠し、記憶を誘発するため、観察された軌跡が素朴にマルコフとして扱われると推定値が非常に小さくなる可能性があることを示しました。 </p>
 <div class="key-points">
-<h4>Treatment to be fixed on this page</h4>
+<h4>このページで修正される処理</h4>
 <ul>
-<li><strong>Do not make it a required gate:</strong>Maintaining EPR > 0, <code>Virtual Dissipation Protocol</code>, biological brain 20W matching, and communication: calculation ratio matching are not set as acceptance conditions at this time. </li>
-<li><strong>Treat as supplementary logs: </strong>Wall-plug power, FLOPs, time irreversibility, and model-based entropy flow are recorded separately. </li>
-<li><strong>Explicit modality dependence:</strong>Since the estimators have different meanings for fMRI / MEG / ECoG / spike train, they are not directly substituted for each other. </li>
-<li><strong>Name estimator family and null control:</strong>Transition-flux lower bounds, time-shifted correlation asymmetry, inversion classifiers, visibility-graph indices, and state-space kinetic Ising entropy flow are not interchangeable, and shuffle / surrogate controls are part of the claim. </li>
-<li><strong>Audit observed-state closure and memory order:</strong>State whether the observed process is treated as Markov, 1st/2nd-order semi-Markov, or another non-Markov process, what hidden states / cycles were collapsed, and whether a low estimate could be caused by hidden dissipation rather than actual near-equilibrium behavior. </li>
-<li><strong>Dividing the lower bound and the main body:</strong>The irreversibility obtained from the observation time series is often a coarse-grained lower bound, not the microscopic physical dissipation itself. </li>
+<li><strong>必須ゲートにしないでください:</strong>EPR > 0維持、<code>Virtual Dissipation Protocol</code>、生体脳20Wマッチング、通信:演算比マッチングは現時点では合格条件として設定されていません。 </li>
+<li><strong>補足ログとして扱います: </strong>コンセント電源、FLOP、時間不可逆性、およびモデルベースのエントロピー フローが個別に記録されます。 </li>
+<li><strong>明示的なモダリティ依存性:</strong>推定量は fMRI / MEG / ECoG / スパイク トレインに対して異なる意味を持つため、相互に直接置き換えることはできません。 </li>
+<li><strong>Name 推定器ファミリーと null コントロール:</strong>Transition フラックス下限、時間シフト相関非対称性、反転分類子、可視性グラフ インデックス、および状態空間動力学イジング エントロピー フローは互換性がなく、シャッフル/サロゲート コントロールはクレームの一部です。 </li>
+<li><strong>観察された状態の閉包と記憶順序を監査する:</strong>観察されたプロセスがマルコフ、1次/2次半マルコフ、または別の非マルコフプロセスとして扱われるかどうか、どの隠れ状態/サイクルが崩壊したか、および低い推定値が実際の平衡に近い挙動ではなく隠れた散逸によって引き起こされる可能性があるかどうかを調べます。 </li>
+<li><strong>下限と本体の分割:</strong>観測時系列から得られる不可逆性は、多くの場合、微視的な物理散逸そのものではなく、粗粒度の下限です。 </li>
 </ul>
 </div>
-<p><strong>Next:</strong> We need an irreversibility benchmark that is reproducible within the same modality and preprocessing chain, plus a log schema that separates wall-plug power, FLOPs, and simulated metabolic overhead. At minimum, publish an <strong>irreversibility route card</strong> naming signal route, state definition, observed-state closure / memory order, estimator family, null / surrogate control, lower-bound or model-based quantity type, and hardware power isolation. For more information, see <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>. </p>
+<p><strong>次へ:</strong> 同じモダリティと前処理チェーン内で再現可能な不可逆性ベンチマークに加えて、コンセント電源、FLOP、およびシミュレートされた代謝オーバーヘッドを分離するログ スキーマが必要です。少なくとも、<strong> 不可逆性ルート カード、</strong> 命名信号ルート、状態定義、観察された状態のクロージャ / メモリ順序、推定器ファミリー、ヌル / サロゲート制御、下限またはモデルベースの数量タイプ、およびハードウェア電源分離を公開します。詳細については、<a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: 不可逆ルート カード </a> を参照してください。 </p>
 </div>
 </details>
 </div>
 </details>
 
 <div class="node" id="verification" data-qa-group>
-<div class="node-kicker">4. Verification</div>
-<h3>Verification: What must be met to say that they are the same? </h3>
-<p class="mini"><strong>Central question:</strong>"How do we define technically verifiable criteria among identity/consciousness/behavior, and how do we set conditions for disproving it?"</p>
+<div class="node-kicker">4。検証</div>
+<h3>Verification: それらが同じであるとするには何を満たさなければなりませんか? </h3>
+<p class="mini"><strong>中心的な質問:</strong>「アイデンティティ/意識/行動の間で技術的に検証可能な基準をどのように定義し、それを反証するための条件をどのように設定すればよいですか?」</p>
 
 <details open class="qa" data-tags="verification" id="qa-v0">
 <summary>
 <span class="qa-id">V0</span>
-<span class="qa-title">Target of verification: Which of identity, consciousness, or behavior should be verified “engineeringly”? </span>
-<span class="qa-tags"><span class="tag">VERIFICATION</span></span>
+<span class="qa-title">検証対象：アイデンティティ・意識・行動のどれを「工学的に」検証するのか？ </span>
+<span class="qa-tags"><span class="tag">検証</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong> You cannot verify what cannot be measured. What should count as “measurable conditions for success”? </p>
-<p><strong>Branching (example):</strong>(A) Equivalence of behaviors and abilities / (B) Equivalence of intervention responses / (C) Continuity of autobiographical memories and values (need to be careful)</p>
-<p><strong>Next:</strong> Pre-register the evaluation suite in V1 and link it to the claim ladder in P1.</p>
+<p><strong>質問:</strong> 測定できないものは検証できません。 「成功のための測定可能な条件」として何を考慮すべきでしょうか? </p>
+<p><strong>分岐（例）：</strong>（A）行動と能力の同等性／（B）介入反応の同等性／（C）自伝的記憶と価値観の連続性（要注意）</p>
+<p><strong>次へ:</strong> V1 で評価スイートを事前登録し、P1 のクレーム ラダーにリンクします。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v1">
 <summary>
 <span class="qa-id">V1</span>
-<span class="qa-title">Evaluation suite: What should we measure as “progress”? (Pre-registration)</span>
-<span class="qa-tags"><span class="tag">BENCHMARK</span></span>
+<span class="qa-title">Evaluation スイート: 「進捗」として何を測定する必要がありますか? (事前登録)</span>
+<span class="qa-tags"><span class="tag">ベンチマーク</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Fix tasks, metrics, baselines, statistics, and failure conditions in advance. </p>
+<p><strong>質問:</strong>タスク、メトリクス、ベースライン、統計、および障害条件を事前に修正してください。 </p>
 <ul>
-<li><strong>Behavior:</strong>Generalization in unlearned tasks, reaction times/errors, learning curves</li>
-<li><strong>Neuro:</strong>State transitions, spectral features, network metrics, intervention responses</li>
-<li><strong>Temporary identity:</strong>Coherence of autobiographical memory, stability of preferences, consistency of self-model</li>
+<li><strong>行動:</strong>未学習タスクの一般化、反応時間/エラー、学習曲線</li>
+<li><strong>ニューロ:</strong>状態遷移、スペクトル特徴、ネットワークメトリクス、介入応答</li>
+<li><strong>一時的なアイデンティティ:</strong>自伝的記憶の一貫性、好みの安定性、自己モデルの一貫性</li>
 </ul>
-<p><strong>Next:</strong> First, create a “small but retestable” suite for L0-L2.</p>
+<p><strong>次:</strong> まず、L0-L2 の「小規模だが再テスト可能な」スイートを作成します。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v2">
 <summary>
 <span class="qa-id">V2</span>
-<span class="qa-title">Causal testing: Can stimuli/interventions produce the “same response”? </span>
+<span class="qa-title">C因果関係テスト: 刺激/介入は「同じ反応」を生み出すことができますか? </span>
 <span class="qa-tags"><span class="tag">CAUSAL</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Correlation matching can be achieved simply by “simulating” things. A strong verification will be whether there is agreement with the intervention. </p>
-<p><strong>Strength of evidence is treated in four stages:</strong>This roadmap does not reduce causal testing to a single type of pass/fail. The primary literature now supports staged evidence of varying strength. </p>
+<p><strong>質問:</strong>相関マッチングは、物事を「シミュレート」するだけで実現できます。強力な検証は介入に合意があるかどうかだ。 </p>
+<p><strong>証拠の強さは 4 つの段階で扱われます:</strong>このロードマップは、因果関係テストを 1 種類の合否に限定するものではありません。現在、一次文献はさまざまな強さの段階的な証拠を裏付けています。 </p>
 <ul>
-<li><strong>Gate 1 / held-out perturbation prediction:</strong>The ability to offline predict responses when changing task conditions, stimulus timing, and environmental changes. </li>
-<li><strong>Gate 2 / online human-in-the-loop:</strong> A loop that includes real-time input and feedback while maintaining performance and auditing latency / jitter. </li>
-<li><strong>Gate 3 / local causal intervention:</strong> Interventions such as TMS-EEG, intracranial stimulation, and adaptive DBS in which stimulation site, intensity, artifact handling, and safety-stop conditions are disclosed. </li>
-<li><strong>Gate 4 / long-run closed loop:</strong>The ability to track recalibration loads, recovery times, and even failure modes over multiple sessions and long-term operations. </li>
+<li><strong>ゲート 1 / ホールドアウト摂動予測:</strong> タスクの条件、刺激のタイミング、環境の変化が変化したときの応答をオフラインで予測する機能。 </li>
+<li><strong>Gate 2 / オンライン ヒューマンインザループ:</strong> パフォーマンスを維持し、レイテンシー/ジッターを監査しながら、リアルタイムの入力とフィードバックを含むループ。 </li>
+<li><strong>ゲート 3 / 局所因果的介入:</strong> TMS-EEG、頭蓋内刺激、適応 DBS などの介入。刺激部位、強度、アーチファクト処理、安全停止条件が開示されます。 </li>
+<li><strong>ゲート 4 / 長期閉ループ:</strong>複数のセッションおよび長期操作にわたる再キャリブレーション負荷、回復時間、さらには障害モードを追跡する機能。 </li>
 </ul>
-<p><strong>Required logs:</strong> Stimulation site, intensity, masking, artifact window, synchronization path, median end-to-end latency / P95 / P99, jitter, dropout, recovery time, and a <strong>body / environment boundary card</strong> naming retained / substituted sensory, motor, and interoceptive channels, slow internal-milieu routes such as circadian phase or glucocorticoid / metabolic regime, plus the surrogate body / environment contract. If these depart from the TMS-EEG recommendations summarized by Hernandez-Pavon et al. (2023), the result is not treated here as a comparable causal test. </p>
-<p><strong>Decision rule:</strong>The success of Gate 1 alone does not assert L3 or "counterfactual equivalence." In order to advance to a stronger claim, it is necessary to submit a bundle of evaluation items, external validation, and abstention conditions that connect M6 (intervention design) and R4 (causal model). For detailed operational verification, see <a href="verification.html#causal-perturbation-suite">Verification Causal Perturbation Suite</a>. </p>
-<p><strong>Next:</strong> Create evaluation items that connect M6 (intervention design) and R4 (causal model), and reduce at least Gate 1 / Gate 2 to specifications that can be re-executed by a third party. </p>
+<p><strong>必要なログ：</strong> 刺激部位、強度、マスキング、アーティファクトウィンドウ、同期パス、エンドツーエンド遅延の中央値 / P95 / P99、ジッター、ドロップアウト、回復時間、および <strong> 身体 / 環境境界カード</strong> ネーミングの保持 / 置換された感覚、運動、および内受容チャネル、概日位相などの遅い内部環境ルート糖質コルチコイド / 代謝体制、および代理身体 / 環境契約。これらが Hernandez-Pavon らによって要約された TMS-EEG 推奨事項から逸脱している場合は、 (2023) の結果は、ここでは比較可能な因果関係検定として扱われません。 </p>
+<p><strong>決定ルール:</strong>ゲート 1 の成功だけでは、L3 または「反事実的等価性」は主張されません。より強い主張に進むためには、M6（介入設計）とR4（因果モデル）を結び付ける評価項目、外部検証、棄権条件を束ねて提出する必要がある。詳細な動作検証については、<a href="verification.html#causal-perturbation-suite">Verification Causal Perturbation Suite</a> を参照してください。 </p>
+<p><strong>次：</strong> M6（介入設計）とR4（因果モデル）を繋ぐ評価項目を作成し、少なくともゲート1/ゲート2を第三者が再実行可能な仕様に落とし込む。 </p>
 </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v3">
 <summary>
 <span class="qa-id">V3</span>
-<span class="qa-title">Generalization: Can you maintain your “identity” even in out-of-distribution (OOD)? </span>
+<span class="qa-title"> 一般化: 配布外 (OOD) でも「アイデンティティ」を維持できますか? </span>
 <span class="qa-tags"><span class="tag">OOD</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>If it only works under the same conditions as training, it is more like "playback" than uploading. Measuring consistency in novel situations. </p>
-<p><strong>Next:</strong>Define the performance degradation curve under untrained tasks, environmental changes, and noise conditions</p>
+<p><strong>質問:</strong>トレーニングと同じ条件下でのみ動作する場合、それはアップロードというよりも「再生」に似ています。新しい状況における一貫性を測定します。 </p>
+<p><strong>次:</strong>トレーニングされていないタスク、環境変化、騒音条件下でのパフォーマンス低下曲線を定義する</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v4">
 <summary>
 <span class="qa-id">V4</span>
-<span class="qa-title">Long-term: How to evaluate learning, drift, and forgetting? </span>
-<span class="qa-tags"><span class="tag">LONGITUDINAL</span></span>
+<span class="qa-title">L長期: 学習、ドリフト、忘却をどのように評価するか? </span>
+<span class="qa-tags"><span class="tag">縦長</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Long-term verification is not just whether a score stayed high. It asks whether <strong>state fluctuation</strong>, <strong>trait-like backbone</strong>, <strong>biological drift</strong>, <strong>interface / decoder drift</strong>, and <strong>maintenance-route burden</strong> were separated well enough that the time claim becomes falsifiable.</p>
-<p><strong>2026-03-22 addendum:</strong>The older wording was too close to an abstract question about “acceptable change.” The site's current technical rule is narrower. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> showed that long-term iBCI control can be maintained by unsupervised recalibration, but that usability and <strong>fixed-decoder durability</strong> are different claims. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> showed a strong communication route while also quantifying degradation of a decoder trained on a specific earlier day. Therefore, V4 now treats long-term verification as the conjunction of <strong>temporal validity</strong>, <strong>bridge validity when acquisition regimes are crossed</strong>, and <strong>maintenance-state disclosure when persistence or forgetting is the claim</strong>.</p>
+<p><strong>質問:</strong>長期的な検証は、スコアが高いままかどうかだけではありません。 <strong>状態変動</strong>、<strong>トレイト様バックボーン</strong>、<strong>生物学的ドリフト</strong>、<strong>インターフェース/デコーダドリフト</strong>、<strong>保守経路負担</strong>が、時間主張が反証可能になるほど十分に分離されていたかどうかを問うものである。</p>
+<p><strong>2026-03-22 追記:</strong>古い表現は、「許容可能な変化」に関する抽象的な質問に近すぎました。サイトの現在の技術ルールはさらに狭いです。 <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">ウィルソンら。 (2025)</a> は、教師なし再キャリブレーションによって長期 iBCI 制御を維持できることを示しましたが、使いやすさと <strong> 固定デコーダの耐久性 </strong> は異なる主張です。 <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">ワイラグカールら(2025) </a> は強力な通信ルートを示し、また、特定の早い日にトレーニングされたデコーダーの劣化を定量化しました。したがって、V4 では、長期検証を <strong> 時間的有効性 </strong>、<strong> 取得レジームが交差する場合のブリッジ有効性 </strong>、および <strong> 永続性または忘却が要求される場合のメンテナンス状態の開示の組み合わせとして扱うようになりました </strong>.</p>
 <ul>
-<li><strong>Temporal validity:</strong> audit fixed decoder interval, state annotation, interface / decoder drift, recalibration burden, and transfer ceiling.</li>
-<li><strong>Bridge validity:</strong> if “same-subject” evidence crosses live-to-fix, cross-regime, or cross-day reacquisition, attach the <a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a>; same-subject is not same-state by default.</li>
-<li><strong>Maintenance route:</strong> if the claim concerns persistence, forgetting, reconsolidation, remote memory, or recovery, attach the <a href="verification.html#maintenance-state-error-budget">maintenance-state error budget</a> instead of treating temporal hold as sufficient evidence.</li>
+<li><strong>時間的有効性:</strong> 監査固定デコーダ間隔、状態注釈、インターフェイス/デコーダ ドリフト、再キャリブレーション負荷、および転送上限。</li>
+<li><strong>ブリッジの有効性:</strong>「同一被験者」の証拠がライブからフィックス、クロスレジーム、またはクロスデイ再取得にまたがる場合、<a href="verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a>を接続します。デフォルトでは、同じサブジェクトは同じ状態ではありません。</li>
+<li><strong>メンテナンス ルート:</strong> クレームが永続性、忘却、再統合、リモート メモリ、またはリカバリに関するものである場合は、一時的な保持を十分な証拠として扱う代わりに、<a href="verification.html#maintenance-state-error-budget">メンテナンス状態のエラー バジェット</a>を添付してください。</li>
 </ul>
-<p><strong>Required next:</strong>M7 longitudinal audit + <a href="verification.html#temporal-validity-card">Temporal Validity Card</a> + update log (P2). For multiday or cross-regime claims, add the relevant bridge and maintenance-route cards instead of leaving the time burden implicit.</p>
+<p><strong>次に必要:</strong>M7 長期的監査 + <a href="verification.html#temporal-validity-card">時間的有効性カード</a> + 更新ログ (P2)。複数日または複数の体制にまたがる請求の場合は、時間負担を暗黙的に残すのではなく、関連するブリッジおよびメンテナンス ルート カードを追加します。</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v5">
 <summary>
 <span class="qa-id">V5</span>
-<span class="qa-title">Identity: What is “causal identity” that goes beyond psychological continuity? </span>
-<span class="qa-tags"><span class="tag">IDENTITY</span><span class="tag">LEGAL</span></span>
+<span class="qa-title">Identity：心理的連続性を超えた「因果的同一性」とは ？ </span>
+<span class="qa-tags"><span class="tag">アイデンティティ</span><span class="tag">LEGAL</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong> Similarities in memory and personality alone, that is, psychological continuity, are not enough to distinguish identity from copying or imitation by an LLM-like system. A more rigorous engineering definition is needed. </p>
+<p><strong>質問:</strong> 記憶と人格の類似性、つまり心理的連続性だけでは、LLM のようなシステムによるコピーや模倣からアイデンティティを区別するのに十分ではありません。より厳密な工学的定義が必要です。 </p>
 <ul>
-<li><strong>New standard: Causal Identity:</strong>
-Extending Parfit's psychological theory, the condition for identity is that the system's ``future predictive ability (accuracy of active inference)'' is statistically indistinguishable from that of the biological brain.
+<li><strong>新標準:因果関係の同一性:</strong>
+パーフィットの心理学理論を拡張すると、システムの「将来予測能力（能動推論の精度）」が生物学的な脳のそれと統計的に区別できないことが同一性の条件となる。
 </li>
-<li><strong>Indicator:</strong>Execute the<strong>Causal Perturbation Protocol</strong>, which is an extension of the Turing Test. We will introduce an index (e.g. Perturbational Complexity Index, PCI) to verify the statistical identity of the biological brain's response to physical perturbations such as TMS and the response to virtual perturbations in emulation, and confirm the correspondence of dynamic causal structures. </li>
-<li><strong>Conditions for disproving:</strong>They have memory, but their adaptation/prediction patterns to new environments deviate from the original (zombie/imitator)</li>
-<li><strong>Next:</strong> Make predictive accuracy a core metric in V8's "imitation-versus-imitation" testing.</li>
-</ul>                        </div>
+<li><strong>インジケータ:</strong>チューリング テストの拡張である<strong>因果摂動プロトコル</strong>を実行します。 TMSなどの物理的摂動に対する生物学的脳の応答とエミュレーションにおける仮想的な摂動に対する応答の統計的同一性を検証し、動的な因果構造の対応を確認するための指標（例：Perturbational Complexity Index、PCI）を導入します。 </li>
+<li><strong>反証の条件:</strong>記憶はあるが、新しい環境への適応/予測パターンが元の(ゾンビ/模倣者)から逸脱している</li>
+<li><strong>次へ:</strong> V8 の「模倣対模倣」テストにおける予測精度を中心的な指標にします。</li>
+</ul> </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v6">
 <summary>
 <span class="qa-id">V6</span>
-<span class="qa-title">Consciousness: To what extent can theory-dependent predictions be made “testable”? </span>
-<span class="qa-tags"><span class="tag">CONSCIOUSNESS</span></span>
+<span class="qa-title">Conciousness: 理論に依存した予測はどの程度まで「検証可能」にすることができますか? </span>
+<span class="qa-tags"><span class="tag">意識</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Consciousness cannot be directly observed. Therefore, the question is whether the prediction differences produced by theories (IIT / GNWT / FEP, etc.) can be benchmarked while minimizing the task/report confound. </p>
+<p><strong>質問:</strong>意識は直接観察できません。したがって、問題は、タスク/レポートの混乱を最小限に抑えながら、理論 (IIT / GNWT / FEP など) によって生成される予測の差異をベンチマークできるかどうかです。 </p>
 <ul>
-<li><strong>Theories are not accepted on a winner-take-all basis:</strong> Ferrante et al. (2025) demonstrated the need for preregistered prediction competition rather than the victory of a single theory. Therefore, on this site, IIT / GNWT / FEP will compete as a <strong>prediction family</strong>, and the theory name itself will not be used as a pass/fail indicator. </li>
-<li><strong>PCI / PCI-ST is a perturbation benchmark:</strong> Casali et al. (2013) and Comolatti et al. (2019) gave a strong benchmark candidate, but not a universal meter. We treat it as an auxiliary measure of L2/L3 only if we disclose the stimulation site, intensity, masking, artifact window, and cohort calibration. </li>
-<li><strong>Spontaneous complexity / criticality is a calibration track:</strong> Maschke et al. (2024) showed an association between spontaneous criticality and PCI, while Casarotto et al. (2024) showed a dissociation between spontaneous features and PCI in a minimally conscious state. Therefore, the resting-state marker is not a PCI replacement, but rather a proxy that requires external calibration. </li>
-<li><strong>No-report / criterion placement is fixed first:</strong> As Cohen et al. (2024) and Fahrenfort et al. (2025) show, if we do not control for post-perceptual processing and criterion placement, there remains a possibility that we are looking at task/report confound rather than theoretical differences. </li>
+<li><strong>理論は勝者総取り方式では受け入れられません:</strong> Ferrante et al. (2025) は、単一の理論の勝利ではなく、事前登録された予測競争の必要性を実証しました。したがって、このサイトでは、IIT / GNWT / FEP は <strong> 予測ファミリー </strong> として競合し、理論名自体は合否指標として使用されません。 </li>
+<li><strong>PCI / PCI-ST は摂動ベンチマークです:</strong> Casali et al. (2013) および Comolatti et al。 (2019) は強力なベンチマーク候補を示しましたが、普遍的なメーターではありませんでした。刺激部位、強度、マスキング、アーティファクトウィンドウ、およびコホートキャリブレーションを開示する場合にのみ、L2/L3 の補助的な尺度として扱います。 </li>
+<li><strong>S自然発生的な複雑性/重要性は校正トラックです:</strong> Maschke et al. (2024) は自発的臨界と PCI との関連性を示しました。 (2024) は、自発的特徴と最小限の意識状態における PCI の間の解離を示しました。したがって、休止状態マーカーは PCI の代替品ではなく、外部キャリブレーションを必要とするプロキシです。 </li>
+<li><strong>レポートなし / 基準の配置が最初に固定されます:</strong> As Cohen et al. (2024) およびファーレンフォートら。 (2025) が示すように、知覚後の処理と基準の配置を制御しない場合、理論的な違いではなく、タスクとレポートが混同されている可能性が残ります。 </li>
 </ul>
-<p><strong>Note:</strong>Theory is treated only as a tool for hypothesis generation, and the success or failure of implementation (WBE) is determined not by "conformity to a specific theory" but by the bundle of V2 (causality), V3 (OOD), and V4 (long-term stability). Even when using geometry or topology, the main pass/fail points are placed in perturbation and generalization. </p>
+<p><strong>注:</strong>理論は仮説生成のためのツールとしてのみ扱われ、実装の成否 (WBE) は「特定の理論への適合性」ではなく、V2 (因果関係)、V3 (OOD)、V4 (長期安定性) の束によって決まります。ジオメトリやトポロジを使用する場合でも、主な合否ポイントは摂動と一般化の中に配置されます。 </p>
 </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v7">
 <summary>
 <span class="qa-id">V7</span>
-<span class="qa-title">Copy/branch: How do you handle the “principal” when multiple instances run? </span>
-<span class="qa-tags"><span class="tag">BRANCHING</span></span>
+<span class="qa-title">Copy/branch: 複数のインスタンスが実行されている場合、「プリンシパル」をどのように処理しますか? </span>
+<span class="qa-tags"><span class="tag">分岐</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Easy to reproduce from an engineering standpoint. Verification design will also fail if branching is not assumed. </p>
-<p><strong>Next:</strong> Connect individual ID/version management (P2) with identity evaluation (V5)</p>
+<p><strong>質問:</strong>エンジニアリングの観点から簡単に再現できます。分岐を想定していないと検証設計も失敗します。 </p>
+<p><strong>次へ:</strong> 個人ID/バージョン管理(P2)とアイデンティティ評価(V5)を接続</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v8">
 <summary>
 <span class="qa-id">V8</span>
-<span class="qa-title">LLM/Distinguishing from imitation: How do you judge whether the external appearance is similar but the content is different? </span>
-<span class="qa-tags"><span class="tag">DISAMBIGUATION</span></span>
+<span class="qa-title">LLM／模造品との見分け方：外見は似ていても中身が違うかどうかはどうやって判断するのですか？ </span>
+<span class="qa-tags"><span class="tag">曖昧さ回避</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Conversations and reports are easy to imitate, and the stronger the prior distribution of the language model, the more likely it is. Therefore, what we want to distinguish here is not the abstract "AI-likeness" but the extent to which neural signals exceed language prior and the modality, task, and time scale in which they are established. </p>
+<p><strong>質問:</strong>会話やレポートは模倣されやすく、言語モデルの事前分布が強いほど模倣される可能性が高くなります。したがって、ここで区別したいのは、抽象的な「AIらしさ」ではなく、神経信号が言語をどの程度超えるか、またそれが成立する様式、課題、時間スケールである。 </p>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Track</th>
-<th>Relatively strong statements as of 2026-03</th>
-<th>Things I can't say yet</th>
+<th>トラック</th>
+<th>2026-03時点で比較的強い声明</th>
+<th>まだ言えないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Non-invasive semantic / caption decoding</strong></td>
-<td>Tang and Horikawa used fMRI to advance semantic reconstruction of continuous language and generation of descriptions of video content. The goal here is to<strong>transfer part of the semantic expression</strong>to an external sentence. </td>
-<td>Since dependence on subject cooperation, task conditions, and caption candidate space remains, this alone cannot be said to be a reproduction of self-model or WBE. </td>
+<td><strong>非侵襲的なセマンティック/キャプションのデコード</strong></td>
+<td>Tang と堀川は、fMRI を使用して、連続言語の意味論的再構築とビデオ コンテンツの説明の生成を進めました。ここでの目標は<strong>意味表現</strong>の一部を外部の文に転送することです。 </td>
+<td>被験者の協力、課題条件、字幕候補空間への依存が残るため、これだけでは自己モデルやWBEの再現とは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Non-invasive word / speech decoding</strong></td>
-<td>Défossez et al. and d'Ascoli et al. have advanced speech/word decoding from MEG/EEG, showing that MEG and reading tasks are advantageous and data volume strongly dominates performance. </td>
-<td>Open-ended thought reading and strong cross-day/cross-task generalizations are another matter. It is impossible to make a strong argument while hiding candidate set and device dependencies. </td>
+<td><strong>非侵襲的な単語/音声デコード</strong></td>
+<td>デフォセズら。およびダスコリら。 MEG/EEG からの音声/単語の高度なデコードが行われており、MEG タスクと読み取りタスクが有利であり、データ量がパフォーマンスを大きく左右することを示しています。 </td>
+<td>自由回答型の思考の読み取りと、日を超えた/タスクを超えた強力な一般化は別の問題です。候補セットとデバイスの依存関係を隠しながら、強力な議論を行うことは不可能です。 </td>
 </tr>
 <tr>
-<td><strong>Invasive streaming speech neuroprosthesis</strong></td>
-<td>Willett, Littlejohn, and Wairagkar made significant advances in speech BCI as a local communication subsystem. Large vocabulary, streaming throughput, and closed-loop own-voice synthesis are important achievements. </td>
-<td>What is shown here is local progress in communication routes, not whole-brain emulation or identity preservation. Throughput also does not by itself determine transferability, fixed-decoder durability, or rescue burden. </td>
+<td><strong>侵襲的ストリーミング音声ニューロプロテーゼ</strong></td>
+<td>Willett、Littlejohn、および Wairagkar は、ローカル通信サブシステムとしての音声 BCI において大きな進歩を遂げました。豊富な語彙、ストリーミング スループット、閉ループ独自の音声合成が重要な成果となります。 </td>
+<td>ここで示されているのは、通信ルートの局所的な進歩であり、全脳エミュレーションやアイデンティティの保存ではありません。また、スループットは、それ自体で転送可能性、固定デコーダの耐久性、またはレスキュー負荷を決定するものではありません。 </td>
 </tr>
 <tr>
-<td><strong>Transfer-assisted speech-decoder initialization</strong></td>
-<td>Singh et al. showed that distributed intracranial recordings can support a group-derived decoder that outperforms models trained on individual data alone, enabling a transfer-learning route for individual initialization. </td>
-<td>This is evidence for <strong>cross-subject initialization</strong> and shared latent structure, not for subject-independent final deployment or for durable fixed-decoder operation after initialization. </td>
+<td><strong>転送支援音声デコーダの初期化</strong></td>
+<td>Singh et al.分散頭蓋内記録は、個人のデータのみでトレーニングされたモデルよりも優れたパフォーマンスを発揮するグループ派生デコーダーをサポートし、個人の初期化のための伝達学習ルートを可能にすることを示しました。 </td>
+<td>これは、<strong>サブジェクト間の初期化</strong>と共有潜在構造の証拠であり、サブジェクトに依存しない最終展開や初期化後の永続的な固定デコーダ操作の証拠ではありません。 </td>
 </tr>
 <tr>
-<td><strong>Fixed-decoder durability slice</strong></td>
-<td>Willett et al. reported a bounded no-new-day-training slice, and Wairagkar et al. made it impossible to ignore the distinction between fast voice synthesis and the time horizon over which a decoder remains usable without rescue. </td>
-<td>This still does not show that fixed decoders remain adequate over long horizons, across changing tasks, or across body / environment regime changes. </td>
+<td><strong>固定デコーダ耐久性スライス</strong></td>
+<td>ウィレットらWairagkarらは、境界のある新しい日なしのトレーニングスライスを報告しました。高速音声合成と、デコーダが救助なしで使用可能な期間との違いを無視することは不可能になりました。 </td>
+<td>これはまだ、固定デコーダが長い期間にわたって、変化するタスクにわたって、または身体/環境体制の変化にわたって適切であり続けることを示していません。 </td>
 </tr>
 <tr>
-<td><strong>Adaptive stabilization / rescue</strong></td>
-<td>Karpowicz et al. and Wilson et al. showed that latent-dynamics alignment and unsupervised recalibration can stabilize iBCI performance when recording conditions drift. </td>
-<td>This is a <strong>rescue route</strong>, not proof that the original decoder stayed stable on its own. It therefore cannot be collapsed into fixed-decoder durability or subject-independent deployment. </td>
+<td><strong>適応型スタビライゼーション/レスキュー</strong></td>
+<td>Karpowicz et al.およびウィルソンら。は、記録条件がドリフトした場合でも、潜在力学アライメントと教師なし再キャリブレーションにより iBCI のパフォーマンスを安定化できることを示しました。 </td>
+<td>これは<strong>レスキュールート</strong>であり、元のデコーダーが単独で安定していたことを証明するものではありません。したがって、固定デコーダの耐久性やサブジェクトに依存しない展開に折りたたむことはできません。 </td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>2026-03-28 addendum: invasive language BCIs need an operational split</strong>
+<strong>2026-03-28 追記: 侵略的言語 BCI には運用上の分割が必要</strong>
 <p>
-The older front-door wording was still too coarse because it let readers compress several different achievements into one `speech BCI success` bucket. The primary literature does not support that. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a> strengthened same-session throughput and also exposed a bounded fixed-decoder slice, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> strengthened streaming throughput / expressivity, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> strengthened instantaneous voice synthesis with silence fallback, <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> strengthened transfer-assisted initialization, and <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> strengthened adaptive stabilization. Those papers do not all answer the same operational question, so this roadmap no longer places them on one row.
+古いフロントドアの文言は、読者がいくつかの異なる成果を 1 つの `speech BCI success` バケットに圧縮できるため、依然として粗すぎました。一次文献はそれを裏付けていません。 <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">ウィレットら(2023) </a> は同一セッションのスループットを強化し、境界付き固定デコーダ スライスも公開しました。<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al。 (2025)</a>はストリーミングスループット/表現力を強化、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairragkarら。 (2025) </a> は無音フォールバックで瞬間音声合成を強化、<a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh ら。 (2025) </a> は転送支援による初期化を強化し、<a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> プラス <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> は適応安定化を強化しました。これらの文書はすべて同じ運用上の質問に答えているわけではないため、このロードマップではこれらの文書を 1 つの行に配置しません。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Minimum evaluation pack</strong>
+<strong>最小評価パック</strong>
 <ul>
-<li><strong>Isolation of neural contribution:</strong> Report <code>no brain</code>, <code>time-shuffle</code>, <code>trial-shuffle</code>, <code>LM-only</code>, and <code>no-LM</code>; if decoding is search-based, also publish candidate-set size. </li>
-<li><strong>Bounds of generalization: </strong>Report held-out stories, held-out vocabulary, cross-day, cross-task, and cross-subject separately and do not hide the need for subject cooperation or individual adaptation. </li>
-<li><strong>Operational route label:</strong> State whether the result is same-session throughput, transfer-assisted initialization, fixed-decoder durability, or adaptive rescue after alignment / recalibration. </li>
-<li><strong>Streaming metrics:</strong> Report not only words per minute but also <code>P50/P95/P99 latency</code>, silence / abstention, dropout, recalibration burden, and recovery time. </li>
-<li><strong>Do not over-promote:</strong> Do not elevate decoding success, embedding similarity, or conversational naturalness into claims about emulation, WBE, or identity preservation. </li>
+<li><strong>神経寄与の分離:</strong>レポート<code>脳なし</code>、<code>タイムシャッフル</code>、<code>トライアルシャッフル</code>、<code>LMのみ</code>、<code>なしLM</code>。デコードが検索ベースの場合は、候補セットのサイズも公開します。 </li>
+<li><strong>一般化の範囲: </strong>保留されたストーリー、保留された語彙、日を超えて、タスクを超えて、主題を超えて個別に報告し、主題の協力や個人の適応の必要性を隠さない。 </li>
+<li><strong>動作ルート ラベル:</strong> 結果が同一セッション スループット、転送支援初期化、固定デコーダ耐久性、またはアライメント/再キャリブレーション後の適応型レスキューであるかどうかを示します。 </li>
+<li><strong>ストリーミングメトリクス:</strong>1分あたりの単語数だけでなく、<code>P50/P95/P99レイテンシー</code>、沈黙/棄権、ドロップアウト、再調整負荷、および回復時間もレポートします。 </li>
+<li><strong>過度に宣伝しないでください:</strong> デコードの成功、埋め込みの類似性、または会話の自然さを、エミュレーション、WBE、またはアイデンティティの保存に関する主張に持ち上げないでください。 </li>
 </ul>
 </div>
 
-<p><strong>Next:</strong> Connect an evaluation pack that bundles <code>LM-only / shuffle / OOD / cross-day / latency / abstention / recalibration</code> to V2 (intervention), I1 (closed loop), and R4 (causal modeling) so that progress on the communication route is not conflated with claims about WBE. </p>
+<p><strong>次:</strong> <code>LM のみ / シャッフル / OOD / クロスデイ / レイテンシー / 棄権 / 再キャリブレーション</code> をバンドルした評価パックを V2 (介入)、I1 (閉ループ)、および R4 (因果モデリング) に接続し、通信ルートの進行状況が WBE に関する主張と混同されないようにします。 </p>
 </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v9">
 <summary>
 <span class="qa-id">V9</span>
-<span class="qa-title">Supplementary exam: Is the design designed to allow a third party to reach the “same conclusion”? </span>
-<span class="qa-tags"><span class="tag">REPRO</span></span>
+<span class="qa-title">追試：第三者が「同じ結論」に到達できるように設計されていますか？ </span>
+<span class="qa-tags"><span class="tag">リプロ</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong> The shortest path to research is to create a situation in which other people can repeat the test. The more identity is debated, the more important repeatability becomes. </p>
-<p><strong>Next:</strong>Make data/code/evaluation publicly available to the extent that P2 (deliverables) is met</p>
+<p><strong>質問:</strong> 研究への最短距離は、他の人がテストを繰り返すことができる状況を作り出すことです。アイデンティティについて議論が深まるほど、再現性の重要性が高まります。 </p>
+<p><strong>次:</strong>P2 (成果物) を満たす範囲でデータ/コード/評価を公開する</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v10">
 <summary>
 <span class="qa-id">V10</span>
-<span class="qa-title">Model distance: How do we measure the "closeness" between the biological brain and emulation? </span>
-<span class="qa-tags"><span class="tag">METRIC</span><span class="tag">MATH</span></span>
+<span class="qa-title">Model の距離: 生物学的な脳とエミュレーションの間の「近さ」をどのように測定するのでしょうか? </span>
+<span class="qa-tags"><span class="tag">メトリック</span><span class="tag">MAT</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Simple Euclidean distance in parameter space often does not reflect differences in the functional behavior of models. How do we quantify the more essential "closeness of behavior"? </p>
-<p><strong>Policy:</strong> Do not adopt a single mathematical distance as the standard solution. At present, stronger external criteria come from observable behavior such as held-out perturbation responses, OOD degradation curves, calibration errors, and recovery times. Distances such as Fisher-Rao, representation distance, and manifold separation are compared as candidates, but none of them is the default pass / fail indicator. </p>
-<p><strong>Next:</strong> Compare on the same benchmark how well candidate distances match the external standards in V2 / V3 / V4. Sensitivity analysis should reveal whether the ranking stays stable when preprocessing, sample count, and state differences are changed. </p>
+<p><strong>質問:</strong>パラメータ空間における単純なユークリッド距離は、多くの場合、モデルの関数的動作の違いを反映しません。より本質的な「行動の近さ」をどうやって数値化するのでしょうか？ </p>
+<p><strong>ポリシー:</strong> 単一の数学的距離を標準解として採用しません。現在、より強力な外部基準は、持続された摂動応答、OOD 劣化曲線、校正エラー、回復時間などの観察可能な動作から得られます。 Fisher-Rao などの距離、表現距離、多様体分離が候補として比較されますが、いずれもデフォルトの合否指標ではありません。 </p>
+<p><strong>次:</strong> 同じベンチマークで候補距離が V2 / V3 / V4 の外部標準とどの程度一致しているかを比較します。感度分析では、前処理、サンプル数、状態の差が変更された場合にランキングが安定しているかどうかを明らかにする必要があります。 </p>
 </div>
 </details>
 
 <details open class="qa" data-tags="verification" id="qa-v11">
 <summary>
 <span class="qa-id">V11</span>
-<span class="qa-title">Topology: Is the “structure” of consciousness conserved? </span>
-<span class="qa-tags"><span class="tag">TDA</span><span class="tag">GEOMETRY</span></span>
+<span class="qa-title">トポロジー: 意識の「構造」は保存されていますか? </span>
+<span class="qa-tags"><span class="tag">TDA</span><span class="tag">ジオメトリ</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Scalar values such as PCI (complexity) alone do not tell us whether the "qualitative structure" of consciousness is the same. </p>
-<p><strong>Policy:</strong>Topological data analysis (TDA) or manifold geometry is a promising track for<strong>ancillary</strong>describing structural differences falling in scalar indicators. Yoon et al. (2024) provided a mathematical basis for comparing topologies in cross-populations, but the iScience 2024 mouse V1 circular manifold study also showed that there are sampling obstacles to retrieving truthful topologies. Therefore, topology distance cannot be directly linked to guaranteeing consciousness structure or passing or failing WBE. </p>
-<p><strong>Next:</strong> Through sampling, embedding dimension, distance function, preprocessing, session drift, and sensitivity analysis with perturbation responsiveness, only phase features that remain stable are reported as auxiliary indicators. </p>
+<p><strong>質問:</strong>PCI (複雑さ) などのスカラー値だけでは、意識の「質的構造」が同じかどうかはわかりません。 </p>
+<p><strong>ポリシー:</strong>トポロジカル データ分析 (TDA) または多様体幾何学は、スカラー指標に該当する構造の違いを記述する <strong>ancillary</strong> の有望なトラックです。ユンら。 (2024) は、集団間のトポロジーを比較するための数学的基礎を提供しましたが、iScience 2024 マウス V1 円形多様体研究では、真実のトポロジーを取得するにはサンプリングの障害があることも示しました。したがって、トポロジーの距離は、意識構造の保証や WBE の合否に直接関係することはできません。 </p>
+<p><strong>次へ:</strong> サンプリング、埋め込み次元、距離関数、前処理、セッション ドリフト、および摂動応答性による感度分析を通じて、安定した位相特徴のみが補助指標としてレポートされます。 </p>
 </div>
 </details>
 </div>
 
 <div class="node" id="deployment" data-qa-group>
-<div class="node-kicker">5. Deployment & Governance</div>
-<h3>Social implementation: What is needed beyond technology? </h3>
-<p class="mini"><strong>Central question:</strong>"What kind of systems, ethics, and legal foundations other than technology are needed for L5 (social implementation)?"</p>
+<div class="node-kicker">5。導入とガバナンス</div>
+<h3>ソーシャル実装: テクノロジーの先に何が必要か? </h3>
+<p class="mini"><strong>中心質問：</strong>「L5（社会実装）にはテクノロジー以外にどのような制度、倫理、法的基盤が必要ですか？」</p>
 
 <details open class="qa" data-tags="deployment" id="qa-d0">
 <summary>
 <span class="qa-id">D0</span>
-<span class="qa-title">Ethical Framework: What are the rights of emulated beings? </span>
-<span class="qa-tags"><span class="tag">ETHICS</span></span>
+<span class="qa-title">倫理的枠組み: エミュレートされた存在の権利は何ですか? </span>
+<span class="qa-tags"><span class="tag">倫理</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>If WBE is successful, is emulation a rights subject? Is stopping “death”? Is reproduction “birth”? </p>
-<p><strong>Current status:</strong>A framework for protecting neural data is being developed through the EU AI Act, the US MIND Act (proposed in 2025), etc., but it does not address the issues specific to WBE (duplication, suspension, modification). </p>
-<p><strong>Next:</strong> Develop design guidelines for the ethics review committee in parallel with technical verification (L0-L2)</p>
+<p><strong>質問:</strong>WBE が成功した場合、エミュレーションは権利の対象になりますか?立ち止まることは「死」なのか？生殖は「誕生」なのでしょうか？ </p>
+<p><strong>現状：</strong>EU AI法や米国MIND法（2025年提案）などを通じてニューラルデータを保護する枠組みが整備されているが、WBE特有の問題（複製、停止、改変）には対応していない。 </p>
+<p><strong>次へ:</strong> 技術検証と並行して倫理審査委員会向けの設計ガイドラインを作成(L0-L2)</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="deployment" id="qa-d1">
 <summary>
 <span class="qa-id">D1</span>
-<span class="qa-title">Consent and withdrawal: How do we design informed consent? </span>
-<span class="qa-tags"><span class="tag">CONSENT</span></span>
+<span class="qa-title">同意と撤回: インフォームド・コンセントはどのように設計すればよいですか? </span>
+<span class="qa-tags"><span class="tag">同意</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>Consent to the WBE process is given in advance, but how can we guarantee the right to withdraw during and after the process? </p>
-<p><strong>Next:</strong> Design a staged consent model (re-consent at each phase) and engineering implementation of termination rights</p>
+<p><strong>質問:</strong>WBE プロセスへの同意は事前に与えられますが、プロセス中およびプロセス後に撤回する権利をどのように保証できますか? </p>
+<p><strong>次へ:</strong> 段階的同意モデル (各フェーズでの再同意) と終了権のエンジニアリング実装を設計する</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="deployment" id="qa-d2">
 <summary>
 <span class="qa-id">D2</span>
-<span class="qa-title">Access and equity: Who should have access to WBE? </span>
-<span class="qa-tags"><span class="tag">EQUITY</span></span>
+<span class="qa-title">アクセスと公平性: WBE にアクセスできるのは誰ですか? </span>
+<span class="qa-tags"><span class="tag">資本</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>If WBE becomes a reality, how will we deal with the disparity problem where only the wealthy have access to "immortality"? </p>
-<p><strong>Next need:</strong>Position open access design of verification commons as the first step to prevent disparities</p>
+<p><strong>質問:</strong>WBEが現実になったら、富裕層だけが「不死」にアクセスできる格差問題にどう対処するのでしょうか？ </p>
+<p><strong>次の必要性:</strong>格差を防ぐ最初のステップとして検証コモンズのオープンアクセス設計を位置づける</p>
 </div>
 </details>
 
 <details open class="qa" data-tags="deployment" id="qa-d3">
 <summary>
 <span class="qa-id">D3</span>
-<span class="qa-title">Security: How to design for exploitation risks and controls? </span>
-<span class="qa-tags"><span class="tag">SECURITY</span></span>
+<span class="qa-title">Security: 悪用のリスクと制御をどのように設計するか? </span>
+<span class="qa-tags"><span class="tag">セキュリティ</span></span>
 </summary>
 <div class="qa-body">
-<p><strong>Question:</strong>How to deal with the risks of emulation modification, forced mental manipulation, military use, etc.? </p>
-<p><strong>Next:</strong> In conjunction with the I8 (containment) design, design technical guarantees for access control, modification auditing, and termination rights.</p>
+<p><strong>質問:</strong>エミュレーション改造、強制精神操作、軍事利用などのリスクにどう対処すればよいですか? </p>
+<p><strong>次へ:</strong> I8 (封じ込め) 設計と組み合わせて、アクセス制御、変更監査、終了権の技術的保証を設計します。</p>
 </div>
 </details>
 </div>
@@ -2006,162 +2010,162 @@ The older front-door wording was still too coarse because it let readers compres
 </section>
 
 <section class="section" id="unsolved">
-<h2 class="section-title">Definition catalog of open problems (strict version)</h2>
+<h2 class="section-title">未解決問題の定義カタログ（厳密版）</h2>
 <p>
-Here, we don't use "unresolved" as an ambiguous term; we define <strong>what is input, what is output, and under what conditions it passes/fails</strong>. Even if there is a wealth of prior research, if the criteria for judgment are ambiguous, the research will not accumulate. On the other hand, if the definition is strict, small advances can be reliably accumulated.
+ここでは、「未解決」を曖昧な用語として使用しません。 <strong> 入力とは何か、出力とは何か、そしてどのような条件下で合格/不合格となるか </strong> を定義します。先行研究が豊富であっても、判断基準があいまいであれば研究は蓄積されません。一方、定義が厳密であれば、小さな前進を確実に積み上げることができます。
 </p>
 
 <table class="data-table">
 <thead>
 <tr>
 <th>ID</th>
-<th>Definition of unsolved problems (rigorization)</th>
-<th>Existing points</th>
-<th>Unresolved boundary (next point to close)</th>
+<th>未解決問題の定義（厳密化）</th>
+<th>既存ポイント</th>
+<th>未解決の境界 (次に閉じる点)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>U0</td>
-<td><strong>Operational identity</strong>: For intervention set I and time window T, can it be defined as "identical" if the conditional distribution difference between the biological system and the model system is less than a threshold? </td>
-<td>There is a framework definition in V0/V5. Introduced the distinction between psychological continuity and causal identity. </td>
-<td>The minimum completeness conditions, threshold settings, and pre-registration rules for intervention set I have not been determined. </td>
+<td><strong>操作上の同一性</strong>: 介入セット I と時間ウィンドウ T について、生物学的システムとモデル システムの間の条件付き分布の差が閾値未満であれば、それは「同一」であると定義できますか? </td>
+<td>V0/V5にはフレームワーク定義があります。心理的連続性と因果的同一性の区別を導入しました。 </td>
+<td>介入セット I の最小完全性条件、しきい値設定、および事前登録ルールは決定されていません。 </td>
 </tr>
 <tr>
 <td>U1</td>
-<td><strong>Identifiability of the inverse problem</strong>: When estimating the potential source x from the observation y, is it possible to quantify "closeness to the unique solution" by the degree of concentration of the posterior distribution? </td>
-<td>The policy for estimation with uncertainty has been clearly stated in R2. However, public implementation and external validation are incomplete. </td>
-<td>Overall identification possibility including forward model error (conductivity/shape) has not been verified. </td>
+<td><strong>逆問題の識別可能性</strong>: 観測値 y から潜在的なソース x を推定するとき、事後分布の集中度によって「一意の解への近さ」を定量化することは可能ですか? </td>
+<td>R2では不確実性を伴う推定の方針が明記されています。ただし、公開実装と外部検証は不完全です。 </td>
+<td>順モデル誤差（導電性・形状）を含めた総合的な識別可能性は検証されていません。 </td>
 </tr>
 <tr>
 <td>U2</td>
-<td><strong>Lower limit of spatiotemporal resolution</strong>: Is it possible to define the minimum temporal/spatial resolution for each task without destroying cognition, learning, and intervention responses? </td>
-<td>The points of discussion have been sorted out in M2/M3. </td>
-<td>Insufficient measured boundaries (delay tolerance/granularity collapse point) in closed-loop tasks. </td>
+<td><strong>時空間解像度の下限</strong>: 認知、学習、介入反応を破壊することなく、各タスクの最小時間/空間解像度を定義することは可能ですか? </td>
+<td>M2/M3で論点が整理されました。 </td>
+<td>閉ループタスクで測定された境界（遅延許容値/粒度崩壊ポイント）が不十分です。 </td>
 </tr>
 <tr>
 <td>U3</td>
-<td><strong>Subject Boundary</strong>: Can the minimum set of physiological, neurological, and environmental elements included in the subject be fixed with a verifiable operational definition? </td>
-<td>Hybrid measurement protocol exists, and M4 / I6 now add a public body / environment boundary-card policy. </td>
-<td>Sensitivity analysis of how much the V5 judgment changes when the boundary changes has not been completed. </td>
+<td><strong>被験者の境界</strong>: 被験者に含まれる生理学的、神経学的、および環境要素の最小セットは、検証可能な操作的定義で固定できますか? </td>
+<td>Hybrid 測定プロトコルが存在し、M4 / I6 に公共団体 / 環境境界カード ポリシーが追加されました。 </td>
+<td>境界変更が完了していない場合にV5判定がどの程度変化するかを感度解析します。 </td>
 </tr>
 <tr>
 <td>U4</td>
-<td><strong>Counterfactual Equivalence</strong>: Can equivalence be determined based on predicted matching of intervening branches rather than observed matching? </td>
-<td>Theoretical policy was clarified in R4/V2/V6. </td>
-<td>Insufficient implementation of counterfactual virtual generator, false intervention baseline, and stopping rules. </td>
+<td><strong>反事実的等価</strong>: 観察された一致ではなく、介在する分岐の予測一致に基づいて等価性を判断できますか? </td>
+<td>R4/V2/V6で理論方針が明確になりました。 </td>
+<td>反事実の仮想ジェネレーター、誤った介入ベースライン、および停止ルールの実装が不十分です。 </td>
 </tr>
 <tr>
 <td>U5</td>
-<td><strong>Learning rules and personality drift</strong>: If learning updates are allowed, to what extent is the expression change considered to be the same? </td>
-<td>The problem has been raised in R5/V4. </td>
-<td>The allowable drift threshold and kill switch conditions for each update rule are undefined. </td>
+<td><strong>学習ルールと性格の偏り</strong>: 学習の更新が許可される場合、表現の変更はどの程度まで同じと見なされますか? </td>
+<td>この問題は R5/V4 で発生しています。 </td>
+<td>各更新ルールの許容ドリフトしきい値とキルスイッチ条件は未定義です。 </td>
 </tr>
 <tr>
 <td>U6</td>
-<td><strong>Separation of personalization and generalization</strong>: Is it possible to identify individual-specific parameters and task-common parameters and avoid overfitting? </td>
-<td>Present evaluation policy in R6. </td>
-<td>There is a lack of standard benches and test plans for intra-individual/inter-individual decomposition. </td>
+<td><strong>個人化と一般化の分離</strong>: 個人固有のパラメータとタスク共通のパラメータを識別し、過剰適合を回避することは可能ですか? </td>
+<td>R6における評価方針を示します。 </td>
+<td>個人内/個人間の分解のための標準ベンチとテスト計画が不足しています。 </td>
 </tr>
 <tr>
 <td>U7</td>
-<td><strong>Multimodal alignment</strong>: When integrating EEG/fMRI/behavior/physiology, can coordinates, delays, and noise differences be kept auditable? </td>
-<td>Required in M5/M9, Motion-BIDS policy (Issue #46). </td>
-<td>Concordance rate evaluation of multiple integrated pipelines using the same data is not yet developed. </td>
+<td><strong>マルチモーダルアライメント</strong>: EEG/fMRI/行動/生理学を統合する場合、座標、遅延、ノイズの違いを可聴に保つことができますか? </td>
+<td> M5/M9、Motion-BIDS ポリシー (問題 #46) で必須。 </td>
+<td>同じデータを使用した複数の統合パイプラインの一致率評価はまだ開発されていません。 </td>
 </tr>
 <tr>
 <td>U8</td>
-<td><strong>Closed-loop stability</strong>: Can the model be controlled without breaking down under delays, noise, and environmental changes? </td>
-<td>Organize requirements using I1/I6. </td>
-<td>Identification of safe operation area based on actual measurements of delay and jitter is insufficient. </td>
+<td><strong>閉ループ安定性</strong>: 遅延、ノイズ、環境変化下でもモデルが故障することなく制御できますか? </td>
+<td>I1/I6を使用して要件を整理します。 </td>
+<td>遅延やジッタの実測に基づく安全動作領域の特定が不十分です。 </td>
 </tr>
 <tr>
 <td>U9</td>
-<td><strong>OOD robustness</strong>: Can the sameness index be maintained in unlearning environments, novel tasks, and noise conditions? </td>
-<td>Clarified the problem in V3. </td>
-<td>Standardization of the deterioration curve (at what speed it collapses) has not been established. </td>
+<td><strong>OOD 堅牢性</strong>: 学習していない環境、新しいタスク、騒音条件下でも同一性インデックスを維持できますか? </td>
+<td>CV3 での問題を解決しました。 </td>
+<td>劣化曲線（どのくらいの速度で崩壊するか）の規格化が確立されていません。 </td>
 </tr>
 <tr>
 <td>U10</td>
-<td><strong>Thermodynamic consistency</strong>: Is it possible to formulate implementation conditions under which information processing satisfies physical irreversibility and dissipation constraints? </td>
-<td>Theoretical organization has progressed with I9 and Issue #58/#61/#62. </td>
-<td>The unification of measurable experimental indicators (dissipation rate, causal density, efficiency) has not yet been completed. </td>
+<td><strong>熱力学的一貫性</strong>: 情報処理が物理的不可逆性と散逸の制約を満たす実装条件を定式化することは可能ですか? </td>
+<td>理論編成はI9と問題#58/#61/#62で進歩しました。 </td>
+<td> 測定可能な実験指標 (散逸率、因果密度、効率) の統一はまだ完了していません。 </td>
 </tr>
 <tr>
 <td>U11</td>
-<td><strong>Calibration of perturbation/spontaneous/geometry proxies</strong>: Under what conditions do the PCI/PCI-ST, spontaneous complexity, criticality, and manifold/topology indicators match and under what conditions do they dissociate? </td>
-<td>Defined the role difference between benchmark hierarchy and auxiliary analysis in V6 / V11. </td>
-<td>Lack of external calibration across multicohort, no-report, and perturbation conditions. </td>
+<td><strong>摂動/自発的/幾何学プロキシのキャリブレーション</strong>: PCI/PCI-ST、自発的複雑性、臨界性、および多様体/トポロジーの指標はどのような条件下で一致し、どのような条件下で分離しますか? </td>
+<td>V6 / V11 におけるベンチマーク階層と補助分析の役割の違いを定義しました。 </td>
+<td>Lマルチコホート、報告なし、摂動条件にわたる外部キャリブレーションの欠如。 </td>
 </tr>
 <tr>
 <td>U12</td>
-<td><strong>Branch identity (multiple instances)</strong>: How to handle individual ID, responsibility, and evaluation attribution after multiple branches. </td>
-<td>The necessity of version control was clearly demonstrated in V7. </td>
-<td>A system design with a fixed branching point and evaluation period has not been started yet. </td>
+<td><strong>ブランチ ID (複数インスタンス)</strong>: 複数ブランチ後の個人 ID、責任、および評価帰属を処理する方法。 </td>
+<td>V7ではバージョン管理の必要性が明確に示されました。 </td>
+<td>A の分岐点と評価期間を固定したシステム設計はまだ開始されていません。 </td>
 </tr>
 <tr>
 <td>U13</td>
-<td><strong>Imitation separation test</strong>: Can behavioral imitation (LLM type) and causal structure preservation be experimentally distinguished? </td>
-<td>3-axis benchmark in Issue #10, integration policy in V8. </td>
-<td>There is a lack of test groups that simultaneously impose intervention, closed loop, and internal state consistency. </td>
+<td><strong>模倣分離テスト</strong>: 行動模倣 (LLM タイプ) と因果構造の保存は実験的に区別できますか? </td>
+問題 #10 の <td>3 軸ベンチマーク、V8 の統合ポリシー。 </td>
+<td>介入、閉ループ、内部状態の一貫性を同時に課すテスト グループが不足しています。 </td>
 </tr>
 <tr>
 <td>U14</td>
-<td><strong>Implementation of retestability</strong>: Is it possible to fix the operation so that a third party can reach the same conclusion using the same data and procedures? </td>
-<td>Requirements have been sorted out in P2/V9. </td>
-<td>The operational flow for publishing the execution environment, differential logs, and failure examples is incomplete. </td>
+<td><strong>再テスト可能性の実装</strong>: 第三者が同じデータと手順を使用して同じ結論に達できるように操作を修正することは可能ですか? </td>
+<td>要件はP2/V9で整理されました。 </td>
+<td>実行環境、差分ログ、障害例の公開までの操作フローが不完全です。 </td>
 </tr>
 <tr>
 <td>U15</td>
-<td><strong>Social implementation governance</strong>: Can rights, consent, and responsibility distribution be designed in synchronization with technical evaluation? </td>
-<td>Issues have been extracted from D0-D2. </td>
-<td>The linkage rules (including cancellation criteria) between technical KPI and system KPI are undefined. </td>
+<td><strong>社会実装ガバナンス</strong>:権利、同意、責任の配分は技術評価と同期して設計できますか? </td>
+<td> 問題は D0 ～ D2 から抽出されています。 </td>
+<td>テクニカルKPIとシステムKPIの連携ルール（キャンセル基準を含む）が未定義です。 </td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>Judgment rules</strong>
+<strong>判定ルール</strong>
 <p>
-U0-U15 above are not "good ideas" but "falsifiable research questions". Each problem is determined to have been ``solved'' only when the <strong>inputs, outputs, evaluation indicators, and failure conditions</strong> are all complete.
+上記の U0 ～ U15 は「良いアイデア」ではなく、「反証可能な研究課題」です。各問題は、<strong>の入力、出力、評価指標、</strong>の故障条件がすべて揃った場合にのみ「解決した」と判断されます。
 </p>
 </div>
 
-<h3>Additional breakdown of the three most important issues (deeper)</h3>
+<h3>最も重要な 3 つの問題の追加の内訳 (詳細)</h3>
 <div class="stage-list">
 <div class="stage-item">
 <div class="stage-number">A</div>
 <div class="stage-body">
-<h4>U4 causal equivalence</h4>
+<h4>U4 因果的等価</h4>
 <ul>
-<li>How to create a minimally complete set of intervention dictionaries (stimulus, task, pharmacology). </li>
-<li>How to calibrate the thresholds of counterfactual matching (KL, JS, FIM, etc.). </li>
-<li>How to suppress overestimation in sham intervention/sham conditions. </li>
-<li>How to pre-register the Stop Rule in case of failure. </li>
+<li>最小限完全な介入辞書 (刺激、課題、薬理学) のセットを作成する方法。 </li>
+<li>反事実一致のしきい値を調整する方法 (KL、JS、FIM など)。 </li>
+<li>偽介入/偽条件における過大評価を抑制する方法。 </li>
+<li>失敗時の停止ルールを事前に登録する方法。 </li>
 </ul>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">B</div>
 <div class="stage-body">
-<h4>U10 Thermodynamic consistency</h4>
+<h4>U10 熱力学的一貫性</h4>
 <ul>
-<li>In what time window should we measure the dissipation rate of information processing? </li>
-<li>How to deal with the difference between physical irreversibility and computational irreversibility. </li>
-<li>Is it possible to create a common index that can be compared even if the implementation platform changes? </li>
-<li>How to optimize the trade-off between energy efficiency and causal performance. </li>
+<li>情報処理の散逸率はどの時間枠で測定すればよいですか? </li>
+<li>物理的不可逆性と計算的不可逆性の違いにどう対処するか。 </li>
+<li>実装プラットフォームが変わっても比較できる共通のインデックスを作成することはできますか？ </li>
+<li>エネルギー効率と因果関係のパフォーマンスの間のトレードオフを最適化する方法。 </li>
 </ul>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">C</div>
 <div class="stage-body">
-<h4>U12 Branched identity</h4>
+<h4>U12 分岐アイデンティティ</h4>
 <ul>
-<li>Where to place the branch point definition (fixed initial condition). </li>
-<li>How to set the evaluation attribution period after branching. </li>
-<li>How to manage responsibility distribution and audit ID when there are multiple branches. </li>
-<li>How to deal with the mismatch between legal subjectivity and technical identity. </li>
+<li>分岐点定義を配置する場所(初期条件固定)。 </li>
+<li>分岐後の評価帰属期間の設定方法。 </li>
+<li>複数の支店がある場合の責任分担と監査IDを管理する方法。 </li>
+<li>法的主観と技術的同一性の不一致にどう対処するか。 </li>
 </ul>
 </div>
 </div>
@@ -2169,159 +2173,159 @@ U0-U15 above are not "good ideas" but "falsifiable research questions". Each pro
 </section>
 
 <section class="section" id="priorwork-map">
-<h2 class="section-title">Previous research map (by priority area)</h2>
+<h2 class="section-title">先行研究マップ（重点分野別）</h2>
 <p>
-Prior research necessary to solve unresolved problems is organized by field. The purpose is not to ``list the literature,'' but to clarify<strong>which evidence works for which problem</strong>.
+未解決の問題を解決するために必要な先行研究を分野ごとにまとめています。目的は「文献を列挙する」ことではなく、<strong>どの証拠がどの問題に有効であるかを明らかにすること</strong>です。
 </p>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>area</th>
-<th>Representative previous research (excerpt)</th>
-<th>Contribution to U0-U15</th>
+<th>エリア</th>
+<th>代表的な先行研究（抜粋）</th>
+<th>U0-U15への貢献</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>WBE basics/personality</td>
-<td>Sandberg &amp; Bostrom (2008), Yamakawa et al. (2024), Parfit (1984), Clowes (2021), Weber (2025)</td>
-<td>U0, U12, U15</td>
+<td>WBE 基本・個性</td>
+<td>Sサンドバーグ＆amp;ボストロム (2008)、山川ら。 (2024)、パルフィット (1984)、クロウズ (2021)、ウェーバー (2025)</td>
+<td>U0、U12、U15</td>
 </tr>
 <tr>
-<td>Consciousness theory and verification</td>
-<td>Tononi (2015), Tononi et al. (2016), Albantakis et al. (2023), Doerig et al. (2019), Ferrante et al. (2025), Casali et al. (2013), Comolatti et al. (2019)</td>
-<td>U0, U4, U11</td>
+<td>意識理論と検証</td>
+<td>Tononi (2015)、Tononi et al. (2016)、アルバンタキスら。 (2023)、Doerig et al。 (2019)、フェランテら。 (2025)、Casali et al。 (2013)、コモラッティら。 (2019)</td>
+<td>U0、U4、U11</td>
 </tr>
 <tr>
-<td>EEG/MEG inverse problem</td>
-<td>Michel &amp; Brunet (2019), Wipf &amp; Nagarajan (2009), Cai et al. (2021), Sechet et al. (2025), Vorwerk et al. (2014), Medani et al. (2025)</td>
-<td>U1, U2, U7</td>
+<td>EEG/MEG 逆問題</td>
+<td>ミシェル&アンプ;ブルネット (2019)、ウィップ＆amp; Nagarajan (2009)、Cai et al. (2021)、Sechet et al。 (2025)、フォルヴェルクら。 (2014)、メダニら。 (2025)</td>
+<td>U1、U2、U7</td>
 </tr>
 <tr>
-<td>Preprocessing/synchronization/connectivity</td>
-<td>Wilson et al. (2010), Thompson et al. (2013), Mowla et al. (2017), Belinskaia et al. (2020), Mansouri et al. (2018), Zrenner et al. (2018), Appelhoff &amp; Stenner (2021), Kothe et al. (2025)</td>
-<td>U1, U7, U8, U14</td>
+<td>前処理/同期/接続</td>
+<td>ウィルソンら(2010)、トンプソンら。 (2013)、モーラら。 (2017)、ベリンスカヤ他。 (2020)、マンスーリら。 (2018)、Zrenner et al。 （2018）、アッペルホフ＆amp; Stenner (2021)、Kothe 他。 (2025)</td>
+<td>U1、U7、U8、U14</td>
 </tr>
 <tr>
-<td>Decoding</td>
-<td>Huth et al. (2016), Tang et al. (2023), D&eacute;fossez et al. (2023), Horikawa (2025), d'Ascoli et al. (2025), Willett et al. (2023), Littlejohn et al. (2025), Wairagkar et al. (2025), Wilson et al. (2025)</td>
-<td>U4, U8, U9, U13</td>
+<td>デコード</td>
+<td>ヒュースら。 (2016)、タンら。 (2023)、D&eacute;fossez 他。 (2023)、堀川 (2025)、d'Ascoli et al. (2025)、ウィレットら。 (2023)、リトルジョンら。 (2025)、Wiragkar et al。 (2025)、ウィルソンら。 (2025)</td>
+<td>U4、U8、U9、U13</td>
 </tr>
 <tr>
-<td>Causal/active reasoning</td>
-<td>Friston et al. (2003), Friston (2010), Friston (2017), Parr &amp; Friston (2019), Laukkonen et al. (2025), Correa et al. (2021)</td>
-<td>U4, U5, U9</td>
+<td>因果/能動的推論</td>
+<td>フリストンら（2003）、フリストン（2010）、フリストン（2017）、パー＆amp;フリストン (2019)、ラウコネンほか。 (2025)、コレアら。 (2021)</td>
+<td>U4、U5、U9</td>
 </tr>
 <tr>
-<td>Biological constraints</td>
-<td>Cook et al. (2019), Scheffer et al. (2020), Kasthuri et al. (2015), Santello et al. (2019), Ozcete et al. (2024), Gamlin et al. (2025)</td>
-<td>U2, U3, U6, U7</td>
+<td>生物学的制約</td>
+<td>Cクックら(2019)、Scheffer et al。 (2020)、Kasthuri et al。 (2015)、Santello et al。 (2019)、オズセテら。 (2024)、ガムリンら。 (2025)</td>
+<td>U2、U3、U6、U7</td>
 </tr>
 <tr>
-<td>Measurement extension (OPM etc.)</td>
-<td>Boto et al. (2018), Seymour et al. (2021), Holmes et al. (2023), Holmes et al. (2025), Rhodes et al. (2025)</td>
-<td>U2, U7, U8</td>
+<td>測定拡張(OPM等)</td>
+<td>Botoら(2018)、シーモア他。 (2021)、ホームズら。 (2023)、ホームズら。 (2025)、ローズら。 (2025)</td>
+<td>U2、U7、U8</td>
 </tr>
 <tr>
-<td>Standardization/Reproducibility</td>
-<td>Gorgolewski et al. (2016), Pernet et al. (2019), EEG-BIDS update, Open benchmark practices</td>
+<td>標準化・再現性</td>
+<td>ゴルゴレフスキーら。 (2016)、ペルネットら。 (2019)、EEG-BIDS アップデート、オープン ベンチマーク プラクティス</td>
 <td>U14</td>
 </tr>
 <tr>
-<td>Ethics, rights, legal system</td>
-<td>Yuste et al. (2017), Ienca &amp; Andorno (2017), MIND Act discourse (2025)</td>
-<td>U12, U15</td>
+<td>倫理、権利、法制度</td>
+<td>ユステら（2017）、イエンカ＆amp;アンドルノ (2017)、MIND Act 講演 (2025)</td>
+<td>U12、U15</td>
 </tr>
 <tr>
-<td>Thermodynamics/computability</td>
-<td>Seifert (2012), Kitazono et al. (2018), complexity reduction studies on IIT (2025)</td>
-<td>U10, U11</td>
+<td>熱力学/計算可能性</td>
+<td>seifert (2012)、北園ら。 (2018)、IIT に関する複雑さの軽減研究 (2025)</td>
+<td>U10、U11</td>
 </tr>
 </tbody>
 </table>
 
 <div class="key-points">
-<h4>Reading order (for practical use)</h4>
+<h4>読み順（実用用）</h4>
 <ul>
-<li><strong>First layer:</strong> Solidify U1/U14 (measurement and reproducibility) first. If this is weak, all higher-level discussions will be unstable. </li>
-<li><strong>Second layer:</strong> Verify U4/U9 (causal and generalization) on an intervention basis and establish the difference from imitation. </li>
-<li><strong>Third layer:</strong> Update U10/U11/U12/U15 (physics, identity, system) by connecting it with the empirical results. </li>
+<li><strong>第1層：</strong> U1/U14（測定と再現性）を最初に固化します。これが弱いと、上位レベルのあらゆる議論が不安定になります。 </li>
+<li><strong>第 2 層:</strong> U4/U9 (因果関係と一般化) を介入ベースで検証し、模倣との違いを確立します。 </li>
+<li><strong>第3層:</strong> U10/U11/U12/U15(物理学、アイデンティティ、システム)を実証結果と結び付けて更新します。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="template">
-<h2 class="section-title">Template for scientific core question page (recommended)</h2>
-<p>When creating a new technical proposal or question page, we recommend copying and using the Markdown template below. It is configured to force a thought flow that fixes R0 (restoration target) and V0 (verification criteria) first. </p>
+<h2 class="section-title">T科学コア質問ページのテンプレート (推奨)</h2>
+<p>新しい技術提案や質問ページを作成する場合は、以下の Markdown テンプレートをコピーして使用することをお勧めします。 R0(修復対象)とV0(検証基準)を先に固定する思考フローを強制するように構成されています。 </p>
 
 <details>
-<summary><strong>View template (click to expand)</strong></summary>
+<summary><strong>テンプレートの表示 (クリックして展開)</strong></summary>
 <pre style="background: #f6f8fa; padding: 16px; border-radius: 6px; white-space: pre-wrap; font-size: 0.85em; overflow-x: auto;">
-## Template for scientific core question page (all items included/can be copied and pasted as is)
+## 科学コア質問ページのテンプレート（すべての項目が含まれています/そのままコピー＆ペーストできます）
 
-> Purpose: **"Fix R0 (recovery target) and V0 (verification criteria) first, then discuss M0 (measurement) and I0 (identifiability)" **This is a template that enforces the order.
-> *Each section is clearly marked as “unconfirmed if it is unconfirmed” so that you can proceed.
-
----
-
-# 0. Title
-
-* **Page title**:
-* **One-sentence summary (conclusion first)**:
-
-  * "This page identifies the necessary measurement requirements (spatiotemporal resolution, observed variables) in order to be able to restore _____ to the standard of _____."
+> 目的: **「最初に R0 (回復対象) と V0 (検証基準) を決定し、次に M0 (測定) と I0 (識別可能性) について議論する」 **これは順序を強制するテンプレートです。
+> ※各項目に「未確認の場合は未確認」と明記してありますのでそのままお進みください。
 
 ---
 
-# 1. Central Question (CQ)
+# 0. タイトル
 
-* **Central question**:
+* **ページタイトル**:
+* **一文の要約 (結論が先にあります)**:
 
-  * “At what spatio-temporal resolution should _____ be acquired to bring the “object to be restored (R0)” closer to being unique?”
-* **Focus of question** (which is the main battlefield):
-
-  * [ ] Selection of observed variables (what to measure)
-  * [ ] Lower limit of resolution/coverage (how fine/wide)
-  * [ ] Tolerable range for noise, missing measurements, and individual differences
-  * [ ] Identification including causality (possibility of intervention)
+  * 「このページでは、_____ を _____ の標準に戻すために必要な測定要件 (時空間分解能、観測変数) を特定します。」
 
 ---
 
-# 2. Fixed terminology/scope (disambiguation elimination)
+# 1. セントラルクエスチョン（CQ）
 
-* **Target species**: Human/Animal (species: ＿＿＿)/Simulation
-* **Status range**: At rest/on task (task: _____)/sleep/pharmacological intervention
-* **Time scale**: milliseconds to seconds/minutes to hours/days to years
-* **Spatial scale**: cell/column/region/whole brain
-* **Meaning of “restoration”** (by definition, not intuition): ＿＿＿＿
+* **中心的な質問**:
+
+  * 「『復元対象（R0）』を一意に近づけるためには、どのくらいの時空間解像度で_____を取得すればよいでしょうか？」
+* **質問の焦点** (主戦場):
+
+  * [ ] 観測変数の選択 (何を測定するか)
+  * [ ] 解像度/範囲の下限 (どの程度細かい/広いか)
+  * [ ] ノイズ・測定値抜け・個体差の許容範囲
+  * [ ] 因果関係（介入の可能性）を含む特定
 
 ---
 
-# 3. R0: Restore target (most important/determined first)
+# 2. 用語/範囲の修正 (曖昧さ回避)
 
-## 3.1 What to restore (definition of target)
+* **対象種**：ヒト/動物（種：＿＿＿）/シミュレーション
+* **ステータス範囲**: 安静時/作業中 (タスク: _____)/睡眠中/薬理学的介入
+* **時間スケール**: ミリ秒から秒/分から時間/日から年
+* **空間スケール**: 細胞/列/領域/脳全体
+* **「修復」の意味** (直感ではなく定義による): ＿＿＿＿
 
-* **Restore target R0**:
+---
 
-  *Example) Structure (wire connections) / dynamics (state transitions) / functions (input → output) / memory / strategies / self-models including subjective reports, etc.
-* **R0 output format** (What should be output in the end to be considered “restored”):
+# 3. R0: 復元ターゲット (最も重要/最初に決定)
 
-  * Examples) Parameter sets, generative models, state space models, agent policies, simulators, etc.
+## 3.1 何を復元するか（対象の定義）
 
-## 3.2 Definition of identity (equivalence relation) = “success”
+* **ターゲット R0 を復元します**:
 
-* **Equivalence relation (success if what is the same)**:
+  ※例）構造（配線接続）／ダイナミクス（状態遷移）／機能（入力→出力）／記憶／戦略／主観レポートを含む自己モデルなど
+* **R0 出力形式** (「復元された」とみなされるためには、最終的に何を出力する必要があります):
 
-  * “If ＿＿＿＿ matches, R0 is considered the same.”
-* **Tolerance** (No matter how different they are, they are treated the same):
+  * 例）パラメータセット、生成モデル、状態空間モデル、エージェントポリシー、シミュレータなど
 
-  * Indicator: ＿＿＿＿, Threshold: ＿＿＿＿
+## 3.2 同一性（同値関係）＝「成功」の定義
 
-## 3.3 Assumptions (assumptions implicitly included in R0)
+* **同値関係(同じであれば成功)**:
 
-*Example) The brain is Markovian/observable latent states exist/can be expressed as a learnable function class, etc.
-* **List of assumptions**:
+  * 「＿＿＿＿が一致する場合、R0 は同じであるとみなされます。」
+* **許容範囲** (どんなに異なっていても、同じように扱われます):
+
+  * 指標：＿＿＿＿、閾値：＿＿＿＿
+
+## 3.3 仮定 (R0 に暗黙的に含まれる仮定)
+
+※例）脳はマルコフ的である / 観察可能な潜在状態が存在する / 学習可能な関数クラスとして表現できる など
+* **前提条件のリスト**:
 
   * A1：＿＿＿＿
   * A2：＿＿＿＿
@@ -2329,175 +2333,175 @@ Prior research necessary to solve unresolved problems is organized by field. The
 
 ---
 
-# 4. V0: Verification criteria (pass/fail test)
+# 4. V0: 検証基準 (合否テスト)
 
-## 4.1 What constitutes “recovery” (test design)
+## 4.1 「回復」とは何か（テスト設計）
 
-* **Verification task**: ＿＿＿＿
-* **Evaluation data**: Within-individual/inter-individual generalization/conditional extrapolation (counterfactual)
-* **Baseline**: ＿＿＿＿ (e.g. simple model, existing method)
+* **検証タスク**: ＿＿＿＿
+* **評価データ**: 個人内/個人間の一般化/条件付き外挿 (反事実)
+* **ベースライン**: ＿＿＿＿ (例: 単純なモデル、既存の手法)
 
-## 4.2 Indicators (quantitative) and passing lines (thresholds)
+## 4.2 指標（定量的）と合格ライン（閾値）
 
-* **Main indicators**: ＿＿＿＿ (e.g. prediction accuracy, likelihood, causal effect agreement, behavioral distribution distance)
-* **Passing line**: ＿＿＿＿ (threshold or ratio)
-* **Reproducibility requirements**: n = ＿＿＿, recall rate ＿＿＿, presence or absence of pre-registration ＿＿＿
+* **主な指標**: ＿＿＿＿ (例: 予測精度、可能性、因果関係の一致、行動分布距離)
+* **合格ライン**: ＿＿＿＿ (閾値または比率)
+* **再現性要件**: n = ＿＿＿、再現率＿＿＿、事前登録の有無＿＿＿
 
-## 4.3 When using intervention/causation (recommended: include if possible)
+## 4.3 介入/因果関係を使用する場合 (推奨: 可能であれば含める)
 
-* **Intervention measures**: stimulation/pharmacology/injury/closed-loop control
-* **Concordance condition at the time of intervention**: ＿＿＿＿ (definition of “response matches”)
-
----
-
-# 5. M0: Measurement premise (MEASUREMENT)
-
-## 5.1 Assumptions of measurement route (which one to assume)
-
-* **Assumption**:
-
-  * [ ] in vivo (non-invasive)
-  * [ ] in vivo (invasive)
-  * [ ] Destructive scan (ex vivo / future vision)
-* **Safety/Ethics/Scale constraints**: ＿＿＿＿
-
-## 5.2 Observation target (what to measure) candidate list
-
-* Electricity: EEG/MEG/ECoG/single/multipoint
-*Blood flow: fMRI/fNIRS
-*Optics: Ca imaging, etc.
-* Structure: MRI/DTI/EM etc.
-* **Observables mainly treated on this page**: ＿＿＿＿
-
-## 5.3 Expected spatiotemporal resolution/coverage
-
-* **Temporal resolution**: ＿＿＿＿
-* **Spatial resolution**: ＿＿＿＿
-* **Coverage**: local/wide area/whole brain
-* **Sampling constraints (duration/number of times)**: ＿＿＿＿
-* **Noise floor/missing**: ＿＿＿＿
+* **介入措置**: 刺激/薬理学/損傷/閉ループ制御
+* **介入時の一致条件**：＿＿＿＿（「応答一致」の定義）
 
 ---
 
-# 6. P0: Estimated model/representation (specify model assumptions)
+# 5. M0：測定前提（MEASUREMENT）
 
-* **Latent representation to be estimated**: state space/factor model/generative model/agent policy/connectome, etc.
-* **Learning paradigm**: Supervised/Self-supervised/Data assimilation/Simulator combination
-* **Required induction bias**: _____ (e.g. low dimensionality, sparsity, symmetry, anatomical constraints)
-* **Computational resources/implementation constraints**: ＿＿＿＿
+## 5.1 測定経路の想定（どの経路を想定するか）
 
----
+* **予測**：
 
-# 7. I0: Identifiability (the “core” of this page)
+  * [ ] in vivo (非侵襲的)
+  * [ ] in vivo (侵襲的)
+  * [ ] 破壊スキャン (生体外 / 未来ビジョン)
+* **安全/倫理/規模の制約**: ＿＿＿＿
 
-## 7.1 Claim (in 1-2 sentences)
+## 5.2 観測対象（何を測定するか）候補リスト
 
-* **I0 claim**:
+* 電気: EEG/MEG/ECoG/シングル/マルチポイント
+※血流：fMRI/fNIRS
+※光学系：Caイメージング等
+* 構造：MRI/DTI/EMなど
+* **このページで主に扱う観測値**: ＿＿＿＿
 
-  * "In order to bring R0 close to uniqueness, it is necessary to obtain the observable quantity ____ in time and space ____ (at least ____ is the lower limit)."
+## 5.3 予想される時空間解像度/カバレッジ
 
-## 7.2 Required conditions (lower limit: impossible without this)
-
-* **Requirements (minimum set of observations)**: ＿＿＿＿
-* **Intuition/Reason**: Unobserved degrees of freedom remain/becomes a many-to-one mapping/become indivisible due to noise, etc.
-* **Specific example of “unidentifiable”**: ＿＿＿＿ (Another solution that produces the same observation can be constructed, etc.)
-
-## 7.3 Sufficient condition (upper limit: theoretically possible if this is achieved)
-
-* **Sufficient condition**: ＿＿＿＿
-* **Reality**: Impossible now/Possible in the future/Alternatives
-
-## 7.4 Failure modes (important: enumerated proactively)
-
-* [ ] Many-to-one (different R0 yields the same observation)
-* [ ] Model misspec (P0 is wrong)
-* [ ] Cause and effect cannot be determined due to lack of intervention
-* [ ] Generalization breaks down due to individual differences
-* [ ] Unidentifiable due to noise floor/missing measurements
-* **Detection method**: ＿＿＿＿ (Which indicator should be used to determine “failure”)
-
-## 7.5 Measure of “approaching uniqueness”
-
-* **Uniqueness score** (candidate): concentration of posterior distribution/equivalence class size/discrimination distance, etc.
-* **Measures to be adopted**: ＿＿＿＿
+* **時間解像度**: ＿＿＿＿
+* **空間解像度**: ＿＿＿＿
+* **対象範囲**: 局所/広域/脳全体
+* **サンプリングの制約 (期間/回数)**: ＿＿＿＿
+* **ノイズフロア/欠落**: ＿＿＿＿
 
 ---
 
-# 8. Strategic branching (A/B/C) *Can be used as an example
+# 6. P0: 推定モデル/表現 (モデルの仮定を指定)
 
-> For each branch, be sure to write a set of not only the "difference in M0" but also the **route to reach V0** and **probability of satisfying I0**.
+* **推定される潜在表現**: 状態空間/因子モデル/生成モデル/エージェント ポリシー/コネクトームなど。
+* **学習パラダイム**: 教師あり/自己教師あり/データ同化/シミュレーターの組み合わせ
+* **必要な誘導バイアス**: _____ (例: 低次元性、スパース性、対称性、解剖学的制約)
+* **計算リソース/実装上の制約**: ＿＿＿＿
 
-## A: Train the model non-invasively (EEG/MEG/fMRI, etc.)
+---
 
-* **Aim**: ＿＿＿＿ (Example: Gain generalization with large-scale, long-term data)
-* **M0**: ＿＿＿＿ (resolution/coverage/constraints)
-* **P0**: ＿＿＿＿ (expression/learning)
-* **Route to reach V0**: ＿＿＿＿ (which test to pass)
-* **Bottleneck on I0**: ＿＿＿＿ (What tends to make it impossible to identify)
-* **“Judgment information” obtained from this branch**: ＿＿＿＿ (information that is effective in selecting the next branch)
+# 7. I0: 識別可能性 (このページの「核心」)
 
-## B: Invasion (ECoG/deep/animal) enhances causal inference
+## 7.1 クレーム (1 ～ 2 文)
 
-* **Aim**: ＿＿＿＿ (Example: Strengthen causality/identification through intervention)
+* **I0 クレーム**:
+
+  * 「R0 を一意性に近づけるためには、時間と空間 ____ で観測可能な量 ____ を得る必要があります (少なくとも ____ が下限値です)。」
+
+## 7.2 必要条件（下限：これがないと無理）
+
+* **要件 (最小限の観察セット)**: ＿＿＿＿
+* **直感/理由**: 観測されない自由度が残る / 多対 1 写像になる / ノイズなどにより分割できなくなる
+* **「特定できない」の具体例**: ＿＿＿＿ (同じ観測結果をもたらす別の解決策が構築できるなど)
+
+## 7.3 十分条件（上限：これを達成すれば理論上可能）
+
+* **十分な条件**: ＿＿＿＿
+* **現実**: 現在は不可能/将来は可能/代替案
+
+## 7.4 障害モード (重要: 積極的に列挙)
+
+* [ ] 多対 1 (異なる R0 でも同じ観測結果が得られます)
+* [ ] モデルの仕様ミス (P0 が間違っています)
+* [ ] 介入がなかったため原因と結果を特定できない
+* [ ] 個人差により一般化が崩れる
+* [ ] ノイズフロア/測定値の欠落により識別不能
+* **検出方法**: ＿＿＿＿ (どの指標で「故障」を判断するか)
+
+## 7.5 「独自性の接近」の尺度
+
+* **一意性スコア** (候補): 事後分布の集中度/同等クラスサイズ/識別距離など。
+* **取るべき措置**: ＿＿＿＿
+
+---
+
+# 8. 戦略分岐（A/B/C） ※一例としてご利用いただけます
+
+> 各分岐について、「M0の差」だけでなく、**V0に到達するルート**と**I0が満たされる確率**も必ずセットで書いてください。
+
+## A: モデルを非侵襲的にトレーニングします (EEG/MEG/fMRI など)。
+
+* **目的**: ＿＿＿＿ (例: 大規模かつ長期データによる汎化の獲得)
+* **M0**: ＿＿＿＿ (解像度/カバレッジ/制約)
+* **P0**: ＿＿＿＿（表現・学習）
+* **V0に到達するルート**: ＿＿＿＿ (どのテストに合格するか)
+* **I0 のボトルネック**: ＿＿＿＿ (特定できなくなる傾向にあるもの)
+* **この分岐から得られる「判断情報」**：＿＿＿＿（次の分岐の選択に有効な情報）
+
+## B: 侵入 (ECoG/深部/動物) は因果推論を強化します
+
+* **目的**: ＿＿＿＿ （例：介入による因果関係・同一性の強化）
 * **M0**：＿＿＿＿
 * **P0**：＿＿＿＿
-* **Route to reach V0**: ＿＿＿＿
-* **Improvements on I0**: ＿＿＿＿ (crushing many-to-one with intervention, etc.)
-* **Handling of extrapolation (human generalization)**: ＿＿＿＿
+* **V0に到達するルート**: ＿＿＿＿
+* **I0 の改善**: ＿＿＿＿ (介入による多対 1 の粉砕など)
+* **外挿(人間の一般化)の扱い**: ＿＿＿＿
 
-## C: Obtain structure with destructive and ultra-high resolution (future vision)
+## C: 破壊的かつ超高解像度の構造の取得（将来像）
 
-* **Aim**: ＿＿＿＿ (Example: Consider upper limit on sufficient condition side)
-* **M0**: ＿＿＿＿ (obtainable structure information)
-* **P0**: ＿＿＿＿ (structure → function mapping assumption)
-* **Route to reach V0**: ＿＿＿＿
-* **I0's conclusion**: ＿＿＿＿ (Is it sufficient in principle/still insufficient?)
-
----
-
-# 9. Rebuttal conditions/Stop rule
-
-## 9.1 Total falsification (condition denying the root of the page)
-
-* **Rebuttal conditions**:
-
-  * “Even if only the measurement is advanced without defining R0 (recovery target), the inability to identify will not be resolved.”
-  * Specifically: ＿＿＿＿ (the same observation can form another R0, it does not pass through V0, etc.)
-
-## 9.2 Stopping rules by branch (withdrawal line)
-
-* Stop of A: ＿＿＿＿
-* Stop B: ＿＿＿＿
-* Stop C: ＿＿＿＿
-* **Pivot condition**: ＿＿＿＿ (judgment criteria for A → B, B → C, etc.)
+* **目標**: ＿＿＿＿ （例：十分条件側の上限を検討）
+* **M0**: ＿＿＿＿ (取得可能な構造情報)
+* **P0**: ＿＿＿＿ (構造→機能マッピングの仮定)
+* **V0に到達するルート**: ＿＿＿＿
+* **I0の結論**: ＿＿＿＿ (原理的には十分ですか/まだ不十分ですか)
 
 ---
 
-# 10. Next action (fix priority on this page)
+# 9. 反論条件・中止ルール
 
-* **Confirm first**:
+## 9.1 完全改ざん（ページのルートを否定する状態）
 
-  1. R0 (restore target/equivalence relationship)
-  2. V0 (pass/fail test)
-  3. I0 (lower limit assertion of necessary conditions)
-* **Things to do this week**: ＿＿＿＿
-* **Next section to add**: ＿＿＿＿
-* **Undecided points (list of questions)**:
+* **反論条件**:
+
+  * 「R0（回復目標）を定めずに測定だけを進めても、特定できないことは解消されません。」
+  * 具体的には: ＿＿＿＿ (同じ観測値が別の R0 を形成する可能性がある、V0 を通過しないなど)
+
+## 9.2 支店（引出しライン）別の停止ルール
+
+* Aの停留所：＿＿＿＿
+* 停留所B: ＿＿＿＿
+* 停留所C: ＿＿＿＿
+* **ピボット条件**：＿＿＿＿（A→B、B→Cなどの判断基準）
+
+---
+
+# 10. 次のアクション (このページの優先順位を修正)
+
+* **最初に確認してください**:
+
+  1. R0（対象・等価関係の復元）
+  2. V0 (合否テスト)
+  3. I0（必要条件の下限主張）
+* **今週やるべきこと**: ＿＿＿＿
+* **次のセクションを追加します**: ＿＿＿＿
+* **未決定点（質問一覧）**：
 
   * Q1：＿＿＿＿
   * Q2：＿＿＿＿
 
 ---
 
-## Appendix: “Summary of main points” frame for overview on one page (optional)
+## 付録: 1 ページで概要を説明する「要点のまとめ」フレーム (オプション)
 
 * **R0**：＿＿＿＿
 * **V0**：＿＿＿＿
 * **M0**：＿＿＿＿
 * **P0**：＿＿＿＿
-* **I0 Conclusion (lower limit/upper limit)**: ＿＿＿＿
-* **Branch to adopt**: A/B/C (Reason: ＿＿＿＿)
-* **Disproval/Suspension**: ＿＿＿＿
+* **I0 結論(下限値/上限値)**: ＿＿＿＿
+* **採用部門**: A/B/C (理由: ＿＿＿＿)
+* **異議申し立て/停止**: ＿＿＿＿
 
 ---
 </pre>
@@ -2505,256 +2509,256 @@ Prior research necessary to solve unresolved problems is organized by field. The
 </section>
 
 <section class="section" id="learning">
-<h2 class="section-title">Learning order (minimum overall picture)</h2>
-<p>“Order” is important. Even if you are strong in measurement, you will not be able to claim progress if your verification standards are ambiguous. On the other hand, even if the verification is excellent, if the restoration target cannot be defined, the implementation will go astray. </p>
+<h2 class="section-title">学習順序（最低限の全体像）</h2>
+<p>「順番」が大切。たとえ測定に強くても、検証基準があいまいであれば進歩とは言えません。逆に、検証が良くても復元対象が定義できなければ実装は迷走してしまいます。 </p>
 <ol>
-<li><strong>Overall picture:</strong>WBE roadmap (overall process/bottleneck)</li>
-<li><strong>Measurement:</strong>What is lost at what resolution (EEG/fMRI/invasive/connectome)</li>
-<li><strong>Reconstruction: </strong>Inverse problem → state estimation → generative model → intervention prediction, and proceed to “falsifiable reconstruction”</li>
-<li><strong>Implementation:</strong>Fix model granularity and enable auditing of impact of execution base differences</li>
-<li><strong>Verification:</strong>Write the evaluation suite and counter-conditions first, and keep the update history</li>
+<li><strong>全体像:</strong>WBE ロードマップ (全体プロセス/ボトルネック)</li>
+<li><strong>測定:</strong>どの解像度で何が失われるか(EEG/fMRI/侵襲的/コネクトーム)</li>
+<li><strong>再構成：</strong>逆問題→状態推定→生成モデル→介入予測を経て「反証可能再構成」へ進む</li>
+<li><strong>実装:</strong>モデルの粒度を修正し、実行ベースの違いによる影響の監査を有効にする</li>
+<li><strong>検証:</strong>最初に評価スイートとカウンター条件を書き込み、更新履歴を保存する</li>
 </ol>
 </section>
 
 
 
 <section class="section" id="sources">
-<h2 class="section-title">List of prior research (expanded version)</h2>
+<h2 class="section-title">先行研究リスト（拡張版）</h2>
 <p>
-Below are the main documents directly related to the open questions of U0-U15. For a detailed list of extensions, please read <a href="mind_uploading_papers.html">Paper Collection</a> and <a href="perspective.html#references">Perspective References</a>.
+以下は、U0-U15 の未解決の質問に直接関連する主な文書です。拡張機能の詳細なリストについては、<a href="mind_uploading_papers.html">Paper Collection</a> および <a href="perspective.html#references">Perspective References</a> を参照してください。
 </p>
 
-<h3>A. WBE basics, personality, philosophy</h3>
+<h3>A。 WBE basics, personality, philosophy</h3>
 <ol>
-<li>Sandberg, A., &amp; Bostrom, N. (2008). <em>Whole Brain Emulation: A Roadmap</em>.</li>
-<li>Yamakawa, H., et al. (2024). Technology roadmap toward the completion of whole-brain architecture.</li>
-<li>Parfit, D. (1984). <em>Reasons and Persons</em>.</li>
+<li>サンドバーグ、A.、＆amp;ボストロム、N. (2008)。 <em>Whole Brain Emulation: A Roadmap</em>.</li>
+<li>山川 博 ほか（2024年）。全脳アーキテクチャの完成に向けた技術ロードマップ。</li>
+<li>パーフィット、D. (1984)。 <em>Reasons and Persons</em>.</li>
 <li>Whitehead, A. N. (1929). <em>Process and Reality</em>.</li>
 <li>Clowes, R. W. (2021). Slow Continuous Mind Uploading.</li>
-<li>Weber, C. (2025). The multiplicity objection against uploading optimism.</li>
+<li>Weber、C. (2025)。アップロードの楽観主義に対する多重性の異議。</li>
 </ol>
 
-<h3>B. Consciousness theory/verification index</h3>
+<h3>B。意識理論・検証指標</h3>
 <ol>
-<li>Tononi, G. (2015). Integrated information theory.</li>
-<li>Tononi, G., et al. (2016). IIT: from consciousness to its physical substrate.</li>
-<li>Albantakis, L., et al. (2023). IIT 4.0.</li>
-<li>Doerig, A., et al. (2019). The unfolding argument.</li>
-<li>Boly, M., et al. (2017). Front vs back NCC debate.</li>
-<li>Tsuchiya, N., et al. (2015). No-report paradigms.</li>
-<li>Casali, A. G., et al. (2013). PCI.</li>
-<li>Comolatti, R., et al. (2019). PCI-ST.</li>
-<li>Ferrante, O., et al. (2025). Adversarial testing of GNWT and IIT.</li>
-<li>Cohen, M. A., et al. (2024). Neural signatures of visual awareness independent of postperceptual processing.</li>
-<li>Fahrenfort, J. J., et al. (2025). Criterion placement threatens the construct validity of neural measures of conscious contents.</li>
-<li>Casarotto, S., et al. (2024). Dissociations between spontaneous electroencephalographic features and perturbational complexity index in the minimally conscious state.</li>
-<li>Maschke, C., et al. (2024). Critical dynamics in spontaneous EEG predict anesthetic-induced loss of consciousness and perturbational complexity.</li>
-<li>Yoon, B., et al. (2024). Tracking the topology of neural manifolds across populations.</li>
-<li>The topological structure of population activity in mouse visual cortex encodes visual stimuli. (2024).</li>
-<li>Massimini, M., et al. (2005). Breakdown of effective connectivity during sleep.</li>
+<li>トノニ、G. (2015)。統合情報理論.</li>
+<li>Tononi, G. 他（2016年）。 IIT: 意識からその物理的基盤まで。</li>
+<li>Albantakis, L., et al. （2023年）。 IIT 4.0.</li>
+<li>Doerig, A. ら（2019年）。展開される議論。</li>
+<li>Boly, M., et al. （2017年）。 NCC の表と裏の議論。</li>
+<li>T土屋直也 他（2015年）。ノーレポートパラダイム.</li>
+<li>Casali、A.G.、他。 （2013年）。 PCI.</li>
+<li>Comolatti、R.、他。 （2019年）。 PCI-ST.</li>
+<li>Ferrante, O. 他(2025年)。 GNWT および IIT.</li> の敵対的テスト
+<li>Cohen、M.A.、他（2024年）。知覚後処理とは独立した視覚認識の神経署名。</li>
+<li>Fahrenfort、J.J.、他(2025年)。基準の配置は、意識内容の神経的尺度の構成の妥当性を脅かします。</li>
+<li>Casarotto, S., et al. （2024年）。最小限の意識状態における自発脳波特徴と摂動複雑性指数の間の解離。</li>
+<li>Maschke、C.、他。 （2024年）。自発脳波における臨界ダイナミクスは、麻酔薬による意識喪失と混乱の複雑性を予測します。</li>
+<li>Yoon, B. 他（2024年）。集団全体にわたる神経多様体のトポロジーの追跡。</li>
+<li>マウスの視覚野における集団活動の位相構造は、視覚刺激をコード化します。 (2024).</li>
+<li>Massimini, M. et al. (2005)。スリープ中の有効な接続の内訳。</li>
 </ol>
 
-<h3>C. Measurement/inverse problems/uncertainty estimation</h3>
+<h3>C。測定/逆問題/不確かさ推定</h3>
 <ol>
-<li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging review.</li>
-<li>Wipf, D., &amp; Nagarajan, S. (2009). Unified Bayesian framework for MEG/EEG source imaging.</li>
-<li>Cai, C., et al. (2021). Robust noise estimation with Champagne. <a href="https://doi.org/10.1016/j.neuroimage.2020.117411" target="_blank">doi:10.1016/j.neuroimage.2020.117411</a></li>
-<li>Sechet, D., Kowalski, M., Mokhtari, S., &amp; Torrésani, B. (2025). Revisiting CHAMPAGNE: Sparse Bayesian Learning as Reweighted Sparse Coding. <a href="https://doi.org/10.1109/SAMPTA64769.2025.11133512" target="_blank">doi:10.1109/SAMPTA64769.2025.11133512</a></li>
-<li>Feng, Z., Mishne, G., Hashemi, A., et al. (2025). Block-Champagne: Imaging Extended E/MEG Source Activation with Empirical Bayesian Uncertainty Quantification. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
-<li>Vorwerk, J., et al. (2014). Head volume conductor modeling guideline.</li>
-<li>Aydin, U., Vorwerk, J., K&uuml;pper, P., et al. (2019). Influence of head tissue conductivity uncertainties on EEG dipole reconstruction. <a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
-<li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
-<li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
-<li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
-<li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
-<li>Logothetis, N. K. (2008). What we can do and what we cannot do with fMRI. <a href="https://doi.org/10.1038/nature06976" target="_blank">doi:10.1038/nature06976</a></li>
-<li>Purdon, P. L., et al. (2013). EEG signatures of loss/recovery of consciousness.</li>
-<li>Boto, E., Holmes, N., Leggett, J., et al. (2018). Moving magnetoencephalography towards real-world applications with a wearable system. <a href="https://doi.org/10.1038/nature26147" target="_blank">doi:10.1038/nature26147</a></li>
-<li>Seymour, R. A., Alexander, N., Mellor, S., O'Neill, G. C., Tierney, T. M., Barnes, G. R., &amp; Maguire, E. A. (2021). Using OPMs to measure neural activity in standing, mobile participants. <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">doi:10.1016/j.neuroimage.2021.118604</a></li>
-<li>Holmes, N., Rea, M., Hill, R. M., et al. (2023). Enabling ambulatory movement in wearable magnetoencephalography with matrix coil active magnetic shielding. <a href="https://doi.org/10.1016/j.neuroimage.2023.120157" target="_blank">doi:10.1016/j.neuroimage.2023.120157</a></li>
-<li>Holmes, N., Rea, M., Hill, R. M., et al. (2023). Naturalistic hyperscanning with wearable magnetoencephalography. <a href="https://doi.org/10.3390/s23125454" target="_blank">doi:10.3390/s23125454</a></li>
-<li>Holmes, N., Leggett, J., Hill, R. M., et al. (2025). Wearable magnetoencephalography in a lightly shielded environment. <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">doi:10.1109/TBME.2024.3465654</a></li>
-<li>Iivanainen, J., Borna, A., Zetter, R., et al. (2022). Calibration and Localization of Optically Pumped Magnetometers Using Electromagnetic Coils. <a href="https://doi.org/10.3390/s22083059" target="_blank">doi:10.3390/s22083059</a></li>
-<li>Rhodes, N., Rier, L., Boto, E., Hill, R. M., &amp; Brookes, M. J. (2025). Source reconstruction without an MRI using optically pumped magnetometer-based magnetoencephalography. <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">doi:10.1162/IMAG.a.8</a></li>
-<li>Wu, T., Xiao, W., Peng, X., Wu, T., &amp; Guo, H. (2025). Crosstalk reduction in optically pumped magnetometers arrays for biomagnetic measurement. <a href="https://doi.org/10.1063/5.0273491" target="_blank">doi:10.1063/5.0273491</a></li>
-<li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
-<li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
-<li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An In Vivo High-Resolution Human Brain Atlas of Synaptic Density. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
-<li>van Blooijs, D., Nunes, A., van den Boom, M. A., et al. (2023). Developmental trajectory of transmission speed in the human brain. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">doi:10.1038/s41593-023-01272-0</a></li>
-<li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
-<li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
-<li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). 31P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
-<li>Guo, R., Yang, S., Wiesner, H. M., Li, Y., Zhao, Y., Liang, Z.-P., Chen, W., &amp; Zhu, X.-H. (2024). Mapping intracellular NAD content in entire human brain using phosphorus-31 MR spectroscopic imaging at 7 Tesla. <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">doi:10.3389/fnins.2024.1389111</a></li>
-<li>Kaiser, A., Vind, F. A., Duarte, J. M. N., Jelescu, I., Lin, Y., Yu, X., Widmaier, M., Wenz, D., &amp; Xin, L. (2026). Ultra-high field <sup>31</sup>P functional magnetic resonance spectroscopy reveals NAD<sup>+</sup> dynamics in brain energy metabolism during visual stimulation. <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">doi:10.1177/0271678X261415784</a></li>
-<li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
-<li>Karkouri, J., Novoselova, M., Rodgers, C. T., et al. (2026). Absolute Quantification of Brain Deuterium Metabolic Imaging in Healthy Volunteers and Glioblastoma Patients at 7T. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">doi:10.1002/mrm.70308</a></li>
-<li>Hagiwara, A., Hori, M., Kamagata, K., et al. (2018). Myelin Measurement: Comparison Between Simultaneous Tissue Relaxometry, Magnetization Transfer Saturation Index, and T1w/T2w Ratio Methods. <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">doi:10.1038/s41598-018-28852-6</a></li>
-<li>Galbusera, R., Weigel, M., Bahn, E., et al. (2025). Quantitative T1 is sensitive to cortical remyelination in multiple sclerosis: A postmortem MRI study. <a href="https://doi.org/10.1111/bpa.70010" target="_blank">doi:10.1111/bpa.70010</a></li>
-<li>Colaes, R., Radwan, A., Billiet, T., et al. (2026). Evaluating the T1w/FLAIR ratio as a proxy for myelin: Associations with myelin water imaging, diffusion metrics, and cognition. <a href="https://doi.org/10.1007/s00234-025-03875-9" target="_blank">doi:10.1007/s00234-025-03875-9</a></li>
-<li>Morgan, C. A., Thomas, D. L., Shao, X., et al. (2024). Measurement of blood-brain barrier water exchange rate using diffusion-prepared and multi-echo arterial spin labelling: Comparison of quantitative values and age dependence. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">doi:10.1002/nbm.5256</a></li>
-<li>Padrela, B. E., Slivka, M., Sneve, M. H., et al. (2025). Blood-brain barrier water permeability across the adult lifespan: A multi-echo ASL study. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">doi:10.1016/j.neurobiolaging.2024.12.012</a></li>
-<li>Chung, K. J., Abdelhafez, Y. G., Spencer, B. A., et al. (2025). Quantitative PET imaging and modeling of molecular blood-brain barrier permeability. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
-<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of 18F-SMBT-1, a Novel 18F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
-<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). Assessing reactive astrogliosis with 18F-SMBT-1 across the Alzheimer disease spectrum. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">doi:10.2967/jnumed.121.263255</a></li>
-<li>Hiraoka, K., Mesfin, B., Wu, Y., et al. (2025). Kinetic and quantitative analysis of [18F]SMBT-1 PET imaging for monoamine oxidase B. <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">doi:10.1007/s12149-025-02083-y</a></li>
-<li>Mesfin, B., Ishioka, Y., Ichinose, Y., et al. (2026). Whole-body biodistribution of [18F]SMBT-1: a novel PET tracer for monoamine oxidase B imaging in healthy humans. <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">doi:10.1007/s12149-025-02144-2</a></li>
-<li>Matsuoka, K., Takado, Y., Kimura, Y., et al. (2026). Quantification of monoamine oxidase B expression with 11C-SL25.1188 for imaging reactive astrocytes in patients with Alzheimer's disease. <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">doi:10.1007/s00259-025-07542-2</a></li>
-<li>Tyacke, R. J., Myers, J. F. M., Venkataraman, A., et al. (2018). Evaluation of 11C-BU99008, a PET ligand for the imidazoline2 binding site in human brain. <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
-<li>Livingston, N. R., Calsolaro, V., Hinz, R., et al. (2022). Relationship between astrocyte reactivity, using novel 11C-BU99008 PET, and glucose metabolism, grey matter volume and amyloid load in cognitively impaired individuals. <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>
-<li>Best, L. M., Truong, J., McCluskey, T., et al. (2026). MAO-B status in alcohol use disorder: a [11C]SL25.1188 PET imaging study of putative astrogliosis. <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">doi:10.1038/s41380-025-03355-9</a></li>
-<li>Jaisa-Aad, M., Muñoz-Castro, C., Healey, M. A., Hyman, B. T., &amp; Serrano-Pozo, A. (2024). Characterization of monoamine oxidase-B (MAO-B) as a biomarker of reactive astrogliosis in Alzheimer’s disease and related dementias. <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">doi:10.1007/s00401-024-02712-2</a></li>
-<li>Hirschler, L., Runderkamp, B. A. R., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
-<li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
-<li>Tallman, C. W., Siler, S. N., Lee, H., et al. (2025). Neuronal allocation and sparse coding of episodic memories in the human hippocampus. <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">doi:10.1038/s41598-025-21967-7</a></li>
-<li>Huber, R., Mäki, H., Rosanova, M., Casarotto, S., Canali, P., Casali, A. G., Tononi, G., &amp; Massimini, M. (2013). Human cortical excitability increases with time awake. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">doi:10.1093/cercor/bhs014</a></li>
-<li>Kuhn, M., Wolf, E., Maier, J. G., Mainberger, F., Feige, B., Schmid, H., et al. (2016). Sleep recalibrates homeostatic and associative synaptic plasticity in the human cortex. <a href="https://doi.org/10.1038/ncomms12455" target="_blank">doi:10.1038/ncomms12455</a></li>
-<li>Fehér, K. D., Henckaerts, P., Hirsch, V., Bucsenez, U., Kuhn, M., Maier, J. G., et al. (2026). A nap can recalibrate homeostatic and associative synaptic plasticity in the human cortex. <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">doi:10.1016/j.neuroimage.2026.121723</a></li>
+<li>ミシェル、C.M.、＆amp;ブルーネット、D. (2019)。 EEGソースイメージングレビュー.</li>
+<li>Wipf、D.、&amp;ナガラジャン、S. (2009)。 MEG/EEG ソース イメージング用の統合ベイジアン フレームワーク。</li>
+<li>Cai、C.、他。 （2021年）。 Champagne を使用した堅牢なノイズ推定。 <a href="https://doi.org/10.1016/j.neuroimage.2020.117411" target="_blank">doi:10.1016/j.neuroimage.2020.117411</a></li>
+<li>Sechet、D.、Kowalski、M.、Mokhtari、S.、およびトレサニ、B. (2025)。 CHAMPAGNE の再訪: 再重み付けされたスパース コーディングとしてのスパース ベイジアン学習。 <a href="https://doi.org/10.1109/SAMPTA64769.2025.11133512" target="_blank">doi:10.1109/SAMPTA64769.2025.11133512</a></li>
+<li>Feng, Z.、Mishne, G.、Hashemi, A. 他(2025年)。 Block-Champagne: 経験的ベイジアン不確実性定量化による拡張 E/MEG ソース活性化のイメージング。 <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
+<li>Vorwerk, J. 他（2014年）。ヘッドボリューム導体モデリングガイドライン.</li>
+<li>Aydin, U.、Vorwerk, J.、K&uuml;pper, P.、他（2019年）。 EEG双極子再構成に対する頭部組織の伝導性の不確実性の影響。 <a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
+<li>Mikulan, E.、Russo, S.、Bares, M.、他（2020年）。人間の脳内刺激と HD-EEG の同時、音源位置特定方法のグラウンドトゥルース。 <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Seeber, M.、Cantonas, L.-M.、Hoevels, M.、他。 （2019年）。皮質下の電気生理学的活動は、高密度EEGソースイメージングで検出可能です。 <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
+<li>Unnwongse、K.、Achakulvisut、T.、Wu、J.Y.、他。 （2023年）。人間の患者における頭蓋内電気刺激によるEEGソースイメージングの直接検証。 <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/ブレインコム/fcad023</a></li>
+<li>Hao, S.、Zhao, H.、Feng, Z. 他(2025年)。薬剤耐性てんかんにおける HD-EEG ソースイメージングと同時 SEEG 記録。 <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Lロゴテティス、NK (2008)。 fMRIでできること、できないこと。 <a href="https://doi.org/10.1038/nature06976" target="_blank">ドイ:10.1038/nature06976</a></li>
+<li>Purdon、P.L.、他（2013年）。意識の喪失/回復の脳波サイン。</li>
+<li>Boto, E.、Holmes, N.、Leggett, J. 他（2018年）。ウェアラブル システムを使用して、脳磁図を現実世界のアプリケーションに移行します。 <a href="https://doi.org/10.1038/nature26147" target="_blank">doi:10.1038/nature26147</a></li>
+<li>Seymour、R.A.、Alexander、N.、Mellor、S.、O'Neill、G.C.、Tierney、T.M.、Barnes、G.R.、およびマグワイア、EA (2021)。 OPM を使用して、立っているモバイル参加者の神経活動を測定します。 <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">doi:10.1016/j.neuroimage.2021.118604</a></li>
+<li>Holmes, N.、Rea, M.、Hill, R.M. 他（2023年）。マトリックスコイルアクティブ磁気シールドを使用したウェアラブル脳磁計での歩行動作を可能にします。 <a href="https://doi.org/10.1016/j.neuroimage.2023.120157" target="_blank">doi:10.1016/j.neuroimage.2023.120157</a></li>
+<li>Holmes, N.、Rea, M.、Hill, R.M. 他（2023年）。ウェアラブル脳磁計による自然主義的なハイパースキャン。 <a href="https://doi.org/10.3390/s23125454" target="_blank">doi:10.3390/s23125454</a></li>
+<li>Holmes, N.、Leggett, J.、Hill, R.M.、他(2025年)。軽く遮蔽された環境でのウェアラブル脳磁計。 <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">doi:10.1109/TBME.2024.3465654</a></li>
+<li>Iivanainen、J.、Borna、A.、Zetter、R.、他。 （2022年）。電磁コイルを使用した光ポンピング磁力計の校正と位置特定。 <a href="https://doi.org/10.3390/s22083059" target="_blank">doi:10.3390/s22083059</a></li>
+<li>Rhodes, N.、Rier, L.、Boto, E.、Hill, R.M.、およびM.J.ブルックス (2025)。光ポンピング磁力計ベースの脳磁図法を使用した、MRI を使用しない信号源再構成。 <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">doi:10.1162/IMAG.a.8</a></li>
+<li>Wu、T.、Xiao、W.、Peng、X.、Wu、T.、&amp; Guo、H. (2025)。生体磁気測定用の光ポンピング磁力計アレイにおけるクロストークの低減。 <a href="https://doi.org/10.1063/5.0273491" target="_blank">ドイ:10.1063/5.0273491</a></li>
+<li>Shapson-Coe, A.、Januszewski, M.、Berger, D.R. 他（2024年）。ナノスケールの解像度で再構成された人間の大脳皮質のペタボクセル断片。 <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Lu, X.、Han, X.、Meirovitch, Y. 他（2023年）。哺乳動物の脳全体の高品質な光学的および超微細構造研究のために細胞外空間を保存します。 <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>Johansen, A.、Beliveau, V.、Colliander, E. 他（2024年）。シナプス密度の生体内高解像度人間の脳アトラス。 <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>van Blooijs, D.、Nunes, A.、van den Boom, M. A. 他（2023年）。人間の脳における伝達速度の発達の軌跡。 <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">doi:10.1038/s41593-023-01272-0</a></li>
+<li>Baadsvik、E.L.、Weiger、M.、Froidevaux、R.、Schildknecht、C.M.、Ineichen、B.V.、およびプルスマン、K.P. (2024)。生体内における人間の脳のミエリン二重層マッピング。 <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Llucchetti, F.、Céléreau, E.、Steullet, P.、他(2025年)。 MR 分光イメージングを使用して人間の脳の代謝コネクトームを構築すると、大脳の生化学的組織が明らかになります。 <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Ren、J.、Sherry、A.D.、およびマロイ、C.R. (2015)。健康な人間の脳の 31P-MRS: ATP 合成、代謝産物濃度、pH、および T1 緩和時間。 <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
+<li>Guo, R.、Yang, S.、Wiesner, H.M.、Li, Y.、Zhao, Y.、Liang, Z.-P.、Chen, W.、および朱、X.-H. （2024年）。 7 テスラでのリン 31 MR 分光イメージングを使用した、人間の脳全体の細胞内 NAD 含有量のマッピング。 <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">doi:10.3389/fnins.2024.1389111</a></li>
+<li>Kaiser, A.、Vind, F.A.、Duarte, J.M.N.、Jelescu, I.、Lin, Y.、Yu, X.、Widmaier, M.、Wenz, D.、および;シン、L. (2026)。超高磁場<sup>31</sup>P機能的磁気共鳴分光法は、視覚刺激中の脳エネルギー代謝におけるNAD<sup>+</sup>の動態を明らかにします。 <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">ドイ:10.1177/0271678X261415784</a></li>
+<li>Li, X.、Zhu, X.-H.、Li, Y. 他(2025年)。動的重水素磁気共鳴分光イメージングを使用した、人間の脳における主要なグルコース代謝率の定量的マッピング。 <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Karkouri, J.、Novoselova, M.、Rodgers, C.T. 他（2026年）。 7Tでの健康なボランティアと神経膠芽腫患者における脳重水素代謝イメージングの絶対定量化。 <a href="https://doi.org/10.1002/mrm.70308" target="_blank">doi:10.1002/mrm.70308</a></li>
+<li>萩原 明、堀 正、鎌形 和人、他（2018年）。ミエリン測定: 同時組織緩和測定法、磁化転移飽和指数、および T1w/T2w 比法の比較。 <a href="https://doi.org/10.1038/s41598-018-28852-6" target="_blank">doi:10.1038/s41598-018-28852-6</a></li>
+<li>Galbusera, R.、Weigel, M.、Bahn, E. 他(2025年)。定量的 T1 は多発性硬化症における皮質再髄鞘形成に敏感である: 死後 MRI 研究。 <a href="https://doi.org/10.1111/bpa.70010" target="_blank">doi:10.1111/bpa.70010</a></li>
+<li>Colaes, R.、Radwan, A.、Billiet, T. 他（2026年）。ミエリンの代用としての T1w/FLAIR 比の評価: ミエリン水イメージング、拡散測定基準、および認知との関連。 <a href="https://doi.org/10.1007/s00234-025-03875-9" target="_blank">doi:10.1007/s00234-025-03875-9</a></li>
+<li>Morgan, C.A.、Thomas, D.L.、Shao, X.、他（2024年）。拡散処理およびマルチエコー動脈スピンラベリングを使用した血液脳関門の水交換率の測定: 定量値と年齢依存性の比較。 <a href="https://doi.org/10.1002/nbm.5256" target="_blank">doi:10.1002/nbm.5256</a></li>
+<li>Padrela, B. E.、Slivka, M.、Sneve, M. H. 他(2025年)。成人生涯にわたる血液脳関門の水透過性: マルチエコー ASL 研究。 <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">doi:10.1016/j.neurobiolaging.2024.12.012</a></li>
+<li>Chung, K.J.、Abdelhafez, Y.G.、Spencer, B.A. 他(2025年)。分子血液脳関門透過性の定量的 PET イメージングとモデリング。 <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
+<li>Villemagne, V. L.、原田 R.、Dore, V. 他（2022年）。反応性星膠症のイメージング用の新規 18F 標識モノアミンオキシダーゼ B PET トレーサーである 18F-SMBT-1 のヒト初評価。 <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
+<li>Villemagne, V. L.、原田 R.、Dore, V. 他（2022年）。アルツハイマー病スペクトル全体にわたる 18F-SMBT-1 による反応性星膠症の評価。 <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">doi:10.2967/jnumed.121.263255</a></li>
+<li>Hiraoka, K.、Mesfin, B.、Wu, Y. 他(2025年)。モノアミンオキシダーゼ B の [18F]SMBT-1 PET イメージングの動態および定量分析。<a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">doi:10.1007/s12149-025-02083-y</a></li>
+<li>Mesfin, B.、Ishioka, Y.、Ichinose, Y., et al. （2026年）。 [18F]SMBT-1 の全身生体内分布: 健康なヒトにおけるモノアミンオキシダーゼ B イメージング用の新規 PET トレーサー。 <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">doi:10.1007/s12149-025-02144-2</a></li>
+<li>松岡 和也、高堂 裕也、木村 裕也、他（2026年）。アルツハイマー病患者の反応性星状細胞をイメージングするための、11C-SL25.1188 を使用したモノアミンオキシダーゼ B 発現の定量化。 <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">doi:10.1007/s00259-025-07542-2</a></li>
+<li>Tyacke、R.J.、Myers、J.F.M.、Venkataraman、A.、他。 （2018年）。ヒト脳のイミダゾリン 2 結合部位の PET リガンドである 11C-BU99008 の評価。 <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
+<li>Lリビングストン、NR、カルソラーロ、V.、ヒンツ、R.、他。 （2022年）。新しい11C-BU99008 PETを使用したアストロサイトの反応性と、認知障害のある個人におけるグルコース代謝、灰白質体積およびアミロイド負荷との関係。 <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>
+<li>Best, L.M.、Truong, J.、McCluskey, T. 他（2026年）。アルコール使用障害における MAO-B の状態: 推定星状神経膠症の [11C]SL25.1188 PET 画像研究。 <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">doi:10.1038/s41380-025-03355-9</a></li>
+<li>Jaisa-Aad、M.、Muñoz-Castro、C.、Healey、M.A.、Hyman、B.T.、およびセラーノ・ポゾ、A. (2024)。アルツハイマー病および関連する認知症における反応性星状神経膠症のバイオマーカーとしてのモノアミンオキシダーゼ-B (MAO-B) の特性評価。 <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">doi:10.1007/s00401-024-02712-2</a></li>
+<li>Hirschler, L.、Runderkamp, B.A.R.、Decker, A. 他(2025年)。ヒトの MRI で測定された CSF 可動性の領域固有の要因。 <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Dagum, P.、Elbert, D.L.、Giovangrandi, L. 他（2026年）。グリンファティック系は、ヒトの脳からアミロイド ベータとタウを血漿まで除去します。 <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
+<li>Tallman、C.W.、Siler、S.N.、Lee、H.、他(2025年)。人間の海馬におけるニューロンの割り当てとエピソード記憶のスパースコーディング。 <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">doi:10.1038/s41598-025-21967-7</a></li>
+<li>Huber, R.、Mäki, H.、Rosanova, M.、Casarotto, S.、Canali, P.、Casali, A. G.、Tononi, G.、およびマッシミニ、M. (2013)。人間の皮質の興奮性は、起きている時間が経つにつれて増加します。 <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">doi:10.1093/cercor/bhs014</a></li>
+<li>Kuhn, M.、Wolf, E.、Maier, J. G.、Mainberger, F.、Feige, B.、Schmid, H.、他。 （2016年）。睡眠は、人間の皮質における恒常性と連合性のシナプス可塑性を再調整します。 <a href="https://doi.org/10.1038/ncomms12455" target="_blank">doi:10.1038/ncomms12455</a></li>
+<li>Fehér、K.D.、Henckaerts、P.、Hirsch、V.、Bucsenez、U.、Kuhn、M.、Maier、J.G.、他。 （2026年）。昼寝は、人間の皮質における恒常性と連合性のシナプス可塑性を再調整することができます。 <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">doi:10.1016/j.neuroimage.2026.121723</a></li>
 </ol>
 
-<h3>D. Preprocessing/synchronization/network analysis</h3>
+<h3>D。前処理/同期/ネットワーク解析</h3>
 <ol>
-<li>Chang, C.-Y., et al. (2018). Evaluation of Artifact Subspace Reconstruction.</li>
-<li>de Cheveigne, A. (2020). ZapLine.</li>
-<li>Vinck, M., et al. (2011). Weighted Phase Lag Index (wPLI).</li>
-<li>Staniek, M., &amp; Lehnertz, K. (2008). Symbolic Transfer Entropy.</li>
-<li>Wilson, J. A., Mellinger, J., Schalk, G., &amp; Williams, J. C. (2010). A procedure for measuring latencies in brain-computer interfaces. <a href="https://doi.org/10.1109/TBME.2010.2047259" target="_blank">doi:10.1109/TBME.2010.2047259</a></li>
-<li>Thompson, D. E., Warschausky, S. A., &amp; Huggins, J. E. (2013). Classifier-based latency estimation: a novel way to estimate and predict BCI accuracy. <a href="https://doi.org/10.1088/1741-2560/10/1/016006" target="_blank">doi:10.1088/1741-2560/10/1/016006</a></li>
-<li>Mowla, M. R., Huggins, J. E., &amp; Thompson, D. E. (2017). Enhancing P300-BCI performance using latency estimation. <a href="https://doi.org/10.1080/2326263X.2017.1338010" target="_blank">doi:10.1080/2326263X.2017.1338010</a></li>
-<li>Belinskaia, A., Smetanin, N., Lebedev, M., &amp; Ossadtchi, A. (2020). Short-delay neurofeedback facilitates training of the parietal alpha rhythm. <a href="https://doi.org/10.1088/1741-2552/abc8d7" target="_blank">doi:10.1088/1741-2552/abc8d7</a></li>
-<li>Mansouri, F., Fettes, P., Schulze, L., et al. (2018). A real-time phase-locking system for non-invasive brain stimulation. <a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">doi:10.3389/fnins.2018.00877</a></li>
-<li>Zrenner, C., Desideri, D., Belardinelli, P., &amp; Ziemann, U. (2018). Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in the human motor cortex. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
-<li>Khatri, U. U., Pulliam, K., Manesiya, M., Vieyra Cortez, M., Millán, J. del R., &amp; Hussain, S. J. (2025). Personalized whole-brain activity patterns predict human corticospinal tract activation in real-time. <a href="https://doi.org/10.1016/j.brs.2024.12.1193" target="_blank">doi:10.1016/j.brs.2024.12.1193</a></li>
-<li>Holt, A. B., Kormann, E., Gulberti, A., et al. (2019). Phase-Dependent Suppression of Beta Oscillations in Parkinson's Disease Patients. <a href="https://doi.org/10.1523/JNEUROSCI.1913-18.2018" target="_blank">doi:10.1523/JNEUROSCI.1913-18.2018</a></li>
-<li>Zrenner, C., Galevska, D., Nieminen, J. O., Baur, D., Stefanou, M. I., &amp; Ziemann, U. (2020). The shaky ground truth of real-time phase estimation. <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">doi:10.1016/j.neuroimage.2020.116761</a></li>
-<li>Gordon, P. C., Dörre, S., Belardinelli, P., Stenroos, M., Zrenner, B., Ziemann, U., &amp; Zrenner, C. (2021). Prefrontal Theta-Phase Synchronized Brain Stimulation With Real-Time EEG-Triggered TMS. <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">doi:10.3389/fnhum.2021.691821</a></li>
-<li>Bruegger, D., &amp; Abegg, M. (2021). Prediction of cortical theta oscillations in humans for phase-locked visual stimulation. <a href="https://doi.org/10.1016/j.jneumeth.2021.109288" target="_blank">doi:10.1016/j.jneumeth.2021.109288</a></li>
-<li>Vigué-Guix, I., Morís Fernández, L., Torralba Cuello, M., Ruzzoli, M., &amp; Soto-Faraco, S. (2022). Can the occipital alpha-phase speed up visual detection through a real-time EEG-based brain-computer interface (BCI)? <a href="https://doi.org/10.1111/ejn.14931" target="_blank">doi:10.1111/ejn.14931</a></li>
-<li>Kim, B., Erickson, B. A., Fernandez-Nunez, G., Rich, R., Mentzelopoulos, G., Vitale, F., &amp; Medaglia, J. D. (2023). EEG Phase Can Be Predicted with Similar Accuracy across Cognitive States after Accounting for Power and Signal-to-Noise Ratio. <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">doi:10.1523/ENEURO.0050-23.2023</a></li>
-<li>Little, S., Pogosyan, A., Neal, S., et al. (2013). Adaptive deep brain stimulation in advanced Parkinson disease. <a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
-<li>Tinkhauser, G., Pogosyan, A., Little, S., et al. (2017). The modulatory effect of adaptive deep brain stimulation on beta bursts in Parkinson's disease. <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
-<li>Hernandez-Pavon, J. C., Metsomaa, J., Mutanen, T. P., et al. (2023). TMS combined with EEG: Recommendations and open issues. <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>
-<li>Hougland, J. R., Kirchhoff, M., Vetter, D. E., Ahola, O., Jooß, A., Humaidan, D., &amp; Ziemann, U. (2025). Fluctuations in the optimal sensorimotor mu-rhythm phase associated with high corticospinal excitability during TMS-EEG. <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">doi:10.1016/j.brs.2025.09.019</a></li>
-<li>Appelhoff, S., &amp; Stenner, T. (2021). In COM we trust: Feasibility of USB-based event marking. <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
-<li>Kothe, C., Shirazi, S. Y., Stenner, T., et al. (2025). The lab streaming layer for synchronized multimodal recording. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Chang、C.-Y.、他。 （2018年）。アーティファクト部分空間再構成の評価.</li>
+<li>de Cheveigne、A. (2020)。ザップライン.</li>
+<li>Vinck, M. 他（2011年）。重み付け位相遅れ指数 (wPLI).</li>
+<li>Staniek、M.、＆amp;レーナーツ、K. (2008)。シンボリック転送エントロピー.</li>
+<li>ウィルソン、J.A.、メリンジャー、J.、シャルク、G.、およびウィリアムズ、J.C. (2010)。ブレイン・コンピューター・インターフェースのレイテンシーを測定する手順。 <a href="https://doi.org/10.1109/TBME.2010.2047259" target="_blank">doi:10.1109/TBME.2010.2047259</a></li>
+<li>TD.E. トンプソン、SA ワルシャウスキー、およびJ. E. ハギンズ (2013)。分類子ベースのレイテンシー推定: BCI 精度を推定および予測する新しい方法。 <a href="https://doi.org/10.1088/1741-2560/10/1/016006" target="_blank">ドイ:10.1088/1741-2560/10/1/016006</a></li>
+<li>Mowla、M. R.、Huggins、J. E.、およびトンプソン、D.E. (2017)。遅延推定を使用して P300-BCI のパフォーマンスを強化します。 <a href="https://doi.org/10.1080/2326263X.2017.1338010" target="_blank">doi:10.1080/2326263X.2017.1338010</a></li>
+<li>Belinskaia、A.、Smetanin、N.、Lebedev、M.、およびオッサッチ、A. (2020)。短時間のニューロフィードバックにより、頭頂部のアルファリズムのトレーニングが容易になります。 <a href="https://doi.org/10.1088/1741-2552/abc8d7" target="_blank">doi:10.1088/1741-2552/abc8d7</a></li>
+<li>Mansouri, F.、Fettes, P.、Schulze, L. 他（2018年）。非侵襲的な脳刺激のためのリアルタイム位相ロック システム。 <a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">doi:10.3389/fnins.2018.00877</a></li>
+<li>Zrenner、C.、Desideri、D.、Belardinelli、P.、およびジーマン、U. (2018)。リアルタイムの EEG で定義された興奮状態は、人間の運動野における TMS 誘発可塑性の有効性を決定します。 <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
+<li>Khatri、U. U.、Pulliam、K.、Manesiya、M.、Vieyra Cortez、M.、Millan、J. del R.、およびフセイン、S.J. (2025)。パーソナライズされた全脳活動パターンにより、人間の皮質脊髄路の活性化がリアルタイムで予測されます。 <a href="https://doi.org/10.1016/j.brs.2024.12.1193" target="_blank">doi:10.1016/j.brs.2024.12.1193</a></li>
+<li>Holt、A.B.、Kormann、E.、Gulberti、A.、他。 （2019年）。パーキンソン病患者におけるベータ振動の位相依存性抑制。 <a href="https://doi.org/10.1523/JNEUROSCI.1913-18.2018" target="_blank">doi:10.1523/JNEUROSCI.1913-18.2018</a></li>
+<li>Zrenner、C.、Galevska、D.、Nieminen、J.O.、Baur、D.、Stefanou、M.I.、および;ジーマン、U. (2020)。リアルタイム位相推定の不安定な真実。 <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">doi:10.1016/j.neuroimage.2020.116761</a></li>
+<li>Gordon, P.C.、Dörre, S.、Belardinelli, P.、Stenroos, M.、Zrenner, B.、Ziemann, U.、およびズレナー、C. (2021)。リアルタイムEEGトリガーTMSによる前頭前シータ相同期脳刺激。 <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">doi:10.3389/fnhum.2021.691821</a></li>
+<li>ブリュッガー、D.、&amp;アベッグ、M. (2021)。位相ロックされた視覚刺激に対する人間の皮質シータ振動の予測。 <a href="https://doi.org/10.1016/j.jneumeth.2021.109288" target="_blank">doi:10.1016/j.jneumeth.2021.109288</a></li>
+<li>Vigue-Guix、I.、Morís Fernández、L.、Torralba Cuello、M.、Ruzzoli、M.、&amp;;ソト・ファラコ、S. (2022)。後頭アルファ相は、リアルタイム EEG ベースのブレイン コンピューター インターフェイス (BCI) を通じて視覚検出を高速化できますか? <a href="https://doi.org/10.1111/ejn.14931" target="_blank">doi:10.1111/ejn.14931</a></li>
+<li>Kim, B.、Erickson, B. A.、Fernandez-Nunez, G.、Rich, R.、Mentzelopoulos, G.、Vitale, F.、およびメダグリア、J.D. (2023)。 EEG 位相は、電力と信号対雑音比を考慮した後、認知状態全体で同様の精度で予測できます。 <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">doi:10.1523/ENEURO.0050-23.2023</a></li>
+<li>Little, S.、Pogosyan, A.、Neal, S. 他（2013年）。進行パーキンソン病における適応型脳深部刺激。 <a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
+<li>Tinkhauser, G.、Pogosyan, A.、Little, S. 他（2017年）。パーキンソン病におけるベータバーストに対する適応的脳深部刺激の調節効果。 <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/ブレイン/awx010</a></li>
+<li>Hernandez-Pavon, J.C.、Metsomaa, J.、Mutanen, T.P. 他（2023年）。 TMS と EEG の組み合わせ: 推奨事項と未解決の問題。 <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>
+<li>Hougland, J. R.、Kirchhoff, M.、Vetter, D. E.、Ahola, O.、Jooss, A.、Humaidan, D.、およびジーマン、U. (2025)。最適な感覚運動ミューリズム段階の変動は、TMS-EEG 中の高い皮質脊髄興奮性と関連しています。 <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">doi:10.1016/j.brs.2025.09.019</a></li>
+<li>アッペルホフ、S.、&amp;ステナー、T. (2021)。 COM では、USB ベースのイベント マーキングの実現可能性を信頼しています。 <a href="https://doi.org/10.3758/s13428-021-01571-z" target="_blank">doi:10.3758/s13428-021-01571-z</a></li>
+<li>Kothe, C.、Shirazi, S. Y.、Stenner, T. 他(2025年)。同期されたマルチモーダル記録のためのラボ ストリーミング レイヤー。 <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
 </ol>
 
-<h3>E. Decoding, generative model, imitation separation</h3>
+<h3>E。デコード、生成モデル、模倣分離</h3>
 <ol>
-<li>Huth, A. G., de Heer, W. A., Griffiths, T. L., Theunissen, F. E., &amp; Gallant, J. L. (2016). Natural speech reveals the semantic maps that tile human cerebral cortex. <a href="https://doi.org/10.1038/nature17637" target="_blank">doi:10.1038/nature17637</a></li>
-<li>Tang, J., LeBel, A., Jain, S., et al. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
-<li>D&eacute;fossez, A., Caucheteux, C., Rapin, J., Kabeli, O., &amp; King, J.-R. (2023). Decoding speech perception from non-invasive brain recordings. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
-<li>Horikawa, T. (2025). Mind captioning: Evolving descriptive text of mental content from human brain activity. <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">doi:10.1126/sciadv.adw1464</a></li>
-<li>d'Ascoli, S., Ferrante, O., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
-<li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
-<li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
-<li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
-<li>Singh, A., Wu, E., Ramsey, N. F., et al. (2025). Transfer learning via distributed brain recordings enables reliable speech decoding. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
-<li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain&ndash;computer interfaces using a hidden Markov model. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Huth、A.G.、de Heer、W.A.、Griffiths、T.L.、Theunissen、F.E.、およびギャラント、J.L. (2016)。自然な音声は、人間の大脳皮質をタイル状に並べた意味マップを明らかにします。 <a href="https://doi.org/10.1038/nature17637" target="_blank">doi:10.1038/nature17637</a></li>
+<li>Tang、J.、LeBel、A.、Jain、S. 他（2023年）。非侵襲的な脳記録からの連続言語の意味的再構築。 <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>D&eacute;fossez、A.、Caucheteux、C.、Rapin、J.、Kabeli、O.、&amp;キング、J.-R. （2023年）。非侵襲的な脳記録から音声知覚を解読します。 <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
+<li>堀川哲也 (2025)心のキャプション: 人間の脳の活動から得られる精神的な内容の進化する説明文。 <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">doi:10.1126/sciadv.adw1464</a></li>
+<li>d'Ascoli, S.、Ferrante, O. 他(2025年)。非侵襲的な脳記録から個々の単語を解読する方向へ。 <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
+<li>Willett, F. R.、Kunz, E.M.、Fan, C. 他（2023年）。高性能言語人工神経。 <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Littlejohn, K.T.、Dabagia, M.、Ladwig, A. 他(2025年)。自然なコミュニケーションを復元するためのストリーミング脳から音声へのニューロプロテーゼ。 <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar, M.、Card, N.S.、Singer-Clark, T. 他(2025年)。瞬間的に音声を合成する神経人工器官。 <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Singh、A.、Wu、E.、Ramsey、NF、他。 (2025年)。分散型脳記録による転移学習により、信頼性の高い音声デコードが可能になります。 <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
+<li>Wilson, G. H.、Stein, E. A.、Kamdar, F. 他(2025年)。隠れマルコフ モデルを使用した、カーソル ベースの皮質内脳コンピューター インターフェイスの長期教師なし再調整。 <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
 </ol>
 
-<h3>E2. Longitudinal validity, state / trait / drift, and recalibration</h3>
+<h3>E2。長期的妥当性、状態/特性/ドリフト、および再キャリブレーション</h3>
 <ol>
-<li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
-<li>Benisty, H., Barson, D., Moberly, A. H., et al. (2024). Rapid fluctuations in functional connectivity of cortical networks encode spontaneous behavior. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
-<li>Egger, A., Bayon, C., d'Almeida, J., et al. (2024). Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
-<li>Gallego, J. A., Perich, M. G., Chowdhury, R. H., Solla, S. A., &amp; Miller, L. E. (2020). Long-term stability of cortical population dynamics underlying consistent behavior. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
-<li>Noda, T., Kienle, E., Eppler, J.-B., et al. (2025). Homeostasis of a representational map in the neocortex. <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
-<li>Karpowicz, B. M., Ali, Y. H., Wimalasena, L. N., et al. (2025). Stabilizing brain-computer interfaces through alignment of latent dynamics. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
+<li>Musall, S.、Kaufman, M.T.、Juavinett, A.L.、Gluf, S.、およびアラスカ州チャーチランド (2019)。単一試行の神経力学は、豊富に変化した動きによって支配されます。 <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Benisty, H.、Barson, D.、Moberly, A. H.、他（2024年）。皮質ネットワークの機能的接続の急速な変動は、自発的な行動を符号化します。 <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
+<li>Egger, A.、Bayon, C.、d'Almeida, J. 他（2024年）。手のジェスチャーの解読に影響を与える時間脳波ダイナミクス: 10 時間の研究。 <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
+<li>J.A.ガレゴ、M.G.ペリッチ、R.H.チョードリー、SA.ソラ、およびミラー、L.E. (2020)。一貫した動作の基礎となる皮質集団動態の長期安定性。 <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
+<li>Noda, T.、Kienle, E.、Eppler, J.-B.、他。 (2025年)。新皮質における表現マップの恒常性。 <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
+<li>Karpowicz、B.M.、Ali、Y.H.、Wimalasena、L.N.、他(2025年)。潜在的なダイナミクスの調整を通じて脳とコンピューターのインターフェースを安定化します。 <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
 </ol>
 
-<h3>F. Causal inference/active inference/counterfactual hypothetical</h3>
+<h3>F。因果推論/能動的推論/反事実仮説</h3>
 <ol>
-<li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
-<li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
-<li>Rosa, M. J., Friston, K., &amp; Penny, W. (2012). Post-hoc selection of dynamic causal models. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
-<li>Friston, K. (2010). Free-energy principle.</li>
-<li>Friston, K. (2017). Active inference: a process theory.</li>
-<li>Parr, T., &amp; Friston, K. J. (2019). Generalised free energy.</li>
-<li>Lee, H.-L., Zahneisen, B., Hugger, T., et al. (2017). Tracking dynamic effective connectivity from fMRI using changes induced by anesthesia. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.012" target="_blank">doi:10.1016/j.neuroimage.2017.02.012</a></li>
-<li>Frässle, S., Manjaly, Z. M., Do, C. T., Kasper, L., Pruessmann, K. P., &amp; Stephan, K. E. (2021). Whole-brain estimates of directed connectivity for human connectomics. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
-<li>Wu, H., Hu, X., &amp; Zeng, Y. (2024). A fast dynamic causal modeling regression method for fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
-<li>Jafarian, A., Assem, M. K., Kocagoncu, E., et al. (2024). Reliability of dynamic causal modelling of resting-state magnetoencephalography. <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
-<li>Hauser, A., &amp; B&uuml;hlmann, P. (2012). Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs. <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
-<li>Vink, J. J., Ramos-Nu&ntilde;ez, A. I., Bellesi, A., et al. (2020). The brain's functional connectome is a poor predictor of the brain's causal activity flow. <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
-<li>Villaverde, A. F. (2019). Observability and Structural Identifiability of Nonlinear Biological Systems. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
-<li>Villaverde, A. F., Tsiantis, N., &amp; Banga, J. R. (2019). Full observability and estimation of unknown inputs, states and parameters of nonlinear biological models. <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">doi:10.1098/rsif.2019.0043</a></li>
-<li>Massonis, G., &amp; Villaverde, A. F. (2020). Finding and breaking Lie symmetries: implications for structural identifiability and observability in biological modelling. <em>Symmetry</em>, 12(3), 469. <a href="https://doi.org/10.3390/sym12030469" target="_blank">doi:10.3390/sym12030469</a></li>
-<li>Diop, S., &amp; Fliess, M. (1991). Nonlinear observability, identifiability, and persistent trajectories. <em>Proceedings of the 30th IEEE Conference on Decision and Control</em>, 714-719. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">doi:10.1109/CDC.1991.261405</a></li>
-<li>Raue, A., Becker, V., Klingmüller, U., &amp; Timmer, J. (2010). Identifiability and observability analysis for experimental design in nonlinear dynamical models. <em>Chaos</em>, 20(4), 045105. <a href="https://doi.org/10.1063/1.3528102" target="_blank">doi:10.1063/1.3528102</a></li>
-<li>Chis, O.-T., Villaverde, A. F., Banga, J. R., &amp; Balsa-Canto, E. (2016). On the relationship between sloppiness and identifiability. <em>Mathematical Biosciences</em>, 282, 147-161. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">doi:10.1016/j.mbs.2016.10.009</a></li>
-<li>White, A., Tolman, M., Thames, H. D., Withers, H. R., Mason, K. A., &amp; Transtrum, M. K. (2016). The limitations of model-based experimental design and parameter estimation in sloppy systems. <em>PLOS Computational Biology</em>, 12(12), e1005227. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">doi:10.1371/journal.pcbi.1005227</a></li>
-<li>Gevertz, J. L., &amp; Kareva, I. (2024). Minimally sufficient experimental design using identifiability analysis. <em>npj Systems Biology and Applications</em>, 10, 2. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">doi:10.1038/s41540-023-00325-1</a></li>
-<li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
-<li>Rasero, J., Betzel, R., Sentis, A. I., Kraynak, T. E., Gianaros, P. J., &amp; Verstynen, T. (2024). Similarity in evoked responses does not imply similarity in macroscopic network states. <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
-<li>Langdon, C., &amp; Engel, T. A. (2025). Latent circuit inference from heterogeneous neural responses during cognitive tasks. <em>Nature Neuroscience</em>, 28, 665-675. <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">doi:10.1038/s41593-025-01869-7</a></li>
-<li>Laukkonen, R., Friston, K., &amp; Chandaria, S. (2025). A beautiful loop.</li>
-<li>Correa, J. D., Lee, S., &amp; Bareinboim, E. (2021). Nested counterfactual identification.</li>
+<li>フリストン、K.J.、ハリソン、L.、＆amp;ペニー、W. (2003)。動的因果モデリング。 <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
+<li>Penny、WD、Stephan、K.E.、Mechelli、A.、およびフリストン、K.J. (2004)。動的因果モデルの比較。 <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
+<li>Rosa、M.J.、Friston、K.、およびペニー、W. (2012)。動的因果モデルの事後選択。 <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
+<li>フリストン、K. (2010)。フリーエネルギー原理.</li>
+<li>フリストン、K. (2017)。能動推論: プロセス理論.</li>
+<li>Parr、T.、&amp;フリストン、K.J. (2019)。一般化自由エネルギー.</li>
+<li>Lee、H.-L.、Zahneisen、B.、Hugger、T.、他。 （2017年）。麻酔によって誘発される変化を使用して、fMRI から動的に効果的な接続を追跡します。 <a href="https://doi.org/10.1016/j.neuroimage.2017.02.012" target="_blank">doi:10.1016/j.neuroimage.2017.02.012</a></li>
+<li>Frässle、S.、Manjaly、Z.M.、Do、C.T.、Kasper、L.、Pruessmann、K.P.、およびステファン、K.E. (2021)。人間のコネクトミクスのための有向接続性の全脳推定。 <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
+<li>Wu、H.、Hu、X.、およびZeng、Y. (2024)。 fMRI 用の高速動的因果モデリング回帰手法。 <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
+<li>Jafarian, A.、Assem, M. K.、Kocagoncu, E. 他（2024年）。安静状態の脳磁図の動的因果モデリングの信頼性。 <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
+<li>ハウザー、A.、＆amp;ブールマン、P. (2012)。有向非巡回グラフの介入マルコフ等価クラスの特性評価と貪欲な学習。 <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
+<li>Vink、J.J.、Ramos-Nu&ntilde;ez、A.I.、Bellesi、A.、他（2020年）。脳の機能的コネクトームは、脳の因果活動の流れを予測するのに十分ではありません。 <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
+<li>ヴィラベルデ、A.F. (2019)。非線形生物システムの観察可能性と構造識別可能性。 <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
+<li>ビジャベルデ、A.F.、チアンティス、N.、およびJ. R. バンガ (2019)。非線形生物学モデルの未知の入力、状態、パラメーターの完全な可観測性と推定。 <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">doi:10.1098/rsif.2019.0043</a></li>
+<li>Massonis, G.、&amp;ビリャベルデ、A.F. (2020)。リー対称性の発見と破壊: 生物学的モデリングにおける構造の特定可能性と観察可能性への影響。 <em>Symmetry</em>、12(3)、469.<a href="https://doi.org/10.3390/sym12030469" target="_blank">doi:10.3390/sym12030469</a></li>
+<li>ディオプ、S.、&amp;フライス、M. (1991)。非線形の観測可能性、識別可能性、および永続的な軌跡。 <em>決定と制御に関する第 30 回 IEEE 会議議事録</em>、714-719。 <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">doi:10.1109/CDC.1991.261405</a></li>
+<li>Raue、A.、Becker、V.、Klingmüller、U.、およびティマー、J. (2010)。非線形力学モデルにおける実験計画のための識別可能性と可観測性の解析。 <em>Chaos</em>、20(4)、045105。<a href="https://doi.org/10.1063/1.3528102" target="_blank">doi:10.1063/1.3528102</a></li>
+<li>Chis、O.-T.、Villaverde、A.F.、Banga、JR.、およびBalsa-Canto、E. (2016)。ずさんさと識別可能性の関係について。 <em>数理生物科学</em>、282、147-161。 <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">doi:10.1016/j.mbs.2016.10.009</a></li>
+<li>ホワイト、A.、トールマン、M.、テムズ、H.D.、ウィザーズ、H.R.、メイソン、K.A.、およびトランストラム、M.K. (2016)。ずさんなシステムにおけるモデルベースの実験計画とパラメータ推定の限界。 <em>PLOS 計算生物学</em>、12(12)、e1005227。 <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">doi:10.1371/journal.pcbi.1005227</a></li>
+<li>Gevertz、J.L.、&amp;カレヴァ、I. (2024)。識別可能性分析を使用した最小限で十分な実験計画。 <em>npj システム生物学とアプリケーション</em>、10、2. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">doi:10.1038/s41540-023-00325-1</a></li>
+<li>Liu、X.、Wanika、L.、Chappell、M.J.、およびブランケ、J. (2025)。アクティブラーニングによる実用的な識別可能性を確立するための効率的なデータ収集。 <em>Computational and Structural Biotechnology Journal</em>、27、4992-5006。 <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
+<li>Rasero、J.、Betzel、R.、Sentis、A.I.、Kraynak、T.E.、Gianaros、P.J.、およびVerstynen、T. (2024)。誘発された反応の類似性は、巨視的なネットワーク状態の類似性を意味しません。 <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
+<li>Lラングドン、C.、＆amp;エンゲル、T.A. (2025)。認知課題中の異質な神経反応からの潜在回路推論。 <em>Nature Neuroscience</em>、28、665-675。 <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">doi:10.1038/s41593-025-01869-7</a></li>
+<li>Laukkonen、R.、Friston、K.、およびチャンダリア、S. (2025)。美しいループ。</li>
+<li>コレア、J.D.、リー、S.、＆amp;バレインボイム、E. (2021)。ネストされた反事実の識別.</li>
 </ol>
 
-<h3>G. Biological constraints (connectome, neuromodulation, glia)</h3>
+<h3>G。生物学的制約 (コネクトーム、神経調節、グリア)</h3>
 <ol>
-<li>Cook, S. J., et al. (2019). Whole-animal connectomes of both <em>C. elegans</em> sexes.</li>
-<li>Scheffer, L. K., et al. (2020). Adult <em>Drosophila</em> central brain connectome.</li>
-<li>Kasthuri, N., et al. (2015). Saturated reconstruction of neocortex volume.</li>
-<li>Santello, M., et al. (2019). Astrocyte-neuron interactions.</li>
-<li>Ozcete, O. D., et al. (2024). Neuromodulatory volume transmission.</li>
-<li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
-<li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
-<li>Goulas, A., Changeux, J.-P., Wagstyl, K., et al. (2021). The natural axis of transmitter receptor distribution in the human cerebral cortex. <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
-<li>Koepp, M. J., Gunn, R. N., Lawrence, A. D., et al. (1998). Evidence for striatal dopamine release during a video game. <a href="https://doi.org/10.1038/30498" target="_blank">doi:10.1038/30498</a></li>
-<li>Lippert, R. N., Cremer, A. L., Edwin Thanarajah, S., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">doi:10.1038/s41467-018-08143-4</a></li>
-<li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
-<li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
-<li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
-<li>Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
-<li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
-<li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
-<li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
-<li>Lee, H.-K., Barbarosie, M., Kameyama, K., Bear, M. F., &amp; Huganir, R. L. (2003). Regulation of distinct AMPA receptor phosphorylation sites during bidirectional synaptic plasticity. <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">doi:10.1016/S0092-8674(03)00122-3</a></li>
-<li>Havekes, R., Park, A. J., Tolentino, R. E., et al. (2016). Compartmentalized PDE4A5 signaling impairs hippocampal synaptic plasticity and long-term memory. <a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">doi:10.1523/JNEUROSCI.0248-16.2016</a></li>
-<li>Vierra, N. C., et al. (2023). Endoplasmic reticulum-plasma membrane junctions couple electrical activity to Ca2+-activated PKA signaling in neurons. <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">doi:10.1038/s41467-023-40930-6</a></li>
-<li>Altas, B., Tuffy, L. P., Patrizi, A., et al. (2024). Region-specific phosphorylation determines Neuroligin-3 localization to excitatory versus inhibitory synapses. <a href="https://doi.org/10.1016/j.biopsych.2023.12.020" target="_blank">doi:10.1016/j.biopsych.2023.12.020</a></li>
-<li>Rodriguez, A. C., Kram&aacute;r, E. A., Augustynski, A. S., et al. (2025). HDAC3 Serine 424 phospho-mimic and phospho-null mutants bidirectionally modulate long-term memory formation and synaptic plasticity in the adult and aging mouse brain. <a href="https://doi.org/10.1523/JNEUROSCI.1619-24.2025" target="_blank">doi:10.1523/JNEUROSCI.1619-24.2025</a></li>
-<li>Frey, U., &amp; Morris, R. G. M. (1997). Synaptic tagging and long-term potentiation. <a href="https://doi.org/10.1038/385533a0" target="_blank">doi:10.1038/385533a0</a></li>
-<li>Shires, K. L., Da Silva, B. M., Hawthorne, J. P., et al. (2012). Synaptic tagging and capture in the living rat. <a href="https://doi.org/10.1038/ncomms2250" target="_blank">doi:10.1038/ncomms2250</a></li>
-<li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
-<li>Fonseca, R., Vabulas, R. M., Hartl, F. U., Bonhoeffer, T., &amp; Nagerl, U. V. (2006). A balance of protein synthesis and proteasome-dependent degradation determines the maintenance of LTP. <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">doi:10.1016/j.neuron.2006.08.015</a></li>
-<li>Pandey, K., Yu, X.-W., Steinmetz, A., &amp; Alberini, C. M. (2021). Autophagy coupled to translation is required for long-term memory. <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">doi:10.1080/15548627.2020.1775393</a></li>
-<li>Chang, Y. C., Gao, Y., Lee, J. Y., et al. (2024). Identification of secretory autophagy as a mechanism modulating activity-induced synaptic remodeling. <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">doi:10.1073/pnas.2315958121</a></li>
-<li>Parker, D., Davidson, K., Osmulski, P. A., et al. (2025). Proteasome augmentation mitigates age-related cognitive decline in mice. <a href="https://doi.org/10.1111/acel.14492" target="_blank">doi:10.1111/acel.14492</a></li>
-<li>Correia, S. S., Bassani, S., Brown, T. C., et al. (2008). Motor protein-dependent transport of AMPA receptors into spines during long-term potentiation. <a href="https://doi.org/10.1038/nn2063" target="_blank">doi:10.1038/nn2063</a></li>
-<li>Swarnkar, S., Avchalumov, Y., Espadas, I., et al. (2021). Molecular motor protein KIF5C mediates structural plasticity and long-term memory by constraining local translation. <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">doi:10.1016/j.celrep.2021.109369</a></li>
-<li>Aiken, J., &amp; Holzbaur, E. L. F. (2024). Spastin locally amplifies microtubule dynamics to pattern the axon for presynaptic cargo delivery. <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">doi:10.1016/j.cub.2024.03.010</a></li>
-<li>de Queiroz, B. R., et al. (2025). Axonal RNA localization is essential for long-term memory. <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">doi:10.1038/s41467-025-57651-7</a></li>
-<li>Stringer, C., Pachitariu, M., Steinmetz, N., et al. (2019). Spontaneous behaviors drive multidimensional, brainwide activity. <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
-<li>Saleem, A. B., Ayaz, A., Jeffery, K. J., Harris, K. D., &amp; Carandini, M. (2013). Integration of visual motion and locomotion in mouse visual cortex. <a href="https://doi.org/10.1038/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
-<li>Ravassard, P., Kees, A., Willers, B., et al. (2013). Multisensory control of hippocampal spatiotemporal selectivity. <a href="https://doi.org/10.1126/science.1232655" target="_blank">doi:10.1126/science.1232655</a></li>
-<li>Zelano, C., Jiang, H., Zhou, G., et al. (2016). Nasal respiration entrains human limbic oscillations and modulates cognitive function. <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">doi:10.1523/JNEUROSCI.2586-16.2016</a></li>
-<li>Raut, R. V., Rosenthal, Z. P., Wang, X., et al. (2025). Arousal as a universal embedding for spatiotemporal brain dynamics. <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">doi:10.1038/s41586-025-09544-4</a></li>
+<li>Cook、S.J.、他（2019年）。両方の<em>Cの動物全体のコネクトーム。エレガンス</em>雌雄.</li>
+<li>Scheffer、L.K.、他。 （2020年）。成体 <em>ショウジョウバエ</em>中枢脳コネクトーム.</li>
+<li>Kasthuri, N. 他（2015年）。新皮質ボリュームの飽和再構成。</li>
+<li>Santello、M.、他（2019年）。アストロサイトとニューロンの相互作用.</li>
+<li>Ozcete、O.D.、他。 （2024年）。神経調節量伝達.</li>
+<li>Reimer, J.、McGinley, M. J.、Liu, Y. 他（2016年）。瞳孔変動は、皮質におけるアドレナリン作動性およびコリン作動性活動の急速な変化を追跡します。 <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
+<li>Hansen, J. Y.、Shafiei, G.、Markello, R. D.、他（2022年）。神経伝達物質システムをヒト新皮質の構造的および機能的組織にマッピングする。 <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
+<li>Goulas, A.、Changeux, J.-P.、Wagstyl, K. 他（2021年）。人間の大脳皮質における伝達物質受容体の分布の自然な軸。 <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
+<li>Koepp、M.J.、Gunn、R.N.、Lawrence、A.D.、他（1998年）。ビデオゲーム中に線条体からドーパミンが放出される証拠。 <a href="https://doi.org/10.1038/30498" target="_blank">ドイ:10.1038/30498</a></li>
+<li>Lippert、R.N.、Cremer、A.L.、Edwin Thanarajah、S. 他（2019年）。刺激誘発性の局所ドーパミン放出の時間依存性評価。 <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">doi:10.1038/s41467-018-08143-4</a></li>
+<li>Neyhart、E.、Zhou、N.、Munn、B.R.、他。 （2024年）。皮質のアセチルコリン動態は、コリン作動性軸索の活性と行動状態によって予測されます。 <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
+<li>Dorkenwald, S. 他（2024年）。成人の脳の神経配線図。 <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
+<li>MICronSコンソーシアムほか(2025年)。マウス視覚野の複数の領域にわたる機能的コネクトミクス。 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Prinz、A.A.、Bucher、D.、およびマーダー、E. (2004)。異なる回路パラメータからの同様のネットワーク アクティビティ。 <a href="https://doi.org/10.1038/nn1352" target="_blank">ドイ:10.1038/nn1352</a></li>
+<li>ベイラン、M.、＆amp;リトウィン・クマール、A. (2025)。コネクトーム制約付きリカレント ネットワークにおける神経活動の予測。 <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Gamlin、C.R.、他。 (2025年)。マウス視覚野における予測されるSstトランスクリプトームタイプのコネクトミクス。 <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Cahill、M.K.、他（2024年）。皮質星状細胞における局所神経伝達物質のネットワークレベルのエンコーディング。 <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>Lee, H.-K.、Barbarosie, M.、Kameyama, K.、Bear, M. F.、およびヒューガニア、R.L. (2003)。双方向性シナプス可塑性における個別の AMPA 受容体リン酸化部位の制御。 <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">doi:10.1016/S0092-8674(03)00122-3</a></li>
+<li>Havekes, R.、Park, A.J.、Tolentino, R.E. 他（2016年）。区画化された PDE4A5 シグナル伝達は、海馬のシナプス可塑性と長期記憶を損ないます。 <a href="https://doi.org/10.1523/JNEUROSCI.0248-16.2016" target="_blank">doi:10.1523/JNEUROSCI.0248-16.2016</a></li>
+<li>ノースカロライナ州ビエラ他（2023年）。小胞体と細胞膜の接合部は、電気活動をニューロン内の Ca2+ 活性化 PKA シグナル伝達に結び付けます。 <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">doi:10.1038/s41467-023-40930-6</a></li>
+<li>Altas, B.、Tuffy, L. P.、Patrizi, A. 他（2024年）。領域特異的なリン酸化は、興奮性シナプスと抑制性シナプスへのニューロリギン 3 の局在を決定します。 <a href="https://doi.org/10.1016/j.biopsych.2023.12.020" target="_blank">doi:10.1016/j.biopsych.2023.12.020</a></li>
+<li>Rodriguez, A.C.、Kram’r, E.A.、Augustinski, A.S.、他(2025年)。 HDAC3 セリン 424 リン酸化模倣変異体およびリン酸化ヌル変異体は、成体および老化マウスの脳における長期記憶形成とシナプス可塑性を双方向に調節します。 <a href="https://doi.org/10.1523/JNEUROSCI.1619-24.2025" target="_blank">doi:10.1523/JNEUROSCI.1619-24.2025</a></li>
+<li>フレイ、U.、＆amp;モリス、R.G.M. (1997)。シナプスのタグ付けと長期的な増強。 <a href="https://doi.org/10.1038/385533a0" target="_blank">doi:10.1038/385533a0</a></li>
+<li>Shires、K.L.、Da Silva、BM、Hawthorne、J.P.、他（2012年）。生きたラットにおけるシナプスのタグ付けと捕獲。 <a href="https://doi.org/10.1038/ncomms2250" target="_blank">doi:10.1038/ncomms2250</a></li>
+<li>Govindarajan、A.、イスラエル人、I.、Huang、S.-Y.、&amp;利根川真司 (2011)樹状分岐は、タンパク質合成依存性 LTP にとって好ましい統合単位です。 <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
+<li>Fonseca, R.、Vabulas, R.M.、Hartl, F. U.、Bonhoeffer, T.、およびNagerl、U.V. (2006)。タンパク質合成とプロテアソーム依存性の分解のバランスが、LTP の維持を決定します。 <a href="https://doi.org/10.1016/j.neuron.2006.08.015" target="_blank">doi:10.1016/j.neuron.2006.08.015</a></li>
+<li>Pandey、K.、Yu、X.-W.、Steinmetz、A.、&amp;アルベリーニ、C.M. (2021)。長期記憶には翻訳とオートファジーが必要です。 <a href="https://doi.org/10.1080/15548627.2020.1775393" target="_blank">doi:10.1080/15548627.2020.1775393</a></li>
+<li>Chang、Y.C.、Gao、Y.、Lee、J.Y.、他。 （2024年）。活動誘発性シナプスリモデリングを調節する機構としての分泌型オートファジーの同定。 <a href="https://doi.org/10.1073/pnas.2315958121" target="_blank">doi:10.1073/pnas.2315958121</a></li>
+<li>Parker, D.、Davidson, K.、Osmulski, P.A.、他(2025年)。プロテアソームの増強は、マウスの加齢に伴う認知機能低下を軽減します。 <a href="https://doi.org/10.1111/acel.14492" target="_blank">doi:10.1111/acel.14492</a></li>
+<li>Correia、S.S.、Bassani、S.、Brown、T.C.、他（2008年）。長期増強中のモータータンパク質依存性のAMPA受容体のスパインへの輸送。 <a href="https://doi.org/10.1038/nn2063" target="_blank">doi:10.1038/nn2063</a></li>
+<li>Swarnkar, S.、Avchalumov, Y.、Espadas, I. 他（2021年）。分子モータータンパク質 KIF5C は、局所的な翻訳を制限することで構造の可塑性と長期記憶を仲介します。 <a href="https://doi.org/10.1016/j.celrep.2021.109369" target="_blank">doi:10.1016/j.celrep.2021.109369</a></li>
+<li>Aiken, J.、&amp;ホルツバウア、E.L.F. (2024)。スパスチンは微小管のダイナミクスを局所的に増幅して、シナプス前への貨物送達のために軸索をパターン化します。 <a href="https://doi.org/10.1016/j.cub.2024.03.010" target="_blank">doi:10.1016/j.cub.2024.03.010</a></li>
+<li>de Queiroz、B.R.、他(2025年)。軸索 RNA の局在化は長期記憶に不可欠です。 <a href="https://doi.org/10.1038/s41467-025-57651-7" target="_blank">doi:10.1038/s41467-025-57651-7</a></li>
+<li>Stringer, C.、Pachitariu, M.、Steinmetz, N. 他（2019年）。自発的な行動は、多次元の脳全体の活動を促進します。 <a href="https://doi.org/10.1126/science.aav7893" target="_blank">doi:10.1126/science.aav7893</a></li>
+<li>サリーム、A.B.、アヤズ、A.、ジェフリー、K.J.、ハリス、K.D.、およびカランディーニ、M. (2013)。マウスの視覚野における視覚運動と移動運動の統合。 <a href="https://doi.org/10.1038/nn.3567" target="_blank">doi:10.1038/nn.3567</a></li>
+<li>Ravassard, P.、Kees, A.、Willers, B. 他（2013年）。海馬の時空間選択性の多感覚制御。 <a href="https://doi.org/10.1126/science.1232655" target="_blank">doi:10.1126/science.1232655</a></li>
+<li>Zelano, C.、Jiang, H.、Zhou, G. 他（2016年）。鼻呼吸は人間の大脳辺縁系の振動を同調させ、認知機能を調節します。 <a href="https://doi.org/10.1523/JNEUROSCI.2586-16.2016" target="_blank">doi:10.1523/JNEUROSCI.2586-16.2016</a></li>
+<li>Raut、R. V.、Rosenthal、Z.P.、Wang、X.、他(2025年)。時空間的な脳のダイナミクスの普遍的な埋め込みとしての覚醒。 <a href="https://doi.org/10.1038/s41586-025-09544-4" target="_blank">doi:10.1038/s41586-025-09544-4</a></li>
 </ol>
 
-<h3>H. Standardization, reproducibility, ethics, system</h3>
+<h3>H。標準化、再現性、倫理、システム</h3>
 <ol>
-<li>Gorgolewski, K. J., et al. (2016). BIDS.</li>
-<li>Pernet, C. R., et al. (2019). EEG-BIDS.</li>
-<li>Fleming, S. M., et al. (2023). Open letter on IIT interpretability and testability.</li>
-<li>Yuste, R., et al. (2017). Four ethical priorities for neurotechnologies and AI.</li>
-<li>Ienca, M., &amp; Andorno, R. (2017). New human rights in neuroscience.</li>
-<li>Schumer, C., et al. (2025). MIND Act discourse.</li>
+<li>Gorgolewski、K.J.、他。 （2016年）。入札.</li>
+<li>Pernet、C.R.、他（2019年）。 EEG-BIDS.</li>
+<li>Fleming、S.M.、他（2023年）。 IIT の解釈可能性とテスト可能性に関する公開書簡.</li>
+<li>Yuste, R. 他（2017年）。ニューロテクノロジーと AI に関する 4 つの倫理的優先事項.</li>
+<li>Ienca、M.、＆amp;アンドルノ、R. (2017)。神経科学における新しい人権.</li>
+<li>Schumer、C.、他。 (2025年)。 MIND Act 談話.</li>
 </ol>
 
-<h3>I. Thermodynamics, irreversibility, energy budget</h3>
+<h3>I。熱力学、不可逆性、エネルギー収支</h3>
 <ol>
-<li>B&eacute;rut, A., Arakelyan, A., Petrosyan, A., et al. (2012). Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics. <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
-<li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
-<li>Lynn, C. W., Cornblath, E. J., Papadopoulos, L., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
-<li>de la Fuente, L. A., Perl, Y. S., Zamberlan, F., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
-<li>Nartallo-Kaluarachchi, R., Bonetti, L., Fern&aacute;ndez-Rubio, G., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
-<li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
-<li>Martínez, I. A., Bisker, G., Horowitz, J. M., &amp; Parrondo, J. M. R. (2019). Inferring broken detailed balance in the absence of observable currents. <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">doi:10.1038/s41467-019-11051-w</a></li>
-<li>Hartich, D., &amp; Godec, A. (2024). Comment on “Inferring broken detailed balance in the absence of observable currents”. <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">doi:10.1038/s41467-024-52602-0</a></li>
-<li>Martínez, I. A., Bisker, G., Horowitz, J. M., &amp; Parrondo, J. M. R. (2024). Reply to: Comment on “Inferring broken detailed balance in the absence of observable currents”. <a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">doi:10.1038/s41467-024-52603-z</a></li>
-<li>Blom, K., Song, K., Vouga, E., Godec, A., &amp; Makarov, D. E. (2024). Milestoning estimators of dissipation in systems observed at a coarse resolution. <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">doi:10.1073/pnas.2318333121</a></li>
+<li>Bérut, A.、Arakelyan, A.、Petrosyan, A. 他（2012年）。情報と熱力学をつなぐランダウアー原理の実験的検証。 <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
+<li>アトウェル、D.、＆amp;ラフリン、S.B. (2001)。脳の灰白質における信号伝達のためのエネルギー予算。 <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
+<li>Lynn、C.W.、Cornblath、E.J.、Papadopoulos、L.、他（2021年）。人間の脳における詳細なバランスの崩れとエントロピー生成。 <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>de la Fuente, L.A.、Perl, Y.S.、Zamberlan, F. 他（2023年）。意識の兆候としての神経力学の時間的不可逆性。 <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Nartallo-Kaluarachchi、R.、Bonetti、L.、Fern&acute;ndez-Rubio、G.、他。 (2025年)。マルチレベルの不可逆性は、人間の脳のダイナミクスにおける非平衡相互作用の高次組織化を明らかにします。 <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
+<li>石原 和也 &amp;島崎 洋 (2025)状態空間運動イジング モデルは、まばらに活動する非平衡ニューロンのダイナミクスにおけるタスク依存のエントロピー フローを明らかにします。 <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>マルティネス、I.A.、ビスカー、G.、ホロウィッツ、J.M.、およびパロンド、J.M.R. (2019)。観察可能な流れがない場合に、壊れた詳細なバランスを推測します。 <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">doi:10.1038/s41467-019-11051-w</a></li>
+<li>Hartich、D.、&amp;ゴデック、A. (2024)。 「観測可能な流れがない場合の壊れた詳細なバランスの推測」についてのコメント。 <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">doi:10.1038/s41467-024-52602-0</a></li>
+<li>Martínez、I.A.、Bisker、G.、Horowitz、J.M.、およびパロンド、J.M.R. (2024)。返信先: 「観測可能な流れがない場合の壊れた詳細なバランスの推測」へのコメント。 <a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">doi:10.1038/s41467-024-52603-z</a></li>
+<li>Blom、K.、Song、K.、Vouga、E.、Godec、A.、およびマカロフ、D.E. (2024)。粗い解像度で観察されたシステム内の散逸のマイルストーン推定値。 <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">doi:10.1073/pnas.2318333121</a></li>
 </ol>
 </section>
 
@@ -2763,66 +2767,66 @@ Below are the main documents directly related to the open questions of U0-U15. F
 <aside class="sidebar-column">
 
 <div class="key-points">
-<h4>What you get from this page</h4>
+<h4>このページから得られるもの</h4>
 <ul>
-<li>Summary of question tree (detailed version) on one page</li>
-<li>Fixing the definition of advancement (claim staircase)</li>
-<li>Search by folding and filtering</li>
-<li>Learning order (don't get lost)</li>
-<li>First primary/review link</li>
+<li>質問ツリー（詳細版）を1ページにまとめた</li>
+<li>進歩の定義の修正（クレーム階段）</li>
+<li>折りたたんでフィルタリングして検索</li>
+<li>学習順序（迷わないように）</li>
+<li>最初のプライマリ/レビュー リンク</li>
 </ul>
 </div>
 
 <div class="sidebar-box">
-<h4>Filter</h4>
+<h4>フィルター</h4>
 <input id="qaSearch" class="filter-input" type="text" placeholder="Narrow down by keywords (e.g. EEG, causality, identity)">
-<p class="small" style="margin-top: 10px;">Category</p>
+<p class="small" style="margin-top: 10px;">Cカテゴリー</p>
 <div class="checkbox-grid" style="margin-top: 8px;">
-<label><input type="checkbox" name="qaTag" value="meta">Meta</label>
-<label><input type="checkbox" name="qaTag" value="measurement">Measurement</label>
-<label><input type="checkbox" name="qaTag" value="reconstruction">Reconstruction</label>
-<label><input type="checkbox" name="qaTag" value="implementation">Implementation</label>
-<label><input type="checkbox" name="qaTag" value="verification">Verification</label>
-<label><input type="checkbox" name="qaTag" value="deployment">Deployment</label>
+<label><input type="checkbox" name="qaTag" value="meta">メタ</label>
+<label><input type="checkbox" name="qaTag" value="measurement">測定</label>
+<label><input type="checkbox" name="qaTag" value="reconstruction">復興</label>
+<label><input type="checkbox" name="qaTag" value="implementation">実装</label>
+<label><input type="checkbox" name="qaTag" value="verification">検証</label>
+<label><input type="checkbox" name="qaTag" value="deployment">展開</label>
 </div>
 <div class="controls" style="margin-top: 12px;">
-<button class="btn" id="qaClear" type="button">Clear</button>
-<button class="btn" id="qaExpandAll" type="button">Expand</button>
-<button class="btn" id="qaCollapseAll" type="button">Collapse</button>
+<button class="btn" id="qaClear" type="button">クリア</button>
+<button class="btn" id="qaExpandAll" type="button">拡張</button>
+<button class="btn" id="qaCollapseAll" type="button">折りたたむ</button>
 </div>
-<p class="small" id="qaStatus" style="margin-top: 10px;">Display: -/-</p>
+<p class="small" id="qaStatus" style="margin-top: 10px;">ディスプレイ: -/-</p>
 </div>
 
 <div class="sidebar-box">
-<h4>On this page</h4>
+<h4>このページについて</h4>
 <ul>
-<li><a href="#howto">How to Use</a></li>
-<li><a href="#measurement-identifiability-audit">2026-03 Literature Audit</a></li>
-<li><a href="#definition">Definition of forward</a></li>
-<li><a href="#roadmap-index">Index</a></li>
-<li><a href="#tree">Tree of questions</a></li>
-<li><a href="#measurement">Measurement</a></li>
-<li><a href="#reconstruction">Reconstruction</a></li>
-<li><a href="#implementation">Implementation</a></li>
-<li><a href="#verification">Verification</a></li>
-<li><a href="#unsolved">Defining an unsolved problem</a></li>
-<li><a href="#priorwork-map">Previous research map</a></li>
-<li><a href="#deployment">Social implementation</a></li>
-<li><a href="#learning">Learning order</a></li>
-<li><a href="#mind-upload">Mind-Upload current location</a></li>
-<li><a href="#sources">References</a></li>
+<li><a href="#howto">使用方法</a></li>
+<li><a href="#measurement-identifiability-audit">2026-03 文献監査</a></li>
+<li><a href="#definition">前方の定義</a></li>
+<li><a href="#roadmap-index">インデックス</a></li>
+<li><a href="#tree">質問のツリー</a></li>
+<li><a href="#measurement">測定</a></li>
+<li><a href="#reconstruction">再構築</a></li>
+<li><a href="#implementation">実装</a></li>
+<li><a href="#verification">検証</a></li>
+<li><a href="#unsolved">未解決の問題の定義</a></li>
+<li><a href="#priorwork-map">先行研究地図</a></li>
+<li><a href="#deployment">社会実装</a></li>
+<li><a href="#learning">学習順序</a></li>
+<li><a href="#mind-upload">マインド - 現在の場所をアップロード</a></li>
+<li><a href="#sources">参考資料</a></li>
 </ul>
 </div>
 
 <div class="sidebar-box">
-<h4>Links</h4>
+<h4>リンク</h4>
 <ul>
-<li><a href="index.html">Start</a></li>
-<li><a href="issue.html#proposal-integration">Proposal integration clause in issue</a></li>
-<li><a href="mind_uploading_papers.html">Paper Collection</a></li>
-<li><a href="brain_science_dictionary.html">Brain Science Dictionary</a></li>
-<li><a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank">GitHub Repository</a></li>
-<li><a href="issue.html">Contribute Guide</a></li>
+<li><a href="index.html">スタート</a></li>
+<li><a href="issue.html#proposal-integration">問題の提案統合条項</a></li>
+<li><a href="mind_uploading_papers.html">ペーパーコレクション</a></li>
+<li><a href="brain_science_dictionary.html">脳科学辞典</a></li>
+<li><a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank">GitHub リポジトリ</a></li>
+<li><a href="issue.html">貢献ガイド</a></li>
 </ul>
 </div>
 
@@ -2830,20 +2834,20 @@ Below are the main documents directly related to the open questions of U0-U15. F
 </main>
 
 <footer>
-<p>Mind-Upload / Technology roadmap (tentative)</p>
+<p>Mind-Upload / 技術ロードマップ（仮）</p>
 </footer>
 
 <script>
-(function () {
+(関数() {
 var searchInput = document.getElementById('qaSearch');
 var clearBtn = document.getElementById('qaClear');
-var expandBtn = document.getElementById('qaExpandAll');
-var collapseBtn = document.getElementById('qaCollapseAll');
+var ExpandBtn = document.getElementById('qaExpandAll');
+var CollapseBtn = document.getElementById('qaCollapseAll');
 var statusEl = document.getElementById('qaStatus');
 
-if (!searchInput || !statusEl) return;
+if (!searchInput || !statusEl) が戻る;
 
-function toArray(nodeList) {
+関数 toArray(nodeList) {
 return Array.prototype.slice.call(nodeList || []);
 }
 
@@ -2851,50 +2855,50 @@ var checkboxes = toArray(document.querySelectorAll('input[name="qaTag"]'));
 var qas = toArray(document.querySelectorAll('details.qa'));
 var groups = toArray(document.querySelectorAll('[data-qa-group]'));
 
-function selectedTags() {
-return checkboxes
-.filter(function (cb) { return cb.checked; })
-.map(function (cb) { return cb.value; });
+関数 selectedTags() {
+チェックボックスを返す
+.filter(関数 (cb) { return cb.checked; })
+.map(関数 (cb) { return cb.value; });
 }
 
-function matchesTags(qaTags, selected) {
-if (!selected.length) return true;
+関数 matchTags(qaTags, selected) {
+if (!selected.length) は true を返します。
 for (var i = 0; i < selected.length; i++) {
-if (qaTags.indexOf(selected[i]) !== -1) return true;
+if (qaTags.indexOf(selected[i]) !== -1) は true を返します。
 }
-return false;
+false を返します。
 }
 
-function matchesText(text, query) {
-if (!query) return true;
+関数 matchText(テキスト, クエリ) {
+if (!query) が true を返します。
 return text.indexOf(query) !== -1;
 }
 
-function applyFilters() {
+関数 applyFilters() {
 var query = (searchInput.value || '').trim().toLowerCase();
 var selected = selectedTags();
-var visibleCount = 0;
+varvisibleCount = 0;
 
-qas.forEach(function (qa) {
+qas.forEach(関数 (qa) {
 var qaTags = (qa.getAttribute('data-tags') || '')
 .split(/\s+/)
-.filter(Boolean);
+.filter(ブール値);
 var text = (qa.textContent || '').toLowerCase();
-var show = matchesTags(qaTags, selected) && matchesText(text, query);
-qa.style.display = show ? '' : 'none';
-if (show) visibleCount += 1;
+var show =matchesTags(qaTags, selected) &&matchesText(text, query);
+qa.style.display = 表示 ? '' : 'なし';
+if (表示)visibleCount += 1;
 });
 
-groups.forEach(function (g) {
+groups.forEach(関数 (g) {
 var groupQas = toArray(g.querySelectorAll('details.qa'));
 var anyVisible = groupQas.some(function (qa) { return qa.style.display !== 'none'; });
-g.style.display = anyVisible ? '' : 'none';
+g.style.display = anyVisible ? '' : 'なし';
 });
 
-statusEl.textContent = 'Display: ' + visibleCount + '/' + qas.length;
+statusEl.textContent = '表示: ' +visibleCount + '/' + qas.length;
 }
 
-function visibleQAs() {
+関数visibleQAs() {
 return qas.filter(function (qa) { return qa.style.display !== 'none'; });
 }
 
@@ -2902,7 +2906,7 @@ searchInput.addEventListener('input', applyFilters);
 checkboxes.forEach(function (cb) { cb.addEventListener('change', applyFilters); });
 
 if (clearBtn) {
-clearBtn.addEventListener('click', function () {
+clearBtn.addEventListener('クリック', function () {
 searchInput.value = '';
 checkboxes.forEach(function (cb) { cb.checked = false; });
 applyFilters();
@@ -2911,14 +2915,14 @@ searchInput.focus();
 }
 
 if (expandBtn) {
-expandBtn.addEventListener('click', function () {
-visibleQAs().forEach(function (d) { d.open = true; });
+ExpandBtn.addEventListener('click', function () {
+VisualQAs().forEach(function (d) { d.open = true; });
 });
 }
 
 if (collapseBtn) {
-collapseBtn.addEventListener('click', function () {
-visibleQAs().forEach(function (d) { d.open = false; });
+CollapseBtn.addEventListener('click', function () {
+VisualQAs().forEach(function (d) { d.open = false; });
 });
 }
 

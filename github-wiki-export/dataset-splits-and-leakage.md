@@ -1,293 +1,293 @@
-# Wiki: Data partitioning and data leaks
+# Wiki: データの分割とデータ漏洩
 
-> Even if the accuracy is high, the evaluation will be corrupted if the classification is lax
+> 精度が高くても分類が甘ければ評価は崩れる
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-25 / Role: Practical guide
+- Updated: 2026-03-25 / Role: 実践ガイド
 
-## Role Of This Page
-This page is a wiki that explains from the beginning how to divide datasets and why data leaks are dangerous. The 2026-03 re-audit tightened one more point: a clean split is necessary, but it is still not enough if acquisition-distribution shortcuts or benchmark-governance failures remain hidden.
+## このページの役割
+このページはデータセットの分割方法とデータ漏洩がなぜ危険なのかを一から解説したWikiです。 2026-03 年の再監査では、もう 1 つの点が強化されました。きれいな分割は必要ですが、買収と分配の近道やベンチマークとガバナンスの失敗が隠されたままであれば、それだけではまだ十分ではありません。
 
-## Accuracy Notes
-These are operational rules, not one-size-fits-all formulas. The best split still depends on the task and data structure, and official challenge operations can materially change what a benchmark score means.
+## 正確性に関する注記
+これらは運用ルールであり、万能の公式ではありません。最適な分割は依然としてタスクとデータ構造に依存しており、公式チャレンジの操作によってベンチマーク スコアの意味が大きく変わる可能性があります。
 
-## Back To Public Pages
-- [Data & Bench](https://mind-upload.com/datasets.html)
-- [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
-- [Verification base](https://mind-upload.com/verification.html)
+## 公開ページへ戻る
+- [データとベンチ](https://mind-upload.com/datasets.html)
+- [実践](https://mind-upload.com/datasets.html#l0-practice)
+- [検証ベース](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
-- [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - Compensates for where the preprocessing itself changes the result.
-- [Wiki: EEG foundation models and pretraining](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models) - Use this page when benchmark rules, extra pretraining, and leaderboard interpretation start to blur together.
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - See why leak prevention is 'part of operations'.
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to the overall map of the learning page.
+## 関連 Wiki ページ
+- [Wiki: EEG の前処理と QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - 前処理自体が結果を変更する部分を補正します。
+- [Wiki: EEG 基礎モデルと事前トレーニング](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models) - ベンチマーク ルール、追加の事前トレーニング、リーダーボードの解釈が曖昧になり始めた場合は、このページを使用してください。
+- [Wiki: 検証インフラストラクチャの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 漏洩防止が「業務の一部」である理由をご覧ください。
+- [ウィキホーム](https://github.com/yasufumi-nakata/mind-upload/wiki) - 学習ページの全体マップに戻ることができます。
 
-## What Is Currently Known
-- Accuracy can easily be overestimated if the train/test separation is loose.
-- Apparent performance tends to improve when fragments from the same subject, same session, and near time are included on both sides.
-- In clinical EEG, report text and report-derived labels can also be leakage sources.
-- Preprocessing, normalization, and feature selection can also be a source of leaks if they are performed after looking at all the data.
-- Even after coarse split hygiene, metadata shortcuts such as site, amplifier, reference, and electrode layout can still dominate the score if disjointness and harmonization are not disclosed.
-- Leaderboard and challenge results are not stable objects unless benchmark provenance and later postmortems are carried together with the score.
+## 現在わかっていること
+- トレーニングとテストの分離が緩い場合、精度は簡単に過大評価される可能性があります。
+- 同じ主題、同じセッション、近い時間の断片が両側に含まれている場合、見かけのパフォーマンスは向上する傾向があります。
+- 臨床 EEG では、レポート テキストおよびレポートから派生したラベルも漏洩源となる可能性があります。
+- 前処理、正規化、および特徴の選択も、すべてのデータを確認した後に実行すると、漏洩の原因となる可能性があります。
+- 粗い分割衛生を行った後でも、不整合性と調和性が開示されていない場合、サイト、アンプ、リファレンス、電極レイアウトなどのメタデータのショートカットが依然としてスコアを支配する可能性があります。
+- リーダーボードとチャレンジの結果は、ベンチマークの来歴とその後の事後分析がスコアと一緒に実行されない限り、安定したオブジェクトではありません。
 
-## What Is Still Unknown
-- Which division is closest to future actual operation depends on the task setting and usage situation.
-- A deep understanding and auditing of data structures is required to be able to claim that leaks have been completely eliminated.
-- How to standardize report-derived labels from signal-only benchmarks is still in the process of operational design.
-- Which benchmark-governance bundle should become the default reusable card for EEG leaderboards is still being refined.
+## まだわかっていないこと
+- どの部門が将来の実運用に最も近いかは、タスクの設定や利用状況によって異なります。
+- リークが完全に排除されたと主張するには、データ構造を深く理解し、監査する必要があります。
+- シグナルのみのベンチマークからレポートから派生したラベルを標準化する方法は、まだ運用設計の途中です。
+- どのベンチマーク ガバナンス バンドルを EEG リーダーボードのデフォルトの再利用可能なカードにするかは、まだ調整中です。
 
 ---
 
-<h2>The shortest explanation</h2>
+<h2>最短の説明</h2>
 <p>
-Data division is the process of ``determining how far you can look before comparing the answers.'' A data leak is when that boundary is inadvertently crossed and information that cannot be used in production is mixed into learning and adjustment.
+データ分割とは「答えを比較する前にどこまで調べられるかを決める」作業であり、データ漏洩とは、その境界線を誤って越えてしまい、学習や調整に本番では使えない情報が混入してしまうことを指します。
 </p>
 
-<strong>2026-03 re-audit: split hygiene is necessary, not sufficient</strong>
+<strong>2026-03 再監査: スプリット衛生は必要ですが十分ではありません</strong>
 <p>
-The older version of this page was good at explaining <strong>subject / session / time split</strong>, but it still left two practical shortcuts too implicit. First, <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a>, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a>, and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> together show that <strong>identity and acquisition-distribution shortcuts</strong> can remain even when the coarse split sounds respectable. Second, the official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a>, <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a>, <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a>, and <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> show that <strong>benchmark governance</strong> itself can move what a score means. Therefore this page now treats split hygiene, acquisition-distribution audit, and benchmark provenance as one operational bundle rather than three unrelated side notes.
+このページの古いバージョンは、<strong> 件名 / セッション / 時間分割</strong> の説明に優れていましたが、依然として 2 つの実用的なショートカットが暗黙的に残されていました。まず、<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Netoら。 (2019)</a>、<a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik 他(2017)</a>、<a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu 他(2020)</a>、<a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di 他(2021)</a> を組み合わせると、粗い分割が立派に聞こえる場合でも、<strong> のアイデンティティと取得と配布のショートカット </strong> が維持できることがわかります。次に、<a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) の公式ホームページ </a>、<a href="https://eeg2025.github.io/rules/" target="_blank"> ルール </a>、<a href="https://eeg2025.github.io/submission/" target="_blank"> 提出ページ </a>、<a href="https://eeg2025.github.io/leaderboard/" target="_blank"> リーダーボード </a> は、<strong> ベンチマーク ガバナンス </strong> 自体がスコアの意味を変えることができることを示しています。したがって、このページでは、分割衛生、取得と流通の監査、およびベンチマークの来歴を、無関係な 3 つの補足事項ではなく、1 つの運用上のバンドルとして扱うようになりました。
 </p>
 
-<h2>Why partitioning matters so much</h2>
+<h2>パーティション分割がそれほど重要な理由</h2>
 <p>
-On school tests, if you practice the questions while looking at the answers, you will get a higher score. However, that score cannot be said to indicate the ability to solve truly new problems. The same goes for machine learning, if the information seen during learning bleeds into the test side, only the numbers will look good.
+学校のテストでは、答えを見ながら問題演習をすると点数が上がります。しかし、そのスコアは真に新しい問題を解決する能力を示しているとは言えません。機械学習も同様で、学習中に見た情報がテスト側に滲み出てしまうと、数字だけが良く見えてしまいます。
 </p>
 
-<h2>First, be aware of the unit of division</h2>
+<h2>まずは割り算の単位を意識する</h2>
 <table>
 <thead>
 <tr>
-<th>Unit of division</th>
-<th>What kind of scene is it?</th>
-<th>Notes</th>
+<th>分割単位</th>
+<th>どんなシーンですか？</th>
+<th>メモ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Subject unit</strong></td>
-<td>When you want to see if you can generalize to new people. </td>
-<td>It's easier than it looks when you have pieces of the same person in both train and test. </td>
+<td><strong>対象ユニット</strong></td>
+<td>初めての人に一般化できるかどうかを確認したいとき。 </td>
+<td>トレーニングとテストの両方に同じ人物のピースがある場合、見た目よりも簡単です。 </td>
 </tr>
 <tr>
-<td><strong>Per session</strong></td>
-<td>When you want to see if the same person will be stable on different days. </td>
-<td>If you divide only by recording on the same day, you will overlook differences in daily differences and electrode conditions. </td>
+<td><strong>セッションあたり</strong></td>
+<td>同じ人が別の日に安定するかどうかを確認したいとき。 </td>
+<td>同日の記録だけで分けると日差や電極状態の違いを見落としてしまいます。 </td>
 </tr>
 <tr>
-<td><strong>Time unit</strong></td>
-<td>When envisioning future predictions or continuous operation. </td>
-<td>If you enter windows with similar times on both sides, you may see almost the same fragment. </td>
+<td><strong>時間単位</strong></td>
+<td>将来予測や継続的な運用を想定する場合。 </td>
+<td> 両側で同じような時間のウィンドウに入ると、ほぼ同じフラグメントが表示されることがあります。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>4 starter data items, independent units are not the same</h2>
+<h2>4 スターター データ項目、独立したユニットは同じではありません</h2>
 
-<strong>The last two columns are the operational reasoning for this site</strong>
+<strong>最後の 2 つの列は、このサイトの運営上の理由です</strong>
 <p>
-<strong>Why leaks</strong> and <strong>Safe classification</strong> in the table below are operational rules drawn by this site based on the official explanation of each dataset and the hierarchical structure shown in primary documents.
+下表の<strong>なぜ漏洩するのか</strong>および<strong>安全分類</strong>は、各データセットの公式説明や一次資料に示されている階層構造を基に当サイトが作成した運用ルールです。
 </p>
 
 <table>
 <thead>
 <tr>
-<th>Dataset</th>
-<th>What should be prioritized as an independent unit</th>
-<th>Common misdivision</th>
-<th>Why does it leak</th>
-<th>How to divide on the safe side</th>
+<th>データセット</th>
+<th>独立したユニットとして何を優先すべきか</th>
+<th>よくある誤分割</th>
+<th>なぜ漏れるのか</th>
+<th>安全側で分割する方法</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG Motor Movement/Imagery</strong></td>
-<td>subject, run if necessary</td>
-<td>Random split of epoch / trial</td>
-<td>Signal characteristics and cue structures of the same subject and session span train / test. </td>
-<td>First of all, separate the subject unit and the run unit even if the evaluation is within the same subject. </td>
+<td><strong>EEG モーターの動き/イメージ</strong></td>
+<td>件名、必要に応じて実行</td>
+<td>エポック/トライアルのランダム分割</td>
+<td>同じ被験者とセッションスパンのトレーニング/テストの信号特性とキュー構造。 </td>
+<td>まず、同じ科目内での評価であっても、科目単位と実行単位を分離します。 </td>
 </tr>
 <tr>
 <td><strong>CHB-MIT</strong></td>
-<td>subject and case chronology</td>
-<td>Random division by file</td>
-<td><code>chb21</code> is the same subject as <code>chb01</code>, and the gap between files also has a context. </td>
-<td>Check for subject correspondence instead of case, and split while preserving sequential order and gap. </td>
+<td>主題と事件の年表</td>
+<td>ファイル別ランダム分割</td>
+<td><code>chb21</code> は <code>chb01</code> と同じ主題であり、ファイル間のギャップにもコンテキストがあります。 </td>
+<td>大文字と小文字の代わりに件名の対応をチェックし、順序とギャップを維持しながら分割します。 </td>
 </tr>
 <tr>
-<td><strong>Sleep-EDF</strong></td>
-<td>subject-night</td>
-<td>Random split of epoch</td>
-<td>Sequential hypnograms and subject-specific sleep structures from the same night span train / test. </td>
-<td>Keep each night and declare first whether it is generalization across subjects or within-subject. </td>
+<td><strong>スリープ-EDF</strong></td>
+<td>主題の夜</td>
+<td>エポックのランダム分割</td>
+<td>同じ夜のスパンのトレーニング/テストからの連続催眠計画と被験者固有の睡眠構造。 </td>
+<td>毎晩記録し、それが被験者間での一般化であるか、被験者内での一般化であるかを最初に宣言します。 </td>
 </tr>
 <tr>
-<td><strong>TUH EEG / TUSZ</strong></td>
-<td>patient / session</td>
-<td>Random division of segment / file, signal-only evaluation with report included</td>
-<td>This is because multiple sessions and de-identified reports of the same patient have information close to the label. </td>
-<td>Require per patient/session split and <strong>report usage flag</strong>. </td>
+<td><strong>TUH 脳波 / TUSZ</strong></td>
+<td>患者 / セッション</td>
+<td>セグメント/ファイルのランダム分割、信号のみの評価、レポート付き</td>
+<td>これは、同じ患者の複数のセッションと匿名化されたレポートに、ラベルに近い情報が含まれているためです。 </td>
+<td> 患者/セッションごとの分割が必要、および <strong> レポート使用フラグ </strong>。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>7 common leak patterns</h2>
+<h2>7 一般的なリークパターン</h2>
 <table>
 <thead>
 <tr>
-<th>Common accidents</th>
-<th>What's happening</th>
+<th>よくある事故</th>
+<th>何が起こっている</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Fragments of the same subject enter on both sides</strong></td>
-<td>The individual's unique habits are memorized, and the generalization performance to new people appears to be higher. </td>
+<td><strong>同じ主題の断片が両側に入っています</strong></td>
+<td>その人特有の習慣が記憶され、初対面の人への汎化性がより高くなるそうです。 </td>
 </tr>
 <tr>
-<td><strong>Mix adjacent time windows</strong></td>
-<td>Separating almost the same waveform slices into train/test, it underestimates the difficulty of predicting the future. </td>
+<td><strong>隣接する時間ウィンドウを混合</strong></td>
+<td>ほぼ同じ波形スライスをトレーニング/テストに分離することで、将来を予測することの難しさを過小評価します。 </td>
 </tr>
 <tr>
-<td><strong>Normalize and select features on all data</strong></td>
-<td>The statistics on the test side are used during training, and the information flows backwards. </td>
+<td><strong>すべてのデータの特徴を正規化して選択</strong></td>
+<td>テスト側の統計はトレーニング中に使用され、情報は逆方向に流れます。 </td>
 </tr>
 <tr>
-<td><strong>Repeat model selection with test</strong></td>
-<td>test essentially takes on the role of validation, and the final score is optimistic. </td>
+<td><strong>テストでモデル選択を繰り返す</strong></td>
+<td>test は基本的に検証の役割を担っており、最終的なスコアは楽観的です。 </td>
 </tr>
 <tr>
-<td><strong>Miss duplicate or derived samples</strong></td>
-<td>Data originally cut from the same record is included on both sides, resulting in a comparison that is not an independent sample. </td>
+<td><strong>重複サンプルまたは派生サンプルの欠落</strong></td>
+<td> 元は同じレコードから切り取られたデータが両側に含まれているため、比較は独立したサンプルではありません。 </td>
 </tr>
 <tr>
-<td><strong>Hide site / device / reference / layout shortcuts</strong></td>
-<td>The model learns acquisition-distribution structure such as amplifier, montage, reference system, or electrode layout instead of the target neural variable. </td>
+<td><strong>サイト/デバイス/リファレンス/レイアウトのショートカットを非表示</strong></td>
+<td>モデルは、ターゲットの神経変数の代わりに、アンプ、モンタージュ、参照システム、電極レイアウトなどの取得分配構造を学習します。 </td>
 </tr>
 <tr>
-<td><strong>Treat challenge operations as fixed when they changed</strong></td>
-<td>The benchmark name stays the same while randomization, hidden grouping, extra-data policy, inference restrictions, or organizer postmortems change what the ranking actually measures. </td>
+<td><strong>変更されたチャレンジ操作を修正済みとして扱う</strong></td>
+<td>ランダム化、非表示グループ化、追加データ ポリシー、推論制限、またはオーガナイザーの事後分析により、ランキングが実際に測定する内容が変更される間、ベンチマーク名は変わりません。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Split hygiene still leaves four shortcut families</h2>
+<h2>分割衛生でも 4 つのショートカット ファミリーが残る</h2>
 <table>
 <thead>
 <tr>
-<th>Shortcut family</th>
-<th>What can masquerade as progress</th>
-<th>What to publish instead</th>
+<th>ショートカットファミリー</th>
+<th>進歩を装えるもの</th>
+<th>代わりに何を公開するか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Subject / session fingerprint</strong></td>
-<td>A score can look like generalization while it mostly exploits stable subject-specific or session-specific structure. </td>
-<td>Disclose the independent hold-out unit, raw-window ancestry, and whether subject/session identifiers were fully disjoint. </td>
+<td><strong>件名/セッションフィンガープリント</strong></td>
+<td>A スコアは一般化のように見えることがありますが、主に安定した主題固有またはセッション固有の構造を活用しています。 </td>
+<td> 独立したホールドアウト ユニット、生ウィンドウの祖先、およびサブジェクト/セッション識別子が完全に素であるかどうかを明らかにします。 </td>
 </tr>
 <tr>
-<td><strong>Acquisition-distribution shortcut</strong></td>
-<td>A model can ride site, amplifier, cap, sampling rate, filter chain, reference system, or electrode-layout differences instead of the claimed neural variable. </td>
-<td>Publish site / device / reference / layout disjointness, the harmonization log, and a metadata-only or setup-only baseline whenever possible. </td>
+<td><strong>取得-配布ショートカット</strong></td>
+<td>A モデルは、要求された神経変数の代わりに、サイト、アンプ、キャップ、サンプリング レート、フィルター チェーン、参照システム、または電極レイアウトの違いに乗ることができます。 </td>
+<td>可能な限り、サイト/デバイス/参照/レイアウトの不整合、調和ログ、およびメタデータのみまたはセットアップのみのベースラインを公開します。 </td>
 </tr>
 <tr>
-<td><strong>Report / metadata shortcut</strong></td>
-<td>A signal-only claim can inherit report-derived labels, triage context, or structured metadata that already sits close to the answer. </td>
-<td>State whether report text or derived metadata were used, and separate signal-only from multimodal / metadata-assisted scoreboards. </td>
+<td><strong>レポート/メタデータのショートカット</strong></td>
+<td>A シグナルのみのクレームは、レポートから派生したラベル、トリアージ コンテキスト、またはすでに答えに近い構造化メタデータを継承できます。 </td>
+<td>レポートテキストまたは派生メタデータが使用されたかどうかを示し、マルチモーダル/メタデータ支援スコアボードからシグナルのみを分離します。 </td>
 </tr>
 <tr>
-<td><strong>Benchmark-governance shortcut</strong></td>
-<td>A leaderboard can look stable even though hidden grouping, randomization, extra-data policy, checkpoint policy, or inference-stage rules changed what the benchmark measured. </td>
-<td>Publish benchmark version, split / randomization rule, hidden grouping, extra-data and pretrained-checkpoint policy, inference-stage restrictions, and later postmortems together with the score. </td>
+<td><strong>ベンチマークとガバナンスのショートカット</strong></td>
+<td>A リーダーボードは、非表示のグループ化、ランダム化、追加データ ポリシー、チェックポイント ポリシー、または推論段階のルールによってベンチマークの測定結果が変更された場合でも、安定しているように見えます。 </td>
+<td>ベンチマーク バージョン、分割/ランダム化ルール、非表示グループ化、追加データおよび事前トレーニング済みチェックポイント ポリシー、推論段階の制限、およびその後の事後検証をスコアとともに公開します。 </td>
 </tr>
 </tbody>
 </table>
 
-<strong>Benchmark governance is part of leakage control, not administrative detail</strong>
+<strong>ベンチマークのガバナンスは漏洩管理の一部であり、管理の詳細ではない</strong>
 <p>
-The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> explicitly says the original preprint became outdated after execution-phase changes and that the website plus starter kit should be treated as current. The official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> require disclosure of additional pretraining datasets, pretrained models and fine-tuning method, code submission during the inference stage, and a <strong>single-GPU 20 GB</strong> inference budget. The official <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> further fixes the event as an <strong>inference-only code competition</strong>. The final <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> then disclosed that Challenge 2 samples had not been randomized, allowing contiguous-trial same-subject structure to affect the ranking and forcing separate awards. On this site, that means benchmark governance now belongs on the same checklist as split hygiene rather than in a footnote after the score.
+<a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) の公式ホームページ </a> では、実行フェーズの変更後に元のプレプリントが古くなったため、Web サイトとスターター キットを最新のものとして扱う必要があると明示的に述べています。公式の <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> では、追加の事前トレーニング データセット、事前トレーニングされたモデルと微調整方法、推論段階でのコードの提出、および <strong> シングル GPU 20 GB</strong> の推論予算の開示が必要です。公式 <a href="https://eeg2025.github.io/submission/" target="_blank"> 提出ページ </a> では、このイベントが <strong> 推論のみのコード コンペティション </strong> としてさらに修正されています。その後、最終的な <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> は、チャレンジ 2 のサンプルがランダム化されていないことを明らかにし、連続試験の同じ被験者の構造がランキングに影響を与え、別々の賞を強制することを可能にしました。このサイトでは、ベンチマーク ガバナンスがスコアの後の脚注ではなく、分割衛生と同じチェックリストに含まれることを意味します。
 </p>
 
-<strong>Metric semantics are also part of leak-resistant reporting</strong>
+<strong>メトリックセマンティクスも漏洩防止レポートの一部</strong>
 <p>
-Even after split hygiene and benchmark provenance are disclosed, the reported number can still mislead if the task is rare-event or class-imbalanced. <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015)</a> showed that precision-recall views are often more informative than ROC summaries under strong imbalance. In seizure tasks, <a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021)</a> and <a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)</a> show that event sensitivity, overlap logic, and false alarms per hour or day matter together, while <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)</a> shows that false-alarm control is itself a design target in seizure prediction. In sleep staging, <a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)</a> and <a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021)</a> show that pooled performance can still hide minority-stage failure. Therefore, this site now asks for a <strong>task-matched metric bundle</strong> in addition to split hygiene.
+スプリットの衛生状態とベンチマークの来歴が明らかになった後でも、タスクがまれなイベントであるか、クラスの不均衡である場合、報告された数値は依然として誤解を招く可能性があります。 <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">斉藤&amp; Rehmsmeier (2015)</a> は、不均衡が強い場合には、適合率と再現率のビューが ROC 概要よりも有益であることが多いことを示しました。発作課題では、<a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021)</a> および <a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)</a> は、イベントの感度、オーバーラップ ロジック、および時間または日ごとの誤警報が同時に重要であることを示しています。一方、<a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal らは、 (2023)</a> は、誤警報制御自体が発作予測における設計目標であることを示しています。睡眠ステージングでは、<a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)</a>と<a href="https://doi.org/10.7554/eLife.70092" target="_blank">ヴァラット＆アンプ。 Walker (2021)</a> は、プールされたパフォーマンスがまだ少数段階の失敗を隠すことができることを示しています。したがって、このサイトでは、スプリット ハイジーンに加えて、<strong> タスクに一致するメトリック バンドル </strong> を要求するようになりました。
 </p>
 
-<h2>Leak warning specific to the dataset added this time</h2>
+<h2>今回追加されたデータセット固有のリーク警告</h2>
 <table>
 <thead>
 <tr>
-<th>dataset</th>
-<th>Notes to be fixed this time</th>
+<th>データセット</th>
+<th>今回修正する注意点</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG Motor Movement/Imagery</strong></td>
-<td>Since it is a cue-locked motor task, even if the split is made stricter, the visual cue/eyeball/myoelectric contributions will still be audited separately. </td>
+<td><strong>EEG 運動・画像</strong></td>
+<td> これはキューロック運動タスクであるため、分割がより厳密になったとしても、視覚キュー/眼球/筋電の寄与は依然として個別に監査されます。 </td>
 </tr>
 <tr>
 <td><strong>CHB-MIT</strong></td>
-<td>Do not confuse subject numbers with case numbers. Don't shuffle files and pin gap and chronology to runbook. </td>
+<td>件名番号と事件番号を混同しないでください。ファイルをシャッフルしたり、ギャップや年表を Runbook に固定したりしないでください。 </td>
 </tr>
 <tr>
-<td><strong>Sleep-EDF</strong></td>
-<td>Do not silently mix R&K hypnogram as equivalent to AASM. No cross-dataset comparison without writing label mapping. </td>
+<td><strong>スリープ-EDF</strong></td>
+<td> R&K ヒプノグラムを AASM と同等のものとして黙って混合しないでください。ラベル マッピングを作成せずにデータセット間の比較を行うことはできません。 </td>
 </tr>
 <tr>
-<td><strong>TUH EEG / TUSZ</strong></td>
-<td>Do not mix report text, triage and session metadata derived from report keyword into input of signal-only benchmark. </td>
+<td><strong>TUH 脳波 / TUSZ</strong></td>
+<td>レポート テキスト、トリアージ、およびレポート キーワードから派生したセッション メタデータをシグナルのみのベンチマークの入力に混合しないでください。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>At least I would like to report this</h2>
+<h2>せめてこれだけは報告したい</h2>
 
-<h4>Report Items</h4>
+<h4>レポートアイテム</h4>
 <ul>
-<li><strong>Evaluation family:</strong>Whether the result is within-session, cross-session, cross-subject, or temporal / longitudinal. </li>
-<li><strong>Split rule:</strong>How many items were placed in train / validation / calibration / test, and what was the independent hold-out unit? </li>
-<li><strong>Window ancestry:</strong>Which subject / case / night / session / file / record generated each split, and were near-adjacent windows kept apart? </li>
-<li><strong>Metric bundle:</strong>Was the task read through balanced / macro metrics, event sensitivity plus false alarms, or per-stage agreement rather than a single headline number? </li>
-<li><strong>Report usage flag:</strong>Was the claim signal-only, or were report text / metadata / multimodal fields also used? </li>
-<li><strong>Acquisition-distribution audit:</strong>Were site, device, reference system, channel map, electrode layout, and protocol distribution separated, harmonized, or left mixed? </li>
-<li><strong>Preprocessing boundaries:</strong>Were normalization, feature selection, and threshold tuning fit using only the allowed split? </li>
-<li><strong>Benchmark provenance:</strong>If this is a challenge or leaderboard result, what were the benchmark version, randomization rule, hidden grouping, extra-data / pretrained-checkpoint policy, inference-stage restrictions, and later postmortems? </li>
-<li><strong>Baseline:</strong>What is the improvement compared with a simpler model or a metadata-only / setup-only baseline? </li>
-<li><strong>Failure example + stopping claim:</strong>Under what conditions did it fail, what was excluded, and what stronger claim is explicitly not being made? </li>
+<li><strong>評価ファミリー:</strong>結果がセッション内、セッション間、被験者間、または時間的/長期的かどうか。 </li>
+<li><strong>分割ルール:</strong>トレーニング/検証/校正/テストに配置されたアイテムの数と、独立したホールドアウト ユニットは何ですか? </li>
+<li><strong>ウィンドウの祖先:</strong>各分割を生成した主題、事件、夜、セッション、ファイル、レコードはどれですか?また、ほぼ隣接するウィンドウは離されていましたか? </li>
+<li><strong>メトリクス バンドル:</strong>タスクは、単一のヘッドライン番号ではなく、バランス/マクロ メトリクス、イベント感度と誤報、またはステージごとの合意に基づいて読み取られましたか? </li>
+<li><strong>レポート使用フラグ:</strong>クレームシグナルのみでしたか、それともレポートテキスト/メタデータ/マルチモーダルフィールドも使用されましたか? </li>
+<li><strong>取得配布監査:</strong>サイト、デバイス、参照システム、チャネルマップ、電極レイアウト、およびプロトコル配布は分離されているか、調和されているか、または混合されたままでしたか? </li>
+<li><strong>前処理境界:</strong>正規化、特徴選択、およびしきい値調整は、許可された分割のみを使用して適合しましたか? </li>
+<li><strong>ベンチマークの来歴:</strong>これがチャレンジまたはリーダーボードの結果である場合、ベンチマークのバージョン、ランダム化ルール、非表示のグループ化、追加データ/事前トレーニング済みチェックポイント ポリシー、推論段階の制限、およびその後の事後検証は何でしたか? </li>
+<li><strong>ベースライン:</strong>より単純なモデルまたはメタデータのみ/セットアップのみのベースラインと比較した改善点は何ですか? </li>
+<li><strong>失敗例 + 主張の停止:</strong>どのような状況で失敗しましたか、何が除外されましたか、そして明示的に行われていないより強力な主張はどれですか? </li>
 </ul>
 
-<h2>References</h2>
+<h2>参考資料</h2>
 <ul>
-<li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
-<li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
-<li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
-<li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016), The Temple University Hospital EEG Data Corpus</a></li>
-<li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018), The Temple University Hospital Seizure Detection Corpus</a></li>
-<li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009), Sleep classification according to AASM and Rechtschaffen &amp; Kales</a></li>
-<li><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019), Detecting the impact of subject characteristics on machine learning-based diagnostic applications</a></li>
-<li><a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017), Systems, subjects, sessions: to what extent do these factors influence EEG data?</a></li>
-<li><a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020), Cross-dataset variability problem in EEG decoding with deep learning</a></li>
-<li><a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021), The Time-Robustness Analysis of Individual Identification Based on Resting-State EEG</a></li>
-<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015), The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</a></li>
-<li><a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021), Evaluation of artificial intelligence systems for assisting neurologists with fast and accurate annotations of scalp electroencephalography data</a></li>
-<li><a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021), Seizure Detection: Interreader Agreement and Detection Algorithm Assessments Using a Large Dataset</a></li>
-<li><a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023), Utilizing risk-controlling prediction calibration to reduce false alarm rates in epileptic seizure prediction</a></li>
-<li><a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017), Large-Scale Automated Sleep Staging</a></li>
-<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021), An open-source, high-performance tool for automated sleep staging</a></li>
-<li><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) official homepage</a></li>
-<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025) official rules</a></li>
-<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG Challenge (2025) official submission page</a></li>
-<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG Challenge (2025) official leaderboard / organizer postmortem</a></li>
+<li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG 運動動作/画像データセット</a></li>
+<li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT 頭皮脳波データベース</a></li>
+<li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF データベースの拡張</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid＆amp; Picone (2016)、テンプル大学病院 EEG データ コーパス</a></li>
+<li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">シャーら(2018)、テンプル大学病院発作検出コーパス</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009)、AASM および Rechtschaffen &amp; に基づく睡眠分類。カレス</a></li>
+<li><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)、機械学習ベースの診断アプリケーションに対する被験者の特性の影響の検出</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)、システム、主題、セッション: これらの要因はどの程度 EEG データに影響しますか?</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xuら。 (2020)、深層学習を使用した EEG デコードにおけるデータセット間変動問題</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di他(2021)、安静状態 EE</a></li> に基づく個人識別の時間ロバスト性分析
+<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">斉藤＆amp; Rehmsmeier (2015)、不均衡なデータセットでバイナリ分類子を評価する場合、適合率-再現率プロットは ROC プロットよりも有益です</a></li>
+<li><a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">ロイら(2021)、頭皮脳波データの迅速かつ正確な注釈により神経内科医を支援するための人工知能システムの評価</a></li>
+<li><a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)、発作検出: 大規模なデータセットを使用したリーダー間の合意と検出アルゴリズムの評価</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)、リスク管理予測キャリブレーションを利用しててんかん発作予測における誤警報率を削減</a></li>
+<li><a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">サンら。 (2017)、大規模な自動睡眠ステージング</a></li>
+<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">ヴァラット＆アンプ; Walker (2021)、自動睡眠ステージングのためのオープンソースの高性能ツール</a></li>
+<li><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) 公式ホームページ</a></li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG チャレンジ (2025) 公式ルール</a></li>
+<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG チャレンジ (2025) 公式提出ページ</a></li>
+<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG チャレンジ (2025) 公式リーダーボード / 主催者事後分析</a></li>
 </ul>
 
-<h2>Safety measures if you get lost in the first book</h2>
+<h2>1冊目で迷った時の安全対策</h2>
 <p>
-When in doubt, it is safe to follow these three points: <strong>Separate train/test for each subject</strong> <strong>Do not touch test until the end</strong><strong>For normalization and feature selection, fit only with train</strong>. Even if it seems too harsh, reliable accuracy is more valuable than fancy numbers.
+迷った場合は、次の 3 つのポイントに従うのが安全です。 <strong> 被験者ごとにトレーニングとテストを分離する </strong> <strong> 最後までテストに触れない </strong> <strong> 正規化と特徴の選択については、train のみでフィッティングする </strong>たとえ厳しすぎるように見えても、派手な数字よりも信頼できる精度の方が価値があります。
 </p>
 
-<h2>Where to go back next</h2>
+<h2>次に戻る場所</h2>
 <p>
-Go back to <a href="https://mind-upload.com/datasets.html">Data & Bench</a> if you want to review the actual starter data, <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a> if you want to go back to creating minimal loops, or go back to <a href="https://mind-upload.com/verification.html">Verification Foundation</a> if you want to see why this is part of the verification foundation.
+実際のスターター データを確認したい場合は <a href="https://mind-upload.com/datasets.html">Data & Bench</a> に戻り、最小限のループの作成に戻りたい場合は <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a> に戻り、これが検証基盤の一部である理由を確認したい場合は <a href="https://mind-upload.com/verification.html">Verification Foundation</a> に戻ってください。
 </p>

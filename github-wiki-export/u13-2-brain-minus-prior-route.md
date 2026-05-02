@@ -1,169 +1,169 @@
-# Wiki: U13-2 brain-minus-prior route packet
+# Wiki: U13-2 ブレインマイナス事前ルートパケット
 
-> A row-specific packet for the first active public RQ
+> 最初のアクティブなパブリック RQ の行固有のパケット
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-04 / Role: U13-2 route packet
+- Updated: 2026-04-04 / Role: U13-2 ルート パケット
 
-## Role Of This Page
-This page fixes the current public route for U13-2 at the level of one question, one primary dataset anchor, one bounded first artifact, and one funding bridge.
+## このページの役割
+このページでは、1 つの質問、1 つのプライマリ データセット アンカー、1 つの境界付き最初のアーティファクト、および 1 つのファンディング ブリッジのレベルで、U13-2 の現在のパブリック ルートを修正します。
 
-## Accuracy Notes
-This page does not claim preserved mechanism, preserved identity, or successful mind preservation. It only records what the present EEG route can honestly close first.
+## 正確性に関する注記
+このページは、保存されたメカニズム、保存されたアイデンティティ、または成功した心の保存を主張するものではありません。現在の EEG ルートが最初に正直に閉じることができるものだけを記録します。
 
-## Back To Public Pages
-- [Issue page](https://mind-upload.com/issue.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
+## 公開ページへ戻る
+- [発行ページ](https://mind-upload.com/issue.html)
+- [データとベンチ](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
-- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact six-row public route.
-- [Wiki: Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - The wider six-row working note.
-- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
+## 関連 Wiki ページ
+- [Wiki: 現在公開されている 6 つのルート概要](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - コンパクトな6列パブリックルート。
+- [Wiki: ディープ フォーカス ノート](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - 幅広の6列ワーキングノート。
+- [Wiki: 助成金とデータセットのプレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - 固定資金とアンカーマップ。
 
 ---
 
-# U13-2 brain-minus-prior route packet
+# U13-2 ブレインマイナス事前ルートパケット
 
-This page does not change the current public six-question batch. It makes only the first active row more explicit, so readers can see why `U13-2` still comes first, why `D10 3M-CPSEED` stays primary, and what the next public-safe artifact can honestly close.
+このページでは、現在の公開されている 6 つの質問のバッチは変更されません。これにより、最初のアクティブな行のみがより明確になるため、読者はなぜ `U13-2` が依然として最初に来るのか、なぜ `D10 3M-CPSEED` がプライマリのままなのか、そして次のパブリックセーフなアーティファクトが実際に何を閉じることができるのかを理解できます。
 
-## What still stays fixed after the 17:07 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 17:07 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 17:07 JST` after `mind-upload@dc8ec5dc5e62`, `EEG-DATA@f115f11c2da4`, and `auto-research-funds@8d0f5128fcdc` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` splits barrier-side human-proxy roles outside the current six without widening the route, `EEG-DATA` still reports `30,930` merged-unique rows, `28,893` high-confidence rows, and `24,909` immediately usable rows after the newest `EEGIS imagined speech` metadata deepening, and `auto-research-funds` adds the `Uehiro ethics foundation` legacy sync while now reporting `8,616` aid IDs, `4,319` rows, and `3,971` official-source rows without changing the practical shortlist.
-- None of those additions replaces the present speech ladder. The newer `EEGIS` deepening is useful because it makes the speech-side support-space more explicit, but it still does not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 07:12:56 GMT`; the checked front-door pages and this row packet still surfaced `2026-04-04 14:10 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `JSM=0`, `Doumei=0`, `Kenkyu no Susume=0`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@dc8ec5dc5e62`、`EEG-DATA@f115f11c2da4`、および `auto-research-funds@8d0f5128fcdc` の後の `2026-04-04 17:07 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、ルートを広げることなく、バリア側の人間プロキシの役割を現在の 6 つ以外に分割します。`EEG-DATA` は、最新の `EEGIS imagined speech` メタデータの深化後も、マージされた固有の行、`28,893` の高信頼行、`24,909` のすぐに使用できる行を引き続きレポートします。`auto-research-funds` は、`Uehiro ethics foundation` レガシー同期を追加し、`8,616` 支援 ID、`4,319` 行、および `3,971` 公式ソース行をレポートします。実際の候補リストを変更することなく。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。新しい `EEGIS` の深化は、音声側のサポート空間をより明確にするため便利ですが、それでも、`D10` を `U13-2` の主要な状態に保つ、明白な / 沈黙を意図した / 想像上の音声の三角形を再現しません。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Sat, 04 Apr 2026 07:12:56 GMT` が返されました。チェックされたフロントドア ページとこの行パケットには、このソース同期の前に `2026-04-04 14:10 JST` の文言がまだ表面化していました。新しい読み取り専用の Todoist 監査では、既存のファンディング タスクのカバレッジが十分であることが示されたため (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`JSM=0`、`Doumei=0`、`Kenkyu no Susume=0`)、このページでは同じ行固有のルートを実際の最新のプル ヘッドに転送するだけです。
 
-## What still stays fixed after the 14:10 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 14:10 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 14:10 JST` after `mind-upload@cafeab4bc2a5`, `EEG-DATA@e0695bcac83d`, and `auto-research-funds@a4852d89376c` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` tightens glossary excitability and ionic terms on top of the earlier EEG foundation-model source-status split without widening the route, `EEG-DATA` still reports `30,930` merged-unique rows, `28,893` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the newest metadata deep dives, and `auto-research-funds` adds `JELA Diakonia` scholarship cards without changing the practical shortlist.
-- None of those additions replaces the present speech ladder. The newest metadata and adjacent-lane carry-forwards still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT`; the checked front-door pages and this row packet still surfaced `2026-04-04 12:02 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Doumei=0`, `Kenkyu no Susume=0`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@cafeab4bc2a5`、`EEG-DATA@e0695bcac83d`、および `auto-research-funds@a4852d89376c` の後の `2026-04-04 14:10 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、ルートを広げることなく、以前の EEG 基礎モデルのソースとステータスの分割に加えて、用語集の興奮性とイオン用語を強化します。`EEG-DATA` は、最新のメタデータの詳細を調査した後も、`30,930` マージされた一意の行、`28,893` 高信頼性の行、`24,909` 即時行、および `24,539` 高信頼性の即時行を報告し、`auto-research-funds` は、実質的な最終候補リストを変更せずに、`JELA Diakonia` 奨学金カードを追加します。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。最新のメタデータと隣接レーンのキャリーフォワードは、`D10` を `U13-2` のプライマリに保つ明白な / サイレント意図された / 想像上のスピーチ トライアングルをまだ再現していません。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT` が返されました。チェックされたフロントドア ページとこの行パケットには、このソース同期の前に `2026-04-04 12:02 JST` の文言がまだ表面化していました。新しい読み取り専用の Todoist 監査では、既存のファンディング タスクのカバレッジが十分であることが示されたため (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Doumei=0`、`Kenkyu no Susume=0`)、このページでは同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 12:02 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 12:02 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 12:02 JST` after `mind-upload@f84f6e53753b`, `EEG-DATA@017ae806c4dd`, and `auto-research-funds@d4024a5b8a1a` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` synchronizes the EEG recording-frame contract across public pages without widening the route, `EEG-DATA` still reports `30,929` merged-unique rows, `28,892` high-confidence rows, `24,908` immediate rows, and `24,538` high-confidence immediate rows after the movement-capacity deep dive, and `auto-research-funds` still just carries the earlier `11:04 JST` funding addendum without changing the practical shortlist.
-- None of those additions replaces the present speech ladder. The movement-capacity family thickens adjacent `U7/U8` support-space, but it still does not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 02:19:09 GMT`; the checked front-door pages and playbook already surfaced `2026-04-04 11:04 JST` wording while this row packet still surfaced `2026-04-04 09:05 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Doumei=0`, `Kenkyu no Susume=0`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@f84f6e53753b`、`EEG-DATA@017ae806c4dd`、および `auto-research-funds@d4024a5b8a1a` の後の `2026-04-04 12:02 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、ルートを広げることなく公開ページ間で EEG 記録フレーム コントラクトを同期し、`EEG-DATA` は、移動容量の詳細な調査後も、`30,929` マージされた固有行、`28,892` 高信頼行、`24,908` 即時行、および `24,538` 高信頼即時行を報告し、`auto-research-funds` は、実質的な最終候補リストを変更せずに、以前の `11:04 JST` 資金調達の追加をそのまま引き継ぎます。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。移動容量ファミリーは、隣接する `U7/U8` サポート スペースを厚くしますが、それでも、`D10` を `U13-2` にとって主要な状態に保つ、明白な / 沈黙を意図した / 想像上のスピーチの三角形を再現しません。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Sat, 04 Apr 2026 02:19:09 GMT` が返されました。チェックされたフロントドア ページとプレイブックにはすでに `2026-04-04 11:04 JST` の文言が表示されていますが、この行パケットにはこのソース同期の前にまだ `2026-04-04 09:05 JST` の文言が表示されています。新しい読み取り専用の Todoist 監査では、既存のファンディング タスクのカバレッジが十分であることが示されたため (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Doumei=0`、`Kenkyu no Susume=0`)、このページでは同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 09:05 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 09:05 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 09:05 JST` after `mind-upload@e571567f017d`, `EEG-DATA@fbbb0d8c01e0`, and `auto-research-funds@d7f6fb9bc158` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `08:07 JST` route-hold sync on top of a recent pretraining-overlap audit, `EEG-DATA` still reports `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the `OpenNeuro ds007020` deep dive, and `auto-research-funds` adds deeply reviewed April 4 scholarship updates without changing the practical shortlist.
-- None of those additions replaces the present speech ladder. `OpenNeuro ds007020` remains a limited rest-side support note, and `HeartBEAM` plus figshare `EEG at rest and with TMS` still stay backup families, so they still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT`; the checked front-door pages already surfaced `2026-04-04 08:07 JST` wording while this row packet still surfaced `2026-04-04 01:04 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@e571567f017d`、`EEG-DATA@fbbb0d8c01e0`、および `auto-research-funds@d7f6fb9bc158` の後の `2026-04-04 09:05 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、最近のトレーニング前オーバーラップ監査に加えて、以前の `08:07 JST` ルートホールド同期を保持するだけです。`EEG-DATA` は、`OpenNeuro ds007020` の詳細な調査後に、`30,929` マージされた一意の行、`28,892` 高信頼行、`24,909` 即時行、および `24,539` 高信頼即時行を引き続き報告し、`auto-research-funds` は、実質的な候補者リストを変更することなく、深く検討された 4 月 4 日の奨学金の更新を追加します。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。 `OpenNeuro ds007020` は限定的なレストサイド サポート ノートのままであり、`HeartBEAM` と figshare `EEG at rest and with TMS` は依然としてバックアップ ファミリのままであるため、`D10` を `U13-2` のプライマリに保つ明白な / サイレント意図された / 想像上のスピーチ トライアングルはまだ再現されていません。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT` が返されました。チェックされたフロントドア ページにはすでに `2026-04-04 08:07 JST` の文言が表示されていますが、この行パケットにはこのソース同期の前にまだ `2026-04-04 01:04 JST` の文言が表示されています。新しい読み取り専用の Todoist 監査では、既存のファンディング タスクのカバレッジがまだ十分であることが示されているため (`items=206`、`projects=2`)、このページでは同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 01:04 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now carries the earlier `00:06 JST` route reread plus field-level artifact-stack disclosure tightening, `EEG-DATA` still reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows after deepening `Numbers` and `PRIOS`, and `auto-research-funds` adds current coverage for `同盟育成会` and `研究のすゝめ奨学金` without changing the practical shortlist.
-- The practical effect for this row stays narrow. The newer support-space additions still do not offer a cleaner public-open replacement for the current imagined-speech control floor, so `D10` remains first and the adjacent speech-side backups remain only backups.
-- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Fri, 03 Apr 2026 15:13:06 GMT`, and the checked bodies still surfaced `2026-04-04 00:06 JST` wording. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `ENEOS=1`, `同盟会=0`, `研究のすゝめ=0`), so this page only carries the same row-specific route forward onto the latest pulled heads.
+- `mind-upload@9b6a8b971ba0`、`EEG-DATA@56d765da60b`、および `auto-research-funds@3c8569e28` の後の `2026-04-04 01:04 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、以前の `00:06 JST` ルートの再読み取りとフィールド レベルのアーティファクト スタック開示の厳格化を実行し、`EEG-DATA` は、`Numbers` および `PRIOS` を深化した後も、`30,921` マージされた一意の行、`28,884` 高信頼行、`24,900` 即時行、および `24,530` 高信頼即時行を引き続き報告し、`auto-research-funds` は、実際的な内容を変更せずに、`同盟育成会` および `研究のすゝめ奨学金` の現在のカバレッジを追加します。候補者リスト。
+- この行に対する実際的な影響は狭いままです。新しいサポートスペースの追加は、現在の想像上の音声制御フロアに代わるよりクリーンな一般公開の代替品をまだ提供していないため、`D10` が最初のままで、隣接する音声側のバックアップは単なるバックアップのままです。
+- このソース同期の前のブラウザレベルのライブ チェックでは、`Last-Modified: Fri, 03 Apr 2026 15:13:06 GMT` を持つ現在のパブリック エントリ ページに対して依然として `HTTP/2 200` が返され、チェックされたボディには依然として `2026-04-04 00:06 JST` の文言が表示されていました。新しい読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`ENEOS=1`、`同盟会=0`、`研究のすゝめ=0`) が依然として十分であることが示されたため、このページでは、同じ行固有のルートを最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 00:06 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 00:06 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 00:06 JST` after `mind-upload@84d84fb5a82d`, `EEG-DATA@b468ecc5f8c0`, and `auto-research-funds@eccee095a939` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `23:06 JST` route reread addenda, `EEG-DATA` now reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows after adding a fast-mapping semantic-integration EEG resource, and `auto-research-funds` adds `Iizuka current card and Korean legacy sync` without changing the practical shortlist.
-- None of those additions replaces the present speech ladder. The newest public-open or nearby support candidates still widen adjacent support space, but they still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages and row packets; the checked bodies still surfaced `22:04 JST` on `brief / bridge / U13-2` and `22:04/22:05 JST` on `issue` rather than a new row-specific claim. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `ENEOS=1`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@84d84fb5a82d`、`EEG-DATA@b468ecc5f8c0`、および `auto-research-funds@eccee095a939` の後の `2026-04-04 00:06 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は以前の `23:06 JST` ルート再読み取り追加機能を保持するだけになり、`EEG-DATA` は高速マッピング セマンティック統合 EEG リソースを追加した後に `30,921` マージされた一意行、`28,884` 高信頼性行、`24,900` 即時行、および `24,530` 高信頼性即時行を報告するようになり、`auto-research-funds` は実際の候補リストを変更せずに `Iizuka current card and Korean legacy sync` を追加します。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。最新の公開または近隣の支持候補者は、依然として隣接する支持スペースを広げていますが、それでも、`D10`を`U13-2`の主力に保つ明白な/サイレント意図された/想像上のスピーチトライアングルを再現していません。
+- このソース同期前のブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページと行パケットに対して `HTTP/2 200` が返されました。チェックされたボディは、新しい行固有のクレームではなく、`brief / bridge / U13-2` では `22:04 JST`、`issue` では `22:04/22:05 JST` を依然として表面化しました。新しい読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`ENEOS=1`) が依然として十分であることが示されたため、このページでは、同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 23:06 JST actual-pull reread on April 3, 2026
+## 2026 年 4 月 3 日の 23:06 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-03 23:06 JST` after `mind-upload@ec7a7dd713e9`, `EEG-DATA@46f6b56c693c`, and `auto-research-funds@b3d3c531729a` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `22:04 JST` route-hold sync, `EEG-DATA` now reports `30,920` merged-unique rows, `28,883` high-confidence rows, `24,899` immediate rows, and `24,529` high-confidence immediate rows after adding `motion sickness` and `swallowing EEG` datasets, and `auto-research-funds` deepens `KIRII / Pigeon / Nakato / Takashima` scholarship coverage plus a `22:04 JST` funding addendum without changing the practical shortlist.
-- None of those additions replaces the present speech ladder. The newest public-open or nearby support candidates still widen adjacent support space, but they still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages and row packets with `Last-Modified: Fri, 03 Apr 2026 13:18:48 GMT`; the front-door pages and `U13-2` itself already surfaced `22:04 JST` while the other row packets still surfaced the earlier `2026-04-02 / 23:08 JST` hold note. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `ENEOS=1`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@ec7a7dd713e9`、`EEG-DATA@46f6b56c693c`、および `auto-research-funds@b3d3c531729a` の後の `2026-04-03 23:06 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は以前の `22:04 JST` ルートホールド同期のみを保持し、`EEG-DATA` は `motion sickness` および `swallowing EEG` データセットの追加後に、`30,920` マージされた一意の行、`28,883` 高信頼行、`24,899` 即時行、および `24,529` 高信頼即時行を報告するようになり、`auto-research-funds` は、実質的な最終候補リストを変更することなく、`KIRII / Pigeon / Nakato / Takashima` 奨学金の適用範囲と `22:04 JST` 資金の追加を強化しました。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。最新の公開または近隣の支持候補者は、依然として隣接する支持スペースを広げていますが、それでも、`D10`を`U13-2`の主力に保つ明白な/サイレント意図された/想像上のスピーチトライアングルを再現していません。
+- このソース同期前のブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `HTTP/2 200` が返され、行パケットには `Last-Modified: Fri, 03 Apr 2026 13:18:48 GMT` が返されました。フロントドアのページと `U13-2` 自体はすでに `22:04 JST` を表していますが、他の行パケットはまだ初期の `2026-04-02 / 23:08 JST` ホールドノートを表しています。新しい読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`ENEOS=1`) が依然として十分であることが示されたため、このページでは、同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 22:04 JST actual-pull reread on April 3, 2026
+## 2026 年 4 月 3 日の 22:04 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-03 22:04 JST` after `mind-upload@1ab35b64796f3936e525befb5d9428d789a16263`, `EEG-DATA@be3d03d1c286dcd37fb056317a693e47c39f7f3a`, and `auto-research-funds@845e6849a6c36e6e83394e32cf8dc4b5fe6fdc07` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled delta is now concentrated in `EEG-DATA`: `summary.json` reports `30,918` merged-unique rows, `28,881` high-confidence rows, `24,898` immediate rows, and `24,528` high-confidence immediate rows after the latest exhaustive refresh, while `mind-upload` and `auto-research-funds` now just carry their earlier `21:05 JST` addenda without changing the practical shortlist.
-- None of those additions replaces the present speech ladder. The newest public-open or nearby support candidates still widen adjacent support space, but they still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Fri, 03 Apr 2026 12:24:26 GMT`; the checked bodies already surfaced `21:05 JST` on `issue / brief / bridge` while `U13-2` itself still surfaced `21:05 JST` and `11:07 JST`. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@1ab35b64796f3936e525befb5d9428d789a16263`、`EEG-DATA@be3d03d1c286dcd37fb056317a693e47c39f7f3a`、および `auto-research-funds@845e6849a6c36e6e83394e32cf8dc4b5fe6fdc07` の後の `2026-04-03 22:04 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- 最新のプルされたデルタは現在、`EEG-DATA` に集中しています。`summary.json` は、最新の完全リフレッシュ後に、マージされた固有の行、`28,881` の高信頼行、`24,898` の即時行、および `24,528` の高信頼の即時行を報告します。一方、`mind-upload` と `auto-research-funds` は、実質的な候補リストを変更せずに、以前の `21:05 JST` の追加をそのまま引き継ぎます。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。最新の公開または近隣の支持候補者は、依然として隣接する支持スペースを広げていますが、それでも、`D10`を`U13-2`の主力に保つ明白な/サイレント意図された/想像上のスピーチトライアングルを再現していません。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`Last-Modified: Fri, 03 Apr 2026 12:24:26 GMT` を持つ現在のパブリック エントリ ページに対して `HTTP/2 200` が返されました。チェックされたボディはすでに `21:05 JST` の `issue / brief / bridge` に浮上していますが、`U13-2` 自体は依然として `21:05 JST` および `11:07 JST` に浮上しています。新しい読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため、このページでは、同じ行固有のルートを実際の最新のプル ヘッドに転送するだけです。
 
-## What still stays fixed after the 21:05 JST actual-pull reread on April 3, 2026
+## 2026 年 4 月 3 日の 21:05 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-03 21:05 JST` after `mind-upload@3db1aa653b74d164c3a57b75677e345ea10356e0`, `EEG-DATA@c10c95274ecf1397768eb28de48aac8ce925c22d`, and `auto-research-funds@4a67e06b530bc742521f80fa5b13ccbe1115ebb9` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `20:05 JST` route-hold addendum outside the current six, `EEG-DATA` now reports `30,914` merged-unique rows, `28,877` high-confidence rows, `24,896` immediate rows, and `24,526` high-confidence immediate rows after BDSP manual deep dives for missing EEG datasets, and `auto-research-funds` now just carries the earlier `20:05 JST` funding addendum without changing the practical shortlist.
-- None of those additions replaces the present speech ladder. The newest public-open or nearby support candidates still widen adjacent support space, but they still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Fri, 03 Apr 2026 11:17:44 GMT`; the checked bodies already surfaced the earlier `20:05 JST` hold note on `issue / brief / bridge` while `U13-2` itself still surfaced `11:07 JST`. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only carries the same row-specific route forward onto the latest pulled heads.
+- `mind-upload@3db1aa653b74d164c3a57b75677e345ea10356e0`、`EEG-DATA@c10c95274ecf1397768eb28de48aac8ce925c22d`、および `auto-research-funds@4a67e06b530bc742521f80fa5b13ccbe1115ebb9` の後の `2026-04-03 21:05 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、現在の 6 つ以外の以前の `20:05 JST` ルートホールドの追加を保持するだけになり、`EEG-DATA` は、不足している EEG データセットに対する BDSP 手動詳細調査後の `30,914` マージされた固有の行、`28,877` 高信頼行、`24,896` 即時行、および `24,526` 高信頼の即時行を報告するようになり、`auto-research-funds` は、実質的な候補リストを変更せずに、以前の `20:05 JST` 資金調達の追加のみを保持するようになりました。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。最新の公開または近隣の支持候補者は、依然として隣接する支持スペースを広げていますが、それでも、`D10`を`U13-2`の主力に保つ明白な/サイレント意図された/想像上のスピーチトライアングルを再現していません。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`Last-Modified: Fri, 03 Apr 2026 11:17:44 GMT` を持つ現在のパブリック エントリ ページに対して `HTTP/2 200` が返されました。チェックされたボディはすでに初期の `20:05 JST` を浮上させており、`issue / brief / bridge` ではメモを保持していますが、`U13-2` 自体はまだ `11:07 JST` を浮上させています。新しい読み取り専用の Todoist 監査では、既存のファンディング タスクのカバレッジが十分であることが示されたため、このページでは、同じ行固有のルートを最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 11:07 JST actual-pull reread on April 3, 2026
+## 2026 年 4 月 3 日の 11:07 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-03 11:07 JST` after `mind-upload@f70432e4a6c8a52afafbc57b98c8f0e360c85d4e`, `EEG-DATA@1981d34c5f71deceb2549684db9173b6f54d2b89`, and `auto-research-funds@bfebe94da875d709756746285f133ef30905fd38` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` carries forward the recent `sleep replay integrity / physiology-gate` wording sync outside the current six, `EEG-DATA` now reports `30,904` merged-unique rows, `28,867` high-confidence rows, and `24,890` directly usable rows, and `auto-research-funds` now reports `8,596` aid IDs, `4,308` rows, and `3,958` official-source rows without changing the practical shortlist.
-- None of those additions replaces the present speech ladder. The newest public-open or nearby support candidates still widen adjacent support space, but they still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Fri, 03 Apr 2026 01:31:28 GMT`, and the checked bodies still surfaced the earlier `05:12 JST` hold note. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only carries the same row-specific route forward onto the latest pulled heads.
+- `mind-upload@f70432e4a6c8a52afafbc57b98c8f0e360c85d4e`、`EEG-DATA@1981d34c5f71deceb2549684db9173b6f54d2b89`、および `auto-research-funds@bfebe94da875d709756746285f133ef30905fd38` の後の `2026-04-03 11:07 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、現在の 6 つ以外の最近の `sleep replay integrity / physiology-gate` 文言同期を引き継ぎ、`EEG-DATA` は、`30,904` マージされた固有行、`28,867` 高信頼行、および `24,890` 直接使用可能な行をレポートするようになり、`auto-research-funds` は、実質的な候補リストを変更せずに、`8,596` 補助 ID、`4,308` 行、および `3,958` 公式ソース行をレポートするようになりました。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。最新の公開または近隣の支持候補者は、依然として隣接する支持スペースを広げていますが、それでも、`D10`を`U13-2`の主力に保つ明白な/サイレント意図された/想像上のスピーチトライアングルを再現していません。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`Last-Modified: Fri, 03 Apr 2026 01:31:28 GMT` を含む現在のパブリック エントリ ページに対して `HTTP/2 200` が返され、チェックされたボディには以前の `05:12 JST` ホールド ノートが依然として表示されていました。新しい読み取り専用の Todoist 監査では、既存のファンディング タスクのカバレッジが十分であることが示されたため、このページでは、同じ行固有のルートを最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 23:08 JST actual-pull reread on April 2, 2026
+## 2026 年 4 月 2 日の 23:08 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-02 23:08 JST` after `mind-upload@f5d1d1dd1683`, `EEG-DATA@ee1463d28288`, and `auto-research-funds@ec24a355abbc` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` clarifies the causal-versus-human-proxy bridge outside the current six, `EEG-DATA` now reports `30,896` merged-unique rows, `28,859` high-confidence rows, and `24,882` directly usable rows after candidate-curation refinement plus the `OpenNeuro ds007615` deep dive, and `auto-research-funds` adds `Geo-Kagaku` current cards without changing the practical shortlist.
-- None of those additions replaces the present speech ladder. `OpenNeuro ds007615`, `ChineseEEG-2`, and the latest public-open carry-forwards widen nearby support space, but they still do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
+- `mind-upload@f5d1d1dd1683`、`EEG-DATA@ee1463d28288`、および `auto-research-funds@ec24a355abbc` の後の `2026-04-02 23:08 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、現在の 6 つ以外の因果関係と人間のプロキシ ブリッジを明確にし、`EEG-DATA` は、統合された固有の行 `30,896`、信頼性の高い行 `28,859`、および候補キュレーションの絞り込みと `OpenNeuro ds007615` の詳細調査後の直接使用可能な行 `24,882` を報告するようになり、`auto-research-funds` は、実質的な候補リストを変更せずに `Geo-Kagaku` の現在のカードを追加します。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。 `OpenNeuro ds007615`、`ChineseEEG-2`、および最新の一般公開キャリーフォワードは、近くのサポートスペースを広げますが、それでも、`D10` を `U13-2` の主な地位に保つ明白な/サイレント意図された/想像上のスピーチトライアングルを再現していません。
+- ブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT` が引き続き `HTTP/2 200` として返され、新たな読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため、このページでは行固有のルート ホールドの文言のみが更新されます。
 
-## What still stays fixed after the 12:04 JST actual-pull reread on April 2, 2026
+## 2026 年 4 月 2 日の 12:04 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-02 12:04 JST` after `mind-upload@dceb8bc`, `EEG-DATA@04b7fda167e`, and `auto-research-funds@4442e348a` still keeps `U13-2` first and keeps `D10` as the primary anchor for this row.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` syncs a spectroscopy front door outside the current six, `EEG-DATA` now reports `30,888` merged-unique rows, `28,851` high-confidence rows, and `24,506` immediate rows after `THINGS-EEG`, an OSF orientation route, and a rat ECoG deep dive, and `auto-research-funds` only refreshes repository stats.
-- None of those additions replaces the present speech ladder. `ChineseEEG-2` still helps as a public-open reading/listening support family, but the newest visual and animal carry-forwards do not recreate the overt / silent-intended / imagined speech triangle that keeps `D10` primary for `U13-2`.
-- Browser-level live checks still returned `200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 02:37:04 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
+- `mind-upload@dceb8bc`、`EEG-DATA@04b7fda167e`、および `auto-research-funds@4442e348a` の後の `2026-04-02 12:04 JST` での実際のプル再チェックでは、引き続き `U13-2` が最初に維持され、`D10` がこの行のプライマリ アンカーとして維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は現在の 6 行の外側にある分光分析フロント ドアを同期し、`EEG-DATA` は `30,888` マージされた固有行、`28,851` 高信頼行、`THINGS-EEG` の直後の `24,506` 行、OSF オリエンテーション ルート、およびラット ECoG ディープ ダイブを報告するようになり、`auto-research-funds` はリポジトリ統計のみを更新します。
+- これらの追加はいずれも現在のスピーチラダーに代わるものではありません。 `ChineseEEG-2` は依然として、一般公開の読書/聴取サポート ファミリーとして役立ちますが、最新のビジュアルおよび動物のキャリーフォワードは、`D10` を `U13-2` の主要な地位に保つ明白な / 沈黙を意図した / 想像上のスピーチの三角形を再現していません。
+- ブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `Last-Modified: Thu, 02 Apr 2026 02:37:04 GMT` が引き続き `200` として返され、新たな読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため、このページでは行固有のルート ホールドの文言のみが更新されます。
 
-## What was rechecked for this row
+## この行で再チェックされた内容
 
-- `D10 3M-CPSEED` still gives a public OpenNeuro route with `20 participants x 4 sessions`, overt / silent-intended / imagined speech, raw BIDS, and phase-split derivatives inside one release.
-- The current funding bridge remains narrow and unchanged: `Kura Fund` stays the first route, `Nakatani Foundation graduate scholarship` stays second, and `Secom General Research Grant` stays only as an urgency-watch route.
-- The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- `D10 3M-CPSEED` は、1 つのリリース内で、`20 participants x 4 sessions`、明白な / 無言の意図 / 想像上の音声、生の BIDS、およびフェーズ分割派生機能を備えたパブリック OpenNeuro ルートを引き続き提供します。
+- 現在の資金調達ブリッジは狭く、変更されていません。`Kura Fund` が最初のルートに留まり、`Nakatani Foundation graduate scholarship` が 2 番目に留まり、`Secom General Research Grant` は緊急監視ルートとしてのみ留まります。
+- 公開されている 6 つの質問のバッチも変更されず、`U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2` です。
 
-## Why `U13-2` still stays first
+## `U13-2` が依然として 1 位であり続ける理由
 
-- It is the shortest current route to test whether the neural signal adds anything beyond the language prior.
-- If this row fails, stronger speech-decoder wording should stay blocked for the current public route.
-- The row can close a bounded first artifact with EEG alone before any stronger mechanism or identity language is attempted.
+- これは、神経信号が以前の言語を超えて何かを追加するかどうかをテストするための現在の最短ルートです。
+- この行が失敗した場合、より強力な音声デコーダの文言は現在のパブリック ルートではブロックされたままになるはずです。
+- この行は、より強力なメカニズムやアイデンティティ言語が試行される前に、EEG のみで境界のある最初のアーティファクトを閉じることができます。
 
-## Why `D10` is primary and other candidates stay secondary
+## `D10` が第一候補であり、他の候補が二次的な理由
 
-| Candidate | What it helps with | Why it is not the first public anchor |
+| 候補者 | 何に役立つのか | なぜこれが最初の公共アンカーではないのか |
 |---|---|---|
-| `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`, immediate) | It keeps overt, silent-intended, and imagined speech in one public release, with repeated sessions plus raw BIDS and phase-split derivatives. This is the cleanest current floor for a bounded `brain-minus-prior` control family. | It stays the primary anchor in this run. |
-| `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`, immediate) | It gives public overt-plus-imagined speech with a larger command count and a control task, so it is the first public-open support family to keep nearby. | It does not keep the same overt / silent-intended / imagined ladder as `D10`, so the `brain-minus-prior` family is still less clean for the present row. |
-| `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, subscription-gated support) | It is useful later as a gated multimodal comparator because it still fixes an EEG-plus-gaze target if access is available. | The current IEEE DataPort page is subscription-gated, and it is not speech-first, so it stays a bounded support anchor rather than the first speech-side anchor. |
-| `D09 VICODEV` (`10.21227/r8fc-2y40`, account required) | It gives multimodal control conditions and a richer distraction setting that may help later control-family design. | It is access-gated and centered on a driving-distraction scenario rather than a direct inner-speech route, so it should not be the first public anchor for `U13-2`. |
-| `DAIS` (`10.1109/ICASSP49357.2023.10096145`, uncertain public) | It may become useful as an adjunct speech benchmark later. | Public status and operational metadata still remain too uncertain for the first bounded public route. |
+| `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`、即時) | 繰り返されるセッションに加え、生の BIDS とフェーズ分割された派生データを使用して、あからさまな、沈黙を意図した、想像上のスピーチを 1 つの公開リリースにまとめます。これは、制限された `brain-minus-prior` コントロール ファミリの最もクリーンな現在のフロアです。 | このランでも引き続き主要アンカーです。 |
+| `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`、即時) | それは、より多くのコマンド数と制御タスクを伴う公然のプラス想像上のスピーチを行うため、近くに置いておく最初の公のオープンサポートファミリーです。 | `D10` と同じ明白 / サイレント意図 / 想像上のはしごを維持していないため、`brain-minus-prior` ファミリは現在の列にとってはまだクリーンではありません。 |
+| `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`、サブスクリプションゲート型サポート) | アクセスが可能な場合でも EEG と視線のターゲットを修正するため、後でゲート付きマルチモーダル コンパレーターとして役立ちます。 | 現在の IEEE DataPort ページはサブスクリプション ゲートであり、スピーチファーストではないため、最初のスピーチ側アンカーではなく、制限されたサポート アンカーのままです。 |
+| `D09 VICODEV` (`10.21227/r8fc-2y40`、アカウントが必要です) | これにより、マルチモーダルな制御条件と、後の制御ファミリー設計に役立つ可能性のあるより豊富な気晴らし設定が提供されます。 | これはアクセスゲート機能があり、直接的な内話ルートではなく、運転の気を散らすシナリオを中心としているため、`U13-2` の最初の公開アンカーとなるべきではありません。 |
+| `DAIS` (`10.1109/ICASSP49357.2023.10096145`、公開は不明) | 後で補助的なスピーチのベンチマークとして役立つ可能性があります。 | 公開ステータスと運用メタデータは、最初の境界付き公開ルートとしては依然として不確実なままです。 |
 
-## What the first artifact can honestly close now
+## 最初のアーティファクトが今正直に閉じることができるもの
 
-| Artifact piece | What it closes now | What still stays outside the claim |
+| アーティファクトの欠片 | 今閉店しているもの | まだ主張の範囲外にあるもの |
 |---|---|---|
-| `Brain-minus-prior control table` | A narrow comparison across overt, silent-intended, and imagined speech under a leak-aware split. | Any claim that decoder success proves preserved internal mechanism or preserved identity. |
-| `Mimic-separation note` | A public-safe report of `semantic alignment`, `brain-minus-prior gap`, and `misalignment rate`. | Any statement that the row demonstrates successful mind preservation. |
-| `Bounded inconsistency audit` | A row-level failure report for prior-only shortcuts and imitation-only passes. | Any theory-level conclusion that goes beyond the present EEG artifact. |
+| `Brain-minus-prior control table` | 漏れを意識した分割の下での、あからさまな、沈黙を意図した、想像上のスピーチの狭い比較。 | デコーダの成功は、内部メカニズムまたはアイデンティティが保存されていることを証明するあらゆる主張です。 |
+| `Mimic-separation note` | `semantic alignment`、`brain-minus-prior gap`、`misalignment rate` の公衆安全レポート。 | この列が精神の保存に成功していることを示すあらゆる声明。 |
+| `Bounded inconsistency audit` | 以前のみのショートカットと模倣のみのパスに関する行レベルの障害レポート。 | 現在の EEG アーチファクトを超える理論レベルの結論。 |
 
-## First-pass KPI bundle and stop rule
+## ファーストパス KPI バンドルと停止ルール
 
-| Item | Current row-level fixation |
+| アイテム | 現在の行レベルの固定 |
 |---|---|
-| `First-pass KPI bundle` | `semantic alignment`, `brain-minus-prior gap`, `misalignment rate` |
-| `Stop rule` | Do not widen this row if the `brain-minus-prior gap` collapses toward a prior-only baseline or if `misalignment rate` stays unstable across sessions. |
+| `First-pass KPI bundle` | `semantic alignment`、`brain-minus-prior gap`、`misalignment rate` |
+| `Stop rule` | `brain-minus-prior gap` が以前のみのベースラインに向かって崩壊する場合、または `misalignment rate` がセッション間で不安定なままである場合は、この行を広げないでください。 |
 
-## Funding wording that still fits
+## まだ適切な資金調達の文言
 
-| Route | Submission wording that stays honest | Why it still fits this row |
+| ルート | 正直さを保つ提出文言 | それでもこの行に適合する理由 |
 |---|---|---|
-| `Kura Fund` | `An EEG brain-to-text mimic-separation benchmark for a bounded verification route toward the mind-upload hypothesis` | The row is still a narrow benchmark and young-researcher route, not a solved-claim route. |
-| `Nakatani Foundation graduate scholarship` | `Doctoral-track EEG inner-speech decoding and identity-drift evaluation for the mind-upload route` | The row stays compatible with a doctoral continuity narrative when kept narrow and benchmark-first. |
-| `Secom General Research Grant` (`next-cycle watch only`) | `EEG inner-speech decoding and identity-drift auditing under bounded public claims` | The March 31, 2026 `12:00 JST` deadline has already passed in this run, so the route remains useful only as a carried-forward watch note rather than a live planning lane. |
+| `Kura Fund` | `An EEG brain-to-text mimic-separation benchmark for a bounded verification route toward the mind-upload hypothesis` | この問題はまだ狭いベンチマークと若手研究者のルートであり、解決された請求ルートではありません。 |
+| `Nakatani Foundation graduate scholarship` | `Doctoral-track EEG inner-speech decoding and identity-drift evaluation for the mind-upload route` | この行は、狭くベンチマークを優先した場合、博士の継続性の物語との互換性を保ちます。 |
+| `Secom General Research Grant`(`next-cycle watch only`) | `EEG inner-speech decoding and identity-drift auditing under bounded public claims` | この実行では 2026 年 3 月 31 日の `12:00 JST` 期限がすでに過ぎているため、このルートは、ライブ計画レーンではなく、繰り越しの監視メモとしてのみ役に立ちます。 |
 
-## External dependency tasks that stay outside this session
+## このセッションの外にある外部依存タスク
 
-- An external language-evaluation layer is still needed before stronger wording about mechanism can be justified.
-- A broader leak-control family is still needed before this row can be read as more than a bounded benchmark artifact.
-- Any claim about preserved mechanism, preserved identity, or successful mind preservation remains outside the present EEG-only route.
+- メカニズムに関するより強力な表現が正当化される前に、外部言語評価層が依然として必要です。
+- この行を境界のあるベンチマーク アーティファクト以上のものとして読み取るには、より広範なリーク制御ファミリがまだ必要です。
+- 保存されたメカニズム、保存されたアイデンティティ、または成功した心の保存に関するいかなる主張も、現在の EEG のみのルートの外に留まります。
 
-## What changed in this run
+## 今回の実行で変わったこと
 
-- The public batch did not change.
-- The main change is that `U13-2` now records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
-- This is still a route-setting update, not a solved-claim update.
+- パブリックバッチは変更されませんでした。
+- 主な変更点は、`U13-2` がアンカー選択の根拠、1 つのコンパクトなファーストパス KPI バンドル、および 1 つの明示的な停止ルールを暗黙的なままにするのではなく記録するようになった点です。
+- これは依然としてルート設定の更新であり、解決された請求の更新ではありません。

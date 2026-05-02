@@ -1,256 +1,255 @@
 ---
 layout: default
-title: "Wiki: Consciousness theory map"
-description: "A technical note that separates theory families, construct-validity controls, perturbation benchmarks, spontaneous proxies, multimodal clinical panels, and auxiliary geometry analysis."
-article_type: Wiki
-subtitle: "Before naming a theory winner, separate prediction families from the four gates that change claim strength."
-author: Mind Uploading Research Project
-last_updated: "2026-03-27"
-note: "Technical / natural science only"
-audience: "Readers who want IIT, GNWT, FEP, PCI, resting-state complexity, and multimodal consciousness readouts organized without overclaiming"
-reading_time: "12-18 minutes"
-page_intro: "This page is a technical map for consciousness-related theories and readouts that recur across Mind-Upload. It does not ask which theory sounds most attractive. It asks what role each item actually plays: prediction family, confound-control design, perturbation benchmark, spontaneous proxy, deployability panel, or auxiliary geometry analysis."
-accuracy_note: "The site-wide reading rule used here is synchronized to the March 27, 2026 re-audit: claim strength depends not only on which metric is named, but also on which verification gate it has passed."
+title: 'Wiki: 意識理論マップ'
+description: 理論ファミリー、構成妥当性コントロール、摂動ベンチマーク、自発的プロキシ、マルチモーダル臨床パネル、および補助幾何学解析を分離する技術的なメモ。
+article_type: ウィキ
+subtitle: 理論の勝者を指名する前に、主張の強さを変える 4 つのゲートから予測ファミリーを分離します。
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-03-27'
+note: 技術/自然科学のみ
+audience: IIT、GNWT、FEP、PCI、安静状態の複雑さ、マルチモーダルな意識の読み出しを過剰に主張することなく整理したいと考えている読者
+reading_time: 12～18分
+page_intro: 'このページは、Mind-Upload 全体で繰り返される意識関連の理論と読み出しの技術マップです。どの理論が最も魅力的に聞こえるかは問われません。各項目が実際にどのような役割を果たしているかを尋ねます: 予測ファミリー、交絡制御設計、摂動ベンチマーク、自発的プロキシ、展開可能性パネル、または補助幾何解析。'
+accuracy_note: ここで使用されるサイト全体の読み取りルールは、2026 年 3 月 27 日の再監査と同期されています。主張の強さは、どのメトリクスに名前が付けられているかだけでなく、どの検証ゲートを通過したかにも依存します。
 page_highlights:
-  - "The page now separates theory families, construct-validity controls, perturbation benchmarks, spontaneous proxies, multimodal clinical panels, and geometry descriptors rather than letting them blur together."
-  - "The same awareness-related result changes meaning depending on whether it has passed construct validity, perturbational validity, same-cohort calibration, and incremental validity."
-  - "No-report and criterion placement are treated as design conditions, not as bedside meters."
-  - "PCI / PCI-ST remains the main benchmark candidate only when stimulation, sensory-control, artifact-window, and reliability logs are exposed."
-  - "Resting-state complexity / criticality can correlate with PCI and still fail to substitute for it inside the same cohort."
-  - "Multimodal clinical panels are kept separate from theory and benchmark claims because their value turns on gain beyond behavior, site transfer, and missing-modality robustness."
+- このページでは、理論ファミリー、構成妥当性コントロール、摂動ベンチマーク、自発的プロキシ、マルチモーダル臨床パネル、およびジオメトリ記述子を、一緒に混同するのではなく分離するようになりました。
+- 同じ意識関連の結果でも、構成の妥当性、摂動の妥当性、同一コホートのキャリブレーション、および増分の妥当性を通過したかどうかに応じて意味が変わります。
+- 無報告および基準の配置は、ベッドサイドのメーターとしてではなく、設計条件として扱われます。
+- PCI / PCI-ST は、刺激、感覚制御、アーティファクト ウィンドウ、および信頼性ログが公開されている場合にのみ、主要なベンチマーク候補として残ります。
+- 休止状態の複雑性/重要性は PCI と相関する可能性がありますが、それでも同じコホート内で PCI を代替することはできません。
+- マルチモーダル臨床パネルは、その価値が行動、部位移行、欠落モダリティの堅牢性を超えて得られるものであるため、理論やベンチマークの主張とは切り離されています。
 known_points:
-  - "Ferrante et al. (2025) did not produce a single winning theory of consciousness."
-  - "Post-perceptual processing and criterion placement can materially shift neural markers, so construct validity must be audited separately."
-  - "PCI / PCI-ST is a serious perturbation benchmark candidate, but sensory contamination and target-specific reliability remain explicit failure modes."
-  - "Resting-state complexity / criticality remains a same-cohort calibration track rather than a direct replacement for perturbation benchmarks."
-  - "Multimodal diagnosis / prognosis panels can outperform behavior-only baselines, but portability still depends on external-site generalization and missing-modality robustness."
-  - "Manifold / topology results remain auxiliary because sampling and preprocessing sensitivity still change the readout."
+- フェランテら。 (2025) は、単一の勝てる意識理論を生み出しませんでした。
+- 知覚後の処理と基準の配置により、神経マーカーが大きく変化する可能性があるため、構成の妥当性を個別に監査する必要があります。
+- PCI / PCI-ST は重大な摂動ベンチマーク候補ですが、感覚的汚染とターゲット固有の信頼性は依然として明示的な故障モードです。
+- 静止状態の複雑性/臨界性は、摂動ベンチマークの直接の代替ではなく、同じコホートのキャリブレーション トラックのままです。
+- マルチモーダル診断/予後パネルは、行動のみのベースラインを上回るパフォーマンスを発揮する可能性がありますが、移植性は依然として外部サイトの一般化と欠落モダリティの堅牢性に依存します。
+- サンプリングと前処理の感度によって読み出しが変化するため、多様体/トポロジーの結果は補助的なもののままです。
 unknown_points:
-  - "It remains unresolved which theory family, if any, will supply a sufficient condition for WBE-relevant consciousness claims."
-  - "It remains unresolved whether any spontaneous metric will become a stable substitute for perturbation benchmarks across altered states and disorders of consciousness."
-  - "It remains unresolved which multimodal bundle is strong enough to travel across centres without recreating hidden calibration drift."
-  - "It remains unresolved whether geometry descriptors will become robust clinical indicators rather than auxiliary summaries."
+- 存在する場合、どの理論群が WBE 関連の意識の主張に十分な条件を提供するかは未解決のままです。
+- 自発的な測定基準が、変性状態や意識障害にわたる摂動ベンチマークの安定した代替となるかどうかは未解決のままです。
+- どのマルチモーダルバンドルが隠れたキャリブレーションドリフトを再現することなく中心を横切って移動するのに十分な強度があるのか​​は未解決のままです。
+- 幾何学的記述子が補助的な要約ではなく堅牢な臨床指標となるかどうかは未解決のままです。
 wiki_links:
-  - label: "Wiki: Counterfactual, intervention, and perturbation verification"
-    url: "/wiki/counterfactual-and-perturbation-verification.html"
-    description: "Use this page when you want the technical difference between observational agreement and changed-condition verification."
-  - label: "Wiki: From observation to estimation"
-    url: "/wiki/observation-to-estimation.html"
-    description: "Use this page when model fit and causal identification start to blur together."
-  - label: "Wiki: Literature and evidence reading"
-    url: "/wiki/literature-and-evidence-reading.html"
-    description: "Use this page to keep theory papers, benchmark papers, and operations papers at different evidence strengths."
+- label: 'Wiki: 反事実、介入、摂動の検証'
+  url: /wiki/counterfactual-and-perturbation-verification.html
+  description: 観察契約と条件変更検証の技術的な違いを知りたい場合は、このページを使用してください。
+- label: 'Wiki: 観察から推定へ'
+  url: /wiki/observation-to-estimation.html
+  description: モデルの適合性と因果関係の特定が曖昧になり始めた場合は、このページを使用してください。
+- label: 'Wiki: 文献と証拠の読み取り'
+  url: /wiki/literature-and-evidence-reading.html
+  description: このページを使用して、理論論文、ベンチマーク 論文、運用論文をさまざまな証拠強度で保存します。
 recommended_pages:
-  - label: "Perspective"
-    url: "/perspective.html"
-  - label: "Roadmap"
-    url: "/tech_roadmap.html"
-  - label: "Verification"
-    url: "/verification.html"
+- label: 視点
+  url: /perspective.html
+- label: ロードマップ
+  url: /tech_roadmap.html
+- label: 検証
+  url: /verification.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Short conclusion for 2026-03-27</h2>
+<h2>2026-03-27</h2> の短い結論
 <p>
-The current primary literature does <strong>not</strong> support naming a single winner among IIT, GNWT, FEP, PCI, criticality, or multimodal clinical panels. What it supports more strongly is a separation of roles. Theory names are <strong>prediction families</strong>. No-report and criterion placement are <strong>construct-validity controls</strong>. PCI / PCI-ST is a <strong>perturbation benchmark candidate</strong>. Resting-state complexity / criticality is a <strong>same-cohort calibration track</strong>. Multimodal clinical bundles are an <strong>incremental-validity / deployability track</strong>. Geometry and topology remain <strong>auxiliary analysis</strong>. On this site, those roles are not interchangeable.
+現在の一次文献では、<strong>not</strong> は、IIT、GNWT、FEP、PCI、臨界性、または複合臨床パネルの中から単一の勝者を指名することをサポートしています。それがより強力にサポートしているのは、役割の分離です。理論名は<strong>予測族</strong>です。レポートなしと基準の配置は、<strong> 構築妥当性コントロール </strong> です。 PCI / PCI-ST は、<strong> </strong> の摂動ベンチマーク候補です。静止状態の複雑性/臨界性は、<strong>同じコホートのキャリブレーショントラック</strong>です。マルチモーダル臨床バンドルは、<strong> 増分有効性 / 導入可能性トラック </strong> です。ジオメトリとトポロジーは <strong> 補助解析 </strong> のままです。このサイトでは、これらの役割に互換性はありません。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-27 re-audit: what this page had to stop doing</strong>
+<strong>2026-03-27 再監査: このページでやめるべきこと</strong>
 <p>
-The previous version already separated theory names from benchmarks, but it still left one important compression in place: <strong>construct validity</strong>, <strong>perturbational validity</strong>, <strong>same-cohort calibration</strong>, and <strong>incremental validity</strong> were too easy to read as one single ladder. That compression is not supported by the primary literature. The page also contained reference drift, including an incorrect DOI for the criterion-placement paper and an incorrect DOI for the spontaneous-versus-perturbational dissociation paper. This revision fixes both the conceptual compression and the citation integrity problem.
+以前のバージョンではすでに理論名とベンチマークが分離されていましたが、依然として 1 つの重要な圧縮が残されていました。<strong> 構築妥当性 </strong>、<strong> 摂動妥当性 </strong>、<strong> 同じコホート校正 </strong>、および <strong> 増分妥当性 </strong> は、1 つのラダーとして読み取るのがあまりにも簡単でした。この圧縮は一次文献ではサポートされていません。このページには、基準配置論文の誤った DOI や自発解離対摂動解離論文の誤った DOI など、参照ドリフトも含まれていました。この改訂版では、概念の圧縮と引用の完全性の問題の両方が修正されています。
 </p>
 </div>
 
 <section class="section" id="roles">
-<h2 class="section-title">First, divide by role</h2>
+<h2 class="section-title">まずは役割別に分ける</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Item</th>
-<th>Role</th>
-<th>What the current primary literature supports</th>
-<th>How this site reads it</th>
+<th>アイテム</th>
+<th>ロール</th>
+<th>現在の一次文献でサポートされていること</th>
+<th>このサイトの見方</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>IIT</strong></td>
-<td>Theory family / prediction generator</td>
-<td>It gives predictions about integration and causal structure, but it is not itself a clinical or engineering benchmark.</td>
-<td>Treated as a <strong>prediction family</strong>, never as a standalone pass/fail meter.</td>
+<td>理論ファミリー / 予測ジェネレーター</td>
+<td>統合と因果構造に関する予測を提供しますが、それ自体は臨床または工学のベンチマークではありません。</td>
+<td><strong>予測ファミリーとして扱われます</strong>、スタンドアロンの合否計としては扱われません。</td>
 </tr>
 <tr>
 <td><strong>GNWT</strong></td>
-<td>Theory family / prediction generator</td>
-<td>It gives predictions about global availability and task relevance, but its markers are sensitive to report and post-perceptual confounds.</td>
-<td>Treated as a <strong>prediction family</strong> that must pass <strong>no-report / criterion-placement control</strong> before its markers are read strongly.</td>
+<td>理論ファミリー / 予測ジェネレーター</td>
+<td>グローバルな可用性とタスクの関連性についての予測を提供しますが、そのマーカーはレポートや知覚後の混乱に敏感です。</td>
+<td>T<strong>予測ファミリーとして扱われる</strong>マーカーが強く読み取られる前に<strong>レポートなし/基準配置制御を通過する必要がある</strong>。</td>
 </tr>
 <tr>
-<td><strong>FEP / Active Inference</strong></td>
-<td>Generative-model / control family</td>
-<td>It offers a broad modeling framework for perception, action, and uncertainty, but it is not by itself a winning consciousness benchmark.</td>
-<td>Treated as a <strong>candidate implementation family</strong> that must still compete under shared verification conditions.</td>
+<td><strong>FEP / アクティブ推論</strong></td>
+<td>ジェネレーティブモデル/コントロールファミリー</td>
+<td>認識、行動、不確実性の広範なモデリング フレームワークを提供しますが、それ自体が勝利の意識ベンチマークになるわけではありません。</td>
+<td><strong>実装候補ファミリーとして扱われます</strong>は、共通の検証条件の下で引き続き競合する必要があります。</td>
 </tr>
 <tr>
-<td><strong>No-report / criterion placement</strong></td>
-<td>Construct-validity design condition</td>
-<td>It helps separate conscious content from post-report or response-strategy effects, but it does not become a bedside meter on its own.</td>
-<td>Treated as the <strong>construct-validity gate</strong>, not as a consciousness readout.</td>
+<td><strong>レポートなし / 基準の配置</strong></td>
+<td>構築妥当性設計条件</td>
+<td>意識的なコンテンツを報告後や対応戦略の影響から分離するのに役立ちますが、それ自体がベッドサイドのメーターになるわけではありません。</td>
+<td>意識の読み出しとしてではなく、<strong>構築妥当性ゲートとして扱われます</strong>。</td>
 </tr>
 <tr>
 <td><strong>PCI / PCI-ST</strong></td>
-<td>Perturbation benchmark candidate</td>
-<td>Response complexity after perturbation remains one of the strongest benchmark candidates across altered states and disorders of consciousness.</td>
-<td>Treated as the <strong>main benchmark candidate</strong> only when perturbation logs, sensory control, artifact windows, and reliability logs are exposed.</td>
+<td>Perturbation ベンチマーク候補</td>
+<td>摂動後の応答の複雑さは、依然として変性状態と意識障害にわたる最も強力なベンチマーク候補の 1 つです。</td>
+<td>T摂動ログ、感覚制御、アーティファクト ウィンドウ、および信頼性ログが公開されている場合にのみ、<strong> のメイン ベンチマーク候補として扱われます</strong>。</td>
 </tr>
 <tr>
-<td><strong>Resting-state complexity / criticality</strong></td>
-<td>Spontaneous proxy / calibration track</td>
-<td>It can track altered states and sometimes align with PCI, but dissociations within the same cohort remain real.</td>
-<td>Treated as a <strong>same-cohort calibration track</strong>, not as a drop-in replacement for perturbation benchmarks.</td>
+<td><strong>休止状態の複雑性/臨界性</strong></td>
+<td>S自発的プロキシ/キャリブレーショントラック</td>
+<td>状態の変化を追跡し、PCI と一致する場合もありますが、同じコホート内の解離は現実のままです。</td>
+<td>T摂動ベンチマークのドロップイン代替品としてではなく、<strong>同じコホートキャリブレーショントラック</strong>として扱われます。</td>
 </tr>
 <tr>
-<td><strong>Multimodal clinical panel</strong></td>
-<td>Incremental-validity / deployability track</td>
-<td>Panels combining behavior, EEG, MRI, PET, and clinical variables can improve diagnosis or prognosis beyond behavior alone.</td>
-<td>Treated as a <strong>deployability track</strong> that must beat the behavior-only baseline, survive missing-modality slices, and generalize across sites.</td>
+<td><strong>マルチモーダル臨床パネル</strong></td>
+<td>増分有効性 / 導入可能性トラック</td>
+行動、EEG、MRI、PET、臨床変数を組み合わせた <td>パネルは、行動のみを超えて診断や予後を改善できます。</td>
+<td><strong>展開可能性トラックとして扱われます</strong>は、動作のみのベースラインを上回り、モダリティの欠落スライスを乗り越え、サイト間で一般化する必要があります。</td>
 </tr>
 <tr>
-<td><strong>Manifold / topology / geometry</strong></td>
-<td>Auxiliary descriptor</td>
-<td>These analyses can summarize structure missed by scalar metrics, but their output is sensitive to sampling, embedding, and preprocessing choices.</td>
-<td>Treated as <strong>auxiliary analysis</strong> rather than an independent pass/fail indicator.</td>
+<td><strong>マニホールド / トポロジー / ジオメトリ</strong></td>
+<td>補助記述子</td>
+<td>これらの分析では、スカラー メトリクスでは見逃された構造を要約できますが、その出力はサンプリング、埋め込み、および前処理の選択の影響を受けます。</td>
+<td>独立した合否インジケータではなく、<strong>補助分析</strong>として扱われます。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="evidence-boundaries">
-<h2 class="section-title">What the primary literature cuts apart</h2>
+<h2 class="section-title">一次文献が切り分けるもの</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Question</th>
-<th>What the current primary literature supports relatively strongly</th>
-<th>What it still does not justify</th>
+<th>質問</th>
+<th>現在の一次文献が比較的強く裏付けていること</th>
+<th>それでも正当化されないもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Theory competition</strong></td>
-<td>Ferrante et al. (2025) showed partial support and partial falsification across IIT, GNWT, and RPT predictions rather than a single winner.</td>
-<td>No theory family can yet be promoted to the default engineering truth condition for WBE.</td>
+<td><strong>理論コンペ</strong></td>
+<td>フェランテら(2025) は、単一の勝者ではなく、IIT、GNWT、RPT の予測全体で部分的な支持と部分的な反証を示しました。</td>
+<td>WBE のデフォルトのエンジニアリング真理条件に昇格できる理論ファミリーはまだありません。</td>
 </tr>
 <tr>
-<td><strong>Construct validity</strong></td>
-<td>Cohen et al. (2024), Fahrenfort et al. (2025), and Dellert et al. (2025) show that post-perceptual processing, response criterion, and modality-general no-report design all materially change how a marker should be read.</td>
-<td>No-report or report-independent design alone does not become a bedside consciousness meter.</td>
+<td><strong>構成の有効性</strong></td>
+<td>コーエンら。 (2024)、ファーレンフォートら。 (2025)、および Dellert et al。 (2025) は、知覚後の処理、反応基準、およびモダリティ全般の非レポート設計がすべて、マーカーの読み方を大きく変えることを示しています。</td>
+<td>報告なしまたは報告に依存しない設計だけでは、ベッドサイドの意識計にはなりません。</td>
 </tr>
 <tr>
-<td><strong>Perturbational validity</strong></td>
-<td>Casali et al. (2013) and Comolatti et al. (2019) support PCI-family metrics as serious perturbation benchmarks, while Hernandez-Pavon et al. (2023), Gogulski et al. (2024), and Biabani et al. (2024) show why stimulation conditions, sensory contamination, and target-specific reliability must be exposed.</td>
-<td>A PCI-like value without perturbation logs, sensory controls, artifact windows, and reliability evidence cannot be treated as a universal state meter.</td>
+<td><strong>摂動の妥当性</strong></td>
+<td>Casali et al. (2013) および Comolatti et al。 Hernandez-Pavon et al. (2019) は深刻な摂動ベンチマークとして PCI ファミリ メトリクスをサポートしています。 (2023)、Gogulski et al。 (2024)、およびビアバニら。 (2024) 刺激条件、感覚汚染、およびターゲット固有の信頼性を公開しなければならない理由を示します。</td>
+<td>A 摂動ログ、感覚制御、アーティファクト ウィンドウ、および信頼性証拠のない PCI のような値は、汎用状態メーターとして扱うことができません。</td>
 </tr>
 <tr>
-<td><strong>Same-cohort calibration</strong></td>
-<td>Maschke et al. (2024) linked spontaneous criticality with perturbational complexity during anesthesia, Casarotto et al. (2024) showed spontaneous-versus-perturbational dissociation in MCS, and Breyton et al. (2025) extended spatiotemporal complexity outside perturbation paradigms.</td>
-<td>Resting-state or passive metrics still cannot replace perturbation benchmarks without same-cohort calibration against PCI, behavior, and outcomes.</td>
+<td><strong>同一コホートキャリブレーション</strong></td>
+<td>Maschke et al. Casarotto et al. (2024) は、自発的臨界性を麻酔中の摂動の複雑さと関連付けました。 (2024) MCS における自発的解離と摂動的解離を示しました。 (2025) 摂動パラダイムの外に拡張された時空間複雑性。</td>
+<td>静止状態またはパッシブメトリクスは、PCI、動作、および結果に対する同じコホートのキャリブレーションがなければ、摂動ベンチマークを置き換えることはできません。</td>
 </tr>
 <tr>
-<td><strong>Incremental validity / deployability</strong></td>
-<td>Rohaut et al. (2024) and Manasova et al. (2026) show that multimodal panels can improve diagnosis / prognosis and multicentre robustness when compared against behavior-only baselines.</td>
-<td>A multimodal panel is not yet portable clinical infrastructure on average accuracy alone; missing-modality robustness and site transfer still matter.</td>
+<td><strong>増分有効性/展開可能性</strong></td>
+<td>Rohaut et al. (2024) およびマナソワら。 (2026) 行動のみのベースラインと比較した場合、多峰性パネルが診断/予後および多施設施設の堅牢性を改善できることを示しています。</td>
+<td>A マルチモーダル パネルは、平均精度だけではまだポータブルな臨床インフラストラクチャではありません。欠落モダリティの堅牢性とサイト転送は依然として重要です。</td>
 </tr>
 <tr>
-<td><strong>Geometry / topology</strong></td>
-<td>Yoon et al. (2024) and recent mouse-visual-cortex topology work show that manifold and topology methods can summarize population structure and cross-population relationships.</td>
-<td>Those descriptors do not by themselves guarantee conscious-state validity, deployability, or WBE-relevant sufficiency.</td>
+<td><strong>ジオメトリ/トポロジー</strong></td>
+<td>Yoonら(2024) と最近のマウス視覚皮質トポロジーの研究は、多様体とトポロジーの手法が集団構造と集団間の関係を要約できることを示しています。</td>
+<td>これらの記述子自体は、意識状態の有効性、展開可能性、または WBE 関連の十分性を保証するものではありません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="four-gates">
-<h2 class="section-title">The 4 gates that change claim strength on this site</h2>
+<h2 class="section-title">このサイトのクレーム強度を変える4つのゲート</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Gate</th>
-<th>Minimum requirement</th>
-<th>Claim that must stop if the gate is missing</th>
+<th>ゲート</th>
+<th>最小要件</th>
+<th>ゲートが見つからない場合は停止しなければならないクレーム</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Construct validity</strong></td>
-<td>Separate no-report from report, log criterion placement separately, and predefine failure conditions.</td>
-<td>Do not claim that a neural marker directly reads conscious content.</td>
+<td><strong>構成の有効性</strong></td>
+<td>レポートなしのレポートをレポートから分離し、基準の配置を個別にログに記録し、失敗条件を事前定義します。</td>
+<td>神経マーカーが意識の内容を直接読み取るとは主張しないでください。</td>
 </tr>
 <tr>
-<td><strong>Perturbational validity</strong></td>
-<td>Expose perturbation site, intensity, sham or control, sensory suppression route, artifact window, analysis window, and target-specific reliability.</td>
-<td>Do not call a PCI / PCI-ST-style value alone a stable state-level benchmark.</td>
+<td><strong>摂動の妥当性</strong></td>
+<td>摂動部位、強度、偽またはコントロール、感覚抑制ルート、アーティファクト ウィンドウ、分析ウィンドウ、およびターゲット固有の信頼性を公開します。</td>
+<td>PCI / PCI-ST スタイルの値だけを安定した状態レベルのベンチマークとは呼びません。</td>
 </tr>
 <tr>
-<td><strong>Same-cohort calibration</strong></td>
-<td>Calibrate spontaneous metrics against PCI, behavior, clinical outcomes, and pipeline sensitivity inside the same cohort.</td>
-<td>Do not present resting-state complexity / criticality as a standalone bedside meter.</td>
+<td><strong>同一コホートキャリブレーション</strong></td>
+<td>同じコホート内の PCI、行動、臨床転帰、パイプライン感度に対する自発的指標を調整します。</td>
+<td>スタンドアロンのベッドサイドメーターとしては、安静状態の複雑さ/重要性を示しません。</td>
 </tr>
 <tr>
-<td><strong>Incremental validity</strong></td>
-<td>Show gain beyond the behavior-only baseline, site transfer, robustness under missing-modality conditions, and calibration error.</td>
-<td>Do not present a multimodal panel as deployable or portable on a headline accuracy alone.</td>
+<td><strong>増分有効性</strong></td>
+<td>S動作のみのベースライン、サイト転送、モダリティ欠落条件下での堅牢性、およびキャリブレーションエラーを超えるゲインを示します。</td>
+<td>ヘッドラインの精度だけで、マルチモーダル パネルを展開可能またはポータブルであると表現しないでください。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="site-rules">
-<h2 class="section-title">Operating rules in Mind-Upload</h2>
+<h2 class="section-title">Mind-Upload の運用ルール</h2>
 <div class="key-points">
 <h4>Rule</h4>
 <ul>
-<li><strong>Theory names do not pass or fail by themselves:</strong> IIT, GNWT, and FEP stay at the prediction-family level.</li>
-<li><strong>No-report and criterion placement are design controls, not meters:</strong> they raise or lower construct validity, not clinical deployability.</li>
-<li><strong>PCI requires a perturbation log:</strong> if stimulation, sensory control, artifact window, or reliability is hidden, claim strength stops early.</li>
-<li><strong>Spontaneous indicators must be calibrated, not substituted:</strong> alignment with PCI in one context does not erase dissociation in another.</li>
-<li><strong>Multimodal panels must beat behavior on the right slice:</strong> gain, calibration, site transfer, and missing-modality robustness are all part of the evidence.</li>
-<li><strong>Geometry remains auxiliary:</strong> manifold and topology analyses can enrich interpretation, but they do not independently settle consciousness claims.</li>
+<li><strong>理論名自体は合格または不合格になりません:</strong> IIT、GNWT、および FEP は予測ファミリー レベルに留まります。</li>
+<li><strong>レポートなしと基準の配置は設計制御であり、メーターではありません:</strong>それらは構成の妥当性を上げたり下げたりするものであり、臨床展開可能性ではありません。</li>
+<li><strong>PCI には摂動ログが必要です。</strong> 刺激、感覚制御、アーティファクト ウィンドウ、または信頼性が隠されている場合、クレーム強度は早期に停止します。</li>
+<li><strong>S自発的インジケーターは代替ではなく校正する必要があります:</strong> ある状況での PCI との調整は、別の状況での解離を消去しません。</li>
+<li><strong>マルチモーダル パネルは、正しいスライスでの動作に勝る必要があります。</strong> ゲイン、キャリブレーション、サイト転送、欠落モダリティの堅牢性はすべて証拠の一部です。</li>
+<li><strong>幾何学は補助的なままです:</strong>多様体とトポロジー分析は解釈を豊かにすることができますが、意識の主張を独立して解決するものではありません。</li>
 </ul>
 </div>
 
 <div class="note-box">
-<strong>How this page connects back to the public pages</strong>
+<strong>このページが公開ページにどのように接続されるか</strong>
 <p>
-<a href="../perspective.html">Perspective</a> uses these distinctions to explain why consciousness-related evidence must move through different gates before the wording is allowed to rise. <a href="../verification.html#consciousness-readout-gate">Verification</a> turns the same logic into an explicit checklist. <a href="../tech_roadmap.html">Roadmap</a> then places those gates inside the larger dependency tree of WBE measurement and verification. This page is the role map that stops those layers from collapsing into one vague idea of “better consciousness science.”
+<a href="../perspective.html">Perspective</a> は、これらの区別を使用して、意識に関連する証拠が、文言が上昇する前に異なるゲートを通過する必要がある理由を説明しています。 <a href="../verification.html#consciousness-readout-gate">Verification</a> は、同じロジックを明示的なチェックリストに変換します。次に、<a href="../tech_roadmap.html">Roadmap</a> は、WBE の測定と検証のより大きな依存関係ツリー内にそれらのゲートを配置します。このページは、これらの層が「より良い意識科学」という 1 つの漠然としたアイデアに崩壊するのを防ぐ役割マップです。
 </p>
 </div>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">References</h2>
+<h2 class="section-title">参考資料</h2>
 <ol>
-<li>Ferrante O, et al. Adversarial testing of global neuronal workspace and integrated information theories of consciousness. <em>Nature</em>. 2025. <a href="https://doi.org/10.1038/s41586-025-08888-1" target="_blank">doi:10.1038/s41586-025-08888-1</a></li>
-<li>Cohen MA, et al. Neural signatures of visual awareness independent of postperceptual processing. <em>Cerebral Cortex</em>. 2024. <a href="https://doi.org/10.1093/cercor/bhae415" target="_blank">doi:10.1093/cercor/bhae415</a></li>
-<li>Fahrenfort JJ, et al. Criterion placement threatens the construct validity of neural measures of consciousness. <em>eLife</em>. 2025. <a href="https://doi.org/10.7554/eLife.102335" target="_blank">doi:10.7554/eLife.102335</a></li>
-<li>Dellert T, et al. Neural correlates of consciousness in an auditory no-report fMRI study. <em>Current Biology</em>. 2025. <a href="https://doi.org/10.1016/j.cub.2025.10.026" target="_blank">doi:10.1016/j.cub.2025.10.026</a></li>
-<li>Casali AG, et al. A theoretically based index of consciousness independent of sensory processing and behavior. <em>Science Translational Medicine</em>. 2013. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
-<li>Comolatti R, et al. A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. <em>Brain Stimulation</em>. 2019. <a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
-<li>Hernandez-Pavon JC, et al. TMS combined with EEG: Recommendations and open issues for data collection and analysis. <em>Brain Stimulation</em>. 2023. <a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>
-<li>Gogulski J, et al. Reliability of the TMS-evoked potential in dorsolateral prefrontal cortex. <em>Cerebral Cortex</em>. 2024. <a href="https://doi.org/10.1093/cercor/bhae130" target="_blank">doi:10.1093/cercor/bhae130</a></li>
-<li>Biabani M, et al. Characterising the contribution of auditory and somatosensory inputs to TMS-evoked potentials following stimulation of prefrontal, premotor, and parietal cortex. <em>Imaging Neuroscience</em>. 2024. <a href="https://doi.org/10.1162/imag_a_00349" target="_blank">doi:10.1162/imag_a_00349</a></li>
-<li>Maschke C, et al. Critical dynamics in spontaneous EEG predict anesthetic-induced loss of consciousness and perturbational complexity. <em>Communications Biology</em>. 2024. <a href="https://doi.org/10.1038/s42003-024-06613-8" target="_blank">doi:10.1038/s42003-024-06613-8</a></li>
-<li>Casarotto S, et al. Dissociations between spontaneous electroencephalographic features and the perturbational complexity index in the minimally conscious state. <em>European Journal of Neuroscience</em>. 2024. <a href="https://doi.org/10.1111/ejn.16299" target="_blank">doi:10.1111/ejn.16299</a></li>
-<li>Breyton M, et al. Spatiotemporal brain complexity quantifies consciousness outside of perturbation paradigms. <em>eLife</em>. 2025. <a href="https://doi.org/10.7554/eLife.98920" target="_blank">doi:10.7554/eLife.98920</a></li>
-<li>Rohaut B, et al. Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury. <em>Nature Medicine</em>. 2024. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
-<li>Manasova D, et al. Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. 2026. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
-<li>Yoon B, Miolane N, Osting B, Linderman SW. Tracking the topology of neural manifolds across populations. <em>PNAS</em>. 2024. <a href="https://doi.org/10.1073/pnas.2402628121" target="_blank">doi:10.1073/pnas.2402628121</a></li>
-<li>The topological structure of population activity in mouse visual cortex encodes visual stimuli. <em>iScience</em>. 2024. <a href="https://doi.org/10.1016/j.isci.2024.111613" target="_blank">doi:10.1016/j.isci.2024.111613</a></li>
+<li>Ferrante O 他グローバルなニューロンワークスペースと意識の統合情報理論の敵対的テスト。 <em>ネイチャー</em>。 2025.<a href="https://doi.org/10.1038/s41586-025-08888-1" target="_blank">doi:10.1038/s41586-025-08888-1</a></li>
+<li>Cohen MA、他。知覚後の処理とは独立した視覚認識の神経署名。 <em>大脳皮質</em>。 2024.<a href="https://doi.org/10.1093/cercor/bhae415" target="_blank">doi:10.1093/cercor/bhae415</a></li>
+<li>ファーレンフォート JJ 他基準の設定は、意識の神経的尺度の構築の妥当性を脅かします。 <em>eライフ</em>。 2025.<a href="https://doi.org/10.7554/eLife.102335" target="_blank">doi:10.7554/eLife.102335</a></li>
+<li>Dellert T 他聴覚のノーレポート fMRI 研究における意識の神経相関。 <em>現在の生物学</em>。 2025.<a href="https://doi.org/10.1016/j.cub.2025.10.026" target="_blank">doi:10.1016/j.cub.2025.10.026</a></li>
+<li>Casali AG、他感覚処理や行動とは独立した、理論に基づいた意識の指標。 <em>サイエンス・トランスレーショナル・メディシン</em>。 2013.<a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
+<li>Comolatti R ら経頭蓋刺激および頭蓋内刺激に対する脳反応の複雑さを経験的に推定するための高速かつ一般的な方法。 <em>脳刺激</em>。 2019.<a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
+<li>Hernandez-Pavon JC 他TMS と EEG の組み合わせ: データ収集と分析に関する推奨事項と未解決の問題。 <em>脳刺激</em>。 2023.<a href="https://doi.org/10.1016/j.brs.2023.02.009" target="_blank">doi:10.1016/j.brs.2023.02.009</a></li>
+<li>Gogulski J 他背外側前頭前野における TMS 誘発電位の信頼性。 <em>大脳皮質</em>。 2024.<a href="https://doi.org/10.1093/cercor/bhae130" target="_blank">doi:10.1093/cercor/bhae130</a></li>
+<li>ビアバニ M 他前頭前野、運動前野、および頭頂葉皮質の刺激後のTMS誘発電位に対する聴覚および体性感覚入力の寄与を特徴付ける。 <em>画像神経科学</em>。 2024.<a href="https://doi.org/10.1162/imag_a_00349" target="_blank">doi:10.1162/imag_a_00349</a></li>
+<li>Maschke C、他。自発的脳波における臨界ダイナミクスは、麻酔薬による意識喪失と混乱の複雑性を予測します。 <em>コミュニケーション生物学</em>。 2024.<a href="https://doi.org/10.1038/s42003-024-06613-8" target="_blank">doi:10.1038/s42003-024-06613-8</a></li>
+<li>Casarotto S, et al.最小限の意識状態における自発脳波特徴と摂動複雑性指数との間の解離。 <em>欧州神経科学ジャーナル</em>。 2024.<a href="https://doi.org/10.1111/ejn.16299" target="_blank">doi:10.1111/ejn.16299</a></li>
+<li>ブレイトン M 他脳の時空間的な複雑さは、摂動パラダイムの外側で意識を定量化します。 <em>eLife</em>。 2025.<a href="https://doi.org/10.7554/eLife.98920" target="_blank">doi:10.7554/eLife.98920</a></li>
+<li>ロハウトB他マルチモーダル評価は、臨床的に反応性のない脳損傷のある救命救急患者の神経予後成績を改善します。 <em>自然医学</em>。 2024.<a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
+<li>Manasova D 他意識障害における診断および予後マーカーの多角的多施設研究。 <em>ブレイン</em>。 2026.<a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
+<li>Yoon B、Miolane N、Osting B、リンダーマン SW。集団全体にわたる神経多様体のトポロジーの追跡。 <em>PNAS</em>。 2024.<a href="https://doi.org/10.1073/pnas.2402628121" target="_blank">doi:10.1073/pnas.2402628121</a></li>
+<li>マウスの視覚野における集団活動の位相構造は、視覚刺激をコード化します。 <em>iサイエンス</em>。 2024.<a href="https://doi.org/10.1016/j.isci.2024.111613" target="_blank">doi:10.1016/j.isci.2024.111613</a></li>
 </ol>
 </section>
 
@@ -258,19 +257,19 @@ The previous version already separated theory names from benchmarks, but it stil
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Pin this page</h4>
+<h4>このページを固定する</h4>
 <ul>
-<li>Theory family is not the same as benchmark</li>
-<li>No-report control is not the same as deployable readout</li>
-<li>PCI, spontaneous metrics, and multimodal panels have different gates</li>
+<li> Theory ファミリはベンチマーク </li> と同じではありません
+<li>レポートなし制御は展開可能な読み出しと同じではありません</li>
+<li>PCI、自発的メトリクス、およびマルチモーダル パネルには異なるゲートがあります</li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Return paths</h4>
+<h4>リターンパス</h4>
 <ul>
-<li><a href="../perspective.html">Perspective →</a></li>
-<li><a href="../tech_roadmap.html">Roadmap →</a></li>
-<li><a href="../verification.html">Verification →</a></li>
+<li><a href="../perspective.html">パース→</a></li>
+<li><a href="../tech_roadmap.html">ロードマップ→</a></li>
+<li><a href="../verification.html">検証→</a></li>
 </ul>
 </div>
 </aside>

@@ -1,78 +1,78 @@
-# Wiki: U7-1 synchronization-contract route packet
+# Wiki: U7-1 同期契約ルート パケット
 
-> A next-watch packet outside the current public six
+> 現在のパブリック 6 以外の次の監視パケット
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-31 / Role: U7-1 route packet
+- Updated: 2026-03-31 / Role: U7-1 ルート パケット
 
-## Role Of This Page
-This page records one narrow next-watch route outside the current public six at the level of one question, one public-open EEG anchor, one bounded first artifact, and one funding bridge.
+## このページの役割
+このページには、1 つの質問のレベルで現在のパブリック 6 以外の 1 つの狭い次の監視ルート、1 つのパブリックオープン EEG アンカー、1 つの制限された最初のアーティファクト、および 1 つのファンディング ブリッジが記録されます。
 
-## Accuracy Notes
-This page does not change the active public six-question batch. It only records what the present U7-1 synchronization route can honestly close first.
+## 正確性に関する注記
+このページでは、アクティブな公開 6 つの質問のバッチは変更されません。現在の U7-1 同期ルートが最初に正直に閉じることができるものだけを記録します。
 
-## Back To Public Pages
-- [Issue page](https://mind-upload.com/issue.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
+## 公開ページへ戻る
+- [発行ページ](https://mind-upload.com/issue.html)
+- [データとベンチ](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
-- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact six-row public route that still stays unchanged.
-- [Wiki: U7-2 timing-metric route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-2-timing-metric-route) - The adjacent row that turns synchronization error into explicit release-block metrics.
-- [Wiki: Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - The wider working note for all current practical rows.
-- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
+## 関連 Wiki ページ
+- [Wiki: 現在公開されている 6 つのルート概要](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - 今も変わらぬコンパクトな6列パブリックルート。
+- [Wiki: U7-2 タイミング メトリック ルート パケット](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-2-timing-metric-route) - 同期エラーを明示的なリリースブロックメトリクスに変換する隣接する行。
+- [Wiki: ディープ フォーカス ノート](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - 現在のすべての実用的な行のより広い作業メモ。
+- [Wiki: 助成金とデータセットのプレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - 固定資金とアンカーマップ。
 
 ---
 
-# U7-1 synchronization-contract route packet
+# U7-1 同期契約ルートパケット
 
-This page does not change the current public six-question batch. It records one narrow route just outside that batch, so readers can see why `U7-1` is the cleanest A-tier candidate to deepen next, why `D11` stays the strongest public-open anchor for that route, and what the first public-safe artifact can honestly close.
+このページでは、現在の公開されている 6 つの質問のバッチは変更されません。このバッチのすぐ外側にある 1 つの狭いルートが記録されているため、読者は、なぜ `U7-1` が次に深化する最もクリーンな A 層候補であるのか、なぜ `D11` がそのルートの最強のパブリック オープン アンカーであり続けるのか、そして最初のパブリック セーフ アーティファクトが何を正直に閉じることができるのかを理解できます。
 
-## What was rechecked for this row
+## この行で再チェックされた内容
 
-- `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` still remains public-open on OpenNeuro and still gives the strongest current `synchronization + provenance + multi-session` floor for `U7-1`.
-- `D15 A simultaneous EEG-fNIRS dataset for investigating working memory load` remains a useful public-open support family for checking whether the same four-field contract survives a second multimodal setting.
-- `D23 EEG, PPG, GSR Multimodal Physiological Signals for Rehabilitation Fatigue Detection` remains a useful public-open support family for stress-testing the same contract under a third sensor bundle.
-- The current public six-question batch still stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
-- The practical funding bridge for this row is still a watch route rather than a current public-six route: `Okawa Foundation research grant` is the cleanest next-watch fit, and existing Todoist watch tasks already cover that lane.
+- `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` は依然として OpenNeuro で公開されており、`U7-1` に対して現在の最強の `synchronization + provenance + multi-session` フロアを提供します。
+- `D15 A simultaneous EEG-fNIRS dataset for investigating working memory load` は、同じ 4 フィールドの契約が 2 番目のマルチモーダル設定でも存続するかどうかを確認するための、有用な公開サポート ファミリです。
+- `D23 EEG, PPG, GSR Multimodal Physiological Signals for Rehabilitation Fatigue Detection` は、3 番目のセンサー バンドルに基づいて同じ契約のストレス テストを行うための有用なパブリック オープン サポート ファミリであり続けます。
+- 現在公開されている 6 つの質問のバッチは、`U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2` のままです。
+- この行の実際的な資金調達ブリッジは、現在のパブリック 6 ルートではなく、依然としてウォッチ ルートです。`Okawa Foundation research grant` は最もクリーンな次のウォッチに適合しており、既存の Todoist ウォッチ タスクはすでにそのレーンをカバーしています。
 
-## Why `U7-1` is the cleanest next-watch route outside the current six
+## `U7-1` が現在の 6 つのルート以外で最もクリーンな次の監視ルートである理由
 
-- It is an `A` row: the main claim can stay inside `EEG-DATA` without requiring the theory, law, or identity-overreading boundary carried by many `B/C` rows.
-- It is infrastructure-first: the first artifact is a synchronization and provenance contract, not a stronger theory claim.
-- It helps the current six without widening them. `U0` needs timing discipline, and `U14` needs reproducibility discipline, so `U7-1` strengthens the floor underneath both families.
+- これは `A` 行です。主なクレームは、多くの `B/C` 行に含まれる理論、法則、または同一性オーバーリード境界を必要とせずに、`EEG-DATA` 内にとどまることができます。
+- これはインフラストラクチャ優先です。最初の成果物は同期と来歴の契約であり、より強力な理論上の主張ではありません。
+- 今の6人を幅を広げずに助ける。 `U0` にはタイミングの規律が必要で、`U14` には再現性の規律が必要であるため、`U7-1` は両方のファミリーの下の基盤を強化します。
 
-## Why `D11` stays the main public-open anchor
+## `D11` がパブリックオープンのメインアンカーであり続ける理由
 
-| Candidate | What it helps with | Why it is not the first public anchor |
+| 候補者 | 何に役立つのか | なぜこれが最初の公共アンカーではないのか |
 |---|---|---|
-| `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | It gives `47 sessions`, `186 EEG runs`, simultaneous EEG-fMRI, multi-run timing structure, and BIDS-side provenance, which makes it the strongest public-open route for enforcing `clock offset`, `sampling drift`, `stimulus onset`, and `QC fail code` together. | None in this run. It is the strongest public-open first anchor for `U7-1`. |
-| `D15 A simultaneous EEG-fNIRS dataset for investigating working memory load` (`10.21227/tswy-m550`, immediate) | It is the strongest nearby support family for checking whether the same synchronization contract survives a second multimodal pairing. | It is thinner than `D11` on session depth and provenance richness, so it stays support rather than primary. |
-| `D23 EEG, PPG, GSR Multimodal Physiological Signals for Rehabilitation Fatigue Detection` (`10.6084/m9.figshare.31169026`, immediate) | It is useful for a third-bundle stress test once the four-field contract is fixed on `D11`. | It is more task-specific and less suitable than `D11` as the first public anchor for a general synchronization contract. |
+| `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`、即時) | これにより、`47 sessions`、`186 EEG runs`、同時 EEG-fMRI、マルチラン タイミング構造、BIDS 側の出自が提供され、`clock offset`、`sampling drift`、`stimulus onset`、`QC fail code` を一緒に施行するための最も強力な公開ルートになります。 | 今回の実行では何もありませんでした。 `U7-1`用最強の公開ファーストアンカーです。 |
+| `D15 A simultaneous EEG-fNIRS dataset for investigating working memory load` (`10.21227/tswy-m550`、即時) | これは、同じ同期コントラクトが 2 番目のマルチモーダル ペアリングでも存続するかどうかを確認するための最も強力な近隣サポート ファミリです。 | セッションの深さと来歴の豊富さの点で `D11` よりも薄いため、プライマリではなくサポートのままです。 |
+| `D23 EEG, PPG, GSR Multimodal Physiological Signals for Rehabilitation Fatigue Detection` (`10.6084/m9.figshare.31169026`、即時) | `D11` で 4 フィールド コントラクトが修正された後の 3 番目のバンドル ストレス テストに役立ちます。 | これはタスク固有であり、一般的な同期コントラクトの最初のパブリック アンカーとしては `D11` よりも適していません。 |
 
-## What the first artifact can honestly close now
+## 最初のアーティファクトが今正直に閉じることができるもの
 
-| Artifact piece | What it closes now | What still stays outside the claim |
+| アーティファクトの欠片 | 今閉店しているもの | まだ主張の範囲外にあるもの |
 |---|---|---|
-| `Four-field BIDS extension note` | A bounded contract that blocks release-ready wording whenever any of `clock offset`, `sampling drift`, `stimulus onset`, or `QC fail code` is missing. | Any statement that one filled contract already establishes community-wide standard adoption. |
-| `Offset/jitter distribution audit` | A narrow report that turns synchronization quality into explicit pass/fail distributions rather than vague metadata language. | Any claim that synchronization logging alone proves scientific validity of every downstream result. |
-| `Reanalysis-success note` | A public-safe rule for whether the same artifact survives reanalysis after the four required fields are enforced. | Any theory-level or deployment-level conclusion beyond the present audit artifact. |
+| `Four-field BIDS extension note` | `clock offset`、`sampling drift`、`stimulus onset`、または `QC fail code` のいずれかが欠落している場合は常に、リリース対応文言をブロックする制限付きコントラクト。 | 1 つの締結された契約によって、すでにコミュニティ全体の標準採用が確立されているという記述があります。 |
+| `Offset/jitter distribution audit` | 同期品質を曖昧なメタデータ言語ではなく、明示的な合否分布に変換する限定的なレポート。 | 同期ログだけですべてのダウンストリーム結果の科学的妥当性が証明されるという主張はすべてです。 |
+| `Reanalysis-success note` | 4 つの必須フィールドが適用された後、同じアーティファクトが再分析に耐えられるかどうかに関するパブリック セーフ ルール。 | 現在の監査成果物を超えた理論レベルまたは展開レベルの結論。 |
 
-## Funding wording that still fits
+## まだ適切な資金調達の文言
 
-| Route | Submission wording that stays honest | Why it still fits this row |
+| ルート | 正直さを保つ提出文言 | それでもこの行に適合する理由 |
 |---|---|---|
-| `Okawa Foundation research grant` (`watch`) | `A public-open synchronization and QC contract for multimodal EEG verification in the mind-upload route` | The row reads naturally as an information / reproducibility / standards-facing research route rather than a solved neuroscience claim. |
-| `Kura Fund` (`secondary only`) | `An international young-researcher synchronization audit package for multimodal EEG reproducibility` | It fits only if framed as a bounded young-researcher infrastructure package, not as a batch switch or stronger mind-upload claim. |
+| `Okawa Foundation research grant`(`watch`) | `A public-open synchronization and QC contract for multimodal EEG verification in the mind-upload route` | この行は、解決された神経科学の主張ではなく、情報/再現性/標準に準拠した研究ルートとして自然に読み取れます。 |
+| `Kura Fund`(`secondary only`) | `An international young-researcher synchronization audit package for multimodal EEG reproducibility` | これは、バッチ切り替えやより強力なマインドアップロードの主張としてではなく、限定された若手研究者のインフラストラクチャパッケージとして組み立てられた場合にのみ適合します。 |
 
-## External dependency tasks that stay outside this session
+## このセッションの外にある外部依存タスク
 
-- Device-side delay truth still needs broader cross-device validation before this row can be read as a full field standard.
-- Community adoption of the four required fields still remains outside the present repository-level artifact.
-- Any interpretation that a synchronization contract by itself resolves multimodal common-state or identity questions remains outside the present route.
+- この行を完全なフィールド標準として読み取る前に、デバイス側の遅延の真実をより広範にクロスデバイス検証する必要があります。
+- 4 つの必須フィールドのコミュニティによる採用は、現在のリポジトリ レベルのアーティファクトの範囲外に残っています。
+- 同期コントラクト自体がマルチモーダルな共通状態またはアイデンティティの問題を解決するという解釈は、現在のルートの外に残ります。
 
-## What changed in this run
+## 今回の実行で変わったこと
 
-- The public batch did not change.
-- The main change is that `U7-1` now has a public packet that records the strongest public-open anchor, the first artifact, and the watch-level funding bridge without widening the current public six.
-- This remains a route-setting update, not a solved-claim update.
+- パブリックバッチは変更されませんでした。
+- 主な変更点は、`U7-1` に、現在のパブリック 6 を拡張することなく、最強のパブリック オープン アンカー、最初のアーティファクト、および監視レベルの資金ブリッジを記録するパブリック パケットが追加されたことです。
+- これはルート設定の更新であり、解決済みのクレームの更新ではありません。

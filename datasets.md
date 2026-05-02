@@ -1,448 +1,449 @@
 ---
 layout: default
-title: "Data & Hands-on: Where to start and how to get to L0"
-description: "From the selection of public data (mainly EEG) to the minimum loop of BIDS → QC → preprocessing → evaluation, organized on one page."
-article_type: Resource
-subtitle: "Connect ``what to use'' and ``how to reproduce'' in the shortest route without separating them."
-author: Mind Uploading Research Project
-last_updated: "2026-04-04"
-note: "Curated List + L0 Practice (updated with the EEG recording-frame contract sync)"
-audience: "People who are wondering which public data to start with, people who are looking for an L0 practice board"
-reading_time: "12-20 minutes"
-page_intro: "This page is a practical guide that answers both ``Which public data should I start validation with first?'' and ``How do I proceed to L0 reproducible analysis?'' in one place. It does not stop at a list of dataset names; it connects BIDS, QC, splitting, and baselines in a single path."
-accuracy_note: "The datasets listed here are entry candidates. They are listed from the perspective of ease of use and reproducibility, and cannot cover all the issues of WBE."
+title: 'データとハンズオン: どこから始めて、どのようにして L0 に到達するか'
+description: 公開データ（主にEEG）の選定からBIDS→QC→前処理→評価の最小ループまでを1ページにまとめました。
+article_type: リソース
+subtitle: 「`what to use'' and `「再現方法」」を分けずに最短ルートで接続します。
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-04-04'
+note: 厳選されたリスト + L0 Practice (EEG レコーディング フレーム コントラクト同期で更新)
+audience: どの公開データから始めようか迷っている人、L0の練習板を探している人
+reading_time: 12～20分
+page_intro: このページは、「`Which public data should I start validation with first?'' and `「L0 再現性解析を行うにはどうすればよいですか?」の両方に 1 か所で答える実践的なガイドです。データセット名のリストにとどまりません。
+  BIDS、QC、分割、ベースラインを 1 つのパスで接続します。
+accuracy_note: ここにリストされているデータセットはエントリ候補です。使いやすさや再現性の観点から記載したものであり、WBE の課題をすべて網羅しているわけではありません。
 page_highlights:
-  - "We look at the shared infrastructure first, then the starter datasets."
-  - "Starter data is a practice board for L0-L1, not the ground truth of EEG source imaging."
-  - "The page now also fixes a component-addition / ablation ladder for maintenance-state routes, so glial substrate-routing, astrocyte-state, neurovascular / BBB, and clearance augmentations are compared against a named neuron-first baseline instead of being piled into one multimodal boost."
-  - "A same-subject support-state bundle is no longer treated as self-interpreting; route class, effective window, quantity bridge, common-driver audit, missingness policy, disagreement topology, repeatability, transfer window, and abstention are now fixed as practical fields."
-  - "Even inside direct-validation data, stimulation ground truth, simultaneous invasive recording, and postsurgical outcome are different evidence classes."
-  - "A fair inverse-problem benchmark also has to separate focal-centre versus source-extent targets, inverse family, uncertainty object, montage / coverage policy, and geometry / conductivity sensitivity rather than naming only a winning method."
-  - "High density is not the only meaningful route: targeted-density and DeepSIF-like low-density ESI can work in bounded regimes, but the gain is still solver-, geometry-, and source-regime-conditioned."
-  - "Each starter dataset has different annotation provenance, time fidelity, and independent split units."
-  - "Within-session / cross-session / cross-subject / adaptation are different evaluation families and should not be placed side by side under the same score."
-  - "Benchmark name is still too coarse: predicted object, independent prediction unit, hold-out unit, adaptation regime, and operations budget can all change what the same score means."
-  - "Metric semantics are task-dependent: in imbalanced or rare-event tasks, accuracy or AUROC alone do not fix event sensitivity, false alarms, minority-class failure, or calibration."
-  - "Cross-session and adaptation labels are not yet temporal-validity claims; state annotation is now split into fast labels and slow internal-milieu disclosure, and fixed decoder interval, recalibration burden, and transfer ceiling still have to be disclosed separately."
-  - "Clock domain, stream alignment, digital trigger capture, physical output onset, and uncontrolled-response timing are different timing-validation classes rather than one sync field."
-  - "Even when the score is numerically the same, you still have to separate the target neural variable from eye movement, EMG, behavior, feedback routes, subject / session fingerprint, and acquisition-distribution shortcuts such as site / device / reference / electrode layout."
-  - "Even when foundation / self-supervised EEG models are used, pretraining-corpus, coordinate-route / reference-family, omitted-channel, and label-budget audits are still required."
-  - "Even when datasets are described as `harmonized`, common-channel intersection, interpolation to a target montage, and REST-based transformation remain different recording-frame branches rather than one benchmark object."
-  - "Official challenge rules, submission constraints, and later postmortems can change what a benchmark score means, so benchmark provenance is part of the dataset / benchmark card rather than administrative detail."
-  - "BIDS raw layout, BIDS derivatives / lineage, workflow recipe, benchmark harness, benchmark-governance snapshot, and runtime pin are different reproducibility layers; naming only the dataset and tool remains too coarse."
-  - "Reference system, channel map, electrode layout, and device protocol are not cosmetic metadata; they can move scores and belong in the dataset card."
-  - "The ultimate goal is to make it possible for a third party to rerun the result under the same conditions."
-  - "The L0 artifact pack now follows this page's stricter site rule: event fidelity, label provenance, acquisition-distribution summary, derivative lineage, and a stopping claim are required alongside version/BIDS/QC/split/baseline."
+- 最初に共有インフラストラクチャを見て、次にスターター データセットを見ていきます。
+- スターター データは L0 ～ L1 の練習用ボードであり、EEG ソース イメージングのグラウンド トゥルースではありません。
+- このページでは、維持状態ルートのコンポーネント追加 / アブレーション ラダーも修正されているため、グリア基質ルーティング、星状細胞状態、神経血管 / BBB、およびクリアランス増強が、1 つのマルチモーダル ブーストに積み上げられるのではなく、指定されたニューロン優先ベースラインと比較されます。
+- 同じ主題のサポート状態バンドルは自己解釈型として扱われなくなりました。ルート クラス、有効ウィンドウ、数量ブリッジ、共通ドライバー監査、欠落ポリシー、不一致トポロジ、再現性、転送ウィンドウ、および棄権が実用的なフィールドとして固定されました。
+- 直接検証データの内部であっても、刺激のグラウンドトゥルース、同時侵襲的記録、および手術後の結果は、異なる証拠クラスです。
+- 公正な逆問題ベンチマークでは、勝利する方法だけを指定するのではなく、焦点中心とソース範囲のターゲット、逆ファミリ、不確実性オブジェクト、モンタージュ / カバレッジ ポリシー、およびジオメトリ / 導電率の感度を分離する必要もあります。
+- 高密度だけが意味のあるルートではありません。ターゲット密度および DeepSIF のような低密度 ESI は、有界レジームで動作できますが、ゲインは依然としてソルバー、ジオメトリ、およびソース レジームによって条件付けされます。
+- 各スターター データセットには、異なるアノテーション来歴、時間忠実度、および独立した分割ユニットがあります。
+- セッション内 / セッション間 / 被験者間 / 適応は異なる評価ファミリーであり、同じスコアの下に並べて配置すべきではありません。
+- ベンチマーク名はまだ粗すぎます。予測オブジェクト、独立した予測ユニット、ホールドアウト ユニット、適応レジーム、運用予算はすべて、同じスコアの意味を変える可能性があります。
+- メトリクスのセマンティクスはタスクに依存します。不均衡なタスクやまれなイベントのタスクでは、精度や AUROC だけではイベントの感度、誤ったアラーム、少数クラスの障害、またはキャリブレーションを修正できません。
+- クロスセッションラベルとアダプテーションラベルはまだ一時的な有効性を主張するものではありません。状態アノテーションは現在、高速ラベルと低速内部環境開示に分割されており、固定デコーダ間隔、再校正負荷、および転送上限は依然として個別に開示する必要があります。
+- クロック ドメイン、ストリーム アライメント、デジタル トリガ キャプチャ、物理出力オンセット、および制御されていない応答タイミングは、1 つの同期フィールドではなく、異なるタイミング検証クラスです。
+- スコアが数値的に同じであっても、ターゲットの神経変数を眼球運動、筋電図、行動、フィードバックルート、被験者/セッションのフィンガープリント、部位/デバイス/参照/電極レイアウトなどの取得分配ショートカットから分離する必要があります。
+- 基礎/自己教師ありEEGモデルが使用される場合でも、事前トレーニングコーパス、座標ルート/参照ファミリー、省略されたチャネル、およびラベルバジェットの監査が依然として必要です。
+- データセットが `harmonized` として記述されている場合でも、共通チャネルの交差、ターゲット モンタージュへの補間、および REST ベースの変換は、1 つのベンチマーク オブジェクトではなく、異なる記録フレーム ブランチのままです。
+- 公式のチャレンジ ルール、提出の制約、およびその後の事後分析により、ベンチマーク スコアの意味が変わる可能性があるため、ベンチマークの来歴は管理上の詳細ではなく、データセット/ベンチマーク カードの一部となります。
+- BIDS raw レイアウト、BIDS デリバティブ / リネージ、ワークフロー レシピ、ベンチマーク ハーネス、ベンチマーク ガバナンス スナップショット、およびランタイム ピンは、異なる再現性レイヤーです。データセットとツールのみの名前付けは粗すぎるままです。
+- 参照システム、チャネル マップ、電極レイアウト、およびデバイス プロトコルは、表面的なメタデータではありません。スコアを移動したり、データセット カードに属することができます。
+- 最終的な目標は、第三者が同じ条件で結果を再実行できるようにすることです。
+- L0 アーティファクト パックは、このページのより厳格なサイト ルールに従います。イベントの忠実度、ラベルの来歴、取得と配布の概要、派生系統、および停止要求が、バージョン/BIDS/QC/スプリット/ベースラインとともに必要となります。
 known_points:
-  - "Public EEG data is useful for L0 recall analysis and L1 baseline practice."
-  - "When selecting data for the first time, you will move forward if you prioritize ease of retesting over difficulty."
-  - "Starter EEG datasets are still neuron-first baselines; maintenance-state claims need paired support-state data or aligned proxy logs, one-family-at-a-time augmentation, and strongest-single-row versus bundle comparison."
-  - "Glial substrate-routing and astrocyte-state are different augmentation families: a named astrocyte observable does not fix supplier cell / neuronal sink / fuel object, and a glial fuel-support route does not by itself identify astrocyte ensembles."
-  - "A same-subject support-state bundle can still mix common drivers, smaller complete-case slices, and opposite-sign rows, so family-split augmentation is not read strongly on this site without its own augmentation card."
-  - "Cue-locked events, expert interval annotations, sleep hypnograms, and physician report-derived labels have different meanings even though they are the same 'public EEG data'."
-  - "Even if the accuracy is the same, the strength of the argument that can be read will change depending on which generalization condition the score was obtained under."
-  - "The same benchmark name can still hide different predicted objects, independent units, grouped hold-out units, adaptation regimes, and inference budgets."
-  - "For class-imbalanced or rare-event tasks, a task-matched metric bundle is required: event sensitivity plus false alarms for seizure tasks, and macro / per-stage agreement for sleep staging, rather than one headline number."
-  - "Cross-session accuracy and cross-session adaptation still do not say whether a fixed decoder survived, how much recalibration was needed, or what transfer ceiling remains."
-  - "The same task and decoder window can still run under different slow internal-milieu regimes, so `state annotation` is not exhausted by movement, arousal, or session ID alone."
-  - "A dataset card that says only `events.tsv` or `LSL` still leaves open whether timing was checked at the stored-data, trigger, physical-output, or uncontrolled-response level."
-  - "A same-day score may reflect movement / EOG / EMG / feedback routes, subject / session fingerprint, or acquisition-distribution shortcuts rather than the target signal."
-  - "Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, acquisition-distribution summary, and adaptation regime are disclosed."
-  - "A benchmark name alone is not enough; version, split / randomization rule, hidden grouping, extra-data policy, pretrained-checkpoint policy, and inference-stage restrictions can all change what a score means."
-  - "A dataset or pipeline name alone is still not enough; raw layout, derivative lineage, workflow recipe, and runtime pin can each move what the result means."
-  - "Reference system, device, electrode layout, and filter chain can change what looks like the same EEG benchmark."
-  - "With only starter data and no individual MRI or invasive ground truth, we cannot make strong claims about improved ESI accuracy."
-  - "At source-imaging stage C, named validation class still matters because stimulation ground truth, simultaneous SEEG, and clinical outcome do not answer the same error question."
-  - "Low-density or targeted-density ESI can be scientifically meaningful in bounded regimes, but montage design, generator depth/orientation, and validation class still have to be declared before the result is compared with HD-EEG or treated as portable."
-  - "For inverse-problem claims, same raw data is still not enough; same head model, same preprocessing, same source regime, same inverse family / target object, and a sensitivity report are also required before comparing solver families."
-  - "At L0, a reusable artifact pack now also requires event fidelity, label provenance, hold-out ancestry, acquisition-distribution summary, derivative lineage, and a stopping claim rather than only version/BIDS/QC/split/baseline."
+- 公開 EEG データは、L0 想起分析と L1 ベースラインの練習に役立ちます。
+- 初めてデータを選択するときは、難易度よりもやり直しのしやすさを優先すると先に進みます。
+- スターター EEG データセットは依然としてニューロン優先のベースラインです。メンテナンス状態の主張には、ペアになったサポート状態データまたは調整されたプロキシ ログ、一度に 1 つのファミリーの拡張、および最も強力な単一行とバンドルの比較が必要です。
+- グリア基質ルーティングとアストロサイト状態は異なる拡張ファミリーです。名前付きアストロサイトオブザーバブルはサプライヤー細胞/ニューロンシンク/燃料オブジェクトを固定せず、グリア燃料サポートルート自体はアストロサイトアンサンブルを識別しません。
+- 同じサブジェクトのサポート状態バンドルでも、共通のドライバー、小さな完全なケースのスライス、および反対符号の行が混在する可能性があるため、独自の拡張カードがなければ、このサイトではファミリー分割拡張は強く認識されません。
+- キューロックイベント、専門家によるインターバル注釈、睡眠催眠計画、医師のレポート由来のラベルは、同じ「公開脳波データ」であっても、異なる意味を持ちます。
+- 同じ精度であっても、どの汎化条件でスコアを取得したかによって、読み取れる主張の強さが変わります。
+- 同じベンチマーク名でも、異なる予測オブジェクト、独立したユニット、グループ化されたホールドアウト ユニット、適応レジーム、および推論バジェットを隠すことができます。
+- クラス不均衡または稀なイベントのタスクの場合は、タスクに一致するメトリクス バンドルが必要です。つまり、1 つのヘッドライン番号ではなく、イベントの感度と発作タスクの誤警報、および睡眠ステージングのマクロ / ステージごとの一致です。
+- クロスセッション精度とクロスセッション適応は、固定デコーダが生き残ったかどうか、どの程度の再キャリブレーションが必要か、またはどの程度の転送上限が残っているかをまだ示していません。
+- 同じタスクとデコーダ ウィンドウは、異なる遅い内部環境環境下でも実行できるため、`state annotation` は移動、覚醒、またはセッション ID だけによって使い果たされることはありません。
+- '`events.tsv` または `LSL` のみを示すデータセット カードでは、タイミングが保存データ、トリガー、物理出力、または非制御応答レベルでチェックされたかどうかは未解決のままです。'
+- 同日のスコアは、ターゲット信号ではなく、動き / EOG / EMG / フィードバック ルート、被験者 / セッションのフィンガープリント、または取得と配信のショートカットを反映する場合があります。
+- 基礎モデルの改善は、事前トレーニング コーパス、チャネル不一致の処理、取得と配信の概要、および適応レジームが開示されない限り比較できません。
+- ベンチマーク名だけでは十分ではありません。バージョン、分割/ランダム化ルール、非表示グループ化、追加データ ポリシー、事前トレーニング済みチェックポイント ポリシー、および推論段階の制限はすべて、スコアの意味を変更する可能性があります。
+- データセットまたはパイプライン名だけではまだ十分ではありません。生のレイアウト、派生リネージュ、ワークフロー レシピ、およびランタイム ピンはそれぞれ、結果の意味を変更できます。
+- 基準システム、デバイス、電極レイアウト、フィルター チェーンによって、同じ EEG ベンチマークに見えるものが変化する可能性があります。
+- スターター データのみで、個々の MRI や侵襲的なグラウンド トゥルースがないため、ESI の精度が向上したと強く主張することはできません。
+- ソースイメージングの段階 C では、刺激のグラウンド トゥルース、同時 SEEG、および臨床結果が同じエラーの質問に答えないため、名前付き検証クラスが依然として重要です。
+- 低密度またはターゲット密度の ESI は、境界領域では科学的に意味がある可能性がありますが、結果を HD-EEG と比較したり、ポータブルとして扱ったりする前に、モンタージュ設計、ジェネレーターの深さ/方向、および検証クラスを宣言する必要があります。
+- 逆問題の主張の場合、同じ生データではまだ十分ではありません。ソルバー ファミリを比較する前に、同じヘッド モデル、同じ前処理、同じソース レジーム、同じ逆ファミリ/ターゲット オブジェクト、および感度レポートも必要です。
+- L0 では、再利用可能なアーティファクト パックには、バージョン/BIDS/QC/スプリット/ベースラインだけでなく、イベントの忠実度、ラベルの来歴、ホールドアウトの祖先、取得と配布の概要、派生系統、および停止要求も必要になりました。
 unknown_points:
-  - "Starter datasets alone cannot solve all the issues of WBE."
-  - "We have not yet determined which data will be most effective for future causal/closed-loop verification."
-  - "We have not decided yet which public data will be the default route for the annotation fidelity benchmark."
-  - "We have not determined yet which public benchmark board should become the default for comparing focal-centre and source-extent inverse methods under the same montage / geometry controls and uncertainty sweep."
-  - "We still do not have a default public EEG benchmark that logs state annotation, fixed decoder interval, recalibration burden, and transfer ceiling under one shared temporal-validity schema."
-  - "We still do not have a shared public template that freezes fast labels and slow internal-milieu disclosure together inside one temporal-validity addendum."
-  - "We still do not have a default public dataset bundle that jointly fixes a neuron-first baseline, family-split support-state augmentation, and strongest-single-row versus bundle comparison under one shared missingness and common-driver audit."
+- スターター データセットだけでは WBE のすべての問題を解決できません。
+- 将来の因果関係/閉ループ検証にどのデータが最も効果的であるかはまだ決定していません。
+- どの公開データがアノテーション忠実度ベンチマークのデフォルト ルートになるかはまだ決定していません。
+- 同じモンタージュ/ジオメトリ制御および不確実性スイープの下で、焦点中心とソース範囲の逆法を比較するためのデフォルトとなる公開ベンチマーク ボードをまだ決定していません。
+- 状態の注釈、固定デコーダ間隔、再調整負荷、および 1 つの共有時間的有効性スキーマの下での転送上限を記録するデフォルトの公開 EEG ベンチマークはまだありません。
+- 迅速なラベルと遅い内部環境の開示を 1 つの一時的有効性に関する補遺の中にまとめて凍結する共有のパブリック テンプレートはまだありません。
+- 1 つの共有欠損と共通ドライバー監査の下で、ニューロン優先のベースライン、ファミリー分割サポート状態の拡張、および最強の単一行とバンドルの比較を共同で修正するデフォルトのパブリック データセット バンドルはまだありません。
 wiki_links:
-  - label: "Wiki: Basics of EEG"
-    url: "/wiki/eeg-basics.html"
-    description: "For people who want to understand the EEG signal itself before looking at the dataset."
-  - label: "Wiki: Minimum artifact pack for L0"
-    url: "/wiki/l0-minimum-artifact-pack.html"
-    description: "Organize L0 deliverables including BIDS, QC, splits, baselines, and execution steps."
-  - label: "Wiki: Basics of verification infrastructure"
-    url: "/wiki/verification-basics.html"
-    description: "Learn why you need benches and registrations, not just data."
-  - label: "Wiki: Data partitioning and leaks"
-    url: "/wiki/dataset-splits-and-leakage.html"
-    description: "We will explain how to divide train/test and common leak accidents from the beginning."
-  - label: "Wiki: Event synchronization and observation log"
-    url: "/wiki/event-sync-and-measurement-logs.html"
-    description: "Explaining why raw EEG alone is not enough from an event and synchronization perspective."
-  - label: "Wiki: state/trait/drift"
-    url: "/wiki/state-trait-and-drift.html"
-    description: "Organize longitudinal reading to avoid confusing same-day score and cross-day stability."
-  - label: "Wiki: EEG foundation models and pretraining"
-    url: "/wiki/eeg-foundation-models.html"
-    description: "Use this page when benchmark rules, pretraining corpora, and leaderboard interpretation start to blur together."
-  - label: "Wiki: Basics of multimodal integration"
-    url: "/wiki/multimodal-integration-basics.html"
-    description: "We will explain from the basics what can be supplemented by adding to EEG."
-  - label: "Wiki: Standards/Location/Validator/Benchmark"
-    url: "/wiki/standards-repositories-validators-and-benchmarks.html"
-    description: "We will clarify the role differences between BIDS, OpenNeuro, Validator, and Benchmark."
+- label: 'Wiki: 脳波の基礎'
+  url: /wiki/eeg-basics.html
+  description: データセットを見る前に脳波信号自体を理解したい人向け。
+- label: 'Wiki: L0 の最小アーティファクト パック'
+  url: /wiki/l0-minimum-artifact-pack.html
+  description: BIDS、QC、分割、ベースライン、実行ステップなどの L0 成果物を整理します。
+- label: 'Wiki: 検証インフラストラクチャの基本'
+  url: /wiki/verification-basics.html
+  description: データだけでなくベンチと登録が必要な理由を学びましょう。
+- label: 'Wiki: データの分割と漏洩'
+  url: /wiki/dataset-splits-and-leakage.html
+  description: 列車・試験と一般的な漏水事故の分け方を最初から解説します。
+- label: 'Wiki: イベント同期と監視ログ'
+  url: /wiki/event-sync-and-measurement-logs.html
+  description: イベントと同期の観点から、生の EEG だけでは十分ではない理由を説明します。
+- label: 'Wiki: 状態/特性/ドリフト'
+  url: /wiki/state-trait-and-drift.html
+  description: 同じ日のスコアと日をまたいだ安定性の混同を避けるために、縦断的な読み取りを整理します。
+- label: 'Wiki: EEG 基礎モデルと事前トレーニング'
+  url: /wiki/eeg-foundation-models.html
+  description: ベンチマーク ルール、事前トレーニング コーパス、およびリーダーボードの解釈が曖昧になり始めた場合は、このページを使用してください。
+- label: 'Wiki: マルチモーダル統合の基本'
+  url: /wiki/multimodal-integration-basics.html
+  description: 脳波に追加することで何が補完できるのかを基礎から解説していきます。
+- label: 'Wiki: 標準/場所/バリデータ/ベンチマーク'
+  url: /wiki/standards-repositories-validators-and-benchmarks.html
+  description: BIDS、OpenNeuro、Validator、Benchmark の役割の違いを明確にします。
 recommended_pages:
-  - label: "Introduction to EEG"
-    url: "/eeg_101.html"
-  - label: "Verification base"
-    url: "/verification.html"
-  - label: "Technology Roadmap"
-    url: "/tech_roadmap.html"
+- label: 脳波検査の概要
+  url: /eeg_101.html
+- label: 検証ベース
+  url: /verification.html
+- label: テクノロジーロードマップ
+  url: /tech_roadmap.html
 ---
-<!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
+<!-- 重要: この情報を削除したり上書きしたりしないでください。これはプロジェクトの恒久的な知識ベースです。 -->
 
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>How To Use</h2>
+<h2>使用方法</h2>
 <p>
-This page is a practical list to help you decide which data to practice with first. First, we use public data to create a state in which we can reproduce the same results (L0), and then check to see if we can predict and withstand changes in conditions (L1-L2).
+このページは、最初にどのデータを使用して練習するかを決定するのに役立つ実用的なリストです。まず、公開データを使って同じ結果を再現できる状態（L0）を作り、状況の変化を予測して耐えられるかどうかを確認します（L1～L2）。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Criteria for selection</strong>
+<strong>選択基準</strong>
 <p>
-When selecting data at the beginning, it is important to choose data that is easy for others to follow in terms of procedures and results, rather than data that is extremely difficult. Rather than aiming for everything from the beginning, a shortcut is to create the smallest loop using public data that is easy to reproduce.
+最初にデータを選ぶ際には、非常に難しいデータではなく、手順や結果が他人にとって分かりやすいデータを選ぶことが大切です。最初からすべてを目指すのではなく、再現しやすい公開データを使って最小のループを作るのが近道です。
 </p>
 </div>
 <div class="note-box">
-<strong>When you want to understand where this page fits</strong>
+<strong>このページがどこに当てはまるかを知りたい場合</strong>
 <p>
-This page is the practical entry point for deciding where to start and how to complete the minimum L0 loop. The <a href="verification.html">verification platform</a> handles what counts as progress, and the <a href="verification.html#casework">casework section within the verification platform</a> handles examples from other fields. If you want a one-page guide to how the practical pages differ from the rest of the site, please see <a href="wiki/practical-pages-reading-guide.html">Wiki: Guide to reading practical pages</a>.
+このページは、どこから開始するか、最小 L0 ループを完了する方法を決定するための実用的なエントリ ポイントです。 <a href="verification.html">検証プラットフォーム</a>は進捗としてカウントされる内容を処理し、検証プラットフォーム</a>内の<a href="verification.html#casework">ケースワークセクションは他の分野の例を処理します。実践的なページがサイトの他の部分とどのように異なるのかについての 1 ページのガイドが必要な場合は、<a href="wiki/practical-pages-reading-guide.html">Wiki: 実践的なページを読むためのガイド</a> を参照してください。
 </p>
 </div>
 <div class="note-box">
-<strong>When you want to complete with just this page</strong>
+<strong>このページだけで完結したい場合</strong>
 <p>
-The minimal loop procedure from the old <code>hands_on.md</code> has been integrated into this page. Therefore, you can read straight through to the L0 skeleton, QC, baseline, and completion conditions without having to go to another page after data selection.
+古い <code>hands_on.md</code> の最小限のループ プロシージャがこのページに統合されました。したがって、データ選択後に別のページに移動することなく、L0 スケルトン、QC、ベースライン、完了条件まで直接読むことができます。
 </p>
 </div>
 <div class="note-box">
-<strong>If you want the RQ-by-RQ route from datasets back to mind-upload questions</strong>
+<strong>データセットからマインド アップロードの質問に戻る RQ ごとのルートが必要な場合</strong>
 <p>
-This page is the practical data portal, not the full research-question map. If you want to move from a dataset bucket here to a specific mind-upload research question, a fixed EEG-ready claim, and a grant-ready theme, start with the <a href="wiki/mind-upload-current-public-six-rq-brief.html">current public six-RQ brief</a>, then use the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a>, the <a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant and dataset playbook</a>, and the <a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">current funding shortlist</a>.
+このページは実用的なデータポータルであり、完全な研究課題マップではありません。ここのデータセット バケットから、特定のマインド アップロード研究の質問、固定された EEG 対応の主張、助成金対応のテーマに移行したい場合は、<a href="wiki/mind-upload-current-public-six-rq-brief.html">現在の公開 6 つの RQ 概要</a> から始めて、<a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG 実現可能性ページ</a>、<a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ ごとの詳細書類</a>、<a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">助成金とデータセットのプレイブック</a>、<a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">現在の資金候補リスト</a>。
 </p>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>What I want to do</th>
-<th>First data</th>
+<th>やりたいこと</th>
+<th>最初のデータ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I want to practice the basics of preprocessing and classification</strong></td>
-<td><strong>EEG Motor Movement/Imagery</strong> is easy to enter. The problem settings are relatively easy to understand, making it suitable for L0-L1 practice. </td>
+<td><strong>前処理と分類の基礎を練習したい</strong></td>
+<td><strong>脳波運動/画像</strong> は簡単に入力できます。問題設定が比較的分かりやすいので、L0～L1の練習に適しています。 </td>
 </tr>
 <tr>
-<td><strong>I want to experience long-term data and event detection</strong></td>
-<td><strong>CHB-MIT</strong> is a good fit. It lets you practice handling noise, long recordings, and event detection together. </td>
+<td><strong>長期的なデータやイベントの検出を体験したい</strong></td>
+<td><strong>CHB-MIT</strong> が適切です。ノイズ、長時間録音、イベント検出の処理を一緒に練習できます。 </td>
 </tr>
 <tr>
-<td><strong>I want to handle state transitions</strong></td>
-<td><strong>Sleep-EDF</strong> is a good fit. It is useful for learning how states change over time. </td>
+<td><strong>状態遷移を扱いたい</strong></td>
+<td><strong>Sleep-EDF</strong> が適切です。時間の経過とともに状態がどのように変化するかを学ぶのに役立ちます。 </td>
 </tr>
 <tr>
-<td><strong>I want to see the difficulty of large-scale data</strong></td>
-<td><strong>TUH EEG</strong> is also a candidate. However, it is heavy for a first dataset, so it is safer to become familiar with the first three first. </td>
+<td><strong>大規模データの難しさを知りたい</strong></td>
+<td><strong>TUH EEG</strong> も候補です。ただし、最初のデータセットとしては重いため、最初の 3 つに慣れておく方が安全です。 </td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>Avoid expecting too much when selecting data at the beginning</strong>
+<strong>最初にデータを選択するときに過度の期待をしないでください</strong>
 <p>
-The starter dataset is not intended to solve all WBE problems at once. The first things you want to get here are <strong>reproducible input organization</strong>, <strong>QC habits</strong>, and <strong>baseline comparison</strong>. Strong points such as identity and causal identity cannot be resolved with just the data at this stage.
+スターター データセットは、すべての WBE 問題を一度に解決することを目的としたものではありません。ここで最初に取得したいのは、<strong>再現可能な入力組織</strong>、<strong>QC 習慣</strong>、<strong>ベースライン比較</strong> です。同一性や因果的同一性などの長所は、現段階のデータだけでは解決できません。
 </p>
 </div>
 <div class="note-box">
-<strong>Keep the public dataset route conservative</strong>
+<strong>公開データセットのルートを控えめにしてください</strong>
 <p>
-This public page stays at the entry level. When one unresolved question is actively being turned into an EEG-ready work package, stronger routing details such as fixed <code>Dxx + DOI</code> anchors, first-pass KPIs, and stopping rules are kept in the wiki rather than promoted here as a public conclusion. Use the <a href="wiki/mind-upload-current-public-six-rq-brief.html">current public six-RQ brief</a>, the <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG feasibility page</a>, and the <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ deep dossiers</a> when you need the current one-question-at-a-time packages.
-</p>
-</div>
-
-<div class="note-box">
-<strong>Seeing before precision</strong>
-<p>
-When you read a dataset introduction, it is tempting to jump straight to "what score was achieved?" The first questions should instead be <strong>what the train/test split unit is</strong>, <strong>whether leakage was checked</strong>, and <strong>whether the result was compared against a simple baseline</strong>. If this is still unclear, please read <a href="wiki/dataset-splits-and-leakage.html">Wiki: Data Splits and Data Leakage</a> first.
-</p>
-</div>
-<div class="note-box">
-<strong>Even if the score is the same, the meaning will change if the generalization conditions are different</strong>
-<p>
-MOABB treats <strong>within-session</strong>, <strong>cross-session</strong>, and <strong>cross-subject</strong> as separate evaluation families. In other words, even if the 70% is the same, the 70% obtained by "same day, same person, same setup" and the 70% obtained by hold-out on "different day" or "different person" are different achievements. If you want to sort out short-term state fluctuations and long-term drift first, please also have a look at <a href="wiki/state-trait-and-drift.html">Wiki: state/trait/drift</a>.
-</p>
-</div>
-<div class="note-box">
-<strong>See label provenance before data name</strong>
-<p>
-Even with the same "public EEG data", the meaning of comparison is different for <strong>cue-locked annotation channel</strong>, <strong>expert interval annotation</strong>, <strong>whole-night hypnogram</strong>, and <strong>physician report-derived label</strong>. Therefore, on this page, in addition to the dataset name, be sure to include <strong>where the label came from</strong>, <strong>at what time granularity</strong>, and <strong>what is considered as an independent unit of split</strong>.
-</p>
-</div>
-<div class="note-box">
-<strong>When you are wondering what to get for L0</strong>
-<p>
-Even if you just decide on the data name, if the form of the submission is ambiguous, it is easy to get stuck. If you want to see BIDS, Validator, QC logs, division rules, baselines, execution steps, and failure examples in one page, please see <a href="wiki/l0-minimum-artifact-pack.html">Wiki: Minimum L0 artifact pack</a>.
-</p>
-</div>
-<div class="note-box">
-<strong>When you want to see the entire order from EEG to L0 in one straight line</strong>
-<p>
-After the introduction to EEG, if you would like to see the flow of selecting data on this page, going around in the L0 practice section, and confirming it as L0 in Verification, please see <a href="wiki/eeg-to-l0-route.html">Wiki: Straight path from EEG to L0</a>.
+この公開ページは入門レベルにとどまります。 1 つの未解決の質問が EEG 対応ワーク パッケージに積極的に変換されている場合、固定 <code>Dxx + DOI</code> アンカー、ファーストパス KPI、停止ルールなどのより強力なルーティングの詳細は、公開の結論としてここで宣伝されるのではなく、Wiki に保持されます。現在の 1 問ずつのパッケージが必要な場合は、<a href="wiki/mind-upload-current-public-six-rq-brief.html">現在の公開 6 つの RQ 概要</a>、<a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG 実現可能性ページ</a>、および <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ ごとの詳細文書</a> を使用してください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Raw EEG is not enough</strong>
+<strong>精度よりも先に見る</strong>
 <p>
-Even if the waveform file is published, if the <strong>event definition</strong>, <strong>stimulus log</strong>, <strong>time synchronization</strong>, and <strong>bad channel / bad segment recording</strong> are weak, it will be difficult to compare again later. Furthermore, in the 2026-03 re-audit, we added to the site rule that event semantics are not fixed just by having `events.tsv`, and hardware delay cannot be audited just by having LSL. If you want to understand this point from the beginning, please see <a href="wiki/event-sync-and-measurement-logs.html">Wiki: Basics of event synchronization and observation logs</a> first.
+データセットの紹介を読むと、すぐに「どのようなスコアが達成されたのか?」というところに飛びつきたくなります。最初の質問は、<strong>トレーニング/テスト分割ユニットは何か</strong>、<strong>漏れがチェックされたかどうか</strong>、<strong>結果が単純なベースラインと比較されたかどうか</strong>です。これがまだ不明な場合は、最初に<a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータ漏洩</a> をお読みください。
+</p>
+</div>
+<div class="note-box">
+<strong>スコアが同じでも汎化条件が違えば意味が変わる</strong>
+<p>
+MOABB は、<strong>within-session</strong>、<strong>cross-session</strong>、および <strong>cross-subject</strong> を別個の評価ファミリーとして扱います。つまり、同じ70％であっても、「同日・同じ人・同じ段取り」で得られる70％と、「別の日」「別の人」でホールドアウトして得られる70％では、異なる成果となるのです。まず短期的な状態変動と長期的なドリフトを整理したい場合は、<a href="wiki/state-trait-and-drift.html">Wiki: state/trait/drift</a> もご覧ください。
+</p>
+</div>
+<div class="note-box">
+<strong>データ名の前にラベルの来歴を参照</strong>
+<p>
+同じ「公開脳波データ」であっても、<strong>キューロックアノテーションチャンネル</strong>、<strong>エキスパートインターバルアノテーション</strong>、<strong>一夜催眠</strong>、<strong>医師レポート由来では比較の意味が異なります。ラベル</strong>。したがって、このページでは、データセット名に加えて、ラベルの由来<strong></strong>、<strong>いつの粒度</strong>、<strong>分割の独立単位とみなされているもの</strong>を必ず含めてください。
+</p>
+</div>
+<div class="note-box">
+<strong>L0</strong> で何を買えばいいのか迷ったとき
+<p>
+データ名だけを決めても、入稿形式があいまいだと行き詰まってしまいがちです。 BIDS、バリデーター、QC ログ、分割ルール、ベースライン、実行ステップ、および失敗例を 1 ページで確認したい場合は、<a href="wiki/l0-minimum-artifact-pack.html">Wiki: Minimum L0 アーティファクト パック</a> を参照してください。
+</p>
+</div>
+<div class="note-box">
+<strong>EEG から L0 までの順序全体を 1 つの直線で表示したい場合</strong>
+<p>
+EEG入門後、このページでデータを選択し、L0練習編で一周し、VerificationでL0であることを確認する流れを見たい場合は、<a href="wiki/eeg-to-l0-route.html">Wiki:EEGからL0</a>への直線パスをご覧ください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Event Fidelity Card now required</strong>
+<strong>生の脳波検査では不十分</strong>
 <p>
-Future dataset cards must include at least <strong>(1) onset / duration / sample</strong>, <strong>(2) clock domain plus stream-alignment rule</strong>, <strong>(3) timing-validation class such as stored-data anchor / digital trigger / physical onset / uncontrolled-response test</strong>, <strong>(4) event semantics such as <code>trial_type</code>, HED, and scoring rules</strong>, <strong>(5) provenance / scorer / report-usage flag</strong>, <strong>(6) independent split units</strong>, and <strong>(7) a clear stopping claim</strong>. Cards without these fields are insufficient as reusable L0 guides.
+波形ファイルが公開されていても、<strong>イベント定義</strong>、<strong>刺激ログ</strong>、<strong>時刻同期</strong>、<strong>不良チャンネル/不良セグメント記録</strong>が弱いと、後で再度比較するのが困難になります。さらに、2026-03 年の再監査では、`events.tsv` があるだけではイベント セマンティクスは修正されず、LSL があるだけではハードウェア遅延は監査できないことをサイト ルールに追加しました。この点を最初から理解したい場合は、<a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期の基礎と観測ログ</a> を最初に参照してください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>BIDS, Derivatives, Pipeline, OpenNeuro, and Benchmark are not the same</strong>
+<strong>イベント忠実度カードが必要になりました</strong>
 <p>
-BIDS is a raw-data standard, BIDS Derivatives keeps processed-output lineage explicit, OpenNeuro and PhysioNet are storage areas, Validator is a formal check, MNE-BIDS is a loader, MNE-BIDS-Pipeline or a BIDS App is a workflow recipe, and Benchmark is a comparison rule. If you want to sort out this role difference from the beginning, please use <a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: Standards/Repositories/Validators/Benchmarks</a>.
+将来のデータセット カードには、少なくとも <strong>(1) オンセット / 期間 / サンプル</strong>、<strong>(2) クロック ドメインとストリーム アライメント ルール</strong>、<strong>(3) 格納データ アンカー/デジタル トリガー/物理オンセット/非制御応答テストなどのタイミング検証クラス</strong>、 <strong>(4) <code>trial_type</code>、HED、スコアリング ルールなどのイベント セマンティクス</strong>、<strong>(5) 来歴 / スコアラー / レポート使用フラグ</strong>、<strong>(6) 独立した分割ユニット</strong>、および<strong>(7) 明確な停止要求</strong>。これらのフィールドのないカードは、再利用可能な L0 ガイドとしては不十分です。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Plan for future expansion</strong>
+<strong>BIDS、デリバティブ、パイプライン、OpenNeuro、およびベンチマークは同じではありません</strong>
 <p>
-EEG-based starter datasets are enough to begin, but later you may want to add spatial or structural information. If you want to map out what can be added to EEG first, please see <a href="wiki/multimodal-integration-basics.html">Wiki: Multimodal integration basics</a>.
+BIDS は生データ標準であり、BIDS Derivatives は処理された出力リネージュを明示的に保ち、OpenNeuro と PhysioNet はストレージ領域、Validator は正式なチェック、MNE-BIDS はローダー、MNE-BIDS-Pipeline または BIDS App はワークフロー レシピ、Benchmark は比較ルールです。この役割の違いを最初から整理したい場合は、<a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: Standards/Repositories/Validators/Benchmarks</a> をご利用ください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>If you want to test whether adding glial, astrocyte, or clearance variables really changes the result</strong>
+<strong>将来の拡張計画</strong>
 <p>
-This page had one practical weakness: it explained how to build a reproducible neuron-first EEG baseline, but it still lacked a public rule for testing whether adding <strong>maintenance-state / support-state</strong> variables changes prediction, stability, or explanation. The current primary literature does not support one compressed <code>support-variable</code> bucket. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a>, <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025)</a>, <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> sharpen distinct <strong>astrocyte-state</strong> routes across minute-scale network encoding, recall, multiday stabilization, and fear-state support. By contrast, <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011)</a>, <a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">Silva et al. (2022)</a>, <a href="https://doi.org/10.1038/s42255-025-01416-5" target="_blank">Pavlowsky et al. (2025)</a>, and <a href="https://doi.org/10.1038/s42255-025-01389-5" target="_blank">Greda et al. (2025)</a> sharpen distinct <strong>glial substrate-routing</strong> routes across lactate support, ketone-body support under starvation, learning-linked fatty-acid routing, and apoE / sortilin-dependent lipid delivery under limited glucose. <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> sharpens a pericyte / capillary-support route; <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025)</a> sharpens a meningeal-lymphatics / microglia route for synaptic physiology; <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> sharpen bounded human clearance-side observables; and <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> raises tracer-specific BBB transport quantification while explicitly leaving human ground truth and test-retest for future work. Therefore, this page now fixes a <strong>component-addition / ablation ladder</strong> that separates <strong>glial substrate-routing</strong> from <strong>astrocyte-state</strong> instead of letting readers pile both into one multimodal boost.
+開始するには EEG ベースの開始データセットで十分ですが、後で空間情報または構造情報を追加することが必要になる場合があります。まず EEG に何を追加できるかを計画したい場合は、<a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基礎</a> を参照してください。
+</p>
+</div>
+
+<div class="note-box">
+<strong>グリア、アストロサイト、またはクリアランス変数を追加すると結果が本当に変わるかどうかをテストしたい場合</strong>
+<p>
+このページには実際的な弱点が 1 つありました。再現可能なニューロン優先 EEG ベースラインの構築方法が説明されていましたが、<strong>maintenance-state / support-state</strong> 変数を追加することで予測、安定性、または説明が変わるかどうかをテストするための公開ルールがまだ欠けていました。現在の主要な文献は、1 つの圧縮された <code>support-variable</code> バケットをサポートしていません。 <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">ケイヒルら。 (2024)</a>、<a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">ウィリアムソンら。 (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">出羽ら。 (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)</a> は、分単位のネットワーク エンコーディング、リコール、複数日間の安定化、および恐怖状態のサポートにわたる、明確な <strong>astrocyte-state</strong> ルートを鮮明にします。対照的に、<a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">スズキら。 (2011)</a>、<a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">Silva 他。 (2022)</a>、<a href="https://doi.org/10.1038/s42255-025-01416-5" target="_blank">Pavlowsky 他。 (2025)</a>、<a href="https://doi.org/10.1038/s42255-025-01389-5" target="_blank">グレダら。 (2025)</a><strong>グリア基質ルーティング</strong>__は、乳酸サポート、飢餓下でのケトン体サポート、学習関連脂肪酸ルーティング、およびグルコース制限下でのapoE/ソルチリン依存性脂質送達を横断するルートを明確にする。 <a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)</a> は周皮細胞/毛細血管支持ルートを鋭くします。 <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">キムら。 (2025)</a> は、シナプス生理学のための髄膜リンパ管/ミクログリア経路を明確にします。 <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">ヒルシュラーら。 (2025)</a> および <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum ら。 (2026)</a> 境界のある人間のクリアランスサイドの観測値を鮮明にする。および<a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chungら。 (2025)</a> は、人間によるグランド トゥルースとテスト再テストを将来の作業に明示的に残しつつ、トレーサー固有の BBB 輸送の定量化を高めます。したがって、このページでは、読者が両方を 1 つのマルチモーダル ブーストにまとめるのではなく、<strong>グリア基質ルーティング</strong> を <strong>アストロサイト状態</strong> から分離する <strong>コンポーネント追加 / アブレーション ラダー</strong> を修正します。
 </p>
 </div>
 
 <section class="section" id="maintenance-component-ablation">
-<h2 class="section-title">A practical component-addition / ablation ladder for maintenance-state routes</h2>
+<h2 class="section-title">メンテナンス状態のルート用の実用的なコンポーネント追加/アブレーションラダー</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Family added on top of the neuron-first baseline</th>
-<th>Minimum paired data requirement</th>
-<th>What you may say if the gain survives</th>
-<th>What still must stop here</th>
+<th>ニューロン優先ベースラインの上に追加されたファミリー</th>
+<th>ペアデータの最小要件</th>
+<th>利益が生き残った場合に言えること</th>
+<th>ここでまだ止めなければならないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Glial substrate-routing route</strong></td>
-<td>Same-subject neural and behavioral target, plus a named glia-to-neuron fuel-support observable or perturbation with supplier cell, neuronal sink, fuel object / carrier, and nutrient or learning regime fixed.</td>
-<td>A declared glial substrate-routing family improved prediction, recall, or a bounded memory-support readout in that named nutrient or learning regime.</td>
-<td>That astrocyte ensemble state was identified, or that one glial fuel route generalizes across lactate, ketone-body, fatty-acid, and apoE / sortilin-dependent lipid delivery.</td>
+<td><strong>グリア基質経路</strong></td>
+<td>同じ被験者の神経および行動のターゲットに加え、サプライヤー細胞、ニューロンシンク、燃料オブジェクト/キャリア、固定された栄養素または学習体制による名前付きのグリアからニューロンへの燃料サポート観察可能または摂動。</td>
+<td>宣言されたグリア基質ルーティングファミリーは、その名前付きの栄養素または学習体制における予測、想起、または限定された記憶サポートの読み出しを改善しました。</td>
+<td>アストロサイトのアンサンブル状態が特定されたこと、または 1 つのグリア燃料経路が乳酸、ケトン体、脂肪酸、および apoE / ソルチリン依存性脂質送達にわたって一般化していることが特定されました。</td>
 </tr>
 <tr>
-<td><strong>Astrocyte-state route</strong></td>
-<td>Same-subject neural and behavioral target, plus a named astrocyte-state observable or perturbation aligned to the same recall, stabilization, or fear-state window.</td>
-<td>A named astrocyte-state family improved prediction, recall, stabilization, or fear-state decoding in that declared window.</td>
-<td>That the responsible whole-brain astrocyte controller was identified, or that astrocyte-state evidence fixed glial fuel routing, clearance control, or one general support state across all tasks and timescales.</td>
+<td><strong>星状細胞状態ルート</strong></td>
+<td>同じ被験者の神経および行動のターゲットに加え、同じ想起、安定化、または恐怖状態のウィンドウに調整された名前付きアストロサイト状態の観察可能または摂動。</td>
+<td>名前付き星状細胞状態ファミリーは、その宣言されたウィンドウにおける予測、想起、安定化、または恐怖状態の解読を改善しました。</td>
+<td>責任ある全脳アストロサイトコントローラーが特定されたこと、またはアストロサイト状態の証拠により、グリア燃料ルーティング、クリアランスコントロール、またはすべてのタスクとタイムスケールにわたる1つの一般的なサポート状態が固定されたこと。</td>
 </tr>
 <tr>
-<td><strong>Neurovascular / BBB / pericyte support route</strong></td>
-<td>Same-subject neural and behavioral target, plus a named capillary, BBB-exchange, or BBB-transport observable with shared arousal / vascular-driver logging.</td>
-<td>A declared vascular-support family reduced one error term or improved one prediction slice under the named physiological regime.</td>
-<td>That a generic BBB state was measured, or that the added row directly read out the neuronal variable of interest.</td>
+<td><strong>神経血管/BBB/周皮細胞サポートルート</strong></td>
+<td>同じ被験者の神経および行動のターゲットに加え、覚醒/血管ドライバーの共有ロギングで観察可能な名前付きの毛細血管、BBB交換、またはBBB輸送。</td>
+<td>宣言された血管支持ファミリーは、指定された生理学的レジームの下で 1 つの誤差項を削減するか、1 つの予測スライスを改善しました。</td>
+<td>一般的な BBB 状態が測定されたこと、または追加された行が対象のニューロン変数を直接読み出したこと。</td>
 </tr>
 <tr>
-<td><strong>Clearance / immune / lymphatic route</strong></td>
-<td>Same-subject neural or biomarker target, plus a named CSF-mobility, tracer-transport, or sleep-linked efflux route with sleep / time-of-day handling fixed.</td>
-<td>A declared transport-side or immune-side route explained incremental variance or changed a bounded physiological readout.</td>
-<td>That local microglial control, route-free whole-brain clearance truth, or one universal maintenance controller was identified.</td>
+<td><strong>クリアランス / 免疫 / リンパ経路</strong></td>
+<td>同じ被験者の神経またはバイオマーカーのターゲットに加え、睡眠/時間帯の処理が固定された名前付きのCSF移動性、トレーサー輸送、または睡眠に関連した排出ルート。</td>
+<td>宣言された輸送側または免疫側の経路は、増分分散を説明するか、境界のある生理学的測定値を変更します。</td>
+<td>その局所的なミクログリア制御、ルートフリーの全脳クリアランスの真実、または1つの普遍的な維持制御装置が特定されました。</td>
 </tr>
 <tr>
-<td><strong>Bundle comparison rule</strong></td>
-<td>Compare the neuron-only baseline, each single added family, and the full bundle under the same subjects, split rule, missingness policy, and common-driver audit.</td>
-<td>The bundle improved the declared task under a named availability and regime constraint, beyond the strongest single added row.</td>
-<td>That the full bundle proves the minimum required biological configuration or closes U3 by itself.</td>
+<td><strong>バンドル比較ルール</strong></td>
+<td>同じサブジェクト、分割ルール、欠落ポリシー、および共通ドライバー監査の下で、ニューロンのみのベースライン、追加された各ファミリー、および完全なバンドルを比較します。</td>
+<td>このバンドルは、名前付きの可用性とレジーム制約の下で宣言されたタスクを、最も強力な単一の追加行を超えて改善しました。</td>
+<td>完全なバンドルが最小限必要な生物学的構成を証明するか、またはそれ自体で U3 を閉じること。</td>
 </tr>
 </tbody>
 </table>
 
 <ol>
-<li>Freeze the <strong>neuron-first baseline</strong>, target object, split unit, and metric bundle before adding any maintenance-state row.</li>
-<li>Add <strong>one family at a time</strong> under the same subjects, same sessions, same missingness rule, and same evaluation family.</li>
-<li>Name the <strong>direct observable</strong>, <strong>time window</strong>, <strong>spatial unit</strong>, and <strong>route class</strong> for every added family, because local causal perturbation and bounded human proxy do not carry the same claim.</li>
-<li>Report the <strong>strongest single added row</strong>, the <strong>full bundle</strong>, and their disagreement / missing-modality behavior under the same split.</li>
-<li>Stop the claim at <strong>incremental predictive, stability, or physiological gain</strong> unless the result also survives common-driver controls, out-of-regime checks, and a named abstention boundary.</li>
+<li>メンテナンス状態の行を追加する前に、<strong>ニューロンファースト ベースライン</strong>、ターゲット オブジェクト、分割ユニット、およびメトリック バンドルをフリーズします。</li>
+<li>同じ被験者、同じセッション、同じ欠損ルール、および同じ評価ファミリの下で、<strong>一度に 1 つのファミリを追加します</strong>。
+<li>追加されたファミリごとに、<strong>直接観測可能</strong>、<strong>時間ウィンドウ</strong>、<strong>空間ユニット</strong>、および<strong>ルート クラス</strong>に名前を付けます。これは、局所的な因果関係の摂動と有界の人間代理が存在するためです。同じ主張を行っていません。</li>
+<li><strong>最強の単一追加行</strong>、<strong>フルバンドル</strong>、および同じ分割におけるそれらの不一致/モダリティの欠落動作を報告します。</li>
+<li>結果がコモンドライバー制御、体制外チェック、および指定された棄権境界にも耐えられない限り、<strong>増分予測、安定性、または生理的利得</strong>で主張を停止します。</li>
 </ol>
 </section>
 
 <div class="note-box">
-<strong>Starter EEG datasets are still only the baseline arm of this ladder</strong>
+<strong>スターター EEG データセットはまだこのラダーのベースライン アームにすぎません</strong>
 <p>
-EEG Motor Movement/Imagery, CHB-MIT, Sleep-EDF, and TUH help you fix the neuron-first baseline, split unit, QC discipline, and leakage checks. By themselves they do not close glial substrate-routing, astrocyte-state, pericyte / BBB support, clearance transport, or other maintenance-state families. Any public maintenance-state claim on this site therefore needs paired support-state data, aligned proxy logs, or a named perturbation route, and it must be compared against the strongest single added family rather than only against the all-in bundle.
+EEG Motor Movement/Imagery、CHB-MIT、Sleep-EDF、および TUH は、ニューロンファーストのベースライン、分割ユニット、QC 規律、漏洩チェックを修正するのに役立ちます。それら自体は、グリア基質ルーティング、星状細胞状態、周皮細胞/BBB サポート、クリアランス輸送、またはその他の維持状態ファミリーを閉じません。したがって、このサイトで公開されているメンテナンス状態の主張には、ペアになったサポート状態データ、調整されたプロキシ ログ、または名前付き摂動ルートが必要であり、オールイン バンドルだけではなく、最も強力な単一追加ファミリーと比較する必要があります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>A same-subject support-state bundle still needs its own augmentation card</strong>
+<strong>同じ主題のサポート状態バンドルには依然として独自の拡張カードが必要です</strong>
 <p>
-The page still had one practical weakness after the family split: it could leave the impression that once several support-state rows are collected in the same subject, the bundle itself is already close to one aligned biological variable. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed that spontaneous multimodal measures contain both <strong>common</strong> and <strong>divergent</strong> cortical structure. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous EEG-PET-MRI can display tightly coupled temporal evolution while still preserving <strong>spatially distinct hemodynamic and metabolic patterns</strong>. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> showed that a major low-frequency global fMRI pattern is substantially coupled to <strong>autonomic physiology</strong>, while <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> showed that about <strong>40%</strong> of gray-matter voxels with significant task BOLD changes exhibited <strong>opposing oxygen-metabolism changes</strong>. Bundle-level gain is real but still conditional: <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> showed that adding markers can reduce prognostic uncertainty, <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> showed that direct same-sample comparison shrank to <strong>48 patients</strong> with all EEG and fMRI features, and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> showed higher <strong>inter-modality disagreement</strong> in minimally conscious or improving patients even as performance improved with more modalities. Row-local stability is separate again: <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024)</a> fixed a named repeatability window for a 3 T deuterium route, and <a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> showed reproducible EEG-fMRI connectome relations only under explicitly harmonized simultaneous acquisition. Therefore, this page now requires a <strong>practical support-state augmentation card</strong> before a same-subject bundle is read as more than row addition.
+家族が分裂した後も、このページには実際的な弱点が 1 つありました。同じ被験者内で複数のサポート状態行が収集されると、そのバンドル自体がすでに 1 つの整列された生物学的変数に近づいているという印象を残す可能性があります。現在の一次文献はそのショートカットをサポートしていません。 <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii ら。 (2024)</a> は、自発的多峰性測定には <strong>common</strong> と <strong>divergent</strong> の両方の皮質構造が含まれていることを示しました。 <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">チェンら。 (2025)</a> は、EEG-PET-MRI を同時に行うと、<strong>空間的に異なる血行動態および代謝パターン</strong> を維持しながら、密接に結合した時間的進化を示すことができることを示しました。 <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">ボルトら。 (2025)</a> は、主要な低周波グローバル fMRI パターンが <strong>自律生理学</strong> と実質的に結合していることを示しました。 (2025)</a> は、重要なタスク BOLD 変化を伴う灰白質ボクセルの約 <strong>40%</strong> が、<strong>反対の酸素代謝変化</strong> を示したことを示しました。バンドルレベルのゲインは実際のものですが、依然として条件付きです: <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> は、マーカーを追加すると予後の不確実性を軽減できることを示しました。<a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al。 (2023)</a> は、すべての EEG および fMRI 特徴を備えた直接同一サンプル比較が <strong>48 人の患者</strong> に縮小したことを示しました。 (2026)</a> は、より多くのモダリティでパフォーマンスが向上したにもかかわらず、最低意識の患者または症状が改善している患者において、<strong>モダリティ間の不一致</strong> が高いことを示しました。行ローカルの安定性はまた別です: <a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024)</a> は 3 T 重水素ルートの名前付き再現性ウィンドウを修正し、<a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)</a> は、明示的に調和された同時収集下でのみ再現可能な EEG-fMRI コネクトーム関係を示しました。したがって、このページでは、同じサブジェクトのバンドルが行の追加以上のものとして読み取られる前に、<strong>実用的なサポート状態拡張カード</strong> が必要になります。
 </p>
 </div>
 
 <section class="section" id="support-state-augmentation-card">
-<h2 class="section-title">A practical support-state augmentation card for dataset bundles</h2>
+<h2 class="section-title">データセット バンドル用の実用的なサポート状態拡張カード</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Field to log before reading a same-subject bundle strongly</th>
-<th>Why this field is necessary</th>
-<th>What overread it blocks</th>
+<th>同じ主題のバンドルを強く読み取る前にログに記録するフィールド</th>
+<th>このフィールドが必要な理由</th>
+<th>オーバーリードされたものをブロック</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Route class and bridge type</strong></td>
-<td>State whether a row is a same-subject human proxy, a same-subject perturbation, a sequential bridge, or a mixed-species causal support row.</td>
-<td>Do not read rodent causal support and bounded human proxy rows as interchangeable evidence just because they concern the same family label.</td>
+<td><strong>ルート クラスとブリッジ タイプ</strong></td>
+<td>行が同じ被験者の人間の代理、同じ被験者の摂動、連続的なブリッジ、または混合種の因果関係のサポート行であるかどうかを示します。</td>
+<td>げっ歯類の因果関係の裏付けと限定された人間の代理行を、同じ家族ラベルに関するという理由だけで交換可能な証拠として読み取らないでください。</td>
 </tr>
 <tr>
-<td><strong>Effective time window and physiological regime</strong></td>
-<td>Log whether rows target the same trial epoch, sleep stage, arousal window, pharmacological state, or multiday stabilization regime.</td>
-<td>Do not read co-acquisition or same-session wording as if one support-state sample had been aligned automatically.</td>
+<td><strong>有効な時間枠と生理学的体制</strong></td>
+<td>行が同じ試験期間、睡眠段階、覚醒ウィンドウ、薬理学的状態、または複数日間の安定化レジームをターゲットにしているかどうかを記録します。</td>
+<td>あたかも 1 つのサポート状態サンプルが自動的に調整されたかのように、同時取得または同一セッションの文言を読まないでください。</td>
 </tr>
 <tr>
-<td><strong>Direct observable and quantity type</strong></td>
-<td>Name whether the added row is density, transport, exchange, mobility, flux, metabolism, or an indirect classifier / score.</td>
-<td>Do not collapse tracer transport, glucose uptake, BOLD fluctuation, and bounded biomarker efflux into one solved maintenance variable.</td>
+<td><strong>直接観測可能および量のタイプ</strong></td>
+<td>追加された行が密度、輸送、交換、移動度、流束、代謝、または間接分類子/スコアであるかどうかを指定します。</td>
+<td>トレーサー輸送、グルコース取り込み、BOLD変動、および有界バイオマーカー流出を1つの解決された維持変数にまとめないでください。</td>
 </tr>
 <tr>
-<td><strong>Shared-driver / quantity-bridge audit</strong></td>
-<td>Disclose vascular, respiratory, autonomic, motion, drug, and time-of-day covariates, and say whether the bundle established a shared trajectory, a common driver, or a true quantity bridge.</td>
-<td>Do not read correlated rows as one biological quantity when the coupling may be driven by arousal or another shared nuisance source.</td>
+<td><strong>共有ドライバー/数量ブリッジ監査</strong></td>
+<td>血管、呼吸器、自律神経、運動、薬物、および時刻の共変量を明らかにし、バンドルが共有軌道、共通の推進力、または真の量の橋渡しを確立したかどうかを述べます。</td>
+<td>カップリングが覚醒または別の共有迷惑源によって引き起こされている可能性がある場合は、相関関係のある行を 1 つの生物学的量として読み取らないでください。</td>
 </tr>
 <tr>
-<td><strong>Availability slice and missing-modality policy</strong></td>
-<td>Report the exact complete-case subset, any imputation or substitution rule, and whether the comparison is same-sample or maximum-available-data.</td>
-<td>Do not hide that the bundle result may depend on a much smaller or specially filtered subgroup than the headline cohort.</td>
+<td><strong>可用性スライスと欠落モダリティ ポリシー</strong></td>
+<td>正確な完全なケースのサブセット、補完または置換ルール、および比較が同じサンプルか最大利用可能データかを報告します。</td>
+<td>バンドルの結果は、ヘッドライン コホートよりもはるかに小さい、または特別にフィルタリングされたサブグループに依存する可能性があることを隠さないでください。</td>
 </tr>
 <tr>
-<td><strong>Strongest single row and disagreement topology</strong></td>
-<td>Compare the best single added family against the full bundle and state where modalities agree, diverge, or change sign.</td>
-<td>Do not promote the full bundle if it only repackages the strongest single row or if disagreement is concentrated in the hardest regime.</td>
+<td><strong>最強の単一行不一致トポロジ</strong></td>
+<td>最適な単一追加ファミリーを完全なバンドルと比較し、モダリティが一致するか、分岐するか、符号が変わるかを示します。</td>
+<td>最も強力な単一行のみを再パッケージ化する場合、または意見の相違が最も困難な体制に集中している場合は、完全なバンドルを宣伝しないでください。</td>
 </tr>
 <tr>
-<td><strong>Row-local repeatability and transfer window</strong></td>
-<td>Name the hardware, sequence, preprocessing, centre, and acquisition window under which each added row is repeatable or portable.</td>
-<td>Do not treat one named proxy route as field-ready or cross-centre stable just because it worked once in one harmonized setup.</td>
+<td><strong>行ローカル再現性と転送ウィンドウ</strong></td>
+<td>追加された各行が反復可能または移植可能となるハードウェア、シーケンス、前処理、中心、取得ウィンドウに名前を付けます。</td>
+<td>1 つの名前付きプロキシ ルートを、1 つの調和されたセットアップで 1 回機能したからといって、現場対応またはクロスセンター安定として扱わないでください。</td>
 </tr>
 <tr>
-<td><strong>Abstention and stopping claim</strong></td>
-<td>State what remains latent after the gain, such as controller identity, cell specificity, or out-of-regime failure.</td>
-<td>Do not turn bundle improvement into a minimum-biological-configuration claim or a U3 closure claim by default.</td>
+<td><strong>棄権および請求の中止</strong></td>
+<td>コントローラーのアイデンティティ、セルの特異性、またはレジーム外の障害など、ゲイン後に潜在的に残るものを述べます。</td>
+<td>バンドルの改善を、デフォルトで最小生物学的構成の主張や U3 クロージャの主張に変えないでください。</td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>What this card changes in practice</strong>
+<strong>このカードが実際に変えること</strong>
 <p>
-On this page, a support-state addition now stays at <strong>family-split augmentation evidence</strong> unless the dataset card logs the fields above and then compares <strong>neuron-first baseline</strong>, <strong>strongest single added row</strong>, and <strong>full bundle</strong> under the same split, availability slice, and abstention rule. If the bundle mixes living-human proxy classes, use the <a href="verification.html#human-proxy-composition-card">Verification: Human Proxy Composition Card</a> alongside the <a href="verification.html#fusion-card">Verification: Fusion Card</a> instead of treating co-acquisition as sufficient.
+このページでは、データセット カードが上記のフィールドをログに記録し、<strong>ニューロンの最初のベースライン</strong>、<strong>最強の単一追加行</strong>、および <strong>フル バンドル</strong> を比較しない限り、サポート状態の追加は<strong>ファミリー分割拡張証拠</strong> のままになります。同じスプリット、可用性スライス、および棄権ルール。バンドルに生きている人間のプロキシ クラスが混在している場合は、同時取得で十分であるとして扱うのではなく、<a href="verification.html#fusion-card">Verification: Fusion Card</a> と並行して <a href="verification.html#human-proxy-composition-card">Verification: Human Proxy複合カード</a> を使用します。
 </p>
 </div>
 </section>
 
 <section class="section" id="platforms">
-<h2 class="section-title">1) Shared infrastructure to establish first</h2>
+<h2 class="section-title">1) 最初に確立する共有インフラストラクチャ</h2>
 <div class="stage-list">
 <div class="stage-item">
 <div class="stage-number">A</div>
 <div class="stage-body">
-<h4>OpenNeuro (BIDS-based sharing)</h4>
-<p>A platform for sharing BIDS-compliant neuroimaging and electrophysiology datasets, including EEG, MEG, and fMRI. </p>
-<a href="https://openneuro.org/" target="_blank" class="btn-action">Open OpenNeuro</a>
+<h4>OpenNeuro (BIDS ベースの共有)</h4>
+<p>EEG、MEG、fMRI などの BIDS 準拠の神経画像および電気生理学データセットを共有するためのプラットフォーム。 </p>
+<a href="https://openneuro.org/" target="_blank" class="btn-action">OpenNeuro を開く</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">B</div>
 <div class="stage-body">
-<h4>PhysioNet (biosignals and benchmark culture)</h4>
-<p>A public platform for biosignal datasets and related resources, including many standard EEG corpora. </p>
-<a href="https://physionet.org/" target="_blank" class="btn-action">Open PhysioNet</a>
+<h4>PhysioNet (生体信号およびベンチマーク文化)</h4>
+<p>生体信号データセットおよび関連リソース (多くの標準的な EEG コーパスを含む) のためのパブリック プラットフォーム。 </p>
+<a href="https://physionet.org/" target="_blank" class="btn-action">PhysioNet を開く</a>
 </div>
 </div>
 <div class="stage-item">
 <div class="stage-number">C</div>
 <div class="stage-body">
-<h4>Human Connectome Project (large-scale human imaging)</h4>
-<p>A representative public resource for large-scale human brain imaging data and analysis tools. </p>
-<a href="https://www.humanconnectome.org/" target="_blank" class="btn-action">Open HCP</a>
+<h4>ヒューマン コネクトーム プロジェクト (大規模人間イメージング)</h4>
+<p>大規模な人間の脳の画像データと分析ツールの代表的な公開リソース。 </p>
+<a href="https://www.humanconnectome.org/" target="_blank" class="btn-action">HCP を開く</a>
 </div>
 </div>
 </div>
 
 <div class="note-box">
-<strong>Reproducibility depends on the full execution chain</strong>
+<strong>再現性は完全な実行チェーンに依存します</strong>
 <p>
-OpenNeuro and PhysioNet are entry points, but they do not guarantee reproducibility by themselves. First fix the <strong>snapshot / version</strong>, then align it with <strong>BIDS / EEG-BIDS</strong>, fix the reading and conversion path with tools such as <strong>MNE-BIDS</strong>, and finally define the comparison setting with a benchmark harness such as <strong>MOABB</strong> for <strong>within-session / cross-session / cross-subject</strong>. If you mix up repository, loader, and benchmark settings, the same dataset name will still yield incomparable results.
+OpenNeuro と PhysioNet はエントリーポイントですが、それ自体では再現性が保証されません。まず <strong>スナップショット / バージョン</strong> を修正し、次に <strong>BIDS / EEG-BIDS</strong> と調整し、<strong>MNE-BIDS</strong> などのツールを使用して読み取りおよび変換パスを修正し、最後に次のようなベンチマーク ハーネスを使用して比較設定を定義します。 <strong>MOABB</strong>、<strong>セッション内/セッション間/被験者間</strong>。リポジトリ、ローダー、ベンチマーク設定を混同した場合、同じデータセット名でも比較できない結果が得られます。
 </p>
 </div>
 </section>
 
 <section class="section" id="starter">
-<h2 class="section-title">2) EEG starter pack (start with this from L0 to L1)</h2>
+<h2 class="section-title">2) EEG スターターパック (L0 から L1 までこれで始めます)</h2>
 <p>
-The following are representative examples of introductory EEG datasets that emphasize ease of use and extensive reference. We focused on practicing the preprocessing pipeline and reaching L0 to L1, and narrowed it down to a range where we can immediately start comparing reproduced baselines.
+以下は、使いやすさと広範な参照を重視した入門用脳波データセットの代表的な例です。前処理パイプラインの練習と L0 から L1 に到達することに重点を置き、再現されたベースラインの比較をすぐに開始できる範囲に絞り込みました。
 </p>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Dataset</th>
-<th>What you can do (example)</th>
-<th>Link</th>
+<th>データセット</th>
+<th>できること(例)</th>
+<th>リンク</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG Motor Movement/Imagery</strong></td>
-<td>Motor/motor recall classification, preprocessing practice, baseline comparison</td>
+<td><strong>EEG 運動動き/画像</strong></td>
+<td>モーター/モーターリコール分類、前処理の実践、ベースライン比較</td>
 <td><a href="https://physionet.org/content/eegmmidb/" target="_blank">PhysioNet</a></td>
 </tr>
 <tr>
-<td><strong>CHB-MIT Scalp EEG</strong></td>
-<td>Epileptic seizure detection, event detection, long-term EEG handling</td>
+<td><strong>CHB-MIT 頭皮脳波</strong></td>
+<td>てんかん発作検出、イベント検出、長期脳波処理</td>
 <td><a href="https://physionet.org/content/chbmit/" target="_blank">PhysioNet</a></td>
 </tr>
 <tr>
-<td><strong>Sleep-EDF</strong></td>
-<td>Estimating sleep stages, modeling state transitions, handling longitudinal fluctuations</td>
+<td><strong>睡眠EDF</strong></td>
+<td>睡眠段階の推定、状態遷移のモデル化、縦方向の変動の処理</td>
 <td><a href="https://physionet.org/content/sleep-edfx/" target="_blank">PhysioNet</a></td>
 </tr>
 <tr>
-<td><strong>TUH EEG Corpus (large scale)</strong></td>
-<td>Scaling EEG classification, difficulty in distribution for actual operation, data leak countermeasures</td>
+<td><strong>TUH EEG コーパス (大規模)</strong></td>
+<td>脳波分類のスケーリング、実運用時の配布難易度、データ漏洩対策</td>
 <td><a href="https://www.isip.piconepress.com/projects/tuh_eeg/" target="_blank">TUH EEG</a></td>
 </tr>
 </tbody>
@@ -451,285 +452,285 @@ The following are representative examples of introductory EEG datasets that emph
 <table class="data-table">
 <thead>
 <tr>
-<th>Dataset</th>
-<th>Good first release</th>
-<th>Why this is a good first release</th>
+<th>データセット</th>
+<th>良い最初のリリース</th>
+<th>これが最初のリリースとして適している理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG Motor Movement/Imagery</strong></td>
-<td>Baseline accuracy and preprocessing log for two-class classification</td>
-<td>The task setup is simple, so it is easy to build a minimal loop from preprocessing to evaluation. </td>
+<td><strong>EEG 運動動き/画像</strong></td>
+<td>2 クラス分類のベースライン精度と前処理ログ</td>
+<td>タスクの設定がシンプルなので、前処理から評価までの最小限のループを簡単に構築できます。 </td>
 </tr>
 <tr>
 <td><strong>CHB-MIT</strong></td>
-<td>Reproduction baseline and exclusion reason log for seizure event detection</td>
-<td>It is a good way to learn the practical difficulties of long recordings and event detection, including failure cases. </td>
+<td>発作イベント検出の再現ベースラインおよび除外理由ログ</td>
+<td>これは、失敗例も含め、長時間の録音とイベント検出の実際的な困難を学ぶ良い方法です。 </td>
 </tr>
 <tr>
-<td><strong>Sleep-EDF</strong></td>
-<td>Basic baseline for sleep stage classification and confusion matrix of state transitions</td>
-<td>It shows not only accuracy but also how state transitions fail, which makes errors easier to interpret. </td>
+<td><strong>睡眠EDF</strong></td>
+<td>睡眠段階分類の基本ベースラインと状態遷移の混同行列</td>
+<td>精度だけでなく、状態遷移がどのように失敗するかも示すため、エラーの解釈が容易になります。 </td>
 </tr>
 <tr>
-<td><strong>TUH EEG Corpus</strong></td>
-<td>Reproduction experiment with a small subset and clarifying data division rules</td>
-<td>It is more important to lock down leak prevention and split rules first than to process the full corpus from the start. </td>
+<td><strong>TUH EEG コーパス</strong></td>
+<td>小さなサブセットでの再現実験とデータ分割ルールの明確化</td>
+<td>最初から完全なコーパスを処理するよりも、リーク防止と分割ルールを最初にロックダウンすることの方が重要です。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="generalization-families">
-<h2 class="section-title">2.5) The same score means different things across generalization settings</h2>
+<h2 class="section-title">2.5) 同じスコアでも汎化設定によって意味が異なります</h2>
 <p>
-This is one of the current weak points of the site. `within-session`, `cross-session`, `cross-subject`, and `adaptation` may all report "classification accuracy," but they answer different questions about generalization. The official MOABB documentation also implements them as separate evaluation classes, and in the 5-day MI dataset of Ma et al. (2022), the average subject-specific accuracy dropped from <strong>within-session 68.8%</strong> to <strong>cross-session 53.7%</strong>, then recovered to <strong>cross-session adaptation 78.9%</strong> when a small amount of target-session data was used. Therefore, this site will no longer list scores alone; it will also state <strong>what was held out, what was allowed to vary, and what remains unresolved</strong>.
+これは、このサイトの現在の弱点の 1 つです。 `within-session`、`cross-session`、`cross-subject`、および `adaptation` はすべて「分類精度」を報告しますが、一般化に関するさまざまな質問に答えます。 MOABB の公式ドキュメントでも、これらを別個の評価クラスとして実装し、Ma らの 5 日間 MI データセットに実装しています。 (2022) によると、被験者固有の平均精度は、<strong>セッション内 68.8%</strong> から <strong>クロスセッション 53.7%</strong> に低下し、その後、少量の対象セッション データが使用された場合には <strong>クロスセッション適応 78.9%</strong> まで回復しました。したがって、このサイトではスコアのみをリストすることはなくなりました。また、<strong>何が差し止められ、何が変更を許可され、何が未解決のままか</strong>も記載されます。
 </p>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Evaluation family</th>
-<th>What is held out</th>
-<th>What this supports</th>
-<th>What not to overread</th>
+<th>評価ファミリー</th>
+<th>提供されるもの</th>
+<th>これがサポートするもの</th>
+<th>読みすぎてはいけないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>within-session</strong></td>
-<td>Folds within the same subject and the same session. </td>
-<td>It can show whether classes separate under the same-day, same-setup condition and whether preprocessing plus baseline modeling work at all. </td>
-<td>Do not treat this as evidence of cross-day robustness or deployable decoding. </td>
+<td><strong>セッション内</strong></td>
+<td>同じ主題および同じセッション内で折り畳まれます。 </td>
+<td>同日、同じセットアップ条件でクラスが分離するかどうか、また前処理とベースライン モデリングがまったく機能するかどうかを示すことができます。 </td>
+<td>これを、日をまたぐ堅牢性やデプロイ可能なデコードの証拠として扱わないでください。 </td>
 </tr>
 <tr>
-<td><strong>cross-session</strong></td>
-<td>A different session or day from the same subject. </td>
-<td>It can show how long subject-specific features persist across days and how sensitive they are to state changes and re-setup effects. </td>
-<td>Do not read this as subject-independent generalization or zero-recalibration operation. </td>
+<td><strong>クロスセッション</strong></td>
+<td>同じ主題からの別のセッションまたは日。 </td>
+<td>これは、主題固有の機能が日をまたがってどれくらい持続するか、また状態の変化や再セットアップの影響に対してどの程度敏感かを示すことができます。 </td>
+<td>これを被験者に依存しない一般化またはゼロ再校正操作として解釈しないでください。 </td>
 </tr>
 <tr>
-<td><strong>cross-subject</strong></td>
-<td>One or more entire subjects. </td>
-<td>It can show whether population-level shared structure exists and how far a cold-start decoder might go at initial installation. </td>
-<td>Do not equate this score with a decoder optimized for a specific individual. </td>
+<td><strong>複数の主題</strong></td>
+<td>1 つ以上の主題全体。 </td>
+<td>人口レベルの共有構造が存在するかどうか、および初期インストール時にコールドスタート デコーダがどこまで機能するかを表示できます。 </td>
+<td>このスコアを特定の個人向けに最適化されたデコーダーと同一視しないでください。 </td>
 </tr>
 <tr>
-<td><strong>cross-session adaptation</strong></td>
-<td>Another session is held out, then a small amount of target-session data is used for recalibration. </td>
-<td>It can show how much performance is recoverable through recalibration and how much room there is for operational adaptation. </td>
-<td>Do not describe this as a stable decoder that worked from the beginning without adaptation. </td>
+<td><strong>クロスセッション適応</strong></td>
+<td>別のセッションが開催され、その後、少量のターゲット セッション データが再調整に使用されます。 </td>
+<td>これにより、再調整によってどの程度のパフォーマンスが回復可能か、また運用上の適応にどの程度の余地があるかを示すことができます。 </td>
+<td>これを、適応せずに最初から動作する安定したデコーダとして説明しないでください。 </td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>Why this distinction matters scientifically</strong>
+<strong>この区別が科学的に重要な理由</strong>
 <p>
-Musall et al. (2019) showed that neural activity during tasks can be strongly dominated by uninstructed movements, and <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed over a <strong>10-hour EEG day</strong> that movement-related decoding changes enough to motivate adaptive decoders. But fast labels are still not the whole state story. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> and <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed glucocorticoid-linked retrieval impairment and reduced human hippocampal / prefrontal retrieval activity, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a> plus <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed circadian and corticosteroid-rhythm control of hippocampal plasticity, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> showed that memory-linked hippocampal activity varies with circadian-rhythm consistency. Finally, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> showed that long-term BCI operation still requires <strong>recurrent recalibration</strong>. In other words, even for the same subject, <strong>short-term resolution</strong>, <strong>cross-day tolerance</strong>, and <strong>long-term operation</strong> are different barriers, and <strong>state annotation</strong> has to split <strong>fast labels</strong> from <strong>slow internal-milieu disclosure</strong> before temporal validity is read strongly.
+ムサルら。 (2019) は、タスク中の神経活動が指示されていない動きによって強く支配される可能性があることを示しました。 (2024)</a> は、<strong>10 時間の脳波検査日</strong> にわたって、運動関連のデコードが適応デコーダーの動機付けに十分な変化を示すことを示しました。しかし、高速ラベルが州のすべてではありません。 <a href="https://doi.org/10.1038/29542" target="_blank">ド・ケルバンら。 (1998)</a> および <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> はグルココルチコイド関連の回収障害とヒトの海馬/前頭前野の回収活動の低下を示しました。<a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a> プラス <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">バーニーら。 (2023)</a> は、海馬可塑性の概日およびコルチコステロイド リズム制御を示しました。 (2015)</a> は、記憶に関連する海馬の活動が概日リズムの一貫性によって変化することを示しました。最後に、<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson ら。 (2025)</a> は、長期的な BCI 運用には依然として <strong>再校正</strong> が必要であることを示しました。言い換えれば、同じ主題であっても、<strong>短期解決</strong>、<strong>日をまたぐ許容範囲</strong>、および<strong>長期操作</strong>は異なる障壁であり、<strong>状態アノテーション</strong>は<strong>__高速に分割する必要があります。時間的有効性が強く読み取られる前の <strong>遅い内部環境開示</strong> からのラベル</strong>。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-04-03 addendum: state annotation is not one free-text field</strong>
+<strong>2026-04-03 追記: 状態の注釈は 1 つのフリーテキスト フィールドではありません</strong>
 <p>
-The remaining practical weakness on this page was subtler than simple split naming. It already separated <strong>cross-session</strong>, <strong>adaptation</strong>, and <strong>long-term use</strong>, but it still left <strong>state annotation</strong> too close to one free-text note about movement, arousal, or session ID. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed over a <strong>10-hour EEG day</strong> that movement-related decoding changes enough to motivate <strong>adaptive decoders</strong>, while <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a>, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> show that the same visible task can still run under different <strong>glucocorticoid</strong>, <strong>circadian</strong>, and broader <strong>slow internal-milieu</strong> regimes. At the same time, <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> show that recurrent recalibration burden and fast same-day throughput are different again. Therefore, on this site, a temporal claim now has to disclose <strong>fast labels</strong> such as movement / arousal / task mode separately from any relevant <strong>slow internal-milieu disclosure</strong> such as time-of-day / circadian phase, recent sleep-wake schedule, glucocorticoid or steroid exposure, and feeding / fasting or glucose-insulin regime, before <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, or <strong>transfer ceiling</strong> are interpreted.
+このページに残っている実際的な弱点は、単純な分割命名よりも微妙なものでした。 <strong>クロスセッション</strong>、<strong>適応</strong>、<strong>長期使用</strong>はすでに分離されていますが、依然として<strong>状態アノテーション</strong>は、動き、覚醒、またはセッションIDに関する1つのフリーテキストメモに近すぎます。現在の一次文献はそのショートカットをサポートしていません。 <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">エッガーら。 (2024)</a> は、<strong>10 時間の脳波検査</strong> を通じて、運動関連のデコーディングが<strong>適応デコーダ</strong> を動機付けるのに十分な変化を示した。 (1998)</a>、<a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">大栄ら。 (2007)</a>、<a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone 他。 (2023)</a>、<a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">バーニーら。 (2023)</a>、<a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> は、同じ目に見えるタスクが、異なる <strong>グルココルチコイド</strong>、<strong>概日</strong>、およびより広範な <strong>遅い内部環境</strong> 体制下でも実行できることを示しています。同時に、<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson ら。 (2025)</a> および <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairragkar ら。 (2025)</a> は、反復的な再校正負荷と高速同日スループットが再び異なることを示しています。したがって、このサイトでは、仮請求では、時刻/概日位相、最近の睡眠覚醒スケジュール、糖質コルチコイドまたはステロイドへの曝露、および摂食/絶食またはグルコースインスリンなどの関連する<strong>遅い内部環境の開示</strong>とは別に、運動/覚醒/タスクモードなどの<strong>高速ラベル</strong>を開示する必要があります。 <strong>固定デコーダ間隔</strong>、<strong>再キャリブレーション負担</strong>、または<strong>転送天井</strong>が解釈される前に、
 </p>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>If the result is reported as...</th>
-<th>You still have to disclose</th>
-<th>Stopped claim if missing</th>
+<th>結果が次のように報告された場合...</th>
+<th>まだ開示する必要があります</th>
+<th>不足している場合は申請を停止</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>same-day online / streaming use</strong></td>
-<td>Fast labels such as movement / arousal / task mode, output-path / abstention or fallback policy, and whether the result stayed inside one same-day operating regime.</td>
-<td>Do not promote to cross-day stability, fixed-decoder durability, or a generic temporal-validity benchmark.</td>
+<td><strong>当日オンライン/ストリーミング利用</strong></td>
+<td>運動 / 覚醒 / タスク モード、出力パス / 棄権またはフォールバック ポリシーなどの高速ラベル、および結果が 1 つの同じ日の運用体制内に留まっているかどうか。</td>
+<td>日をまたぐ安定性、固定デコーダーの耐久性、または一般的な時間的有効性ベンチマークを宣伝しないでください。</td>
 </tr>
 <tr>
-<td><strong>cross-session</strong></td>
-<td>Fast state labels, any relevant slow internal-milieu disclosure such as time-of-day / circadian phase, recent sleep-wake schedule, glucocorticoid or steroid exposure, feeding / fasting or glucose-insulin regime, fixed decoder interval, and whether the setup was reattached, re-referenced, or otherwise changed.</td>
-<td>Read only as cross-day tolerance under named conditions, not as durable decoding.</td>
+<td><strong>クロスセッション</strong></td>
+<td>高速状態ラベル、時刻/概日位相、最近の睡眠覚醒スケジュール、グルココルチコイドまたはステロイド曝露、摂食/絶食またはグルコースインスリン療法、固定デコーダー間隔、設定が再接続、再参照、またはその他の方法で変更されたかどうかなど、関連する遅い内部環境の開示。</td>
+<td>耐久性のあるデコードではなく、指定された条件の下で日をまたぐ許容値としてのみ読み取ります。</td>
 </tr>
 <tr>
-<td><strong>cross-session adaptation</strong></td>
-<td>The same temporal fields as above, plus how much target-session data was used, when recalibration happened, and what the pre-adaptation score was.</td>
-<td>Do not promote to fixed-decoder stability or low-burden deployment.</td>
+<td><strong>セッション間の適応</strong></td>
+<td>上記と同じ時間フィールドに加えて、使用されたターゲット セッション データの量、再調整がいつ行われたか、および事前適応スコアはいくらであったか。</td>
+<td>固定デコーダの安定性または低負荷の導入を促進しないでください。</td>
 </tr>
 <tr>
-<td><strong>longitudinal / chronic use</strong></td>
-<td>Fast labels plus slow internal-milieu disclosure, fixed decoder interval, recalibration burden, failure / fallback mode, and participant / site / task transfer ceiling.</td>
-<td>Do not promote to generic long-term robustness or deployability.</td>
+<td><strong>長期的/慢性的な使用</strong></td>
+<td>高速ラベルに加えて遅い内部環境開示、固定デコーダ間隔、再調整負荷、障害/フォールバック モード、および参加者/サイト/タスク転送上限。</td>
+<td>一般的な長期的な堅牢性や展開可能性を促進しないでください。</td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>2026-03-18 addendum: fix the route behind the same score</strong>
+<strong>2026-03-18 追記: 同じスコアの後ろのルートを修正</strong>
 <p>
-Even when a within-session score is high, it can still be explained by eye-movement confounds shown by <a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">Mostert et al. (2018)</a>, the EMG route shown by <a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">McFarland et al. (2005)</a>, post-onset auditory feedback shown by <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">Chen et al. (2024)</a>, identity confounding shown by <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>, time-robust resting-state fingerprints shown by <a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang et al. (2020)</a> and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a>, or subject-driven EEG variation summarized by <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a>. For that reason, this site now overlays the <a href="verification.html#specificity-shortcut-card">Verification: Specificity &amp; Shortcut Card</a> on dataset cards and baseline results, fixing <strong>plausible nuisance routes</strong>, <strong>auxiliary channels such as EOG / EMG / behavior / audio / metadata</strong>, <strong>nuisance-only baselines</strong>, <strong>fingerprint audit</strong>, <strong>nuisance-regime hold-outs</strong>, and <strong>the claim that must stop here</strong>.
+セッション内スコアが高い場合でも、<a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">Mostert らによって示された眼球運動の交絡によって説明できます。 (2018)</a>、<a href="https://doi.org/10.1088/1741-2560/2/4/014" target="_blank">McFarland らによって示された EMG ルート。 (2005)</a>、<a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">Chen らによって示された発症後の聴覚フィードバック。 (2024)</a>、<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto らによって示されたアイデンティティ交絡。 (2019)</a>、<a href="https://doi.org/10.1016/j.patcog.2020.107381" target="_blank">Wang らによって示された時間耐性のある静止状態のフィンガープリント。 (2020)</a> および <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di ら。 (2021)</a>、または <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson らによって要約された被験者主導型 EEG 変動。 (2022)</a>。そのため、このサイトでは <a href="verification.html#specificity-shortcut-card">Verification: Specificity &amp; をオーバーレイするようになりました。データセット カードとベースライン結果のショートカット カード</a>、<strong>もっともらしい迷惑ルート</strong>、<strong>EOG / EMG / 動作 / 音声 / メタデータなどの補助チャネル</strong>、<strong>迷惑専用ベースライン</strong>、 <strong>指紋監査</strong>、<strong>迷惑政権の証拠隠滅</strong>、<strong>ここで止めるべき主張</strong>。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-04-04 correction: acquisition distribution needs a recording-frame contract</strong>
+<strong>2026-04-04 修正: 取得配信には録画フレーム契約が必要</strong>
 <p>
-This site previously stopped more clearly at <strong>subject / session fingerprint</strong> than at <strong>setup effects</strong>. That remained too weak for dataset cards. The official <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">EEG-BIDS specification</a> already separates <strong>electrodes</strong>, <strong>channels</strong>, <strong>coordinate system</strong>, and <strong>reference scheme</strong>. <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Hu et al. (2018)</a> showed that the measured scalp potential itself changes with reference montage and electrode setup, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that EEG recordings vary not only by subject and session but also by recording system, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that cross-dataset EEG decoding is degraded by environmental variability such as amplifier, cap, sampling rate, and filtering, <a href="https://doi.org/10.1002/brb3.2789" target="_blank">Ceballos-Villegas et al. (2022)</a> explicitly modeled multinational batch effects across studies and devices, and <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dong et al. (2024)</a> showed that cross-location comparison required an explicit <strong>REST-based offline transform</strong> rather than a generic claim that the datasets had already been harmonized. Therefore, this site now treats <strong>site / device / reference system / electrode layout / coordinate route / protocol distribution</strong> as a <strong>recording-frame contract</strong> rather than as harmless metadata. <strong>Inference from these sources:</strong> <strong>common-channel intersection</strong>, <strong>interpolation to a target montage</strong>, and <strong>REST-based transformation</strong> preserve different benchmark objects, so a dataset card now has to name the harmonization branch rather than only say that setup differences were handled.
+このサイトは以前、<strong>setup Effects</strong> よりも <strong>件名 / セッション フィンガープリント</strong> で明確に停止していました。データセット カードとしては依然として弱すぎました。公式の <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">EEG-BIDS 仕様</a> は、<strong>電極</strong>、<strong>チャネル</strong>、<strong>座標系</strong>、および<strong>参照スキーム</strong>をすでに分離しています。 <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">胡他。 (2018)</a> は、測定された頭皮電位自体が参照モンタージュと電極設定によって変化することを示しました。<a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al。 (2017)</a> は、脳波記録が被験者やセッションによってだけでなく、記録システムによっても異なることを示しました。<a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al。 (2020)</a> は、クロスデータセット EEG デコーディングがアンプ、キャップ、サンプリング レート、フィルタリングなどの環境変動によって低下することを示しました。<a href="https://doi.org/10.1002/brb3.2789" target="_blank">Ceballos-Villegas et al。 (2022)</a> は、研究とデバイスにわたる多国籍バッチ効果を明示的にモデル化しました。 (2024)</a> は、データセットがすでに調和されているという一般的な主張ではなく、クロスロケーション比較には明示的な <strong>REST ベースのオフライン変換</strong> が必要であることを示しました。したがって、このサイトでは、<strong>サイト / デバイス / 参照システム / 電極配置 / 座標ルート / プロトコル分布</strong> を、無害なメタデータとしてではなく、<strong>録画フレーム契約</strong> として扱うようになりました。 <strong>これらのソースからの推論:</strong> <strong>共通チャネル交差</strong>、<strong>ターゲット モンタージュへの補間</strong>、<strong>REST ベースの変換</strong> は異なるベンチマーク オブジェクトを保持するため、データセット カードは調和ブランチに名前を付ける必要があります。セットアップの違いが処理されたと言うだけではありません。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-25 addendum: benchmark governance is part of the benchmark</strong>
+<strong>2026-03-25 追記: ベンチマーク ガバナンスはベンチマークの一部です</strong>
 <p>
-The next practical weakness on this page was that <strong>split / leak / harmonization</strong> were visible, while <strong>benchmark governance</strong> could still be treated as administrative detail. The current primary and official sources do not support that shortcut. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> states that the original challenge preprint became outdated during execution and that the website plus starter kit should be treated as current. The official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> require disclosure of <strong>additional pretraining datasets</strong>, <strong>pretrained models / fine-tuning method</strong>, <strong>code submission at inference stage</strong>, and a <strong>single-GPU 20 GB</strong> inference budget. The official <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> then disclosed that <strong>Challenge 2 samples had not been randomized</strong>, allowing contiguous-trial same-subject structure to affect what the ranking meant and forcing separate awards. That warning is aligned with benchmark-side primary sources: <a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)</a> argued that inconsistent evaluation protocols make cross-model EEG-FM comparisons unreliable, and <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> showed across <strong>12 open-source foundation models</strong> and <strong>13 datasets</strong> that ranking depends materially on transfer regime and benchmarking choices. Therefore, when this site reads a leaderboard, challenge result, or foundation-model benchmark, the card must also name <strong>benchmark version</strong>, <strong>split / randomization rule</strong>, <strong>hidden grouping structure</strong>, <strong>extra-data / pretrained-checkpoint policy</strong>, <strong>adaptation regime</strong>, <strong>inference-stage restrictions</strong>, and <strong>later organizer postmortems</strong>. If those fields are missing, we treat the result only as a qualified benchmark snapshot, not as a stable measure of portable EEG generalization.
+このページの次の実際的な弱点は、<strong>分割 / リーク / 調和</strong> が表示される一方で、<strong>ベンチマーク ガバナンス</strong> が依然として管理詳細として扱われる可能性があることでした。現在の一次ソースと公式ソースはそのショートカットをサポートしていません。公式 <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) ホームページ</a> には、元のチャレンジのプレプリントが実行中に古くなったため、Web サイトとスターター キットを最新のものとして扱う必要があると記載されています。公式の<a href="https://eeg2025.github.io/rules/" target="_blank">ルール</a>では、<strong>追加の事前トレーニングデータセット</strong>、<strong>事前トレーニング済みモデル/微調整方法</strong>、<strong>推論段階でのコード提出</strong>、および<strong>シングルGPUの開示が必要です。 20 GB</strong> の推論予算。その後、公式の <a href="https://eeg2025.github.io/leaderboard/" target="_blank">リーダーボード</a> は、<strong>チャレンジ 2 サンプルがランダム化されていない</strong> ことを明らかにし、連続治験の同じ被験者の構造がランキングの意味に影響を与え、別々の賞を強制することを可能にしました。この警告は、ベンチマーク側の一次情報源 (<a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong ら) と一致しています。 (2025)</a> は、一貫性のない評価プロトコルによりモデル間の EEG-FM 比較の信頼性が低くなると主張し、<a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu らは (2025) (2026)</a> は、<strong>12 個のオープンソース基盤モデル</strong> および <strong>13 個のデータセット</strong> にわたって、ランキングが転送体制とベンチマークの選択に大きく依存することを示しました。したがって、このサイトがリーダーボード、チャレンジ結果、または基礎モデル ベンチマークを読み取る場合、カードは<strong>ベンチマーク バージョン</strong>、<strong>分割/ランダム化ルール</strong>、<strong>隠しグループ構造</strong>、<strong>追加データ/事前トレーニング済みチェックポイントも指定する必要があります。ポリシー</strong>、<strong>適応体制</strong>、<strong>推論段階の制限</strong>、<strong>後の主催者事後分析</strong>。これらのフィールドが欠落している場合、結果はポータブル EEG 一般化の安定した測定としてではなく、適格なベンチマーク スナップショットとしてのみ扱われます。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-31 addendum: benchmark name is not yet the benchmark object</strong>
+<strong>2026-03-31 追記: ベンチマーク名はまだベンチマーク オブジェクトではありません</strong>
 <p>
-The next practical weakness was narrower. Even after benchmark governance became visible, a reader could still talk as if the benchmark name fixed the <strong>predicted object</strong>, <strong>independent prediction unit</strong>, <strong>grouped hold-out unit</strong>, <strong>adaptation regime</strong>, and <strong>operations budget</strong>. The current primary and official sources do not support that shortcut. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> separates <strong>Challenge 1</strong> response-time regression from <strong>Challenge 2</strong> subject-level externalizing prediction, the official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> and <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> add an <strong>inference-only code-submission workflow</strong> under a <strong>single-GPU 20 GB</strong> budget, <a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022)</a> use one five-session motor-imagery dataset to separate <strong>within-session</strong>, <strong>cross-session</strong>, and <strong>cross-session adaptation</strong>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> separate <strong>leave-one-subject-out cross-subject evaluation</strong> from <strong>within-subject few-shot calibration</strong>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> show that <strong>six benchmark inconsistencies</strong> can reverse rankings on identical datasets by up to <strong>24 percentage points</strong>. Therefore, on this site, a dataset or leaderboard name is still too coarse until the object / unit / budget matrix is disclosed explicitly.
+次の実際的な弱点はさらに狭いものでした。ベンチマーク ガバナンスが可視化された後でも、読者は、あたかもベンチマーク名が<strong>予測オブジェクト</strong>、<strong>独立予測ユニット</strong>、<strong>グループ化されたホールドアウトユニット</strong>、<strong>適応レジーム</strong>、および<strong>運営予算</strong>。現在の一次ソースと公式ソースはそのショートカットをサポートしていません。公式 <a href="https://eeg2025.github.io/" target="_blank">EEG チャレンジ (2025) ホームページ</a> は、<strong>チャレンジ 1</strong> の応答時間回帰を、<strong>チャレンジ 2</strong> の被験者レベルの外部化予測、公式の <a href="https://eeg2025.github.io/rules/" target="_blank">ルール</a> から分離しています。 <a href="https://eeg2025.github.io/submission/" target="_blank">提出ページ</a> <strong>シングル GPU 20 GB</strong> 予算の下に、<strong>推論のみのコード提出ワークフロー</strong> を追加します。 (2022)</a> は、1 つの 5 セッションの運動画像データセットを使用して、<strong>セッション内</strong>、<strong>クロスセッション</strong>、<strong>クロスセッション適応</strong>、<a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> <strong>1 被験者抜きの被験者間評価</strong> を <strong>被験者内数ショット校正</strong> から分離し、<a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は、<strong>6 つのベンチマークの不一致</strong> により、同一のデータセットのランキングが最大 <strong>24 パーセント ポイント</strong> 逆転する可能性があることを示しています。したがって、このサイトでは、オブジェクト / ユニット / 予算マトリックスが明示的に開示されるまで、データセットまたはリーダーボードの名前はまだ粗すぎます。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-04-02 addendum: setup diversity is not yet physiology-equivalent transfer</strong>
+<strong>2026-04-02 追記: セットアップの多様性はまだ生理学と同等の転移ではありません</strong>
 <p>
-The next weak point on this page was different from benchmark governance. A dataset or benchmark card could already expose <strong>site / device / reference / layout diversity</strong> and still leave a reader with the impression that a setup-agnostic foundation model had already solved <strong>physiology-preserving transfer</strong>. The current primary literature does not support that shortcut. <a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a> target <strong>channel-permutation equivariance</strong>, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a> target <strong>coordinate-based adaptation across heterogeneous devices and more than 150 layouts</strong>, and <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> push setup-agnostic pretraining to more than <strong>60,000 hours</strong> from <strong>92 datasets</strong> and <strong>25,000 subjects</strong>. Those papers advance <strong>recording-frame compatibility</strong>. They still do not prove that different montages, coordinate routes, and reference families already preserve one shared <strong>physiology-side representation</strong>. <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a> then show that strong EEG foundation models can still generalize poorly when <strong>subject-level supervision is limited</strong> unless extra adaptation structure is added. Therefore, this page now treats <strong>setup diversity</strong>, <strong>coordinate route</strong>, <strong>reference family</strong>, <strong>omitted-channel policy</strong>, and <strong>label-limited adaptation burden</strong> as separate dataset / benchmark-card fields rather than one merged claim of portable generalization.
+このページの次の弱点は、ベンチマーク ガバナンスとは異なります。データセットまたはベンチマーク カードは、すでに <strong>サイト / デバイス / リファレンス / レイアウトの多様性</strong> を公開していても、設定に依存しない基盤モデルが既に <strong>生理学的保持伝達</strong> を解決しているという印象を読者に残す可能性があります。現在の一次文献はそのショートカットをサポートしていません。 <a href="https://arxiv.org/abs/2507.14141" target="_blank">ハンら。 (2025)</a> ターゲット <strong>チャネル順列等分散</strong>、<a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al。 (2025)</a> ターゲット <strong>異種デバイスと 150 以上のレイアウトにわたる座標ベースの適応</strong>、<a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al。 (2025)</a> <strong>92 データセット</strong> および <strong>25,000 人の被験者</strong> から、セットアップに依存しない事前トレーニングを <strong>60,000 時間</strong> 以上に押し上げます。これらの論文は<strong>レコーディングフレームの互換性</strong>を前進させます。彼らは、異なるモンタージュ、座標ルート、および参照ファミリーが 1 つの共有<strong>生理学側表現</strong> を既に保存していることをまだ証明していません。 <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a> 次に、追加の適応構造が追加されない限り、<strong>被験者レベルの監視が制限されている</strong> 場合でも、強力な EEG 基礎モデルは依然として不十分に一般化できることを示します。したがって、このページでは、<strong>セットアップの多様性</strong>、<strong>座標ルート</strong>、<strong>参照ファミリー</strong>、<strong>省略チャネルポリシー</strong>、および<strong>ラベル制限適応負担</strong>を扱うようになりました。移植可能な一般化の 1 つの統合された主張ではなく、個別のデータセット/ベンチマーク カード フィールドとして。
 </p>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Case</th>
-<th>What the named benchmark or dataset actually predicts</th>
-<th>What still has to be frozen separately</th>
-<th>Safe ceiling on this site</th>
+<th>ケース</th>
+<th>指定されたベンチマークまたはデータセットが実際に予測するもの</th>
+<th>まだ個別に凍結する必要があるもの</th>
+<th>このサイトの安全上限</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG Challenge 1</strong><br>official homepage + rules</td>
-<td><strong>Trial-level</strong> response-time regression from the CCD task.</td>
-<td>The <strong>trial</strong> is the scoring unit, but grouped subject structure and the <strong>inference-only single-GPU 20 GB</strong> budget still have to be disclosed separately.</td>
-<td>A named transfer benchmark under a fixed operations budget, not a general EEG decoder verdict.</td>
+<td><strong>EEG チャレンジ 1</strong><br>公式ホームページ + ルール</td>
+<td><strong>トライアルレベル</strong> CCD タスクからの応答時間の回帰。</td>
+<td><strong>トライアル</strong>はスコアリング単位ですが、グループ化された主題の構造と<strong>推論専用シングルGPU 20 GB</strong>の予算は別途開示する必要があります。</td>
+<td>一般的な EEG デコーダーの判定ではなく、固定運用予算に基づく名前付き転送ベンチマーク。</td>
 </tr>
 <tr>
-<td><strong>EEG Challenge 2</strong><br>official homepage + leaderboard</td>
-<td><strong>Subject-level</strong> externalizing-factor prediction from EEG across multiple paradigms.</td>
-<td>The <strong>subject</strong> is the natural independent unit, and the organizer postmortem shows that hidden contiguous-trial grouping can still change what the benchmark measured.</td>
-<td>A subject-invariance benchmark attempt whose meaning remains contingent on grouping policy, not proof that subject invariance is solved.</td>
+<td><strong>EEG チャレンジ 2</strong><br>公式ホームページ + リーダーボード</td>
+<td><strong>被験者レベル</strong> 複数のパラダイムにわたる脳波からの外在化因子予測。</td>
+<td><strong>件名</strong>は本来の独立した単位であり、主催者の事後分析では、隠れた連続トライアルのグループ化によってベンチマークの測定結果が依然として変化する可能性があることが示されています。</td>
+<td>サブジェクト不変ベンチマークの試み。その意味は依然としてグループ化ポリシーに依存しており、サブジェクト不変が解決されていることを証明するものではありません。</td>
 </tr>
 <tr>
-<td><strong>Ma et al. (2022)</strong><br>five-session motor-imagery dataset</td>
-<td>The same raw dataset supports <strong>within-session</strong>, <strong>cross-session</strong>, and <strong>cross-session adaptation</strong> evaluation families.</td>
-<td>The dataset name alone does not tell you whether <strong>target-session data</strong> were used, when recalibration happened, or what the <strong>pre-adaptation score</strong> was.</td>
-<td>A useful session-shift practice board, not automatic fixed-decoder durability.</td>
+<td><strong>Ma et al. (2022)</strong><br>5 セッションの運動画像データセット</td>
+<td>同じ生データセットは、<strong>セッション内</strong>、<strong>クロスセッション</strong>、<strong>クロスセッション適応</strong>評価ファミリーをサポートします。</td>
+<td>データセット名だけでは、<strong>ターゲットセッションデータ</strong>が使用されたかどうか、いつ再調整が行われたか、<strong>事前適応スコア</strong>が何であったかはわかりません。</td>
+<td>自動固定デコーダの耐久性ではなく、セッション シフトの練習用ボードとして役立ちます。</td>
 </tr>
 <tr>
-<td><strong>Liu et al. (2026)</strong><br>foundation-model benchmark matrix</td>
-<td>Cross-model comparison across <strong>13 EEG datasets</strong> and <strong>nine paradigms</strong> under multiple transfer settings.</td>
-<td>The paper explicitly separates <strong>leave-one-subject-out</strong> transfer from <strong>within-subject few-shot calibration</strong>, so hold-out unit and adaptation regime still have to be named separately.</td>
-<td>A transfer-regime comparison board, not one portable score of EEG generalization.</td>
+<td><strong>Liu et al. (2026)</strong><br>基礎モデル ベンチマーク マトリックス</td>
+<td>複数の転送設定における<strong>13個のEEGデータセット</strong>および<strong>9つのパラダイム</strong>にわたるモデル間の比較。</td>
+<td>この論文では、<strong>1 つの被験者を残す</strong> 転送と、<strong>被験者内少数ショット校正</strong> を明示的に分離しているため、ホールドアウト ユニットと適応レジームは依然として個別に名前を付ける必要があります。</td>
+<td>転送体制の比較ボードであり、EEG 一般化のポータブル スコアではありません。</td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>Site rule from this section</strong>
+<strong>このセクションのサイト ルール</strong>
 <p>
-From this section onward, dataset cards and baseline results must report at least <strong>(1) evaluation family</strong>, <strong>(2) benchmark object plus independent prediction unit</strong>, <strong>(3) the independent hold-out unit</strong>, <strong>(4) raw-recording / window ancestry</strong>, <strong>(5) subject / session / site / device / reference-system / electrode-layout disjointness together with metadata-only baselines</strong>, <strong>(6) the channel-map / coordinate-route / reference-family / omitted-channel / sample-rate / filter harmonization log, including whether comparison used common-channel intersection, interpolation to a target montage, REST / another explicit transform, or no cross-setup harmonization</strong>, <strong>(7) whether target-session, target-subject, or target-site data were used</strong>, <strong>(8) recalibration amount and timing or extra label budget</strong>, <strong>(9) for leaderboard or challenge claims, benchmark provenance including version, split / randomization rule, hidden grouping, extra-data / checkpoint policy, inference-stage restrictions or operations budget, and postmortem disclosures</strong>, and <strong>(10) a stopping claim</strong>. If the claim spans more than one session or day, it must additionally disclose the site's <strong>Temporal Validity</strong> fields: <strong>state annotation split into fast labels and slow internal-milieu disclosure</strong>, <strong>fixed decoder interval</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong>. Scores without this context will be treated as limited L1 decode results, fingerprint-unresolved / acquisition-distribution-unresolved classifiers, or benchmark-object-unresolved / benchmark-governance-unresolved leaderboards rather than evidence of long-term stability or deployability.
+このセクション以降、データセット カードとベースライン結果は、少なくとも <strong>(1) 評価ファミリー</strong>、<strong>(2) ベンチマーク オブジェクトと独立予測ユニット</strong>、<strong>(3) 独立ホールドアウト ユニット</strong>、<strong>(4) 生記録 / ウィンドウを報告する必要があります。祖先</strong>、<strong>(5) サブジェクト / セッション / サイト / デバイス / リファレンス システム / 電極レイアウトの不整合性とメタデータのみのベースライン</strong>、<strong>(6) チャネル マップ / 座標ルート / リファレンス ファミリ / 省略チャネル / サンプル レート / フィルタ調和ログ（比較で共通チャネル交差を使用したかどうか、ターゲットへの補間を含む）モンタージュ、REST / 別の明示的な変換、またはクロスセットアップ調和なし</strong>、<strong>(7) ターゲット セッション、ターゲット サブジェクト、またはターゲット サイト データが使用されたかどうか</strong>、<strong>(8) 再調整量とタイミング、または追加のラベル予算</strong>、<strong>(9) リーダーボードまたはチャレンジ用クレーム、バージョンを含むベンチマークの来歴、分割/ランダム化ルール、非表示のグループ化、追加データ/チェックポイント ポリシー、推論段階の制限または運用予算、事後開示</strong>、<strong>(10) 停止クレーム</strong>。申し立てが複数のセッションまたは日にまたがる場合は、さらにサイトの <strong>時間的有効性</strong> フィールドを開示する必要があります: <strong>状態注釈を高速ラベルと低速内部環境開示に分割</strong>、<strong>固定デコーダ間隔</strong>、 <strong>再校正負担</strong>、および<strong>転送上限</strong>。このコンテキストのないスコアは、長期的な安定性や展開可能性の証拠ではなく、限定された L1 デコード結果、フィンガープリント未解決 / 取得配布未解決の分類子、またはベンチマークオブジェクト未解決 / ベンチマークガバナンス未解決のリーダーボードとして扱われます。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-25 addendum: metric semantics are part of the benchmark</strong>
+<strong>2026-03-25 追記: メトリクスのセマンティクスはベンチマークの一部です</strong>
 <p>
-The next practical weakness on this page was that <strong>split / leak / harmonization</strong> and <strong>benchmark governance</strong> were visible, while <strong>metric semantics</strong> could still hide behind one headline number. The primary literature does not support that shortcut. <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015)</a> showed why <strong>precision-recall</strong> views can be more informative than ROC summaries under strong class imbalance. In seizure tasks, <a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021)</a> and <a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)</a> show that practical evaluation still turns on <strong>sensitivity</strong>, <strong>false alarms per hour or day</strong>, event-overlap logic, and latency rather than plain accuracy, while <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)</a> show that <strong>false-alarm control</strong> is itself a design target in seizure prediction rather than an afterthought. In sleep staging, <a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)</a> used <strong>Cohen's kappa</strong> and showed that imbalance in stage proportions changes performance estimates, while <a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021)</a> show that pooled performance can still hide especially weak <strong>N1-stage</strong> agreement. Therefore, on this site, a dataset or benchmark card must now also disclose a <strong>task-matched metric bundle</strong>, not only a split and a score.
+このページの次の実際的な弱点は、<strong>分割 / リーク / 調和</strong> および <strong>ベンチマーク ガバナンス</strong> が可視化されている一方で、<strong>メトリクス セマンティクス</strong> が依然として 1 つの見出し番号の背後に隠れている可能性があることでした。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">斉藤＆amp; Rehmsmeier (2015)</a> は、クラスの不均衡が強い場合、<strong>precision-recall</strong> ビューが ROC サマリーよりも有益である理由を示しました。発作課題では、<a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021)</a> および <a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer ら。 (2021)</a> は、実際の評価では、<strong>感度</strong>、<strong>1 時間または 1 日あたりの誤ったアラーム</strong>、イベント重複ロジック、単純な精度ではなく遅延が有効であることを示しています。 (2023)</a> は、<strong>誤報制御</strong> 自体が後付けではなく、発作予測における設計目標であることを示しています。睡眠ステージングでは、<a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)</a> は <strong>Cohen の kappa</strong> を使用し、ステージの比率の不均衡によってパフォーマンスの推定値が変化することを示しました。 Walker (2021)</a> は、プールされたパフォーマンスが依然として特に弱い <strong>N1 段階</strong> の一致を隠す可能性があることを示しています。したがって、このサイトでは、データセットまたはベンチマーク カードは、スプリットとスコアだけでなく、<strong>タスクに一致するメトリクス バンドル</strong> も開示する必要があります。
 </p>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Task family</th>
-<th>Minimum metric bundle on this site</th>
-<th>Overread to block</th>
+<th>タスクファミリー</th>
+<th>このサイトの最小メトリック バンドル</th>
+<th>ブロックへのオーバーリード</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Cue-locked classification / decoding</strong></td>
-<td>Balanced accuracy or macro-F1, confusion matrix, subject-wise aggregation, and calibration / abstention if probabilities are output.</td>
-<td>Do not let one accuracy number hide minority-class collapse or confidence miscalibration.</td>
+<td><strong>キューロック分類/デコード</strong></td>
+<td>バランスの取れた精度またはマクロ F1、混同行列、被験者ごとの集計、および確率が出力される場合の校正/棄権。</td>
+<td>1 つの精度の数値によって、少数派クラスの崩壊や信頼度の誤調整が隠蔽されないようにしてください。</td>
 </tr>
 <tr>
-<td><strong>Seizure detection / forecasting</strong></td>
-<td>Event sensitivity or recall, false alarms per hour or per day, event-overlap rule, detection / warning latency when relevant, and calibration if thresholds or alarms are used.</td>
-<td>Do not let accuracy, AUROC, or one threshold-free summary stand in for clinically usable alarm behavior.</td>
+<td><strong>発作検出/予測</strong></td>
+<td>イベントの感度またはリコール、1時間または1日あたりの誤警報、イベント重複ルール、関連する場合の検出/警告遅延、およびしきい値または警報が使用されている場合の調整。</td>
+<td>臨床的に使用可能なアラーム動作の代わりに、精度、AUROC、または 1 つのしきい値なしの概要を使用しないでください。</td>
 </tr>
 <tr>
-<td><strong>Sleep staging</strong></td>
-<td>Cohen's kappa or macro-F1, per-stage recall / F1, and a confusion matrix that keeps minority stages visible.</td>
-<td>Do not let pooled accuracy hide weak N1 or transition-stage performance.</td>
+<td><strong>睡眠ステージング</strong></td>
+<td>Cohen のカッパまたはマクロ F1、ステージごとのリコール / F1、および少数ステージを表示し続ける混同行列。</td>
+<td>プールされた精度によって弱い N1 または移行段階のパフォーマンスが隠蔽されないようにしてください。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="dataset-audit">
-<h2 class="section-title">3) Audit to avoid overestimating starter data</h2>
+<h2 class="section-title">3) 初期データの過大評価を避けるための監査</h2>
 <p>
-The above four cases are very useful as a practice base for L0-L1, but they are not the ground truth for directly verifying the strong claims of EEG source imaging and WBE. What is needed here is not a dichotomy of ``usable/unusable,'' but rather a fixation on <strong>which claims can be supported</strong>.
+上記の 4 つのケースは、L0 ～ L1 の練習ベースとして非常に役立ちますが、EEG ソース イメージングと WBE の強力な主張を直接検証するためのグランド トゥルースではありません。ここで必要なのは、「使える/使えない」という二分法ではなく、<strong>どの主張が支持できる</strong>かということに固執することです。
 </p>
 
 <div class="note-box">
-<strong>The last two columns in this section reflect this site's operating logic</strong>
+<strong>このセクションの最後の 2 つの列は、このサイトの運営ロジックを反映しています</strong>
 <p>
-The <strong>stopping claims</strong> and <strong>minimum operational rules</strong> in the table below are operational boundaries drawn from what is directly observed and annotated in the official dataset descriptions and primary literature. In other words, they are not claims explicitly made by the dataset providers; they are site rules derived from <strong>annotation provenance and time fidelity</strong>.
+以下の表の <strong>停止要求</strong> および <strong>最小運用ルール</strong> は、公式データセットの説明と一次文献で直接観察され、注釈が付けられているものから導かれた運用上の境界です。言い換えれば、これらはデータセットプロバイダーによって明示的に行われた主張ではありません。これらは、<strong>アノテーションの出所と時間忠実度</strong> から派生したサイト ルールです。
 </p>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Dataset</th>
-<th>Things that are easy to verify now</th>
-<th>Still difficult to verify</th>
-<th>Minimum precautions</th>
+<th>データセット</th>
+<th>今すぐ確認できること</th>
+<th>まだ検証が難しい</th>
+<th>最低限の予防措置</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG Motor Movement/Imagery</strong></td>
-<td>Since it is a cue-locked task of 64ch, 160Hz, and 109 people, it is suitable for practicing preprocessing, subject-based split, and simple baseline comparison. </td>
-<td>Without individualized MRI, electrode coordinates, and invasive ground truth, claims of improved ESI accuracy and deep reconstruction cannot be audited. </td>
-<td>Since the task involves presenting left/right/up/down cues on the screen, we will check for inclusion of line of sight, myoelectricity, and cue-locked artifacts, and fix the split for each subject. </td>
+<td><strong>EEG 運動動き/画像</strong></td>
+<td>64ch、160Hz、109人のキューロックタスクなので、前処理や被験者ごとの分割、単純なベースライン比較の練習に適しています。 </td>
+<td>個別の MRI、電極座標、侵襲的グラウンド トゥルースがなければ、ESI の精度の向上や深部再構成の主張を監査することはできません。 </td>
+<td>このタスクには画面上に左/右/上/下のキューを提示することが含まれるため、視線、筋電、キューロックアーティファクトが含まれているかどうかを確認し、被験者ごとに分割を修正します。 </td>
 </tr>
 <tr>
 <td><strong>CHB-MIT</strong></td>
-<td>Suitable for learning long-term EEG, seizure event detection, and logging of missing and exclusion reasons. </td>
-<td>Since it strongly depends on the clinical conditions of children, intractable epilepsy, and drug withdrawal, it cannot be used as a general-purpose benchmark for general recognition or source imaging. </td>
-<td>Split in case units and handle while retaining the gap and montage summary between records. The disparity between seizures and seizures will also be clarified first. </td>
+<td>長期のEEG、発作イベントの検出、欠落および除外理由のログの学習に適しています。 </td>
+<td>小児の臨床状態、難治性てんかん、および薬物離脱に強く依存するため、一般的な認識やソースイメージングのための汎用ベンチマークとして使用することはできません。 </td>
+<td>レコード間のギャップとモンタージュサマリーを保持しながら、ケース単位に分割して処理します。発作と発作の違いもまず明らかにされます。 </td>
 </tr>
 <tr>
-<td><strong>Sleep-EDF</strong></td>
-<td>It is suitable for learning how to handle state transitions, sleep stage classification, and longitudinal fluctuations using whole-night PSG. </td>
-<td>The primary EEG is Fpz-Cz / Pz-Oz 2-lead, 100 Hz, so it is not a benchmark for spatial resolution or source imaging. </td>
-<td>The labels are manual scoring based on the Rechtschaffen &amp; Kales standard, so when comparing with new sleep stage studies, we will clearly indicate the label correspondence. </td>
+<td><strong>睡眠EDF</strong></td>
+<td>終夜 PSG を使用した状態遷移、睡眠段階分類、経時的変動の処理方法を学習するのに適しています。 </td>
+<td>一次 EEG は Fpz-Cz / Pz-Oz 2 リード、100 Hz であるため、空間解像度やソース イメージングのベンチマークではありません。 </td>
+<td>ラベルは、Rechtschaffen &amp; に基づいて手動で採点されます。 Kales標準ですので、新しい睡眠ステージ研究と比較する場合には、ラベルの対応を明記いたします。 </td>
 </tr>
 <tr>
-<td><strong>TUH EEG Corpus</strong></td>
-<td>Suitable for learning the difficulties of real-world distribution such as large scale, clinical noise, repeated sessions, and physician reports. </td>
-<td>It is not suitable for direct validation of source imaging improvements as it is not a controlled biophysical benchmark due to large variations in channel number and clinical conditions. </td>
-<td>Fix patient/session unit split, fixed channel subset, montage normalization, and text leakage prevention when using reports first. </td>
+<td><strong>TUH EEG コーパス</strong></td>
+<td>大規模、臨床ノイズ、繰り返しのセッション、医師のレポートなど、現実世界の配信の難しさを学習するのに適しています。 </td>
+<td>チャネル数と臨床状態のばらつきが大きいため、管理された生物物理学的ベンチマークではないため、ソース画像の改善を直接検証するのには適していません。 </td>
+<td>最初にレポートを使用する場合の患者/セッション単位の分割、固定チャネル サブセット、モンタージュ正規化、およびテキスト漏洩防止を修正しました。 </td>
 </tr>
 </tbody>
 </table>
@@ -737,226 +738,226 @@ The <strong>stopping claims</strong> and <strong>minimum operational rules</stro
 <table class="data-table">
 <thead>
 <tr>
-<th>Dataset</th>
-<th>Label/Event origin</th>
-<th>Time fidelity</th>
-<th>Claim to stop here</th>
-<th>Minimum operational rules</th>
+<th>データセット</th>
+<th>ラベル/イベントの起源</th>
+<th>時間忠実度</th>
+<th>ここで停止するよう主張してください</th>
+<th>最低限の運用ルール</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG Motor Movement/Imagery</strong></td>
-<td><code>.event</code> and annotation channel T0/T1/T2 indicate cue-locked onset of real/imagined motion. </td>
-<td>Cue-onset level for 160 Hz recording. </td>
-<td>Do not promote open-ended thought decoding or subject-independent semantic readout. </td>
-<td>Split by subject + run and audit visual cue and myoelectric/ocular contributions separately. </td>
+<td><strong>EEG 運動動き/画像</strong></td>
+<td><code>.event</code> および注釈チャネル T0/T1/T2 は、実際の/想像上の動きのキューロックされたオンセットを示します。 </td>
+<td>160 Hz 録音のキューオンセットレベル。 </td>
+<td>自由な思考の解読や主題に依存しない意味論的な読み出しを促進しないでください。 </td>
+<td>被験者ごとに分割し、視覚的手がかりと筋電/眼球の寄与を個別に実行および監査します。 </td>
 </tr>
 <tr>
 <td><strong>CHB-MIT</strong></td>
-<td>The summary and <code>.seizure</code> annotations for each case mark seizure intervals during long-term recording. In addition, <code>chb21</code> is the same subject as <code>chb01</code>. </td>
-<td>Expert interval annotation, gap between files also remains. </td>
-<td>Do not treat this as gap-free continuous monitoring or count cases as if they were independent subjects. </td>
-<td>Split by subject and case chronology rather than by file, and keep gap plus montage summaries in the runbook. </td>
+<td>各症例の概要と <code>.seizure</code> の注釈は、長期記録中の発作間隔をマークします。また、<code>chb21</code> は、<code>chb01</code> と同じ主題です。 </td>
+<td>Expert 間隔の注釈、ファイル間のギャップも残ります。 </td>
+<td>これをギャップのない継続的なモニタリングとして扱ったり、症例を独立した被験者であるかのようにカウントしたりしないでください。 </td>
+<td>ファイルごとではなく、件名とケースの時系列ごとに分割し、ギャップ プラス モンタージュの概要をランブックに保持します。 </td>
 </tr>
 <tr>
-<td><strong>Sleep-EDF</strong></td>
-<td>Comes with an R&amp;K hypnogram by a well-trained technician and a 1 Hz event marker. </td>
-<td>The whole-night stage annotation is coarse, and even though the EEG is 100 Hz, the marker is 1 Hz. </td>
-<td>Stop claiming that sub-second event onset and AASM equivalent labels are self-evident. </td>
-<td>If you split by subject-night and map from R&amp;K to AASM, specify the mapping rule. </td>
+<td><strong>睡眠EDF</strong></td>
+<td>十分な訓練を受けた技術者による R&K ヒプノグラムと 1 Hz イベント マーカーが付属しています。 </td>
+<td>徹夜ステージの注釈は粗く、EEG が 100 Hz であるにもかかわらず、マーカーは 1 Hz です。 </td>
+<td>1 秒未満のイベント発生と AASM と同等のラベルが自明であると主張するのはやめてください。 </td>
+<td>件名の夜で分割し、R&K から AASM にマッピングする場合は、マッピング ルールを指定します。 </td>
 </tr>
 <tr>
 <td><strong>TUH EEG / TUSZ</strong></td>
-<td>TUH has a patient/session hierarchy and a clinician report <code>.txt</code>, while TUSZ goes through a selection including report keyword search and automatic triage. </td>
-<td>Clinical label at session/file level and expert seizure annotation at some subset. </td>
-<td>Do not write report-assisted labels as if they were pure EEG-only benchmark accuracy. </td>
-<td>Require patient / session unit splits and a <strong>report-usage flag</strong>, and do not feed report text into signal-only evaluation. </td>
+<td>TUH には患者/セッション階層と臨床医レポート <code>.txt</code> があり、TUSZ にはレポートのキーワード検索と自動トリアージを含む選択が行われます。 </td>
+<td>セッション/ファイル レベルでの臨床ラベルと、一部のサブセットでの専門家の発作注釈。 </td>
+<td>レポート支援ラベルを、純粋な EEG のみのベンチマーク精度であるかのように記述しないでください。 </td>
+<td>患者/セッション単位の分割と <strong>レポート使用フラグ</strong> を要求し、レポート テキストを信号のみの評価にフィードしないでください。 </td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>Why these stop-lines are evidence-backed rather than site style</strong>
+<strong>これらの停止線が現場のスタイルではなく証拠に裏付けられている理由</strong>
 <p>
-The official <a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">EEG Motor Movement/Imagery dataset description</a> itself fixes the ceiling: <strong>109 volunteers</strong>, <strong>64 channels</strong>, <strong>14 cue-driven runs</strong>, <strong>160 Hz</strong>, and <strong>T0/T1/T2</strong> onset codes copied into both the annotation channel and <code>.event</code> files. That is enough to audit cue-locked decoding, preprocessing, and subject-split hygiene, but it is also why this site requires a separate audit of <strong>visual-cue</strong>, <strong>overt-movement</strong>, and <strong>myoelectric / ocular</strong> contributions before any stronger readout wording is allowed.
+公式の <a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">EEG Motor Movement/Imagery データセットの説明</a> 自体が上限を修正しています: <strong>109 ボランティア</strong>、<strong>64 チャンネル</strong>、<strong>14 キュー主導の実行</strong>、<strong>160 Hz</strong> および <strong>T0/T1/T2</strong> オンセット コードは、アノテーション チャネルと <code>.event</code> ファイルの両方にコピーされました。キューロックされたデコード、前処理、および件名分割の衛生状態を監査するにはこれで十分ですが、このサイトでは、より強力な読み上げ文言が適用される前に、<strong>visual-cue</strong>、<strong>overt-movement</strong>、および <strong>myoelectric / ocular</strong> の投稿を個別に監査する必要がある理由もここにあります。許可されています。
 </p>
 <p>
-The official <a href="https://doi.org/10.13026/C2K01R" target="_blank">CHB-MIT description</a> fixes a different ceiling: <strong>22 pediatric subjects organized into 23 cases</strong>, <strong>case chb21 being the same subject as chb01</strong>, <strong>gaps between consecutively numbered EDF files</strong>, and seizure boundaries carried by <code>.seizure</code> files together with case summaries. Therefore file-level randomization overstates independence unless <strong>subject identity</strong> and <strong>case chronology</strong> remain explicit.
+公式の <a href="https://doi.org/10.13026/C2K01R" target="_blank">CHB-MIT の説明</a> は、異なる上限を修正しています: <strong>22 件の小児対象を 23 件のケースに編成</strong>、<strong>ケース chb21 は chb01 と同じ件名</strong>、<strong>連続番号付き EDF 間のギャップファイル</strong>、および事件の概要とともに<code>.seizure</code> ファイルによって保持される発作境界。したがって、<strong>対象者の身元</strong> および<strong>事件の時系列</strong> が明示的なままでない限り、ファイルレベルのランダム化は独立性を誇張します。
 </p>
 <p>
-The official <a href="https://doi.org/10.13026/C2X676" target="_blank">Sleep-EDF description</a> likewise constrains the interpretation: the PSG uses only <strong>Fpz-Cz / Pz-Oz EEG</strong> together with EOG and chin EMG, while the event marker and some auxiliary channels are sampled at <strong>1 Hz</strong>, and the hypnograms are <strong>manual Rechtschaffen &amp; Kales scores</strong>. <a href="https://doi.org/10.5664/jcsm.2350" target="_blank">Rosenberg &amp; Van Hout (2013)</a> then showed that even modern sleep-stage scoring reaches only about <strong>82.6% overall inter-scorer agreement</strong>, with weaker agreement for <strong>N1</strong> and <strong>N3</strong>. That is why this site stops a Sleep-EDF result at staged-state practice unless label mapping, scoring regime, and time granularity are disclosed explicitly.
+公式の <a href="https://doi.org/10.13026/C2X676" target="_blank">Sleep-EDF の説明</a> も同様に解釈を制約しています。PSG は <strong>Fpz-Cz / Pz-Oz EEG</strong> のみを EOG および顎 EMG とともに使用しますが、イベント マーカーといくつかの補助チャネルは <strong>1 Hz</strong> でサンプリングされます。催眠術は<strong>手動レヒトシャッフェン&amp;;です。カレスのスコア</strong>。 <a href="https://doi.org/10.5664/jcsm.2350" target="_blank">ローゼンバーグ＆amp; Van Hout (2013)</a> は、現代の睡眠段階のスコアリングでも全体のスコアラー間の一致率は <strong>82.6% 程度のみ</strong> に達し、<strong>N1</strong> と <strong>N3</strong> については一致度が低いことを示しました。このため、このサイトでは、ラベル マッピング、スコア体系、および時間粒度が明示的に開示されていない限り、段階的状態の実践で Sleep-EDF の結果を停止します。
 </p>
 <p>
-For <strong>TUH / TUSZ</strong>, <a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016)</a> explain that the clinical corpus pairs EDF recordings with <strong>clinician reports</strong>, while <a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018)</a> describe seizure-rich triage using <strong>report keyword search</strong> and <strong>automatic detectors</strong>. Later corpus-maintenance notes documented that an early Neureka 2020 release had <strong>non-exclusive subjects across train / dev / blind evaluation</strong> and <strong>high-frequency seizure annotation problems</strong>. Therefore <strong>report-usage flags</strong>, <strong>patient/session ancestry</strong>, and <strong>benchmark postmortems</strong> are treated on this site as part of the result rather than footnotes.
-</p>
-</div>
-
-<div class="note-box">
-<strong>The most important site rule to add now</strong>
-<p>
-When introducing starter data, always include <strong>(1) label provenance</strong>, <strong>(2) time granularity</strong>, <strong>(3) clock domain plus stream-alignment rule</strong>, <strong>(4) timing-validation class</strong>, <strong>(5) event semantics</strong>, <strong>(6) independent split unit</strong>, <strong>(7) acquisition-distribution summary plus harmonization policy</strong>, and <strong>(8) stopping claim</strong>. A dataset card that does not include this will be considered insufficient as a practical guide for L0.
+<strong>TUH / TUSZ</strong>、<a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">の場合は従ってください。 Picone (2016)</a> は、臨床コーパスが EDF 記録と <strong>臨床医の報告</strong> を組み合わせていると説明しています。 (2018)</a> は、<strong>レポート キーワード検索</strong> および <strong>自動検出器</strong> を使用した発作の多いトリアージについて説明しています。その後のコーパスメンテナンスノートには、Neureka 2020 の初期リリースには、<strong>列車/開発/ブラインド評価にわたる非独占的な主題</strong> および <strong>高周波発作の注釈の問題</strong> があったことが文書化されています。したがって、<strong>レポート使用フラグ</strong>、<strong>患者/セッションの祖先</strong>、および<strong>ベンチマーク事後分析</strong>は、このサイトでは脚注ではなく結果の一部として扱われます。
 </p>
 </div>
 
 <div class="note-box">
-<strong>BIDS is a requirement, but not a ground truth</strong>
+<strong>今追加すべき最も重要なサイト ルール</strong>
 <p>
-BIDS/EEG-BIDS is important, but it alone cannot prove the validity of source imaging or the comparability of cross-dataset decoding. The BIDS specification itself also requires <code>EEGReference</code>, <code>SamplingFrequency</code>, <code>SoftwareFilters</code>, and if <code>*_electrodes.tsv</code> is issued, <code>*_coordsystem.json</code> is also required. However, this is a condition that makes it possible for a third party to trace the incident, not a condition that allows the true source to be known or that automatically harmonizes reference mismatch, electrode-layout mismatch, and device / filter differences across cohorts.
+スターター データを導入するときは、必ず <strong>(1) ラベル来歴</strong>、<strong>(2) 時間粒度</strong>、<strong>(3) クロック ドメインとストリーム アライメント ルール</strong>、<strong>(4) タイミング検証クラス</strong>、 <strong>(5) イベント セマンティクス</strong>、<strong>(6) 独立した分割ユニット</strong>、<strong>(7) 取得/配布の概要と調和ポリシー</strong>、および<strong>(8) クレームの停止</strong>。これが含まれていないデータセット カードは、L0 の実用的なガイドとして不十分であると考えられます。
 </p>
 </div>
 
 <div class="note-box">
-<strong>If you want to claim ESI improvement, you need a different chain of evidence</strong>
+<strong>BIDS は要件ですが、真実ではありません</strong>
 <p>
-Please provide at least the following four points.
+BIDS/EEG-BIDS は重要ですが、それだけではソース イメージングの有効性やデータセット間のデコードの比較可能性を証明することはできません。 BIDS 仕様自体も、<code>EEGReference</code>、<code>SamplingFrequency</code>、<code>SoftwareFilters</code> を必要とし、<code>*_electrodes.tsv</code> が発行される場合、 <code>*_coordsystem.json</code> も必要です。ただし、これは第三者が事件を追跡できるようにする条件であり、真の発生源を知ることを可能にする条件や、コホート間の基準の不一致、電極レイアウトの不一致、およびデバイス/フィルターの違いを自動的に調和させる条件ではありません。
+</p>
+</div>
+
+<div class="note-box">
+<strong>ESI の改善を主張したい場合は、別の一連の証拠が必要です</strong>
+<p>
+少なくとも以下の4点をお知らせください。
 </p>
 <ul>
-<li><strong>Individual anatomy:</strong> Individual MRI/CT or EEG-BIDS recordings with digitized electrode positions and <code>*_electrodes.tsv</code> / <code>*_coordsystem.json</code></li>
-<li><strong>Forward model audit:</strong> Head model and skull-conductivity sensitivity analysis</li>
-<li><strong>External standards:</strong> Ground truth such as phantoms, simultaneous invasive recording, intracranial stimulation, or TMS-EEG</li>
-<li><strong>Uncertainty:</strong> Report not only point estimates but also localization errors and interval estimates</li>
+<li><strong>個人の解剖学:</strong> デジタル化された電極位置と <code>*_electrodes.tsv</code> / <code>*_coordsystem.json</code></li> を含む個人の MRI/CT または EEG-BIDS 記録
+<li><strong>フォワードモデル監査:</strong> 頭部モデルおよび頭蓋骨伝導率感度分析</li>
+<li><strong>外部標準:</strong> ファントム、同時侵襲記録、頭蓋内刺激、TMS-EEG などのグラウンド トゥルース</li>
+<li><strong>不確実性:</strong> 点推定だけでなく、位置推定誤差と区間推定も報告</li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="validation-ladder">
-<h2 class="section-title">4) If you want to dig deeper into source imaging, divide the data into three stages</h2>
+<h2 class="section-title">4) ソース イメージングをさらに深く掘り下げたい場合は、データを 3 つの段階に分割します</h2>
 <p>
-The weak point of this page was that it only stopped by saying, ``Starter data is not a direct benchmark for source imaging,'' but then it was weak in deciding what to choose next. Here, we divide the data into three levels depending on the strength of the argument.
+このページの弱点は、「スターターデータはソースイメージングの直接のベンチマークではない」と言うだけで終わっていて、次に何を選択するかを決めるのが弱かったことです。ここでは、議論の強さに応じてデータを 3 つのレベルに分けます。
 </p>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>stage</th>
-<th>Representative data</th>
-<th>Supported argument</th>
-<th>Things I can't say yet</th>
+<th>ステージ</th>
+<th>代表的なデータ</th>
+<th>サポートされている引数</th>
+<th>まだ言えないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>A: Practice table</strong></td>
-<td>EEG Motor Movement/Imagery, CHB-MIT, Sleep-EDF, TUH EEG</td>
-<td>L0-L1 reproducibility analysis, QC, split design, baseline comparison</td>
-<td>ESI localization error improvement, deep source claim, strong WBE-oriented reconstruction claim</td>
+<td><strong>A: 練習台</strong></td>
+<td>EEG モーターの動き/イメージ、CHB-MIT、睡眠 EDF、TUH EEG</td>
+<td>L0-L1 再現性分析、QC、分割設計、ベースライン比較</td>
+<td>ESI ローカリゼーション エラーの改善、深いソースの主張、強力な WBE 指向の再構成の主張</td>
 </tr>
 <tr>
-<td><strong>B: Reconstruction with anatomical constraints</strong></td>
-<td>Records including <code>*_electrodes.tsv</code> / <code>*_coordsystem.json</code> for individualized MRI, digitized electrodes, and EEG-BIDS</td>
-<td>Audit of forward model, comparison of reconstruction near the cortical surface, sensitivity analysis of electrode placement and conductivity assumptions</td>
-<td>Deep source accuracy guarantee without direct ground truth, generalized unique recovery claim</td>
+<td><strong>B: 解剖学的制約を伴う再建</strong></td>
+<td>個別化された MRI、デジタル化された電極、EEG-BIDS の <code>*_electrodes.tsv</code> / <code>*_coordsystem.json</code> を含むレコード</td>
+<td>フォワードモデルの監査、皮質表面付近の再構成の比較、電極配置と導電率の仮定の感度分析</td>
+<td>直接的なグラウンドトゥルースを使用しない詳細なソース精度保証、一般化された独自の回復主張</td>
 </tr>
 <tr>
-<td><strong>C: Direct validation</strong></td>
-<td>Localize-MI (Mikulan et al., 2020), scalp EEG with intracranial stimulation, simultaneous HD-EEG/SEEG, presurgical cohort with postoperative outcome</td>
-<td>Named validation-class audit: localization error against known stimulation sites, concordance with simultaneous invasive recording, or clinical concordance against postoperative outcome</td>
-<td>Universal performance guarantee beyond task/cohort/montage</td>
+<td><strong>C: 直接検証</strong></td>
+<td>Localize-MI (Mikulan et al., 2020)、頭蓋内刺激を伴う頭皮脳波、同時 HD-EEG/SEEG、術後転帰を伴う術前コホート</td>
+<td>指定された検証クラスの監査: 既知の刺激部位に対する位置特定エラー、同時侵襲記録との一致、または術後の転帰との臨床的一致</td>
+<td>タスク/コホート/モンタージュを超えた普遍的なパフォーマンス保証</td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>Stage C is not one box</strong>
+<strong>ステージ C は 1 つのボックスではありません</strong>
 <p>
-On this site, you should still write which C-stage validation class you used:
+このサイトでは、どの C ステージ検証クラスを使用したかを記述する必要があります。
 </p>
 <ul>
-<li><strong>stimulation ground truth:</strong> asks localization error against a known stimulation site and time (Mikulan et al., 2020; Unnwongse et al., 2023).</li>
-<li><strong>simultaneous invasive recording:</strong> asks concordance with concurrent SEEG/ECoG under the same event regime (Hao et al., 2025).</li>
-<li><strong>postsurgical outcome / clinical concordance:</strong> asks whether the source estimate points toward clinically relevant tissue, not whether the source was uniquely observed (Birot et al., 2014).</li>
+<li><strong>刺激のグラウンド トゥルース:</strong> は、既知の刺激部位および時間に対する位置推定誤差を求めます (Mikulan et al., 2020; Unnwongse et al., 2023)。</li>
+<li><strong>同時侵襲的記録:</strong> は、同じイベント体制下での同時 SEEG/ECoG との一致を求めます (Hao et al., 2025)。</li>
+<li><strong>術後転帰 / 臨床的一致:</strong> は、ソースが独自に観察されたかどうかではなく、ソース推定が臨床的に関連する組織を指しているかどうかを尋ねます (Birot et al., 2014)。</li>
 </ul>
 </div>
 
 <div class="note-box">
-<strong>The most important thing now is the C stage public benchmark</strong>
+<strong>今最も重要なことは、C ステージの公開ベンチマークです</strong>
 <p>
-Localize-MI by Mikulan et al. (2020) is a rare data resource that exposes intracerebral stimulation with 256ch scalp EEG and stereo-EEG, allowing source imaging to be directly audited against “known stimulation locations.” Hao et al. (2025) reported average localization errors of 14.07 mm for ictal ESI and 17.38 mm for interictal ESI in 29 simultaneous HD-EEG/SEEG cases, indicating that source power and source depth greatly affect accuracy. Jahromi et al. (2026) then added a <strong>3D-printed pediatric deep-source phantom</strong>, showing that even phantom validation is not one universal board once <strong>deep epileptic source class</strong> and <strong>geometry</strong> are changed. Therefore, if you want to improve your source imaging, you need not only a C-level benchmark, but also a named C-stage validation class rather than an A-level starter dataset alone.
+Localize-MI (Mikulan ら) (2020) は、256 チャネルの頭皮 EEG およびステレオ EEG による脳内刺激を公開する貴重なデータ リソースであり、ソース イメージングを「既知の刺激位置」に対して直接監査できるようになります。ハオら。 (2025) は、29 件の同時 HD-EEG/SEEG 症例において、発作時 ESI で 14.07 mm、発作間欠期 ESI で 17.38 mm の平均位置推定誤差を報告し、信号源の出力と信号源の深さが精度に大きく影響することを示しています。ヤフロミら。 (2026) その後、<strong>3D プリントされた小児ディープソース ファントム</strong> を追加し、<strong>ディープてんかんソース クラス</strong> および <strong>geometry</strong> が変更されると、ファントムの検証であっても 1 つのユニバーサル ボードではないことを示しました。したがって、ソース イメージングを改善したい場合は、C レベルのベンチマークだけでなく、A レベルのスターター データセットのみではなく、名前付きの C ステージ検証クラスも必要になります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>High density is no longer the only credible route, but it is still not a solver-free shortcut</strong>
+<strong>高密度はもはや唯一の信頼できるルートではありませんが、それでもソルバー不要の近道ではありません</strong>
 <p>
-One remaining simplification on this page was to make the entrance sound too close to <strong>HD-EEG is the serious route and low-density EEG is the weak route</strong>. The current primary literature is narrower than that. <a href="https://doi.org/10.1016/j.clinph.2023.08.009" target="_blank">Horrillo-Maysonnial et al. (2023)</a> showed that a targeted <strong>33-36-electrode</strong> montage reached <strong>54/58 sublobar concordance (93%)</strong> against an <strong>83-electrode</strong> HD montage, but still showed larger peak-vertex distance for <strong>tangential generators</strong>. <a href="https://doi.org/10.1016/j.clinph.2025.04.009" target="_blank">Rong et al. (2025)</a> then showed that a DeepSIF-based approach stayed comparatively stable from <strong>75 to 16 electrodes</strong>, with average spatial dispersions of <strong>7.9/9.0 mm</strong> versus <strong>21.9/28.1 mm</strong> for sLORETA and <strong>20.0/28.9 mm</strong> for LCMV. But these papers do not erase the direct-validation ceiling. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> showed that coverage geometry and conductivity assumptions still move localization error in direct validation, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> showed that ictal and interictal ESI differed (<strong>14.07 ± 4.62 mm</strong> versus <strong>17.38 ± 4.16 mm</strong>) and that <strong>source depth</strong> and <strong>spike power</strong> still matter. Therefore, this site no longer treats <strong>high density</strong> versus <strong>low density</strong> as the right first split. The safer split is <strong>named montage / coverage policy + inverse family + source regime + validation class</strong>.
+このページに残っている簡略化の 1 つは、入口の音を <strong>HD-EEG が深刻なルートであり、低密度 EEG が弱いルートである</strong> に近づきすぎていることです。現在の一次文献はそれよりも狭いです。 <a href="https://doi.org/10.1016/j.clinph.2023.08.009" target="_blank">Horrillo-Maysonnial et al. (2023)</a> は、ターゲットを絞った <strong>33-36-electrode</strong> モンタージュが <strong>83-electrode</strong> HD モンタージュに対して <strong>54/58 サブ葉一致 (93%)</strong> に達したが、それでもさらに大きく表示されたことを示しました。 <strong>接線ジェネレータ</strong>のピーク頂点距離。 <a href="https://doi.org/10.1016/j.clinph.2025.04.009" target="_blank">Rong et al. (2025)</a> は、DeepSIF ベースのアプローチが <strong>75 から 16 電極</strong> まで比較的安定しており、平均空間分散が <strong>7.9/9.0 mm</strong> 対 <strong>21.9/28.1 であることを示しました。 sLORETA の場合は mm</strong>、LCMV の場合は <strong>20.0/28.9 mm</strong>。しかし、これらの論文は直接検証の上限を消去するものではありません。 <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse ら。 (2023)</a> は、カバレッジ幾何学と導電率の仮定が直接検証において依然として位置推定誤差を動かすことを示しました。 (2025)</a> は、発作時と発作間欠期の ESI が異なること (<strong>14.07 ± 4.62 mm</strong> 対 <strong>17.38 ± 4.16 mm</strong>)、および <strong>ソース深さ</strong> であることを示しました。 <strong>スパイクパワー</strong>は依然として重要です。したがって、このサイトでは、<strong>高密度</strong> と <strong>低密度</strong> を正しい最初の分割として扱うことはなくなりました。より安全な分割は、<strong>という名前のモンタージュ / カバレッジ ポリシー + 逆ファミリ + ソース レジーム + 検証クラス</strong> です。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Postoperative outcomes can be used, but should not be equated with ground truth</strong>
+<strong>術後の結果を使用することはできますが、グラウンドトゥルースと同一視すべきではありません</strong>
 <p>
-In a systematic review by Mouthaan et al. (2019), the summary sensitivity of electric source imaging in presurgical epilepsy was 82% and specificity was 53%. In other words, although postoperative outcomes and SOZ concordance are useful external criteria, source imaging itself cannot be fixed as the true value. Even at the C stage, what you can say now is ``How far has the error been reduced with this benchmark?'', not ``I was able to uniquely read the source in my brain.''
+Mouthaanらによる系統的レビューでは、 (2019) によると、術前てんかんにおける電源イメージングの概要感度は 82%、特異度は 53% でした。言い換えれば、術後の転帰と SOZ の一致は有用な外部基準ではありますが、線源画像そのものを真の値として確定することはできません。 C段階であっても、今言えることは「`How far has the error been reduced with this benchmark?'', not `「ソースを脳内で独自に読み取ることができた」ということです。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Practical reading</strong>
+<strong>実践的な読書</strong>
 <p>
-The first question when selecting data is not ``what is interesting?'' but <strong>what level of argument do you want to support this time</strong>? Level A is sufficient for practicing L0-L1. If you want to proceed with claiming improvements in source imaging, please put your claim on hold unless you audit the head model in stage B and take direct validation in stage C. If you do proceed to solver comparison, the next section fixes what has to stay the same across methods before any leaderboard is accepted.
+データを選択する際の最初の質問は、「何が興味深いのか」ではなく、<strong>今回はどのレベルの議論をサポートしたい</strong>ですか? L0～L1の練習にはレベルAで十分です。ソース イメージングの改善を主張したい場合は、ステージ B でヘッド モデルを監査し、ステージ C で直接検証しない限り、主張を保留してください。ソルバーの比較に進む場合は、次のセクションで、リーダーボードが受け入れられる前に、メソッド間で同一でなければならない点が修正されます。
 </p>
 </div>
 </section>
 
 <section class="section" id="inverse-benchmark-board">
-<h2 class="section-title">4.5) Inverse-problem benchmark board: compare error questions, not solver names</h2>
+<h2 class="section-title">4.5) 逆問題ベンチマーク ボード: ソルバー名ではなく、エラーの質問を比較</h2>
 <p>
-The weakness of this page after the 2026-03-18 validation-class update was that it could still let a reader jump from ``we used C-stage data'' to ``solver X won.'' That is too weak. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">Michel &amp; Brunet (2019)</a> describe ESI as a pipeline rather than a single algorithm, but the current literature is stricter still. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> expose a <strong>probabilistic focal-support family</strong>, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> expose a <strong>sparse debiased-inference family</strong>, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target <strong>extended-source reconstruction</strong>. Those papers do not return the same target object or the same uncertainty object. <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a> then showed on an in-vivo focal-source benchmark that ten methods differ not only in best localization error but also in sensitivity to regularization and montage density, while <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a>, and <a href="https://doi.org/10.1016/j.compbiomed.2026.111449" target="_blank">Jahromi et al. (2026)</a> show that direct-validation boards themselves differ by stimulation class, simultaneous invasive reference, and deep-source phantom geometry. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> and <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a> further show that forward-model uncertainty is a separate audit rather than a property inherited from a nicer inverse map. Therefore, this site now treats inverse-problem comparison as a board with five fixed axes: <strong>validation class</strong>, <strong>source regime / target object</strong>, <strong>inverse family / uncertainty object</strong>, <strong>same-geometry controls</strong>, and <strong>sensitivity sweep</strong>.
+2026-03-18 の検証クラス更新後のこのページの弱点は、依然として読者が「`we used C-stage data'' to `__「ソルバー X が勝ちました」からジャンプできることです。それは弱すぎます。 <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">ミシェル＆amp; Brunet (2019)</a> では、ESI を単一のアルゴリズムではなくパイプラインとして説明していますが、現在の文献はさらに厳密です。 <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">ルリアら。 (2024)</a> <strong>確率的焦点支持ファミリー</strong>、<a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong ら。 (2025)</a> は、<strong>スパースの偏り解消推論ファミリー</strong> と <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng らを公開します。 (2025)</a> ターゲット <strong>拡張ソース再構築</strong>。これらの論文は、同じターゲット オブジェクトや同じ不確実性オブジェクトを返しません。 <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">パスカレラら。 (2023)</a> は、生体内焦点源ベンチマークで、10 の方法が最良の位置推定誤差だけでなく、正則化とモンタージュ密度に対する感度も異なることを示しました。 (2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">ハオら。 (2025)</a>、および<a href="https://doi.org/10.1016/j.compbiomed.2026.111449" target="_blank">Jahromi et al。 (2026)</a> は、直接検証ボード自体が刺激クラス、同時侵襲参照、および深部ソースファントムの形状によって異なることを示しています。 <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk ら。 (2024)</a> および <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk ら。 (2026)</a> は、順モデルの不確実性が、より優れた逆マップから継承された特性ではなく、別個の監査であることをさらに示しています。したがって、このサイトでは、逆問題比較を 5 つの固定軸を持つボードとして扱うようになりました: <strong>検証クラス</strong>、<strong>ソース レジーム / ターゲット オブジェクト</strong>、<strong>逆ファミリ / 不確実性オブジェクト</strong>、<strong>同じジオメトリコントロール</strong>、および<strong>感度スイープ</strong>。
 </p>
 
 <div class="note-box">
-<strong>Inverse family is not just a solver style label</strong>
+<strong>逆ファミリは単なるソルバー スタイルのラベルではありません</strong>
 <p>
-This page now has to stop another shortcut explicitly. A <strong>posterior-support map</strong>, a <strong>debiased sparse interval</strong>, and an <strong>extended-source overlap estimate</strong> are not three visualizations of one identical hidden object. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> return posterior support for focal alternatives, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> return debiased estimation / inference for sparse spatial-temporal sources, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> return uncertainty-aware <strong>extended-source</strong> reconstructions. Therefore, a benchmark on this site must name not only the board, but also which <strong>inverse family</strong> was used, what <strong>target object</strong> it aimed to recover, and what <strong>uncertainty object</strong> it actually returned.
+このページでは、別のショートカットを明示的に停止する必要があります。 <strong>事後サポート マップ</strong>、<strong>偏りのない疎間隔</strong>、および<strong>拡張ソース重複推定</strong>は、1 つの同一の非表示オブジェクトを 3 つ視覚化したものではありません。 <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">ルリアら。 (2024)</a> 焦点代替案に対する事後サポートを返す、<a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al。 (2025)</a> は、疎な時空間ソースに対する偏りのない推定/推論を返します。また、<a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> は不確実性を考慮した <strong>拡張ソース</strong> 再構成を返します。したがって、このサイトのベンチマークでは、ボードの名前だけでなく、どの <strong>逆ファミリ</strong> が使用されたか、どの <strong>ターゲット オブジェクト</strong> が回復を目的としていたか、そしてどの <strong>不確実性オブジェクト</strong> が実際に返されたのかも指定する必要があります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Centre error and source extent are different benchmark objects</strong>
+<strong>センターエラーとソースエクステントは異なるベンチマークオブジェクト</strong>
 <p>
-Another shortcut still had to be blocked here. A benchmark can be “directly validated” and still score only the <strong>geometric center</strong> of a source. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> explicitly target <strong>extended-source reconstruction</strong> rather than focal-center localization. <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> likewise note that their <strong>ECD</strong>-based distance comparison neglects the spatial extent of the seizure-onset and irritative zones, and argue that future localization work should incorporate <strong>source extent</strong> in addition to geometric center. Therefore, a solver that wins a focal-site distance board is not automatically the best method for distributed, extended, or propagation-rich sources, and a public benchmark on this site must state whether it scores <strong>centre</strong>, <strong>extent</strong>, <strong>overlap</strong>, or <strong>propagation pattern</strong>.
+ここでも別のショートカットをブロックする必要がありました。ベンチマークは「直接検証」でき、ソースの <strong>幾何中心</strong> のみをスコアにします。 <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng ら。 (2025)</a> は、焦点中心位置特定ではなく、<strong>拡張音源再構築</strong> を明示的にターゲットにしています。 <a href="https://doi.org/10.1111/epi.18552" target="_blank">ハオら。 (2025)</a> も同様に、<strong>ECD</strong> に基づく距離比較では、発作開始ゾーンと刺激性ゾーンの空間範囲が無視されていることに注目し、将来の位置特定作業には幾何学的中心に加えて <strong>音源範囲</strong> を組み込む必要があると主張しています。したがって、焦点サイト距離ボードを獲得したソルバーが、自動的に分散、拡張、または伝播の多いソースに最適な方法になるわけではありません。このサイトの公開ベンチマークでは、スコアが <strong>centre</strong>、<strong>extent</strong>、<strong>overlap</strong>、または<strong>伝播パターン</strong>。
 </p>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Benchmark question</th>
-<th>Keep fixed across methods</th>
-<th>Primary metric to publish</th>
-<th>What not to overread</th>
+<th>ベンチマークの質問</th>
+<th>メソッド間で固定を維持</th>
+<th>公開する主要指標</th>
+<th>読みすぎてはいけないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Focal-source localization against known stimulation site</strong></td>
-<td>Same raw recording, event window, electrode coordinates, head model, conductivity sweep, source space, and bad-channel mask.</td>
-<td>Distance to known stimulation site/time, plus spread across conductivity and regularization settings.</td>
-<td>Do not crown a universal solver for extended or distributed sources from a focal-source board alone.</td>
+<td><strong>既知の刺激部位に対する焦点源の位置特定</strong></td>
+<td>同じ生の記録、イベント ウィンドウ、電極座標、頭部モデル、導電率スイープ、ソース空間、および不良チャネル マスク。</td>
+<td>既知の刺激部位までの距離/時間、および導電率と正則化設定全体の広がり。</td>
+<td>焦点ソース ボードだけから拡張ソースまたは分散ソースのユニバーサル ソルバーを作成しないでください。</td>
 </tr>
 <tr>
-<td><strong>Concordance with simultaneous SEEG/ECoG under the same event</strong></td>
-<td>Same event definition, same reference montage, same source-depth stratification, same preprocessing, and same concordance rule.</td>
-<td>Distance or overlap to invasive reference together with source depth and source power strata.</td>
-<td>Do not read concordance as direct ground truth for all generators, especially low-amplitude or deep activity.</td>
+<td><strong>同じイベントにおける同時 SEEG/ECoG との一致</strong></td>
+<td>同じイベント定義、同じ参照モンタージュ、同じソース深度階層化、同じ前処理、および同じ一致ルール。</td>
+<td>侵襲的基準までの距離または重なり、ソースの深さとソースの電力層。</td>
+<td>すべてのジェネレータ、特に低振幅または深いアクティビティの一致を直接のグラウンドトゥルースとして解釈しないでください。</td>
 </tr>
 <tr>
-<td><strong>Clinical concordance / postsurgical outcome</strong></td>
-<td>Same SOZ/resection definition, same outcome window, same blinding rule, and same patient inclusion criteria.</td>
-<td>Sensitivity/specificity or concordance against clinical outcome, clearly separated from localization error.</td>
-<td>Do not relabel surgical concordance as precise source-localization ground truth.</td>
+<td><strong>臨床的一致/術後の転帰</strong></td>
+<td>同じ SOZ/切除定義、同じ結果ウィンドウ、同じ盲検ルール、および同じ患者包含基準。</td>
+<td>臨床転帰に対する感度/特異度または一致。ローカリゼーションエラーから明確に分離されます。</td>
+<td>外科的一致を正確な音源位置特定のグラウンドトゥルースとしてラベル付けし直さないでください。</td>
 </tr>
 <tr>
-<td><strong>Extended-source reconstruction or multimodal-prior reconstruction</strong></td>
-<td>Same definition of source extent, same prior source, same anatomical constraints, and the same focal-versus-extended evaluation split.</td>
-<td>Extent overlap or reconstruction error for distributed sources, plus the gain from the added prior.</td>
-<td>Do not compare an extended-source method only on a focal-source leaderboard and call it inferior in general.</td>
+<td><strong>拡張ソース再構成またはマルチモーダル事前再構成</strong></td>
+<td>ソース範囲の同じ定義、同じ以前のソース、同じ解剖学的制約、および同じ焦点評価と拡張評価の分割。</td>
+<td>分散ソースの範囲のオーバーラップまたは再構成エラーと、追加された事前のゲインからのゲイン。</td>
+<td>拡張ソース メソッドをフォーカル ソース リーダーボード上でのみ比較し、一般的に劣っていると判断しないでください。</td>
 </tr>
 <tr>
-<td><strong>Inverse-family comparison under one named board</strong></td>
-<td>Same validation class, same raw data, same geometry, same source regime, and an explicit statement of whether each method returns posterior support, sparse debiased intervals, focal centres, or source extent / overlap.</td>
-<td>Family-typed result table: target object, uncertainty object, primary board metric, and the spread induced by conductivity / hyperparameter sweeps.</td>
-<td>Do not collapse a probabilistic focal family, a sparse debiased family, and an extended-source family into one shared winner or one generic “better ESI” claim.</td>
+<td><strong>1 つの名前付きボードでの逆ファミリ比較</strong></td>
+<td>同じ検証クラス、同じ生データ、同じジオメトリ、同じソース領域、および各メソッドが事後サポート、疎な偏り除去間隔、焦点中心、またはソース範囲/オーバーラップを返すかどうかの明示的なステートメント。</td>
+<td>ファミリー型の結果テーブル: ターゲット オブジェクト、不確実性オブジェクト、プライマリ ボード メトリック、および導電率/ハイパーパラメータ スイープによって引き起こされる広がり。</td>
+<td>確率的焦点ファミリー、疎な偏りのないファミリー、および拡張ソース ファミリを、1 つの共有勝者または 1 つの一般的な「より良い ESI」主張にまとめないでください。</td>
 </tr>
 </tbody>
 </table>
@@ -964,325 +965,325 @@ Another shortcut still had to be blocked here. A benchmark can be “directly va
 <table class="data-table">
 <thead>
 <tr>
-<th>If MNE / beamformer / Champagne disagree</th>
-<th>What to publish now</th>
-<th>Safe reading on this site</th>
+<th>MNE / ビームフォーマー / シャンパンが同意しない場合</th>
+<th>今公開すべき内容</th>
+<th>このサイトの安全な読み方</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Ranking flips when skull conductivity, head model, or electrode geometry is perturbed.</td>
-<td>Show the family-specific ranking under the full sensitivity sweep instead of only the best run.</td>
-<td>Method-conditioned improvement in a bounded geometry regime, not a solver winner in general.</td>
+<td>頭蓋骨の導電性、頭部モデル、または電極の形状が乱れると、ランキングが反転します。</td>
+<td>最良の実行のみではなく、フル感度スイープの下でファミリー固有のランキングを表示します。</td>
+<td>有界ジオメトリ領域におけるメソッド条件付きの改善であり、一般にソルバーの勝者ではありません。</td>
 </tr>
 <tr>
-<td>A method wins only at one hand-tuned regularization point.</td>
-<td>Publish the localization-error curve or interval across the tested hyperparameter range.</td>
-<td>Best-case performance only; robustness remains unresolved.</td>
+<td>メソッドは、手動で調整された 1 つの正則化ポイントでのみ成功します。</td>
+<td>テストされたハイパーパラメータ範囲にわたるローカリゼーションエラー曲線または間隔を公開します。</td>
+<td>最良の場合のパフォーマンスのみ。堅牢性は未解決のままです。</td>
 </tr>
 <tr>
-<td>Dense montages reduce dispersion but not localization error.</td>
-<td>Report localization error and spatial dispersion separately.</td>
-<td>Better concentration of the estimate, not automatic improvement in true-source accuracy.</td>
+<td>高密度のモンタージュは分散を軽減しますが、ローカリゼーション エラーは軽減しません。</td>
+<td>ローカリゼーション エラーと空間分散を個別に報告します。</td>
+<td>真のソース精度の自動改善ではなく、推定の集中度が向上します。</td>
 </tr>
 <tr>
-<td>Deep and superficial sources behave differently.</td>
-<td>Stratify results by source depth rather than pooling into one mean.</td>
-<td>Conditional detectability only; do not generalize to deep sources as a whole.</td>
+<td>深いソースと表面的なソースは異なる動作をします。</td>
+<td>結果を 1 つの平均値にプールするのではなく、ソースの深さによって階層化します。</td>
+<td>条件付きの検出のみ。全体として深いソースに一般化しないでください。</td>
 </tr>
 <tr>
-<td>A focal-source board and an extended-source board favor different families.</td>
-<td>Keep separate leaderboards for focal, sparse, and extended-source tasks.</td>
-<td>Source-regime-specific strength, not a contradiction that can be collapsed into one number.</td>
+<td>フォーカル ソース ボードと拡張ソース ボードは、異なるファミリに適しています。</td>
+<td>焦点、スパース、および拡張ソース タスク用に個別のリーダーボードを保持します。</td>
+<td>ソース体制固有の強みであり、1 つの数値にまとめられる矛盾ではありません。</td>
 </tr>
 <tr>
-<td>Probabilistic focal support, sparse debiased inference, and extent-aware reconstruction return different uncertainty objects.</td>
-<td>Publish the family label, target object, and uncertainty object beside the main score instead of hiding them in Methods.</td>
-<td>Board-specific, family-specific evidence only; do not read disagreement as generic noise around one common truth object.</td>
+<td>確率的焦点サポート、スパース偏り解消推論、範囲を意識した再構成は、さまざまな不確実性オブジェクトを返します。</td>
+<td>ファミリー ラベル、ターゲット オブジェクト、不確実性オブジェクトをメソッドで非表示にするのではなく、メイン スコアの横に公開します。</td>
+<td>理事会固有、家族固有の証拠のみ。意見の相違を、1 つの共通の真実に関する一般的なノイズとして解釈しないでください。</td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>Site rule from this section</strong>
+<strong>このセクションのサイト ルール</strong>
 <p>
-A public inverse-problem comparison on this site must now disclose at least <strong>(1) validation class</strong>, <strong>(2) source regime and target object (focal-centre / sparse / extended / propagation-aware)</strong>, <strong>(3) inverse family plus the uncertainty object it returns</strong>, <strong>(4) same-geometry controls including montage / coverage policy</strong>, <strong>(5) sensitivity sweep over conductivity and key hyperparameters</strong>, <strong>(6) inter-method disagreement summary</strong>, and <strong>(7) the claim that must stop here</strong>. Without these fields, a result will be treated as a method illustration or lab-specific pipeline note, not as a reusable benchmark.
+このサイトの公開逆問題比較では、少なくとも <strong>(1) 検証クラス</strong>、<strong>(2) ソース レジームとターゲット オブジェクト (焦点中心 / スパース / 拡張 / 伝播認識)</strong>、<strong>(3) 逆ファミリとそれが返す不確実性オブジェクト</strong>、を開示する必要があります。 <strong>(4) モンタージュ/カバレッジポリシーを含む同一ジオメトリ制御</strong>、<strong>(5) 導電率および主要なハイパーパラメータの感度スイープ</strong>、<strong>(6) メソッド間の不一致の概要</strong>、<strong>(7) 停止すべき主張ここ</strong>。これらのフィールドがないと、結果は再利用可能なベンチマークとしてではなく、メソッドの図またはラボ固有のパイプライン ノートとして扱われます。
 </p>
 </div>
 </section>
 
 <section class="section" id="benchmark-mindset">
-<h2 class="section-title">5) Checklist that does not end with just “there is data”</h2>
+<h2 class="section-title">5) 「データがある」だけでは終わらないチェックリスト</h2>
 <div class="key-points">
-<h4>Checklist</h4>
+<h4>チェックリスト</h4>
 <ul>
-<li><strong>Version fixed:</strong>Does OpenNeuro snapshot, PhysioNet version, DOI, acquisition date remain?</li>
-<li><strong>Reproduction:</strong>Can you write the acquisition procedure, license, preprocessing conditions, random numbers, and environment</li>
-<li><strong>Metadata:</strong>Do you have sampling, reference, electrode placement, event definition, clock domain, and a named timing-validation class?</li>
-<li><strong>Annotation provenance:</strong>Did you clearly indicate whether the label came from an annotation channel, manual scoring, or a report-derived rule, and whether a known scorer-agreement or report-derived ceiling still limits interpretation?</li>
-<li><strong>QC:</strong>Are noise, defects, and artifacts quantified?</li>
-<li><strong>Comparison:</strong>Is there a baseline and can be compared using the same metrics as the evaluation family</li>
-<li><strong>Metric bundle:</strong>If the task is imbalanced or event-based, are event sensitivity, false alarms, per-stage agreement, or calibration disclosed rather than one headline number?</li>
-<li><strong>Benchmark provenance:</strong>If the result comes from a challenge or leaderboard, are benchmark version, split / randomization, hidden grouping, subject exclusivity, extra-data policy, pretrained-checkpoint policy, inference-stage restrictions, and later postmortems fixed?</li>
-<li><strong>Inverse-problem governance:</strong>If source imaging is compared, are validation class, source regime, inverse family / uncertainty object, geometry/control sweep, and inter-method disagreement disclosed before declaring a winner?</li>
-<li><strong>Rebuttal evidence:</strong>Are there data leak tests, segment/window ancestry checks, counterfactual tests, and records of failures</li>
+<li><strong>修正されたバージョン:</strong>OpenNeuro スナップショット、PhysioNet バージョン、DOI、取得日は残りますか?</li>
+<li><strong>転載:</strong>取得手順、ライセンス、前処理条件、乱数、環境を書いていただけますか</li>
+<li><strong>メタデータ:</strong>サンプリング、リファレンス、電極配置、イベント定義、クロック ドメイン、および名前付きタイミング検証クラスはありますか?</li>
+<li><strong>アノテーションの出所:</strong>ラベルがアノテーション チャネル、手動スコアリング、またはレポートから派生したルールから来たものであるかどうか、また、既知のスコアラーの合意またはレポートから派生した上限によって依然として解釈が制限されるかどうかを明確に示しましたか?</li>
+<li><strong>QC:</strong>ノイズ、欠陥、アーティファクトは定量化されていますか?</li>
+<li><strong>比較:</strong>ベースラインはありますか?評価ファミリーと同じ指標を使用して比較できます</li>
+<li><strong>メトリクス バンドル:</strong>タスクが不均衡またはイベントベースの場合、イベントの感度、誤報、段階ごとの合意、またはキャリブレーションが、1 つのヘッドライン番号ではなく開示されていますか?</li>
+<li><strong>ベンチマークの来歴:</strong>結果がチャレンジまたはリーダーボードから得られた場合、ベンチマークのバージョン、分割/ランダム化、非表示のグループ化、サブジェクトの排他性、追加データ ポリシー、事前トレーニング済みチェックポイント ポリシー、推論段階の制限、およびその後の事後検証は修正されていますか?</li>
+<li><strong>逆問題ガバナンス:</strong>ソース イメージングが比較される場合、勝者を宣言する前に、検証クラス、ソース レジーム、逆ファミリ/不確実性オブジェクト、ジオメトリ/制御スイープ、およびメソッド間の不一致が開示されますか?</li>
+<li><strong>反論証拠:</strong>データ漏洩テスト、セグメント/ウィンドウの祖先チェック、反事実テスト、障害の記録はありますか</li>
 </ul>
 </div>
 
 <div class="note-box">
-<strong>Official benchmark postmortems are part of reproducibility, not footnotes</strong>
+<strong>公式ベンチマーク事後検証は脚注ではなく再現性の一部です</strong>
 <p>
-In practical work, a benchmark page, rules page, submission constraint, and final leaderboard can each fix a different part of what your score means. <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a> show that segment-based cross-validation in translational EEG can leak subject information between training and test sets and inflate headline performance. The later TUH/TUSZ maintenance record also documented a public-release case where <strong>subject exclusivity</strong> and <strong>annotation quality</strong> had to be repaired after downstream use had already begun. That is why this page now routes EEG foundation-model benchmarking not only through split / leakage hygiene but also through <strong>benchmark provenance</strong>. If the benchmark uses evolving challenge operations, continue directly to <a href="wiki/eeg-foundation-models.html">Wiki: EEG foundation models and pretraining</a> and <a href="verification.html#pretraining-card">Verification: Pretraining Card</a> before treating the ranking as portable generalization evidence.
+実際の作業では、ベンチマーク ページ、ルール ページ、提出制限、および最終リーダーボードのそれぞれが、スコアの意味の異なる部分を修正できます。 <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">ブルックシャーら。 (2024)</a> は、トランスレーショナル EEG におけるセグメントベースの相互検証により、トレーニング セットとテスト セットの間で被験者の情報が漏洩し、見出しのパフォーマンスが水増しされる可能性があることを示しています。後の TUH/TUSZ 保守記録には、下流での使用がすでに開始された後に <strong>主題の独占性</strong> および <strong>注釈の品質</strong> を修復する必要がある公開リリースのケースも文書化されています。そのため、このページでは、EEG 基礎モデルのベンチマークを、スプリット/リークの衛生状態だけでなく、<strong>ベンチマークの来歴</strong> を通じてもルーティングするようになりました。ベンチマークで進化するチャレンジ操作が使用されている場合は、ランキングを移植可能な一般化の証拠として扱う前に、<a href="wiki/eeg-foundation-models.html">Wiki: EEG 基礎モデルと事前トレーニング</a> および <a href="verification.html#pretraining-card">検証: 事前トレーニング カード</a> に直接進んでください。
 </p>
 </div>
 </section>
 
 <section class="section" id="l0-practice">
-<h2 class="section-title">6) Run the L0 minimum loop here</h2>
+<h2 class="section-title">6) ここで L0 最小ループを実行します</h2>
 <p>
-The goal here is not to compete for high accuracy, but to create the smallest loop that a third party can follow in the same way. The minimum pack on this site is no longer just <strong>version + BIDS + QC + split + baseline</strong>. It now also requires <strong>event fidelity</strong>, <strong>label provenance</strong>, <strong>acquisition-distribution summary</strong>, <strong>derivative lineage</strong>, and <strong>a stopping claim</strong> so later accuracy can still be read correctly.
+ここでの目標は、高精度を競うことではなく、第三者が同じ方法でたどることができる最小のループを作成することです。このサイトの最小パックは、<strong>バージョン + BIDS + QC + スプリット + ベースライン</strong> だけではなくなりました。また、<strong>イベント忠実度</strong>、<strong>ラベル来歴</strong>、<strong>取得配布概要</strong>、<strong>派生系統</strong>、<strong>a 要求の停止</strong> も必要となるため、その後の精度でも正しく読み取ることができます。
 </p>
 
 <div class="key-points">
-<h4>L0 Loop</h4>
+<h4>L0 ループ</h4>
 <ul>
-<li><strong>Version:</strong>OpenNeuro snapshot / PhysioNet version / DOI / leave acquisition date</li>
-<li><strong>Input:</strong>Create a format that can be placed in BIDS / EEG-BIDS (data + metadata + reference / channels / electrodes / events)</li>
-<li><strong>Event fidelity:</strong>Record onset / duration / sample, clock domain, stream-alignment rule, timing-validation class, delay / jitter evidence, and event semantics</li>
-<li><strong>Label provenance:</strong>State whether the target comes from annotation channels, expert scoring, clinician reports, or other rules</li>
-<li><strong>Quality: </strong>Record missing, noise, artifact, and exclusion reasons in numerical form</li>
-<li><strong>Processing:</strong>Fix preprocessing conditions, random numbers, software version, and derivative lineage from raw to outputs</li>
-<li><strong>Evaluation: </strong>Fix one of within-session / cross-session / cross-subject first, together with the independent hold-out unit and raw-recording / window ancestry</li>
-<li><strong>Output:</strong>Even if it is simple, publish at least one baseline indicator that can be compared later, and state what claim must stop here</li>
-<li><strong>Audit:</strong>Failure cases, leak tests, harmonization logs, and pending conditions are also recorded along with the results</li>
+<li><strong>バージョン:</strong>OpenNeuro スナップショット / PhysioNet バージョン / DOI / 休暇取得日</li>
+<li><strong>入力:</strong>BIDS / EEG-BIDS (データ + メタデータ + リファレンス / チャネル / 電極 / イベント) に配置できる形式を作成します</li>
+<li><strong>イベント忠実度:</strong>レコードのオンセット/期間/サンプル、クロックドメイン、ストリームアライメントルール、タイミング検証クラス、遅延/ジッターの証拠、およびイベントセマンティクス</li>
+<li><strong>ラベルの来歴:</strong>ターゲットがアノテーション チャネル、専門家のスコアリング、臨床医のレポート、またはその他のルールからのものであるかどうかを記述します</li>
+<li><strong>品質: </strong>欠落、ノイズ、アーティファクト、除外理由を数値形式で記録</li>
+<li><strong>処理:</strong>前処理条件、乱数、ソフトウェア バージョン、生から出力までの派生系統を修正</li>
+<li><strong>評価: </strong>独立したホールドアウト ユニットと未加工記録/ウィンドウ祖先とともに、最初にセッション内/セッション間/被験者間のうちの 1 つを修正します</li>
+<li><strong>出力:</strong>単純であっても、後で比較できるように少なくとも 1 つのベースライン指標を公開し、ここでどの主張を終了する必要があるかを述べます</li>
+<li><strong>監査:</strong>障害ケース、リークテスト、調和ログ、保留中の状態も結果とともに記録されます</li>
 </ul>
 </div>
 
 <div class="note-box">
-<strong>2026-03-20 addendum: the public L0 pack is now synchronized</strong>
+<strong>2026-03-20 追記: パブリック L0 パックが同期されました</strong>
 <p>
-The weakness of this page was that the public checklist had become stricter than the wiki page readers actually use when assembling an L0 submission. That gap is now closed. If you want the submission shape itself, not only the route on this page, go directly to <a href="wiki/l0-minimum-artifact-pack.html">Wiki: Minimum artifact pack for L0</a>. The synced pack now fixes <strong>dataset identity</strong>, <strong>event fidelity</strong>, <strong>label provenance</strong>, <strong>evaluation family + hold-out ancestry</strong>, <strong>acquisition-distribution summary</strong>, <strong>derivative lineage</strong>, and <strong>stopping claim</strong> as first-class deliverables.
+このページの弱点は、公開チェックリストが、Wiki ページの読者が L0 提出を組み立てる際に実際に使用するものよりも厳格になっていることでした。そのギャップは今では埋まっています。このページのルートだけでなく、提出シェイプ自体が必要な場合は、<a href="wiki/l0-minimum-artifact-pack.html">Wiki: L0</a> の最小アーティファクト パックに直接アクセスしてください。同期されたパックは、<strong>データセットのアイデンティティ</strong>、<strong>イベント忠実度</strong>、<strong>ラベル来歴</strong>、<strong>評価ファミリー + ホールドアウト祖先</strong>、<strong>取得分布を修正しました。概要</strong>、<strong>派生系統</strong>、および<strong></strong>を第一級の成果物として主張停止します。
 </p>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Easy to get clogged</th>
-<th>To cut first</th>
+<th>詰まりやすい</th>
+<th>最初にカットする</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I think I can reproduce it with the same dataset name</strong></td>
-<td>Fix the OpenNeuro snapshot tag and PhysioNet version first, and leave the acquisition date and DOI in the runbook. </td>
+<td><strong>同じデータセット名で再現できると思います</strong></td>
+<td>最初に OpenNeuro スナップショット タグと PhysioNet バージョンを修正し、取得日と DOI を Runbook に残します。 </td>
 </tr>
 <tr>
-<td><strong>Stops in the form of BIDS</strong></td>
-<td>Before inputting the actual data, first create a directory skeleton, <code>dataset_description.json</code>, <code>participants.tsv</code>, and <code>events.tsv</code>. </td>
+<td><strong>BIDS の形式で停止</strong></td>
+<td>実際のデータを入力する前に、まずディレクトリ スケルトン、<code>dataset_description.json</code>、<code>participants.tsv</code>、および <code>events.tsv</code> を作成します。 </td>
 </tr>
 <tr>
-<td><strong>I wonder how much QC to leave</strong></td>
-<td>It is safer to fix just the four items: missing, noise, artifact, and reason for exclusion, and increase them later. </td>
+<td><strong>どのくらいの QC を残せばよいのだろうか</strong></td>
+<td>欠落、ノイズ、アーティファクト、除外理由の 4 つの項目だけを修正し、後で項目を増やす方が安全です。 </td>
 </tr>
 <tr>
-<td><strong>Cannot determine baseline</strong></td>
-<td>Prefer a simple and easy-to-reproduce model, such as motor recall 2 classes or spectral summary, rather than a complex model. </td>
+<td><strong>ベースラインを決定できません</strong></td>
+<td>複雑なモデルよりも、モーターリコール 2 クラスやスペクトル要約などの、シンプルで再現しやすいモデルを好みます。 </td>
 </tr>
 <tr>
-<td><strong>Getting lost in train/test</strong></td>
-<td>First decide whether the comparison is within-session, cross-session, or cross-subject, then lock the split unit for each subject or session. </td>
+<td><strong>電車/試験で道に迷った</strong></td>
+<td>まず、比較がセッション内、セッション間、または被験者間であるかどうかを決定し、次に被験者またはセッションごとに分割ユニットをロックします。 </td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>Step 0: Freeze the version</strong>
+<strong>ステップ 0: バージョンを凍結する</strong>
 <p>
-The dataset name alone is not enough. OpenNeuro manages snapshots with semantic-version Git tags, and PhysioNet also displays and cites dataset versions for each project. Therefore, the first runbook should record <strong>snapshot / version / DOI / retrieval date</strong>, not just the <strong>dataset name</strong>.
+データセット名だけでは十分ではありません。 OpenNeuro はセマンティック バージョンの Git タグを使用してスナップショットを管理し、PhysioNet はプロジェクトごとにデータセットのバージョンを表示および引用します。したがって、最初の Runbook では、<strong>データセット名</strong> だけでなく、<strong>スナップショット / バージョン / DOI / 取得日</strong> を記録する必要があります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Step 1: Create the BIDS skeleton first</strong>
+<strong>ステップ 1: 最初に BIDS スケルトンを作成する</strong>
 <p>
-Even if the contents are not aligned at first, just fixing the placement will reduce rework. If you create a file name and metadata template with the premise of passing it through a validator, subsequent QC and comparisons will become much easier.
+最初は中身がずれていても、配置を修正するだけで手戻りが減ります。バリデーターに通すことを前提にファイル名とメタデータのテンプレートを作成すると、その後のQCや比較が非常に楽になります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Step 2: Eliminate standard violations first with Validator</strong>
+<strong>ステップ 2: まず Validator</strong> を使用して標準違反を排除します
 <p>
-Eliminate any problems found with the machine at an early stage. Passing the BIDS Validator is not a sufficient condition for research, but it is close to the minimum requirement for sharing.
+機械に発見された問題を早期に解決します。 BIDS Validator に合格することは研究のための十分条件ではありませんが、共有のための最低条件に近いです。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Step 2.5: Separate and fix loader and benchmark</strong>
+<strong>ステップ 2.5: ローダーとベンチマークを分離して修正する</strong>
 <p>
-MNE-BIDS is a tool that helps with BIDSPath handling, data loading, and metadata extraction, while MOABB fixes the paradigm and evaluation family. There is a difference between being able to <strong>read</strong> data and being <strong>able to make fair comparisons</strong>. In particular, MNE-BIDS treats write-back of modified or preloaded data as an exception, so it is safer to treat preprocessed data as derivatives with explicit lineage.
+MNE-BIDS は、BIDSPath の処理、データの読み込み、メタデータの抽出を支援するツールであり、MOABB はパラダイムと評価ファミリーを修正します。データを<strong>読み取る</strong>できることと、<strong>公正な比較</strong>できることの間には違いがあります。特に、MNE-BIDS は変更されたデータまたはプリロードされたデータのライトバックを例外として扱うため、前処理されたデータを明示的なリネージを持つ派生データとして扱う方が安全です。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Step 3: Leave QC logs as numerical values ​​instead of waveforms</strong>
+<strong>ステップ 3: QC ログを波形ではなく数値として残す</strong>
 <p>
-With just the raw waveform, it is difficult for a third party to reconstruct what went wrong and what was left out. The main body of L0 is to record bad channels, bad segments, event synchronization, stimulus logs, and reaction logs with numerical values ​​and threshold values.
+生の波形だけでは、何が問題で何が取り残されたのかを第三者が再構築することは困難です。 L0の本体は不良チャネル、不良セグメント、イベント同期、刺激ログ、反応ログを数値と閾値で記録します。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Step 4: Fix only one baseline</strong>
+<strong>ステップ 4: ベースラインを 1 つだけ修正する</strong>
 <p>
-Rather than using SOTA, first place a comparison axis that is easy to reproduce. Having an initial baseline allows you to compare what has improved even after updating the preprocessing or updating the model.
+SOTAを使うのではなく、まず再現しやすい比較軸を置きます。初期ベースラインがあると、前処理を更新したりモデルを更新した後でも、何が改善されたかを比較できます。
 </p>
 </div>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Check items</th>
-<th>Lowest line of L0</th>
-<th>Where to go back to when you're running low</th>
+<th>項目を確認してください</th>
+<th>L0 の最下位ライン</th>
+<th>体力がなくなったときに戻る場所</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Data version</strong></td>
-<td>snapshot / version / DOI / acquisition date is fixed</td>
-<td><a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: Standards/Repositories/Validators/Benchmarks</a></td>
+<td><strong>データバージョン</strong></td>
+<td>スナップショット / バージョン / DOI / 取得日は固定です</td>
+<td><a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 標準/リポジトリ/バリデータ/ベンチマーク</a></td>
 </tr>
 <tr>
-<td><strong>Data structure</strong></td>
-<td>Can be stored in BIDS format</td>
-<td><a href="#bids">The shortest route to shareable data</a></td>
+<td><strong>データ構造</strong></td>
+<td>BIDS 形式で保存可能</td>
+<td><a href="#bids">共有可能なデータへの最短ルート</a></td>
 </tr>
 <tr>
-<td><strong>Quality control</strong></td>
-<td>QC logs and exclusion criteria remain</td>
-<td><a href="wiki/event-sync-and-measurement-logs.html">Wiki: Event synchronization and observation logs</a></td>
+<td><strong>品質管理</strong></td>
+<td>QC ログと除外基準は残ります</td>
+<td><a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベントの同期と観察ログ</a></td>
 </tr>
 <tr>
-<td><strong>Comparability</strong></td>
-<td>One baseline and evaluation family / train/test rules are fixed</td>
-<td><a href="wiki/dataset-splits-and-leakage.html">Wiki: Data splits and data leaks</a></td>
+<td><strong>比較性</strong></td>
+<td>1 つのベースラインと評価ファミリ/トレーニング/テスト ルールが修正されています</td>
+<td><a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータ漏洩</a></td>
 </tr>
 <tr>
-<td><strong>Prepare to share</strong></td>
-<td>Execution steps, environment, and failure examples can be passed on to a third party</td>
-<td><a href="verification.html">Verification infrastructure</a></td>
+<td><strong>共有の準備</strong></td>
+<td>実行手順、環境、失敗例はサードパーティに渡すことができます</td>
+<td><a href="verification.html">検証インフラストラクチャ</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="bids">
-<h2 class="section-title">7) The shortest route to "shareable data" with Mind-Upload</h2>
+<h2 class="section-title">7) Mind-Upload</h2> による「共有可能なデータ」への最短ルート
 <p>
-Mind-Upload's goal is not just to collect data, but to leave it in a form that can be verified by a third party.
-The shortest route to that end is to approach BIDS/EEG-BIDS.
+Mind-Upload の目標は、データを収集するだけではなく、第三者が検証できる形でデータを残すことです。
+そのための最短ルートはBIDS/EEG-BIDSに近づくことです。
 </p>
 <div class="cta-box">
-<h4>Verification Commons</h4>
-<p>Click here for the blueprint for "Standards + Storage + Evaluation". </p>
-<a href="verification.html">View verification platform →</a>
+<h4>検証コモンズ</h4>
+<p>「標準 + ストレージ + 評価」のブループリントについては、ここをクリックしてください。 </p>
+<a href="verification.html">検証プラットフォームを表示 →</a>
 </div>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">8) References and official pages</h2>
+<h2 class="section-title">8) 参考文献と公式ページ</h2>
 <ul>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS 1.11.1: Task events</a></li>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS 1.11.1: Electroencephalography</a></li>
-<li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
-<li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">Robbins et al. (2021), HED for FAIR event annotation</a></li>
-<li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">Hermes et al. (2025), HED library schema for EEG data annotation</a></li>
-<li><a href="https://doi.org/10.1162/imag_a_00136" target="_blank">Kothe et al. (2025), Lab Streaming Layer</a></li>
-<li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024), Motion-BIDS</a></li>
-<li><a href="https://docs.openneuro.org/git.html" target="_blank">OpenNeuro Docs: Git access and snapshots</a></li>
-<li><a href="https://docs.openneuro.org/user_guide.html" target="_blank">OpenNeuro Docs: Dataset landing page and snapshot metadata</a></li>
-<li><a href="https://physionet.org/about/" target="_blank">PhysioNet: About and citation policy</a></li>
-<li><a href="https://physionet.org/about/content/" target="_blank">PhysioNet: Resources and citation guidance</a></li>
-<li><a href="https://doi.org/10.21105/joss.01896" target="_blank">Appelhoff et al. (2019), MNE-BIDS</a></li>
-<li><a href="https://mne.tools/mne-bids/stable/generated/mne_bids.write_raw_bids.html" target="_blank">MNE-BIDS Docs: write_raw_bids</a></li>
-<li><a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018), MOABB</a></li>
-<li><a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB Docs</a></li>
-<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.WithinSessionEvaluation.html" target="_blank">MOABB Docs: WithinSessionEvaluation</a></li>
-<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSessionEvaluation.html" target="_blank">MOABB Docs: CrossSessionEvaluation</a></li>
-<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSubjectEvaluation.html" target="_blank">MOABB Docs: CrossSubjectEvaluation</a></li>
-<li><a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022), A large EEG dataset for studying cross-session variability in motor imagery BCI</a></li>
-<li><a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024), Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI</a></li>
-<li><a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025), Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning</a></li>
-<li><a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025), DIVER-0: A Fully Channel Equivariant EEG Foundation Model</a></li>
-<li><a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025), HEAR: An EEG Foundation Model with Heterogeneous Electrode Adaptive Representation</a></li>
-<li><a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025), REVE: A Foundation Model for EEG -- Adapting to Any Setup with Large-Scale Pretraining on 25,000 Subjects</a></li>
-<li><a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026), Structured Prototype-Guided Adaptation for EEG Foundation Models</a></li>
-<li><a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026), EEG Foundation Models: Progresses, Benchmarking, and Open Problems</a></li>
-<li><a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026), PRISM: Exploring Heterogeneous Pretrained EEG Foundation Model Transfer to Clinical Differential Diagnosis</a></li>
-<li><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025), official homepage</a></li>
-<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025), rules</a></li>
-<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG Challenge (2025), submission page</a></li>
-<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG Challenge (2025), leaderboard</a></li>
-<li><a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019), Single-trial neural dynamics are dominated by richly varied movements</a></li>
-<li><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024), Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study</a></li>
-<li><a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025), Stabilizing brain-computer interfaces through alignment of latent dynamics</a></li>
-<li><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025), Long-term unsupervised recalibration of cursor-based intracortical BCIs</a></li>
-<li><a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025), An instantaneous voice-synthesis neuroprosthesis</a></li>
-<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015), The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</a></li>
-<li><a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021), Evaluation of artificial intelligence systems for assisting neurologists with fast and accurate annotations of scalp electroencephalography data</a></li>
-<li><a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021), Seizure Detection: Interreader Agreement and Detection Algorithm Assessments Using a Large Dataset</a></li>
-<li><a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023), Utilizing risk-controlling prediction calibration to reduce false alarm rates in epileptic seizure prediction</a></li>
-<li><a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017), Large-Scale Automated Sleep Staging</a></li>
-<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021), An open-source, high-performance tool for automated sleep staging</a></li>
-<li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
-<li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
-<li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
-<li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016), TUH EEG Corpus</a></li>
-<li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018), TUH Seizure Detection Corpus</a></li>
-<li><a href="https://par.nsf.gov/servlets/purl/10311411" target="_blank">Hamid et al. (2021), Recent advances in the TUH EEG Corpus: improving the interrater agreement for artifacts and epileptiform events</a></li>
-<li><a href="https://doi.org/10.5664/jcsm.2350" target="_blank">Rosenberg &amp; Van Hout (2013), The American Academy of Sleep Medicine inter-scorer reliability program: sleep stage scoring</a></li>
-<li><a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024), Data leakage in deep learning studies of translational EEG</a></li>
-<li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009), Sleep classification difference between AASM and Rechtschaffen &amp; Kales</a></li>
-<li><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020), Localize-MI</a></li>
-<li><a href="https://doi.org/10.1088/0031-9155/46/1/306" target="_blank">Baillet et al. (2001), Evaluation of inverse methods and head models using a human skull phantom</a></li>
-<li><a href="https://doi.org/10.1016/j.neuroimage.2004.10.030" target="_blank">Phillips et al. (2005), An empirical Bayesian solution to the source reconstruction problem in EEG</a></li>
-<li><a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">Michel &amp; Brunet (2019), EEG source imaging: a practical review of the analysis steps</a></li>
-<li><a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">Aydin et al. (2019), Influence of head tissue conductivity uncertainties on EEG dipole reconstruction</a></li>
-<li><a href="https://doi.org/10.1016/j.neuroimage.2020.117411" target="_blank">Cai et al. (2021), Robust estimation of noise for electromagnetic brain imaging with the Champagne algorithm</a></li>
-<li><a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023), An in-vivo validation of ESI methods with focal sources</a></li>
-<li><a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025), HD-EEG source imaging with simultaneous SEEG</a></li>
-<li><a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">Birot et al. (2014), Head model and electrical source imaging</a></li>
-<li><a href="https://doi.org/10.1016/j.clinph.2018.12.016" target="_blank">Mouthaan et al. (2019), E-PILEPSY systematic review</a></li>
-<li><a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023), Validating EEG source imaging using intracranial electrical stimulation</a></li>
-<li><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019), Subcortical electrophysiological activity is detectable with high-density EEG source imaging</a></li>
-<li><a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024), Global sensitivity of EEG source analysis to tissue conductivity uncertainties</a></li>
-<li><a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024), The SESAMEEG package: a probabilistic tool for source localization and uncertainty quantification in M/EEG</a></li>
-<li><a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025), Debiased estimation and inference for spatial-temporal EEG/MEG source imaging</a></li>
-<li><a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025), Block-Champagne for extended E/MEG source imaging</a></li>
-<li><a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026), Potential of EEG and EEG/MEG skull conductivity estimation to improve source analysis in presurgical evaluation of epilepsy</a></li>
-<li><a href="https://doi.org/10.1016/j.compbiomed.2026.111449" target="_blank">Jahromi et al. (2026), 3D printed pediatric head phantom for assessing deep epileptic sources localization</a></li>
-<li><a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024), Network-level encoding of local neurotransmitters in cortical astrocytes</a></li>
-<li><a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">Suzuki et al. (2011), Astrocyte-neuron lactate transport is required for long-term memory formation</a></li>
-<li><a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">Silva et al. (2022), Glial ketogenesis regulates memory maintenance during starvation</a></li>
-<li><a href="https://doi.org/10.1038/s42255-025-01416-5" target="_blank">Pavlowsky et al. (2025), Neuronal fatty acid oxidation fuels memory after intensive learning in Drosophila</a></li>
-<li><a href="https://doi.org/10.1038/s42255-025-01389-5" target="_blank">Greda et al. (2025), Interaction of sortilin with apolipoprotein E3 enables neurons to use long-chain fatty acids as alternative metabolic fuel</a></li>
-<li><a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">Williamson et al. (2025), Learning-associated astrocyte ensembles regulate memory recall</a></li>
-<li><a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">Dewa et al. (2025), The astrocytic ensemble acts as a multiday trace to stabilize memory</a></li>
-<li><a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026), Astrocytes enable amygdala neural representations supporting memory</a></li>
-<li><a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025), Pericyte pannexin1 controls cerebral capillary diameter and supports memory function</a></li>
-<li><a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">Kim et al. (2025), Meningeal lymphatics-microglia axis regulates synaptic physiology</a></li>
-<li><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025), Region-specific drivers of CSF mobility measured with MRI in humans</a></li>
-<li><a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025), Quantitative PET imaging and modeling of molecular blood-brain barrier permeability</a></li>
-<li><a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026), The glymphatic system clears amyloid beta and tau from brain to plasma in humans</a></li>
-<li><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024), Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization</a></li>
-<li><a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025), Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep</a></li>
-<li><a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025), Autonomic physiological coupling of the global fMRI signal</a></li>
-<li><a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025), BOLD signal changes can oppose oxygen metabolism across the human cortex</a></li>
-<li><a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024), Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury</a></li>
-<li><a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023), Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study</a></li>
-<li><a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026), Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness</a></li>
-<li><a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024), Repeatability of deuterium metabolic imaging in healthy volunteers at 3 T</a></li>
-<li><a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021), The relationship between EEG and fMRI connectomes is reproducible across simultaneous EEG-fMRI studies from 1.5 T to 7T</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS 1.11.1: タスク イベント</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS 1.11.1: 脳波検査</a></li>
+<li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)、EEG-BIDS</a></li>
+<li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">ロビンズら。 (2021)、FAIR イベント注釈の HED</a></li>
+<li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">エルメス 他(2025)、EEG データ注釈用の HED ライブラリ スキーマ</a></li>
+<li><a href="https://doi.org/10.1162/imag_a_00136" target="_blank">Kothe et al. (2025)、ラボ ストリーミング レイヤー</a></li>
+<li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024)、モーション-BIDS</a></li>
+<li><a href="https://docs.openneuro.org/git.html" target="_blank">OpenNeuro ドキュメント: Git アクセスとスナップショット</a></li>
+<li><a href="https://docs.openneuro.org/user_guide.html" target="_blank">OpenNeuro Docs: データセットのランディング ページとスナップショット メタデータ</a></li>
+<li><a href="https://physionet.org/about/" target="_blank">PhysioNet: 概要と引用ポリシー</a></li>
+<li><a href="https://physionet.org/about/content/" target="_blank">PhysioNet: リソースと引用に関するガイダンス</a></li>
+<li><a href="https://doi.org/10.21105/joss.01896" target="_blank">Appelhoff et al. (2019)、MNE-BIDS</a></li>
+<li><a href="https://mne.tools/mne-bids/stable/generated/mne_bids.write_raw_bids.html" target="_blank">MNE-BIDS ドキュメント: write_raw_bids</a></li>
+<li><a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">ジャヤラム＆amp;バラチャント (2018)、MOABB</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/index.html" target="_blank">MOABB ドキュメント</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.WithinSessionEvaluation.html" target="_blank">MOABB ドキュメント: WithinSessionEvaluation</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSessionEvaluation.html" target="_blank">MOABB ドキュメント: CrossSessionEvaluation</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSubjectEvaluation.html" target="_blank">MOABB ドキュメント: CrossSubjectEvaluation</a></li>
+<li><a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022)、運動イメージのセッション間の変動を研究するための大規模な EEG データセット BCI</a></li>
+<li><a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024)、BCI</a></li> の膨大な EEG データを使用して一般的な表現を学習するための大脳モデル
+<li><a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">リーら。 (2025)、大規模な脳波基盤モデルはまだ可能ですか?微調整からの洞察</a></li>
+<li><a href="https://arxiv.org/abs/2507.14141" target="_blank">ハンら。 (2025)、DIVER-0: 完全チャネル等変脳波基盤モデル</a></li>
+<li><a href="https://arxiv.org/abs/2510.12515" target="_blank">チェンら。 (2025)、HEAR: 異種電極適応表現を備えた EEG 基礎モデル</a></li>
+<li><a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi 他。 (2025)、REVE: EEG の基礎モデル -- 25,000 人の被験者に対する大規模な事前トレーニングによるあらゆるセットアップへの適応</a></li>
+<li><a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)、EEG 基礎モデルの構造化プロトタイプに基づく適応</a></li>
+<li><a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu ら。 (2026)、EEG 基礎モデル: 進捗状況、ベンチマーク、および未解決の問題</a></li>
+<li><a href="https://arxiv.org/abs/2603.02268" target="_blank">ラヒリら。 (2026)、PRISM: 異種の事前学習済み EEG 基礎モデルの臨床鑑別診断への移行の探索</a></li>
+<li><a href="https://eeg2025.github.io/" target="_blank">EEG チャレンジ (2025)、公式ホームページ</a></li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG チャレンジ (2025)、ルール</a></li>
+<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG チャレンジ (2025)、提出ページ</a></li>
+<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG チャレンジ (2025)、リーダーボード</a></li>
+<li><a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)、単一トライアルのニューラル ダイナミクスは、豊富に変化する動きによって支配されます</a></li>
+<li><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)、手のジェスチャーの解読に影響を与える時間脳波ダイナミクス: 10 時間の研究</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)、潜在ダイナミクスの調整による脳とコンピューターのインターフェースの安定化</a></li>
+<li><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">ウィルソンら。 (2025)、カーソルベースの皮質内 BCI の長期教師なし再校正</a></li>
+<li><a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar 他。 (2025)、瞬間音声合成神経人工器官</a></li>
+<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">斉藤＆amp; Rehmsmeier (2015)、不均衡なデータセットでバイナリ分類器を評価する場合、適合率-再現率プロットは ROC プロットよりも有益です</a></li>
+<li><a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">ロイら。 (2021)、頭皮脳波データの迅速かつ正確な注釈付けにより神経内科医を支援するための人工知能システムの評価</a></li>
+<li><a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)、発作検出: 大規模なデータセットを使用したリーダー間の合意と検出アルゴリズムの評価</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">シーガルら。 (2023)、リスク管理予測キャリブレーションを利用しててんかん発作予測における誤警報率を削減</a></li>
+<li><a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)、大規模な自動睡眠ステージング</a></li>
+<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">ヴァラット＆amp; Walker (2021)、自動睡眠ステージングのためのオープンソースの高性能ツール</a></li>
+<li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG 運動動作/画像データセット</a></li>
+<li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT 頭皮脳波データベース</a></li>
+<li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF データベースの拡張</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">従ってください。 Picone (2016)、TUH EEG コーパス</a></li>
+<li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">シャーら。 (2018)、TUH 発作検出コーパス</a></li>
+<li><a href="https://par.nsf.gov/servlets/purl/10311411" target="_blank">Hamid et al. (2021)、TUH EEG コーパスの最近の進歩: アーティファクトとてんかんイベントに関する評価者間合意の改善</a></li>
+<li><a href="https://doi.org/10.5664/jcsm.2350" target="_blank">ローゼンバーグ＆amp; Van Hout (2013)、米国睡眠医学会スコアラー間信頼性プログラム: 睡眠段階スコアリング</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">ブルックシャーら。 (2024)、トランスレーショナル脳波の深層学習研究におけるデータ漏洩</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">モーザーら。 (2009)、AASM と Rechtschaffen &amp; 間の睡眠分類の違い。カレス</a></li>
+<li><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">ミクランら。 (2020)、ローカライズ-MI</a></li>
+<li><a href="https://doi.org/10.1088/0031-9155/46/1/306" target="_blank">Baillet et al. (2001)、人間の頭蓋骨ファントムを使用した逆法と頭部モデルの評価</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2004.10.030" target="_blank">フィリップスら。 (2005)、EEG</a></li> における信号源再構成問題に対する経験的なベイジアン解法
+<li><a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">ミシェル＆amp; Brunet (2019)、EEG ソース イメージング: 分析ステップの実践的なレビュー</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">Aydin et al. (2019)、脳波双極子再構成に対する頭部組織の伝導性不確実性の影響</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2020.117411" target="_blank">Cai ら。 (2021)、シャンパン アルゴリズムを使用した電磁脳イメージングのノイズのロバスト推定</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">パスカレラら。 (2023)、焦点ソースを使用した ESI メソッドの生体内検証</a></li>
+<li><a href="https://doi.org/10.1111/epi.18552" target="_blank">ハオら。 (2025)、同時 SEEG</a></li> を使用した HD-EEG ソース イメージング
+<li><a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">Birot et al. (2014)、頭部モデルと電源イメージング</a></li>
+<li><a href="https://doi.org/10.1016/j.clinph.2018.12.016" target="_blank">Mouthaan et al. (2019)、E-PILEPSY 系統的レビュー</a></li>
+<li><a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)、頭蓋内電気刺激を使用した EEG ソース イメージングの検証</a></li>
+<li><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber ら。 (2019)、皮質下の電気生理学的活動は高密度EEGソースイメージングで検出可能</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)、組織伝導率の不確実性に対する EEG ソース分析のグローバル感度</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">ルリアら。 (2024)、SESAMEEG パッケージ: M/EEG</a></li> における音源位置特定と不確実性定量化のための確率的ツール
+<li><a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">トンら。 (2025)、時空間 EEG/MEG ソース イメージングのための偏りのない推定と推論</a></li>
+<li><a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)、拡張 E/MEG 線源イメージング用の Block-Champagne</a></li>
+<li><a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)、てんかんの術前評価における信号源分析を改善するための EEG および EEG/MEG 頭蓋骨伝導率推定の可能性</a></li>
+<li><a href="https://doi.org/10.1016/j.compbiomed.2026.111449" target="_blank">Jahromi et al. (2026)、深いてんかん源の局在性を評価するための 3D プリント小児頭部ファントム</a></li>
+<li><a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)、皮質星状細胞における局所神経伝達物質のネットワークレベルのエンコーディング</a></li>
+<li><a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">鈴木ら。 (2011)、長期記憶形成にはアストロサイト-ニューロンの乳酸輸送が必要</a></li>
+<li><a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">Silva ら。 (2022)、グリアのケト生成は飢餓時の記憶維持を調節</a></li>
+<li><a href="https://doi.org/10.1038/s42255-025-01416-5" target="_blank">Pavlowsky 他。 (2025)、ショウジョウバエの集中学習後の神経脂肪酸の酸化が記憶力を高める</a></li>
+<li><a href="https://doi.org/10.1038/s42255-025-01389-5" target="_blank">グレダら。 (2025)、ソルチリンとアポリポタンパク質 E3 の相互作用により、ニューロンは代替代謝燃料として長鎖脂肪酸を使用できるようになります</a></li>
+<li><a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">ウィリアムソンら。 (2025)、学習に関連した星状細胞アンサンブルが記憶想起を調節</a></li>
+<li><a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">出羽ら。 (2025)、星状細胞アンサンブルは、記憶を安定させるための複数日のトレースとして機能</a></li>
+<li><a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">Bukalo et al. (2026)、アストロサイトは記憶をサポートする扁桃体の神経表現を可能にする</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-61312-0" target="_blank">Mai-Morente et al. (2025)、周皮細胞パネキシン 1 は脳毛細血管径を制御し、記憶機能をサポート</a></li>
+<li><a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">キムら。 (2025)、髄膜リンパ管-ミクログリア軸はシナプス生理学を調節</a></li>
+<li><a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)、ヒトの MRI で測定された CSF 可動性の地域固有の要因</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)、分子血液脳関門透過性の定量的 PET イメージングとモデリング</a></li>
+<li><a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)、グリンファティック系はヒトの脳から血漿までアミロイド ベータとタウを除去</a></li>
+<li><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii ら。 (2024)、自発的脳活動の多峰性測定により、皮質機能組織の共通パターンと多様なパターンの両方が明らかに</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">チェンら。 (2025)、同時 EEG-PET-MRI は、覚醒時とノンレム睡眠全体にわたる時間的に結合され、空間的に構造化された脳のダイナミクスを特定します</a></li>
+<li><a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">ボルトら。 (2025)、グローバル fMRI 信号の自律生理学的結合</a></li>
+<li><a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">エップら。 (2025)、大胆な信号変化は人間の皮質全体の酸素代謝を妨げる可能性があります</a></li>
+<li><a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut ら。 (2024)、マルチモーダル評価により、脳損傷を伴う臨床的に無反応な救命救急患者の神経予後パフォーマンスが改善</a></li>
+<li><a href="https://doi.org/10.1093/brain/awac335" target="_blank">アミリ 他(2023)、集中治療室における残留意識のマルチモーダル予測: CONNECT-ME 研究</a></li>
+<li><a href="https://doi.org/10.1093/brain/awaf412" target="_blank">マナソワら。 (2026)、意識障害における診断および予後マーカーの多角的多施設研究</a></li>
+<li><a href="https://doi.org/10.1186/s41747-024-00426-4" target="_blank">B&oslash;gh et al. (2024)、3 T</a></li> での健康なボランティアにおける重水素代謝イメージングの再現性
+<li><a href="https://doi.org/10.1016/j.neuroimage.2021.117864" target="_blank">Wirsich et al. (2021)、EEG と fMRI コネクトームの関係は、1.5 T から 7T までの同時 EEG-fMRI 研究全体で再現可能</a></li>
 </ul>
 </section>
 
@@ -1291,17 +1292,17 @@ The shortest route to that end is to approach BIDS/EEG-BIDS.
 <aside class="sidebar-column">
 
 <div class="sidebar-box">
-<h4>Related</h4>
+<h4>関連</h4>
 <ul>
-<li><a href="eeg_101.html">Introduction to EEG →</a></li>
-<li><a href="tech_roadmap.html#measurement">Roadmap: Measurement →</a></li>
-<li><a href="verification.html#casework">Verification: Casework →</a></li>
-<li><a href="glossary.html">Glossary →</a></li>
+<li><a href="eeg_101.html">EEG の概要 →</a></li>
+<li><a href="tech_roadmap.html#measurement">ロードマップ: 測定 →</a></li>
+<li><a href="verification.html#casework">検証: ケースワーク →</a></li>
+<li><a href="glossary.html">用語集 →</a></li>
 </ul>
 </div>
 
 <div class="sidebar-box">
-<h4>Links</h4>
+<h4>リンク</h4>
 <ul>
 <li><a href="https://bids.neuroimaging.io/" target="_blank">BIDS</a></li>
 <li><a href="https://openneuro.org/" target="_blank">OpenNeuro</a></li>

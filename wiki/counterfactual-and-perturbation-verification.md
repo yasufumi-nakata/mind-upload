@@ -1,441 +1,442 @@
 ---
 layout: default
-title: "Wiki: Verification of counterfactuals, interventions, and perturbations"
-description: "Primary-literature reading guide for separating held-out accuracy, online control, local intervention, state-dependent controller families, temporal durability, bridge validity, and perturbation-structure tests."
-article_type: Wiki
-subtitle: "A fast loop, a causal gain, and a durable same-state result are different claims."
-author: Mind Uploading Research Project
-last_updated: "2026-03-31"
-note: "Learning guide / evidence refresh"
-audience: "People who want to read causal-verification papers without collapsing online control, local intervention, cross-day durability, and same-state continuity into one result"
-reading_time: "14-22 minutes"
-page_intro: "This page is a wiki that separates held-out accuracy, online human-in-the-loop control, bidirectional or local intervention, state-dependent intervention, temporal durability, and perturbation-structure tests using primary literature. It also connects those evidence classes to the site's newer operating rules: the Temporal Validity Card, Burst-Controller Log, State-Continuity Bridge Card, Maintenance-State Error Budget, and Body / Environment Boundary Card."
-accuracy_note: "The primary literature as of March 2026 strongly supports local subsystem- and task-limited causal evidence plus real engineering progress in online control and deployment. It still does not demonstrate whole-brain counterfactual equivalence or state-complete WBE, and it also does not support reading burst-driven neuromodulation as one generic controller family."
+title: 'Wiki: 反事実、介入、摂動の検証'
+description: 保持精度、オンライン制御、ローカル介入、状態依存コントローラー ファミリ、時間的耐久性、ブリッジの妥当性、および摂動構造テストを分離するための、一次文献の読書ガイド。
+article_type: ウィキ
+subtitle: 高速ループ、因果関係のゲイン、および永続的な同じ状態の結果は別の主張です。
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-03-31'
+note: 学習ガイド/証拠の更新
+audience: オンライン制御、ローカル介入、日を超えた耐久性、および同一状態の継続性を 1 つの結果にまとめることなく、因果関係検証論文を読みたい人
+reading_time: 14～22分
+page_intro: このページは、一次文献を使用したホールドアウト精度、オンライン人間参加型制御、双方向またはローカル介入、状態依存介入、時間的耐久性、および摂動構造テストを分離する Wiki です。また、これらの証拠クラスをサイトの新しい運用ルール
+  (時間的有効性カード、バースト コントローラー ログ、状態継続性ブリッジ カード、メンテナンス状態エラー バジェット、および本体/環境境界カード) に関連付けます。
+accuracy_note: 2026 年 3 月時点の主要文献は、ローカルのサブシステムおよびタスクに限定された因果関係の証拠に加え、オンライン制御と展開における実際のエンジニアリングの進歩を強力に裏付けています。それは依然として、脳全体の反事実的等価性や状態完全な
+  WBE を実証しておらず、また、バースト駆動型神経変調を 1 つの汎用コントローラー ファミリとして読み取ることもサポートしていません。
 page_highlights:
-  - "Offline decode, online control, local causal gain, cross-day durability, and branch-structure verification are separate walls."
-  - "Low latency and abstention in one session do not by themselves solve fixed-decoder durability, clinic-to-home deployment, or same-state continuity across days."
-  - "For burst-driven neuromodulation, biomarker family, controller mode, sensing viability, comparator policy, and programming burden are separate audit items."
-  - "Same-subject wording is not accepted here as same-state evidence unless the bridge regime and elapsed time are disclosed explicitly."
-  - "Persistence, forgetting, recovery, and long-horizon claims require maintenance-state disclosure in addition to intervention logs."
-  - "What recent primary literature supports strongly is subsystem-limited causal evidence and deployment-specific engineering progress, not whole-brain counterfactual equivalence."
+- オフラインのデコード、オンライン制御、ローカル因果ゲイン、日を超えた耐久性、および分岐構造の検証は別の壁です。
+- 1 回のセッションでの低遅延と棄権だけでは、固定デコーダの耐久性、診療所から家庭への展開、または数日にわたる同じ状態の継続性を解決することはできません。
+- バースト駆動型神経変調の場合、バイオマーカー ファミリ、コントローラー モード、センシング実行可能性、コンパレーター ポリシー、およびプログラミング負荷は別個の監査項目です。
+- ここでは、ブリッジレジームと経過時間が明示的に開示されない限り、同じ主題の文言は同じ州の証拠として受け入れられません。
+- 永続性、忘却性、回復性、および長期にわたるクレームには、介入ログに加えてメンテナンス状態の開示が必要です。
+- 最近の一次文献が強く支持しているのは、サブシステムに限定された因果関係の証拠と展開固有のエンジニアリングの進歩であり、脳全体の反事実的等価性ではありません。
 known_points:
-  - "High held-out accuracy alone does not guarantee agreement in causal structure."
-  - "Bidirectional feedback and state-dependent stimulation strengthen causal evidence, but their scope of application remains localized unless the omitted boundary is disclosed."
-  - "Recent speech BCI and adaptive DBS papers show that tail latency, recalibration burden, biomarker/controller family, eligibility or programming burden, and clinic-to-home deployment are separate audit items."
-  - "Same-subject or same-brain wording can solve specimen identity while still leaving state continuity unresolved across days, regimes, or live-to-fix bridges."
-  - "When a claim extends to persistence, forgetting, or recovery after perturbation, intervention logs alone are insufficient without maintenance-state disclosure."
+- 高い保持精度だけでは、因果構造の一致が保証されません。
+- 双方向フィードバックと状態依存刺激は因果関係の証拠を強化しますが、省略された境界が開示されない限り、それらの適用範囲は局所的なままです。
+- 最近のスピーチ BCI およびアダプティブ DBS の論文では、テール レイテンシー、再キャリブレーション負荷、バイオマーカー/コントローラー ファミリ、適格性またはプログラミング負荷、および診療所から在宅への導入が別個の監査項目であることが示されています。
+- 同じ主題または同じ脳の文言は、日、体制、または生存から固定までの橋をまたぐ状態の連続性を未解決のままにして、標本の同一性を解決することができます。
+- 主張が永続、忘却、または摂動後の回復にまで及ぶ場合、保守状態の開示がなければ介入ログだけでは不十分です。
 unknown_points:
-  - "It remains open which perturbation set would be sufficient for whole-brain branch-equivalence."
-  - "The extent to which counterfactual branch structure can be benchmarked in a shareable public infrastructure is still unresolved."
-  - "No public benchmark yet joins perturbation response, temporal durability, bridge validity, and maintenance-state disclosure under one whole-brain standard."
-  - "Which biomarker/controller pairing best generalizes across bradykinesia, gait impairment, dyskinesia control, and chronic home use in adaptive DBS remains unresolved."
+- どの摂動セットが脳全体の分岐の等価性に十分であるかは不明のままである。
+- 共有可能な公共インフラストラクチャにおいて、事実に反するブランチ構造をどの程度ベンチマークできるかはまだ未解決です。
+- 摂動応答、時間的耐久性、ブリッジの有効性、およびメンテナンス状態の開示を 1 つの全脳標準に基づいて結合する公開ベンチマークはまだありません。
+- どのバイオマーカーとコントローラーの組み合わせが、適応型 DBS における運動緩慢、歩行障害、ジスキネジアの制御、および慢性的な家庭での使用を最もよく一般化するかは未解決のままです。
 wiki_links:
-  - label: "Wiki: Decode and Emulate"
-    url: "/wiki/decode-vs-emulate.html"
-    description: "Return here first if translation and generation are still being mixed together."
-  - label: "Wiki: From Observation to Estimation"
-    url: "/wiki/observation-to-estimation.html"
-    description: "Explains why observational fit and causal validation are different steps."
-  - label: "Wiki: State, Trait, and Drift"
-    url: "/wiki/state-trait-and-drift.html"
-    description: "Background for cross-day durability, recalibration burden, and transfer ceilings."
-  - label: "Wiki: State-Continuity Bridge"
-    url: "/wiki/state-continuity-bridge.html"
-    description: "Explains why same-subject or same-brain wording does not automatically give one same-state sample."
-  - label: "Wiki: Closed Loop, Delay, Jitter, Safe Stop"
-    url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
-    description: "Detailed timing-side companion for online control and deployment logs."
+- label: 'Wiki: デコードとエミュレート'
+  url: /wiki/decode-vs-emulate.html
+  description: 変換と生成がまだ混在している場合は、最初にここに戻ってください。
+- label: 'Wiki: 観察から推定へ'
+  url: /wiki/observation-to-estimation.html
+  description: 観察による適合と因果関係の検証が異なるステップである理由を説明します。
+- label: 'Wiki: 状態、特性、ドリフト'
+  url: /wiki/state-trait-and-drift.html
+  description: 日をまたぐ耐久性、再調整の負担、転送上限の背景。
+- label: 'Wiki: 状態継続ブリッジ'
+  url: /wiki/state-continuity-bridge.html
+  description: 同じ主題または同じ脳の文言が自動的に同じ状態のサンプルを 1 つ提供しない理由を説明します。
+- label: 'Wiki: 閉ループ、遅延、ジッター、安全停止'
+  url: /wiki/closed-loop-latency-jitter-and-safety-stops.html
+  description: オンライン制御および展開ログの詳細なタイミング側のコンパニオン。
 recommended_pages:
-  - label: "Verification platform"
-    url: "/verification.html"
-  - label: "Technology roadmap"
-    url: "/tech_roadmap.html"
-  - label: "Introduction to WBE"
-    url: "/wbe_101.html"
+- label: 検証プラットフォーム
+  url: /verification.html
+- label: 技術ロードマップ
+  url: /tech_roadmap.html
+- label: WBE の概要
+  url: /wbe_101.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Shortest conclusion</h2>
+<h2>最短の結論</h2>
 <p>
-High held-out accuracy is important, but it alone does not mean that the mechanisms inside are the same. The current primary literature supports at least six separate walls: <strong>held-out decode</strong>, <strong>online human-in-the-loop control</strong>, <strong>bidirectional or local intervention</strong>, <strong>state-dependent intervention</strong>, <strong>temporal durability and deployment</strong>, and <strong>branch-structure or perturbation-pattern testing</strong>.
+保持精度が高いことは重要ですが、それだけでは内部の機構が同じというわけではありません。現在の一次文献は、少なくとも 6 つの個別の壁をサポートしています。<strong> ホールドアウト デコード </strong>、<strong> オンライン ヒューマン インザ ループ制御 </strong>、<strong> 双方向またはローカル介入 </strong>、<strong> 状態依存介入 </strong>、<strong> 時間的耐久性および展開 </strong>、<strong> 分岐構造または摂動パターン テスト </strong>。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Main weakness this pass had to fix</strong>
+<strong>このパスで修正する必要があった主な弱点</strong>
 <p>
-The older version correctly separated held-out accuracy from intervention, but it still let readers learn causal verification as if it were one monotonic ladder. The recent primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> demonstrated raw-neural closed-loop voice synthesis in less than <strong>10 ms</strong> with explicit silence outside speech, yet the same paper reported a noticeable decline in fixed-decoder performance after about <strong>15 days</strong>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> then achieved <strong>one month</strong> of unsupervised closed-loop cursor control while showing, with recordings spanning <strong>five years</strong>, that pairwise recalibration and chained long-term use are different questions. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> pushed adaptive DBS into blinded randomized blocks in home life over <strong>one month per condition</strong>, while <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a> showed that even after offering chronic adaptive DBS to <strong>20 consecutive</strong> Parkinson's disease patients, eligibility and programming constraints still narrowed who could actually continue. A second remaining weakness was subtler: this page still let readers treat adaptive DBS as one generic state-dependent intervention. <a href="https://pubmed.ncbi.nlm.nih.gov/38580641/" target="_blank">Mathiopoulou et al. (2024)</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/39289373/" target="_blank">Stanslaski et al. (2024)</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/41741462/" target="_blank">Cascino et al. (2026)</a>, and the newer biomarker papers cited below show that <strong>biomarker family</strong>, <strong>controller mode</strong>, <strong>state dependence</strong>, <strong>sensing viability</strong>, and <strong>programming burden</strong> are different causal-verification burdens. Therefore this page now separates <strong>same-session causal gain</strong>, <strong>state-dependent controller family</strong>, <strong>temporal durability</strong>, <strong>bridge validity</strong>, and <strong>deployment burden</strong> instead of hiding them inside one phrase such as <strong>closed-loop success</strong>.
+古いバージョンでは、保留精度と介入が正しく分離されていましたが、それでも読者は 1 つの単調なはしごであるかのように因果関係の検証を学習できました。最近の一次文献はそのショートカットをサポートしていません。 <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> は、<strong>10 ミリ秒未満で生のニューラル閉ループ音声合成を実証しました</strong> 音声外に明示的な沈黙がありましたが、同じ論文では、約 <strong>15 日</strong> 後に固定デコーダのパフォーマンスが顕著に低下したと報告しました。 <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)その後、</a> は、<strong> 1 か月で </strong> の教師なし閉ループ カーソル制御を達成しましたが、<strong>5 年にわたる記録により</strong> ペアごとの再キャリブレーションと連鎖的な長期使用は別の問題であることを示しました。 <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024) </a> は、<strong> 条件ごとに 1 ヶ月間、</strong> にわたって、家庭生活における盲検化されたランダム化ブロックに適応型 DBS を押し込みました。一方、<a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026) </a> は、<strong>20 連続の </strong> パーキンソン病患者に慢性適応 DBS を提供した後でも、実際に継続できる患者の資格とプログラムの制約が依然として狭まっていることを示しました。残りの 2 番目の弱点は、さらに微妙なものでした。このページでは、読者が適応 DBS を 1 つの一般的な状態依存介入として扱うことができました。 <a href="https://pubmed.ncbi.nlm.nih.gov/38580641/" target="_blank">Mathiopoulou et al. (2024)</a>、<a href="https://pubmed.ncbi.nlm.nih.gov/39289373/" target="_blank">Stanslaski et al. (2024)</a>、<a href="https://pubmed.ncbi.nlm.nih.gov/41741462/" target="_blank">Cascino et al. (2026)</a>、および以下に引用する新しいバイオマーカー論文は、<strong>バイオマーカーファミリー</strong>、<strong>コントローラーモード</strong>、<strong>状態依存性</strong>、<strong>センシング生存性</strong>、および<strong>プログラミング負荷</strong>が異なる因果関係検証負荷であることを示しています。したがって、このページでは、<strong> 閉ループの成功</strong> などの 1 つのフレーズ内に隠すのではなく、<strong> 同一セッション因果ゲイン </strong>、<strong> 状態依存コントローラー ファミリ </strong>、<strong> 時間耐久性 </strong>、<strong> ブリッジ有効性 </strong>、および <strong> デプロイ負荷 </strong> を分離するようになりました。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-31 deepening: burst-driven neuromodulation is controller-limited, not one state-dependent intervention</strong>
+<strong>2026-03-31 深化: バースト駆動型神経調節はコントローラーに制限されており、1 つの状態依存介入ではない</strong>
 <p>
-This page now blocks one more shortcut. <a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou et al. (2024)</a> showed that subthalamic beta changes with <strong>movement</strong>, <strong>dopamine</strong>, and <strong>DBS</strong> state; <a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> showed that adaptive-DBS already splits across <strong>single-threshold</strong>, <strong>dual-threshold</strong>, and different onset-duration policies; <a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou et al. (2025)</a> pushed up different <strong>gamma-linked</strong> biomarker families; <a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">Dixon et al. (2026)</a> added a remotely optimized neural-decoder route; and <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a> showed that <strong>eligibility</strong> and <strong>programming constraints</strong> can still block chronic use. Therefore, on this site, a state-dependent neuromodulation paper is not read only by <strong>trigger timing</strong> or <strong>symptom change</strong>. It must also disclose <strong>which biomarker family</strong>, <strong>which controller policy</strong>, <strong>which operating regime</strong>, <strong>which sensing exclusions</strong>, and <strong>which comparator</strong> made the result possible.
+このページはもう 1 つのショートカットをブロックします。 <a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou 他(2024)</a> は、視床下ベータが <strong> 運動 </strong>、<strong> ドーパミン </strong>、<strong>DBS</strong> 状態に応じて変化することを示しました。 <a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Sスタンスラスキら(2024) </a> は、アダプティブ DBS がすでに <strong> 単一閾値 </strong>、<strong> 二重閾値 </strong>、および異なる開始期間ポリシーに分割されていることを示しました。 <a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaruら(2024)</a> および <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou 他。 (2025) </a> は、さまざまな <strong> ガンマ関連 </strong> バイオマーカー ファミリーを押し上げました。 <a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">ディクソンら(2026) </a> はリモートで最適化されたニューラル デコーダー ルートを追加しました。および<a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascinoら。 (2026) </a> は、<strong> 適格性 </strong> および <strong> プログラミング制約 </strong> が依然として慢性使​​用をブロックできることを示しました。したがって、このサイトでは、状態依存性神経調節論文は、<strong>トリガータイミング</strong>または<strong>症状変化</strong>だけでは読み取れません。また、<strong>、どのバイオマーカーファミリー</strong>、<strong>、どのコントローラーポリシー</strong>、<strong>、どの操作レジーム</strong>、<strong>どのセンシング除外</strong>、<strong>どのコンパレーター</strong>が結果を可能にしたのかも開示しなければならない。
 </p>
 </div>
 
 <section class="section" id="ladder">
-<h2 class="section-title">First, classify causal evidence into six levels</h2>
+<h2 class="section-title">まずは因果関係証拠を6つのレベルに分類</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Stage</th>
-<th>What is actually changing</th>
-<th>Minimum log wanted on this site</th>
-<th>What still cannot be said</th>
+<th>ステージ</th>
+<th>実際何が変わるのか</th>
+<th>このサイトで必要な最小限のログ</th>
+<th>まだ言えないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. Held-out decode</strong></td>
-<td>Check whether the model still predicts on unused data.</td>
-<td>Split unit, leakage audit, calibration error, uncertainty, and abstention if probabilities are output.</td>
-<td>It still does not show agreement under changed conditions or agreement in causal structure.</td>
+<td><strong>1。保留デコード</strong></td>
+<td>モデルがまだ未使用のデータを予測しているかどうかを確認します。</td>
+<td>分割ユニット、漏れ監査、校正エラー、不確実性、確率が出力される場合の棄権。</td>
+<td>条件を変えても一致せず、因果構造も一致しない。</td>
 </tr>
 <tr>
-<td><strong>2. Online human-in-the-loop control</strong></td>
-<td>A participant continuously operates while seeing or hearing the output.</td>
-<td>End-to-end latency distribution, jitter, dropout, abstention or silence policy, and recalibration events.</td>
-<td>Even if it works online, it still does not show compatibility with explicit perturbation, long-term durability, or same-state continuity.</td>
+<td><strong>2。オンライン人間参加型制御</strong></td>
+<td>A 参加者は出力を見たり聞いたりしながら継続的に動作します。</td>
+<td>エンドツーエンドの遅延分布、ジッター、ドロップアウト、棄権または沈黙ポリシー、および再キャリブレーション イベント。</td>
+<td>オンラインで動作しても、明示的な摂動、長期耐久性、または同一状態の継続性との互換性は示されていません。</td>
 </tr>
 <tr>
-<td><strong>3. Bidirectional feedback / local intervention</strong></td>
-<td>Feedback or stimulation changes the next biological input or behavior.</td>
-<td>Stimulus timing, intensity, artifact window, effect size, failure cases, and local safety conditions.</td>
-<td>Local causal gain still does not show whole-brain generative equivalence.</td>
+<td><strong>3。双方向フィードバック/ローカル介入</strong></td>
+<td>フィードバックまたは刺激は、次の生物学的入力または行動を変化させます。</td>
+<td>刺激のタイミング、強度、アーティファクトウィンドウ、効果の大きさ、故障ケース、およびローカルの安全条件。</td>
+<td>局所因果的利得はまだ全脳の生成的同等性を示していない。</td>
 </tr>
 <tr>
-<td><strong>4. State-dependent intervention</strong></td>
-<td>Stimulation or control policy switches as a function of the detected state.</td>
-<td>State-estimation error, biomarker family / symptom axis, controller family, comparator policy, duty cycle, stop conditions, abstention or fallback policy, and real-life block structure when relevant.</td>
-<td>A symptom-linked controller or personalized biomarker route is still different from state completeness or branch-equivalence.</td>
+<td><strong>4。状態に応じた介入</strong></td>
+<td>Sシミュレーションまたは制御ポリシーは、検出された状態に応じて切り替わります。</td>
+<td>状態推定エラー、バイオマーカー ファミリ / 症状軸、コントローラ ファミリ、コンパレータ ポリシー、デューティ サイクル、停止条件、棄権またはフォールバック ポリシー、および関連する場合の実際のブロック構造。</td>
+<td>A 症状にリンクされたコントローラーまたはパーソナライズされたバイオマーカー ルートは、状態の完全性または分岐同等性とは依然として異なります。</td>
 </tr>
 <tr>
-<td><strong>5. Temporal durability / deployment</strong></td>
-<td>The controller is expected to survive days, weeks, or home deployment rather than a single research session.</td>
-<td>Fixed-decoder interval, supervised versus unsupervised recalibration route, performance-decay curve, recovery time, clinic versus home context, continuation or eligibility counts, signal-availability exclusions, and manual programming burden.</td>
-<td>Cross-day operation still does not by itself show same-state continuity or maintenance-consistent causal equivalence.</td>
+<td><strong>5。経時耐久性/展開</strong></td>
+<td>コントローラーは、1 回の研究セッションではなく、数日、数週間、または家庭での展開に耐えることが期待されています。</td>
+<td>固定デコーダ間隔、監視ありと監視なしの再校正ルート、パフォーマンス減衰曲線、回復時間、クリニックと自宅の状況、継続数または適格性カウント、信号利用可能性の除外、手動プログラミングの負担。</td>
+<td>日をまたぐ動作は、それ自体では依然として同じ状態の継続性または保守一貫性のある因果関係の同等性を示しません。</td>
 </tr>
 <tr>
-<td><strong>6. Perturbation-structure / branch test</strong></td>
-<td>Compare multiple branches or perturbation-response patterns under fixed comparison rules.</td>
-<td>Explicit branch variables, preregistered comparison rule, fixed failure criterion, repeatable perturbation set, temporal scope, and bridge status.</td>
-<td>Even here, whole-brain identity, complete maintenance-state coverage, and social deployment are not automatically determined.</td>
+<td><strong>6。摂動構造/分岐試験</strong></td>
+<td>固定比較ルールに基づいて複数の分岐または摂動応答パターンを比較します。</td>
+<td>明示的な分岐変数、事前登録された比較ルール、固定故障基準、再現可能な摂動セット、時間スコープ、ブリッジ ステータス。</td>
+<td>ここでも、全脳のアイデンティティ、完全なメンテナンス状態のカバレッジ、および社会的展開は自動的に決定されません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="recent-stop-lines">
-<h2 class="section-title">Recent literature forces five extra stop lines</h2>
+<h2 class="section-title">最近の文献では停止線が 5 つ追加されています</h2>
 <p>
-The site's newer cards are not editorial decoration. They are forced by concrete gaps that recent primary literature leaves visible. This page now treats them as part of causal-verification reading rather than as optional follow-up bureaucracy.
+このサイトの新しいカードは編集上の装飾ではありません。それらは、最近の一次文学が目に見える形で残す具体的なギャップによって強制されます。このページでは、それらをオプションのフォローアップ官僚制としてではなく、因果関係検証の読書の一部として扱います。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Stop line</th>
-<th>Why recent literature forces it</th>
-<th>What this site now requires</th>
+<th>トップライン</th>
+<th>最近の文献がそれを強制する理由</th>
+<th>このサイトに現在必要なもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Temporal Validity</strong></td>
-<td><a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> shows that an impressive same-session voice loop can still lose fixed-decoder performance after about 15 days, while <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> shows that one month of unsupervised use must be read separately from pairwise recalibration.</td>
-<td>Attach the <a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> whenever the claim reaches beyond same-session performance.</td>
+<td><strong>時間的妥当性</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">ワイラグカールら(2025)</a> は、印象的な同一セッション音声ループが約 15 日後でも固定デコーダのパフォーマンスを失う可能性があることを示しています。 (2025)</a> は、1 か月間監視なしで使用した場合は、ペアごとの再校正とは別に読み取る必要があることを示しています。</td>
+<td>クレームが同一セッションのパフォーマンスを超える場合は、<a href="../verification.html#temporal-validity-card">T時間的有効性カード</a>を添付してください。</td>
 </tr>
 <tr>
-<td><strong>Burst-Controller Log</strong></td>
-<td><a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou et al. (2024)</a> shows that beta feedback is state-dependent, <a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> shows that controller law and onset-duration policy are part of the object, <a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru et al. (2024)</a> plus <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou et al. (2025)</a> show that gamma-linked routes are not the same biomarker family as beta-guided bradykinesia control, and <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a> shows that eligibility and programming constraints remain part of the result.</td>
-<td>Attach the <a href="../verification.html#additional-audit-logs">Burst-Controller Log</a> whenever burst-driven neuromodulation or adaptive DBS is promoted above exploratory timing or personalized-controller feasibility.</td>
+<td><strong>バーストコントローラーログ</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou 他(2024) </a> は、ベータ フィードバックが状態に依存することを示しています。<a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> は、コントローラーの法則とオンセット期間ポリシーがオブジェクトの一部であることを示しています。<a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru et al。 (2024)</a> プラス <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou 他(2025) </a> は、ガンマ線関連経路がベータ誘導性運動緩慢制御と同じバイオマーカー ファミリーではないことを示し、<a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a> は、資格とプログラムの制約が結果の一部として残っていることを示しています。</td>
+<td>バースト駆動の神経変調または適応 DBS が探索的タイミングまたはパーソナライズされたコントローラーの実現可能性を超えて促進される場合は常に、<a href="../verification.html#additional-audit-logs"> バースト コントローラー ログを接続します</a>。
 </tr>
 <tr>
-<td><strong>State-Continuity Bridge</strong></td>
-<td><a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> shows that preservation route and fixation schedule alter extracellular-space retention, <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> remains a sequential in vivo-to-EM local pipeline rather than simultaneous same-state capture, and <a href="https://doi.org/10.1038/nature14467" target="_blank">Attardo et al. (2015)</a> shows that adult CA1 spines themselves turn over on the scale of weeks.</td>
-<td>Attach the <a href="../verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> whenever a result is read as one same-state sample across days, regimes, or live-to-fix bridges.</td>
+<td><strong>状態継続ブリッジ</strong></td>
+<td><a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu ら(2023) </a> は、保存ルートと固定スケジュールによって細胞外空間保持が変化することを示しています。<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025) </a> は、同時の同じ状態のキャプチャではなく、引き続き in vivo から EM への逐次的なローカル パイプラインであり、<a href="https://doi.org/10.1038/nature14467" target="_blank">Attardo et al. (2015)</a> は、成人の CA1 脊椎自体が数週間のスケールで回転することを示しています。</td>
+<td>日、レジーム、またはライブからフィックスまでのブリッジにわたって結果が 1 つの同じ状態のサンプルとして読み取られるたびに、<a href="../verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> を接続します。</td>
 </tr>
 <tr>
-<td><strong>Maintenance-State Error Budget</strong></td>
-<td><a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>, <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">Schreiner et al. (2024)</a>, and <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">Deng et al. (2025)</a> show that sleep history, replay coupling, and intracellular timing windows remain active controllers of persistence and recovery rather than background context.</td>
-<td>Attach the <a href="../verification.html#maintenance-state-error-budget">Maintenance-State Error Budget</a> whenever the claim concerns persistence, forgetting, reconsolidation, or recovery after perturbation.</td>
+<td><strong>メンテナンス状態エラー予算</strong></td>
+<td><a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a>、<a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">Schreiner et al. (2024)</a>、<a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">Deng et al. (2025)</a> は、睡眠履歴、再生カップリング、および細胞内タイミング ウィンドウが、バックグラウンド コンテキストではなく持続性と回復のアクティブなコントローラーであり続けることを示しています。</td>
+<td>クレームが永続性、忘却、再統合、または摂動後の回復に関する場合は常に、<a href="../verification.html#maintenance-state-error-budget">メンテナンス状態エラー予算を添付します</a>。</td>
 </tr>
 <tr>
-<td><strong>Body / Environment Boundary</strong></td>
-<td><a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> strengthens local bidirectional feedback, but the closed-loop literature more broadly still depends on retained or omitted tactile, proprioceptive, respiratory, arousal, and other organism-level routes.</td>
-<td>Attach the <a href="../verification.html#body-environment-boundary-card">Body / Environment Boundary Card</a> whenever a fast loop is being promoted toward naturalistic or embodied equivalence rather than local controller performance.</td>
+<td><strong>身体と環境の境界</strong></td>
+<td><a href="https://doi.org/10.1126/science.abd0380" target="_blank">Flesher et al. (2021)</a> は局所的な双方向フィードバックを強化しますが、より広範な閉ループ文献は依然として、触覚、固有受容、呼吸、覚醒、その他の生物レベルの経路の保持または省略に依存しています。</td>
+<td>高速ループがローカル コントローラーのパフォーマンスではなく、自然主義的または具現化された等価性を目指して推進されている場合は常に、<a href="../verification.html#body-environment-boundary-card">本体 / 環境境界カード</a>を取り付けます。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="boundary-cases">
-<h2 class="section-title">Boundary cases seen in primary literature</h2>
+<h2 class="section-title">一次文献に見られる境界例</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Papers</th>
-<th>What actually happened</th>
-<th>How to read on this site</th>
-<th>What still cannot be said</th>
+<th>論文</th>
+<th>実際に起こったこと</th>
+<th>このサイトの見方</th>
+<th>まだ言えないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Forenzo et al. (2024)</strong></td>
-<td>A non-invasive EEG continuous-tracking task was run online with a deep-learning decoder inside the human loop.</td>
-<td>This is an online-control result. It is stronger than offline accuracy and should be read through online metrics.</td>
-<td>It is not counterfactual equivalence or whole-brain generative equivalence.</td>
+<td>A 非侵襲的な脳波連続追跡タスクは、ヒューマン ループ内の深層学習デコーダーを使用してオンラインで実行されました。</td>
+<td>オンライン制御結果です。これはオフラインの精度よりも強力であり、オンラインの指標を通じて読み取る必要があります。</td>
+<td>それは反事実的等価性でも、全脳生成的等価性でもありません。</td>
 </tr>
 <tr>
-<td><strong>Littlejohn et al. (2025)</strong></td>
-<td>A speech neuroprosthesis streamed brain-to-voice updates in <strong>80-ms</strong> increments for naturalistic communication.</td>
-<td>This is a communication-subsystem online-control advance. It raises the bar for tail-latency and output-path logging.</td>
-<td>It still does not show same-state continuity, long-term fixed-decoder durability, or branch-equivalence.</td>
+<td><strong>Lリトルジョンら。 (2025)</strong></td>
+<td>A 音声ニューロプロテーゼは、脳から音声への更新を <strong>80 ～ ms</strong> 刻みでストリーミングし、自然なコミュニケーションを実現します。</td>
+<td>通信サブシステムのオンライン制御を進化させたものです。テール レイテンシと出力パス ロギングの基準を引き上げます。</td>
+<td>同じ状態の連続性、長期の固定デコーダ耐久性、または分岐の等価性はまだ示されていません。</td>
 </tr>
 <tr>
-<td><strong>Wairagkar et al. (2025)</strong></td>
-<td>Raw neural activity was converted into synthesized voice in less than <strong>10 ms</strong>, with silence returned in non-speech segments.</td>
-<td>This is a strong same-session loop result and a strong abstention example.</td>
-<td>The same paper still leaves long-term durability open because fixed-decoder performance declines after about 15 days.</td>
+<td><strong>ワイラグカールら(2025)</strong></td>
+<td>Raw の神経活動は <strong>10 ms</strong> 未満で合成音声に変換され、非音声セグメントでは沈黙が返されました。</td>
+<td>これは、強力な同一セッション ループの結果と強力な棄権の例です。</td>
+<td>固定デコーダーの性能は約15日で低下するため、同じ用紙でも長期耐久性はまだ不明です。</td>
 </tr>
 <tr>
-<td><strong>Wilson et al. (2025)</strong></td>
-<td>One month of unsupervised closed-loop cursor control was obtained, with offline characterization of neural nonstationarity across five years.</td>
-<td>This is the right reading model for <strong>Temporal Validity</strong> and recalibration burden.</td>
-<td>Cross-day usability still does not by itself show same-state continuity or maintenance-complete control.</td>
+<td><strong>ウィルソンら(2025)</strong></td>
+<td>1 か月間の教師なし閉ループ カーソル制御が得られ、5 年間にわたる神経非定常性のオフライン特性評価が行われました。</td>
+<td>これは、<strong>時間的有効性</strong>および再校正負担に適した読み取りモデルです。</td>
+<td>一日を超えたユーザビリティは、それ自体ではまだ同じ状態の継続性やメンテナンス完了の制御を示していません。</td>
 </tr>
 <tr>
 <td><strong>Flesher et al. (2021)</strong></td>
-<td>ICMS tactile feedback improved robotic-arm control behavior in a bidirectional BCI.</td>
-<td>This is a classic example that bidirectional feedback can causally improve a local sensorimotor loop.</td>
-<td>It remains a subsystem-limited causal gain rather than whole-brain WBE evidence.</td>
+<td>ICMS 触覚フィードバックにより、双方向 BCI におけるロボット アームの制御動作が改善されました。</td>
+<td>これは、双方向フィードバックが原因で局所の感覚運動ループを改善できるという古典的な例です。</td>
+<td>脳全体の WBE 証拠ではなく、サブシステムに限定された因果的利益のままです。</td>
 </tr>
 <tr>
-<td><strong>Oehrn et al. (2024), Cascino et al. (2026)</strong></td>
-<td>Adaptive DBS was pushed into blinded randomized home-life blocks, and later chronic programming-principle work showed that <strong>eligibility</strong>, <strong>signal quality</strong>, and <strong>continuation</strong> remain practical constraints.</td>
-<td>This is the correct reading model for <strong>deployment burden</strong> and <strong>controller-feasibility screening</strong> rather than laboratory-only success.</td>
-<td>Symptom-control benefit still does not equal complete state reconfiguration, same-state equivalence, or one universally valid biomarker/controller pair.</td>
+<td><strong>Oehrn et al. (2024)、Cascino et al。 (2026)</strong></td>
+<td>Adaptive DBS は盲検化されたランダム化された家庭生活ブロックに押し込まれ、その後の慢性的なプログラミング原理の研究により、<strong> 資格 </strong>、<strong> 信号品質 </strong>、および <strong> 継続 </strong> が依然として実際的な制約であることが示されました。</td>
+<td>これは、ラボのみの成功ではなく、<strong>展開の負担</strong>および<strong>コントローラーの実現可能性スクリーニング</strong>の正しい読み取りモデルです。</td>
+<td>症状制御の利点は、完全な状態の再構成、同じ状態の同等性、または 1 つの普遍的に有効なバイオマーカー/コントローラーのペアには依然として等しくありません。</td>
 </tr>
 <tr>
-<td><strong>Mathiopoulou et al. (2024), Stanslaski et al. (2024), Olaru et al. (2024), Mathiopoulou et al. (2025), Dixon et al. (2026)</strong></td>
-<td>Adaptive neuromodulation split across beta-guided bradykinesia control, multi-timescale threshold policies, dyskinesia-linked gamma, DBS-entrained prokinetic gamma, and movement-responsive decoder control.</td>
-<td>This is the correct reading model for <strong>state-dependent controller family</strong>, not one generic `adaptive DBS` result.</td>
-<td>It still does not show that one trigger family, one controller law, or one operating regime solves symptom-linked control across tasks, medication cycles, or home use.</td>
+<td><strong>Mathiopoulou 他(2024)、Stanslaski et al。 (2024)、Olaru et al。 (2024)、Mathiopolou 他。 (2025)、ディクソンら。 (2026)</strong></td>
+<td>ベータ誘導による運動緩慢制御、マルチタイムスケール閾値ポリシー、ジスキネジア関連ガンマ、DBS 同調運動促進ガンマ、および運動応答性デコーダー制御にまたがる適応性神経調節。</td>
+<td>これは、<strong> 状態依存コントローラー ファミリ </strong> の正しい読み取りモデルであり、一般的な `adaptive DBS` の結果ではありません。</td>
+<td>1 つのトリガーファミリー、1 つのコントローラー法則、または 1 つの操作体制が、タスク、投薬サイクル、または家庭での使用全体にわたる症状に関連した制御を解決することはまだ示されていません。</td>
 </tr>
 <tr>
-<td><strong>Casali et al. (2013), Comolatti et al. (2019)</strong></td>
-<td>Perturbation-complexity metrics were formalized for TMS or intracranial stimulation responses.</td>
-<td>Perturbation-based verification can be implemented, but only if stimulation conditions and artifact handling are fixed explicitly.</td>
-<td>A single complexity index is still not enough for WBE pass or fail.</td>
+<td><strong>Casali et al. (2013)、コモラッティら。 (2019)</strong></td>
+<td>摂動複雑度メトリクスは、TMS または頭蓋内刺激応答用に形式化されました。</td>
+<td>摂動ベースの検証は実装できますが、刺激条件とアーティファクト処理が明示的に修正されている場合に限ります。</td>
+<td>A 単一の複雑さのインデックスでは、WBE の合否を判断するのにまだ十分ではありません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="burst-controller-split">
-<h2 class="section-title">State-dependent neuromodulation is controller-limited, not just state-triggered</h2>
+<h2 class="section-title">状態依存の神経調節は、状態によってトリガーされるだけでなく、コントローラーによって制限されます</h2>
 <p>
-One more split is needed for causal-verification reading. The older version of this page already separated online control from temporal durability, which was necessary. It still remained too weak for burst-driven neuromodulation, because it let readers learn adaptive DBS as if the main question were only whether stimulation responded to a detected signal. The current primary literature does not support that shortcut. On this site, a burst-driven or adaptive-neuromodulation result now has to separate the <strong>biomarker family</strong>, the <strong>symptom axis</strong>, the <strong>controller mode and timescale</strong>, the <strong>sensing-compatibility burden</strong>, the <strong>comparator policy</strong>, and the <strong>programming / continuation burden</strong>.
+因果関係検証の読み取りには、もう 1 つの分割が必要です。このページの古いバージョンでは、オンライン制御と必要な一時的耐久性がすでに分離されていました。刺激が検出された信号に応答するかどうかだけが主な問題であるかのように、読者に適応 DBS を学習させるため、バースト駆動の神経調節にはまだ弱すぎるままでした。現在の一次文献はそのショートカットをサポートしていません。このサイトでは、バースト駆動または適応ニューロモジュレーションの結果は、<strong> バイオマーカー ファミリー </strong>、<strong> 症状軸 </strong>、<strong> コントローラー モードとタイムスケール </strong>、<strong> センシング互換性負荷 </strong>、<strong> コンパレーター ポリシー </strong>、および <strong> プログラミング / 継続負荷 </strong> を分離する必要があります。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Layer to separate</th>
-<th>What recent literature now supports</th>
-<th>What must be logged on this site</th>
+<th>層を分離</th>
+<th>最近の文献で現在サポートされているもの</th>
+<th>このサイトに記録する必要があるもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Biomarker family / symptom axis</strong></td>
-<td><a href="https://doi.org/10.1002/ana.23951" target="_blank">Little et al. (2013)</a> and <a href="https://doi.org/10.1093/brain/awx010" target="_blank">Tinkhauser et al. (2017)</a> support beta-guided antikinetic control, <a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru et al. (2024)</a> supports dyskinesia-linked narrowband gamma, <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou et al. (2025)</a> supports DBS-entrained prokinetic gamma, and <a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">Dixon et al. (2026)</a> supports a movement-responsive neural-decoder route.</td>
-<td>Name the biomarker family, symptom target, and why that pairing is being read as the relevant controller object.</td>
+<td><strong>バイオマーカーファミリー / 症状軸</strong></td>
+<td><a href="https://doi.org/10.1002/ana.23951" target="_blank">リトルら(2013)</a> および <a href="https://doi.org/10.1093/brain/awx010" target="_blank">Tinkhauser et al。 (2017) </a> はベータ誘導による抗運動制御をサポート、<a href="https://doi.org/10.1093/brain/awae004" target="_blank">Olaru et al. (2024) </a> はジスキネジア関連の狭帯域ガンマをサポート、<a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">Mathiopoulou et al。 (2025)</a> は DBS に同調した運動促進ガンマをサポートし、<a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">Dixon et al. (2026)</a> は、動きに反応するニューラル デコーダー ルートをサポートします。</td>
+<td>バイオマーカー ファミリ、症状のターゲット、およびそのペアリングが関連するコントローラー オブジェクトとして読み取られる理由に名前を付けます。</td>
 </tr>
 <tr>
-<td><strong>State dependence / controllability</strong></td>
-<td><a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou et al. (2024)</a> showed that subthalamic beta changes with movement, dopamine, and DBS itself, and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12397205/" target="_blank">Busch et al. (2025)</a> showed that chronic thresholds and controllability can drift across real-life use.</td>
-<td>Name the operating regime: rest versus movement, medication state, stimulation state, and any state slices where the controller stopped being reliable.</td>
+<td><strong>状態依存性・制御性</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">Mathiopoulou 他(2024) </a> は、視床下ベータが運動、ドーパミン、DBS 自体によって変化することを示しました。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12397205/" target="_blank">Busch et al. (2025) </a> は、慢性的な閾値と制御性が実際の使用環境全体で変動する可能性があることを示しました。</td>
+<td>動作体制に名前を付けます: 安静と運動、投薬状態、刺激状態、およびコントローラーの信頼性が低下した状態スライス。</td>
 </tr>
 <tr>
-<td><strong>Controller mode / timescale</strong></td>
-<td><a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> showed that adaptive DBS already splits across single-threshold, dual-threshold, and different onset-duration policies rather than one universal timing law.</td>
-<td>Name the controller family, update interval, onset duration, ramp or smoothing policy, floor / ceiling amplitude, and fallback rule.</td>
+<td><strong>コントローラーモード/タイムスケール</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">スタンスラスキら。 (2024)</a> は、適応 DBS が 1 つの普遍的なタイミング法則ではなく、単一しきい値、二重しきい値、およびさまざまな開始期間ポリシーにすでに分割されていることを示しました。</td>
+<td>コントローラー ファミリ、更新間隔、オンセット期間、ランプまたはスムージング ポリシー、下限/上限振幅、およびフォールバック ルールに名前を付けます。</td>
 </tr>
 <tr>
-<td><strong>Sensing compatibility / artifact burden</strong></td>
-<td><a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">Stanslaski et al. (2024)</a> and <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a> show that inadequate signal, artifacts, absent peaks, and incompatible settings remain major bottlenecks rather than background implementation detail.</td>
-<td>Name sensing contacts, signal-to-noise or peak criteria, excluded hemispheres or participants, artifact resets, and any unilateral or surrogate sensing policy.</td>
+<td><strong>センシング互換性/アーティファクト負荷</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">スタンスラスキら。 (2024)</a> および <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino ら。 (2026)</a> は、バックグラウンド実装の詳細ではなく、不適切な信号、アーティファクト、ピークの不在、互換性のない設定が主要なボトルネックとして残っていることを示しています。</td>
+<td>名前センシング接点、信号対雑音比またはピーク基準、除外された半球または参加者、アーティファクトのリセット、および任意の一方的または代理センシングポリシー。</td>
 </tr>
 <tr>
-<td><strong>Comparator and deployability burden</strong></td>
-<td><a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> showed blinded randomized symptom benefit for a personalized signal-selection route, while <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a> showed that chronic continuation still depends on eligibility and repeated optimization.</td>
-<td>Name the comparator condition, any matching rule for duty cycle or energy when relevant, the programming workflow, continuation counts, and whether the benefit survives outside the tuning context.</td>
+<td><strong>コンパレータと導入可能性の負担</strong></td>
+<td><a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024) </a> は、パーソナライズされた信号選択ルートに対して盲検でランダム化された症状の利点を示しました。一方、<a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">Cascino et al. (2026)</a> は、慢性的な継続が依然として適格性と繰り返しの最適化に依存していることを示しました。</td>
+<td>コンパレータ条件、関連する場合のデューティ サイクルまたはエネルギーの一致ルール、プログラミング ワークフロー、継続回数、およびチューニング コンテキスト外で利点が存続するかどうかに名前を付けます。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>Fast communication BCI is still not counterfactual equivalence</strong>
+<strong>高速通信BCIはまだ反事実的同等ではない</strong>
 <p>
-<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> all move speech neuroprosthetics forward. However, what they establish is <strong>online decoding and closed-loop communication in a subsystem</strong>. On this site that is not upgraded to <strong>branch-equivalence</strong>, <strong>whole-brain causal equivalence</strong>, or <strong>same-state continuity</strong> without the extra card bundle above.
+<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">ウィレットら(2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Lリトルジョンら。 (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairragkar et al。 (2025) </a> はすべて、音声神経人工装具を前進させます。ただし、確立されるのは <strong> オンライン デコードとサブシステム </strong> での閉ループ通信です。このサイトでは、上記の追加カード バンドルなしで <strong> 分岐同等性 </strong>、<strong> 全脳因果同等性 </strong>、または <strong> 同一状態継続性 </strong> にアップグレードされていません。
 </p>
 </div>
 
 <section class="section" id="counterfactual-label">
-<h2 class="section-title">What this site calls a counterfactual test</h2>
+<h2 class="section-title">このサイトが反事実テストと呼ぶもの</h2>
 <p>
-On this site, we do not call something a <strong>counterfactual</strong> merely because conditions were changed. If the bundle below is incomplete, the result stays at a weaker label such as <strong>intervention response test</strong>, <strong>state-dependent controller result</strong>, or <strong>perturbation generalization test</strong>.
+このサイトでは、単に条件が変更されたという理由だけで何かを <strong>counterfactual</strong> とは呼びません。以下のバンドルが不完全な場合、結果は <strong> 介入応答テスト </strong>、<strong> 状態依存コントローラー結果 </strong>、または <strong> 摂動汎化テスト </strong> などの弱いラベルに留まります。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Condition</th>
-<th>Why it is necessary</th>
+<th>状態</th>
+<th>なぜ必要なのか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Branch variables are explicit</strong></td>
-<td>If it is unclear what was changed, it is impossible to distinguish branch comparison from noise or drift.</td>
+<td><strong>ブランチ変数は明示的</strong></td>
+<td>何が変更されたのかが不明瞭な場合、分岐比較をノイズやドリフトと区別することができません。</td>
 </tr>
 <tr>
-<td><strong>Comparison rules are pre-registered</strong></td>
-<td>If convenient branches are chosen after seeing the result, the test only looks counterfactual in retrospect.</td>
+<td><strong>比較ルールは事前登録されています</strong></td>
+<td>結果を見て都合のよい分岐が選択された場合、テストは後から振り返ると反事実にしか見えません。</td>
 </tr>
 <tr>
-<td><strong>Artifact windows and safety conditions are published</strong></td>
-<td>Without this, stimulation-induced artifacts can be misread as neural response.</td>
+<td><strong>アーティファクトウィンドウと安全条件が公開されています</strong></td>
+<td>これがないと、刺激誘発アーチファクトが神経反応として誤って読み取られる可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Temporal scope is fixed explicitly</strong></td>
-<td>Readers need to know whether the test is same-trial, same-session, same-day, or cross-day, and whether the decoder was fixed or recalibrated.</td>
+<td><strong>時間範囲は明示的に修正されます</strong></td>
+<td>読者は、テストが同一トライアル、同一セッション、同日または複数日であるかどうか、およびデコーダが修正されたか再調整されたかを知る必要があります。</td>
 </tr>
 <tr>
-<td><strong>Controller family is disclosed for state-dependent neuromodulation</strong></td>
-<td>Without biomarker family, controller law, sensing exclusions, and comparator policy, a burst-trigger result can be overread as generic adaptive control.</td>
+<td><strong>状態依存性の神経調節のためのコントローラーファミリーが開示されています</strong></td>
+<td>バイオマーカー ファミリ、コントローラーの法則、センシング除外、およびコンパレーター ポリシーがないと、バースト トリガーの結果が一般的な適応制御としてオーバーリードされる可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Bridge status is disclosed when same-subject language is used</strong></td>
-<td>A same-subject claim still needs acquisition order, elapsed time, regime continuity, and omitted drift processes before it can be read as one same-state sample.</td>
+<td><strong>同じ主題の言語が使用されている場合、ブリッジステータスが公開されます</strong></td>
+<td>A 同一対象クレームは、1 つの同一状態サンプルとして読み取る前に、取得順序、経過時間、レジーム連続性、および省略されたドリフト プロセスがまだ必要です。</td>
 </tr>
 <tr>
-<td><strong>Failure conditions are fixed in advance</strong></td>
-<td>The result is only falsifiable when the threshold for branch mismatch is declared before the outcome is known.</td>
+<td><strong>障害条件は事前に修正されています</strong></td>
+<td>結果が判明する前に分岐不一致のしきい値が宣言された場合にのみ、結果は反証可能です。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="log-bundle">
-<h2 class="section-title">Minimum log bundle now required</h2>
+<h2 class="section-title">最小のログ バンドルが必要になりました</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Log family</th>
-<th>What to keep</th>
-<th>What overread it blocks</th>
+<th>ログファミリー</th>
+<th>保管すべきもの</th>
+<th>ブロックするオーバーリード内容</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Intervention definition</strong></td>
-<td>Site, intensity, timing, duration, branch variable, task condition, and explicit control or sham policy.</td>
-<td>Blocks vague claims that "something was perturbed" without a reproducible branch definition.</td>
+<td><strong>介入の定義</strong></td>
+<td>Site、強度、タイミング、期間、分岐変数、タスク条件、および明示的な制御または偽のポリシー。</td>
+<td>再現可能な分岐定義のない「何かが混乱した」という曖昧な主張をブロックします。</td>
 </tr>
 <tr>
-<td><strong>Artifact and safety handling</strong></td>
-<td>Artifact window, interpolation or masking policy, excluded trials, stop conditions, and hard-stop versus soft-fallback behavior.</td>
-<td>Blocks device-induced changes from being misread as neural response.</td>
+<td><strong>アーティファクトと安全な取り扱い</strong></td>
+<td>アーティファクト ウィンドウ、補間またはマスキング ポリシー、除外されたトライアル、停止条件、ハードストップとソフト フォールバックの動作。</td>
+<td>デバイスに起因する変化が神経反応として誤って読み取られるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Online timing and abstention</strong></td>
-<td>P50/P95/P99 latency, jitter, dropout, output-path delay, and abstention, silence, or hold-last-output policy.</td>
-<td>Blocks average latency alone from standing in for actual loop behavior.</td>
+<td><strong>オンラインタイミングと棄権</strong></td>
+<td>P50/P95/P99 レイテンシー、ジッター、ドロップアウト、出力パス遅延、および棄権、沈黙、または最後の出力を保持するポリシー。</td>
+<td>実際のループ動作の代わりとなる平均レイテンシーのみをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Temporal validity</strong></td>
-<td>Fixed-decoder interval, supervised versus unsupervised recalibration route, performance-decay curve, recovery time, and clinic-versus-home block structure.</td>
-<td>Blocks same-session success from being silently promoted to cross-day durability.</td>
+<td><strong>時間的妥当性</strong></td>
+<td>固定デコーダ間隔、教師付き再校正ルートと教師なし再校正ルート、パフォーマンス減衰曲線、回復時間、クリニックと自宅のブロック構造。</td>
+<td>同一セッションの成功が、サイレントに日をまたぐ耐久性に昇格するのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Burst-controller disclosure</strong></td>
-<td>Biomarker family / symptom axis, controller family, state slice, sensing exclusions, comparator policy, and programming or rescue burden.</td>
-<td>Blocks exploratory trigger timing from being promoted to validated symptom-linked control.</td>
+<td><strong>バーストコントローラーの開示</strong></td>
+<td>バイオマーカー ファミリ / 症状軸、コントローラー ファミリ、状態スライス、センシング除外、コンパレーター ポリシー、およびプログラミングまたはレスキューの負担。</td>
+<td>探索的トリガーのタイミングが検証済みの症状関連コントロールに昇格するのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Bridge status</strong></td>
-<td>Same-session or cross-day status, live-to-fix or live-to-live ordering, elapsed time, regime change, and coordinate-transfer burden.</td>
-<td>Blocks same-subject wording from being misread as one same-state sample.</td>
+<td><strong>ブリッジステータス</strong></td>
+<td>同一セッションまたは日をまたいだステータス、ライブから修正またはライブからライブへの順序付け、経過時間、レジーム変更、および座標転送負荷。</td>
+<td>同じ主題の文言が 1 つの同じ州のサンプルとして誤って読み取られるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Maintenance-state disclosure</strong></td>
-<td>If persistence, forgetting, reconsolidation, or recovery is claimed, name the relevant maintenance families or attach the Maintenance-State Error Budget.</td>
-<td>Blocks intervention response from being upgraded to long-horizon maintenance evidence.</td>
+<td><strong>メンテナンス状態の開示</strong></td>
+<td>永続化、忘却、再統合、またはリカバリが要求される場合は、関連するメンテナンス ファミリの名前を指定するか、メンテナンス状態エラー予算を添付してください。</td>
+<td>介入応答が長期保守証拠にアップグレードされるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Boundary disclosure</strong></td>
-<td>Retained, substituted, and omitted sensory, motor, interoceptive, and feedback routes.</td>
-<td>Blocks a fast local controller from being promoted to naturalistic or embodied equivalence.</td>
+<td><strong>境界開示</strong></td>
+<td>感覚、運動、内受容、およびフィードバック経路の保持、置換、および省略。</td>
+<td>高速ローカル コントローラーが自然主義的または具体化された等価物に昇格するのをブロックします。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">Eight questions when reading causal-verification papers</h2>
+<h2 class="section-title">因果関係検証論文を読むときの 8 つの質問</h2>
 <ol>
-<li><strong>What was changed physically or computationally?</strong> Distinguish branch variable, decoder update, feedback path, and task manipulation.</li>
-<li><strong>Is the result same-session, cross-day, or home-life?</strong> Online success in one session is different from temporal durability.</li>
-<li><strong>Was the decoder fixed, supervised, or unsupervised?</strong> Hidden recalibration changes what the claimed causal evidence means.</li>
-<li><strong>If the result is state-dependent neuromodulation, which biomarker family and controller law were actually used?</strong> `Adaptive` is too coarse unless biomarker, timescale, comparator, and sensing exclusions are explicit.</li>
-<li><strong>Was the result compared against a named controller or only against a weak baseline?</strong> Symptom benefit and controller feasibility are different readings.</li>
-<li><strong>If the paper says same-subject or same-brain, is it really one same-state sample?</strong> Check bridge order, elapsed time, and regime continuity.</li>
-<li><strong>If persistence or recovery is claimed, where is the maintenance-state disclosure?</strong> Intervention logs alone are not enough for long-horizon claims.</li>
-<li><strong>Are we jumping from subsystem-limited causal gain to whole-brain equivalence?</strong> This remains the main overread to block.</li>
+<li><strong>物理的または計算的に何が変更されましたか?</strong>分岐変数、デコーダ更新、フィードバック パス、およびタスク操作を区別します。</li>
+<li><strong>結果は同一セッション、複数日、または家庭生活で得られますか?</strong> 1 セッションでのオンラインの成功は、一時的な持続性とは異なります。</li>
+<li><strong>デコーダは修正されましたか、監視されていますか、または監視されていませんか?</strong>隠された再調整により、主張される因果関係の証拠の意味が変わります。</li>
+<li><strong>結果が状態依存性の神経調節である場合、どのバイオマーカーファミリーとコントローラー法則が実際に使用されましたか?</strong>バイオマーカー、タイムスケール、コンパレーター、およびセンシングの除外が明示的でない限り、`Adaptive`は粗すぎます。</li>
+<li><strong>結果は指定されたコントローラーと比較されましたか、それとも弱いベースラインとのみ比較されましたか?</strong>症状の利点とコントローラーの実現可能性は異なる測定値です。</li>
+<li><strong>論文に同じ被験者または同じ脳と書かれている場合、それは本当に同じ状態の 1 つのサンプルですか?</strong> ブリッジの順序、経過時間、およびレジームの連続性を確認してください。</li>
+<li><strong>永続性または回復が主張されている場合、メンテナンス状態の開示はどこにありますか?</strong>介入ログだけでは長期的な主張には十分ではありません。</li>
+<li><strong>サブシステム限定の因果利得から脳全体の等価性へジャンプしているのでしょうか?</strong>これは依然としてブロックする主なオーバーリードです。</li>
 </ol>
 </section>
 
 <section class="section" id="sources">
-<h2 class="section-title">References</h2>
+<h2 class="section-title">参考資料</h2>
 <ol>
-<li>Forenzo D, Zhu H, Shanahan J, Lim J, He B. Continuous tracking using deep learning-based decoding for noninvasive brain-computer interface. <em>PNAS Nexus</em>. 2024. <a href="https://doi.org/10.1093/pnasnexus/pgae145" target="_blank">doi:10.1093/pnasnexus/pgae145</a></li>
-<li>Willett FR, Kunz EM, Fan C, et al. A high-performance speech neuroprosthesis. <em>Nature</em>. 2023. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
-<li>Littlejohn KT, Dabagia M, Ladwig A, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>. 2025. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
-<li>Wairagkar M, Moses DA, Metzger SL, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>. 2025. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
-<li>Flesher SN, Downey JE, Weiss JM, et al. A brain-computer interface that evokes tactile sensations improves robotic arm control. <em>Science</em>. 2021. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
-<li>Wilson GH, Bray N, Franken M, et al. Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
-<li>Little S, Pogosyan A, Neal S, et al. Adaptive deep brain stimulation in advanced Parkinson disease. <em>Annals of Neurology</em>. 2013. <a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
-<li>Tinkhauser G, Pogosyan A, Little S, et al. The modulatory effect of adaptive deep brain stimulation on beta bursts in Parkinson's disease. <em>Brain</em>. 2017. <a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
-<li>Mathiopoulou V, Lofredi R, Feldmann LK, et al. Modulation of subthalamic beta oscillations by movement, dopamine, and deep brain stimulation in Parkinson's disease. <em>npj Parkinson's Disease</em>. 2024. <a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">doi:10.1038/s41531-024-00693-3</a></li>
-<li>Stanslaski S, Summers RLS, Tonder L, et al. Sensing data and methodology from the Adaptive DBS Algorithm for Personalized Therapy in Parkinson's Disease (ADAPT-PD) clinical trial. <em>npj Parkinson's Disease</em>. 2024. <a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">doi:10.1038/s41531-024-00772-5</a></li>
-<li>Oehrn CR, Roediger J, Diehl A, et al. Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <em>Nature Medicine</em>. 2024. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
-<li>Olaru M, Cernera S, Hahn A, et al. Motor network gamma oscillations in chronic home recordings predict dyskinesia in Parkinson's disease. <em>Brain</em>. 2024. <a href="https://doi.org/10.1093/brain/awae004" target="_blank">doi:10.1093/brain/awae004</a></li>
-<li>Busch JL, Kaplan J, Behnke JK, et al. Chronic adaptive deep brain stimulation for Parkinson's disease: clinical outcomes and programming strategies. <em>npj Parkinson's Disease</em>. 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12397205/" target="_blank">PMC:PMC12397205</a></li>
-<li>Mathiopoulou V, Habets J, Feldmann LK, et al. Gamma entrainment induced by deep brain stimulation as a biomarker for motor improvement with neuromodulation. <em>Nature Communications</em>. 2025. <a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">doi:10.1038/s41467-025-58132-7</a></li>
-<li>Dixon S, Oehrn C, Remple M, et al. Movement-responsive deep brain stimulation for Parkinson's disease using a remotely optimized neural decoder. <em>Nature Biomedical Engineering</em>. 2026. <a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">doi:10.1038/s41551-025-01438-0</a></li>
-<li>Cascino S, Roediger J, Oehrn C, et al. Chronic adaptive deep brain stimulation in Parkinson's disease: ADAPT-START findings and programming principles. <em>npj Parkinson's Disease</em>. 2026. <a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
-<li>Wilkins KB, Melbourne JA, Akella P, et al. Beta burst-driven adaptive deep brain stimulation for gait impairment and freezing of gait in Parkinson's disease. <em>Brain Communications</em>. 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">PMC:PMC12268161</a></li>
-<li>Lu Z, Chmielowiec J, Himes B, et al. Fixation-dependent changes in the preservation of extracellular space in the neuro-glio-vascular unit. <em>Cell Reports Methods</em>. 2023. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
-<li>MICrONS Consortium, et al. Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>. 2025. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
-<li>Attardo A, Fitzgerald JE, Schnitzer MJ. Impermanence of dendritic spines in live adult CA1 hippocampus. <em>Nature</em>. 2015. <a href="https://doi.org/10.1038/nature14467" target="_blank">doi:10.1038/nature14467</a></li>
-<li>Hengen KB, Torrado Pacheco A, McGregor JN, Van Hooser SD, Turrigiano GG. Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <em>Cell</em>. 2016. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
-<li>Schreiner T, Petzka M, Staudigl T, et al. Spindle-locked ripples mediate memory reactivation during human NREM sleep. <em>Nature Communications</em>. 2024. <a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">doi:10.1038/s41467-024-49572-8</a></li>
-<li>Deng Z, Fei X, Zhang S, Xu M. A time window for memory consolidation during NREM sleep revealed by cAMP oscillation. <em>Neuron</em>. 2025. <a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">doi:10.1016/j.neuron.2025.03.020</a></li>
-<li>Casali AG, Gosseries O, Rosanova M, et al. A theoretically based index of consciousness independent of sensory processing and behavior. <em>Science Translational Medicine</em>. 2013. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
-<li>Comolatti R, Pigorini A, Casarotto S, et al. A fast and general method to empirically estimate the complexity of brain responses to transcranial and intracranial stimulations. <em>Brain Stimulation</em>. 2019. <a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
+<li>Forenzo D、Zhu H、Shanahan J、Lim J、He B。非侵襲的なブレイン コンピューター インターフェイスのための深層学習ベースのデコードを使用した連続追跡。 <em>PNASネクサス</em>。 2024.<a href="https://doi.org/10.1093/pnasnexus/pgae145" target="_blank">doi:10.1093/pnasnexus/pgae145</a></li>
+<li>Willett FR、Kunz EM、Fan C 他高性能言語人工神経。 <em>ネイチャー</em>。 2023.<a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Llittlejohn KT、Dabagia M、Ladwig A 他自然なコミュニケーションを復元するためのストリーミング脳から音声へのニューロプロテーゼ。 <em>Nature Neuroscience</em>。 2025.<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar M、Moses DA、Metzger SL、他。瞬間的に音声を合成する神経人工器官。 <em>ネイチャー</em>。 2025.<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Flesher SN、Downey JE、Weiss JM、他触覚を呼び起こすブレイン コンピューター インターフェイスにより、ロボット アームの制御が向上します。 <em>サイエンス</em>。 2021.<a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>ウィルソン GH、ブレイ N、フランケン M 他隠れマルコフ モデルを使用した、カーソルベースの皮質内脳コンピューター インターフェイスの長期教師なし再調整。 <em>Nature Biomedical Engineering</em>。 2025.<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Little S、Pogosyan A、Neal S、他進行パーキンソン病における適応型脳深部刺激。 <em>神経学紀要</em>。 2013.<a href="https://doi.org/10.1002/ana.23951" target="_blank">doi:10.1002/ana.23951</a></li>
+<li>Tinkhauser G、Pogosyan A、Little S 他。パーキンソン病におけるベータバーストに対する適応的脳深部刺激の調節効果。 <em>脳</em>。 2017.<a href="https://doi.org/10.1093/brain/awx010" target="_blank">doi:10.1093/brain/awx010</a></li>
+<li>Mathiopoulou V、Lofredi R、Feldmann LK 他パーキンソン病における運動、ドーパミン、脳深部刺激による視床下ベータ振動の調節。 <em>npj パーキンソン病</em>。 2024.<a href="https://doi.org/10.1038/s41531-024-00693-3" target="_blank">doi:10.1038/s41531-024-00693-3</a></li>
+<li>Stanslaski S、サマーズ RLS、トンダー L 他パーキンソン病における個別化治療のための適応 DBS アルゴリズム (ADAPT-PD) 臨床試験からのセンシング データと方法論。 <em>npj パーキンソン病</em>。 2024.<a href="https://doi.org/10.1038/s41531-024-00772-5" target="_blank">doi:10.1038/s41531-024-00772-5</a></li>
+<li>Oehrn CR、Roediger J、Diehl A、他。パーキンソン病における慢性適応脳深部刺激と従来の刺激の比較: 盲検ランダム化実現可能性試験。 <em>自然医学</em>。 2024.<a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
+<li>Olaru M、Cernera S、Hahn A、他。慢性的な家庭録音における運動ネットワークのガンマ振動は、パーキンソン病におけるジスキネジアを予測します。 <em>脳</em>。 2024.<a href="https://doi.org/10.1093/brain/awae004" target="_blank">doi:10.1093/brain/awae004</a></li>
+<li>ブッシュ JL、カプラン J、ベンケ JK 他パーキンソン病に対する慢性適応性脳深部刺激：臨床転帰とプログラミング戦略。 <em>npj パーキンソン病</em>。 2025.<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12397205/" target="_blank">PMC:PMC12397205</a></li>
+<li>Mathiopoulou V、Habets J、Feldmann LK、他神経調節による運動改善のバイオマーカーとしての脳深部刺激によって誘発されるガンマ同調。 <em>ネイチャーコミュニケーションズ</em>。 2025.<a href="https://doi.org/10.1038/s41467-025-58132-7" target="_blank">doi:10.1038/s41467-025-58132-7</a></li>
+<li>Dixon S、Oehrn C、Remple M 他リモートで最適化されたニューラル デコーダーを使用した、パーキンソン病に対する運動応答性の脳深部刺激。 <em>Nature Biomedical Engineering</em>。 2026.<a href="https://doi.org/10.1038/s41551-025-01438-0" target="_blank">doi:10.1038/s41551-025-01438-0</a></li>
+<li>Cascino S、Roediger J、Oehrn C 他パーキンソン病における慢性適応性脳深部刺激：ADAPT-START の発見とプログラミング原理。 <em>npj パーキンソン病</em>。 2026.<a href="https://doi.org/10.1038/s41531-026-01269-z" target="_blank">doi:10.1038/s41531-026-01269-z</a></li>
+<li>Wilkins KB、メルボルン JA、Akella P、他。パーキンソン病における歩行障害および歩行のすくみに対するベータバースト駆動の適応的深部脳刺激。 <em>ブレインコミュニケーションズ</em>。 2025.<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12268161/" target="_blank">PMC:PMC12268161</a></li>
+<li>Lu Z、Chmielowiec J、Himes B、他。神経膠血管単位における細胞外空間の保存における固定依存性の変化。 <em>Cell レポート メソッド </em>。 2023.<a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>MICrONSコンソーシアムほかマウス視覚野の複数の領域にわたる機能的コネクトミクス。 <em>ネイチャー</em>。 2025.<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>アタルド A、フィッツジェラルド JE、シュニッツァー MJ。生きた成人CA1海馬における樹状突起棘の不永性。 <em>ネイチャー</em>。 2015.<a href="https://doi.org/10.1038/nature14467" target="_blank">doi:10.1038/nature14467</a></li>
+<li>ヘンゲンKB、トルラード・パチェコA、マクレガーJN、ヴァン・フーザーSD、トゥリジャーノGG。ニューロンの発火速度の恒常性は睡眠によって阻害され、覚醒によって促進されます。 <em>セル</em>。 2016.<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
+<li>Schreiner T、Petzka M、Staudigl T、他。スピンドルロックリップルは、人間のノンレム睡眠中の記憶の再活性化を媒介します。 <em>ネイチャーコミュニケーションズ</em>。 2024.<a href="https://doi.org/10.1038/s41467-024-49572-8" target="_blank">doi:10.1038/s41467-024-49572-8</a></li>
+<li>Deng Z、Fei X、Zhang S、Xu M. cAMP 振動によって明らかにされた NREM 睡眠中の記憶固定の時間窓。 <em>ニューロン</em>。 2025.<a href="https://doi.org/10.1016/j.neuron.2025.03.020" target="_blank">doi:10.1016/j.neuron.2025.03.020</a></li>
+<li>Casali AG、Gosseries O、Rosanova M、他。感覚処理や行動とは独立した、理論に基づいた意識の指標。 <em>科学トランスレーショナル医療</em>。 2013.<a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
+<li>モラッティ R、ピゴリーニ A、カサロット S 他経頭蓋刺激および頭蓋内刺激に対する脳反応の複雑さを経験的に推定するための高速かつ一般的な方法。 <em>脳刺激</em>。 2019.<a href="https://doi.org/10.1016/j.brs.2019.05.013" target="_blank">doi:10.1016/j.brs.2019.05.013</a></li>
 </ol>
 </section>
 
 <section class="section" id="return">
-<h2 class="section-title">Where to go back next</h2>
+<h2 class="section-title">次に戻る場所</h2>
 <p>
-To return to the difference between translation and generation, use <a href="../wbe_101.html">Introduction to WBE</a>. To return to the site-wide rule bundle, use <a href="../verification.html">Verification platform</a>. To return to timing-side deployment detail, use <a href="closed-loop-latency-jitter-and-safety-stops.html">Wiki: Closed Loop, Delay, Jitter, Safe Stop</a>. To return to bridge validity itself, use <a href="state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>.
+変換と生成の違いに戻るには、<a href="../wbe_101.html">WBE</a> の紹介を使用してください。サイト全体のルール バンドルに戻るには、<a href="../verification.html">Verification platform</a> を使用します。タイミング側の展開の詳細に戻るには、<a href="closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ、遅延、ジッター、安全停止</a> を使用してください。ブリッジの有効性自体に戻るには、<a href="state-continuity-bridge.html">Wiki: State-Continuity Bridge</a> を使用します。
 </p>
 </section>
 
@@ -443,21 +444,21 @@ To return to the difference between translation and generation, use <a href="../
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="decode-vs-emulate.html">Decode and Emulate →</a></li>
-<li><a href="observation-to-estimation.html">From observation to estimation →</a></li>
-<li><a href="state-trait-and-drift.html">State, Trait, and Drift →</a></li>
-<li><a href="state-continuity-bridge.html">State-Continuity Bridge →</a></li>
-<li><a href="closed-loop-latency-jitter-and-safety-stops.html">Closed-loop / delay / jitter / safe stop →</a></li>
+<li><a href="decode-vs-emulate.html">デコードとエミュレート→</a></li>
+<li><a href="observation-to-estimation.html">観測から推定へ→</a></li>
+<li><a href="state-trait-and-drift.html">状態、特性、ドリフト →</a></li>
+<li><a href="state-continuity-bridge.html">ステート・コンティニュイティ・ブリッジ→</a></li>
+<li><a href="closed-loop-latency-jitter-and-safety-stops.html">クローズドループ/遅延/ジッター/安全停止→</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../verification.html">Verification platform →</a></li>
-<li><a href="../tech_roadmap.html">Technology roadmap →</a></li>
-<li><a href="../wbe_101.html">Introduction to WBE →</a></li>
+<li><a href="../verification.html">検証プラットフォーム→</a></li>
+<li><a href="../tech_roadmap.html">技術ロードマップ→</a></li>
+<li><a href="../wbe_101.html">WBE入門→</a></li>
 </ul>
 </div>
 </aside>

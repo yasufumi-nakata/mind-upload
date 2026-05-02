@@ -1,80 +1,80 @@
-# Wiki: U1-2 uncertainty-calibration route packet
+# Wiki: U1-2 不確かさ校正ルート パケット
 
-> A next-watch inverse-estimation packet outside the current public six
+> 現在のパブリック 6 以外の次の監視逆推定パケット
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-31 / Role: U1-2 route packet
+- Updated: 2026-03-31 / Role: U1-2 ルート パケット
 
-## Role Of This Page
-This page records one narrow next-watch route outside the current public six at the level of one question, one inverse-estimation anchor family, one bounded first artifact, and one funding bridge.
+## このページの役割
+このページには、1 つの質問のレベルで現在公開されている 6 つのルートの外側にある 1 つの狭い次の注目ルート、1 つの逆推定アンカー ファミリ、1 つの有界最初のアーティファクト、および 1 つの資金ブリッジが記録されます。
 
-## Accuracy Notes
-This page does not change the active public six-question batch. It only records what the present U1-2 uncertainty-calibration route can honestly close first.
+## 正確性に関する注記
+このページでは、アクティブな公開 6 つの質問のバッチは変更されません。現在の U1-2 不確かさ校正ルートが最初に正直に閉じることができるもののみを記録します。
 
-## Back To Public Pages
-- [Issue page](https://mind-upload.com/issue.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
+## 公開ページへ戻る
+- [発行ページ](https://mind-upload.com/issue.html)
+- [データとベンチ](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
-- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact six-row public route that still stays unchanged.
-- [Wiki: U7-1 synchronization-contract route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route) - The synchronization packet that now sits directly before this route.
-- [Wiki: Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - The wider working note for all current practical rows.
-- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
+## 関連 Wiki ページ
+- [Wiki: 現在公開されている 6 つのルート概要](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - 今も変わらぬコンパクトな6列パブリックルート。
+- [Wiki: U7-1 同期契約ルート パケット](https://github.com/yasufumi-nakata/mind-upload/wiki/u7-1-synchronization-contract-route) - 同期パケットはこのルートの直前に配置されます。
+- [Wiki: ディープ フォーカス ノート](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - 現在のすべての実用的な行のより広い作業メモ。
+- [Wiki: 助成金とデータセットのプレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - 固定資金とアンカーマップ。
 
 ---
 
-# U1-2 uncertainty-calibration route packet
+# U1-2 不確かさ校正ルート パケット
 
-This page does not change the current public six-question batch. It records one narrow route just outside that batch, so readers can see why `U1-2` is the next strongest `A`-tier candidate after `U7-1`, why `D08` stays the strongest inverse-estimation anchor for that route, and what the first public-safe artifact can honestly close.
+このページでは、現在の公開されている 6 つの質問のバッチは変更されません。このバッチのすぐ外側にある 1 つの狭いルートが記録されているため、読者は、なぜ `U1-2` が `U7-1` に次いで強い `A` 層の候補であるのか、なぜ `D08` がそのルートの最強の逆推定アンカーであり続けるのか、そして最初のパブリックセーフアーティファクトが何を正直に閉じることができるのかを理解することができます。
 
-## What was rechecked for this row
+## この行で再チェックされた内容
 
-- `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` still remains the strongest current `ground-truth + intervention + inverse-validation` floor for `U1-2`.
-- `10.21227/7may-9q56` still resolves to the IEEE DataPort canonical page for `D08`. That page body still points readers to the public DOI route `10.25493/NXN2-05W`, while the same IEEE surface also shows subscription/access UI. Public wording therefore keeps the emphasis on the uncertainty-calibration artifact rather than on a stronger access-class claim.
-- When the `EEG-DATA` catalog auto-label and the live access surface disagree, this packet follows the live DOI handoff plus the artifact value of `ground-truth + intervention` rather than the catalog label alone. The public-safe point here is still the uncertainty-calibration artifact, not a stronger access-class claim.
-- `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` remains a useful public-open support family for repeating perturbation checks under richer multi-session provenance.
-- `D19 CerebellarTMSEEGData` remains a useful public-open support family for perturbation-family cross-checks once the `D08` ground-truth floor is fixed.
-- The current public six-question batch still stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
-- The practical funding bridge for this row is watch-only rather than a current public-six route: `Brain Science Foundation research grant` and `Nakatani Foundation research grant` remain the cleanest next-watch fits, and existing Todoist watch tasks already cover both lanes.
+- `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` は依然として `U1-2` にとって最も強力な現在の `ground-truth + intervention + inverse-validation` フロアです。
+- `10.21227/7may-9q56` は依然として `D08` の IEEE DataPort 正規ページに解決されます。そのページ本文は引き続き読者にパブリック DOI ルート `10.25493/NXN2-05W` を示しますが、同じ IEEE サーフェスにはサブスクリプション/アクセス UI も表示されます。したがって、公的表現では、より強力なアクセスクラスの主張ではなく、不確実性校正のアーティファクトが強調され続けます。
+- `EEG-DATA` カタログ自動ラベルとライブ アクセス サーフェスが一致しない場合、このパケットはカタログ ラベル単独ではなく、ライブ DOI ハンドオフと `ground-truth + intervention` のアーティファクト値に従います。ここでの公衆の安全性のポイントは依然として不確実性キャリブレーションのアーティファクトであり、より強力なアクセスクラスの主張ではありません。
+- `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` は、より豊富なマルチセッション来歴の下で摂動チェックを繰り返すための有用な公開サポート ファミリであり続けます。
+- `D19 CerebellarTMSEEGData` は、`D08` のグラウンドトゥルース フロアが修正された後も、摂動ファミリーのクロスチェックに有用な公開サポート ファミリとして残ります。
+- 現在公開されている 6 つの質問のバッチは、`U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2` のままです。
+- この列の実際的な資金調達ブリッジは、現在のパブリック 6 ルートではなくウォッチ専用です。`Brain Science Foundation research grant` と `Nakatani Foundation research grant` は依然として最もクリーンな次のウォッチに適合しており、既存の Todoist ウォッチ タスクはすでに両方のレーンをカバーしています。
 
-## Why `U1-2` is the next strongest route after `U7-1`
+## `U1-2` が `U7-1` の次に強いルートである理由
 
-- It is an `A` row: the main claim can stay inside `EEG-DATA` without requiring theory, law, or identity-overreading language.
-- It is measurement-first: the first artifact is an uncertainty-calibration report, not a stronger recoverability or personhood claim.
-- It follows `U7-1` naturally. `U7-1` fixes synchronization and provenance discipline; `U1-2` fixes whether inverse estimates keep their uncertainty bounds when conductivity, electrode loss, and noise are perturbed.
+- これは `A` 行です。主な主張は、理論、法律、または同一性を読み込む言語を必要とせずに、`EEG-DATA` 内に留まることができます。
+- それは測定第一です。最初の成果物は不確実性の校正レポートであり、より強力な回復可能性や個人性の主張ではありません。
+- 自然に`U7-1`をフォローします。 `U7-1` は同期と来歴の規律を修正します。 `U1-2` は、導電率、電極損失、およびノイズが摂動された場合に、逆推定値が不確実性限界を維持するかどうかを修正します。
 
-## Why `D08` stays the main anchor
+## `D08` がメインアンカーであり続ける理由
 
-| Candidate | What it helps with | Why it is not the first anchor |
+| 候補者 | 何に役立つのか | 最初のアンカーではない理由 |
 |---|---|---|
-| `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` (`10.21227/7may-9q56`, with public DOI handoff `10.25493/NXN2-05W`) | It gives the cleanest current `ground-truth + intervention + source-localization` floor, which makes it the strongest first anchor for `interval coverage`, `error increment`, and `rank stability` under repeated perturbations. | None in this run. It is the strongest first anchor for `U1-2`. |
-| `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | It is the strongest nearby support family for checking whether the same uncertainty rule survives richer session structure and provenance. | It is strong on synchronization and state logging, but it is not a direct ground-truth inverse-validation floor. |
-| `D19 CerebellarTMSEEGData` (`10.6084/m9.figshare.13082495`, immediate) | It is useful for perturbation-family cross-checks once the first uncertainty packet is fixed on `D08`. | It is better as a TMS-EEG perturbation support family than as the first direct inverse-ground-truth anchor. |
+| `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` (`10.21227/7may-9q56`、パブリック DOI ハンドオフ付き `10.25493/NXN2-05W`) | これにより、現在の `ground-truth + intervention + source-localization` フロアが最もクリーンになり、繰り返しの摂動下で `interval coverage`、`error increment`、および `rank stability` にとって最も強力な最初のアンカーになります。 | 今回の実行では何もありませんでした。 `U1-2`用の最強のファーストアンカーです。 |
+| `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`、即時) | これは、同じ不確実性ルールがより豊富なセッション構造と来歴に存続するかどうかを確認するための最も強力な近隣サポート ファミリです。 | 同期と状態のログ記録には優れていますが、直接的なグラウンドトゥルースの逆検証フロアではありません。 |
+| `D19 CerebellarTMSEEGData` (`10.6084/m9.figshare.13082495`、即時) | 最初の不確実性パケットが `D08` で修正されると、摂動ファミリのクロスチェックに役立ちます。 | これは、最初の直接逆グランドトゥルース アンカーとしてよりも、TMS-EEG 摂動サポート ファミリとして優れています。 |
 
-## What the first artifact can honestly close now
+## 最初のアーティファクトが今正直に閉じることができるもの
 
-| Artifact piece | What it closes now | What still stays outside the claim |
+| アーティファクトの欠片 | 今閉店しているもの | まだ主張の範囲外にあるもの |
 |---|---|---|
-| `Inverse problem reproduction report (error/uncertainty)` | A bounded report that locks `interval coverage`, `perturbation stability`, `error increment`, and `rank stability` under repeated conductivity, missing-electrode, and noise perturbations. | Any statement that one stable inverse route already proves full recoverability across all head models, subjects, or tasks. |
-| `Coverage-stability table` | An explicit pass/fail table that shows where the uncertainty bounds still hold and where the row must be downgraded. | Any blanket solver-victory wording across untested model families. |
-| `Downgrade-rule note` | A public-safe rule that forces the claim downward whenever repeated perturbations break coverage stability or flip the ranking across methods. | Any interpretation that inverse-estimate stability by itself proves preserved mechanism, preserved identity, or successful mind preservation. |
+| `Inverse problem reproduction report (error/uncertainty)` | 繰り返される導電率、電極の欠落、およびノイズの摂動下で `interval coverage`、`perturbation stability`、`error increment`、および `rank stability` をロックする制限付きレポート。 | 1 つの安定した逆ルートがすべての頭部モデル、被験者、タスクにわたって完全に回復可能であるという記述は、すでに証明されています。 |
+| `Coverage-stability table` | 不確実性の限界がまだ保持されている場所と、行をダウングレードする必要がある場所を示す明示的な合否テーブル。 | 未テストのモデル ファミリにわたる包括的なソルバー勝利文言。 |
+| `Downgrade-rule note` | 繰り返される変動によってカバレッジの安定性が損なわれたり、メソッド間でのランキングが逆転したりするたびに、クレームを強制的に下方修正する公共の安全なルール。 | 安定性を逆推定する解釈は、それ自体で、保存されたメカニズム、保存されたアイデンティティ、または成功した心の保存を証明します。 |
 
-## Funding wording that still fits
+## まだ適切な資金調達の文言
 
-| Route | Submission wording that stays honest | Why it still fits this row |
+| ルート | 正直さを保つ提出文言 | それでもこの行に適合する理由 |
 |---|---|---|
-| `Brain Science Foundation research grant` (`watch`) | `Perturbation-tested uncertainty calibration for inverse EEG estimates in the mind-upload verification route` | The row reads naturally as a conservative inverse-validation benchmark rather than a stronger restoration claim. |
-| `Nakatani Foundation research grant` (`next-cycle watch`) | `Ground-truth inverse-uncertainty benchmark for reproducible EEG validation` | It fits as a BME-facing validation package, but only as a watch route because the current cycle is closed. |
+| `Brain Science Foundation research grant`(`watch`) | `Perturbation-tested uncertainty calibration for inverse EEG estimates in the mind-upload verification route` | この行は、より強力な修復主張ではなく、保守的な逆検証ベンチマークとして自然に読み取れます。 |
+| `Nakatani Foundation research grant`(`next-cycle watch`) | `Ground-truth inverse-uncertainty benchmark for reproducible EEG validation` | これは BME 向けの検証パッケージとして適合しますが、現在のサイクルが終了しているため監視ルートとしてのみ適合します。 |
 
-## External dependency tasks that stay outside this session
+## このセッションの外にある外部依存タスク
 
-- Population-wide head-model identification and conductivity-prior agreement still remain outside the present repository-level artifact.
-- Community agreement on acceptable interval-coverage thresholds still remains outside the present packet.
-- Any interpretation that inverse-estimate stability proves preserved mechanism, preserved identity, or full recoverability remains outside the present route.
+- 集団全体の頭部モデルの同定と導電率の事前一致は、現在のリポジトリレベルの成果物の範囲外にまだ残っています。
+- 許容可能な間隔カバレッジしきい値に関するコミュニティの合意は、現在のパケットの範囲外にまだ残っています。
+- 逆推定安定性が保存されたメカニズム、保存された同一性、または完全な回復可能性を証明するという解釈は、現在のルートの範囲外のままです。
 
-## What changed in this run
+## 今回の実行で変わったこと
 
-- The public batch did not change.
-- The main change is that `U1-2` now has a public packet that records the strongest inverse-estimation anchor, the first artifact, and the watch-level funding bridge after `U7-1`.
-- This remains a route-setting update, not a solved-claim update.
+- パブリックバッチは変更されませんでした。
+- 主な変更点は、`U1-2` に、`U7-1` 以降の最も強力な逆推定アンカー、最初のアーティファクト、および監視レベルのファンディング ブリッジを記録するパブリック パケットが追加されたことです。
+- これはルート設定の更新であり、解決済みのクレームの更新ではありません。

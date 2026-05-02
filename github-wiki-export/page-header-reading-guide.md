@@ -1,185 +1,185 @@
-# Wiki: How to Read the Opening Blocks of Public Pages
+# Wiki: 公開ページの開始ブロックを読む方法
 
-> A guide to using the page intro, known/unknown, wiki links, and overview as an entry point
+> ページのイントロ、既知/未知、Wiki リンク、概要をエントリ ポイントとして使用するためのガイド
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-06 / Role: Reading guide
+- Updated: 2026-03-06 / Role: 読書ガイド
 
-## Role Of This Page
-This page is a companion wiki that explains how to read the guidance blocks that commonly appear at the top of public pages. Before entering the main text, it helps you align the role of the page, the boundaries of its claims, and the route back to the learning wiki.
+## このページの役割
+このページは、公開ページの上部に一般的に表示されるガイダンス ブロックの読み方を説明するコンパニオン Wiki です。本文に入る前に、ページの役割、その主張の境界、学習 Wiki へ戻るルートを調整するのに役立ちます。
 
-## Accuracy Notes
-This page explains reading rules. For the facts and technical conditions behind any specific point, always return to the main text of the relevant public page.
+## 正確性に関する注記
+このページでは読書ルールについて説明します。特定の点の背後にある事実や技術的条件については、必ず関連する公開ページの本文に戻ってください。
 
-## Back To Public Pages
-- [Start Page](https://mind-upload.com)
-- [Verification base](https://mind-upload.com/verification.html)
-- [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
+## 公開ページへ戻る
+- [スタートページ](https://mind-upload.com)
+- [検証ベース](https://mind-upload.com/verification.html)
+- [パブリック コンテンツ統合ハブ](https://mind-upload.com/content_hub.html)
 
-## Related Wiki Pages
-- [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - Click here if you want to know the differences in the roles of pages.
-- [Wiki: How to read 'What we know/what we don't know'](https://github.com/yasufumi-nakata/mind-upload/wiki/known-unknown-and-status-reading) - You can find out more about the meaning of known / unknown.
-- [Wiki: 3 ways to use this site](https://github.com/yasufumi-nakata/mind-upload/wiki/site-usage-modes) - We will organize how to use this site as a whole: entry, learning, and participation.
+## 関連 Wiki ページ
+- [Wiki: 公開ページを読むためのガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - ページの役割の違いを知りたい場合はこちらをご覧ください。
+- [Wiki: 「私たちが知っていること/私たちが知らないこと」の読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/known-unknown-and-status-reading) - 既知/未知の意味について詳しく知ることができます。
+- [Wiki: このサイトを使用する 3 つの方法](https://github.com/yasufumi-nakata/mind-upload/wiki/site-usage-modes) - エントリー・学習・参加というサイト全体の使い方を整理していきます。
 
-## What Is Currently Known
-- Public pages begin with a common format for the page's role, intended audience, accuracy assumptions, known/unknown, and wiki navigation.
-- By simply reading the opening block before entering the main text, you can decide whether to use the page as an entry point or return to the wiki first.
-- Even if the page is long, if you use the guide and floor plan at the beginning, it will be easier to avoid the situation where you have to read the entire page to understand.
+## 現在わかっていること
+- 公開ページは、ページの役割、対象読者、精度の前提、既知/未知、Wiki ナビゲーションに関する共通の形式で始まります。
+- 本文に入る前に冒頭部分を読むだけで、そのページを入り口として使用するか、最初に Wiki に戻るかを決定できます。
+- ページが長くても、最初にガイドや間取り図を活用すれば、ページ全体を読まないと理解できないという事態を避けやすくなります。
 
-## What Is Still Unknown
-- It is not possible to make a final judgment on individual points just by looking at the opening block.
-- The contents of wiki links and recommended pages are not fixed because the depth required for each page is different.
+## まだわかっていないこと
+- 開始ブロックだけを見て個々のポイントを最終判断することはできません。
+- Wiki のリンクや推奨ページの内容は、ページごとに必要な深さが異なるため、固定ではありません。
 
 ---
 
-<h2>The role of this wiki</h2>
+<h2>このウィキの役割</h2>
 <p>
-This wiki is an auxiliary page that provides information on how to read before entering the main text of public pages. As an information portal, the public page first indicates ``what this page does,'' ``how much does it assert,'' and ``where can you learn more about the background?''. You can check the common rules on one page.
+このwikiは、公開されているページの本文に入る前に読む方法についての情報を提供する補助ページです。情報ポータルとして、公開ページではまず「`what this page does,'' ``how much does it assert,'' and `『背景をもっと詳しく学べる場所』」を表示。共通ルールを1ページで確認できます。
 </p>
 
-<strong>Conclusion first</strong>
+<strong>最初に結論</strong>
 <p>
-At the beginning of the public page, it will be easier to get lost if you read the following from the top: <strong>Role</strong>, <strong>Target audience</strong>, <strong>Accuracy assumption</strong>, <strong>Known/Unknown</strong>, and <strong>Wiki guideline</strong>. That's enough for the main text.
+公開ページの冒頭では、上から<strong>Role</strong>、<strong>対象者</strong>、<strong>正確性の仮定</strong>、<strong>既知/不明</strong>、<strong>Wikiガイドライン</strong>と読むと迷いやすいです。本文はこれで十分です。
 </p>
 
 <table>
 <thead>
 <tr>
-<th>First element</th>
-<th>What to see</th>
-<th>Points that are easy to misread</th>
+<th>最初の要素</th>
+<th>見どころ</th>
+<th>間違えやすいポイント</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>How to read this page</strong></td>
-<td>Look at what the page does, what it grabs first, and where it goes next. </td>
-<td>If you think this is the entire summary of the main text, you will overlook the role description. </td>
+<td><strong>このページの見方</strong></td>
+<td>ページが何をするのか、最初に何を取得するのか、次にどこへ行くのかを見てください。 </td>
+<td>これが本文の全体の要約だと思っていると、役割の説明を見落としてしまいます。 </td>
 </tr>
 <tr>
-<td><strong>Suitable for people/reading guidelines</strong></td>
-<td>Determine whether you are currently reading the page. </td>
-<td>This is not a guideline for the difficulty level, but for the reading order. </td>
+<td><strong>対象者/読書ガイドラインに適しています</strong></td>
+<td>現在ページを読んでいるかどうかを確認します。 </td>
+<td>難易度の目安ではなく、読む順番の目安です。 </td>
 </tr>
 <tr>
-<td><strong>Accuracy Assumption</strong></td>
-<td>See what the page does not affirm and what it withholds. </td>
-<td>It's not a decorative statement, it's a boundary line of affirmation. </td>
+<td><strong>精度の仮定</strong></td>
+<td>ページで何が肯定されておらず、何が差し控えられているかを確認してください。 </td>
+<td>それは飾りではない、肯定の境界線。 </td>
 </tr>
 <tr>
-<td><strong>What we know now</strong></td>
-<td>Let's see what is relatively clear. </td>
-<td>Reading "fully resolved" is an overstatement. </td>
+<td><strong>現在わかっていること</strong></td>
+<td>比較的わかりやすいものを見てみましょう。 </td>
+<td>「完全に解決された」というのは誇張表現です。 </td>
 </tr>
 <tr>
-<td><strong>What we don't know yet</strong></td>
-<td>Confirm that the issue cannot be resolved on that page alone. </td>
-<td>This is not a column that reads "proved to be impossible." </td>
+<td><strong>まだわかっていないこと</strong></td>
+<td>そのページだけでは問題を解決できないことを確認します。 </td>
+<td>これは「不可能であることが判明した」というコラムではありません。 </td>
 </tr>
 <tr>
-<td><strong>Check the basics on wiki</strong></td>
-<td>Check the entrance back to background information. </td>
-<td>It is not a bonus, but a formal round-trip route to the learning layer. </td>
+<td><strong>wiki で基本を確認</strong></td>
+<td>背景情報に戻って入り口を確認してください。 </td>
+<td>おまけではなく、学習層への正式な往復ルートです。 </td>
 </tr>
 <tr>
-<td><strong>Floor diagram on page</strong></td>
-<td>Understand the section structure of long pages first. </td>
-<td>This is not a substitute for a table of contents, but rather a guide to help you decide where to read first. </td>
+<td><strong>フロア図はページ内</strong></td>
+<td>まず長いページのセクション構造を理解してください。 </td>
+<td>これは目次の代わりではなく、最初にどこから読むかを決めるためのガイドです。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>30 seconds rule before entering main text</h2>
+<h2>本文に入る前に30秒ルール</h2>
 <ol>
-Check <li><strong>How to read this page</strong> to see if the page is an entry, a blueprint, or a practice. </li>
-Check the <li><strong>Suitable people/reading guidelines</strong> to see if it is suitable for you. </li>
-<li>Let's first look at the extent to which we are not asserting the <strong>accuracy assumption</strong>. </li>
-<li><strong>What we know now / What we don't know yet</strong> Establish boundaries before reading the text. </li>
-<li>Look at the <strong>wiki links</strong> and if you don't have enough background knowledge, go back to the learning page first. </li>
+<li><strong>このページの読み方</strong> をチェックして、ページがエントリー、ブループリント、または実践であるかどうかを確認してください。 </li>
+<li><strong>適した人/読書ガイドライン</strong>を確認して、自分に適しているかどうかを確認してください。 </li>
+<li>まず、<strong>精度の仮定</strong>を主張していない範囲を見てみましょう。 </li>
+<li><strong>私たちが現在知っていること/私たちがまだ知らないこと</strong>テキストを読む前に境界線を確立してください。 </li>
+<li><strong>wiki リンク</strong> を参照し、十分な背景知識がない場合は、まず学習ページに戻ってください。 </li>
 </ol>
 
-<h2>What to see in the "How to read this page" block</h2>
+<h2>「このページの見方」ブロックの見方</h2>
 <p>
-This includes <strong>page intro</strong>, <strong>highlights</strong>, and <strong>recommended pages</strong>. In short, it first tells you, ``What is this page supposed to do?'' ``What should I grasp first, even if I don't read everything?'' and ``Where can I go next to gain understanding?''
+これには、<strong> ページ紹介 </strong>、<strong> ハイライト </strong>、<strong> おすすめページ </strong> が含まれます。つまり、最初に「`What is this page supposed to do?'' ``What should I grasp first, even if I don't read everything?'' and `『理解を得るために次にどこに行けばよいですか?』」と伝えます。
 </p>
 
-<h4>Check</h4>
+<h4>チェック</h4>
 <ul>
-<li><strong>page intro:</strong> Read as an explanation of the page's role, not the main text. </li>
-<li><strong>Highlights: </strong> It is not a collection of conclusions and assertions, but an introduction to key points that can be easily lost in the main text. </li>
-<li><strong>Recommended pages:</strong> These are not helpful links, but suggestions for public pages you should read next. </li>
+<li><strong>ページ紹介:</strong> 本文ではなく、ページの役割の説明として読んでください。 </li>
+<li><strong>ハイライト: </strong> 結論や主張を集めたものではなく、本文中で埋もれがちな要点を紹介するものです。 </li>
+<li><strong>推奨ページ:</strong> これらは役立つリンクではありませんが、次に読むべき公開ページの提案です。 </li>
 </ul>
 
-<h2>Stop at ``Suitable people / Reading guideline / Assumption of accuracy''</h2>
+<h2>「対象者・閲覧ガイドライン・正確性の前提」で停止</h2>
 <p>
-This column is for orienting yourself before reading. In particular, the <strong>premise of accuracy</strong> is important and makes the difference between whether a page affirms the possibility or whether it is a foundation for confirming whether something is possible.
+このコラムは、読む前に方向転換するためのものです。特に、正確さ</strong>の<strong>前提は重要であり、ページが可能性を肯定するものであるか、それとも何かが可能であるかどうかを確認するための基礎であるかどうかの違いを生み出します。
 </p>
 
-<strong>Common misreadings</strong>
+<strong>よくある間違い</strong>
 <p>
-The ``premise of accuracy'' is the scope of the page, not a polite note. If you skip this part, it's easier to read Verification as a success declaration page, or read FAQ as a final conclusion page.
+「正確さの前提」はページの範囲であり、丁寧なメモではありません。この部分をスキップすると、検証を成功宣言ページとして読むか、FAQ を最終結論ページとして読む方が簡単です。
 </p>
 
-<h2>'I know/I don't know' is the boundary line</h2>
+<h2>「わかる/わからない」の境界線</h2>
 <p>
-Known/Unknown on the public page is a column for determining "what can be said strongly" and "what remains unresolved." Even if there are strong expressions in the main text, it is important not to read them into stronger arguments than in this column.
+公開ページの既知・未知は「強く言えること」と「未解決なこと」を判断するための欄です。本文に強い表現がある場合でも、それをこのコラムよりも強い主張に解釈しないことが重要です。
 </p>
 <table>
 <thead>
 <tr>
-<th>Heading</th>
-<th>Meaning</th>
-<th>Reading methods to avoid</th>
+<th>見出し</th>
+<th>意味</th>
+<th>回避すべき方法の読み方</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>What we know now</strong></td>
-<td>This is a relatively stable statement based on current methods and evidence. </td>
-<td>Read as "Enough is enough, no need for further verification." </td>
+<td><strong>現在わかっていること</strong></td>
+<td>これは、現在の方法と証拠に基づいた比較的安定した声明です。 </td>
+<td>「これで十分です。これ以上の検証は必要ありません。」と読みます。 </td>
 </tr>
 <tr>
-<td><strong>What we don't know yet</strong></td>
-<td>Includes unresolved issues, non-agreement, lack of evidence, external dependencies, etc. </td>
-<td>It is read as "I have come to the conclusion that it is completely impossible." </td>
+<td><strong>まだわかっていないこと</strong></td>
+<td>未解決の問題、不合意、証拠の欠如、外部依存関係などが含まれます。
+<td>「全く不可能であるとの結論に至りました」と読みます。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Wiki links are not a detour, but a learning guide</h2>
+<h2>Wiki リンクは回り道ではなく、学習ガイドです</h2>
 <p>
-Instead of turning the main text of the public page into a long textbook, background explanations are moved to the wiki. Therefore, <strong>wiki links are not an optional extra, but a formal entry point to use when you stop understanding</strong>.
+公開ページの本文を長い教科書にする代わりに、背景の説明を Wiki に移動します。したがって、<strong>wiki リンクはオプションの追加物ではなく、</strong> を理解できなくなったときに使用する正式なエントリ ポイントです。
 </p>
 
-<h4>How to use</h4>
+<h4></h4>の使い方
 <ul>
-<li><strong>Stop at a term:</strong> Return to glossary or basic wiki. </li>
-<li><strong>Stop at reading:</strong> Return to public-page-reading-guide or route-related wikis. </li>
-<li><strong>Stop on strength of evidence:</strong> Return to claims-and-evidence and known-unknown systems. </li>
+<li><strong>用語で停止:</strong> 用語集または基本 Wiki に戻ります。 </li>
+<li><strong>S閲覧の先頭:</strong> 公開ページ閲覧ガイドまたはルート関連 Wiki に戻ります。 </li>
+<li><strong>証拠の強さに関する停止:</strong> 主張と証拠および既知-未知のシステムに戻ります。 </li>
 </ul>
 
-<h2>How to use the floor plan and "for high school students"</h2>
+<h2>間取り図の使い方と「高校生向け」</h2>
 <p>
-On long pages, a <strong>page diagram</strong> and <strong>For high school students: words that appear on this page</strong> appear after the beginning. The diagram is used to understand the positional relationship of the clauses, and the easy-to-understand terminology section is used to create a foothold for the words that will appear in the main text.
+長いページでは、<strong> ページ図</strong> および <strong> 高校生向け: このページに表示される単語 </strong> は先頭の後に表示されます。図で文節の位置関係を理解し​​、わかりやすい用語集で本文に登場する言葉の足がかりを作ります。
 </p>
 
-<strong>Recommended usage</strong>
+<strong>おすすめの使い方</strong>
 <p>
-If you have a long page and cannot read it in order from the beginning, open the relevant section first in the diagram, and only return to the terminology section or Glossary if there are many words you do not know. You don't have to read everything equally.
+ページが長くて最初から順番に読むことができない場合は、まず図の該当するセクションを開いて、知らない単語がたくさんある場合にのみ用語セクションまたは用語集に戻ってください。すべてを平等に読む必要はありません。
 </p>
 
-<h2>Common misreadings</h2>
+<h2>よくある間違い</h2>
 
-<h4>Mistake</h4>
+<h4>間違い</h4>
 <ul>
-<li><strong>Read recommended pages as a collection of evidence:</strong> This is where you go next, not in order of strength of evidence. </li>
-<li><strong>Read known_points as a declaration of success:</strong> Relatively stable facts, not a declaration of resolution of the entire issue. </li>
-<li><strong>Read unknown_points as pessimism:</strong> This is an open inventory, not a reason to stop research. </li>
-<li><strong>Postponing wiki links too much:</strong> If you read the main text without enough background, it's easy to lose sight of the different roles of public pages. </li>
+<li><strong>証拠のコレクションとして推奨ページを読む:</strong> 次に進むのは、証拠の強さの順ではありません。 </li>
+<li><strong>成功の宣言として既知のポイントを読み取ります:</strong> 問題全体の解決の宣言ではなく、比較的安定した事実。 </li>
+<li><strong>unknown_points を悲観論として読む:</strong> これは未解決の目録であり、研究を中止する理由ではありません。 </li>
+<li><strong>Wiki リンクを延期しすぎる:</strong> 十分な背景を知らずに本文を読むと、公開ページのさまざまな役割を見失いがちです。 </li>
 </ul>
 
-<h2>Where to return next</h2>
+<h2>次に戻る場所</h2>
 <p>
-If you want to sort out the differences between public pages, go to <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">Public page reading guide</a>, if you want to dig deeper into the meaning of known/unknown, go to <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/known-unknown-and-status-reading">How to read ``known/unknown''</a>, and to return to the entrance, go to <a href="https://mind-upload.com">start page</a> Please use.
+公開ページの違いを整理したい場合は<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">公開ページの読み方ガイド</a>、既知・未知の意味をより深く掘り下げたい場合は<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/known-unknown-and-status-reading">「既知・未知」の読み方</a>、入り口に戻る場合は<a href="https://mind-upload.com">スタートページ</a>をご利用ください。
 </p>

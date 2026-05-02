@@ -1,199 +1,199 @@
-# Wiki: Three Ways to Use This Site
+# Wiki: このサイトを使用する 3 つの方法
 
-> Use public portals, learning wikis, and action pages differently depending on your goal
+> 目標に応じて公開ポータル、学習 Wiki、アクション ページを使い分ける
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-14 / Role: Site usage modes
+- Updated: 2026-03-14 / Role: サイトの使用モード
 
-## Role Of This Page
-This page is a companion guide that explains three ways to use Mind-Upload as a whole: getting the big picture, learning from the basics, and actually fixing or participating. Public pages act as information portals, the wiki acts as a learning foundation, and Issues and Collaborations act as action entry points.
+## このページの役割
+このページは、Mind-Upload 全体を使用する 3 つの方法 (全体像を把握する、基本から学ぶ、実際に修正するか参加する) を説明するコンパニオン ガイドです。公開ページは情報ポータルとして機能し、Wiki は学習基盤として機能し、問題とコラボレーションはアクションのエントリ ポイントとして機能します。
 
-## Accuracy Notes
-This page is about how to use the site. For any specific claim or technical condition, always return to the relevant page itself.
+## 正確性に関する注記
+サイトのご利用方法についてのページです。特定のクレームまたは技術的条件については、必ず関連するページ自体に戻ってください。
 
-## Back To Public Pages
-- [Start Page](https://mind-upload.com)
-- [Contribution Guide](https://mind-upload.com/issue.html)
-- [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
+## 公開ページへ戻る
+- [スタートページ](https://mind-upload.com)
+- [貢献ガイド](https://mind-upload.com/issue.html)
+- [パブリック コンテンツ統合ハブ](https://mind-upload.com/content_hub.html)
 
-## Related Wiki Pages
-- [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - For those who want to take a closer look at the differences between public pages used in big picture mode.
-- [Wiki: Learning portal for learning from the basics](https://github.com/yasufumi-nakata/mind-upload/wiki) - Entrance to the entire wiki to return to in learning mode.
-- [Wiki: 5 paths to follow after participation/collaboration page](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes) - This is for people who want to decide the next page in participation mode.
+## 関連 Wiki ページ
+- [Wiki: 公開ページを読むためのガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - Big Picture モードで使用される公開ページの違いを詳しく知りたい人向け。
+- [Wiki: 基礎から学べる学習ポータル](https://github.com/yasufumi-nakata/mind-upload/wiki) - 学習モードで戻るための Wiki 全体への入り口。
+- [Wiki: 参加/コラボレーション後にたどる 5 つの道筋ページ](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes) - 参加モードで次のページを決めたい人向けです。
 
-## What Is Currently Known
-- Public pages are effective as information portals that allow you to quickly get an overall picture.
-- If you put the explanations for learning from the beginning on a wiki, the entrance page will be easier to read.
-- Corrections and contributions should be posted to action pages such as Issues and Collaborations.
+## 現在わかっていること
+- 公開ページは全体像を素早く把握できる情報ポータルとして有効です。
+- 最初から学ぶための解説をwikiに載せると入口ページが読みやすくなります。
+- 修正や投稿は、問題やコラボレーションなどのアクション ページに投稿する必要があります。
 
-## What Is Still Unknown
-- Which mode is the shortest way to enter depends on the reader's prerequisite knowledge and purpose.
-- Future expansions may add more auxiliary pages for each mode.
+## まだわかっていないこと
+- どのモードに入るのが最短の方法であるかは、読者の前提知識と目的によって異なります。
+- 将来の拡張では、各モードにさらに補助ページが追加される可能性があります。
 
 ---
 
-<h2>First, decide what you want to do now</h2>
+<h2>まず、今何をしたいかを決めてください</h2>
 <p>
-This site is not intended for reading everything from the beginning. If you first decide <strong>do you want to get the big picture</strong>, <strong>learn from the basics</strong>, or <strong>do you want to actually fix</strong>, you'll have a pretty clear idea of ​​which pages to use.
+このサイトは最初からすべてを読むことを目的としたものではありません。最初に<strong>全体像を把握したい</strong>、<strong>基本から学ぶ</strong>、または<strong>実際に修正したい</strong>を決定すると、どのページを使用するかがかなり明確になります。
 </p>
 
-<h2>3 ways to use</h2>
+<h2>3つの使い方</h2>
 <table>
 <thead>
 <tr>
-<th>Mode</th>
-<th>What to do</th>
-<th>First page to open</th>
+<th>モード</th>
+<th>どうする</th>
+<th>最初に開くページ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Getting the big picture</strong></td>
-<td>Quickly figure out what's known, what's unresolved, and where to read next. </td>
-<td><a href="https://mind-upload.com">index</a> / <a href="https://mind-upload.com/verification.html">Verification</a></td>
+<td><strong>全体像を把握する</strong></td>
+<td>既知のこと、未解決のこと、次にどこを読むべきかがすぐにわかります。 </td>
+<td><a href="https://mind-upload.com">インデックス</a> / <a href="https://mind-upload.com/verification.html">検証</a></td>
 </tr>
 <tr>
-<td><strong>Learn from the beginning</strong></td>
-<td>Learn terminology, background, how to read a page, and the strength of evidence in order. </td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki">Wiki Home</a></td>
+<td><strong>最初から学ぶ</strong></td>
+<td>用語、背景、ページの読み方、証拠の強さを順に学びます。 </td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki">Wiki ホーム</a></td>
 </tr>
 <tr>
-<td><strong>Actually fixing/participating</strong></td>
-<td>Determine the issue, integration destination, separation of external dependencies, and minimum deliverables. </td>
-<td><a href="https://mind-upload.com/issue.html">Issue</a> / <a href="https://mind-upload.com/content_hub.html">Content Hub</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
+<td><strong>実際に修正/参加しています</strong></td>
+<td>課題、統合先、外部依存関係の分離、最低限の成果物を決定します。 </td>
+<td><a href="https://mind-upload.com/issue.html">発行</a> / <a href="https://mind-upload.com/content_hub.html">コンテンツハブ</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">コラボレーション</a></td>
 </tr>
 </tbody>
 </table>
 
-<h2>1. Mode to grasp the big picture</h2>
+<h2>1。全体像を把握するモード</h2>
 <table>
 <thead>
 <tr>
-<th>At times like this</th>
-<th>First page to read</th>
-<th>Where to go next</th>
+<th>こんなとき</th>
+<th>最初に読むページ</th>
+<th>次の行き先</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I want to know the core policy of the site</strong></td>
-<td><a href="https://mind-upload.com/verification.html">Verification</a></td>
-<td><a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a></td>
+<td><strong>Iサイトのコアポリシーを知りたい</strong></td>
+<td><a href="https://mind-upload.com/verification.html">検証</a></td>
+<td><a href="https://mind-upload.com/tech_roadmap.html">ロードマップ</a></td>
 </tr>
 <tr>
-<td><strong>I want to start with a short introduction</strong></td>
+<td><strong>簡単な紹介から始めたい</strong></td>
 <td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a> / <a href="https://mind-upload.com/eeg_101.html">EEG 101</a></td>
-<td><a href="https://mind-upload.com/faq.html">FAQ</a> / <a href="https://mind-upload.com/glossary.html">Glossary</a></td>
+<td><a href="https://mind-upload.com/faq.html">FAQ</a> / <a href="https://mind-upload.com/glossary.html">用語集</a></td>
 </tr>
 <tr>
-<td><strong>Confused by the differences between public pages</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">Public page reading guide</a></td>
-<td><a href="https://mind-upload.com">index</a> / <a href="https://mind-upload.com/verification.html">Verification</a></td>
+<td><strong>公開ページ間の違いに混乱</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">公開ページの閲覧ガイド</a></td>
+<td><a href="https://mind-upload.com">インデックス</a> / <a href="https://mind-upload.com/verification.html">検証</a></td>
 </tr>
 </tbody>
 </table>
 
-<h2>2. Learning mode from beginners</h2>
+<h2>2。初心者から学ぶモード</h2>
 <table>
 <thead>
 <tr>
-<th>At times like this</th>
-<th>Read first wiki</th>
-<th>Next public page</th>
+<th>こんなとき</th>
+<th>最初のウィキをお読みください</th>
+<th>次の公開ページ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I don't know what WBE is talking about</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics">WBE basics</a></td>
+<td><strong>WBE が何について話しているのかわかりません</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics">WBE 基本</a></td>
 <td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a></td>
 </tr>
 <tr>
-<td><strong>I don't know how to read the flashy claims</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">How to read claims and evidence</a></td>
-<td><a href="https://mind-upload.com/verification.html">Verification</a></td>
+<td><strong>派手な主張の読み方がわからない</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">主張と証拠の読み方</a></td>
+<td><a href="https://mind-upload.com/verification.html">検証</a></td>
 </tr>
 <tr>
-<td><strong>I'm confused because there are so many pages on this site</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki">Wiki Home</a></td>
-<td><a href="https://mind-upload.com">index</a></td>
+<td><strong>このサイトにはページが多すぎて混乱しています</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki">Wiki ホーム</a></td>
+<td><a href="https://mind-upload.com">インデックス</a></td>
 </tr>
 </tbody>
 </table>
 
-<h2>3. Actual fix/participation mode</h2>
+<h2>3。実固定/参加モード</h2>
 <table>
 <thead>
 <tr>
-<th>At times like this</th>
-<th>First page to read</th>
-<th>View with auxiliary wiki</th>
+<th>こんなとき</th>
+<th>最初に読むページ</th>
+<th>補助wiki付きの表示</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I want to make small corrections</strong></td>
-<td><a href="https://mind-upload.com/issue.html">Issue</a></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">How to write your first issue</a></td>
+<td><strong>細かい修正をしたい</strong></td>
+<td><a href="https://mind-upload.com/issue.html">問題</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">最初の問題の書き方</a></td>
 </tr>
 <tr>
-<td><strong>Not sure where to put new information</strong></td>
-<td><a href="https://mind-upload.com/content_hub.html">Content Hub</a></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics">Basics of deciding where to place new information</a></td>
+<td><strong>新しい情報をどこに載せるべきかわからない</strong></td>
+<td><a href="https://mind-upload.com/content_hub.html">コンテンツハブ</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics">新しい情報を配置する場所を決める基本</a></td>
 </tr>
 <tr>
-<td><strong>I want to organize stories that include external dependencies</strong></td>
-<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">In-house production and external dependencies</a></td>
+<td><strong>外部依存関係を含むストーリーを整理したい</strong></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">コラボレーション</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">社内生産と外部依存関係</a></td>
 </tr>
 </tbody>
 </table>
 
-<strong>When you are unsure which artifact to return what you have read</strong>
+<strong>読んだものをどのアーティファクトに返せばよいかわからない場合</strong>
 <p>
-If you want to see in a straight line how to return to literature organization, theory organization, proposal, issue, and external dependence, please see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow">Flow of connecting what you read to change</a>.
+文献整理、理論整理、提案、課題、外部依存への戻り方を直線的に見たい場合は<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow">読んだものをchange</a>につなげるフローをご覧ください。
 </p>
 
-<h2>Guidelines for switching modes</h2>
+<h2>モード切り替えのガイドライン</h2>
 <table>
 <thead>
 <tr>
-<th>Current status</th>
-<th>Switch to</th>
-<th>Reason</th>
+<th>現状</th>
+<th></th>に切り替える
+<th>理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Read the big picture but stop at the terminology</strong></td>
-<td>Learning mode</td>
-<td>It's easier to misread the main text if you go back to the wiki and supplement the assumptions. </td>
+<td><strong>全体像を読みますが、用語はやめてください</strong></td>
+<td>ラーニングモード</td>
+<td>wikiに戻って前提を補足すると本文を誤読しやすくなります。 </td>
 </tr>
 <tr>
-<td><strong>After reading the wiki, I can see what I want to fix</strong></td>
-<td>Participation mode</td>
-<td>Put it into an issue or Content Hub to turn it into actionable changes. </td>
+<td><strong>Wiki を読んだ後、修正したいことがわかりました</strong></td>
+<td>参加モード</td>
+<td>それを問題またはコンテンツ ハブに入れて、実行可能な変更に変えます。 </td>
 </tr>
 <tr>
-<td><strong>I tried to write an issue, but I don't know what the premise is</strong></td>
-<td>Learn mode or big picture mode</td>
-<td>Go back to Verification or the wiki and align the conditions and terms first. </td>
+<td><strong>I 問題を書こうとしましたが、前提がわかりません</strong></td>
+<td>ラーニングモードまたはビッグピクチャーモード</td>
+<td>検証または wiki に戻り、最初に条件と規約を確認してください。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Common ways to get lost</h2>
+<h2>よくある迷い方</h2>
 
-<h4>Mistake</h4>
+<h4>間違い</h4>
 <ul>
-<li><strong>Read everything from the beginning:</strong> It's easier to get lost if you choose one mode first. </li>
-<li><strong>Continue with just the wiki:</strong> Since the wiki is for learning purposes, you will eventually need to return to the public pages and issues. </li>
-<li><strong>Write a big proposal all of a sudden in participatory mode:</strong> It's safer to start with small revisions and minimum deliverables. </li>
-<li><strong>Read public pages as a textbook:</strong> Public pages are a place to get the gist and direction. </li>
+<li><strong>最初からすべて読む:</strong> 最初に 1 つのモードを選択すると、迷いやすくなります。 </li>
+<li><strong>Wiki のみで続行:</strong> Wiki は学習目的であるため、最終的には公開ページと問題に戻る必要があります。 </li>
+<li><strong>参加型モードで突然大きな提案書を作成する:</strong> 小さな修正と最小限の成果物から始める方が安全です。 </li>
+<li><strong>公開ページを教科書として読む:</strong> 公開ページは要点や方向性を知るための場所です。 </li>
 </ul>
 
-<h2>Where to return next</h2>
+<h2>次に戻る場所</h2>
 <p>
-Use the <a href="https://mind-upload.com">Start Page</a> to get back to the big picture, the <a href="https://github.com/yasufumi-nakata/mind-upload/wiki">Wiki Home</a> to get back to learning, or the <a href="https://mind-upload.com/issue.html">Contribution Guide</a> and <a href="https://mind-upload.com/content_hub.html">Public Content Integration Hub</a> to get started.
+全体像に戻るには <a href="https://mind-upload.com"> スタート ページ</a>、学習に戻るには <a href="https://github.com/yasufumi-nakata/mind-upload/wiki">Wiki Home</a>、始めるには <a href="https://mind-upload.com/issue.html">Contribution Guide</a> および <a href="https://mind-upload.com/content_hub.html">Public Content Integration Hub</a> を使用してください。
 </p>

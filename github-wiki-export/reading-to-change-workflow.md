@@ -1,153 +1,153 @@
-# Wiki: Flow of connecting what you read to change
+# Wiki: 読んだことが変わるまでの流れ
 
-> See everything from observation, proposal, execution, and isolation of external dependencies in one straight line
+> 観察、提案、実行、外部依存関係の分離まですべてを 1 つの直線で確認します
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-14 / Role: Reading to change workflow
+- Updated: 2026-03-14 / Role: ワークフローを変えるために読む
 
-## Role Of This Page
-This page is a workflow guide for connecting the insights gained from reading Mind-Upload pages to actual changes and organization. When you find a new paper, notice a theoretical weakness, see the shape of a proposal, know a fix that can be fixed right away, or know that an external dependency is required, it will guide you in a straight line to which page to go back to and what to make.
+## このページの役割
+このページは、Mind-Upload ページを読んで得た洞察を実際の変更や組織に結び付けるためのワークフロー ガイドです。新しい論文を見つけたとき、理論的な弱点に気づいたとき、提案の形を確認したとき、すぐに修正できる修正方法がわかったとき、または外部依存関係が必要であることがわかったときに、どのページに戻って何を作成すればよいのかを一直線に導きます。
 
-## Accuracy Notes
-What is shown here is a workflow arrangement. To check the validity of individual proposals and papers, be sure to go back to the original page text and rationale.
+## 正確性に関する注記
+ここに示されているのはワークフローの配置です。個々の提案や論文の妥当性を確認するには、必ず元のページのテキストと根拠に戻ってください。
 
-## Back To Public Pages
-- [Literature map](https://mind-upload.com/research_harvest_50.html)
-- [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
-- [Contribution Guide](https://mind-upload.com/issue.html)
+## 公開ページへ戻る
+- [文学地図](https://mind-upload.com/research_harvest_50.html)
+- [技術提案](https://mind-upload.com/issue.html#proposal-integration)
+- [貢献ガイド](https://mind-upload.com/issue.html)
 
-## Related Wiki Pages
-- [Wiki: Differences between facts, hypotheses, proposals, and execution tasks](https://github.com/yasufumi-nakata/mind-upload/wiki/facts-hypotheses-proposals-and-tasks) - This is for people who want to sort out the differences in roles between pages first.
-- [Wiki: 5 paths to follow after participation/collaboration page](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes) - This is for people who want to decide on the next page after the participation page.
-- [Wiki: Basics of deciding where to put new information](https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics) - For those who want a more detailed look at where to put it.
+## 関連 Wiki ページ
+- [Wiki: 事実、仮説、提案、実行タスクの違い](https://github.com/yasufumi-nakata/mind-upload/wiki/facts-hypotheses-proposals-and-tasks) - まずはページ間の役割の違いを整理したい人向けです。
+- [Wiki: 参加/コラボレーション後にたどる 5 つの道筋ページ](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes) - 参加ページの次のページで決めたい人向けです。
+- [Wiki: 新しい情報をどこに配置するかを決定するための基本](https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics) - 設置場所を詳しく知りたい方へ。
 
-## What Is Currently Known
-- If you decide which artifact to turn what you read into, information will be less scattered.
-- The page to return to is different for literature organization, theory organization, proposal, execution task, and external dependence.
-- Even when it comes to external dependencies, there are quite a few preparations that can be made in-house first.
+## 現在わかっていること
+- 読んだものをどの成果物に変換するかを決めておけば、情報の散乱が少なくなります。
+- 文献整理、理論整理、提案、実行課題、外部依存により戻るページが異なります。
+- 外部依存関係であっても、最初に社内で準備できることはかなりあります。
 
-## What Is Still Unknown
-- Which realization will lead to the greatest results will depend on the unresolved problems and implementation status at the time.
-- The extent to which the discussion of external dependence progresses to concrete cooperation depends on the other party and the conditions.
+## まだわかっていないこと
+- どちらの実現が最大の成果につながるかは、その時点での未解決の問題や実行状況によって異なります。
+- 対外依存の議論がどの程度具体的な協力に進むかは、相手や状況次第である。
 
 ---
 
-<h2>Determine the next deliverable so that you don't just read it.</h2>
+<h2>ただ読むだけではないように、次の成果物を決定します。</h2>
 <p>
-On this site, we do not leave behind what we read and understand. First, decide whether it is an attempt to organize the literature, a theoretical weakness, a suggestion, a fix that can be removed immediately, or an external dependency, and then decide where to return.
+このサイトでは、私たちが読んで理解した内容を残すことはありません。まず、それが文献を整理する試みであるか、理論的な弱点、提案であるか、すぐに削除できる修正であるか、外部依存であるかを判断し、どこに戻るかを決定します。
 </p>
 
-<h2>Basic flow</h2>
+<h2>基本フロー</h2>
 <table>
 <thead>
 <tr>
-<th>What I noticed after reading</th>
-<th>Back to</th>
-<th>What to make there</th>
+<th>読んで気づいたこと</th>
+<th></th>に戻る
+<th>そこで何を作る</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I found a new paper or evidence</strong></td>
-<td><a href="https://mind-upload.com/research_harvest_50.html">Research Harvest</a> / <a href="https://mind-upload.com/mind_uploading_papers.html">Papers</a></td>
-<td>Connections to unsolved problems, evidence examples, wide archiving. </td>
+<td><strong>I 新しい論文または証拠を見つけました</strong></td>
+<td><a href="https://mind-upload.com/research_harvest_50.html">リサーチハーベスト</a> / <a href="https://mind-upload.com/mind_uploading_papers.html">論文</a></td>
+<td>未解決の問題へのつながり、証拠の例、幅広いアーカイブ。 </td>
 </tr>
 <tr>
-<td><strong>I found weaknesses in the theory and differences in assumptions</strong></td>
-<td><a href="https://mind-upload.com/perspective.html">Perspective</a> / <a href="https://mind-upload.com/perspective.html#design-principles">Idea</a></td>
-<td>Review of limits, theoretical framework, and design principles. </td>
+<td><strong>I 理論の弱点と仮定の違いを発見</strong></td>
+<td><a href="https://mind-upload.com/perspective.html">パースペクティブ</a> / <a href="https://mind-upload.com/perspective.html#design-principles">アイデア</a></td>
+<td>限界、理論的枠組み、設計原則のレビュー。 </td>
 </tr>
 <tr>
-<td><strong>I could see the direction and policy to move forward</strong></td>
-<td><a href="https://mind-upload.com/issue.html#proposal-integration">Proposals</a></td>
-<td>Suggestions, stream organization, evidence links. </td>
+<td><strong>I 進むべき方向性と方針が見えました</strong></td>
+<td><a href="https://mind-upload.com/issue.html#proposal-integration">提案</a></td>
+<td>提案、ストリーム構成、証拠リンク。 </td>
 </tr>
 <tr>
-<td><strong>I can now see changes that can be fixed in this repository</strong></td>
-<td><a href="https://mind-upload.com/issue.html">Issue</a></td>
-<td>Execution task, advance condition, refutation condition, modification position. </td>
+<td><strong>I このリポジトリで修正できる変更を確認できるようになりました</strong></td>
+<td><a href="https://mind-upload.com/issue.html">問題</a></td>
+<td>実行タスク、進行条件、反駁条件、修正位置。 </td>
 </tr>
 <tr>
-<td><strong>I realized that external collaboration and systems were necessary</strong></td>
-<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
-<td>External dependent tasks, in-house preparations, minimum deliverables. </td>
+<td><strong>I 外部の協力とシステムが必要であると認識した</strong></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">コラボレーション</a></td>
+<td>外部に依存するタスク、社内での準備、最小限の成果物。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>How to tell where to put it back</h2>
+<h2>元に戻す場所の見分け方</h2>
 <table>
 <thead>
 <tr>
-<th>Things to distinguish</th>
-<th>How to judge</th>
+<th>見分けるポイント</th>
+<th></th>の判断方法
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Literature organization or proposal</strong></td>
-<td>If you want to organize ``what has been learned,'' you should organize the literature, and if you want to show ``how to proceed,'' you should make a proposal. </td>
+<td><strong>文学組織または提案</strong></td>
+<td>「`what has been learned,'' you should organize the literature, and if you want to show `をどう進めていくか」を整理したい場合は、提案を行う必要があります。 </td>
 </tr>
 <tr>
-<td><strong>Suggestion or Issue</strong></td>
-<td>If it's a change that can be fixed in this repository right now, it's an issue, and if it's still in the planning stage, it's a suggestion. </td>
+<td><strong>提案または問題</strong></td>
+<td>このリポジトリで今すぐ修正できる変更であれば、それは問題であり、まだ計画段階にある場合は提案です。 </td>
 </tr>
 <tr>
-<td><strong>Issue or Collaborations</strong></td>
-<td>If you need a partner, an IRB, equipment, or a contract, call Collaborations, and if you can do without them, call Issues. </td>
+<td><strong>発行またはコラボレーション</strong></td>
+<td>パートナー、治験審査委員会、機器、または契約が必要な場合は、コラボレーションに電話してください。それらがなくても大丈夫な場合は、問題に電話してください。 </td>
 </tr>
 <tr>
-<td><strong>Public page or wiki</strong></td>
-<td>If you want to show the main points and what is known/unknown, use the public page, and if you want to learn from the basics, use the wiki. </td>
+<td><strong>公開ページまたはウィキ</strong></td>
+<td>要点や既知・未知を示したい場合は公開ページを、基礎から学びたい場合はWikiをご利用ください。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Common examples</h2>
+<h2>よくある例</h2>
 <table>
 <thead>
 <tr>
-<th>Scene</th>
-<th>Back to</th>
-<th>Reason</th>
+<th>シーン</th>
+<th></th>に戻る
+<th>理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I found a new EEG paper</strong></td>
-<td><a href="https://mind-upload.com/research_harvest_50.html">Research Harvest</a></td>
-<td>If you don't first sort out which U will be effective, it will tend to be scattered among proposals and issues. </td>
+<td><strong>I 新しい脳波検査の論文を見つけました</strong></td>
+<td><a href="https://mind-upload.com/research_harvest_50.html">リサーチハーベスト</a></td>
+<td>まずどのUが有効なのかを整理しておかないと、提案や課題に分散してしまいがちです。 </td>
 </tr>
 <tr>
-<td><strong>After reading Perspective, I was concerned about the weaknesses of the theory</strong></td>
-<td><a href="https://mind-upload.com/perspective.html">Perspective</a> / <a href="https://mind-upload.com/perspective.html#design-principles">Idea</a></td>
-<td>It is better to leave it as a theoretical arrangement first, so that the premises of the proposal and implementation are less likely to deviate. </td>
+<td><strong>Perspectiveを読んだ後、理論の弱点が気になりました</strong></td>
+<td><a href="https://mind-upload.com/perspective.html">パースペクティブ</a> / <a href="https://mind-upload.com/perspective.html#design-principles">アイデア</a></td>
+<td>最初は理論的な整理として残しておくほうが、提案と実装の前提が逸脱しにくくなります。 </td>
 </tr>
 <tr>
-<td><strong>After reading the Proposals, I saw a deficiency that could be fixed immediately</strong></td>
-<td><a href="https://mind-upload.com/issue.html">Issue</a></td>
-<td>This is the stage from organizing proposals to specific revisions and completion conditions. </td>
+<td><strong>提案書を読んだ後、すぐに修正できる欠陥が見つかりました</strong></td>
+<td><a href="https://mind-upload.com/issue.html">問題</a></td>
+<td>提案書の整理から具体的な修正、完成条件までの段階です。 </td>
 </tr>
 <tr>
-<td><strong>When I tried to write an issue, there were too many external dependencies</strong></td>
-<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
-<td>This is because internal changes and external dependencies need to be separated. </td>
+<td><strong>問題を書こうとしたとき、外部依存関係が多すぎました</strong></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">コラボレーション</a></td>
+<td>これは、内部の変更と外部の依存関係を分離する必要があるためです。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Common ways to get lost</h2>
+<h2>よくある迷い方</h2>
 
-<h4>Mistake</h4>
+<h4>間違い</h4>
 <ul>
-<li><strong>Turn interesting literature into a proposal as it is:</strong> It is safer to return to unresolved issues and arranging issues first. </li>
-<li><strong>Write the immediate fixes on the suggestion page:</strong> It is better to separate the execution task into an issue so that it can have completion conditions. </li>
-<li><strong>Mixing external dependencies with issues:</strong> It is easy to get stuck if you do not separate internal changes and waiting for the other party. </li>
-<li><strong>Add all background information to the public page:</strong> It is better to post detailed explanations from the beginning to the wiki to maintain the entry point. </li>
+<li><strong>興味のある文献をそのまま提案書にする：</strong> 未解決の課題に戻り、課題を整理してから行うほうが安全です。 </li>
+<li><strong>提案ページに即時修正を書き込みます:</strong> 完了条件を設定できるように、実行タスクを課題に分割することをお勧めします。 </li>
+<li><strong>外部依存関係と問題の混在:</strong> 内部の変更と相手を待つことを区別しないと行き詰まりやすくなります。 </li>
+<li><strong>すべての背景情報を公開ページに追加します:</strong> エントリ ポイントを維持するために、最初からの詳細な説明を Wiki に投稿することをお勧めします。 </li>
 </ul>
 
-<h2>Where to return next</h2>
+<h2>次に戻る場所</h2>
 <p>
-If you want to go back to the differences in the roles of pages, go back to <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/facts-hypotheses-proposals-and-tasks">Differences between facts, hypotheses, proposals, and execution tasks</a>, go back to deciding where to put it <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics">Basics of deciding where to put new information</a>, go back to the next page path for participation <a Please use href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes">Five paths to follow after participation/collaboration page</a>.
+ページの役割の違いに戻りたい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/facts-hypotheses-proposals-and-tasks">事実、仮説、提案、実行タスクの違い</a>、掲載場所の決定に戻る<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics">新しい情報を掲載する場所を決める基本</a>、次のページに戻る参加のための道筋<a Please use href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes">参加・連携後にたどるべき5つの道筋ページ</a>をご覧ください。
 </p>

@@ -1,108 +1,107 @@
 ---
 layout: default
-title: "Wiki: U8-1 closed-loop delay-tolerance route packet"
-description: "Why U8-1 is the next bounded closed-loop route outside the current public six, why D20 stays the cleanest public-open anchor, and what the first safety artifact can honestly close."
-article_type: Wiki
-subtitle: "A next-watch closed-loop packet outside the current public six"
-author: Mind Uploading Research Project
-last_updated: "2026-04-04"
-note: "U8-1 route packet (updated with phase-targeting estimability sync)"
-audience: "Readers who want one bounded closed-loop route outside the current six without widening the public claim surface"
-reading_time: "8-12 minutes"
-page_intro: "This page records one narrow next-watch route outside the current public six at the level of one question, one public-open closed-loop anchor, one bounded first artifact, and one funding bridge."
-accuracy_note: "This page does not change the active public six-question batch. It only records what the present U8-1 closed-loop route can honestly close first."
+title: 'Wiki: U8-1 閉ループ遅延耐性ルート パケット'
+description: U8-1 が現在のパブリック 6 以外の次の有界閉ループ ルートである理由、D20 が最もクリーンなパブリック オープン アンカーであり続ける理由、および最初の安全アーティファクトが正直に閉じることができるものは何か。
+article_type: ウィキ
+subtitle: 現在のパブリック 6 の外側にある次回監視の閉ループ パケット
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-04-04'
+note: U8-1 ルート パケット (フェーズ ターゲティング推定可能性同期で更新)
+audience: 公開請求範囲を広げることなく、現在の 6 つのルート以外の 1 つの有界閉ループ ルートを望んでいる読者
+reading_time: 8～12分
+page_intro: このページには、1 つの質問のレベルで現在のパブリック 6 の外側にある 1 つの狭い次の注目ルート、1 つのパブリックオープン閉ループアンカー、1 つの有界最初のアーティファクト、および 1 つのファンディングブリッジが記録されます。
+accuracy_note: このページでは、アクティブな公開 6 つの質問のバッチは変更されません。現在の U8-1 閉ループ ルートが最初に正直に閉じることができるものだけを記録します。
 wiki_links:
-  - label: "Wiki: Current public six route brief"
-    url: "/wiki/mind-upload-current-public-six-rq-brief.html"
-    description: "The compact six-row public route that still stays unchanged."
-  - label: "Wiki: Closed loop, delay, jitter, safe stop"
-    url: "/wiki/closed-loop-latency-jitter-and-safety-stops.html"
-    description: "The timing, safety-stop, and co-adaptation page that now makes this row readable more narrowly."
-  - label: "Wiki: Deep focus notes"
-    url: "/wiki/mind-upload-rq60-deep-focus-notes.html"
-    description: "The wider working note for all current practical rows."
-  - label: "Wiki: Grant and dataset playbook"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "The fixed funding and anchor map."
+- label: 'Wiki: 現在公開されている 6 つのルート概要'
+  url: /wiki/mind-upload-current-public-six-rq-brief.html
+  description: 今も変わらぬコンパクトな6列パブリックルート。
+- label: 'Wiki: 閉ループ、遅延、ジッター、安全停止'
+  url: /wiki/closed-loop-latency-jitter-and-safety-stops.html
+  description: タイミング、安全停止、および相互適応のページにより、この行がより狭く読み取れるようになりました。
+- label: 'Wiki: ディープ フォーカス ノート'
+  url: /wiki/mind-upload-rq60-deep-focus-notes.html
+  description: 現在のすべての実用的な行のより広い作業メモ。
+- label: 'Wiki: 助成金とデータセットのプレイブック'
+  url: /wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html
+  description: 固定資金とアンカーマップ。
 recommended_pages:
-  - label: "Issue page"
-    url: "/issue.html"
-  - label: "Data & Bench"
-    url: "/datasets.html"
+- label: 発行ページ
+  url: /issue.html
+- label: データとベンチ
+  url: /datasets.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
-# U8-1 closed-loop delay-tolerance route packet
+# U8-1 閉ループ遅延耐性ルート パケット
 
-This page does not change the current public six-question batch. It records one narrow route just outside that batch, so readers can see why `U8-1` is the next bounded closed-loop route to deepen, why `D20` stays the cleanest public-open first anchor for that row, and what the first public-safe artifact can honestly close.
+このページでは、現在の公開されている 6 つの質問のバッチは変更されません。このバッチのすぐ外側にある 1 つの狭いルートが記録されているため、読者は、`U8-1` が次に深化する有界閉ループ ルートである理由、`D20` がその行の最もクリーンなパブリック オープンの最初のアンカーであり続ける理由、および最初のパブリック セーフ アーティファクトが正直に閉じることができるものを理解することができます。
 
-## What was rechecked for this row
+## この行で再チェックされた内容
 
-- `D20 Closed-loop auditory stimulation targeting REM oscillations` still remains the cleanest public-open first anchor for `U8-1`, because it is already a real REM phase-targeting family with explicit estimability, targeting, and stop-intervention failure modes rather than a generic offline benchmark.
-- `D21 NeuroSimo: closed-loop EEG/EMG-guided TMS` remains the strongest support family once the row needs an explicit trigger / stop / recovery cross-check in a second intervention setting.
-- `D12 Longitudinal MI-BCI training with transcutaneous spinal stimulation` remains a useful support family for durability and retraining burden, but it still fits `U8-6` more directly than the first `U8-1` packet.
-- The refreshed `closed-loop latency / jitter / safe stop` page now keeps timing, phase-targeting estimability, co-adaptation, rescue-mode recalibration, and body/environment incompleteness separate, which makes `U8-1` readable as a bounded operations packet rather than as a universal latency claim.
-- The current public six-question batch still stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
-- The practical funding bridge for this row is still watch-only rather than a current public-six route: `Japan Industrial Science Research Institute research grant` and `Nakatani Foundation research grant` remain the cleanest fits, and existing Todoist watch tasks already cover both lanes.
+- `D20 Closed-loop auditory stimulation targeting REM oscillations` は、一般的なオフライン ベンチマークではなく、明示的な推定可能性、ターゲティング、および介入停止障害モードを備えた実際の REM フェーズ ターゲティング ファミリであるため、依然として `U8-1` の最もクリーンなパブリック オープンの最初のアンカーであり続けています。
+- `D21 NeuroSimo: closed-loop EEG/EMG-guided TMS` は、行が 2 番目の介入設定で明示的なトリガー / 停止 / リカバリのクロスチェックを必要とする場合でも、最も強力なサポート ファミリであり続けます。
+- `D12 Longitudinal MI-BCI training with transcutaneous spinal stimulation` は耐久性と再トレーニングの負担の面で依然として有用なサポート ファミリですが、それでも最初の `U8-1` パケットよりも `U8-6` に直接適合します。
+- 更新された `closed-loop latency / jitter / safe stop` ページでは、タイミング、位相ターゲティングの推定可能性、共適応、レスキュー モードの再キャリブレーション、および本体/環境の不完全性が分離されるようになりました。これにより、`U8-1` がユニバーサル レイテンシの要求としてではなく、制限された操作パケットとして読み取れるようになりました。
+- 現在公開されている 6 つの質問のバッチは、`U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2` のままです。
+- この列の実際的な資金調達ブリッジは、現在のパブリック 6 ルートではなく、依然としてウォッチ専用です。`Japan Industrial Science Research Institute research grant` と `Nakatani Foundation research grant` が依然として最もクリーンに適合しており、既存の Todoist ウォッチ タスクはすでに両方のレーンをカバーしています。
 
-## Why `U8-1` is the next bounded closed-loop route outside the current six
+## `U8-1` が現在の 6 つのルート以外の次の有界閉ループ ルートである理由
 
-- It is a `B` row: the useful first claim is still real, but it must stay explicitly bounded and must keep external dependencies visible.
-- It is control-and-safety-first: the first artifact is a `closed-loop safety KPI dashboard`, not a claim that one timing number already solves closed-loop stability.
-- It extends the outside-current-six route without widening the public claim surface. `U7-1` fixes synchronization discipline, `U1-2` fixes inverse-estimation uncertainty, `U4-2` fixes a narrow intervention rule, and `U8-1` fixes the delay-tolerance and safety-stop boundary for one named loop family.
+- これは `B` 行です。最初の有用なクレームは依然として現実ですが、明示的に制限されたままにし、外部依存関係を可視にしておく必要があります。
+- それは制御と安全第一です。最初のアーチファクトは `closed-loop safety KPI dashboard` であり、1 つのタイミング数値がすでに閉ループの安定性を解決しているという主張ではありません。
+- これは、公的な主張範囲を広げることなく、外側の現行 6 ルートを拡張します。 `U7-1` は同期規律を修正し、`U1-2` は逆推定の不確実性を修正し、`U4-2` は狭い介入ルールを修正し、`U8-1` は 1 つの名前付きループ ファミリの遅延許容範囲と安全停止境界を修正します。
 
-## Why `D20` stays the main public-open anchor
+## `D20` がパブリックオープンのメインアンカーであり続ける理由
 
-| Candidate | What it helps with | Why it is not the first public anchor |
+| 候補者 | 何に役立つのか | なぜこれが最初の公共アンカーではないのか |
 |---|---|---|
-| `D20 Closed-loop auditory stimulation targeting REM oscillations` (`10.5281/zenodo.10663994`, immediate) | It is already a named REM phase-targeting family, so it is the shortest route to a bounded `stability rate / stop-intervention rate / recovery time` dashboard plus a disclosed `phase-targeting log` instead of a generic timing story. | None in this run. It is the cleanest public-open first anchor for `U8-1`. |
-| `D21 NeuroSimo: closed-loop EEG/EMG-guided TMS` (`10.5281/zenodo.14398633`, immediate) | It is the strongest nearby support family when the row needs an explicit trigger / intervention / recovery cross-check in a second closed-loop setting. | It is more protocol-specific and intervention-heavy than the first delay-tolerance packet needs. |
-| `D12 Longitudinal MI-BCI training with transcutaneous spinal stimulation` (`10.5281/zenodo.15454354`, immediate) | It is useful once the row has to connect delay tolerance to fixed-decoder durability and retraining burden. | It fits `U8-6` more directly than the first `U8-1` packet, so it stays support rather than primary. |
+| `D20 Closed-loop auditory stimulation targeting REM oscillations` (`10.5281/zenodo.10663994`、即時) | これはすでに名前付き REM フェーズ ターゲティング ファミリであるため、一般的なタイミング ストーリーではなく、制限された `stability rate / stop-intervention rate / recovery time` ダッシュボードと公開された `phase-targeting log` への最短ルートです。 | 今回の実行では何もありませんでした。 `U8-1` の最もクリーンな公開初のアンカーです。 |
+| `D21 NeuroSimo: closed-loop EEG/EMG-guided TMS` (`10.5281/zenodo.14398633`、即時) | 行が 2 番目の閉ループ設定で明示的なトリガー/介入/回復のクロスチェックを必要とする場合、これは最も強力な近隣サポート ファミリーです。 | これは、最初の遅延耐性パケットが必要とするものよりもプロトコル固有であり、介入が多くなります。 |
+| `D12 Longitudinal MI-BCI training with transcutaneous spinal stimulation` (`10.5281/zenodo.15454354`、即時) | これは、行の遅延許容度を固定デコーダーの耐久性と再トレーニングの負担に結び付ける必要がある場合に役立ちます。 | 最初の `U8-1` パケットよりも `U8-6` に直接適合するため、プライマリではなくサポートのままになります。 |
 
 <div class="note-box">
-<strong>Why `D20` cannot stay a delay-only anchor</strong>
+<strong>`D20` が遅延のみのアンカーであり続けることができない理由</strong>
 <p>
-`D20` is not merely a generic fast-loop dataset. The linked REM paper, <a href="https://doi.org/10.1093/sleep/zsae193" target="_blank">Jaramillo et al. (2024)</a>, delivered auditory stimulation phase-locked to alpha or theta oscillations during REM sleep and reported <strong>phase-dependent power and frequency changes</strong>. That makes the route scientifically narrower and stricter than a generic latency packet. <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> showed that meaningful real-time phase estimation itself degrades when oscillatory amplitude and SNR are low. <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">Gordon et al. (2021)</a> showed that prefrontal theta-triggered stimulation needed additional constraints to avoid low-amplitude and phase-reset epochs. <a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigu&eacute;-Guix et al. (2022)</a> showed that reliable trial-to-trial alpha phase locking still did not yield a consistent behavioral gain. <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">Kim et al. (2023)</a> showed across public datasets that prediction quality improves primarily with higher power and SNR and with waiting for eligible epochs. <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland et al. (2025)</a> then showed within-session fluctuation and low test-retest reliability of the optimal mu-phase. Therefore, the first public-safe artifact for `U8-1` cannot remain a <strong>delay-only dashboard</strong>. It also needs a <strong>phase-targeting log</strong> that keeps estimability, targeting accuracy, downstream effect, and phase-stability separate.
+`D20` は、単なる一般的な高速ループ データセットではありません。リンクされた REM 論文、<a href="https://doi.org/10.1093/sleep/zsae193" target="_blank">Jaramillo et al. (2024) </a> は、レム睡眠中にアルファまたはシータ振動に位相ロックされた聴覚刺激を提供し、<strong> 位相依存の電力と周波数の変化を報告しました </strong>。これにより、ルートは一般的な遅延パケットよりも科学的に狭くなり、より厳密になります。 <a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrennerら(2020)</a> は、振動振幅と SNR が低い場合、意味のあるリアルタイム位相推定自体が低下することを示しました。 <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">ゴードンら(2021) </a> は、前頭前部シータ誘発刺激には、低振幅および位相リセット エポックを回避するために追加の制約が必要であることを示しました。 <a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigu'-Guix et al. (2022) </a> は、信頼性の高い試験間のアルファ位相ロックが依然として一貫した行動の向上をもたらさないことを示しました。 <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">キムら。 (2023) </a> は、公開データセット全体で、主にパワーと SNR が高く、適格なエポックを待つことで予測品質が向上することを示しました。 <a href="https://doi.org/10.1016/j.brs.2025.09.019" target="_blank">Hougland 他(2025)</a> はその後、最適ミューフェーズのセッション内変動とテスト再テストの信頼性が低いことを示しました。したがって、`U8-1` の最初のパブリック セーフ アーティファクトは、<strong> 遅延のみのダッシュボード</strong> のままにすることはできません。また、推定可能性、ターゲティング精度、下流効果、および位相安定性を分離して維持する <strong> 位相ターゲティング log</strong> も必要です。
 </p>
 </div>
 
-| `Phase-targeting field` | What the packet now has to say explicitly | What goes wrong if omitted |
+| `Phase-targeting field` | パケットが明示的に伝えなければならないこと | 省略すると何が問題になるのか |
 |---|---|---|
-| `Oscillation gate` | Which band, channel / spatial filter, power / SNR threshold, phase-reset rejection, and no-stim or missed-trigger rate defined an eligible REM epoch. | A fast trigger is overread as if the target oscillation had actually been estimable throughout the session. |
-| `Targeting metric` | Which circular phase-error metric, off-target comparator, and causal-versus-post-hoc benchmark were used under the disclosed REM protocol. | Low mean latency is mistaken for correct phase targeting. |
-| `Downstream effect` | Which outcome changed: power, frequency, physiology, behavior, or none, and on what time window. | Targeting success is silently promoted to physiological or behavioral efficacy. |
-| `Stability policy` | Whether the preferred phase stayed fixed, drifted, or was updated within or across sessions, and how abstention was handled when the target weakened. | One locally useful phase is overread as a stable controller across the whole route. |
+| `Oscillation gate` | どの帯域、チャネル/空間フィルタ、パワー/SNR しきい値、フェーズ リセット除去、およびノー​​ スティムまたはミス トリガー レートが適格な REM エポックを定義します。 | 高速トリガーは、あたかもターゲットの発振がセッション全体を通じて実際に推定可能であったかのようにオーバーリードされます。 |
+| `Targeting metric` | 開示された REM プロトコルの下で使用された循環位相エラー メトリック、オフターゲット コンパレータ、および因果ベンチマークとポストホック ベンチマークはどれですか。 | 平均レイテンシーが低いと、位相ターゲティングが正しいと誤解されます。 |
+| `Downstream effect` | どの結果が変化したか: 出力、周波数、生理機能、行動、または何も変化しなかった。また、どのような時間枠で変化したか。 | ターゲティングの成功は、生理学的または行動的な有効性を静かに促進します。 |
+| `Stability policy` | 優先フェーズが固定されたままであるか、変動するか、セッション内またはセッション間で更新されるかどうか、およびターゲットが弱まったときに棄権がどのように処理されるか。 | ローカルで役立つ 1 つのフェーズは、ルート全体にわたる安定したコントローラーとしてオーバーリードされます。 |
 
-## What the first artifact can honestly close now
+## 最初のアーティファクトが今正直に閉じることができるもの
 
-| Artifact piece | What it closes now | What still stays outside the claim |
+| アーティファクトの欠片 | 今閉店しているもの | まだ主張の範囲外にあるもの |
 |---|---|---|
-| `Closed-loop safety KPI dashboard` | A bounded dashboard that fixes `stability rate`, `stop-intervention rate`, `recovery time`, and declared end-to-end timing percentiles for one named loop family under one disclosed protocol. | Any statement that one dashboard already gives a universal closed-loop threshold across loop types. |
-| `Phase-targeting log` | A bounded log that fixes `oscillation gate`, `no-stim / missed-trigger rate`, `circular phase error`, `off-target comparator`, and `effect readout` for the present REM targeting protocol. | Any statement that a fast loop or a low average phase error already proves reliable phase-specific control or stable downstream benefit. |
-| `Delay-tolerance band note` | A narrow rule for which timing deterioration begins to break the present loop class under the present protocol, oscillation gate, and stop logic. | Any statement that a single ms threshold generalizes across neurofeedback, P300 control, speech BCI, phase-targeting, and chronic adaptive stimulation. |
-| `Downgrade-rule note` | A public-safe rule that keeps the row at a local-controller result whenever stability drops below the predeclared floor or recovery time drifts beyond the operating band. | Any interpretation that a fast or stable local loop is automatically boundary-complete, fixed-decoder durable, chronically deployable, or identity-relevant. |
+| `Closed-loop safety KPI dashboard` | 1 つの開示されたプロトコルの下で 1 つの名前付きループ ファミリの `stability rate`、`stop-intervention rate`、`recovery time`、および宣言されたエンドツーエンド タイミング パーセンタイルを修正する、境界付きダッシュボード。 | 1 つのダッシュボードがループ タイプ全体に共通の閉ループしきい値をすでに提供しているというステートメント。 |
+| `Phase-targeting log` | 現在の REM ターゲティング プロトコルの `oscillation gate`、`no-stim / missed-trigger rate`、`circular phase error`、`off-target comparator`、および `effect readout` を修正する制限付きログ。 | 高速ループまたは低い平均位相誤差は、信頼性の高い位相固有の制御または安定したダウンストリームの利点をすでに証明しています。 |
+| `Delay-tolerance band note` | 現在のプロトコル、発振ゲート、および停止ロジックの下で、タイミング劣化が現在のループ クラスを破壊し始める狭いルール。 | 単一の ms 閾値がニューロフィードバック、P300 制御、音声 BCI、位相ターゲティング、および慢性適応刺激全体にわたって一般化するという記述。 |
+| `Downgrade-rule note` | 安定性が事前に宣言された下限を下回るか、回復時間が動作帯域を超えてドリフトするたびに、行をローカル コントローラーの結果に維持するパブリック セーフ ルール。 | 高速または安定したローカル ループは、自動的に境界が完了し、固定デコーダの耐久性があり、慢性的に展開可能、またはアイデンティティ関連であるという解釈。 |
 
-## Funding wording that still fits
+## まだ適切な資金調達の文言
 
-| Route | Submission wording that stays honest | Why it still fits this row |
+| ルート | 正直さを保つ提出文言 | それでもこの行に適合する理由 |
 |---|---|---|
-| `Japan Industrial Science Research Institute research grant` (`watch`) | `Operational delay-tolerance and safety-stop dashboard for closed-loop EEG control in the mind-upload route` | The row reads naturally as an engineering-style operations and safety package rather than as a stronger neuroscience or mind-preservation claim. |
-| `Nakatani Foundation research grant` (`next-cycle watch`) | `Control-theoretic delay-tolerance benchmark for closed-loop EEG safety and retraining boundaries` | It still fits as a bounded BME-facing validation package, but only as a watch route because the current cycle is closed. |
+| `Japan Industrial Science Research Institute research grant`(`watch`) | `Operational delay-tolerance and safety-stop dashboard for closed-loop EEG control in the mind-upload route` | この行は、より強力な神経科学や精神の保存の主張としてではなく、エンジニアリングスタイルの運用と安全のパッケージとして自然に読み取れます。 |
+| `Nakatani Foundation research grant`(`next-cycle watch`) | `Control-theoretic delay-tolerance benchmark for closed-loop EEG safety and retraining boundaries` | これは、制限された BME 向け検証パッケージとしては依然として適合しますが、現在のサイクルが閉じられているため、監視ルートとしてのみ適合します。 |
 
-## External dependency tasks that stay outside this session
+## このセッションの外にある外部依存タスク
 
-- Generalization across loop classes still remains outside the present packet.
-- Phase-targeting estimability, downstream effect, and preferred-phase stability still remain separate evidence objects even inside the current REM family.
-- Fixed-decoder durability, rescue-mode recalibration burden, and clinic/home transfer still remain separate evidence objects rather than completed claims of this row.
-- Any interpretation that one closed-loop timing result proves a boundary-complete controller, a stable preserved self, or a deployable WBE loop remains outside the present route.
+- ループ クラス間の一般化は、依然として現在のパケットの範囲外にあります。
+- 位相ターゲティングの推定可能性、下流効果、および優先位相の安定性は、現在の REM ファミリ内であっても依然として別個の証拠オブジェクトのままです。
+- 固定デコーダの耐久性、レスキューモードの再調整負担、診療所/自宅への移動は、この行の完了した主張ではなく、依然として別個の証拠オブジェクトのままです。
+- 1 つの閉ループ タイミング結果が、境界完全なコントローラー、安定して保存された自己、または展開可能な WBE ループを証明するという解釈は、現在のルートの外側に残ります。
 
-## What changed in this run
+## 今回の実行で変わったこと
 
-- The public batch did not change.
-- The main change is that `U8-1` now has a public packet that records the cleanest public-open anchor, the first safety artifact, and the watch-level funding bridge after the closed-loop timing page was strengthened.
-- This remains a route-setting update, not a solved-claim update.
+- パブリックバッチは変更されませんでした。
+- 主な変更点は、閉ループ タイミング ページが強化された後、`U8-1` に最もクリーンなパブリック オープン アンカー、最初の安全性アーティファクト、および監視レベルの資金ブリッジを記録するパブリック パケットが追加されたことです。
+- これはルート設定の更新であり、解決済みのクレームの更新ではありません。
 
 </article>
 </main>

@@ -1,158 +1,158 @@
-# Wiki: Distinguishing between what to do first in-house and external dependencies
+# Wiki: 最初に行うべき社内依存関係と外部依存関係の区別
 
-> Breaking down the work that looks like 'waiting for the other person' into preparation work
+> 「相手を待つ」ように見える作業を準備作業に分解する
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-14 / Role: Operational guide
+- Updated: 2026-03-14 / Role: 操作ガイド
 
-## Role Of This Page
-This page is an auxiliary page for reading the ``external dependencies'' that come up many times in the operation of Mind-Upload, not as a reason to stop, but as a target for decomposition.The focus here is to distinguish between things that can be created first with this repository and things that require a partner or system.
+## このページの役割
+このページは、Mind-Upload の運用で何度も出てくる「外部依存関係」を、停止理由ではなく分解対象として読むための補助ページです。ここでの焦点は、このリポジトリで最初に作成できるものと、パートナーやシステムが必要なものとを区別することです。
 
-## Accuracy Notes
-This page is an aid to help separate the work. This page alone cannot guarantee that an actual agreement, contract, IRB, or equipment use will be established.
+## 正確性に関する注記
+このページは、作業を分離するのに役立ちます。このページだけでは、実際の契約、契約、治験審査委員会、または機器の使用が確立されることを保証するものではありません。
 
-## Back To Public Pages
-- [Contribution Guide](https://mind-upload.com/issue.html)
-- [Collaboration candidate](https://mind-upload.com/issue.html#external-collaboration)
-- [Verification base](https://mind-upload.com/verification.html)
+## 公開ページへ戻る
+- [貢献ガイド](https://mind-upload.com/issue.html)
+- [連携候補者](https://mind-upload.com/issue.html#external-collaboration)
+- [検証ベース](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
-- [Wiki: How to read suggestions and state labels](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading) - We will first sort out the differences in stages such as proposals, document reflection, and external dependencies.
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Explains why requirements specifications and judgment conditions are created first.
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other auxiliary pages.
+## 関連 Wiki ページ
+- [Wiki: 提案と状態ラベルの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading) - まずは提案、文書反映、外部依存などの段階での違いを整理していきます。
+- [Wiki: 検証インフラストラクチャの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 要件仕様書と判定条件を最初に作成する理由を説明します。
+- [ウィキホーム](https://github.com/yasufumi-nakata/mind-upload/wiki) - 他の補助ページに戻ることができます。
 
-## What Is Currently Known
-- Even for externally dependent tasks, requirements specifications, judgment conditions, public log formats, comparison tables, etc. can be created in-house first.
-- It will be easier to move forward if you organize the minimum deliverables and request details on one page before approaching the other party.
-- Whether it's an issue or a joint research project, it's important to clearly state what can be done right now.
+## 現在わかっていること
+- 外部に依存する業務であっても、要件仕様書や判定条件、公開ログフォーマット、比較表などをまず社内で作成することが可能です。
+- 相手にアプローチする前に、最低限の成果物と依頼内容を1ページに整理しておくとスムーズに進みます。
+- 課題でも共同研究でも、今何ができるかを明確にすることが大切です。
 
-## What Is Still Unknown
-- Which external candidates will actually agree and on what terms will depend on factors on the other side.
-- IRB, contract, funding, and equipment availability timing will be determined outside of this page.
+## まだわかっていないこと
+- どの外部候補者が実際に合意するか、またどのような条件で合意するかは、相手側の要因によって決まります。
+- IRB、契約、資金調達、および機器の入手可能時期は、このページの外で決定されます。
 
 ---
 
-<h2>What I would like to share first</h2>
+<h2>最初に共有したいこと</h2>
 <p>
-Externally dependent tasks are work that <strong>cannot be completed by itself. However, that doesn't mean that you can't do anything<strong>for us. You can make preparations before making a request, judgment conditions, public log format, comparison table, etc. in advance.
+外部に依存するタスクは、<strong> だけでは完了できない作業です。ただし、<strong> が私たちのために何もできないというわけではありません。リクエスト前の準備や判定条件、公開ログ形式、比較表などを事前に準備できます。
 </p>
 
-<strong>When you want to decide the next page after the participation page</strong>
+<strong>参加ページの次のページを決めたい場合</strong>
 <p>
-After reading Issues and Collaborations, if you want to see in one page whether you should move on to small modifications, condition design, working from literature, or L0 implementation preparation, please see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes">Five paths to follow after participation/collaboration page</a>.
+「問題とコラボレーション」を読んだ後、小さな変更、条件設計、文献からの作業、または L0 実装の準備に進むべきかどうかを 1 ページで確認したい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes"> 参加/コラボレーション後にたどるべき 5 つのパス ページ</a> を参照してください。
 </p>
 
-<h2>Read in-house production and external dependencies in two columns</h2>
+<h2>社内プロダクションと外部の依存関係を 2 列で読み取ります</h2>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>What you can do now with this repository</th>
-<th>Becoming externally dependent</th>
+<th>タイプ</th>
+<th>このリポジトリでできること</th>
+<th>外部依存になる</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Experiment</strong></td>
-<td>You can create requirement specifications, evaluation indicators, stopping conditions, public log formats, and pre-registration drafts. </td>
-<td>IRB, subject recruitment, equipment usage, and measurement data acquisition are dependent on external parties. </td>
+<td><strong>実験</strong></td>
+<td>要求仕様書、評価指標、停止条件、公開ログフォーマット、事前登録案を作成できます。 </td>
+<td>IRB、被験者の募集、機器の使用、測定データの取得は外部関係者に依存しています。 </td>
 </tr>
 <tr>
-<td><strong>Joint research</strong></td>
-<td>You can create a one-page summary, minimum deliverables, request scope, comparison table, and reanalysis plan. </td>
-<td>Co-author agreements, contracts, partner approvals, and data sharing conditions are externally dependent. </td>
+<td><strong>共同研究</strong></td>
+<td>1ページのサマリー、最低限の成果物、リクエスト範囲、比較表、再分析計画を作成できます。 </td>
+<td>共著者契約、契約、パートナーの承認、およびデータ共有条件は外部に依存します。 </td>
 </tr>
 <tr>
-<td><strong>Standardization proposal</strong></td>
-<td>You can create specification drafts, difference tables, sample logs, and assumed use cases. </td>
-<td>Community adoption, official specification reflection, and external review are externally dependent. </td>
+<td><strong>標準化提案</strong></td>
+<td>仕様案、差分表、サンプルログ、想定ユースケースを作成できます。 </td>
+<td>コミュニティの採用、公式仕様の反映、外部レビューは外部に依存します。 </td>
 </tr>
 <tr>
-<td><strong>Funds/systems</strong></td>
-<td>You can organize the purpose, minimum scope, deliverables, and required budget. </td>
-<td>Formal decisions on adoption, budget allocation, legal decisions, and system design are externally dependent. </td>
+<td><strong>資金/制度</strong></td>
+<td>目的、最低限の範囲、成果物、必要な予算を整理できます。 </td>
+<td>採用、予算配分、法的決定、およびシステム設計に関する正式な決定は外部に依存します。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Minimum preparations that you want to make first even if there are external dependencies</h2>
+<h2>外部依存関係がある場合でも最初に行う必要がある最小限の準備</h2>
 <table>
 <thead>
 <tr>
-<th>Preparations</th>
-<th>Minimum contents</th>
-<th>Why is it necessary</th>
+<th>準備</th>
+<th>最低限の内容</th>
+<th>なぜ必要なのか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>One page summary</strong></td>
-<td>Purpose, what you want from the other person, and what you already have. </td>
-<td>This is so that the other person can quickly determine what you are talking about. </td>
+<td><strong>1 ページの概要</strong></td>
+<td>目的、相手に求めるもの、すでに持っているもの。 </td>
+<td>相手が何を言っているのかをすぐに判断できるようにするためです。 </td>
 </tr>
 <tr>
-<td><strong>Minimum deliverables</strong></td>
-<td>This definition narrows down the minimum scope to one. </td>
-<td>If the request is too large, it will be difficult to reach an initial agreement. </td>
+<td><strong>最小納品物</strong></td>
+<td>この定義では、最小範囲が 1 つに絞り込まれます。 </td>
+<td>ご要望が大きすぎる場合、初期合意に達することが困難になります。 </td>
 </tr>
 <tr>
-<td><strong>Judgment conditions</strong></td>
-<td>What should we do to move forward? What should we put on hold? What should we do to fail? </td>
-<td>This is to prevent the goal from shifting as the story progresses. </td>
+<td><strong>判定条件</strong></td>
+<td>前に進むにはどうすればいいですか？何を保留すべきでしょうか？失敗するにはどうすればいいでしょうか？ </td>
+<td>ストーリーの進行に伴って目的が移動するのを防ぐためです。 </td>
 </tr>
 <tr>
-<td><strong>Publishable preparation</strong></td>
-<td>Specification draft, QC log example, comparison table, BIDS template, checklist. </td>
-<td>This is because it makes it easier to show how serious you are and how specific you are. </td>
+<td><strong>出版準備</strong></td>
+<td>仕様案、QCログ例、比較表、BIDSテンプレート、チェックリスト。 </td>
+<td>本気度や具体性が伝わりやすいからです。 </td>
 </tr>
 <tr>
-<td><strong>External dependency boundaries</strong></td>
-<td>Who needs to make decisions regarding IRB, equipment, contracts, legal matters, approval of the other party, etc.? </td>
-<td>This is to avoid confusing immediate work with waiting work. </td>
+<td><strong>外部依存関係の境界</strong></td>
+<td>治験審査委員会、設備、契約、法的事項、相手方の承認などの意思決定は誰が行う必要がありますか？ </td>
+<td>これは、即時作業と待機中の作業を混同しないようにするためです。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Slight differences between issues and collaborative research</h2>
+<h2>課題と共同研究のわずかな違い</h2>
 <table>
 <thead>
 <tr>
-<th>Scene</th>
-<th>What I want to fix first</th>
-<th>Things that become external dependencies</th>
+<th>シーン</th>
+<th>まず直したいところ</th>
+<th>外部依存関係となるもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>When creating an issue</strong></td>
-<td>Where you stopped, what you lacked, conditions for progress, and conditions for disproving. </td>
-<td>If we need experiments or legal matters, we will cut it out as a separate track. </td>
+<td><strong>問題を作成するとき</strong></td>
+<td>どこで止まったのか、何が足りなかったのか、進歩の条件、そして反証の条件。 </td>
+<td>実験や法務が必要な場合は別トラックとして切り出します。 </td>
 </tr>
 <tr>
-<td><strong>When looking at joint research candidates</strong></td>
-<td>The scope of what you want to ask the other party for and the deliverables that you can produce first. </td>
-<td>Agreement, co-authorship, data usage conditions, and equipment usage remain. </td>
+<td><strong>共同研究候補を見る場合</strong></td>
+<td>相手にお願いしたいことの範囲と、最初に制作できる成果物。 </td>
+<td>契約、共著、データ使用条件、機器使用条件はそのまま残ります。 </td>
 </tr>
 <tr>
-<td><strong>When submitting a standardization proposal</strong></td>
-<td> Difference tables, samples, and points that are lacking in the current standard. </td>
-<td>Remains subject to community review and formal adoption. </td>
+<td><strong>標準化提案提出時</strong></td>
+<td> の差異表、サンプル、現行規格に不足している点。 </td>
+<td> は引き続きコミュニティのレビューと正式な採用の対象となります。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Common confusion</h2>
+<h2>よくある混乱</h2>
 
-<h4>Misread</h4>
+<h4>誤読</h4>
 <ul>
-<li><strong>"Do nothing now because it depends on external sources":</strong> Specifications, comparison tables, log formats, and minimum deliverables can be created first. </li>
-<li><strong>``It's progressing because it's written in writing'':</strong> The preliminary preparations to hand it over to the other party and the actual agreement being reached are two different things. </li>
-<li><strong>"The bigger the plan, the better":</strong> If you don't cut the minimum scope at first, neither requests nor issues will work. </li>
-<li><strong>"Treat external dependencies as complete in the main text":</strong> This should be especially avoided, and should be written separately from in-house changes that have a trail. </li>
+<li><strong>「外部ソースに依存するため、今は何もしない」:</strong> 仕様、比較表、ログ形式、最小限の成果物を最初に作成できます。 </li>
+<li><strong>「書面だから進んでいる」：</strong> 相手に引き渡すための下準備と、実際に合意が得られることは別のことです。 </li>
+<li><strong>「計画は大きければ大きいほど良い」:</strong> 最初に最低限の範囲を切り詰めないと、要望も課題もうまくいきません。 </li>
+<li><strong>「本文では外部依存関係を完全なものとして扱う」:</strong> これは特に避けるべきであり、証跡のある社内変更とは別に記述する必要があります。 </li>
 </ul>
 
-<h2>Where to return next</h2>
+<h2>次に戻る場所</h2>
 <p>
-Please return to <a href="https://mind-upload.com/issue.html">Contribution Guide</a> to return to how to write an issue, <a href="https://mind-upload.com/issue.html#external-collaboration">Collaboration Candidates</a> to organize joint research candidates, and return to <a href="https://mind-upload.com/verification.html">Verification Platform</a> to solidify requirements specifications and judgment conditions.
+課題の書き方に戻るには<a href="https://mind-upload.com/issue.html">貢献ガイド</a>に、共同研究候補者をまとめるには<a href="https://mind-upload.com/issue.html#external-collaboration">連携候補</a>に、要件仕様や判断条件を固めるには<a href="https://mind-upload.com/verification.html">検証プラットフォーム</a>に戻ってください。
 </p>

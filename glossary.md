@@ -1,1127 +1,1130 @@
 ---
 layout: default
-title: "Glossary"
-description: "A practical glossary of the terms used most often in Mind-Upload, with short explanations and links back to the main pages."
-article_type: Reference
-subtitle: "Start by keeping the words straight"
-author: Mind Uploading Research Project
-last_updated: "2026-04-04"
-note: "Living document (updated with bridge-witness, intrinsic-excitability / ionic route-card, and thermal-route sync)"
-audience: "Readers who do not want to get stuck on terminology and anyone trying to avoid category mistakes"
-reading_time: "3 to 10 minutes for only the necessary items"
-page_intro: "This page is a glossary for the terms that appear most often in Mind-Upload. It starts with short everyday-language explanations, then points you back to the more rigorous pages when needed."
-accuracy_note: "The definitions here are deliberately short. For exact usage, return to the linked page sections or original papers."
+title: 用語集
+description: Mind-Upload で最も頻繁に使用される用語の実用的な用語集。短い説明とメイン ページへのリンクが含まれています。
+article_type: 参照
+subtitle: まずは言葉をまっすぐにすることから始めましょう
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-04-04'
+note: 生きているドキュメント (ブリッジ監視、固有興奮性 / イオン ルート カード、およびサーマル ルート同期で更新)
+audience: 専門用語に行き詰まりたくない読者、およびカテゴリの間違いを避けたいと考えている人
+reading_time: 必要な項目だけで3分～10分程度
+page_intro: このページは、Mind-Upload でよく出てくる用語の用語集です。最初は短い日常用語の説明から始まり、必要に応じてより厳密なページに戻ります。
+accuracy_note: ここでの定義は意図的に短くしています。正確な使用法については、リンク先のページのセクションまたは元の論文に戻ってください。
 page_highlights:
-  - "It gives short explanations of terms and points to where each concept matters."
-  - "It now includes the front-door verification terms added in the March 2026 re-audit, such as claim ceiling, shortcut auditing, maintenance-state, and vascular-state / CVR audit."
-  - "It now also includes the human-observability and support-state terms needed after the late-March and early-April 2026 deepening passes, such as proxy class, route maturity / model burden, route role, calibrator role, support-state proxy, glial substrate-routing, target-defined astrocyte-related proxy, and macro clearance-transport proxy family."
-  - "It now also defines the newer route-card semantics added in the late-March 2026 passes, such as field-formation wall, Fusion Card, Human Proxy Composition Card, shared-driver audit, strongest single row, and State-Continuity Bridge Card."
-  - "It now also makes the effective-connectivity stop line explicit at the front door: effective-connectivity route card, observed-subsystem closure / latent-confound audit, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, reliability window, and model recovery / family comparison are no longer left implicit."
-  - "It now also makes the thermodynamic stop line explicit at the front door: coarse-graining / timescale, observed-state closure / hidden-degree risk, reverse-transition support / finite-data handling, stability / nuisance sensitivity, cross-estimator concordance, and physiology-side grounding / bridge quality are no longer left implicit."
-  - "It now also includes the temporal-bridge stop line added in the 2026-03-30 sync, namely the split between fast state labels and slow internal milieu."
-  - "It now also includes the bridge-witness split used across the newer state-continuity pages, so same-subject / same-brain labels are no longer left sounding like one generic continuity proof."
-  - "It now also includes the maintenance-side route-card split needed after the late-March and early-April 2026 front-door passes, so intrinsic excitability and ionic / chloride language no longer stay collapsed into one generic hidden-state meter."
-  - "It now also makes the thermal stop line explicit at the front door: thermal route card, field-potential thermal confound, device-heating artifact, brain-state proxy route, and passive / task-linked versus perturbation-conditioned human thermal routes are no longer left implicit."
-  - "It now also fixes tractography-specific stop-line terms such as macro pathway prior and tractography route card, so living-human connectome language is not overread."
-  - "It now also includes the electrical-state stop-line terms needed after the 2026-04-03 human-clue split, such as shared extracellular / electrical state, human ECS proxy clue, and human perturbation-conditioned clue."
-  - "It is especially careful about pairs that sound similar but should not be collapsed, such as observability / identifiability / direct validation and functional connectivity / effective connectivity / causal wiring."
-  - "If a term blocks your reading, this page is meant to get you unstuck quickly and send you back to the main text."
+- 用語の簡単な説明と、各概念が重要となる箇所を示します。
+- これには、請求限度額、ショートカット監査、メンテナンス状態、血管状態/CVR監査など、2026年3月の再監査で追加されたフロントドア検証条件が含まれています。
+- これには、プロキシクラス、ルート成熟度/モデル負荷、ルート役割、キャリブレーター役割、サポート状態プロキシ、グリア基質ルーティング、ターゲット定義アストロサイト関連プロキシ、マクロクリアランス輸送プロキシファミリーなど、2026年3月下旬から4月上旬の深化パス後に必要となる人間の観察可能性とサポート状態の条件も含まれています。
+- また、2026 年 3 月下旬のパスに追加された新しいルート カード セマンティクス (フィールド フォーメーション ウォール、フュージョン カード、ヒューマン プロキシ構成カード、共有ドライバー監査、最強の単一行、状態継続ブリッジ カードなど)
+  も定義されています。
+- また、有効な接続の停止ラインもフロントドアで明示的になりました。有効な接続のルート カード、観察されたサブシステムのクロージャ / 潜在的な交絡の監査、ノード定義ポリシー、処理 / 第 1 レベルの設計ポリシー、サンプリング / 変換の感度、信頼性ウィンドウ、およびモデルの回復
+  / ファミリの比較は暗黙的に残されなくなりました。
+- また、熱力学的停止線も正面玄関で明示的になりました。粗視化 / タイムスケール、観察された状態の閉合 / 隠れ次数リスク、逆遷移サポート / 有限データ処理、安定性 / 迷惑感度、相互推定量の一致、および生理学側の接地 / ブリッジ品質は暗黙のままではなくなりました。
+- これには、2026 年 3 月 30 日の同期で追加された一時ブリッジ停止ライン、つまり高速状態ラベルと低速内部環境の間の分割も含まれるようになりました。
+- また、新しい状態連続性ページ全体で使用されるブリッジ証人分割も含まれるようになり、同一被験者/同一脳ラベルが 1 つの一般的な連続性証明のように聞こえることはなくなりました。
+- これには、2026 年 3 月下旬と 4 月上旬のフロントドア パス後に必要となるメンテナンス側のルート カードの分割も含まれるようになりました。そのため、固有の興奮性とイオン/塩化物言語が 1 つの一般的な隠れ状態メーターにまとめられたままになることはなくなりました。
+- また、フロントドアでのサーマルストップラインも明示的になりました。サーマルルートカード、フィールドポテンシャルサーマルコンファウンド、デバイス加熱アーティファクト、脳状態プロキシルート、パッシブ/タスクリンク対摂動条件付き人間サーマルルートは、暗黙的に残されなくなりました。
+- また、マクロ経路事前やトラクトグラフィールートカードなどのトラクトグラフィー固有の停止線用語も修正されるようになり、生きている人間のコネクトーム言語が読みすぎないようになります。
+- これには、2026 年 4 月 3 日の人間と手がかりの分割後に必要とされた電気的状態の停止線条件 (共有細胞外/電気状態、人間 ECS 代理手がかり、人間摂動条件付き手がかりなど) も含まれるようになりました。
+- 可観測性 / 識別可能性 / 直接検証と機能的接続性 / 効果的な接続性 / 因果関係など、似ているように聞こえるが崩壊すべきではないペアについては特に注意が必要です。
+- 用語によって読み進めるのが妨げられている場合、このページはすぐに行き詰まりを解消し、本文に戻ってもらうことを目的としています。
 known_points:
-  - "Many misunderstandings can be avoided simply by reducing terminology confusion."
-  - "It is especially important to distinguish between decode/emulate, correlation/causation, functional connectivity/effective connectivity/causal wiring, observability/identifiability, model fit/direct validation, and brain signal/language prior."
-  - "Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, glial substrate-routing, astrocyte-state, target-defined astrocyte-related proxy, clearance / immune support, macro clearance-transport proxy family, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-role, route-maturity, and calibrator-role language."
-  - "For effective connectivity, candidate model space alone is still too coarse; observed-subsystem closure, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, model recovery, reliability window, and abstention each carry a different failure mode."
-  - "For thermodynamic language, estimator family alone is still too coarse; coarse-graining, hidden-degree risk, reverse-transition support, stability, cross-estimator concordance, physiology-side grounding, bridge quality, and abstention each carry a different failure mode."
-  - "Support-state proxy is still too coarse unless quantity type or route role is also named explicitly."
-  - "Readers also need a term-level split between fast state labels such as movement / arousal and slow internal milieu such as circadian phase, glucocorticoid exposure, and insulin / metabolic regime."
-  - "Readers also need a term-level split between same-subject / same-brain labels and the specific bridge witness being claimed, such as landmarks, latent manifolds, representational geometry, fingerprints, alignment rescue, or recalibration rescue."
-  - "Readers also need a term-level split between intrinsic-excitability route families such as allocation bias, AIS / ion-channel-state plasticity, homeostatic set point / recovery control, and bounded human proxy routes, because those do not constrain the same physiological object."
-  - "Readers also need a term-level split between ionic / chloride route families such as local chloride set point, E_GABA_A / inhibitory-driving-force regime, interstitial-ion state switching, and quantity-defined human sodium or CSF-ion proxies, because those do not raise the claim ceiling in the same way."
-  - "Readers also need a term-level split between thermal-state itself, field-potential thermal confounds, device-heating artifacts, brain-state proxy routes, and passive / task-linked versus perturbation-conditioned human thermal routes, because those do not raise the claim ceiling in the same way."
-  - "Readers also need a term-level stop line between connectome as structural scaffold and living-human tractography as an acquisition- and graph-conditioned macro pathway prior."
-  - "Readers now also need a term-level split between shared extracellular / electrical state itself, human diffusion-MRI ECS clues, and human perturbation-conditioned clues, because those do not raise the claim ceiling in the same way."
-  - "The newer route-card names are not decorative labels; they each name a distinct failure mode such as upstream visibility loss, cross-stack shared-driver risk, or broken state continuity across a sequential bridge."
-  - "This page serves as an entry point for short definitions and a way to return to the main text."
+- 多くの誤解は、用語の混乱を減らすだけで回避できます。
+- デコード/エミュレート、相関/因果関係、機能的接続/効果的な接続/因果配線、観察可能性/識別可能性、モデル適合/直接検証、脳信号/事前言語を区別することが特に重要です。
+- 読者は、隠れ状態、ショートカット ルート、メンテナンス状態、転写後 RNA 状態、リン酸シグナル伝達 / セカンド メッセンジャー状態、グリア基質ルーティング、アストロ サイト状態、ターゲット定義アストロ サイト関連プロキシ、クリアランス
+  / 免疫サポート、マクロ クリアランス輸送プロキシ ファミリー、貨物輸送状態、熱状態、タイミング状態、血管状態、プロキシクラス、ルートロール、ルート成熟度、キャリブレーターロール言語。
+- 効果的な接続性を実現するには、候補モデル空間だけではまだ粗すぎます。観察されたサブシステムのクロージャ、ノード定義ポリシー、処理/第 1 レベルの設計ポリシー、サンプリング/変換の感度、モデルの回復、信頼性ウィンドウ、および棄権には、それぞれ異なる障害モードが伴います。
+- 熱力学言語の場合、推定器族だけではまだ粗すぎます。粗視化、隠れ次数リスク、逆遷移サポート、安定性、相互推定の一致、生理学側の接地、橋の品質、および棄権には、それぞれ異なる故障モードが伴います。
+- 数量タイプまたはルート ロールも明示的に指定しない限り、サポート状態プロキシはまだ粗すぎます。
+- また、読者は、運動/覚醒などの速い状態のラベルと、概日相、グルココルチコイド曝露、インスリン/代謝体制などの遅い内部環境とを用語レベルで分割する必要があります。
+- 読者はまた、同じ主題/同じ頭脳のラベルと、ランドマーク、潜在多様体、表現幾何学、指紋、位置合わせレスキュー、または再校正レスキューなど、主張されている特定のブリッジ証人の間で用語レベルの分割を必要とします。
+- また、読者は、割り当てバイアス、AIS / イオンチャネル状態可塑性、恒常性設定点 / 回復制御、および有界人間代理ルートなどの固有興奮性ルート ファミリ間の用語レベルの分割も必要です。これらは同じ生理学的対象を制約しないためです。
+- また、読者は、局所塩化物設定値、E_GABA_A / 抑制駆動力レジーム、間質イオン状態スイッチング、および量で定義されたヒトナトリウムまたは CSF イオンの代替物質など、イオン / 塩化物経路ファミリー間の用語レベルの分割も必要です。これらは同じ方法で請求上限を引き上げないためです。
+- また、読者は、熱状態そのもの、電界ポテンシャル熱交絡、デバイス加熱アーティファクト、脳状態プロキシ ルート、および受動的/タスクにリンクされた人間の熱ルートと摂動条件付きの人間の熱ルートの間の用語レベルの分割も必要です。これらは同じ方法でクレームの上限を引き上げないためです。
+- 読者はまた、構造的足場としてのコネクトームと、事前に取得およびグラフ条件付けされたマクロ経路としての生きたヒトのトラクトグラフィーとの間に、用語レベルの停止線を必要とします。
+- 読者は現在、共有された細胞外/電気状態自体、ヒト拡散 MRI ECS 手がかり、およびヒト摂動条件付き手がかりの間で用語レベルの分割も必要としています。これらは同様に請求の上限を引き上げないためです。
+- 新しいルートカード名は装飾的なラベルではありません。それらはそれぞれ、アップストリームの可視性の喪失、スタック間の共有ドライバーのリスク、またはシーケンシャル ブリッジ全体での壊れた状態の継続性など、個別の障害モードに名前を付けています。
+- このページは、短い定義への入り口として、また本文に戻るための手段として機能します。
 unknown_points:
-  - "Terms related to the theory of consciousness have slightly different meanings depending on the paper or position."
-  - "A short definition alone does not completely resolve the issues in research."
+- 意識理論に関連する用語は、論文や立場によって意味が若干異なります。
+- 短い定義だけでは研究の問題を完全に解決することはできません。
 wiki_links:
-  - label: "Wiki: WBE basics"
-    url: "/wiki/mind-upload-basics.html"
-    description: "The starting point if you want to see how the terms fit into the broader topic."
-  - label: "Wiki: Guide to the public pages"
-    url: "/wiki/public-page-reading-guide.html"
-    description: "Helps you decide which public page to return to after checking a term."
-  - label: "Wiki: Consciousness theory map"
-    url: "/wiki/consciousness-theory-map.html"
-    description: "A supplementary page that organizes IIT, GNWT, FEP, and PCI in one table."
-  - label: "Wiki: EEG basics"
-    url: "/wiki/eeg-basics.html"
-    description: "For readers who want EEG-related terms explained along the measurement workflow."
-  - label: "Wiki: From measurement to modeling"
-    url: "/wiki/measurement-and-modeling-terms.html"
-    description: "Organizes EEG, QC, BIDS, ESI, DCM, and SCM in one workflow."
-  - label: "Wiki: From observation to estimation"
-    url: "/wiki/observation-to-estimation.html"
-    description: "Explains inverse problems, ESI, DCM, SCM, and causal equivalence classes more carefully."
-  - label: "Wiki: Uncertainty, calibration, and abstention"
-    url: "/wiki/uncertainty-confidence-and-abstention.html"
-    description: "Explains point estimates, intervals, uncertainty propagation, and abstention under low confidence."
-  - label: "Wiki: Basics of multimodal integration"
-    url: "/wiki/multimodal-integration-basics.html"
-    description: "Clarifies the different roles of EEG, MEG, fMRI, ECoG, and MRI from the beginning."
-  - label: "Wiki: Why a Connectome Is Not Enough"
-    url: "/wiki/connectome-is-not-enough.html"
-    description: "Explains why structure-only information still leaves multiple state classes unresolved."
-  - label: "Wiki: Observability and Claim Ceiling by Measurement Stack"
-    url: "/wiki/measurement-stack-and-claim-ceiling.html"
-    description: "Explains what each stack directly observes and where the reading ceiling appears."
-  - label: "Wiki: Baselines, preregistration, and model cards"
-    url: "/wiki/baselines-prereg-and-model-cards.html"
-    description: "Explains the different roles of common research-operations terms."
-  - label: "Wiki: Thermodynamic grounding basics"
-    url: "/wiki/thermodynamic-grounding-basics.html"
-    description: "Introduces Landauer, dissipation, NESS, and EPR from the beginning."
+- label: 'Wiki: WBE の基本'
+  url: /wiki/mind-upload-basics.html
+  description: 用語がより広範なトピックにどのように適合するかを確認したい場合の出発点です。
+- label: 'Wiki: 公開ページのガイド'
+  url: /wiki/public-page-reading-guide.html
+  description: 用語を確認した後にどの公開ページに戻るかを決定するのに役立ちます。
+- label: 'Wiki: 意識理論マップ'
+  url: /wiki/consciousness-theory-map.html
+  description: IIT、GNWT、FEP、および PCI を 1 つの表にまとめた補足ページ。
+- label: 'Wiki: 脳波の基礎'
+  url: /wiki/eeg-basics.html
+  description: 測定ワークフローに沿って脳波関連用語の説明を求める読者向け。
+- label: 'Wiki: 測定からモデリングまで'
+  url: /wiki/measurement-and-modeling-terms.html
+  description: EEG、QC、BIDS、ESI、DCM、および SCM を 1 つのワークフローにまとめます。
+- label: 'Wiki: 観察から推定へ'
+  url: /wiki/observation-to-estimation.html
+  description: 逆問題、ESI、DCM、SCM、因果等価クラスについてさらに詳しく説明します。
+- label: 'Wiki: 不確実性、校正、および棄権'
+  url: /wiki/uncertainty-confidence-and-abstention.html
+  description: 点推定、間隔、不確実性の伝播、および信頼度が低い場合の棄権について説明します。
+- label: 'Wiki: マルチモーダル統合の基本'
+  url: /wiki/multimodal-integration-basics.html
+  description: EEG、MEG、fMRI、ECoG、MRI のさまざまな役割を最初から明確にします。
+- label: 'Wiki: コネクトームだけでは不十分な理由'
+  url: /wiki/connectome-is-not-enough.html
+  description: 構造のみの情報が依然として複数の状態クラスを未解決のままにする理由を説明します。
+- label: 'Wiki: 測定スタックごとの可観測性とクレームの上限'
+  url: /wiki/measurement-stack-and-claim-ceiling.html
+  description: 各スタックが直接観察するものと、読み取りの上限がどこに現れるかを説明します。
+- label: 'Wiki: ベースライン、事前登録、およびモデル カード'
+  url: /wiki/baselines-prereg-and-model-cards.html
+  description: 一般的な研究運営用語のさまざまな役割について説明します。
+- label: 'Wiki: 熱力学的接地の基本'
+  url: /wiki/thermodynamic-grounding-basics.html
+  description: Landauer、dissipation、NESS、EPRを最初から紹介します。
 recommended_pages:
-  - label: "Introduction to WBE"
-    url: "/wbe_101.html"
-  - label: "Introduction to EEG"
-    url: "/eeg_101.html"
-  - label: "FAQ"
-    url: "/faq.html"
+- label: WBE の概要
+  url: /wbe_101.html
+- label: 脳波検査の概要
+  url: /eeg_101.html
+- label: よくある質問
+  url: /faq.html
 ---
-<!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
+<!-- 重要: この情報を削除したり上書きしたりしないでください。これはプロジェクトの恒久的な知識ベースです。 -->
 
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>How To Use</h2>
+<h2>使用方法</h2>
 <p>
-This glossary is a quick reference for the meaning of terms. It starts with everyday-language explanations, moves to stricter definitions only when needed, and ties the discussion back to measurement, modeling, and verification.
+この用語集は、用語の意味を簡単に確認できるリファレンスです。日常用語の説明から始まり、必要な場合にのみより厳密な定義に移り、議論を測定、モデリング、検証に戻します。
 </p>
 </div>
 
 <div class="note-box">
-<strong>How To Use This Page</strong>
+<strong>このページの使用方法</strong>
 <p>
-There is no need to memorize every word. Check only the term that blocked you, get a rough sense of its meaning here, and then return to the original page.
+すべての単語を暗記する必要はありません。ブロックした用語のみを確認し、ここで大まかな意味を理解してから、元のページに戻ります。
 </p>
 </div>
 <div class="note-box">
-<strong>When You Are Unsure Which Page To Return To</strong>
+<strong>どのページに戻ればよいかわからない場合</strong>
 <p>
-Even after checking the terminology, you may still be unsure whether to return next to Verification, Roadmap, WBE 101, or EEG 101. If you want the role differences among the public pages first, see <a href="wiki/public-page-reading-guide.html">Wiki: Guide to the public pages</a>.
+用語を確認した後でも、次に「検証」、「ロードマップ」、「WBE 101」、または「EEG 101」のどれに戻るべきかまだわからないかもしれません。最初に公開ページ間の役割の違いが必要な場合は、<a href="wiki/public-page-reading-guide.html">Wiki: 公開ページのガイド</a> を参照してください。
 </p>
 </div>
 <div class="note-box">
-<strong>When You Want To Split Theory Pages From Practical Pages</strong>
+<strong>理論ページと実践ページを分割したい場合</strong>
 <p>
-If you want to return to theory-side pages such as WBE 101, Perspective, the framework section in Perspective, or Roadmap, use <a href="wiki/theory-pages-reading-guide.html">Wiki: Guide to the theory pages</a>. If you want to return instead to practical pages such as Verification, Datasets, or the L0 practice section in Datasets, use <a href="wiki/practical-pages-reading-guide.html">Wiki: Guide to the practical pages</a>.
+WBE 101、Perspective、Perspective のフレームワーク セクション、ロードマップなどの理論側のページに戻りたい場合は、<a href="wiki/theory-pages-reading-guide.html">Wiki: 理論ページのガイド</a> を使用してください。代わりに、検証、データセット、またはデータセットの L0 実践セクションなどの実践的なページに戻りたい場合は、<a href="wiki/practical-pages-reading-guide.html">Wiki: 実践的なページへのガイド</a> を使用してください。
 </p>
 </div>
 
 <section class="section" id="where-to-look">
-<h2 class="section-title">How to find lost words by type</h2>
+<h2 class="section-title">タイプごとに失われた単語を見つける方法</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>If you stop at these words</th>
-<th>First section to look at</th>
-<th>What you'll learn here</th>
+<th>この言葉で止めたら</th>
+<th>最初に見るセクション</th>
+<th>ここで学べること</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>"Foundation words of this site" such as Mind-Upload, WBE, and the claim ladder</td>
-<td><a href="#core">Core concepts</a></td>
-<td>You can see the site's goals and how it grades claim strength.</td>
+<td>Mind-Upload、WBE、クレームラダーなどの「このサイトの基礎用語」</td>
+<td><a href="#core">中心となる概念</a></td>
+<td>サイトの目標と、主張の強度をどのように評価するかを確認できます。</td>
 </tr>
 <tr>
-<td>Words that indicate "differences in what can be done," such as decode, emulate, and counterfactual</td>
-<td><a href="#decode-emulate">Decode and Emulate</a></td>
-<td>You can see that translating observations and running internal dynamics are different claims.</td>
+<td>デコード、エミュレート、反事実など、「できることの違い」を示す言葉</td>
+<td><a href="#decode-emulate">デコードおよびエミュレート</a></td>
+<td>観察の翻訳と内部ダイナミクスの実行は異なる主張であることがわかります。</td>
 </tr>
 <tr>
-<td>Words from consciousness theory or consciousness metrics, such as IIT, GNWT, FEP, and PCI</td>
-<td><a href="#consciousness-theories">Theories of consciousness</a></td>
-<td>You can get a quick sense of what each theory or metric is trying to explain.</td>
+<td>IIT、GNWT、FEP、PCI などの意識理論または意識指標からの言葉</td>
+<td><a href="#consciousness-theories">意識理論</a></td>
+<td>各理論や指標が何を説明しようとしているのかを簡単に理解できます。</td>
 </tr>
 <tr>
-<td>Measurement method terms such as EEG, MEG, fMRI, ECoG, QC</td>
-<td><a href="#measurement">Measurement</a></td>
-<td>You can check what each method measures and where it is strong or weak.</td>
+<td>EEG、MEG、fMRI、ECoG、QCなどの測定方法用語</td>
+<td><a href="#measurement">測定</a></td>
+<td>各メソッドが何を測定するのか、どこが強いか弱いかを確認できます。</td>
 </tr>
 <tr>
-<td>“Estimation and modeling” terms such as inverse problem, ESI, causality, and identifiability</td>
-<td><a href="#modeling">Modeling</a></td>
-<td>You can see why estimation from observations may fail to determine a unique answer.</td>
+<td>逆問題、ESI、因果関係、識別可能性などの「推定とモデリング」用語</td>
+<td><a href="#modeling">モデリング</a></td>
+<td>観察からの推定では一意の答えを決定できない理由がわかります。</td>
 </tr>
 <tr>
-<td>"Research operations" terms such as BIDS, benchmark, reproducibility, and preregistration</td>
-<td><a href="#open-science">Standardization/Reproducibility</a></td>
-<td>You can see why operating rules are needed to create comparable progress.</td>
+<td>BIDS、ベンチマーク、再現性、事前登録などの「調査業務」用語</td>
+<td><a href="#open-science">標準化/再現性</a></td>
+<td>同等の進歩を生み出すために運用ルールが必要な理由がわかります。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>Reading tips</strong>
+<strong>読書のヒント</strong>
 <p>
-When similar words appear next to each other, start by asking what each term directly observes, whether it supports a strong claim by itself, and whether it includes changed-condition or intervention responses. In particular, do not stretch a correlation claim directly into a claim about causation or identity.
+似たような単語が隣り合って現れた場合は、それぞれの単語が何を直接観察しているのか、それ自体が強い主張を裏付けているかどうか、状態変化や介入の反応が含まれているかどうかを尋ねることから始めます。特に、相関関係の主張を因果関係や同一性に関する主張に直接拡張しないでください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When the theory names are lined up in a row and become difficult</strong>
+<strong>理論名が並んでいて難しくなったとき</strong>
 <p>
-The differences among IIT, GNWT, FEP, and PCI can be hard to keep straight from short definitions alone. In that case, start with <a href="wiki/consciousness-theory-map.html">Wiki: Consciousness theory map</a>, get the table-level overview first, and then return here.
+IIT、GNWT、FEP、および PCI の違いを、短い定義だけから理解するのは難しい場合があります。その場合は、<a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a> から始めて、まず表レベルの概要を理解してから、ここに戻ってください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When measurement words and model words are mixed and become difficult</strong>
+<strong>測定語とモデル語が混在して難しくなる場合</strong>
 <p>
-EEG, QC, BIDS, inverse problems, ESI, DCM, and SCM are not synonyms. If you want to see which terms belong to observation, organization, estimation, and verification, start with <a href="wiki/measurement-and-modeling-terms.html">Wiki: Guide to terms from measurement to modeling</a>.
+EEG、QC、BIDS、逆問題、ESI、DCM、および SCM は同義語ではありません。どの用語が観察、整理、推定、検証に属しているかを確認したい場合は、<a href="wiki/measurement-and-modeling-terms.html">Wiki: 測定からモデリングまでの用語ガイド</a> から始めてください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When stuck at an inverse problem or causal model</strong>
+<strong>逆問題または因果モデルで行き詰まった場合</strong>
 <p>
-There is a difference between "signals visible on the scalp," "what was actually happening in the brain," and "what counts as a causal explanation." If you want to organize that distinction through the forward problem, inverse problem, ESI, DCM, and SCM, start with <a href="wiki/observation-to-estimation.html">Wiki: From observation to estimation</a>.
+「頭皮に見える信号」、「脳内で実際に何が起こっていたか」、「何が因果関係の説明とみなされるか」の間には違いがあります。順問題、逆問題、ESI、DCM、および SCM を通じてその区別を整理したい場合は、<a href="wiki/observation-to-estimation.html">Wiki: 観察から推定へ</a> から始めてください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When you get stuck due to the range of numbers or how to handle low reliability</strong>
+<strong>数値の範囲や信頼性の低さへの対処方法で行き詰まった場合</strong>
 <p>
-Confidence intervals, credible intervals, uncertainty propagation, and abstention are all ways to avoid overreading a single number. If you want that organized from the beginning, see <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: Uncertainty, calibration, and abstention</a> first.
+信頼区間、信頼区間、不確実性の伝播、および棄権はすべて、単一の数値の読みすぎを避けるための方法です。最初から整理したい場合は、<a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性、校正、および棄権</a> を最初に参照してください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When it stops due to the difference in the role of the measuring device</strong>
+<strong>測定器の役割の違いにより停止する場合</strong>
 <p>
-EEG, MEG, fMRI, ECoG, and MRI all measure the brain, but they do not provide the same kind of information. If you want to see what each modality contributes and why they are combined, start with <a href="wiki/multimodal-integration-basics.html">Wiki: Basics of multimodal integration</a>.
+EEG、MEG、fMRI、ECoG、および MRI はすべて脳を測定しますが、同じ種類の情報を提供するわけではありません。各モダリティがどのような役割を果たし、それらが結合される理由を知りたい場合は、<a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> から始めてください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When You Get Stuck On Research-Operations Terms</strong>
+<strong>研究運営条件で行き詰まった場合</strong>
 <p>
-Baselines, benchmarks, preregistration, model cards, and failure examples all matter for reproducibility, but they do different jobs. If you want to sort out those differences from the beginning, see <a href="wiki/baselines-prereg-and-model-cards.html">Wiki: Baselines, preregistration, and model cards</a> first.
+ベースライン、ベンチマーク、事前登録、モデル カード、および失敗例はすべて再現性にとって重要ですが、それぞれの役割は異なります。これらの違いを最初から整理したい場合は、<a href="wiki/baselines-prereg-and-model-cards.html">Wiki: ベースライン、事前登録、およびモデル カード</a> を最初に参照してください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When the new verification terms start to pile up</strong>
+<strong>新しい確認条件が積み重なり始めるとき</strong>
 <p>
-If words such as <strong>claim ceiling</strong>, <strong>hidden state</strong>, <strong>specificity / shortcut</strong>, <strong>maintenance-state</strong>, <strong>timing-state</strong>, or <strong>vascular-state / CVR audit</strong> start appearing faster than they can be digested, begin with <a href="verification.html#observability-budget">Verification: Observability Budget</a> and then return here. This glossary is meant to stop those terms from collapsing into one vague idea of “uncertainty.”
+<strong>クレーム天井</strong>、<strong>隠し状態</strong>、<strong>特異性/ショートカット</strong>、<strong>メンテナンス状態</strong>、<strong>タイミング状態</strong>、または<strong>血管状態 / CVR 監査</strong> は、消化できるよりも早く表示され始めます。<a href="verification.html#observability-budget">検証: 観察可能性予算</a> から始めて、ここに戻ります。この用語集は、これらの用語が「不確実性」という 1 つの漠然とした概念に崩壊するのを防ぐことを目的としています。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When human-evidence terms start sounding like one thing</strong>
+<strong>人的証拠の用語が一つのもののように聞こえ始めるとき</strong>
 <p>
-Words such as <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, <strong>route role</strong>, <strong>calibrator role</strong>, <strong>support-state proxy</strong>, <strong>glial substrate-routing</strong>, <strong>target-defined astrocyte-related proxy</strong>, and <strong>macro clearance-transport proxy family</strong> are there to stop local ultrastructure, SV2A PET, MRSI biochemical scaffold, dynamic DMRSI, myelin mapping, BBB water exchange, MAO-B / I<sub>2</sub>BS astrocyte PET, CSF mobility, respiration-conditioned net-flow MRI, exercise-conditioned contrast-influx, and model-based biomarker-efflux evidence from collapsing into one impression of “we can now see almost everything in humans.” If that distinction is what you need next, go to <a href="wbe_101.html#human-observability-ladder">WBE 101: human observability ladder</a> and <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: Observability and Claim Ceiling by Measurement Stack</a>.
+<strong>プロキシ クラス</strong>、<strong>ルートの成熟度/モデルの負荷</strong>、<strong>ルートの役割</strong>、<strong>キャリブレーターの役割</strong>、<strong>サポート状態プロキシ</strong>、などの単語<strong>グリア基質ルーティング</strong>、<strong>ターゲット定義アストロサイト関連プロキシ</strong>、および<strong>マクロクリアランス輸送プロキシファミリー</strong>は、局所超微細構造、SV2A PET、MRSI生化学足場、動的DMRSI、ミエリンマッピング、BBB水を停止するために存在します。交換、MAO-B / I<sub>2</sub>BS 星状膠細胞 PET、CSF 可動性、呼吸条件付きネットフロー MRI、運動条件付き造影剤流入、およびモデルベースのバイオマーカー排出の証拠は、「人間のほぼすべてが見えるようになった」という 1 つの印象に崩壊します。次にその区別が必要な場合は、<a href="wbe_101.html#human-observability-ladder">WBE 101: 人間の可観測性ラダー</a> および <a href="wiki/measurement-stack-and-claim-ceiling.html">Wiki: 測定スタックによる可観測性と要求の上限</a> を参照してください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When astrocyte-state and glial fuel support start sounding identical</strong>
+<strong>アストロサイト状態とグリア燃料のサポートが同じように聞こえ始めるとき</strong>
 <p>
-On this site, those are different terms. <strong>Glial substrate-routing</strong> is about who supplied which fuel or carrier to which neuronal sink under which regime. <strong>Astrocyte-state</strong> is about astrocyte network or ensemble state that can shape recall, stabilization, or fear-state representation. Current human energetic imaging or astrocyte-related PET does not directly identify living-human glia-to-neuron fuel-routing state. If that distinction is what you need next, go to <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#glial-substrate-route-card">Wiki: glial substrate-routing route card</a>.
+このサイトでは、これらは異なる用語です。 <strong>グリア基質ルーティング</strong> は、誰がどの体制下でどの燃料またはキャリアをどのニューロンシンクに供給したかに関するものです。 <strong>アストロサイト状態</strong> は、想起、安定化、または恐怖状態の表現を形作ることができるアストロサイトのネットワークまたはアンサンブル状態に関するものです。現在のヒトのエネルギーイメージングやアストロサイト関連の PET では、生きたヒトのグリアからニューロンへの燃料経路の状態を直接識別することはできません。次にその区別が必要な場合は、<a href="wbe_101.html#state-completeness">WBE 101: エントリ ポイントの非表示状態</a> および <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#glial-substrate-route-card">Wiki: グリア基質ルーティング ルート カード</a> に進んでください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When excitability words start sounding like one thing</strong>
+<strong>興奮する言葉が一つのもののように聞こえ始めるとき</strong>
 <p>
-On this site, <strong>intrinsic excitability</strong> is not one generic hidden variable. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">Yiu et al. (2014)</a> and <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic et al. (2025)</a> support <strong>allocation / engram-selection bias routes</strong>, <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">Benoit et al. (2025)</a> plus <a href="https://doi.org/10.1038/nature09160" target="_blank">Grubb &amp; Burrone (2010)</a> support <strong>AIS / ion-channel-state routes</strong>, <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al. (2016)</a> supports <strong>firing-rate set-point / recovery-control routes</strong>, and <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">Tallman et al. (2025)</a> remains a <strong>human clinical-unit allocation-linked route</strong> with firing as an indirect excitability index. Those are different physiological loci and different observability ceilings. If that distinction is what you need next, go to <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#intrinsic-excitability-route-card">Wiki: intrinsic excitability / homeostatic-set-point route card</a>.
+このサイトでは、<strong>本質的興奮性</strong> は 1 つの一般的な隠れた変数ではありません。 <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">Yiu ら。 (2014)</a> および <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">Hadzibegovic ら。 (2025)</a> サポート <strong> 割り当て / エングラム選択バイアス ルート</strong>、<a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">Benoit et al. (2025)</a> プラス <a href="https://doi.org/10.1038/nature09160" target="_blank">グラブとBurrone (2010)</a> サポート <strong>AIS / イオンチャネル状態ルート</strong>、<a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">Hengen et al。 (2016)</a> は、<strong>発射速度設定値 / 回復制御ルート</strong> および <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">Tallman et al. をサポートします。 (2025)</a> は、間接的な興奮性指標として発火を伴う <strong>ヒト臨床ユニット割り当てにリンクされたルート</strong> のままです。それらは異なる生理学的位置と異なる可観測性の上限です。その区別が次に必要な場合は、<a href="wbe_101.html#state-completeness">WBE 101: エントリ ポイントの隠れ状態</a> および <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#intrinsic-excitability-route-card">Wiki: 固有興奮性 / 恒常性設定点ルート カード</a> に進んでください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When ionic words start sounding like one thing</strong>
+<strong>イオン性の言葉が一つのもののように聞こえ始めるとき</strong>
 <p>
-On this site, <strong>ionic / chloride evidence</strong> is not one interchangeable meter. <a href="https://doi.org/10.1126/science.1245423" target="_blank">Glykys et al. (2014)</a> supports a <strong>local chloride-set-point route</strong>, <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">Heubl et al. (2017)</a> supports <strong>activity-dependent KCC2 regulation</strong>, <a href="https://doi.org/10.1126/science.aad4821" target="_blank">Ding et al. (2016)</a> supports <strong>interstitial-ion state switching</strong>, <a href="https://doi.org/10.1016/j.celrep.2023.112934" target="_blank">Byvaltsev et al. (2023)</a> supports <strong>perisynaptic K<sup>+</sup> clearance by reverse-mode KCC2</strong>, <a href="https://doi.org/10.1093/braincomms/fcaf201" target="_blank">Lyckenvik et al. (2025)</a> shows that human <strong>CSF ion ranges</strong> remain tightly regulated and distinct from serum, and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> shows that human sodium MRI still splits into <strong>mono-/bi-T<sub>2</sub> signal routes</strong> rather than one routine ionic-state readout. If that distinction is what you need next, go to <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#ionic-route-card">Wiki: ionic / chloride route card</a>.
+このサイトでは、<strong>イオン/塩化物の証拠</strong> は 1 つの交換可能なメーターではありません。 <a href="https://doi.org/10.1126/science.1245423" target="_blank">Glykys ら。 (2014)</a> は、<strong>ローカル塩化物設定値ルート</strong>、<a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">Heubl らをサポートします。 (2017)</a> は、<strong>アクティビティ依存の KCC2 規制</strong>、<a href="https://doi.org/10.1126/science.aad4821" target="_blank">Ding らをサポートします。 (2016)</a> は、<strong>格子間イオン状態スイッチング</strong>、<a href="https://doi.org/10.1016/j.celrep.2023.112934" target="_blank">Byvaltsev らをサポートします。 (2023)</a> は、リバースモード KCC2</strong>、<a href="https://doi.org/10.1093/braincomms/fcaf201" target="_blank">Lyckenvik らによる <strong>シナプス周囲 K<sup>+</sup> クリアランスをサポートします。 (2025)</a> は、ヒト <strong>CSF イオン範囲</strong> が依然として厳密に制御されており、血清とは異なることを示しています。 (2025)</a> は、ヒトのナトリウム MRI が依然として 1 つのルーチンのイオン状態読み出しではなく、<strong>mono-/bi-T<sub>2</sub> 信号ルート</strong> に分割されていることを示しています。次にその区別が必要な場合は、<a href="wbe_101.html#state-completeness">WBE 101: エントリ ポイントの非表示状態</a> および <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#ionic-route-card">Wiki: イオン / 塩化物ルート カード</a> に進みます。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When thermal words start sounding like one thing</strong>
+<strong>感情的な言葉が一つのもののように聞こえ始めたとき</strong>
 <p>
-On this site, <strong>thermal-state</strong> is not one interchangeable meter. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">Hardingham &amp; Larkman (1998)</a> and <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">Volgushev et al. (2000)</a> support <strong>local operating-point physiology</strong>, <a href="https://doi.org/10.1126/science.8446900" target="_blank">Moser et al. (1993)</a> supports a <strong>field-potential thermal confound</strong>, <a href="https://doi.org/10.1038/nature07448" target="_blank">Long &amp; Fee (2008)</a> supports <strong>sequence-timing perturbation</strong>, <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">Owen et al. (2019)</a> and <a href="https://doi.org/10.1038/s42003-023-04542-6" target="_blank">Boorman et al. (2023)</a> support <strong>device- or preparation-linked heating / cooling burden</strong>, <a href="https://doi.org/10.1038/s41598-025-21175-3" target="_blank">Lazopulo et al. (2025)</a> supports a <strong>brain-state proxy route</strong>, and <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">Rogala et al. (2024)</a>, <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">Tan et al. (2025)</a>, <a href="https://doi.org/10.1016/j.jshs.2023.09.001" target="_blank">Tan et al. (2024)</a>, plus <a href="https://doi.org/10.1016/j.clinph.2025.02.262" target="_blank">Inoue et al. (2025)</a> support different human thermal routes. Those are different inferential objects with different ceilings. If that distinction is what you need next, go to <a href="wbe_101.html#state-completeness">WBE 101: hidden state at the entry point</a> and <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#thermal-route-card">Wiki: thermal route card</a>.
+このサイトでは、<strong>thermal-state</strong> は 1 つの交換可能なメーターではありません。 <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">ハーディンガム＆amp; Larkman (1998)</a> および <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">Volgushev et al。 (2000)</a> サポート <strong>局所動作点生理学</strong>、<a href="https://doi.org/10.1126/science.8446900" target="_blank">Moser et al。 (1993)</a> は、<strong>フィールドポテンシャル熱交絡</strong>、<a href="https://doi.org/10.1038/nature07448" target="_blank">Long およびFee (2008)</a> は、<strong>シーケンス タイミング摂動</strong>、<a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">Owen et al. をサポートします。 (2019)</a> および <a href="https://doi.org/10.1038/s42003-023-04542-6" target="_blank">Boorman et al. (2023)</a> サポート <strong>デバイスまたは準備に関連した加熱/冷却負荷</strong>、<a href="https://doi.org/10.1038/s41598-025-21175-3" target="_blank">Lazopulo et al。 (2025)</a> は、<strong>ブレインステート プロキシ ルート</strong>、および <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. をサポートします。 (2022)</a>、<a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">Rogala 他。 (2024)</a>、<a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">タンら。 (2025)</a>、<a href="https://doi.org/10.1016/j.jshs.2023.09.001" target="_blank">タンら。 (2024)</a>、プラス <a href="https://doi.org/10.1016/j.clinph.2025.02.262" target="_blank">井上ら。 (2025)</a> は、人間のさまざまな熱経路をサポートします。これらは異なる天井を持つ異なる推論オブジェクトです。次にその区別が必要な場合は、<a href="wbe_101.html#state-completeness">WBE 101: エントリ ポイントの非表示状態</a> および <a href="wiki/homeostatic-plasticity-and-maintenance-state.html#thermal-route-card">Wiki: サーマル ルート カード</a> に進んでください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When the newer card names start piling up</strong>
+<strong>新しいカード名が増え始めるとき</strong>
 <p>
-If names such as <strong>field-formation wall</strong>, <strong>Fusion Card</strong>, <strong>Human Proxy Composition Card</strong>, <strong>shared-driver audit</strong>, <strong>strongest single row</strong>, or <strong>State-Continuity Bridge Card</strong> start appearing faster than they can be digested, use this glossary to keep the failure modes separate. These terms are not just site jargon: they mark different reasons why <strong>same-session</strong>, <strong>multimodal</strong>, <strong>same-subject</strong>, or <strong>proxy-rich</strong> still may fail to raise the claim ceiling.
+<strong>フィールド形成壁</strong>、<strong>Fusion Card</strong>、<strong>Human Proxy複合カード</strong>、<strong>共有ドライバー監査</strong>、<strong>最強の単一行</strong>、または<strong>状態継続ブリッジ カード</strong> は、消化できるよりも早く出現し始めます。この用語集を使用して、障害モードを分離しておきます。これらの用語は単なるサイト用語ではありません。<strong>same-session</strong>、<strong>multimodal</strong>、<strong>same-subject</strong>、または <strong>proxy-rich</strong> が依然として請求上限を引き上げられない可能性があるさまざまな理由を示しています。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When same-subject and same-brain start sounding like proof by themselves</strong>
+<strong>同じ対象と同じ脳がそれ自体で証拠のように聞こえ始めるとき</strong>
 <p>
-On this site, those labels are not enough. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> support co-registered landmark-style bridges, <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a> and <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> support latent-dynamics / alignment witnesses, <a href="https://doi.org/10.1093/cercor/bhw068" target="_blank">Guntupalli et al. (2016)</a> supports a representational-space witness, <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a> shows that fingerprint evidence is time-scale dependent, and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> shows that stable use can still depend on unsupervised recalibration. These are different carried objects, so this glossary now defines them separately instead of letting <code>same-subject</code> or <code>same-brain</code> stand in for one generic continuity guarantee.
+このサイトでは、これらのラベルだけでは十分ではありません。 <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">ボッシュら。 (2022)</a> および <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS コンソーシアム 他(2025)</a> は、共同登録されたランドマーク スタイルの橋をサポートします。<a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a> および <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> 潜在力学 / アライメント証人をサポート、<a href="https://doi.org/10.1093/cercor/bhw068" target="_blank">Guntupalli ら。 (2016)</a> は、表象空間の証言者、<a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville らをサポートします。 (2021)</a> は、指紋の証拠が時間スケールに依存することを示しています。 (2025)</a> は、安定した使用が依然として教師なしの再調整に依存する可能性があることを示しています。これらは異なる搬送オブジェクトであるため、この用語集では、<code>same-subject</code> または <code>same-brain</code> を 1 つの一般的な連続性保証の代わりに使用するのではなく、個別に定義するようになりました。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When effective-connectivity words start sounding too close to discovered wiring</strong>
+<strong>効果的な接続という言葉が発見された配線に近すぎるように聞こえ始めたとき</strong>
 <p>
-If terms such as <strong>effective-connectivity route card</strong>, <strong>observed-subsystem closure / latent-confound audit</strong>, <strong>node-definition policy</strong>, <strong>processing / first-level design policy</strong>, <strong>sampling / transformation sensitivity</strong>, <strong>reliability window</strong>, or <strong>model recovery / family comparison</strong> start appearing faster than they can be digested, that is a sign the site is trying to stop a real overread. On this site, a directed graph is not promoted beyond a <strong>model-conditioned causal hypothesis</strong> until those terms are disclosed. If that distinction is what you need next, go to <a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: effective-connectivity route card</a>, <a href="faq.html">FAQ</a>, and <a href="verification.html#observability-budget">Verification: Observability Budget</a>.
+<strong>有効接続ルートカード</strong>、<strong>観察されたサブシステムの閉鎖/潜在交絡監査</strong>、<strong>ノード定義ポリシー</strong>、<strong>処理/第1レベルの設計ポリシー</strong>、<strong>サンプリング/変換などの用語がある場合感度</strong>、<strong>信頼性ウィンドウ</strong>、または<strong>モデル回復/ファミリー比較</strong>は、消化できるよりも早く表示され始めます。これは、サイトが実際のオーバーリードを阻止しようとしている兆候です。このサイトでは、これらの用語が開示されるまで、有向グラフは <strong>モデル条件付き因果仮説</strong> を超えて宣伝されません。次にその区別が必要な場合は、<a href="wiki/observation-to-estimation.html#effective-connectivity-route-card">Wiki: 有効接続ルート カード</a>、<a href="faq.html">FAQ</a>、<a href="verification.html#observability-budget">検証: オブザーバビリティ バジェット</a> にアクセスしてください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When thermodynamic words start sounding too close to measured cost</strong>
+<strong>熱力学の言葉が測定コストに近すぎるように聞こえるとき</strong>
 <p>
-If terms such as <strong>Irreversibility / Thermodynamic Route Card</strong>, <strong>coarse-graining / timescale</strong>, <strong>observed-state closure / hidden-degree risk</strong>, <strong>reverse-transition support / finite-data handling</strong>, <strong>stability / nuisance sensitivity</strong>, <strong>cross-estimator concordance</strong>, or <strong>physiology-side grounding / bridge quality</strong> start appearing faster than they can be digested, that is a sign the site is trying to stop a real overread. On this site, an irreversibility result is not promoted beyond <strong>exploratory auxiliary evidence</strong> until those terms are disclosed. If that distinction is what you need next, go to <a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: irreversibility route card</a>, <a href="faq.html#q1f">FAQ</a>, and <a href="verification.html#thermodynamic-verification">Verification: thermodynamic indicators</a>.
+<strong>不可逆性 / 熱力学ルート カード</strong>、<strong>粗粒度 / タイムスケール</strong>、<strong>観察状態閉包 / 隠れ次数リスク</strong>、<strong>逆遷移サポート / 有限データ処理</strong> などの用語の場合、 <strong>安定性/迷惑感度</strong>、<strong>相互推定の一致</strong>、または<strong>生理学側の接地/ブリッジの品質</strong>は、消化できるよりも早く表示され始めます。これは、サイトが実際のオーバーリードを阻止しようとしている兆候です。このサイトでは、これらの条件が開示されるまで、不可逆性の結果は<strong>探索的補助証拠</strong>を超えて宣伝されません。次にその区別が必要な場合は、<a href="wiki/thermodynamic-grounding-basics.html#irreversibility-route-card">Wiki: 不可逆性ルート カード</a>、<a href="faq.html#q1f">FAQ</a>、<a href="verification.html#thermodynamic-verification">検証: 熱力学指標</a> にアクセスしてください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>When time-validity words start sounding too similar</strong>
+<strong>期限付きの単語があまりにも似ているように聞こえるとき</strong>
 <p>
-If <strong>state annotation</strong>, <strong>state continuity</strong>, <strong>day-night context</strong>, and <strong>slow internal milieu</strong> start sounding like one thing, return to <a href="wiki/state-trait-and-drift.html">Wiki: state, trait, and drift</a> and <a href="wiki/state-continuity-bridge.html">Wiki: State-Continuity Bridge</a>. On this site, fast labels such as movement or arousal do not automatically cover circadian phase, glucocorticoid exposure, or insulin / metabolic regime.
+<strong>状態の注釈</strong>、<strong>状態の継続性</strong>、<strong>昼夜コンテキスト</strong>、および<strong>遅い内部環境</strong>が同じもののように聞こえ始めたら、<a href="wiki/state-trait-and-drift.html">Wiki: 状態、特性、およびドリフト</a> および <a href="wiki/state-continuity-bridge.html">Wiki: 状態継続ブリッジ</a>。このサイトでは、動きや覚醒などの速いラベルは、概日位相、グルココルチコイド曝露、またはインスリン/代謝体制を自動的にはカバーしません。
 </p>
 </div>
 
 <section class="section" id="core">
-<h2 class="section-title">Core concepts</h2>
+<h2 class="section-title">中心となる概念</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Meaning of Mind-Upload (roughly)</th>
+<th>期間</th>
+<th>マインドアップロードの意味（ざっくり）</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Mind Upload</strong></td>
-<td>A broad term for transferring mind-relevant function, memory, or consciousness-related claims into a digital substrate. In Mind-Upload, such claims are separated by the claim ladder.</td>
+<td><strong>マインドアップロード</strong></td>
+<td>心関連の機能、記憶、または意識関連の主張をデジタル基板に転送するための広義の用語。 Mind-Upload では、そのようなクレームはクレーム ラダーによって分離されます。</td>
 </tr>
 <tr>
-<td><strong>WBE（Whole Brain Emulation）</strong></td>
-<td>Reproducing brain-relevant function on a different substrate. What counts as "success" depends on the definition, so the evaluation criteria must be fixed first.</td>
+<td><strong>WBE（全脳エミュレーション）</strong></td>
+<td>脳に関連する機能を別の基板上で再現します。何を「成功」とみなすかは定義によって異なるため、最初に評価基準を修正する必要があります。</td>
 </tr>
 <tr>
-<td><strong>Claim stairs (L0-L5)</strong></td>
-<td>A framework for aligning claim wording with actual achievement. It prevents L1 decoding claims from being confused with L4 identity claims.</td>
+<td><strong>クレーム階段 (L0-L5)</strong></td>
+<td>主張の文言を実際の成果と一致させるためのフレームワーク。これにより、L1 デコード要求が L4 ID 要求と混同されるのを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>Verification Commons</strong></td>
-<td>A public-good layer of standards, data, evaluation, registration, and auditing that allows "comparable progress" to accumulate.</td>
+<td><strong>検証コモン</strong></td>
+<td>「同等の進歩」を蓄積できる、標準、データ、評価、登録、監査の公益層。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="decode-emulate">
-<h2 class="section-title">Decode and Emulate</h2>
+<h2 class="section-title">デコードしてエミュレート</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Difference</th>
+<th>期間</th>
+<th>違い</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Decoding</strong></td>
-<td>Predict states, stimuli, sentences, etc. from observed signals (easily based on correlation). </td>
+<td><strong>デコード</strong></td>
+<td>観察された信号から状態、刺激、文章などを予測します (相関関係に簡単に基づいて)。 </td>
 </tr>
 <tr>
-<td><strong>Emulation</strong></td>
-<td>Internal states evolve over time, respond to interventions, and generate future outputs (strong causal and generative demands). </td>
+<td><strong>エミュレーション</strong></td>
+<td>内部状態は時間の経過とともに進化し、介入に反応し、将来の出力（強い因果的要求と生成的要求）を生成します。 </td>
 </tr>
 <tr>
-<td><strong>Counterfactual</strong></td>
-<td>Prediction for the branch "What if I change condition X?" The center of verification that fills the gap between decode and emulate. </td>
+<td><strong>反事実</strong></td>
+<td>分岐の予測「条件 X を変更したらどうなるか?」デコードとエミュレートの間のギャップを埋める検証の中心地。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="easy-confusions">
-<h2 class="section-title">Commonly confused words</h2>
+<h2 class="section-title">よく混同されやすい単語</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Easy to confuse groups</th>
-<th>The difference in one word</th>
+<th>グループを混同しやすい</th>
+<th>一言で言えば違い</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Mind Upload / WBE</strong></td>
-<td>Mind upload is a broad general term, and WBE is a technology-oriented way of reproducing brain functions on a different basis. </td>
+<td><strong>マインド アップロード / WBE</strong></td>
+<td>マインド アップロードは広範な一般用語であり、WBE は脳機能を別のベースで再現するテクノロジー指向の方法です。 </td>
 </tr>
 <tr>
-<td><strong>Decoding/Emulation</strong></td>
-<td>Decoding translates observations into outputs, while emulation requires internal dynamics that continue to evolve and respond to intervention.</td>
+<td><strong>デコード/エミュレーション</strong></td>
+<td>デコードでは観察結果が出力に変換されますが、エミュレーションでは進化を続け介入に応答する内部ダイナミクスが必要です。</td>
 </tr>
 <tr>
-<td><strong>Correlation / Causation</strong></td>
-<td>Correlation is a relationship that changes together, and causation is a relationship that changes when one changes the other. </td>
+<td><strong>相関関係/因果関係</strong></td>
+<td>相関関係は一緒に変化する関係であり、因果関係は一方が他方を変えると変化する関係です。 </td>
 </tr>
 <tr>
-<td><strong>Functional connectivity / effective connectivity / causal wiring</strong></td>
-<td>Functional connectivity is statistical dependence, effective connectivity is a model-conditioned directed-influence claim, and causal wiring needs stronger intervention or external validation than either label alone.</td>
+<td><strong>機能的な接続 / 効果的な接続 / 因果関係のある配線</strong></td>
+<td>機能的な接続性は統計的依存性であり、有効な接続性はモデル条件付きの有向影響の主張であり、因果関係の配線には、いずれかのラベル単独よりも強力な介入または外部検証が必要です。</td>
 </tr>
 <tr>
-<td><strong>Observability/Identifiability</strong></td>
-<td>Observability asks whether states can be distinguished at all, while identifiability asks whether they can be uniquely determined. The first can hold without the second.</td>
+<td><strong>可観測性/識別性</strong></td>
+<td>観察可能性は状態をまったく区別できるかどうかを尋ねるのに対し、識別可能性は状態を一意に決定できるかどうかを尋ねます。 1 つ目は 2 つ目がなくても成立します。</td>
 </tr>
 <tr>
-<td><strong>Model fitting/direct validation</strong></td>
-<td>Model fitting means matching observed data, and direct validation means checking against external ground truth. The evidence is stronger for the latter. </td>
+<td><strong>モデルフィッティング/直接検証</strong></td>
+<td>モデル フィッティングは観察されたデータと一致することを意味し、直接検証は外部のグランド トゥルースと照合することを意味します。証拠は後者の方が強力です。 </td>
 </tr>
 <tr>
-<td><strong>Brain signals / language prior</strong></td>
-<td>Brain signals are measurement-derived information, and language prior is statistical clues supplemented by vocabulary, context, and LLM. Output fluency alone cannot separate the contributions. </td>
+<td><strong>脳信号/言語以前</strong></td>
+<td>脳信号は測定結果から得られる情報であり、言語事前情報は語彙、文脈、および LLM によって補足された統計的な手がかりです。出力の流暢さだけでは貢献を区別することはできません。 </td>
 </tr>
 <tr>
-<td><strong>Benchmark/Leaderboard</strong></td>
-<td>Benchmarks are tasks and indicators for comparison, and leaderboards are operational screens that list the results. </td>
+<td><strong>ベンチマーク/リーダーボード</strong></td>
+<td>ベンチマークは比較のためのタスクと指標であり、リーダーボードは結果を一覧表示する操作画面です。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="verification-hidden-state">
-<h2 class="section-title">Verification and Hidden-State Terms</h2>
+<h2 class="section-title">検証と非表示状態の条件</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Meaning in Mind-Upload</th>
+<th>期間</th>
+<th>心の中の意味 - アップロード</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Claim ceiling</strong></td>
-<td>The strongest statement the current evidence is allowed to support. If key variables stay unobserved or unaudited, the claim stops at a lower level.</td>
+<td><strong>請求上限</strong></td>
+<td>現在の証拠が裏付けることができる最も強力な声明。主要な変数が観察されない、または監査されないままである場合、クレームはより低いレベルで停止します。</td>
 </tr>
 <tr>
-<td><strong>Hidden state / latent state</strong></td>
-<td>A variable that still affects behavior or dynamics but is not directly observed by the current measurement stack. “Not measured” and “not important” are different claims.</td>
+<td><strong>隠れ状態/潜在状態</strong></td>
+<td>動作やダイナミクスに影響を与える変数ですが、現在の測定スタックでは直接観察されません。 「測定されていない」と「重要ではない」は異なる主張です。</td>
 </tr>
 <tr>
-<td><strong>Observability Budget</strong></td>
-<td>A site rule that separates what entered the sensor from what still had to be inferred. It prevents “multimodal” or “higher resolution” from being misread as state-complete.</td>
+<td><strong>可観測性予算</strong></td>
+<td>センサーに入力されたものと、まだ推測する必要があるものを分離するサイト ルール。これにより、「マルチモーダル」または「高解像度」が状態完全なものとして誤って読み取られるのを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>Macro pathway prior</strong></td>
-<td>A tractography-derived human connectome or bundle estimate that constrains large-scale white-matter organization without becoming a synapse-resolved, direction-complete, or pipeline-invariant graph. Acquisition scheme, endpoint assignment, parcellation, filtering, and uncertainty handling can all change it.</td>
+<td><strong>前のマクロ経路</strong></td>
+<td>シナプス分解、方向完全、またはパイプライン不変のグラフになることなく、大規模な白質組織を制限するトラクトグラフィー由来のヒト コネクトームまたはバンドル推定。取得スキーム、エンドポイントの割り当て、分割、フィルタリング、および不確実性の処理はすべて変更される可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Proxy class</strong></td>
-<td>The kind of variable a route actually constrains, such as structural scaffold, synaptic-density proxy, biochemical scaffold, macro energetic proxy, or clearance proxy. It says <strong>what object is being measured</strong>, not which route role the paper plays or how mature the route is.</td>
+<td><strong>プロキシ クラス</strong></td>
+<td>構造的足場、シナプス密度プロキシ、生化学的足場、マクロエネルギープロキシ、クリアランスプロキシなど、ルートが実際に制約する変数の種類。 <strong>どのようなオブジェクトが測定されているか</strong>が記載されており、論文がどのルートの役割を果たしているか、またはルートがどの程度成熟しているかは記載されていません。</td>
 </tr>
 <tr>
-<td><strong>Route maturity / model burden</strong></td>
-<td>A separate label for how specialized, small-cohort, hardware-limited, or model-dependent a route still is. It prevents a useful proxy from being misread as field-ready or routine just because the paper is technically strong.</td>
+<td><strong>ルートの成熟度 / モデルの負担</strong></td>
+<td>ルートがどの程度特殊化、小規模コホート、ハードウェア制限、またはモデル依存であるかを示す別のラベル。これにより、論文が技術的に強力であるという理由だけで、有用なプロキシが現場対応または日常的なものとして誤って読み取られるのを防ぐことができます。</td>
 </tr>
 <tr>
-<td><strong>Route role</strong></td>
-<td>The specific job a paper plays inside one route family, such as first-in-human target validation, disease-context contrast, named quantification, whole-body biodistribution, challenge-linked release, or model-based biomarker efflux. It is different from proxy class, route maturity, and calibrator role, and it stops one family name from sounding like one interchangeable row.</td>
+<td><strong>ルートの役割</strong></td>
+<td>1 つのルート ファミリー内で論文が果たす特定の役割。たとえば、ヒトでの最初の標的検証、疾患と状況の対比、名前付き定量化、全身生体内分布、チャレンジに関連した放出、またはモデルベースのバイオマーカー流出などです。これは、プロキシ クラス、ルートの成熟度、およびキャリブレーターの役割とは異なり、1 つのファミリー名が 1 つの交換可能な行のように聞こえるのを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>Calibrator role</strong></td>
-<td>The bounded hidden-state family a route can safely calibrate on this site. A route can be real and technically strong while still calibrating only one hidden-state family rather than a whole human internal state.</td>
+<td><strong>校正者の役割</strong></td>
+<td>このサイトでルートを安全に調整できる境界付き非表示状態ファミリー。ルートは、人間の内部状態全体ではなく、1 つの隠れ状態ファミリーのみを調整しながら、現実的かつ技術的に強力なものにすることができます。</td>
 </tr>
 <tr>
-<td><strong>Human observability ladder</strong></td>
-<td>A front-door rule that compares human measurement routes on three axes at once: <strong>proxy class</strong>, <strong>route maturity / model burden</strong>, and <strong>calibrator role</strong>. It stops “human evidence exists” from being compressed into “state-complete human measurement is close.”</td>
+<td><strong>人間観察ラダー</strong></td>
+<td>人による測定ルートを 3 つの軸で一度に比較するフロントドア ルール: <strong>プロキシ クラス</strong>、<strong>ルート成熟度 / モデル負荷</strong>、<strong>キャリブレーター ロール</strong>。これにより、「人間による証拠が存在する」が「状態完全な人間による測定が近づいている」に圧縮されることがなくなります。</td>
 </tr>
 <tr>
-<td><strong>Human Proxy Composition Card</strong></td>
-<td>The disclosure rule for combining several living-human proxy rows. It asks what each row directly measures, whether the rows are truly same-subject / same-session / same-perturbation, whether the agreement survives a <strong>shared-driver audit</strong>, what the bundle adds beyond the <strong>strongest single row</strong>, and which hidden-state families still remain latent.</td>
+<td><strong>人間代理構成カード</strong></td>
+<td>複数の生きた人間のプロキシ行を結合するための開示ルール。各行が何を直接測定するのか、行が本当に同じ主題/同じセッション/同じ摂動であるかどうか、<strong>共有ドライバー監査</strong> に合意が存続するかどうか、<strong>最も強力な単一行</strong> を超えてバンドルが追加するもの、そしてどの隠れ状態ファミリーがまだ潜在的に残っているかを尋ねます。</td>
 </tr>
 <tr>
-<td><strong>Shared-driver audit</strong></td>
-<td>A check on whether apparent agreement across modalities or proxy rows could still be explained by a common nuisance source, such as arousal, autonomic physiology, global vascular fluctuations, or a shared preprocessing artifact, rather than by one uniquely identified biological target.</td>
+<td><strong>共有ドライバー監査</strong></td>
+<td>モダリティまたはプロキシ行間の明らかな一致が、一意に識別された 1 つの生物学的標的ではなく、覚醒、自律神経生理機能、全体的な血管変動、または共有の前処理アーティファクトなどの共通の迷惑源によって依然として説明できるかどうかのチェック。</td>
 </tr>
 <tr>
-<td><strong>Strongest single row</strong></td>
-<td>The best individual route in a proxy bundle under matched conditions. On this site, a bundle does not raise the claim ceiling merely by having more rows; it must show what it adds beyond the strongest single route already available.</td>
+<td><strong>最強の単一行</strong></td>
+<td>条件が一致した場合のプロキシ バンドル内の最適な個別ルート。このサイトでは、バンドルの行数が増えるだけで請求の上限が引き上げられるわけではありません。すでに利用可能な最強の単一ルートを超えて何が追加されるかを示す必要があります。</td>
 </tr>
 <tr>
-<td><strong>Fusion Card</strong></td>
-<td>The disclosure rule for multimodal or atlas-informed claims. It asks for acquisition relation, lag / synchronization audit, co-registration scope, fusion-model burden, shared-vs-specific component disclosure, external calibration, and abstention boundary before “multimodal” is read as stronger than the best unimodal route.</td>
+<td><strong>フュージョン カード</strong></td>
+<td>マルチモーダルまたはアトラス情報に基づいたクレームの開示ルール。 「マルチモーダル」が最良のユニモーダル ルートよりも強力であると判断される前に、取得関係、ラグ/同期監査、共同登録範囲、融合モデルの負荷、共有コンポーネントと固有コンポーネントの開示、外部キャリブレーション、および棄権境界を求めます。</td>
 </tr>
 <tr>
-<td><strong>Tractography route card</strong></td>
-<td>The disclosure rule for tractography-derived connectome claims. It asks for direct observable, acquisition / harmonization scheme, cortical-endpoint assignment, graph-construction choices, uncertainty quantification, external calibration, and abstention boundary before a diffusion-MRI graph is read beyond the macro-pathway-prior ceiling.</td>
+<td><strong>交通路ルートカード</strong></td>
+<td>トラクトグラフィー由来のコネクトームクレームの開示規則。これは、拡散 MRI グラフがマクロ経路事前上限を超えて読み取られる前に、直接観察可能、取得 / 調和スキーム、皮質エンドポイントの割り当て、グラフ構築の選択、不確実性の定量化、外部キャリブレーション、および棄権境界を要求します。</td>
 </tr>
 <tr>
-<td><strong>State-Continuity Bridge Card</strong></td>
-<td>The disclosure rule for claims that bridge across live measurement, later fixation, ex vivo follow-up, or cross-day reacquisition. It asks for acquisition order, elapsed time, regime continuity including slow internal milieu, coordinate transfer, bridge validation, and residual drift ceiling before specimen linkage is promoted to one state sample.</td>
+<td><strong>状態継続ブリッジ カード</strong></td>
+<td>ライブ測定、その後の固定、体外追跡、または日をまたいでの再取得を橋渡しするクレームの開示規則。取得順序、経過時間、遅い内部環境を含むレジームの連続性、座標転送、ブリッジの検証、および標本のリンケージが 1 つの状態サンプルに昇格される前の残留ドリフト上限が求められます。</td>
 </tr>
 <tr>
-<td><strong>Same-subject / same-brain label</strong></td>
-<td>A label that says which specimen, participant, or brain is being linked across measurements. On this site it is a <strong>linkage statement</strong>, not yet a proof that the carried object stayed the same. The missing question is always <strong>what kind of bridge witness was preserved</strong>.</td>
+<td><strong>同じ主題/同じ脳のラベル</strong></td>
+<td>どの標本、参加者、または脳が測定間でリンクされているかを示すラベル。このサイトでは、<strong>リンクステートメント</strong>であり、運ばれた物体が同じままであることを証明するものではありません。欠けている質問は常に<strong>どのような橋の証人が保存されたか</strong>.</td>です。
 </tr>
 <tr>
-<td><strong>Same-state evidence</strong></td>
-<td>Evidence that supports not only <strong>same subject</strong> or <strong>same brain</strong>, but also continuity of the relevant latent state across the bridge being claimed. It is stronger than specimen identity alone and usually requires an explicit bridge audit.</td>
+<td><strong>同じ州の証拠</strong></td>
+<td><strong>同じ主題</strong> または <strong>同じ頭脳</strong> だけでなく、主張されている橋を越えた関連する潜在状態の連続性も裏付ける証拠。これは標本識別単独よりも強力であり、通常は明示的なブリッジ監査が必要です。</td>
 </tr>
 <tr>
-<td><strong>Bridge witness</strong></td>
-<td>The specific type of evidence used to argue that something was carried across a bridge. On this site, anatomical landmarks, latent manifolds, representational geometry, fingerprint features, alignment rescue, and recalibration rescue are different bridge witnesses with different safe claim ceilings, so they should not be collapsed into one generic continuity proof.</td>
+<td><strong>橋梁証人</strong></td>
+<td>何かが橋を渡って運ばれたと主張するために使用される特定のタイプの証拠。このサイトでは、解剖学的ランドマーク、潜在多様体、表現幾何学、指紋特徴、位置合わせレスキュー、および再校正レスキューは、異なる安全クレームの上限を持つ異なるブリッジ証人であるため、これらを 1 つの一般的な連続性証明にまとめるべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Landmark / correspondence-point witness</strong></td>
-<td>A bridge witness built from co-registration features such as matched landmarks, correspondence points, or specimen-linked coordinates. It can support specimen linkage and coordinate transfer, but by itself it does not prove that synaptic state, biochemical state, or other latent state stayed the same across the bridge.</td>
+<td><strong>ランドマーク/通信地点証人</strong></td>
+<td>一致するランドマーク、対応点、標本にリンクされた座標などの相互登録特徴から構築された橋梁証人。それは標本の結合と座標伝達をサポートできますが、それ自体では、シナプス状態、生化学的状態、またはその他の潜在状態が橋を越えて同じままであったことを証明するものではありません。</td>
 </tr>
 <tr>
-<td><strong>Latent-manifold witness</strong></td>
-<td>A bridge witness built from low-dimensional latent dynamics or manifold structure that remains usable across days or recording changes. It can support stable readout under an alignment step, but it is still different from direct proof that the underlying local biological state stayed fixed.</td>
+<td><strong>潜在多様証人</strong></td>
+<td>低次元の潜在ダイナミクスまたは多様体構造から構築されたブリッジ ウィットネスは、日数を超えて使用したり変更を記録したりし続けることができます。アライメントステップ下での安定した読み出しをサポートできますが、根底にある局所的な生物学的状態が固定されたままであることを直接証明することとは依然として異なります。</td>
 </tr>
 <tr>
-<td><strong>Representational-space / geometry witness</strong></td>
-<td>A bridge witness built from preserved relations among population-response patterns, such as a shared representational space or reproducible representational geometry. It is stronger than loose pattern similarity, but it is still not automatically anatomical identity, same-state proof, or route-free continuity of all hidden variables.</td>
+<td><strong>表現空間 / 幾何学目撃者</strong></td>
+<td>共有表現空間や再現可能な表現幾何学など、集団反応パターン間の保存された関係から構築された橋渡し証人。これは、緩やかなパターンの類似性よりも強力ですが、それでも自動的に解剖学的同一性、同一状態の証明、またはすべての隠れた変数のルートフリーの連続性を保証するものではありません。</td>
 </tr>
 <tr>
-<td><strong>Fingerprint witness</strong></td>
-<td>A bridge witness built from subject-identifying neural patterns that support re-identification across recordings. On this site, fingerprint evidence is useful but narrower than same-state evidence, because it can depend strongly on time scale, modality, and task regime while leaving the carried latent variable ambiguous.</td>
+<td><strong>指紋証人</strong></td>
+<td>録音全体にわたる再識別をサポートする、被験者を識別する神経パターンから構築されたブリッジ証人。このサイトでは、指紋証拠は役に立ちますが、同一状態の証拠よりも範囲が狭くなります。これは、保持される潜在変数が曖昧なままで、時間スケール、モダリティ、タスク体制に大きく依存する可能性があるためです。</td>
 </tr>
 <tr>
-<td><strong>Alignment rescue</strong></td>
-<td>A post hoc mapping that restores performance by aligning a new recording to a reference latent space, manifold, or decoder geometry. It supports a <strong>usable bridge under alignment</strong>, but it does not by itself prove that the raw signal, the sensor relation, or the biological state remained unchanged.</td>
+<td><strong>アライメントレスキュー</strong></td>
+<td>新しい記録を参照潜在空間、多様体、またはデコーダー ジオメトリに位置合わせすることでパフォーマンスを復元するポストホック マッピング。これは、<strong>アライメント</strong> の下で使用可能なブリッジをサポートしますが、それ自体では、生の信号、センサー関係、または生物学的状態が変化していないことを証明するものではありません。</td>
 </tr>
 <tr>
-<td><strong>Recalibration rescue</strong></td>
-<td>A bridge-maintenance strategy that restores performance by updating model parameters or adaptation state on later data. It supports <strong>operational recoverability under drift</strong>, not proof that the same carried object stayed valid without recalibration.</td>
+<td><strong>再調整レスキュー</strong></td>
+<td>後のデータのモデル パラメーターまたは適応状態を更新することでパフォーマンスを回復するブリッジ メンテナンス戦略。 <strong>ドリフト</strong>下での動作回復可能性をサポートしますが、同じ搬送物体が再調整なしで有効であったことを証明するものではありません。</td>
 </tr>
 <tr>
-<td><strong>Slow internal milieu</strong></td>
-<td>The hours-to-days body-state layer that includes circadian phase, recent sleep-wake schedule, glucocorticoid / steroid exposure, and feeding / insulin-metabolic regime. It can shift hippocampal plasticity, memory retrieval, or decoder-relevant neural state even when the visible fast sensory-motor loop looks unchanged. It should not be collapsed either into fast-loop state labels such as movement or arousal, or into the longer-horizon maintenance-state families.</td>
+<td><strong>遅い内部環境</strong></td>
+<td>概日周期、最近の睡眠覚醒スケジュール、糖質コルチコイド/ステロイドへの曝露、および摂食/インスリン代謝体制を含む、数時間から数日間の身体状態層。目に見える高速感覚運動ループが変化していないように見えても、海馬の可塑性、記憶の検索、またはデコーダー関連の神経状態を変化させる可能性があります。これを、運動や覚醒などの高速ループ状態ラベルや、より長い期間の維持状態ファミリーに折りたたむべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Specificity &amp; Shortcut Card</strong></td>
-<td>An audit that asks whether a high score came from the intended neural variable or from nuisance routes such as movement, EMG, fingerprint, or acquisition setup.</td>
+<td><strong>特異性とショートカット カード</strong></td>
+<td>高スコアが意図した神経変数から来たのか、それとも動き、筋電図、指紋、取得設定などの迷惑ルートから来たのかを尋ねる監査。</td>
 </tr>
 <tr>
-<td><strong>Neural Contribution Card</strong></td>
-<td>The speech / brain-to-text version of shortcut auditing. It separates brain-derived contribution from task structure, language priors, candidate sets, and feedback routes.</td>
+<td><strong>ニューラル貢献カード</strong></td>
+<td>ショートカット監査の音声/脳からテキストへのバージョン。これは、脳由来の貢献をタスク構造、言語事前分布、候補セット、およびフィードバック ルートから分離します。</td>
 </tr>
 <tr>
-<td><strong>Subject / session fingerprint</strong></td>
-<td>Person- or session-specific signal that can raise scores even when the target neural variable is weak. Cross-subject or cross-session claims need this separated explicitly.</td>
+<td><strong>件名/セッション フィンガープリント</strong></td>
+<td>ターゲットの神経変数が弱い場合でもスコアを上げることができる個人またはセッション固有の信号。主題間またはセッション間のクレームでは、これを明示的に分離する必要があります。</td>
 </tr>
 <tr>
-<td><strong>Acquisition-distribution shortcut</strong></td>
-<td>Performance that comes from site, device, reference system, electrode layout, impedance pattern, or protocol differences rather than from the intended biological target.</td>
+<td><strong>取得と配布のショートカット</strong></td>
+<td>意図された生物学的ターゲットからではなく、部位、デバイス、参照システム、電極レイアウト、インピーダンス パターン、またはプロトコルの違いから生じるパフォーマンス。</td>
 </tr>
 <tr>
-<td><strong>Vascular-state / CVR audit</strong></td>
-<td>A measurement-side audit for hemodynamic modalities that asks whether baseline vascular state, cerebrovascular reactivity, or superficial/systemic contamination could explain the amplitude difference. It is different from maintenance-side neurovascular-unit / BBB / pericyte state.</td>
+<td><strong>血管状態/CVR監査</strong></td>
+<td>ベースラインの血管状態、脳血管反応性、または表面/全身汚染が振幅の違いを説明できるかどうかを問う血行力学的モダリティの測定側監査。維持側の神経血管ユニット/BBB/周皮細胞の状態とは異なります。</td>
 </tr>
 <tr>
-<td><strong>Maintenance-state</strong></td>
-<td>Slow controller and support variables, such as sleep / wake history, post-transcriptional RNA-state, phospho-signaling / second-messenger state, cargo-transport / cytoskeletal trafficking state, thermal-state, ionic state, bioenergetic / mitochondrial support, neurovascular-unit / BBB / pericyte state, glial substrate-routing, astrocyte-state, and clearance-related support, that matter for long-horizon stability. It is broader than fast loop state labels, but it is also different from the narrower slow internal milieu of circadian / glucocorticoid / insulin-metabolic regime disclosure.</td>
+<td><strong>メンテナンス状態</strong></td>
+<td>睡眠/覚醒履歴、転写後のRNA状態、リンシグナル伝達/セカンドメッセンジャー状態、貨物輸送/細胞骨格輸送状態、熱状態、イオン状態、生体エネルギー/ミトコンドリアサポート、神経血管ユニット/BBB/周皮細胞状態、グリア基質ルーティングなどのスローコントローラーおよびサポート変数、星状細胞の状態、およびクリアランス関連のサポートは、長期的な安定性に重要です。これは高速ループ状態ラベルよりも広範囲ですが、概日/グルココルチコイド/インスリン代謝体制の開示というより狭い、ゆっくりとした内部環境とも異なります。</td>
 </tr>
 <tr>
-<td><strong>Intrinsic excitability / homeostatic-set-point route card</strong></td>
-<td>The disclosure rule that stops the word <strong>excitability</strong> from collapsing allocation bias, AIS / ion-channel-state plasticity, homeostatic recovery control, and bounded human proxy routes into one line. It asks which claim family, physiological locus, direct observable, time window, human evidence class, and abstention boundary are actually supported.</td>
+<td><strong>固有興奮性 / 恒常性設定値ルート カード</strong></td>
+<td><strong>興奮性</strong>という単語が、割り当てバイアス、AIS / イオンチャネル状態の可塑性、恒常性回復制御、および限定された人間の代理ルートを 1 行にまとめて崩壊するのを防ぐ開示ルール。どのクレームファミリー、生理的位置、直接観察可能性、時間枠、人的証拠クラス、および棄権境界が実際にサポートされているかを尋ねます。</td>
 </tr>
 <tr>
-<td><strong>Allocation / engram-selection bias</strong></td>
-<td>The route family about which neurons are preferentially recruited into a memory trace because their excitability or readiness is higher at encoding. It is different from AIS / ion-channel plasticity, firing-rate homeostasis, and human perturbation-conditioned proxy routes.</td>
+<td><strong>割り当て/エングラム選択バイアス</strong></td>
+<td>エンコード時の興奮性または準備状態がより高いため、ニューロンがメモリ トレースに優先的にリクルートされるルート ファミリー。それは、AIS / イオンチャネル可塑性、発火率恒常性、および人間の摂動条件付き代理ルートとは異なります。</td>
 </tr>
 <tr>
-<td><strong>AIS / ion-channel-state route</strong></td>
-<td>The route family about axon-initial-segment geometry, Na<sup>+</sup>-channel distribution, spike-initiation rules, and related excitability plasticity. It is different from allocation bias, which neurons were selected, and from long-horizon recovery control.</td>
+<td><strong>AIS / イオンチャネル状態ルート</strong></td>
+<td>軸索初期セグメントの形状、Na<sup>+</sup> チャネル分布、スパイク開始規則、および関連する興奮性可塑性に関するルート ファミリー。これは、どのニューロンが選択されたかという割り当てバイアスや、長期的な回復制御とは異なります。</td>
 </tr>
 <tr>
-<td><strong>Homeostatic set point / recovery control</strong></td>
-<td>The route family about where a neuron or circuit returns after perturbation, deprivation, or state change. It is different from a momentary firing-rate snapshot, from AIS microstructure, and from which neurons were allocated during learning.</td>
+<td><strong>恒常性設定値/回復制御</strong></td>
+<td>摂動、剥奪、状態変化後にニューロンまたは回路がどこに戻るかに関するルート ファミリ。これは、瞬間的な発火率スナップショット、AIS 微細構造、学習中に割り当てられたニューロンとは異なります。</td>
 </tr>
 <tr>
-<td><strong>Post-transcriptional RNA-state</strong></td>
-<td>The layer between gene-level transcript abundance and protein outcome that includes alternative splicing, m6A-dependent translation / degradation, and ADAR-mediated RNA editing. It should not be collapsed into either static transcript counts or local proteostasis.</td>
+<td><strong>転写後の RNA 状態</strong></td>
+<td>遺伝子レベルの転写物の存在量と、選択的スプライシング、m6A依存性の翻訳/分解、ADAR媒介のRNA編集を含むタンパク質の結果との間の層。静的転写産物数または局所プロテオスタシスのいずれかに分類されるべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Phospho-signaling / second-messenger state</strong></td>
-<td>The fast controller layer between protein presence and current pathway activity that includes phosphosite occupancy, kinase/phosphatase balance, and compartment-specific cAMP/Ca<sup>2+</sup>/PKA signaling nanodomains. It should not be collapsed into either transcript abundance, bulk proteomics, or nominal synaptic weight.</td>
+<td><strong>リン酸シグナル伝達/セカンドメッセンジャー状態</strong></td>
+<td>タンパク質の存在と電流経路活性の間の高速コントローラー層。これには、リン酸化サイト占有、キナーゼ/ホスファターゼバランス、コンパートメント特異的cAMP/Ca<sup>2+</sup>/PKAシグナル伝達ナノドメインが含まれます。転写物の存在量、バルクプロテオミクス、名目上のシナプス重量のいずれかに分類すべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Glial substrate-routing</strong></td>
-<td>The maintenance-side fuel-routing layer that asks which glial supplier delivered which substrate or carrier to which neuronal sink, under which regime and through which transport route. On this site, lactate-shuttle support, glial ketone-body routing under starvation, intensive-learning glia-to-neuron fatty-acid flux, and apoE / sortilin-dependent lipid delivery are different claim families rather than one generic glial-support row. Current living-human energetic imaging or astrocyte-related PET does not directly read out this routing state, so it should not be collapsed into astrocyte-state, neuronal mitochondrial control, or one generic human energetic proxy.</td>
+<td><strong>グリア基質ルーティング</strong></td>
+<td>どのグリア供給者がどの基質または担体をどのニューロンシンクに、どの体制で、どの輸送ルートを通じて配送したかを尋ねるメンテナンス側の燃料ルーティング層。このサイトでは、乳酸シャトルのサポート、飢餓下でのグリアのケトン体ルーティング、集中学習によるグリアからニューロンへの脂肪酸フラックス、および apoE / ソルチリン依存性の脂質送達は、1 つの一般的なグリア サポートの列ではなく、異なるクレーム ファミリーです。現在の生きた人間のエネルギーイメージングやアストロサイト関連の PET は、このルーティング状態を直接読み取らないため、アストロサイトの状態、ニューロンのミトコンドリア制御、または 1 つの一般的な人間のエネルギーの代理にまとめるべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Astrocyte-state</strong></td>
-<td>The minutes-to-days astrocyte network or ensemble state that can change recall, multiday stabilization, or fear-state representations through astrocyte-specific signaling and population dynamics. On this site, the human side does not directly read out astrocyte-state; it is carried only by target-defined astrocyte-related proxies. MAO-B first-in-human target validation, disease-context contrast, brain quantification / biodistribution, and I<sub>2</sub>BS routes are different route roles rather than one interchangeable astrocyte row. Astrocyte-state should not be collapsed into glial substrate-routing, generic metabolic background, or clearance / immune support.</td>
+<td><strong>星状細胞の状態</strong></td>
+<td>アストロサイト特有のシグナル伝達と集団動態を通じて、想起、数日間の安定化、または恐怖状態の表現を変化させることができる、数分から数日にわたるアストロサイトのネットワークまたはアンサンブルの状態。このサイトでは、人間側はアストロサイトの状態を直接読み出しません。それは、標的が定義された星状細胞関連プロキシによってのみ運ばれます。 MAO-B first-in-human ターゲットの検証、疾患コンテキストのコントラスト、脳の定量化 / 生体内分布、および I<sub>2</sub>BS ルートは、交換可能な 1 つの星状細胞列ではなく、異なるルートの役割です。星状細胞の状態は、グリア基質ルーティング、一般的な代謝背景、またはクリアランス/免疫サポートに分類されるべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Target-defined astrocyte-related proxy</strong></td>
-<td>A living-human proxy family such as MAO-B or I<sub>2</sub>BS PET that constrains tracer-defined astrocyte-related signal rather than route-free astrocyte-state ground truth. Its safe reading still depends on route role: first-in-human target validation, disease-context contrast, named quantification, whole-body biodistribution, or cohort / covariate regime are different papers with different ceilings.</td>
+<td><strong>ターゲット定義のアストロサイト関連プロキシ</strong></td>
+<td>MAO-B や I<sub>2</sub>BS PET などの生きた人間のプロキシ ファミリ。ルートフリーのアストロ サイト状態のグランド トゥルースではなく、トレーサー定義のアストロ サイト関連シグナルを制約します。その安全な読み取り値は依然としてルートの役割に依存します。つまり、ヒトでの最初の標的の検証、疾患と状況の対比、名前付き定量化、全身の体内分布、またはコホート/共変量レジームは、異なる上限を持つ異なる論文です。</td>
 </tr>
 <tr>
-<td><strong>Neurovascular-unit / BBB / pericyte state</strong></td>
-<td>The maintenance-side vascular support layer that includes capillary recruitment / tone, endothelial / pericyte barrier and transport regime, and BBB quantity types such as water exchange, tracer-specific transport, or leakage-related state that can change plasticity support and long-horizon stability. It should not be collapsed either into measurement-side vascular-state / CVR audit or into clearance / immune support.</td>
+<td><strong>神経血管ユニット / BBB / 周皮細胞の状態</strong></td>
+<td>維持側の血管支持層には、毛細血管の動員/緊張、内皮/周皮細胞のバリアと輸送体制、および可塑性サポートと長期安定性を変化させる可能性がある水交換、トレーサー特異的輸送、または漏出関連状態などのBBB量タイプが含まれます。測定側の血管状態 / CVR 監査またはクリアランス / 免疫サポートのいずれかにまとめるべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Clearance / immune support</strong></td>
-<td>The multiday support layer that includes drainage anatomy, microglia-related synaptic support, CSF-interstitial exchange, and related clearance routes that can change synaptic physiology, recovery, and protein-clearance claims. On the human side, the transport proxy family already splits into macroscopic CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned net-flow, exercise-conditioned contrast influx / meningeal-lymphatic flow, intrathecal tracer / CSF-to-blood clearance, CSF mobility, and model-based biomarker efflux. It should not be collapsed either into astrocyte-state, into a generic glymphatic cleanup metaphor, or into direct local immune-controller identity.</td>
+<td><strong>クリアランス / 免疫サポート</strong></td>
+<td>ドレナージの解剖学、ミクログリア関連のシナプス サポート、CSF 間質交換、およびシナプスの生理学、回復、タンパク質クリアランスの主張を変える可能性のある関連クリアランス ルートを含む複数日サポート レイヤー。ヒト側では、輸送プロキシファミリーはすでに巨視的なCSF振動、実質-CSF水交換、呼吸条件正味流動、運動条件造影剤流入/髄膜リンパ流、くも膜下腔内トレーサー/CSFから血液へのクリアランス、CSF移動性、およびモデルベースのバイオマーカー流出に分割されている。それを星状細胞の状態、一般的なグリンファティッククリーンアップのメタファー、または直接的な局所免疫コントローラーの同一性のいずれかに折りたたむべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Macro clearance-transport proxy family</strong></td>
-<td>A living-human support-state proxy family that measures transport-side objects such as macroscopic CSF oscillation, parenchyma-CSF water exchange, respiration-conditioned net-flow, exercise-conditioned contrast influx / parasagittal meningeal-lymphatic flow, intrathecal tracer / CSF-to-blood clearance, CSF mobility, or model-based biomarker efflux. These rows differ by direct observable, crossed boundary, intervention regime, carrier / analyte class, and model burden, so they do not form one generic glymphatic meter or local immune-controller readout.</td>
+<td><strong>マクロクリアランストランスポートプロキシファミリー</strong></td>
+<td>肉眼的CSF振動、実質-CSF水交換、呼吸条件正味流量、運動条件造影剤流入/傍矢状髄膜リンパ流、くも膜下腔内トレーサー/CSFから血液へのクリアランス、CSF移動度、またはモデルベースのバイオマーカー流出などの輸送側オブジェクトを測定する生きたヒトの支持状態プロキシファミリー。これらの行は、直接観察可能な、境界を越えた、介入レジーム、担体/検体のクラス、およびモデル負荷によって異なるため、1 つの一般的なグリンファティック メーターや局所免疫コントローラーの読み取り値を形成するものではありません。</td>
 </tr>
 <tr>
-<td><strong>Support-state proxy</strong></td>
-<td>A human route that constrains slow maintenance variables only at a coarse level. Its meaning still depends on quantity type or route role: energetic balance vs exchange flux vs NAD dynamics; quantity-defined ionic or myelin routes; BBB water-exchange vs tracer-specific transport; target-defined astrocyte-related proxies; or macro clearance-transport routes such as CSF mobility, net-flow, contrast-influx, intrathecal clearance, and model-based efflux. It is stronger than saying “nothing is visible,” but weaker than local controller, glial substrate-routing identity, astrocyte-ensemble state, cell-specific immune control, or other cell-specific ground truth.</td>
+<td><strong>サポート状態プロキシ</strong></td>
+<td>遅いメンテナンス変数を大まかなレベルでのみ制限する人的ルート。その意味は依然として、量のタイプまたはルートの役割、つまりエネルギーバランス対交換フラックス対NADダイナミクスによって異なります。量で定義されたイオンまたはミエリン経路。 BBB の水交換とトレーサー固有の輸送。ターゲット定義のアストロサイト関連プロキシ。またはCSF移動度、正味の流れ、造影剤流入、くも膜下腔内クリアランス、モデルベースの流出などのマクロクリアランス輸送ルート。これは、「何も表示されない」と言うよりは強力ですが、ローカルコントローラー、グリア基質ルーティングの同一性、アストロサイトアンサンブルの状態、細胞特異的な免疫制御、またはその他の細胞固有のグラウンドトゥルースよりは弱いです。</td>
 </tr>
 <tr>
-<td><strong>Shared extracellular / electrical state</strong></td>
-<td>The non-chemical coordination layer that includes gap-junction coupling, endogenous field effects, extracellular-space geometry / diffusion barriers / osmotic regime, and inhibitory-driving-force state. It should not be collapsed into the chemical connectome, into generic ionic state, or into one generic synchrony variable.</td>
+<td><strong>細胞外/電気的状態の共有</strong></td>
+<td>ギャップ結合結合、内在性電界効果、細胞外空間形状/拡散障壁/浸透圧領域、および抑制駆動力状態を含む非化学的配位層。化学コネクトーム、一般的なイオン状態、または 1 つの一般的な同期変数に折りたたむべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Human ECS proxy clue</strong></td>
-<td>A bounded human diffusion-MRI clue that is compatible with changes in extra-axonal / extracellular volume or sleep-linked interstitial-fluid / glymphatic-like state, but is not a direct local readout of synapse-adjacent extracellular geometry. On this site, wakefulness-related diffusion clues and sleep-conditioned higher-order diffusion clues are different route classes rather than one interchangeable human ECS row.</td>
+<td><strong>Human ECS プロキシの手掛かり</strong></td>
+<td>軸索外/細胞外体積または睡眠関連間質液/グリンファティック様状態の変化と互換性のある有界ヒト拡散MRI手がかりですが、シナプスに隣接する細胞外形状の直接的な局所読み取り値ではありません。このサイトでは、覚醒関連の拡散手がかりと睡眠条件付き高次拡散手がかりは、交換可能な 1 つのヒト ECS 行ではなく、異なるルート クラスです。</td>
 </tr>
 <tr>
-<td><strong>Human perturbation-conditioned clue</strong></td>
-<td>A human study in which a perturbation changes behavior or oscillation coupling in a way consistent with a hidden mechanism, while still not directly identifying which cells or local state variable changed. It is stronger than having no human evidence, but weaker than a direct local assay or route-free state identification.</td>
+<td><strong>人間の摂動条件付き手がかり</strong></td>
+<td>どのセルまたは局所状態変数が変化したかを直接特定することはできませんが、摂動によって隠れたメカニズムと一致する形で挙動または振動結合が変化するという人体研究。これは人的証拠がないよりは強力ですが、直接的な局所分析やルートフリーの状態の特定よりは弱いです。</td>
 </tr>
 <tr>
-<td><strong>Thermal-state</strong></td>
-<td>The tissue operating-temperature condition that can change membrane kinetics, synaptic reliability, field-potential amplitude, and sequence timing. It is different from timing-state, bioenergetic-state, and thermodynamic / irreversibility metrics. Even on the human side, the safer routes still split into passive / task-linked macro thermometry and perturbation-conditioned thermal routes rather than one direct local thermal readout.</td>
+<td><strong>熱状態</strong></td>
+<td>膜の動態、シナプスの信頼性、電位の振幅、シーケンスのタイミングを変化させる可能性がある組織の動作温度条件。これは、タイミング状態、生体エネルギー状態、熱力学/不可逆性のメトリクスとは異なります。人間側でも、より安全なルートは、1 つの直接的なローカル温度測定値ではなく、パッシブ / タスクにリンクされたマクロ温度測定と摂動条件付き熱ルートに依然として分割されています。</td>
 </tr>
 <tr>
-<td><strong>Thermal route card</strong></td>
-<td>The disclosure rule that stops <strong>thermal evidence</strong> from collapsing local operating-point physiology, field-potential confounds, sequence / rhythm perturbation, device-heating artifact, brain-state proxy routes, and human passive / task-linked versus perturbation-conditioned thermal routes into one bucket. It asks for claim family, direct thermal observable, spatial / preparation regime, driver or perturbation route, time window, function target, human evidence class, and abstention boundary.</td>
+<td><strong>サーマル ルート カード</strong></td>
+<td><strong>熱的証拠</strong>が、局所動作点生理機能、電場電位交絡、シーケンス/リズム摂動、デバイス加熱アーティファクト、脳状態代理ルート、および人間の受動的/タスク関連熱ルートと摂動条件付き熱ルートを1つのバケツにまとめて崩壊するのを阻止する開示ルール。それは、クレームファミリー、直接熱観測可能性、空間/準備レジーム、ドライバーまたは摂動ルート、時間枠、関数ターゲット、人的証拠クラス、および棄権境界を求めます。</td>
 </tr>
 <tr>
-<td><strong>Field-potential thermal confound</strong></td>
-<td>A route in which temperature shifts rescale or drift field-potential amplitude strongly enough to mimic or mask the effect being claimed. It is not evidence by itself that the intended cognitive, plasticity, or circuit variable changed.</td>
+<td><strong>電界ポテンシャル熱交絡</strong></td>
+<td>温度が変化するルートは、主張されている効果を模倣またはマスクするのに十分なほど強く、フィールド電位振幅を再スケールまたはドリフトします。それ自体は、意図した認知、可塑性、または回路変数が変化したという証拠ではありません。</td>
 </tr>
 <tr>
-<td><strong>Device- or preparation-linked heating artifact</strong></td>
-<td>A local temperature change produced by the intervention or setup itself, such as optogenetic light delivery, probes, stimulation hardware, or cooling / warming apparatus. It can distort neural or neurovascular readouts and therefore must not be silently read as the target mechanism.</td>
+<td><strong>デバイスまたは準備に関連した加熱アーティファクト</strong></td>
+<td>光遺伝学的光送達、プローブ、刺激ハードウェア、または冷却/加温装置などの介入またはセットアップ自体によって生じる局所的な温度変化。神経または神経血管の読み出しを歪める可能性があるため、ターゲットメカニズムとしてサイレントに読み取ってはなりません。</td>
 </tr>
 <tr>
-<td><strong>Brain-state proxy route</strong></td>
-<td>A route in which brain temperature covaries with sleep / wake state or oscillatory regime and therefore acts as a coarse state marker. It is stronger than having no state-linked thermal evidence, but weaker than a direct readout of cell-specific microtemperature, synapse-specific heating burden, or local thermal-controller identity.</td>
+<td><strong>ブレイン状態プロキシ ルート</strong></td>
+<td>脳温度が睡眠/覚醒状態または振動状態に応じて変化するため、粗い状態マーカーとして機能するルート。これは、状態に関連付けられた熱的証拠がないよりは強力ですが、細胞固有の微小温度、シナプス固有の加熱負荷、または局所的な熱コントローラーのアイデンティティを直接読み出すよりは弱いです。</td>
 </tr>
 <tr>
-<td><strong>Human passive / task-linked macro thermometry</strong></td>
-<td>A living-human route such as MRS thermometry or task-linked thermal mapping that constrains coarse regional brain temperature or task-evoked temperature change. It remains a bounded macro thermal proxy rather than cell-specific microtemperature or local heating-burden ground truth.</td>
+<td><strong>人間の受動的/タスクにリンクされたマクロ温度測定</strong></td>
+<td>MRS 体温測定やタスクにリンクされた熱マッピングなどの、局所的な大まかな脳温度やタスクによって引き起こされる温度変化を制限する生きた人間のルート。これは、セル固有のマイクロ温度や局所的な加熱負荷のグラウンド トゥルースではなく、境界付きマクロ熱プロキシのままです。</td>
 </tr>
 <tr>
-<td><strong>Human perturbation-conditioned thermal route</strong></td>
-<td>A living-human route in which systemic heat exposure or focal cooling changes function or neurovascular readout under a declared thermal perturbation. It can show temperature sensitivity under intervention, but it is still not a direct readout of cell-specific thermal-state or local thermal-controller identity.</td>
+<td><strong>人為摂動条件熱経路</strong></td>
+<td>宣言された熱摂動下で、全身的な熱曝露または局所的な冷却により機能または神経血管の読み出しが変化する生きた人間のルート。介入下の温度感度を示すことはできますが、それでもセル固有の熱状態やローカルの熱コントローラーのアイデンティティを直接読み出すことはできません。</td>
 </tr>
 <tr>
-<td><strong>Timing-state</strong></td>
-<td>Biological conduction-timing variables such as myelin, node / internode geometry, periaxonal coupling, and related support state. It is different from hardware latency. When living-human proxy routes are used here, tract-scale transmission-speed estimation is treated as a separate timing-support route, and myelin-water, MT-family, bilayer, qT1-remyelination-sensitive, and T1w/FLAIR tissue-health-sensitive routes are treated as different quantity types rather than one direct timing readout.</td>
+<td><strong>タイミング状態</strong></td>
+<td>ミエリン、節/節間の形状、軸索周囲結合、および関連するサポート状態などの生体伝導タイミング変数。ハードウェアの遅延とは異なります。ここで生きた人間のプロキシ ルートが使用される場合、管スケールの伝送速度推定は別個のタイミング サポート ルートとして扱われ、ミエリン水、MT ファミリー、二重層、qT1 再髄鞘形成に敏感なルート、および T1w/FLAIR 組織の健康に敏感なルートは、1 つの直接的なタイミング読み取り値ではなく、異なる量タイプとして扱われます。</td>
 </tr>
 <tr>
-<td><strong>Cargo-transport / cytoskeletal trafficking state</strong></td>
-<td>The branch-, spine-, or bouton-specific delivery and retention of receptors, endosomes, RNA cargoes, organelles, and presynaptic components. It is different from both local proteostasis and bioenergetic-state.</td>
+<td><strong>貨物輸送/細胞骨格輸送の状態</strong></td>
+<td>受容体、エンドソーム、RNAカーゴ、細胞小器官、およびシナプス前成分の分岐、脊椎、またはボタン特異的な送達と保持。それは、局所的なプロテオスタシスとも生体エネルギー状態とも異なります。</td>
 </tr>
 <tr>
-<td><strong>Ionic / chloride route card</strong></td>
-<td>The disclosure rule that stops <strong>ionic state</strong> from collapsing local chloride set point, KCC2 / NKCC1 regulation, interstitial-ion state shifts, perisynaptic K<sup>+</sup> clearance, pathology routes, and quantity-defined human sodium proxies into one meter. It asks for claim family, direct ionic observable, spatial regime, controller or perturbation route, human quantity type or compartment model, and abstention boundary.</td>
+<td><strong>イオン/塩化物ルートカード</strong></td>
+<td><strong>イオン状態</strong>が局所塩化物設定値、KCC2 / NKCC1規制、間質イオン状態シフト、シナプス周囲K<sup>+</sup>クリアランス、病理ルート、および量で定義されたヒトナトリウム代替物を1メートルに崩壊させるのを阻止する開示ルール。それは、クレームファミリー、直接イオン観測可能性、空間レジーム、コントローラーまたは摂動ルート、人間の数量タイプまたはコンパートメントモデル、および棄権境界を求めます。</td>
 </tr>
 <tr>
-<td><strong>Local chloride set point</strong></td>
-<td>The locally established chloride concentration that helps determine whether GABA<sub>A</sub> input is more hyperpolarizing or less hyperpolarizing / depolarizing. It is different from bulk sodium MRI, generic excitability, or one whole-brain ionic scalar.</td>
+<td><strong>局所塩化物設定値</strong></td>
+<td>GABA<sub>A</sub> 入力がより過分極化しているか、またはより過分極化/脱分極化が少ないかを判断するのに役立つ、局所的に確立された塩素濃度。これは、バルクナトリウム MRI、一般的な興奮性、または 1 つの全脳イオンスカラーとは異なります。</td>
 </tr>
 <tr>
-<td><strong>E<sub>GABA_A</sub> / inhibitory-driving-force regime</strong></td>
-<td>The effective reversal-potential / driving-force context that helps decide how inhibitory input acts in the local circuit. It depends on chloride handling and local ionic conditions, so it should not be collapsed into synaptic weight, cell type, or one generic E/I-balance label.</td>
+<td><strong>E<sub>GABA_A</sub> / 抑制駆動力体制</strong></td>
+<td>抑制性入力が局所回路でどのように作用するかを決定するのに役立つ、効果的な逆転の可能性/駆動力のコンテキスト。それは塩化物の処理と局所的なイオン条件に依存するため、シナプスの重み、細胞の種類、または 1 つの一般的な E/I バランス ラベルにまとめるべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Interstitial-ion state switching</strong></td>
-<td>The route family in which extracellular K<sup>+</sup>, Ca<sup>2+</sup>, Mg<sup>2+</sup>, H<sup>+</sup>, or CSF-adjacent ion composition shifts the network's operating regime, such as sleep-wake state, gain, or synchrony. It is different from local chloride set point and from quantity-defined human sodium proxies.</td>
+<td><strong>格子間イオン状態切り替え</strong></td>
+<td>細胞外 K<sup>+</sup>、Ca<sup>2+</sup>、Mg<sup>2+</sup>、H<sup>+</sup>、または CSF 隣接イオン組成が睡眠と覚醒などのネットワークの動作体制をシフトさせるルート ファミリー状態、ゲイン、または同期。これは、局所的な塩化物設定値や、量で定義されたヒトのナトリウム代替値とは異なります。</td>
 </tr>
 <tr>
-<td><strong>Quantity-defined human sodium / ionic proxy family</strong></td>
-<td>The living-human route family that measures explicitly defined ionic quantities such as tissue-sodium concentration, SQ+TQF-derived compartment fractions, mono-/bi-T<sub>2</sub> sodium components, or CSF ion profiles. These routes are real but non-equivalent. They do not automatically yield cell-specific chloride concentration, local E<sub>GABA_A</sub>, or routine whole-brain intra- versus extracellular partition ground truth.</td>
+<td><strong>量で定義されたヒトナトリウム/イオン代理ファミリー</strong></td>
+<td>組織ナトリウム濃度、SQ+TQF 由来のコンパートメント画分、モノ/バイ T<sub>2</sub> ナトリウム成分、CSF イオンプロファイルなど、明示的に定義されたイオン量を測定する生きたヒトのルートファミリー。これらのルートは実際のものですが、同等ではありません。これらは、細胞固有の塩素濃度、局所的な E<sub>GABA_A</sub>、または日常的な全脳の細胞内と細胞外のパーティションのグラウンド トゥルースを自動的に生成するものではありません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="consciousness-theories">
-<h2 class="section-title">Theories of Consciousness</h2>
+<h2 class="section-title">意識理論</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Meaning in Mind-Upload</th>
+<th>期間</th>
+<th>心の中の意味 - アップロード</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>IIT (Integrated Information Theory)</strong></td>
-<td>A theory that measures consciousness by the amount of integrated information (Φ). IIT 4.0 (Albantakis et al., 2023) revamps the axiomatic system and specifies consciousness using a Φ structure (cause-effect structure). In WBE, this is directly linked to the preservation requirement of causal structure. </td>
+<td><strong>IIT (統合情報理論)</strong></td>
+<td>意識を統合情報量(Φ)で測る理論。 IIT 4.0 (Albantakis et al., 2023) は、公理系を刷新し、Φ 構造 (原因-結果構造) を使用して意識を指定します。 WBE では、これは因果構造の保存要件に直接関係します。 </td>
 </tr>
 <tr>
-<td><strong>GNWT (Global Neural Workspace Theory)</strong></td>
-<td>The theory that consciousness is established when information is "ignited" in the frontal-parietal network and shared over a wide area. The experimental conflict with IIT was verified by Cogitate Consortium (2025). </td>
+<td><strong>GNWT (グローバル ニューラル ワークスペース理論)</strong></td>
+<td>意識は、前頭頭頂ネットワークで情報が「点火」され、広範囲にわたって共有されるときに確立されるという理論。 IIT との実験的な衝突は、Cogitate Consortium (2025) によって検証されました。 </td>
 </tr>
 <tr>
-<td><strong>FEP (Free Energy Principle)</strong></td>
-<td>A comprehensive framework in which living things minimize the "surprise" of sensory input in order to maintain boundaries with the environment (Friston, 2010). WBE uses this as the implementation principle. </td>
+<td><strong>FEP (フリーエネルギー原則)</strong></td>
+<td>環境との境界を維持するために、生物が感覚入力の「驚き」を最小限に抑える包括的なフレームワーク (Friston、2010)。 WBE はこれを実装原則として使用します。 </td>
 </tr>
 <tr>
-<td><strong>Active Inference</strong></td>
-<td>Behavioral aspects of FEP. Minimize prediction errors by actively changing the environment. Foundations of emulator autonomy. </td>
+<td><strong>アクティブ推論</strong></td>
+<td>FEP の行動面。環境を積極的に変更することで予測誤差を最小限に抑えます。エミュレータの自律性の基礎。 </td>
 </tr>
 <tr>
-<td><strong>PCI/PCI-ST (Perturbation Complexity Index)</strong></td>
-<td>A metric that quantifies the complexity of the EEG response to TMS perturbation. In Mind-Upload it is treated as a theory-light empirical indicator, not as a final answer to consciousness.</td>
+<td><strong>PCI/PCI-ST (摂動複雑性指数)</strong></td>
+<td>TMS 摂動に対する EEG 応答の複雑さを定量化する指標。 Mind-Upload では、意識に対する最終的な答えとしてではなく、理論に基づいた経験的な指標として扱われます。</td>
 </tr>
 <tr>
-<td><strong>Markov Blanket</strong></td>
-<td>Statistical boundaries between system and environment. Although it is used to define the “self” in FEP, its application to the boundaries of consciousness has been criticized (Bruineberg et al., 2022). </td>
+<td><strong>マルコフブランケット</strong></td>
+<td>システムと環境の間の統計的境界。 FEP では「自己」を定義するために使用されていますが、意識の境界への適用は批判されています (Bruineberg et al., 2022)。 </td>
 </tr>
 <tr>
-<td><strong>Unfolding Argument</strong></td>
-<td>The criticism is that any recurrent network can be replaced by a functionally equivalent feedforward network, and Φ=0 in IIT (Doerig et al., 2019). Arguments supporting the need to preserve causal structure in WBE. </td>
+<td><strong>展開される議論</strong></td>
+<td>その批判は、任意のリカレント ネットワークは機能的に同等のフィードフォワード ネットワークに置き換えることができ、IIT では Φ=0 であるということです (Doerig et al., 2019)。 WBE で因果構造を保存する必要性を支持する議論。 </td>
 </tr>
 <tr>
-<td><strong>HOT (Higher Order Theory)</strong></td>
-<td>A group of theories that posit that consciousness is established by higher-order representations (``I know what I am perceiving'') relative to primary representations. </td>
+<td><strong>HOT (高次理論)</strong></td>
+<td>意識は一次表現に比べて高次の表現（「私は何を知覚しているのかを知っている」）によって確立されると仮定する理論群。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="measurement">
-<h2 class="section-title">Measurement</h2>
+<h2 class="section-title">測定</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Memo</th>
+<th>期間</th>
+<th>メモ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EEG</strong></td>
-<td>Measures the potential difference on the scalp with high temporal resolution. Spatial resolution is weak, so handling uncertainty is important. </td>
+<td>高い時間分解能で頭皮の電位差を測定します。空間分解能が低いため、不確実性への対処が重要です。 </td>
 </tr>
 <tr>
 <td><strong>MEG</strong></td>
-<td>Measures magnetic fields. It complements EEG because the sensitivity profile is different, but the equipment is costly.</td>
+<td>磁場を測定します。感度プロファイルが異なるため脳波を補完しますが、装置は高価です。</td>
 </tr>
 <tr>
 <td><strong>fMRI</strong></td>
-<td>Measures blood-flow-related BOLD signals. Spatial resolution is relatively strong, but the signal is hemodynamic rather than direct electrical activity, so vascular-state / CVR limits still matter.</td>
+<td>血流関連の BOLD 信号を測定します。空間分解能は比較的高いですが、信号は直接的な電気活動ではなく血行動態であるため、血管状態/CVR 制限が依然として重要です。</td>
 </tr>
 <tr>
 <td><strong>fNIRS</strong></td>
-<td>Measures near-infrared changes in oxy- and deoxy-hemoglobin in superficial cortex. It is portable, but short-separation and systemic-confound control are critical.</td>
+<td>表皮質のオキシヘモグロビンおよびデオキシヘモグロビンの近赤外線変化を測定します。持ち運び可能ですが、短時間の分離と全身混乱の制御が重要です。</td>
 </tr>
 <tr>
-<td><strong>ECoG / Invasive measurement</strong></td>
-<td>While there is potential for causal intervention and high SNR, there are significant restrictions in ethics and scope of application. </td>
+<td><strong>ECoG / 侵襲的測定</strong></td>
+<td>因果関係のある介入と高い SNR の可能性はありますが、倫理と適用範囲には重大な制限があります。 </td>
 </tr>
 <tr>
-<td><strong>QC（Quality Control）</strong></td>
-<td>Quantifies impedance, noise, defects, artifacts, and related conditions, then records them in a log.</td>
+<td><strong>QC（品質管理）</strong></td>
+<td>インピーダンス、ノイズ、欠陥、アーティファクト、および関連する状態を定量化し、それらをログに記録します。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="implementation">
-<h2 class="section-title">Implementation</h2>
+<h2 class="section-title">実装</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Meaning in Mind-Upload</th>
+<th>期間</th>
+<th>心の中の意味 - アップロード</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Neuromorphic hardware</strong></td>
-<td>Specialized chips (Intel Loihi 2, SpiNNaker 2, etc.) that imitate the dynamics of biological neurons using electronic circuits. A candidate for meeting IIT's causal structure requirements. </td>
+<td><strong>ニューロモーフィック ハードウェア</strong></td>
+<td>電子回路を使用して生体ニューロンのダイナミクスを模倣する特殊なチップ (Intel Loihi 2、SpiNNaker 2 など)。 IIT の因果構造要件を満たす候補。 </td>
 </tr>
 <tr>
-<td><strong>Slow Continuous Mind Uploading</strong></td>
-<td>A migration strategy that integrates the biological brain and digital infrastructure in stages, rather than a blanket copy (Clowes, 2021). An engineering approach to preserving identity. </td>
+<td><strong>ゆっくりとした継続的なマインドのアップロード</strong></td>
+<td>ブランケットコピーではなく、生物学的な脳とデジタルインフラストラクチャを段階的に統合する移行戦略(Clowes、2021)。アイデンティティを維持するための工学的アプローチ。 </td>
 </tr>
 <tr>
-<td><strong>Connectome</strong></td>
-<td>Complete map of neural connections in the brain. In Mind-Upload it counts as <strong>structural scaffold evidence</strong>, not as state-complete reconstruction, because excitability, timing-state, transcription/chromatin, proteostasis, ECM, ionic state, and maintenance support remain separate variables. If the route is living-human diffusion-MRI tractography, the safe reading is lower still: it becomes an acquisition- and graph-conditioned <strong>macro pathway prior</strong> unless stronger calibration is named explicitly.</td>
+<td><strong>コネクトーム</strong></td>
+<td>脳内の神経接続の完全なマップ。 Mind-Upload では、興奮性、タイミング状態、転写/クロマチン、タンパク質恒常性、ECM、イオン状態、および維持サポートは別個の変数のままであるため、状態完全な再構成としてではなく、<strong>構造足場証拠</strong> としてカウントされます。ルートが生体-ヒト拡散-MRI トラクトグラフィーである場合、安全な読み取り値はさらに低くなります。より強力なキャリブレーションが明示的に指定されていない限り、取得とグラフで条件付けされた<strong>マクロ経路以前</strong>になります。</td>
 </tr>
 <tr>
-<td><strong>Human tractography connectome</strong></td>
-<td>A living-human diffusion-MRI-derived connectome estimate. It can support major-bundle hypotheses, parcel-level pathway likelihoods, or calibrated bundle comparisons, but it is still conditioned by q-space sampling, endpoint policy, parcellation, filtering, and uncertainty modeling rather than functioning as one stable edge-complete graph.</td>
+<td><strong>人体トラクトグラフィー コネクトーム</strong></td>
+<td>生きているヒトの拡散 MRI 由来のコネクトーム推定。メジャー バンドルの仮説、パーセル レベルの経路尤度、または調整されたバンドルの比較をサポートできますが、1 つの安定したエッジ完全グラフとして機能するのではなく、依然として q 空間サンプリング、エンドポイント ポリシー、パーセルレーション、フィルタリング、および不確実性モデリングによって条件付けされます。
 </tr>
 <tr>
-<td><strong>NMM（Neural Mass Model）</strong></td>
-<td>A model that describes the average activity of a large neuronal population. It underlies DCM and is often used to estimate E/I balance.</td>
+<td><strong>NMM（神経質量モデル）</strong></td>
+<td>大規模なニューロン集団の平均活動を記述するモデル。これは DCM の基礎となり、E/I バランスの推定によく使用されます。</td>
 </tr>
 <tr>
-<td><strong>E/I balance (excitation/inhibition balance)</strong></td>
-<td>Dynamic balance between excitability and inhibition in neural circuits. Involves changes in the quality and level of consciousness. </td>
+<td><strong>E/I バランス (興奮/抑制バランス)</strong></td>
+<td>神経回路における興奮性と抑制性の間の動的バランス。意識の質とレベルの変化が伴います。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="modeling">
-<h2 class="section-title">Modeling</h2>
+<h2 class="section-title">モデリング</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>How to use Mind-Upload</th>
+<th>期間</th>
+<th>マインド アップロードの使用方法</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Field-formation wall</strong></td>
-<td>The upstream visibility limit that decides whether a source class can reach the sensors at all with usable signal. Source extent, orientation, folding, cancellation, and tissue conductivities matter here, so this wall comes <strong>before</strong> the inverse solver.</td>
+<td><strong>フィールド形成壁</strong></td>
+<td>ソースクラスが使用可能な信号でセンサーに到達できるかどうかを決定するアップストリームの可視性の制限。ここではソースの範囲、方向、折り畳み、キャンセル、および組織の導電率が重要であるため、この壁は逆ソルバーの<strong></strong>の前に来ます。</td>
 </tr>
 <tr>
-<td><strong>Inverse Problem</strong></td>
-<td>The problem of estimating causes such as brain activity from observations such as scalp EEG. In general, the solution is not unique.</td>
+<td><strong>逆問題</strong></td>
+<td>頭皮脳波などの観察から脳活動などの原因を推定する問題。一般に、解決策は一意ではありません。</td>
 </tr>
 <tr>
-<td><strong>Observability</strong></td>
-<td>Asks whether different latent states can be distinguished from the chosen observations. What is visible and what is uniquely knowable are different questions.</td>
+<td><strong>可観測性</strong></td>
+<td>選択された観測値からさまざまな潜在状態を区別できるかどうかを尋ねます。何が見えるのか、何が独自に認識できるのかは別の問題です。</td>
 </tr>
 <tr>
-<td><strong>Identifiability</strong></td>
-<td>Asks whether different internal models or states could explain the same observation. High prediction accuracy does not guarantee a unique explanation.</td>
+<td><strong>識別性</strong></td>
+<td>異なる内部モデルまたは状態が同じ観察を説明できるかどうかを尋ねます。高い予測精度は、一意の説明を保証するものではありません。</td>
 </tr>
 <tr>
-<td><strong>ESI（EEG Source Imaging）</strong></td>
-<td>Solves the inverse problem to estimate brain sources. The important point is to report not only the estimate itself but also its uncertainty.</td>
+<td><strong>ESI（脳波ソースイメージング）</strong></td>
+<td>逆問題を解き、脳の情報源を推定します。重要な点は、推定値そのものだけでなく、その不確実性も報告することです。</td>
 </tr>
 <tr>
-<td><strong>Direct Validation</strong></td>
-<td>Compares an estimated source or model output against intracranial stimulation, SEEG, or other external ground truth. A good fit alone is not a substitute.</td>
+<td><strong>直接検証</strong></td>
+<td>推定されたソースまたはモデルの出力を頭蓋内刺激、SEEG、またはその他の外部のグラウンド トゥルースと比較します。ぴったりフィットするだけでは代替品にはなりません。</td>
 </tr>
 <tr>
-<td><strong>Language Prior</strong></td>
-<td>Statistical prior information that the decoder borrows from vocabulary, context, and LLM. While it can smooth out sentences, it also obscures the contribution of brain-derived information. </td>
+<td><strong>初級言語</strong></td>
+<td>デコーダーが語彙、コンテキスト、および LLM から借用する統計的な事前情報。文章を滑らかにする一方で、脳由来の情報の寄与を曖昧にしてしまいます。 </td>
 </tr>
 <tr>
-<td><strong>Calibration</strong></td>
-<td>For example, a prediction with 80% confidence is true about 80% of the time over the long term. This is the task of aligning the size and correctness of the scores. In language decoding, however, the statement remains conditional on the declared candidate set, onset rule, or prompt scaffold unless a broader output space was explicitly audited.</td>
+<td><strong>校正</strong></td>
+<td>たとえば、信頼度 80% の予測は、長期的には約 80% の確率で当てはまります。スコアの大きさと正確さを揃える作業です。ただし、言語デコードでは、より広範な出力空間が明示的に監査されない限り、ステートメントは宣言された候補セット、オンセット ルール、またはプロンプト スキャフォールドに条件付きのままになります。</td>
 </tr>
 <tr>
-<td><strong>Abstention / Reject Option</strong></td>
-<td>An operation that returns "I don't know" under low confidence, extrapolation, or outlier conditions. It trades coverage against risk to avoid overclaiming.</td>
+<td><strong>棄権/拒否オプション</strong></td>
+<td>信頼度が低い、外挿、または外れ値の条件下で「わかりません」を返す操作。過剰請求を避けるために、補償範囲とリスクを引き換えにします。</td>
 </tr>
 <tr>
-<td><strong>Functional connectivity</strong></td>
-<td>Statistical dependence among recorded signals or inferred sources. It can be useful, but it is not automatically leak-proof, directional, or causal.</td>
+<td><strong>機能的な接続</strong></td>
+<td>記録された信号または推定ソース間の統計的依存性。便利ではありますが、自動的に漏れを防止したり、方向性や因果関係を示したりするものではありません。</td>
 </tr>
 <tr>
-<td><strong>Effective connectivity</strong></td>
-<td>A model-conditioned claim about directed influence among named nodes. It is stronger than undirected dependence, but candidate model space alone is not enough: observed-subsystem closure / latent-confound audit, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, validation, reliability window, and abstention still shape the safe claim ceiling.</td>
+<td><strong>効果的な接続</strong></td>
+<td>名前付きノード間の指向性影響に関するモデル条件付き主張。これは無向依存よりも強力ですが、候補モデル空間だけでは十分ではありません。観察されたサブシステムのクロージャ / 潜在交絡監査、ノード定義ポリシー、処理 / 第 1 レベルの設計ポリシー、サンプリング / 変換感度、検証、信頼性ウィンドウ、および棄権が依然として安全主張の上限を形成します。</td>
 </tr>
 <tr>
-<td><strong>Effective-connectivity route card</strong></td>
-<td>The disclosure rule for directed-graph claims. It asks for candidate model space, observed-subsystem closure / latent-confound audit, node-definition policy, processing / first-level design policy, sampling / transformation sensitivity, family comparison or model recovery, held-out perturbation / external validation, reliability window, and abstention boundary before a graph is read as more than a model-conditioned causal hypothesis.</td>
+<td><strong>有効接続ルート カード</strong></td>
+<td>有向グラフのクレームの開示規則。グラフがモデル条件付き因果仮説以上のものとして読み取られる前に、候補モデル空間、観測サブシステム閉包 / 潜在交絡監査、ノード定義ポリシー、処理 / 第 1 レベル設計ポリシー、サンプリング / 変換感度、ファミリー比較またはモデル回復、ホールドアウト摂動 / 外部検証、信頼性ウィンドウ、棄権境界が求められます。</td>
 </tr>
 <tr>
-<td><strong>Observed-subsystem closure / latent-confound audit</strong></td>
-<td>A check on whether the recorded nodes and declared inputs are enough for the causal claim being made, or whether hidden nodes, common drives, or unknown inputs could still generate the same directed pattern. It stops a graph fit from being overread as if the observed subsystem were automatically closed.</td>
+<td><strong>観察されたサブシステムの閉鎖 / 潜在的交絡監査</strong></td>
+<td>記録されたノードと宣言された入力が因果関係の主張に十分であるかどうか、または隠れたノード、共通ドライブ、または不明な入力が依然として同じ有向パターンを生成する可能性があるかどうかのチェック。観察されたサブシステムが自動的に閉じられたかのように、グラフ フィットがオーバーリードされるのを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>Node-definition policy</strong></td>
-<td>The rule for how graph nodes were chosen and represented, such as atlas parcels, functionally localized ROIs, source-space regions, or latent-state variables. Because directed estimates can move when node boundaries or functional accuracy change, this policy is part of the claim rather than an implementation detail.</td>
+<td><strong>ノード定義ポリシー</strong></td>
+<td>アトラス パーセル、機能的に局所化された ROI、ソース空間領域、潜在状態変数などのグラフ ノードがどのように選択され、表現されるかに関するルール。ノードの境界や機能の精度が変化すると有向推定値が変動する可能性があるため、このポリシーは実装の詳細ではなく主張の一部です。</td>
 </tr>
 <tr>
-<td><strong>Processing / first-level design policy</strong></td>
-<td>The declared preprocessing and first-level modeling choices that shape the input to the effective-connectivity estimator, such as GLM design, activation contrast, nuisance regression, filtering, deconvolution, or ROI-extraction policy. On this site, those choices are not silent defaults because reasonable processing changes can materially alter connectivity strength and parameter certainty.</td>
+<td><strong>処理/第 1 レベルの設計ポリシー</strong></td>
+<td>GLM 設計、アクティベーション コントラスト、迷惑回帰、フィルタリング、デコンボリューション、ROI 抽出ポリシーなど、有効接続推定器への入力を形成する、宣言された前処理と第 1 レベルのモデリングの選択肢。このサイトでは、これらの選択はサイレント デフォルトではありません。合理的な処理の変更により、接続の強度とパラメーターの確実性が大幅に変更される可能性があるためです。</td>
 </tr>
 <tr>
-<td><strong>Sampling / transformation sensitivity</strong></td>
-<td>The audit of how much the directed result depends on sampling rate, hemodynamic transform, temporal aggregation, source leakage handling, or other observation-model transformations. It is there because a plausible graph under one sampling / transformation regime may fail or reverse under another.</td>
+<td><strong>サンプリング/変換感度</strong></td>
+<td>指示された結果がサンプリング レート、血行力学変換、時間的集計、ソース漏洩処理、またはその他の観察モデル変換にどの程度依存するかを監査します。これは、あるサンプリング/変換レジームの下ではもっともらしいグラフが、別のレジームでは失敗したり反転したりする可能性があるためです。</td>
 </tr>
 <tr>
-<td><strong>Model recovery / family comparison</strong></td>
-<td>The check on whether the estimation workflow can recover the intended model family, or at least distinguish it from named alternatives, under matched simulation or held-out conditions. This is stronger than reporting only a winning model score inside one declared family.</td>
+<td><strong>モデルリカバリ/ファミリー比較</strong></td>
+<td>推定ワークフローが、一致したシミュレーションまたはホールドアウト条件の下で、意図したモデル ファミリを復元できるか、少なくとも名前付きの代替モデルと区別できるかどうかのチェック。これは、宣言された 1 つのファミリー内の勝利モデル スコアのみをレポートするよりも強力です。</td>
 </tr>
 <tr>
-<td><strong>Reliability window</strong></td>
-<td>The acquisition regime over which an effective-connectivity estimate remains stable enough to support reuse, such as tightly matched task conditions, scan duration, hardware setup, and session interval. Reliability is therefore not a route-free property of the method alone.</td>
+<td><strong>信頼性ウィンドウ</strong></td>
+<td>厳密に一致したタスク条件、スキャン期間、ハードウェア設定、セッション間隔など、実効接続推定が再利用をサポートするのに十分な安定性を維持する取得レジーム。したがって、信頼性はメソッド単独のルートフリー特性ではありません。</td>
 </tr>
 <tr>
 <td><strong>wPLI</strong></td>
-<td>A phase-lag metric designed to reduce sensitivity to some zero-lag mixing and noise. It is safer than some older phase-synchrony measures, but not a leak-proof inter-areal coupling readout.</td>
+<td>ゼロラグミキシングとノイズに対する感度を低減するために設計された位相ラグメトリクス。これは、一部の古い位相同期対策よりも安全ですが、リーク防止の領域間結合読み出しではありません。</td>
 </tr>
 <tr>
-<td><strong>STE (Symbolic Transfer Entropy)</strong></td>
-<td>A directional-dependence estimator based on temporal information flow. In Mind-Upload it is not treated as causal proof without perturbation or external validation.</td>
+<td><strong>STE (シンボリック転送エントロピー)</strong></td>
+<td>時間情報フローに基づく方向依存推定器。 Mind-Upload では、摂動や外部検証がなければ因果関係の証明として扱われません。</td>
 </tr>
 <tr>
 <td><strong>DCM</strong></td>
-<td>A dynamic-causal-modeling framework that compares explicit generative circuit models. On this site it remains a route-card claim: larger model spaces, faster solvers, or whole-brain variants can improve tractability, but they do not remove the need to disclose node definition, processing policy, observed-subsystem closure, validation, reliability window, and abstention before any stronger causal-wiring language is allowed.</td>
+<td>明示的な生成回路モデルを比較する動的因果モデリング フレームワーク。このサイトでは、それはルートカードの主張のままです。より大きなモデル空間、より高速なソルバー、または全脳バリアントは扱いやすさを向上させることができますが、より強力な因果関係配線言語が許可される前に、ノード定義、処理ポリシー、観察されたサブシステムの閉鎖、検証、信頼性ウィンドウ、および棄権を開示する必要性がなくなるわけではありません。</td>
 </tr>
 <tr>
-<td><strong>SCM (Structural Causal Model)</strong></td>
-<td>A model that clearly shows causal relationships. Easy to define counterfactuals and intervention predictions. </td>
+<td><strong>SCM (構造因果モデル)</strong></td>
+<td>因果関係を明確に示すモデル。反事実と介入の予測を簡単に定義できます。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="thermodynamics">
-<h2 class="section-title">Thermodynamics and cost</h2>
+<h2 class="section-title">熱力学とコスト</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Meaning in Mind-Upload</th>
+<th>期間</th>
+<th>心の中の意味 - アップロード</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Landauer lower bound</strong></td>
-<td>The minimum dissipation lower bound for logically irreversible operations such as bit erasure. It is not a direct estimate of whole-brain wall power or WBE implementation cost.</td>
+<td><strong>ランダウアー下限</strong></td>
+<td>ビット消去などの論理的に不可逆な操作の最小消費の下限。これは、全脳壁電力または WBE の実装コストを直接見積もるものではありません。</td>
 </tr>
 <tr>
-<td><strong>Energy budget</strong></td>
-<td>A descriptive breakdown of how biological tissue spends energy. It helps compare cost components, but it is not by itself a pass/fail KPI for emulation.</td>
+<td><strong>エネルギー予算</strong></td>
+<td>生体組織がどのようにエネルギーを消費するかの詳細な内訳。これはコスト コンポーネントの比較に役立ちますが、それ自体はエミュレーションの合否 KPI ではありません。</td>
 </tr>
 <tr>
-<td><strong>NESS (nonequilibrium steady state)</strong></td>
-<td>A state that stays statistically stable only while energy continues to flow through the system. It is a concept for ongoing maintenance, not proof of identity or consciousness.</td>
+<td><strong>NESS (非平衡定常状態)</strong></td>
+<td>システム内をエネルギーが流れ続けている間のみ統計的に安定した状態を維持します。これは継続的なメンテナンスのための概念であり、身元や意識の証明ではありません。</td>
 </tr>
 <tr>
-<td><strong>Irreversibility / EPR proxy</strong></td>
-<td>A family of estimates derived from time asymmetry or entropy-production logic. In Mind-Upload, this is not one common measurement object: lower-bound estimates, asymmetry scores, visibility-graph indices, and model-based entropy-flow estimates are kept separate, and even a named estimator family still does not fix coarse-graining, hidden-degree risk, or operational stability.</td>
+<td><strong>不可逆性 / EPR プロキシ</strong></td>
+<td>時間の非対称性またはエントロピー生成ロジックから導出される推定値のファミリー。 Mind-Upload では、これは 1 つの一般的な測定オブジェクトではありません。下限推定値、非対称スコア、可視性グラフ インデックス、およびモデルベースのエントロピー フロー推定値は分離されており、名前付き推定器ファミリーであっても、粗視化、隠れ次数リスク、または運用の安定性は依然として修正されていません。</td>
 </tr>
 <tr>
-<td><strong>Irreversibility / Thermodynamic Route Card</strong></td>
-<td>The disclosure rule for reporting thermodynamic-style claims: state the signal route and state definition, coarse-graining / timescale, observed-state closure / hidden-degree risk, estimator family and quantity type, null / surrogate control, reverse-transition support / finite-data handling, stability / nuisance sensitivity, physiology-side grounding / bridge quality if energetic language is used, cost isolation, and abstention boundary before the claim ceiling is raised.</td>
+<td><strong>不可逆性 / 熱力学ルート カード</strong></td>
+<td>熱力学形式のクレームを報告するための開示ルール: 信号ルートと状態定義、粗視化/タイムスケール、観測状態閉合/隠れ次数リスク、推定器ファミリーと数量タイプ、ヌル/サロゲート制御、逆遷移サポート/有限データ処理、安定性/迷惑感度、エネルギー的な言語が使用されている場合の生理学側の接地/ブリッジ品質、コスト分離、クレーム上限前の棄権境界を記載します。 </td>
 </tr>
 <tr>
-<td><strong>Coarse-graining / timescale</strong></td>
-<td>The state-space construction behind the estimate: parcelization or clustering rule, retained features, temporal bins, sampling rate, and analysis window. Changing these choices can change what quantity was actually computed.</td>
+<td><strong>粗視化 / タイムスケール</strong></td>
+<td>推定の背後にある状態空間の構築: パーセル化またはクラスタリング ルール、保持された特徴、時間ビン、サンプリング レート、分析ウィンドウ。これらの選択を変更すると、実際に計算された数量が変わる可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Observed-state closure / hidden-degree risk</strong></td>
-<td>The risk that hidden variables, hidden cycles, or memory introduced by coarse graining still carry dissipation that the reported trajectory does not see. A small irreversibility number is not automatically near-equilibrium.</td>
+<td><strong>観察された状態の閉鎖/隠れ次数リスク</strong></td>
+<td>粗視化によって導入された隠れた変数、隠れたサイクル、またはメモリが、報告された軌跡では見られない散逸を依然として抱えているリスク。不可逆数が小さいと、自動的に平衡に近い状態にはなりません。</td>
 </tr>
 <tr>
-<td><strong>Reverse-transition support / finite-data handling</strong></td>
-<td>Whether the relevant forward and reverse transitions were actually observed often enough, and how zero or rare counts were handled. A clean shuffle or surrogate is not the same thing as adequate support coverage.</td>
+<td><strong>逆遷移サポート / 有限データ処理</strong></td>
+<td>関連する順方向および逆方向の遷移が実際に十分な頻度で観察されたかどうか、およびゼロまたはまれなカウントがどのように処理されたか。クリーンなシャッフルまたはサロゲートは、適切なサポート範囲と同じではありません。</td>
 </tr>
 <tr>
-<td><strong>Stability / nuisance sensitivity</strong></td>
-<td>Whether the result survives motion, denoising, protocol changes, and test-retest checks. A mathematically interesting metric is not automatically a reusable operational signal.</td>
+<td><strong>安定性 / 迷惑に対する敏感さ</strong></td>
+<td>結果がモーション、ノイズ除去、プロトコルの変更、およびテストと再テストのチェックに耐えられるかどうか。数学的に興味深いメトリクスは、自動的には再利用可能な動作信号ではありません。</td>
 </tr>
 <tr>
-<td><strong>Cross-estimator concordance</strong></td>
-<td>Whether the sign or ordering survives more than one reasonable estimator family or state-space construction, rather than remaining an estimator-specific artifact.</td>
+<td><strong>相互推定の一致</strong></td>
+<td>符号または順序付けが、推定器固有の成果物として残るのではなく、複数の合理的な推定器族または状態空間構築に存続するかどうか。</td>
 </tr>
 <tr>
-<td><strong>Physiology-side grounding / bridge quality</strong></td>
-<td>Whether metabolism or energetic cost was directly measured and aligned in the same session / state window, and whether agreement or disagreement across modalities was quantified. Paired modalities alone do not make a signal-side irreversibility measure a direct metabolic readout.</td>
+<td><strong>生理学側の接地/ブリッジの品質</strong></td>
+<td>代謝コストまたはエネルギーコストが同じセッション/状態ウィンドウで直接測定および調整されたかどうか、およびモダリティ間の一致または不一致が定量化されたかどうか。ペアのモダリティだけでは、シグナル側の不可逆性測定を直接代謝の読み取り値にすることはできません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>Supplementary information for 2026-03</strong>
+<strong>2026-03 の補足情報</strong>
 <p>
-Although non-invasive decoding and ESI are making steady progress, a successful decoder does not necessarily mean that the internal state can be uniquely restored, and a BOLD / fNIRS difference does not automatically mean a clean neural difference. When reading Tang et al. (2023), d'Ascoli et al. (2025), Unnwongse et al. (2023), and Hao et al. (2025), keep task constraints, shortcut routes, language prior, direct validation, and vascular-state limits separate.
+非侵襲的デコードと ESI は着実に進歩していますが、デコーダの成功は必ずしも内部状態を一意に復元できることを意味するわけではなく、BOLD / fNIRS の違いが自動的にきれいな神経の違いを意味するわけではありません。 Tang et al. を読むと、 (2023)、ダスコリら。 (2025)、Unnwongse et al。 (2023)、および Hao et al。 (2025) では、タスクの制約、ショートカット ルート、事前言語、直接検証、および血管状態の制限を分離しておきます。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Thermodynamic words also need a claim ceiling</strong>
+<strong>熱力学用語にもクレーム上限が必要</strong>
 <p>
-<a href="https://doi.org/10.1038/nature10872" target="_blank">Bérut et al. (2012)</a>, <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">Attwell &amp; Laughlin (2001)</a>, <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a>, <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a>, <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> do not all compute the same quantity. <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">Martínez et al. (2019)</a> and <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">Blom et al. (2024)</a> show that partial observation or coarse lumping can hide dissipation and induce memory, <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Baiesi et al. (2024)</a> show that sparse reverse transitions can force lower-bound strategies, <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">Poudel et al. (2024)</a> and <a href="https://doi.org/10.1002/hbm.26778" target="_blank">Metzen et al. (2024)</a> show that operational stability depends on metric family and nuisance handling, and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> plus <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> show that temporal coupling or BOLD change is not automatic energetic grounding. In Mind-Upload, a <strong>thermodynamic result</strong> therefore does not automatically mean measured physical dissipation, reusable operational metric, matched metabolism-side evidence, wall-power, or a WBE gate.
+<a href="https://doi.org/10.1038/nature10872" target="_blank">Bérut ら。 (2012)</a>、<a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">アトウェル＆amp;ラフリン (2001)</a>、<a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn 他。 (2021)</a>、<a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">デ・ラ・フエンテ 他(2023)</a>、<a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi 他。 (2025)</a>、<a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">石原＆amp; Shimazaki (2025)</a> は、すべてが同じ量を計算するわけではありません。 <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">マルティネスら。 (2019)</a> および <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">ブロムら。 (2024)</a> は、部分的な観察または粗い集中化が散逸を隠し、記憶を誘導できることを示しています。<a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Baiesi et al。 (2024)</a> は、まばらな逆遷移が下限戦略を強制できることを示しています。<a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">Poudel et al. (2024)</a> および <a href="https://doi.org/10.1002/hbm.26778" target="_blank">Metzen 他。 (2024)</a> は、運用の安定性がメトリック ファミリと迷惑処理に依存することを示し、<a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen らは、 (2025)</a> プラス <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp ら。 (2025)</a> は、時間的結合または大胆な変化が自動的なエネルギー的接地ではないことを示しています。したがって、Mind-Upload では、<strong>熱力学結果</strong> は、測定された物理的散逸、再利用可能な動作メトリック、一致した代謝側の証拠、壁電力、または WBE ゲートを自動的に意味するわけではありません。
 </p>
 </div>
 
 <section class="section" id="open-science">
-<h2 class="section-title">Standardization and reproducibility (Open Science)</h2>
+<h2 class="section-title">標準化と再現性 (オープン サイエンス)</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Meaning</th>
+<th>期間</th>
+<th>意味</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>BIDS / EEG-BIDS</strong></td>
-<td>Rules for organizing neural measurement data. Their role is to lower the barrier to sharing and reproduction.</td>
+<td>神経測定データを整理するためのルール。彼らの役割は、共有と複製に対する障壁を下げることです。</td>
 </tr>
 <tr>
-<td><strong>Benchmark</strong></td>
-<td>A mechanism for fixing tasks, data, and metrics so results can be compared.</td>
+<td><strong>ベンチマーク</strong></td>
+<td>結果を比較できるように、タスク、データ、メトリクスを修正するためのメカニズム。</td>
 </tr>
 <tr>
-<td><strong>Baseline</strong></td>
-<td>Starting point for comparison. If you want to claim improvement, you need a difference from the baseline. </td>
+<td><strong>ベースライン</strong></td>
+<td>比較の開始点。改善を主張したい場合は、ベースラインとの差が必要です。 </td>
 </tr>
 <tr>
-<td><strong>Preregistration</strong></td>
-<td>Fixes the plan before running the work and separates exploration from verification. This helps reduce reporting bias.</td>
+<td><strong>事前登録</strong></td>
+<td>作業を実行する前に計画を修正し、探索と検証を分離します。これは、報告の偏りを軽減するのに役立ちます。</td>
 </tr>
 <tr>
-<td><strong>Model card</strong></td>
-<td>A format that publishes not only scores but also training data, compute requirements, shortcut risks, claim ceiling, known weaknesses, and failure examples.</td>
+<td><strong>モデルカード</strong></td>
+<td>スコアだけでなく、トレーニング データ、コンピューティング要件、ショートカット リスク、クレーム上限、既知の弱点、失敗例も公開する形式。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">References (term definitions)</h2>
+<h2 class="section-title">参考資料 (用語の定義)</h2>
 <ol>
-<li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
-<li>Wipf, D., &amp; Nagarajan, S. (2009). Unified Bayesian framework for MEG/EEG source imaging. <a href="https://doi.org/10.1016/j.neuroimage.2008.02.059" target="_blank">doi:10.1016/j.neuroimage.2008.02.059</a></li>
-<li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
-<li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation in focal epilepsy. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
-<li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
-<li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
-<li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
-<li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
-<li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
-<li>Rosa, M. J., Friston, K., &amp; Penny, W. (2012). Post-hoc selection of dynamic causal models. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
-<li>Vinck, M., et al. (2011). Weighted Phase Lag Index (wPLI). <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
-<li>Staniek, M., &amp; Lehnertz, K. (2008). Symbolic Transfer Entropy. <a href="https://doi.org/10.1103/PhysRevLett.100.158101" target="_blank">doi:10.1103/PhysRevLett.100.158101</a></li>
-<li>Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: A simulation study. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
-<li>Palva, J. M., Wang, S. H., Palva, S., Zhigalov, A., Monto, S., Brookes, M. J., Schoffelen, J.-M., &amp; Jerbi, K. (2018). Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
-<li>Ye, S., Kitajo, K., &amp; Kitano, K. (2020). Information-theoretic approach to detect directional information flow in EEG signals induced by TMS. <a href="https://doi.org/10.1016/j.neures.2019.09.003" target="_blank">doi:10.1016/j.neures.2019.09.003</a></li>
-<li>Miljevic, A., Murphy, O. W., Fitzgerald, P. B., &amp; Bailey, N. W. (2025). Estimating sensor-space EEG connectivity PART 1: Identifying best performing methods for functional connectivity in simulated data. <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">doi:10.1016/j.clinph.2025.03.043</a></li>
-<li>Gorgolewski, K. J., et al. (2016). BIDS. <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">doi:10.1038/sdata.2016.44</a></li>
-<li>Pernet, C. R., et al. (2019). EEG-BIDS. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
-<li>Pernet, C. R., et al. (2020). Best practices in data analysis and sharing in neuroimaging using MEEG. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
-<li>Guo, C., Pleiss, G., Sun, Y., &amp; Weinberger, K. Q. (2017). On Calibration of Modern Neural Networks. <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank">PMLR 70:1321-1330</a></li>
-<li>Geifman, Y., &amp; El-Yaniv, R. (2017). Selective Classification for Deep Neural Networks. <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
-<li>Gouwens, N. W., et al. (2021). Integrated morphoelectric and transcriptomic classification of cortical GABAergic cells. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
-<li>Yiu, A. P., Mercaldo, V., Yan, C., et al. (2014). Neurons Are Recruited to a Memory Trace Based on Relative Neuronal Excitability Immediately before Training. <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">doi:10.1016/j.neuron.2014.07.017</a></li>
-<li>Hadzibegovic, S., Zhu, L., Ginger, M., et al. (2025). Early intrinsic excitability plasticity of neocortical engram neurons defines memory formation and precision. <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
-<li>Benoit, R., Galego, D. A., Sch&auml;ren, M. S., et al. (2025). Axon initial segment dynamics during associative fear learning. <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">doi:10.1038/s41593-025-02152-5</a></li>
-<li>Hengen, K. B., Torrado Pacheco, A., McGregor, J. N., Van Hooser, S. D., &amp; Turrigiano, G. G. (2016). Neuronal firing rate homeostasis is inhibited by sleep and promoted by wake. <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
-<li>Grubb, M. S., &amp; Burrone, J. (2010). Activity-dependent relocation of the axon initial segment fine-tunes neuronal excitability. <a href="https://doi.org/10.1038/nature09160" target="_blank">doi:10.1038/nature09160</a></li>
-<li>Tallman, C. W., Steinmetz, P. N., &amp; Wixted, J. T. (2025). Neuronal allocation and sparse coding of episodic memories in the human hippocampus. <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">doi:10.1038/s41598-025-21967-7</a></li>
-<li>Santoni, G., et al. (2024). Chromatin plasticity predetermines neuronal eligibility for memory trace formation. <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
-<li>Wang, J., Telese, F., Tan, Y., et al. (2015). LSD1n is an H4K20 demethylase regulating memory formation via transcriptional elongation control. <a href="https://doi.org/10.1038/nn.4069" target="_blank">doi:10.1038/nn.4069</a></li>
-<li>Dai, J., Aoto, J., &amp; Südhof, T. C. (2019). Alternative splicing of presynaptic neurexins differentially controls postsynaptic NMDA and AMPA receptor responses. <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">doi:10.1016/j.neuron.2019.03.032</a></li>
-<li>Shi, H., Zhang, X., Weng, Y.-L., et al. (2018). m6A facilitates hippocampus-dependent learning and memory through YTHDF1. <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">doi:10.1038/s41586-018-0666-1</a></li>
-<li>Peterson, L. N., Kasper, J. M., Allgaier, J. A., et al. (2025). ADAR2-mediated Q/R editing of GluA2 in homeostatic synaptic plasticity. <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">doi:10.1126/scisignal.adr1442</a></li>
-<li>Joglekar, A., Prjibelski, A., Mahfouz, A., et al. (2024). Single-cell long-read sequencing-based mapping reveals specialized splicing patterns in developing and adult mouse and human brain. <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">doi:10.1038/s41593-024-01616-4</a></li>
-<li>Li, Y., Zhu, M., Li, X., et al. (2025). Enhanced Protein Synthesis and Hippocampus-Dependent Memory via Inhibition of YTHDF2-Mediated m6A mRNA Degradation. <a href="https://doi.org/10.1002/advs.202514926" target="_blank">doi:10.1002/advs.202514926</a></li>
-<li>Giese, K. P., Fedorov, N. B., Filipkowski, R. K., &amp; Silva, A. J. (1998). Autophosphorylation at Thr286 of the alpha calcium-calmodulin kinase II in LTP and learning. <a href="https://doi.org/10.1126/science.279.5352.870" target="_blank">doi:10.1126/science.279.5352.870</a></li>
-<li>Lee, H.-K., Barbarosie, M., Kameyama, K., Bear, M. F., &amp; Huganir, R. L. (2003). Regulation of distinct AMPA receptor phosphorylation sites during bidirectional synaptic plasticity. <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">doi:10.1016/S0092-8674(03)00122-3</a></li>
-<li>Tomita, S., Stein, V., Stocker, T. J., Nicoll, R. A., &amp; Bredt, D. S. (2005). Bidirectional synaptic plasticity regulated by phosphorylation of stargazin-like TARPs. <a href="https://doi.org/10.1016/j.neuron.2005.01.009" target="_blank">doi:10.1016/j.neuron.2005.01.009</a></li>
-<li>Vierra, N. C., et al. (2023). Endoplasmic reticulum-plasma membrane junctions couple electrical activity to Ca2+-activated PKA signaling in neurons. <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">doi:10.1038/s41467-023-40930-6</a></li>
-<li>Biswas, D., et al. (2023). The landscape of the human brain phosphoproteome reveals region-specific phosphorylation events. <a href="https://doi.org/10.1021/acs.jproteome.2c00244" target="_blank">doi:10.1021/acs.jproteome.2c00244</a></li>
-<li>Govindarajan, A., Israely, I., Huang, S.-Y., &amp; Tonegawa, S. (2011). The dendritic branch is the preferred integrative unit for protein synthesis-dependent LTP. <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
-<li>Glykys, J., Dzhala, V., Egawa, K., et al. (2014). Local impermeant anions establish the neuronal chloride concentration. <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
-<li>Heubl, M., Zhang, J., Pressey, J. C., et al. (2017). GABAA receptor dependent synaptic inhibition rapidly tunes KCC2 activity via the Cl-sensitive WNK1 kinase. <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">doi:10.1038/s41467-017-01749-0</a></li>
-<li>Ding, F., O'Donnell, J., Xu, Q., et al. (2016). Changes in the composition of brain interstitial ions control the sleep-wake cycle. <a href="https://doi.org/10.1126/science.aad4821" target="_blank">doi:10.1126/science.aad4821</a></li>
-<li>Byvaltsev, E., Behbood, M., Schleimer, J.-H., Gensch, T., Semyanov, A., Schreiber, S., &amp; Strauss, U. (2023). KCC2 reverse mode helps to clear postsynaptically released potassium at glutamatergic synapses. <a href="https://doi.org/10.1016/j.celrep.2023.112934" target="_blank">doi:10.1016/j.celrep.2023.112934</a></li>
-<li>Lyckenvik, T., Forsberg, M., Johansson, K., et al. (2025). Ion concentrations in CSF and serum are differentially and precisely regulated. <a href="https://doi.org/10.1093/braincomms/fcaf201" target="_blank">doi:10.1093/braincomms/fcaf201</a></li>
-<li>Qian, Y., Lin, Y.-C., Chen, X., et al. (2025). Single-quantum sodium MRI at 3 T for separation of mono- and bi-T2 sodium signals. <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
-<li>Hardingham, N. R., &amp; Larkman, A. U. (1998). The reliability of excitatory synaptic transmission in slices of rat visual cortex in vitro is temperature dependent. <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">doi:10.1111/j.1469-7793.1998.249bu.x</a></li>
-<li>Volgushev, M., Vidyasagar, T. R., Chistiakova, M., Yousef, T., &amp; Eysel, U. T. (2000). Membrane properties and spike generation in rat visual cortical cells during reversible cooling. <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">doi:10.1111/j.1469-7793.2000.00059.x</a></li>
-<li>Moser, E., Mathiesen, I., &amp; Andersen, P. (1993). Association between brain temperature and dentate field potentials in exploring and swimming rats. <a href="https://doi.org/10.1126/science.8446900" target="_blank">doi:10.1126/science.8446900</a></li>
-<li>Long, M. A., &amp; Fee, M. S. (2008). Using temperature to analyse temporal dynamics in the songbird motor pathway. <a href="https://doi.org/10.1038/nature07448" target="_blank">doi:10.1038/nature07448</a></li>
-<li>Owen, S. F., Liu, M. H., &amp; Kreitzer, A. C. (2019). Thermal constraints on in vivo optogenetic manipulations. <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">doi:10.1038/s41593-019-0422-3</a></li>
-<li>Boorman, L. W., Harris, S. S., Shabir, O., et al. (2023). Bidirectional alterations in brain temperature profoundly modulate spatiotemporal neurovascular responses in-vivo. <a href="https://doi.org/10.1038/s42003-023-04542-6" target="_blank">doi:10.1038/s42003-023-04542-6</a></li>
-<li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
-<li>Rogala, J., Dreszer, J., Sińczuk, M., et al. (2024). Local variation in brain temperature explains gender-specificity of working memory performance. <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">doi:10.3389/fnhum.2024.1398034</a></li>
-<li>Tan, X. R., Stephenson, M. C., Alhadad, S., et al. (2024). Elevated brain temperature under severe heat exposure impairs cortical motor activity and executive function. <a href="https://doi.org/10.1016/j.jshs.2023.09.001" target="_blank">doi:10.1016/j.jshs.2023.09.001</a></li>
-<li>Tan, Y., Liu, W., Li, Y., et al. (2025). Measurement of Healthy Adult Brain Temperature Using <sup>1</sup>H Magnetic Resonance Spectroscopy Thermometry. <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">doi:10.1007/s00062-024-01467-3</a></li>
-<li>Inoue, T., Nomura, S., Yamakawa, T., et al. (2025). Intraoperative evaluation using a multimodality probe of temperature-dependent neurovascular modulation during focal brain cooling. <a href="https://doi.org/10.1016/j.clinph.2025.02.262" target="_blank">doi:10.1016/j.clinph.2025.02.262</a></li>
-<li>Lazopulo, A., Emmenegger, Y., Đukanović, N., et al. (2025). Brain temperature as proxy for brain state and oscillatory activity in the mouse. <a href="https://doi.org/10.1038/s41598-025-21175-3" target="_blank">doi:10.1038/s41598-025-21175-3</a></li>
-<li>Seidl, A. H., Rubel, E. W., &amp; Barria, A. (2015). Tuning of Ranvier node and internode properties in myelinated axons to adjust action potential timing. <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
-<li>Suzuki, A., et al. (2011). Astrocyte-neuron lactate transport is required for long-term memory formation. <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
-<li>Silva, B., et al. (2022). Glial ketogenesis regulates memory maintenance during starvation. <a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">doi:10.1038/s42255-022-00528-6</a></li>
-<li>Pavlowsky, A., et al. (2025). Neuronal fatty acid oxidation fuels memory after intensive learning in Drosophila. <a href="https://doi.org/10.1038/s42255-025-01416-5" target="_blank">doi:10.1038/s42255-025-01416-5</a></li>
-<li>Greda, A. K., et al. (2025). Interaction of sortilin with apolipoprotein E3 enables neurons to use long-chain fatty acids as alternative metabolic fuel. <a href="https://doi.org/10.1038/s42255-025-01389-5" target="_blank">doi:10.1038/s42255-025-01389-5</a></li>
-<li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
-<li>Williamson, N. R., et al. (2025). Learning-associated astrocyte ensembles regulate memory recall. <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
-<li>Dewa, K., et al. (2025). The astrocytic ensemble acts as a multiday trace to stabilize memory. <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
-<li>Bukalo, O., et al. (2026). Astrocytes enable amygdala neural representations supporting memory. <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
-<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
-<li>Hiraoka, K., Mesfin, B., Wu, Y., et al. (2025). Kinetic and quantitative analysis of [<sup>18</sup>F]SMBT-1 PET imaging for monoamine oxidase B. <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">doi:10.1007/s12149-025-02083-y</a></li>
-<li>Mesfin, B., Ishioka, Y., Ichinose, Y., et al. (2026). Whole-body biodistribution of [<sup>18</sup>F]SMBT-1: a novel PET tracer for monoamine oxidase B imaging in healthy humans. <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">doi:10.1007/s12149-025-02144-2</a></li>
-<li>Tyacke, R. J., Myers, J. F. M., Venkataraman, A., et al. (2018). Evaluation of <sup>11</sup>C-BU99008, a PET Ligand for the Imidazoline<sub>2</sub> Binding Site in Human Brain. <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
-<li>Livingston, N. R., Calsolaro, V., Hinz, R., et al. (2022). Relationship between astrocyte reactivity, using novel <sup>11</sup>C-BU99008 PET, and glucose metabolism, grey matter volume and amyloid load in cognitively impaired individuals. <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>
-<li>Best, L. M., Truong, J., McCluskey, T., et al. (2026). MAO-B status in alcohol use disorder: a [<sup>11</sup>C]SL25.1188 PET imaging study of putative astrogliosis. <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">doi:10.1038/s41380-025-03355-9</a></li>
-<li>Musall, S., Kaufman, M. T., Juavinett, A. L., Gluf, S., &amp; Churchland, A. K. (2019). Single-trial neural dynamics are dominated by richly varied movements. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
-<li>Chaibub Neto, E., Pratap, A., Perumal, T. M., et al. (2019). Identity confounding in machine learning can be controlled by design. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
-<li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
-<li>Williams, R. J., Specht, J. L., Mazerolle, E. L., et al. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
-<li>Yücel, M. A., Selb, J., Huppert, T. J., Franceschini, M. A., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
-<li>Ahlfors, S. P., Han, J., Belliveau, J. W., &amp; Hämäläinen, M. S. (2010). Sensitivity of MEG and EEG to source orientation. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">doi:10.1007/s10548-010-0154-x</a></li>
-<li>Goldenholz, D. M., Ahlfors, S. P., Hämäläinen, M. S., Sharon, D., Ishitobi, M., Vaina, L. M., &amp; Stufflebeam, S. M. (2009). Mapping the signal-to-noise-ratios of cortical sources in magnetoencephalography and electroencephalography. <a href="https://doi.org/10.1002/hbm.20571" target="_blank">doi:10.1002/hbm.20571</a></li>
-<li>Piastra, M. C., Nüßing, A., Vorwerk, J., Clerc, M., Engwer, C., &amp; Wolters, C. H. (2021). A comprehensive study on electroencephalography and magnetoencephalography sensitivity to cortical and subcortical sources. <a href="https://doi.org/10.1002/hbm.25272" target="_blank">doi:10.1002/hbm.25272</a></li>
-<li>Thomas, C., Ye, F. Q., Irfanoglu, M. O., Modi, P., Saleem, K. S., Leopold, D. A., &amp; Pierpaoli, C. (2014). Anatomical accuracy of brain connections derived from diffusion MRI tractography is inherently limited. <a href="https://doi.org/10.1073/pnas.1405672111" target="_blank">doi:10.1073/pnas.1405672111</a></li>
-<li>Reveley, C., Seth, A. K., Pierpaoli, C., Silva, A. C., Yu, D., Saunders, R. C., Leopold, D. A., &amp; Ye, F. Q. (2015). Superficial white matter fiber systems impede detection of long-range cortical connections in diffusion MR tractography. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">doi:10.1073/pnas.1418198112</a></li>
-<li>Schilling, K. G., Gao, Y., Janve, V., Stepniewska, I., Landman, B. A., &amp; Anderson, A. W. (2018). Confirmation of a gyral bias in diffusion MRI fiber tractography. <a href="https://doi.org/10.1002/hbm.23936" target="_blank">doi:10.1002/hbm.23936</a></li>
-<li>Gajwani, M., Oldham, S., Pang, J. C., Arnatkevičiūtė, A., Tiego, J., Bellgrove, M. A., &amp; Fornito, A. (2023). Can hubs of the human connectome be identified consistently with diffusion MRI? <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">doi:10.1162/netn_a_00324</a></li>
-<li>He, Y., Hong, Y., Wu, Y., et al. (2024). Spherical-deconvolution informed filtering of tractograms changes laterality of structural connectome. <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">doi:10.1016/j.neuroimage.2024.120904</a></li>
-<li>McMaster, E. M., Newlin, N. R., Rudravaram, G., et al. (2025). Harmonized connectome resampling for variance in voxel sizes. <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>
-<li>Manzano-Patrón, J. P., Deistler, M., Schröder, C., et al. (2025). Uncertainty mapping and probabilistic tractography using Simulation-based Inference in diffusion MRI: A comparison with classical Bayes. <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">doi:10.1016/j.media.2025.103580</a></li>
-<li>Zhu, S., Huszar, I. N., Cottaar, M., et al. (2025). Imaging the structural connectome with hybrid MRI-microscopy tractography. <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">doi:10.1016/j.media.2025.103498</a></li>
-<li>Bramati, I. B., Szczupak, D., Carneiro Monteiro, M., Meireles, F., Menezes Guimarães, D., Dean, R. J., Paul, L. K., &amp; Tovar-Moll, F. (2026). Diffusion MRI sampling schemes bias diffusion metrics and tractography. <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">doi:10.3389/fnimg.2026.1670604</a></li>
-<li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
-<li>Wei, H., Prasad, G., Ombao, H., &amp; Hajnal, J. V. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
-<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
-<li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An In Vivo High-Resolution Human Brain Atlas of Synaptic Density. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
-<li>Lucchetti, F., Céléreau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
-<li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
-<li>Kim, J., et al. (2025). Meningeal lymphatics-microglia axis regulates synaptic physiology. <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
-<li>Fultz, N. E., Bonmassar, G., Setsompop, K., et al. (2019). Coupled electrophysiological, hemodynamic, and cerebrospinal fluid oscillations in human sleep. <a href="https://doi.org/10.1126/science.aax5440" target="_blank">doi:10.1126/science.aax5440</a></li>
-<li>Kim, D., Huang, Y., &amp; Liu, J. (2025). Non-invasive MRI measurements of age-dependent in vivo human glymphatic exchange using magnetization transfer spin labeling. <a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">doi:10.1016/j.neuroimage.2025.121142</a></li>
-<li>Eide, P. K., Pripp, A. H., Valnes, L. M., et al. (2023). Intrathecal cerebrospinal fluid tracer clearance to blood is associated with CSF-to-blood clearance capacity and plasma biomarkers. <a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">doi:10.1038/s41467-023-37685-5</a></li>
-<li>Hirschler, L., et al. (2025). Region-specific drivers of cerebrospinal fluid mobility measured with MRI in humans. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
-<li>Lim, C., Chen, C., Zhang, C., et al. (2025). Human cerebrospinal fluid net flow enhanced by respiration during the awake state. <a href="https://doi.org/10.1038/s41467-025-66548-4" target="_blank">doi:10.1038/s41467-025-66548-4</a></li>
-<li>Yoo, R.-E., Kim, J.-H., Moon, H. Y., et al. (2025). Long-term physical exercise facilitates putative glymphatic and meningeal lymphatic vessel flow in humans. <a href="https://doi.org/10.1038/s41467-025-58726-1" target="_blank">doi:10.1038/s41467-025-58726-1</a></li>
-<li>Dagum, P., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
-<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
-<li>Bolt, T., Falahpour, M., Nalci, A., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
-<li>Epp, S. M., Castrillón, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
-<li>Lu, X., Han, X., Meirovitch, Y., Sjöstedt, E., Schalek, R. L., &amp; Lichtman, J. W. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
-<li>MICrONS Consortium, Bae, J. A., Bak, J. H., et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
-<li>de Quervain, D. J. F., Roozendaal, B., &amp; McGaugh, J. L. (1998). Stress and glucocorticoids impair retrieval of long-term spatial memory. <a href="https://doi.org/10.1038/29542" target="_blank">doi:10.1038/29542</a></li>
-<li>Oei, N. Y. L., Elzinga, B. M., Wolf, O. T., de Ruiter, M. B., Damoiseaux, J. S., Kuijer, J. P. A., Veltman, D. J., Scheltens, P., &amp; Rombouts, S. A. R. B. (2007). Glucocorticoids decrease hippocampal and prefrontal activation during declarative memory retrieval in young men. <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">doi:10.1007/s11682-007-9003-2</a></li>
-<li>McCauley, J. P., Petroccione, M. A., D'Brant, L. Y., et al. (2020). Circadian modulation of neurons and astrocytes controls synaptic plasticity in hippocampal area CA1. <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">doi:10.1016/j.celrep.2020.108255</a></li>
-<li>Barone, I., Gillette, N. M., Hawks-Mayer, H., et al. (2023). Synaptic BMAL1 phosphorylation controls circadian hippocampal plasticity. <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">doi:10.1126/sciadv.adj1010</a></li>
-<li>Birnie, M. T., Begum, G., Sugden, D., et al. (2023). Circadian regulation of hippocampal function is disrupted with corticosteroid treatment. <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">doi:10.1073/pnas.2211996120</a></li>
-<li>Benedict, C., Hallschmid, M., Hatke, A., et al. (2004). Intranasal insulin improves memory in humans. <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">doi:10.1016/j.psyneuen.2004.04.003</a></li>
-<li>Reger, M. A., Watson, G. S., Green, P. S., et al. (2008). Intranasal insulin administration dose-dependently modulates verbal memory and plasma amyloid-beta in memory-impaired older adults. <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">doi:10.3233/JAD-2008-13309</a></li>
-<li>Sherman, S. M., Mumford, J. A., &amp; Schnyer, D. M. (2015). Hippocampal activity mediates the relationship between circadian activity rhythms and memory in older adults. <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">doi:10.1016/j.neuropsychologia.2015.07.020</a></li>
-<li>Bérut, A., Arakelyan, A., Petrosyan, A., et al. (2012). Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics. <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
-<li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
-<li>Lynn, C. W., et al. (2021). Broken detailed balance and entropy production in the human brain. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
-<li>Deco, G., Sanz Perl, Y., Bocaccio, H., Tagliazucchi, E., &amp; Kringelbach, M. L. (2022). The INSIDEOUT framework provides precise signatures of the balance of intrinsic and extrinsic dynamics in brain states. <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">doi:10.1038/s42003-022-03505-7</a></li>
-<li>de la Fuente, L. A., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
-<li>Nartallo-Kaluarachchi, R., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
-<li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
-<li>Mart&iacute;nez, I. A., Bisker, G., Horowitz, J. M., &amp; Parrondo, J. M. R. (2019). Inferring broken detailed balance in the absence of observable currents. <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">doi:10.1038/s41467-019-11051-w</a></li>
-<li>Blom, K., Song, K., Vouga, E., Godec, A., &amp; Makarov, D. E. (2024). Milestoning estimators of dissipation in systems observed at a coarse resolution. <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">doi:10.1073/pnas.2318333121</a></li>
-<li>Baiesi, M., Falasco, G., &amp; Moghimi-Araghi, S. (2024). Effective estimation of entropy production with lacking data. <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">doi:10.1038/s42005-024-01742-2</a></li>
-<li>Poudel, R., et al. (2024). Network representation of fMRI data using visibility graphs: the impact of motion and test-retest reliability. <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">doi:10.1007/s12021-024-09652-y</a></li>
-<li>Metzen, D., et al. (2024). Reliability of variability and complexity measures for task and task-free BOLD fMRI. <a href="https://doi.org/10.1002/hbm.26778" target="_blank">doi:10.1002/hbm.26778</a></li>
-<li>Chen, Y., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
-<li>Epp, S. M., Castrillon, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
-<li>Albantakis, L., et al. (2023). Integrated Information Theory (IIT) 4.0. <a href="https://doi.org/10.1371/journal.pcbi.1011465" target="_blank">doi:10.1371/journal.pcbi.1011465</a></li>
-<li>Friston, K. (2010). The free-energy principle. <a href="https://doi.org/10.1038/nrn2787" target="_blank">doi:10.1038/nrn2787</a></li>
-<li>Casali, A. G., et al. (2013). PCI. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
-<li>Doerig, A., et al. (2019). Unfolding Argument. <a href="https://doi.org/10.1016/j.concog.2019.04.002" target="_blank">doi:10.1016/j.concog.2019.04.002</a></li>
-<li>Tononi, G., et al. (2016). IIT: from the phenomenology to the mechanisms of consciousness. <a href="https://doi.org/10.1038/nrn.2016.44" target="_blank">doi:10.1038/nrn.2016.44</a></li>
+<li>ミシェル、C.M.、およびブルーネット、D. (2019)。 EEGソースイメージングのレビュー。 <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
+<li>Wipf、D.、&amp;ナガラジャン、S. (2009)。 MEG/EEG ソース イメージング用の統合ベイジアン フレームワーク。 <a href="https://doi.org/10.1016/j.neuroimage.2008.02.059" target="_blank">doi:10.1016/j.neuroimage.2008.02.059</a></li>
+<li>Seeber, M.、Cantonas, L.-M.、Hoevels, M.、他。 （2019年）。皮質下の電気生理学的活動は、高密度EEGソースイメージングで検出可能です。 <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
+<li>Unnwongse、K.、Achakulvisut、T.、Wu、J.Y.、他。 （2023年）。焦点性てんかんにおける頭蓋内電気刺激を使用したEEGソースイメージングの検証。 <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Hao, S.、Zhao, H.、Feng, Z. 他(2025年)。薬剤耐性てんかんにおける HD-EEG ソースイメージングと同時 SEEG 記録。 <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Tang、J.、LeBel、A.、Jain、S.、およびヒュース、A.G. (2023)。非侵襲的な脳記録からの連続言語の意味的再構築。 <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>d'Ascoli, S.、Bel, C.、Rapin, J. 他(2025年)。非侵襲的な脳記録から個々の単語を解読する方向へ。 <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
+<li>K.J.フリストン、L.ハリソン、およびペニー、W. (2003)。動的因果モデリング。 <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
+<li>ペニー、WD、ステファン、K.E.、メシェリ、A.、およびフリストン、K.J. (2004)。動的因果モデルの比較。 <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
+<li>ローザ、M.J.、フリストン、K.、およびペニー、W. (2012)。動的因果モデルの事後選択。 <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
+<li>Vinck, M. 他（2011年）。重み付け位相遅れ指数 (wPLI)。 <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
+<li>Staniek、M.、＆amp;レーナーツ、K. (2008)。シンボリック転送エントロピー。 <a href="https://doi.org/10.1103/PhysRevLett.100.158101" target="_blank">doi:10.1103/PhysRevLett.100.158101</a></li>
+<li>ハウフェ、S.、ニクリン、V.V.、ミュラー、K.-R.、&amp;ノルテ、G. (2013)。 EEG データの接続性測定の重要な評価: シミュレーション研究。 <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
+<li>パルバ、J.M.、ワン、S.H.、パルバ、S.、ジガロフ、A.、モント、S.、ブルックス、M.J.、ショッフェレン、J.-M.、&amp;;ジャービ、K. (2018)。 MEG/EEG ソース空間におけるゴースト インタラクション: エリア間のカップリング対策に関する注意事項。 <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
+<li>ええ、S.、Kitajo、K.、&amp;北野和也 (2020). TMS によって引き起こされる EEG 信号内の方向性情報フローを検出するための情報理論的アプローチ。 <a href="https://doi.org/10.1016/j.neures.2019.09.003" target="_blank">doi:10.1016/j.neures.2019.09.003</a></li>
+<li>Miljevic、A.、Murphy、O.W.、Fitzgerald、P.B.、およびニューウェスト州ベイリー (2025)。センサー空間の EEG 接続性の推定 パート 1: シミュレートされたデータにおける機能的接続性の最もパフォーマンスの高い方法を特定します。 <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">doi:10.1016/j.clinph.2025.03.043</a></li>
+<li>Gorgolewski、K.J.、他。 （2016年）。入札。 <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">doi:10.1038/sdata.2016.44</a></li>
+<li>Pernet, C.R. 他（2019年）。脳波入札。 <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
+<li>Pernet, C.R. 他（2020年）。 MEEG を使用した神経画像処理におけるデータ分析と共有のベスト プラクティス。 <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
+<li>Guo、C.、Pleiss、G.、Sun、Y.、およびワインバーガー、K.Q. (2017)。最新のニューラル ネットワークのキャリブレーションについて。 <a href="https://proceedings.mlr.press/v70/guo17a.html" target="_blank">PMLR 70:1321-1330</a></li>
+<li>ゲイフマン、Y.、＆amp;エル・ヤニフ、R. (2017)。ディープ ニューラル ネットワークの選択的分類。 <a href="https://papers.neurips.cc/paper/7073-selective-classification-for-deep-neural-networks" target="_blank">NeurIPS 2017</a></li>
+<li>Gouwens、N.W.、他。 （2021年）。皮質 GABA 作動性細胞の統合された形態電気的およびトランスクリプトーム分類。 <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
+<li>Yiu、A.P.、Mercaldo、V.、Yan、C.、他。 （2014年）。ニューロンは、トレーニング直前の相対的なニューロンの興奮性に基づいて記憶トレースにリクルートされます。 <a href="https://doi.org/10.1016/j.neuron.2014.07.017" target="_blank">doi:10.1016/j.neuron.2014.07.017</a></li>
+<li>Hadzibegovic, S.、Zhu, L.、Ginger, M. 他(2025年)。新皮質エングラムニューロンの初期の固有興奮性の可塑性は、記憶の形成と精度を定義します。 <a href="https://doi.org/10.1038/s41467-025-66975-3" target="_blank">doi:10.1038/s41467-025-66975-3</a></li>
+<li>Benoit, R.、Galego, D.A.、Sch&auml;ren, M.S.、他(2025年)。連合恐怖学習中の軸索の初期セグメントのダイナミクス。 <a href="https://doi.org/10.1038/s41593-025-02152-5" target="_blank">doi:10.1038/s41593-025-02152-5</a></li>
+<li>Hengen、K.B.、Torrado Pacheco、A.、McGregor、J.N.、Van Hooser、SD、およびトゥリジャーノ、G.G. (2016)。ニューロンの発火速度の恒常性は睡眠によって阻害され、覚醒によって促進されます。 <a href="https://doi.org/10.1016/j.cell.2016.01.046" target="_blank">doi:10.1016/j.cell.2016.01.046</a></li>
+<li>グラブ、MS、およびブローン、J. (2010)。軸索初期セグメントの活動依存性の再配置により、ニューロンの興奮性が微調整されます。 <a href="https://doi.org/10.1038/nature09160" target="_blank">doi:10.1038/nature09160</a></li>
+<li>C.W.トールマン、P.N.スタインメッツ、およびウィックステッド、J.T. (2025)。人間の海馬におけるニューロンの割り当てとエピソード記憶のスパースコーディング。 <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">doi:10.1038/s41598-025-21967-7</a></li>
+<li>Santoni, G. 他（2024年）。クロマチン可塑性は、記憶痕跡形成に対するニューロンの適格性を事前に決定します。 <a href="https://doi.org/10.1126/science.adg9982" target="_blank">doi:10.1126/science.adg9982</a></li>
+<li>Wang, J.、Telese, F.、Tan, Y. 他（2015年）。 LSD1n は、転写伸長制御を介して記憶形成を制御する H4K20 デメチラーゼです。 <a href="https://doi.org/10.1038/nn.4069" target="_blank">doi:10.1038/nn.4069</a></li>
+<li>Dai、J.、Aoto、J.、&amp;チュートホフ、TC (2019)。シナプス前ニューレキシンの選択的スプライシングは、シナプス後 NMDA および AMPA 受容体応答を差次的に制御します。 <a href="https://doi.org/10.1016/j.neuron.2019.03.032" target="_blank">doi:10.1016/j.neuron.2019.03.032</a></li>
+<li>Shi、H.、Zhang、X.、Weng、Y.-L.、他。 （2018年）。 m6A は、YTHDF1 を通じて海馬に依存した学習と記憶を促進します。 <a href="https://doi.org/10.1038/s41586-018-0666-1" target="_blank">doi:10.1038/s41586-018-0666-1</a></li>
+<li>Peterson, L.N.、Kasper, J.M.、Allgaier, J.A. 他(2025年)。恒常性シナプス可塑性における GluA2 の ADAR2 媒介 Q/R 編集。 <a href="https://doi.org/10.1126/scisignal.adr1442" target="_blank">doi:10.1126/scisignal.adr1442</a></li>
+<li>Joglekar, A.、Prjibelski, A.、Mahfouz, A. 他（2024年）。単一細胞のロングリード配列ベースのマッピングにより、発生中および成体のマウスおよびヒトの脳における特殊なスプライシング パターンが明らかになります。 <a href="https://doi.org/10.1038/s41593-024-01616-4" target="_blank">doi:10.1038/s41593-024-01616-4</a></li>
+<li>Li, Y.、Zhu, M.、Li, X. 他(2025年)。 YTHDF2媒介m6A mRNA分解の阻害によるタンパク質合成と海馬依存性記憶の強化。 <a href="https://doi.org/10.1002/advs.202514926" target="_blank">doi:10.1002/advs.202514926</a></li>
+<li>Giese、K.P.、Fedorov、NB、Filipkowski、R.K.、およびシルバ、A.J. (1998)。 LTP および学習におけるアルファ カルシウム カルモジュリン キナーゼ II の Thr286 での自己リン酸化。 <a href="https://doi.org/10.1126/science.279.5352.870" target="_blank">doi:10.1126/science.279.5352.870</a></li>
+<li>Lee, H.-K.、Barbarosie, M.、Kameyama, K.、Bear, M. F.、およびヒューガニア、R.L. (2003)。双方向性シナプス可塑性における個別の AMPA 受容体リン酸化部位の制御。 <a href="https://doi.org/10.1016/S0092-8674(03)00122-3" target="_blank">doi:10.1016/S0092-8674(03)00122-3</a></li>
+<li>Tomita, S.、Stein, V.、Stocker, T. J.、Nicoll, R. A.、およびブレッド、DS (2005)。スターガジン様TARPのリン酸化によって調節される双方向性シナプス可塑性。 <a href="https://doi.org/10.1016/j.neuron.2005.01.009" target="_blank">doi:10.1016/j.neuron.2005.01.009</a></li>
+<li>ノースカロライナ州ビエラ、他（2023年）。小胞体と細胞膜の接合部は、電気活動をニューロン内の Ca2+ 活性化 PKA シグナル伝達に結び付けます。 <a href="https://doi.org/10.1038/s41467-023-40930-6" target="_blank">doi:10.1038/s41467-023-40930-6</a></li>
+<li>Biswas, D. 他（2023年）。人間の脳のリン酸化プロテオームの状況は、領域特異的なリン酸化イベントを明らかにします。 <a href="https://doi.org/10.1021/acs.jproteome.2c00244" target="_blank">doi:10.1021/acs.jproteome.2c00244</a></li>
+<li>Govindarajan、A.、イスラエル人、I.、Huang、S.-Y.、および利根川真司 (2011)樹状分岐は、タンパク質合成依存性 LTP にとって好ましい統合単位です。 <a href="https://doi.org/10.1016/j.neuron.2010.12.008" target="_blank">doi:10.1016/j.neuron.2010.12.008</a></li>
+<li>Glykys, J.、Dzhala, V.、Ekawa, K. 他（2014年）。局所的な不浸透性アニオンにより、神経細胞の塩化物濃度が確立されます。 <a href="https://doi.org/10.1126/science.1245423" target="_blank">doi:10.1126/science.1245423</a></li>
+<li>Heubl, M.、Zhang, J.、Pressey, J.C. 他（2017年）。 GABAA 受容体依存性シナプス阻害は、Cl 感受性 WNK1 キナーゼを介して KCC2 活性を迅速に調整します。 <a href="https://doi.org/10.1038/s41467-017-01749-0" target="_blank">doi:10.1038/s41467-017-01749-0</a></li>
+<li>Ding, F.、O'Donnell, J.、Xu, Q. 他（2016年）。脳の間質イオンの組成の変化は、睡眠と覚醒のサイクルを制御します。 <a href="https://doi.org/10.1126/science.aad4821" target="_blank">doi:10.1126/science.aad4821</a></li>
+<li>Byvaltsev, E.、Behbood, M.、Schleimer, J.-H.、Gensch, T.、Semyanov, A.、Schreiber, &amp;ストラウス、U. (2023)。 KCC2 リバース モードは、グルタミン酸作動性シナプスでシナプス後放出されたカリウムを除去するのに役立ちます。 <a href="https://doi.org/10.1016/j.celrep.2023.112934" target="_blank">doi:10.1016/j.celrep.2023.112934</a></li>
+<li>Lyckenvik, T.、Forsberg, M.、Johansson, K.、他。 (2025年)。 CSF と血清中のイオン濃度は、個別かつ正確に制御されます。 <a href="https://doi.org/10.1093/braincomms/fcaf201" target="_blank">doi:10.1093/braincomms/fcaf201</a></li>
+<li>Qian, Y.、Lin, Y.-C.、Chen, X.、他(2025年)。モノ-およびバイ-T2 ナトリウム信号を分離するための 3 T での単一量子ナトリウム MRI。 <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
+<li>ノースカロライナ州ハーディンガム、およびラークマン、オーストラリア (1998)。インビトロでのラット視覚野のスライスにおける興奮性シナプス伝達の信頼性は温度に依存します。 <a href="https://doi.org/10.1111/j.1469-7793.1998.249bu.x" target="_blank">doi:10.1111/j.1469-7793.1998.249bu.x</a></li>
+<li>ヴォルグシェフ、M.、ヴィディヤサーガル、T. R.、チスティアコワ、M.、ユセフ、T.、および;ユタ州エイセル (2000)。可逆冷却中のラット視覚皮質細胞における膜の特性とスパイクの生成。 <a href="https://doi.org/10.1111/j.1469-7793.2000.00059.x" target="_blank">doi:10.1111/j.1469-7793.2000.00059.x</a></li>
+<li>Moser、E.、Mathiesen、I.、およびアンダーセン、P. (1993)。探索ラットおよび遊泳ラットにおける脳温度と歯状野電位との関連性。 <a href="https://doi.org/10.1126/science.8446900" target="_blank">doi:10.1126/science.8446900</a></li>
+<li>ロング、M.A.、&amp;フィー、MS. (2008)。温度を使用して鳴き鳥の運動経路の時間的ダイナミクスを分析します。 <a href="https://doi.org/10.1038/nature07448" target="_blank">doi:10.1038/nature07448</a></li>
+<li>オーウェン、SF、リュー、M.H.、およびクライツァー、A.C. (2019)。生体内光遺伝学的操作における熱的制約。 <a href="https://doi.org/10.1038/s41593-019-0422-3" target="_blank">doi:10.1038/s41593-019-0422-3</a></li>
+<li>Boorman, L.W.、Harris, S.S.、Shabir, O. 他（2023年）。脳温度の双方向変化は、生体内での時空間神経血管反応を大きく調節します。 <a href="https://doi.org/10.1038/s42003-023-04542-6" target="_blank">doi:10.1038/s42003-023-04542-6</a></li>
+<li>Rzechorzek, N.M.、Thrippleton, M.J.、Chappell, F.M.、他（2022年）。人間の脳の毎日の温度リズムは、脳損傷後の生存を予測します。 <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
+<li>Rogala, J.、Dreszer, J.、Sińczuk, M.、他。 （2024年）。脳温度の局所的な変動は、作業記憶のパフォーマンスの性別特異性を説明します。 <a href="https://doi.org/10.3389/fnhum.2024.1398034" target="_blank">doi:10.3389/fnhum.2024.1398034</a></li>
+<li>Tan, X.R.、Stephenson, M.C.、Alhadad, S. 他（2024年）。重度の熱にさらされた状態で脳温度が上昇すると、皮質の運動活動と実行機能が損なわれます。 <a href="https://doi.org/10.1016/j.jshs.2023.09.001" target="_blank">doi:10.1016/j.jshs.2023.09.001</a></li>
+<li>Tan, Y.、Liu, W.、Li, Y. 他(2025年)。 <sup>1</sup>H 磁気共鳴分光温度測定を使用した健康な成人の脳温度の測定。 <a href="https://doi.org/10.1007/s00062-024-01467-3" target="_blank">doi:10.1007/s00062-024-01467-3</a></li>
+<li>井上 哲也、野村 伸治、山川 哲也、他(2025年)。脳局所冷却中の温度依存性神経血管変調のマルチモダリティプローブを使用した術中評価。 <a href="https://doi.org/10.1016/j.clinph.2025.02.262" target="_blank">doi:10.1016/j.clinph.2025.02.262</a></li>
+<li>Lazopulo, A.、Emmenegger, Y.、Đukanović, N.、他。 (2025年)。マウスの脳の状態と振動活動の代用としての脳温度。 <a href="https://doi.org/10.1038/s41598-025-21175-3" target="_blank">doi:10.1038/s41598-025-21175-3</a></li>
+<li>ザイドル、A. H.、ルーベル、EW、およびBarria、A. (2015)。活動電位のタイミングを調整するための有髄軸索のランビエ結節および節間特性の調整。 <a href="https://doi.org/10.1038/ncomms9073" target="_blank">doi:10.1038/ncomms9073</a></li>
+<li>鈴木 明 他（2011年）。星状細胞とニューロンの乳酸輸送は、長期記憶の形成に必要です。 <a href="https://doi.org/10.1016/j.cell.2011.02.018" target="_blank">doi:10.1016/j.cell.2011.02.018</a></li>
+<li>Silva、B.、他。 （2022年）。グリアのケトン生成は、飢餓時の記憶維持を調節します。 <a href="https://doi.org/10.1038/s42255-022-00528-6" target="_blank">doi:10.1038/s42255-022-00528-6</a></li>
+<li>Pavlowsky、A.、他。 (2025年)。ショウジョウバエの集中学習後の神経細胞の脂肪酸酸化は、記憶力を高めます。 <a href="https://doi.org/10.1038/s42255-025-01416-5" target="_blank">doi:10.1038/s42255-025-01416-5</a></li>
+<li>グレダ、AK、他。 (2025年)。ソルチリンとアポリポタンパク質 E3 の相互作用により、ニューロンは長鎖脂肪酸を代替代謝燃料として使用できるようになります。 <a href="https://doi.org/10.1038/s42255-025-01389-5" target="_blank">doi:10.1038/s42255-025-01389-5</a></li>
+<li>Cahill、M.K.、他。 （2024年）。皮質星状細胞における局所神経伝達物質のネットワークレベルのエンコーディング。 <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>ウィリアムソン、NR、他。 (2025年)。学習に関連した星状細胞アンサンブルは記憶の想起を制御します。 <a href="https://doi.org/10.1038/s41586-024-08170-w" target="_blank">doi:10.1038/s41586-024-08170-w</a></li>
+<li>Dewa, K., et al. (2025年)。星状細胞アンサンブルは、記憶を安定させるための複数日間の追跡として機能します。 <a href="https://doi.org/10.1038/s41586-025-09619-2" target="_blank">doi:10.1038/s41586-025-09619-2</a></li>
+<li>Bukalo, O. 他（2026年）。アストロサイトは、記憶をサポートする扁桃体の神経表現を可能にします。 <a href="https://doi.org/10.1038/s41586-025-10068-0" target="_blank">doi:10.1038/s41586-025-10068-0</a></li>
+<li>Villemagne、V.L.、原田、R.、Dore、V.、他。 （2022年）。反応性星膠症のイメージング用の新規な<sup>18</sup>F標識モノアミンオキシダーゼ-B PETトレーサーである<sup>18</sup>F-SMBT-1のファーストインヒューマン評価。 <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
+<li>Hiraoka, K.、Mesfin, B.、Wu, Y.、他(2025年)。モノアミンオキシダーゼ B の [<sup>18</sup>F]SMBT-1 PET イメージングの速度論的および定量的分析。 <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">doi:10.1007/s12149-025-02083-y</a></li>
+<li>Mesfin, B.、Ishioka, Y.、Ichinose, Y.、他（2026年）。 [<sup>18</sup>F]SMBT-1 の全身生体内分布: 健康なヒトにおけるモノアミンオキシダーゼ B イメージング用の新規 PET トレーサー。 <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">doi:10.1007/s12149-025-02144-2</a></li>
+<li>Tyacke、R.J.、Myers、J.F.M.、Venkataraman、A. 他（2018年）。人間の脳のイミダゾリン<sub>2</sub>結合部位のPETリガンドである<sup>11</sup>C-BU99008の評価。 <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
+<li>リビングストン、NR、カルソラロ、V.、ヒンツ、R.、他。 （2022年）。新しい<sup>11</sup>C-BU99008 PETを使用したアストロサイトの反応性と、認知障害のある個人におけるグルコース代謝、灰白質体積およびアミロイド負荷との関係。 <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>
+<li>ベスト、L.M.、チュオン、J.、マクラスキー、T.、他。 （2026年）。アルコール使用障害における MAO-B の状態: 推定星状神経膠症の [<sup>11</sup>C]SL25.1188 PET 画像研究。 <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">doi:10.1038/s41380-025-03355-9</a></li>
+<li>Musall, S.、Kaufman, M.T.、Juavinett, A.L.、Gluf, S.、およびアラスカ州チャーチランド (2019)。単一試行の神経力学は、豊富に変化した動きによって支配されます。 <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>Chaibub Neto, E.、Pratap, A.、Permal, T.M.、他。 （2019年）。機械学習におけるアイデンティティ交絡は、設計によって制御できます。 <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
+<li>マーフィー、K.、ハリス、A.D.、およびワイズ、R.G. (2011)。息止めによる血管反応性の違いを確実に測定: 刺激誘発状態と安静状態の BOLD fMRI データを正規化します。 <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
+<li>Williams, R.J.、Specht、J.L.、Mazerolle、E.L.、他（2023年）。 BOLD fMRI タスクの反応と大脳皮質全体の脳血管反応性の対応。 <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
+<li>Yücel, M. A.、Selb, J.、Huppert, T. J.、Franceschini, M. A.、およびボアス、D.A. (2015)。短い分離回帰により統計的有意性が向上し、異なる自律神経反応を伴うタスクについて近赤外分光法によって得られる血行力学的反応の局所性が向上します。 <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
+<li>アールフォルス、S.P.、ハン、J.、ベリボー、J.W.、およびハマライネン、修士号 (2010)。音源方向に対する MEG と EEG の感度。 <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">doi:10.1007/s10548-010-0154-x</a></li>
+<li>Goldenholz, D.M.、Ahlfors, S.P.、Hämäläinen, M.S.、Sharon, D.、Ishitobi, M.、Vaina, L.M.、および; Stufflebeam、S.M. (2009)。脳磁図と脳波における皮質信号源の信号対雑音比のマッピング。 <a href="https://doi.org/10.1002/hbm.20571" target="_blank">doi:10.1002/hbm.20571</a></li>
+<li>Piastra, M. C.、Nüßing, A.、Vorwerk, J.、Clerc, M.、Engwer, C.、およびウォルターズ、C.H. (2021)。皮質および皮質下の信号源に対する脳波検査および脳磁気検査の感度に関する包括的な研究。 <a href="https://doi.org/10.1002/hbm.25272" target="_blank">doi:10.1002/hbm.25272</a></li>
+<li>トーマス、C.、イェ、F.Q.、イルファノグル、M.O.、モディ、P.、サリーム、K.S.、レオポルド、D.A.、および;ピエルパオリ、C. (2014)。拡散 MRI トラクトグラフィーから得られる脳接続の解剖学的精度には本質的に限界があります。 <a href="https://doi.org/10.1073/pnas.1405672111" target="_blank">doi:10.1073/pnas.1405672111</a></li>
+<li>Reveley, C.、Seth, A.K.、Pierpaoli, C.、Silva, A.C.、Yu, D.、Saunders, R.C.、Leopold, D.A.、および;そう、F.Q. (2015)。表在白質線維系は、拡散 MR トラクトグラフィーにおける長距離皮質接続の検出を妨げます。 <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">doi:10.1073/pnas.1418198112</a></li>
+<li>Schilling, K. G.、Gao, Y.、Janve, V.、Stepniewska, I.、Landman, B. A.、およびアンダーソン、AW (2018)。拡散 MRI ファイバートラクトグラフィーにおける回転偏りの確認。 <a href="https://doi.org/10.1002/hbm.23936" target="_blank">doi:10.1002/hbm.23936</a></li>
+<li>ガジワニ、M.、オルダム、S.、パン、J.C.、アルナトケヴィチュテ、A.、ティエゴ、J.、ベルグローブ、M. A.、および;フォルニト、A. (2023)。ヒトコネクトームのハブは拡散 MRI で一貫して特定できますか? <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">doi:10.1162/netn_a_00324</a></li>
+<li>He, Y.、Hong, Y.、Wu, Y. 他（2024年）。球面デコンボリューションに基づくトラクトグラムのフィルタリングにより、構造コネクトームの左右性が変化します。 <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">doi:10.1016/j.neuroimage.2024.120904</a></li>
+<li>McMaster, E.M.、Newlin, N.R.、Rudravaram, G. 他(2025年)。ボクセル サイズの差異を考慮した調和のとれたコネクトーム リサンプリング。 <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>
+<li>Manzano-Patrón, J.P.、Deistler, M.、Schröder, C. 他(2025年)。拡散 MRI におけるシミュレーションベースの推論を使用した不確実性マッピングと確率的トラクトグラフィー: 古典的なベイズとの比較。 <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">doi:10.1016/j.media.2025.103580</a></li>
+<li>Zhu, S.、Huszar, I. N.、Cottaar, M. 他(2025年)。ハイブリッド MRI 顕微鏡トラクトグラフィーによる構造コネクトームの画像化。 <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">doi:10.1016/j.media.2025.103498</a></li>
+<li>ブラマティ、I. B.、シュチュパック、D.、カルネイロ モンテイロ、M.、メイレレス、F.、メネゼス ギマランイス、D.、ディーン、R. J.、ポール、L. K.、および;トヴァー・モール、F. (2026)。拡散 MRI サンプリング スキームは、拡散測定基準とトラクトグラフィーに偏りをもたらします。 <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">doi:10.3389/fnimg.2026.1670604</a></li>
+<li>Kothe, C.、Shirazi, S. Y.、Stenner, T.、Medine, D.、Boulay, C.、Grivich, M. I.、Artoni, F.、Mullen, T.、Delorme, A.、および; Makeig、S. (2025)。同期されたマルチモーダル記録のためのラボ ストリーミング レイヤー。 <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Wei、H.、Prasad、G.、Ombao、H.、およびハイナル、J.V. (2020)。 EEG および fMRI 用のベイジアン フュージョンおよびマルチモーダル DCM。 <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
+<li>Vafaii, H.、Mandino, F.、Desrosiers-Grégoire, G.、他。 （2024年）。自発的な脳活動の多峰性測定により、皮質機能組織の共通パターンと多様なパターンの両方が明らかになります。 <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Johansen, A.、Beliveau, V.、Colliander, E. 他（2024年）。シナプス密度の生体内高解像度人間の脳アトラス。 <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Lucchetti, F.、Céléreau, E.、Steullet, P.、他。 (2025年)。 MR 分光イメージングを使用して人間の脳の代謝コネクトームを構築すると、大脳の生化学的組織が明らかになります。 <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>Li, X.、Zhu, X.-H.、Li, Y. 他(2025年)。動的重水素磁気共鳴分光イメージングを使用した、人間の脳における主要なグルコース代謝率の定量的マッピング。 <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Kim, J. 他(2025年)。髄膜リンパ管-ミクログリア軸はシナプスの生理機能を調節します。 <a href="https://doi.org/10.1016/j.cell.2025.02.022" target="_blank">doi:10.1016/j.cell.2025.02.022</a></li>
+<li>Fultz, N.E.、Bonmassar, G.、Setsompop, K. 他（2019年）。人間の睡眠中の電気生理学的、血行力学的、および脳脊髄液の振動を組み合わせたもの。 <a href="https://doi.org/10.1126/science.aax5440" target="_blank">doi:10.1126/science.aax5440</a></li>
+<li>キム、D.、ファン、Y.、&amp;リュー、J. (2025)。磁化転移スピン標識を使用した、年齢依存性の生体内ヒトグリンファティック交換の非侵襲的 MRI 測定。 <a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">doi:10.1016/j.neuroimage.2025.121142</a></li>
+<li>Eide, P.K.、Pripp, A.H.、Valnes, L.M. 他（2023年）。くも膜下腔内の脳脊髄液トレーサーの血液へのクリアランスは、CSF から血液へのクリアランス能力および血漿バイオマーカーと関連しています。 <a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">doi:10.1038/s41467-023-37685-5</a></li>
+<li>ヒルシュラー、L.、他。 (2025年)。ヒトの MRI で測定された脳脊髄液流動性の領域固有の要因。 <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Lim, C.、Chen, C.、Zhang, C. 他(2025年)。人間の脳脊髄液の正味の流れは、覚醒状態の呼吸によって強化されます。 <a href="https://doi.org/10.1038/s41467-025-66548-4" target="_blank">doi:10.1038/s41467-025-66548-4</a></li>
+<li>Yoo、R.-E.、Kim、J.-H.、Moon、H.Y.、他(2025年)。長期にわたる身体運動は、ヒトのグリンパ管および髄膜リンパ管の流れを促進すると考えられます。 <a href="https://doi.org/10.1038/s41467-025-58726-1" target="_blank">doi:10.1038/s41467-025-58726-1</a></li>
+<li>Dagum、P.、他。 （2026年）。グリンファティック系は、ヒトの脳からアミロイド ベータとタウを血漿まで除去します。 <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
+<li>Chen, J.E.、Lewis, L.D.、Coursey, S.E.、他(2025年)。 EEG-PET-MRI を同時に行うことで、覚醒時とノンレム睡眠時の時間的に結合し、空間的に構造化された脳のダイナミクスを特定します。 <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Bolt, T.、Falahpour, M.、Nalci, A. 他(2025年)。グローバル fMRI 信号の自律生理学的結合。 <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
+<li>Epp, S.M.、Castrillon, G.、Yuan, B. 他(2025年)。大胆な信号変化は、人間の皮質全体の酸素代謝を妨げる可能性があります。 <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Lu、X.、Han、X.、Meirovitch、Y.、Sjöstedt、E.、Shalek、R.L.、およびリヒトマン、J.W. (2023)。哺乳動物の脳全体の高品質な光学的および超微細構造研究のために細胞外空間を保存します。 <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>MICrONS コンソーシアム、Bae、J.A.、Bak、J.H. 他(2025年)。マウス視覚野の複数の領域にわたる機能的コネクトミクス。 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>de Quervain、D.J.F.、Roozendaal、B.、およびJ.L. マクゴー (1998)。ストレスと糖質コルチコイドは、長期の空間記憶の想起を妨げます。 <a href="https://doi.org/10.1038/29542" target="_blank">doi:10.1038/29542</a></li>
+<li>Oei, N. Y. L.、Elzinga, B. M.、Wolf, O. T.、de Ruiter, M. B.、Damoiseaux, J. S.、Kuijer, J. P. A.、Veltman, D. J.、Sheltens, P.、および;ロンバウツ、S.A.R.B. (2007)。糖質コルチコイドは、若い男性の宣言的記憶の想起中に海馬と前頭前野の活性化を減少させます。 <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">doi:10.1007/s11682-007-9003-2</a></li>
+<li>McCauley, J.P.、Petroccione, M.A.、D'Brant, L.Y. 他（2020年）。ニューロンとアストロサイトの概日調節は、海馬領域 CA1 のシナプス可塑性を制御します。 <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">doi:10.1016/j.celrep.2020.108255</a></li>
+<li>Barone, I.、Gillette, N.M.、Hawks-Mayer, H. 他（2023年）。シナプスのBMAL1リン酸化は、海馬の概日可塑性を制御します。 <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">doi:10.1126/sciadv.adj1010</a></li>
+<li>バーニー、M.T.、ベガム、G.、サグデン、D.、他。 （2023年）。海馬機能の概日調節は、コルチコステロイド治療により破壊されます。 <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">doi:10.1073/pnas.2211996120</a></li>
+<li>Benedict, C.、Hallschmid, M.、Hatke, A. 他(2004)。鼻腔内インスリンは人間の記憶力を改善します。 <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">doi:10.1016/j.psyneuen.2004.04.003</a></li>
+<li>Reger, M.A.、Watson, G.S.、Green, P.S.、他（2008年）。鼻腔内インスリン投与は、記憶障害のある高齢者の言語記憶と血漿アミロイドベータを用量依存的に調節します。 <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">doi:10.3233/JAD-2008-13309</a></li>
+<li>シャーマン、SM、マムフォード、JA、およびシュナイアー、D.M. (2015)。海馬の活動は、高齢者の概日活動リズムと記憶との関係を媒介します。 <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">doi:10.1016/j.neuropsychologia.2015.07.020</a></li>
+<li>Bérut, A.、Arakelyan, A.、Petrosyan, A. 他（2012年）。情報と熱力学をつなぐランダウアー原理の実験的検証。 <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
+<li>アトウェル、D.、&amp;ラフリン、S.B. (2001)。脳の灰白質における信号伝達のためのエネルギー予算。 <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">ドイ:10.1097/00004647-200110000-00001</a></li>
+<li>Lynn、C.W.、他（2021年）。人間の脳における詳細なバランスの崩れとエントロピー生成。 <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>Deco, G.、Sanz Perl, Y.、Bocaccio, H.、Taglizucchi, E.、およびクリンゲルバッハ、M.L. (2022)。 INSIDEOUT フレームワークは、脳の状態における内因性と外因性のダイナミクスのバランスを正確に示します。 <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">doi:10.1038/s42003-022-03505-7</a></li>
+<li>デ・ラ・フエンテ、LA、他（2023年）。意識の兆候としての神経力学の時間的不可逆性。 <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Nartallo-Kaluarachchi、R.、他。 (2025年)。マルチレベルの不可逆性は、人間の脳のダイナミクスにおける非平衡相互作用の高次組織化を明らかにします。 <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
+<li>Ishihara, K.、&amp;島崎 洋 (2025)状態空間運動イジング モデルは、まばらに活動する非平衡ニューロンのダイナミクスにおけるタスク依存のエントロピー フローを明らかにします。 <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>Mart&iacute;nez、I.A.、Bisker、G.、Horowitz、J.M.、およびパロンド、J.M.R. (2019)。観察可能な流れがない場合に、壊れた詳細なバランスを推測します。 <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">doi:10.1038/s41467-019-11051-w</a></li>
+<li>Blom, K.、Song, K.、Vouga, E.、Godec, A.、およびマカロフ、D.E. (2024)。粗い解像度で観察されたシステム内の散逸のマイルストーン推定値。 <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">doi:10.1073/pnas.2318333121</a></li>
+<li>Baiesi、M.、Falasco、G.、およびモギミ・アラギ、S. (2024)。データが不足している場合でもエントロピー生成を効果的に推定できます。 <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">doi:10.1038/s42005-024-01742-2</a></li>
+<li>Poudel、R.、他。 （2024年）。可視性グラフを使用した fMRI データのネットワーク表現: 動きの影響とテスト再テストの信頼性。 <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">doi:10.1007/s12021-024-09652-y</a></li>
+<li>Metzen, D. 他（2024年）。タスクおよびタスクフリー BOLD fMRI の変動性と複雑さの測定の信頼性。 <a href="https://doi.org/10.1002/hbm.26778" target="_blank">doi:10.1002/hbm.26778</a></li>
+<li>Chen, Y. 他(2025年)。 EEG-PET-MRI を同時に行うことで、覚醒時とノンレム睡眠時の時間的に結合し、空間的に構造化された脳のダイナミクスを特定します。 <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Epp, S.M.、Castrillon, G.、Yuan, B. 他(2025年)。大胆な信号変化は、人間の皮質全体の酸素代謝を妨げる可能性があります。 <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Albantakis, L. 他（2023年）。統合情報理論 (IIT) 4.0。 <a href="https://doi.org/10.1371/journal.pcbi.1011465" target="_blank">doi:10.1371/journal.pcbi.1011465</a></li>
+<li>フリストン、K. (2010)。フリーエネルギー原理。 <a href="https://doi.org/10.1038/nrn2787" target="_blank">doi:10.1038/nrn2787</a></li>
+<li>Casali、AG、他。 （2013年）。 PCI。 <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
+<li>Doerig, A. 他（2019年）。展開される議論。 <a href="https://doi.org/10.1016/j.concog.2019.04.002" target="_blank">doi:10.1016/j.concog.2019.04.002</a></li>
+<li>Tononi, G. 他（2016年）。 IIT: 現象学から意識のメカニズムまで。 <a href="https://doi.org/10.1038/nrn.2016.44" target="_blank">doi:10.1038/nrn.2016.44</a></li>
 </ol>
 </section>
 
@@ -1130,19 +1133,19 @@ Although non-invasive decoding and ESI are making steady progress, a successful 
 <aside class="sidebar-column">
 
 <div class="sidebar-box">
-<h4>Related</h4>
+<h4>関連</h4>
 <ul>
-<li><a href="wbe_101.html">Introduction to WBE →</a></li>
-<li><a href="eeg_101.html">Introduction to EEG →</a></li>
-<li><a href="verification.html">Verification infrastructure →</a></li>
-<li><a href="tech_roadmap.html#definition">Definition of progress →</a></li>
+<li><a href="wbe_101.html">WBE の紹介 →</a></li>
+<li><a href="eeg_101.html">EEG の概要 →</a></li>
+<li><a href="verification.html">検証インフラストラクチャ →</a></li>
+<li><a href="tech_roadmap.html#definition">進捗状況の定義 →</a></li>
 </ul>
 </div>
 
 <div class="note-box">
-<strong>Note</strong>
+<strong>注</strong>
 <p>
-This glossary is "provisional for unification". Ambiguous words will be fixed to “measurable definitions” on the Roadmap side.
+この用語集は「統一暫定版」です。曖昧な単語はロードマップ側で「測定可能な定義」に修正されます。
 </p>
 </div>
 

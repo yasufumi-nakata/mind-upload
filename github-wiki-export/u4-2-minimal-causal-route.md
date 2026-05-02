@@ -1,78 +1,78 @@
-# Wiki: U4-2 minimal-causal route packet
+# Wiki: U4-2 最小因果ルート パケット
 
-> A next-watch causal packet outside the current public six
+> 現在のパブリック 6 以外の次のウォッチ因果パケット
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-31 / Role: U4-2 route packet
+- Updated: 2026-03-31 / Role: U4-2 ルート パケット
 
-## Role Of This Page
-This page records one narrow next-watch route outside the current public six at the level of one question, one intervention anchor family, one bounded first artifact, and one funding bridge.
+## このページの役割
+このページには、1 つの質問のレベルで現在公開されている 6 つのルートの外にある 1 つの狭い次の監視ルート、1 つの介入アンカー ファミリ、1 つの境界付き最初のアーティファクト、および 1 つの資金ブリッジが記録されます。
 
-## Accuracy Notes
-This page does not change the active public six-question batch. It only records what the present U4-2 minimal-causal route can honestly close first.
+## 正確性に関する注記
+このページでは、アクティブな公開 6 つの質問のバッチは変更されません。現在の U4-2 最小因果ルートが最初に正直に閉じることができるものだけを記録します。
 
-## Back To Public Pages
-- [Issue page](https://mind-upload.com/issue.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
+## 公開ページへ戻る
+- [発行ページ](https://mind-upload.com/issue.html)
+- [データとベンチ](https://mind-upload.com/datasets.html)
 
-## Related Wiki Pages
-- [Wiki: Current public six route brief](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - The compact six-row public route that still stays unchanged.
-- [Wiki: U1-2 uncertainty-calibration route packet](https://github.com/yasufumi-nakata/mind-upload/wiki/u1-2-uncertainty-calibration-route) - The inverse-estimation packet that now sits directly before this route.
-- [Wiki: Deep focus notes](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - The wider working note for all current practical rows.
-- [Wiki: Grant and dataset playbook](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - The fixed funding and anchor map.
+## 関連 Wiki ページ
+- [Wiki: 現在公開されている 6 つのルート概要](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-current-public-six-rq-brief) - 今も変わらぬコンパクトな6列パブリックルート。
+- [Wiki: U1-2 不確かさ校正ルート パケット](https://github.com/yasufumi-nakata/mind-upload/wiki/u1-2-uncertainty-calibration-route) - 逆推定パケットは、このルートの直前に配置されます。
+- [Wiki: ディープ フォーカス ノート](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-rq60-deep-focus-notes) - 現在のすべての実用的な行のより広い作業メモ。
+- [Wiki: 助成金とデータセットのプレイブック](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-eeg-rq60-grant-dataset-playbook) - 固定資金とアンカーマップ。
 
 ---
 
-# U4-2 minimal-causal route packet
+# U4-2 最小因果ルート パケット
 
-This page does not change the current public six-question batch. It records one narrow route just outside that batch, so readers can see why `U4-2` is the next strongest causal-intervention route after `U1-2`, why `D05` stays the narrowest first anchor for that row, and what the first public-safe artifact can honestly close.
+このページでは、現在の公開されている 6 つの質問のバッチは変更されません。このバッチのすぐ外側にある 1 つの狭いルートが記録されているため、読者は、なぜ `U4-2` が `U1-2` の次に強力な因果関係介入ルートであるのか、なぜ `D05` がその行の最も狭い最初のアンカーであり続けるのか、そして最初のパブリックセーフアーティファクトが何を正直に閉じることができるのかを理解できます。
 
-## What was rechecked for this row
+## この行で再チェックされた内容
 
-- `D05 EEG cortical responses after HiPi: High-speed robot-controlled pinprick stimulation` still remains the narrowest immediate intervention floor for `U4-2`, because it keeps the row focused on a minimal `intervention-versus-control` claim instead of drifting into theory-ranking language.
-- `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` remains the strongest direct-validation support family once the first minimal-causal rule is fixed and the row needs a cleaner known-intervention-site cross-check.
-- `D19 CerebellarTMSEEGData` remains a useful public-open perturbation support family for checking whether the same sign-stability rule survives a second intervention family with explicit control conditions.
-- The current public six-question batch still stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
-- The practical funding bridge for this row is still watch-only rather than a current public-six route: `Brain Science Foundation research grant` and `Nakatani Foundation research grant` remain the cleanest next-watch fits, and existing Todoist watch tasks already cover both lanes.
+- `D05 EEG cortical responses after HiPi: High-speed robot-controlled pinprick stimulation` は、依然として `U4-2` にとって最も狭い即時介入フロアであり続けています。これは、理論のランク付けの言葉に流れ込むのではなく、列を最小限の `intervention-versus-control` 主張に集中させ続けるためです。
+- 最初の最小因果ルールが修正され、その行に明確な既知介入部位のクロスチェックが必要になった後も、`D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` は依然として最強の直接検証サポート ファミリです。
+- `D19 CerebellarTMSEEGData` は、明示的な制御条件を持つ 2 番目の介入ファミリーでも同じ符号安定性ルールが存続するかどうかをチェックするための、有用なパブリックオープン摂動サポートファミリーです。
+- 現在公開されている 6 つの質問のバッチは、`U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2` のままです。
+- この列の実際的な資金調達ブリッジは、現在のパブリック 6 ルートではなく、依然としてウォッチ専用です。`Brain Science Foundation research grant` と `Nakatani Foundation research grant` は依然として最もクリーンな次のウォッチに適合しており、既存の Todoist ウォッチ タスクはすでに両方のレーンをカバーしています。
 
-## Why `U4-2` is the next strongest causal route after `U1-2`
+## `U4-2` が `U1-2` の次に強い因果ルートである理由
 
-- It is an `A` row: the main claim can stay inside `EEG-DATA` without requiring theory victory, legal argument, or identity-overreading language.
-- It is intervention-first: the first artifact is a minimal causal protocol plus a rebuttal boundary, not a stronger global causal-equivalence claim.
-- It broadens the outside-current-six route without widening the public claim surface. `U7-1` fixes synchronization discipline, `U1-2` fixes inverse-estimation uncertainty, and `U4-2` fixes the narrowest intervention-conditioned sign-agreement rule.
+- これは `A` 行です。主な主張は、理論上の勝利、法的議論、または同一性を読み過ぎる文言を必要とせずに、`EEG-DATA` 内にとどまることができます。
+- それは介入優先です。最初の成果物は最小限の因果プロトコルと反論境界を加えたものであり、より強力な全体的な因果関係の同等性の主張ではありません。
+- それは、公的な主張の対象範囲を広げることなく、外側の流れの6つのルートを広げます。 `U7-1` は同期規律を修正し、`U1-2` は逆推定の不確実性を修正し、`U4-2` は最も狭い介入条件付き符号一致ルールを修正します。
 
-## Why `D05` stays the main anchor
+## `D05` がメインアンカーであり続ける理由
 
-| Candidate | What it helps with | Why it is not the first anchor |
+| 候補者 | 何に役立つのか | 最初のアンカーではない理由 |
 |---|---|---|
-| `D05 EEG cortical responses after HiPi: High-speed robot-controlled pinprick stimulation` (`10.21227/8snc-7h06`, immediate) | It is the narrowest current pain-evoked intervention route in the catalog, which keeps `U4-2` focused on `intervention-versus-control difference`, `sign agreement`, and a bounded rebuttal rule. | None in this run. It is the narrowest first anchor for `U4-2`. |
-| `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` (`10.21227/7may-9q56`, with public DOI handoff `10.25493/NXN2-05W`) | It is the strongest support family once the row needs a known-intervention-site cross-check and a more explicit direct-validation floor. | It pulls the row toward inverse-estimation and source-validation language more than the first minimal-causal packet needs. |
-| `D19 CerebellarTMSEEGData` (`10.6084/m9.figshare.13082495`, immediate) | It is useful for cross-checking the same sign-stability rule under a second perturbation family with explicit control conditions and published exclusion notes. | It is better as a perturbation-family support dataset than as the first narrow anchor for a minimal causal packet. |
+| `D05 EEG cortical responses after HiPi: High-speed robot-controlled pinprick stimulation` (`10.21227/8snc-7h06`、即時) | これは、カタログ内で現在の痛み誘発介入ルートの中で最も狭いものであり、`U4-2` は `intervention-versus-control difference`、`sign agreement`、および限定された反論ルールに重点を置き続けています。 | 今回の実行では何もありませんでした。 `U4-2`のファーストアンカーの中で一番細いです。 |
+| `D08 Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods` (`10.21227/7may-9q56`、パブリック DOI ハンドオフ付き `10.25493/NXN2-05W`) | 既知の介入サイトのクロスチェックとより明確な直接検証のフロアが必要な場合、これは最も強力なサポートファミリーになります。 | 最初の最小因果パケットが必要とする以上に、逆推定とソース検証言語に向かって行を引っ張ります。 |
+| `D19 CerebellarTMSEEGData` (`10.6084/m9.figshare.13082495`、即時) | これは、明示的な制御条件と公開された除外ノートを使用して、2 番目の摂動ファミリの下で同じ符号安定性ルールをクロスチェックするのに役立ちます。 | これは、最小因果パケットの最初の狭いアンカーとしてよりも、摂動ファミリーのサポート データセットとして優れています。 |
 
-## What the first artifact can honestly close now
+## 最初のアーティファクトが今正直に閉じることができるもの
 
-| Artifact piece | What it closes now | What still stays outside the claim |
+| アーティファクトの欠片 | 今閉店しているもの | まだ主張の範囲外にあるもの |
 |---|---|---|
-| `Intervention protocol and rebuttal condition definition` | A bounded protocol that fixes the minimum causal claim to `intervention-conditioned sign agreement` rather than to a stronger causal-equivalence story. | Any statement that one intervention family already settles broader theory competition or full mechanism recovery. |
-| `Sign-agreement table` | An explicit pass/fail table for `intervention-versus-control difference`, `sign agreement`, and `counterfactual error` under the same split and preprocessing policy. | Any blanket claim that intervention sensitivity already generalizes across modalities, cohorts, or theoretical formalisms. |
-| `Downgrade-rule note` | A public-safe rule that forces the row down to exploration whenever sign reversals persist or the intervention-effect interval crosses zero. | Any interpretation that one stable sign-agreement rule proves preserved internal mechanism, preserved identity, or successful mind preservation. |
+| `Intervention protocol and rebuttal condition definition` | より強い因果関係の同等性ストーリーではなく、最小限の因果関係の主張を `intervention-conditioned sign agreement` に固定する、制限されたプロトコル。 | 1 つの介入ファミリーがすでに広範な理論競争または完全なメカニズムの回復に決着しているという声明。 |
+| `Sign-agreement table` | 同じ分割および前処理ポリシーに基づく `intervention-versus-control difference`、`sign agreement`、および `counterfactual error` の明示的な合否テーブル。 | 介入の感受性は、モダリティ、コホート、または理論的形式主義全体にわたってすでに一般化しているという包括的な主張はありません。 |
+| `Downgrade-rule note` | 符号反転が持続するか、介入効果間隔がゼロを超える場合に、その行を強制的に探索に移すパブリックセーフルール。 | 1 つの安定した署名合意規則が、内部メカニズムの保存、アイデンティティの保存、または心の保存の成功を証明するというあらゆる解釈。 |
 
-## Funding wording that still fits
+## まだ適切な資金調達の文言
 
-| Route | Submission wording that stays honest | Why it still fits this row |
+| ルート | 正直さを保つ提出文言 | それでもこの行に適合する理由 |
 |---|---|---|
-| `Brain Science Foundation research grant` (`watch`) | `Minimal causal-intervention benchmark for reproducible EEG verification in the mind-upload route` | The row reads naturally as a conservative intervention-validation benchmark rather than as a stronger restoration claim. |
-| `Nakatani Foundation research grant` (`next-cycle watch`) | `Intervention-conditioned EEG sign-agreement benchmark with explicit rebuttal gates` | It fits as a BME-facing validation package, but only as a watch route because the current cycle is closed. |
+| `Brain Science Foundation research grant`(`watch`) | `Minimal causal-intervention benchmark for reproducible EEG verification in the mind-upload route` | この議論は、より強力な修復主張としてではなく、保守的な介入検証のベンチマークとして自然に読み取れます。 |
+| `Nakatani Foundation research grant`(`next-cycle watch`) | `Intervention-conditioned EEG sign-agreement benchmark with explicit rebuttal gates` | これは BME 向けの検証パッケージとして適合しますが、現在のサイクルが終了しているため監視ルートとしてのみ適合します。 |
 
-## External dependency tasks that stay outside this session
+## このセッションの外にある外部依存タスク
 
-- Broader causal-graph identifiability and theory-ranking language still remain outside the present repository-level artifact.
-- Population transfer of the same sign-agreement rule still remains outside the present packet.
-- Any interpretation that one intervention family proves preserved mechanism, preserved identity, or full recoverability remains outside the present route.
+- より広範な因果グラフの識別可能性と理論のランク付け言語は、現在のリポジトリ レベルの成果物の範囲外にまだ残っています。
+- 同じ署名合意ルールの集団転送は、現在のパケットの外側にまだ残っています。
+- 1 つの介入ファミリーが保存されたメカニズム、保存されたアイデンティティ、または完全な回復可能性を証明するという解釈は、現在のルートの外に残ります。
 
-## What changed in this run
+## 今回の実行で変わったこと
 
-- The public batch did not change.
-- The main change is that `U4-2` now has a public packet that records the narrowest intervention anchor, the first artifact, and the watch-level funding bridge after `U1-2`.
-- This remains a route-setting update, not a solved-claim update.
+- パブリックバッチは変更されませんでした。
+- 主な変更点は、`U4-2` に、`U1-2` 以降の最も狭い介入アンカー、最初のアーティファクト、監視レベルの資金ブリッジを記録するパブリック パケットが追加されたことです。
+- これはルート設定の更新であり、解決済みのクレームの更新ではありません。

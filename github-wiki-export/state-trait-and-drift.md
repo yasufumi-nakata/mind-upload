@@ -1,384 +1,384 @@
-# Wiki: state, trait, and drift
+# Wiki: 状態、特性、およびドリフト
 
-> Do not turn same-day success, algorithmic rescue, and long-term stability into the same claim
+> 即日の成功、アルゴリズムによる救済、長期的な安定性を同じ主張に変えないでください。
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-01 / Role: Technical / natural science only
+- Updated: 2026-04-01 / Role: 技術/自然科学のみ
 
-## Role Of This Page
-This page explains how Mind-Upload reads state, trait, and drift when a result spans hours, days, weeks, or months. The point is not only that signals change over time, but that several different time problems coexist: state fluctuation, trait-like backbone, biological drift, interface / decoder drift, and the operational burden of keeping a system usable.
+## このページの役割
+このページでは、結果が数時間、数日、数週間、または数か月にわたる場合に、Mind-Upload が状態、特性、ドリフトを読み取る方法について説明します。重要なのは、信号が時間の経過とともに変化するということだけではなく、状態の変動、特性のようなバックボーン、生物学的ドリフト、インターフェイス/デコーダのドリフト、システムを使用可能な状態に保つための運用負荷など、いくつかの異なる時間の問題が共存しているということです。
 
-## Accuracy Notes
-This page treats state / trait / drift only as technology and natural-science audit items. It does not address philosophical identity or legal rights.
+## 正確性に関する注記
+このページでは、状態/特性/ドリフトをテクノロジーおよび自然科学の監査項目としてのみ扱います。哲学的なアイデンティティや法的権利については言及しません。
 
-## Back To Public Pages
-- [Verification: Temporal Validity Card](https://mind-upload.com/verification.html#temporal-validity-card)
-- [Datasets: generalization families](https://mind-upload.com/datasets.html#generalization-families)
-- [EEG 101](https://mind-upload.com/eeg_101.html)
+## 公開ページへ戻る
+- [検証: 一時的有効性カード](https://mind-upload.com/verification.html#temporal-validity-card)
+- [データセット: 一般化ファミリー](https://mind-upload.com/datasets.html#generalization-families)
+- [脳波101](https://mind-upload.com/eeg_101.html)
 
-## Related Wiki Pages
-- [Wiki: Uncertainty, calibration, and abstention](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - Use this page when temporal claims also need confidence, coverage, and fallback logic.
-- [Wiki: Closed loops, latency, jitter, and safe stops](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Use this page when temporal validity intersects with online operation.
-- [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Use this page when state or backbone claims depend on latent inference rather than direct observation.
+## 関連 Wiki ページ
+- [Wiki: 不確実性、校正、および棄権](https://github.com/yasufumi-nakata/mind-upload/wiki/uncertainty-confidence-and-abstention) - 一時的なクレームにも信頼性、カバレッジ、フォールバック ロジックが必要な場合は、このページを使用します。
+- [Wiki: 閉ループ、レイテンシー、ジッター、および安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - 一時的な有効性がオンライン操作と交差する場合は、このページを使用します。
+- [Wiki: 観察から推定へ](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - 状態またはバックボーンの主張が直接の観察ではなく潜在的な推論に依存する場合にこのページを使用します。
 
-## What Is Currently Known
-- Behavioral state, arousal, uninstructed movement, and spontaneous behavior can dominate apparent same-day neural variance.
-- Circadian phase, glucocorticoid exposure, and insulin / metabolic regime can also move memory or hippocampal plasticity without any change in the recording interface.
-- Population-level structure can remain more stable than individual units, so unit drift and backbone stability must not be collapsed.
-- Longitudinal identifiability can be carried by different objects such as dynamic functional-connectivity windows, EEG spectral profiles, aperiodic components, or nonlinear avalanche dynamics.
-- Fixed-decoder horizon, recalibration burden, and stabilization strategy answer different questions.
-- In invasive language BCIs, cross-subject transfer initialization, bounded fixed-decoder use, and adaptive rescue are different achievements rather than one longitudinal ladder.
-- Current speech and cursor BCI papers support important communication and control advances, but they still need an explicit transfer ceiling.
+## 現在わかっていること
+- 行動状態、覚醒、指示されていない動き、および自発的な行動が、見かけ上の同日の神経変動を支配する可能性があります。
+- サーカディアンフェーズ、グルココルチコイド曝露、およびインスリン/代謝体制も、記録インターフェースを変更することなく、記憶または海馬の可塑性を動かす可能性があります。
+- 集団レベルの構造は個々のユニットよりも安定した状態を維持できるため、ユニットのドリフトとバックボーンの安定性が崩れてはなりません。
+- 縦方向の識別可能性は、動的機能接続ウィンドウ、EEG スペクトル プロファイル、非周期成分、非線形雪崩ダイナミクスなどのさまざまなオブジェクトによって保持されます。
+- 固定デコーダーの範囲、再キャリブレーションの負担、および安定化戦略は、さまざまな質問に答えます。
+- 侵襲的言語 BCI では、被験者間転送の初期化、制限された固定デコーダの使用、および適応型レスキューは、1 つの縦方向のはしごではなく、異なる成果です。
+- 現在の音声およびカーソル BCI 論文は重要な通信と制御の進歩をサポートしていますが、依然として明示的な転送上限が必要です。
 
-## What Is Still Unknown
-- There is still no site-wide default benchmark that compares state annotation, fixed-decoder durability, recalibration burden, and transfer ceiling across EEG and invasive BCI under one schema.
-- It remains unsettled which backbone object should be the default trait target for WBE-relevant longitudinal claims.
-- It also remains unsettled which fingerprint carriers survive cross-state transfer rather than only same-regime reacquisition.
-- It is also unsettled how far algorithmic stabilization can be extended before changing the claim from fixed-decoder durability to adaptive operation.
-- A shared default logging schema for slow internal-milieu variables across EEG, invasive BCI, and human memory studies is still incomplete.
+## まだわかっていないこと
+- 1 つのスキーマの下で、EEG と侵襲的 BCI にわたる状態アノテーション、固定デコーダーの耐久性、再キャリブレーション負荷、転送上限を比較するサイト全体のデフォルト ベンチマークはまだありません。
+- どのバックボーン オブジェクトが WBE 関連の縦断的主張のデフォルトの特性ターゲットとなるべきかは未解決のままです。
+- また、どの指紋保持者が同じ体制での再取得のみではなく、州を越えた転送でも生き残るのかも未解決のままである。
+- また、固定デコーダの耐久性から適応動作に主張を変更する前に、アルゴリズムの安定化をどこまで拡張できるかも不明です。
+- EEG、侵襲的BCI、および人間の記憶研究にわたる低速内部環境変数の共有デフォルトロギングスキーマはまだ不完全です。
 
 ---
 
-<h2>Bottom line in one sentence</h2>
+<h2>一文の最後の行</h2>
 <p>
-On this site, <strong>state</strong>, <strong>trait</strong>, and <strong>drift</strong> are not treated as three loose labels. They are unpacked into <strong>state annotation</strong>, <strong>trait-like backbone</strong>, <strong>biological drift</strong>, <strong>interface / decoder drift</strong>, <strong>recalibration burden</strong>, and <strong>transfer ceiling</strong> so a same-day fit or a rescued decoder is not silently promoted to long-term stability.
+このサイトでは、<strong>state</strong>、<strong>trait</strong>、<strong>drift</strong> を 3 つのルーズ ラベルとして扱いません。これらは <strong> 状態アノテーション </strong>、<strong> トレイト様バックボーン </strong>、<strong> 生物学的ドリフト </strong>、<strong> インターフェース / デコーダー ドリフト </strong>、<strong> 再キャリブレーション負荷 </strong>、および <strong> 転送シーリング </strong> にアンパックされるため、同日のフィットまたはレスキューされたデコーダーがサイレントに長期に昇格されることはありません。安定性。
 </p>
 
-<h4>Three Misreadings To Stop Early</h4>
+<h4>早期に阻止するための 3 つの誤解</h4>
 <ul>
-<li><strong>Same-day success is not trait evidence:</strong> without state annotation, it may only reflect today's behavior, arousal, or setup.</li>
-<li><strong>Adaptive rescue is not fixed-decoder durability:</strong> if alignment or recalibration was needed, that burden belongs in the result.</li>
-<li><strong>One-person longitudinal success is not generic transfer:</strong> transfer ceiling must be stated explicitly.</li>
+<li><strong>当日の成功は特性の証拠ではありません:</strong> 状態の注釈がない場合、今日の行動、覚醒、またはセットアップのみを反映している可能性があります。</li>
+<li><strong>アダプティブレスキューは固定デコーダー耐久性ではありません:</strong> アライメントや再キャリブレーションが必要な場合、その負担は結果に含まれます。</li>
+<li><strong>1 人の長期的な成功は一般的な異動ではありません:</strong> 異動の上限は明示的に指定する必要があります。</li>
 </ul>
 
-<strong>How this page fits the site</strong>
+<strong>このページがサイトにどのように適合するか</strong>
 <p>
-The core public rule is the <a href="https://mind-upload.com/verification.html#temporal-validity-card">Verification: Temporal Validity Card</a>. This wiki is the technical background page for that card. If you want the operational submission fields, read Verification; if you want the underlying logic for why those fields are separated, read this page.
+中心となるパブリック ルールは、<a href="https://mind-upload.com/verification.html#temporal-validity-card">Verification: Temporal Validity Card</a> です。この Wiki は、そのカードの技術的な背景ページです。運用上の送信フィールドが必要な場合は、「検証」を参照してください。これらのフィールドが分​​離されている理由の基礎となるロジックが必要な場合は、このページをお読みください。
 </p>
 
-<strong>2026-04-01 correction: invasive language BCIs are not one temporal-validity route</strong>
+<strong>2026-04-01 訂正: 侵襲的言語 BCI は 1 つの一時的有効性ルートではありません</strong>
 <p>
-The remaining weakness on this page was that it already separated <strong>fixed-decoder durability</strong> from <strong>recalibration burden</strong>, but it still left too much room to read modern invasive language BCI papers as if they formed one monotonic time-stability ladder. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> support different <strong>communication throughput / expressivity</strong> routes. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> supports a separate <strong>cross-subject transfer-initialization</strong> route. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> support <strong>alignment-based rescue / unsupervised recalibration</strong> routes. On this site, those are no longer read as one interchangeable story about drift, stability, and deployability.
+このページの残りの弱点は、<strong>固定デコーダ耐久性</strong>と<strong>再キャリブレーション負荷</strong>がすでに分離されているということでしたが、それでも現代の侵略的言語のBCI論文を1つの単調な時間安定性ラダーを形成しているかのように読むには余地が多すぎました。現在の一次文献はそのショートカットをサポートしていません。 <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">ウィレットら(2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Lリトルジョンら。 (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairragkar et al. (2025)</a> は、異なる <strong> 通信スループット / 表現力 </strong> ルートをサポートします。 <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025) </a> は、別個の <strong> サブジェクト間転送初期化 </strong> ルートをサポートします。 <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> および <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> は、<strong> アライメントベースのレスキュー / 教師なし再キャリブレーション </strong> ルートをサポートします。このサイトでは、これらはもはやドリフト、安定性、展開可能性に関する 1 つの交換可能なストーリーとしては読み取られません。
 </p>
 
-<strong>2026-03-28 addendum: fingerprint success is not yet one backbone object</strong>
+<strong>2026-03-28 追記: フィンガープリントの成功はまだバックボーン オブジェクトではありません</strong>
 <p>
-The remaining weakness on this page was subtler than simple drift. It already said that <strong>trait</strong> must name a backbone object, but it still left readers too much room to treat any strong person-identification result as if it had measured one universal, state-invariant trait. The newer primary literature does not support that shortcut. <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a> showed that functional-connectivity fingerprints depend on timescale and that different network families dominate at different windows. <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> showed that resting-state EEG individuality can stay robust over runs separated by weeks, but that result is still tied to a named PSD/coherence feature family and recording regime. <a href="https://doi.org/10.1016/j.neuroimage.2023.120260" target="_blank">Sorrentino et al. (2023)</a> then showed that the non-linear, intermittent part of MEG activity can carry more subject-specific information than stationary correlation structure. Finally, <a href="https://doi.org/10.1038/s41598-025-34509-y" target="_blank">Kyllönen et al. (2026)</a> showed across two-night sleep EEG from two sites that robust individual signatures can persist even when across-participant insomnia classification drops to chance. Therefore, on this site, <strong>trait-like backbone</strong> claims now need not only a temporal horizon but also an explicit <strong>backbone / fingerprint object</strong> and the <strong>state regime</strong> in which that object stayed stable.
+このページに残っている弱点は、単純なドリフトよりも微妙なものでした。すでに <strong>trait</strong> はバックボーン オブジェクトに名前を付ける必要があると述べましたが、強力な個人識別の結果をあたかも 1 つの普遍的で状態に影響されない特性を測定したかのように扱うには、読者にまだ余地が多すぎます。新しい一次文献では、そのショートカットはサポートされていません。 <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">ヴァン・デ・ヴィル他(2021)</a> は、機能接続のフィンガープリントがタイムスケールに依存し、異なるネットワーク ファミリが異なるウィンドウで優勢であることを示しました。 <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Diら(2021) </a> は、安静状態の EEG の個性が数週間の間隔で実行されても堅牢な状態を維持できることを示しましたが、その結果は依然として、名前付き PSD/コヒーレンス特徴ファミリーと記録体制に関連付けられています。 <a href="https://doi.org/10.1016/j.neuroimage.2023.120260" target="_blank">Sorrentino et al. (2023) </a> は、MEG 活動の非線形で断続的な部分が、定常的な相関構造よりも多くの被験者固有の情報を運ぶことができることを示しました。最後に、<a href="https://doi.org/10.1038/s41598-025-34509-y" target="_blank">Kyllönen ら。 (2026) </a> は、2 つの施設からの 2 晩の睡眠 EEG 全体で、参加者全体の不眠症分類が偶然に落ちた場合でも、堅牢な個人のサインが持続する可能性があることを示しました。したがって、このサイトでは、<strong>trait のようなバックボーン </strong> の主張には、時間的範囲だけでなく、明示的な <strong> バックボーン/フィンガープリント オブジェクト </strong> と、そのオブジェクトが安定していた <strong> 状態レジーム </strong> も必要になります。
 </p>
 
-<strong>2026-03-30 addendum: slow internal milieu is part of state annotation, not background noise</strong>
+<strong>2026-03-30 追記: 遅い内部環境は状態注釈の一部であり、背景ノイズではありません</strong>
 <p>
-The remaining weakness after the fingerprint update was that this page could still make <strong>state annotation</strong> sound too close to movement, arousal, and day-night labels alone. The primary literature does not support that shortcut. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> showed glucocorticoid-dependent retrieval impairment, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed hydrocortisone-linked decreases in human hippocampal and prefrontal retrieval activity, <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed circadian and corticosteroid-rhythm control of hippocampal plasticity, and <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>, <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> showed that insulin delivery or circadian-rhythm consistency can shift human memory or hippocampal activity. Therefore, on this site, the same task, same latency, or same decoder window does not imply the same hippocampal operating regime unless <strong>fast labels</strong> and <strong>slow internal-milieu labels</strong> were both disclosed.
+フィンガープリントの更新後に残った弱点は、このページが依然として <strong> 状態のアノテーション </strong> を運動、覚醒、昼夜のラベルのみに近づけすぎる可能性があるということでした。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998) </a> はグルココルチコイド依存性の回復障害を示しました。<a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007) </a> は、ヒトの海馬および前頭前野の回復活動におけるヒドロコルチゾン関連の減少を示しました。<a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>、<a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone 他(2023)</a>、<a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023) </a> は海馬可塑性の概日制御とコルチコステロイド リズム制御を示し、<a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>、<a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al。 (2008)</a>、<a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al。 (2015) </a> は、インスリン投与または概日リズムの一貫性が人間の記憶または海馬の活動を変化させる可能性があることを示しました。したがって、このサイトでは、<strong>fast ラベル </strong> および <strong>slow 内部環境ラベル </strong> の両方が開示されていない限り、同じタスク、同じレイテンシ、または同じデコーダ ウィンドウが同じ海馬の動作体制を意味するものではありません。
 </p>
 
-<strong>When a score looks good but you do not know what time claim it supports</strong>
+<strong> スコアは良さそうだが、どのタイムクレームをサポートしているかわからない場合</strong>
 <p>
-Use <a href="https://mind-upload.com/datasets.html#generalization-families">Datasets: generalization families</a> first to separate within-session, cross-session, cross-subject, and adaptation results. Then return here to decide whether the paper actually showed <strong>state robustness</strong>, <strong>trait-like backbone</strong>, <strong>stabilized operation</strong>, or only a short fixed-decoder interval.
+最初に <a href="https://mind-upload.com/datasets.html#generalization-families">Datasets: 一般化ファミリー </a> を使用して、セッション内、セッション間、被験者間、および適応結果を分離します。次に、ここに戻って、論文が実際に <strong> 状態の堅牢性 </strong>、<strong> 特性に似たバックボーン </strong>、<strong> 安定化された動作 </strong>、または短い固定デコーダ間隔のみを示しているかどうかを判断します。
 </p>
 
-<h2>The five fields this site now audits for time validity</h2>
+<h2>このサイトが時間有効性を監査する 5 つのフィールド</h2>
 <p>
-The main weakness of the older page was that it separated <strong>state</strong>, <strong>trait</strong>, and <strong>drift</strong> conceptually, but it still left too much room to read <strong>same-day success</strong>, <strong>algorithmic stabilization</strong>, and <strong>longitudinal deployability</strong> as one continuous story. The newer literature does not support that shortcut. The site therefore now fixes five separate fields.
+古いページの主な弱点は、<strong>state</strong>、<strong>trait</strong>、および<strong>drift</strong>が概念的に分離されていることでしたが、それでも、<strong>同日の成功</strong>、<strong>アルゴリズムの安定化</strong>、および<strong>縦方向の展開可能性</strong>を1つの連続したストーリーとして読み取るには余地が多すぎました。新しい文献では、そのショートカットはサポートされていません。したがって、サイトでは 5 つの個別のフィールドを修正するようになりました。
 </p>
 <table>
 <thead>
 <tr>
-<th>Field</th>
-<th>What must be named</th>
-<th>What not to overread</th>
+<th>フィールド</th>
+<th>必ず名前を付けてください</th>
+<th>読みすぎてはいけないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>fixed decoder interval</strong></td>
-<td>How long the decoder or readout was held without retraining, realignment, or hidden operator adjustment.</td>
-<td>Do not treat adaptive maintenance or periodic alignment as if the original decoder had simply remained valid.</td>
+<td><strong>固定デコーダ間隔</strong></td>
+<td>再トレーニング、再調整、または隠れたオペレータ調整を行わずにデコーダまたは読み出しが保持された時間。</td>
+<td>適応メンテナンスや定期的な調整を、元のデコーダが単に有効なままであるかのように扱ってはなりません。</td>
 </tr>
 <tr>
-<td><strong>state annotation</strong></td>
-<td>Arousal, spontaneous behavior, movement, task mode, day/night or within-day context, circadian phase, recent sleep-wake schedule, glucocorticoid or steroid exposure, feeding / fasting or glucose-insulin regime, medication or stimulation state, and any other state labels that can move performance.</td>
-<td>Do not read uncontrolled day-to-day variation as trait instability if the state itself was left unlogged.</td>
+<td><strong>状態の注釈</strong></td>
+<td>覚醒、自発的行動、運動、タスクモード、昼/夜または日中の状況、概日位相、最近の睡眠覚醒スケジュール、グルココルチコイドまたはステロイドへの曝露、摂食/絶食またはグルコースインスリン療法、投薬または刺激状態、およびパフォーマンスを左右する可能性のあるその他の状態ラベル。</td>
+<td>状態自体がログに記録されなかった場合、制御されていない日ごとの変動を形質の不安定性として読み取らないでください。</td>
 </tr>
 <tr>
-<td><strong>interface / decoder drift</strong></td>
-<td>Electrode reattachment, impedance change, channel loss, preprocessing shift, feature-distribution shift, and software / decoder mismatch.</td>
-<td>Do not collapse a failing fixed decoder into proof that the biological representation itself collapsed.</td>
+<td><strong>インターフェース/デコーダードリフト</strong></td>
+<td>電極の再取り付け、インピーダンスの変化、チャネル損失、前処理のシフト、機能分布のシフト、およびソフトウェア/デコーダーの不一致。</td>
+<td>失敗した固定デコーダを崩壊させて、生物学的表現自体が崩壊したという証拠を作らないでください。</td>
 </tr>
 <tr>
-<td><strong>recalibration burden</strong></td>
-<td>How often recalibration occurred, how much labeled or inferred target data it used, how long it took, and what happened when it failed.</td>
-<td>Do not say “drift is solved” when the result actually shows that drift can be absorbed at a named operational cost.</td>
+<td><strong>再校正負担</strong></td>
+<td>再キャリブレーションが行われた頻度、使用されたラベル付きまたは推測されたターゲット データの量、所要時間、および失敗したときに何が起こったか。</td>
+<td>指定された運用コストでドリフトを吸収できることが結果で実際に示されている場合は、「ドリフトが解決した」とは言わないでください。</td>
 </tr>
 <tr>
-<td><strong>transfer ceiling</strong></td>
-<td>Whether the result stayed within one participant, one implant, one site, one task family, or one behavioral regime, and what it still does not establish.</td>
-<td>Do not promote one-participant longitudinal success to generic transfer, broad deployment, or WBE-relevant longitudinal equivalence.</td>
+<td><strong>トランスファー天井</strong></td>
+<td>結果が 1 人の参加者、1 つのインプラント、1 つの部位、1 つのタスクファミリー、または 1 つの行動レジーム内に留まるかどうか、またまだ確立されていないこと。</td>
+<td>1 人の参加者の長期的な成功を、一般的な移行、広範な展開、または WBE 関連の長期的な同等性へと促進しないでください。</td>
 </tr>
 </tbody>
 </table>
 
-<strong>Extra disclosure when the paper uses trait / backbone / fingerprint language</strong>
+<strong>論文で特質/バックボーン/フィンガープリント言語が使用されている場合の追加開示</strong>
 <p>
-The five temporal-validity fields remain necessary, but they are not sufficient when a result is described as a <strong>trait</strong>, <strong>backbone</strong>, or <strong>fingerprint</strong>. In those cases, this site additionally asks which feature family actually carries the longitudinal identity signal, such as dynamic functional connectivity, spectral profile, aperiodic component, avalanche-transition dynamics, or representational geometry, and whether that object was tested only within one regime or across a declared state change.
+5 つの一時的有効性フィールドは依然として必要ですが、結果が <strong>trait</strong>、<strong>backbone</strong>、または <strong>fingerprint</strong> として記述される場合には十分ではありません。このような場合、このサイトではさらに、動的機能接続性、スペクトル プロファイル、非周期成分、雪崩遷移ダイナミクス、表現幾何学などの縦方向の同一性信号を実際に伝送するフィーチャ ファミリがどれであるか、またそのオブジェクトが 1 つのレジーム内でのみテストされたのか、それとも宣言された状態変化全体にわたってテストされたのかを尋ねます。
 </p>
 
-<strong>Fast labels and slow internal milieu are different audits</strong>
+<strong>高速なラベルと低速な内部環境は異なる監査</strong>
 <p>
-Movement, arousal, task mode, and setup explain one family of temporal failures. Circadian phase, steroid exposure, and feeding / insulin-metabolic regime explain another. On this site, both have to be logged when a result is promoted beyond a narrow same-task timing claim.
+動作、覚醒、タスク モード、およびセットアップは、一時的な失敗の 1 つのグループを説明します。概日周期、ステロイド曝露、および摂食/インスリン代謝体制が別の説明をします。このサイトでは、結果が狭い同一タスク タイミング要求を超えて昇格する場合、両方をログに記録する必要があります。
 </p>
 
-<h2>Why the old three-way split is not enough</h2>
+<h2>なぜ従来の 3 方向分割では不十分なのか</h2>
 <p>
-If we say only “state is short-term, trait is stable, drift is change over time,” we still hide the crucial difference between <strong>what changed in the organism</strong> and <strong>what changed in the interface or decoder</strong>. We also hide the difference between a <strong>fixed decoder surviving</strong> and a <strong>system being kept alive by adaptation</strong>. The site therefore reads longitudinal results through four layers first, and then attaches the five temporal-validity fields above.
+「状態は短期的、形質は安定、ドリフトは時間の経過とともに変化する」とだけ言ったとしても、<strong>生物内で変化したもの</strong>と<strong>インターフェースまたはデコーダ内で変化したもの</strong>の間の決定的な違いが依然として隠されていることになります。また、</strong> で生き残る <strong> 固定デコーダと、適応 </strong> によって存続する <strong> システムとの違いも隠します。したがって、サイトは最初に 4 つのレイヤーを通じて長期的な結果を読み取り、次に上の 5 つの時間的有効性フィールドを添付します。
 </p>
 <table>
 <thead>
 <tr>
-<th>Layer</th>
-<th>What it means here</th>
-<th>Typical timescale</th>
-<th>Minimum evidence we want</th>
+<th>レイヤー</th>
+<th>ここでの意味</th>
+<th>一般的なタイムスケール</th>
+<th>最低限必要な証拠</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>state fluctuation</strong></td>
-<td>The momentary or short-horizon condition: arousal, spontaneous behavior, movement, task engagement, sleep pressure, circadian phase, glucocorticoid or steroid exposure, feeding / insulin-metabolic state, pharmacological state, or time-of-day effects.</td>
-<td>Seconds to hours, sometimes within one day.</td>
-<td>State labels plus performance or neural-structure differences by state.</td>
+<td><strong>状態変動</strong></td>
+<td>瞬間的または短期間の状態: 覚醒、自発的行動、運動、課題への取り組み、睡眠圧、概日周期、グルココルチコイドまたはステロイドへの曝露、摂食/インスリン代謝状態、薬理学的状態、または時間帯の影響。</td>
+<td>数秒から数時間、場合によっては 1 日以内。</td>
+<td>状態ラベルと状態ごとのパフォーマンスまたは神経構造の違い。</td>
 </tr>
 <tr>
-<td><strong>trait-like backbone</strong></td>
-<td>A relatively stable skeleton such as latent dynamics, representational geometry, or functional fingerprint.</td>
-<td>Days to months, depending on the preparation.</td>
-<td>Cross-session stability of a named backbone object, not only one feature or channel.</td>
+<td><strong>形質様バックボーン</strong></td>
+<td>A 潜在力学、表現幾何学、機能的指紋などの比較的安定した骨格。</td>
+<td>準備に応じて数日から数か月。</td>
+<td>1 つの機能やチャネルだけでなく、名前付きバックボーン オブジェクトのセッション間の安定性。</td>
 </tr>
 <tr>
-<td><strong>biological drift</strong></td>
-<td>Plasticity, learning, unit turnover, remapping, and other changes in the living system itself.</td>
-<td>Days to months.</td>
-<td>Evidence that separates unit-level volatility from population-level preservation or recovery.</td>
+<td><strong>生物ドリフト</strong></td>
+<td>可塑性、学習、ユニットの回転、再マッピング、および生命システム自体のその他の変化。</td>
+<td>数日から数か月。</td>
+<td>ユニットレベルの変動性と集団レベルの保存または回復を区別する証拠。</td>
 </tr>
 <tr>
-<td><strong>interface / decoder drift</strong></td>
-<td>Changes caused by the recording interface, preprocessing chain, feature extractor, or decoder mismatch.</td>
-<td>Within session to months.</td>
-<td>A record of channel / interface change plus fixed-decoder degradation and recalibration burden.</td>
+<td><strong>インターフェース/デコーダードリフト</strong></td>
+<td>録画インターフェイス、前処理チェーン、特徴抽出機能、またはデコーダーの不一致によって引き起こされる変更。</td>
+<td>セッション内から数カ月以内。</td>
+<td>A チャネル / インターフェースの変更と固定デコーダの劣化および再キャリブレーションの負担の記録。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>What the primary literature now supports</h2>
+<h2>一次文献が現在サポートしているもの</h2>
 
-<h3>1. State annotation is not optional</h3>
+<h3>1。状態の注釈はオプションではありません</h3>
 <p>
-It is too weak to treat same-day fluctuation as mere nuisance or to reduce state annotation to movement and arousal alone. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a> showed that cortex-wide neural activity during task performance is strongly shaped by uninstructed movements, and <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">Benisty et al. (2024)</a> showed that spontaneous behavior rapidly changes not only activity magnitude but also functional-connectivity structure. More specifically for EEG control, <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed that movement-related EEG dynamics vary across a 10-hour day/night window and that robust decoding therefore requires adaptive decoders.
+同じ日の変動を単なる迷惑なものとして扱ったり、状態の注釈を動作と覚醒だけに限定したりするには弱すぎます。 <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019) </a> は、課題遂行中の皮質全体の神経活動が、指示されていない運動によって強く形成されることを示しました。 (2024)</a> は、自発的行動が活動の大きさだけでなく、機能的接続構造も急速に変化することを示しました。より具体的にはEEG制御については、<a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Eggerら。 (2024) </a> は、運動に関連した EEG ダイナミクスが 10 時間の昼夜枠にわたって変化すること、したがって堅牢なデコードには適応デコーダが必要であることを示しました。
 </p>
 <p>
-But the same visible fast loop can also cross a slower body-state regime. <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a> showed glucocorticoid-dependent retrieval impairment, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a> showed hydrocortisone-linked decreases in human hippocampal and prefrontal retrieval activity, <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, and <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a> showed circadian and corticosteroid-rhythm control of hippocampal plasticity, and <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>, <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger et al. (2008)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> showed that insulin delivery or circadian-rhythm consistency can shift human memory or hippocampal activity. On this site, that means <strong>state annotation</strong> has to split <strong>fast labels</strong> from <strong>slow internal-milieu disclosure</strong>; otherwise a same-task result can still hide a different operating regime.
-</p>
-
-<h3>2. Trait-like backbone sits above unit-level immutability</h3>
-<p>
-The safer reading is not “a trait means one neuron stays fixed.” <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020)</a> showed that aligned low-dimensional cortical dynamics can remain stable over long periods even when recorded neurons turn over. <a href="https://doi.org/10.1038/nn.4135" target="_blank">Finn et al. (2015)</a> showed that functional-connectivity patterns can identify individuals across scan sessions. At the same time, <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">Roth &amp; Merriam (2023)</a> showed cumulative representational drift in human V1 over months while relative dissimilarity structure remained more stable, and <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">Noda et al. (2025)</a> showed that a population-level representational map can recover within days after selective neuron loss. Therefore, this site now reads <strong>trait</strong> as a named backbone object, not as single-feature immutability.
-</p>
-<p>
-However, the phrase <strong>functional fingerprint</strong> still hides an important remaining ambiguity: it does not yet say <strong>which object</strong> carried the identification. <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">Van De Ville et al. (2021)</a> showed that the best functional-connectivity fingerprints emerge over longer windows while shorter windows can still contain highly identifiable snapshots, and that the dominant networks change across timescales. <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> showed that resting-state EEG identity can remain robust over intervals of at least two weeks using spectral and coherence features. <a href="https://doi.org/10.1016/j.neuroimage.2023.120260" target="_blank">Sorrentino et al. (2023)</a> then showed in source-reconstructed MEG that subject differentiation can be driven mainly by fast, intermittent avalanche dynamics rather than the stationary component usually summarized by correlation structure. <a href="https://doi.org/10.1038/s41598-025-34509-y" target="_blank">Kyllönen et al. (2026)</a> finally showed that sleep EEG can preserve strong two-night individual signatures even when the nominal disorder label fails to generalize across participants, with high-frequency activity dominating the identity signal. Therefore, on this site, a <strong>trait-like backbone</strong> claim must name the <strong>backbone / fingerprint object</strong>, the <strong>timescale</strong>, and the <strong>state regime</strong> in which that object remained stable, rather than stopping at person-identification accuracy alone.
+しかし、同じ目に見える高速ループが、より遅い本体状態領域を通過することもあります。 <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998) </a> はグルココルチコイド依存性の回復障害を示しました。<a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007) </a> は、ヒトの海馬および前頭前野の回復活動におけるヒドロコルチゾン関連の減少を示しました。<a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">McCauley et al. (2020)</a>、<a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone 他(2023)</a>、<a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">バーニーら。 (2023) </a> は、海馬可塑性の概日制御とコルチコステロイド リズム制御を示し、<a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">Benedict et al. (2004)</a>、<a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">Reger 他。 (2008)</a>、および<a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al。 (2015) </a> は、インスリン投与または概日リズムの一貫性が人間の記憶または海馬の活動を変化させる可能性があることを示しました。このサイトでは、<strong> 状態アノテーション </strong> が <strong> 高速ラベル </strong> を <strong> 低速内部環境開示 </strong> から分割する必要があることを意味します。そうしないと、同じタスクの結果でも異なる動作体制が隠蔽される可能性があります。
 </p>
 
-<h3>3. Stabilization and recalibration are not the same thing as fixed-decoder durability</h3>
+<h3>2。特性のようなバックボーンはユニットレベルの不変性の上に位置します</h3>
 <p>
-Recent BCI papers sharpen this distinction. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> showed that aligning latent dynamics can stabilize BCI decoding across long recordings, but that is still an <strong>alignment-based rescue strategy</strong>, not evidence that no drift occurred. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> then showed that long-term cursor BCI control can be maintained with unsupervised hidden-Markov-model recalibration, while also showing that the burden of recalibration and the choice of stabilization strategy matter. The site therefore now separates <strong>fixed decoder interval</strong> from <strong>recalibration burden</strong> and refuses to let “the system stayed usable” silently replace “the original decoder stayed valid.”
+より安全な解釈は、「特性とは 1 つのニューロンが固定されたままであることを意味する」ではありません。 <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">Gallego et al. (2020) </a> は、記録されたニューロンがターンオーバーした場合でも、整列した低次元の皮質ダイナミクスが長期間にわたって安定した状態を維持できることを示しました。 <a href="https://doi.org/10.1038/nn.4135" target="_blank">フィンら。 (2015)</a> は、機能的接続パターンがスキャン セッション全体で個人を識別できることを示しました。同時に、<a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">Roth &amp; Merriam (2023)</a> は、数か月にわたるヒト V1 の累積的表現ドリフトを示しましたが、相対的非類似性構造はより安定したままであり、<a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">Noda et al. (2025) </a> は、集団レベルの表現マップが選択的ニューロン喪失後数日以内に回復できることを示しました。したがって、このサイトでは、<strong>trait</strong> を単一機能の不変性としてではなく、名前付きバックボーン オブジェクトとして読み取るようになりました。
+</p>
+<p>
+しかし、フレーズ <strong> 機能指紋 </strong> は依然として重要な曖昧さを隠しています。つまり、<strong>、どのオブジェクト </strong> が識別情報を保持したかはまだ述べられていません。 <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">ヴァン・デ・ヴィル 他(2021)</a> は、最良の機能接続フィンガープリントは長いウィンドウで出現する一方、短いウィンドウでも高度に識別可能なスナップショットを含む可能性があり、支配的なネットワークがタイムスケールにわたって変化することを示しました。 <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Diら(2021) </a> は、スペクトルとコヒーレンスの特徴を使用して、安静状態の EEG 同一性が少なくとも 2 週間の間隔にわたって堅牢な状態を維持できることを示しました。 <a href="https://doi.org/10.1016/j.neuroimage.2023.120260" target="_blank">Sorrentino et al. (2023) </a> は、ソース再構成された MEG で、通常は相関構造によって要約される定常成分ではなく、主に高速で断続的な雪崩ダイナミクスによって主題の区別が駆動され得ることを示しました。 <a href="https://doi.org/10.1038/s41598-025-34509-y" target="_blank">キロネンら。 (2026) </a> は、名目上の障害ラベルが参加者間で一般化できず、高周波活動が識別信号を支配している場合でも、睡眠 EEG が 2 晩の個人の強力な署名を保存できることを最終的に示しました。したがって、このサイトでは、<strong>trait のようなバックボーン </strong> クレームは、個人識別精度だけにとどまるのではなく、<strong> バックボーン / 指紋オブジェクト </strong>、<strong> タイムスケール </strong>、およびそのオブジェクトが安定していた <strong> 状態レジーム </strong> を指定する必要があります。
 </p>
 
-<h3>4. Invasive language BCIs split into four temporal routes</h3>
+<h3>3。安定化と再キャリブレーションは、固定デコーダーの耐久性</h3>と同じではありません。
 <p>
-Communication-route papers are important, but their temporal claims are no longer one object. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> strengthen <strong>same-session throughput / expressivity</strong> under different output contracts. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> strengthens <strong>cross-subject transfer initialization</strong> from distributed brain recordings, which is useful for bootstrapping but still different from proving participant-invariant decoding or long-horizon no-update use. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> instead strengthen <strong>adaptive rescue</strong> and <strong>unsupervised recalibration</strong> under accumulating neural change. On this site, a temporal-validity claim for invasive language BCIs therefore has to say which route it belongs to before the reader can decide whether the result supports throughput, initialization, bounded fixed-decoder use, or adaptive operation.
+最近の BCI 論文では、この区別が明確になっています。 <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> は、潜在ダイナミクスを調整することで長時間の記録にわたって BCI デコードを安定化できることを示しましたが、これは依然として <strong> アライメントベースのレスキュー戦略 </strong> であり、ドリフトが発生しなかったという証拠ではありません。 <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">ウィルソンら(2025)</a> はその後、長期カーソル BCI 制御が教師なし隠れマルコフ モデル再校正で維持できることを示し、同時に再校正の負担と安定化戦略の選択が重要であることも示しました。したがって、サイトは現在、<strong>固定デコーダー間隔</strong>を<strong>再キャリブレーション負荷</strong>から分離し、「システムは使用可能のまま」を「元のデコーダーは有効のまま」に置き換えることを拒否しています。
+</p>
+
+<h3>4。侵襲的言語の BCI は 4 つの時間的ルートに分割</h3>
+<p>
+コミュニケーションルート文書は重要ですが、その一時的な主張はもはや単一の対象ではありません。 <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">ウィレットら(2023)</a>、<a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Lリトルジョンら。 (2025)</a>、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairragkar et al. (2025) </a> は、異なる出力契約の下で <strong> と同じセッションのスループット / 表現力を強化します </strong>。 <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025) </a> は、分散脳記録からの <strong> 被験者間転送初期化 </strong> を強化します。これはブートストラップには役立ちますが、参加者不変デコードや長期的な更新なしの使用の証明とは依然として異なります。 <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a> および <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a>は代わりに<strong>アダプティブレスキュー</strong>と<strong>教師なし再校正</strong>を蓄積した神経変化の下で強化します。したがって、このサイトでは、侵入言語 BCI の時間的妥当性の主張は、結果がスループット、初期化、制限された固定デコーダの使用、または適応操作をサポートするかどうかを読者が判断できるようになる前に、それがどのルートに属するかを示す必要があります。
 </p>
 <table>
 <thead>
 <tr>
-<th>Route type</th>
-<th>Representative literature</th>
-<th>What it supports</th>
-<th>What it still does not support</th>
+<th>ルートタイプ</th>
+<th>代表文献</th>
+<th>対応内容</th>
+<th>まだ対応していないもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Throughput / expressivity</strong></td>
-<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>; <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a>; <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a></td>
-<td>High-rate or low-latency communication under a declared output contract, vocabulary, and abstention / silence policy.</td>
-<td>Cross-person portability, indefinite fixed-decoder validity, or participant-invariant language manifolds.</td>
+<td><strong>スループット/表現力</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">ウィレットら(2023)</a>; <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Lリトルジョンら(2025)</a>; <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">ワイラグカールら(2025)</a></td>
+<td>宣言された出力契約、語彙、棄権/沈黙ポリシーに基づく高速または低遅延通信。</td>
+<td>人を超えた移植性、無期限の固定デコーダ有効性、または参加者不変言語多様体。</td>
 </tr>
 <tr>
-<td><strong>Transfer initialization</strong></td>
+<td><strong>転送の初期化</strong></td>
 <td><a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a></td>
-<td>Bootstrapping a subject-specific decoder from distributed recordings rather than training from scratch on one participant alone.</td>
-<td>Longitudinal durability without later updates, zero-calibration use, or a state-invariant backbone proven across participants.</td>
+<td>1 人の参加者だけを対象に最初からトレーニングするのではなく、分散録画から主題固有のデコーダをブートストラップします。</td>
+<td>後の更新、ゼロキャリブレーションの使用、または参加者全体で証明された状態不変のバックボーンを必要としない長期的な耐久性。</td>
 </tr>
 <tr>
-<td><strong>Bounded fixed-decoder slice</strong></td>
-<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">Willett et al. (2023)</a>; <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a></td>
-<td>A declared interval over which performance can be checked without new supervised retraining.</td>
-<td>Indefinite decoder durability, cross-site portability, or solved neural drift.</td>
+<td><strong>有界固定デコーダスライス</strong></td>
+<td><a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">ウィレットら(2023)</a>; <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">ワイラグカールら(2025)</a></td>
+<td>A 新たな監視付き再トレーニングなしでパフォーマンスをチェックできる宣言された間隔。</td>
+<td> デコーダーの無期限の耐久性、サイト間の移植性、またはニューラル ドリフトの解決。</td>
 </tr>
 <tr>
-<td><strong>Adaptive rescue / recalibration</strong></td>
-<td><a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>; <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a></td>
-<td>Maintaining usable control by latent alignment or unsupervised updates under named drift conditions.</td>
-<td>Evidence that the original decoder remained valid or that drift disappeared biologically.</td>
+<td><strong>アダプティブレスキュー/再キャリブレーション</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">Karpowicz et al. (2025)</a>; <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">ウィルソンら(2025)</a></td>
+<td>名前付きドリフト条件下での潜在的なアライメントまたは監視されていない更新により、使用可能な制御を維持します。</td>
+<td>元のデコーダが有効なままであるか、ドリフトが生物学的に消滅したという証拠。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Minimum submission this site now expects for longitudinal claims</h2>
+<h2>このサイトが縦断的主張に対して現在求めている最小提出数</h2>
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>What must be reported at minimum</th>
-<th>Stopped claim if missing</th>
+<th>アイテム</th>
+<th>最低限報告しなければならないこと</th>
+<th>紛失した場合は請求を停止します</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>state annotation</strong></td>
-<td>Arousal / behavior / movement / task-mode labels, and when relevant, time-of-day or sleep-pressure context plus circadian phase, recent sleep-wake schedule, glucocorticoid or steroid exposure, and feeding / fasting or glucose-insulin regime.</td>
-<td>Same-day or cross-day differences cannot be read cleanly as trait or drift.</td>
+<td><strong>状態の注釈</strong></td>
+<td>覚醒/行動/運動/タスクモードのラベル、および関連する場合は、時刻または睡眠圧の状況と概日位相、最近の睡眠覚醒スケジュール、グルココルチコイドまたはステロイドへの曝露、および摂食/絶食またはグルコース-インスリン療法。</td>
+<td>同日または日をまたいだ違いを形質またはドリフトとして正確に読み取ることができません。</td>
 </tr>
 <tr>
-<td><strong>backbone / fingerprint object</strong></td>
-<td>Name whether the longitudinal object is latent dynamics, functional-connectivity fingerprint, EEG spectral profile, aperiodic component, avalanche-transition dynamics, representational geometry, or another explicit feature family, and state whether it was tested only within one regime or across a declared state change.</td>
-<td>Identification success cannot be promoted to a stable, state-invariant trait or backbone.</td>
+<td><strong>バックボーン/指紋オブジェクト</strong></td>
+<td>縦方向のオブジェクトが潜在ダイナミクス、機能的接続フィンガープリント、EEGスペクトルプロファイル、非周期成分、雪崩遷移ダイナミクス、表現幾何学、または別の明示的な特徴ファミリーであるかどうかを指定し、それが1つのレジーム内でのみテストされたのか、それとも宣言された状態変化全体にわたってテストされたのかを述べます。</td>
+<td>識別成功を、安定した状態不変形質またはバックボーンに昇格させることはできません。</td>
 </tr>
 <tr>
-<td><strong>fixed decoder interval</strong></td>
-<td>The exact days or sessions over which the same decoder was held without retraining.</td>
-<td>No claim of fixed-decoder durability or stable backbone may be made.</td>
+<td><strong>固定デコーダ間隔</strong></td>
+<td>同じデコーダが再トレーニングなしで開催された正確な日数またはセッション。</td>
+<td>固定デコーダの耐久性や安定したバックボーンについては主張できません。</td>
 </tr>
 <tr>
-<td><strong>communication route type</strong></td>
-<td>For invasive language or speech BCIs, state whether the result is same-session throughput / expressivity, transfer initialization, a bounded fixed-decoder slice, or adaptive rescue, and name any no-new-day-training, open-loop, or baseline-from-scratch comparator that defines that route.</td>
-<td>A communication result cannot be promoted to generic transfer or long-horizon durability by default.</td>
+<td><strong>通信経路タイプ</strong></td>
+<td>侵略的な言語または音声の BCI の場合、結果が同一セッションのスループット / 表現力、転送初期化、境界付き固定デコーダ スライス、またはアダプティブ レスキューのいずれであるかを述べ、そのルートを定義する新しい日なしトレーニング、オープン ループ、またはスクラッチからのベースライン コンパレータの名前を指定します。</td>
+<td>A の通信結果は、デフォルトでは汎用転送または長期耐久性に昇格できません。</td>
 </tr>
 <tr>
-<td><strong>stabilization / rescue mode</strong></td>
-<td>Whether latent alignment, unsupervised recalibration, supervised recalibration, or human operator intervention was used.</td>
-<td>Adaptive operation cannot be rephrased as fixed-decoder stability.</td>
+<td><strong>安定化/レスキューモード</strong></td>
+<td>潜在的なアライメント、教師なし再キャリブレーション、教師あり再キャリブレーション、または人間のオペレーター介入が使用されたかどうか。</td>
+<td>適応動作は、固定デコーダの安定性と言い換えることはできません。</td>
 </tr>
 <tr>
-<td><strong>recalibration burden</strong></td>
-<td>Frequency, duration, amount of target data, and failure / fallback behavior.</td>
-<td>Operational drift remains hidden and deployability cannot be claimed.</td>
+<td><strong>再校正負担</strong></td>
+<td>頻度、期間、ターゲット データの量、および障害/フォールバック動作。</td>
+<td>運用上のドリフトは隠されたままであり、導入可能性を主張することはできません。</td>
 </tr>
 <tr>
-<td><strong>transfer ceiling</strong></td>
-<td>One line stating whether the result is still limited to one participant, one implant, one site, one task family, or one behavioral regime.</td>
-<td>The result stays as participant-specific longitudinal evidence only.</td>
+<td><strong>トランスファー天井</strong></td>
+<td>結果が依然として 1 人の参加者、1 つのインプラント、1 つの部位、1 つのタスク ファミリ、または 1 つの行動レジームに限定されるかどうかを示す 1 行。</td>
+<td>結果は参加者固有の長期的な証拠としてのみ残ります。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Common misreadings and demotion rules on this site</h2>
+<h2>このサイトのよくある誤解と降格ルール</h2>
 <table>
 <thead>
 <tr>
-<th>Dangerous reading</th>
-<th>Why it is too strong</th>
-<th>How this site demotes it</th>
+<th>危険な読書</th>
+<th>強すぎる理由</th>
+<th>このサイトがどのように降格しているのか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>"The score matched on the same day, so the trait is stable."</strong></td>
-<td>Without state annotation, same-day success can still ride on momentary behavior, arousal, setup conditions, or a different circadian / endocrine-metabolic regime.</td>
-<td>Read as state-level evidence only.</td>
+<td><strong>「同日にスコアが一致したので特性は安定しています。」</strong></td>
+<td>状態の注釈がなくても、同日の成功は瞬間的な行動、覚醒、設定条件、または異なる概日/内分泌代謝体制に依存する可能性があります。</td>
+<td>州レベルの証拠としてのみ読み取ります。</td>
 </tr>
 <tr>
-<td><strong>"High person-identification accuracy means one state-invariant trait was measured."</strong></td>
-<td>Different timescales, feature families, and aperiodic or high-arousal components can carry strong identification without proving one universal backbone object.</td>
-<td>Name the fingerprint object and regime first; otherwise read it as same-regime identifiability only.</td>
+<td><strong>「個人識別精度が高いということは、1 つの状態不変特性が測定されたことを意味します。」</strong></td>
+<td>さまざまなタイムスケール、機能ファミリー、非周期的または高覚醒コンポーネントは、1 つの普遍的なバックボーン オブジェクトを証明することなく、強力な識別を保持できます。</td>
+<td>最初に指紋オブジェクトとレジームに名前を付けます。それ以外の場合は、同じ体制の識別のみとして読み取ってください。</td>
 </tr>
 <tr>
-<td><strong>"Latent alignment or recalibration kept performance high, so drift is solved."</strong></td>
-<td>The result may show that drift can be compensated, not that it vanished.</td>
-<td>Report stabilization strategy and recalibration burden as separate outputs.</td>
+<td><strong>「潜在的なアライメントまたは再キャリブレーションによりパフォーマンスが高く維持されたため、ドリフトが解決されました。」</strong></td>
+<td>結果は、ドリフトがなくなったわけではなく、補正できることを示している可能性があります。</td>
+<td>安定化戦略と再校正負荷を個別の出力としてレポートします。</td>
 </tr>
 <tr>
-<td><strong>"The fixed decoder failed, so the biological representation collapsed."</strong></td>
-<td>Interface / decoder drift can break performance even when a backbone remains.</td>
-<td>Require separation of biological drift from interface / decoder drift.</td>
+<td><strong>「修正されたデコーダーが失敗したため、生物学的表現が崩壊しました。」</strong></td>
+<td>インターフェイス/デコーダーのドリフトにより、バックボーンが残っている場合でもパフォーマンスが低下する可能性があります。</td>
+<td>インターフェース/デコーダードリフトから生物学的ドリフトを分離する必要があります。</td>
 </tr>
 <tr>
-<td><strong>"Low latency plus several days of use means long-term deployability."</strong></td>
-<td>Latency, fixed-decoder durability, and recalibration burden are different audits.</td>
-<td>Do not promote to long-term deployability without all three fields.</td>
+<td><strong>「低遅延と数日間の使用により、長期的な導入が可能になります。」</strong></td>
+<td>Lレイテンシー、固定デコーダの耐久性、再キャリブレーションの負担は異なる監査です。</td>
+<td>3 つのフィールドすべてがなければ、長期的な展開可能性を促進しません。</td>
 </tr>
 <tr>
-<td><strong>"Cross-subject transfer initialization means the decoder is participant-invariant or already durable."</strong></td>
-<td>Initialization from other participants' data can lower the startup burden while still requiring subject-specific adaptation, later recalibration, or a bounded fixed-decoder interval.</td>
-<td>Read as initialization evidence only unless later fixed-decoder or rescue evidence is shown explicitly.</td>
+<td><strong>「被験者間転送の初期化とは、デコーダが参加者不変であるか、すでに耐久性があることを意味します。」 </strong></td>
+<td>他の参加者のデータからの初期化により、起動の負担を軽減できますが、被験者固有の適応、後の再キャリブレーション、または制限された固定デコーダ間隔が必要になります。</td>
+<td>後の固定デコーダまたはレスキュー証拠が明示的に示されない限り、初期化証拠としてのみ読み取ります。</td>
 </tr>
 <tr>
-<td><strong>"The task and fast loop matched, so the biological regime matched."</strong></td>
-<td>Circadian phase, glucocorticoid exposure, and insulin / metabolic regime can shift hippocampal retrieval or plasticity even when the visible loop looks unchanged.</td>
-<td>Read as fast-loop or same-task evidence only unless slow internal-milieu disclosure is present.</td>
+<td><strong>「タスクと高速ループが一致したため、生物学的レジームが一致しました。」 </strong></td>
+<td>概日位相、グルココルチコイド曝露、およびインスリン/代謝体制は、目に見えるループが変化していないように見えても、海馬の回復または可塑性を変化させる可能性があります。</td>
+<td>内部環境の開示が遅い場合を除き、高速ループまたは同一タスクの証拠としてのみ読み取ります。</td>
 </tr>
 <tr>
-<td><strong>"Participant-specific longitudinal success means generic transfer."</strong></td>
-<td>One-participant success does not close cross-person, cross-site, or cross-task transfer.</td>
-<td>Attach an explicit transfer ceiling.</td>
+<td><strong>「参加者固有の長期的な成功は、一般的な移転を意味します。」</strong></td>
+<td>1 人の参加者が成功しても、人を越えた、サイトを越えた、またはタスクを越えた転送は終了しません。</td>
+<td>明示的な転送上限をアタッチします。</td>
 </tr>
 <tr>
-<td><strong>"A stable population map means every unit is stable."</strong></td>
-<td>Population-level homeostasis can coexist with unit-level volatility.</td>
-<td>Keep unit drift and backbone stability in separate columns.</td>
+<td><strong>「人口マップが安定しているということは、すべてのユニットが安定していることを意味します。」</strong></td>
+<td>集団レベルの恒常性は、ユニットレベルの変動性と共存できます。</td>
+<td>別々のカラムでユニットのドリフトとバックボーンの安定性を維持します。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Operating rules adopted by this site</h2>
+<h2>当サイトが採用している運用ルール</h2>
 
 <h4>Rule</h4>
 <ul>
-<li><strong>Do not report time validity in one number:</strong> fixed decoder interval, state annotation, recalibration burden, and transfer ceiling stay separate.</li>
-<li><strong>State annotation must split fast labels from slow internal milieu:</strong> movement, arousal, and task mode do not cover circadian phase, glucocorticoid exposure, or insulin-metabolic regime.</li>
-<li><strong>Trait must name its backbone and fingerprint object:</strong> latent dynamics, representational geometry, functional-connectivity fingerprint, spectral profile, aperiodic component, avalanche-transition dynamics, or another explicit object.</li>
-<li><strong>Person-identification is not enough by itself:</strong> say which object carried the identity signal, over which timescale, and whether it survived a declared state change or only same-regime repeats.</li>
-<li><strong>Adaptive rescue must be visible:</strong> if alignment or recalibration was used, say so and report the cost.</li>
-<li><strong>For invasive language BCIs, temporal route type must be named:</strong> throughput / expressivity, transfer initialization, bounded fixed-decoder slices, and adaptive rescue do not license the same claim.</li>
-<li><strong>Biological drift and interface drift are different failure modes:</strong> do not collapse them into one “nonstationarity” line.</li>
-<li><strong>Session dates and intervals are required:</strong> intraday, daily, weekly, and monthly claims must be distinguishable.</li>
-<li><strong>Every longitudinal result needs a stop line:</strong> say what still cannot be inferred from the reported horizon.</li>
+<li><strong>時間の有効性を 1 つの数値で報告しません:</strong> 固定デコーダ間隔、状態注釈、再キャリブレーション負荷、および転送上限は別々のままです。</li>
+<li><strong>状態アノテーションは、速いラベルと遅い内部環境を分割する必要があります:</strong> の動き、覚醒、およびタスク モードは、概日相、グルココルチコイド曝露、またはインスリン代謝体制をカバーしません。</li>
+<li><strong>Trait は、そのバックボーンとフィンガープリント オブジェクトに名前を付ける必要があります:</strong> 潜在ダイナミクス、表現幾何学、機能接続フィンガープリント、スペクトル プロファイル、非周期成分、雪崩遷移ダイナミクス、または別の明示的なオブジェクト。</li>
+<li><strong>人物の識別だけでは十分ではありません:</strong>どのオブジェクトが識別信号を伝えたのか、どのタイムスケールで、宣言された状態変化を生き残ったのか、それとも同じ体制の繰り返しのみを生き延びたのかを述べます。</li>
+<li><strong>アダプティブ レスキューが表示される必要があります:</strong> アライメントまたは再キャリブレーションが使用された場合は、その旨を伝え、コストを報告してください。</li>
+<li><strong>侵略的言語 BCI の場合、時間ルート タイプに名前を付ける必要があります:</strong> スループット/表現力、転送初期化、制限された固定デコーダー スライス、およびアダプティブ レスキューは、同じクレームをライセンスしません。</li>
+<li><strong>生物学的ドリフトと界面ドリフトは異なる故障モードです:</strong> はそれらを 1 つの「非定常性」線にまとめません。</li>
+<li><strong>セッションの日付と間隔は必須です。</strong> 日中、日次、週次、月次の請求を区別できる必要があります。</li>
+<li><strong>すべての経度結果には停止線が必要です:</strong> 報告された地平線からまだ推測できないことを述べます。</li>
 </ul>
 
-<h2>References</h2>
+<h2>参考資料</h2>
 <ol>
-<li>Musall S, Kaufman MT, Juavinett AL, Gluf S, Churchland AK. Single-trial neural dynamics are dominated by richly varied movements. <em>Nature Neuroscience</em>. 2019;22:1677-1686. <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
-<li>Benisty H, Barson D, Moberly AH, et al. Rapid fluctuations in functional connectivity of cortical networks encode spontaneous behavior. <em>Nature Neuroscience</em>. 2024;27:148-158. <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
-<li>Egger A, Bayon C, d'Almeida J, et al. Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <em>Scientific Reports</em>. 2024;14:21209. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
-<li>Gallego JA, Perich MG, Chowdhury RH, Solla SA, Miller LE. Long-term stability of cortical population dynamics underlying consistent behavior. <em>Nature Neuroscience</em>. 2020;23:260-270. <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
-<li>Finn ES, Shen X, Scheinost D, et al. Functional connectome fingerprinting: identifying individuals using patterns of brain connectivity. <em>Nature Neuroscience</em>. 2015;18:1664-1671. <a href="https://doi.org/10.1038/nn.4135" target="_blank">doi:10.1038/nn.4135</a></li>
-<li>Van De Ville D, Amico E, Abbas K, et al. When makes you unique: Temporality of the human brain fingerprint. <em>Science Advances</em>. 2021;7:eabj0751. <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">doi:10.1126/sciadv.abj0751</a></li>
-<li>Di X, Guo Z, Meng X, et al. The Time-Robustness Analysis of Individual Identification Based on Resting-State EEG. <em>Frontiers in Human Neuroscience</em>. 2021;15:672946. <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
-<li>Sorrentino P, Troisi Lopez E, Romano A, et al. Brain fingerprint is based on the aperiodic, scale-free, neuronal activity. <em>NeuroImage</em>. 2023;277:120260. <a href="https://doi.org/10.1016/j.neuroimage.2023.120260" target="_blank">doi:10.1016/j.neuroimage.2023.120260</a></li>
-<li>Roth ZN, Merriam EP. Representations in human primary visual cortex drift over time. <em>Nature Communications</em>. 2023;14:4422. <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">doi:10.1038/s41467-023-40144-w</a></li>
-<li>Noda T, Kienle E, Eppler J-B, et al. Homeostasis of a representational map in the neocortex. <em>Nature Neuroscience</em>. 2025;28:1533-1545. <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
-<li>Kyllönen M, Cox R, Makkonen T, et al. Trait-like individual signatures dominate sleep EEG over insomnia-specific features. <em>Scientific Reports</em>. 2026;16:4408. <a href="https://doi.org/10.1038/s41598-025-34509-y" target="_blank">doi:10.1038/s41598-025-34509-y</a></li>
-<li>Karpowicz BM, O'Shea DJ, Wyche S, et al. Stabilizing brain-computer interfaces through alignment of latent dynamics. <em>Nature Communications</em>. 2025;16:3500. <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
-<li>Wilson GH, Stein EA, Kamdar F, et al. Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. 2025. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
-<li>Willett FR, Avansino DT, Hochberg LR, Henderson JM, Shenoy KV. A high-performance speech neuroprosthesis. <em>Nature</em>. 2023;620:1031-1036. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
-<li>Littlejohn KT, Cho CJ, Liu JR, et al. A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>. 2025;28:1318-1328. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
-<li>Wairagkar M, Card NS, Singer-Clark T, et al. An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>. 2025;644:145-152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
-<li>Singh A, Thomas T, Li J, et al. Transfer learning via distributed brain recordings enables reliable speech decoding. <em>Nature Communications</em>. 2025;16:8749. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
-<li>de Quervain DJF, Roozendaal B, McGaugh JL. Stress and glucocorticoids impair retrieval of long-term spatial memory. <em>Nature</em>. 1998;394:787-790. <a href="https://doi.org/10.1038/29542" target="_blank">doi:10.1038/29542</a></li>
-<li>Oei NYL, Elzinga BM, Wolf OT, de Ruiter MB, Damoiseaux JS, Kuijer JPA, Veltman DJ, Scheltens P, Rombouts SARB. Glucocorticoids decrease hippocampal and prefrontal activation during declarative memory retrieval in young men. <em>Brain Imaging and Behavior</em>. 2007;1:31-41. <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">doi:10.1007/s11682-007-9003-2</a></li>
-<li>McCauley JP, Petroccione MA, D'Brant LY, et al. Circadian modulation of neurons and astrocytes controls synaptic plasticity in hippocampal area CA1. <em>Cell Reports</em>. 2020;33:108255. <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">doi:10.1016/j.celrep.2020.108255</a></li>
-<li>Barone I, Gillette NM, Hawks-Mayer H, et al. Synaptic BMAL1 phosphorylation controls circadian hippocampal plasticity. <em>Science Advances</em>. 2023;9:eadj1010. <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">doi:10.1126/sciadv.adj1010</a></li>
-<li>Birnie MT, Begum G, Sugden D, et al. Circadian regulation of hippocampal function is disrupted with corticosteroid treatment. <em>Proceedings of the National Academy of Sciences of the United States of America</em>. 2023;120:e2211996120. <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">doi:10.1073/pnas.2211996120</a></li>
-<li>Benedict C, Hallschmid M, Hatke A, et al. Intranasal insulin improves memory in humans. <em>Psychoneuroendocrinology</em>. 2004;29:1326-1334. <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">doi:10.1016/j.psyneuen.2004.04.003</a></li>
-<li>Reger MA, Watson GS, Green PS, et al. Intranasal insulin administration dose-dependently modulates verbal memory and plasma amyloid-beta in memory-impaired older adults. <em>Journal of Alzheimer's Disease</em>. 2008;13:323-331. <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">doi:10.3233/JAD-2008-13309</a></li>
-<li>Sherman SM, Mumford JA, Schnyer DM. Hippocampal activity mediates the relationship between circadian activity rhythms and memory in older adults. <em>Neuropsychologia</em>. 2015;75:617-625. <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">doi:10.1016/j.neuropsychologia.2015.07.020</a></li>
+<li>ミューソール S、カウフマン MT、ジュアビネット AL、グルフ S、チャーチランド AK。単一試行の神経力学は、豊富に変化した動きによって支配されます。 <em>Nature Neuroscience</em>。 2019;22:1677-1686。 <a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">doi:10.1038/s41593-019-0502-4</a></li>
+<li>ベニスティ H、バーソン D、モバリー AH、他皮質ネットワークの機能的接続の急速な変動は、自発的な行動を符号化します。 <em>Nature Neuroscience</em>。 2024;27:148-158。 <a href="https://doi.org/10.1038/s41593-023-01498-y" target="_blank">doi:10.1038/s41593-023-01498-y</a></li>
+<li>Egger A、Bayon C、d'Almeida J、他。手のジェスチャーの解読に影響を与える時間脳波ダイナミクス: 10 時間の研究。 <em>科学レポート</em>。 2024;14:21209。 <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
+<li>Gallego JA、Perich MG、Chowdhury RH、Solla SA、Miller LE。一貫した動作の基礎となる皮質集団動態の長期安定性。 <em>Nature Neuroscience</em>。 2020;23:260-270。 <a href="https://doi.org/10.1038/s41593-019-0555-4" target="_blank">doi:10.1038/s41593-019-0555-4</a></li>
+<li>Finn ES、Shen X、Scheinost D、他。機能的コネクトーム フィンガープリンティング: 脳の接続パターンを使用して個人を識別します。 <em>Nature Neuroscience</em>。 2015;18:1664-1671。 <a href="https://doi.org/10.1038/nn.4135" target="_blank">doi:10.1038/nn.4135</a></li>
+<li>Van De Ville D、Amico E、Abbas K、他あなたをユニークにするとき: 人間の脳の指紋の一時性。 <em>科学の進歩</em>。 2021;7:eabj0751。 <a href="https://doi.org/10.1126/sciadv.abj0751" target="_blank">doi:10.1126/sciadv.abj0751</a></li>
+<li>Di X、Guo Z、Meng X 他安静状態脳波に基づく個人識別の時間ロバスト性分析。 <em>人間の神経科学のフロンティア</em>。 2021;15:672946。 <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
+<li>Sソレンティーノ P、トロイージ ロペス E、ロマーノ A 他脳指紋は、非周期的でスケールフリーのニューロン活動に基づいています。 <em>ニューロイメージ</em>。 2023;277:120260。 <a href="https://doi.org/10.1016/j.neuroimage.2023.120260" target="_blank">doi:10.1016/j.neuroimage.2023.120260</a></li>
+<li>Roth ZN、メリアムEP。人間の一次視覚野の表現は時間の経過とともに変化します。 <em>ネイチャーコミュニケーションズ</em>。 2023;14:4422。 <a href="https://doi.org/10.1038/s41467-023-40144-w" target="_blank">doi:10.1038/s41467-023-40144-w</a></li>
+<li>Noda T、Kienle E、Eppler J-B 他新皮質における表現マップの恒常性。 <em>Nature Neuroscience</em>。 2025;28:1533-1545。 <a href="https://doi.org/10.1038/s41593-025-01982-7" target="_blank">doi:10.1038/s41593-025-01982-7</a></li>
+<li>Kyllönen M、Cox R、Makkonen T、他。特性のような個人の特徴は、不眠症特有の特徴よりも睡眠 EEG を支配します。 <em>科学レポート</em>。 2026;16:4408。 <a href="https://doi.org/10.1038/s41598-025-34509-y" target="_blank">doi:10.1038/s41598-025-34509-y</a></li>
+<li>Karpowicz BM、O'Shea DJ、Wyche S、他潜在的なダイナミクスの調整を通じて脳とコンピューターのインターフェースを安定化します。 <em>ネイチャーコミュニケーションズ</em>。 2025;16:3500。 <a href="https://doi.org/10.1038/s41467-025-59652-y" target="_blank">doi:10.1038/s41467-025-59652-y</a></li>
+<li>Wilson GH、Stein EA、Kamdar F、他隠れマルコフ モデルを使用した、カーソルベースの皮質内脳コンピューター インターフェイスの長期教師なし再調整。 <em>Nature Biomedical Engineering</em>。 2025.<a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>ウィレット FR、アバンシーノ DT、ホッホベルグ LR、ヘンダーソン JM、シェノイ KV。高性能言語人工神経。 <em>ネイチャー</em>。 2023;620:1031-1036。 <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>Littlejohn KT、Cho CJ、Liu JR 他自然なコミュニケーションを復元するためのストリーミング脳から音声へのニューロプロテーゼ。 <em>Nature Neuroscience</em>。 2025;28:1318-1328。 <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar M、Card NS、Singer-Clark T、他。瞬間的に音声を合成する神経人工器官。 <em>ネイチャー</em>。 2025;644:145-152。 <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Singh A、Thomas T、Li J 他分散型脳記録による転移学習により、信頼性の高い音声デコードが可能になります。 <em>ネイチャーコミュニケーションズ</em>。 2025;16:8749。 <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
+<li>de Quervain DJF、Roozendaal B、McGaugh JL.ストレスと糖質コルチコイドは、長期の空間記憶の想起を妨げます。 <em>ネイチャー</em>。 1998;394:787-790。 <a href="https://doi.org/10.1038/29542" target="_blank">ドイ:10.1038/29542</a></li>
+<li>Oei NYL、Elzinga BM、Wolf OT、de Ruiter MB、Damoiseaux JS、Kuijer JPA、Veltman DJ、Sheltens P、Rombouts SARB。糖質コルチコイドは、若い男性の宣言的記憶の想起中に海馬と前頭前野の活性化を減少させます。 <em>脳の画像化と行動</em>。 2007;1:31-41。 <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">doi:10.1007/s11682-007-9003-2</a></li>
+<li>McCauley JP、Petroccione MA、D'Brant LY、他。ニューロンとアストロサイトの概日調節は、海馬領域 CA1 のシナプス可塑性を制御します。 <em>セルレポート</em>。 2020;33:108255。 <a href="https://doi.org/10.1016/j.celrep.2020.108255" target="_blank">doi:10.1016/j.cellrep.2020.108255</a></li>
+<li>Barone I、Gillette NM、Hawks-Mayer H、他。シナプスのBMAL1リン酸化は、海馬の概日可塑性を制御します。 <em>科学の進歩</em>。 2023;9:eadj1010。 <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">doi:10.1126/sciadv.adj1010</a></li>
+<li>バーニー MT、ベガム G、サグデン D 他海馬機能の概日調節は、コルチコステロイド治療により破壊されます。 <em>米国科学アカデミー紀要</em>。 2023;120:e2211996120。 <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">doi:10.1073/pnas.2211996120</a></li>
+<li>Benedict C、Hallschmid M、Hatke A 他鼻腔内インスリンは人間の記憶力を改善します。 <em>精神神経内分泌学</em>。 2004;29:1326-1334。 <a href="https://doi.org/10.1016/j.psyneuen.2004.04.003" target="_blank">doi:10.1016/j.psyneuen.2004.04.003</a></li>
+<li>Reger MA、Watson GS、Green PS など鼻腔内インスリン投与は、記憶障害のある高齢者の言語記憶と血漿アミロイドベータを用量依存的に調節します。 <em>アルツハイマー病ジャーナル</em>。 2008;13:323-331。 <a href="https://doi.org/10.3233/JAD-2008-13309" target="_blank">doi:10.3233/JAD-2008-13309</a></li>
+<li>SシャーマンSM、マムフォードJA、シュナイアーDM。海馬の活動は、高齢者の概日活動リズムと記憶との関係を媒介します。 <em>神経心理学</em>。 2015;75:617-625。 <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">doi:10.1016/j.neuropsychologia.2015.07.020</a></li>
 </ol>

@@ -1,209 +1,194 @@
 ---
 layout: default
-title: 'Wiki: Identity assessment and continuity test'
-description: In L4's identity assertion, we will briefly organize what and how we
-  want to test from the perspectives of memory, values, learning, branching, and longitudinal.
-article_type: Wiki
-subtitle: Returning to philosophy and test design with reservation conditions
-author: Mind Uploading Research Project
+title: 'Wiki: アイデンティティ評価と連続性テスト'
+description: L4のアイデンティティアサーションでは、何をどのようにテストしたいのかを、記憶、価値観、学習、分岐、縦断の観点から簡単に整理します。
+article_type: ウィキ
+subtitle: 予約条件を使用した哲学とテスト設計への回帰
+author: マインドアップロード研究プロジェクト
 last_updated: '2026-03-06'
-note: Learning guide
-audience: People who want to return to engineering about their identity, people who
-  are easily stopped by how to read L4
-reading_time: 10-15 minutes
-page_intro: This page is a wiki that organizes Mind-Upload's L4 ``Individuality Assertion''
-  from the perspective of ``What do you want to test and how?'' rather than introducing
-  philosophical terms. We will explain from the beginning how to reduce memory, values,
-  learning, longitudinal stability, and handling of divergences to pre-registered
-  continuity tests.
-accuracy_note: What is described here is the beginning of evaluation design. It is
-  still unresolved under what conditions we can finally determine that the two persons
-  are the same person, and this page does not provide that conclusion.
+note: 学習ガイド
+audience: 自分のアイデンティティを気にしてエンジニアリングに戻りたい人、L4の読み方で止められやすい人
+reading_time: 10～15分
+page_intro: このページは哲学用語の紹介ではなく、Mind-UploadのL4「`Individuality Assertion'' from the perspective of `「何をどのようにテストしたいのですか?」をまとめたWikiです。
+  We will explain from the beginning how to reduce memory, values, learning, longitudinal stability, and handling of divergences
+  to pre-registered continuity tests.
+accuracy_note: ここで説明するのは評価設計の始まりです。どのような条件で最終的に二人が同一人物であると判断できるのかはまだ未解明であり、このページではその結論を示していません。
 page_highlights:
-- When it comes to identity, it's not just a matter of ``similarity''; it's also important
-  to decide where to put your personality on hold.
-- We look at memory, values, learning, bifurcation, and longitudinal drift separately.
-- Pre-registration and failure conditions are especially important in L4.
+- アイデンティティに関して言えば、単なる「類似性」の問題ではありません。自分の個性をどこで保留するかを決めることも重要です。
+- 私たちは、記憶、価値観、学習、分岐、縦方向のドリフトを個別に検討します。
+- L4 では、事前登録と失敗条件が特に重要です。
 known_points:
-- The assertion of identity is stronger than L0-L3, and mere output matching is not
-  enough.
-- We need to look at memories, values, learning history, and reactions to changing
-  conditions separately.
-- Bifurcations and long-term drift make claims of identity even more difficult.
+- 同一性の主張は L0 ～ L3 よりも強く、単なる出力一致では十分ではありません。
+- 記憶、価値観、学習履歴、状況の変化に対する反応を個別に見る必要があります。
+- 分岐や長期にわたる漂流は、アイデンティティの主張をさらに困難にします。
 unknown_points:
-- It is still unresolved which combination of tests must be met to constitute a sufficient
-  condition.
-- It remains to be proven that continuous transitions may be sufficient to protect
-  one's identity.
+- 十分条件を構成するにはどのテストの組み合わせが満たされなければならないかはまだ未解決です。
+- 継続的な移行がアイデンティティを保護するのに十分であるかどうかはまだ証明されていません。
 wiki_links:
-- label: 'Wiki: Identity and copying issues'
+- label: 'Wiki: ID とコピーの問題'
   url: /wiki/personhood-and-copy-problem.html
-  description: First of all, it is for those who want to return to the philosophical
-    foundations.
-- label: 'Wiki: How to read claims and evidence'
+  description: まずは哲学の基礎に立ち返りたい人向けです。
+- label: 'Wiki: 主張と証拠の読み方'
   url: /wiki/claims-and-evidence.html
-  description: It makes up for how strong a claim L4 is.
-- label: 'Wiki: Counterfactuals/Interventions/Perturbations'
+  description: これは、L4 の主張の強さを補います。
+- label: 'Wiki: 反事実/介入/摂動'
   url: /wiki/counterfactual-and-perturbation-verification.html
-  description: This will explain why you want to see reactions to changes in conditions.
-- label: 'Wiki: state/trait/drift'
+  description: これは、条件の変化に対する反応を確認する理由を説明します。
+- label: 'Wiki: 状態/特性/ドリフト'
   url: /wiki/state-trait-and-drift.html
-  description: Supplement how to distinguish between short-term conditions and long-term
-    characteristics in longitudinal evaluation.
-- label: 'Wiki: Update/branch/stop rules'
+  description: 長期的な評価において短期的な状態と長期的な特性を区別する方法を補足します。
+- label: 'Wiki: 更新/分岐/停止ルール'
   url: /wiki/update-branching-and-stop-rules.html
-  description: Supplements the basics of branch logs, version management, and stop
-    conditions.
+  description: ブランチログ、バージョン管理、停止条件の基本を補足します。
 recommended_pages:
-- label: Introduction to WBE
+- label: WBE の概要
   url: /wbe_101.html
-- label: Verification platform
+- label: 検証プラットフォーム
   url: /verification.html
-- label: technology roadmap
+- label: 技術ロードマップ
   url: /tech_roadmap.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>The shortest idea</h2>
+<h2>最短のアイデア</h2>
 <p>
-When questioning someone's identity, it is not only necessary to ask whether they speak the same way. It is important to decide first what is going on and what will be put on hold if things break down.
+誰かのアイデンティティを尋ねるとき、必要なのは、その人が同じ話し方をしているかどうかを尋ねるだけではありません。まず、何が起こっているのか、問題が発生した場合に何を保留するのかを決めることが重要です。
 </p>
 </div>
 
 <section class="section" id="why-l4-is-hard">
-<h2 class="section-title">Why L4 suddenly becomes difficult</h2>
+<h2 class="section-title">なぜL4が急に難しくなるのか</h2>
 <p>
-In L1 and L2, you can put relatively clear metrics like accuracy and prediction match. However, in L4, questions such as ``Is this memory match enough?'' ``If a person's values ​​change slightly, are they a different person?'' and ``To what extent should we allow changes due to learning?'' come into play. In other words, not only the measurement but also the judgment rules themselves become difficult.
+L1 と L2 には、精度や予測一致などの比較的明確な指標を入れることができます。しかし、L4では「`Is this memory match enough?'' ``If a person's values ​​change slightly, are they a different person?'' and `「学習による変化をどこまで許容すべきか」という問題が絡んでくる。つまり、測定だけでなく判定ルール自体も難しくなってしまうのです。
 </p>
 </section>
 
 <section class="section" id="what-to-separate">
-<h2 class="section-title">First of all, 5 items to consider separately</h2>
+<h2 class="section-title">まずは分けて検討すべき5つの項目</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Item</th>
-<th>What do you want to see</th>
-<th>Why that's not enough</th>
+<th>アイテム</th>
+<th>何が見たいですか</th>
+<th>それだけでは不十分な理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Memory</strong></td>
-<td>Autobiographical memory and episodic coherence. </td>
-<td>Memory replay alone does not necessarily indicate subjective continuity. </td>
+<td><strong>メモリ</strong></td>
+<td>自伝的記憶とエピソードの一貫性。 </td>
+<td>メモリー再生だけでは、必ずしも主観的な連続性を示すわけではありません。 </td>
 </tr>
 <tr>
-<td><strong>Values/Preferences</strong></td>
-<td>Consistency in judgment tendencies and priorities. </td>
-<td>It is necessary to distinguish between short-term mood swings and long-term personality trends. </td>
+<td><strong>値/設定</strong></td>
+<td>判断の傾向と優先順位の一貫性。 </td>
+<td>短期的な気分の変動と長期的な性格傾向を区別する必要があります。 </td>
 </tr>
 <tr>
-<td><strong>Learning history</strong></td>
-<td>How to incorporate new experiences and connect with previous trends. </td>
-<td>It is natural for things to change as they learn, and the change itself cannot be immediately called a mismatch. </td>
+<td><strong>学習履歴</strong></td>
+<td>新しい体験を取り入れ、以前のトレンドと結びつける方法。 </td>
+<td>学習すれば変化するのは当然であり、変化そのものを直ちにミスマッチとは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Reaction to changes in conditions</strong></td>
-<td>How do responses diverge under unlearning conditions and interventions? </td>
-<td>Even if they are similar during normal times, there is a possibility that they will break down drastically due to branching. </td>
+<td><strong>状態の変化に対する反応</strong></td>
+<td>未学習の条件や介入の下で、反応はどのように分岐しますか? </td>
+<td>平常時は似ていても、分岐により大きく崩れる可能性があります。 </td>
 </tr>
 <tr>
-<td><strong>Longitudinal stability</strong></td>
-<td>What is stable and what fluctuates within the day, between days, and over the long term? </td>
-<td>It is not possible to see the persistence of identity with just one measurement. </td>
+<td><strong>縦方向の安定性</strong></td>
+<td>1日内、日ごと、長期にわたって何が安定し、何が変動するのか？ </td>
+<td>一度の測定だけでは同一性の持続性を確認することはできません。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="example-tests">
-<h2 class="section-title">What kind of continuity test do you want to consider</h2>
+<h2 class="section-title">どのような導通テストを検討しますか</h2>
 <div class="key-points">
-<h4>Tests you would like to include as examples</h4>
+<h4>T例として含めたいテスト</h4>
 <ul>
-<li><strong>Autobiographical memory alignment: Tracks not only the content of events, but also their associations and priorities. </li>
-<li><strong>Preference stability:</strong>Looks at whether value judgments and choice trends persist beyond short-term noise. </li>
-<li><strong>Learning continuity:</strong>After giving new information, see if the update method connects with the original trend. </li>
-<li><strong>Branch verification:</strong>When changing conditions, record the point at which it should be treated as a separate individual. </li>
-<li><strong>Long-term drift monitoring:</strong> Track characteristics that change and characteristics that don't change over days or weeks. </li>
+<li><strong>自伝的記憶の調整: イベントの内容だけでなく、それらの関連性や優先順位も追跡します。 </li>
+<li><strong>好みの安定性:</strong>価値判断と選択の傾向が短期的なノイズを超えて持続するかどうかを調べます。 </li>
+<li><strong>学習の継続性:</strong>新しい情報を与えた後、更新方法が元の傾向とつながっているかどうかを確認します。 </li>
+<li><strong>分岐検証:</strong>条件を変更する場合、別個体として扱うべき点を記録します。 </li>
+<li><strong>長期ドリフトモニタリング:</strong> 数日または数週間にわたって変化する特性と変化しない特性を追跡します。 </li>
 </ul>
 </div>
-<p>In particular, if you want to organize only the entrance of longitudinal evaluation first, <a href="state-trait-and-drift.html">Wiki: state/trait/drift</a> is a supplementary lecture. </p>
+<p>特に縦断評価の入口だけを先に整理したい場合は、<a href="state-trait-and-drift.html">Wiki:state/trait/drift</a>が補講となります。 </p>
 </section>
 
 <section class="section" id="prereg">
-<h2 class="section-title">Why pre-registration is especially important</h2>
+<h2 class="section-title">事前登録が特に重要な理由</h2>
 <p>
-Evaluations of a person's personality can be interpreted in any way that suits them in hindsight. That's why it is necessary to <strong>pre-register</strong> ``what to consider as a match,'' ``to what degree of deviation to suspend,'' and ``which branches to treat as separate individuals.''
+人の性格の評価は、後から考えるとその人に都合の良いように解釈できます。そのため、<strong> </strong> ``what to consider as a match,'' ``to what degree of deviation to suspend,'' and ``どのブランチを別個体として扱うかを事前登録する必要があります。
 </p>
 <div class="note-box">
-<strong>Things you should decide first</strong>
+<strong>まず決めるべきこと</strong>
 <p>
-These are test items, scoring rules, observation period, failure conditions, stopping conditions, and handling of branching. In L4, if this part is ambiguous, the entire conclusion will be shaken.
+試験項目、採点ルール、観察期間、故障条件、停止条件、分岐の扱いです。 L4ではこの部分があいまいだと全体の結論が揺らいでしまいます。
 </p>
 </div>
 </section>
 
 <section class="section" id="branching">
-<h2 class="section-title">What is difficult when branching occurs</h2>
+<h2 class="section-title">分岐が発生すると大変なこと</h2>
 <p>
-If the two systems start learning separately at some point, they may start out almost the same, but over time they will have different histories. At this time, the question is ``to what point should they be treated as the same evaluation unit?'' and ``at what point should they be separated as separate entities?''
+2 つのシステムがある時点で別々に学習し始めた場合、最初はほぼ同じになる可能性がありますが、時間の経過とともに異なる履歴を持つことになります。現時点で問題となるのは、「`to what point should they be treated as the same evaluation unit?'' and `をどの時点で別個の存在として分離すべきか」だ。
 </p>
 <p>
-Therefore, when evaluating L4, it is important to consider not only similarity but also <strong>branch log</strong> and <strong>version control</strong>.
+したがって、L4 を評価する際には、類似性だけでなく、<strong> ブランチログ </strong> および <strong> バージョン管理 </strong> も考慮することが重要です。
 </p>
 <p>
-If you want to clarify the differences between branching points, branch IDs, stop conditions, and kill switches first, <a href="update-branching-and-stop-rules.html">Wiki: Update/branching/stop rules</a> is a supplementary lecture.
+分岐点、分岐ID、停止条件、キルスイッチの違いを先に明確にしたい場合は、<a href="update-branching-and-stop-rules.html">Wiki:更新・分岐・停止ルール</a>を補講とします。
 </p>
 </section>
 
 <section class="section" id="what-not-claim">
-<h2 class="section-title">Things you shouldn't say at this stage</h2>
+<h2 class="section-title">この段階で言ってはいけないこと</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Expressions that are easy to overstate</th>
-<th>Safer reading</th>
+<th>誇張しやすい表現</th>
+<th>より安全に読書</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Identity verified</strong></td>
-<td>There have been no major discrepancies so far in the pre-registered continuity test group. </td>
+<td><strong>本人確認済み</strong></td>
+<td> 事前に登録した導通テストグループでは、これまでのところ大きな差異はありません。 </td>
 </tr>
 <tr>
-<td><strong>Same person completely saved</strong></td>
-<td>Preliminary evaluation regarding memory, values, learning, and branching has been established. </td>
+<td><strong>同一人物が完全に保存されました</strong></td>
+<td>記憶、価値観、学習、分岐に関する事前評価が確立されています。 </td>
 </tr>
 <tr>
-<td><strong>Same in the long run</strong></td>
-<td>No significant drift was observed in the defined indicators within the observation period. </td>
+<td><strong>長期的には同じ</strong></td>
+<td>観察期間内に、定義された指標に有意な変動は観察されませんでした。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="how-to-read">
-<h2 class="section-title">Minimum checks when reading L4 stories</h2>
+<h2 class="section-title">L4 ストーリーを読み取る際の最小限のチェック</h2>
 <div class="key-points">
-<h4>Checklist</h4>
+<h4>チェックリスト</h4>
 <ul>
-<li><strong>What do you consider to be continuous:</strong>Whether you are looking at memory, values, learning, branching, or longitudinal. </li>
-<li><strong>Are there pre-registrations?</strong>Are the criteria changed later? </li>
-<li><strong>Are there any failure conditions?</strong>Are there any discrepancies that will cause the project to be put on hold? </li>
-<li><strong>Is the observation period sufficient?</strong>Does a single match indicate long-term identity? </li>
+<li><strong>連続的とは何だと思いますか:</strong>記憶、価値観、学習、分岐、または長期的なものを見ているかどうか。 </li>
+<li><strong>事前登録はありますか?</strong>基準は後から変更されますか? </li>
+<li><strong>失敗条件はありますか?</strong>プロジェクトが保留される原因となる矛盾はありますか? </li>
+<li><strong>観察期間は十分ですか?</strong>単一の一致は長期的な同一性を示しますか? </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="return">
-<h2 class="section-title">Where to go back next</h2>
+<h2 class="section-title">次に戻る場所</h2>
 <p>
-If you want to go back to the philosophy-oriented entrance, please use <a href="personhood-and-copy-problem.html">Identity and the copy problem</a>, if you want to go back to the L4 position, please use <a href="../wbe_101.html">Introduction to WBE</a>, and if you want to go back to verification design, please use <a href="../verification.html">Verification infrastructure</a>.
+理念志向の入り口に戻りたい場合は<a href="personhood-and-copy-problem.html">Identityとコピー問題</a>を、L4の位置に戻りたい場合は<a href="../wbe_101.html">WBE</a>を、検証設計に戻りたい場合は<a href="../verification.html">検証基盤</a>をご利用ください。
 </p>
 </section>
 
@@ -211,19 +196,19 @@ If you want to go back to the philosophy-oriented entrance, please use <a href="
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="personhood-and-copy-problem.html">Personhood and copy problem →</a></li>
-<li><a href="claims-and-evidence.html">How to read claims and evidence →</a></li>
-<li><a href="counterfactual-and-perturbation-verification.html">Counterfactual/intervention/perturbation →</a></li>
+<li><a href="personhood-and-copy-problem.html">人物像とコピーの問題→</a></li>
+<li><a href="claims-and-evidence.html">主張と証拠の読み方→</a></li>
+<li><a href="counterfactual-and-perturbation-verification.html">反事実/介入/摂動 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../wbe_101.html">Introduction to WBE →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
-<li><a href="../tech_roadmap.html">Technology roadmap →</a></li>
+<li><a href="../wbe_101.html">WBE入門→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../tech_roadmap.html">技術ロードマップ→</a></li>
 </ul>
 </div>
 </aside>

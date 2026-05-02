@@ -1,143 +1,143 @@
-# Wiki: 4 paths to follow after Verification
+# Wiki: 検証後に従うべき 4 つのパス
 
-> A guide to help you decide the next page without hesitation after reading the verification platform
+> 検証プラットフォームを読んだ後、迷わず次のページに進むためのガイド
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-14 / Role: Reading route
+- Updated: 2026-03-14 / Role: 読書ルート
 
-## Role Of This Page
-This page is a guide to help you decide which page to publish next depending on what you want to know after reading Verification. The next page will change depending on whether you go back to L0 implementation, L2 intervention verification, L3 closed loop, or L4 identity.
+## このページの役割
+このページは、検証を読んだ後に知りたいことに応じて、次にどのページを公開するかを決定するためのガイドです。次のページは、L0 実装、L2 介入検証、L3 閉ループ、または L4 ID のいずれに戻るかによって変わります。
 
-## Accuracy Notes
-Here is the next entrance to Verification. Please be sure to check the actual conditions for each route in the main text of the original page.
+## 正確性に関する注記
+ここが検証への次の入り口です。各路線の実情は必ずオリジナルページの本文でご確認ください。
 
-## Back To Public Pages
-- [Verification platform](https://mind-upload.com/verification.html)
-- [hands-on](https://mind-upload.com/datasets.html#l0-practice)
-- [technology roadmap](https://mind-upload.com/tech_roadmap.html)
+## 公開ページへ戻る
+- [検証プラットフォーム](https://mind-upload.com/verification.html)
+- [実践的な](https://mind-upload.com/datasets.html#l0-practice)
+- [技術ロードマップ](https://mind-upload.com/tech_roadmap.html)
 
-## Related Wiki Pages
-- [Wiki: How to read each L0 to L5](https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes) - This is for those who want to return to the overall path of the level.
-- [Wiki: Guide to reading practical pages](https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide) - This is for those who want to see the role differences between Verification, Datasets, and Hands-on first.
-- [Wiki: Straight path from EEG to L0](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route) - This is for people who want to see only the specific route on the L0 side right away.
+## 関連 Wiki ページ
+- [Wiki: L0～L5の各読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes) - これは、レベルの全体的なパスに戻りたい人向けです。
+- [Wiki: 実用的なページを読むためのガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide) - これは、検証、データセット、ハンズオンの役割の違いを最初に確認したい人向けです。
+- [Wiki: EEG から L0 への直線パス](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route) - L0側の特定ルートだけをすぐに見たい人向けです。
 
-## What Is Currently Known
-- Verification is an overall blueprint, so the next page is too large as it is.
-- The page to return to differs depending on L0 implementation, L2 verification, L3 closed loop, and L4 identity.
-- If you fix the route after Verification, the reading becomes much more stable.
+## 現在わかっていること
+- 検証は全体の設計図なので、このままでは次のページが大きすぎます。
+- 戻るページは、L0 実装、L2 検証、L3 閉ループ、L4 ID によって異なります。
+- 検証後にルートを修正すると、読み取りがより安定します。
 
-## What Is Still Unknown
-- Which route will ultimately become the most important may change as the project progresses.
-- The final conditions for L4 and L5 are still undetermined.
+## まだわかっていないこと
+- 最終的にどのルートが最も重要になるかは、プロジェクトの進行に応じて変わる可能性があります。
+- L4とL5の最終条件はまだ決まっていない。
 
 ---
 
-<h2>Decide the next page</h2>
+<h2>次のページを決める</h2>
 <p>
-Verification is important as a blueprint, but just reading it is too broad for the next work. Here, we will divide it into four paths based on <strong>What do you want to know next</strong> and pin the next page.
+設計図として検証は重要ですが、ただ読むだけでは次の作業に向けて幅が広すぎます。ここでは<strong>・知りたいことは次</strong>をベースに4つのパスに分けて次のページを固定していきます。
 </p>
 
-<h2>Four paths to follow after Verification</h2>
+<h2>検証後にたどる4つの道</h2>
 <table>
 <thead>
 <tr>
-<th>What I want to know</th>
-<th>Next page</th>
-<th>What to decide there</th>
+<th>知りたい</th>
+<th>次のページ</th>
+<th>そこで何を決めるか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I want to create an implementation of L0</strong></td>
-<td><a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a></td>
-<td>Fix the procedure that connects input, QC, preprocessing, baseline, and failure cases. </td>
+<td><strong>I L0</strong></td> の実装を作成したい
+<td><a href="https://mind-upload.com/datasets.html#l0-practice">ハンズオン</a></td>
+<td>入力、QC、前処理、ベースライン、および失敗ケースを接続する手順を修正します。 </td>
 </tr>
 <tr>
-<td><strong>I want to know about L2 intervention/counterfactual verification</strong></td>
-<td><a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a></td>
-<td>Check which issues lead to causal verification and generation prediction using dependency relationships. </td>
+<td><strong>L2介入/反事実検証について知りたい</strong></td>
+<td><a href="https://mind-upload.com/tech_roadmap.html">ロードマップ</a></td>
+<td>依存関係を利用してどの問題が因果関係検証や生成予測につながるのかを確認します。 </td>
 </tr>
 <tr>
-<td><strong>I want to know the closed loop conditions of L3</strong></td>
-<td><a href="https://mind-upload.com/eeg_101.html">EEG 101</a> or <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Closed-loop/delay/jitter/safety stops</a></td>
-<td>Separate the difference between offline accuracy and real-time stability. </td>
+<td><strong>I L3</strong></td>の閉ループ条件を知りたい
+<td><a href="https://mind-upload.com/eeg_101.html">EEG 101</a> または <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">閉ループ/遅延/ジッター/安全停止</a></td>
+<td>オフラインの精度とリアルタイムの安定性の違いを分離します。 </td>
 </tr>
 <tr>
-<td><strong>I want to know the identity of L4</strong></td>
-<td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a> or <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests">Identity Assessment and Continuity Tests</a></td>
-<td>Check what you want to consider as continuous in terms of memory, values, learning, and branching. </td>
+<td><strong>I L4</strong></td>の正体を知りたい
+<td><a href="https://mind-upload.com/wbe_101.html">WBE 101</a> または <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests">ID 評価および連続性テスト</a></td>
+<td>記憶、価値観、学習、分岐の観点から、連続しているものとみなしたいものにチェックを入れます。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Why this division</h2>
-<table>
-<thead>
-<tr>
-<th>way</th>
-<th>Reasons for going to that page after Verification</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>L0 implementation</strong></td>
-<td>This is because it is necessary to translate the passing conditions determined in Verification into actual deliverables in Hands-on. </td>
-</tr>
-<tr>
-<td><strong>L2 validation</strong></td>
-<td>It's easy to jump into interventions and counterfactuals if you don't look at the roadmap to see which points need to be addressed first. </td>
-</tr>
-<tr>
-<td><strong>L3 Closed Loop</strong></td>
-<td>For closed loops, it is not enough to just evaluate the verification design; it is also necessary to look at measurement and real-time constraints. </td>
-</tr>
-<tr>
-<td><strong>L4 Personality</strong></td>
-<td>This is because you can't measure your identity based on your score alone; you need to first organize what you want to pre-register and test. </td>
-</tr>
-</tbody>
-</table>
-
-<h2>Each-way assistance wiki</h2>
+<h2>なぜこの部門なのか</h2>
 <table>
 <thead>
 <tr>
 <th>way</th>
-<th>Wiki worth watching together</th>
+<th>確認後にそのページに移動する理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>L0 implementation</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route">A straight path from EEG to L0</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">The minimum artifact pack for L0</a></td>
+<td><strong>L0実装</strong></td>
+<td>検証で決めた合格条件をハンズオンで実際の成果物に落とし込む必要があるためです。 </td>
 </tr>
 <tr>
-<td><strong>L2 validation</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification">Verification of counterfactuals, interventions, and perturbations</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation">From observation to estimation</a></td>
+<td><strong>L2 検証</strong></td>
+<td>ロードマップを見てどの点に最初に取り組む必要があるかを確認しないと、介入や反事実に飛びつくのは簡単です。 </td>
 </tr>
 <tr>
-<td><strong>L3 Closed Loop</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Closed-loop/delay/jitter/safety stops</a></td>
+<td><strong>L3 閉ループ</strong></td>
+<td>閉ループの場合、検証設計を評価するだけでは十分ではありません。測定とリアルタイムの制約も考慮する必要があります。 </td>
 </tr>
 <tr>
-<td><strong>L4 Personality</strong></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests">Personhood assessment and continuity tests</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem">Personhood and copy problems</a></td>
+<td><strong>L4 パーソナリティ</strong></td>
+<td>これは、スコアだけでは自分のアイデンティティを評価できないためです。まず、事前登録してテストしたいものを整理する必要があります。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Common ways to get lost</h2>
+<h2>片道支援wiki</h2>
+<table>
+<thead>
+<tr>
+<th>way</th>
+<th>一緒に見る価値のあるWiki</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L0実装</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-to-l0-route">A EEG から L0</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/l0-minimum-artifact-pack">L0</a></td> の最小アーティファクト パック
+</tr>
+<tr>
+<td><strong>L2 検証</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification">反事実、介入、摂動の検証</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation">観察から推定まで</a></td>
+</tr>
+<tr>
+<td><strong>L3 閉ループ</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">閉ループ/遅延/ジッター/安全停止</a></td>
+</tr>
+<tr>
+<td><strong>L4 パーソナリティ</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/identity-and-continuity-tests">人物像の評価と継続性テスト</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/personhood-and-copy-problem">人物像とコピーの問題</a></td>
+</tr>
+</tbody>
+</table>
 
-<h4>Mistake</h4>
+<h2>よくある迷い方</h2>
+
+<h4>間違い</h4>
 <ul>
-<li><strong>Just reading Verification makes me feel like I've decided what to do next:</strong> Actually, I need to narrow it down to one route. </li>
-<li><strong>Start tracking L0 and L2 at the same time:</strong> It is easier to establish reproducible analysis first, as it will require less rework. </li>
-<li><strong>Think of L3 in terms of accuracy only:</strong> Closed loops require additional delays and safety stops. </li>
-<li><strong>Think of L4 as an extension of the score:</strong> It is necessary to separately design in advance what is considered to be continuous in terms of individuality. </li>
+<li><strong>「検証」を読むだけで、次の行動が決まったような気分になります:</strong> 実は、ルートを 1 つに絞る必要があります。 </li>
+<li><strong>L0 と L2 の追跡を同時に開始:</strong> 最初に再現可能な分析を確立する方が、やり直しが少なくて済むため簡単です。 </li>
+<li><strong>L3 を精度の観点のみで考えてください:</strong> 閉ループには追加の遅延と安全停止が必要です。 </li>
+<li><strong>L4をスコアの延長として考える：</strong>個性的に連続すると思われるものをあらかじめ別途設計する必要がある。 </li>
 </ul>
 
-<h2>Where to return next</h2>
+<h2>次に戻る場所</h2>
 <p>
-To return to the main text of Verification, please use <a href="https://mind-upload.com/verification.html">Verification base</a>. To return to the route of the entire level, please use <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes">How to read each L0 to L5</a>. To return to the role differences across practical pages, please use <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide">Reading guide for practical pages</a>.
+検証本文に戻る場合は<a href="https://mind-upload.com/verification.html">Verificationbase</a>をご利用ください。レベル全体のルートに戻るには、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claim-level-reading-routes">でL0～L5</a>の各L0を読み取る方法を使用してください。実践ページ間の役割の違いに戻るには、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/practical-pages-reading-guide">実践ページの読み方ガイド</a>を使用してください。
 </p>

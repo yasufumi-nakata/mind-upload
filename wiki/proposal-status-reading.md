@@ -1,141 +1,140 @@
 ---
 layout: default
-title: "Wiki: How to read suggestions and status labels"
-description: "This is an auxiliary page to organize the differences between proposal, acceptance, document reflection, implementation, and external dependencies, and to avoid misreading proposal pages and issues."
-article_type: Wiki
-subtitle: "'Recruited' and 'finished' are two different things"
-author: Mind Uploading Research Project
-last_updated: "2026-03-14"
-note: "Reading guide"
-audience: "People who have difficulty understanding proposal pages and issue status labels"
-reading_time: "8-12 minutes"
-page_intro: "This page is an auxiliary page to help you avoid misreading the status labels that appear on Mind-Upload's proposal and issue pages. There is a difference between a proposal being accepted and implementation and external agreement completed, so we will explain the difference in everyday language."
-accuracy_note: "The explanations here are a reading aid. Be sure to return to the proposal page and issue history for the latest status of individual proposals."
+title: 'Wiki: 提案とステータス ラベルの見方'
+description: これは、提案、承認、文書反映、実装、外部依存関係の違いを整理し、提案ページと論点の誤読を避けるための補助ページです。
+article_type: ウィキ
+subtitle: 「採用」と「採用」は別物
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-03-14'
+note: 読書ガイド
+audience: 提案ページや課題ステータスラベルを理解するのが難しい人
+reading_time: 8～12分
+page_intro: このページは、Mind-Upload の提案ページと問題ページに表示されるステータス ラベルの読み間違いを防ぐための補助ページです。提案が受理されて実装されることと、外部合意が完了することには違いがありますので、その違いを日常用語で説明します。
+accuracy_note: ここでの説明は読みやすくするためのものです。必ず提案ページに戻って発行履歴を確認し、個々の提案の最新ステータスを確認してください。
 page_highlights:
-  - "Proposal, acceptance, document reflection, implementation, and external dependencies are explained as separate stages."
-  - "Which label you look at will tell you where to go back next."
-  - "This is an aid so that you don't read that just because it's in the text means it's complete."
+- 提案、承認、ドキュメントの反映、実装、および外部依存関係が別の段階として説明されます。
+- どのラベルを見れば、次にどこに戻ればよいかがわかります。
+- これは、本文にあるから完結していると思わないための補助です。
 known_points:
-  - "Acceptance of the proposal or reflection of the document does not automatically mean completion of the code or collaborative research."
-  - "For externally dependent tasks, you need to read the preparation on your side and the agreement on the other side separately."
-  - "Status labels indicate the location of implementation and publication, not scientific certainty per se."
+- 提案の受け入れや文書の反映は、自動的にコードや共同研究の完了を意味するものではありません。
+- 外部に依存するタスクについては、自分側の準備と相手側の契約を別々に読む必要があります。
+- ステータスラベルは、実装および出版の場所を示すものであり、科学的確実性自体を示すものではありません。
 unknown_points:
-  - "The extent to which each proposal is ultimately implemented may change as we proceed."
-  - "The completion timing and conditions of externally dependent tasks cannot be guaranteed by labels alone."
+- 各提案が最終的にどの程度実施されるかは、作業が進むにつれて変わる可能性があります。
+- 外部依存タスクの完了タイミングや完了条件はラベルだけでは保証できません。
 wiki_links:
-  - label: "Wiki: How to read the literature and evidence page"
-    url: "/wiki/literature-and-evidence-reading.html"
-    description: "Compensate for how proposal pages differ from literature pages."
-  - label: "Wiki: What to do first in-house and external dependencies"
-    url: "/wiki/internal-prework-and-external-dependencies.html"
-    description: "This book is for people who want to break down external dependencies into the preparation work that can be done now."
-  - label: "Wiki: Basics of verification infrastructure"
-    url: "/wiki/verification-basics.html"
-    description: "You can see why achievement conditions and disconfirmation conditions are placed first."
-  - label: "Wiki Home"
-    url: "/wiki/"
-    description: "You can return to other basic pages."
+- label: 'Wiki: 文献と証拠のページの読み方'
+  url: /wiki/literature-and-evidence-reading.html
+  description: 提案書ページと文献ページの違いを補います。
+- label: 'Wiki: 社内および外部の依存関係について最初に行うべきこと'
+  url: /wiki/internal-prework-and-external-dependencies.html
+  description: この本は、外部依存関係を今すぐに実行できる準備作業に分解したい人向けです。
+- label: 'Wiki: 検証インフラストラクチャの基本'
+  url: /wiki/verification-basics.html
+  description: 達成条件と不確認条件が最初に配置される理由がわかります。
+- label: ウィキホーム
+  url: /wiki/
+  description: 他の基本ページに戻ることができます。
 recommended_pages:
-  - label: "Technical proposal"
-    url: "/issue.html#proposal-integration"
-  - label: "Contribution Guide"
-    url: "/issue.html"
-  - label: "Verification base"
-    url: "/verification.html"
+- label: 技術提案
+  url: /issue.html#proposal-integration
+- label: 貢献ガイド
+  url: /issue.html
+- label: 検証ベース
+  url: /verification.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>What I would like to distinguish first</h2>
+<h2>まず区別したいのは</h2>
 <p>
-On the proposal page, the different stages are ``accepted as a good idea,'' ``written in the main text,'' ``worked into code,'' and ``completed with external agreement.'' Blurring this distinction confuses work that is progressing with work that is still pending.
+提案書のページでは、さまざまな段階が「`accepted as a good idea,'' ``written in the main text,'' ``worked into code,'' and `『外部の同意を得て完了』となっている。」この区別があいまいであると、進行中の作業とまだ保留中の作業が混同されます。
 </p>
 </div>
 
 <section class="section" id="labels">
-<h2 class="section-title">Make state labels everyday words</h2>
+<h2 class="section-title">日常の言葉で状態ラベルを作成する</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Label type</th>
-<th>In everyday language</th>
-<th>What remains</th>
+<th>ラベルタイプ</th>
+<th>日常用語</th>
+<th>残り</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Publish proposal</strong></td>
-<td>It has been put forward as a proposal and is open for discussion. </td>
-<td>Verification of validity and priority remains. </td>
+<td><strong>提案書を公開</strong></td>
+<td> 提案として提出されており、議論が行われています。 </td>
+<td>有効性と優先度の検証は残ります。 </td>
 </tr>
 <tr>
-<td><strong>Proposal acceptance/policy reflection</strong></td>
-<td>As a direction, we have judged that it is worth taking. </td>
-<td>The implementation method, verification conditions, and publication materials remain. </td>
+<td><strong>提案受理・方針反映</strong></td>
+方向性としては<td>を取る価値があると判断しました。 </td>
+<td>の実施方法、検証条件、公表資料が残っています。 </td>
 </tr>
 <tr>
-<td><strong>Document reflection</strong></td>
-<td>The condition is as written in the main text. </td>
-<td>Code, data, and logs may not be complete. </td>
+<td><strong>ドキュメントの反射</strong></td>
+<td>状態は本文記載の通りです。 </td>
+<td>コード、データ、ログが不完全な可能性があります。 </td>
 </tr>
 <tr>
-<td><strong>Implemented</strong></td>
-<td>It is a state where there is something that actually moves. </td>
-<td>Separate third-party supplementary examinations or audits may be required. </td>
+<td><strong>実装済み</strong></td>
+<td>実際に動くものがある状態です。 </td>
+<td>別途第三者による追加検査や監査が必要となる場合があります。 </td>
 </tr>
 <tr>
-<td><strong>External dependencies</strong></td>
-<td>We cannot complete the process alone; we need a partner and a system. </td>
-<td>Agreements, contracts, experiments, funding, etc. remain. </td>
+<td><strong>外部依存関係</strong></td>
+<td>一人では完結できませんのでご了承ください。パートナーとシステムが必要です。 </td>
+<td>協定、契約、実験、資金などが残っています。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="what-not-mean">
-<h2 class="section-title">What labels don't mean</h2>
+<h2 class="section-title">ラベルの意味しない</h2>
 <div class="key-points">
-<h4>Not Mean</h4>
+<h4>意味がない</h4>
 <ul>
-<li><strong>Proposal acceptance:</strong> This does not mean that the proposal is completely scientifically correct. </li>
-<li><strong>Document reflection:</strong> This does not mean that implementation and joint research are finished. </li>
-<li><strong>Implemented:</strong> This does not mean that social implementation and system development have been completed. </li>
+<li><strong>提案受諾:</strong> これは、提案が科学的に完全に正しいことを意味するものではありません。 </li>
+<li><strong>文書反映:</strong> これで実施・共同研究が終了したわけではありません。 </li>
+<li><strong>実装済み:</strong> 社会実装やシステム開発が完了しているわけではありません。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="where-to-return">
-<h2 class="section-title">Where should I go back</h2>
+<h2 class="section-title">どこに戻ればいいですか</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>What I want to know</th>
-<th>Back page</th>
+<th>知りたい</th>
+<th>戻る</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Contents and basis of proposal</td>
-<td><a href="../issue.html#proposal-integration">Technical proposal</a></td>
+<td>提案内容と根拠</td>
+<td><a href="../issue.html#proposal-integration">技術提案</a></td>
 </tr>
 <tr>
-<td>Who can help what now?</td>
-<td><a href="../issue.html">Contribution guide</a></td>
+<td>今誰が何を助けることができますか?</td>
+<td><a href="../issue.html">貢献ガイド</a></td>
 </tr>
 <tr>
-<td>Assumptions of achievement conditions and disproval conditions</td>
-<td><a href="../verification.html">Verification infrastructure</a></td>
+<td>達成条件と反証条件の仮定</td>
+<td><a href="../verification.html">検証インフラストラクチャ</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>To avoid making external dependencies a "waiting box"</strong>
+<strong>外部依存関係が「待ちボックス」になるのを避けるため </strong>
 <p>
-This page explains the stage differences. If you want to organize what you can create first after becoming an external dependency, please see <a href="internal-prework-and-external-dependencies.html">Wiki: What to do first in-house and separating external dependencies</a>.
+このページではステージの違いについて説明します。外部依存関係になった後に最初に作成できるものを整理したい場合は、<a href="internal-prework-and-external-dependencies.html">Wiki: 社内で最初に行うことと外部依存関係の分離</a> を参照してください。
 </p>
 </div>
 
@@ -143,19 +142,19 @@ This page explains the stage differences. If you want to organize what you can c
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="literature-and-evidence-reading.html">How to read the literature and evidence page →</a></li>
-<li><a href="verification-basics.html">Basics of verification infrastructure →</a></li>
-<li><a href="roadmap-reading-guide.html">How to read the roadmap →</a></li>
+<li><a href="literature-and-evidence-reading.html">文献・エビデンスページの見方→</a></li>
+<li><a href="verification-basics.html">検証基盤の基礎→</a></li>
+<li><a href="roadmap-reading-guide.html">ロードマップの見方→</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../issue.html#proposal-integration">Technical proposal →</a></li>
-<li><a href="../issue.html">Contribution guide →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
+<li><a href="../issue.html#proposal-integration">技術提案→</a></li>
+<li><a href="../issue.html">投稿ガイド→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
 </ul>
 </div>
 </aside>

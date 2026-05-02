@@ -1,122 +1,122 @@
-# Wiki: How to read the literature and evidence page
+# Wiki: 文献と証拠のページの読み方
 
-> Don't confuse 'many papers' with 'strong conclusions'
+> 「多数の論文」と「強力な結論」を混同しないでください
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-26 / Role: Reading guide
+- Updated: 2026-03-26 / Role: 読書ガイド
 
-## Role Of This Page
-This page is an auxiliary page that organizes the roles of the literature pages on Mind-Upload. The more papers there are on a page, the more difficult it is to read if the roles are mixed up, so this guide first explains ``what the page does'' and ``to what extent it should not be treated as definitive.''
+## このページの役割
+このページは、Mind-Upload 上の文献ページの役割を整理した補助ページです。 1ページに論文が多くなればなるほど、その役割が混同されると読みづらくなるため、本書ではまず「`what the page does'' and `をどの程度まで確定的なものとして扱ってはいけないのか」を説明する。
 
-## Accuracy Notes
-This page is a reading aid. Please be sure to return to the original page and original paper to check the evaluation of individual papers and individual proposals.
+## 正確性に関する注記
+このページは読書補助です。個々の論文や個々の提案の評価については、必ず元のページや元の論文に戻ってご確認ください。
 
-## Back To Public Pages
-- [Literature map](https://mind-upload.com/research_harvest_50.html)
-- [Collection of papers](https://mind-upload.com/mind_uploading_papers.html)
-- [Technical proposal](https://mind-upload.com/issue.html#proposal-integration)
+## 公開ページへ戻る
+- [文学地図](https://mind-upload.com/research_harvest_50.html)
+- [論文集](https://mind-upload.com/mind_uploading_papers.html)
+- [技術提案](https://mind-upload.com/issue.html#proposal-integration)
 
-## Related Wiki Pages
-- [Wiki: Source types, status labels, and evidence classes](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status) - Organize the meaning of Scopus, arXiv, Review, Media, source_logged, and evidence classes.
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Compensate with assumptions about the strength of evidence and what to look for.
-- [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - Each paper or proposal corresponds to an overall issue.
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - You can return to other basic pages.
+## 関連 Wiki ページ
+- [Wiki: ソースタイプ、ステータスラベル、および証拠クラス](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status) - Scopus、arXiv、Review、Media、source_logged、およびevidenceクラスの意味を整理します。
+- [Wiki: 検証インフラストラクチャの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 証拠の強さと何を探すべきかについての仮定を補ってください。
+- [Wiki: WBE の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - それぞれの論文や提案は全体的な問題に対応しています。
+- [ウィキホーム](https://github.com/yasufumi-nakata/mind-upload/wiki) - 他の基本ページに戻ることができます。
 
-## What Is Currently Known
-- Separating pages with different roles makes it difficult to confuse volume with strength of conclusion.
-- The purpose of reading the collection of papers, bibliography map, and proposal page is different.
-- Important decisions should be made by going back to the original paper or page, not the summary.
-- A human measurement paper often changes what is observable, not what is already solved.
-- A same-subject or multimodal human paper can still be a proxy-composition problem rather than a same-state result.
+## 現在わかっていること
+- 役割の異なるページを分けることで、ボリュームと結論の強さを混同しにくくなります。
+- 論文集、書誌マップ、企画書のページを読む目的は異なります。
+- 重要な決定は、要約ではなく、元の論文やページに戻って行う必要があります。
+- 人間による測定紙は、すでに解決されたものではなく、観察可能なものを変えることがよくあります。
+- 同じ主題または複数のモードを持つ人間の論文は、依然として同じ状態の結果ではなく、代理構成の問題である可能性があります。
 
-## What Is Still Unknown
-- Which paper will ultimately remain as the central basis may change in the future.
-- States such as source_logged may be updated on subsequent scrutiny.
+## まだわかっていないこと
+- 最終的にどの論文が中心的な基盤として残るかは、将来変わる可能性があります。
+- source_logged などの状態は、その後の精査によって更新される可能性があります。
 
 ---
 
-<h2>First, separate roles</h2>
+<h2>まずは役割を分ける</h2>
 <p>
-Not all literature pages have the same role. By separating the pages that collect broadly, the pages that organize by unresolved problems, and the pages that integrate as proposals, we make it difficult for readers to lose track of what they are currently looking at.
+すべての文献ページに同じ役割があるわけではありません。幅広くまとめたページ、未解決の課題ごとにまとめたページ、提案として統合したページに分けることで、読者が今何を見ているのかを見失いにくくしています。
 </p>
 
-<strong>When you want to decide the next page after reading the literature</strong>
+<strong>文献を読んで次のページを決めたいとき</strong>
 <p>
-If you want to see not only the difference in roles but also where to go back to unresolved problems, proposals, issues, and collaboration candidates after reading papers and literature maps, please see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">The straight path from literature to implementation and participation</a>.
+役割の違いだけでなく、論文や文献マップを読んだ後に未解決の問題、提案、課題、コラボレーション候補にどこに戻るかについて知りたい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">文献から実装、参加までの直線的なパス</a>を参照してください。
 </p>
 
-<strong>When you want to follow only the primary evidence of technology/natural science</strong>
+<strong>テクノロジー・自然科学の一次証拠だけを追いたいとき</strong>
 <p>
-<a href="https://mind-upload.com/mind_uploading_papers.html">Collection of Papers</a> is a broad archive, so the first chronological order does not necessarily correspond to technological frontier order. If you want to see technical routes such as decode, speech neuroprosthesis, ESI direct validation, human observability, and maintenance-state first, please enter from the <strong>Technology / Natural Science Priority Route</strong> in the collection of papers.
+<a href="https://mind-upload.com/mind_uploading_papers.html">論文コレクション</a>は広範なアーカイブであるため、最初の時系列順は必ずしも技術フロンティアの順序と一致しません。デコード、音声人工神経、ESI直接検証、人間可観測性、保守状態などの技術ルートを先にご覧になりたい場合は、論文集の<strong>技術・自然科学優先ルート</strong>からお入りください。
 </p>
 
-<strong>When you see a new human measurement paper</strong>
+<strong>新しい人間測定用紙を見たとき</strong>
 <p>
-Ask first whether the paper is a <strong>demo</strong>, a <strong>direct validator</strong>, an <strong>observability-class advance</strong>, or a <strong>hidden-state boundary paper</strong>. That one question blocks a common scientific overread: <strong>"humans measured more, therefore hidden state is almost closed."</strong>
+まず、その論文が <strong>demo</strong>、<strong>direct validator</strong>、<strong>observability-class Advanced</strong>、または <strong>hidden-stateboundarypaper</strong> であるかどうかを尋ねます。この 1 つの質問は、一般的な科学的深読みをブロックします。<strong>「人間はより多くの測定を行ったので、隠れた状態はほぼ閉じられています。」</strong>
 </p>
 
-<strong>When the paper sounds like living-human whole-brain state measurement</strong>
+<strong>論文が生きた人間の全脳状態測定のように聞こえるとき</strong>
 <p>
-Do not stop at "same-subject", "multimodal", or "proxy-rich". Return next to <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition">Wiki: Human Proxy Composition and Route Maturity</a> and <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling">Wiki: Measurement-stack observability and claim ceilings</a>. On this site, the practical question is narrower: <strong>what did each row directly observe, what common-driver or vascular/autonomic route could still move with it, and what hidden-state family remains outside calibration?</strong>
+「同じ主題」、「マルチモーダル」、または「プロキシが豊富」で停止しないでください。次に、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition">Wiki: ヒューマン プロキシの構成とルートの成熟度</a> および <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling">Wiki: 測定スタックの可観測性と要求の上限</a> に戻ります。このサイトでは、実際的な質問はより狭くなります: <strong> 各行が直接観察したものは何ですか、どの共通ドライバーまたは血管/自律神経経路がそれと一緒に移動する可能性がありますか、そしてどの隠れ状態ファミリーがキャリブレーションの外に残っていますか? </strong>
 </p>
 
-<h2>Differences between the three pages</h2>
+<h2>3つのページの違い</h2>
 <table>
 <thead>
 <tr>
-<th>Page</th>
-<th>Role</th>
-<th>What to do here</th>
-<th>Things not to do here</th>
+<th>ページ</th>
+<th>ロール</th>
+<th>ここでできること</th>
+<th>ここではしてはいけないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Collection of papers</strong></td>
-<td>Wide entrance</td>
-<td>The flow by year, existence of related papers, and guesses from the abstracts. Technical readers enter key primary sources through the preferred route. </td>
-<td>Confirm the final evaluation of each paper only here. </td>
+<td><strong>論文集</strong></td>
+<td>ワイドエントランス</td>
+<td>年度ごとの流れ、関連論文の有無、抄録からの推測。技術分野の読者は、優先ルートを通じて主要な一次情報源を入力します。 </td>
+<td>各紙の最終評価はここだけでご確認いただけます。 </td>
 </tr>
 <tr>
-<td><strong>Bibliography map</strong></td>
-<td>Organization by unresolved issues</td>
-<td>See what is solved and what is unsolved for each U number. </td>
-<td>The strength of a conclusion is determined by the number of citations alone. </td>
+<td><strong>書誌マップ</strong></td>
+<td>未解決の問題ごとの整理</td>
+<td>U 番号ごとに何が解決され、何が未解決であるかを確認します。 </td>
+<td>結論の強さは引用の数だけで決まります。 </td>
 </tr>
 <tr>
-<td><strong>Technical proposal</strong></td>
-<td>Integration of implementation strategies</td>
-<td>Keep track of which proposals are out there, what state they are in, and what impact they have. </td>
-<td> Acceptance of the proposal should be read as implementation completion. </td>
+<td><strong>技術提案</strong></td>
+<td>実装戦略の統合</td>
+<td>どのような提案が存在し、どのような状態にあり、どのような影響を与えるかを追跡します。 </td>
+<td> 提案の受諾は実装完了と読み替えてください。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>How deep should you read</h2>
+<h2>どのくらい深く読めばいいですか</h2>
 <table>
 <thead>
 <tr>
-<th>What you're looking at</th>
-<th>You can stop on the spot</th>
-<th>Return to original text</th>
+<th>見ているもの</th>
+<th>その場で止められる</th>
+<th>原文に戻る</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Thesis card</td>
-<td>When you realize that your point is far from yours. </td>
-<td>When you want to use methods, evaluations, and limitations as evidence. </td>
+<td>論文カード</td>
+<td>自分の主張が自分の主張からかけ離れていることに気づいたとき。 </td>
+<td>手法や評価、限界などを証拠として使いたいとき。 </td>
 </tr>
 <tr>
-<td>Current U number map</td>
-<td>When you know which U is relevant to you. </td>
-<td>When you want to check whether the literature really works for that U. </td>
+<td>現在のUナンバーマップ</td>
+<td>どの U が自分に関連しているかがわかったとき。 </td>
+<td>文献が本当にそのUに使えるか確認したいとき。
 </tr>
 <tr>
-<td>Proposal summary table</td>
-<td>When the streams and state involved are known. </td>
-<td>When you want to judge acceptance or rejection or validity. </td>
+<td>提案概要表</td>
+<td>関連するストリームと状態がわかっている場合。 </td>
+<td>合否や正当性を判断したいときに。 </td>
 </tr>
 </tbody>
 </table>
@@ -125,22 +125,22 @@ Do not stop at "same-subject", "multimodal", or "proxy-rich". Return next to <a 
 
 <h4>Rule</h4>
 <ul>
-<li><strong>Don't confuse quantity with strength:</strong> The number of papers and citations is not the same as establishing a conclusion. </li>
-<li><strong>Don't stop at the summary:</strong> Always go back to the DOI or original text when using it as evidence. </li>
-<li><strong>Do not misread status labels:</strong> source_logged, proposal accepted, and document reflected each have different meanings. </li>
-<li><strong>Do not collapse observability into sufficiency:</strong> A new human proxy or atlas can raise what is observable without proving state-complete measurement.</li>
-<li><strong>Do not collapse proxy-rich into state-closed:</strong> Same-subject or multimodal human rows still need proxy-class, calibrator-role, and common-driver checks.</li>
+<li><strong>量と強さを混同しないでください:</strong> 論文や引用の数は、結論を確立することと同じではありません。 </li>
+<li><strong>要約に止まらないでください:</strong>証拠として使用する場合は、必ず DOI または原文に戻ってください。 </li>
+<li><strong>ステータスラベルを読み違えないでください:</strong>source_logged、提案承認、およびドキュメント反映はそれぞれ異なる意味を持っています。 </li>
+<li><strong>可観測性を十分なものに崩壊させないでください:</strong> 新しい人間のプロキシまたはアトラスは、状態完全な測定を証明することなく、観測可能なものを引き上げることができます。</li>
+<li><strong>プロキシリッチを状態クローズに折りたたまないでください:</strong> 同一被験者またはマルチモーダルな人間の行には、引き続きプロキシクラス、キャリブレーターロール、および共通ドライバーのチェックが必要です。</li>
 </ul>
 
-<strong>When you want to check the meaning of Scopus / arXiv / source_logged first</strong>
+<strong>Scopus/arXiv/source_loggedの意味を先に確認したい場合</strong>
 <p>
-This page is a supplementary page that explains the role differences. If you want to organize publication source, document type, site status, and evidence class on a single page, look first at <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status">Wiki: How to read source types, status labels, and evidence classes</a>, and the way the collection of papers and bibliographic maps will look will stabilize.
+このページは役割の違いを説明する補足ページです。出版ソース、文書タイプ、サイトステータス、証拠クラスを 1 ページにまとめたい場合は、まず <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status">Wiki: ソースタイプ、ステータスラベル、および証拠クラスの読み方</a> を参照すると、論文コレクションと書誌マップの見た目が安定します。
 </p>
 
-<h2>Where to go back next</h2>
+<h2>次に戻る場所</h2>
 <p>
-If you want to view a wide range of papers, please go back to <a href="https://mind-upload.com/mind_uploading_papers.html">Paper Collection</a>, if you want to start with unsolved problems, go to <a href="https://mind-upload.com/research_harvest_50.html">Literature Map</a>, and if you want to follow proposals and implementation policies, go back to <a href="https://mind-upload.com/issue.html#proposal-integration">Technical Proposal</a>.
+幅広い論文を見たい場合は<a href="https://mind-upload.com/mind_uploading_papers.html">論文集</a>、未解決の問題から始めたい場合は<a href="https://mind-upload.com/research_harvest_50.html">文学地図</a>、提案や実施方針を追いたい場合は<a href="https://mind-upload.com/issue.html#proposal-integration">技術提案</a>へお戻りください。
 </p>
 <p>
-If the paper is a living-human measurement paper that sounds close to whole-brain state measurement, go next to <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition">Human Proxy Composition and Route Maturity</a> before promoting it in your head from "observability-class advance" to "state-identification evidence."
+その論文が、脳全体の状態測定に近い生きた人間の測定論文である場合は、「可観測性クラスの進歩」から「状態識別の証拠」まで頭の中で宣伝する前に、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/human-proxy-composition">Human Proxy Composition and Route Maturity</a> の次へ進んでください。
 </p>

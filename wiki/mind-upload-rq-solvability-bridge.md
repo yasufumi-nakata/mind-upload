@@ -1,551 +1,550 @@
 ---
 layout: default
-title: "Mind-upload RQ Solvability Bridge"
-description: "A public-safe bridge from the current mind-upload research questions to bounded EEG-DATA anchors, honest funding themes, and explicit external-dependency boundaries."
-article_type: Wiki
-subtitle: "One question, one anchor family, one funding lane, one stop line"
-author: Mind Uploading Research Project
-last_updated: "2026-04-12"
-note: "Current RQ-to-EEG-and-funding bridge"
-audience: "Readers who want to see what EEG can close now, what still stays outside the claim, and which funding lane still fits."
-reading_time: "10-15 minutes"
-page_intro: "This page fixes the current deepening queue and the next-watch queue at the level of one research question, one EEG-DATA anchor family, one honest funding theme, and one explicit external-dependency boundary."
-accuracy_note: "This is not a solved-claim update. It records only bounded artifacts that can honestly be closed now under current public-open or gated-support anchors."
+title: マインドアップロード RQ 解決可能性ブリッジ
+description: 現在のマインドアップロードの研究課題から、限定された EEG-DATA アンカー、誠実な資金提供テーマ、および明示的な外部依存境界までの、公衆に安全な橋。
+article_type: ウィキ
+subtitle: 1 つの質問、1 つのアンカーファミリー、1 つの資金レーン、1 つの停止ライン
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-04-12'
+note: 現在の RQ から EEG および資金調達へのブリッジ
+audience: EEG が現在クローズできるもの、まだ申請の範囲外にあるもの、およびどの資金レーンがまだ適合するのかを知りたい読者。
+reading_time: 10～15分
+page_intro: このページは、1 つのリサーチクエスチョン、1 つの EEG-DATA アンカーファミリー、1 つの誠実な資金調達テーマ、および 1 つの明示的な外部依存境界のレベルで、現在の深化キューと次回監視キューを修正します。
+accuracy_note: これは解決済みの申し立てに関する更新ではありません。現在のパブリックオープンまたはゲートサポートアンカーの下で正直に閉じることができる、制限されたアーティファクトのみを記録します。
 wiki_links:
-  - label: "Wiki: Current public six route brief"
-    url: "/wiki/mind-upload-current-public-six-rq-brief.html"
-    description: "The compact public-facing route for the six rows currently being deepened."
-  - label: "Wiki: RQ60 EEG feasibility page"
-    url: "/wiki/mind-upload-eeg-rq60-feasibility-and-funds.html"
-    description: "The wider 60RQ judgment page."
-  - label: "Wiki: Grant and dataset playbook"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "The row-by-row route from RQ to dataset anchor and funding lane."
-  - label: "Wiki: RQ-by-RQ deep dossiers"
-    url: "/wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html"
-    description: "The longer working dossiers for one-RQ-at-a-time execution."
-  - label: "Wiki: U7-1 route packet"
-    url: "/wiki/u7-1-synchronization-contract-route.html"
-    description: "The cleanest public-open A-tier synchronization packet outside the current six."
-  - label: "Wiki: U7-2 route packet"
-    url: "/wiki/u7-2-timing-metric-route.html"
-    description: "The adjacent timing-metric packet that turns the same synchronization family into explicit release-block thresholds without changing the headline queue."
-  - label: "Wiki: U1-2 route packet"
-    url: "/wiki/u1-2-uncertainty-calibration-route.html"
-    description: "The next narrow inverse-estimation uncertainty packet outside the current six."
-  - label: "Wiki: U4-2 route packet"
-    url: "/wiki/u4-2-minimal-causal-route.html"
-    description: "The current minimal causal-intervention packet outside the current six."
-  - label: "Wiki: U8-1 route packet"
-    url: "/wiki/u8-1-closed-loop-delay-tolerance-route.html"
-    description: "The current bounded closed-loop delay-tolerance packet outside the current six."
+- label: 'Wiki: 現在公開されている 6 つのルート概要'
+  url: /wiki/mind-upload-current-public-six-rq-brief.html
+  description: 現在深化工事中の6列のコンパクトな公共側ルート。
+- label: 'Wiki: RQ60 EEG の実現可能性ページ'
+  url: /wiki/mind-upload-eeg-rq60-feasibility-and-funds.html
+  description: 幅広の60RQ判定ページ。
+- label: 'Wiki: 助成金とデータセットのプレイブック'
+  url: /wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html
+  description: RQ からデータセット アンカーおよびファンディング レーンまでの行ごとのルート。
+- label: 'Wiki: RQ ごとの詳細な資料'
+  url: /wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html
+  description: 一度に 1 つの RQ を実行する場合、作業に時間がかかるドシエ。
+- label: 'Wiki: U7-1 ルート パケット'
+  url: /wiki/u7-1-synchronization-contract-route.html
+  description: 現在の 6 つのパケットの中で最もクリーンなパブリックオープン A 層同期パケット。
+- label: 'Wiki: U7-2 ルート パケット'
+  url: /wiki/u7-2-timing-metric-route.html
+  description: ヘッドライン キューを変更せずに、同じ同期ファミリーを明示的なリリース ブロックしきい値に変換する隣接するタイミング メトリック パケット。
+- label: 'Wiki: U1-2 ルート パケット'
+  url: /wiki/u1-2-uncertainty-calibration-route.html
+  description: 現在の 6 つの外側にある次の狭い逆推定不確実性パケット。
+- label: 'Wiki: U4-2 ルート パケット'
+  url: /wiki/u4-2-minimal-causal-route.html
+  description: 現在の 6 つ以外の現在の最小限の因果関係介入パケット。
+- label: 'Wiki: U8-1 ルート パケット'
+  url: /wiki/u8-1-closed-loop-delay-tolerance-route.html
+  description: 現在の 6 の範囲外にある、現在の有界閉ループ遅延許容パケット。
 recommended_pages:
-  - label: "Contribution Guide"
-    url: "/issue.html"
-  - label: "Data & Bench"
-    url: "/datasets.html"
-  - label: "Research Harvest"
-    url: "/research_harvest_50.html"
+- label: 貢献ガイド
+  url: /issue.html
+- label: データとベンチ
+  url: /datasets.html
+- label: 研究成果
+  url: /research_harvest_50.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
-# Mind-upload RQ Solvability Bridge
-
-This page answers one narrow question: for the rows that are actually worth deepening now, what can `EEG-DATA` honestly close, what still needs outside support, and what funding theme still fits without overstating the claim.
-
-It does **not** try to re-scan all `60RQ` items at once. The working style on this site is now `deepen one row at a time`, not `summarize everything at the same depth`.
-
-## What paper writing should now send back as a current-stage limit on April 12, 2026
-
-- The latest paper-writing pass made one recurring stop line explicit: when a draft can only support a `measurement boundary` but not a stronger `personhood continuity`, `migration`, or `same-entity` claim, the text should say so directly instead of hiding the gap inside softer prose.
-- For the current `U0-2 / U0-3` lane, three missing artifacts now stay fixed as the main reason a stronger claim still cannot be raised: a dataset-level ablation table that shows what actually carries the score, a threshold-stability ledger that shows the decision rule does not collapse across reruns, and a recording-frame disclosure that states exactly which acquisition / preprocessing frame the result still depends on.
-- Therefore, if a paper-writing step stops with wording like `this cannot honestly be solved at the current stage`, that stop should be returned here as a `current-stage limit`, not treated as a writing weakness. The failure mode is usually not lack of prose but lack of one more bounded artifact or disclosure.
-- Public-safe reading therefore remains narrow: `current EEG artifacts can tighten bounded measurement claims`, but they still do **not** by themselves close identity continuity, transfer-to-migration, or stronger equivalence wording.
-
-## What still stays fixed after the 22:06 JST actual-pull reread on April 4, 2026
-
-- An actual-pull recheck at `2026-04-04 22:06 JST` after `mind-upload@39248d59caaa`, `EEG-DATA@7ba2201e2b5`, and `auto-research-funds@f90279417a9f` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas remain carry-forward rather than route replacement: `mind-upload` adds paired-fluid barrier route guidance outside the current six without widening the route, `EEG-DATA` deepens the `IEEE DataPort EEG records` audit while now keeping `30,935` merged-unique rows, `28,898` high-confidence rows, `24,910` immediately usable rows, and `24,540` high-confidence immediate rows, and `auto-research-funds` only relaxes moving-head references without displacing the practical shortlist.
-- The route-safe reading also stays deliberately narrow in one important way: `D03 / D02 / D01` still look more open on DOI/DataCite/catalog-side reads than they do on the actual IEEE DataPort landing pages, so `D10` remains the only clear public-open primary anchor while `D03 / D02 / D01` still stay gated-support anchors in public wording.
-- The newest repo-wide carry-forward still does not create a stronger row-level replacement: the paired-fluid barrier note tightens outside-current-six bridge language, the newest IEEE DataPort catalog audit improves access-status discipline, and the funding wording cleanup keeps the shortlist easier to reuse, but none of them repairs the recall-validity gap under `U13-5`, replaces the cross-session identity-drift floor under `U0-2 / U0-3`, or displaces the current `D11 / D08 / D05 / D20` next-watch family.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, `u13-2-brain-minus-prior-route.html`, and `u13-5-perception-to-recall-route.html`; the checked headers now returned `Last-Modified: Sat, 04 Apr 2026 12:16:08 GMT`, and the checked bodies still surfaced `2026-04-04 17:07 JST` wording on the front door plus `U13-2`, and `2026-04-04 19:09 JST` wording on `U13-5`, before this source sync.
-- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still stays the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
-- A fresh read-only Todoist audit still showed enough route coverage (`items=207`, `projects=2`), so no new task was added in this session.
-- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue while tightening why the DOI/catalog view does not by itself promote `D03 / D02 / D01`.
-
-## What still stays fixed after the 17:07 JST actual-pull reread on April 4, 2026
-
-- An actual-pull recheck at `2026-04-04 17:07 JST` after `mind-upload@dc8ec5dc5e62`, `EEG-DATA@f115f11c2da4`, and `auto-research-funds@8d0f5128fcdc` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas remain carry-forward rather than route replacement: `mind-upload` splits barrier-side human-proxy roles outside the current six without widening the route, `EEG-DATA` deepens the `EEGIS imagined speech` metadata while still keeping `30,930` merged-unique rows, `28,893` high-confidence rows, and `24,909` immediately usable rows in the current README snapshot, and `auto-research-funds` adds the `Uehiro ethics foundation` legacy sync while now reporting `8,616` aid IDs, `4,319` rows, and `3,971` official-source rows without displacing the practical shortlist.
-- The route-safe reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording because no newest pulled head turns those three routes into immediate public anchors.
-- The newest repo-wide carry-forward still does not create a stronger row-level replacement: the barrier-role split tightens outside-current-six human-proxy discipline, the newest imagined-speech metadata deepening improves speech-side support-space navigation, and the legacy-funding sync improves adjacent runway context, but none of them repairs the recall-validity gap under `U13-5`, replaces the cross-session identity-drift floor under `U0-2 / U0-3`, or displaces the current `D11 / D08 / D05 / D20` next-watch family.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Sat, 04 Apr 2026 07:12:56 GMT`, and the checked bodies still surfaced `2026-04-04 14:10 JST` wording across all five checked pages before this source sync.
-- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still stays the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
-- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `JSM=0`, `Doumei=0`, `Kenkyu no Susume=0`), so no new task was added in this session.
-- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue while aligning the front door, the bridge, the playbook, and the first-row packet to the same bounded `17:07 JST` basis.
-
-## What still stays fixed after the 14:10 JST actual-pull reread on April 4, 2026
-
-- An actual-pull recheck at `2026-04-04 14:10 JST` after `mind-upload@cafeab4bc2a5`, `EEG-DATA@e0695bcac83d`, and `auto-research-funds@a4852d89376c` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas remain carry-forward rather than route replacement: `mind-upload` tightens glossary excitability and ionic terms on top of the earlier EEG foundation-model source-status split without widening the route, `EEG-DATA` deepens `neuroTUM Cybathlon`, `Zenodo TSA v7.8`, and `poetry EEG` metadata while still keeping `30,930` merged-unique rows, `28,893` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows, and `auto-research-funds` adds `JELA Diakonia` scholarship cards without displacing the practical shortlist.
-- The route-safe reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording because no newest pulled head turns those three routes into immediate public anchors.
-- The newest repo-wide carry-forward still does not create a stronger row-level replacement: the glossary and source-status tightening improve front-door discipline, the newest EEG metadata deep dives improve support-space navigation, and the new adjacent scholarship cards keep runway context readable, but none of them repairs the recall-validity gap under `U13-5`, replaces the cross-session identity-drift floor under `U0-2 / U0-3`, or displaces the current `D11 / D08 / D05 / D20` next-watch family.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, and the current-six row packets; the checked headers now return `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT`, and the checked bodies still surfaced `2026-04-04 12:02 JST` wording on the front door plus `2026-04-04 09:05 JST` on the older current-six row packets before this source sync.
-- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still reads as the annual `mid-January to early-April` window and continues to be handled as the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
-- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Doumei=0`, `Kenkyu no Susume=0`), so no new task was added in this session.
-- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue while aligning the front door, playbook, and the entire current-six row packet set to the same bounded `14:10 JST` basis.
-
-## What still stays fixed after the 12:02 JST actual-pull reread on April 4, 2026
-
-- An actual-pull recheck at `2026-04-04 12:02 JST` after `mind-upload@f84f6e53753b`, `EEG-DATA@017ae806c4dd`, and `auto-research-funds@d4024a5b8a1a` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas remain carry-forward rather than route replacement: `mind-upload` synchronizes the EEG recording-frame contract across public pages without widening the route, `EEG-DATA` deep-dives capacity-for-movement EEG datasets while still keeping `30,929` merged-unique rows, `28,892` high-confidence rows, `24,908` immediate rows, and `24,538` high-confidence immediate rows, and `auto-research-funds` still just carries the earlier `11:04 JST` funding addendum without displacing the practical shortlist.
-- The route-safe reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording because no newest pulled head turns those three routes into immediate public anchors.
-- The newest repo-wide carry-forward still does not create a stronger row-level replacement: the recording-frame tightening improves front-door technical discipline, the movement-capacity deep dive improves support-space navigation, and the funding carry-forward keeps the shortlist readable, but none of them repairs the recall-validity gap under `U13-5`, replaces the cross-session identity-drift floor under `U0-2 / U0-3`, or displaces the current `D11 / D08 / D05 / D20` next-watch family.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Sat, 04 Apr 2026 02:19:09 GMT`, and the checked bodies already surfaced `2026-04-04 11:04 JST` wording on `issue / brief / bridge / playbook` while `u13-2-brain-minus-prior-route.html` still surfaced `2026-04-04 09:05 JST` wording before this source sync.
-- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still reads as the annual `mid-January to early-April` window and continues to be handled as the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
-- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Doumei=0`, `Kenkyu no Susume=0`), so no new task was added in this session.
-- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue while aligning the front door, playbook, and the first-row packet to the same bounded `12:02 JST` basis.
-
-## What still stays fixed after the 11:04 JST actual-pull reread on April 4, 2026
-
-- An actual-pull recheck at `2026-04-04 11:04 JST` after `mind-upload@812e1650bae1`, `EEG-DATA@1deac45c75a2`, and `auto-research-funds@9741ee45a025` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas remain carry-forward rather than route replacement: `mind-upload` tightens glossary bridge-witness terminology without widening the route, `EEG-DATA` collapses duplicate EEG-fMRI override rows and now keeps `30,929` merged-unique rows, `28,892` high-confidence rows, `24,908` immediate rows, and `24,538` high-confidence immediate rows while leaving the current `D10 / D03 / D02 / D01` family unchanged, and `auto-research-funds` adds legacy coverage for current-cycle funding cards without displacing the practical shortlist.
-- The route-safe reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording because no newest pulled head turns those three routes into immediate public anchors.
-- The newest repo-wide carry-forward still does not create a stronger row-level replacement: the duplicate-override cleanup improves inventory hygiene, the glossary tightening improves front-door reading discipline, and the legacy-card expansion improves funding context, but none of them repairs the recall-validity gap under `U13-5`, replaces the cross-session identity-drift floor under `U0-2 / U0-3`, or displaces the current `D11 / D08 / D05 / D20` next-watch family.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Sat, 04 Apr 2026 01:14:45 GMT`, and the checked bodies still surfaced `2026-04-04 09:05 JST` wording before this source sync.
-- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still reads as the annual `mid-January to early-April` window and continues to be handled as the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
-- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`), so no new task was added in this session.
-- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue while adding a bounded `11:04 JST` front-door and playbook sync.
-
-## What still stays fixed after the 09:05 JST actual-pull reread on April 4, 2026
-
-- An actual-pull recheck at `2026-04-04 09:05 JST` after `mind-upload@e571567f017d`, `EEG-DATA@fbbb0d8c01e0`, and `auto-research-funds@d7f6fb9bc158` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas remain carry-forward rather than route replacement: `mind-upload` now just carries the earlier `08:07 JST` route-hold sync on top of a recent pretraining-overlap audit, `EEG-DATA` still keeps `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows while treating `OpenNeuro ds007020` as a limited rest-side support note and keeping `HeartBEAM` plus figshare `EEG at rest and with TMS` only as backup families, and `auto-research-funds` adds deeply reviewed April 4 scholarship updates while still keeping `JGC-S` only as an adjacent runway without displacing the practical shortlist.
-- The route-safe reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording because no newest pulled head turns those three routes into immediate public anchors.
-- The newest repo-wide carry-forward still does not create a stronger row-level replacement: `OpenNeuro ds007020` stays a limited rest-side note, `HeartBEAM` stays a stronger backup/watch candidate, and figshare `EEG at rest and with TMS` stays a narrow perturbation backup, but none of them repairs the recall-validity gap under `U13-5`, replaces the cross-session identity-drift floor under `U0-2 / U0-3`, or displaces the current `D11 / D08 / D05 / D20` next-watch family.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, and the current-six row packets; the checked front-door headers now return `Last-Modified: Fri, 03 Apr 2026 23:18:55 GMT`, and the checked bodies already surfaced `2026-04-04 08:07 JST` wording. The current-six row packets returned `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT` and still surfaced `2026-04-04 01:04 JST` wording before this source sync.
-- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still reads as the annual `mid-January to early-April` window and continues to be handled as the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
-- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`), so no new task was added in this session.
-- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue while aligning the current-six row packets to the already-published front door.
-
-## What still stays fixed after the 08:07 JST actual-pull reread on April 4, 2026
-
-- An actual-pull recheck at `2026-04-04 08:07 JST` after `mind-upload@418c8f5d0ef9`, `EEG-DATA@dc6d833b83e9`, and `auto-research-funds@58d8738be5d5` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas remain carry-forward rather than route replacement: `mind-upload` tightens the front-door human-proxy comparison, `EEG-DATA` still keeps `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows while promoting `HeartBEAM` and figshare `EEG at rest and with TMS` only as backup families, and `auto-research-funds` adds the `JGC-S` foreign-student scholarship only as an adjacent runway without displacing the practical shortlist.
-- The route-safe reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording because no newest pulled head turns those three routes into immediate public anchors.
-- The newest repo-wide carry-forward still does not create a stronger row-level replacement: `HeartBEAM` is useful as a stronger backup/watch candidate, but it still does not repair the recall-validity gap under `U13-5`, replace the cross-session identity-drift floor under `U0-2 / U0-3`, or displace the current `D11 / D08 / D05 / D20` next-watch family.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `u13-2-brain-minus-prior-route.html`, and `u13-5-perception-to-recall-route.html`; the checked headers now return `Last-Modified: Fri, 03 Apr 2026 22:10:18 GMT`, while the checked bodies still surfaced the earlier `2026-04-04 01:04 JST` wording before this source sync.
-- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` still reads as the annual `mid-January to early-April` window and continues to be handled as the `2026-04-09` must-arrive side route, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
-- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=1`, `Doumei=0`, `Kenkyu no Susume=0`), so no new task was added in this session.
-
-## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
-
-- An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas remain carry-forward rather than route replacement: `mind-upload` now carries the earlier `00:06 JST` route reread plus field-level artifact-stack disclosure tightening, `EEG-DATA` deepens the public OpenNeuro metadata for `Numbers` and `PRIOS` while still keeping `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows, and `auto-research-funds` adds current coverage for `同盟育成会` and `研究のすゝめ奨学金` without displacing the practical shortlist.
-- The route-safe reading also stays deliberately narrow: `D10` remains the only clear public-open primary anchor, while `D03 / D02 / D01` still stay gated-support anchors in public wording because no newest pulled head turns those three routes into immediate public anchors.
-- The newest repo-wide carry-forward still does not create a stronger row-level replacement: `Numbers` and `PRIOS` improve support-space specificity, but they do not repair the recall-validity gap under `U13-5`, replace the cross-session identity-drift floor under `U0-2 / U0-3`, or displace the current `D11 / D08 / D05 / D20` next-watch family.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `u13-2-brain-minus-prior-route.html`, and `u13-5-perception-to-recall-route.html`; the checked headers now return `Last-Modified: Fri, 03 Apr 2026 15:13:06 GMT`, while the checked bodies still surfaced the earlier `2026-04-04 00:06 JST` wording before this source sync.
-- Official-window spot checks keep the same practical bridge: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09 (must arrive)`, `Nakatani Foundation research grant = closed / next-cycle watch`, and `Secom General Research Grant = closed (2026-03-31 12:00 JST)`.
-- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=1`, `同盟会=0`, `研究のすゝめ=0`), so no new task was added in this session.
-
-## What still stays fixed after the 00:06 JST actual-pull reread on April 4, 2026
-
-- An actual-pull recheck at `2026-04-04 00:06 JST` after `mind-upload@84d84fb5a82d`, `EEG-DATA@b468ecc5f8c0`, and `auto-research-funds@eccee095a939` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas are still carry-forward rather than route replacement: `mind-upload` now just carries the earlier `23:06 JST` route reread addenda, `EEG-DATA` adds `fast mapping semantic integration EEG dataset` while `summary.json` now reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows, and `auto-research-funds` adds `Iizuka current card and Korean legacy sync` without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks before this source sync still returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, `u13-2-brain-minus-prior-route.html`, and `u13-5-perception-to-recall-route.html`; the checked bodies still surfaced `22:04 JST` on `brief / bridge / U13-2` and `22:04/22:05 JST` on `issue` rather than a new queue or claim.
-- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Kashinome Scholarship` stays a student-runway side route (`2026-01-14 - 2026-04-09 must arrive`), `Nakatani Foundation research grant` remains closed / next-cycle watch, and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
-- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=1`), so no new task was added in this session.
-- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue onto the actual latest pulled heads, the latest live public bodies, official windows, and Todoist sufficiency check.
-
-## What still stays fixed after the 23:06 JST actual-pull reread on April 3, 2026
-
-- An actual-pull recheck at `2026-04-03 23:06 JST` after `mind-upload@ec7a7dd713e9`, `EEG-DATA@46f6b56c693c`, and `auto-research-funds@b3d3c531729a` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas are still carry-forward rather than route replacement: `mind-upload` now just carries the earlier `22:04 JST` route-hold sync, `EEG-DATA` adds `motion sickness` and `swallowing EEG` datasets while `summary.json` now reports `30,920` merged-unique rows, `28,883` high-confidence rows, `24,899` immediate rows, and `24,529` high-confidence immediate rows, and `auto-research-funds` deepens `KIRII / Pigeon / Nakato / Takashima` scholarship coverage plus a `22:04 JST` funding addendum without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks in this run returned `HTTP/2 200` for `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, `mind-upload-eeg-rq60-grant-dataset-playbook.html`, and the current-six row packets; the checked headers now return `Last-Modified: Fri, 03 Apr 2026 13:18:48 GMT`, the front-door pages plus `U13-2` already surfaced `22:04 JST`, and the other five row packets still surfaced the earlier `2026-04-02 / 23:08 JST` hold note before this source sync.
-- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Kashinome Scholarship` stays a student-runway side route (`2026-01-14 - 2026-04-09 must arrive`), `Nakatani Foundation research grant` remains closed / next-cycle watch, and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
-- A fresh read-only Todoist audit still showed enough route coverage (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=1`), so no new task was added in this session.
-- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue onto the actual latest pulled heads, live row packets, official windows, and Todoist sufficiency check.
-
-## What still stays fixed after the 22:04 JST actual-pull reread on April 3, 2026
-
-- An actual-pull recheck at `2026-04-03 22:04 JST` after `mind-upload@1ab35b64796f3936e525befb5d9428d789a16263`, `EEG-DATA@be3d03d1c286dcd37fb056317a693e47c39f7f3a`, and `auto-research-funds@845e6849a6c36e6e83394e32cf8dc4b5fe6fdc07` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled delta is now concentrated in `EEG-DATA`: `summary.json` reports `30,918` merged-unique rows, `28,881` high-confidence rows, `24,898` immediate rows, and `24,528` high-confidence immediate rows after the latest exhaustive refresh, while `mind-upload` and `auto-research-funds` now just carry their earlier `21:05 JST` addenda without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Fri, 03 Apr 2026 12:24:26 GMT`, while the checked bodies already surfaced `21:05 JST` on `issue / brief / bridge` and `21:05 JST` plus `11:07 JST` on `U13-2` before this source sync.
-- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), and the rest of the watch/closed reading stays unchanged from the `21:05 JST` reread.
-- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=205`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Keio graduate scholarship=2`, `G-7=1`, `ENEOS=0`), so no new task was added in this session.
-- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue onto the actual latest pulled heads, live public headers, official windows, and Todoist sufficiency check.
-
-## What still stays fixed after the 21:05 JST actual-pull reread on April 3, 2026
-
-- An actual-pull recheck at `2026-04-03 21:05 JST` after `mind-upload@3db1aa653b74d164c3a57b75677e345ea10356e0`, `EEG-DATA@c10c95274ecf1397768eb28de48aac8ce925c22d`, and `auto-research-funds@4a67e06b530bc742521f80fa5b13ccbe1115ebb9` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas are still carry-forward rather than route replacement: `mind-upload` now just carries the `20:05 JST` route-hold addendum, `EEG-DATA` adds BDSP manual deep dives for missing EEG datasets while now reporting `30,914` merged-unique rows, `28,877` high-confidence rows, `24,896` immediate rows, and `24,526` high-confidence immediate rows, and `auto-research-funds` now just carries the `20:05 JST` funding addendum without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Fri, 03 Apr 2026 11:17:44 GMT`, while the checked bodies already surfaced the earlier `20:05 JST` hold note on `issue / brief / bridge` and `11:07 JST` on `U13-2` before this source sync.
-- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Kashinome Scholarship` stays a student-runway side route (`2026-01-14 - 2026-04-09 must arrive`), `Nakatani Foundation research grant` remains closed / next-cycle watch (`募集を終了しました` on the current public page), and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=205`, `projects=2`, `Nakatani family=11`, `G-7=1`, `ENEOS=0`, `Keio graduate scholarship=2`), so no new task was added in this session.
-- This source sync still does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest pulled heads, live public headers, official windows, and Todoist sufficiency check.
-
-## What still stays fixed after the 20:05 JST actual-pull reread on April 3, 2026
-
-- An actual-pull recheck at `2026-04-03 20:05 JST` after `mind-upload@b4fd73d9e98301c918b57541704a95246d69ae09`, `EEG-DATA@649ff098ab577f11065562379150acea1aa07002`, and `auto-research-funds@7c1b835d1d138214f282dc85d2f06d9faa522310` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas still deepen support space rather than widen the present bridge: `mind-upload` now splits human thermal evidence outside the current six into `passive / task-linked macro thermometry` and `perturbation-conditioned thermal routes`, `EEG-DATA` adds a restricted `Transcranial Magnetic Stimulation in Alzheimer's disease-Data` BDSP deep dive while now reporting `30,912` merged-unique rows, `28,875` high-confidence rows, and `24,894` directly usable rows, and `auto-research-funds` completes current-card coverage for `ENEOS` and `G-7` scholarships while still reporting `8,600` aid IDs, `4,308` rows, and `3,959` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Fri, 03 Apr 2026 10:19:46 GMT`, while the checked bodies still surfaced the earlier `11:05/11:07 JST` hold note before this source sync.
-- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Kashinome Scholarship` stays a student-runway side route (`2026-01-14 - 2026-04-09 must arrive`), `Nakatani Foundation research grant` remains closed / next-cycle watch (`募集を終了しました` on the current public page), and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=205`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this session.
-- This source sync does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest pulled heads, live public headers, official windows, and Todoist sufficiency check.
-
-## What still stays fixed after the 11:05 JST actual-pull reread on April 3, 2026
-
-- An actual-pull recheck at `2026-04-03 11:05 JST` after `mind-upload@f70432e4a6c8a52afafbc57b98c8f0e360c85d4e`, `EEG-DATA@1981d34c5f71deceb2549684db9173b6f54d2b89`, and `auto-research-funds@bfebe94da875d709756746285f133ef30905fd38` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas still tighten support space rather than widen the present bridge: `mind-upload` now tightens `sleep replay integrity / physiology-gate` wording outside the current six, `EEG-DATA` refreshes its inventory and deep-dives the `COG-BCI` family while now reporting `30,904` merged-unique rows, `28,867` high-confidence rows, and `24,890` directly usable rows, and `auto-research-funds` carries forward the `10:06 JST mind-upload funding addendum` while now reporting `8,596` aid IDs, `4,308` rows, and `3,958` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Fri, 03 Apr 2026 01:31:28 GMT`, while the checked bodies still surfaced the earlier `05:12 JST` hold note before this source sync.
-- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Kashinome Scholarship` stays a student-runway side route (`2026-01-14 - 2026-04-09 must arrive`), `Nakatani Foundation research grant` remains closed / next-cycle watch (`募集を終了しました` on the current public page), and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest pulled heads, live public headers, official windows, and Todoist sufficiency check.
-
-## What still stays fixed after the 05:12 JST actual-pull reread on April 3, 2026
-
-- An actual-pull recheck at `2026-04-03 05:12 JST` after `mind-upload@a9fc5d1cb691f3669c40803604e78cf87fab4eed`, `EEG-DATA@8c3ace28bad0b3bac259caa440994e5d05bfc7d1`, and `auto-research-funds@35756f8381c47daa24bb70bb7a1ff88d1dcf76bc` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas still tighten support space rather than widen the present bridge: `mind-upload` is now at a `docs: sync github wiki export` head that keeps the exported route mirrors aligned without changing the active queue, `EEG-DATA` carries forward a `VR navigation dataset` output refresh on top of a recent `EESM17` metadata deepening while still keeping `30,900` merged-unique rows, `28,863` high-confidence rows, and `24,885` directly usable rows, and `auto-research-funds` adds `JSPS overseas fellow` current-card snapshots on top of a recent `JSSF research publication` refresh while now reporting `8,594` aid IDs, `4,307` rows, and `3,957` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Thu, 02 Apr 2026 19:17:56 GMT`, while the checked bodies still surfaced the earlier `04:05/04:06 JST` hold note before this source sync.
-- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Kashinome Scholarship` stays a student-runway side route (`2026-01-14 - 2026-04-09 must arrive`), `Nakatani Foundation research grant` remains closed / next-cycle watch (`募集を終了しました` on the current public page), and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest pulled heads, live public headers, official windows, and Todoist sufficiency check.
-
-## What still stays fixed after the 04:06 JST actual-pull reread on April 3, 2026
-
-- An actual-pull recheck at `2026-04-03 04:06 JST` after `mind-upload@f5e13ebdc4748ce683d905c37cabfdb3c53036bb`, `EEG-DATA@53f5c8166faf0d5fcebfb5c39741d4992eb82a39`, and `auto-research-funds@1f190fec93a9180a27443b1fe2b31f9488dfbf74` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas still tighten support space rather than widen the present bridge: `mind-upload` carries forward the `BCSFB / human-proxy composition` literature sync outside the current six, `EEG-DATA` keeps `30,900` merged-unique rows, `28,863` high-confidence rows, and `24,885` directly usable rows after a catalog refresh that does not replace any current anchor family, and `auto-research-funds` refreshes current-card and registry layers around `Itoh domestic scholarship` while now reporting `8,593` aid IDs, `4,306` rows, and `3,956` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Thu, 02 Apr 2026 18:14:39 GMT`.
-- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Kashinome Scholarship` stays a student-runway side route (`2026-01-14 - 2026-04-09 must arrive`), `Nakatani Foundation research grant` remains closed / next-cycle watch (`募集を終了しました` on the current public page), and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest pulled heads, live public headers, official windows, and Todoist sufficiency check.
-
-## What still stays fixed after the 23:08 JST actual-pull reread on April 2, 2026
-
-- An actual-pull recheck at `2026-04-02 23:08 JST` after `mind-upload@f5d1d1dd1683`, `EEG-DATA@ee1463d28288`, and `auto-research-funds@ec24a355abbc` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas still deepen route discipline and support space rather than widen the present bridge: `mind-upload` clarifies the causal-versus-human-proxy bridge and local-route/proxy boundaries outside the current six, `EEG-DATA` refines EEG candidate curation and adds `OpenNeuro ds007615` while now reporting `30,896` merged-unique rows, `28,859` high-confidence rows, and `24,882` directly usable rows in the current README snapshot, and `auto-research-funds` adds `Geo-Kagaku` current cards plus a README-stat refresh without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording therefore still stays unchanged: no newest pulled head turns `D03 / D02 / D01` into immediate public anchors, so public-safe wording still keeps `D10` as the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks in this run returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u13-2-brain-minus-prior-route.html`; the checked headers now return `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT`.
-- Official window spot checks in this run still keep the practical bridge narrow: `Kura Fund` remains open (`2026-02-02 - 2026-04-17 17:00`), `Nakatani Foundation graduate scholarship` remains open (`2026-04-01 - 2026-05-25 15:00`), `Nakatani Foundation research grant` remains closed / next-cycle watch (`募集期間 2025-06-01 - 2025-07-07`), and `Secom General Research Grant` remains closed for the current cycle (`2026-03-31 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest pulled heads, live public headers, official windows, and Todoist sufficiency check.
-
-## What still stays fixed after the 19:03 JST actual-pull reread on April 2, 2026
-
-- An actual-pull recheck at `2026-04-02 19:03 JST` after `mind-upload@e1a7e7e2f22c`, `EEG-DATA@a7f9390492fd`, and `auto-research-funds@00cdbaa9a122` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than widen the present bridge: `mind-upload` now deepens the `blood-CSF barrier / choroid-plexus` route split on human neurovascular pages outside the current six, `EEG-DATA` still reports `30,892` merged-unique rows, `28,855` high-confidence rows, and `24,880` directly usable rows in the current README snapshot, and `auto-research-funds` still keeps its latest summary at `8,590` aid IDs, `4,301` rows, and `3,951` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors because a direct live-access reread still shows `Subscription Required` plus `LOGIN TO ACCESS DATASET FILES` on the current `IEEE DataPort` pages for those three support anchors.
-- Browser-level live checks before this source sync returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u7-2-timing-metric-route.html`; those checked pages returned `Last-Modified: Thu, 02 Apr 2026 09:37:54 GMT`, but their route-facing body wording still surfaced the earlier `18:06 JST` hold note.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09 (must arrive)`, `Secom General Research Grant = closed (March 31, 2026 at 12:00 JST)`, and `Nakatani Foundation research grant = closed / next-cycle watch`.
-- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest repo heads, live public headers, official windows, and Todoist sufficiency check while updating the route-hold wording to the latest pulled heads.
-
-## What still stays fixed after the 18:06 JST actual-pull reread on April 2, 2026
-
-- An actual-pull recheck at `2026-04-02 18:06 JST` after `mind-upload@85b6603b569b`, `EEG-DATA@a7f9390492fd`, and `auto-research-funds@b6c0d0f4eeb7` still leaves both the current public six and the headline next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than widen the present bridge: `mind-upload` only syncs `U7-2` public bridge wording, `EEG-DATA` deep-dives `OSF gazx2` confidence EEG metadata and `OpenNeuro ds007081` while now reporting `30,892` merged-unique rows, `28,855` high-confidence rows, and `24,880` directly usable rows in the current README snapshot, and `auto-research-funds` refreshes its README summary to `8,590` aid IDs, `4,301` rows, and `3,951` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the headline next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors because a direct live-access reread still shows `Subscription Required` plus `LOGIN TO ACCESS DATASET FILES` on the current `IEEE DataPort` pages for those three support anchors.
-- Browser-level live checks before this source sync returned `HTTP/2 200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u7-2-timing-metric-route.html`; those checked pages returned `Last-Modified: Thu, 02 Apr 2026 08:22:50 GMT`.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09 (must arrive)`, `Secom General Research Grant = closed (March 31, 2026 at 12:00 JST)`, and `Nakatani Foundation research grant = closed / next-cycle watch`.
-- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync does **not** widen the current queue or claim surface. It only carries forward the same queue onto the latest repo heads, live public headers, official windows, and Todoist sufficiency check.
-
-## What still stays fixed after the 11:05 JST actual-pull reread on April 2, 2026
-
-- An actual-pull recheck at `2026-04-02 11:05 JST` after `mind-upload@208e59e2180c`, `EEG-DATA@00d85380f3fd`, and `auto-research-funds@f4ba35518400` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` refreshes the 10:07 route-hold packets, `EEG-DATA` deep-dives the maintained `ChineseEEG-2` release plus the public `auditory-eeg` family while still reporting `30,887` merged-unique rows, `28,850` high-confidence rows, and `24,875` immediately usable rows, and `auto-research-funds` keeps the same practical shortlist without replacing the current `D10 / D03 / D02 / D01` family or the next-watch `D11 / D08 / D05 / D20` family. The speech-side public-open backup ladder is now clearer, but it still does not replace `D10` or fix the recall-validity gap that keeps `U13-5` bounded.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors because a direct live-access reread still shows `Subscription Required` plus `LOGIN TO ACCESS DATASET FILES` on those three `IEEE DataPort` pages.
-- Browser-level live checks in this run returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages returned `Last-Modified: Thu, 02 Apr 2026 01:22:44 GMT`.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, `Secom General Research Grant = closed (March 31, 2026 at 12:00 JST)`, and `Nakatani Foundation research grant = next-cycle watch`.
-- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync only refreshes the route-hold wording and the speech-side support reading. It does not widen the current queue or claim surface.
-
-## What still stays fixed after the 11:09 JST actual-pull reread on April 2, 2026
-
-- An actual-pull recheck at `2026-04-02 11:09 JST` after `mind-upload@208e59e2180c`, `EEG-DATA@00d85380f3f`, and `auto-research-funds@f4ba35518400` still leaves both the current public six and the next-watch queue unchanged.
-- The current `mind-upload` head is the earlier 10:07 route-hold packet refresh itself, while the newest upstream movement is on `EEG-DATA`: `chore: deep-dive ChineseEEG-2 and PhysioNet auditory EEG`. The refreshed summary still reports `30,887` merged-unique rows, `28,850` high-confidence rows, and `24,875` directly usable rows, and `auto-research-funds` keeps the same practical shortlist while its repository stats still read `8,585` aid IDs, `4,293` rows, and `3,943` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors because a direct live-access reread still shows `IEEE DataPort` login and subscription gates on those three routes.
-- The newest public-open adjuncts only tighten row-specific backup coverage rather than widen the queue: `ds007591` and `ds007602` strengthen speech-side backup options for `U13-2` but still expose only three released participants each, `ChineseEEG-2` strengthens public reading/listening alignment coverage for `U13-5` but still does not expose the intended recall-labeled branch, and PhysioNet `auditory-eeg` is clearly public-open but remains single-day 4-channel coverage rather than a replacement for `D02` in `U0-2 / U0-3`.
-- Browser-level live checks before this source sync still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages now returned `Last-Modified: Thu, 02 Apr 2026 01:22:44 GMT`.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` official page still reads as the annual `mid-January to early-April` window, and `Secom General Research Grant` still shows the current cycle closed (`March 31, 2026 at 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync only refreshes the route-hold wording and the backup-family reading after the newest `EEG-DATA` carry-forward. It does not widen the current queue or claim surface.
-
-## What still stays fixed after the 10:07 JST actual-pull reread on April 2, 2026
-
-- An actual-pull recheck at `2026-04-02 10:07 JST` after `mind-upload@be507c810b11`, `EEG-DATA@3f20f48cca6e`, and `auto-research-funds@fb32c05163f4` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` refines EEG foundation setup-equivalence boundaries outside the current six, `EEG-DATA` deep-dives the HBN EEG release 11 route and now reports `30,887` merged-unique rows, `28,850` high-confidence rows, and `24,871` directly usable rows, and `auto-research-funds` keeps the same practical shortlist while its repository stats still read `8,585` aid IDs, `4,293` rows, and `3,943` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors because a direct live-access reread still shows `IEEE DataPort` login and subscription gates on those three routes.
-- The row-level bridge reading only tightens inside that unchanged queue: `U13-5` still keeps an explicit recall-validity caveat because the visible `D03` metadata still does not expose a recall-specific label, and `U14-4 / U14-2` still keep `D13` as the first public-open rerun support family beyond the current `D01` disclosure floor.
-- Browser-level live checks before this source sync still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages also returned `Last-Modified: Thu, 02 Apr 2026 00:15:06 GMT`.
-- This source sync also re-aligns the public-side row wording and the funding-facing `60RQ` dossier wording to the same `Dxx + DOI + dataset name + access class` standard, so the bridge page, the deep dossiers, and the funding repo now point to the same canonical row packets again.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` official page still reads as the annual `mid-January to early-April` window, and `Secom General Research Grant` still shows the current cycle closed (`March 31, 2026 at 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync only refreshes the route-hold wording on the public entry pages and the canonical row packets. It does not widen the current queue or claim surface.
-
-## What still stays fixed after the 09:05 JST actual-pull reread on April 2, 2026
-
-- An actual-pull recheck at `2026-04-02 09:05 JST` after `mind-upload@d7f30648fc40`, `EEG-DATA@ac8cc6fc8e74`, and `auto-research-funds@31ec17305f6a` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` tightens a literature myelin route split outside the current six, `EEG-DATA` adds the `aw8sz` deep dive and now reports `merged_unique=30886`, `high_confidence=28849`, and `access_counts_high.immediate=24500`, and `auto-research-funds` carries forward the `Aoi graduate scholarship` / `JSSF research grant` merges plus a README-stat refresh to `8,585` aid IDs, `4,293` rows, and `3,943` official-source rows without replacing the current `D10 / D03 / D02 / D01` family or the next-watch `D11 / D08 / D05 / D20` family.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors because a direct live-access reread still shows `IEEE DataPort` login and subscription gates on those three routes.
-- Browser-level live checks before this source sync still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages also returned `Last-Modified: Wed, 01 Apr 2026 23:29:12 GMT`, and the live pages still surfaced the earlier `04:09 JST` / `03:08 JST` reread notes before this source update.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, the `Kashinome Scholarship` official page still reads as the annual `mid-January to early-April` window, and `Secom General Research Grant` still shows the current cycle closed (`March 31, 2026 at 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync only refreshes the route-hold wording on the public entry pages. It does not widen the current queue or claim surface.
-
-## What still stays fixed after the 03:08 JST actual-pull reread on April 2, 2026
-
-- An actual-pull recheck at `2026-04-02 03:08 JST` after `mind-upload@d391dbede29e`, `EEG-DATA@f9df9ba85a6`, and `auto-research-funds@95f804055809` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` splits ECM / PNN literature routes outside the current six, `EEG-DATA` adds two immediate-access deep-dive candidates (`10.48804/NV4RGL` and `10.7281/T1/B660D2`) without replacing the current `D10 / D03 / D02 / D01` family or the next-watch `D11 / D08 / D05 / D20` family, and `auto-research-funds` adds Gakusho / NII funding merges plus a README-stat refresh without changing the practical shortlist.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks before this source sync still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages also returned `Last-Modified: Wed, 01 Apr 2026 17:27:08 GMT`, and the live route order still named the same six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle (`March 31, 2026 at 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-- This source sync only refreshes the route-hold wording on the public entry pages. It does not widen the current queue or claim surface.
-
-## What still stays fixed after the 00:03 JST actual-pull reread on April 2, 2026
-
-- An actual-pull recheck at `2026-04-02 00:03 JST` after `mind-upload@cff3abab58e8`, `EEG-DATA@a885ef3f029d`, and `auto-research-funds@0f60872538dc` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` tightens deuterium operating-point wording outside the current six, `EEG-DATA` adds the `DANDI 001187` deep dive and now reports `merged_unique=30875`, `high_confidence=28838`, and `access_counts_high.immediate=24492`, and `auto-research-funds` carries forward the `Isono / Okabe` scholarship refresh without changing the practical shortlist.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks before this source sync still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages also returned `Last-Modified: Wed, 01 Apr 2026 14:17:54 GMT`, and the live route order still named the same six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle (`March 31, 2026 at 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-
-## What still stays fixed after the 22:05 JST actual-pull reread on April 1, 2026
-
-- An actual-pull recheck at `2026-04-01 22:05 JST` after `mind-upload@84e5337`, `EEG-DATA@bbb8d6c63d7`, and `auto-research-funds@5ff33413e` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` clarifies clearance-route labels at the front door outside the current six, `EEG-DATA` refreshes deep-dive metadata while keeping `merged_unique=30873`, `high_confidence=28836`, `access_counts_high.immediate=24487`, and `18,312 / 28,832` experiment-facing rows (`63.51%` coverage), and `auto-research-funds` adds the `Yamaoka graduate scholarship` snapshot plus README-facing stats refresh without changing the practical shortlist.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks before this source sync still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the checked pages also returned `Last-Modified: Wed, 01 Apr 2026 12:13:54 GMT`, and the live route order still named the same six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle (`March 31, 2026 at 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items, projects)` full-item audit still showed enough route coverage (`items=203`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-
-## What still stays fixed after the 18:05 JST actual-pull reread on April 1, 2026
-
-- An actual-pull recheck at `2026-04-01 18:05 JST` after `mind-upload@9984d0b`, `EEG-DATA@5fc1df00f07`, and `auto-research-funds@d7092c8e9` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` deepens wearable `OPM / MEG` route synchronization and measurement-stack clarification outside the current six, `EEG-DATA` adds a continuous-pursuit EEG BCI deep dive and now reports `merged_unique=30873`, `high_confidence=28836`, and `access_counts_high.immediate=24486`, its experiment-metadata report still covers `18,312 / 28,832` rows with at least one experiment-facing field (`63.51%` coverage), and `auto-research-funds` keeps the same practical shortlist after the recent carry-forward scholarship refresh.
-- Route-safe access wording also stays unchanged: the refreshed local `EEG-DATA` catalog keeps widening, but the live-access read remains stricter, so `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 08:22:51 GMT` on those public surfaces, and the live `issue.html` paragraph still names the same six in the same order before this run's new addendum.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle (`March 31, 2026 at 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-
-## What still stays fixed after the 17:06 JST actual-pull reread on April 1, 2026
-
-- An actual-pull recheck at `2026-04-01 17:06 JST` after `mind-upload@c5a0550`, `EEG-DATA@82893f6ca6e`, and `auto-research-funds@ec6f7d068` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` deepens astrocyte PET route splits outside the current six, `EEG-DATA` deep-dives the KMI EEG dataset and now reports `merged_unique=30871`, `high_confidence=28834`, and `access_counts_high.immediate=24484`, its experiment-metadata report still covers `18,312 / 28,832` rows with at least one experiment-facing field (`63.51%` coverage), and `auto-research-funds` adds the `Megachips 2026 scholarship` snapshot plus a README-stat refresh without changing the practical shortlist.
-- Route-safe access wording also stays unchanged: the refreshed local `EEG-DATA` catalog still renders `D03 / D02` as catalog-side immediate rows and `D01` as a mixed immediate/check-needed pair, but the live-access read remains stricter, so `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 07:16:09 GMT` on those public surfaces, and the live `issue.html` paragraph still names the same six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle (`March 31, 2026 at 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-
-## What still stays fixed after the 14:09 JST actual-pull reread on April 1, 2026
-
-- An actual-pull recheck at `2026-04-01 14:09 JST` after `mind-upload@ccef40f2f7cf`, `EEG-DATA@deefd5f95c6d`, and `auto-research-funds@f5f76c485ccb` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` clarifies presynaptic release-machinery ceilings outside the current six, `EEG-DATA` now reports `merged_unique=30869`, `high_confidence=28832`, and `access_counts_high.immediate=24482`, its new experiment-metadata report now covers `18,312 / 28,832` rows with at least one experiment-facing field (`63.51%` coverage), and `auto-research-funds` refreshes repo-level stats without changing the practical shortlist.
-- Route-safe access wording also stays unchanged: the refreshed local `EEG-DATA` catalog still renders `D03 / D02` as catalog-side immediate rows and `D01` as a mixed immediate/check-needed pair, but the live-access read remains stricter, so `D10` remains the only clear public-open primary anchor in the current six while `D03 / D02 / D01` remain gated-support planning anchors.
-- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 04:20:02 GMT` on those public surfaces, and the live `issue.html` paragraph still names the same six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle (`March 31, 2026 at 12:00 JST`).
-- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=5`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-
-## What still stays fixed after the 12:06 JST actual-pull reread on April 1, 2026
-
-- A second actual-pull recheck at `2026-04-01 12:06 JST` after `mind-upload@9f4bc8e760b1`, `EEG-DATA@1324f9e1ae2b`, and `auto-research-funds@6548b1650535` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` already keeps the route-hold wording public-safe, `EEG-DATA` now reports `merged_unique=30867`, `high_confidence=28830`, and `access_counts_high.immediate=24480`, and `auto-research-funds` refreshes funding reread documentation without changing the practical shortlist.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six, while `D03 / D02 / D01` remain gated-support planning anchors because the live-access read is still narrower than the catalog-side identifier surface.
-- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; the current `Last-Modified` header is `Wed, 01 Apr 2026 02:26:28 GMT` on those public surfaces, and the live `issue.html` paragraph still names the same six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, and `Secom General Research Grant` remains closed for the current cycle.
-- No new Todoist route was introduced in this reread. The latest canonical funding-shortlist audit still already covers the current practical lanes, and the official recheck did not surface a new current-cycle funder.
-
-## What still stays fixed after the 11:06 JST actual-pull reread on April 1, 2026
-
-- A latest actual-pull recheck at `2026-04-01 11:06 JST` after `mind-upload@aa21ab9855c1`, `EEG-DATA@cccd137a3468`, and `auto-research-funds@3a691196cb9f` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still deepen support rather than the present bridge: `mind-upload` already keeps the route-hold wording public-safe, `EEG-DATA` deepens repository-wide metadata and now reports `merged_unique=30866`, `high_confidence=28829`, and `access_counts_high.immediate=24479`, and `auto-research-funds` refreshes repo-level stats without changing the practical shortlist.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six, while `D03 / D02 / D01` remain gated-support planning anchors because the live-access read is still narrower than the catalog-side identifier surface.
-- Browser-level live checks still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`; `Last-Modified` advanced to `Wed, 01 Apr 2026 01:21:12 GMT` for `issue.html` / `u8-1` and `Wed, 01 Apr 2026 01:21:13 GMT` for the two bridge pages, and the live `issue.html` paragraph still names the same six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain watch-or-closed outside the current-cycle lane.
-- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-
-## What still stays fixed after the 10:19 JST actual-pull reread on April 1, 2026
-
-- A latest actual-pull recheck at `2026-04-01 10:19 JST` after `mind-upload@d87b9ce`, `EEG-DATA@c05ceda146f8`, and `auto-research-funds@ca65b206cf6d` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still widen support rather than the present bridge: `mind-upload` deepened a beginner glial substrate route audit outside the current public-six packet, `EEG-DATA` added an `OpenNeuro ds006036` deep dive that does not displace `D10 / D03 / D02 / D01` or the next-watch family `D11 / D08 / D05 / D20`, and `auto-research-funds` added `JCS / Takai / Korean scholarship` current cards without changing the practical shortlist.
-- Route-safe access wording also stays unchanged: `D10` remains the only clear public-open primary anchor in the current six, while `D03 / D02 / D01` remain gated-support planning anchors because the live-access read is still narrower than the catalog-side identifier surface.
-- Browser-level live checks at `2026-04-01 10:19 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, and the live `issue.html` paragraph still names the same six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain watch-or-closed outside the current-cycle lane.
-- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-
-## What still stays fixed after the 03:09 JST actual-pull reread on April 1, 2026
-
-- A latest actual-pull recheck at `2026-04-01 03:09 JST` after `mind-upload@31835fcd8daa`, `EEG-DATA@12eef8ca4ef0`, and `auto-research-funds@040e5b8798fd` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still widen support rather than the present bridge: `mind-upload` split temporal routes for invasive language BCIs outside the current public-six packet, `EEG-DATA` added a semantic-text-relevance deep dive that widens language-related backup coverage without displacing `D10 / D03 / D02 / D01` or the next-watch family `D11 / D08 / D05 / D20`, and `auto-research-funds` refreshed `Obayashi / Yokogaku` cards without changing the practical shortlist.
-- Browser-level live checks at `2026-04-01 03:09 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `mind-upload-rq-solvability-bridge.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, and the live `issue.html` paragraph still names the same six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain watch-or-closed outside the current-cycle lane.
-- A fresh read-only Todoist `api/v1/sync(items)` full-item audit still showed enough route coverage (`items=203`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this session.
-
-## What still stays fixed after the 01:06 JST live-source recheck on April 1, 2026
-
-- A second no-op actual-pull recheck at `2026-04-01 01:06 JST` after nested `mind-upload@8da02e2e48e0`, `EEG-DATA@e6013384fa01`, and `auto-research-funds@c6a383f07a7b` still leaves both the current public six and the next-watch queue unchanged.
-- The current `EEG-DATA` head still supports the same narrow anchor families rather than replacing them: the current-six family `D10 / D03 / D02 / D01` and the next-watch family `D11 / D08 / D05 / D20` are all still present in the repo, and public-safe wording still keeps `D10` as the only clear public-open primary while `D03 / D02 / D01` remain gated-support planning anchors because the live-access read stays stricter than the catalog label.
-- Browser-level live checks at `2026-04-01 01:06 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, `u8-1-closed-loop-delay-tolerance-route.html`, and `mind-upload-rq-solvability-bridge.html`, so this run still keeps the public batch fixed.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain watch-or-closed outside the current-cycle lane.
-- A fresh read-only Todoist `api/v1/sync` full-item audit still showed enough route coverage (`items=204`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this session.
-
-## What still stays fixed after the 00:12 JST actual-pull reread on April 1, 2026
-
-- A latest actual-pull recheck at `2026-04-01 00:12 JST` after `mind-upload@e53a50b1256d`, `EEG-DATA@48f4814db5da`, and `auto-research-funds@76145d0e3f4c` still leaves both the current public six and the next-watch queue unchanged.
-- The current `EEG-DATA` head still supports the same narrow anchor families rather than replacing them: the current-six family `D10 / D03 / D02 / D01` and the next-watch family `D11 / D08 / D05 / D20` are all still present in the repo, but public-safe wording continues to keep `D10` as the only clear public-open primary while `D03 / D02 / D01` remain gated-support planning anchors because the live-access read and mirror state still stay mixed.
-- Browser-level live checks at `2026-04-01 00:15 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so this run keeps the public batch fixed and adds only a bounded reread note to the supporting route pages.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain watch-or-closed outside the current-cycle lane.
-- A fresh read-only Todoist `api/v1/sync` full-item audit still showed enough route coverage (`items=204`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this session.
-
-## How to read "solvable with EEG" on this page
-
-- `Close now` means a bounded benchmark, audit, or disclosure artifact that can be finished on one declared dataset family.
-- `Support only` means a useful anchor that still does not justify a stronger public-open route by itself.
-- When the live access audit and the catalog auto-label disagree, this page follows the live access audit for public-safe wording and keeps the catalog label only as a planning hint.
-- `External dependency` means a requirement that still needs theory work, language evaluation, legal judgment, clinical transfer, hardware validation, or broader community adoption outside this repository.
-- `Funding theme` means wording that still matches the present artifact level. It is not a promise that the larger mind-upload question is solved.
-
-## What still stays fixed after the 21:09 JST post-pull reread on March 31, 2026
-
-- A latest pull recheck at `2026-03-31 21:09 JST` after `mind-upload@ed6f8203e46d`, `EEG-DATA@20fbbad9959f`, and `auto-research-funds@77f189662745` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still widen support rather than the present bridge: `mind-upload` tightened dataset-benchmark object rules and clarified the FAQ RNA route split, `EEG-DATA` added request-gated `HBUED` emotion-recognition coverage plus a continuous-pursuit online BCI metadata deep dive, and `auto-research-funds` added `Teraura Sayoko outbound scholarship`, `Gakusho scholarship`, and README-stat refreshes, but none of those changes replace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
-- Browser-level live checks at `2026-03-31 21:09 JST` still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, and the live `issue.html` paragraph still names the current six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant`, `Secom General Research Grant`, and `Brain Science Foundation research grant` remain outside the current-cycle lane.
-- A fresh read-only Todoist `api/v1/sync` full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this session.
-
-## What still stays fixed after the 19:07 JST post-pull reread on March 31, 2026
-
-- A latest pull recheck at `2026-03-31 19:07 JST` after `mind-upload@b7b6c0498ae1`, `EEG-DATA@24e85cc20f09`, and `auto-research-funds@0fddd53bd03c` still leaves both the current public six and the next-watch queue unchanged.
-- The newest pulled deltas still widen support rather than the present bridge: `mind-upload` strengthened the front-door human-proxy split, `EEG-DATA` refreshed the catalog to `merged_unique=30860`, `high_confidence=28823`, and `access_counts_high.immediate=24471`, and `auto-research-funds` refreshed Kioxia/Takayanagi funding records, but none of those changes replace the current `D10 / D03 / D02 / D01` family or the outside-current-six order `U7-1 -> U1-2 -> U4-2 -> U8-1`.
-- Browser-level live checks at `2026-03-31 19:09 JST` still returned `200` for `issue.html` and `mind-upload-current-public-six-rq-brief.html`, and the live `issue.html` paragraph still names the current six in the same order.
-- Official window spot checks still keep the practical bridge narrow: `Kura Fund = 2026-02-02 - 2026-04-17 17:00`, `Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`, `Kashinome Scholarship = 2026-01-14 - 2026-04-09`, while `Nakatani Foundation research grant` and `Secom General Research Grant` are already closed for the current cycle.
-- A fresh read-only Todoist full-item audit still showed enough route coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Nakatani graduate scholarship=7`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`), so no new task was added in this session.
-
-## What still stays fixed after the 17:06 JST post-pull reread on March 31, 2026
-
-- A latest pull recheck at `2026-03-31 17:06 JST` after `mind-upload@4731680627ff`, `EEG-DATA@3e7a53d9ca8`, and `auto-research-funds@ef2924014a65` still leaves both the current public six and the next-watch queue unchanged.
-- The newest `EEG-DATA` additions widen the support map rather than the present bridge: the NTU Dataverse adult-to-infant unidirectional neural-coupling raw/preprocessed releases are immediately downloadable and useful for future social-learning or paired-observer rows, while OpenNeuro `ds007146` adds a large auditory MEG/EEG/Ear-EEG record that still stays `uncertain_public` because the visible public object tree does not yet verify the claimed raw EEG / Ear-EEG coverage.
-- Recounting the `### Ux-y` headings in the RQ-by-RQ dossiers still returns `60`, so this run does not replace the one-row-at-a-time workflow with a flatter summary pass.
-- Browser-level live checks with a browser user agent still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`.
-- The practical funding reading therefore stays narrow: `Kura Fund`, `Nakatani Foundation graduate scholarship`, and `Kashinome Scholarship` remain the active bridge for the current six, `Secom General Research Grant` is already closed for the current cycle (`March 31, 2026 at 12:00 JST`) and stays only as a carried-forward watch record, and no new Todoist item was created in this session.
-
-## What still stays fixed after the 16:32 JST metadata carry-forward reread on March 31, 2026
-
-- A latest pull reread after `mind-upload@a11240d38415`, `EEG-DATA@3e7a53d9ca84`, and `auto-research-funds@c95cc61fdfc9` still leaves both the current public six and the next-watch queue unchanged.
-- `EEG-DATA`'s newest head is a metadata-deepening carry-forward rather than a route swap: the refreshed catalog now reports `merged_unique=30858`, `high_confidence=28821`, and `access_counts_high.immediate=24469`, which widens the backup-family search space but still does not replace the current `D10 / D03 / D02 / D01` family for the active route.
-- The practical access reading also stays conservative. The refreshed catalog still exposes `D01` through the DOI route as immediate and still keeps `D02` in the immediate/planning bucket, but the live public route continues to follow the stricter access audit and therefore keeps `D03 / D02 / D01` only as subscription-gated support anchors.
-- Browser-level live checks in this run still returned `200` for `issue.html`, `mind-upload-current-public-six-rq-brief.html`, and `u8-1-closed-loop-delay-tolerance-route.html`, so no extra public-front-page prose was added.
-- A fresh Todoist `api/v1/sync(items)` audit still showed enough coverage (`items=205`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `AI for Aging-Society Problem Solving=0`), so no new task was added in this run.
-
-## What stays fixed on March 31, 2026
-
-- The current public six-question batch still stays `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2`.
-- The next-watch queue still stays `U7-1 -> U1-2 -> U4-2 -> U8-1`.
-- If you want the exact next-watch row packets, continue with the [U7-1 route packet](/wiki/u7-1-synchronization-contract-route.html), the [U1-2 route packet](/wiki/u1-2-uncertainty-calibration-route.html), the [U4-2 route packet](/wiki/u4-2-minimal-causal-route.html), and the [U8-1 route packet](/wiki/u8-1-closed-loop-delay-tolerance-route.html).
-- Inside the current public six, `D10 3M-CPSEED` remains the only clearly public-open primary anchor.
-- `D03 Multimodal Fusion EEG + Eye-Tracking`, `D02 CSTE`, and `D01 Acquisition delay of wireless EEG` still remain subscription-gated support anchors on the public route.
-- No new Todoist task was needed in this run because the current practical lanes and watch lanes were already covered by existing tasks in the funding workflow.
-
-## Why this page exists
-
-- The current public six brief is intentionally short.
-- The `RQ60` feasibility and dossier pages are intentionally wide.
-- This page is the bridge in between: it fixes the current execution queue and the next-watch queue at a row-by-row level without pretending that all `60RQ` items should be read at the same depth right now.
-
-## Current public six
-
-| RQ | Main anchor now | What EEG can honestly close now | What still stays outside the claim | Funding theme that still fits | Lane that still fits now | Todoist |
+# マインドアップロード RQ 解決可能性ブリッジ
+
+このページは、1 つの狭い質問に答えます。つまり、実際に今深める価値がある行について、`EEG-DATA` が正直に解決できるものは何か、まだ外部のサポートが必要なものは何か、主張を誇張することなく適合する資金調達テーマは何か。
+
+すべての `60RQ` アイテムを一度に再スキャンしようとする**わけではありません**。このサイトの作業スタイルは、`summarize everything at the same depth` ではなく `deepen one row at a time` になりました。
+
+## 2026 年 4 月 12 日に現段階の制限として返送すべき論文の内容
+
+- 最新の論文執筆パスでは、繰り返される停止線が 1 つ明確になりました。つまり、草案が `measurement boundary` のみをサポートし、より強力な `personhood continuity`、`migration`、または `same-entity` の主張をサポートできない場合、文章は柔らかい散文の中にギャップを隠すのではなく、そのことを直接伝えるべきです。
+- 現在の `U0-2 / U0-3` レーンでは、より強力な主張を依然として提起できない主な理由として、3 つの欠落アーティファクトが修正されたままになっています。つまり、実際にスコアを保持するものを示すデータセット レベルのアブレーション テーブル、再実行後に決定ルールが崩れないことを示す閾値安定性台帳、および結果が依然としてどの取得 / 前処理フレームに依存しているかを正確に示す記録フレームの開示です。
+- したがって、論文執筆ステップが `this cannot honestly be solved at the current stage` のような文言で停止した場合、その停止はここでは `current-stage limit` として返される必要があり、執筆の弱点として扱われません。通常、失敗モードは散文の欠如ではなく、もう 1 つの境界のある成果物または開示の欠如です。
+- したがって、パブリックセーフな解釈は依然として狭い: `current EEG artifacts can tighten bounded measurement claims` ですが、それでも、それ自体ではアイデンティティの継続性、移行から移行、またはより強力な同等性の表現に厳密には**なりません**。
+
+## 2026 年 4 月 4 日の 22:06 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@39248d59caaa`、`EEG-DATA@7ba2201e2b5`、`auto-research-funds@f90279417a9f` の後の `2026-04-04 22:06 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、ルート置換ではなく繰り越しのままです。`mind-upload` は、ルートを広げることなく、現在の 6 つの外側にペア流体バリア ルート ガイダンスを追加します。`EEG-DATA` は、`30,935` マージされた一意の行、`28,898` 高信頼行、`24,910` すぐに使用可能な行、`24,540` 高信頼即時行を維持しながら、`IEEE DataPort EEG records` 監査を強化します。`auto-research-funds` は、移動ヘッド参照のみを緩和します。現実的な候補リストを置き換えます。
+- ルートセーフの読み取りも、1 つの重要な点で意図的に狭いままです。つまり、`D03 / D02 / D01` は、実際の IEEE DataPort ランディング ページよりも DOI/DataCite/カタログ側の読み取りでは依然としてオープンに見えるため、`D10` は唯一の明確なパブリック オープン プライマリ アンカーのままである一方、`D03 / D02 / D01` は依然としてパブリックの文言におけるゲート サポート アンカーのままです。
+- 最新のリポジトリ全体の繰り越しは依然として強力な行レベルの置換を作成していません。ペアの流体バリア ノートは外部カレント 6 ブリッジ言語を強化し、最新の IEEE DataPort カタログ監査はアクセス ステータスの規律を改善し、資金調達の文言のクリーンアップにより候補リストを再利用しやすくしていますが、いずれも `U13-5` でのリコール有効性ギャップの修復、`U0-2 / U0-3` でのクロスセッション ID ドリフト フロアの置き換え、または現在の `D11 / D08 / D05 / D20` の置き換えにはなりません。次に見る家族。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`mind-upload-eeg-rq60-grant-dataset-playbook.html`、`u13-2-brain-minus-prior-route.html`、および `u13-5-perception-to-recall-route.html` に対して `HTTP/2 200` が返されました。このソース同期の前に、チェックされたヘッダーは `Last-Modified: Sat, 04 Apr 2026 12:16:08 GMT` を返し、チェックされたボディはフロント ドアに `2026-04-04 17:07 JST` の文言と `U13-2` が表示され、`U13-5` に `2026-04-04 19:09 JST` の文言が表示されました。
+- 公式窓口のスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship` は依然として `2026-04-09` の必須到着側ルート、`Nakatani Foundation research grant = closed / next-cycle watch`、および `Secom General Research Grant = closed (2026-03-31 12:00 JST)` という実際的なブリッジが維持されています。
+- 新しい読み取り専用 Todoist 監査では、まだ十分なルート カバレッジ (`items=207`、`projects=2`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期によって、現在のキューまたはクレーム サーフェスは**拡大されません**。 DOI/カタログ ビュー自体が `D03 / D02 / D01` を促進しない理由を強化しながら、同じキューを転送するだけです。
+
+## 2026 年 4 月 4 日の 17:07 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@dc8ec5dc5e62`、`EEG-DATA@f115f11c2da4`、`auto-research-funds@8d0f5128fcdc` の後の `2026-04-04 17:07 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 取得された最新のデルタは、ルート置換ではなく繰り越されたままになります。`mind-upload` は、ルートを拡大することなく、現在の 6 つの外側でバリア側の人間プロキシの役割を分割します。`EEG-DATA` は、`30,930` マージされた一意の行、`28,893` の信頼性の高い行、`24,909` のすぐに使用できる行を現在の README スナップショットに保持しながら、`EEGIS imagined speech` メタデータを深めます。`auto-research-funds` は、レポートを作成しながら `Uehiro ethics foundation` レガシー同期を追加します。実際の候補リストを置き換えることなく、`8,616` 援助 ID、`4,319` 行、および `3,971` 公式ソース行。
+- ルート セーフの読み取り値も意図的に狭いままです。`D10` は依然として唯一の明確なパブリック オープン プライマリ アンカーですが、`D03 / D02 / D01` は、これら 3 つのルートを直接のパブリック アンカーに変える最新のプル ヘッドがないため、公的表現では依然としてゲート サポート アンカーのままです。
+- 最新のリポジトリ全体のキャリーフォワードは、依然として強力な行レベルの置換を作成していません。バリアの役割分割は、現在の 6 人の人間代理規律の外側を強化し、最新の想像音声メタデータの深化は音声側のサポートスペースナビゲーションを改善し、レガシーファンディングの同期は隣接する滑走路のコンテキストを改善しますが、いずれも `U13-5` の下でリコールと妥当性のギャップを修復せず、`U0-2 / U0-3` の下でセッション間の ID ドリフトフロアを置き換えたり、現在の`D11 / D08 / D05 / D20` ネクストウォッチファミリー。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`mind-upload-eeg-rq60-grant-dataset-playbook.html`、および `u13-2-brain-minus-prior-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Sat, 04 Apr 2026 07:12:56 GMT` を返すようになり、チェックされた本文は、このソース同期の前に、チェックされた 5 ページすべてにわたって `2026-04-04 14:10 JST` の文言が依然として表示されていました。
+- 公式窓口のスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship` は依然として `2026-04-09` の必須到着側ルート、`Nakatani Foundation research grant = closed / next-cycle watch`、および `Secom General Research Grant = closed (2026-03-31 12:00 JST)` という実際的なブリッジが維持されています。
+- 新しい読み取り専用 Todoist 監査では、まだ十分なルート カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`JSM=0`、`Doumei=0`、`Kenkyu no Susume=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期によって、現在のキューまたはクレーム サーフェスは**拡大されません**。フロント ドア、ブリッジ、プレイブック、および最初の行のパケットを同じ境界付き `17:07 JST` ベースに調整しながら、同じキューを転送するだけです。
+
+## 2026 年 4 月 4 日の 14:10 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@cafeab4bc2a5`、`EEG-DATA@e0695bcac83d`、`auto-research-funds@a4852d89376c` の後の `2026-04-04 14:10 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 取得された最新のデルタは、ルート置換ではなく、そのまま引き継がれます。`mind-upload` は、ルートを広げることなく、初期の EEG 基礎モデルのソースステータス分割に加えて、用語集の興奮性とイオン用語を強化します。`EEG-DATA` は、`30,930` マージされた一意の行、`28,893` 高信頼行、`24,909` 即時行、および `24,539` を維持しながら、`neuroTUM Cybathlon`、`Zenodo TSA v7.8`、および `poetry EEG` メタデータを深めます。信頼性の高い即時行、および `auto-research-funds` は、実際の最終候補リストを置き換えることなく、`JELA Diakonia` 奨学金カードを追加します。
+- ルート セーフの読み取り値も意図的に狭いままです。`D10` は依然として唯一の明確なパブリック オープン プライマリ アンカーですが、`D03 / D02 / D01` は、これら 3 つのルートを直接のパブリック アンカーに変える最新のプル ヘッドがないため、公的表現では依然としてゲート サポート アンカーのままです。
+- 最新のリポジトリ全体の繰り越しは、依然として強力な行レベルの置換を作成していません。用語集とソース ステータスの厳格化によりフロントドアの規律が改善され、最新の EEG メタデータの詳細な調査によりサポート スペース ナビゲーションが改善され、新しい隣接するスカラシップ カードにより滑走路のコンテキストを読み取り可能に保たれていますが、いずれも `U13-5` でのリコール有効性ギャップの修復、`U0-2 / U0-3` でのセッション間 ID ドリフト フロアの置き換え、または現在の `D11 / D08 / D05 / D20` ネクスト ウォッチ ファミリーの置き換えにはなりません。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`mind-upload-eeg-rq60-grant-dataset-playbook.html`、および現在の 6 行パケットに対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT` を返しますが、チェックされたボディは、フロント ドアに `2026-04-04 12:02 JST` という文言と、このソース同期の前の古い現在の 6 行パケットに `2026-04-04 09:05 JST` という文言が依然として表示されています。
+- 公式窓口のスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship` は依然として年次 `mid-January to early-April` 窓口として読み取られ、`2026-04-09` 必ず到着する側ルート、`Nakatani Foundation research grant = closed / next-cycle watch`、および `Secom General Research Grant = closed (2026-03-31 12:00 JST)` として引き続き扱われます。
+- 新しい読み取り専用 Todoist 監査では、まだ十分なルート カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Doumei=0`、`Kenkyu no Susume=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期によって、現在のキューまたはクレーム サーフェスは**拡大されません**。フロント ドア、プレイブック、および現在の 6 行パケット全体を同じ境界付き `14:10 JST` ベースに調整しながら、同じキューを転送するだけです。
+
+## 2026 年 4 月 4 日の 12:02 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@f84f6e53753b`、`EEG-DATA@017ae806c4dd`、`auto-research-funds@d4024a5b8a1a` の後の `2026-04-04 12:02 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 取得された最新のデルタは、ルート置換ではなく繰り越しのままです。`mind-upload` は、ルートを拡大することなくパブリック ページ全体で EEG 記録フレーム コントラクトを同期し、`EEG-DATA` は、マージされた一意の行、`28,892` 高信頼行、`24,908` 即時行、`24,538` 高信頼即時行、および `auto-research-funds` を維持しながら、移動容量の EEG データセットを詳細に調査します。実質的な最終候補リストを置き換えることなく、以前の `11:04 JST` 資金調達に関する追加条項をそのまま保持しています。
+- ルート セーフの読み取り値も意図的に狭いままです。`D10` は依然として唯一の明確なパブリック オープン プライマリ アンカーですが、`D03 / D02 / D01` は、これら 3 つのルートを直接のパブリック アンカーに変える最新のプル ヘッドがないため、公的表現では依然としてゲート サポート アンカーのままです。
+- 最新のリポジトリ全体のキャリーフォワードは、依然として強力な行レベルの置き換えを作成していません。記録フレームの強化はフロントドアの技術規律を改善し、移動能力の詳細な調査はサポートスペースのナビゲーションを改善し、資金の繰り越しは候補リストを読みやすい状態に保ちますが、それらのどれも、`U13-5`の下でのリコール有効性のギャップを修復せず、`U0-2 / U0-3`の下でのセッション間のアイデンティティドリフトフロアを置き換えず、現在の`D11 / D08 / D05 / D20`ネクストウォッチファミリーに取って代わるものでもありません。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`mind-upload-eeg-rq60-grant-dataset-playbook.html`、および `u13-2-brain-minus-prior-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Sat, 04 Apr 2026 02:19:09 GMT` を返し、チェックされたボディは、このソース同期の前に `issue / brief / bridge / playbook` で `2026-04-04 11:04 JST` の文言がすでに表示されていますが、`u13-2-brain-minus-prior-route.html` ではまだ `2026-04-04 09:05 JST` の文言が表示されています。
+- 公式窓口のスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship` は依然として年次 `mid-January to early-April` 窓口として読み取られ、`2026-04-09` 必ず到着する側ルート、`Nakatani Foundation research grant = closed / next-cycle watch`、および `Secom General Research Grant = closed (2026-03-31 12:00 JST)` として引き続き扱われます。
+- 新しい読み取り専用 Todoist 監査では、まだ十分なルート カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Doumei=0`、`Kenkyu no Susume=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期によって、現在のキューまたはクレーム サーフェスは**拡大されません**。フロント ドア、プレイブック、および最初の行のパケットを同じ境界付き `12:02 JST` ベースに調整しながら、同じキューを転送するだけです。
+
+## 2026 年 4 月 4 日の 11:04 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@812e1650bae1`、`EEG-DATA@1deac45c75a2`、`auto-research-funds@9741ee45a025` の後の `2026-04-04 11:04 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、ルート置換ではなく繰り越しのままになります。`mind-upload` は、ルートを広げることなく、用語集のブリッジ監視の用語を厳格化します。`EEG-DATA` は、重複する EEG-fMRI オーバーライド行を縮小し、`30,929` マージされた一意の行、`28,892` 高信頼行、`24,908` 即時行、および `24,538` 高信頼即時行を保持する一方で、現在の `D10 / D03 / D02 / D01` ファミリは変更せず、`auto-research-funds` を維持します。実用的な候補リストを置き換えることなく、現在のサイクルの資金調達カードに従来の補償範囲を追加します。
+- ルート セーフの読み取り値も意図的に狭いままです。`D10` は依然として唯一の明確なパブリック オープン プライマリ アンカーですが、`D03 / D02 / D01` は、これら 3 つのルートを直接のパブリック アンカーに変える最新のプル ヘッドがないため、公的表現では依然としてゲート サポート アンカーのままです。
+- 最新のリポジトリ全体の繰り越しは、依然として強力な行レベルの置換を作成していません。重複オーバーライドのクリーンアップは在庫の衛生状態を改善し、用語集の厳格化はフロントドアの読み取り規律を改善し、レガシーカードの拡張は資金調達コンテキストを改善しますが、それらのどれも、`U13-5` でのリコール有効性のギャップを修復せず、`U0-2 / U0-3` でのセッション間 ID ドリフトフロアを置き換えず、現在の `D11 / D08 / D05 / D20` ネクストウォッチファミリーに取って代わるものでもありません。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`mind-upload-eeg-rq60-grant-dataset-playbook.html`、および `u13-2-brain-minus-prior-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Sat, 04 Apr 2026 01:14:45 GMT` を返すようになり、チェックされたボディには、このソース同期の前に `2026-04-04 09:05 JST` の文言が依然として表示されます。
+- 公式窓口のスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship` は依然として年次 `mid-January to early-April` 窓口として読み取られ、`2026-04-09` 必ず到着する側ルート、`Nakatani Foundation research grant = closed / next-cycle watch`、および `Secom General Research Grant = closed (2026-03-31 12:00 JST)` として引き続き扱われます。
+- 新しい読み取り専用 Todoist 監査では、まだ十分なルート カバレッジ (`items=206`、`projects=2`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期によって、現在のキューまたはクレーム サーフェスは**拡大されません**。制限された `11:04 JST` フロントドアとプレイブックの同期を追加する際に、同じキューを転送するだけです。
+
+## 2026 年 4 月 4 日の 09:05 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@e571567f017d`、`EEG-DATA@fbbb0d8c01e0`、`auto-research-funds@d7f6fb9bc158` の後の `2026-04-04 09:05 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、ルート置換ではなく繰り越しのままになります。`mind-upload` は、最近の事前トレーニングオーバーラップ監査に加えて以前の `08:07 JST` ルートホールド同期を保持するだけです。`EEG-DATA` は、`30,929` マージされた一意の行、`28,892` 高信頼行、`24,909` 即時行、および `24,539` 高信頼即時行を引き続き保持しますが、`OpenNeuro ds007020` を制限された残り側サポート ノートとして扱い、保持します。 `HeartBEAM` に加えて、バックアップ ファミリーとしてのみ `EEG at rest and with TMS` を共有し、`auto-research-funds` は、実質的な候補リストを置き換えることなく、`JGC-S` を隣接する滑走路としてのみ維持しながら、徹底的に検討された 4 月 4 日の奨学金の更新を追加します。
+- ルート セーフの読み取り値も意図的に狭いままです。`D10` は依然として唯一の明確なパブリック オープン プライマリ アンカーですが、`D03 / D02 / D01` は、これら 3 つのルートを直接のパブリック アンカーに変える最新のプル ヘッドがないため、公的表現では依然としてゲート サポート アンカーのままです。
+- 最新のリポジトリ全体の繰り越しは、依然として強力な行レベルの置換を作成しません。`OpenNeuro ds007020` は限定的な残りのメモとして残り、`HeartBEAM` はより強力なバックアップ/監視候補として残り、figshare `EEG at rest and with TMS` は狭い摂動バックアップのままですが、いずれも `U13-5` でのリコール有効性のギャップを修復せず、`U0-2 / U0-3` でのセッション間 ID ドリフトフロアを置き換えず、現在の `D11 / D08 / D05 / D20` の次の監視ファミリーに取って代わるものでもありません。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`mind-upload-eeg-rq60-grant-dataset-playbook.html`、および現在の 6 行パケットに対して `HTTP/2 200` が返されました。チェックされたフロントドアのヘッダーは `Last-Modified: Fri, 03 Apr 2026 23:18:55 GMT` を返し、チェックされたボディにはすでに `2026-04-04 08:07 JST` の文言が表示されています。現在の 6 行のパケットは `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT` を返しましたが、このソース同期の前に `2026-04-04 01:04 JST` の文言が依然として表面化していました。
+- 公式窓口のスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship` は依然として年次 `mid-January to early-April` 窓口として読み取られ、`2026-04-09` 必ず到着する側ルート、`Nakatani Foundation research grant = closed / next-cycle watch`、および `Secom General Research Grant = closed (2026-03-31 12:00 JST)` として引き続き扱われます。
+- 新しい読み取り専用 Todoist 監査では、まだ十分なルート カバレッジ (`items=206`、`projects=2`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期によって、現在のキューまたはクレーム サーフェスは**拡大されません**。現在の 6 行のパケットをすでにパブリッシュされているフロント ドアに位置合わせしながら、同じキューを転送するだけです。
+
+## 2026 年 4 月 4 日の 08:07 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@418c8f5d0ef9`、`EEG-DATA@dc6d833b83e9`、`auto-research-funds@58d8738be5d5` の後の `2026-04-04 08:07 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、ルート置換ではなく繰り越しのままです。`mind-upload` は、フロントドアの人間プロキシ比較を強化し、`EEG-DATA` は、`30,929` マージされた一意の行、`28,892` 高信頼行、`24,909` 即時行、および `24,539` 高信頼即時行を引き続き保持しながら、`HeartBEAM` と figshare `EEG at rest and with TMS` をバックアップ ファミリとしてのみ昇格し、`auto-research-funds` は、`JGC-S` 留学生奨学金を追加します。実際の候補リストを置き換えることなく、隣接する滑走路としてのみ使用できます。
+- ルート セーフの読み取り値も意図的に狭いままです。`D10` は依然として唯一の明確なパブリック オープン プライマリ アンカーですが、`D03 / D02 / D01` は、これら 3 つのルートを直接のパブリック アンカーに変える最新のプル ヘッドがないため、公的表現では依然としてゲート サポート アンカーのままです。
+- 最新のリポジトリ全体の繰り越しは、依然として強力な行レベルの置換を作成しません。`HeartBEAM` は、より強力なバックアップ/監視候補として役立ちますが、それでも、`U13-5` でのリコール有効性のギャップを修復したり、`U0-2 / U0-3` でセッション間の ID ドリフトフロアを置き換えたり、現在の `D11 / D08 / D05 / D20` の次の監視ファミリーを置き換えたりすることはできません。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u13-2-brain-minus-prior-route.html`、および `u13-5-perception-to-recall-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Fri, 03 Apr 2026 22:10:18 GMT` を返すようになりましたが、チェックされたボディには、このソース同期の前の初期の `2026-04-04 01:04 JST` の文言が依然として表示されています。
+- 公式窓口のスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship` は依然として年次 `mid-January to early-April` 窓口として読み取られ、`2026-04-09` 必ず到着する側ルート、`Nakatani Foundation research grant = closed / next-cycle watch`、および `Secom General Research Grant = closed (2026-03-31 12:00 JST)` として引き続き扱われます。
+- 新しい読み取り専用 Todoist 監査では、まだ十分なルート カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Keio graduate scholarship=2`、`G-7=1`、`ENEOS=1`、`Doumei=0`、`Kenkyu no Susume=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 4 日の 01:04 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@9b6a8b971ba0`、`EEG-DATA@56d765da60b`、`auto-research-funds@3c8569e28` の後の `2026-04-04 01:04 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、ルート置換ではなく繰り越しのままになります。`mind-upload` は、以前の `00:06 JST` ルートの再読み取りとフィールド レベルのアーティファクト スタック開示の強化を保持するようになり、`EEG-DATA` は、`30,921` マージされた一意の行、`28,884` 高信頼性行、`24,900` 即時行、および `24,530` 高信頼性即時行を維持しながら、`Numbers` および `PRIOS` のパブリック OpenNeuro メタデータを強化します。 `auto-research-funds` は、実用的な候補リストを変更することなく、`同盟育成会` および `研究のすゝめ奨学金` の現在のカバレッジを追加します。
+- ルート セーフの読み取り値も意図的に狭いままです。`D10` は依然として唯一の明確なパブリック オープン プライマリ アンカーですが、`D03 / D02 / D01` は、これら 3 つのルートを直接のパブリック アンカーに変える最新のプル ヘッドがないため、公的表現では依然としてゲート サポート アンカーのままです。
+- 最新のリポジトリ全体の繰り越しは、依然として強力な行レベルの置換を作成しません。`Numbers` と `PRIOS` はサポート空間の特異性を向上させますが、`U13-5` でのリコール有効性のギャップを修復したり、`U0-2 / U0-3` でのクロスセッション ID ドリフトフロアを置き換えたり、現在の `D11 / D08 / D05 / D20` ネクストウォッチファミリーを置き換えたりすることはありません。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u13-2-brain-minus-prior-route.html`、および `u13-5-perception-to-recall-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Fri, 03 Apr 2026 15:13:06 GMT` を返すようになりましたが、チェックされたボディには、このソース同期の前の初期の `2026-04-04 00:06 JST` の文言が依然として表示されています。
+- 公式窓口のスポット チェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09 (must arrive)`、`Nakatani Foundation research grant = closed / next-cycle watch`、`Secom General Research Grant = closed (2026-03-31 12:00 JST)` という同じ実用的なブリッジが維持されます。
+- 新しい読み取り専用 Todoist 監査では、まだ十分なルート カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Keio graduate scholarship=2`、`G-7=1`、`ENEOS=1`、`同盟会=0`、`研究のすゝめ=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 4 日の 00:06 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@84d84fb5a82d`、`EEG-DATA@b468ecc5f8c0`、`auto-research-funds@eccee095a939` の後の `2026-04-04 00:06 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- プルされた最新のデルタは、ルート置換ではなく引き続きキャリーフォワードです。`mind-upload` は以前の `23:06 JST` ルート再読み込み追加を保持するだけになり、`EEG-DATA` は `fast mapping semantic integration EEG dataset` を追加し、`summary.json` は `30,921` マージされた一意の行、`28,884` 高信頼行、`24,900` 即時行、および `24,530` 高信頼即時行を報告し、`auto-research-funds` は現在のルートを置き換えずに `Iizuka current card and Korean legacy sync` を追加します。 `D10 / D03 / D02 / D01` ファミリー、または次の目玉となる `D11 / D08 / D05 / D20` ファミリー。
+- したがって、ルート セーフ アクセスの文言は依然として変更されていません。最新のプル ヘッドが `D03 / D02 / D01` を即時パブリック アンカーに変えることはないため、パブリック セーフの文言では、`D10` が現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーとして維持され、一方、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`mind-upload-eeg-rq60-grant-dataset-playbook.html`、`u13-2-brain-minus-prior-route.html`、`u13-5-perception-to-recall-route.html` に対して `HTTP/2 200` が返されました。チェックされたボディは、新しいキューやクレームではなく、依然として `brief / bridge / U13-2` 上で `22:04 JST`、`issue` 上で `22:04/22:05 JST` として浮上しました。
+- この実行での公式ウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund` は開いたまま (`2026-02-02 - 2026-04-17 17:00`)、`Nakatani Foundation graduate scholarship` は開いたまま (`2026-04-01 - 2026-05-25 15:00`)、`Kashinome Scholarship` は学生滑走路側ルートのまま (`2026-01-14 - 2026-04-09 must arrive`)、`Nakatani Foundation research grant` は閉じたまま/次のサイクルの監視、`Secom General Research Grant` は現在のサイクルでは閉じたままです (`2026-03-31 12:00 JST`)。
+- 新しい読み取り専用 Todoist 監査では、まだ十分なルート カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Keio graduate scholarship=2`、`G-7=1`、`ENEOS=1`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期によって、現在のキューまたはクレーム サーフェスは**拡大されません**。同じキューを実際の最新のプルヘッド、最新のライブ公開ボディ、公式ウィンドウ、および Todoist の十分性チェックに転送するだけです。
+
+## 2026 年 4 月 3 日の 23:06 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@ec7a7dd713e9`、`EEG-DATA@46f6b56c693c`、`auto-research-funds@b3d3c531729a` の後の `2026-04-03 23:06 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- プルされた最新のデルタは、ルート置換ではなく引き続き転送されます。`mind-upload` は以前の `22:04 JST` ルート ホールド同期をそのまま保持し、`EEG-DATA` は `motion sickness` および `swallowing EEG` データセットを追加します。一方、`summary.json` は、`30,920` マージされた一意の行、`28,883` 高信頼性行、`24,899` 即時行、および `24,529` 高信頼性即時行を報告し、`auto-research-funds` は深化されます。現在の `D10 / D03 / D02 / D01` ファミリや注目の次期 `D11 / D08 / D05 / D20` ファミリを置き換えることなく、`KIRII / Pigeon / Nakato / Takashima` 奨学金補償に加えて `22:04 JST` 資金補助も提供されます。
+- したがって、ルート セーフ アクセスの文言は依然として変更されていません。最新のプル ヘッドが `D03 / D02 / D01` を即時パブリック アンカーに変えることはないため、パブリック セーフの文言では、`D10` が現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーとして維持され、一方、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- この実行のブラウザ レベルのライブ チェックでは、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`mind-upload-eeg-rq60-grant-dataset-playbook.html`、および現在の 6 行パケットに対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Fri, 03 Apr 2026 13:18:48 GMT` を返し、フロントドア ページと `U13-2` はすでに `22:04 JST` を表しており、他の 5 行のパケットは、このソース同期の前にまだ初期の `2026-04-02 / 23:08 JST` ホールド ノートを表しています。
+- この実行での公式ウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund` は開いたまま (`2026-02-02 - 2026-04-17 17:00`)、`Nakatani Foundation graduate scholarship` は開いたまま (`2026-04-01 - 2026-05-25 15:00`)、`Kashinome Scholarship` は学生滑走路側ルートのまま (`2026-01-14 - 2026-04-09 must arrive`)、`Nakatani Foundation research grant` は閉じたまま/次のサイクルの監視、`Secom General Research Grant` は現在のサイクルでは閉じたままです (`2026-03-31 12:00 JST`)。
+- 新しい読み取り専用 Todoist 監査では、まだ十分なルート カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Keio graduate scholarship=2`、`G-7=1`、`ENEOS=1`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期によって、現在のキューまたはクレーム サーフェスは**拡大されません**。同じキューを実際に最後にプルされたヘッド、ライブ行パケット、公式ウィンドウ、および Todoist の十分性チェックに転送するだけです。
+
+## 2026 年 4 月 3 日の 22:04 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@1ab35b64796f3936e525befb5d9428d789a16263`、`EEG-DATA@be3d03d1c286dcd37fb056317a693e47c39f7f3a`、`auto-research-funds@845e6849a6c36e6e83394e32cf8dc4b5fe6fdc07` の後の `2026-04-03 22:04 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルされたデルタは現在、`EEG-DATA` に集中しています。`summary.json` は、最新の完全リフレッシュ後に、マージされた固有の行、`28,881` の高信頼行、`24,898` の即時行、および `24,528` の高信頼の即時行を報告します。一方、`mind-upload` と `auto-research-funds` は、現在の `D10 / D03 / D02 / D01` ファミリや次期注目の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、以前の `21:05 JST` の追加機能を引き継ぐだけです。
+- したがって、ルート セーフ アクセスの文言は依然として変更されていません。最新のプル ヘッドが `D03 / D02 / D01` を即時パブリック アンカーに変えることはないため、パブリック セーフの文言では、`D10` が現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーとして維持され、一方、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u13-2-brain-minus-prior-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Fri, 03 Apr 2026 12:24:26 GMT` を返すようになりましたが、チェックされたボディは、このソース同期の前に、`issue / brief / bridge` では `21:05 JST`、`U13-2` では `21:05 JST` と `11:07 JST` がすでに表示されています。
+- この実行での公式ウィンドウ スポット チェックでは、依然として実用的なブリッジが狭いままです。`Kura Fund` は開いたまま (`2026-02-02 - 2026-04-17 17:00`)、`Nakatani Foundation graduate scholarship` は開いたまま (`2026-04-01 - 2026-05-25 15:00`)、残りの時計/閉じた読み取り値は `21:05 JST` の再読み取りから変更されていません。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` 監査では、まだ十分なルート カバレッジ (`items=205`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Keio graduate scholarship=2`、`G-7=1`、`ENEOS=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期によって、現在のキューまたはクレーム サーフェスは**拡大されません**。同じキューを実際の最新のプルヘッド、ライブパブリックヘッダー、公式ウィンドウ、および Todoist の十分性チェックに転送するだけです。
+
+## 2026 年 4 月 3 日の 21:05 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@3db1aa653b74d164c3a57b75677e345ea10356e0`、`EEG-DATA@c10c95274ecf1397768eb28de48aac8ce925c22d`、`auto-research-funds@4a67e06b530bc742521f80fa5b13ccbe1115ebb9` の後の `2026-04-03 21:05 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- プルされた最新のデルタは、ルート置換ではなく引き続きキャリーフォワードです。`mind-upload` は `20:05 JST` ルートホールドの追加のみを保持し、`EEG-DATA` は、不足している EEG データセットに対する BDSP 手動ディープ ダイブを追加すると同時に、`30,914` マージされた一意の行、`28,877` 高信頼行、`24,896` 即時行、および `24,526` 高信頼即時行をレポートし、`auto-research-funds` は `20:05 JST` のみを保持するようになりました。現在の `D10 / D03 / D02 / D01` ファミリや次期注目の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、追加の資金調達を行うことができます。
+- したがって、ルート セーフ アクセスの文言は依然として変更されていません。最新のプル ヘッドが `D03 / D02 / D01` を即時パブリック アンカーに変えることはないため、パブリック セーフの文言では、`D10` が現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーとして維持され、一方、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u13-2-brain-minus-prior-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Fri, 03 Apr 2026 11:17:44 GMT` を返すようになりましたが、チェックされたボディは、このソース同期の前に、`issue / brief / bridge` では初期の `20:05 JST` ホールド ノートが、`U13-2` では `11:07 JST` がすでに表示されていました。
+- この実行での公式ウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund` は開いたまま (`2026-02-02 - 2026-04-17 17:00`)、`Nakatani Foundation graduate scholarship` は開いたまま (`2026-04-01 - 2026-05-25 15:00`)、`Kashinome Scholarship` は学生滑走路側ルートのまま (`2026-01-14 - 2026-04-09 must arrive`)、`Nakatani Foundation research grant` は閉じたまま/次サイクル監視 (現在の公開ページの `募集を終了しました`)、`Secom General Research Grant` は現在のサイクルでは閉じたままです (`2026-03-31 12:00 JST`)。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` 監査では、まだ十分なルート カバレッジ (`items=205`、`projects=2`、`Nakatani family=11`、`G-7=1`、`ENEOS=0`、`Keio graduate scholarship=2`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期によって、現在のキューまたはクレーム サーフェスは**拡大されません**。同じキューを最新のプルされたヘッド、ライブパブリックヘッダー、公式ウィンドウ、および Todoist の十分性チェックに転送するだけです。
+
+## 2026 年 4 月 3 日の 20:05 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@b4fd73d9e98301c918b57541704a95246d69ae09`、`EEG-DATA@649ff098ab577f11065562379150acea1aa07002`、`auto-research-funds@7c1b835d1d138214f282dc85d2f06d9faa522310` の後の `2026-04-03 20:05 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジを広げるのではなく、依然としてサポートスペースを深めています。`mind-upload` は、現在の 6 つ以外の人体熱証拠を `passive / task-linked macro thermometry` と `perturbation-conditioned thermal routes` に分割し、`EEG-DATA` は、制限付きの `Transcranial Magnetic Stimulation in Alzheimer's disease-Data` BDSP ディープダイブを追加すると同時に、`30,912` マージされた固有行、`28,875` 高信頼行、および `24,894` 直接使用可能な行を報告します。また、`auto-research-funds` は、`ENEOS` と `ENEOS` の現在のカードのカバレッジを完了します。現在の `D10 / D03 / D02 / D01` ファミリや次期注目の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、`8,600` 援助 ID、`4,308` 行、および `3,959` 公式ソース行を引き続きレポートしながら、`G-7` 奨学金を提供します。
+- したがって、ルート セーフ アクセスの文言は依然として変更されていません。最新のプル ヘッドが `D03 / D02 / D01` を即時パブリック アンカーに変えることはないため、パブリック セーフの文言では、`D10` が現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーとして維持され、一方、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u13-2-brain-minus-prior-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Fri, 03 Apr 2026 10:19:46 GMT` を返すようになりましたが、チェックされたボディは、このソース同期前の以前の `11:05/11:07 JST` ホールド ノートを依然として表示しています。
+- この実行での公式ウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund` は開いたまま (`2026-02-02 - 2026-04-17 17:00`)、`Nakatani Foundation graduate scholarship` は開いたまま (`2026-04-01 - 2026-05-25 15:00`)、`Kashinome Scholarship` は学生滑走路側ルートのまま (`2026-01-14 - 2026-04-09 must arrive`)、`Nakatani Foundation research grant` は閉じたまま/次サイクル監視 (現在の公開ページの `募集を終了しました`)、`Secom General Research Grant` は現在のサイクルでは閉じたままです (`2026-03-31 12:00 JST`)。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` 監査では、まだ十分なルート カバレッジ (`items=205`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、現在のキューまたはクレーム サーフェスを**拡大しません**。同じキューを最新のプルされたヘッド、ライブパブリックヘッダー、公式ウィンドウ、および Todoist の十分性チェックに転送するだけです。
+
+## 2026 年 4 月 3 日の 11:05 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@f70432e4a6c8a52afafbc57b98c8f0e360c85d4e`、`EEG-DATA@1981d34c5f71deceb2549684db9173b6f54d2b89`、`auto-research-funds@bfebe94da875d709756746285f133ef30905fd38` の後の `2026-04-03 11:05 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジを広げるのではなく、依然としてサポートスペースを狭めています。`mind-upload`は、現在の6つ以外の`sleep replay integrity / physiology-gate`の文言を強化し、`EEG-DATA`はインベントリを更新し、`COG-BCI`ファミリーを詳細に調べながら、`30,904`マージされた一意の行、`28,867`高信頼行、および`24,890`直接使用可能な行を報告します。`auto-research-funds`は、`10:06 JST mind-upload funding addendum`を引き継ぎながら、`8,596`補助IDを報告します。現在の `D10 / D03 / D02 / D01` ファミリや次期注目の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、`4,308` 行と `3,958` 公式ソース行を提供します。
+- したがって、ルート セーフ アクセスの文言は依然として変更されていません。最新のプル ヘッドが `D03 / D02 / D01` を即時パブリック アンカーに変えることはないため、パブリック セーフの文言では、`D10` が現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーとして維持され、一方、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u13-2-brain-minus-prior-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Fri, 03 Apr 2026 01:31:28 GMT` を返すようになりましたが、チェックされたボディは、このソース同期前の以前の `05:12 JST` ホールド ノートを依然として表示しています。
+- この実行での公式ウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund` は開いたまま (`2026-02-02 - 2026-04-17 17:00`)、`Nakatani Foundation graduate scholarship` は開いたまま (`2026-04-01 - 2026-05-25 15:00`)、`Kashinome Scholarship` は学生滑走路側ルートのまま (`2026-01-14 - 2026-04-09 must arrive`)、`Nakatani Foundation research grant` は閉じたまま/次サイクル監視 (現在の公開ページの `募集を終了しました`)、`Secom General Research Grant` は現在のサイクルでは閉じたままです (`2026-03-31 12:00 JST`)。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` 監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、現在のキューまたはクレーム サーフェスを**拡大しません**。同じキューを最新のプルされたヘッド、ライブパブリックヘッダー、公式ウィンドウ、および Todoist の十分性チェックに転送するだけです。
+
+## 2026 年 4 月 3 日の 05:12 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@a9fc5d1cb691f3669c40803604e78cf87fab4eed`、`EEG-DATA@8c3ace28bad0b3bac259caa440994e5d05bfc7d1`、`auto-research-funds@35756f8381c47daa24bb70bb7a1ff88d1dcf76bc` の後の `2026-04-03 05:12 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジを広げるのではなく、依然としてサポート スペースを狭めています。`mind-upload` は現在、アクティブ キューを変更せずにエクスポートされたルート ミラーの位置合わせを維持する `docs: sync github wiki export` ヘッドにあり、`EEG-DATA` は、`30,900` マージされた一意の行、`28,863` 高信頼行、および `24,885` 直接使用可能な行を維持しながら、最近の `EESM17` メタデータの深化に加えて `VR navigation dataset` 出力更新を繰り越し、`auto-research-funds` は追加します。最近の `JSSF research publication` リフレッシュに加えて、`JSPS overseas fellow` の現在のカードのスナップショットが追加され、現在の `D10 / D03 / D02 / D01` ファミリや次期注目の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、`8,594` エイド ID、`4,307` 行、`3,957` 公式ソース行がレポートされるようになりました。
+- したがって、ルート セーフ アクセスの文言は依然として変更されていません。最新のプル ヘッドが `D03 / D02 / D01` を即時パブリック アンカーに変えることはないため、パブリック セーフの文言では、`D10` が現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーとして維持され、一方、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u13-2-brain-minus-prior-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Thu, 02 Apr 2026 19:17:56 GMT` を返すようになりましたが、チェックされたボディは、このソース同期前の以前の `04:05/04:06 JST` ホールド ノートを依然として表示しています。
+- この実行での公式ウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund` は開いたまま (`2026-02-02 - 2026-04-17 17:00`)、`Nakatani Foundation graduate scholarship` は開いたまま (`2026-04-01 - 2026-05-25 15:00`)、`Kashinome Scholarship` は学生滑走路側ルートのまま (`2026-01-14 - 2026-04-09 must arrive`)、`Nakatani Foundation research grant` は閉じたまま/次サイクル監視 (現在の公開ページの `募集を終了しました`)、`Secom General Research Grant` は現在のサイクルでは閉じたままです (`2026-03-31 12:00 JST`)。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` 監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、現在のキューまたはクレーム サーフェスを**拡大しません**。同じキューを最新のプルされたヘッド、ライブパブリックヘッダー、公式ウィンドウ、および Todoist の十分性チェックに転送するだけです。
+
+## 2026 年 4 月 3 日の 04:06 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@f5e13ebdc4748ce683d905c37cabfdb3c53036bb`、`EEG-DATA@53f5c8166faf0d5fcebfb5c39741d4992eb82a39`、`auto-research-funds@1f190fec93a9180a27443b1fe2b31f9488dfbf74` の後の `2026-04-03 04:06 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジを広げるのではなく、依然としてサポート スペースを狭めています。`mind-upload` は、現在の 6 つ以外の `BCSFB / human-proxy composition` 文献同期を引き継ぎ、`EEG-DATA` は、現在のアンカー ファミリを置き換えないカタログ更新後に `30,900` マージされた一意の行、`28,863` の信頼性の高い行、および `24,885` 直接使用可能な行を保持し、`auto-research-funds` は、`8,593` 補助を報告しながら、`Itoh domestic scholarship` の周囲の現在のカードおよびレジストリ レイヤーを更新します。 ID、`4,306` 行、および `3,956` 公式ソース行。現在の `D10 / D03 / D02 / D01` ファミリや次期注目の `D11 / D08 / D05 / D20` ファミリを置き換えることはありません。
+- したがって、ルート セーフ アクセスの文言は依然として変更されていません。最新のプル ヘッドが `D03 / D02 / D01` を即時パブリック アンカーに変えることはないため、パブリック セーフの文言では、`D10` が現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーとして維持され、一方、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u13-2-brain-minus-prior-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Thu, 02 Apr 2026 18:14:39 GMT` を返すようになりました。
+- この実行での公式ウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund` は開いたまま (`2026-02-02 - 2026-04-17 17:00`)、`Nakatani Foundation graduate scholarship` は開いたまま (`2026-04-01 - 2026-05-25 15:00`)、`Kashinome Scholarship` は学生滑走路側ルートのまま (`2026-01-14 - 2026-04-09 must arrive`)、`Nakatani Foundation research grant` は閉じたまま/次サイクル監視 (現在の公開ページの `募集を終了しました`)、`Secom General Research Grant` は現在のサイクルでは閉じたままです (`2026-03-31 12:00 JST`)。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` 監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、現在のキューまたはクレーム サーフェスを**拡大しません**。同じキューを最新のプルされたヘッド、ライブパブリックヘッダー、公式ウィンドウ、および Todoist の十分性チェックに転送するだけです。
+
+## 2026 年 4 月 2 日の 23:08 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@f5d1d1dd1683`、`EEG-DATA@ee1463d28288`、`auto-research-funds@ec24a355abbc` の後の `2026-04-02 23:08 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジを広げるのではなく、ルート規律とサポート空間をさらに深めます。`mind-upload` は、現在の 6 つ以外の原因対人間プロキシ ブリッジとローカル ルート/プロキシの境界を明確にし、`EEG-DATA` は EEG 候補のキュレーションを改良し、`OpenNeuro ds007615` を追加すると同時に、現在の README で `30,896` マージされた一意の行、`28,859` の高信頼行、および `24,882` の直接使用可能な行を報告します。スナップショット、`auto-research-funds` は、現在の `D10 / D03 / D02 / D01` ファミリや次期注目の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、`Geo-Kagaku` の現在のカードと README 統計の更新を追加します。
+- したがって、ルート セーフ アクセスの文言は依然として変更されていません。最新のプル ヘッドが `D03 / D02 / D01` を即時パブリック アンカーに変えることはないため、パブリック セーフの文言では、`D10` が現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーとして維持され、一方、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u13-2-brain-minus-prior-route.html` に対して `HTTP/2 200` が返されました。チェックされたヘッダーは `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT` を返すようになりました。
+- この実行での公式ウィンドウ スポット チェックでは、依然として実質的なブリッジが狭いままです。`Kura Fund` はオープンのまま (`2026-02-02 - 2026-04-17 17:00`)、`Nakatani Foundation graduate scholarship` はオープンのまま (`2026-04-01 - 2026-05-25 15:00`)、`Nakatani Foundation research grant` はクローズされたまま/次のサイクル監視 (`募集期間 2025-06-01 - 2025-07-07`)、そして `Secom General Research Grant` は現在のサイクルではクローズされたままです (`2026-03-31 12:00 JST`)。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` 監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、現在のキューまたはクレーム サーフェスを**拡大しません**。同じキューを最新のプルされたヘッド、ライブパブリックヘッダー、公式ウィンドウ、および Todoist の十分性チェックに転送するだけです。
+
+## 2026 年 4 月 2 日の 19:03 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@e1a7e7e2f22c`、`EEG-DATA@a7f9390492fd`、`auto-research-funds@00cdbaa9a122` の後の `2026-04-02 19:03 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジを広げるのではなく、依然としてサポートを深めています。`mind-upload` は、現在の 6 つ以外の人間の神経血管ページでの `blood-CSF barrier / choroid-plexus` ルート分割を深め、`EEG-DATA` は、現在の README スナップショットでマージされた固有行 `30,892`、信頼性の高い行 `28,855`、および直接使用可能な行 `24,880` を引き続き報告し、`auto-research-funds` は、最新の概要を `8,590` 支援 ID、`4,301` 行に維持します。現在の `D10 / D03 / D02 / D01` ファミリや次期注目の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、`3,951` 公式ソースの行を追加します。
+- ルートセーフ アクセスの文言も変更されません。`D10` は現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。これは、直接ライブ アクセスの再読み込みでは、これら 3 つのサポート アンカーの現在の `IEEE DataPort` ページに `Subscription Required` と `LOGIN TO ACCESS DATASET FILES` が表示されるためです。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u7-2-timing-metric-route.html` に対して `HTTP/2 200` が返されました。これらのチェックされたページは `Last-Modified: Thu, 02 Apr 2026 09:37:54 GMT` を返しましたが、ルートに面した本文の文言には、以前の `18:06 JST` 保留メモが依然として現れていました。
+- 公式のウィンドウスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09 (must arrive)`、`Secom General Research Grant = closed (March 31, 2026 at 12:00 JST)`、`Nakatani Foundation research grant = closed / next-cycle watch` という実際的なブリッジは依然として狭いままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、現在のキューまたはクレーム サーフェスを**拡大しません**。同じキューを最新のリポジトリ ヘッド、ライブ パブリック ヘッダー、公式ウィンドウ、Todoist 十分性チェックに転送するだけで、ルートホールドの文言を最新のプルされたヘッドに更新します。
+
+## 2026 年 4 月 2 日の 18:06 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@85b6603b569b`、`EEG-DATA@a7f9390492fd`、`auto-research-funds@b6c0d0f4eeb7` の後の `2026-04-02 18:06 JST` での実際のプルの再チェックでは、現在のパブリック 6 とヘッドラインのネクストウォッチ キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジを拡大するのではなく、依然としてサポートを深めています。`mind-upload` は `U7-2` パブリック ブリッジの文言のみを同期し、`EEG-DATA` は `OSF gazx2` 信頼性 EEG メタデータと `OpenNeuro ds007081` を詳細に調べますが、同時に `30,892` マージされた一意の行、`28,855` 高信頼性の行、および `24,880` 直接使用可能な行を現在の README スナップショットに報告し、`auto-research-funds` は README の概要を次のように更新します。現在の `D10 / D03 / D02 / D01` ファミリや次期注目の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、`8,590` エイド ID、`4,301` 行、および `3,951` 公式ソース行を提供します。
+- ルートセーフ アクセスの文言も変更されません。`D10` は現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。これは、直接ライブ アクセスの再読み込みでは、これら 3 つのサポート アンカーの現在の `IEEE DataPort` ページに `Subscription Required` と `LOGIN TO ACCESS DATASET FILES` が表示されるためです。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u7-2-timing-metric-route.html` に対して `HTTP/2 200` が返されました。チェックされたページは `Last-Modified: Thu, 02 Apr 2026 08:22:50 GMT` を返しました。
+- 公式のウィンドウスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09 (must arrive)`、`Secom General Research Grant = closed (March 31, 2026 at 12:00 JST)`、`Nakatani Foundation research grant = closed / next-cycle watch` という実際的なブリッジは依然として狭いままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、現在のキューまたはクレーム サーフェスを**拡大しません**。同じキューを最新のリポジトリ ヘッド、ライブ パブリック ヘッダー、公式ウィンドウ、および Todoist 十分性チェックに転送するだけです。
+
+## 2026 年 4 月 2 日の 11:05 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@208e59e2180c`、`EEG-DATA@00d85380f3fd`、および `auto-research-funds@f4ba35518400` の後の `2026-04-02 11:05 JST` での実際のプルの再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジではなく依然としてサポートを強化しています。`mind-upload` は 10:07 ルートホールド パケットを更新し、`EEG-DATA` は維持されている `ChineseEEG-2` リリースとパブリック `auditory-eeg` ファミリを詳細に調べながら、`30,887` マージされた一意の行、`28,850` 高信頼行、および `24,875` すぐに使用可能な行を引き続き報告します。`auto-research-funds` は、現在の `D10 / D03 / D02 / D01` ファミリや次に`D11 / D08 / D05 / D20`ファミリーを見てみましょう。スピーチ側の公開バックアップのはしごはより明確になりましたが、それでも `D10` に取って代わるものではなく、`U13-5` を制限し続けているリコールの有効性のギャップを修正するものでもありません。
+- ルートセーフ アクセスの文言も変更されません。`D10` は現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。これは、直接ライブ アクセスの再読み取りでは、これら 3 つの `IEEE DataPort` ページで `Subscription Required` と `LOGIN TO ACCESS DATASET FILES` が依然として表示されるためです。
+- この実行のブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u8-1-closed-loop-delay-tolerance-route.html` に対して `200` が返されました。チェックされたページは `Last-Modified: Thu, 02 Apr 2026 01:22:44 GMT` を返しました。
+- 公式のウィンドウスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09`、`Secom General Research Grant = closed (March 31, 2026 at 12:00 JST)`、`Nakatani Foundation research grant = next-cycle watch` という実際的なブリッジは依然として狭いままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、ルートホールドの文言と音声側のサポートの読み取りのみを更新します。現在のキューやクレーム サーフェスは拡大しません。
+
+## 2026 年 4 月 2 日の 11:09 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@208e59e2180c`、`EEG-DATA@00d85380f3f`、および `auto-research-funds@f4ba35518400` の後の `2026-04-02 11:09 JST` での実際のプルの再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 現在の `mind-upload` ヘッドは、以前の 10:07 ルートホールド パケット リフレッシュ自体であり、最新のアップストリーム移動は `EEG-DATA`: `chore: deep-dive ChineseEEG-2 and PhysioNet auditory EEG` 上にあります。更新された概要では、引き続き `30,887` マージされた固有行、`28,850` 高信頼行、および `24,875` 直接使用可能な行が報告され、`auto-research-funds` は同じ実用的な候補リストを維持し、そのリポジトリ統計では、現在の `D10 / D03 / D02 / D01` ファミリまたは次の監視対象の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、引き続き `8,585` 補助 ID、`4,293` 行、および `3,943` 公式ソース行を読み取ります。
+- ルート セーフ アクセスの文言も変更されません。`D10` は現在の 6 つのルートの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。これは、直接ライブ アクセスの再読み取りでは依然としてこれら 3 つのルート上で `IEEE DataPort` ログインおよびサブスクリプション ゲートが表示されるためです。
+- 最新のパブリックオープン付属物は、キューを広げるのではなく、行固有のバックアップ カバレッジを強化するだけです。`ds007591` と `ds007602` は、`U13-2` の音声側バックアップ オプションを強化しますが、公開された参加者はそれぞれ 3 人だけです。`ChineseEEG-2` は、`U13-5` のパブリック リーディング/リスニング アラインメント カバレッジを強化しますが、意図したリコール ラベル付きブランチはまだ公開しません。また、PhysioNet `auditory-eeg` は明らかにパブリック オープンですが、代替ではなく 1 日の 4 チャネル カバレッジのままです。 `U0-2 / U0-3`の中の`D02`。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u8-1-closed-loop-delay-tolerance-route.html` に対して `200` が返されました。チェックされたページは `Last-Modified: Thu, 02 Apr 2026 01:22:44 GMT` を返すようになりました。
+- 公式のウィンドウスポットチェックは依然として現実的な橋渡しを狭めています。`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship` の公式ページは依然として年次 `mid-January to early-April` ウィンドウとして表示され、`Secom General Research Grant` は依然として現在のサイクルが終了した (`March 31, 2026 at 12:00 JST`) と表示されています。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、最新の `EEG-DATA` キャリーフォワードの後に​​、ルート ホールドの文言とバックアップ ファミリの読み取り値のみを更新します。現在のキューやクレーム サーフェスは拡大しません。
+
+## 2026 年 4 月 2 日の 10:07 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@be507c810b11`、`EEG-DATA@3f20f48cca6e`、および `auto-research-funds@fb32c05163f4` の後の `2026-04-02 10:07 JST` での実際のプルの再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジではなく依然としてサポートを強化しています。`mind-upload` は、現在の 6 つ以外の EEG 基盤セットアップと同等の境界を洗練し、`EEG-DATA` は HBN EEG リリース 11 ルートを詳細に調査し、マージされた一意の行、`28,850` の高信頼行、および直接使用可能な行 `24,871` を報告します。また、`auto-research-funds` は、リポジトリ統計が依然として `8,585` である間、同じ実用的な候補リストを維持します。現在の `D10 / D03 / D02 / D01` ファミリや次の注目の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、Aid ID、`4,293` 行、および `3,943` 公式ソース行を追加できます。
+- ルート セーフ アクセスの文言も変更されません。`D10` は現在の 6 つのルートの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。これは、直接ライブ アクセスの再読み取りでは依然としてこれら 3 つのルート上で `IEEE DataPort` ログインおよびサブスクリプション ゲートが表示されるためです。
+- 行レベルのブリッジ読み取りは、変更されていないキュー内でのみ強化されます。`U13-5` は、表示される `D03` メタデータがまだリコール固有のラベルを公開していないため、明示的なリコール有効性の警告を維持しており、`U14-4 / U14-2` は、`D13` を現在の `D01` 公開フロアを超えて最初の公開再実行サポート ファミリとして維持しています。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u8-1-closed-loop-delay-tolerance-route.html` に対して `200` が返されました。チェックしたページでも `Last-Modified: Thu, 02 Apr 2026 00:15:06 GMT` が返されました。
+- このソース同期により、パブリック側の行の文言と資金提供側の `60RQ` ドシエの文言も同じ `Dxx + DOI + dataset name + access class` 標準に再調整されるため、ブリッジ ページ、ディープドシエ、資金リポジトリは再び同じ正規の行パケットを指すようになります。
+- 公式のウィンドウスポットチェックは依然として現実的な橋渡しを狭めています。`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship` の公式ページは依然として年次 `mid-January to early-April` ウィンドウとして表示され、`Secom General Research Grant` は依然として現在のサイクルが終了した (`March 31, 2026 at 12:00 JST`) と表示されています。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、パブリック エントリ ページと正規の行パケット上のルートホールドの文言のみを更新します。現在のキューやクレーム サーフェスは拡大しません。
+
+## 2026 年 4 月 2 日の 09:05 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@d7f30648fc40`、`EEG-DATA@ac8cc6fc8e74`、および `auto-research-funds@31ec17305f6a` の後の `2026-04-02 09:05 JST` での実際のプルの再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジではなく依然としてサポートを強化しています。`mind-upload` は、現在の 6 つ以外に分割されている文献ミエリンルートを強化し、`EEG-DATA` は `aw8sz` の詳細を追加し、`merged_unique=30886`、`high_confidence=28849`、および `access_counts_high.immediate=24500` をレポートするようになりました。`auto-research-funds` は、`Aoi graduate scholarship` / `JSSF research grant` のマージに加えて、`8,585` 補助 ID、`4,293` 行、および `3,943` への README 統計の更新を繰り越します。現在の `D10 / D03 / D02 / D01` ファミリや次の注目の `D11 / D08 / D05 / D20` ファミリを置き換えることなく、公式ソースの行を表示します。
+- ルート セーフ アクセスの文言も変更されません。`D10` は現在の 6 つのルートの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。これは、直接ライブ アクセスの再読み取りでは依然としてこれら 3 つのルート上で `IEEE DataPort` ログインおよびサブスクリプション ゲートが表示されるためです。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u8-1-closed-loop-delay-tolerance-route.html` に対して `200` が返されました。チェックされたページも `Last-Modified: Wed, 01 Apr 2026 23:29:12 GMT` を返し、ライブ ページには、このソース更新前の以前の `04:09 JST` / `03:08 JST` 再読メモがまだ表示されていました。
+- 公式のウィンドウスポットチェックは依然として現実的な橋渡しを狭めています。`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship` の公式ページは依然として年次 `mid-January to early-April` ウィンドウとして表示され、`Secom General Research Grant` は依然として現在のサイクルが終了した (`March 31, 2026 at 12:00 JST`) と表示されています。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、パブリック エントリ ページ上のルートホールドの文言のみを更新します。現在のキューやクレーム サーフェスは拡大しません。
+
+## 2026 年 4 月 2 日の 03:08 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@d391dbede29e`、`EEG-DATA@f9df9ba85a6`、および `auto-research-funds@95f804055809` の後の `2026-04-02 03:08 JST` での実際のプルの再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジではなく依然としてサポートを強化しています。`mind-upload`は、現在の6つの外部にECM / PNN文献ルートを分割し、`EEG-DATA`は、現在の`D10 / D03 / D02 / D01`ファミリーまたは次の注目の`D11 / D08 / D05 / D20`ファミリーを置き換えることなく、2つの即時アクセスの詳細な候補（`10.48804/NV4RGL`および`10.7281/T1/B660D2`）を追加し、`auto-research-funds`は、実質的な候補リストを変更することなく、Gakusho / NII資金の統合とREADME統計の更新を追加します。
+- ルートセーフ アクセスの文言も変更されません。`D10` は現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u8-1-closed-loop-delay-tolerance-route.html` に対して `200` が返されました。チェックされたページでも `Last-Modified: Wed, 01 Apr 2026 17:27:08 GMT` が返され、ライブ ルートの順序では依然として同じ順序で同じ 6 つの名前が付けられていました。
+- 公式のウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09`、`Secom General Research Grant` は現在のサイクル (`March 31, 2026 at 12:00 JST`) では閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+- このソース同期は、パブリック エントリ ページ上のルートホールドの文言のみを更新します。現在のキューやクレーム サーフェスは拡大しません。
+
+## 2026 年 4 月 2 日の 00:03 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@cff3abab58e8`、`EEG-DATA@a885ef3f029d`、および `auto-research-funds@0f60872538dc` の後の `2026-04-02 00:03 JST` での実際のプルの再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジではなく依然としてサポートを強化しています。`mind-upload` は、現在の 6 つ以外の重水素動作点の文言を厳格化し、`EEG-DATA` は `DANDI 001187` の詳細を追加し、`merged_unique=30875`、`high_confidence=28838`、および `access_counts_high.immediate=24492` を報告するようになり、`auto-research-funds` は、実質的な候補リストを変更することなく `Isono / Okabe` 奨学金の更新を繰り越します。
+- ルートセーフ アクセスの文言も変更されません。`D10` は現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u8-1-closed-loop-delay-tolerance-route.html` に対して `200` が返されました。チェックされたページでも `Last-Modified: Wed, 01 Apr 2026 14:17:54 GMT` が返され、ライブ ルートの順序では依然として同じ順序で同じ 6 つの名前が付けられていました。
+- 公式のウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09`、`Secom General Research Grant` は現在のサイクル (`March 31, 2026 at 12:00 JST`) では閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 1 日の 22:05 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@84e5337`、`EEG-DATA@bbb8d6c63d7`、および `auto-research-funds@5ff33413e` の後の `2026-04-01 22:05 JST` での実際のプルの再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジではなく依然としてサポートを強化しています。`mind-upload` は、現在の 6 つの外側の正面玄関のクリアランス ルート ラベルを明確にし、`EEG-DATA` は、`merged_unique=30873`、`high_confidence=28836`、`access_counts_high.immediate=24487`、および `18,312 / 28,832` 実験に面した行 (`63.51%` カバレッジ) を維持しながら詳細なメタデータを更新し、`auto-research-funds` は、実質的な候補リストを変更せずに、`Yamaoka graduate scholarship` スナップショットと README に面した統計を追加します。
+- ルートセーフ アクセスの文言も変更されません。`D10` は現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- このソース同期前のブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u8-1-closed-loop-delay-tolerance-route.html` に対して `200` が返されました。チェックされたページでも `Last-Modified: Wed, 01 Apr 2026 12:13:54 GMT` が返され、ライブ ルートの順序では依然として同じ順序で同じ 6 つの名前が付けられていました。
+- 公式のウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09`、`Secom General Research Grant` は現在のサイクル (`March 31, 2026 at 12:00 JST`) では閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items, projects)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 1 日の 18:05 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@9984d0b`、`EEG-DATA@5fc1df00f07`、および `auto-research-funds@d7092c8e9` の後の `2026-04-01 18:05 JST` での実際のプルの再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジではなく依然としてサポートを強化しています。`mind-upload` は、ウェアラブル `OPM / MEG` ルート同期と現在の 6 つ以外の測定スタックの明確化を強化し、`EEG-DATA` は継続追跡 EEG BCI ディープ ダイブを追加し、`merged_unique=30873`、`high_confidence=28836`、および `access_counts_high.immediate=24486` をレポートするようになりました。その実験メタデータ レポートは、少なくとも 1 つの実験に面したフィールド (`63.51%` カバレッジ) を持つ `18,312 / 28,832` 行を引き続きカバーします。 `auto-research-funds` は、最近の繰越奨学金の更新後も、同じ実質的な候補者リストを維持しています。
+- ルートセーフ アクセスの文言も変更されません。更新されたローカル `EEG-DATA` カタログは拡大を続けていますが、ライブ アクセス読み取りは引き続き厳格であるため、`D10` は現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままであり、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- ブラウザ ユーザー エージェントを使用したブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、および `u8-1-closed-loop-delay-tolerance-route.html` に対して依然として `200` が返されました。現在の `Last-Modified` ヘッダーは、これらの公開サーフェスでは `Wed, 01 Apr 2026 08:22:51 GMT` であり、ライブ `issue.html` 段落では、この実行の新しい付録の前に、依然として同じ 6 つの名前が同じ順序で付けられています。
+- 公式のウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09`、`Secom General Research Grant` は現在のサイクル (`March 31, 2026 at 12:00 JST`) では閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 1 日の 17:06 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@c5a0550`、`EEG-DATA@82893f6ca6e`、および `auto-research-funds@ec6f7d068` の後の `2026-04-01 17:06 JST` での実際のプルの再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジではなく依然としてサポートを強化しています。`mind-upload` は、現在の 6 つ以外のアストロサイト PET ルート分割を深め、`EEG-DATA` は KMI EEG データセットを詳細に調査し、`merged_unique=30871`、`high_confidence=28834`、および `access_counts_high.immediate=24484` をレポートするようになりました。その実験メタデータ レポートは、少なくとも 1 つの実験に面したフィールド (`63.51%` カバレッジ) を持つ `18,312 / 28,832` 行を引き続きカバーし、`auto-research-funds` は `Megachips 2026 scholarship` スナップショットと実際の候補リストを変更せずに README-stat を更新します。
+- ルートセーフなアクセスの文言も変更されません。更新されたローカル `EEG-DATA` カタログでは、引き続き `D03 / D02` がカタログ側の即時行として、`D01` が即時/要チェックの混合ペアとしてレンダリングされますが、ライブ アクセス読み取りはより厳密なままであるため、`D10` は現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままであり、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- ブラウザ ユーザー エージェントを使用したブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、および `u8-1-closed-loop-delay-tolerance-route.html` に対して依然として `200` が返されました。現在の `Last-Modified` ヘッダーは、これらの公開サーフェスでは `Wed, 01 Apr 2026 07:16:09 GMT` ですが、ライブ `issue.html` 段落では依然として同じ 6 つの名前が同じ順序で付けられています。
+- 公式のウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09`、`Secom General Research Grant` は現在のサイクル (`March 31, 2026 at 12:00 JST`) では閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 1 日の 14:09 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@ccef40f2f7cf`、`EEG-DATA@deefd5f95c6d`、および `auto-research-funds@f5f76c485ccb` の後の `2026-04-01 14:09 JST` での実際のプルの再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジではなく依然としてサポートを深めています。`mind-upload` は現在の 6 つ以外のシナプス前解放機構の上限を明確にし、`EEG-DATA` は `merged_unique=30869`、`high_confidence=28832`、`access_counts_high.immediate=24482` を報告するようになり、新しい実験メタデータ レポートは少なくとも 1 つの実験に面したフィールド (`63.51%` カバレッジ) を持つ `18,312 / 28,832` 行をカバーし、`auto-research-funds` は実質的な候補リストを変更せずにリポレベルの統計を更新します。
+- ルートセーフなアクセスの文言も変更されません。更新されたローカル `EEG-DATA` カタログでは、引き続き `D03 / D02` がカタログ側の即時行として、`D01` が即時/要チェックの混合ペアとしてレンダリングされますが、ライブ アクセス読み取りはより厳密なままであるため、`D10` は現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままであり、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- ブラウザ ユーザー エージェントを使用したブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、および `u8-1-closed-loop-delay-tolerance-route.html` に対して依然として `200` が返されました。現在の `Last-Modified` ヘッダーは、これらの公開サーフェスでは `Wed, 01 Apr 2026 04:20:02 GMT` ですが、ライブ `issue.html` 段落では依然として同じ 6 つの名前が同じ順序で付けられています。
+- 公式のウィンドウスポットチェックでは、実際のブリッジは依然として狭いままです。`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09`、`Secom General Research Grant` は現在のサイクル (`March 31, 2026 at 12:00 JST`) では閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=5`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 1 日の 12:06 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@9f4bc8e760b1`、`EEG-DATA@1324f9e1ae2b`、および `auto-research-funds@6548b1650535` の後の `2026-04-01 12:06 JST` での 2 回目の実際のプル再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジではなく依然としてサポートを強化しています。`mind-upload` はすでにルートホールドの文言を公衆安全に保ち、`EEG-DATA` は現在 `merged_unique=30867`、`high_confidence=28830`、および `access_counts_high.immediate=24480` を報告し、`auto-research-funds` は実質的な候補リストを変更せずに資金の再読ドキュメントを更新しています。
+- ルートセーフなアクセスの文言も変更されません。`D10` は、現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` は、ライブ アクセスの読み取りが依然としてカタログ側の識別子の表面よりも狭いため、ゲート サポート プランニング アンカーのままです。
+- ブラウザ ユーザー エージェントを使用したブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、および `u8-1-closed-loop-delay-tolerance-route.html` に対して依然として `200` が返されました。現在の `Last-Modified` ヘッダーは、これらの公開サーフェスでは `Wed, 01 Apr 2026 02:26:28 GMT` ですが、ライブ `issue.html` 段落では依然として同じ 6 つの名前が同じ順序で付けられています。
+- 公式のウィンドウスポットチェックでは、実際的なブリッジは依然として狭いままです。`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09`、`Secom General Research Grant` は現在のサイクルでは閉鎖されたままです。
+- 今回の再読では、新しい Todoist ルートは導入されませんでした。最新の正規の資金調達候補者リストの監査では、現時点での実際的な領域がすでにカバーされており、公式の再検査では新たな現行サイクルの資金提供者は明らかにされませんでした。
+
+## 2026 年 4 月 1 日の 11:06 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@aa21ab9855c1`、`EEG-DATA@cccd137a3468`、`auto-research-funds@3a691196cb9f` 後の `2026-04-01 11:06 JST` での最新の実際のプル再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジではなく依然としてサポートを強化しています。`mind-upload` はすでにルート ホールドの文言をパブリック セーフに保ち、`EEG-DATA` はリポジトリ全体のメタデータを強化し、`merged_unique=30866`、`high_confidence=28829`、`access_counts_high.immediate=24479` をレポートするようになり、`auto-research-funds` は実質的な候補リストを変更せずにリポジトリ レベルの統計を更新します。
+- ルートセーフなアクセスの文言も変更されません。`D10` は、現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` は、ライブ アクセスの読み取りが依然としてカタログ側の識別子の表面よりも狭いため、ゲート サポート プランニング アンカーのままです。
+- ブラウザレベルのライブチェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、および `u8-1-closed-loop-delay-tolerance-route.html` に対して引き続き `200` が返されました。 `Last-Modified` は `issue.html` / `u8-1` および `Wed, 01 Apr 2026 01:21:13 GMT` の 2 つのブリッジ ページで `Wed, 01 Apr 2026 01:21:12 GMT` に進み、ライブ `issue.html` 段落では依然として同じ 6 つの名前が同じ順序で付けられています。
+- 公式のウィンドウスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09` という実際のブリッジは依然として狭いままですが、`Nakatani Foundation research grant`、`Secom General Research Grant`、および `Brain Science Foundation research grant` は現在のサイクルレーンの外側で監視または閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 1 日の 10:19 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@d87b9ce`、`EEG-DATA@c05ceda146f8`、`auto-research-funds@ca65b206cf6d` 後の `2026-04-01 10:19 JST` での最新の実際のプル再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルされたデルタは、現在のブリッジではなく依然としてサポートを拡大しています。`mind-upload` は、現在のパブリック 6 パケットの外にある初心者のグリア基質ルート監査を深め、`EEG-DATA` は、`D10 / D03 / D02 / D01` や次の注目ファミリー `D11 / D08 / D05 / D20` を置き換えない `OpenNeuro ds006036` の詳細な調査を追加し、`auto-research-funds` は、実質的な候補リストを変更することなく、`JCS / Takai / Korean scholarship` の現在のカードを追加しました。
+- ルートセーフなアクセスの文言も変更されません。`D10` は、現在の 6 つの中で唯一の明確なパブリック オープン プライマリ アンカーのままですが、`D03 / D02 / D01` は、ライブ アクセスの読み取りが依然としてカタログ側の識別子の表面よりも狭いため、ゲート サポート プランニング アンカーのままです。
+- `2026-04-01 10:19 JST` でのブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u8-1-closed-loop-delay-tolerance-route.html` に対して依然として `200` が返され、ライブ `issue.html` 段落では依然として同じ 6 つの名前が同じ順序で付けられています。
+- 公式のウィンドウスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09` という実際のブリッジは依然として狭いままですが、`Nakatani Foundation research grant`、`Secom General Research Grant`、および `Brain Science Foundation research grant` は現在のサイクルレーンの外側で監視または閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 1 日の 03:09 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@31835fcd8daa`、`EEG-DATA@12eef8ca4ef0`、`auto-research-funds@040e5b8798fd` 後の `2026-04-01 03:09 JST` での最新の実際のプル再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジではなく依然としてサポートを拡大しています。`mind-upload` は、現在のパブリック 6 パケットの外側に侵入する言語 BCI の一時ルートを分割し、`EEG-DATA` は、`D10 / D03 / D02 / D01` または次のウォッチ ファミリ `D11 / D08 / D05 / D20` を置き換えることなく、言語関連のバックアップ カバレッジを拡大するセマンティック テキスト関連性の詳細を追加し、`auto-research-funds` は、実質的な候補リストを変更せずに `Obayashi / Yokogaku` カードを更新しました。
+- `2026-04-01 03:09 JST` でのブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`mind-upload-rq-solvability-bridge.html`、`u8-1-closed-loop-delay-tolerance-route.html` に対して依然として `200` が返され、ライブ `issue.html` 段落では依然として同じ 6 つの名前が同じ順序で付けられています。
+- 公式のウィンドウスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09` という実際のブリッジは依然として狭いままですが、`Nakatani Foundation research grant`、`Secom General Research Grant`、および `Brain Science Foundation research grant` は現在のサイクルレーンの外側で監視または閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync(items)` の全項目監査では、まだ十分なルート カバレッジ (`items=203`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 1 日の 01:06 JST のライブソースの再チェック後も修正されていないもの
+
+- ネストされた `mind-upload@8da02e2e48e0`、`EEG-DATA@e6013384fa01`、および `auto-research-funds@c6a383f07a7b` の後の `2026-04-01 01:06 JST` での 2 回目の no-op 実プル再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 現在の `EEG-DATA` ヘッドは、同じナロー アンカー ファミリを置き換えるのではなく、依然としてサポートしています。現在の 6 つのファミリー `D10 / D03 / D02 / D01` と次のウォッチ ファミリ `D11 / D08 / D05 / D20` はすべてまだリポジトリに存在しており、パブリック セーフの文言では、`D10` が唯一の明確なパブリック オープン プライマリとして維持されていますが、ライブ アクセスの読み取りがカタログ ラベルよりも厳格であるため、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。
+- `2026-04-01 01:06 JST` でのブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`u8-1-closed-loop-delay-tolerance-route.html`、および `mind-upload-rq-solvability-bridge.html` に対して依然として `200` が返されたため、この実行によりパブリック バッチは修正されたままになります。
+- 公式のウィンドウスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09` という実際のブリッジは依然として狭いままですが、`Nakatani Foundation research grant`、`Secom General Research Grant`、および `Brain Science Foundation research grant` は現在のサイクルレーンの外側で監視または閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync` の全項目監査では、まだ十分なルート カバレッジ (`items=204`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 4 月 1 日の 00:12 JST の実際のプルの再読み込み後もまだ修正されている点
+
+- `mind-upload@e53a50b1256d`、`EEG-DATA@48f4814db5da`、`auto-research-funds@76145d0e3f4c` 後の `2026-04-01 00:12 JST` での最新の実際のプル再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 現在の `EEG-DATA` ヘッドは、同じナロー アンカー ファミリを置き換えるのではなく、依然としてサポートしています。現在の 6 つのファミリー `D10 / D03 / D02 / D01` と次のウォッチ ファミリ `D11 / D08 / D05 / D20` はすべてまだリポジトリに存在していますが、パブリック セーフの文言により、引き続き `D10` が唯一の明確なパブリック オープン プライマリとして維持されますが、`D03 / D02 / D01` はゲート サポート プランニング アンカーのままです。これは、ライブ アクセス読み取りとミラー状態がまだ混在しているためです。
+- `2026-04-01 00:15 JST` でのブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、および `u8-1-closed-loop-delay-tolerance-route.html` に対して依然として `200` が返されたため、この実行によりパブリック バッチは修正されたままとなり、サポートされるルート ページに制限された再読み取りメモのみが追加されます。
+- 公式のウィンドウスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09` という実際のブリッジは依然として狭いままですが、`Nakatani Foundation research grant`、`Secom General Research Grant`、および `Brain Science Foundation research grant` は現在のサイクルレーンの外側で監視または閉鎖されたままです。
+- 新しい読み取り専用 Todoist `api/v1/sync` の全項目監査では、まだ十分なルート カバレッジ (`items=204`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## このページの「脳波で解ける」の読み方
+
+- `Close now` は、宣言された 1 つのデータセット ファミリで完了できる、制限されたベンチマーク、監査、または開示アーティファクトを意味します。
+- `Support only` は、それだけでは強力な一般公開ルートを正当化できない有用なアンカーを意味します。
+- ライブ アクセス監査とカタログの自動ラベルが一致しない場合、このページはパブリック セーフな文言についてライブ アクセス監査に従い、カタログ ラベルは計画のヒントとしてのみ保持されます。
+- `External dependency` は、理論作業、言語評価、法的判断、臨床移行、ハードウェア検証、またはこのリポジトリ外でのより広範なコミュニティでの採用が依然として必要な要件を意味します。
+- `Funding theme` は、現在の成果物のレベルにまだ一致する文言を意味します。マインドアップロードに関するより大きな問題が解決されるという約束はありません。
+
+## 2026 年 3 月 31 日の 21:09 JST ポストプル再読み込み後も修正されたままのもの
+
+- `mind-upload@ed6f8203e46d`、`EEG-DATA@20fbbad9959f`、`auto-research-funds@77f189662745` 後の `2026-03-31 21:09 JST` での最新のプル再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジではなく依然としてサポートを拡大しています。`mind-upload` はデータセット ベンチマーク オブジェクト ルールを強化し、FAQ RNA ルート分割を明確にし、`EEG-DATA` はリクエスト ゲート型 `HBUED` 感情認識カバレッジと継続的追跡オンライン BCI メタデータの詳細を追加し、`auto-research-funds` は `Teraura Sayoko outbound scholarship`、`Gakusho scholarship`、および README 統計の更新を追加しましたが、これらの変更はいずれも現在の `D10 / D03 / D02 / D01` ファミリやアウトサイドカレントシックスオーダー`U7-1 -> U1-2 -> U4-2 -> U8-1`。
+- `2026-03-31 21:09 JST` でのブラウザレベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、`u8-1-closed-loop-delay-tolerance-route.html` に対して依然として `200` が返され、ライブ `issue.html` 段落では依然として同じ順序で現在の 6 つの名前が付けられています。
+- 公式のウィンドウスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09` という実際のブリッジは依然として狭いままですが、`Nakatani Foundation research grant`、`Secom General Research Grant`、および `Brain Science Foundation research grant` は現行サイクルレーンの外側のままです。
+- 新しい読み取り専用 Todoist `api/v1/sync` の全項目監査では、まだ十分なルート カバレッジ (`items=205`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 3 月 31 日の 19:07 JST ポストプル再読み込み後も修正されたままのもの
+
+- `mind-upload@b7b6c0498ae1`、`EEG-DATA@24e85cc20f09`、`auto-research-funds@0fddd53bd03c` 後の `2026-03-31 19:07 JST` での最新のプル再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新のプルデルタは、現在のブリッジではなく依然としてサポートを拡大しています。`mind-upload`はフロントドアの人間代理分割を強化し、`EEG-DATA`はカタログを`merged_unique=30860`、`high_confidence=28823`、`access_counts_high.immediate=24471`に更新し、`auto-research-funds`はキオクシア/高柳の資金調達記録を更新しましたが、これらの変更はいずれも現在の`D10 / D03 / D02 / D01`ファミリーやアウトサイドカレントシックスオーダーの`U7-1 -> U1-2 -> U4-2 -> U8-1`に代わるものではありません。
+- `2026-03-31 19:09 JST` でのブラウザレベルのライブ チェックでは、`issue.html` と `mind-upload-current-public-six-rq-brief.html` に対して依然として `200` が返され、ライブ `issue.html` 段落では依然として同じ順序で現在の 6 つの名前が付けられています。
+- 公式のウィンドウスポットチェックでは、`Kura Fund = 2026-02-02 - 2026-04-17 17:00`、`Nakatani Foundation graduate scholarship = 2026-04-01 - 2026-05-25 15:00`、`Kashinome Scholarship = 2026-01-14 - 2026-04-09` という実質的なブリッジがまだ狭いままですが、`Nakatani Foundation research grant` と `Secom General Research Grant` は現在のサイクルですでに閉鎖されています。
+- 新しい読み取り専用 Todoist の全項目監査では、まだ十分なルート カバレッジ (`items=205`、`Kura=2`、`Nakatani family=11`、`Nakatani graduate scholarship=7`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`) が示されていたため、このセッションには新しいタスクは追加されませんでした。
+
+## 2026 年 3 月 31 日の 17:06 JST ポストプル再読み込み後も修正されたままのもの
+
+- `mind-upload@4731680627ff`、`EEG-DATA@3e7a53d9ca8`、`auto-research-funds@ef2924014a65` 後の `2026-03-31 17:06 JST` での最新のプル再チェックでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- 最新の `EEG-DATA` の追加により、現在のブリッジではなくサポート マップが広がります。NTU Dataverse の成人から幼児の一方向性神経結合の生/前処理済みリリースはすぐにダウンロード可能で、将来の社会学習やペア観察者の行に役立ちます。一方、OpenNeuro `ds007146` は、目に見えるパブリック オブジェクト ツリーが要求された生の EEG をまだ検証していないため、`uncertain_public` のままである大規模な聴覚 MEG/EEG/Ear-EEG 記録を追加します。 / 耳脳波の範囲。
+- RQ ごとのドシエで `### Ux-y` 見出しを再カウントしても `60` が返されるため、この実行では一度に 1 行のワークフローがよりフラットな要約パスに置き換えられるわけではありません。
+- ブラウザ ユーザー エージェントを使用したブラウザ レベルのライブ チェックでは、依然として `issue.html`、`mind-upload-current-public-six-rq-brief.html`、および `u8-1-closed-loop-delay-tolerance-route.html` に対して `200` が返されました。
+- したがって、実際の資金調達の読み取り値は狭いままです。`Kura Fund`、`Nakatani Foundation graduate scholarship`、`Kashinome Scholarship` は現在の 6 つのアクティブなブリッジのままで、`Secom General Research Grant` は現在のサイクル (`March 31, 2026 at 12:00 JST`) ではすでに終了しており、繰り越されたウォッチ レコードとしてのみ残されており、このセッションでは新しい Todoist アイテムは作成されませんでした。
+
+## 2026 年 3 月 31 日の 16:32 JST メタデータ繰り越し再読み込み後も修正されたままのもの
+
+- `mind-upload@a11240d38415`、`EEG-DATA@3e7a53d9ca84`、および `auto-research-funds@c95cc61fdfc9` の後の最新のプル再読み取りでは、現在のパブリック 6 と次の監視キューの両方が変更されないままになります。
+- `EEG-DATA` の最新のヘッドは、ルート スワップではなく、メタデータを深化させたキャリーフォワードです。更新されたカタログでは、`merged_unique=30858`、`high_confidence=28821`、および `access_counts_high.immediate=24469` がレポートされるようになりました。これにより、バックアップ ファミリの検索スペースが広がりますが、アクティブ ルートの現在の `D10 / D03 / D02 / D01` ファミリが置き換えられるわけではありません。
+- 実際のアクセス読み取り値も控えめなままです。更新されたカタログでは、引き続き DOI ルートを介して `D01` が即時として公開され、`D02` が即時/計画バケット内に保持されますが、ライブ パブリック ルートは引き続き厳格なアクセス監査に従い、したがって `D03 / D02 / D01` はサブスクリプション ゲート サポート アンカーとしてのみ保持されます。
+- この実行におけるブラウザ レベルのライブ チェックでは、`issue.html`、`mind-upload-current-public-six-rq-brief.html`、および `u8-1-closed-loop-delay-tolerance-route.html` に対して依然として `200` が返されたため、余分な公開フロントページの散文は追加されませんでした。
+- 新しい Todoist `api/v1/sync(items)` 監査では、まだ十分なカバレッジ (`items=205`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`AI for Aging-Society Problem Solving=0`) が示されていたため、この実行では新しいタスクは追加されませんでした。
+
+## 2026 年 3 月 31 日までに修正される内容
+
+- 現在公開されている 6 つの質問のバッチはまだ `U13-2 -> U13-5 -> U0-2 -> U0-3 -> U14-4 -> U14-2` のままです。
+- 次の監視キューは依然として `U7-1 -> U1-2 -> U4-2 -> U8-1` のままです。
+- 正確な次の監視行パケットが必要な場合は、[U7-1 ルート パケット](/wiki/u7-1-synchronization-contract-route.html)、[U1-2 ルート パケット](/wiki/u1-2-uncertainty-calibration-route.html)、[U4-2 ルート パケット](/wiki/u4-2-minimal-causal-route.html)、および [U8-1ルートパケット](/wiki/u8-1-closed-loop-delay-tolerance-route.html)。
+- 現在のパブリック 6 の中で、`D10 3M-CPSEED` は唯一明確にパブリックに公開されているプラ​​イマリ アンカーのままです。
+- `D03 Multimodal Fusion EEG + Eye-Tracking`、`D02 CSTE`、および `D01 Acquisition delay of wireless EEG` は、パブリック ルート上のサブスクリプション ゲート型サポート アンカーのままです。
+- 現在の実用的なレーンとウォッチ レーンはファンディング ワークフローの既存のタスクですでにカバーされていたため、この実行では新しい Todoist タスクは必要ありませんでした。
+
+## このページが存在する理由
+
+- 現在公開されている6つの準備書面は意図的に短くなっている。
+- `RQ60` の実現可能性と関係書類のページは意図的に幅広になっています。
+- このページはその間の橋渡しです。すべての `60RQ` 項目が今同じ深さで読み取られるべきであるというふりをせずに、行ごとのレベルで現在の実行キューと次の監視キューを修正します。
+
+## 現在の公立6名
+
+| RQ | 現在のメインアンカー | EEG が今正直に閉じることができるもの | まだ主張の範囲外にあるもの | 今でも適合する資金調達テーマ | 今でもフィットするレーン | Todoist |
 |---|---|---|---|---|---|---|
-| `U13-2` | `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`, immediate) | A bounded `brain-minus-prior` control table, mimic-separation note, and inconsistency audit for imagined speech. | Preserved internal mechanism, preserved identity, and any stronger mind-preservation wording. | `Neural-contribution audit for imagined speech with a brain-minus-prior control` | `Kura Fund`, then `Nakatani Foundation graduate scholarship` | Existing tasks already cover the lane. No new item was added. |
-| `U13-5` | `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, subscription-gated support) | A perception-to-recall degradation note and transfer-gap table under one bounded paired-stream route, with an explicit recall-validity caveat. | Any stronger mechanism-preservation reading or claim that a shared decoder implies a shared preserved mechanism. | `Perception-to-recall transfer-gap benchmark for mimic separation` | `Kura Fund`, then `Nakatani Foundation graduate scholarship` | Existing tasks already cover the lane. No new item was added. |
-| `U0-2` | `D02 CSTE` (`10.21227/j162-nh61`, subscription-gated support) | An `offset / jitter` distribution plus a `state-feature collapse` audit for a bounded identity-drift benchmark. | Legal, philosophical, or normative continuity claims. | `Temporal-validity-aware identity-drift audit with offset, jitter, and state-feature collapse` | `Nakatani Foundation graduate scholarship`, then `Kashinome Scholarship` | Existing tasks already cover the lane. No new item was added. |
-| `U0-3` | `D02 CSTE` (`10.21227/j162-nh61`, subscription-gated support) | A threshold-stability note and overfit-exclusion rule on the same repeated-session floor as `U0-2`. | Treating a stable threshold as sufficient for personhood continuity or branch-identity resolution. | `Task-specific threshold stability and overfit-exclusion benchmark for identity drift` | `Nakatani Foundation graduate scholarship`, then `Kashinome Scholarship` | Existing tasks already cover the lane. No new item was added. |
-| `U14-4` | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | Filled Model Card and Dataset Card examples for one bounded latency/disclosure floor, to be widened only with `D13`-backed rerun examples. | Field-wide reproducibility, standards adoption, or deployment readiness. | `Card-integrated reproducibility contract for the current public batch` | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | Existing tasks already cover the lane. No new item was added. |
-| `U14-2` | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, subscription-gated support) | A fixed-split rerun contract and negative-case trail for exploration-versus-confirmation discipline, to be widened only with `D13`-backed rerun examples. | Presenting exploratory outputs as confirmatory evidence or claiming broad rerun robustness. | `Fixed-split rerun contract for exploration versus confirmation` | `Kura Fund`; `Nakatani Foundation research grant` as next-cycle watch | Existing tasks already cover the lane. No new item was added. |
+| `U13-2` | `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`、即時) | 有界`brain-minus-prior`制御テーブル、模倣分離メモ、および想像上の音声の不一致監査。 | 保存された内部メカニズム、保存されたアイデンティティ、およびより強力な精神保存の文言。 | `Neural-contribution audit for imagined speech with a brain-minus-prior control` | `Kura Fund`、次に `Nakatani Foundation graduate scholarship` | 既存のタスクがすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
+| `U13-5` | `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`、サブスクリプションゲート型サポート) | 明示的なリコール有効性の警告を伴う、1 つの有界ペアストリーム ルートにおける知覚からリコールまでの劣化ノートと転送ギャップ テーブル。 | 共有デコーダが共有保存メカニズムを意味するという、より強力なメカニズム保存の読み取りまたは主張。 | `Perception-to-recall transfer-gap benchmark for mimic separation` | `Kura Fund`、次に `Nakatani Foundation graduate scholarship` | 既存のタスクがすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
+| `U0-2` | `D02 CSTE` (`10.21227/j162-nh61`、サブスクリプションゲート型サポート) | `offset / jitter` ディストリビューションと、制限された ID ドリフト ベンチマークの `state-feature collapse` 監査。 | 法的、哲学的、または規範的な継続性の主張。 | `Temporal-validity-aware identity-drift audit with offset, jitter, and state-feature collapse` | `Nakatani Foundation graduate scholarship`、次に `Kashinome Scholarship` | 既存のタスクがすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
+| `U0-3` | `D02 CSTE` (`10.21227/j162-nh61`、サブスクリプションゲート型サポート) | `U0-2` と同じ繰り返しセッション フロアのしきい値安定性メモとオーバーフィット除外ルール。 | 安定したしきい値を、人格の連続性または分岐アイデンティティの解決に十分なものとして扱う。 | `Task-specific threshold stability and overfit-exclusion benchmark for identity drift` | `Nakatani Foundation graduate scholarship`、次に `Kashinome Scholarship` | 既存のタスクがすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
+| `U14-4` | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`、サブスクリプションゲート型サポート) | 1 つの制限されたレイテンシー/開示フロアの埋められたモデル カードとデータセット カードのサンプル。`D13` を利用した再実行サンプルでのみ拡張されます。 | フィールド全体の再現性、標準の採用、または導入の準備。 | `Card-integrated reproducibility contract for the current public batch` | `Kura Fund`; `Nakatani Foundation research grant`を次サイクルウォッチとして | 既存のタスクがすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
+| `U14-2` | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`、サブスクリプションゲート型サポート) | 探索対確認の規律のための固定分割再実行契約と否定的なケースの証跡。`D13` に支援された再実行サンプルでのみ拡張されます。 | 探索的な出力を確認証拠として提示する、または広範な再実行の堅牢性を主張する。 | `Fixed-split rerun contract for exploration versus confirmation` | `Kura Fund`; `Nakatani Foundation research grant`を次サイクルウォッチとして | 既存のタスクがすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
 
-## Solve-first stacks inside the current public six
+## 現在のパブリック 6 内の最初のスタックを解決する
 
-| Stack | Current order | Why this stack stays narrow now | Main anchor family and first public-open support |
+| スタック | 現在の注文 | このスタックが現在狭いままである理由 | メインアンカーファミリーと初の一般公開対応 |
 |---|---|---|---|
-| Speech-side contribution stack | `U13-2 -> U13-5` | First keep neural contribution separate from the language prior, then ask where decoder transfer breaks when the route moves from perception to recall. | `D10` stays the first public-open floor; `D03` stays the paired-stream planning anchor; public-open backup remains `D10` plus `ZuCo 2.0` and the spoken/imagination robot-speech EEG family. |
-| Identity-drift floor | `U0-2 -> U0-3` | First bound timing drift and state-feature collapse, then ask whether the threshold rule survives once the timing floor is fixed. | `D02` stays the planning floor; the cleanest public-open stress tests remain `ds004148` and `ds007216`. |
-| Disclosure-to-rerun contract | `U14-4 -> U14-2` | First turn disclosure fields into filled card examples, then freeze the exploration-versus-confirmation split under one rerun contract. | `D01` stays the planning floor; `D13` remains the first public-open rerun family those two rows would need next, with `D08` kept for grounded validation-field examples. |
+| 音声側の貢献スタック | `U13-2 -> U13-5` | まず、神経の寄与を以前の言語から切り離しておき、次に、ルートが知覚から想起に移るときに、デコーダの転送がどこで途切れるかを尋ねます。 | `D10` は引き続き最初の一般公開フロアです。 `D03` はペアストリーム計画のアンカーであり続けます。一般に公開されているバックアップは、`D10` と `ZuCo 2.0` および音声/想像ロボット音声 EEG ファミリーのままです。 |
+| アイデンティティ漂流フロア | `U0-2 -> U0-3` | 最初に制限されたタイミング ドリフトと状態特徴の崩壊を調べ、次にタイミング フロアが固定された後にしきい値ルールが存続するかどうかを尋ねます。 | `D02` は計画フロアにとどまります。最もクリーンな公開ストレス テストは、`ds004148` と `ds007216` のままです。 |
+| 開示・再実行契約 | `U14-4 -> U14-2` | まず開示フィールドを記入済みのカード例に変換し、次に 1 つの再実行契約に基づいて探索と確認の分割を凍結します。 | `D01` は計画フロアにとどまります。 `D13` は、これら 2 つの行が次に必要となる最初の公開再実行ファミリーであり、`D08` は接地された検証フィールドの例として保持されます。 |
 
-The cleanest public-open support underneath those three stacks still stays outside the batch itself: `U7-1 -> U1-2` keeps the synchronization and inverse-uncertainty floor readable without forcing a batch switch.
+これら 3 つのスタックの下にある最もクリーンなパブリック オープン サポートは、依然としてバッチ自体の外側にあります。`U7-1 -> U1-2` は、バッチの切り替えを強制することなく、同期と逆不確実性の下限を読み取り可能な状態に保ちます。
 
-## Public-open backup families for the current public six
+## 現在公開されている 6 つの公開バックアップ ファミリー
 
-These backup families do not replace the current planning anchors. They only record the least-distorting public-open inspection path when the main planning anchor is gated.
+これらのバックアップ ファミリは、現在の計画アンカーを置き換えるものではありません。主要な計画アンカーがゲートされている場合に、歪みが最も少ない一般公開検査パスのみを記録します。
 
-| RQ | Best public-open backup family | What it keeps testable | Why it still stays backup-only |
+| RQ | 最高の一般公開バックアップ ファミリー | テスト可能に保つもの | なぜ依然としてバックアップのみのままなのか |
 |---|---|---|---|
-| `U13-5` | `D10 3M-CPSEED`, `ZuCo 2.0`, and `spoken + imagined robot-speech EEG` | Decoder-side transfer failure, a public EEG+ET paired-stream family, and speech-condition collapse can still be inspected without a gated paired-stream dataset. | None of these public-open families exposes a clean recall-labeled branch point, so the route still loses the reason `D03` stays primary in planning. |
-| `U0-2` | `A test-retest resting and cognitive state EEG dataset`, then `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` | Retest drift and provenance-sensitive timing failure can still be stress-tested on public-open families. | The route still loses the direct `cross-session / cross-task biometrics` framing that keeps `D02` primary in planning. |
-| `U0-3` | `A test-retest resting and cognitive state EEG dataset`, then `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` | Threshold drift can still be checked under public-open retest and multi-session ladders. | The route still loses the cleanest intended identity-drift floor, so the result remains backup-only. |
-| `U14-4` | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications`, then `D08 Simultaneous human intracerebral stimulation and HD-EEG` | The card contract can still be illustrated with the first required public-open rerun family plus grounded validation-field examples. | These families help only after the first disclosure contract is fixed; they do not replace the narrower latency-first planning anchor, but `D13` is the support family the row would need next. |
-| `U14-2` | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications`, then `D08 Simultaneous human intracerebral stimulation and HD-EEG` | Split-violation examples and validation-heavy failure trails can still be illustrated on public-open datasets. | They widen rerun examples later, but they do not replace the latency-first split boundary that keeps `D01` primary in planning. |
+| `U13-5` | `D10 3M-CPSEED`、`ZuCo 2.0`、`spoken + imagined robot-speech EEG` | デコーダ側の転送障害、公開 EEG+ET ペア ストリーム ファミリ、および音声状態の崩壊は、ゲート付きペア ストリーム データセットなしでも検査できます。 | これらの一般に公開されているファミリはどれも、クリーンなリコールラベルが貼られた分岐点を公開していないため、このルートは依然として、`D03` が計画の主要な要素であり続ける理由を失っています。 |
+| `U0-2` | `A test-retest resting and cognitive state EEG dataset`、次に `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` | 再テストのドリフトと来歴に依存するタイミングの失敗については、公開されているファミリーに対して引き続きストレス テストを行うことができます。 | このルートでは、`D02` プライマリの計画を維持する直接的な `cross-session / cross-task biometrics` フレームが依然として失われています。 |
+| `U0-3` | `A test-retest resting and cognitive state EEG dataset`、次に `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` | しきい値ドリフトは、公開再テストおよびマルチセッションラダーの下でも引き続きチェックできます。 | ルートは依然として意図した最もクリーンな ID ドリフト フロアを失っているため、結果はバックアップのみのままです。 |
+| `U14-4` | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications`、次に `D08 Simultaneous human intracerebral stimulation and HD-EEG` | カード契約は、最初に必要な公開再実行ファミリーと根拠のある検証フィールドの例を使用して説明できます。 | これらの家族は、最初の開示契約が締結された後にのみ支援します。これらは、より狭いレイテンシ優先のプランニング アンカーに代わるものではありませんが、`D13` はその行が次に必要とするサポート ファミリです。 |
+| `U14-2` | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications`、次に `D08 Simultaneous human intracerebral stimulation and HD-EEG` | 分割違反の例や検証に重点を置いた失敗の痕跡は、公開されているデータセットで引き続き図示できます。 | これらは後で再実行の例を拡張しますが、計画において `D01` をプライマリに保つレイテンシー優先の分割境界を置き換えるものではありません。 |
 
-## Exact dataset family to use before stronger wording
+## より強力な表現の前に使用する正確なデータセット ファミリ
 
-The tables above fix the present route at the level of one primary anchor per row. The table below answers the more operational question that comes next: which nearby `EEG-DATA` family should stay on deck before the row is widened or submitted with stronger wording.
+上の表は、行ごとに 1 つのプライマリ アンカーのレベルで現在のルートを固定します。以下の表は、次に来るより運用上の質問、つまり行を広げるかより強い表現で送信する前に、どの近くの `EEG-DATA` ファミリをデッキに残すべきかという質問に答えています。
 
-### For the current public six
+### 現在のパブリック6については、
 
-| RQ | Primary anchor to code first | Support family to keep nearby | Why the support family still stays secondary |
+| RQ | 最初にコードへのプライマリアンカー | 家族が近くにいられるようにサポートする | 扶養家族が依然として二の次である理由 |
 |---|---|---|---|
-| `U13-2` | `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`, immediate) | `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`, immediate), `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, gated), and `D09 VICODEV` (`10.21227/r8fc-2y40`, gated) | They help later control-family design, multimodal comparison, or speech-side stress tests, but none keeps the same clean `overt / silent-intended / imagined` ladder as `D10` for the first public artifact. |
-| `U13-5` | `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, gated support) | `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`, immediate), `ZuCo 2.0` (`https://osf.io/2urht`, immediate public EEG+ET family), and `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`, immediate) | They are useful for speech-side transfer stress tests and public EEG+ET inspection, but none exposes a clean recall-labeled branch point, so the present row still cannot close without an external recall-validity layer. |
-| `U0-2` | `D02 CSTE` (`10.21227/j162-nh61`, gated support) | `A test-retest resting and cognitive state EEG dataset` (`10.18112/openneuro.ds004148.v1.0.1`, immediate) and `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | They are stronger public-open stress-test families for retest ladders and synchronization logging, but they are not as direct a `cross-session / cross-task biometrics` floor as `D02`. |
-| `U0-3` | `D02 CSTE` (`10.21227/j162-nh61`, gated support) | `A test-retest resting and cognitive state EEG dataset` (`10.18112/openneuro.ds004148.v1.0.1`, immediate) and `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | They are the right adjuncts once the threshold rule needs a richer session-external retest ladder, but they still do not replace `D02` as the narrowest identity-drift floor. |
-| `U14-4` | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, gated support) | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`, immediate) and `D08 Simultaneous human intracerebral stimulation and HD-EEG` (`10.21227/7may-9q56`, access-mixed) | They are better for richer rerun examples and leak-audit design once the first card fields are fixed. `D13` is the first public-open support family the row would need next, but it still does not replace `D01` as the latency/disclosure floor. |
-| `U14-2` | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`, gated support) | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`, immediate) and `D08 Simultaneous human intracerebral stimulation and HD-EEG` (`10.21227/7may-9q56`, access-mixed) | They are the right adjuncts for split-violation examples and broader rerun families. `D13` is the first public-open support family the row would need next, but the first bounded split contract still reads most cleanly on the narrower latency route. |
+| `U13-2` | `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`、即時) | `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`、即時)、`D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`、ゲート付き)、`D09 VICODEV` (`10.21227/r8fc-2y40`、ゲート付き) | これらは、後のコントロール ファミリの設計、マルチモーダル比較、または音声側のストレス テストに役立ちますが、最初の公開アーティファクトの `D10` と同じクリーンな `overt / silent-intended / imagined` ラダーを維持するものはありません。 |
+| `U13-5` | `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`、ゲートサポート) | `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`、即時)、`ZuCo 2.0` (`https://osf.io/2urht`、即時公開 EEG+ET ファミリー)、および `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`、即時) | これらは音声側伝達ストレス テストや公開 EEG+ET 検査に役立ちますが、クリーンな再現ラベル付き分岐点を公開するものはないため、外部の再現妥当性層がなければ現在の行を閉じることはできません。 |
+| `U0-2` | `D02 CSTE` (`10.21227/j162-nh61`、ゲートサポート) | `A test-retest resting and cognitive state EEG dataset` (`10.18112/openneuro.ds004148.v1.0.1`、即時) および `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`、即時) | これらは、再テストラダーと同期ロギングのための強力な公開ストレステスト ファミリですが、`D02` ほど直接的な `cross-session / cross-task biometrics` フロアではありません。 |
+| `U0-3` | `D02 CSTE` (`10.21227/j162-nh61`、ゲートサポート) | `A test-retest resting and cognitive state EEG dataset` (`10.18112/openneuro.ds004148.v1.0.1`、即時) および `A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`、即時) | これらは、しきい値ルールでより充実したセッション外部再テスト ラダーが必要になった場合には適切な付属物ですが、依然として最も狭いアイデンティティ ドリフト フロアとして `D02` に代わるものではありません。 |
+| `U14-4` | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`、ゲートサポート) | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`、即時) および `D08 Simultaneous human intracerebral stimulation and HD-EEG` (`10.21227/7may-9q56`、アクセス混合) | これらは、最初のカード フィールドが修正された後の、より豊富な再実行サンプルやリーク監査設計に適しています。 `D13` は、その行が次に必要とする最初の公開サポート ファミリですが、それでもレイテンシー/開示フロアとして `D01` に代わるものではありません。 |
+| `U14-2` | `D01 Acquisition delay of wireless EEG` (`10.21227/dv1p-vq18`、ゲートサポート) | `D13 A New Benchmark Dataset Towards Ubiquitous P300 ERP-based BCI Applications` (`10.17632/vyczny2r4w`、即時) および `D08 Simultaneous human intracerebral stimulation and HD-EEG` (`10.21227/7may-9q56`、アクセス混合) | これらは、分割違反の例やより広範な再実行ファミリーに適した付属品です。 `D13` は、行が次に必要とする最初のパブリックオープンサポートファミリーですが、最初の制限付き分割コントラクトは依然として、レイテンシが狭いルートで最もきれいに読み取られます。 |
 
-### For the next-watch queue
+### 次の監視キューの場合
 
-| RQ | Primary anchor to code first | Support family to keep nearby | Why the support family still stays secondary |
+| RQ | 最初にコードへのプライマリアンカー | 家族が近くにいられるようにサポートする | 扶養家族が依然として二の次である理由 |
 |---|---|---|---|
-| `U7-1` | `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | `D15 A simultaneous EEG-fNIRS dataset for investigating working memory load` (`10.21227/tswy-m550`, immediate) and `D23 EEG, PPG, GSR Multimodal Physiological Signals for Rehabilitation Fatigue Detection` (`10.6084/m9.figshare.31169026`, immediate) | They are useful for multimodal stress tests after the four-field contract is fixed, but neither matches `D11` on provenance richness and session structure for the first synchronization packet. |
-| `U1-2` | `D08 Simultaneous human intracerebral stimulation and HD-EEG` (`10.21227/7may-9q56`, public DOI handoff `10.25493/NXN2-05W`) | `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) and `D19 CerebellarTMSEEGData` (`10.6084/m9.figshare.13082495`, immediate) | They are strong perturbation-family cross-checks, but they do not replace the direct `ground-truth + intervention + inverse-validation` role of `D08`. |
-| `U4-2` | `D05 EEG cortical responses after HiPi` (`10.21227/8snc-7h06`, immediate) | `D08 Simultaneous human intracerebral stimulation and HD-EEG` (`10.21227/7may-9q56`, access-mixed) and `D19 CerebellarTMSEEGData` (`10.6084/m9.figshare.13082495`, immediate) | They are better for known-site or second-family perturbation checks after the first causal sign-agreement rule is fixed, but they are less minimal than `D05` for the first rebuttal gate. |
-| `U8-1` | `D20 Closed-loop auditory stimulation targeting REM oscillations` (`10.5281/zenodo.10663994`, immediate) | `D21 NeuroSimo: closed-loop EEG/EMG-guided TMS` (`10.5281/zenodo.14398633`, immediate) and `D12 Longitudinal MI-BCI training with transcutaneous spinal stimulation` (`10.5281/zenodo.15454354`, immediate) | They are the right support families for trigger/recovery cross-checks and retraining burden, but `D20` remains the cleanest public-open first anchor for one bounded delay-tolerance packet. |
+| `U7-1` | `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`、即時) | `D15 A simultaneous EEG-fNIRS dataset for investigating working memory load` (`10.21227/tswy-m550`、即時) および `D23 EEG, PPG, GSR Multimodal Physiological Signals for Rehabilitation Fatigue Detection` (`10.6084/m9.figshare.31169026`、即時) | これらは、4 フィールド コントラクトが修正された後のマルチモーダル ストレス テストには役立ちますが、どちらも来歴の豊富さと最初の同期パケットのセッション構造に関して `D11` とは一致しません。 |
+| `U1-2` | `D08 Simultaneous human intracerebral stimulation and HD-EEG` (`10.21227/7may-9q56`、パブリック DOI ハンドオフ `10.25493/NXN2-05W`) | `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`、即時) および `D19 CerebellarTMSEEGData` (`10.6084/m9.figshare.13082495`、即時) | これらは強力な摂動ファミリーのクロスチェックですが、`D08` の直接的な `ground-truth + intervention + inverse-validation` の役割に代わるものではありません。 |
+| `U4-2` | `D05 EEG cortical responses after HiPi` (`10.21227/8snc-7h06`、即時) | `D08 Simultaneous human intracerebral stimulation and HD-EEG` (`10.21227/7may-9q56`、アクセス混合) および `D19 CerebellarTMSEEGData` (`10.6084/m9.figshare.13082495`、即時) | これらは、最初の因果関係の符号一致ルールが修正された後の既知のサイトまたは 2 番目のファミリーの摂動チェックには適していますが、最初の反証ゲートの `D05` ほど最小ではありません。 |
+| `U8-1` | `D20 Closed-loop auditory stimulation targeting REM oscillations` (`10.5281/zenodo.10663994`、即時) | `D21 NeuroSimo: closed-loop EEG/EMG-guided TMS` (`10.5281/zenodo.14398633`、即時) および `D12 Longitudinal MI-BCI training with transcutaneous spinal stimulation` (`10.5281/zenodo.15454354`、即時) | これらは、トリガー/回復のクロスチェックと再トレーニングの負担にとって適切なサポート ファミリですが、`D20` は、1 つの制限付き遅延許容パケットに対する最もクリーンで公開されている最初のアンカーのままです。 |
 
-## Next-watch queue and adjacent support packets outside the current public six
+## 現在のパブリック 6 以外の次の監視キューと隣接するサポート パケット
 
-The headline next-watch queue still stays `U7-1 / U1-2 / U4-2 / U8-1`. `U7-2` is listed below as an adjacent support packet inside the same synchronization family, not as a queue replacement.
+ヘッドラインの次回視聴キューは依然として `U7-1 / U1-2 / U4-2 / U8-1` のままです。 `U7-2` は、キューの代替としてではなく、同じ同期ファミリー内の隣接するサポート パケットとして以下にリストされています。
 
-| RQ | Main anchor now | What EEG can honestly close next | What still stays outside the claim | Funding theme that still fits | Watch lane | Todoist |
+| RQ | 現在のメインアンカー | 次に脳波を正確に測定できるもの | まだ主張の範囲外にあるもの | 今でも適合する資金調達テーマ | ウォッチレーン | Todoist |
 |---|---|---|---|---|---|---|
-| `U7-1` | `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | A four-field synchronization contract, offset/jitter audit, and reanalysis-success note. | Device-wide standard adoption and any claim that synchronization logging alone solves validity. | `A public-open synchronization and QC contract for multimodal EEG verification in the mind-upload route` | `Okawa Foundation research grant` (`watch`) | Existing watch tasks already cover the lane. No new item was added. |
-| `U7-2` | `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`, immediate) | An explicit `offset median / jitter p95 / peak-latency drift / reanalysis agreement` metric bundle plus release-block thresholds for the same synchronization family. | Any claim that those thresholds alone solve validity, establish field-wide standards, or remove broader hardware-truth requirements. | `Release-block timing metrics for public-open multimodal EEG synchronization in the mind-upload route` | `Okawa Foundation research grant` (`watch`) | Existing watch tasks already cover the lane. No new item was added. |
-| `U1-2` | `D08 Simultaneous human intracerebral stimulation and HD-EEG` (`10.21227/7may-9q56`, public DOI handoff `10.25493/NXN2-05W`) | An inverse uncertainty-calibration report, coverage-stability table, and downgrade rule under repeated perturbations. | Any claim that one stable inverse route already proves full recoverability or preserved mechanism. | `Perturbation-tested uncertainty calibration for inverse EEG estimates in the mind-upload verification route` | `Brain Science Foundation research grant` (`watch`), `Nakatani Foundation research grant` (`next-cycle watch`) | Existing watch tasks already cover the lane. No new item was added. |
-| `U4-2` | `D05 EEG cortical responses after HiPi` (`10.21227/8snc-7h06`, immediate) | A minimal intervention protocol, sign-agreement table, and rebuttal boundary for one narrow causal packet. | Broader theory ranking, global causal-equivalence claims, and any preserved-identity reading. | `Minimal causal-intervention benchmark for reproducible EEG verification in the mind-upload route` | `Brain Science Foundation research grant` (`watch`), `Nakatani Foundation research grant` (`next-cycle watch`) | Existing watch tasks already cover the lane. No new item was added. |
-| `U8-1` | `D20 Closed-loop auditory stimulation targeting REM oscillations` (`10.5281/zenodo.10663994`, immediate) | A closed-loop safety KPI dashboard, delay-tolerance band note, and downgrade rule for one named loop family. | Universal loop thresholds, chronic deployment claims, and any identity-relevant controller reading. | `Operational delay-tolerance and safety-stop dashboard for closed-loop EEG control in the mind-upload route` | `Japan Industrial Science Research Institute research grant` (`watch`), `Nakatani Foundation research grant` (`next-cycle watch`) | Existing watch tasks already cover the lane. No new item was added. |
+| `U7-1` | `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`、即時) | 4 つのフィールドの同期コントラクト、オフセット/ジッター監査、および再分析成功メモ。 | デバイス全体の標準採用と、同期ログだけで有効性が解決されるという主張。 | `A public-open synchronization and QC contract for multimodal EEG verification in the mind-upload route` | `Okawa Foundation research grant`(`watch`) | 既存の監視タスクはすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
+| `U7-2` | `D11 A multi-session simultaneous EEG-fMRI dataset with online experience sampling` (`10.18112/openneuro.ds007216.v1.0.0`、即時) | 明示的な `offset median / jitter p95 / peak-latency drift / reanalysis agreement` メトリック バンドルと、同じ同期ファミリーのリリース ブロックしきい値。 | これらのしきい値だけで妥当性が解決される、分野全体の標準が確立される、または広範なハードウェアの真実の要件が削除されるという主張。 | `Release-block timing metrics for public-open multimodal EEG synchronization in the mind-upload route` | `Okawa Foundation research grant`(`watch`) | 既存の監視タスクはすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
+| `U1-2` | `D08 Simultaneous human intracerebral stimulation and HD-EEG` (`10.21227/7may-9q56`、パブリック DOI ハンドオフ `10.25493/NXN2-05W`) | 逆不確かさ校正レポート、カバレッジ安定性テーブル、および繰り返される摂動下でのダウングレード ルール。 | 1 つの安定した逆ルートがあるという主張は、完全な回復可能性または保存されたメカニズムをすでに証明しています。 | `Perturbation-tested uncertainty calibration for inverse EEG estimates in the mind-upload verification route` | `Brain Science Foundation research grant`(`watch`)、`Nakatani Foundation research grant`(`next-cycle watch`) | 既存の監視タスクはすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
+| `U4-2` | `D05 EEG cortical responses after HiPi` (`10.21227/8snc-7h06`、即時) | 1 つの狭い因果パケットに対する最小限の介入プロトコル、署名合意テーブル、および反論境界。 | より広範な理論のランキング、世界的な因果関係の同等性の主張、および保存された同一性に関する読み取り。 | `Minimal causal-intervention benchmark for reproducible EEG verification in the mind-upload route` | `Brain Science Foundation research grant`(`watch`)、`Nakatani Foundation research grant`(`next-cycle watch`) | 既存の監視タスクはすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
+| `U8-1` | `D20 Closed-loop auditory stimulation targeting REM oscillations` (`10.5281/zenodo.10663994`、即時) | 閉ループ安全性 KPI ダッシュボード、遅延許容バンド ノート、および 1 つの名前付きループ ファミリのダウングレード ルール。 | ユニバーサル ループのしきい値、慢性的な展開の要求、およびアイデンティティ関連のコントローラーの読み取り値。 | `Operational delay-tolerance and safety-stop dashboard for closed-loop EEG control in the mind-upload route` | `Japan Industrial Science Research Institute research grant`(`watch`)、`Nakatani Foundation research grant`(`next-cycle watch`) | 既存の監視タスクはすでにレーンをカバーしています。新しい項目は追加されませんでした。 |
 
-## Funding windows that still matter right now
+## 今でも重要な資金調達窓口
 
-- `Kura Fund` remains open through `April 17, 2026 at 17:00`.
-- `Nakatani Foundation graduate scholarship` runs from `April 1, 2026` through `May 25, 2026 at 15:00`.
-- `Kashinome Scholarship` remains open through `April 9, 2026`.
-- `Secom General Research Grant` is already closed for the current cycle (`March 31, 2026 at 12:00 JST`) and now stays only as a carried-forward watch record.
-- `Brain Science Foundation research grant`, `Okawa Foundation research grant`, `Japan Industrial Science Research Institute research grant`, and `Nakatani Foundation research grant` stay in watch or next-cycle-watch mode for the outside-current-six queue.
+- `Kura Fund` は `April 17, 2026 at 17:00` までオープンなままです。
+- `Nakatani Foundation graduate scholarship` は `April 1, 2026` から `May 25, 2026 at 15:00` まで実行されます。
+- `Kashinome Scholarship` は `April 9, 2026` までオープンなままです。
+- `Secom General Research Grant` は現在のサイクル (`March 31, 2026 at 12:00 JST`) ではすでにクローズされており、現在は繰り越し監視レコードとしてのみ残されています。
+- `Brain Science Foundation research grant`、`Okawa Foundation research grant`、`Japan Industrial Science Research Institute research grant`、および `Nakatani Foundation research grant` は、outside-current-six キューの監視モードまたは次サイクル監視モードに留まります。
 
-## What still does not become true just because this page exists
+## このページが存在するだけではまだ成り立たないこと
 
-- It does not turn the wider `60RQ` map into a same-depth execution queue.
-- It does not raise the public claim ceiling above bounded benchmark, audit, and disclosure artifacts.
-- It does not move theory, law, neurorights, chronic deployment, or full identity questions into an EEG-only solved state.
+- これは、より広い `60RQ` マップを同じ深さの実行キューに変換しません。
+- 制限されたベンチマーク、監査、および開示成果物を超えて公的請求の上限を引き上げることはありません。
+- それは、理論、法律、神経権利、慢性的な展開、または完全なアイデンティティの問題をEEGのみで解決された状態に移行させるものではありません。
 
 </article>
 </main>

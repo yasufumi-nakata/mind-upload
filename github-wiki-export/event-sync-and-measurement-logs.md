@@ -1,450 +1,450 @@
-# Wiki: Basics of event synchronization and observation logs
+# Wiki: イベント同期と監視ログの基本
 
-> Comparisons break down if we don't leave behind the source of the label, not just the signal.
+> 信号だけでなく、ラベルのソースを残さないと、比較はうまくいきません。
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-28 / Role: Practical guide
+- Updated: 2026-03-28 / Role: 実践ガイド
 
-## Role Of This Page
-This page is a wiki that explains why raw EEG waveforms alone are not reproducible in research from the perspectives of event markers, event semantics, time synchronization, manual scoring, and report-derived labels. The purpose is to prevent not only ``waveform files are available but cannot be compared,'' but also ``labels are available but provenance is ambiguous and cannot be compared,'' and ``time is available but clock domain is ambiguous and cannot be compared.''
+## このページの役割
+このページは、イベント マーカー、イベント セマンティクス、時間同期、手動スコアリング、レポート由来のラベルの観点から、生の EEG 波形だけでは研究で再現できない理由を説明する Wiki です。目的は、「`waveform files are available but cannot be compared,'' but also ``labels are available but provenance is ambiguous and cannot be compared,'' and `」時間が利用できるだけでなく、クロック ドメインがあいまいで比較できないことを防ぐことです。」
 
-## Accuracy Notes
-What we are dealing with here is the minimum observation log and label provenance, but in the 2026-03-28 update, we also clarify the differences in the roles of BIDS event tables, HED semantics, LSL synchronization, physical timing validation, and Motion-BIDS-type metadata. Although each issue requires additional metadata, the principle of keeping events, meanings, clock systems, and timing-validation classes separate remains the same.
+## 正確性に関する注記
+ここで扱っているのは最小限の観察ログとラベルの来歴ですが、2026-03-28 のアップデートでは、BIDS イベント テーブル、HED セマンティクス、LSL 同期、物理タイミング検証、Motion-BIDS タイプのメタデータの役割の違いも明確にしています。各問題には追加のメタデータが必要ですが、イベント、意味、クロック システム、タイミング検証クラスを分離するという原則は変わりません。
 
-## Back To Public Pages
-- [Introduction to EEG](https://mind-upload.com/eeg_101.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
-- [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
+## 公開ページへ戻る
+- [脳波検査の概要](https://mind-upload.com/eeg_101.html)
+- [データとベンチ](https://mind-upload.com/datasets.html)
+- [実践](https://mind-upload.com/datasets.html#l0-practice)
 
-## Related Wiki Pages
-- [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - Compensate for where the results change after observation.
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Learn why logs are a public good.
-- [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Compensates for how to read delay and jitter in L3 closed-loop evaluation.
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - Returns to the entire learning page.
+## 関連 Wiki ページ
+- [Wiki: EEG の前処理と QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - 観察後に結果が変化した部分を補正します。
+- [Wiki: 検証インフラストラクチャの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 丸太が公共財である理由を学びましょう。
+- [Wiki: 閉ループ、遅延、ジッター、安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - L3 閉ループ評価における遅延とジッターの読み取り方法を補正します。
+- [ウィキホーム](https://github.com/yasufumi-nakata/mind-upload/wiki) - 学習ページ全体に戻ります。
 
-## What Is Currently Known
-- Waveform files alone may not be sufficient to reconstruct task and stimulus responses.
-- If you don't record delays, jitter, and drift, your strengths in temporal resolution will be undermined.
-- BIDS/EEG-BIDS provides a container for events and metadata, but machine-readable semantics like HED are useful for cross-study reuse.
-- Even with LSL and trigger lines, time fidelity cannot be audited without specifying the clock domain and device-side delay.
-- A BIDS onset or sample index does not by itself prove physical display/audio onset, and a digital trigger does not by itself prove uncontrolled response timing.
-- If you do not write annotation provenance, you may not be able to reuse the same label name.
-- Recording bad channels/bad segments is directly linked to transparency of exclusions.
+## 現在わかっていること
+- 波形ファイルだけでは、課題や刺激の反応を再構築するには不十分な場合があります。
+- 遅延、ジッター、ドリフトを記録しないと、時間分解能における強みが損なわれてしまいます。
+- BIDS/EEG-BIDS はイベントとメタデータのコンテナを提供しますが、HED のような機械可読セマンティクスは研究間での再利用に役立ちます。
+- LSL とトリガー ラインを使用する場合でも、クロック ドメインとデバイス側の遅延を指定しないと時間忠実度を監査することはできません。
+- BIDS のオンセットまたはサンプル インデックスは、それ自体では物理的なディスプレイ/オーディオのオンセットを証明するものではなく、デジタル トリガーだけでは制御されていない応答タイミングを証明するものでもありません。
+- アノテーションの出所を書かないと、同じラベル名を再利用できない場合があります。
+- 不良チャンネル/不良セグメントの記録は、除外の透明性に直接関係します。
 
-## What Is Still Unknown
-- We are still in the process of operational design as to how detailed metadata will be required for all assignments.
-- How to unify the minimum synchronization log in complex multimodal simultaneous measurements is a future issue.
-- We still need to adjust how far event semantics should be made mandatory in HED / ontology / scorer rules.
-- The site-wide schema for how far report-derived labels should be separated from signal-only benchmarks is still being finalized.
+## まだわかっていないこと
+- すべての割り当てにどの程度詳細なメタデータが必要になるかについては、まだ運用設計の途中です。
+- 複雑な多峰同時測定における最小同期ログをどのように統一するかが今後の課題である。
+- HED / オントロジー / スコアラー ルールでイベント セマンティクスをどこまで必須にするかを調整する必要があります。
+- レポート由来のラベルをシグナルのみのベンチマークからどの程度分離する必要があるかについてのサイト全体のスキーマはまだ最終決定中です。
 
 ---
 
-<h2>The shortest answer</h2>
+<h2>最短の答え</h2>
 <p>
-Raw EEG is a sequence of electrical signals. However, what we often want to know in research is ``<strong>When and what signals occur</strong>''. Without that correspondence table, the meaning will be ambiguous even if you look at it later.
+生の EEG は一連の電気信号です。しかし、研究でよく知りたいのは「<strong>いつ、どのような信号が発生する</strong>」ということです。その対応表がないと後から見ても意味が曖昧になってしまいます。
 </p>
 
-<strong>Assumptions added in 2026-03 literature audit</strong>
+<strong>2026-03 文献監査で追加された前提条件</strong>
 <p>
-This page treats not only event logs but also <strong>label provenance</strong> as observation logs. In other words, even if the same "correct label" is used, it will not be a comparable benchmark unless it is written whether it is an <strong>annotation channel</strong>, an <strong>expert's interval annotation</strong>, a <strong>whole-night hypnogram</strong>, or a <strong>label derived from a doctor's report</strong>.
+このページではイベントログだけでなく、<strong>label起源</strong>も観測ログとして扱います。つまり、同じ「正しいラベル」を使ったとしても、<strong>アノテーションチャンネル</strong>なのか、<strong>エキスパートのインターバルアノテーション</strong>なのか、<strong>全夜催眠</strong>なのか、<strong>医師のレポートから導き出したラベル</strong>なのかが書かれていない限り、比較可能なベンチマークにはなりません。
 </p>
 
-<strong>Main weakness this page needed to fix</strong>
+<strong>このページの主な弱点を修正する必要があります</strong>
 <p>
-Although the site already stated that events and synchronization matter, it still did not cleanly separate <strong>time anchors</strong>, <strong>event semantics</strong>, and <strong>clock alignment</strong>. BIDS task events provide a descriptive framework through <code>events.tsv</code> and JSON sidecars, but as Robbins et al. (2021) and Hermes et al. (2025) show, cross-study reuse also requires <strong>machine-readable semantics such as HED</strong>. Furthermore, as Kothe et al. (2025) show, LSL can strengthen network synchronization without automatically giving you device-internal delay or stimulus-presentation delay. That is why this site audits event fidelity in three tiers rather than treating it as a single checkbox.
+このサイトはイベントと同期が重要であるとすでに述べていますが、それでも <strong> 時間アンカー </strong>、<strong> イベント セマンティクス </strong>、および <strong> クロック アライメント </strong> を明確に分離していませんでした。 BIDS タスク イベントは、<code>events.tsv</code> および JSON サイドカーを通じて説明的なフレームワークを提供します。 （2021）およびHermes et al。 (2025) によると、研究間の再利用には、HED</strong> などの <strong> マシン可読セマンティクスも必要です。さらに、Kothe et al. (2025) に示されているように、LSL は、デバイス内部遅延や刺激提示遅延を自動的に与えることなく、ネットワーク同期を強化できます。このため、このサイトではイベントの忠実度を 1 つのチェックボックスとして扱うのではなく、3 つの段階で監査します。
 </p>
 
-<strong>2026-03-28 re-audit: timing evidence still needed a ladder</strong>
+<strong>2026-03-28 再監査: タイミング証拠にはまだラダーが必要</strong>
 <p>
-The remaining weakness was that this page could still let a reader treat <strong>BIDS onset/sample fields</strong>, <strong>LSL alignment</strong>, <strong>TTL markers</strong>, <strong>photodiode traces</strong>, and <strong>microphone / loopback tests</strong> as if they were interchangeable proofs of timing. The current standards and primary literature do not support that compression. The BIDS specification defines <code>onset</code> relative to the <strong>first stored data point</strong>, not the physical onset at the screen or speaker. Hermes et al. (2025) shows that HED sharpens machine-actionable semantics, not hardware latency truth. Kothe et al. (2025) shows that LSL can compensate cross-device offsets and jitter, but residual setup offsets must still be tested on the actual instruments. Lepauvre et al. (2024) and Bridges et al. (2020) then show that physical stimulus onset and response timing need external validation because software package, operating system, and hardware combinations can materially shift delay and jitter. Therefore, this site now reads timing evidence as a <strong>validation ladder</strong> rather than one sync checkbox.
+残りの弱点は、このページでは、読者が <strong>BIDS オンセット/サンプル フィールド </strong>、<strong>LSL アライメント </strong>、<strong>TTL マーカー </strong>、<strong> フォトダイオード トレース </strong>、および <strong> マイク / ループバック テスト </strong> を、交換可能なタイミングの証明であるかのように扱うことができることです。現在の標準および主要な文献は、その圧縮をサポートしていません。 BIDS 仕様では、画面またはスピーカーでの物理的なオンセットではなく、<strong> 最初に保存されたデータ ポイント </strong> を基準にして <code>onset</code> を定義します。ヘルメスら。 (2025) は、HED がハードウェア レイテンシの真実ではなく、マシンが動作可能なセマンティクスを鮮明にすることを示しています。コーテら。 (2025) は、LSL がクロスデバイス オフセットとジッターを補償できることを示していますが、残りのセットアップ オフセットは実際の機器でテストする必要があります。ルポーブルら。 (2024) および Bridges ら。次に、(2020) は、ソフトウェア パッケージ、オペレーティング システム、およびハードウェアの組み合わせによって遅延とジッターが大幅に変化する可能性があるため、物理的刺激の開始と応答のタイミングには外部検証が必要であることを示しました。したがって、このサイトでは、タイミング証拠を 1 つの同期チェックボックスではなく <strong> 検証ラダー </strong> として読み取るようになりました。
 </p>
 
-<h2>Why raw EEG alone is not enough</h2>
+<h2>生の脳波だけでは不十分な理由</h2>
 <p>
-For example, if we do not know how many times a stimulus appeared during a task, at what timing a button was pressed, or which sections were excluded due to noise, different people will interpret the same waveform differently. In other words, if you look only at the waveform, it may not be clear what you are comparing.
+例えば、課題中に刺激が何回現れたのか、どのタイミングでボタンが押されたのか、ノイズによりどの部分が除外されたのかなどが分からないと、同じ波形でも人によって解釈が異なります。つまり、波形だけを見ていると、何を比較しているのかが分かりにくい可能性があります。
 </p>
 
-<h2>Event markers and stimulus log</h2>
+<h2>イベントマーカーと刺激ログ</h2>
 <table>
 <thead>
 <tr>
-<th>Record</th>
-<th>What is it needed for</th>
+<th>レコード</th>
+<th></th>に必要なものは何ですか
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Event marker</strong></td>
-<td>Indicates where stimulus presentation, response, state change, etc. correspond to on the waveform. </td>
+<td><strong>イベントマーカー</strong></td>
+<td> 刺激提示、反応、状態変化などが波形上のどこに相当するかを示します。 </td>
 </tr>
 <tr>
-<td><strong>Stimulus log</strong></td>
-<td>It records which stimuli appeared, in what order, and under what conditions. </td>
+<td><strong>刺激ログ</strong></td>
+<td>どのような刺激が、どのような順序で、どのような条件で現れたかを記録します。 </td>
 </tr>
 <tr>
-<td><strong>Reaction log</strong></td>
-<td>Associate the subject's button presses, answers, failed trials, etc. with the waveform. </td>
+<td><strong>反応ログ</strong></td>
+<td>被験者のボタンの押下、回答、試行の失敗などを波形と関連付けます。 </td>
 </tr>
 </tbody>
 </table>
 <p>
-Even if there is only an event marker, if the content of the stimulus or the name of the condition is ambiguous, it will be difficult to reanalyze it. Conversely, just having a stimulus log is not enough unless it is linked to EEG time.
+イベントマーカーだけがあっても、刺激の内容や状態の名称があいまいであれば、再解析することは困難です。逆に、EEG 時間とリンクしていなければ、刺激ログがあるだけでは十分ではありません。
 </p>
 
-<h2>Event fidelity is audited in three layers</h2>
+<h2>イベントの忠実度は 3 つのレイヤーで監査されます</h2>
 <table>
 <thead>
 <tr>
-<th>layer</th>
-<th>What to fix here</th>
-<th>Misreading that is likely to occur if missing</th>
+<th>レイヤー</th>
+<th>ここを修正する必要があります</th>
+<th>紛失すると起こりやすい誤読</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. Time anchor</strong></td>
-<td>Correspondence with onset/duration, sample index, clock domain, stimulus/response log. </td>
-<td>``When the event happened'' becomes ambiguous, and epoching and delayed evaluation break down. </td>
+<td><strong>1。タイムアンカー</strong></td>
+<td>Cオンセット/持続時間、サンプルインデックス、クロックドメイン、刺激/応答ログとの対応。 </td>
+<td>「いつその出来事が起こったのか」が曖昧になり、画期的かつ遅れた評価が崩れる。 </td>
 </tr>
 <tr>
-<td><strong>2. Event semantics</strong></td>
-<td><code>trial_type</code>, condition name, HED tags, manual scoring rule, report usage flag. </td>
-<td>Even if the label name is the same, the meaning will be different and cross-study meta/mega analysis will be broken. </td>
+<td><strong>2。イベントのセマンティクス</strong></td>
+<td><code>trial_type</code>、条件名、HED タグ、手動スコアリング ルール、レポート使用フラグ。 </td>
+<td>ラベル名が同じでも意味が異なり、研究横断的なメタ/メガ分析が崩れてしまいます。 </td>
 </tr>
 <tr>
-<td><strong>3. Synchronization and transport</strong></td>
-<td>Clock offset, delay, jitter, drift, transport path, presence or absence of resampling/smoothing. </td>
-<td>If LSL or trigger is just a sub-ms ground truth, it will be easy to misread it. </td>
+<td><strong>3。同期とトランスポート</strong></td>
+<td>Cクロックオフセット、遅延、ジッター、ドリフト、トランスポートパス、リサンプリング/スムージングの有無。 </td>
+<td>LSL またはトリガーが単なるサブミリ秒のグラウンドトゥルースである場合、それを読み間違える可能性があります。 </td>
 </tr>
 </tbody>
 </table>
 <p>
-BIDS task events primarily provide the <strong>first layer</strong>, HED supplements the <strong>second-layer semantics</strong>, and LSL supports <strong>third-layer network synchronization</strong>. Therefore, this site does not treat these as interchangeable tools.
+BIDS タスク イベントは主に <strong> 第 1 層 </strong> を提供し、HED は <strong> 第 2 層セマンティクス </strong> を補足し、LSL は <strong> 第 3 層ネットワーク同期 </strong> をサポートします。したがって、このサイトではこれらを互換性のあるツールとして扱いません。
 </p>
 
-<h2>Timing validation is a ladder, not one box</h2>
+<h2>タイミング検証は 1 つのボックスではなく、はしごです</h2>
 <table>
 <thead>
 <tr>
-<th>Validation class</th>
-<th>What it directly fixes</th>
-<th>What it still does not prove</th>
-<th>Typical artifact to keep</th>
+<th>検証クラス</th>
+<th>直接修正するもの</th>
+<th>まだ証明されていないこと</th>
+<th>保存すべき典型的なアーティファクト</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Stored-data anchor</strong></td>
-<td>Fixes where an event sits in the saved data file by <code>onset</code>, <code>duration</code>, and optionally <code>sample</code>.</td>
-<td>Does not prove physical display/audio onset, device throughput delay, or participant response timing.</td>
-<td><code>events.tsv</code>, <code>events.json</code>, acquisition start definition, discarded-sample rule.</td>
+<td><strong>保存データアンカー</strong></td>
+<td><code>onset</code>、<code>duration</code>、およびオプションで <code>sample</code>.</td> によって、保存されたデータ ファイル内のイベントが存在する場所を修正します
+<td> は、物理的なディスプレイ/オーディオの開始、デバイスのスループット遅延、または参加者の応答タイミングを証明しません。</td>
+<td><code>events.tsv</code>、<code>events.json</code>、取得開始定義、破棄サンプルルール.</td>
 </tr>
 <tr>
-<td><strong>Stream alignment</strong></td>
-<td>Fixes cross-device clock offset, drift, and network-jitter handling across synchronized streams.</td>
-<td>Does not prove the true latency of displays, speakers, amplifiers, or buttons.</td>
-<td>LSL/XDF log, clock domain, offset / RTT summary, resync policy.</td>
+<td><strong>ストリームアライメント</strong></td>
+<td>同期ストリーム全体でのクロスデバイス クロック オフセット、ドリフト、ネットワーク ジッターの処理を修正します。</td>
+<td> は、ディスプレイ、スピーカー、アンプ、ボタンの実際の遅延を証明するものではありません。</td>
+<td>LSL/XDF ログ、クロック ドメイン、オフセット / RTT サマリー、再同期ポリシー。</td>
 </tr>
 <tr>
-<td><strong>Acquisition-side digital marker capture</strong></td>
-<td>Fixes when a trigger pulse reached the acquisition system or DAQ input.</td>
-<td>Does not prove when the stimulus actually became visible/audible or when the participant actually responded.</td>
-<td>TTL or marker trace, DAQ channel, trigger wiring map, marker-to-stream relation.</td>
+<td><strong>取得側デジタルマーカーキャプチャ</strong></td>
+<td>トリガパルスが収集システムまたはDAQ入力に到達したタイミングを修正します。</td>
+<td>刺激が実際に視覚/聴覚になったとき、または参加者が実際に反応したときは証明されません。</td>
+<td>TTL またはマーカー トレース、DAQ チャネル、トリガー配線マップ、マーカーとストリームの関係。</td>
 </tr>
 <tr>
-<td><strong>Physical output onset</strong></td>
-<td>Fixes the real-world onset and duration of a visual or auditory event at the actuator.</td>
-<td>Does not prove subjective perception time, neural processing latency, or response-device timing.</td>
-<td>Photodiode trace, microphone trace, audio loopback, high-speed-camera or equivalent setup note.</td>
+<td><strong>物理的出力開始</strong></td>
+<td>アクチュエータにおける視覚または聴覚イベントの現実世界の開始と継続時間を修正します。</td>
+<td> は、主観的な知覚時間、神経処理遅延、または応答デバイスのタイミングを証明するものではありません。</td>
+<td>フォトダイオード トレース、マイク トレース、オーディオ ループバック、高速カメラ、または同等のセットアップに関するメモ。</td>
 </tr>
 <tr>
-<td><strong>Uncontrolled-response timing</strong></td>
-<td>Fixes the gap between the logged response timestamp and the actual button / key / actuator response.</td>
-<td>Does not prove stimulus onset timing or internal cognitive latency.</td>
-<td>Contact microphone, force sensor, loopback, response-box validation log.</td>
+<td><strong>制御不能な応答タイミング</strong></td>
+<td>ログに記録された応答タイムスタンプと実際のボタン/キー/アクチュエータの応答の間のギャップを修正します。</td>
+<td>は、刺激の開始タイミングや内部認知潜時を証明しません。</td>
+<td>接触マイク、力センサー、ループバック、レスポンスボックス検証ログ。</td>
 </tr>
 </tbody>
 </table>
 <p>
-On this site, a submission has to name the <strong>highest rung actually tested</strong>. Saying “we used BIDS” fixes the stored-data anchor. Saying “we used LSL” fixes stream alignment. Saying “we sent TTL markers” fixes acquisition-side digital capture. Claims about <strong>physical stimulus onset</strong> or <strong>true response timing</strong> require an external measurement rung such as photodiode, microphone, or loopback.
+このサイトでは、提出物は<strong>実際にテストされた最も高い段に</strong>という名前を付ける必要があります。 「BIDS を使用しました」と言うと、保存されたデータのアンカーが修正されます。 「LSL を使用しました」と言うと、ストリームの位置合わせが修正されます。 「TTL マーカーを送信しました」と言うと、取得側のデジタル キャプチャが修正されます。 <strong>物理的刺激の開始</strong>または<strong>真の応答タイミング</strong>に関する主張には、フォトダイオード、マイク、またはループバックなどの外部測定ラングが必要です。
 </p>
 
-<h2>Read the origins of labels in four different ways</h2>
+<h2>4つの異なる方法でラベルの由来を読む</h2>
 <table>
 <thead>
 <tr>
-<th>Label type</th>
-<th>Representative examples</th>
-<th>What it directly represents</th>
-<th>Minimum auxiliary log that should be kept</th>
+<th>ラベルタイプ</th>
+<th>代表例</th>
+<th>それが直接表すもの</th>
+<th>保持する必要がある最小限の補助ログ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>cue-locked annotation channel</strong></td>
-<td>EEG Motor Movement/Imagery T0 / T1 / T2</td>
-<td>The design timing of the issue cue and motion/imagery onset. </td>
-<td>Leave run ID, task ID, subject ID, visual cue condition, and epoching rule. </td>
+<td><strong>cueロックアノテーションチャンネル</strong></td>
+<td>EEG モーターの動き/画像 T0 / T1 / T2</td>
+<td>問題の合図とモーション/画像の開始の設計タイミング。 </td>
+<td>Leave 実行 ID、タスク ID、サブジェクト ID、ビジュアル キュー条件、およびエポシング ルール。 </td>
 </tr>
 <tr>
-<td><strong>expert interval annotation</strong></td>
-<td>CHB-MIT seizure onset / offset</td>
-<td>This is the event section during long-term recording. </td>
-<td>Leave file order, gap, case-to-subject support, montage changes. </td>
+<td><strong>エキスパート間隔注釈</strong></td>
+<td>CHB-MIT 発作開始 / オフセット</td>
+<td>長時間録画時のイベント部です。 </td>
+<td>ファイルの順序、ギャップ、ケースから主題へのサポート、モンタージュの変更を残します。 </td>
 </tr>
 <tr>
-<td><strong>manual hypnogram</strong></td>
-<td>Sleep-EDF's R&K sleep stage</td>
-<td>This is the coarse state label of whole-night. </td>
-<td>Leave scoring manual, scorer ID, night / study conditions, and label mapping. </td>
+<td><strong>手動催眠術</strong></td>
+<td>Sleep-EDFのR&Kスリープステージ</td>
+<td>これは一晩の粗い状態のラベルです。 </td>
+<td>採点マニュアル、採点者ID、夜間・学習条件、ラベルマッピングを残します。 </td>
 </tr>
 <tr>
-<td><strong>report-derived / triaged label</strong></td>
-<td>TUH EEG / TUSZ report keyword search and clinician report</td>
-<td>Clinical label and triage information attached to session/file. </td>
-<td>Leave report usage flag, patient / session ID, signal-only or multimodal declaration. </td>
+<td><strong>レポート由来/トリアージラベル</strong></td>
+<td>TUH EEG / TUSZ レポートのキーワード検索と臨床医レポート</td>
+<td>C臨床ラベルとトリアージ情報がセッション/ファイルに添付されます。 </td>
+<td>Leave レポート使用フラグ、患者 / セッション ID、信号のみまたはマルチモーダル宣言。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Three things to look for in time synchronization</h2>
+<h2>時間同期で注意すべき 3 つのこと</h2>
 <table>
 <thead>
 <tr>
-<th>Term</th>
-<th>Meaning</th>
-<th>What is the problem</th>
+<th>期間</th>
+<th>意味</th>
+<th>何が問題ですか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Delay</strong></td>
-<td>How many ms is the difference between the actual event and the record? </td>
-<td>The time of the post-stimulus response is shifted, leading to incorrect interpretation. </td>
+<td><strong>遅延</strong></td>
+<td>実際のイベントと記録の差は何msですか？ </td>
+<td>刺激後の反応時間がずれるため、誤った解釈が生じます。 </td>
 </tr>
 <tr>
-<td><strong>Jitter</strong></td>
-<td>How much does the deviation fluctuate each time? </td>
-<td>Averaging will blur the peaks and make the response appear weaker. </td>
+<td><strong>ジッター</strong></td>
+<td>毎回の偏差はどれくらい変動しますか？ </td>
+<td>平均化するとピークがぼやけ、応答が弱く見えます。 </td>
 </tr>
 <tr>
-<td><strong>Drift</strong></td>
-<td>The clock lag increases over a long period of time. </td>
-<td>The later the time, the greater the synchronization error becomes. </td>
+<td><strong>ドリフト</strong></td>
+<td>長時間使用すると時計の遅れが大きくなります。 </td>
+<td>時間が遅くなるほど同期誤差が大きくなります。 </td>
 </tr>
 </tbody>
 </table>
 <p>
-This section explains the meaning of the observation log. If you want to see how these affect end-to-end stability and safe stopping in L3 closed-loop evaluation, <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Wiki: Closed-loop, delay, jitter, and safe stopping</a> is a supplementary lesson.
+ここでは観測ログの意味について説明します。これらが L3 閉ループ評価におけるエンドツーエンドの安定性と安全な停止にどのような影響を与えるかを知りたい場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Wiki: 閉ループ、遅延、ジッター、および安全な停止</a> が補足レッスンです。
 </p>
 
-<h2>LSL is powerful, but not hardware ground truth</h2>
+<h2>LSL は強力ですが、ハードウェアのグラウンド トゥルースではありません</h2>
 <p>
-The Lab Streaming Layer (LSL) is extremely useful as a foundation for synchronizing multiple streams within the same LAN and consistently handling clock offsets and stream metadata. Kothe et al. (2025) showed that LSL can achieve millisecond precision with software-based synchronization. However, the same paper also makes clear that <strong>the input device's throughput delay and on-device processing delay cannot be estimated or corrected by LSL alone</strong>. Therefore, even if LSL is used, display delay, audio delay, and amplifier buffer delay must still be measured separately.
+Lab Streaming Layer (LSL) は、同じ LAN 内で複数のストリームを同期し、クロック オフセットとストリーム メタデータを一貫して処理するための基盤として非常に役立ちます。コーテら。 (2025) LSL はソフトウェアベースの同期でミリ秒の精度を達成できることを示しました。ただし、同じ論文では、<strong> 入力デバイスのスループット遅延とオンデバイス処理遅延は、LSL だけでは推定または補正できないことも明らかにしています </strong>。したがって、LSL を使用する場合でも、表示遅延、音声遅延、およびアンプのバッファ遅延を個別に測定する必要があります。
 </p>
 <table>
 <thead>
 <tr>
-<th>Things you should leave behind even if you are using LSL</th>
-<th>Reason</th>
+<th>LSL</th>を使っていても残しておいたほうがいいもの
+<th>理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>timestamp domain</strong></td>
-<td>If you do not write whether it is based on the presentation PC, acquisition PC, or device clock, the meaning of the time difference will be lost. </td>
+<td><strong>タイムスタンプドメイン</strong></td>
+<td> 発表用PC、取得用PC、デバイス時計のいずれを基準としているのか書かないと時差の意味がなくなってしまいます。 </td>
 </tr>
 <tr>
-<td><strong>device-side delay</strong></td>
-<td>The internal delays of the amplifier, display, audio output, and microcontroller cannot be determined by software timestamp alone. </td>
+<td><strong>デバイス側遅延</strong></td>
+<td>アンプ、ディスプレイ、オーディオ出力、マイクロコントローラーの内部遅延は、ソフトウェアのタイムスタンプだけでは判断できません。 </td>
 </tr>
 <tr>
-<td><strong>drift / resync policy</strong></td>
-<td>In long-term recording, the alignment error in the second half changes depending on whether or not drift correction is applied. </td>
+<td><strong>ドリフト/再同期ポリシー</strong></td>
+<td>長時間記録ではドリフト補正の有無により後半のアライメント誤差が変化します。 </td>
 </tr>
 <tr>
-<td><strong>validation method</strong></td>
-<td>You need to know which method you used to estimate the delay, such as photodiode, loopback, TTL, or common signal input. </td>
+<td><strong>検証方法</strong></td>
+<td>フォトダイオード、ループバック、TTL、共通信号入力など、遅延の推定にどの方法を使用したかを知る必要があります。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>What to log with the 4 starter datasets</h2>
+<h2>4 つのスターター データセットで何を記録するか</h2>
 
-<strong>The last column is the operational reasoning for this site</strong>
+<strong>最後の列はこのサイトの運営上の理由</strong>
 <p>
-The <strong>what not to overread</strong> column below marks the operational boundary that this site draws from the logging granularity directly described in official dataset documentation and primary literature.
+以下の <strong> 読みすぎてはいけないこと </strong> 列は、公式データセットのドキュメントや一次文献に直接記載されているログの粒度からこのサイトが引いた運用上の境界を示しています。
 </p>
 
 <table>
 <thead>
 <tr>
-<th>Dataset</th>
-<th>Current logging</th>
-<th>Additional details to preserve</th>
-<th>What not to overread</th>
+<th>データセット</th>
+<th>電流ロギング</th>
+<th>保存すべき追加の詳細</th>
+<th>深読みしてはいけないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG Motor Movement/Imagery</strong></td>
-<td><code>.event</code> and the annotation channel record cue-locked onset with T0 / T1 / T2 tags. </td>
-<td>Keep subject, run, task block, epoching window, and EOG / EMG audit results. </td>
-<td>Do not read this cue-locked motor task as spontaneous thought readout. </td>
+<td><strong>EEG 運動/画像</strong></td>
+<td><code>.event</code> およびアノテーション チャンネルは、T0 / T1 / T2 タグでキューロックされたオンセットを記録します。 </td>
+<td>サブジェクト、実行、タスク ブロック、エポッキング ウィンドウ、および EOG / EMG 監査結果を保持します。 </td>
+<td>このキューロック運動タスクを自発的思考の読み出しとして読み取らないでください。 </td>
 </tr>
 <tr>
 <td><strong>CHB-MIT</strong></td>
-<td>The summary and <code>.seizure</code> annotations preserve seizure intervals, case structure, file gaps, and surrogate dates. </td>
-<td>Keep case-to-subject linkage, gap length, whether recording is continuous, and montage summaries. </td>
-<td>Do not treat each file as an independent sample or read the dataset as a gap-free monitoring log. </td>
+<td> 概要および <code>.seizure</code> 注釈は、発作間隔、事件構造、ファイル ギャップ、および代理日付を保存します。 </td>
+<td>症例と被験者の関連性、ギャップの長さ、記録が連続的であるかどうか、およびモンタージュの概要を保持します。 </td>
+<td>各ファイルを独立したサンプルとして扱ったり、データセットをギャップのない監視ログとして読み取ったりしないでください。 </td>
 </tr>
 <tr>
-<td><strong>Sleep-EDF</strong></td>
-<td>The dataset includes an R&amp;K hypnogram, Fpz-Cz / Pz-Oz EEG, and a 1 Hz event marker. </td>
-<td>Keep the scoring manual, scorer, study arm, night ID, and any mapping rules to AASM labels. </td>
-<td>Do not claim sub-second sleep-event timing simply because the EEG itself is sampled at 100 Hz. </td>
+<td><strong>スリープ-EDF</strong></td>
+<td> データセットには、R&K 催眠図、Fpz-Cz / Pz-Oz EEG、1 Hz イベント マーカーが含まれています。 </td>
+<td> スコアリングマニュアル、スコアラー、スタディアーム、ナイト ID、および AASM ラベルへのマッピングルールを保持します。 </td>
+<td> EEG 自体が 100 Hz でサンプリングされているという理由だけで、1 秒未満の睡眠イベント タイミングを主張しないでください。 </td>
 </tr>
 <tr>
-<td><strong>TUH EEG / TUSZ</strong></td>
-<td>Depending on the subset, the dataset includes patient / session hierarchy, EDF, clinician reports, and expert seizure annotation. </td>
-<td>Keep report-usage flags, patient / session splits, and any report-keyword-derived triage. </td>
-<td>Do not write report-assisted clinical labels as pure EEG signal-only results. </td>
+<td><strong>TUH 脳波 / TUSZ</strong></td>
+<td>サブセットに応じて、データセットには患者/セッション階層、EDF、臨床医レポート、および専門家の発作注釈が含まれます。 </td>
+<td>レポート使用フラグ、患者/セッション分割、レポートキーワード由来のトリアージを保持します。 </td>
+<td>レポート支援臨床ラベルを純粋な EEG 信号のみの結果として書き込まないでください。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Why leave bad channel / bad segment</h2>
+<h2>不良チャネル/不良セグメントを残す理由</h2>
 <p>
-It is normal to exclude channels with large noise or sections broken by body movement. However, without that record, another person cannot reproduce the same exclusion later.
+ノイズが大きいチャンネルや体の動きによって壊れたセクションを除外するのが通常です。ただし、その記録がなければ、後で別の人が同じ除外を再現することはできません。
 </p>
 
-<h4>What you want to keep as a minimum</h4>
+<h4>最低限抑えておきたいこと</h4>
 <ul>
-<li><strong>bad channel:</strong>Which channel was marked bad and for what reason? </li>
-<li><strong>bad segment:</strong>Which time segment did you exclude? </li>
-<li><strong>Threshold:</strong>What criteria were used to exclude it? </li>
-<li><strong>How to fix:</strong>Did you interpolate or discard? </li>
+<li><strong>不良チャネル:</strong>どのチャネルが不良とマークされましたか?その理由は何ですか? </li>
+<li><strong>不正なセグメント:</strong>どの時間セグメントを除外しましたか? </li>
+<li><strong>しきい値:</strong>除外するためにどのような基準が使用されましたか? </li>
+<li><strong>修正方法:</strong>補間または破棄しましたか? </li>
 </ul>
 
-<h2>Minimum information required for EEG-BIDS</h2>
+<h2>EEG-BIDS</h2>に必要な最小限の情報
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Meaning</th>
+<th>アイテム</th>
+<th>意味</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>`events.tsv`</strong></td>
-<td>Leaves the time and type of stimulus and response. </td>
+<td>刺激と反応の時間と種類を残します。 </td>
 </tr>
 <tr>
-<td><strong>`events.json` and HED</strong></td>
-<td>Explain the meaning of <code>trial_type</code> and other columns, and optionally make event semantics machine-readable with HED tags. </td>
+<td><strong>`events.json` および HED</strong></td>
+<td><code>trial_type</code> およびその他の列の意味を説明し、オプションで HED タグを使用してイベント セマンティクスを機械可読にします。 </td>
 </tr>
 <tr>
 <td><strong>`channels.tsv`</strong></td>
-<td>Leave the status and type of each channel. </td>
+<td>各チャンネルのステータスと種類を残します。 </td>
 </tr>
 <tr>
-<td><strong>JSON metadata</strong></td>
-<td>Leave the sampling frequency, reference method, measurement conditions, etc. </td>
+<td><strong>JSON メタデータ</strong></td>
+<td>サンプリング周波数、基準方法、測定条件等はお任せください。
 </tr>
 <tr>
-<td><strong>clock / sync log</strong></td>
-<td>Clock domain, delay, jitter, drift, synchronization method, and measurement method are recorded in separate logs. </td>
+<td><strong>クロック/同期ログ</strong></td>
+<td>Clockドメイン、遅延、ジッター、ドリフト、同期方法、測定方法を別ログに記録します。 </td>
 </tr>
 <tr>
-<td><strong>`*_coordsystem.json` and extended schema</strong></td>
-<td>When using electrodes, motion sensors, or pose streams, leave the coordinate system and measurement arrangement as first-class metadata. </td>
+<td><strong>`*_coordsystem.json` および拡張スキーマ</strong></td>
+<td>電極、モーション センサー、またはポーズ ストリームを使用する場合は、座標系と測定の配置を第一級のメタデータとして残します。 </td>
 </tr>
 <tr>
-<td><strong>QC / Exclusion Log</strong></td>
-<td>Leave bad channels, bad segments, noise, and exclusion reasons in external logs and derivatives. </td>
+<td><strong>QC / 除外ログ</strong></td>
+<td>不良チャネル、不良セグメント、ノイズ、除外理由を外部ログと派生ファイルに残します。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Event Fidelity Card required on this site</h2>
+<h2>このサイトではイベント フィデリティ カードが必要</h2>
 <p>
-As of the 2026-03-28 site rule, dataset cards and runbooks that contain events must include at least the following six items. The point is not to wait until everything is perfect, but to make missing pieces visible and define where claims must stop.
+2026 年 3 月 28 日のサイト ルール以降、イベントを含むデータセット カードと Runbook には、少なくとも次の 6 つの項目が含まれている必要があります。重要なのは、すべてが完璧になるまで待つことではなく、欠けている部分を可視化し、どこで主張を止めなければならないかを定義することです。
 </p>
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Minimum details to include</th>
+<th>アイテム</th>
+<th>最低限含めるべき詳細</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. Event anchor</strong></td>
-<td>Onset / duration / sample, source file, and the clock domain to which the time refers. </td>
+<td><strong>1。イベントアンカー</strong></td>
+<td>Onset / 継続時間 / サンプル、ソース ファイル、および時間が参照するクロック ドメイン。 </td>
 </tr>
 <tr>
-<td><strong>2. Event semantics</strong></td>
-<td><code>trial_type</code>, condition definitions, HED or an equivalent vocabulary, and whether semantics come from signal-only annotation or manual scoring / reports. </td>
+<td><strong>2。イベントのセマンティクス</strong></td>
+<td><code>trial_type</code>、条件定義、HED または同等の語彙、およびセマンティクスが信号のみの注釈または手動スコアリング/レポートから得られるかどうか。 </td>
 </tr>
 <tr>
-<td><strong>3. Clock domain and stream alignment</strong></td>
-<td>Name the clock domain, synchronization middleware if any, offset / drift handling, and resynchronization policy. </td>
+<td><strong>3。クロックドメインとストリームアライメント</strong></td>
+<td> クロック ドメイン、同期ミドルウェア (存在する場合)、オフセット/ドリフト処理、および再同期ポリシーに名前を付けます。 </td>
 </tr>
 <tr>
-<td><strong>4. Timing validation class</strong></td>
-<td>Name whether timing evidence comes from stored-data anchor only, digital marker capture, physical output onset, or uncontrolled-response testing, together with measured delay / jitter summary and the measurement method. </td>
+<td><strong>4。タイミング検証クラス</strong></td>
+<td> タイミング証拠が、保存されたデータ アンカーのみ、デジタル マーカー キャプチャ、物理的な出力オンセット、または制御されていない応答テストから得られたものであるかどうか、測定された遅延/ジッターの概要と測定方法とともに名前を付けます。 </td>
 </tr>
 <tr>
-<td><strong>5. Provenance</strong></td>
-<td>Scorer ID, scoring manual, report-usage flag, and whether the label is signal-only or multimodal. </td>
+<td><strong>5。来歴</strong></td>
+<td>Scorer ID、スコアリングマニュアル、レポート使用フラグ、ラベルがシグナル専用かマルチモーダルか。 </td>
 </tr>
 <tr>
-<td><strong>6. Geometry / multimodal metadata</strong></td>
-<td>Electrode coordinates, coordinate system, and the frame plus schema of any additional motion, video, or physiology streams. </td>
+<td><strong>6。ジオメトリ/マルチモーダルメタデータ</strong></td>
+<td>電極座標、座標系、および追加のモーション、ビデオ、または生理学的ストリームのフレームとスキーマ。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Information that is difficult to restore later</h2>
+<h2>後から復元することが困難な情報</h2>
 <p>
-If you do not record the following information, you will have to guess it later.
+次の情報を記録しておかないと、後で推測する必要があります。
 </p>
 <ul>
-<li><strong>Exact time of stimulus presentation:</strong>Rough order cannot be substituted. </li>
-<li><strong>Clock domain:</strong>If you do not state which clock a timestamp belongs to, you cannot interpret differences across multiple streams. </li>
-<li><strong>Timing validation class:</strong>If you do not say whether a number comes from stored-data anchor, TTL, photodiode, microphone, or loopback, sync evidence becomes impossible to interpret. </li>
-<li><strong>Actual delay and jitter:</strong> Sometimes equipment and software settings are not enough. </li>
-<li><strong>Device-side delay:</strong>Even if you use LSL or trigger, you need to measure the internal delay of the display, audio, and amplifier separately. </li>
-<li><strong>Reason for exclusion:</strong>Even if you look back on it, you won't know why you threw it away. </li>
-<li><strong>Label provenance:</strong>If you do not record whether a label came from manual scoring or a report-derived rule, you cannot compare it safely even when the label name is the same. </li>
-<li><strong>Event semantics: </strong>If there is no meaning of <code>trial_type</code>, condition name, or HED tags, the same name may be different conditions. </li>
-<li><strong>scoring manual / scorer:</strong>Manual hypnograms like Sleep-EDF change their meaning for reuse when they lose their reference and scorer. </li>
-<li><strong>report usage flag:</strong>In TUH-style datasets, you otherwise cannot tell later whether a label depended on reports or came from signal-only processing. </li>
-<li><strong>Coordinate system and sensor frame:</strong> Adding motion and pose but not leaving frame makes multimodal integration non-reusable. </li>
-<li><strong>On-the-spot operational notes:</strong> Electrode troubles and synchronization errors cannot be read from the waveform alone. </li>
+<li><strong>刺激提示の正確な時間:</strong>大まかな順序は置き換えることができません。 </li>
+<li><strong>クロック ドメイン:</strong>タイムスタンプがどのクロックに属しているかを指定しないと、複数のストリーム間の差異を解釈できません。 </li>
+<li><strong>タイミング検証クラス:</strong>数値が保存されたデータ アンカー、TTL、フォトダイオード、マイク、またはループバックからのものであるかどうかを指定しないと、同期の証拠を解釈することができなくなります。 </li>
+<li><strong>実際の遅延とジッター:</strong> 機器やソフトウェアの設定が不十分な場合があります。 </li>
+<li><strong>機器側遅延：</strong>LSLやトリガーを使用する場合でも、ディスプレイ、オーディオ、アンプの内部遅延を別途測定する必要があります。 </li>
+<li><strong>除外理由:</strong>思い返しても、なぜ捨てたのか分かりません。 </li>
+<li><strong>Lラベルの来歴:</strong>ラベルが手動スコアリングによるものかレポートから派生したルールによるものかを記録しない場合、ラベル名が同じであっても安全に比較することはできません。 </li>
+<li><strong>イベントセマンティクス:</strong><code>trial_type</code>、条件名、または HED タグの意味がない場合、同じ名前が異なる条件である可能性があります。 </li>
+<li><strong>スコアリングマニュアル/スコアラー:</strong>Sleep-EDFのような手動ヒプノグラムは、参照とスコアラーを失うと再利用のために意味が変わります。 </li>
+<li><strong>レポート使用フラグ:</strong>TUH スタイルのデータセットでは、そうしないと、ラベルがレポートに依存しているのか、信号のみの処理から来たのかを後から判断することができません。 </li>
+<li><strong>座標系とセンサー フレーム:</strong> モーションとポーズを追加してもフレームを離れることはできないため、マルチモーダル統合は再利用できなくなります。 </li>
+<li><strong>現場作業上の注意：</strong> 電極トラブルや同期エラーは波形だけでは読み取れません。 </li>
 </ul>
 
-<h2>References</h2>
+<h2>参考資料</h2>
 <ul>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS Specification: Events</a></li>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS Specification: Electroencephalography</a></li>
-<li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
-<li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">Robbins et al. (2021), Building FAIR functionality: annotating events in time series data using HED</a></li>
-<li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">Hermes et al. (2025), HED library schema for EEG data annotation</a></li>
-<li><a href="https://doi.org/10.1162/imag_a_00136" target="_blank">Kothe et al. (2025), The lab streaming layer for synchronized multimodal recording</a></li>
-<li><a href="https://doi.org/10.3758/s13428-024-02508-y" target="_blank">Lepauvre et al. (2024), A standardized framework to test event-based experiments</a></li>
-<li><a href="https://doi.org/10.7717/peerj.9414" target="_blank">Bridges et al. (2020), The timing mega-study: comparing a range of experiment generators, both lab-based and online</a></li>
-<li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024), Motion-BIDS</a></li>
-<li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
-<li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
-<li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
-<li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016), The Temple University Hospital EEG Data Corpus</a></li>
-<li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">Shah et al. (2018), The Temple University Hospital Seizure Detection Corpus</a></li>
-<li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009), Sleep classification according to AASM and Rechtschaffen &amp; Kales</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS 仕様: イベント</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS 仕様: 脳波検査</a></li>
+<li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">パーネット他(2019)、EEG-BIDS</a></li>
+<li><a href="https://doi.org/10.1007/s12021-021-09513-7" target="_blank">Robbins et al. (2021)、FAIR 機能の構築: HED</a></li> を使用した時系列データ内のイベントの注釈付け
+<li><a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">エルメス等(2025)、EEG データ注釈用の HED ライブラリ スキーマ</a></li>
+<li><a href="https://doi.org/10.1162/imag_a_00136" target="_blank">Kothe et al. (2025)、同期マルチモーダル記録用のラボ ストリーミング レイヤー</a></li>
+<li><a href="https://doi.org/10.3758/s13428-024-02508-y" target="_blank">LLepauvre et al. (2024)、イベントベースの実験をテストするための標準化されたフレームワーク</a></li>
+<li><a href="https://doi.org/10.7717/peerj.9414" target="_blank">ブリッジズら(2020)、タイミングのメガスタディ: ラボベースとオンラインの両方のさまざまな実験ジェネレーターの比較</a></li>
+<li><a href="https://doi.org/10.1038/s41597-024-03559-8" target="_blank">Jeung et al. (2024)、モーション-BIDS</a></li>
+<li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG 運動動作/画像データセット</a></li>
+<li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT 頭皮脳波データベース</a></li>
+<li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF データベースの拡張</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid＆amp; Picone (2016)、テンプル大学病院 EEG データ コーパス</a></li>
+<li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">シャーら(2018)、テンプル大学病院発作検出コーパス</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009)、AASM および Rechtschaffen &amp; に基づく睡眠分類。カレス</a></li>
 </ul>
 
-<h2>Where to go back next</h2>
+<h2>次に戻る場所</h2>
 <p>
-Please use <a href="https://mind-upload.com/eeg_101.html">Introduction to EEG</a> to return to the role of EEG as a whole, <a href="https://mind-upload.com/datasets.html">Data & Bench</a> to return to selecting starter data, and <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a> to return to the minimal loop procedure.
+EEG 全体の役割に戻るには <a href="https://mind-upload.com/eeg_101.html"> Introduction to EEG</a>、スターター データの選択に戻るには <a href="https://mind-upload.com/datasets.html">Data & Bench</a>、最小限のループ手順に戻るには <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-on</a> を使用してください。
 </p>

@@ -1,402 +1,402 @@
-# Wiki: Thermodynamic Grounding Basics
+# Wiki: 熱力学的接地の基本
 
-> Arrow-of-time evidence is informative, but it is not direct physical dissipation by default
+> 時間の矢の証拠は有益ですが、デフォルトでは直接的な物理的消散ではありません
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-02 / Role: Technical / natural science only
+- Updated: 2026-04-02 / Role: 技術/自然科学のみ
 
-## Role Of This Page
-This page explains why thermodynamic language appears on Mind-Upload, what current neural-data papers actually compute, and where the interpretation ceiling still sits.
+## このページの役割
+このページでは、なぜ熱力学言語が Mind-Upload に登場するのか、現在の神経データ論文が実際に何を計算しているのか、そして解釈の上限がどこにあるのかについて説明します。
 
-## Accuracy Notes
-This page treats thermodynamic indicators as auxiliary scientific evidence. It does not treat them as sufficient conditions for identity, consciousness, or WBE success.
+## 正確性に関する注記
+このページでは、熱力学指標を補助的な科学的証拠として扱います。それは、それらをアイデンティティ、意識、または WBE の成功のための十分な条件として扱いません。
 
-## Back To Public Pages
-- [Verification](https://mind-upload.com/verification.html)
-- [FAQ](https://mind-upload.com/faq.html#q1f)
-- [Perspective](https://mind-upload.com/perspective.html#design-principles)
+## 公開ページへ戻る
+- [検証](https://mind-upload.com/verification.html)
+- [よくある質問](https://mind-upload.com/faq.html#q1f)
+- [視点](https://mind-upload.com/perspective.html#design-principles)
 
-## Related Wiki Pages
-- [Wiki: Verification Basics](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Places thermodynamic indicators inside the wider verification stack.
-- [Wiki: Claims and Evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - Explains how auxiliary evidence is kept from silently becoming a stronger claim.
-- [Wiki: From Observation to Estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Explains why observability and model-based inference are separate burdens.
+## 関連 Wiki ページ
+- [Wiki: 検証の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 熱力学インジケーターをより広い検証スタック内に配置します。
+- [Wiki: 主張と証拠](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - 補助証拠が静かに強力な主張にならないようにする方法を説明します。
+- [Wiki: 観察から推定へ](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - 可観測性とモデルベースの推論が別の負担となる理由を説明します。
 
-## What Is Currently Known
-- The biological brain is a continuously driven physical system rather than a static stored object.
-- Current neural irreversibility papers do report informative nonequilibrium signatures, but they do not all compute the same quantity.
-- State-space construction, coarse graining, and dynamical assumptions are part of the claim rather than implementation footnotes.
-- Partial observation can hide dissipative cycles and induce memory, so weak observable currents do not by themselves imply near-equilibrium.
-- Physiology-side grounding is a separate requirement from observation-side arrow-of-time analysis.
+## 現在わかっていること
+- 生物学的な脳は、静的に保存された物体ではなく、継続的に駆動される物理システムです。
+- 現在の神経不可逆性に関する論文では、有益な非平衡シグネチャが報告されていますが、すべてが同じ量を計算しているわけではありません。
+- 状態空間の構築、粗視化、および動的仮定は、実装の脚注ではなくクレームの一部です。
+- 部分的な観察は散逸サイクルを隠し、記憶を誘発する可能性があるため、観察可能な弱い電流自体が平衡に近いことを意味するものではありません。
+- 生理学側のグラウンディングは、観察側の時間の矢の分析とは別の要件です。
 
-## What Is Still Unknown
-- There is still no field-standard route from neural irreversibility metrics to a stable whole-brain entropy-production estimate.
-- It remains unresolved which thermodynamic indicators, if any, will prove decision-relevant for stronger WBE claims.
-- Cross-estimator convergence and physiology-side calibration for energetic interpretations remain open problems.
+## まだわかっていないこと
+- 神経不可逆性メトリクスから安定した全脳エントロピー生成推定値への現場標準的なルートはまだありません。
+- 熱力学指標が存在する場合、どの熱力学指標がより強力な WBE 主張の決定に関連するかを証明するかは未解決のままです。
+- 相互推定器の収束とエネルギー解釈のための生理学側の校正は未解決の問題のままです。
 
 ---
 
-<h2>Shortest conclusion</h2>
+<h2>最短の結論</h2>
 <p>
-On this site, thermodynamic language is useful only after it is typed correctly. A paper can show <strong>temporal asymmetry</strong>, a <strong>coarse-grained nonequilibrium lower bound</strong>, or a <strong>model-conditioned entropy-flow estimate</strong> without yet measuring <strong>microscopic physical dissipation</strong>, <strong>brain-wide metabolic cost</strong>, or a <strong>WBE acceptance criterion</strong>.
+このサイトでは、熱力学言語は正しく入力された場合にのみ役に立ちます。論文は、<strong>微視的な物理散逸</strong>、<strong>脳全体の代謝コスト</strong>、または<strong>WBE許容基準</strong>をまだ測定していなくても、<strong>時間的非対称性</strong>、<strong>粗粒非平衡下限</strong>、または<strong>モデル条件付きエントロピーフロー推定</strong>を示すことができます。
 </p>
 
-<h4>Three Overreads To Stop Early</h4>
+<h4>早期に停止するための 3 つのオーバーリード</h4>
 <ul>
-<li><strong>Arrow of time is not direct heat dissipation:</strong> observation-side irreversibility and physiology-side energetic cost are different routes.</li>
-<li><strong>A clean surrogate is not enough:</strong> reverse-transition support and sparse-data handling are separate burdens.</li>
-<li><strong>One thermodynamic word is not one measurement object:</strong> lower bounds, asymmetry scores, graph indices, and model-based entropy-flow estimates answer different questions.</li>
+<li><strong>時間の矢は直接的な熱放散ではない：</strong>観測側の不可逆性と生理学側のエネルギーコストは別ルート。</li>
+<li><strong>A クリーンなサロゲートだけでは十分ではありません:</strong> 逆遷移のサポートとスパース データの処理は別の負担です。</li>
+<li><strong>1 つの熱力学ワードは 1 つの測定オブジェクトではありません。</strong> 下限、非対称スコア、グラフ インデックス、モデルベースのエントロピー フロー推定値がさまざまな質問に答えます。</li>
 </ul>
 
-<strong>How this page fits the site</strong>
+<strong>このページがサイトにどのように適合するか</strong>
 <p>
-This is the background page for the <a href="https://mind-upload.com/verification.html#thermodynamic-verification">Verification: thermodynamic indicators</a> rule and the <a href="#irreversibility-route-card">irreversibility route card</a>. The operational policy lives in Verification; this page explains why that policy is strict.
+これは、<a href="https://mind-upload.com/verification.html#thermodynamic-verification">Verification: 熱力学指標 </a> ルールおよび <a href="#irreversibility-route-card"> 不可逆性ルート カード </a> の背景ページです。運用ポリシーは検証に反映されます。このページでは、そのポリシーが厳格である理由を説明します。
 </p>
 
-<strong>Scope</strong>
+<strong>Sスコープ</strong>
 <p>
-This page stays on the technology and natural-science side only. It does not use thermodynamic language to settle identity, consciousness, law, or ethics. The narrower question is: <strong>what did the paper actually compute, what assumptions were required, and what ceiling still remains?</strong>
+このページはテクノロジーと自然科学の側面のみに留まります。アイデンティティ、意識、法律、倫理を解決するために熱力学的言語は使用されません。より狭い質問は次のとおりです: <strong>論文は実際に何を計算しましたか、どのような仮定が必要で、どのような上限がまだ残っていますか? </strong>
 </p>
 
-<strong>2026-03-30 correction: the real danger is silent translation</strong>
+<strong>2026-03-30 訂正: 本当の危険は無言翻訳</strong>
 <p>
-The main weakness of the older page was not that it mentioned the wrong literature. The weakness was that it still let readers move too quickly across four translations: from <strong>signal asymmetry</strong> to <strong>nonequilibrium inference</strong>, from <strong>coarse-grained inference</strong> to <strong>energetic interpretation</strong>, from <strong>observed trajectory</strong> to <strong>thermodynamic closure</strong>, and from <strong>auxiliary physics signal</strong> to <strong>WBE relevance</strong>. The current primary literature does not support those jumps unless each one is disclosed separately.
+古いページの主な弱点は、間違った文献について言及していることではありませんでした。弱点は、読者が依然として 4 つの変換にわたってあまりにも早く移動してしまうことでした: <strong> 信号の非対称 </strong> から <strong> 非平衡推論 </strong>、<strong> 粗粒推論 </strong> から <strong> エネルギー的解釈 </strong>、<strong> 観察された軌道 </strong> から <strong> 熱力学的閉鎖 </strong>、そして<strong>補助物理信号</strong>から<strong>WBE関連</strong>。現在の一次文献は、それぞれが個別に開示されていない限り、これらのジャンプをサポートしていません。
 </p>
 
-<strong>2026-04-02 correction: estimator meaning is not the same as operational stability</strong>
+<strong>2026-04-02 修正: 推定値の意味は動作安定性と同じではありません</strong>
 <p>
-The next weakness was subtler. Even after separating estimator family, hidden-degree risk, and physiology-side grounding, the page still let one more shortcut survive: it was still too easy to read a mathematically interpretable metric as if it were already <strong>operationally stable</strong> or <strong>bridge-ready</strong>. The current primary literature does not support that shortcut either. <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">Poudel et al. (2024)</a> showed that small motion can materially alter visibility-graph structure and that only a low-motion subset reached moderate-to-high test-retest reliability for selected graph metrics. <a href="https://doi.org/10.1002/hbm.26778" target="_blank">Metzen et al. (2024)</a> showed that variability and complexity measures in BOLD fMRI have markedly different reliability profiles, with some functional-connectivity complexity measures remaining in the unacceptable-to-moderate range. <a href="https://doi.org/10.1016/j.neuroimage.2021.117760" target="_blank">Omidvarnia et al. (2021)</a> showed reproducible multiscale-entropy structure for resting-state fMRI, but that result is specific to that estimator family and acquisition setting rather than a blanket license for all irreversibility metrics. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> then showed with simultaneous EEG-PET-MRI that temporal coupling across electrophysiology, hemodynamics, and metabolism can be strong while the spatial organization and state trajectories remain distinct rather than interchangeable. Therefore, on this site, <strong>stability / nuisance sensitivity</strong>, <strong>cross-estimator concordance</strong>, and <strong>physiology-bridge quality</strong> are now treated as separate reporting burdens rather than as footnotes under the estimator label.
+次の弱点はさらに微妙なものでした。推定量ファミリー、隠れ次数リスク、および生理学的側面の根拠を分離した後でも、このページにはもう 1 つのショートカットが残されています。数学的に解釈可能なメトリクスを、すでに <strong> 動作的に安定している </strong> または <strong> ブリッジ対応 </strong> であるかのように読み取るのはまだ簡単すぎました。現在の一次文献もそのショートカットをサポートしていません。 <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">プーデルら。 (2024)</a> は、小さな動きが可視性グラフの構造を大きく変える可能性があり、動きの少ないサブセットのみが、選択されたグラフ指標について中程度から高いテスト再テストの信頼性に達することを示しました。 <a href="https://doi.org/10.1002/hbm.26778" target="_blank">メッツェンら(2024)</a> は、BOLD fMRI における変動性と複雑性の測定値は著しく異なる信頼性プロファイルを持ち、一部の機能接続性の複雑性の測定値は許容不可能から中程度の範囲に留まっていることを示しました。 <a href="https://doi.org/10.1016/j.neuroimage.2021.117760" target="_blank">Omidvarnia et al. (2021)</a> は、安静状態 fMRI の再現可能なマルチスケール エントロピー構造を示しましたが、その結果は、すべての非可逆性メトリクスに対する包括的なライセンスではなく、その推定器ファミリーと取得設定に固有のものです。 <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">チェンら。 (2025) </a> は、EEG-PET-MRI の同時使用により、電気生理学、血行力学、代謝にわたる時間的結合が強い一方で、空間構成と状態の軌跡は交換可能ではなく明確なままである可​​能性があることを示しました。したがって、このサイトでは、<strong> 安定性 / 迷惑感度 </strong>、<strong> 推定間の相互一致 </strong>、および <strong> 生理学ブリッジ品質 </strong> は、推定ラベルの下の脚注としてではなく、別個の報告負担として扱われるようになりました。
 </p>
 
-<h2>Why thermodynamics appears on Mind-Upload at all</h2>
+<h2> そもそもなぜ熱力学が Mind-Upload に登場するのか</h2>
 <p>
-Mind-Upload does not treat WBE as a static data-storage problem alone. The brain is a continuously driven physical system whose information processing is maintained under non-equilibrium conditions. That is why thermodynamic language appears here. But the site's use is deliberately narrow: thermodynamic indicators are treated as <strong>auxiliary constraints on ongoing physical process</strong>, not as a shortcut to identity, consciousness, or final success conditions.
+Mind-Upload は、WBE を静的データ ストレージの問題だけとして扱いません。脳は継続的に駆動される物理システムであり、その情報処理は非平衡条件下で維持されます。ここで熱力学的な言葉が登場するのはそのためです。しかし、このサイトの用途は意図的に限定されています。熱力学指標は、アイデンティティ、意識、または最終的な成功条件への近道としてではなく、進行中の物理プロセスに対する補助的な制約<strong>として扱われます</strong>。
 </p>
 
-<h2>Five layers that must stay separate</h2>
+<h2>5 つの層は分離しておく必要があります</h2>
 <table>
 <thead>
 <tr>
-<th>Layer</th>
-<th>Representative literature</th>
-<th>What it can support</th>
-<th>What it still cannot support</th>
+<th>レイヤー</th>
+<th>代表文献</th>
+<th>対応できること</th>
+<th>まだ対応できないもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Landauer lower bound</strong></td>
-<td><a href="https://doi.org/10.1038/nature10872" target="_blank">B&eacute;rut et al. (2012)</a></td>
-<td>A lower bound for logically irreversible operations such as bit erasure.</td>
-<td>Actual brain power draw, actual emulator wall-power, or a WBE pass condition.</td>
+<td><strong>ランダウアー下限</strong></td>
+<td><a href="https://doi.org/10.1038/nature10872" target="_blank">B’rut et al. (2012)</a></td>
+<td>A ビット消去などの論理的に不可逆な操作の下限。</td>
+<td>実際の脳の消費電力、実際のエミュレータの壁電力、または WBE 合格条件。</td>
 </tr>
 <tr>
-<td><strong>Tissue-level energy budget</strong></td>
-<td><a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">Attwell &amp; Laughlin (2001)</a></td>
-<td>A descriptive decomposition of signaling-related energy use in biological tissue.</td>
-<td>A universal KPI for digital emulation or a thermodynamic success threshold.</td>
+<td><strong>問題レベルのエネルギー予算</strong></td>
+<td><a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">アトウェル＆アンプ;ラフリン (2001)</a></td>
+<td>A 生体組織におけるシグナル伝達関連のエネルギー使用の記述的分解。</td>
+<td>A デジタル エミュレーションまたは熱力学的成功しきい値のユニバーサル KPI。</td>
 </tr>
 <tr>
-<td><strong>Observation-side irreversibility metric</strong></td>
-<td><a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lynn et al. (2021)</a>; <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">Deco et al. (2022)</a>; <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">de la Fuente et al. (2023)</a>; <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a></td>
-<td>Time asymmetry or broken detailed balance under a declared signal route, state-space construction, and estimator family.</td>
-<td>Direct microscopic dissipation, direct metabolic cost, or implementation-side efficiency.</td>
+<td><strong>観測側不可逆性メトリック</strong></td>
+<td><a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">Lリンら。 (2021)</a>; <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">デコ他(2022)</a>; <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">デ・ラ・フエンテ 他(2023)</a>; <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a></td>
+<td>宣言された信号ルート、状態空間構築、および推定器ファミリーの下での時間の非対称性または詳細なバランスの崩れ。</td>
+<td>直接的な微視的散逸、直接的な代謝コスト、または実装側の効率。</td>
 </tr>
 <tr>
-<td><strong>Model-conditioned entropy-flow estimate</strong></td>
-<td><a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a></td>
-<td>A time-varying entropy-flow estimate inside a declared state-space kinetic-Ising model.</td>
-<td>Whole-brain direct EPR measurement without model burden.</td>
+<td><strong>モデル条件付きエントロピーフロー推定</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">石原＆amp;島崎(2025)</a></td>
+<td>A 宣言された状態空間運動イジング モデル内の時変エントロピー フロー推定。</td>
+<td>モデル負担のない全脳直接EPR測定。</td>
 </tr>
 <tr>
-<td><strong>Implementation-side cost accounting</strong></td>
-<td>Project-specific engineering audit</td>
-<td>Wall-power, FLOPs, communication cost, cooling burden, and hardware throughput of the implementation itself.</td>
-<td>Observation-side neural irreversibility by itself, unless the bridge is disclosed explicitly.</td>
+<td><strong>実装側原価計算</strong></td>
+<td>プロジェクト固有のエンジニアリング監査</td>
+<td>壁面電源、FLOP、通信コスト、冷却負荷、実装自体のハードウェア スループット。</td>
+<td>ブリッジが明示的に開示されていない限り、それ自体で観察側の神経不可逆性。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Three translation gaps the site now blocks</h2>
+<h2>サイトがブロックする 3 つの翻訳ギャップ</h2>
 <table>
 <thead>
 <tr>
-<th>Translation gap</th>
-<th>What the primary literature shows</th>
-<th>Safe reading on this site</th>
+<th>翻訳ギャップ</th>
+<th>一次文献が示していること</th>
+<th>このサイトの安全な読み方</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Estimator label -&gt; thermodynamic meaning</strong></td>
-<td><a href="https://pubmed.ncbi.nlm.nih.gov/34789565/" target="_blank">Lynn et al. (2021)</a> estimated entropy production only after coarse-graining BOLD dynamics into clustered macrostates and showed sensitivity to the number of clusters. <a href="https://academic.oup.com/cercor/article/33/5/1856/6577164" target="_blank">de la Fuente et al. (2023)</a> showed that reversibility detection depends on retained principal components, feature family, and classifier complexity. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a> added a nonstationary state-space kinetic Ising model precisely because steady-state assumptions fail for neural activity. <a href="https://doi.org/10.1103/PhysRevLett.125.110601" target="_blank">Teza &amp; Stella (2020)</a> and <a href="https://doi.org/10.1103/PhysRevE.105.L042601" target="_blank">Cocconi et al. (2022)</a> showed that coarse graining can preserve or rescale entropy production depending on process class and scale.</td>
-<td>An estimator family name alone is too coarse. State-space construction, timescale, and dynamical assumptions belong in the claim.</td>
+<td><strong>推定ラベル ->熱力学的意味</strong></td>
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/34789565/" target="_blank">Lynn et al. (2021) </a> は、BOLD ダイナミクスをクラスター化されたマクロ状態に粗視化した後にのみエントロピー生成を推定し、クラスターの数に対する感度を示しました。 <a href="https://academic.oup.com/cercor/article/33/5/1856/6577164" target="_blank">デ・ラ・フエンテ 他(2023) </a> は、可逆性の検出が保持された主成分、特徴ファミリー、分類器の複雑さに依存することを示しました。 <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">石原&アンプ; Shimazaki (2025)</a> は、まさに定常状態の仮定が神経活動に当てはまらないため、非定常状態空間運動イジング モデルを追加しました。 <a href="https://doi.org/10.1103/PhysRevLett.125.110601" target="_blank">テザ＆アンプStella (2020)</a> および <a href="https://doi.org/10.1103/PhysRevE.105.L042601" target="_blank">Cocconi et al. (2022)</a> は、粗視化がプロセス クラスとスケールに応じてエントロピー生成を保存または再スケールできることを示しました。</td>
+<td>推定子ファミリー名だけでは粗すぎます。状態空間の構築、タイムスケール、および動的仮定がこの主張に含まれます。</td>
 </tr>
 <tr>
-<td><strong>Signal irreversibility -&gt; metabolic or energetic interpretation</strong></td>
-<td><a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> found that about <strong>40%</strong> of voxels with significant task-evoked BOLD changes showed oxygen-metabolism changes in the opposite direction. Observation-side asymmetry therefore does not by itself determine energetic demand.</td>
-<td>If the text uses words such as <strong>energy</strong>, <strong>metabolism</strong>, or <strong>dissipation cost</strong>, it must name a physiology-side route such as calibrated CMRO<sub>2</sub>, FDG-PET, or <sup>31</sup>P-MRS, or else abstain.</td>
+<td><strong>信号の不可逆性 ->代謝またはエネルギーの解釈</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp 他(2025) </a> は、重要なタスク誘発 BOLD 変化を伴うボクセルの約 <strong>40%</strong> が、逆方向の酸素代謝変化を示すことを発見しました。したがって、観測側の非対称性はそれ自体でエネルギー需要を決定するものではありません。</td>
+<td>テキストで<strong>エネルギー</strong>、<strong>代謝</strong>、または<strong>散逸コスト</strong>などの単語が使用されている場合は、校正されたCMRO<sub>2</sub>、FDG-PET、または<sup>31</sup>P-MRSなどの生理学側のルートを指定する必要があります。棄権.</td>
 </tr>
 <tr>
-<td><strong>Observed trajectory -&gt; thermodynamic closure</strong></td>
-<td><a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">Mart&iacute;nez et al. (2019)</a> showed that waiting-time asymmetry can reveal hidden dissipation even when observable current vanishes. <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">Hartich &amp; Godec (2024)</a> showed that this can fail when coarse-graining and time reversal do not commute, and <a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">Mart&iacute;nez et al. (2024)</a> limited the earlier claim to local-in-time coarse grainings and, where needed, semi-Markov constructions. <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">Blom et al. (2024)</a> showed that coarse lumping can hide dissipative cycles and induce memory. <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Baiesi et al. (2024)</a> showed that sparse or unobserved reverse transitions can make direct estimation fail.</td>
-<td>Low current or a small irreversibility estimate is not read as near-equilibrium unless hidden-degree risk, memory order, and reverse-transition support are disclosed explicitly.</td>
+<td><strong>観測軌跡 ->熱力学的閉鎖</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">Mart&iacute;nez et al. (2019) </a> は、観測可能な電流が消失した場合でも、待機時間の非対称性によって隠れた散逸が明らかになる可能性があることを示しました。 <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">ハルティヒ＆アンプ; Godec (2024)</a> は、粗視化と時間反転が両立しない場合、これが失敗する可能性があることを示しました。 (2024)</a> は、以前の主張をローカルインタイム粗視化と、必要に応じて半マルコフ構造に限定しました。 <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">ブロムら。 (2024) </a> は、粗いランピングが散逸サイクルを隠し、記憶を誘発する可能性があることを示しました。 <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">Baiesi et al. (2024)</a> は、まばらなまたは観測されていない逆遷移が直接推定に失敗する可能性があることを示しました。</td>
+<td>低電流または小さな不可逆性推定は、隠れ次数リスク、メモリ順序、および逆遷移サポートが明示的に開示されていない限り、平衡に近いものとして読み取られません。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>The thermodynamic claim ladder on this site</h2>
+<h2>このサイトの熱力学的主張のはしご</h2>
 <p>
-The safe way to read thermodynamic papers is not to ask whether they are <strong>important</strong> or <strong>unimportant</strong>. The better question is <strong>which rung they actually reached</strong>.
+熱力学の論文を読む安全な方法は、それが <strong>重要</strong> か <strong>重要でない</strong> かを尋ねないことです。より良い質問は、<strong> が実際にどの階に到達したかです </strong>。
 </p>
 <table>
 <thead>
 <tr>
-<th>Claim rung</th>
-<th>Minimum evidence required</th>
-<th>What it still does not license</th>
+<th>クレームラング</th>
+<th>最低限必要な証拠</th>
+<th>まだライセンスが取得されていないもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Rung 1: signal-side arrow of time</strong></td>
-<td>A declared observation route plus a reproducible forward-versus-reversed asymmetry or inversion-detection result.</td>
-<td>Direct entropy production, direct metabolic cost, or implementation-side efficiency.</td>
+<td><strong>Rung 1: 信号側時間の矢</strong></td>
+<td>A 宣言された観測ルートに加え、再現可能な順方向と逆方向の非対称性または反転検出結果。</td>
+<td>直接的なエントロピー生成、直接的な代謝コスト、または実装側の効率。</td>
 </tr>
 <tr>
-<td><strong>Rung 2: coarse-grained nonequilibrium lower bound</strong></td>
-<td>A transition-based or equivalent lower-bound estimate with explicit state-space construction, coarse-graining policy, and finite-data uncertainty.</td>
-<td>Microscopic dissipation or thermodynamic closure of the full underlying process.</td>
+<td><strong>Rung 2: 粗視化非平衡下限</strong></td>
+<td>A 明示的な状態空間構築、粗視化ポリシー、および有限データの不確実性を備えた遷移ベースまたは同等の下限推定。</td>
+<td>根底にあるプロセス全体の微視的な散逸または熱力学的閉鎖。</td>
 </tr>
 <tr>
-<td><strong>Rung 3: model-conditioned entropy-flow estimate</strong></td>
-<td>An explicit dynamical model, its assumptions, parameter-identifiability limits, and controls separating coupling-related effects from firing-rate or sampling artifacts.</td>
-<td>Model-free direct EPR measurement or a unique mechanistic explanation.</td>
+<td><strong>Rung 3: モデル条件付きエントロピー フロー推定</strong></td>
+<td>明示的な動的モデル、その仮定、パラメーターの識別可能性の制限、およびカップリング関連の効果を発射レートまたはサンプリング アーティファクトから分離する制御。</td>
+<td>モデルフリーの直接EPR測定または独自の機構解説。</td>
 </tr>
 <tr>
-<td><strong>Rung 4: physiology-grounded energetic interpretation</strong></td>
-<td>A separate physiology-side route linking the observed signal-side effect to metabolism, transport, or energetics under a declared bridge.</td>
-<td>A universal thermodynamic success criterion or identity-relevant sameness.</td>
+<td><strong>Rung 4: 生理学に基づいたエネルギー的解釈</strong></td>
+<td>A 宣言されたブリッジの下で、観察された信号副作用を代謝、輸送、またはエネルギー学に結び付ける生理学側の別のルート。</td>
+<td>A 普遍的な熱力学的成功基準またはアイデンティティ関連の同一性。</td>
 </tr>
 <tr>
-<td><strong>Rung 5: implementation-side cost accounting</strong></td>
-<td>Separate measurement of hardware power, wall-clock energy, FLOPs, communication cost, and cooling burden for the implementation itself.</td>
-<td>Equivalence to the brain's nonequilibrium statistics unless the bridge is argued and tested separately.</td>
+<td><strong>Rung 5: 実装側の原価計算</strong></td>
+<td>ハードウェア電力、実時間のエネルギー、FLOP、通信コスト、実装自体の冷却負荷を個別に測定します。</td>
+<td>ブリッジが個別に議論されテストされない限り、脳の非平衡統計と同等。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Irreversibility is not one estimator family</h2>
+<h2>不可逆性は 1 つの推定値ファミリーではない</h2>
 <p>
-The same thermodynamic vocabulary still hides materially different mathematical objects.
+同じ熱力学の語彙には、依然として実質的に異なる数学的対象が隠されています。
 </p>
 <table>
 <thead>
 <tr>
-<th>Estimator family</th>
-<th>Representative literature</th>
-<th>What is actually computed</th>
-<th>Safe ceiling on this site</th>
+<th>エスティメータファミリー</th>
+<th>代表文献</th>
+<th>実際に計算される内容</th>
+<th>このサイトの安全天井</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Coarse-grained transition-flux lower bound</strong></td>
+<td><strong>粗粒遷移磁束下限</strong></td>
 <td><a href="https://pubmed.ncbi.nlm.nih.gov/34789565/" target="_blank">Lynn et al. (2021)</a></td>
-<td>Entropy-production lower bound from clustered BOLD-state transitions.</td>
-<td>Broken detailed balance in a declared coarse-grained macrostate system, not direct microscopic heat dissipation.</td>
+<td>クラスター化された BOLD 状態遷移からのエントロピー生成の下限。</td>
+<td>宣言された粗粒マクロ状態システムの詳細なバランスが崩れており、直接的な微視的な熱放散ではありません。</td>
 </tr>
 <tr>
-<td><strong>Time-shifted asymmetry / inversion family</strong></td>
-<td><a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">Deco et al. (2022)</a>; <a href="https://academic.oup.com/cercor/article/33/5/1856/6577164" target="_blank">de la Fuente et al. (2023)</a></td>
-<td>Forward-versus-reversed asymmetry from time-shifted correlations or inversion classification.</td>
-<td>Temporal-asymmetry signature under the stated preprocessing and features, not direct EPR.</td>
+<td><strong>タイムシフト非対称/反転ファミリー</strong></td>
+<td><a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">デコ他(2022)</a>; <a href="https://academic.oup.com/cercor/article/33/5/1856/6577164" target="_blank">デ・ラ・フエンテ 他(2023)</a></td>
+<td>時間シフト相関または反転分類からの順方向と逆方向の非対称性。</td>
+<td>直接的な EPR ではなく、指定された前処理と機能に基づく時間的非対称署名。</td>
 </tr>
 <tr>
-<td><strong>Directed visibility-graph irreversibility</strong></td>
+<td><strong>有向可視性グラフの不可逆性</strong></td>
 <td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11912438/" target="_blank">Nartallo-Kaluarachchi et al. (2025)</a></td>
-<td>Graph divergence between in/out degree structure of directed visibility graphs built from MEG-derived dynamics.</td>
-<td>Ordering of nonequilibrium organization across interaction scales, not direct causal wiring or microscopic dissipation.</td>
+<td>MEG 由来のダイナミクスから構築された有向視程グラフの入次数構造と出力次数構造の間のグラフの発散。</td>
+<td>直接的な因果関係や微視的な散逸ではなく、相互作用スケール全体にわたる非平衡組織の秩序化。</td>
 </tr>
 <tr>
-<td><strong>State-space kinetic Ising entropy flow</strong></td>
-<td><a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">Ishihara &amp; Shimazaki (2025)</a></td>
-<td>Time-varying entropy flow in a nonstationary, sparsely active spike-ensemble model.</td>
-<td>A model-conditioned entropy-flow estimate in recorded ensembles, not whole-brain direct EPR measurement.</td>
+<td><strong>状態空間動力学イジングエントロピーフロー</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">石原＆amp;島崎(2025)</a></td>
+<td>非定常でまばらに活動するスパイク アンサンブル モデルにおける時間変化するエントロピー フロー。</td>
+<td>A 全脳直接 EPR 測定ではなく、記録されたアンサンブルにおけるモデル条件付きエントロピー フロー推定。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Irreversibility route card</h2>
+<h2>不可逆ルートカード</h2>
 <p>
-The purpose of the route card is simple: thermodynamic language alone does not tell the reader what quantity was computed, how fragile it is, or how far the interpretation may safely rise.
+ルート カードの目的は単純です。熱力学の言語だけでは、どの量が計算されたか、それがどれほど壊れやすいか、または解釈がどこまで安全に上昇できるかは読者にわかりません。
 </p>
 <table>
 <thead>
 <tr>
-<th>Route-card field</th>
-<th>What must be disclosed</th>
-<th>What misreading it blocks</th>
+<th>ルートカードフィールド</th>
+<th>開示しなければならないこと</th>
+<th>ブロックする誤読</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Signal route and state definition</strong></td>
-<td>Modality, sensor / source / spike level, preprocessing summary, source reconstruction or parcelization if used, and task / state segmentation rule.</td>
-<td>It blocks fMRI, ECoG, MEG, EEG, and spike-train results from sounding like the same observation route.</td>
+<td><strong>信号のルートと状態の定義</strong></td>
+<td>モダリティ、センサー / ソース / スパイク レベル、前処理の概要、使用されている場合はソースの再構築または分割、およびタスク / 状態のセグメンテーション ルール。</td>
+<td>fMRI、ECoG、MEG、EEG、スパイクトレインの結果が同じ観測ルートのように聞こえることをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Coarse-graining geometry and timescale</strong></td>
-<td>Parcel count, clustering rule, retained principal components, source model, window length, temporal bin width, sampling rate, and frequency range.</td>
-<td>It blocks the same paper title from sounding like the same quantity after state-space construction changes.</td>
+<td><strong>粗視化ジオメトリとタイムスケール</strong></td>
+<td>パーセル数、クラスタリングルール、保持された主成分、ソースモデル、ウィンドウの長さ、一時的なビン幅、サンプリングレート、および周波数範囲。</td>
+<td>状態空間の構造が変更された後、同じ論文のタイトルが同じ数量のように聞こえるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Observed-state closure / hidden-degree risk</strong></td>
-<td>Whether hidden states, hidden cycles, latent variables, or nonlocal coarse-graining could still carry dissipation that is invisible in the reported trajectory.</td>
-<td>It blocks weak observable current from being misread as near-equilibrium.</td>
+<td><strong>観察された状態の閉鎖/隠れ度リスク</strong></td>
+<td>隠れ状態、隠れサイクル、潜在変数、または非局所的な粗視化が、報告された軌跡では目に見えない散逸を引き起こす可能性があるかどうか。</td>
+<td>観測可能な微弱な電流が平衡に近いと誤って読み取られるのを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>Dynamical assumptions and memory order</strong></td>
-<td>Whether the process is treated as Markov, semi-Markov, or another memory-bearing system, and whether coarse-graining and time reversal commute under the adopted construction.</td>
-<td>It blocks a Markov-style estimator from being overread when the observed process acquires memory under coarse graining.</td>
+<td><strong>動的仮定と記憶順序</strong></td>
+<td>プロセスがマルコフ、セミマルコフ、または別のメモリ担持システムとして扱われるかどうか、および採用された構造の下で粗粒化と時間反転が可能かどうか。</td>
+<td>観察されたプロセスが粗粒度でメモリを取得するときに、マルコフ スタイル推定器がオーバーリードされるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Estimator family and quantity type</strong></td>
-<td>State explicitly whether the result is a lower bound, asymmetry score, graph divergence, model-based entropy-flow component, or fuller entropy-production estimate.</td>
-<td>It blocks asymmetry scores or lower bounds from being misread as direct microscopic dissipation.</td>
+<td><strong>見積り器ファミリーと数量タイプ</strong></td>
+<td>結果が下限、非対称スコア、グラフの発散、モデルベースのエントロピー フロー コンポーネント、またはより完全なエントロピー生成推定であるかどうかを明示的に示します。</td>
+<td>非対称スコアまたは下限が直接的な顕微鏡散逸として誤って読み取られるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Cross-estimator concordance</strong></td>
-<td>State whether the qualitative conclusion survives more than one reasonable estimator family, feature construction, or state-space definition, or whether it remains explicitly estimator-specific.</td>
-<td>It blocks one metric family from sounding like a universal thermodynamic structure of the brain.</td>
+<td><strong>相互推定の一致</strong></td>
+<td>定性的結論が複数の合理的な推定器族、特徴構築、または状態空間定義に存続するかどうか、またはそれが明示的に推定器固有のままであるかどうかを示します。</td>
+<td>1 つの計量ファミリーが脳の普遍的な熱力学構造のように聞こえるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Null / surrogate control</strong></td>
-<td>State what shuffle, time reversal, label randomization, or surrogate was used and what failure it was designed to catch.</td>
-<td>It blocks a clean null test from sounding like a full thermodynamic validation.</td>
+<td><strong>Null / サロゲート コントロール</strong></td>
+<td>どのようなシャッフル、時間反転、ラベルのランダム化、またはサロゲートが使用されたか、およびどのような障害を検出するように設計されているかを説明します。</td>
+<td>クリーンなヌルテストが完全な熱力学的検証のように聞こえるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Stability / nuisance sensitivity</strong></td>
-<td>Report motion sensitivity, denoising / preprocessing sensitivity, split-half or test-retest reliability, session interval, and whether the result is single-site or protocol-scoped.</td>
-<td>It blocks one clean run from sounding like a stable operational signal.</td>
+<td><strong>安定性/迷惑感度</strong></td>
+<td>モーション感度、ノイズ除去/前処理感度、分割半分またはテスト再テストの信頼性、セッション間隔、結果が単一サイトかプロトコル範囲かをレポートします。</td>
+<td>1 回のクリーンな実行が安定した動作信号のように聞こえるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Reverse-transition support / finite-data handling</strong></td>
-<td>Transition-count support, whether reverse transitions were observed for the reported state pairs, and how zero or rare counts were handled.</td>
-<td>It blocks a clean surrogate test from being mistaken for adequate support coverage.</td>
+<td><strong>逆遷移サポート/有限データ処理</strong></td>
+<td>Transition-count のサポート、報告された状態ペアで逆遷移が観察されたかどうか、およびゼロまたはまれなカウントの処理方法。</td>
+<td>クリーンな代理テストが適切なサポート範囲と誤解されるのを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>Physiology-side grounding</strong></td>
-<td>If energetic or metabolic language is used, state whether a direct route such as calibrated CMRO<sub>2</sub>, FDG-PET, or <sup>31</sup>P-MRS was actually measured, or explicitly state that it was not.</td>
-<td>It blocks signal-side irreversibility from being silently upgraded to metabolic cost or physical dissipation.</td>
+<td><strong>生理学側接地</strong></td>
+<td>エネルギー的または代謝的な表現が使用されている場合は、校正済みの CMRO<sub>2</sub>、FDG-PET、または <sup>31</sup>P-MRS などの直接ルートが実際に測定されたかどうかを述べるか、測定されていないことを明示的に述べてください。</td>
+<td>信号側の不可逆性が代謝コストや物理的散逸にサイレントにアップグレードされるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Physiology-bridge quality</strong></td>
-<td>If a physiology-side route is invoked, state whether it was same-session, same-state-window, spatially coregistered, lag-aware, and whether agreement or disagreement across modalities was quantified explicitly.</td>
-<td>It blocks “paired modalities exist” from sounding like energetic grounding has already been solved.</td>
+<td><strong>生理学ブリッジ品質</strong></td>
+<td>生理学側のルートが呼び出された場合は、それが同じセッション、同じ状態ウィンドウ、空間的に同時登録されたか、ラグを認識したか、モダリティ間の一致または不一致が明示的に定量化されたかどうかを述べます。</td>
+<td>エネルギー的なグラウンディングがすでに解決されているかのように聞こえる「ペアのモダリティが存在する」ことをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Cost isolation</strong></td>
-<td>Report hardware power, wall-clock energy, FLOPs, communication cost, and cooling burden separately from the neural irreversibility metric.</td>
-<td>It blocks implementation-side engineering cost from being merged with observation-side nonequilibrium evidence.</td>
+<td><strong>コストの分離</strong></td>
+<td>ハードウェア電力、実時間エネルギー、FLOP、通信コスト、冷却負荷を神経不可逆性メトリクスとは別にレポートします。</td>
+<td>実装側のエンジニアリングコストが観測側の非平衡証拠と融合するのを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>Abstention boundary</strong></td>
-<td>Declare what the analysis does not identify, such as microscopic dissipation, direct metabolic cost, direct causal wiring, or identity-relevant sameness.</td>
-<td>It blocks auxiliary analysis from being promoted to a thermodynamic gate for WBE.</td>
+<td><strong>棄権境界</strong></td>
+<td>微視的な散逸、直接的な代謝コスト、直接的な因果関係、アイデンティティ関連の同一性など、分析では特定されないものを宣言します。</td>
+<td>補助解析が WBE の熱力学ゲートに昇格するのをブロックします。</td>
 </tr>
 </tbody>
 </table>
 <p>
-If this card is missing, this site keeps the result at <strong>exploratory auxiliary evidence</strong>. It is not promoted here to a common thermodynamic gate, direct microscopic dissipation, direct metabolic-cost readout, or WBE-relevant identity evidence.
+このカードが欠落している場合、このサイトでは結果を <strong> 探索的補助証拠 </strong> に保管します。ここでは、一般的な熱力学ゲート、直接的な微視的散逸、直接的な代謝コストの読み取り、または WBE 関連の同一性証拠に昇格するものではありません。
 </p>
 
-<h2>What would actually strengthen the claim</h2>
+<h2>実際に主張を強化するもの</h2>
 <table>
 <thead>
 <tr>
-<th>What to add</th>
-<th>Why it matters</th>
-<th>What it still does not prove</th>
+<th>追加するもの</th>
+<th>それが重要な理由</th>
+<th>まだ証明されていないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Robustness across reasonable coarse-graining choices</strong></td>
-<td>Shows that the sign or ordering of the result is not a one-pipeline artifact of parcelization, clustering, PCA rank, or temporal binning.</td>
-<td>It still does not turn a lower bound or asymmetry score into direct physical dissipation.</td>
+<td><strong>合理的な粗粒度の選択にわたる堅牢性</strong></td>
+<td>結果の符号または順序付けが、分割、クラスタリング、PCA ランク、または時間的ビニングの 1 つのパイプライン アーティファクトではないことを示します。</td>
+<td>それでも、下限または非対称スコアを直接の物理散逸に変換することはありません。</td>
 </tr>
 <tr>
-<td><strong>Explicit model-sensitivity audit</strong></td>
-<td>Shows what changes when stationarity, pairwise couplings, conditional independence, source-model assumptions, or memory order are altered.</td>
-<td>It still does not identify a unique neural mechanism.</td>
+<td><strong>明示的なモデル機密性監査</strong></td>
+<td>定常性、ペアワイズ結合、条件付き独立性、ソースモデルの仮定、またはメモリ順序が変更されたときに何が変わるかを示します。</td>
+<td>まだ固有の神経機構は特定されていません。</td>
 </tr>
 <tr>
-<td><strong>Cross-estimator concordance audit</strong></td>
-<td>Shows whether the sign, ordering, or state separation survives more than one reasonable estimator family instead of depending on one mathematical construction.</td>
-<td>It still does not make different estimators equivalent or erase hidden-state risk.</td>
+<td><strong>相互推定一致監査</strong></td>
+<td>符号、順序付け、または状態の分離が、1 つの数学的構造に依存するのではなく、複数の合理的な推定器族に存続するかどうかを示します。</td>
+<td>それでも、異なる推定量を同等にしたり、隠れ状態のリスクを消去したりすることはできません。</td>
 </tr>
 <tr>
-<td><strong>Observed-state closure / hidden-degree audit</strong></td>
-<td>Shows whether hidden cycles, latent variables, or nonlocal coarse graining could still carry the dissipation that the observed path misses.</td>
-<td>It still does not recover total microscopic entropy production by itself.</td>
+<td><strong>観察された状態の閉鎖/隠れた次数の監査</strong></td>
+<td>隠れたサイクル、潜在変数、または非局所的な粗視化が、観測されたパスが見逃す散逸を依然として引き起こす可能性があるかどうかを示します。</td>
+<td>それ自体ではまだ微視的なエントロピー生成の総量を回復できません。</td>
 </tr>
 <tr>
-<td><strong>Within-modality stability / nuisance audit</strong></td>
-<td>Shows whether the effect survives motion handling, denoising choices, split-half or test-retest checks, and declared protocol changes.</td>
-<td>It still does not convert an observation-side metric into a universal gate or a cross-site standard.</td>
+<td><strong>モダリティ内の安定性/迷惑監査</strong></td>
+<td>エフェクトがモーション処理、ノイズ除去の選択、分割またはテスト再テストのチェック、および宣言されたプロトコルの変更に耐えるかどうかを示します。</td>
+<td>まだ、観測側のメトリックをユニバーサル ゲートまたはクロスサイト標準に変換しません。</td>
 </tr>
 <tr>
-<td><strong>Reverse-transition support / sparse-data disclosure</strong></td>
-<td>Shows whether the relevant forward and reverse transitions were actually seen often enough for the chosen estimator.</td>
-<td>It still does not remove hidden-variable bias by itself.</td>
+<td><strong>逆遷移サポート / スパースデータ開示</strong></td>
+<td>関連する順方向および逆方向の遷移が、選択した推定量に対して実際に十分な頻度で見られたかどうかを示します。</td>
+<td>それ自体では隠れ変数バイアスはまだ除去されません。</td>
 </tr>
 <tr>
-<td><strong>Physiology-side calibration when energetic language is used</strong></td>
-<td>Separates observation-side arrow-of-time analysis from actual metabolism-side measurement.</td>
-<td>It still does not establish identity, consciousness, or a universal thermodynamic acceptance criterion.</td>
+<td><strong>エネルギー的な言語が使用される場合の生理学側のキャリブレーション</strong></td>
+<td>観察側の時間矢解析と実際の代謝側の測定を分離します。</td>
+<td>アイデンティティ、意識、普遍的な熱力学的許容基準はまだ確立されていません。</td>
 </tr>
 <tr>
-<td><strong>Same-session physiology bridge with disagreement handling</strong></td>
-<td>Shows whether electrophysiology, hemodynamics, and metabolism were aligned in the same acquisition window and whether partial agreement or spatial dissociation was reported rather than hidden.</td>
-<td>It still does not prove that a neural irreversibility metric is a direct energetic readout.</td>
+<td><strong>不一致処理を伴う同一セッション生理学ブリッジ</strong></td>
+<td>電気生理学、血行力学、代謝が同じ取得ウィンドウ内で調整されているかどうか、また部分的な一致または空間的解離が隠蔽されずに報告されたかどうかを示します。</td>
+<td>神経不可逆性メトリクスが直接的なエネルギー読み取り値であることはまだ証明されていません。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Nine questions when reading thermodynamic claims</h2>
+<h2>熱力学の主張を読むときの 9 つの質問</h2>
 <ol>
-<li><strong>Are we looking at a lower bound, an asymmetry score, a graph index, or a model-based entropy-flow estimate?</strong></li>
-<li><strong>How was the state space built?</strong> Check parcelization, clustering, PCA rank, source model, temporal bins, and frequency range.</li>
-<li><strong>What hidden-state or memory risk remains?</strong> Ask whether the observed trajectory is plausibly Markov, semi-Markov, or under-closed.</li>
-<li><strong>Did the paper separate null controls from support coverage?</strong> A clean shuffle does not guarantee adequate reverse-transition counts.</li>
-<li><strong>Does the qualitative result survive reasonable estimator changes?</strong> If not, read it as estimator-specific rather than as a general thermodynamic fact.</li>
-<li><strong>Does it survive motion, denoising, and scan-rescan checks?</strong></li>
-<li><strong>If the paper says "energy" or "metabolism," where is the physiology-side route, and was it aligned in the same session / state window?</strong></li>
-<li><strong>Are logical and physical costs still separated?</strong> Do not merge FLOPs, wall-power, and signal-side nonequilibrium into one scalar.</li>
-<li><strong>What does the metric explicitly abstain from claiming?</strong> If that line is missing, the ceiling should be read conservatively.</li>
+<li><strong>下限、非対称スコア、グラフインデックス、またはモデルベースのエントロピーフロー推定を見ているのですか?</strong></li>
+<li><strong>状態空間はどのように構築されましたか?</strong>パーセル化、クラスタリング、PCA ランク、ソース モデル、時間ビン、および周波数範囲を確認します。</li>
+<li><strong>どのような隠れ状態またはメモリのリスクが残っていますか?</strong>観察された軌跡がマルコフ、セミマルコフ、またはアンダークローズドであるかどうかを尋ねます。</li>
+<li><strong>論文ではヌル コントロールがサポート対象から分離されていましたか?</strong> クリーン シャッフルでは十分な逆遷移数が保証されません。</li>
+<li><strong>定性的結果は妥当な推定値の変更後も存続しますか?</strong>そうでない場合は、一般的な熱力学的事実としてではなく、推定値固有のものとして読み取ってください。</li>
+<li><strong>モーション、ノイズ除去、スキャンと再スキャンのチェックに耐えられますか?</strong></li>
+<li><strong>論文に「エネルギー」または「代謝」と書かれている場合、生理学側のルートはどこにあり、同じセッション/状態ウィンドウ内で調整されましたか?</strong></li>
+<li><strong>論理コストと物理コストは依然として分離されていますか?</strong>FLOP、壁電力、および信号側の非平衡を 1 つのスカラーにマージしません。</li>
+<li><strong>メトリックが明示的に主張を控えていることは何ですか?</strong>その線が欠落している場合は、上限を保守的に読み取る必要があります。</li>
 </ol>
 
-<h2>References</h2>
+<h2>参考資料</h2>
 <ol>
-<li>B&eacute;rut, A., Arakelyan, A., Petrosyan, A., et al. (2012). Experimental verification of Landauer&rsquo;s principle linking information and thermodynamics. <em>Nature</em>, 483, 187-189. <a href="https://doi.org/10.1038/nature10872" target="_blank">doi:10.1038/nature10872</a></li>
-<li>Attwell, D., &amp; Laughlin, S. B. (2001). An energy budget for signaling in the grey matter of the brain. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 21(10), 1133-1145. <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
-<li>Seifert, U. (2012). Stochastic thermodynamics, fluctuation theorems and molecular machines. <em>Reports on Progress in Physics</em>, 75(12), 126001. <a href="https://doi.org/10.1088/0034-4885/75/12/126001" target="_blank">doi:10.1088/0034-4885/75/12/126001</a></li>
-<li>Lynn, C. W., Cornblath, E. J., Papadopoulos, L., Bertolero, M. A., Bassett, D. S., &amp; Daniels, K. E. (2021). Broken detailed balance and entropy production in the human brain. <em>Proceedings of the National Academy of Sciences</em>, 118(47), e2109889118. <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
-<li>Mart&iacute;nez, I. A., Bisker, G., Horowitz, J. M., &amp; Parrondo, J. M. R. (2019). Inferring broken detailed balance in the absence of observable currents. <em>Nature Communications</em>, 10, 3542. <a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">doi:10.1038/s41467-019-11051-w</a></li>
-<li>Hartich, D., &amp; Godec, A. (2024). Comment on “Inferring broken detailed balance in the absence of observable currents”. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">doi:10.1038/s41467-024-52602-0</a></li>
-<li>Mart&iacute;nez, I. A., Bisker, G., Horowitz, J. M., &amp; Parrondo, J. M. R. (2024). Reply to: Comment on “Inferring broken detailed balance in the absence of observable currents”. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">doi:10.1038/s41467-024-52603-z</a></li>
-<li>Deco, G., Sanz Perl, Y., Bocaccio, H., Tagliazucchi, E., &amp; Kringelbach, M. L. (2022). The INSIDEOUT framework provides precise signatures of the balance of intrinsic and extrinsic dynamics in brain states. <em>Communications Biology</em>, 5, 572. <a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">doi:10.1038/s42003-022-03505-7</a></li>
-<li>de la Fuente, L. A., et al. (2023). Temporal irreversibility of neural dynamics as a signature of consciousness. <em>Cerebral Cortex</em>, 33(5), 1856-1865. <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
-<li>Nartallo-Kaluarachchi, R., et al. (2025). Multilevel irreversibility reveals higher-order organization of nonequilibrium interactions in human brain dynamics. <em>Proceedings of the National Academy of Sciences</em>, 122(10), e2408791122. <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
-<li>Ishihara, K., &amp; Shimazaki, H. (2025). State-space kinetic Ising model reveals task-dependent entropy flow in sparsely active nonequilibrium neuronal dynamics. <em>Nature Communications</em>, 16, 10852. <a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
-<li>Blom, K., Song, K., Vouga, E., Godec, A., &amp; Makarov, D. E. (2024). Milestoning estimators of dissipation in systems observed at a coarse resolution. <em>Proceedings of the National Academy of Sciences</em>, 121(17), e2318333121. <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">doi:10.1073/pnas.2318333121</a></li>
-<li>Teza, G., &amp; Stella, A. L. (2020). Exact coarse graining preserves entropy production out of equilibrium. <em>Physical Review Letters</em>, 125(11), 110601. <a href="https://doi.org/10.1103/PhysRevLett.125.110601" target="_blank">doi:10.1103/PhysRevLett.125.110601</a></li>
-<li>Cocconi, L., Salbreux, G., &amp; Pruessner, G. (2022). Scaling of entropy production under coarse graining in active disordered media. <em>Physical Review E</em>, 105(4), L042601. <a href="https://doi.org/10.1103/PhysRevE.105.L042601" target="_blank">doi:10.1103/PhysRevE.105.L042601</a></li>
-<li>Baiesi, M., Nishiyama, T., &amp; Falasco, G. (2024). Effective estimation of entropy production with lacking data. <em>Communications Physics</em>, 7, 264. <a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">doi:10.1038/s42005-024-01742-2</a></li>
-<li>Epp, S. M., Castrill&oacute;n, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
-<li>Poudel, G. R., Egan, G. F., &amp; McIntosh, A. R. (2024). Network representation of fMRI data using visibility graphs: The impact of motion and test-retest reliability. <em>Neuroinformatics</em>, 22, 265-284. <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">doi:10.1007/s12021-024-09652-y</a></li>
-<li>Metzen, D., Fellner, M.-C., Labrenz, F., &amp; Waschke, L. (2024). Reliability of variability and complexity measures for task and task-free BOLD fMRI. <em>Human Brain Mapping</em>, 45(10), e26778. <a href="https://doi.org/10.1002/hbm.26778" target="_blank">doi:10.1002/hbm.26778</a></li>
-<li>Omidvarnia, A., Pedersen, M., Walz, J. M., et al. (2021). Temporal complexity of fMRI is reproducible and correlates with higher order cognition. <em>NeuroImage</em>, 230, 117760. <a href="https://doi.org/10.1016/j.neuroimage.2021.117760" target="_blank">doi:10.1016/j.neuroimage.2021.117760</a></li>
-<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Bérut, A.、Arakelyan, A.、Petrosyan, A. 他（2012年）。情報と熱力学をつなぐランダウアー原理の実験的検証。 <em>ネイチャー</em>、483、187-189。 <a href="https://doi.org/10.1038/nature10872" target="_blank">ドイ:10.1038/nature10872</a></li>
+<li>アトウェル、D.、＆amp;ラフリン、S.B. (2001)。脳の灰白質における信号伝達のためのエネルギー予算。 <em>脳血流と脳のジャーナル代謝</em>、21(10)、1133-1145。 <a href="https://doi.org/10.1097/00004647-200110000-00001" target="_blank">doi:10.1097/00004647-200110000-00001</a></li>
+<li>ザイフェルト、U. (2012)。確率的熱力学、変動定理、分子機械。 <em>物理学の進歩に関するレポート</em>、75(12)、126001。<a href="https://doi.org/10.1088/0034-4885/75/12/126001" target="_blank">doi:10.1088/0034-4885/75/12/126001</a></li>
+<li>Lynn, C.W.、Cornblath, E.J.、Papadopoulos, L.、Bertolero, M.A.、Bassett, D.S.、および;ダニエルズ、K.E. (2021)。人間の脳における詳細なバランスの崩れとエントロピー生成。 <em>米国科学アカデミー紀要</em>、118(47)、e2109889118。 <a href="https://doi.org/10.1073/pnas.2109889118" target="_blank">doi:10.1073/pnas.2109889118</a></li>
+<li>Martianez、I.A.、Bisker、G.、Horowitz、J.M.、&amp;パロンド、J.M.R. (2019)。観察可能な流れがない場合に、壊れた詳細なバランスを推測します。 <em>Nature Communications</em>、10、3542。<a href="https://doi.org/10.1038/s41467-019-11051-w" target="_blank">doi:10.1038/s41467-019-11051-w</a></li>
+<li>Hartich、D.、&amp;ゴデック、A. (2024)。 「観測可能な流れがない場合の壊れた詳細なバランスの推測」についてのコメント。 <em>ネイチャーコミュニケーションズ</em>。 <a href="https://doi.org/10.1038/s41467-024-52602-0" target="_blank">doi:10.1038/s41467-024-52602-0</a></li>
+<li>Martianez、I.A.、Bisker、G.、Horowitz、J.M.、およびパロンド、J.M.R. (2024)。返信先: 「観測可能な流れがない場合の壊れた詳細なバランスの推測」へのコメント。 <em>ネイチャーコミュニケーションズ</em>。 <a href="https://doi.org/10.1038/s41467-024-52603-z" target="_blank">doi:10.1038/s41467-024-52603-z</a></li>
+<li>Deco、G.、Sanz Perl、Y.、Bocaccio、H.、Taliazucchi、E.、&amp;クリンゲルバッハ、M.L. (2022)。 INSIDEOUT フレームワークは、脳の状態における内因性と外因性のダイナミクスのバランスを正確に示します。 <em>コミュニケーション生物学</em>、5、572。<a href="https://doi.org/10.1038/s42003-022-03505-7" target="_blank">doi:10.1038/s42003-022-03505-7</a></li>
+<li>de la Fuente、LA、他（2023年）。意識の兆候としての神経力学の時間的不可逆性。 <em>大脳皮質</em>、33(5)、1856-1865。 <a href="https://doi.org/10.1093/cercor/bhac177" target="_blank">doi:10.1093/cercor/bhac177</a></li>
+<li>Nartallo-Kaluarachchi、R.、他。 (2025年)。マルチレベルの不可逆性は、人間の脳のダイナミクスにおける非平衡相互作用の高次組織化を明らかにします。 <em>米国科学アカデミー紀要</em>、122(10)、e2408791122。 <a href="https://doi.org/10.1073/pnas.2408791122" target="_blank">doi:10.1073/pnas.2408791122</a></li>
+<li>石原 和也＆amp;島崎 洋 (2025)状態空間運動イジング モデルは、まばらに活動する非平衡ニューロンのダイナミクスにおけるタスク依存のエントロピー フローを明らかにします。 <em>Nature Communications</em>、16、10852。<a href="https://doi.org/10.1038/s41467-025-66669-w" target="_blank">doi:10.1038/s41467-025-66669-w</a></li>
+<li>Blom、K.、Song、K.、Vouga、E.、Godec、A.、およびマカロフ、D.E. (2024)。粗い解像度で観察されたシステム内の散逸のマイルストーン推定値。 <em>米国科学アカデミー紀要</em>、121(17)、e2318333121。 <a href="https://doi.org/10.1073/pnas.2318333121" target="_blank">doi:10.1073/pnas.2318333121</a></li>
+<li>Teza、G.、＆amp;ステラ、A.L. (2020)。正確な粗視化により、エントロピー生成が平衡状態から保たれます。 <em>物理レビューレター</em>、125(11)、110601。<a href="https://doi.org/10.1103/PhysRevLett.125.110601" target="_blank">doi:10.1103/PhysRevLett.125.110601</a></li>
+<li>Cocconi、L.、Salbreux、G.、&amp;プルスナー、G. (2022)。アクティブな無秩序な媒体における粗視化の下でのエントロピー生成のスケーリング。 <em>物理レビュー E</em>、105(4)、L042601。 <a href="https://doi.org/10.1103/PhysRevE.105.L042601" target="_blank">doi:10.1103/PhysRevE.105.L042601</a></li>
+<li>Baiesi、M.、Nishiyama、T.、＆amp;ファラスコ、G. (2024)。データが不足している場合でもエントロピー生成を効果的に推定できます。 <em>通信物理</em>、7、264.<a href="https://doi.org/10.1038/s42005-024-01742-2" target="_blank">doi:10.1038/s42005-024-01742-2</a></li>
+<li>Epp、S.M.、Castrill'n、G.、Yuan、B.、他。 (2025年)。大胆な信号変化は、人間の皮質全体の酸素代謝を妨げる可能性があります。 <em>Nature Neuroscience</em>。 <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>プーデル、G. R.、イーガン、G. F.、およびマッキントッシュ、A.R. (2024)。可視性グラフを使用した fMRI データのネットワーク表現: 動きの影響とテスト再テストの信頼性。 <em>神経情報学</em>、22、265-284。 <a href="https://doi.org/10.1007/s12021-024-09652-y" target="_blank">doi:10.1007/s12021-024-09652-y</a></li>
+<li>Metzen, D.、Fellner, M.-C.、Labrenz, F.、およびワシュケ、L. (2024)。タスクおよびタスクフリー BOLD fMRI の変動性と複雑さの測定の信頼性。 <em>人間の脳のマッピング</em>、45(10)、e26778。 <a href="https://doi.org/10.1002/hbm.26778" target="_blank">doi:10.1002/hbm.26778</a></li>
+<li>Omidvarnia、A.、Pedersen、M.、Walz、J.M.、他。 （2021年）。 fMRI の時間的複雑さは再現可能であり、高次の認知と相関しています。 <em>NeuroImage</em>、230、117760。<a href="https://doi.org/10.1016/j.neuroimage.2021.117760" target="_blank">doi:10.1016/j.neuroimage.2021.117760</a></li>
+<li>Chen、J. E.、Lewis、L. D.、Coursey、S. E.、他(2025年)。 EEG-PET-MRI を同時に行うことで、覚醒時とノンレム睡眠時の時間的に結合し、空間的に構造化された脳のダイナミクスを特定します。 <em>Nature Communications</em>、16、8887。<a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
 </ol>

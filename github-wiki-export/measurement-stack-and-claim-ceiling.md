@@ -1,1067 +1,1067 @@
-# Wiki: observability and claim ceiling by measurement stack
+# Wiki: 測定スタックによる可観測性とクレーム上限
 
-> multimodal is not a synonym for ``seen everything''
+> マルチモーダルは「すべてを見た」の同義語ではありません。
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-03 / Role: Technical / natural science only (updated with the 2026-04-03 BCSFB / astrocyte / neuroimmune route-family sync)
+- Updated: 2026-04-03 / Role: 技術/自然科学のみ (2026-04-03 BCSFB / 星状細胞 / 神経免疫ルートファミリー同期で更新)
 
-## Role Of This Page
-This page is a wiki that fixes the ``upper claim limit for each measurement stack,'' which is often overlooked in WBE discussions. It's not enough to say that hidden state is important. Based on primary literature, we will explain what each of EEG/MEG/fMRI, spatial transcriptomics, Patch-seq, volume EM, diffusion-MRI tractography / structural connectome, same-brain functional connectomics, synaptic-density PET, mixed arousal proxy, local transmitter sensor, receptor atlas / PET, glia imaging, and human 1H-MRSI biochemical-similarity / high-resolution 1H-MRSI metabolite-distribution mapping / 31P metabolite-pH-balance / 31P MT exchange-flux / 31P NAD-content mapping / 31P functional NAD-dynamics / deuterium metabolite-mapping-absolute-quantification / deuterium kinetic-rate / ionic / thermal / myelin / BBB / blood-CSF-barrier / choroid-plexus / astrocyte target-route-role split / neuroimmune target-route-role split / clearance routes directly observes and what remains latent.
+## このページの役割
+このページは、WBEの議論で見落とされがちな「各測定スタックのクレーム上限」を修正するWikiです。隠れた状態が重要であると言うだけでは十分ではありません。 EEG/MEG/fMRI、空間トランスクリプトミクス、Patch-seq、ボリュームEM、拡散MRIトラクトグラフィー/構造コネクトミクス、同一脳機能コネクトミクス、シナプス密度PET、混合覚醒プロキシ、局所伝達センサー、受容体アトラス/PET、グリアイメージング、ヒト1H-MRSI生化学的類似性/高分解能がそれぞれどのようなものなのかを一次文献に基づいて解説します。 1H-MRSI代謝物分布マッピング / 31P代謝物-pHバランス / 31P MT交換フラックス / 31P NAD含有量マッピング / 31P機能的NADダイナミクス / 重水素代謝物マッピング-絶対定量 / 重水素運動速度 / イオン / 熱 / ミエリン / BBB / 血液CSFバリア / 脈絡叢 /アストロサイトの標的ルートと役割の分割 / 神経免疫の標的ルートと役割の分割 / クリアランスルートは直接観察され、何が潜在的に残るか。
 
-## Accuracy Notes
-The ``claim ceiling'' column below is not the conclusion declared by each paper. This is an operational inference drawn by this site from variables directly observed in primary literature and state variables that are still unobserved.
+## 正確性に関する注記
+以下の「請求の上限」欄は各紙が宣言した結論ではありません。これは、一次文献で直接観察された変数とまだ観察されていない状態変数からこのサイトが導き出した操作的推論です。
 
-## Back To Public Pages
-- [Introduction to WBE](https://mind-upload.com/wbe_101.html)
-- [Verification platform](https://mind-upload.com/verification.html)
-- [technology roadmap](https://mind-upload.com/tech_roadmap.html)
+## 公開ページへ戻る
+- [WBE の概要](https://mind-upload.com/wbe_101.html)
+- [検証プラットフォーム](https://mind-upload.com/verification.html)
+- [技術ロードマップ](https://mind-upload.com/tech_roadmap.html)
 
-## Related Wiki Pages
-- [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - This is a page that first organizes which state variables will be omitted.
-- [Wiki: Homeostatic plasticity and maintenance state](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state) - Dig deeper into missing variables from the long-term maintenance-state side.
-- [Wiki: Multimodal integration basics](https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics) - Click here if you would like to take a closer look at the integrated audit of EEG/MEG/fMRI/invasive records.
-- [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - This is an entry point to avoid confusing observed values ​​and latent state estimates.
+## 関連 Wiki ページ
+- [Wiki: 配線図だけでは不十分な理由](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - これはまずどの状態変数が省略されるのかを整理するページです。
+- [Wiki: 恒常性可塑性と維持状態](https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state) - 長期的な維持状態の側面から欠落している変数をさらに深く掘り下げます。
+- [Wiki: マルチモーダル統合の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics) - EEG/MEG/fMRI/侵襲的記録の統合監査を詳しく知りたい場合は、ここをクリックしてください。
+- [Wiki: 観察から推定へ](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - これは、観測値と潜在状態の推定値の混同を避けるためのエントリ ポイントです。
 
-## What Is Currently Known
-- EEG/MEG/fMRI provides macroscopic proxies, but not directly for cell types, synaptic efficiency, neuromodulatory fields, and glial status.
-- Even wearable OPM-MEG remains a route-conditioned macro field observable rather than a portability-based escape from the EEG / MEG claim ceiling.
-- In hemodynamic modalities, uncalibrated BOLD / HbO / HbR amplitude, transfer-audited amplitude, and model-conditioned oxygen-metabolism routes are different inferential objects, and vascular transfer state such as baseline perfusion, CVR, and superficial/systemic contamination can still dominate the simpler rows.
-- Whole-brain spatial transcriptomics provides a major advance in cell-type taxonomy and spatial location, but the sufficiency of dynamic states is another matter.
-- Patch-seq and same-brain connectomics reduce degeneracy, but the sufficiency of whole-brain coverage and long-term maintenance-state remains.
-- Same-brain functional connectomics can strengthen local structure-function links while still relying on morphology-bridged labels and leaving current synaptic state, presynaptic release machinery / active-zone nanostructure, and unique dynamics unresolved.
-- A diffusion-MRI-derived human connectome is not one stable object; hub maps, laterality, and bundle recovery remain conditioned by acquisition scheme, endpoint assignment, graph construction, and uncertainty handling.
-- Local transmitter / glia imaging is effective for calibrating coarse proxies, but it does not directly provide whole-brain ground truth.
-- Human 1H-MRSI biochemical similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, ionic, thermal, myelin, BBB, blood-CSF-barrier / choroid-plexus, astrocyte target / route-role split, neuroimmune target / route-role split, and clearance routes reduce different latent-state error terms and should not be summarized as one direct path to maintenance-state completeness.
-- Human local clinical-unit allocation and noninvasive perturbation-conditioned routes also reduce different latent-state error terms, so `human excitability evidence` is not one reusable row.
-- A real human proxy route may still calibrate only one bounded hidden-state family, so proxy class and operational maturity do not by themselves fix calibrator role.
-- Same-subject or same-brain wording can solve specimen identity while still leaving state continuity unresolved across time gaps, regime changes, and tissue transformation.
+## 現在わかっていること
+- EEG/MEG/fMRI は巨視的なプロキシを提供しますが、細胞タイプ、シナプス効率、神経調節野、およびグリアの状態を直接表すものではありません。
+- ウェアラブル OPM-MEG であっても、EEG / MEG 要求の上限からの携帯性に基づく回避ではなく、ルート条件付きのマクロ フィールド観察可能のままです。
+- 血行動態モダリティでは、未校正の BOLD / HbO / HbR 振幅、移送監査振幅、およびモデル条件付けされた酸素代謝ルートは異なる推論対象であり、ベースライン灌流、CVR、表面/全身汚染などの血管移送状態が依然として単純な行を支配する可能性があります。
+- 全脳空間トランスクリプトミクスは、細胞タイプの分類と空間的位置に大きな進歩をもたらしますが、動的状態が十分であるかどうかは別の問題です。
+- パッチシークエンスと同一脳コネクトミクスは変性を軽減しますが、脳全体の適用範囲と長期的な維持状態は十分に維持されます。
+- 同一脳機能コネクトミクスは、形態学に架橋されたラベルに依存し、現在のシナプス状態、シナプス前放出機構/活性ゾーンのナノ構造、および固有のダイナミクスを未解決のままにしつつ、局所的な構造と機能のリンクを強化することができます。
+- 拡散 MRI 由来のヒト コネクトームは 1 つの安定した物体ではありません。ハブ マップ、水平性、およびバンドルの回復は、取得スキーム、エンドポイントの割り当て、グラフの構築、および不確実性の処理によって条件付けされたままになります。
+- ローカルトランスミッター/グリアイメージングは​​、粗いプロキシのキャリブレーションには効果的ですが、脳全体のグラウンドトゥルースを直接提供するものではありません。
+- ヒト 1H-MRSI 生化学的類似性、高解像度 1H-MRSI 代謝物分布マッピング、31P 代謝物 / pH バランス、31P MT 交換フラックス、重水素代謝物マッピング / 絶対定量ルート、重水素速度イメージング、イオン、熱、ミエリン、BBB、血液 CSF 関門 / 脈絡叢、星状細胞標的 / ルート役割分割、神経免疫標的/ルート役割分割、およびクリアランスルートは、さまざまな潜在状態エラー条件を削減するものであり、維持状態の完全性への 1 つの直接的な経路として要約されるべきではありません。
+- 人間のローカル臨床ユニットの割り当てと非侵襲的な摂動条件付きルートもさまざまな潜在状態エラー項を削減するため、`human excitability evidence` は 1 つの再利用可能な行ではありません。
+- 実際の人間のプロキシ ルートは、依然として 1 つの限定された隠れ状態ファミリーのみを調整する可能性があるため、プロキシ クラスと運用の成熟度自体がキャリブレータの役割を固定するわけではありません。
+- 同じ被験者または同じ脳の言葉遣いは、時間ギャップ、レジームの変化、および組織の変化にわたる状態の連続性を未解決のままにして、標本の同一性を解決できます。
 
-## What Is Still Unknown
-- It cannot yet be determined which stack combination will most efficiently reduce degeneracy for WBE.
-- The sufficient conditions for which latent state should be obtained in the same brain, whole brain, and long-term longitudinal study are not yet determined.
-- How to optimize the augmentation order between stacks can also vary depending on the task, species, and time constant.
+## まだわかっていないこと
+- どのスタックの組み合わせが WBE の縮退を最も効果的に軽減するかはまだ決定できません。
+- 同一脳内、脳全体、長期縦断研究において潜在状態を取得するための十分な条件はまだ決定されていない。
+- スタック間の拡張順序を最適化する方法も、タスク、種類、時定数によって異なります。
 
 ---
 
-<h2>The shortest conclusion</h2>
+<h2>最短の結論</h2>
 <p>
-The weakness of the current site is that even though it was possible to enumerate important hidden states, it did not highlight which measurement stack directly observes what and where it hits the claim limit. Based on the primary literature, EEG/MEG/fMRI strengthens macro state tracking, whole-brain spatial atlas strengthens cell-type and spatial arrangement, Patch-seq bridges cell-type and morpho-electric phenotype, volume EM strengthens structural scaffolding, diffusion-MRI tractography strengthens living-human macro pathway priors, same-brain functional connectomics strengthens local conditional prediction, and local transmitter/astrocyte imaging strengthens coarse proxy calibration. However,<strong>no stack alone provides state-complete reconstruction</strong>. Therefore, on this site, we clearly specify the claim ceiling for each measurement stack, and prohibit expressions that exceed that.
+現在のサイトの弱点は、重要な隠れ状態を列挙することは可能であったにもかかわらず、どの測定スタックが何を、どこでクレーム制限に達したかを直接観察していることが強調されていないことです。一次文献に基づいて、EEG/MEG/fMRI はマクロ状態追跡を強化し、全脳空間アトラスは細胞型と空間配置を強化し、Patch-seq は細胞型と形態電気表現型を橋渡しし、ボリューム EM は構造足場を強化し、拡散 MRI トラクトグラフィーは生体ヒトマクロ経路事前分布を強化し、同一脳機能コネクトミクスは局所状態予測を強化し、局所伝達物質/アストロサイトイメージングは強化する粗いプロキシキャリブレーション。ただし、<strong> スタックのみでは状態完全な再構築 </strong> が提供されます。そのため、当サイトでは測定スタックごとにクレーム上限を明記し、それを超える表現を禁止させていただきます。
 </p>
 
-<strong>Scope of this page</strong>
+<strong>このページの範囲</strong>
 <p>
-Philosophy, legal systems, and individuality are not covered here. What we are dealing with is the question of ``what can be seen directly through observation, and what is still latent'' from the perspective of technology and natural science only.
+哲学、法制度、個性などはここでは扱いません。私たちが扱っているのは、技術や自然科学だけの観点から「観察によって直接見えるものと潜在的なものは何か」という問題です。
 </p>
 
-<h2>Weaknesses to be explored in depth</h2>
+<h2>徹底的に調査すべき弱点</h2>
 <p>
-Conventional public pages already knew that connectome alone was not enough, maintenance-state remained, and comparisons should be made using augmentation/ablation. However, this alone leaves room for readers to overinterpret when they see the words <strong>multimodal</strong>, <strong>atlas</strong>, <strong>connectome</strong>, and <strong>same-brain</strong>, saying, ``I see pretty much everything.'' The weakness is that the discussion of<strong>state variables</strong> and<strong>measurement stack</strong>s have not yet been fully integrated.
+従来の公開ページは、コネクトームだけでは十分ではなく、維持状態が残り、拡張/アブレーションを使用して比較を行う必要があることをすでに知っていました。ただし、これだけでは、読者が <strong>multimodal</strong>、<strong>atlas</strong>、<strong>connectome</strong>、<strong>same-brain</strong> という単語を見たときに「ほとんどすべてが見えている」と過剰に解釈する余地が残っています。弱点は、<strong> 状態変数 </strong> および <strong> 測定スタック </strong> の議論がまだ完全に統合されていないことです。
 </p>
 <p>
-Therefore, on this page, we will integrate the direct observables of each stack, what can be said a little more strongly, what will still remain in latent state, and the <strong>claim ceiling</strong> allowed by this site into one table.
+そこでこのページでは、各スタックの直接観測できるもの、もう少し強く言えること、潜在的に残るもの、そして当サイトが許可している<strong>claim Ceiling</strong>を一つの表に統合してみます。
 </p>
 
-<h2>Observability and claim ceiling per measurement stack</h2>
+<h2>測定スタックごとの可観測性とクレーム上限</h2>
 
-<strong>How to read</strong>
+<strong></strong>の読み方
 <p>
-The last column of the table below is not a summary of each paper, but the operating rules for this site. In other words, it is a well-founded upper bound subtracted from <strong>the stack's directly observed variables</strong> and <strong>still unobserved state variables</strong>.
+以下の表の最後の列は各論文の概要ではなく、当サイトの運営ルールです。言い換えれば、これは、<strong>スタックの直接観測された変数</strong>および<strong>まだ観測されていない状態変数</strong>から差し引かれた、十分に根拠のある上限です。
 </p>
 
 <table>
 <thead>
 <tr>
-<th>measurement stack</th>
-<th>What is directly observed</th>
-<th>Something that can be said relatively strongly</th>
-<th>What remains latent</th>
-<th>Claim ceiling on this site</th>
+<th>測定スタック</th>
+<th>直接観察できるもの</th>
+<th>比較的強く言えること</th>
+<th>潜在的に残っているもの</th>
+<th>このサイトで天井を請求する</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EEG / MEG</strong></td>
-<td>Globally synchronized current field and its time change, with movement-tolerant MEG only under declared shielding / field-control conditions. </td>
-<td>ms-scale global state transitions, frequency band dynamics, closed-loop timing constraints, and route-conditioned movement-tolerant macro electrophysiology can be audited. </td>
-<td>The uniqueness of the deep source, cell type, current synaptic efficiency, neuromodulatory field, and glial/metabolic state are not directly determined. </td>
-<td><strong>Macro state tracking and weak L2</strong>. It does not raise to cell/synapse granularity or state-complete claims. </td>
+<td> 宣言されたシールド/フィールド制御条件下でのみ移動耐性のある MEG を使用して、現在のフィールドとその時間変化をグローバルに同期します。 </td>
+<td>ms スケールのグローバル状態遷移、周波数帯域ダイナミクス、閉ループ タイミング制約、およびルート条件付き移動耐性マクロ電気生理学を監査できます。 </td>
+<td>深部ソースの独自性、細胞タイプ、現在のシナプス効率、神経調節野、およびグリア/代謝状態は直接決定されません。 </td>
+<td><strong>マクロ状態追跡と弱いL2</strong>。セル/シナプスの粒度や状態の完全性を主張するものではありません。 </td>
 </tr>
 <tr>
-<td><strong>BOLD / HbO / HbR amplitude (uncalibrated hemodynamic route)</strong></td>
-<td>BOLD / HbO / HbR amplitude and slow regional cofluctuation. </td>
-<td>Wide coverage, recruitment patterns, and coarse within-subject state occupancy can be tracked as hemodynamic-limited differences. </td>
-<td>ms timing, excitation/inhibition separation, local transmitter dynamics, current synaptic efficacy, and separation of neural change from vascular transfer state / superficial or autonomic contamination remain unresolved. </td>
-<td><strong>Up to wide-area hemodynamic-limited difference</strong>. Without transfer-side calibration, this row is not promoted to a clean neural difference. </td>
+<td><strong>BOLD / HbO / HbR 振幅 (未校正血行動態ルート)</strong></td>
+<td>BOLD / HbO / HbR の振幅とゆっくりとした局所的変動。 </td>
+<td>幅広いカバレッジ、リクルートパターン、および被験者内の大まかな状態占有率を、血行力学的に限定された差異として追跡できます。 </td>
+<td>ms のタイミング、興奮/抑制の分離、局所伝達物質のダイナミクス、電流シナプスの有効性、および血管伝達状態/表面または自律神経の汚染からの神経変化の分離は未解決のままです。 </td>
+<td><strong>広域血行動態限定差</strong>まで。転送側のキャリブレーションがなければ、この行はクリーンなニューラル差異にプロモートされません。 </td>
 </tr>
 <tr>
-<td><strong>Vascular-calibrated hemodynamic route (CVR / baseline-perfusion / short-separation audit)</strong></td>
-<td>BOLD / HbO / HbR amplitude plus named vascular-state covariates, short-channel signals, or baseline-perfusion calibration used to audit transfer-side variation. </td>
-<td>Protocol-scoped group or longitudinal comparisons can be strengthened after declared transfer-side calibration, and superficial / systemic confounds can be reduced rather than ignored. </td>
-<td>Neural quantity type, oxygen metabolism, cell-specific activity, and maintenance-side neurovascular / BBB controller state remain unresolved. </td>
-<td><strong>Up to transfer-audited hemodynamic comparison</strong>. Passing this row does not by itself create a neural-quantity or neurovascular-support readout. </td>
+<td><strong>血管校正済み血行動態ルート (CVR / ベースライン灌流 / 短期分離監査)</strong></td>
+<td>BOLD / HbO / HbR 振幅と、転送側変動を監査するために使用される名前付き血管状態共変量、短チャネル信号、またはベースライン灌流キャリブレーション。 </td>
+<td>プロトコルを対象としたグループまたは長期的な比較は、宣言された転送側キャリブレーション後に強化でき、表面的/全身的な混乱を無視するのではなく軽減できます。 </td>
+<td>神経量の種類、酸素代謝、細胞特異的活動、維持側の神経血管/BBBコントローラーの状態は未解決のままです。 </td>
+<td><strong>転送監査済み血行動態比較</strong>まで。この行を渡すこと自体は、神経量または神経血管サポートの読み出しを作成しません。 </td>
 </tr>
 <tr>
-<td><strong>Model-conditioned oxygen-metabolism route (qBOLD / OEF / CMRO2 family)</strong></td>
-<td>Multi-contrast hemodynamic observables combined with an explicit physiology model to estimate OEF / CMRO2 or related macro metabolic quantities. </td>
-<td>A named oxygen-metabolism quantity can be compared to plain BOLD / HbO / HbR and can reveal agreement or sign dissociation under the declared model. </td>
-<td>Model-free neural drive, cell-type-specific energy use, transmitter-specific coupling, and direct controller identity remain unresolved; quantity estimates still depend on calibration and model assumptions. </td>
-<td><strong>Up to a model-conditioned macro oxygen-metabolism route</strong>. It is not promoted to direct neural-state ground truth or to a generic hemodynamic truth meter. </td>
+<td><strong>モデル条件付き酸素代謝ルート (qBOLD / OEF / CMRO2 ファミリー)</strong></td>
+<td>マルチコントラストの血行動態観察データと明示的な生理学モデルを組み合わせて、OEF / CMRO2 または関連するマクロ代謝量を推定します。 </td>
+<td>A という名前の酸素代謝量は、単純な BOLD / HbO / HbR と比較でき、宣言されたモデルに基づいて一致または解離の兆候を明らかにできます。 </td>
+<td>モデルフリーの神経駆動、細胞タイプ固有のエネルギー使用、送信機固有の結合、および直接コントローラーのアイデンティティは未解決のままです。数量の推定値は依然としてキャリブレーションとモデルの仮定に依存します。 </td>
+<td><strong>モデル条件付きマクロ酸素代謝ルート</strong>まで。これは、直接的なニューラル状態のグランド トゥルースまたは一般的な血行動態のトゥルース メーターには昇格されません。 </td>
 </tr>
 <tr>
-<td><strong>whole-brain spatial transcriptomics / cell atlas</strong></td>
-<td>Ex vivo transcriptomic cell type and spatial arrangement. </td>
-<td>Like Yao et al.'s whole-mouse-brain atlas, it can greatly advance cell-type taxonomy, regional distribution, and molecular maps. </td>
-<td>The current firing rules, synaptic efficiency, neuromodulatory/glial state, sleep-history, and destination after perturbation remain. </td>
-<td><strong>Up to molecular atlas / cell-type prior</strong>. It does not increase dynamic completeness or current state sufficiency. </td>
+<td><strong>全脳空間トランスクリプトミクス / セルアトラス</strong></td>
+<td>Ex vivo トランスクリプトーム細胞の種類と空間配置。 </td>
+<td>LYao らの全マウス脳アトラスと同様に、細胞型分類、地域分布、分子地図を大幅に進歩させることができます。 </td>
+<td> 現在の発火規則、シナプス効率、神経調節/グリア状態、睡眠履歴、および摂動後の目的地は残ります。 </td>
+<td><strong>分子アトラス/細胞型以前の</strong>まで。動的完全性や現在の状態の十分性は向上しません。 </td>
 </tr>
 <tr>
-<td><strong>Patch-seq / morpho-electric-transcriptomic bridge</strong></td>
-<td>Compatible with single cell transcriptome, morphology, and electrophysiology. </td>
-<td>Like the systems of Gouwens et al. and Gamlin et al., it is possible to strengthen the bridge between cell-type labels, morpho-electric phenotypes, and some connectivity motifs. </td>
-<td>Whole-brain coverage, same-brain circuit context, current network state, and longitudinal plastic history remain. </td>
-<td><strong>Up to cell-type-specific prior and local parameter constraints</strong>. It is not used for whole-brain state completeness. </td>
+<td><strong>パッチシーケンス / 形態電気トランスクリプトームブリッジ</strong></td>
+<td>単一細胞トランスクリプトーム、形態学、電気生理学と互換性があります。 </td>
+<td>Gouwens らのシステムと同様。 Gamlin et al. の研究によれば、細胞型標識、形態電気的表現型、およびいくつかの接続モチーフの間の橋渡しを強化することが可能である。 </td>
+<td>全脳カバレッジ、同一脳回路コンテキスト、現在のネットワーク状態、長期にわたる可塑性履歴が残ります。 </td>
+<td><strong>セルタイプ固有の事前およびローカルパラメータ制約</strong>まで。脳全体の状態を完全にするためには使用されません。 </td>
 </tr>
 <tr>
-<td><strong>volume EM connectomics</strong></td>
-<td>This is a structural snapshot of hyperfine morphology and chemical synapse. </td>
-<td>You can strengthen the structural scaffold, projectome, and candidate circuits like Dorkenwald et al.'s whole-brain fly wiring diagram. </td>
-<td>Current synaptic weight, intrinsic excitability, neuromodulatory context, glial slow state, and sleep-dependent maintenance are not directly included. </td>
-<td><strong>Structural atlas / scaffold</strong>. Do not replace connectome-complete with emulation-complete. </td>
+<td><strong>ボリュームEMコネクトミクス</strong></td>
+<td>これは、超微細形態と化学シナプスの構造スナップショットです。 </td>
+<td>Dorkenwald et al. の全脳フライ配線図のような構造足場、プロジェクトーム、および候補回路を強化できます。 </td>
+<td> 現在のシナプス重量、固有の興奮性、神経調節状況、グリアの遅い状態、および睡眠依存性の維持は直接含まれていません。 </td>
+<td><strong>構造アトラス / 足場</strong>。 connectome-complete をエミュレーション-complete に置き換えないでください。 </td>
 </tr>
 <tr>
-<td><strong>same-brain functional connectomics</strong></td>
-<td>Co-registered in vivo activity measurements and a later reconstructed local EM connectome in a named same-brain pipeline. </td>
-<td>Like MICrONS and linked analyses, sampled local circuits can strengthen structure-function correspondences, local connection rules, and connectome-constrained conditional prediction within the measured region / task / state. </td>
-<td>Same-time whole-brain state, current synaptic efficacy / release state / active-zone architecture, direct transcriptomic identity unless separately measured, unique dynamical parameterization, and long-horizon maintenance-state remain unresolved. </td>
-<td><strong>Up to a sequential local structure-function scaffold and local conditional prediction</strong>. We do not promote it to current synaptic-state or presynaptic release-machinery readout, direct cell-type truth, unique dynamics, or a whole-brain twin. </td>
+<td><strong>同一脳機能コネクトミクス</strong></td>
+<td>Co で登録された in vivo 活動測定値と、その後名前付き同一脳パイプラインで再構築された局所 EM コネクトーム。 </td>
+<td>MICrONS やリンクされた解析と同様に、サンプリングされたローカル回路は、測定された領域/タスク/状態内の構造と機能の対応、ローカル接続ルール、およびコネクトームに制約された条件付き予測を強化できます。 </td>
+<td>同時の全脳状態、現在のシナプス効率/解放状態/アクティブゾーン構造、個別に測定しない限り直接的なトランスクリプトーム同一性、独自の動的パラメータ化、長期維持状態は未解決のままです。 </td>
+<td><strong>逐次局所構造機能足場および局所条件付き予測</strong>まで。現在のシナプス状態またはシナプス前放出機構の読み出し、直接的な細胞型の真実、ユニークなダイナミクス、または全脳双生児にそれを推進することはありません。 </td>
 </tr>
 <tr>
-<td><strong>diffusion MRI tractography / structural connectome</strong></td>
-<td>Diffusion-weighted signal plus model-derived local orientation estimates; bundle, endpoint, and parcel-graph claims appear only after tracking, endpoint assignment, and graph construction.</td>
-<td>Macro white-matter pathway priors, named bundle hypotheses, and protocol-scoped parcel-connectivity comparisons can be strengthened when acquisition, endpoint policy, and graph-construction route are disclosed.</td>
-<td>Synapse identity, direction, current weight, cortical endpoint completeness, stable hub / laterality metrics independent of filtering or parcellation, and protocol-invariant graph meaning remain unresolved; uncertainty and ex vivo calibration still sit downstream.</td>
-<td><strong>Up to an acquisition-, endpoint-, graph-, and calibration-conditioned macro pathway prior</strong>. We do not read it as an edge-complete human connectome or one stable graph by default.</td>
+<td><strong>拡散 MRI トラクトグラフィー / 構造コネクトーム</strong></td>
+<td>拡散強調信号とモデル由来の局所方向推定値。バンドル、エンドポイント、およびパーセル グラフのクレームは、追跡、エンドポイントの割り当て、グラフの構築後にのみ表示されます。</td>
+<td>マクロ白質経路事前分布、名前付きバンドル仮説、およびプロトコル スコープのパーセル接続性比較は、取得、エンドポイント ポリシー、およびグラフ構築ルートが開示されるときに強化できます。</td>
+<td>Sシナプスのアイデンティティ、方向、現在の重量、皮質エンドポイントの完全性、フィルタリングまたは分割に依存しない安定したハブ/側性メトリクス、およびプロトコル不変のグラフの意味は未解決のままです。不確実性と生体外校正はまだ下流にあります。</td>
+<td><strong></strong> より前の取得、エンドポイント、グラフ、およびキャリブレーション条件付きマクロ経路まで。デフォルトでは、これをエッジ完全なヒューマン コネクトームまたは 1 つの安定したグラフとして読み取りません。</td>
 </tr>
 <tr>
-<td><strong>SV2A PET / synaptic-density PET</strong></td>
-<td>Tracer-defined regional SV2A binding interpreted through kinetic modeling or a validated simplified scan window. </td>
-<td>You can strengthen human in vivo regional synaptic-density gradients, atlas construction, and disease-linked density comparisons. </td>
-<td>Current release probability, release-site number, active-zone nanostructure / priming-site assembly, postsynaptic receptor occupancy, task-evoked momentary synaptic efficacy, and branch-local plasticity state remain unresolved, and anatomy/partial-volume handling can still matter for interpretation. </td>
-<td><strong>Up to regional synaptic-density proxy</strong>. We do not read it as current synaptic efficacy, presynaptic release machinery, or momentary synaptic state. </td>
+<td><strong>SV2A PET / シナプス密度 PET</strong></td>
+<td>Tracer によって定義された局所 SV2A バインディングは、動態モデリングまたは検証済みの簡易スキャン ウィンドウを通じて解釈されます。 </td>
+<td>ヒトの生体内局所シナプス密度勾配、アトラス構築、疾患関連密度比較を強化できます。 </td>
+<td>現在の放出確率、放出部位の数、活性領域のナノ構造/プライミング部位の集合、シナプス後受容体の占有率、課題誘発性の瞬間的なシナプス効率、および分枝局所の可塑性状態は未解決のままであり、解剖学的構造/部分体積の処理が依然として解釈上重要となる可能性がある。 </td>
+<td><strong>地域シナプス密度プロキシ</strong>まで。私たちはそれを現在のシナプスの有効性、シナプス前の放出機構、または瞬間的なシナプスの状態として解釈しません。 </td>
 </tr>
 <tr>
-<td><strong>mixed arousal proxy (pupil / HRV / locomotion / facial motion)</strong></td>
-<td>Behavior-linked arousal markers and their covariance with ongoing state. </td>
-<td>You can stratify coarse arousal-like state and test whether a behavioral proxy carries useful variance for the task. </td>
-<td>Transmitter identity, receptor family, regional release, cell-specific effect, and the whole-brain transmitter field remain unresolved. </td>
-<td><strong>Up to coarse covariate / stratification</strong>. We do not treat it as transmitter-specific ground truth. </td>
+<td><strong>混合覚醒プロキシ(瞳孔/HRV/運動/顔の動き)</strong></td>
+<td>行動に関連した覚醒マーカーと進行中の状態との共分散。 </td>
+<td>粗い覚醒のような状態を層別化し、行動プロキシがタスクに有用な変動をもたらすかどうかをテストできます。 </td>
+<td> 伝達物質の正体、受容体ファミリー、局所放出、細胞特異的効果、および全脳伝達物質領域は未解決のままです。 </td>
+<td><strong>粗い共変量/階層化まで</strong>。私たちはそれを送信機固有のグラウンドトゥルースとして扱いません。 </td>
 </tr>
 <tr>
-<td><strong>local axon activity / transmitter sensor</strong></td>
-<td>Local cholinergic / aminergic axon activity or local extracellular transmitter signal in the measured region. </td>
-<td>You can calibrate local chemical dynamics, spatial heterogeneity, and where a mixed behavioral proxy fails or succeeds. </td>
-<td>The whole-brain distribution, receptor occupancy / downstream effect, and cross-species generalization to human current state remain unresolved. </td>
-<td><strong>Up to local transmitter-linked calibration</strong>. It is stronger than mixed proxy, but it is still not whole-brain neuromodulatory ground truth. </td>
+<td><strong>局所軸索活動 / 送信センサー</strong></td>
+<td>L測定領域における局所コリン作動性/アミン作動性軸索活動または局所細胞外伝達物質シグナル。 </td>
+<td>局所的な化学力学、空間的不均一性、および混合動作プロキシが失敗する場所または成功する場所を校正できます。 </td>
+<td> 脳全体の分布、受容体占有/下流効果、および人類の現状に対する種間の一般化は未解決のままです。 </td>
+<td><strong>ローカル送信機連動校正</strong>まで。これは混合プロキシよりも強力ですが、それでも脳全体の神経調節のグラウンドトゥルースではありません。 </td>
 </tr>
 <tr>
-<td><strong>receptor / transporter atlas or autoradiography</strong></td>
-<td>Group-average regional distribution of selected receptors / transporters and laminar density priors from PET and autoradiography. </td>
-<td>You can show where selected transmitter systems are likely to differ and which cortical axes they follow. </td>
-<td>Current occupancy, task-evoked release, individual time-varying state, and cell-specific downstream effect remain unresolved. </td>
-<td><strong>Up to regional chemoarchitectural prior</strong>. It is not read as the current neuromodulatory state. </td>
+<td><strong>受容体/輸送体アトラスまたはオートラジオグラフィー</strong></td>
+<td> PET およびオートラジオグラフィーからの選択された受容体 / トランスポーターのグループ平均地域分布および層流密度事前分布。 </td>
+<td>選択した送信システムが異なる可能性がある場所と、それらがどの皮質軸に従うかを示すことができます。 </td>
+<td>現在の占有、タスク誘発放出、個々の時間変化する状態、およびセル固有の下流効果は未解決のままです。 </td>
+<td><strong>地域化学構造以前の</strong>まで。現在の神経調節状態としては読み取られません。 </td>
 </tr>
 <tr>
-<td><strong>occupancy PET</strong></td>
-<td>Ligand- or drug-specific target engagement within a named receptor family over bounded scan windows, interpreted through an explicit tracer and quantification model. </td>
-<td>You can quantify selected exogenous target engagement for the chosen receptor family, ligand / drug, dose, and scan window. </td>
-<td>Endogenous transmitter release, unsampled receptor families, laminar / cell-specific effect, and continuous state outside the dosing window remain unresolved. </td>
-<td><strong>Up to ligand- and dose-limited target-engagement proxy</strong>. We do not read it as endogenous release or whole-brain current transmitter state. </td>
+<td><strong>占有率 PET</strong></td>
+<td>L明示的なトレーサーおよび定量化モデルを通じて解釈される、境界付きスキャン ウィンドウにわたる名前付き受容体ファミリー内のリガンドまたは薬物に特異的なターゲットの関与。 </td>
+<td>選択した受容体ファミリー、リガンド/薬物、用量、およびスキャンウィンドウについて、選択した外因性ターゲットの関与を定量化できます。 </td>
+<td> 内因性伝達物質の放出、サンプリングされていない受容体ファミリー、層状/細胞特異的効果、および投与範囲外の連続状態は未解決のままです。 </td>
+<td><strong>リガンドおよび用量が制限されたターゲットエンゲージメントプロキシ</strong>まで。私たちはそれを内因性の放出または脳全体の電流伝達物質の状態として解釈しません。 </td>
 </tr>
 <tr>
-<td><strong>displacement / release-sensitive PET</strong></td>
-<td>Challenge-linked change in binding potential for selected tracers / receptor families over bounded scan windows, used as a proxy for endogenous transmitter release under an explicit task or pharmacological challenge. </td>
-<td>You can test whether a named challenge perturbs a selected transmitter system within the scanned window and spatial scope. </td>
-<td>The complete transmitter field, unsampled receptor families, laminar / cell-specific effect, downstream consequence, and continuous state outside the challenge window remain unresolved. </td>
-<td><strong>Up to receptor-, tracer-, and challenge-limited release proxy</strong>. We do not promote it to receptor-family-complete or whole-brain internal-state ground truth. </td>
+<td><strong>変位/リリース感応型 PET</strong></td>
+明示的なタスクまたは薬理学的チャレンジの下での内因性伝達物質放出の代理として使用される、境界スキャンウィンドウ上の選択されたトレーサー/受容体ファミリーの結合潜在力における<td>チャレンジ関連の変化。 </td>
+<td>スキャンされたウィンドウと空間スコープ内で、名前付きチャレンジが選択した送信システムを混乱させるかどうかをテストできます。 </td>
+<td>完全な伝達物質フィールド、サンプリングされていない受容体ファミリー、層状/細胞特異的効果、下流の影響、チャレンジウィンドウ外の連続状態は未解決のままです。 </td>
+<td><strong>受容体、トレーサー、およびチャレンジ制限放出プロキシまで</strong>。私たちはそれを受容体ファミリーの完全な、または脳全体の内部状態のグランドトゥルースに昇格させません。 </td>
 </tr>
 <tr>
-<td><strong>astrocyte / glial imaging</strong></td>
-<td>Astrocyte network response and slow-state dynamics to local neurotransmitter input. </td>
-<td>Like Cahill et al., we can visualize minute-long glial network states and further strengthen slow-state/recovery modeling. </td>
-<td>Full integration of whole-brain coverage, cell-type-specific generalization, fast synaptic state, sleep-history, and other stacks remains. </td>
-<td><strong>As far as banning slow-state calibration and glia omission</strong>. This alone does not claim whole-brain completeness. </td>
+<td><strong>星状細胞/グリアイメージング</strong></td>
+<td>局所神経伝達物質入力に対するアストロサイトのネットワーク応答と低速状態のダイナミクス。 </td>
+<td>LCahill らと同様に、分単位のグリア ネットワーク状態を視覚化し、低速状態/回復モデリングをさらに強化できます。 </td>
+<td>脳全体のカバレッジ、細胞タイプ固有の一般化、高速シナプス状態、睡眠履歴、その他のスタックが完全に統合されています。 </td>
+<td><strong>スローステートキャリブレーションとグリア省略を禁止する限り</strong>。これだけでは脳全体が完全であるとは言えません。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Why ceiling is so different</h2>
+<h2>なぜ天井がこんなに違うのか</h2>
 
-<h3>1. atlas strengthens identity but does not directly provide current state</h3>
+<h3>1。アトラスはアイデンティティを強化しますが、現在の状態を直接提供するわけではありません</h3>
 <p>
-Yao et al. combined scRNA-seq and MERFISH on whole mouse brain and presented a high-resolution atlas consisting of 34 classes, 338 subclasses, 1,201 supertypes, and 5,322 clusters. This is a major step forward in terms of cell-type taxonomy and spatial location. However, what we can say directly from this is <strong>which molecular class the cell belongs to and where it is located</strong>, but does not include<strong>the current moment's threshold, gain, synaptic efficacy, sleep-dependent renormalization, or transmitter occupancy</strong>. So while atlas is very important, it is safe to read it first as <strong>identity prior</strong>.
+ヤオら。は、マウス全脳について scRNA-seq と MERFISH を組み合わせ、34 クラス、338 サブクラス、1,201 スーパータイプ、および 5,322 クラスターからなる高解像度アトラスを提示しました。これは、細胞の種類の分類と空間的位置の点で大きな前進です。ただし、これから直接言えることは、<strong> 細胞が属する分子クラスとその位置</strong> ですが、<strong> 現時点の閾値、利得、シナプス効率、睡眠依存の繰り込み、または伝達物質占有率</strong> は含まれません。したがって、アトラスは非常に重要ですが、最初に <strong>identity Prior</strong> として読んでも安全です。
 </p>
 
-<h3>2. Patch-seq is a bridge but does not erase the coverage wall</h3>
+<h3>2。 Patch-seq はブリッジですが、カバレッジの壁を消去しません</h3>
 <p>
-Gouwens et al. showed that morpho-electric variation remains continuously within the transcriptomic family, and Gamlin et al. mapped MET-types defined by Patch-seq to large-scale EM and showed differences in myelination and synaptic output for each Sst MET-type. This means that <strong>cell-type label alone is not enough; adding electrophysiology and morphology is of great value</strong>. On the other hand, Patch-seq is sparse and destructive sampling and does not provide the whole brain current state or longitudinal history of the same individual. Therefore, it is a<strong>bridge</strong> and not<strong>whole-brain completeness</strong>.
+ガウエンスら。 Gamlinらは、形態電気的変化がトランスクリプトームファミリー内に継続的に残ることを示した。 Patch-seq によって定義された MET タイプを大規模 EM にマッピングし、各 Sst MET タイプの髄鞘形成とシナプス出力の違いを示しました。これは、<strong>cell タイプのラベルだけでは十分ではないことを意味します。電気生理学と形態学を追加することは非常に価値のある</strong>です。一方、Patch-seq はまばらで破壊的なサンプリングであり、脳全体の現在の状態や同じ個人の長期的な履歴は提供されません。したがって、それは<strong>ブリッジ</strong>であり、<strong>全脳完全</strong>ではありません。
 </p>
 
-<h3>3. EM connectome is a scaffold but does not freeze dynamic state</h3>
+<h3>3。 EM コネクトームは足場ですが、動的状態を固定しません</h3>
 <p>
-Dorkenwald et al.'s adult fly whole-brain connectome is a huge step forward, reorganizing approximately 5 × 10<sup>7</sup> chemical synapses and 139,255 neurons. However, EM is strong because it is a structural scaffold, and it is not a method that directly measures current weight, release probability, neuromodulatory context, and glial/metabolic background. The criticism that follows from this is simple: we must not equate knowing the wiring with knowing the generative state of the moment.
+Dorkenwald らの成虫のハエの全脳コネクトームは大きな進歩であり、約 5 × 10<sup>7</sup> の化学シナプスと 139,255 個のニューロンを再構成します。ただし、EM は構造的な足場であるため強力であり、現在の体重、放出確率、神経調節の状況、およびグリア/代謝の背景を直接測定する方法ではありません。ここから得られる批判は単純です。配線を知ることと、その瞬間の生成状態を知ることを同一視してはならないということです。
 </p>
 
-<h3>4. Adding same-brain function reduces degeneration, but does not by itself fix labels, current synaptic state, or unique dynamics</h3>
+<h3>4。同一脳機能の追加は変性を軽減しますが、それ自体ではラベル、現在のシナプス状態、または固有のダイナミクスを修正するわけではありません</h3>
 <p>
-MICrONS combines dense calcium imaging, behavioral states, and a later EM connectome in the same brain, and the linked analyses show that same-brain local circuits can support stronger structure-function correspondences and connectome-constrained conditional prediction. This is a real advance over connectome-only. However, the measurable object is still a <strong>sequential, local, and regime-bounded bridge</strong>, not a same-time whole-brain state sample. It is therefore too weak to treat the label <strong>same-brain functional connectomics</strong> as one solved class. The remaining walls are not only whole-brain coverage and maintenance-state, but also whether transcriptomic labels were <strong>directly measured or morphology-bridged</strong>, whether the result constrains <strong>current synaptic efficacy / release state / active-zone architecture</strong>, and whether the resulting dynamical explanation is <strong>unique rather than one member of a still-degenerate family</strong>. Therefore, the ceiling of this stack on this site is a <strong>sequential local structure-function scaffold</strong> or <strong>local conditional-prediction route</strong>, not current synaptic-state, presynaptic release-machinery readout, or a whole-brain twin.
+MICrONS は、高密度カルシウムイメージング、行動状態、およびその後の EM コネクトームを同じ脳内で組み合わせたもので、関連付けられた解析により、同じ脳の局所回路がより強力な構造機能対応とコネクトームに制約された条件付き予測をサポートできることが示されています。これは、connectome のみに比べて大きな進歩です。ただし、測定可能なオブジェクトは依然として <strong> シーケンシャル、ローカル、レジーム境界ブリッジ </strong> であり、同時の全脳状態サンプルではありません。したがって、ラベル <strong>same-brain Functional connectomics</strong> を 1 つの解決されたクラスとして扱うには弱すぎます。残りの壁は、脳全体の適用範囲と維持状態だけでなく、トランスクリプトームラベルが直接測定されたか</strong>、形態ブリッジされた</strong>かどうか、その結果が<strong>現在のシナプス効率/解放状態/アクティブゾーンアーキテクチャを制約するか</strong>、そして結果として得られる力学的説明がまだ退化している家族の1メンバーではなく<strong>独自のものであるかどうか</strong>も含まれます。したがって、このサイトのこのスタックの天井は、<strong> シーケンシャルなローカル構造機能足場 </strong> または <strong> ローカル条件付き予測ルート </strong> であり、現在のシナプス状態、シナプス前解放機構の読み出し、または全脳双子ではありません。
 </p>
 
-<h3>4.5. Same-brain functional connectomics is a sequential local scaffold, not current synaptic-state or a unique whole-brain twin</h3>
+<h3>4.5。同一脳機能コネクトミクスは、現在のシナプス状態や独自の全脳ツイン</h3>ではなく、逐次局所足場である
 <p>
-Another weakness that remained on this page was that <strong>same-brain functional connectomics</strong> could still be overread as if one frontier stack had already solved specimen identity, direct cell typing, current synaptic state, presynaptic release machinery, and dynamical identifiability in one move. That is too weak. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">Bosch et al. (2022)</a> showed a strong correlative workflow from in vivo physiology to synchrotron microtomography and volume EM, but through a multistage landmark-based route. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> then showed a same-brain local pipeline that can support rich structure-function analysis, and <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">Ding et al. (2025)</a> showed that same-brain functional connectomics can reveal a generalized local wiring rule. But <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025)</a> still mapped <strong>predicted</strong> transcriptomic types through morphology-based classification rather than direct transcriptomic readout inside the EM volume. And the remaining latent state is not trivial: <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>, <a href="https://doi.org/10.7554/eLife.18167" target="_blank">Moln&aacute;r et al. (2016)</a>, <a href="https://doi.org/10.1038/s41593-017-0041-9" target="_blank">Sakamoto et al. (2018)</a>, <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a>, <a href="https://doi.org/10.1038/s41593-024-01720-5" target="_blank">Emperador-Melero et al. (2024)</a>, and <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024)</a> show that current synaptic efficacy, release probability, active-zone architecture, and membrane-state-gated consolidation are not exhausted by structure-function correspondence, while <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> show that connectome-constrained recurrent networks can still remain dynamically degenerate until extra recordings collapse the solution space. What follows directly is that <strong>same-brain functional connectomics is a strong local scaffold, but not a solved route to current synaptic-state, presynaptic release-machinery truth, direct transcriptomic truth, or unique whole-brain dynamics</strong>.
+このページに残されたもう 1 つの弱点は、<strong> 同一脳機能コネクトミクス </strong> が、あたかも 1 つのフロンティア スタックが標本の同一性、直接細胞タイピング、現在のシナプス状態、シナプス前放出機構、および動的識別可能性を 1 回の動作ですでに解決したかのようにオーバーリードされる可能性があることです。それは弱すぎます。 <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">ボッシュら(2022) </a> は、生体内生理学からシンクロトロン マイクロトモグラフィーおよびボリューム EM までの強力な相関ワークフローを示しましたが、これは多段階のランドマークベースのルートを介したものでした。 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICronSコンソーシアムほか(2025) </a> はその後、豊富な構造機能解析をサポートできる同一脳ローカル パイプラインを示しました。 (2025)</a> は、同一脳機能コネクトミクスが一般化された局所配線規則を明らかにできることを示しました。しかし、<a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">Gamlin et al. (2025) </a> は依然として、EM ボリューム内の直接のトランスクリプトーム読み取りではなく、形態学に基づいた分類を通じて <strong> 予測された </strong> トランスクリプトーム タイプをマッピングしました。そして、残りの潜在状態は自明ではありません:<a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">Holler et al. (2021)</a>、<a href="https://doi.org/10.7554/eLife.18167" target="_blank">モルナー 他(2016)</a>、<a href="https://doi.org/10.1038/s41593-017-0041-9" target="_blank">阪本ほか(2018)</a>、<a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">D&uuml;rst et al. (2022)</a>、<a href="https://doi.org/10.1038/s41593-024-01720-5" target="_blank">エンペラドール・メレロ 他(2024)</a>、<a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">Mittermaier et al. (2024) </a> は、現在のシナプス効率、放出確率、アクティブゾーン構造、および膜状態ゲートの強化が構造と機能の対応によって使い尽くされていないことを示しています。 Litwin-Kumar (2025)</a> は、コネクトームに制約されたリカレント ネットワークが、追加の記録によって解空間が崩壊するまで動的に縮退したままになる可能性があることを示しています。直接的に続くことは、<strong>同じ脳の機能コネクトミクスは強力な局所足場であるが、現在のシナプス状態、シナプス前放出機構の真実、直接的なトランスクリプトームの真実、またはユニークな全脳ダイナミクス</strong>への解決された経路ではないということである。
 </p>
 <table>
 <thead>
 <tr>
-<th>Wall</th>
-<th>What the primary literature now supports</th>
-<th>Site rule</th>
+<th>壁</th>
+<th>一次文献が現在サポートしているもの</th>
+<th>サイトルール</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Sequential bridge wall</strong></td>
-<td>Same-brain correlative pipelines can carry landmarks, targeted subvolumes, and local structure-function correspondence across stages, but they are still sequential rather than same-time whole-brain state capture.</td>
-<td>Do not read <strong>same-brain</strong> as <strong>same-time complete state</strong>; disclose acquisition order, regime continuity, and local scope first.</td>
+<td><strong>連続橋壁</strong></td>
+<td>同一脳相関パイプラインは、ステージ全体でランドマーク、ターゲットのサブボリューム、および局所的な構造と機能の対応を運ぶことができますが、同時に脳全体の状態をキャプチャするのではなく、依然としてシーケンシャルです。</td>
+<td><strong>同じ脳</strong>を<strong>同時完了状態</strong>として読み込まないでください。取得順序、体制の継続性、およびローカル範囲を最初に開示します。</td>
 </tr>
 <tr>
-<td><strong>Label-transfer wall</strong></td>
-<td>Same-brain connectomics can support morphology-linked transfer to transcriptomic classes, but that is different from direct transcriptomic measurement inside the reconstructed volume.</td>
-<td>Do not read <strong>predicted transcriptomic type</strong> as <strong>direct cell-type truth</strong> unless the assay route is named explicitly.</td>
+<td><strong>ラベル転写壁</strong></td>
+<td>Same-brain コネクトミクスは、トランスクリプトーム クラスへの形態に関連した転移をサポートできますが、それは再構成されたボリューム内の直接のトランスクリプトーム測定とは異なります。</td>
+<td>アッセイルートが明示的に指定されていない限り、<strong>予測されたトランスクリプトームタイプ</strong>を<strong>直接的な細胞型の真実</strong>として読み取らないでください。</td>
 </tr>
 <tr>
-<td><strong>Synaptic-state wall</strong></td>
-<td>Structure-function correspondence, synapse size, and identified connectivity strengthen priors on function, but current efficacy, release probability, active-zone architecture, and membrane-state-gated consolidation still depend on additional state variables.</td>
-<td>Do not read <strong>same-brain functional connectomics</strong> as <strong>current synaptic-state or presynaptic release-machinery readout</strong> without a direct synaptic-state assay.</td>
+<td><strong>シナプス状態壁</strong></td>
+<td>構造と機能の対応、シナプスのサイズ、特定された接続性は機能に関する事前分布を強化しますが、現在の有効性、放出確率、アクティブゾーンのアーキテクチャ、および膜状態ゲートの統合は依然として追加の状態変数に依存します。</td>
+<td><strong>同じ脳機能コネクトミクス</strong>を<strong>現在のシナプス状態またはシナプス前放出機構の読み出し</strong>として、直接的なシナプス状態アッセイなしで読み取らないでください。</td>
 </tr>
 <tr>
-<td><strong>Dynamics-identifiability wall</strong></td>
-<td>Even when connectivity is fixed, recurrent networks with different biophysical parameters can generate compatible activity until additional recordings constrain the solution space.</td>
-<td>Do not read <strong>connectome-constrained prediction</strong> as <strong>unique recovered dynamics</strong> unless the extra-recording / perturbation route that removes degeneracy is disclosed.</td>
+<td><strong>ダイナミクス識別可能壁</strong></td>
+<td>接続が固定されている場合でも、追加の記録によってソリューション スペースが制限されるまで、異なる生物物理学的パラメーターを持つリカレント ネットワークは互換性のあるアクティビティを生成できます。</td>
+<td>縮退を除去する追加記録/摂動ルートが開示されていない限り、<strong>コネクトーム制約予測</strong>を<strong>独自の回復ダイナミクス</strong>と読み替えないでください。</td>
 </tr>
 </tbody>
 </table>
 
-<strong>Operating rule for same-brain functional connectomics</strong>
+<strong>同一脳機能コネクトミクスの動作規則</strong>
 <p>
-On this site, same-brain functional connectomics is read first as a <strong>sequential local structure-function scaffold</strong> or <strong>local conditional-prediction route</strong>. To argue above that ceiling, a submission now has to disclose the bridge class, whether labels were directly measured or transferred, whether any route directly probed current synaptic state or presynaptic release machinery, and what extra recordings or perturbations were required to narrow the dynamical solution space.
+このサイトでは、同一脳機能コネクトミクスは、まず <strong> 逐次局所構造機能足場 </strong> または <strong> 局所条件予測ルート </strong> として読み込まれます。その上限を超えて議論するには、提出物は現在、ブリッジクラス、ラベルが直接測定されたか転送されたか、現在のシナプス状態またはシナプス前放出機構を直接調査したルートがあるかどうか、および動的解の空間を狭めるためにどのような追加の記録や摂動が必要だったかを開示する必要がある。
 </p>
 
-<h3>4.6. Destructive ultrastructure still faces a preservation / registration / throughput wall</h3>
+<h3>4.6。破壊的な超微細構造は依然として保存/登録/スループットの壁に直面している</h3>
 <p>
-Another weakness that remained on this page was that <strong>volume EM</strong>, <strong>petascale</strong>, or <strong>same-brain</strong> could still be overread as if destructive ultrastructure had already solved native-state preservation, whole-brain scaling, and reconstruction quality in one move. That is too weak. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that conventional aldehyde fixation collapses extracellular space, that the fixation time course itself is not instantaneous, and that high-pressure freezing preserves extracellular space only in samples thinner than roughly <strong>200 μm</strong>. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> then showed that a rapidly preserved human sample can yield a remarkable nanoscale reconstruction, but still as a <strong>1.05 mm<sup>3</sup></strong> surgical fragment with <strong>1.8 PB</strong> raw data and <strong>326 days</strong> of imaging. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> showed that same-brain function plus EM is a sequential local pipeline rather than simultaneous state capture, and <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024)</a> showed that even the adult fly whole-brain frontier still depended on proofreading, thresholding, and substantial manual correction effort. What follows directly is that <strong>resolution alone does not erase preservation artifacts, local registration limits, or reconstruction burden</strong>.
+このページに残っていたもう 1 つの弱点は、<strong>volume EM</strong>、<strong>petascale</strong>、または <strong>same-brain</strong> が、あたかも破壊的な超微細構造がすでにネイティブ状態の保存、脳全体のスケーリング、および再構築の品質を一度に解決したかのようにオーバーリードされる可能性があるということでした。それは弱すぎます。 <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Luら。 (2023)</a> は、従来のアルデヒド固定では細胞外空間が崩壊すること、固定時間経過自体は瞬間的ではないこと、そして高圧凍結ではおよそ <strong>200 μm</strong> よりも薄いサンプルでのみ細胞外空間が保存されることを示しました。 <a href="https://doi.org/10.1126/science.adk4858" target="_blank">シャプソン・コーら。 (2024) </a> は、急速に保存されたヒトサンプルが顕著なナノスケールの再構成をもたらすことができることを示しましたが、依然として <strong>1.05 mm<sup>3</sup></strong> の外科的断片として、<strong>1.8 PB</strong> 生データと <strong>326 日 </strong> のイメージングを備えています。 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICronSコンソーシアムほか(2025) </a> は、同一脳機能と EM が同時状態キャプチャではなく逐次ローカル パイプラインであることを示しました。<a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">Dorkenwald et al. (2024) </a> は、成虫のハエの全脳フロンティアでさえ、依然として校正、しきい値処理、および大幅な手作業による修正作業に依存していることを示しました。直接的に言えることは、<strong>resolution だけでは、保存アーティファクト、ローカル登録制限、または再構築の負担 </strong> を消去しないということです。
 </p>
 <table>
 <thead>
 <tr>
-<th>Wall</th>
-<th>What the primary literature now supports</th>
-<th>Site rule</th>
+<th>壁</th>
+<th>一次文献で現在サポートされている内容</th>
+<th>サイトルール</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Preservation wall</strong></td>
-<td>Fixation route changes what the ultrastructure looks like; preserving extracellular space and fine geometry requires an explicit preservation protocol and does not mean that live molecular or electrophysiological state was captured.</td>
-<td>Do not read <strong>nanoscale</strong> or <strong>EM</strong> as automatic native-state preservation.</td>
+<td><strong>保存壁</strong></td>
+<td>固定ルートにより、超微細構造の外観が変化します。細胞外空間と微細な形状を保存するには、明示的な保存プロトコルが必要ですが、生きた分子状態または電気生理学的状態が捕捉されたことを意味するものではありません。</td>
+<td><strong>nanoscale</strong> または <strong>EM</strong> を自動ネイティブ状態保存として読み取らないでください。</td>
 </tr>
 <tr>
-<td><strong>Registration wall</strong></td>
-<td>Same-brain function + EM is stronger than connectome-only, but it is still a sequential, local, and registration-limited route rather than same-time whole-brain state capture.</td>
-<td>Do not read <strong>same-brain</strong> as <strong>same-time complete state</strong>.</td>
+<td><strong>登録ウォール</strong></td>
+<td>同一脳機能 + EM はコネクトームのみよりも強力ですが、それでも同時全脳状態キャプチャではなく、順次、ローカル、登録限定ルートです。</td>
+<td><strong>same-brain</strong>を<strong>同時完了状態として読み込まない</strong>.</td>
 </tr>
 <tr>
-<td><strong>Throughput / proof wall</strong></td>
-<td>Petascale imaging still implies long acquisition windows, sectioning/alignment risk, segmentation trade-offs, and nontrivial proofreading burden.</td>
-<td>Do not read <strong>petascale</strong> as <strong>finished, error-free, or whole-brain-ready</strong>.</td>
+<td><strong>貫通力/耐衝撃壁</strong></td>
+<td>ペタスケール イメージングには、依然として長い取得ウィンドウ、セクショニング/アライメントのリスク、セグメンテーションのトレードオフ、および重要な校正負担が伴います。</td>
+<td><strong>ペタスケール</strong>を<strong>完了、エラーなし、または全脳対応</strong>.</td>として読み取らないでください
 </tr>
 </tbody>
 </table>
 
-<strong>Operating rule for destructive ultrastructure</strong>
+<strong>破壊的超微細構造の運用ルール</strong>
 <p>
-On this site, a destructive ultrastructure result is read first as a <strong>structural scaffold</strong> or <strong>local ex vivo scaffold</strong> unless it also discloses preservation route, live-to-fix window, registration scope, section-loss / alignment risk, segmentation / proofreading status, and omitted live-state families. That disclosure bundle is formalized in <a href="https://mind-upload.com/verification.html#destructive-structure-card">Verification: Destructive-Structure Route Card</a>.
+このサイトでは、破壊的超微細構造結果は、保存ルート、ライブから固定までのウィンドウ、登録範囲、セクション損失 / アライメント リスク、セグメンテーション / 校正ステータス、および省略されたライブステート ファミリも開示していない限り、最初に <strong> 構造スキャフォールド </strong> または <strong> ローカル ex vivo スキャフォールド </strong> として読み取られます。その開示バンドルは、<a href="https://mind-upload.com/verification.html#destructive-structure-card">Verification: Destructive-Structure Route Card</a> で形式化されています。
 </p>
 
-<h3>4.7. Human diffusion MRI tractography is a route-conditioned macro pathway prior, not one stable graph</h3>
+<h3>4.7。ヒト拡散 MRI トラクトグラフィーはルート条件付きマクロ経路であり、1 つの安定したグラフではありません</h3>
 <p>
-Another weakness that remained on this page was that <strong>connectome</strong>, <strong>dMRI</strong>, or <strong>tractography graph</strong> could still be overread as if a living-human structural stack already produced one stable object. That is too weak. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">Reveley et al. (2015)</a> showed that superficial white matter can impede detection of long-range cortical connections, and <a href="https://doi.org/10.1002/hbm.23936" target="_blank">Schilling et al. (2018)</a> showed that tractography endpoints remain biased toward gyral crowns across algorithms and diffusion models. The newer literature then shows that even after tracking, the graph itself still moves. <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">Gajwani et al. (2023)</a> showed across <strong>40 pipelines</strong> and <strong>44</strong> group-representative reconstructions that hub location is highly variable, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">He et al. (2024)</a> showed that tractogram filtering can significantly change connectome laterality. Upstream of that, <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster et al. (2025)</a> showed that voxel-size variance changes the resulting connectome and recommended harmonized resampling, while <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">Bramati et al. (2026)</a> showed on the same <strong>3 T</strong> scanner with uniform processing that common diffusion-sampling schemes can still shift voxel-wise metrics and tractography outputs. Downstream, <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón et al. (2025)</a> showed that fibre-orientation uncertainty can be propagated into tractography rather than hidden, and <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">Zhu et al. (2025)</a> showed that MRI plus microscopy can improve reconstruction in a hybrid calibration setting. What follows directly is that <strong>a diffusion-MRI-derived human connectome is not one stable graph by default</strong>; it is an <strong>acquisition-, endpoint-, graph-construction-, and calibration-conditioned estimate</strong>.
+このページに残っていたもう 1 つの弱点は、<strong>connectome</strong>、<strong>dMRI</strong>、または <strong>tractographygraph</strong> が、あたかも生きた人間の構造スタックが既に 1 つの安定したオブジェクトを生成したかのようにオーバーリードされる可能性があるということでした。それは弱すぎます。 <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">Reveleyら(2015) </a> は、表在白質が長距離の皮質結合の検出を妨げる可能性があることを示しました。 (2018) </a> は、トラクトグラフィーのエンドポイントがアルゴリズムと拡散モデル全体で脳回冠に偏り続けていることを示しました。新しい文献では、追跡後でもグラフ自体は依然として移動することが示されています。 <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">ガジワニら(2023) </a> は、<strong>40 パイプライン </strong> および <strong>44</strong> のグループを代表する再構成で、ハブの位置が非常に可変であることを示しました。 (2024) </a> は、トラクトグラム フィルタリングによってコネクトームの左右性が大きく変化する可能性があることを示しました。その上流には、<a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">McMaster らがあります。 (2025) </a> は、ボクセル サイズの分散によって結果として生じるコネクトームが変化することを示し、調和のとれたリサンプリングを推奨しました。 (2026) </a> は、同じ <strong>3 T</strong> スキャナ上で均一な処理を行い、一般的な拡散サンプリング方式でもボクセルごとのメトリクスとトラクトグラフィー出力をシフトできることを示しました。下流、<a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">Manzano-Patrón ら。 (2025) </a> は、繊維配向の不確実性が隠れるのではなくトラクトグラフィーに伝播する可能性があることを示しました。 (2025) </a> は、MRI と顕微鏡を組み合わせたハイブリッド キャリブレーション設定で再構成を改善できることを示しました。すぐに続くのは、<strong>a 拡散 MRI 由来のヒト コネクトームは、デフォルトでは 1 つの安定したグラフではないということです </strong>。これは、<strong> 取得、エンドポイント、グラフ構築、およびキャリブレーション条件付き推定値 </strong> です。
 </p>
 <table>
 <thead>
 <tr>
-<th>Wall</th>
-<th>What the primary literature now supports</th>
-<th>Site rule</th>
+<th>壁</th>
+<th>一次文献で現在サポートされている内容</th>
+<th>サイトルール</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Endpoint / surface-assignment wall</strong></td>
-<td>Long-range cortical endpoints can still be hidden by superficial white matter or over-assigned toward gyral crowns, so cortical edge coverage is not a direct observable of the diffusion signal.</td>
-<td>Do not read a tractography endpoint map as cortical edge completeness without naming the surface-assignment route and remaining endpoint-limited territory.</td>
+<td><strong>エンドポイント / サーフェス割り当て壁</strong></td>
+<td>長距離の皮質エンドポイントは、表層白質によって隠蔽されたり、回頭回頭方向に過剰に割り当てられたりする可能性があるため、皮質エッジの範囲は拡散信号を直接観察できません。</td>
+<td>表面割り当てルートと残りのエンドポイント限定領域に名前を付けずに、トラクトグラフィーエンドポイントマップを皮質エッジ完全性として読み取らないでください。</td>
 </tr>
 <tr>
-<td><strong>Graph-construction wall</strong></td>
-<td>Hub topology, laterality, and other parcel-graph metrics can move across plausible filtering, weighting, thresholding, or group-reconstruction choices.</td>
-<td>Do not read a tractography graph metric as anatomy by default; disclose the graph-construction route and whether the result survives plausible pipeline variation.</td>
+<td><strong>グラフ構築壁</strong></td>
+<td>Hub トポロジ、左右性、その他のパーセル グラフ メトリクスは、妥当なフィルタリング、重み付け、しきい値処理、またはグループ再構成の選択肢を横断して移動できます。</td>
+<td> デフォルトでは、トラクトグラフィー グラフ メトリックを解剖学的構造として読み取りません。グラフ構築ルートと、その結果がパイプラインの変動に耐えられるかどうかを明らかにします。</td>
 </tr>
 <tr>
-<td><strong>Acquisition / harmonization wall</strong></td>
-<td>Voxel resolution and q-space sampling scheme can systematically move connectome estimates even before endpoint policy and graph construction are interpreted.</td>
-<td>Do not compare headline tractography results across scanners, voxel sizes, or sampling schemes without an explicit harmonization route and a statement of whether the result is protocol-scoped.</td>
+<td><strong>取得・調和ウォール</strong></td>
+<td>ボクセル解像度と q 空間サンプリング スキームは、エンドポイント ポリシーとグラフ構築が解釈される前であっても、コネクトーム推定を体系的に移動できます。</td>
+<td>明示的な調和ルートと、結果がプロトコル スコープであるかどうかの記述なしに、スキャナー、ボクセル サイズ、またはサンプリング スキーム間でヘッドライン トラクトグラフィーの結果を比較しないでください。</td>
 </tr>
 <tr>
-<td><strong>Uncertainty / calibration wall</strong></td>
-<td>Posterior uncertainty can be mapped rather than hidden, and ex vivo MRI-microscopy fusion can improve reconstruction, but neither step turns living-human tractography into a finished connectome.</td>
-<td>Do not treat uncertainty-aware tractography or hybrid calibration as edge-complete human connectome recovery; they are narrower improvements on named error terms.</td>
+<td><strong>不確かさ/校正壁</strong></td>
+<td>後方不確実性は隠すのではなくマッピングでき、生体外 MRI と顕微鏡の融合により再構成が向上しますが、どちらのステップも生きたヒトのトラクトグラフィーを完成したコネクトームに変えることはできません。</td>
+<td>不確実性を考慮したトラクトグラフィーまたはハイブリッドキャリブレーションをエッジ完全なヒトコネクトーム回復として扱わないでください。これらは、名前付きエラー用語に関するより狭い改善です。</td>
 </tr>
 </tbody>
 </table>
 
-<strong>Operating rule for diffusion-MRI tractography</strong>
+<strong>拡散 MRI トラクトグラフィーの運用ルール</strong>
 <p>
-On this site, a living-human tractography result is read first as a <strong>macro pathway prior</strong> or <strong>bundle-level hypothesis route</strong> unless it also discloses acquisition / harmonization, cortical endpoint assignment, parcel-graph construction, stability under plausible pipelines, and how uncertainty or external calibration was handled. That disclosure bundle is aligned here with the deeper <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough#tractography-route-card">tractography route card</a>.
+このサイトでは、生体トラクトグラフィーの結果は、取得/調和、皮質エンドポイントの割り当て、パーセルグラフの構築、もっともらしいパイプラインでの安定性、および不確実性または外部キャリブレーションがどのように処理されたかについても開示しない限り、</strong> または <strong> バンドルレベルの仮説ルート </strong> よりも前の <strong> マクロ経路として最初に読み取られます。この開示バンドルは、ここではより深い <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough#tractography-route-card">tractography ルート カード </a> と連携しています。
 </p>
 
-<h3>4.8. EEG / MEG still face a visibility / inverse / validation wall</h3>
+<h3>4.8。 EEG / MEG は依然として可視化 / 逆相 / 検証の壁に直面しています</h3>
 <p>
-Another weakness that remained on this page was that <strong>source-localized</strong>, <strong>deep-source detectable</strong>, or <strong>intracranially validated</strong> could still be overread as if non-invasive field recordings had already crossed from macro observables into general internal-state recovery. That is too weak. Before any inverse solver runs, there is already a <strong>field-formation wall</strong>. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a> quantified source-orientation sensitivity with realistic tissue boundaries and found that the median ratio between the least and most sensitive orientations was <strong>0.63 for EEG</strong> but only <strong>0.06 for MEG</strong>. <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a> then showed that extended and distributed sources can cancel substantially at the surface. <a href="https://doi.org/10.1002/hbm.20571" target="_blank">Goldenholz et al. (2009)</a> showed that source extent and anatomy strongly change detectability, with mesial temporal source patches of about <strong>3 cm<sup>2</sup></strong> versus <strong>8 cm<sup>2</sup></strong> differing by roughly <strong>10 dB</strong> in SNR. <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a> further showed that ignoring the <strong>CSF compartment</strong> overestimates EEG SNR and that cortical / subcortical sensitivity depends jointly on depth and orientation. Only after that upstream filter do benchmark papers become readable. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> created the first open human ground-truth benchmark by combining <strong>256-channel HD-EEG</strong> with precisely known intracerebral stimulation sites, but they also stated explicitly that stimulation artifacts are <strong>non-physiological</strong> and that spatial sampling remains anatomically clustered. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> then evaluated <strong>3,619</strong> known stimulation locations in <strong>11 patients</strong> with simultaneous SEEG and scalp EEG and found mean localization errors ranging from <strong>10.3 to 26 mm</strong>, worsening with source depth and lower skull conductivity. <a href="https://doi.org/10.1016/j.jneumeth.2024.110193" target="_blank">Zauli et al. (2024)</a> showed that hidden interictal discharges not visible on single-trial scalp HD-EEG can be uncovered with simultaneous SEEG-triggered averaging, but the resulting ESI still remained <strong>method- and parameter-dependent</strong> with localization accuracy of only about <strong>2 cm</strong>. <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> reported that simultaneous HD-EEG/SEEG ictal ESI localizes better than interictal ESI, yet still at <strong>14.07 ± 4.62 mm</strong> versus <strong>17.38 ± 4.16 mm</strong>, with accuracy strongly influenced by source depth and spike power. Finally, <a href="https://doi.org/10.1038/s41467-019-08665-5" target="_blank">Pizzo et al. (2019)</a> showed that MEG can detect direct hippocampal or amygdalar contributions under simultaneous intracranial validation, but only after blind source separation because the deep contribution reaching the surface was <strong>small but significant</strong> rather than dominating the sensor signal. What follows directly is that <strong>EEG / MEG can gain conditional access to some deeper generators, but they still do not collapse field formation, the inverse problem, or general deep-state observability</strong>.
+このページに残されたもう 1 つの弱点は、<strong> ソース局在化 </strong>、<strong> 深部ソース検出可能 </strong>、または <strong> 頭蓋内検証済み </strong> が、あたかも非侵襲的なフィールド記録が既にマクロ観測値から一般的な内部状態の回復に移行したかのようにオーバーリードされる可能性があるということでした。それは弱すぎます。逆ソルバーが実行される前に、<strong> フィールド形成の壁 </strong> がすでに存在します。 <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)</a> は、現実的な組織境界を使用して線源方向の感度を定量化し、最も感度の低い方向と最も感度の高い方向の間の中央値比が、EEG</strong> では <strong>0.63 であるのに対し、MEG</strong> では <strong>0.06 にすぎないことを発見しました。 <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a> は、拡張および分散されたソースが地表で実質的にキャンセルできることを示しました。 <a href="https://doi.org/10.1002/hbm.20571" target="_blank">ゴールデンホルツら(2009)</a> は、音源の範囲と解剖学的構造が検出可能性を大きく変化させ、SNR において約 <strong>3 cm<sup>2</sup></strong> と <strong>8 cm<sup>2</sup></strong> の近心側頭音源パッチの違いがおよそ <strong>10 dB</strong> であることを示しました。 <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra 他(2021)</a> はさらに、<strong>CSF コンパートメントを無視すると、</strong> が EEG SNR を過大評価し、皮質/皮質下の感度が深さと向きに共同して依存することを示しました。上流のフィルターを通過した後でのみ、ベンチマーク ペーパーが読み取れるようになります。 <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">ミクランら(2020)</a> は、<strong>256 チャネル HD-EEG</strong> と正確に知られている脳内刺激部位を組み合わせることにより、初のオープンなヒト グランドトゥルース ベンチマークを作成しましたが、刺激アーティファクトは <strong> 非生理学的 </strong> であり、空間サンプリングは解剖学的にクラスター化されたままであるとも明確に述べられています。 <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a> は次に、<strong>11 患者</strong> における既知の刺激位置 <strong>3,619</strong> を SEEG と頭皮 EEG を同時に用いて評価し、平均位置推定誤差が <strong>10.3 から 26 mm</strong> の範囲であることを発見しました。これは、信号源の深さと頭蓋骨の伝導率が低いほど悪化します。 <a href="https://doi.org/10.1016/j.jneumeth.2024.110193" target="_blank">Zauli et al. (2024) </a> は、単一試行の頭皮 HD-EEG では見えない隠れた発作間欠放電が SEEG トリガーによる同時平均化で発見できることを示しましたが、結果として得られる ESI は依然として <strong> 方法およびパラメーター依存の </strong> のままであり、位置特定精度はわずか約 <strong>2 cm</strong> でした。 <a href="https://doi.org/10.1111/epi.18552" target="_blank">ハオら。 (2025) </a> は、同時 HD-EEG/SEEG 発作時 ESI は発作間欠 ESI よりも局在性が高いものの、依然として <strong>17.38 ± 4.16 mm</strong> に対して <strong>14.07 ± 4.62 mm</strong> であり、その精度は信号源の深さとスパイク出力に強く影響されることを報告しました。最後に、<a href="https://doi.org/10.1038/s41467-019-08665-5" target="_blank">Pizzo et al. (2019)</a>は、MEGが同時に頭蓋内で海馬または扁桃体の直接寄与を検出できることを示した ただし、表面に到達する深い寄与はセンサー信号を支配するのではなく<strong>小さいが重要な</strong>であったため、ブラインドソース分離後にのみ検証されました。直接的に続くのは、<strong>EEG / MEG がいくつかのより深いジェネレーターへの条件付きアクセスを取得できるが、それでもフィールド形成、逆問題、または一般的なディープステートの可観測性 </strong> を崩壊させることはないということです。
 </p>
 <table>
 <thead>
 <tr>
-<th>Wall</th>
-<th>What the primary literature now supports</th>
-<th>Site rule</th>
+<th>壁</th>
+<th>一次文献が現在サポートしている内容</th>
+<th>サイトルール</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Field-formation wall</strong></td>
-<td>Whether a source reaches the scalp with usable SNR already depends on its orientation, depth, cortical folding, source extent, cancellation profile, and the tissue compartments included in the head model.</td>
-<td>Do not read <strong>high-density</strong>, <strong>deep detectable</strong>, or <strong>not seen at the scalp</strong> without naming the target source class, expected extent, cancellation risk, and CSF / conductivity assumptions.</td>
+<td><strong>畑形成壁</strong></td>
+<td> 線源が使用可能な SNR で頭皮に到達するかどうかは、その方向、深さ、皮質の折り畳み、線源の範囲、キャンセル プロファイル、および頭部モデルに含まれる組織コンパートメントによって決まります。</td>
+<td>読み取り禁止<strong>高密度</strong>、<strong>深部検出可能</strong>、または<strong>頭皮では見られない</strong>ターゲットソースクラス、予想される範囲、キャンセルリスク、およびCSF/伝導率の仮定を指定しない</td>
 </tr>
 <tr>
-<td><strong>Visibility wall</strong></td>
-<td>Deep or low-power events can be absent at the scalp in single trials and may only appear after intracranial timing information, averaging, or special source-separation steps.</td>
-<td>Do not read <strong>scalp-invisible</strong> as <strong>nonexistent</strong>, but do not read <strong>recoverable under SEEG guidance</strong> as <strong>routinely visible non-invasively</strong> either.</td>
+<td><strong>可視壁</strong></td>
+<td>深部イベントまたは低出力イベントは、単一の試験では頭皮に存在しない可能性があり、頭蓋内タイミング情報、平均化、または特別な信号源分離ステップの後にのみ発生する可能性があります。</td>
+<td><strong>頭皮が見えない</strong>を<strong>存在しない</strong>と読まないでください。ただし、<strong>SEEGガイダンスの下で回復可能</strong>を<strong>日常的に非侵襲的に見える</strong>とも読まないでください。</td>
 </tr>
 <tr>
-<td><strong>Inverse / model wall</strong></td>
-<td>Localization error changes with source depth, skull conductivity, forward model, and chosen inverse method; better fit does not imply unique recovery of the underlying neural state.</td>
-<td>Do not read <strong>source-localized</strong> as <strong>unique internal-state reconstruction</strong>; always disclose the head model, conductivity assumptions, and abstention conditions.</td>
+<td><strong>逆/モデル壁</strong></td>
+<td>L位置特定エラーは、ソースの深さ、頭蓋骨の伝導率、フォワードモデル、および選択した逆法によって変化します。より良い適合は、根底にある神経状態の一意の回復を意味するものではありません。</td>
+<td><strong>ソースローカライズ</strong>を<strong>独自の内部状態再構成</strong>として読み取らないでください。ヘッドモデル、導電率の仮定、および棄権条件を常に開示してください。</td>
 </tr>
 <tr>
-<td><strong>Validation wall</strong></td>
-<td>Current direct-validation routes mostly come from intracranial stimulation, epilepsy discharges, or simultaneous SEEG/MEG recordings, which answer conditional localization questions rather than physiological whole-brain cognition in healthy humans.</td>
-<td>Do not promote <strong>intracranially validated epilepsy benchmarks</strong> to <strong>general-purpose whole-brain state readout</strong>.</td>
+<td><strong>検証ウォール</strong></td>
+<td>現在の直接検証ルートは、主に頭蓋内刺激、てんかん放電、またはSEEG/MEGの同時記録から得られており、健康な人間の生理学的全脳認知ではなく、条件付きの位置特定の質問に答えます。</td>
+<td>促進しない<strong>頭蓋内で検証されたてんかんベンチマーク</strong>から<strong>汎用全脳状態読み取り</strong>.</td>
 </tr>
 </tbody>
 </table>
 
-<strong>2026-04-01 addendum: wearable OPM-MEG is still inside the EEG / MEG ceiling</strong>
+<strong>2026-04-01 追記: ウェアラブル OPM-MEG は依然として EEG / MEG 天井内にあります</strong>
 <p>
-This page still left one EEG / MEG shortcut undernamed. The current primary literature does <strong>not</strong> support treating wearable OPM-MEG as a separate escape hatch from the EEG / MEG claim ceiling. <a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a> and <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">Seymour et al. (2021)</a> show motion-tolerant proof-of-concept, but <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">Rea et al. (2021)</a> and <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">Mellor et al. (2022)</a> show that precision field modeling and nulling are part of the route, <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025)</a> show that lightly shielded operation still relies on active compensation plus tSSS, <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes et al. (2025)</a> show that pseudo-MRI remains an MRI-light substitute rather than a new anatomy-free gold standard, <a href="https://doi.org/10.1063/5.0273491" target="_blank">Wu et al. (2025)</a> show that crosstalk remains an array-level burden, and <a href="https://doi.org/10.3390/s25134160" target="_blank">Spedden et al. (2025)</a> show whole-body stepping feasibility in three healthy participants rather than broad everyday coverage. Therefore, on this site wearable OPM-MEG is typed as <strong>movement-tolerant macro electrophysiology under disclosed shielding, field control, sensor calibration / coregistration, anatomy route, crosstalk, and task regime</strong>, not as shield-free, calibration-free, or state-complete observation.
+このページには、名前の下に 1 つの EEG / MEG ショートカットがまだ残されています。現在の一次文献は、ウェアラブル OPM-MEG を EEG / MEG クレームの上限とは別個の避難ハッチとして扱うことを <strong>not</strong> でサポートしています。 <a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a> および <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">Seymour et al. (2021) </a> はモーション耐性の概念実証を示していますが、<a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">Rea らは(2021)</a> および <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">Mellor et al. (2022)</a> は、精密フィールド モデリングとヌリングがそのルートの一部であることを示しています。<a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025)</a> は、軽くシールドされた動作が依然としてアクティブ補償と tSSS に依存していることを示しています。<a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes ら。 (2025) </a> は、疑似 MRI が解剖学的構造を必要としない新しいゴールドスタンダードではなく、依然として MRI 光の代替品であることを示しています。<a href="https://doi.org/10.1063/5.0273491" target="_blank">Wu et al。 (2025)</a> は、クロストークが依然としてアレイレベルの負担であることを示し、<a href="https://doi.org/10.3390/s25134160" target="_blank">Spedden らは、 (2025) </a> は、日常の広範な適用範囲ではなく、3 人の健康な参加者における全身ステッピングの実現可能性を示しています。したがって、このサイトでは、ウェアラブル OPM-MEG は、シールドなし、校正なし、または状態完全な観察としてではなく、開示されたシールド、フィールド制御、センサー校正 / 位置合わせ、解剖学的ルート、クロストーク、およびタスク レジームの下で <strong> 運動耐性マクロ電気生理学として分類されます。</strong> として分類されます。
 </p>
 
-<strong>Operating rule for EEG / MEG</strong>
+<strong>EEG / MEG</strong>の運用ルール
 <p>
-On this site, EEG / MEG are read first as <strong>macro field observables</strong>. Even when deeper sources become conditionally detectable, the claim ceiling stays bounded by field formation, synchrony, source depth, head-model assumptions, and the exact validation route. To argue above macro state tracking or weak L2, a result now has to disclose whether the support comes from <strong>field-formation / sensitivity analysis</strong>, <strong>stimulation benchmark</strong>, <strong>simultaneous intracranial recording</strong>, <strong>task-only inference</strong>, or <strong>model transfer</strong>, plus what deep or cell-scale state variables remain latent. For wearable OPM-MEG, the minimum disclosure bundle now also includes <strong>shielding class</strong>, <strong>field nulling / interference suppression</strong>, <strong>sensor calibration / coregistration</strong>, <strong>anatomy route</strong>, <strong>crosstalk burden</strong>, and <strong>task regime</strong>.
+このサイトでは、EEG / MEG は最初に <strong>macro field observables</strong> として読み込まれます。より深いソースが条件付きで検出可能になった場合でも、クレームの上限はフィールドの形成、同期性、ソースの深さ、ヘッドモデルの仮定、および正確な検証ルートによって制限されたままになります。マクロ状態追跡または弱い L2 について議論するには、そのサポートが <strong> 場形成 / 感度分析 </strong>、<strong> 刺激ベンチマーク </strong>、<strong> 同時頭蓋内記録 </strong>、<strong> タスクのみの推論 </strong>、または <strong> モデル転送 </strong> に加えて、深部または細胞スケールの状態変数が潜在的に残っているかどうかを結果で明らかにする必要があります。ウェアラブル OPM-MEG の場合、最小開示バンドルには、<strong> シールド クラス </strong>、<strong> フィールド ヌリング / 干渉抑制 </strong>、<strong> センサー キャリブレーション / コアレジストレーション </strong>、<strong> 解剖ルート </strong>、<strong> クロストーク負荷 </strong>、および <strong> タスク レジーム </strong> も含まれるようになりました。
 </p>
 
-<h3>5. Hemodynamic stacks also observe through a vascular transfer state</h3>
+<h3>5。血行動態スタックは血管移動状態も観察</h3>
 <p>
-The weak point that needed another pass was not only that BOLD amplitude could be overread as a neural difference, but that improved hemodynamic papers could still be collapsed into one stronger modality row. That was too weak. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">Murphy et al. (2011)</a>, <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">Williams et al. (2023)</a>, and <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> constrain the <strong>transfer-side calibration problem</strong>: baseline perfusion and CVR move the amplitude. <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> and <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt et al. (2025)</a> constrain a distinct <strong>autonomic / body-coupling route</strong> in which large-scale fMRI fluctuations co-vary with physiology rather than transparently reporting neural drive. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> then showed that about <strong>40%</strong> of task-responsive voxels can display oxygen-metabolism changes opposite in sign to the BOLD response, while <a href="https://doi.org/10.1002/nbm.70120" target="_blank">Jaroszynski et al. (2025)</a> showed that an oxygen-metabolism route itself already depends on an explicit <strong>constrained qBOLD + pCASL model stack</strong>. What follows directly is that <strong>hemodynamic work must now be split into at least three route families on this site: uncalibrated amplitude, transfer-audited amplitude, and model-conditioned oxygen-metabolism estimation</strong>.
+別のパスを必要とした弱点は、BOLD の振幅が神経の違いとして読み取られる可能性があるだけでなく、改善された血行力学の論文が依然として 1 つの強力なモダリティ行に折りたたまれる可能性があることでした。それは弱すぎました。 <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">マーフィーら(2011)</a>、<a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">ウィリアムズら。 (2023)</a>、<a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">Wu et al. (2023)</a> は、<strong> の転送側キャリブレーション問題を制約します。</strong>: ベースライン灌流と CVR が振幅を移動します。 <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbayら(2019)</a> および <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">Bolt 他(2025) </a> は、神経駆動を透過的に報告するのではなく、大規模な fMRI 変動が生理機能と共変動する、明確な <strong> 自律神経/身体結合ルート </strong> を制約します。 <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Eppら(2025) </a> は、課題応答ボクセルの約 <strong>40% </strong> が、BOLD 応答とは逆符号の酸素代謝変化を示すことができることを示しました。 (2025) </a> は、酸素代謝ルート自体がすでに明示的な <strong> 制約付き qBOLD + pCASL モデル スタック </strong> に依存していることを示しました。直接的に続くことは、<strong> 血行力学作業をこのサイトで少なくとも 3 つのルート ファミリ (未校正振幅、転送監査振幅、およびモデル条件付き酸素代謝推定 </strong>) に分割する必要があるということです。
 </p>
 
-<strong>fNIRS belongs to the same caution family</strong>
+<strong>fNIRS は同じ注意ファミリー </strong> に属します
 <p>
-The same logic applies to cortical hemodynamic modalities beyond fMRI. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015)</a> showed that short-separation regression improves both significance and localization for fNIRS tasks with differing autonomic responses, and <a href="https://doi.org/10.1117/1.NPh.12.3.035009" target="_blank">An et al. (2025)</a> showed that short-channel regression still improves validity and sensitivity even in a working-memory paradigm with minimal motor requirements. Therefore, on this site, fNIRS without <strong>short-separation / superficial diagnostic</strong> is not treated as a direct neural-difference readout, and short-channel-corrected fNIRS is still read as a <strong>transfer-audited hemodynamic route</strong> rather than a neural meter.
+同じ論理が、fMRI を超えた皮質血行動態モダリティにも当てはまります。 <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">Yucel et al. (2015) </a> は、短い分離回帰によって、異なる自律神経反応を伴う fNIRS タスクの有意性と局在化の両方が改善されることを示しました。 (2025) </a> は、最小の運動要件を備えた作業記憶パラダイムでも、短チャネル回帰によって妥当性と感度が依然として向上することを示しました。したがって、このサイトでは、<strong>ショート分離/表層診断</strong>のないfNIRSは直接神経差測定値として扱われず、ショートチャンネル補正されたfNIRSは依然として神経メーターではなく<strong>転移監査血行動態ルート</strong>として読み取られます。
 </p>
 
-<strong>CVR audit is not the same as a quantity bridge</strong>
+<strong>CVR 監査は数量ブリッジと同じではありません</strong>
 <p>
-On this site, <strong>passing a vascular-state / CVR audit</strong> and <strong>estimating an oxygen-metabolism quantity</strong> are different achievements. The first can reduce transfer-side ambiguity in BOLD / HbO / HbR amplitude. The second still needs a named physiology model, calibration route, and quantity definition such as OEF or CMRO2. Therefore, a CVR-corrected amplitude result is not promoted here to an oxygen-metabolism result, and a quantitative OEF / CMRO2 paper is still read as a <strong>model-conditioned macro metabolic route</strong> rather than a direct neural-state meter.
+このサイトでは、<strong>血管状態/CVR監査を通過する</strong>と<strong>酸素代謝量を推定する</strong>は別の実績となります。 1 つ目は、BOLD / HbO / HbR 振幅における転送側の曖昧さを軽減できます。 2 番目の場合でも、名前付きの生理学的モデル、キャリブレーション ルート、および OEF や CMRO2 などの数量定義が必要です。したがって、CVR 補正された振幅の結果はここでは酸素代謝の結果に昇格されず、定量的な OEF / CMRO2 論文は依然として直接的な神経状態メーターではなく、<strong> モデル条件付きマクロ代謝ルート </strong> として読み取られます。
 </p>
 
 <table>
 <thead>
 <tr>
-<th>Hemodynamic route family</th>
-<th>What it tightens</th>
-<th>What still stays separate</th>
-<th>Site rule</th>
+<th>血行動態ルートファミリー</th>
+<th>締めるもの</th>
+<th>まだ分離しているもの</th>
+<th>サイトルール</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Uncalibrated BOLD / HbO / HbR amplitude</strong></td>
-<td>Wide-area recruitment, slow state occupancy, and protocol-scoped hemodynamic differences.</td>
-<td>Baseline perfusion, CVR, superficial/systemic contamination, autonomic-body coupling, and oxygen-metabolism relation.</td>
-<td>Read as a <strong>hemodynamic-limited difference</strong>, not a clean neural difference.</td>
+<td><strong>未校正の太字 / HbO / HbR 振幅</strong></td>
+<td>広域のリクルート、遅い州の占有率、およびプロトコル範囲の血行動態の違い。</td>
+<td>ベースライン灌流、CVR、表面/全身汚染、自律神経結合、酸素代謝関係。</td>
+<td><strong>血行力学的に限定された差異として読み取る</strong>、きれいな神経差異ではない</td>
 </tr>
 <tr>
-<td><strong>Transfer-audited amplitude</strong><br>CVR / baseline-perfusion / short-separation route</td>
-<td>Whether the observed amplitude difference survives named transfer-side calibration.</td>
-<td>Neural quantity type, oxygen metabolism, and maintenance-side neurovascular / BBB controller state.</td>
-<td>Read as a <strong>transfer-audited hemodynamic comparison</strong>, not as neural or support-state ground truth.</td>
+<td><strong>転送監査振幅</strong><br>CVR / ベースライン灌流 / 短い分離ルート</td>
+<td>転送側キャリブレーションという名前の観測された振幅差が存続するかどうか。</td>
+<td>神経量タイプ、酸素代謝、維持側神経血管・BBBコントローラー状態。</td>
+<td>ニューラルまたはサポート状態のグラウンド トゥルースとしてではなく、<strong>転送監査された血行動態比較</strong>として読み取ります。</td>
 </tr>
 <tr>
-<td><strong>Autonomic / body-coupled global mode</strong></td>
-<td>Whether part of the hemodynamic variance is better read as shared physiology-linked fluctuation than as task-specific neural signal.</td>
-<td>Regional neural drive and transmitter-specific interpretation.</td>
-<td>Do not fold a physiology-linked global mode back into a generic neural gain without an explicit grounding rule.</td>
+<td><strong>自律型/身体連動型グローバルモード</strong></td>
+<td>血行動態の変動の一部は、タスク固有の神経信号としてではなく、共有された生理学に関連した変動として読み取ったほうがよいかどうか。</td>
+<td>領域の神経ドライブと送信機固有の解釈。</td>
+<td>明示的な基礎ルールなしに、生理学に関連したグローバル モードを一般的な神経ゲインに折り畳まないでください。</td>
 </tr>
 <tr>
-<td><strong>Model-conditioned oxygen-metabolism route</strong><br>qBOLD / OEF / CMRO2 family</td>
-<td>A named macro metabolic quantity under a declared model, which can agree with or diverge from BOLD amplitude.</td>
-<td>Model-free neural state, cell-specific energetic allocation, and direct controller identity.</td>
-<td>Read as a <strong>model-conditioned macro metabolic route</strong>, not as the default truth layer for all hemodynamic papers.</td>
+<td><strong>モデル条件付き酸素代謝ルート</strong><br>qBOLD / OEF / CMRO2ファミリー</td>
+<td>A は、宣言されたモデルに基づくマクロ代謝量を指定します。これは、太字の振幅と一致することも、発散することもあります。</td>
+<td>モデルフリーの神経状態、細胞固有のエネルギー割り当て、および直接コントローラーのアイデンティティ。</td>
+<td>すべての血行動態論文のデフォルトの真実層としてではなく、<strong>モデル条件付きマクロ代謝ルートとして読み取ります</strong>。</td>
 </tr>
 </tbody>
 </table>
 
-<h3>6. Neuromodulatory routes form a ladder, not one stack</h3>
+<h3>6。神経調節経路は 1 つのスタックではなく、はしごを形成します</h3>
 <p>
-The weakness that needed another pass was that this page still let <strong>pupil / HRV</strong>, <strong>local transmitter imaging</strong>, <strong>receptor maps</strong>, <strong>occupancy PET</strong>, and <strong>displacement / release-sensitive PET</strong> sound closer than they are. That was too weak. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016)</a> showed that pupil fluctuations track both adrenergic and cholinergic activity rather than a single transmitter. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lohani et al. (2022)</a> showed that cortical cholinergic signals are spatially heterogeneous across behavioral states, and <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024)</a> showed that local ACh depends on axon activity and local clearance kinetics. On the human side, <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> and <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021)</a> showed that receptor maps are structured regional priors, <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> showed selected D<sub>2</sub>-receptor target engagement by an administered drug, and <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a>, and <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> showed challenge- and window-limited dopamine or serotonin release proxies. What follows directly is that <strong>neuromodulation is not one measurement class</strong>.
+別のパスが必要だった弱点は、このページでは依然として <strong> 瞳孔 / HRV</strong>、<strong> ローカル送信機イメージング </strong>、<strong> 受容体マップ </strong>、<strong> 占有 PET</strong>、および <strong> 変位 / 解放感知 PET</strong> が実際よりも近くに聞こえることです。それは弱すぎました。 <a href="https://doi.org/10.1038/ncomms13289" target="_blank">Reimer et al. (2016) </a> は、瞳孔変動が単一の伝達物質ではなく、アドレナリン作動性とコリン作動性の両方の活動を追跡することを示しました。 <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">Lロハニら(2022) </a> は、皮質コリン作動性シグナルが行動状態全体にわたって空間的に不均一であることを示しました。また、<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">Neyhart et al. (2024) </a> は、局所 ACh が軸索活動および局所クリアランス動態に依存することを示しました。人間側では、<a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> および <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">Goulas et al. (2021) </a> は、受容体マップが構造化された地域事前分布であることを示しました。<a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013) </a> は、投与された薬物による選択された D<sub>2</sub> 受容体標的結合を示し、<a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>、<a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al。 (2019)</a>、<a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020) </a> は、チャレンジ制限およびウィンドウ制限されたドーパミンまたはセロトニン放出プロキシを示しました。直接的に続くのは、<strong> 神経調節は 1 つの測定クラス </strong> ではないということです。
 </p>
 
-<strong>Site rule for the ladder</strong>
+<strong>はしご用サイトルール</strong>
 <p>
-On this site, <strong>mixed arousal proxy</strong> is read as a coarse covariate, <strong>local transmitter sensor</strong> as local calibration, <strong>receptor / transporter atlas</strong> as a regional prior, <strong>occupancy PET</strong> as target engagement, and <strong>displacement / release-sensitive PET</strong> as a challenge-limited release proxy. None of those rungs is promoted by default to the claim that the current whole-brain neuromodulatory state was directly measured.
+このサイトでは、<strong>混合覚醒プロキシ</strong>は粗い共変量として読み取られ、<strong>ローカルトランスミッターセンサー</strong>はローカルキャリブレーションとして、<strong>レセプター/トランスポーターアトラス</strong>は領域事前分布として、<strong>占有率PE</strong>はターゲットエンゲージメントとして、<strong>変位/リリース感受性PEET</strong>はチャレンジ限定リリースプロキシとして読み取られます。これらの段落のいずれも、現在の全脳の神経調節状態が直接測定されたという主張にデフォルトで昇格するものではありません。
 </p>
 
-<strong>Occupancy and displacement are different audit items</strong>
+<strong>占有率と移動量は別の監査項目</strong>
 <p>
-<a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> asked whether an administered antipsychotic occupied a selected receptor target in healthy humans. By contrast, <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a>, and <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> used task- or drug-challenge-linked binding changes as dopamine or serotonin release proxies within bounded windows. Those designs do not answer the same question. On this site, occupancy PET is therefore audited as <strong>target engagement</strong>, whereas displacement PET is audited as <strong>endogenous release proxy under a named challenge</strong>.
+<a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">ウォンら。 (2013) </a> は、投与された抗精神病薬が健康なヒトの選択された受容体標的を占めるかどうかを尋ねました。対照的に、<a href="https://doi.org/10.1038/30498" target="_blank">Koepp ら。 (1998)</a>、<a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al。 (2019)</a>、<a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020) </a> は、課題または薬物チャレンジに関連した結合変化を、境界のあるウィンドウ内のドーパミンまたはセロトニン放出代理として使用しました。それらのデザインは同じ質問に答えません。したがって、このサイトでは、占有 PET は <strong> ターゲットエンゲージメント </strong> として監査されるのに対し、置換 PET は名前付きチャレンジ </strong> の下で <strong> 内因性放出プロキシとして監査されます。
 </p>
 
-<strong>PET routes still need tracer and quantification disclosure</strong>
+<strong>PET ルートには依然としてトレーサーと定量化の開示が必要</strong>
 <p>
-PET-based proxy classes are not readable from the modality label alone. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">Naganawa et al. (2021)</a> showed that human SV2A PET quantification depends on the tracer, arterial-versus-reference route, compartment model, and named scan window. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> then built a healthy-human synaptic-density atlas, <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina et al. (2024)</a> linked [<sup>11</sup>C]UCB-J DVRcs to task-related activity and cognition in healthy adults, <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> showed that [<sup>11</sup>C]UCB-J binding measures remain unchanged during brief functional activation even when tracer influx rises with blood flow, and <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">Holmes et al. (2022)</a> found no measurable overall SV2A change 24 h after ketamine despite symptom improvement. Those papers do not answer the same question. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> built a receptor atlas by collating PET data from more than 1,200 healthy individuals, so the resulting map is a normative chemoarchitectural prior rather than an individual's current transmitter state. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">Wong et al. (2013)</a> quantified occupancy for an administered antipsychotic, while <a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>, <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al. (2019)</a>, and <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020)</a> used challenge-linked binding changes as displacement-based release proxies. Therefore, on this site, PET-based routes must name the tracer, occupancy-versus-displacement design, challenge or administered drug plus dose when applicable, quantification model or validated window, anatomy / partial-volume handling when relevant, and the comparison family they actually instantiate before their claim ceiling is interpreted. The full SV2A-specific checklist now lives in <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state#sv2a-route-card">Wiki: SV2A / synaptic-density PET route card</a>.
+PET ベースのプロキシ クラスは、モダリティ ラベルだけからは読み取ることができません。 <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">長縄ら(2021)</a> は、ヒト SV2A PET 定量化がトレーサー、動脈対参照経路、コンパートメント モデル、および指定されたスキャン ウィンドウに依存することを示しました。 <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">ヨハンセンら。 (2024) </a> はその後、健康なヒトのシナプス密度アトラス、<a href="https://doi.org/10.1162/imag_a_00190" target="_blank">Shatalina らを構築しました。 (2024) </a> は、[<sup>11</sup>C]UCB-J DVRcs を健康な成人の課題関連活動と認知に関連付けました。<a href="https://doi.org/10.1177/0271678X20946198" target="_blank">Smart et al. (2021)</a> は、血流に伴ってトレーサーの流入が増加した場合でも、[<sup>11</sup>C]UCB-J 結合測定値が短期間の機能活性化中に変化しないことを示しました。 (2022) </a> では、症状が改善したにもかかわらず、ケタミン投与後 24 時間で測定可能な全体的な SV2A 変化が見られませんでした。これらの論文は同じ質問に答えていません。 <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">ハンセンら(2022) </a> は、1,200 人以上の健康な個人からの PET データを照合することによって受容体アトラスを構築したため、結果として得られるマップは、個人の現在の伝達物質の状態ではなく、標準的な化学構造の事前情報になります。 <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">ウォンら。 (2013) </a> は、投与された抗精神病薬の占有率を定量化しました。一方、<a href="https://doi.org/10.1038/30498" target="_blank">Koepp et al. (1998)</a>、<a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">Lippert et al。 (2019)</a>、<a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">Erritzoe et al. (2020) </a> は、チャレンジに関連した結合変化を置換ベースの放出プロキシとして使用しました。したがって、このサイトでは、PET ベースのルートでは、トレーサー、占有対置換の設計、該当する場合はチャレンジまたは投与された薬物と用量、定量化モデルまたは検証されたウィンドウ、関連する場合は解剖学的構造 / 部分体積の処理、および請求上限が解釈される前に実際にインスタンス化される比較ファミリーを指定する必要があります。 SV2A 固有の完全なチェックリストは現在、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/homeostatic-plasticity-and-maintenance-state#sv2a-route-card">Wiki: SV2A / シナプス密度 PET ルート カード </a> にあります。
 </p>
 
 <p>
-The same caution extends to glia. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024)</a> showed that local neurotransmitter inputs are minute-long encoded into broad astrocyte networks. That is a real advance, but it is still a slow-state / support-state route, not an automatic shortcut to whole-brain internal-state completeness.
+同じ注意がグリアにも当てはまります。 <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">Cahill et al. (2024) </a> は、局所的な神経伝達物質の入力が広範な星状細胞ネットワークに数分間エンコードされていることを示しました。これは本当に進歩ですが、依然として低速状態/サポート状態へのルートであり、脳全体の内部状態の完全性への自動的な近道ではありません。
 </p>
 
-<h2>7. Human maintenance-state routes also form a ladder</h2>
+<h2>7。人間のメンテナンス状態のルートも梯子を形成</h2>
 <p>
-Another weakness that remained on this page was that it separated generic measurement stacks while still leaving recent <strong>human maintenance-state evidence</strong> too easy to compress into one sentence such as ``human in vivo observability is getting close.'' That is too weak. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> pushed up <strong>local human nanoscale ultrastructure</strong>, <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> pushed up a <strong>regional synaptic-density atlas</strong>, <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> pushed up a <strong>whole-brain biochemical scaffold</strong>, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> pushed up a <strong><sup>31</sup>P metabolite / pH balance route</strong>, <a href="https://doi.org/10.1002/mrm.26560" target="_blank">Ren et al. (2017)</a> pushed up a <strong>model-conditioned <sup>31</sup>P MT exchange-flux route</strong>, <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al. (2024)</a> pushed up a <strong>whole-brain <sup>31</sup>P NAD-content mapping route</strong>, <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a> pushed up a <strong>localized functional <sup>31</sup>P NAD-dynamics route</strong>, <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> pushed up a <strong>deuterium metabolite-mapping / absolute-quantification route</strong>, and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> pushed up a <strong>deuterium kinetic-rate route</strong>. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian et al. (2012)</a> and <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a> pushed up <strong>macro ionic routes</strong>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a> pushed up <strong>macro thermal routes</strong>, <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al. (2023)</a> pushed up a <strong>tract-scale transmission-speed estimation route</strong>, and <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> pushed up <strong>macro myelin mapping</strong>. Human support-state evidence then splits again rather than converging into one route: <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> plus <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> push up a <strong>BBB water-exchange route</strong>, <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> pushes up a <strong>tracer-specific BBB transport route</strong>, <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a> pushes up a <strong>choroid-plexus perfusion route</strong>, <a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">Petitclerc et al. (2021)</a> push up a <strong>blood-to-CSF water-transport route</strong>, <a href="https://doi.org/10.1080/21688370.2021.1963143" target="_blank">Anderson et al. (2022)</a> push up a <strong>choroid-plexus water-cycling route</strong>, <a href="https://doi.org/10.1177/0271678X251369218" target="_blank">Wu et al. (2026)</a> push up an <strong>apparent BCSFB-exchange route</strong>, and <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a> push up a <strong>simultaneous BBB-versus-BCSFB exchange route</strong>. Astrocyte PET also splits by route role: <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> push up an <strong>SMBT-1 first-in-human MAO-B target-validation route</strong>, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> push up an <strong>SMBT-1 AD-spectrum disease-context route</strong>, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> push up an <strong>SMBT-1 brain-quantification route</strong>, <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al. (2026)</a> push up an <strong>SMBT-1 whole-body biodistribution route</strong>, <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">Matsuoka et al. (2026)</a> push up an <strong>SL25.1188 simplified-quantification route</strong>, <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> push up an <strong>SL25.1188 severity- and smoking-conditioned MAO-B route</strong>, and <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> plus <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a> push up an <strong>I2BS astrocyte PET route</strong>. <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a> plus <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> show that even MAO-B-linked interpretation remains cohort- and pathology-conditioned. Human neuroimmune PET then splits again rather than converging into one immune lane: <a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a> plus <a href="https://doi.org/10.1093/brain/awaf078" target="_blank">Wijesinghe et al. (2025)</a> push up a <strong>TSPO disease-context / validation-bounded PET route</strong>, <a href="https://doi.org/10.1186/s13550-022-00929-4" target="_blank">Horti et al. (2022)</a> plus <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">Ogata et al. (2025)</a> push up a <strong>CSF1R route-setting PET route</strong>, and <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yan et al. (2025)</a> pushes up a <strong>COX-2 enzyme-defined PET route</strong>. <a href="https://doi.org/10.1126/science.aax5440" target="_blank">Fultz et al. (2019)</a> pushes up a <strong>macroscopic CSF-oscillation route</strong>, <a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">Kim, Huang, &amp; Liu (2025)</a> pushes up a <strong>parenchyma-CSF water-exchange route</strong>, <a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">Eide et al. (2023)</a> pushes up an <strong>intrathecal-tracer / CSF-to-blood-clearance-capacity route</strong>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a> pushes up a <strong>CSF-mobility MRI route</strong>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> pushes up a <strong>model-based overnight biomarker-efflux route</strong>. Human excitability-side evidence then splits again rather than converging into one route: <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">Tallman et al. (2025)</a> push up a <strong>local human clinical single-unit allocation route</strong>, but with firing explicitly treated as only an indirect excitability index; <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, and <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a> push up a <strong>sleep-homeostasis / plasticity-recalibration route</strong>; and <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> plus <a href="https://doi.org/10.1016/j.brs.2024.12.1193" target="_blank">Khatri et al. (2025)</a> push up <strong>state-gated perturbation routes</strong>. What follows directly is that <strong>human evidence is layered across proxy classes</strong>, not a single near-direct route to current whole-brain maintenance-state. A second correction is also required: those rows are not all equally mature, routine, or deployment-ready, and they do not safely calibrate the same hidden-state family.
+このページに残されたもう 1 つの弱点は、一般的な測定スタックを分離しながら、最近の <strong>人間の維持状態の証拠</strong> を残したまま、「人間の生体内観測可能性が近づいている」などの 1 つの文に圧縮するのが簡単すぎるということでした。それはあまりにも弱すぎます。 <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> は <strong> 局所ヒトナノスケール超微細構造を押し上げた </strong>、<a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al。 (2024)</a> は <strong> 領域シナプス密度アトラスを押し上げました</strong>、<a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al。 (2025) </a> は <strong> 全脳生化学足場を押し上げました </strong>、<a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al。 (2015)</a>は<strong><sup>31</sup>P代謝物/pHバランスルートを押し上げました</strong>、<a href="https://doi.org/10.1002/mrm.26560" target="_blank">Renら。 (2017)</a>は、<strong>モデル条件付き<sup>31</sup>P MT交換磁束ルート</strong>、<a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guoらを押し上げました。 (2024)</a>は<strong>全脳<sup>31</sup>P NADコンテンツマッピングルート</strong>、<a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiserらを押し上げた。 (2026) </a> は、<strong> 局所化された機能的 <sup>31</sup>P NAD ダイナミクス ルートを押し上げました </strong>、<a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al。 (2026)</a> は <strong> 重水素代謝物マッピング / 絶対定量ルートを押し上げました </strong>、および <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al。 (2025)</a>は<strong>重水素運動速度ルート</strong>を押し上げました。 <a href="https://doi.org/10.1002/mrm.23225" target="_blank">Qian ら(2012)</a> および <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian ら。 (2025) </a> は <strong> マクロイオンルートを押し上げた </strong>、<a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al。 (2022) </a> が <strong> マクロ サーマル ルートを押し上げた </strong>、<a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al。 (2023)</a>は<strong>tract規模の通信速度推定ルートを引き上げた</strong>、<a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvikら。 (2024)</a>は<strong>マクロミエリンマッピング</strong>を押し上げました。その後、人間の支持状態の証拠は 1 つのルートに収束するのではなく、再び分岐します。<a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> プラス <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a>が<strong>BBB水交換ルートを押し上げる</strong>、<a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chungら。 (2025) </a> は <strong>tracer 特異的な BBB 輸送ルートを押し上げる</strong>、<a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al。 (2020)</a> は <strong> 脈絡叢灌流ルートを押し上げる</strong>、<a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">Petitclec et al. (2021)</a>は<strong>血液からCSFへの水輸送ルートを押し上げる</strong>、<a href="https://doi.org/10.1080/21688370.2021.1963143" target="_blank">Andersonら。 (2022)</a>は<strong>脈絡叢の水循環経路を押し上げる</strong>、<a href="https://doi.org/10.1177/0271678X251369218" target="_blank">Wuら。 (2026) </a> は <strong> 見かけの BCSFB 交換ルートを押し上げます </strong>、<a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclec ら。 (2026)</a>は<strong>同時BBB対BCSFB交換ルート</strong>を押し上げます。星状細胞 PET も経路の役割によって分割されます:<a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022) </a> は、<strong>SMBT-1 のファーストインヒト MAO-B ターゲット検証ルートを推進</strong>、<a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al。 (2022)</a> は PH100​​XSMBT-1 AD スペクトラム疾患コンテキスト ルートを押し上げます</strong>、<a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al。 (2025)</a>は<strong>SMBT-1脳定量化ルートを押し上げる</strong>、 <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">メスフィンら(2026)</a>は<strong>SMBT-1の全身生体内分布経路を押し上げる</strong>、<a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">松岡ら。 (2026)</a> は <strong>SL25.1188 簡易定量化ルートをプッシュアップ</strong>、<a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al。 (2026)</a> は、<strong>SL25.1188 の重症度および喫煙条件付き MAO-B ルートを押し上げる</strong>、および <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al。 (2018)</a> プラス <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Lリビングストンら(2022)</a>は<strong>I2BSアストロサイトPETルート</strong>を押し上げます。 <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a> プラス <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best 他(2026)</a> は、MAO-B に関連した解釈であってもコホートおよび病理条件付けされたままであることを示しています。その後、ヒト神経免疫 PET は 1 つの免疫レーンに収束するのではなく、再び分裂します。<a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a> プラス <a href="https://doi.org/10.1093/brain/awaf078" target="_blank">Wijesinghe 他(2025) </a> は <strong>TSPO 疾患コンテキスト / 検証限定 PET ルートを押し上げる</strong>、<a href="https://doi.org/10.1186/s13550-022-00929-4" target="_blank">Horti et al。 (2022)</a>プラス<a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">尾形他(2025)</a>は<strong>CSF1Rルート設定PETルート</strong>、<a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yanらをプッシュアップします。 (2025)</a> は、<strong>COX-2 酵素定義 PET ルート </strong> を押し上げます。 <a href="https://doi.org/10.1126/science.aax5440" target="_blank">Fultz 他(2019)</a> は <strong> 巨視的 CSF 振動ルートを押し上げる</strong>、<a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">Kim、Huang、およびamp; Liu (2025)</a> は <strong> 柔組織 -CSF 水交換ルートを押し上げる </strong>、<a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">Eide et al. (2023) </a> は、<strong> くも膜下腔内トレーサー / CSF から血液除去能力へのルートを押し上げます </strong>、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al。 (2025)</a>は<strong>CSF移動性MRIルートを押し上げる</strong>、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagumら。 (2026) </a> は、<strong> モデルベースの一晩のバイオマーカー排出ルート </strong> を押し上げます。その後、人間の興奮性に関する証拠は 1 つのルートに収束するのではなく、再び分岐します。<a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">Tallman et al. (2025) </a> は、<strong> 局所ヒト臨床単一ユニット割り当てルート </strong> を押し上げますが、発火は間接的な興奮性指標としてのみ明示的に扱われます。 <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">フーバーら(2013)</a>、<a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al。 (2016)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a>は<strong>睡眠恒常性/可塑性再調整ルート</strong>を押し上げます。および<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrennerら。 (2018)</a> プラス <a href="https://doi.org/10.1016/j.brs.2024.12.1193" target="_blank">Khatri et al. (2025)</a> は <strong> 状態ゲート摂動ルート </strong> を押し上げます。直接的に続くのは、<strong>人間の証拠はプロキシクラス</strong>全体に階層化されており、現在の全脳維持状態への単一に近い直接的なルートではないということです。 2 番目の修正も必要です。これらの行はすべて同じように成熟しているわけではなく、ルーチンであり、展開の準備ができているわけではなく、同じ隠し状態ファミリーを安全に調整することはできません。
 </p>
 <table>
 <thead>
 <tr>
-<th>Human route</th>
-<th>Proxy class on this site</th>
-<th>Operational maturity / burden</th>
-<th>Safe calibrator role on this site</th>
-<th>What still remains latent</th>
-<th>Claim ceiling on this site</th>
+<th>人のルート</th>
+<th>このサイトのProxyクラス</th>
+<th>運用の成熟度/負担</th>
+<th>このサイトにおける安全校正者の役割</th>
+<th>まだ潜在的に残っているもの</th>
+<th>このサイトで上限を請求</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Local human nanoscale ultrastructure</strong><br>Shapson-Coe et al. (2024)</td>
-<td><strong>Local ex vivo structural scaffold</strong></td>
-<td>Destructive surgical-fragment route; not repeatable living-human acquisition.</td>
-<td>Structural scaffold only.</td>
-<td>Living whole-brain dynamics, current synaptic efficacy, ongoing maintenance-state, and cross-brain generalization.</td>
-<td><strong>Local human structural scaffold</strong>. We do not promote it to living whole-brain state capture.</td>
+<td><strong>局所的なヒトのナノスケール超微細構造</strong><br>Shapson-Coe et al. (2024)</td>
+<td><strong>局所生体外構造足場</strong></td>
+<td> 破壊的な手術片ルート。再現性のない生きた人間の取得。</td>
+<td>構造用足場のみ。</td>
+<td>L生きている全脳ダイナミクス、現在のシナプス効率、継続的な維持状態、および脳を超えた一般化。</td>
+<td><strong>ローカル人体構造足場</strong>。生きた全脳状態捕捉には推進しません。</td>
 </tr>
 <tr>
-<td><strong>Regional synaptic-density PET atlas</strong><br>Johansen et al. (2024)</td>
-<td><strong>Regional synaptic-density proxy</strong></td>
-<td>Healthy-cohort atlas; tracer- and quantification-dependent.</td>
-<td>Bounded synaptic-density prior.</td>
-<td>Current synaptic efficacy, release probability, task-evoked momentary state change, synaptic-tag capture, and branch-local plasticity state.</td>
-<td><strong>Regional synaptic-density proxy</strong>. We do not read it as a direct measurement of current synaptic function.</td>
+<td><strong>領域シナプス密度 PET アトラス</strong><br>Johansen et al. (2024)</td>
+<td><strong>領域シナプス密度プロキシ</strong></td>
+<td>健康コホートアトラス;トレーサーと定量に依存します。</td>
+<td>境界シナプス密度以前。</td>
+<td>現在のシナプス効率、解放確率、タスク誘発瞬間状態変化、シナプスタグ捕捉、および分岐局所可塑性状態。</td>
+<td><strong>領域シナプス密度プロキシ</strong>。現在のシナプス機能を直接測定するものではありません。</td>
 </tr>
 <tr>
-<td><strong>Whole-brain 1H-MRSI metabolic similarity scaffold</strong><br>Lucchetti et al. (2025)</td>
-<td><strong>Parcel-level 1H-MRSI biochemical similarity scaffold</strong></td>
-<td>Whole-brain cohort mapping with replication, but still a static five-metabolite similarity route.</td>
-<td>Bounded 1H-MRSI biochemical-organization scaffold.</td>
-<td>Current transcriptional controller, branch-local energetic reserve, cell-specific recovery logic, and local transmitter / glial microstate.</td>
-<td><strong>Macro 1H-MRSI biochemical scaffold</strong>. It is not a local maintenance-state snapshot.</td>
+<td><strong>全脳 1H-MRSI 代謝類似性足場</strong><br>Lucchetti et al. (2025)</td>
+<td><strong>パーセルレベルの 1H-MRSI 生化学的類似性足場</strong></td>
+<td>複製を伴う全脳コホート マッピングですが、依然として静的な 5 つの代謝物の類似性ルートです。</td>
+<td>境界付き 1H-MRSI 生化学組織足場。</td>
+<td>電流転写コントローラー、分枝局所エネルギー予備力、細胞固有の回復ロジック、および局所伝達物質/グリア微小状態。</td>
+<td><strong>マクロ 1H-MRSI 生化学足場</strong>。これはローカルのメンテナンス状態のスナップショットではありません。</td>
 </tr>
 <tr>
-<td><strong>High-resolution 1H-MRSI metabolite-distribution route</strong><br>Guo et al. (2025)</td>
-<td><strong>High-resolution 1H-MRSI metabolite-distribution proxy</strong></td>
-<td>Ultrahigh-field route with extended spatiospectral encoding, subspace modeling, and explicit ghosting / aliasing / low-SNR handling burden.</td>
-<td>Bounded high-resolution metabolite-distribution proxy.</td>
-<td>Parcel-level similarity structure, deuterium absolute quantification, kinetic glucose-rate maps, current transcriptional controller, and branch-local energetic reserve.</td>
-<td><strong>High-resolution metabolite-distribution proxy</strong>. It is not biochemical similarity, kinetic-rate imaging, or a local maintenance-state snapshot.</td>
+<td><strong>高分解能 1H-MRSI 代謝物分布経路</strong><br>Guo et al. (2025)</td>
+<td><strong>高解像度 1H-MRSI 代謝物分布プロキシ</strong></td>
+<td>拡張された空間スペクトル エンコーディング、部分空間モデリング、および明示的なゴースト/エイリアシング/低 SNR 処理負荷を備えた超高磁場ルート。</td>
+<td>境界付き高解像度代謝物配布プロキシ。</td>
+<td>パーセルレベルの類似構造、重水素の絶対定量化、グルコース速度マップ、電流転写コントローラー、分岐局所エネルギー予備力。</td>
+<td><strong>高解像度代謝物分布プロキシ</strong>。これは、生化学的類似性、動態速度イメージング、または局所的なメンテナンス状態のスナップショットではありません。</td>
 </tr>
 <tr>
-<td><strong>Human 31P-MRS metabolite / pH balance route</strong><br>Ren et al. (2015)</td>
-<td><strong>Macro 31P metabolite / pH balance proxy</strong></td>
-<td>Healthy resting cohort of 12 with ATP-synthesis, phosphorus-metabolite, pH, and relaxation estimates, but not a spatially fine compartment-control readout.</td>
-<td>Bounded phosphorus metabolite / pH balance proxy.</td>
-<td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
-<td><strong>Macro 31P metabolite / pH balance proxy</strong>. It does not become branch-local mitochondrial ground truth.</td>
+<td><strong>ヒト 31P-MRS 代謝物 / pH バランス ルート</strong><br>Ren et al. (2015)</td>
+<td><strong>マクロ 31P 代謝物 / pH バランスプロキシ</strong></td>
+<td>ATP 合成、リン代謝物、pH、弛緩の推定値を備えた 12 人の健康な安静コホートですが、空間的に細かいコンパートメント制御の読み取り値はありません。</td>
+<td>有界リン代謝物 / pH バランス プロキシ。</td>
+<td>どの樹状枝にATPが不足しているか、ミトコンドリアがどこに留まっているか、現在どのコンパートメントがエネルギー的に脆弱であるか、どの分裂/融合状態がアクティブであるか。</td>
+<td><strong>マクロ 31P 代謝物 / pH バランス プロキシ</strong>。分岐局所ミトコンドリアのグランドトゥルースにはなりません。</td>
 </tr>
 <tr>
-<td><strong>Human 31P MT exchange-flux route</strong><br>Ren et al. (2017)</td>
-<td><strong>Model-conditioned macro 31P MT exchange-flux proxy</strong></td>
-<td>Specialized 7 T route with a five-pool magnetization-transfer model rather than a route-free energetic snapshot.</td>
-<td>Bounded model-conditioned exchange-flux proxy.</td>
-<td>Route-independent metabolite / pH balance, whole-brain NAD content, task-evoked local NAD dynamics, branch-local mitochondrial residence, and direct controller identity.</td>
-<td><strong>Model-conditioned macro 31P MT exchange-flux proxy</strong>. It does not become route-free energetic ground truth or branch-local mitochondrial ground truth.</td>
+<td><strong>ヒト31P MT交換フラックスルート</strong><br>Ren et al. (2017)</td>
+<td><strong>モデル条件付きマクロ 31P MT 交換磁束プロキシ</strong></td>
+<td>ルートフリーのエネルギースナップショットではなく、5つのプール磁化転移モデルを備えた特殊な7 Tルート。</td>
+<td>有界モデル条件付き交換フラックス プロキシ。</td>
+<td>経路非依存性代謝物 / pH バランス、全脳 NAD 含有量、タスク誘発局所 NAD ダイナミクス、分枝局所ミトコンドリア滞留、および直接コントローラーのアイデンティティ。</td>
+<td><strong>モデル条件付きマクロ 31P MT 交換フラックス プロキシ</strong>。ルートフリーのエネルギー グラウンド トゥルースまたはブランチ ローカル ミトコンドリア グラウンド トゥルースにはなりません。</td>
 </tr>
 <tr>
-<td><strong>Human 31P NAD-content mapping route</strong><br>Guo et al. (2024)</td>
-<td><strong>Macro 31P NAD-content map proxy</strong></td>
-<td>Specialized 7 T whole-brain route with subspace-based denoising, low-concentration spectral fitting, and long acquisition burden.</td>
-<td>Bounded whole-brain NAD-content map proxy.</td>
-<td>Task-evoked local NAD dynamics, branch-local mitochondrial residence, whole-brain moment-to-moment redox control, and task-general controller identity.</td>
-<td><strong>Macro 31P NAD-content map proxy</strong>. It does not become localized functional dynamics or branch-local mitochondrial ground truth.</td>
+<td><strong>ヒト 31P NAD コンテンツ マッピング ルート</strong><br>Guo et al. (2024)</td>
+<td><strong>マクロ 31P NAD コンテンツ マップ プロキシ</strong></td>
+<td>部分空間ベースのノイズ除去、低濃度スペクトル フィッティング、長時間取得負荷を備えた特殊な 7 T 全脳ルート。</td>
+<td>境界のある全脳 NAD コンテンツ マップ プロキシ。</td>
+<td>Tタスク誘発局所 NAD ダイナミクス、分枝局所ミトコンドリア滞留、全脳の瞬間ごとの酸化還元制御、およびタスク全体コントローラーのアイデンティティ。</td>
+<td><strong>マクロ 31P NAD コンテンツ マップ プロキシ</strong>。局所的な機能ダイナミクスや分岐局所的なミトコンドリアのグラウンド トゥルースにはなりません。</td>
 </tr>
 <tr>
-<td><strong>Human 31P functional NAD-dynamics route</strong><br>Kaiser et al. (2026)</td>
-<td><strong>Localized functional 31P NAD-dynamics proxy</strong></td>
-<td>Specialized 7 T task fMRS with prior fMRI localization and one occipital voxel rather than a whole-brain map.</td>
-<td>Bounded task-locked local NAD-dynamics proxy.</td>
-<td>Whole-brain NAD-content mapping, task-general energetic-controller identity, branch-local mitochondrial residence, and whole-brain moment-to-moment redox control.</td>
-<td><strong>Localized functional 31P NAD-dynamics proxy</strong>. It does not become a whole-brain energetic map or branch-local mitochondrial ground truth.</td>
+<td><strong>ヒト 31P 機能的 NAD ダイナミクス ルート</strong><br>Kaiser et al. (2026)</td>
+<td><strong>ローカライズされた機能的な 31P NAD ダイナミクス プロキシ</strong></td>
+<td>事前の fMRI 位置特定と全脳マップではなく 1 つの後頭ボクセルを備えた特殊な 7 T タスク fMRS。</td>
+<td>境界タスクロックされたローカル NAD ダイナミクス プロキシ。</td>
+<td>全脳の NAD コンテンツ マッピング、タスク一般のエネルギー コントローラーのアイデンティティ、分枝局所ミトコンドリアの常駐、および全脳の瞬間ごとの酸化還元制御。</td>
+<td><strong>ローカライズされた機能的な 31P NAD ダイナミクス プロキシ</strong>。それは、脳全体のエネルギーマップや枝局所的なミトコンドリアのグラウンドトゥルースにはなりません。</td>
 </tr>
 <tr>
-<td><strong>Human deuterium metabolite-mapping / absolute-quantification route</strong><br>Karkouri et al. (2026)</td>
-<td><strong>Macro deuterium metabolite-mapping / absolute-quantification proxy</strong></td>
-<td>Specialized 7 T deuterium imaging with dedicated hardware and calibrated absolute-quantification pipeline; current human evidence remains limited-cohort and high-burden.</td>
-<td>Bounded deuterium metabolite-mapping proxy.</td>
-<td>Glucose-transport or metabolic-rate terms unless an explicit kinetic model is added, plus which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
-<td><strong>Macro deuterium metabolite-mapping / absolute-quantification proxy</strong>. It does not become branch-local mitochondrial ground truth or kinetic-rate truth by default.</td>
+<td><strong>ヒト重水素代謝物マッピング/絶対定量ルート</strong><br>Karkouri et al. (2026)</td>
+<td><strong>マクロ重水素代謝物マッピング/絶対定量プロキシ</strong></td>
+<td>専用ハードウェアと校正された絶対定量パイプラインを備えた特殊な 7 T 重水素イメージング。現在のヒトでの証拠は依然として限られており、コホートと負荷が高い。</td>
+<td>有界重水素代謝物マッピング プロキシ。</td>
+<td>明示的な速度論モデルが追加されていない限り、グルコース輸送または代謝率の用語に加えて、どの樹状枝にATPが不足しているか、ミトコンドリアがどこに停留しているか、現在どのコンパートメントがエネルギー的に脆弱であるか、どの分裂/融合状態がアクティブであるか。</td>
+<td><strong>マクロ重水素代謝物マッピング/絶対定量プロキシ</strong>。デフォルトでは、ブランチローカルミトコンドリアのグラウンドトゥルースまたはカイネティックレートトゥルースにはなりません。</td>
 </tr>
 <tr>
-<td><strong>Human deuterium kinetic-rate imaging</strong><br>Li et al. (2025)</td>
-<td><strong>Model-conditioned macro deuterium kinetic-rate proxy</strong></td>
-<td>Specialized 7 T dynamic DMRSI with custom hardware, blood-input acquisition, and explicit kinetic model; current human evidence remains very small-cohort and high-burden.</td>
-<td>Bounded deuterium kinetic-rate proxy.</td>
-<td>Which dendritic branch lacks ATP reserve, where mitochondria are parked, which compartment is energetically fragile right now, and which fission / fusion state is active.</td>
-<td><strong>Model-conditioned macro deuterium kinetic-rate proxy</strong>. It does not become branch-local mitochondrial ground truth or one generic deuterium map.</td>
+<td><strong>ヒト重水素速度イメージング</strong><br>Li et al. (2025)</td>
+<td><strong>モデル条件付きマクロ重水素運動速度プロキシ</strong></td>
+<td>カスタムハードウェア、血液入力取得、および明示的な動態モデルを備えた特殊な 7 T ダイナミック DMRSI。現在の人体での証拠は依然として非常に小規模で、負担が大きい。</td>
+<td>有界重水素運動速度プロキシ。</td>
+<td>どの樹状枝にATP貯蔵量がないか、ミトコンドリアがどこに停まっているか、現在どのコンパートメントがエネルギー的に脆弱か、どの分裂/融合状態が活発であるか。</td>
+<td><strong>モデル条件付きマクロ重水素運動速度プロキシ</strong>。これは、分岐局所的なミトコンドリアのグランド トゥルースや 1 つの一般的な重水素マップにはなりません。</td>
 </tr>
 <tr>
-<td><strong>Human sodium MRI / ionic proxy</strong><br>Qian et al. (2012); Qian et al. (2025)</td>
-<td><strong>Macro ionic proxy</strong></td>
-<td>Specialized acquisition with emerging compartment-sensitive extensions rather than routine controller readout.</td>
-<td>Bounded ionic-burden proxy.</td>
-<td>Cell-specific chloride concentration, KCC2 / NKCC1 balance, extracellular K<sup>+</sup> / Ca<sup>2+</sup> / pH microdomains, local E<sub>GABA</sub>, and routine whole-brain intra- versus extracellular sodium partition.</td>
-<td><strong>Macro ionic proxy</strong>. It is not direct ground truth of current chloride homeostasis.</td>
+<td><strong>ヒトナトリウムMRI/イオンプロキシ</strong><br>Qianら。 (2012);銭ら。 (2025)</td>
+<td><strong>マクロイオンプロキシ</strong></td>
+<td>ルーチンのコントローラー読み出しではなく、新しいコンパートメント依存の拡張機能を備えた特殊な取得。</td>
+<td>有界イオン負荷プロキシ。</td>
+<td>C細胞特異的塩素濃度、KCC2 / NKCC1 バランス、細胞外 K<sup>+</sup> / Ca<sup>2+</sup> / pH マイクロドメイン、局所 E<sub>GABA</sub>、および日常的な全脳の細胞内ナトリウム分配と細胞外ナトリウム分配。</td>
+<td><strong>マクロイオンプロキシ</strong>。現在の塩化物恒常性の直接的な真実ではありません。</td>
 </tr>
 <tr>
-<td><strong>Human brain thermometry</strong><br>Rzechorzek et al. (2022)</td>
-<td><strong>Macro thermal proxy</strong></td>
-<td>Living-human macro mapping route, but not a local thermal-controller assay.</td>
-<td>Bounded thermal-burden proxy.</td>
-<td>Cell-specific microtemperature, synapse-level heating burden, and local thermal controller state.</td>
-<td><strong>Macro thermal proxy</strong>. It is not cell-specific thermal-state ground truth.</td>
+<td><strong>人間の脳の温度測定</strong><br>Rzechorzek et al. (2022)</td>
+<td><strong>マクロ サーマル プロキシ</strong></td>
+<td>L生きている人間のマクロ マッピング ルートですが、ローカル サーマル コントローラー アッセイではありません。</td>
+<td>境界のある熱負荷プロキシ。</td>
+<td>Cセル固有のマイクロ温度、シナプスレベルの加熱負荷、および局所的な熱コントローラーの状態。</td>
+<td><strong>マクロサーマルプロキシ</strong>。これはセル固有の熱状態のグランドトゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human tract-scale transmission-speed estimation</strong><br>van Blooijs et al. (2023)</td>
-<td><strong>Tract-scale timing-support proxy</strong></td>
-<td>Development-sensitive human route with transfer-time and tract-geometry dependence rather than per-axon measurement.</td>
-<td>Bounded tract-scale timing-support proxy.</td>
-<td>Per-axon conduction controller, myelin-specific quantity, node / internode microgeometry, and local timing-state recovery.</td>
-<td><strong>Tract-scale timing-support proxy</strong>. It is not myelin-specific ground truth or full timing-state recovery.</td>
+<td><strong>人道規模の伝送速度推定</strong><br>van Blooijs et al. (2023)</td>
+<td><strong>Tract スケール タイミング サポート プロキシ</strong></td>
+<td>軸索ごとの測定ではなく、移動時間と管の形状に依存する発生に敏感なヒト経路。</td>
+<td>境界のあるトラクト スケール タイミング サポート プロキシ。</td>
+<td>軸索ごとの伝導コントローラー、ミエリン固有の量、ノード/ノード間の微細形状、およびローカル タイミング状態回復。</td>
+<td><strong>Tract スケール タイミング サポート プロキシ </strong>。これは、ミエリン固有のグラウンド トゥルースまたは完全なタイミング状態の回復ではありません。</td>
 </tr>
 <tr>
-<td><strong>Human myelin bilayer mapping (specialized proof-of-principle)</strong><br>Baadsvik et al. (2024)</td>
-<td><strong>Macro myelin proxy</strong></td>
-<td>Proof-of-principle in two healthy volunteers on specialized high-performance hardware.</td>
-<td>Bounded myelin / timing-support proxy.</td>
-<td>Per-axon conduction controller, node / internode microgeometry, and local timing-state recovery.</td>
-<td><strong>Macro myelin proxy</strong>. It is not full timing-state recovery.</td>
+<td><strong>ヒトミエリン二重層マッピング（特殊な原理証明）</strong><br>Baadsvik et al. (2024)</td>
+<td><strong>マクロミエリンプロキシ</strong></td>
+<td>専用の高性能ハードウェアを使用した 2 人の健康なボランティアによる原理実証。</td>
+<td>境界ミエリン/タイミングサポートプロキシ。</td>
+<td>軸索ごとの伝導コントローラー、ノード/ノード間マイクロジオメトリ、およびローカル タイミング状態回復。</td>
+<td><strong>マクロミエリンプロキシ</strong>。完全なタイミング状態回復ではありません。</td>
 </tr>
 <tr>
-<td><strong>Human clinical single-unit allocation route</strong><br>Tallman et al. (2025)</td>
-<td><strong>Local clinical-unit allocation-related proxy</strong></td>
-<td>Pathology-conditioned implanted-human route with local hippocampal single-unit coverage; not a routine noninvasive whole-brain assay.</td>
-<td>Bounded local human allocation-related calibrator.</td>
-<td>Whole-brain controller coverage, direct AIS / channel-state readout, and separation of pre-existing excitability from learning-induced change.</td>
-<td><strong>Local clinical-unit allocation-related route</strong>. We do not promote it to a whole-brain excitability meter or direct controller measurement.</td>
+<td><strong>ヒト臨床単一ユニット割り当てルート</strong><br>Tallman et al. (2025)</td>
+<td><strong>ローカル診療ユニット割り当て関連プロキシ</strong></td>
+<td>局所的な海馬の単一ユニットをカバーする、病理条件付けされたヒト移植ルート。日常的な非侵襲的な全脳アッセイではありません。</td>
+<td>境界のあるローカル人員割り当て関連キャリブレータ。</td>
+<td>全脳コントローラーをカバー、AIS / チャネル状態の直接読み出し、既存の興奮性と学習誘発性の変化の分離。</td>
+<td><strong>ローカル診療ユニット割り当て関連ルート</strong>。全脳興奮度計や直接コントローラー測定には推奨しておりません。</td>
 </tr>
 <tr>
-<td><strong>Human BBB water-exchange MRI</strong><br>Morgan et al. (2024); Padrela et al. (2025)</td>
-<td><strong>Macro BBB water-exchange proxy</strong></td>
-<td>ASL-based route with method dependence and explicit fitting burden; Kw and Tex are not route-free leakiness scalars.</td>
-<td>Bounded BBB water-exchange proxy.</td>
-<td>Tracer-specific permeability-surface-area, blood-CSF-barrier / choroid-plexus transport-family separation, cell-specific pericyte / endothelial controller identity, local capillary recruitment state, and synapse-resolved neurovascular support.</td>
-<td><strong>Macro BBB water-exchange proxy</strong>. It is not tracer-specific transport truth or local controller ground truth.</td>
+<td><strong>ヒトBBB水交換MRI</strong><br>Morgan et al. (2024);パドレラら。 (2025)</td>
+<td><strong>マクロ BBB 水交換プロキシ</strong></td>
+メソッド依存性と明示的なフィッティング負担を伴う <td>ASL ベースのルート。 Kw と Tex はルートフリーの漏洩スカラーではありません。</td>
+<td>境界付き BBB 水交換プロキシ。</td>
+<td>Tracer 固有の透過性表面積、血液 CSF 関門 / 脈絡叢輸送ファミリーの分離、細胞固有の周皮細胞 / 内皮コントローラーのアイデンティティ、局所的な毛細血管の動員状態、およびシナプス分解された神経血管サポート。</td>
+<td><strong>マクロ BBB 水交換プロキシ</strong>。これは、トレーサー固有のトランスポート トゥルースまたはローカル コントローラー グラウンド トゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human tracer-specific BBB transport PET</strong><br>Chung et al. (2025)</td>
-<td><strong>Tracer-specific BBB transport proxy</strong></td>
-<td>Total-body high-temporal-resolution PET plus explicit kinetic-model burden; tracer choice changes the transport object.</td>
-<td>Bounded tracer-specific BBB transport proxy.</td>
-<td>Water-exchange time / rate, blood-CSF-barrier / choroid-plexus transport-family separation, cell-specific pericyte / endothelial controller identity, local capillary recruitment state, and synapse-resolved neurovascular support.</td>
-<td><strong>Tracer-specific BBB transport proxy</strong>. It is not one generic BBB leakiness meter or local controller ground truth.</td>
+<td><strong>ヒトトレーサー特異的BBB輸送PET</strong><br>Chungら。 (2025)</td>
+<td><strong>Tracer 固有の BBB トランスポート プロキシ</strong></td>
+<td>全身の高時間分解能 PET と明示的な運動モデル負荷。トレーサの選択により、トランスポート オブジェクトが変更されます。</td>
+<td>境界付きトレーサー固有の BBB トランスポート プロキシ。</td>
+<td>水交換時間/速度、血液CSF関門/脈絡叢輸送ファミリー分離、細胞特異的周皮細胞/内皮コントローラーの同一性、局所毛細血管動員状態、およびシナプス分解神経血管サポート。</td>
+<td><strong>Tracer 固有の BBB トランスポート プロキシ </strong>。これは、1 つの一般的な BBB 漏れ測定器やローカル コントローラーのグラウンド トゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human choroid-plexus perfusion route</strong><br>Zhao et al. (2020)</td>
-<td><strong>Choroid-plexus perfusion proxy</strong></td>
-<td>ASL-based human MRI with ROI-segmentation and long-T<sub>1</sub> interpretation burden; perfusion rather than cross-boundary transport.</td>
-<td>Bounded choroid-plexus perfusion proxy.</td>
-<td>Blood-to-CSF water transport, choroid-plexus water cycling, apparent BCSFB exchange, simultaneous BBB-versus-BCSFB separation, solute-specific transport, and epithelial-controller identity.</td>
-<td><strong>Choroid-plexus perfusion proxy</strong>. It is not blood-to-CSF transport truth or local controller ground truth.</td>
+<td><strong>ヒト脈絡叢灌流ルート</strong><br>Zhao et al. (2020)</td>
+<td><strong>脈絡叢灌流プロキシ</strong></td>
+ROI セグメンテーションと長い T<sub>1</sub> 読影負荷を備えた <td>ASL ベースのヒト MRI。境界を越えた輸送ではなく灌流。</td>
+<td>境界脈絡叢灌流プロキシ。</td>
+<td>血液からCSFへの水輸送、脈絡叢の水循環、見かけのBCSFB交換、BBB対BCSFBの同時分離、溶質特異的輸送、および上皮コントローラーの同一性。</td>
+<td><strong>脈絡叢灌流プロキシ</strong>。これは、血液から CSF への輸送の真実やローカル コントローラーのグランド トゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human blood-to-CSF transport route</strong><br>Petitclerc et al. (2021)</td>
-<td><strong>Blood-to-CSF water-transport proxy</strong></td>
-<td>Ultra-long-TE ASL route with labeled-water transport assumptions and specialized timing burden.</td>
-<td>Bounded blood-to-CSF transport proxy.</td>
-<td>Choroid-plexus perfusion, choroid-plexus water cycling, apparent BCSFB exchange, simultaneous BBB-versus-BCSFB separation, solute-specific transport, and epithelial-controller identity.</td>
-<td><strong>Blood-to-CSF water-transport proxy</strong>. It is not one generic barrier-permeability scalar or local controller ground truth.</td>
+<td><strong>ヒトの血液からCSFへの輸送経路</strong><br>Petitclec et al. (2021)</td>
+<td><strong>血液からCSFへの水輸送プロキシ</strong></td>
+<td>ラベル付き水輸送の想定と特殊なタイミング負荷を備えた超長距離 TE ASL ルート。</td>
+<td>境界のある血液から CSF への輸送プロキシ。</td>
+<td>脈絡叢灌流、脈絡叢の水循環、見かけの BCSFB 交換、BBB 対 BCSFB の同時分離、溶質特異的輸送、および上皮コントローラーの同一性。</td>
+<td><strong>血液からCSFへの水輸送代理</strong>。これは、1 つの一般的なバリア透過性スカラーまたはローカル コントローラーのグラウンド トゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human choroid-plexus water-cycling route</strong><br>Anderson et al. (2022)</td>
-<td><strong>Choroid-plexus water-cycling proxy</strong></td>
-<td>DCE-MRI route with contrast-leakage modeling and barrier-compartment assumptions.</td>
-<td>Bounded choroid-plexus water-cycling proxy.</td>
-<td>ASL blood-to-CSF transport, apparent BCSFB exchange, simultaneous BBB-versus-BCSFB separation, solute-specific transport, and epithelial-controller identity.</td>
-<td><strong>Choroid-plexus water-cycling proxy</strong>. It is not route-free barrier transport truth.</td>
+<td><strong>ヒト脈絡叢の水循環経路</strong><br>Anderson et al. (2022)</td>
+<td><strong>脈絡叢の水循環プロキシ</strong></td>
+<td>DCE-MRI ルート（造影剤漏れモデリングとバリアコンパートメントの仮定を使用）。</td>
+<td>境界脈絡叢の水循環プロキシ。</td>
+<td>ASL 血液から CSF への輸送、見かけの BCSFB 交換、BBB 対 BCSFB の同時分離、溶質特異的輸送、および上皮コントローラーの同一性。</td>
+<td><strong>脈絡叢の水循環プロキシ</strong>。ルートフリーバリア輸送真実ではありません。</td>
 </tr>
 <tr>
-<td><strong>Human apparent BCSFB exchange route</strong><br>Wu et al. (2026)</td>
-<td><strong>Apparent BCSFB-exchange proxy</strong></td>
-<td>REXI feasibility route with scan-rescan burden and apparent-exchange interpretation rather than direct solute flux.</td>
-<td>Bounded apparent BCSFB-exchange proxy.</td>
-<td>Boundary-separated BBB-versus-BCSFB exchange, solute-specific transport, epithelial-controller identity, and synapse-resolved neurovascular support.</td>
-<td><strong>Apparent BCSFB-exchange proxy</strong>. It is not direct solute-transport truth or local controller ground truth.</td>
+<td><strong>ヒトの見かけのBCSFB交換経路</strong><br>Wuら。 (2026)</td>
+<td><strong>見かけ上の BCSFB 交換プロキシ</strong></td>
+<td>REXI 直接溶質フラックスではなく、スキャン-再スキャン負荷と見かけの交換解釈を使用した実現可能性ルート。</td>
+<td>境界のある見かけの BCSFB 交換プロキシ。</td>
+<td>境界分離された BBB 対 BCSFB 交換、溶質特異的輸送、上皮コントローラーの同一性、およびシナプス分解された神経血管サポート。</td>
+<td><strong>見かけ上の BCSFB 交換プロキシ</strong>。これは、直接的な溶質輸送の真実やローカル コントローラーのグランド トゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human simultaneous BBB-versus-BCSFB exchange route</strong><br>Petitclerc et al. (2026)</td>
-<td><strong>Boundary-separated BBB-versus-BCSFB exchange proxy</strong></td>
-<td>Dual-boundary ASL modeling route that estimates BBB and BCSFB exchange together; route-setting rather than routine deployment.</td>
-<td>Bounded boundary-separated BBB-versus-BCSFB exchange proxy.</td>
-<td>Solute-specific transport, local endothelial-versus-epithelial controller identity, capillary / choroid-plexus microterritory control, and synapse-resolved neurovascular support.</td>
-<td><strong>Boundary-separated BBB-versus-BCSFB exchange proxy</strong>. It is not one generic barrier-permeability row or local controller ground truth.</td>
+<td><strong>ヒト同時BBB対BCSFB交換ルート</strong><br>Petitclec et al. (2026)</td>
+<td><strong>境界分離された BBB 対 BCSFB 交換プロキシ</strong></td>
+<td>BBB と BCSFB 交換を一緒に推定する二重境界 ASL モデリング ルート。日常的な展開ではなくルート設定。</td>
+<td>有界境界で区切られた BBB 対 BCSFB 交換プロキシ。</td>
+<td>溶質特異的輸送、局所内皮対上皮コントローラーのアイデンティティ、毛細血管/脈絡叢の微小領域制御、およびシナプス分解型神経血管サポート。</td>
+<td><strong>境界分離された BBB 対 BCSFB 交換プロキシ</strong>。これは、1 つの一般的なバリア透過性の列やローカル コントローラーのグラウンド トゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human SMBT-1 first-in-human MAO-B target-validation route</strong><br>Villemagne et al. (2022)</td>
-<td><strong>MAO-B-related target-validation proxy</strong></td>
-<td>Healthy-volunteer first-in-human dynamic PET with blockade evidence; still validation-stage rather than routine disease calibration.</td>
-<td>Bounded MAO-B target-validation proxy.</td>
-<td>AD-context transfer, stable brain-quantification regime, whole-body biodistribution, SL25.1188-related burden, I2BS-related burden, astrocyte-ensemble identity, minute-scale astrocyte-network state, and a route-free whole-brain astrocyte-state scalar.</td>
-<td><strong>MAO-B target-validation proxy</strong>. It is not route-free astrocyte-state ground truth.</td>
+<td><strong>ヒトSMBT-1ファーストインヒトMAO-Bターゲット検証ルート</strong><br>Villemagne et al. (2022)</td>
+<td><strong>MAO-B 関連のターゲット検証プロキシ</strong></td>
+<td>健康ボランティアによるファースト・イン・ヒューマン・ダイナミックPET（封鎖証拠あり）。ルーチンの疾患キャリブレーションではなく、まだ検証段階です。</td>
+<td>境界のある MAO-B ターゲット検証プロキシ。</td>
+<td>AD コンテキスト伝達、安定した脳定量化レジーム、全身生体内分布、SL25.1188 関連負荷、I2BS 関連負荷、アストロ サイト アンサンブル同一性、分単位スケールのアストロ サイト ネットワーク状態、およびルートフリーの全脳アストロ サイト状態スカラー。</td>
+<td><strong>MAO-B ターゲット検証プロキシ</strong>。ルートフリーのアストロサイト状態のグランドトゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human SMBT-1 AD-spectrum MAO-B disease-context route</strong><br>Villemagne et al. (2022); Jaisa-Aad et al. (2024); Best et al. (2026)</td>
-<td><strong>MAO-B-related disease-context proxy</strong></td>
-<td>Disease- and covariate-regime-dependent PET route; informative for pathology contrast, but not one general human baseline.</td>
-<td>Bounded MAO-B disease-context proxy.</td>
-<td>SL25.1188-related burden, I2BS-related burden, astrocyte-ensemble identity, minute-scale astrocyte-network state, whole-body biodistribution, and a route-free whole-brain astrocyte-state scalar.</td>
-<td><strong>MAO-B disease-context proxy</strong>. It is not route-free astrocyte-state ground truth.</td>
+<td><strong>ヒト SMBT-1 AD スペクトル MAO-B 疾患コンテキスト ルート</strong><br>Villemagne et al. (2022); Jaisa-Aad et al. (2024);ベストら。 (2026)</td>
+<td><strong>MAO-B 関連疾患コンテキスト プロキシ</strong></td>
+<td>疾患および共変量体制に依存する PET ルート。病理コントラストには有益ですが、人間の一般的なベースラインは 1 つではありません。</td>
+<td>境界のある MAO-B 疾患コンテキスト プロキシ。</td>
+<td>SL25.1188 関連負荷、I2BS 関連負荷、アストロ サイト アンサンブルの同一性、分単位のアストロ サイト ネットワーク状態、全身の体内分布、およびルートフリーの全脳アストロ サイト状態スカラー。</td>
+<td><strong>MAO-B 疾患コンテキスト プロキシ</strong>。ルートフリーのアストロサイト状態のグランドトゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human SMBT-1 brain-quantification route</strong><br>Hiraoka et al. (2025)</td>
-<td><strong>MAO-B-related brain-quantification proxy</strong></td>
-<td>Dedicated quantification study with explicit kinetic-versus-simplified modeling burden; route-setting rather than disease-general deployment.</td>
-<td>Bounded MAO-B brain-quantification proxy.</td>
-<td>Cross-centre transfer, disease-context calibration, whole-body biodistribution, SL25.1188-related burden, I2BS-related burden, astrocyte-ensemble identity, and a route-free whole-brain astrocyte-state scalar.</td>
-<td><strong>MAO-B brain-quantification proxy</strong>. It is not route-free astrocyte-state ground truth.</td>
+<td><strong>ヒトSMBT-1脳定量化ルート</strong><br>Hiraoka et al. (2025)</td>
+<td><strong>MAO-B 関連の脳定量化プロキシ</strong></td>
+<td>明示的な速度論的モデリングと単純化されたモデリングの負担を伴う専用の定量化研究。疾患全般の展開ではなくルート設定。</td>
+<td>境界のある MAO-B 脳定量化プロキシ。</td>
+<td>中心間移動、疾患コンテキストキャリブレーション、全身生体内分布、SL25.1188関連負荷、I2BS関連負荷、アストロサイトアンサンブル同一性、およびルートフリーの全脳アストロサイト状態スカラー。</td>
+<td><strong>MAO-B 脳定量化プロキシ</strong>。ルートフリーのアストロサイト状態のグランドトゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human SMBT-1 whole-body biodistribution route</strong><br>Mesfin et al. (2026)</td>
-<td><strong>MAO-B-related whole-body biodistribution / tracer-burden proxy</strong></td>
-<td>Healthy-volunteer whole-body dynamic PET with limited cohort and long acquisition burden.</td>
-<td>Bounded whole-body biodistribution / tracer-burden proxy.</td>
-<td>Brain target validity, disease-context contrast, SL25.1188-related burden, I2BS-related burden, astrocyte-ensemble identity, minute-scale astrocyte-network state, and a route-free whole-brain astrocyte-state scalar.</td>
-<td><strong>Whole-body biodistribution / tracer-burden proxy</strong>. It is not route-free astrocyte-state ground truth.</td>
+<td><strong>ヒトSMBT-1全身生体内分布経路</strong><br>Mesfin et al. (2026)</td>
+<td><strong>MAO-B 関連の全身生体内分布 / トレーサー負荷プロキシ</strong></td>
+<td>コホートが限定され、取得負荷が長い、健康ボランティアによる全身ダイナミック PET。</td>
+<td>境界のある全身生体内分布 / トレーサー負荷プロキシ。</td>
+<td>脳ターゲットの妥当性、疾患コンテキストのコントラスト、SL25.1188関連負荷、I2BS関連負荷、アストロサイトアンサンブルアイデンティティ、分スケールのアストロサイトネットワーク状態、およびルートフリーの全脳アストロサイト状態スカラー。</td>
+<td><strong>全身生体内分布 / トレーサー負荷プロキシ</strong>。ルートフリーのアストロサイト状態のグランドトゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human SL25.1188 MAO-B route</strong><br>Matsuoka et al. (2026); Best et al. (2026)</td>
-<td><strong>SL25.1188-related MAO-B proxy</strong></td>
-<td>Simplified-quantification and cohort-severity / smoking-conditioned PET route; not a route-free healthy baseline.</td>
-<td>Bounded SL25.1188-related MAO-B proxy.</td>
-<td>SMBT-1 target-validation / disease-context / brain-quantification / whole-body-biodistribution roles, I2BS-related burden, astrocyte-ensemble identity, minute-scale astrocyte-network state, and a route-free whole-brain astrocyte-state scalar.</td>
-<td><strong>SL25.1188-related MAO-B proxy</strong>. It is not route-free astrocyte-state ground truth.</td>
+<td><strong>ヒト SL25.1188 MAO-B ルート</strong><br>松岡ら。 (2026);ベストら。 (2026)</td>
+<td><strong>SL25.1188 関連の MAO-B プロキシ</strong></td>
+<td>簡易定量化およびコホート重症度/喫煙条件付き PET ルート。ルートフリーの健全なベースラインではありません。</td>
+<td>境界のある SL25.1188 関連の MAO-B プロキシ。</td>
+<td>SMBT-1 ターゲット検証 / 疾患コンテキスト / 脳定量 / 全身生体内分布の役割、I2BS 関連負荷、アストロ サイト アンサンブル同一性、分単位スケールのアストロ サイト ネットワーク状態、およびルートフリーの全脳アストロ サイト状態スカラー。</td>
+<td><strong>SL25.1188 関連の MAO-B プロキシ</strong>。ルートフリーのアストロサイト状態のグランドトゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human I2BS astrocyte PET route</strong><br>Tyacke et al. (2018); Livingston et al. (2022)</td>
-<td><strong>I2BS-related astrocyte proxy</strong></td>
-<td>Tracer-specific PET with idazoxan-competition interpretation, quantification-model burden, and disease-regime dependence.</td>
-<td>Bounded I2BS-related astrocyte proxy.</td>
-<td>MAO-B-related target-validation / disease-context / quantification / whole-body-biodistribution / SL25.1188 roles, astrocyte-ensemble identity, minute-scale astrocyte-network state, and a route-free whole-brain astrocyte-state scalar.</td>
-<td><strong>I2BS-related astrocyte proxy</strong>. It is not route-free astrocyte-state ground truth.</td>
+<td><strong>ヒト I2BS 星状細胞 PET ルート</strong><br>Tyacke et al. （2018年）;リヴィングストンら。 (2022)</td>
+<td><strong>I2BS 関連星状細胞プロキシ</strong></td>
+<td>T イダゾキサン競合解釈、定量化モデル負荷、および疾患レジメン依存性を備えたトレーサー特異的 PET。</td>
+<td>境界のある I2BS 関連星状細胞プロキシ。</td>
+<td>MAO-B 関連のターゲット検証 / 疾患コンテキスト / 定量化 / 全身生体内分布 / SL25.1188 の役割、アストロサイトアンサンブルの同一性、分単位スケールのアストロサイトネットワーク状態、およびルートフリーの全脳アストロサイト状態スカラー。</td>
+<td><strong>I2BS関連アストロサイトプロキシ</strong>。ルートフリーのアストロサイト状態のグランドトゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human TSPO disease-context / validation-bounded PET</strong><br>Biechele et al. (2023); Wijesinghe et al. (2025)</td>
-<td><strong>TSPO disease-context / validation-bounded neuroimmune proxy</strong></td>
-<td>Target- and disease-context-specific PET with cross-species / postmortem validation burden; not a universal activation-state meter.</td>
-<td>Bounded TSPO disease-context / validation-bounded proxy.</td>
-<td>CSF1R route-setting, COX-2 enzyme-defined burden, cell-specific immune-controller identity, causal cytokine state, and local synapse-support mechanism.</td>
-<td><strong>TSPO disease-context / validation-bounded neuroimmune proxy</strong>. It is not route-free microglia-state ground truth.</td>
+<td><strong>ヒト TSPO 疾患コンテキスト / 検証境界 PET</strong><br>Biechele et al. (2023); Wijesinghe et al. (2025)</td>
+<td><strong>TSPO 疾患コンテキスト / 検証限定神経免疫プロキシ</strong></td>
+<td>T異種間検証/死後検証負担を伴う、標的および疾患状況に特化したPET。汎用の起動状態メーターではありません。</td>
+<td>境界付き TSPO 疾患コンテキスト / 検証境界付きプロキシ。</td>
+<td>CSF1R 経路設定、COX-2 酵素定義負荷、細胞特異的免疫コントローラーの正体、原因となるサイトカインの状態、および局所的なシナプス支持機構。</td>
+<td><strong>TSPO 疾患コンテキスト/検証境界神経免疫プロキシ</strong>。ルートフリーのミクログリア状態のグラウンド トゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human CSF1R route-setting PET</strong><br>Horti et al. (2022); Ogata et al. (2025)</td>
-<td><strong>CSF1R route-setting neuroimmune proxy</strong></td>
-<td>First-in-human and arterial-input / tracer-model burden; route-setting rather than routine disease deployment.</td>
-<td>Bounded CSF1R route-setting proxy.</td>
-<td>TSPO disease-context transfer, COX-2 enzyme-defined burden, cell-specific immune-controller identity, causal cytokine state, and local synapse-support mechanism.</td>
-<td><strong>CSF1R route-setting neuroimmune proxy</strong>. It is not route-free immune-state ground truth.</td>
+<td><strong>ヒト CSF1R ルート設定 PET</strong><br>Horti et al. (2022);尾形ら。 (2025)</td>
+<td><strong>CSF1R ルート設定神経免疫プロキシ</strong></td>
+<td>First-in-humanおよび動脈入力/トレーサーモデル負荷。日常的な病気の展開ではなくルート設定。</td>
+<td>Bounded CSF1R ルート設定プロキシ。</td>
+<td>TSPO 疾患コンテキスト伝達、COX-2 酵素定義負荷、細胞特異的免疫コントローラーのアイデンティティ、原因となるサイトカインの状態、および局所的なシナプス支持機構。</td>
+<td><strong>CSF1R ルート設定神経免疫プロキシ</strong>。ルートフリーの免疫状態のグランドトゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human COX-2 enzyme-defined PET</strong><br>Yan et al. (2025)</td>
-<td><strong>COX-2 enzyme-defined neuroimmune proxy</strong></td>
-<td>First-in-human blockade-defined PET with selected healthy-participant burden; not a route-free inflammation meter.</td>
-<td>Bounded COX-2 enzyme-defined proxy.</td>
-<td>TSPO disease-context transfer, CSF1R route-setting, cell-specific immune-controller identity, causal cytokine state, and local synapse-support mechanism.</td>
-<td><strong>COX-2 enzyme-defined neuroimmune proxy</strong>. It is not route-free immune-state ground truth.</td>
+<td><strong>ヒト COX-2 酵素定義 PET</strong><br>Yan et al. (2025)</td>
+<td><strong>COX-2 酵素定義神経免疫プロキシ</strong></td>
+<td>選択された健康参加者の負担を伴うファーストインヒューマン遮断定義PET。ルートフリーの炎症計ではありません。</td>
+<td>境界のある COX-2 酵素定義プロキシ。</td>
+<td>TSPO 疾患状況の伝達、CSF1R 経路設定、細胞特異的免疫コントローラーの同一性、原因となるサイトカインの状態、および局所的なシナプス支持機構。</td>
+<td><strong>COX-2 酵素定義神経免疫プロキシ</strong>。ルートフリーの免疫状態のグランド トゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human macroscopic CSF-oscillation proxy</strong><br>Fultz et al. (2019)</td>
-<td><strong>Sleep-state CSF-oscillation proxy</strong></td>
-<td>Fast-fMRI plus EEG sleep route; macro oscillation rather than a solute-specific clearance assay.</td>
-<td>Bounded sleep-state CSF-oscillation proxy.</td>
-<td>Net molecular flux, parenchyma-CSF exchange, CSF-to-blood clearance capacity, cell-specific immune control, and local synaptic maintenance.</td>
-<td><strong>Sleep-state CSF-oscillation proxy</strong>. It is not direct protein-clearance truth.</td>
+<td><strong>ヒト巨視的CSF振動プロキシ</strong><br>Fultzら。 (2019)</td>
+<td><strong>スリープ状態 CSF 発振プロキシ</strong></td>
+<td>Fast-fMRI と EEG 睡眠ルート。溶質特異的クリアランスアッセイではなく、マクロ振動。</td>
+<td>境界のあるスリープ状態 CSF 発振プロキシ。</td>
+<td>Net 分子フラックス、実質-CSF 交換、CSF から血液へのクリアランス能力、細胞特異的免疫制御、および局所シナプス維持。</td>
+<td><strong>スリープ状態の CSF 発振プロキシ</strong>。プロテインクリアランスの直接的な真実ではありません。</td>
 </tr>
 <tr>
-<td><strong>Human parenchyma-CSF water-exchange proxy</strong><br>Kim, Huang, &amp; Liu (2025)</td>
-<td><strong>Parenchyma-CSF water-exchange proxy</strong></td>
-<td>Small-cohort noninvasive MRI route with exchange-model burden; not a protein-specific efflux assay.</td>
-<td>Bounded parenchyma-CSF water-exchange proxy.</td>
-<td>Protein-specific efflux, CSF-to-blood clearance capacity, cell-specific immune control, and local synaptic maintenance.</td>
-<td><strong>Parenchyma-CSF water-exchange proxy</strong>. It is not protein-specific clearance truth.</td>
+<td><strong>ヒト実質-CSF水交換プロキシ</strong><br>Kim、Huang、およびリュー (2025)</td>
+<td><strong>柔組織-CSF水交換プロキシ</strong></td>
+<td>交換モデル負荷を伴う小規模コホート非侵襲的 MRI ルート。タンパク質特異的な流出アッセイではありません。</td>
+<td>境界実質-CSF水交換プロキシ。</td>
+<td>タンパク質特異的な流出、CSFから血液へのクリアランス能力、細胞特異的な免疫制御、および局所的なシナプス維持。</td>
+<td><strong>柔組織-CSF水交換プロキシ</strong>。タンパク質特異的なクリアランスの真実ではありません。</td>
 </tr>
 <tr>
-<td><strong>Human respiration-conditioned CSF net-flow route</strong><br>Lim et al. (2025)</td>
-<td><strong>Respiration-conditioned CSF net-flow proxy</strong></td>
-<td>Awake-state 2D phase-contrast MRI route with plane-specific and respiration-regime burden; not a route-free whole-brain circulation assay.</td>
-<td>Bounded respiration-conditioned net-flow proxy.</td>
-<td>Route-free whole-brain bulk circulation, protein-specific efflux, cell-specific immune control, and local synaptic maintenance.</td>
-<td><strong>Respiration-conditioned net-flow proxy</strong>. It is not route-free clearance truth.</td>
+<td><strong>ヒト呼吸条件付きCSF正味流路</strong><br>Lim et al. (2025)</td>
+<td><strong>呼吸条件付きCSFネットフロープロキシ</strong></td>
+<td> 面固有の呼吸体制負荷を伴う覚醒状態 2D 位相差 MRI ルート。ルートフリーの全脳循環アッセイではありません。</td>
+<td>境界呼吸条件付きネットフロー プロキシ。</td>
+<td>ルートフリーの全脳大循環、タンパク質特異的流出、細胞特異的免疫制御、および局所シナプス維持。</td>
+<td><strong>呼吸条件付きネットフロープロキシ</strong>。ルートフリークリアランス真実ではありません。</td>
 </tr>
 <tr>
-<td><strong>Human exercise-conditioned contrast-influx / meningeal-lymphatic route</strong><br>Yoo et al. (2025)</td>
-<td><strong>Exercise-conditioned contrast-influx / meningeal-lymphatic proxy</strong></td>
-<td>Long-term exercise intervention with intravenous-contrast dynamic-T1 / black-blood / IR-ALADDIN burden; not a natural-sleep baseline route.</td>
-<td>Bounded intervention-conditioned contrast-influx / meningeal-lymphatic proxy.</td>
-<td>Natural-sleep whole-brain clearance truth, route-free local immune control, and local synaptic maintenance.</td>
-<td><strong>Exercise-conditioned contrast-influx / meningeal-lymphatic proxy</strong>. It is not all-purpose clearance truth.</td>
+<td><strong>ヒトの運動条件付き造影剤流入/髄膜リンパ管経路</strong><br>Yoo et al. (2025)</td>
+<td><strong>運動条件付き造影剤流入/髄膜リンパ代理</strong></td>
+<td>L静脈内造影剤ダイナミック T1 / black-blood / IR-ALADDIN 負荷による長期運動介入。自然な睡眠のベースライン ルートではありません。</td>
+<td>境界介入条件付き造影剤流入/髄膜リンパ代理。</td>
+<td>自然な睡眠による全脳クリアランスの真実、ルートフリーの局所免疫制御、局所シナプス維持。</td>
+<td><strong>運動条件付き造影剤流入/髄膜リンパ代理</strong>。万能クリアランス真実ではありません。</td>
 </tr>
 <tr>
-<td><strong>Human intrathecal tracer / CSF-to-blood clearance proxy</strong><br>Eide et al. (2023)</td>
-<td><strong>Intrathecal-tracer / CSF-to-blood-clearance-capacity proxy</strong></td>
-<td>Intrathecal tracer plus contrast MRI and population-pharmacokinetic-model burden; not a routine natural-sleep route.</td>
-<td>Bounded intrathecal-tracer / CSF-to-blood-clearance-capacity proxy.</td>
-<td>Natural-sleep whole-brain clearance truth, cell-specific immune control, and local synaptic maintenance.</td>
-<td><strong>Intrathecal-tracer / CSF-to-blood-clearance-capacity proxy</strong>. It is not a route-free glymphatic scalar.</td>
+<td><strong>ヒトくも膜下腔内トレーサー/CSF-血液クリアランスプロキシ</strong><br>Eide et al. (2023)</td>
+<td><strong>くも膜下腔内トレーサー / CSFから血液クリアランス容量へのプロキシ</strong></td>
+<td>くも膜下腔内トレーサーと造影 MRI および集団薬物動態モデル負荷。日常的な自然睡眠ルートではありません。</td>
+<td>境界髄腔内トレーサー / CSF から血液クリアランス容量へのプロキシ。</td>
+<td>自然な睡眠による全脳クリアランスの真実、細胞特異的免疫制御、局所的なシナプス維持。</td>
+<td><strong>くも膜下腔内トレーサー/CSFから血液クリアランス容量へのプロキシ</strong>。ルートフリーのグリンファティック スカラーではありません。</td>
 </tr>
 <tr>
-<td><strong>Human CSF-mobility MRI</strong><br>Hirschler et al. (2025)</td>
-<td><strong>CSF-mobility proxy</strong></td>
-<td>Specialized 7 T MRI route; mobility rather than net flow or direct solute clearance.</td>
-<td>Bounded CSF-mobility proxy.</td>
-<td>Net solute flux, CSF-to-blood clearance capacity, cell-specific immune control, and local synaptic maintenance.</td>
-<td><strong>CSF-mobility proxy</strong>. It is not direct flux truth.</td>
+<td><strong>ヒトCSF移動性MRI</strong><br>Hirschler et al. (2025)</td>
+<td><strong>CSF モビリティ プロキシ</strong></td>
+<td>特殊な 7 T MRI ルート。正味の流れや直接的な溶質クリアランスではなく、移動性を高めます。</td>
+<td>境界のある CSF モビリティ プロキシ。</td>
+<td>純溶質フラックス、CSFから血液へのクリアランス能力、細胞特異的免疫制御、および局所シナプス維持。</td>
+<td><strong>CSF モビリティ プロキシ</strong>。ダイレクトフラックス真実ではありません。</td>
 </tr>
 <tr>
-<td><strong>Human model-based overnight biomarker efflux</strong><br>Dagum et al. (2026)</td>
-<td><strong>Model-based biomarker-efflux proxy</strong></td>
-<td>Investigational-device route with multicompartment modeling and crossover-protocol burden.</td>
-<td>Bounded model-based biomarker-efflux proxy.</td>
-<td>Local immune-controller identity, local synaptic maintenance, and route-free whole-brain clearance truth.</td>
-<td><strong>Model-based biomarker-efflux proxy</strong>. It is not local maintenance-controller ground truth.</td>
+<td><strong>ヒトモデルベースの一晩のバイオマーカー流出</strong><br>Dagum et al. (2026)</td>
+<td><strong>モデルベースのバイオマーカー排出プロキシ</strong></td>
+<td>マルチコンパートメント モデリングとクロスオーバー プロトコル負荷を伴う調査デバイス ルート。</td>
+<td>有界モデルベースのバイオマーカー排出プロキシ。</td>
+<td>局所免疫制御因子のアイデンティティ、局所的なシナプス維持、およびルートフリーの全脳クリアランスの真実。</td>
+<td><strong>モデルベースのバイオマーカー排出プロキシ</strong>。ローカルメンテナンスコントローラーグラウンドトゥルースではありません。</td>
 </tr>
 <tr>
-<td><strong>Human sleep-homeostasis / plasticity proxy</strong><br>Huber et al. (2013); Kuhn et al. (2016); Fehér et al. (2026)</td>
-<td><strong>Perturbation-conditioned maintenance proxy</strong></td>
-<td>Intervention-backed human route, but still controller-indirect and regime-limited.</td>
-<td>Bounded excitability / plasticity-support proxy.</td>
-<td>Which cell type, AIS / channel change, synapse, glial controller, or recovery controller produced the effect.</td>
-<td><strong>Perturbation-conditioned maintenance proxy</strong>. It is not direct readout of the responsible excitability controller.</td>
+<td><strong>人間の睡眠恒常性/可塑性プロキシ</strong><br>Huber et al. (2013);クーンら。 (2016);フェエールら。 (2026)</td>
+<td><strong>摂動条件付きメンテナンス プロキシ</strong></td>
+<td>介入に裏付けられた人的ルートだが、依然として管理者による間接的かつ体制限定である。</td>
+<td>有界興奮性 / 可塑性サポート プロキシ。</td>
+<td>どの細胞タイプ、AIS / チャネル変更、シナプス、グリア コントローラー、または回復コントローラーが効果を生み出したか。</td>
+<td><strong>摂動条件付きメンテナンス プロキシ</strong>。責任のある興奮性コントローラーを直接読み出すものではありません。</td>
 </tr>
 <tr>
-<td><strong>Human state-gated perturbation proxy</strong><br>Zrenner et al. (2018); Khatri et al. (2025)</td>
-<td><strong>State-gated perturbation proxy</strong></td>
-<td>Operationally real closed-loop human route, but still mechanism-indirect.</td>
-<td>Bounded state-gated excitability proxy.</td>
-<td>AIS geometry, channel distribution, cell-specific allocation state, and long-horizon recovery controller.</td>
-<td><strong>State-gated perturbation proxy</strong>. It is not direct measurement of the excitability mechanism itself.</td>
+<td><strong>ヒト状態ゲート摂動プロキシ</strong><br>Zrenner et al. （2018年）;カトリら。 (2025)</td>
+<td><strong>ステートゲート摂動プロキシ</strong></td>
+<td>操作上は実際の閉ループの人的ルートですが、メカニズムは間接的です。</td>
+<td>有界状態ゲート興奮性プロキシ。</td>
+<td>AIS ジオメトリ、チャネル分散、セル固有の割り当て状態、および長期復旧コントローラー。</td>
+<td><strong>ステートゲート摂動プロキシ</strong>。興奮メカニズムそのものを直接測定するものではありません。</td>
 </tr>
 <tr>
-<td><strong>Still lacking a comparable in vivo whole-brain human route</strong></td>
-<td><strong>Still explicitly latent</strong></td>
-<td>No comparable living-human whole-brain route in the reviewed stack bundle.</td>
-<td>No safe calibrator role yet.</td>
-<td>These layers still cannot be promoted from human evidence to comparable whole-brain in vivo ground truth on the basis of the reviewed measurement classes alone.</td>
-<td><strong>Keep them explicitly latent</strong> or externally calibrated; do not auto-fill them from the proxy rows above.</td>
+<td><strong>同等の生体内全脳ヒト経路がまだ欠けている</strong></td>
+<td><strong>まだ明示的に潜在的</strong></td>
+<td>レビューされたスタック バンドルには、匹敵する生きた人間の全脳ルートはありません。</td>
+<td>安全なキャリブレータの役割はまだありません。</td>
+<td>これらの層は、レビューされた測定クラスのみに基づいて、人間の証拠から同等の全脳の生体内グラウンドトゥルースに昇格することはまだできません。</td>
+<td><strong>明示的に潜在的なままにしておく</strong>または外部で校正します。上記のプロキシ行から自動入力しないでください。</td>
 </tr>
 </tbody>
 </table>
 
-<strong>Proxy class, operational maturity, and calibrator role have to be logged separately</strong>
+<strong>Proxy クラス、運用の成熟度、およびキャリブレータの役割を個別に記録する必要がある</strong>
 <p>
-The key operational criticism is that a route can be real without being broad. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> built an atlas from <strong>33 healthy participants</strong> calibrated against postmortem autoradiography, but that still calibrates a <strong>synaptic-density prior</strong> rather than task-time synaptic efficacy. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> derived a <strong>five-metabolite similarity scaffold</strong> from <strong>51 healthy adolescents</strong> with an <strong>independent replication sample of 13</strong>, but that still calibrates a <strong>biochemical organization scaffold</strong> rather than an energetic controller. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> measured <strong>ATP synthesis, phosphorus metabolites, and pH</strong> in <strong>12 healthy participants</strong>, which calibrates only a <strong>bounded energetic-balance proxy</strong>. <a href="https://doi.org/10.1002/mrm.26560" target="_blank">Ren et al. (2017)</a> measured <strong>PCr&rarr;&gamma;-ATP and Pi&rarr;&gamma;-ATP exchange flux</strong> under a <strong>5-pool MT model</strong> in <strong>six subjects</strong>, which calibrates only a <strong>bounded model-conditioned exchange-flux proxy</strong>. <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al. (2024)</a> reported a <strong>whole-brain NAD-content map</strong> at <strong>7 T</strong> under subspace denoising and long acquisitions, while <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a> reported a <strong>task-evoked local NAD<sup>+</sup> route</strong> in a functionally localized occipital voxel of <strong>25 healthy volunteers</strong>. Those are real 31P routes, but they still calibrate only a <strong>bounded metabolite / pH balance proxy</strong>, a <strong>bounded model-conditioned exchange-flux proxy</strong>, a <strong>bounded whole-brain NAD-content map</strong>, or a <strong>bounded task-locked local NAD-dynamics proxy</strong>. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> reported <strong>absolute deuterated metabolite maps</strong> at <strong>7 T</strong> with a dedicated calibration pipeline, while <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> reported <strong>deuterium kinetic-rate maps</strong> under blood-input and explicit kinetic modeling in a <strong>five-participant</strong> cohort. Those are real routes, but they still calibrate only <strong>bounded deuterium metabolite-mapping</strong> or <strong>bounded deuterium kinetic-rate</strong> proxies. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al. (2023)</a> estimated <strong>tract-scale transmission speed</strong> in a developmental human route, while <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> showed myelin-bilayer mapping in <strong>two healthy volunteers</strong> on specialized hardware. Those are real timing-support advances, but they still calibrate only a <strong>bounded tract-scale timing-support proxy</strong> or a <strong>bounded macro myelin proxy</strong>, not per-axon conduction control. <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">Tallman et al. (2025)</a> then added a <strong>local human clinical-unit allocation route</strong> in epilepsy patients, but one that still stops at a bounded local calibrator because firing is only an indirect index of excitability and coverage is not whole-brain. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber et al. (2013)</a>, <a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al. (2016)</a>, and <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026)</a> calibrate only a <strong>bounded perturbation-conditioned maintenance proxy</strong>, while <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> plus <a href="https://doi.org/10.1016/j.brs.2024.12.1193" target="_blank">Khatri et al. (2025)</a> calibrate only a <strong>bounded state-gated corticospinal / plasticity proxy</strong>. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">Morgan et al. (2024)</a> plus <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025)</a> calibrate only a <strong>bounded BBB water-exchange proxy</strong>, while <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">Chung et al. (2025)</a> calibrates only a <strong>bounded tracer-specific BBB transport proxy</strong>. <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">Petitclerc et al. (2021)</a>, <a href="https://doi.org/10.1080/21688370.2021.1963143" target="_blank">Anderson et al. (2022)</a>, <a href="https://doi.org/10.1177/0271678X251369218" target="_blank">Wu et al. (2026)</a>, and <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclerc et al. (2026)</a> then calibrate only <strong>bounded choroid-plexus perfusion</strong>, <strong>blood-to-CSF transport</strong>, <strong>choroid-plexus water-cycling</strong>, <strong>apparent BCSFB exchange</strong>, or <strong>boundary-separated BBB-versus-BCSFB exchange</strong> proxies, not one generic barrier-support meter. Astrocyte PET also splits by route role: <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> calibrate only a <strong>bounded MAO-B target-validation proxy</strong>, <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al. (2022)</a> plus <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a> and <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> calibrate only a <strong>bounded MAO-B disease-context proxy</strong>, <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al. (2025)</a> calibrate only a <strong>bounded MAO-B brain-quantification proxy</strong>, <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al. (2026)</a> calibrate only a <strong>bounded whole-body biodistribution / tracer-burden proxy</strong>, <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">Matsuoka et al. (2026)</a> plus <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> calibrate only a <strong>bounded SL25.1188-related MAO-B proxy</strong>, and <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. (2018)</a> plus <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Livingston et al. (2022)</a> calibrate only a <strong>bounded I2BS-related astrocyte proxy</strong>. Human neuroimmune PET also splits by target class and route role: <a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a> plus <a href="https://doi.org/10.1093/brain/awaf078" target="_blank">Wijesinghe et al. (2025)</a> calibrate only a <strong>bounded TSPO disease-context / validation-bounded proxy</strong>, <a href="https://doi.org/10.1186/s13550-022-00929-4" target="_blank">Horti et al. (2022)</a> plus <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">Ogata et al. (2025)</a> calibrate only a <strong>bounded CSF1R route-setting proxy</strong>, and <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yan et al. (2025)</a> calibrates only a <strong>bounded COX-2 enzyme-defined proxy</strong>. <a href="https://doi.org/10.1126/science.aax5440" target="_blank">Fultz et al. (2019)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">Kim, Huang, &amp; Liu (2025)</a>, <a href="https://doi.org/10.1038/s41467-025-66548-4" target="_blank">Lim et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-025-58726-1" target="_blank">Yoo et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">Eide et al. (2023)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> then calibrate only <strong>sleep-state CSF oscillation</strong>, <strong>parenchyma-CSF water exchange</strong>, <strong>respiration-conditioned CSF net flow</strong>, <strong>exercise-conditioned contrast influx / meningeal-lymphatic flow</strong>, <strong>intrathecal-tracer / CSF-to-blood-clearance capacity</strong>, <strong>CSF mobility</strong>, or <strong>model-based biomarker efflux</strong> respectively, not one generic clearance-support meter. Therefore, this page now treats <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>safe calibrator role</strong> as separate metadata that all have to be stated before claim ceilings are interpreted.
+運用上の重要な批判は、ルートが広くなくても現実になり得るということです。 <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">ヨハンセンら。 (2024) </a> は、<strong> 33 人の健康な参加者からアトラスを構築しました。</strong> は死後オートラジオグラフィーに対して校正されましたが、それでも課題時のシナプス効率ではなく、</strong> よりも前の <strong> シナプス密度を校正しました。 <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Llucchetti et al. (2025) </a> は、13</strong> の <strong> 独立複製サンプルを使用して、<strong>51 人の健康な青年 </strong> から <strong>5 つの代謝物類似性足場 </strong> を導き出しましたが、それでもエネルギーコントローラーではなく <strong> 生化学組織足場 </strong> を校正しています。 <a href="https://doi.org/10.1002/nbm.3384" target="_blank">レンら。 (2015) </a> は、<strong>12 人の健康な参加者 </strong> の <strong>ATP 合成、リン代謝物、および pH</strong> を測定しました。これは、<strong> 境界エネルギーバランスプロキシ </strong> のみを校正します。 <a href="https://doi.org/10.1002/mrm.26560" target="_blank">レンら。 (2017) </a> は、<strong>6 人の被験者 </strong> における <strong>5 プール MT モデル </strong> の下で、<strong>PCrα-γ-ATP および Piαγ-ATP 交換フラックス </strong> を測定しました。これは、<strong> 有界モデル条件付き交換フラックス プロキシ </strong> のみを校正します。 <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guoら。 (2024) </a> は、部分空間ノイズ除去と長時間取得の下で、<strong> 全脳 NAD コンテンツ マップ </strong> <strong>7 T</strong> を報告しました。 (2026) </a> は、<strong>25 人の健康なボランティア </strong> の機能的に局在化した後頭ボクセルにおける <strong> タスク誘発局所 NAD<sup>+</sup> ルート </strong> を報告しました。これらは実際の 31P ルートですが、依然として <strong> 境界のある代謝物 / pH バランス プロキシ </strong>、<strong> 境界のあるモデル条件付き交換フラックス プロキシ </strong>、<strong> 境界のある全脳 NAD コンテンツ マップ </strong>、または <strong> 境界のあるタスクロック ローカル NAD ダイナミクス プロキシ </strong> のみを校正します。 <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri 他(2026) </a> は、専用の校正パイプラインを使用して <strong> の絶対重水素化代謝物マップ </strong> を <strong>7 T</strong> で報告しました。 (2025) </a> は、<strong>5 人の参加者 </strong> コホートにおける血液入力および明示的な速度論モデリングの下で​​、<strong> 重水素の速度マップ </strong> を報告しました。これらは実際のルートですが、それでも <strong> 有界重水素代謝物マッピング </strong> または <strong> 有界重水素運動速度 </strong> プロキシのみを校正します。 <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">van Blooijs et al. (2023) </a> は、ヒトの発生経路における <strong>tract スケールの伝達速度 </strong> を推定しました。一方、<a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024) </a> は、特殊なハードウェア上で <strong>2 人の健康なボランティア </strong> におけるミエリン二重層マッピングを示しました。これらは実際のタイミング サポートの進歩ですが、それでも軸索ごとの伝導制御ではなく、<strong> 境界のある管スケール タイミング サポート プロキシ </strong> または <strong> 境界のあるマクロ ミエリン プロキシ </strong> のみを校正します。 <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">Tトールマンら(2025)</a> に追加 <strong> てんかん患者における局所ヒト臨床単位割り当てルート </strong> ですが、発火は興奮性の間接的な指標にすぎず、脳全体が対象ではないため、依然として有界局所キャリブレーターで停止します。 <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">Huber 他(2013)</a>、<a href="https://doi.org/10.1038/ncomms12455" target="_blank">Kuhn et al。 (2016)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">Fehér et al. (2026) </a> は <strong> 有界摂動条件付きメンテナンス プロキシ </strong> のみを校正しますが、<a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> プラス <a href="https://doi.org/10.1016/j.brs.2024.12.1193" target="_blank">Khatri et al. (2025)</a> は、PH100​​X 有界状態ゲート皮質脊髄 / 可塑性プロキシ </strong> のみを校正します。 <a href="https://doi.org/10.1002/nbm.5256" target="_blank">モーガンら(2024)</a> プラス <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">Padrela et al. (2025) </a> は <strong> 境界付き BBB 水交換プロキシ </strong> のみを校正しますが、<a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">chung et al. (2025)</a> は、<strong>bounded トレーサー固有の BBB トランスポート プロキシ </strong> のみを調整します。 <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">Zhao et al. (2020)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">プチクレール 他(2021)</a>、<a href="https://doi.org/10.1080/21688370.2021.1963143" target="_blank">アンダーソン他(2022)</a>、<a href="https://doi.org/10.1177/0271678X251369218" target="_blank">Wu 他(2026)</a>、<a href="https://doi.org/10.1177/0271678X261429042" target="_blank">Petitclec et al. (2026) </a> は、<strong> 境界脈絡叢灌流 </strong>、<strong> 血液から CSF への輸送 </strong>、<strong> 脈絡叢の水循環 </strong>、<strong> 見かけの BCSFB 交換 </strong>、または <strong> 境界分離のみを校正します。 BBB 対 BCSFB 交換</strong> プロキシ、1 つの汎用バリア サポート メーターではありません。星状細胞 PET も経路の役割によって分割されます:<a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">Villemagne et al. (2022)</a> は <strong> 境界付き MAO-B ターゲット検証プロキシのみを校正します</strong>、<a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">Villemagne et al。 (2022)</a> プラス <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">Jaisa-Aad et al. (2024)</a> および <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best et al. (2026)</a> は、<strong> 境界のある MAO-B 疾患コンテキスト プロキシのみを校正します</strong>、<a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">Hiraoka et al。 (2025) </a> は <strong>bounded MAO-B 脳定量プロキシのみを校正します</strong>、<a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">Mesfin et al。 (2026)</a> は <strong> 境界のある全身生体内分布 / トレーサー負荷プロキシのみを校正します</strong>、<a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">matsuoka et al。 (2026)</a> プラス <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">Best 他(2026) </a> は、<strong>bounded SL25.1188 関連 MAO-B プロキシ </strong> および <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">Tyacke et al. のみを校正します。 (2018)</a> プラス <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">Lリビングストンら(2022)</a> は、<strong> 境界のある I2BS 関連星状細胞プロキシ </strong> のみを校正します。ヒト神経免疫 PET も標的クラスと経路の役割によって分割されます: <a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">Biechele et al. (2023)</a> プラス <a href="https://doi.org/10.1093/brain/awaf078" target="_blank">Wijesinghe et al. (2025)</a> は、<strong> 境界 TSPO 疾患コンテキスト / 検証境界プロキシのみを校正します</strong>、<a href="https://doi.org/10.1186/s13550-022-00929-4" target="_blank">Horti et al。 (2022)</a>プラス<a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">尾形ら。 (2025) </a> は、<strong> 限定された CSF1R ルート設定プロキシ </strong> および <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">Yan らのみを調整します。 (2025)</a> は、<strong> 結合 COX-2 酵素定義プロキシ </strong> のみを校正します。 <a href="https://doi.org/10.1126/science.aax5440" target="_blank">Fultz 他(2019)</a>、 <a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">キム、ファン、＆amp; Liu (2025)</a>、<a href="https://doi.org/10.1038/s41467-025-66548-4" target="_blank">Lim et al. (2025)</a>、<a href="https://doi.org/10.1038/s41467-025-58726-1" target="_blank">Yoo 他(2025)</a>、<a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">Eide et al. (2023)</a>、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> は、<strong> 睡眠状態の CSF 振動 </strong>、<strong> 柔組織 - CSF 水交換 </strong>、<strong> 呼吸条件付き CSF 正味流量 </strong>、<strong> 運動条件付き造影剤流入 / 髄膜リンパ流 </strong>、 <strong>くも膜下腔内トレーサー/CSFから血液へのクリアランス容量</strong>、<strong>CSFモビリティ</strong>、または<strong>モデルベースのバイオマーカー排出</strong>であり、1つの汎用クリアランスサポートメーターではありません。したがって、このページでは、<strong>proxy class</strong>、<strong>operational maturity</strong>、および <strong>safe calibrator role</strong> を、クレームの上限が解釈される前にすべて記載する必要がある別個のメタデータとして扱うようになりました。
 </p>
 
-<strong>Spectroscopy rows also split by quantity type and model burden</strong>
+<strong>分光分析行も量の種類とモデルの負担によって分割されます</strong>
 <p>
-The spectroscopy rows cannot be read as one proxy family. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Lucchetti et al. (2025)</a> constrained <strong>parcel-level correlation structure</strong> across five metabolites, <a href="https://doi.org/10.1109/TBME.2025.3572448" target="_blank">Guo et al. (2025)</a> constrained <strong>high-resolution 1H-MRSI metabolite-distribution maps</strong> under explicit reconstruction and artifact-control burden, <a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al. (2015)</a> constrained <strong>ATP synthesis / phosphorus-metabolite balance / pH</strong>, <a href="https://doi.org/10.1002/mrm.26560" target="_blank">Ren et al. (2017)</a> constrained <strong>PCr&rarr;ATP and Pi&rarr;ATP exchange flux</strong> under a magnetization-transfer model, <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al. (2024)</a> constrained <strong>whole-brain intracellular NAD content</strong>, <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al. (2026)</a> constrained <strong>task-evoked local NAD<sup>+</sup> dynamics</strong>, <a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al. (2026)</a> constrained <strong>absolute deuterated-metabolite concentrations</strong> under a dedicated quantification pipeline, and <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> constrained <strong>glucose-transport and kinetic-rate maps</strong> under a blood-input model. Even within <sup>1</sup>H-MRSI mapping, <a href="https://doi.org/10.1002/brb3.1852" target="_blank">Bhogal et al. (2020)</a>, <a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">Wright et al. (2022)</a>, <a href="https://doi.org/10.1148/radiol.232401" target="_blank">Baboli et al. (2024)</a>, and <a href="https://doi.org/10.1109/TBME.2025.3572448" target="_blank">Guo et al. (2025)</a> show that lipid suppression, tissue-fraction correction, water / relaxation modeling, ghosting, aliasing, and low-SNR handling materially shape the inferred maps. Therefore, this site does not allow ``human spectroscopy evidence'' as a single proxy label. The quantity type, cohort burden, hardware burden, and model burden all have to be named before the claim ceiling is read.
+分光学行を 1 つのプロキシ ファミリとして読み取ることはできません。 <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">Llucchetti et al. (2025) </a> は、5 つの代謝産物にわたる <strong> 小包レベルの相関構造を制約した </strong>、<a href="https://doi.org/10.1109/TBME.2025.3572448" target="_blank">Guo et al. (2025) </a> に制約された <strong> 高解像度 1H-MRSI 代謝物分布マップ、明示的な再構築とアーティファクト制御負荷の下での </strong>、<a href="https://doi.org/10.1002/nbm.3384" target="_blank">Ren et al。 (2015) </a> の制約された <strong>ATP 合成 / リン代謝物バランス / pH</strong>、<a href="https://doi.org/10.1002/mrm.26560" target="_blank">Ren et al. (2017) </a> は、磁化転移モデルの下で <strong>PCr&rarr;ATP と Pi&rarr;ATP 交換磁束 </strong> を拘束しました、<a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">Guo et al。 (2024)</a> 抑制された <strong> 全脳細胞内 NAD 含量 </strong>、<a href="https://doi.org/10.1177/0271678X261415784" target="_blank">Kaiser et al。 (2026) </a> 拘束 <strong> タスク誘発局所 NAD<sup>+</sup> ダイナミクス </strong>、<a href="https://doi.org/10.1002/mrm.70308" target="_blank">Karkouri et al。 (2026) </a> は専用の定量パイプラインの下で <strong> 重水素化代謝物の絶対濃度 </strong> を制約し、<a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025) </a> は、血液入力モデルの下で <strong> グルコース輸送および運動速度マップ </strong> を制約しました。 <sup>1</sup>H-MRSI マッピング内でも、<a href="https://doi.org/10.1002/brb3.1852" target="_blank">Bhogal et al. (2020)</a>、<a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">ライト他(2022)</a>、<a href="https://doi.org/10.1148/radiol.232401" target="_blank">Baboli et al. (2024)</a>、<a href="https://doi.org/10.1109/TBME.2025.3572448" target="_blank">Guo et al。 (2025)</a> は、脂質抑制、組織分画補正、水/緩和モデリング、ゴースト、エイリアシング、および低 SNR 処理が推論されたマップを実質的に形作ることを示しています。したがって、このサイトでは、「人間の分光学的証拠」を単一の代理ラベルとして使用することは許可されていません。請求上限を読み取る前に、数量タイプ、コホート負担、ハードウェア負担、およびモデル負担をすべて指定する必要があります。
 </p>
 
-<strong>Site rule for human proxy classes</strong>
+<strong>人間プロキシ クラスのサイト ルール</strong>
 <p>
-On this site, human-side summaries must name the <strong>proxy class</strong> explicitly. ``Human evidence exists'' is too coarse. The summary has to tell the reader whether the result is a <strong>local structural scaffold</strong>, <strong>regional synaptic-density proxy</strong>, <strong>macro 1H-MRSI biochemical similarity scaffold</strong>, <strong>high-resolution 1H-MRSI metabolite-distribution proxy</strong>, <strong>macro 31P metabolite / pH balance proxy</strong>, <strong>macro 31P MT exchange-flux proxy</strong>, <strong>macro 31P NAD-content map proxy</strong>, <strong>localized functional 31P NAD-dynamics proxy</strong>, <strong>macro deuterium metabolite-mapping / absolute-quantification proxy</strong>, <strong>macro deuterium kinetic-rate proxy</strong>, <strong>local clinical-unit allocation-related proxy</strong>, <strong>perturbation-conditioned maintenance proxy</strong>, <strong>state-gated perturbation proxy</strong>, <strong>tract-scale transmission-speed proxy</strong>, <strong>quantity-defined macro ionic / thermal / myelin proxy family</strong>, <strong>macro BBB water-exchange proxy</strong>, <strong>tracer-specific BBB transport proxy</strong>, <strong>choroid-plexus perfusion proxy</strong>, <strong>blood-to-CSF water-transport proxy</strong>, <strong>choroid-plexus water-cycling proxy</strong>, <strong>apparent BCSFB-exchange proxy</strong>, <strong>boundary-separated BBB-versus-BCSFB exchange proxy</strong>, <strong>MAO-B target-validation / disease-context / brain-quantification / whole-body-biodistribution / SL25.1188 astrocyte proxies</strong>, <strong>I2BS-related astrocyte proxy</strong>, <strong>TSPO disease-context / validation-bounded neuroimmune proxy</strong>, <strong>CSF1R route-setting neuroimmune proxy</strong>, <strong>COX-2 enzyme-defined neuroimmune proxy</strong>, <strong>sleep-state CSF-oscillation proxy</strong>, <strong>parenchyma-CSF water-exchange proxy</strong>, <strong>respiration-conditioned CSF-net-flow proxy</strong>, <strong>exercise-conditioned contrast-influx / meningeal-lymphatic proxy</strong>, <strong>intrathecal-tracer / CSF-to-blood-clearance-capacity proxy</strong>, <strong>CSF-mobility proxy</strong>, or <strong>model-based biomarker-efflux proxy</strong>. When the route is still specialized, model-dependent, or small-cohort, that maturity limit must be stated alongside the proxy class. And when the route calibrates only one bounded hidden-state family, that <strong>calibrator role</strong> must be written explicitly rather than inherited from the modality label.
+このサイトでは、人間側のサマリーは <strong>proxy クラス </strong> に明示的に名前を付ける必要があります。 「人間の証拠が存在する」というのは粗すぎる。要約では、結果が読者に、<strong> 局所構造足場</strong>、<strong> 領域シナプス密度プロキシ</strong>、<strong> マクロ 1H-MRSI 生化学的類似性足場</strong>、<strong> 高解像度 1H-MRSI 代謝物分布プロキシ</strong>、<strong> マクロ 31P 代謝物 / pH バランスであるかどうかを伝える必要があります。 proxy</strong>、<strong>macro 31P MT 交換フラックス proxy</strong>、<strong>macro 31P NAD 含有量マップ proxy</strong>、<strong> 局在化機能 31P NAD ダイナミクス proxy</strong>、<strong>macro 重水素代謝物マッピング / 絶対定量プロxy</strong>、<strong>macro 重水素キネティックレートプロキシ</strong>、<strong>ローカル臨床ユニット割り当て関連プロキシ</strong>、<strong>摂動条件付きメンテナンスプロキシ</strong>、<strong>状態ゲート摂動プロキシ</strong>、<strong>トラクトスケール伝送速度プロキシ</strong>、<strong>量定義マクロイオン/サーマル/ミエリンプロキシファミリー</strong>、 <strong> マクロ BBB 水交換プロキシ</strong>、<strong> トレーサー固有 BBB 輸送プロキシ</strong>、<strong> 脈絡叢灌流プロキシ</strong>、<strong> 血液から CSF への水輸送プロキシ</strong>、<strong> 脈絡叢水循環プロキシ</strong>、<strong> 見かけの BCSFB 交換プロキシ</strong>、<strong>境界分離BBB対BCSFB交換プロキシ</strong>、<strong>MAO-Bターゲット検証/疾患コンテキスト/脳定量化/全身生体内分布/SL25.1188アストロサイトプロキシ</strong>、<strong>I2BS関連アストロサイトプロキシ</strong>、<strong>TSPO疾患コンテキスト / 検証境界神経免疫プロキシ</strong>、<strong>CSF1R ルート設定神経免疫プロキシ</strong>、<strong>COX-2酵素定義神経免疫プロキシ</strong>、<strong>睡眠状態CSF振動プロキシ</strong>、<strong>柔組織-CSF水交換プロキシ</strong>、<strong>呼吸条件付きCSF-ネットフロープロキシ</strong>、<strong>運動条件付き造影剤流入/髄膜リンパ管プロキシ</strong>、<strong>くも膜下腔内トレーサー/CSF-血液除去能プロキシ</strong>、<strong>CSF移動性プロキシ</strong>、または<strong>モデルベースのバイオマーカー流出プロキシ</strong>。ルートがまだ特化されている、モデルに依存している、または小規模なコホートである場合、その成熟度の制限をプロキシ クラスと並行して記述する必要があります。また、ルートが 1 つの限定された隠れ状態ファミリーのみをキャリブレーションする場合、その <strong>calibrator ロール </strong> は、モダリティ ラベルから継承するのではなく、明示的に書き込む必要があります。
 </p>
 
-<strong>Same-subject still does not solve the bridge by itself</strong>
+<strong>同じ件名は依然として単独でブリッジを解決できません</strong>
 <p>
-One more shortcut remained too easy on this page: to read <strong>same subject</strong> or <strong>same brain</strong> as if several human rows had already become one state sample. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that preservation route changes extracellular-space retention and native geometry, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> remained a rapidly preserved local surgical fragment rather than a living whole-brain route, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> remained a sequential same-brain pipeline rather than same-time capture. Therefore, if a human proxy bundle crosses live and ex vivo or separated physiological regimes, this site now asks for a <a href="https://mind-upload.com/verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> that names elapsed time, regime continuity, coordinate-transfer burden, and residual drift ceiling before same-state language is allowed.
+このページには、もう 1 つの近道があまりにも簡単でした。それは、<strong>同じ被験者</strong>または<strong>同じ脳</strong>を、あたかも複数の人間の列がすでに1つの状態サンプルになっているかのように読み取ることです。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Luら(2023) </a> は、保存経路によって細胞外空間保持とネイティブ形状が変化することを示しました。<a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024) </a> は、生きた全脳経路ではなく、急速に保存された局所的な外科的断片のままであり、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025) </a> は、同時キャプチャではなく、逐次同一脳パイプラインのままでした。したがって、人間のプロキシ バンドルが生と体外、または分離された生理学的レジームを横断する場合、このサイトでは現在、同一状態言語が許可されるまでの経過時間、レジーム連続性、座標転送負荷、および残留ドリフト上限を指定する <a href="https://mind-upload.com/verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> を要求します。
 </p>
 
-<strong>Why this ladder matters operationally</strong>
+<strong>このはしごが運用上重要な理由</strong>
 <p>
-The danger is not only philosophical overreach. If these rows are compressed into one sentence, readers can silently replace ``human proxy-rich evidence'' with ``human near-direct maintenance-state observation.'' This site does not allow that rephrasing. The missing layers above stay latent until a comparable whole-brain in vivo human route or an explicit external-calibration route is shown.
+危険は哲学の行き過ぎだけではありません。これらの行が 1 つの文に圧縮されている場合、読者は黙って「`human proxy-rich evidence'' with `「人間による直接に近い保守状態の観察」」を置き換えることができます。このサイトではその言い換えを許可していません。上記の欠落した層は、同等の生体内人間の全脳経路または明示的な外部校正経路が示されるまで、潜在的なままである。
 </p>
 
-<h2>8. Proxy-rich human evidence still does not become state-complete by composition</h2>
+<h2>8。代理が豊富な人間の証拠は、依然として構成</h2>によって完全な状態にはなりません
 <p>
-A remaining weakness after separating <strong>proxy class</strong>, <strong>operational maturity</strong>, and <strong>calibrator role</strong> was that a reader could still mentally add the strongest human rows together and conclude that the hidden-state problem is almost solved. The primary literature does not support that shortcut. The rows above live on different spatial units, time windows, and inference layers, and several of the strongest demonstrations are still specialized or model-heavy. The safe reading on this site is therefore not ``the proxies add up to completeness,'' but ``the proxies reduce different error terms and still leave a fusion problem.''
+<strong> プロキシ クラス </strong>、<strong> 運用成熟度 </strong>、<strong> キャリブレータ ロール </strong> を分離した後に残った弱点は、読者が依然として頭の中で最も強力な人間の行を加算し、隠れ状態の問題がほぼ解決されたと結論付けることができるということでした。一次文献ではそのショートカットはサポートされていません。上記の行は、さまざまな空間単位、時間ウィンドウ、推論レイヤーに存在しており、最も強力なデモンストレーションのいくつかは依然として特殊化されているか、モデルが多用されています。したがって、このサイトの安全な読み方は「`the proxies add up to completeness,'' but `」ではなく、「プロキシはさまざまなエラー項を削減するが、融合の問題は依然として残る」というものではありません。
 </p>
 <table>
 <thead>
 <tr>
-<th>Compositional shortcut to block</th>
-<th>Why the cited literature does not support it</th>
-<th>Operational correction on this site</th>
+<th>ブロックへの合成ショートカット</th>
+<th>引用文献がそれをサポートしていない理由</th>
+<th>当サイトの操作修正</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>``Atlas + proxy = current individual state''</strong></td>
-<td><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">Johansen et al. (2024)</a> and <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> are atlas / cohort resources. They constrain regional organization and synaptic-density distribution, but they do not directly read one individual's current task-time state.</td>
-<td>Write <strong>atlas</strong> or <strong>normative prior</strong> explicitly; do not phrase these rows as current-state measurement.</td>
+<td><strong>「アトラス + プロキシ = 現在の個々の状態」</strong></td>
+<td><a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">ヨハンセンら。 (2024)</a> および <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">Hansen et al. (2022)</a> はアトラス/コホート リソースです。これらは、局所的な組織化とシナプス密度の分布を制約しますが、ある個人の現在のタスク時間の状態を直接読み取るわけではありません。</td>
+<td><strong>atlas</strong> または <strong>normative priority</strong> を明示的に書き込みます。これらの行を現在の状態の測定値として表現しないでください。</td>
 </tr>
 <tr>
-<td><strong>``Several macro proxies = one local controller''</strong></td>
-<td><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a>, <a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>, <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian et al. (2025)</a>, and <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> constrain different macro energetic, thermal, ionic, or myelin variables. They do not identify branch-local ATP reserve, current chloride set point, or per-axon conduction control as one merged mechanism.</td>
-<td>Keep local controllers explicit in the Observability Budget; do not auto-fill them from macro proxy coexistence.</td>
+<td><strong>「複数のマクロ プロキシ = 1 つのローカル コントローラー」</strong></td>
+<td><a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li 他(2025)</a>、<a href="https://doi.org/10.1093/brain/awab466" target="_blank">Rzechorzek et al. (2022)</a>、<a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">Qian 他(2025)</a>、および<a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al。 (2024) </a> は、さまざまなマクロのエネルギー変数、熱変数、イオン変数、またはミエリン変数を制約します。彼らは、枝局所ATP貯蔵量、現在の塩化物設定値、または軸索ごとの伝導制御を1つの統合されたメカニズムとして特定していません。</td>
+<td>可観測性バジェットでローカル コントローラーを明示的に保ちます。マクロ プロキシの共存から自動入力しないでください。</td>
 </tr>
 <tr>
-<td><strong>``Support-state proxy = direct maintenance controller''</strong></td>
-<td><a href="https://doi.org/10.1038/s41467-025-66548-4" target="_blank">Lim et al. (2025)</a>, <a href="https://doi.org/10.1038/s41467-025-58726-1" target="_blank">Yoo et al. (2025)</a>, <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">Hirschler et al. (2025)</a>, and <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026)</a> constrain respiration-conditioned net flow, exercise-conditioned contrast influx / meningeal-lymphatic flow, CSF mobility, or brain-to-plasma biomarker efflux under route-specific acquisition and model assumptions, not cell-specific immune control or synaptic maintenance logic.</td>
-<td>Read them as <strong>support-state evidence</strong> only; leave local maintenance control latent unless another calibrated route closes it.</td>
+<td><strong>「サポート状態プロキシ = 直接メンテナンス コントローラー」</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-66548-4" target="_blank">Lim et al. (2025)</a>、<a href="https://doi.org/10.1038/s41467-025-58726-1" target="_blank">Yoo 他(2025)</a>、<a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">ヒルシュラーら。 (2025)</a>、<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">Dagum et al. (2026) </a> は、細胞固有の免疫制御やシナプス維持ロジックではなく、経路固有の収集およびモデルの仮定の下で、呼吸条件の正味の流れ、運動条件の造影剤流入 / 髄膜リンパ流、CSF 移動性、または脳から血漿へのバイオマーカーの流出を制限します。</td>
+<td><strong>サポート状態の証拠として読み替えてください</strong>のみ。別の調整されたルートが閉じない限り、ローカル メンテナンス コントロールを潜在的なままにします。</td>
 </tr>
 <tr>
-<td><strong>``Cross-stack fusion adds only observables''</strong></td>
-<td><a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020)</a> made the model burden in EEG-fMRI fusion explicit, while <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed that simultaneous multimodal recordings can carry both common and divergent structure across modalities. Fusion therefore combines model burdens and mismatch risks as well as direct observables.</td>
-<td>Log the <strong>fusion model</strong>, <strong>external calibration source</strong>, and <strong>abstention boundary</strong> separately instead of treating multimodal combination as self-justifying; on this site that package is the <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a>.</td>
+<td><strong>「クロススタック融合は観測可能なものだけを追加する」</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020) </a> は EEG-fMRI 融合におけるモデル負荷を明確にしましたが、<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> および <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen ら。 (2025) </a> は、同時マルチモーダル記録がモダリティ全体で共通構造と発散構造の両方を保持できることを示しました。したがって、Fusion では、モデルの負担と不一致のリスク、および直接の観測可能量が結合されます。</td>
+<td> <strong> 融合モデル </strong>、<strong> 外部校正源 </strong>、および <strong> 棄権境界 </strong> を、多峰性の組み合わせを自己正当化するものとして扱うのではなく、個別にログに記録します。このサイトでは、そのパッケージは <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a>.</td> です。
 </tr>
 <tr>
-<td><strong>``Different scales acquired somewhere imply same-subject completeness''</strong></td>
-<td><a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> is local ex vivo nanoscale human cortex, whereas <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> and <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik et al. (2024)</a> are small-cohort specialized in vivo macro routes. The cited papers do not demonstrate same-subject, same-time, whole-brain cross-stack state identification.</td>
-<td>Reserve stronger wording for studies that disclose <strong>same-subject co-registration</strong>, <strong>same-regime alignment</strong>, and <strong>externally validated cross-stack fusion</strong>.</td>
+<td><strong>「どこかで取得された異なるスケールは、同じ主題の完全性を暗示します」</strong></td>
+<td><a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024) </a> は局所的な ex vivo ナノスケールのヒト皮質であるのに対し、<a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">Li et al. (2025)</a> および <a href="https://doi.org/10.1002/mrm.29998" target="_blank">Baadsvik ら。 (2024)</a> は、生体内マクロ経路に特化した小規模コホートです。引用された論文は、同じ被験者、同じ時間、全脳のクロススタック状態の識別を実証していません。</td>
+<td><strong>同一被験者の共同登録</strong>、<strong>同一レジームアライメント</strong>、および<strong>外部検証されたクロススタック融合</strong>.</td>を開示する研究については、より強い表現を留保します
 </tr>
 <tr>
-<td><strong>``Same-subject sequential pipeline = same-state multistack sample''</strong></td>
-<td><a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that preservation route changes geometry, <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> remained a local ex vivo fragment, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> remained a sequential same-brain workflow rather than same-time capture. The cited papers do not show that specimen identity alone closes time, regime, or registration drift.</td>
-<td>Attach a <strong>State-Continuity Bridge Card</strong> that names elapsed time, regime continuity, coordinate transfer, and residual drift ceiling before promoting the bundle above proxy-rich evidence.</td>
+<td><strong>「同一サブジェクトのシーケンシャル パイプライン = 同じ状態のマルチスタック サンプル」</strong></td>
+<td><a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Luら。 (2023) </a> は、保存ルートによって形状が変化することを示しました。<a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024) </a> は局所的な ex vivo フラグメントのままであり、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> は、同時キャプチャではなく、シーケンシャル同一脳ワークフローのままでした。引用された論文は、標本の同一性だけで時間、体制、または登録ドリフトが解消されることを示していません。</td>
+<td>バンドルをプロキシ豊富な証拠の上にプロモートする前に、経過時間、レジーム継続性、座標転送、および残留ドリフト上限を指定する <strong>State-Continuity Bridge Card</strong> を接続します。</td>
 </tr>
 </tbody>
 </table>
 
-<strong>Composition rule on this site</strong>
+<strong>このサイトの構成ルール</strong>
 <p>
-This site now treats <strong>proxy-rich human evidence</strong> as a real advance over a single proxy class, but still below <strong>same-subject, cross-stack, externally calibrated state identification</strong>. To move upward, a paper or benchmark package has to disclose co-registration scope, perturbation alignment, clock / lag audit, quantification models, external calibration, and what latent states remain unmatched. If the bridge is sequential across live and ex vivo or across separated physiological regimes, it also has to disclose elapsed time, regime continuity, coordinate transfer, and residual drift ceiling through the <a href="https://mind-upload.com/verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a>. On this site, multimodal combination itself is formalized as the <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a>. That ranking is an inference from the primary literature summarized above.
+このサイトでは現在、<strong>プロキシが豊富な人間の証拠</strong>を単一のプロキシクラスを超える実際の進歩として扱っていますが、<strong>同じ被験者、クロススタック、外部で調整された状態の識別</strong>よりはまだ下回っています。上向きに進むためには、論文またはベンチマークパッケージは、相互登録範囲、摂動調整、クロック/ラグ監査、定量化モデル、外部キャリブレーション、およびどのような潜在状態が一致しないままであるかを開示する必要があります。ブリッジが生と体外、または別々の生理学的レジームにわたって連続している場合、<a href="https://mind-upload.com/verification.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> を介して、経過時間、レジームの連続性、座標転送、および残留ドリフト天井も開示する必要があります。当サイトではマルチモーダル組み合わせそのものを<a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a>として正式に表記しています。このランキングは、上で要約した一次文献からの推論です。
 </p>
 
-<h2>Practical rules arising from this criticism</h2>
+<h2>この批判から生じる実際的なルール</h2>
 
 <h4>Rule</h4>
 <ul>
-<li><strong>Write the measurement stack in the augmentation claim:</strong>Instead of saying "added transcriptomic label", distinguish between whole-brain atlas, patch-seq bridge, or same-brain link. </li>
-<li><strong>Don't mix atlas / bridge / scaffold / local twin / proxy calibration:</strong>Fix which kind of advance is the same "advance". </li>
-<li><strong>Don't make multimodal a synonym for state-complete:</strong>Include in the text what latent state still remains. </li>
-<li><strong>Do not compress same-brain functional connectomics into one solved route:</strong>Name the sequential bridge, label source, synaptic-state evidence class, and whether extra recordings or perturbations were needed to reduce dynamical degeneracy. </li>
-<li><strong>In human-side summaries, name proxy class, operational maturity, and calibrator role:</strong>Do not compress local ultrastructure, synaptic-density PET, biochemical scaffold, perturbation-conditioned plasticity/state-gated perturbation routes, energetic / ionic / thermal / myelin, BBB, blood-CSF-barrier / choroid-plexus, astrocyte, neuroimmune, or clearance routes into one direct route. </li>
-<li><strong>Do not read proxy accumulation as automatic state-completeness:</strong>Cross-stack fusion still needs same-subject alignment, model disclosure, external calibration, and abstention boundaries.</li>
-<li><strong>Do not read same-subject wording as same-state when the bridge is sequential:</strong>Require elapsed time, regime continuity, coordinate transfer, and residual drift disclosure. </li>
-<li><strong>When filling in unobserved states, write ``estimated'': </strong>If threshold / gain / set point is auto-completed from cell type, write ``latent inference''. </li>
-<li><strong>Do not promote BOLD / fNIRS amplitude to neural difference without hemodynamic audit:</strong>Write vascular-state / CVR calibration route or abstention explicitly. </li>
-<li><strong>Prohibit expressions that exceed the claim ceiling:</strong>For example, do not write EM alone as emulation-complete, Patch-seq as whole-brain state-complete, pupil as transmitter ground truth, receptor atlas as current transmitter state, occupancy PET as whole-brain transmitter-state readout, or displacement PET as whole-brain neuromodulatory ground truth. </li>
+<li><strong>拡張クレームに測定スタックを書き込みます:</strong>「追加されたトランスクリプトームラベル」と言う代わりに、全脳アトラス、パッチシーケンスブリッジ、または同一脳リンクを区別します。 </li>
+<li><strong>アトラス/ブリッジ/足場/ローカルツイン/プロキシキャリブレーションを混合しないでください:</strong>どの種類のアドバンスが同じ「アドバンス」であるかを修正します。 </li>
+<li><strong>マルチモーダルを状態完全の同義語にしないでください:</strong>どのような潜在状態がまだ残っているかをテキストに含めてください。 </li>
+<li><strong>同一脳機能コネクトミクスを 1 つの解決されたルートに圧縮しないでください:</strong>シーケンシャル ブリッジ、ラベル ソース、シナプス状態証拠クラスの名前を指定し、動的縮退を減らすために追加の記録または摂動が必要かどうかを指定します。 </li>
+<li><strong>人間側の要約では、プロキシクラス、運用の成熟度、およびキャリブレーターの役割に名前を付けます:</strong>局所超微細構造、シナプス密度PET、生化学的足場、摂動条件可塑性/状態ゲート摂動ルート、エネルギー/イオン/熱/ミエリン、BBB、血液CSF関門/脈絡叢、アストロ サイト、神経免疫、またはクリアランス ルートを 1 つの直接ルートに統合します。 </li>
+<li><strong>プロキシの蓄積を自動状態完全性として読み取らないでください:</strong>クロススタック融合には依然として同一対象のアライメント、モデル開示、外部キャリブレーション、および棄権境界が必要です。</li>
+<li><strong>ブリッジがシーケンシャルである場合、同じサブジェクトの文言を同じ状態として読み取らないでください:</strong>経過時間、レジーム連続性、座標転送、および残留ドリフトの開示が必要です。 </li>
+<li><strong>未観測の状態を埋める場合は「`estimated'': PH37XIf threshold / gain / set point is auto-completed from cell type, write `『潜在推論』」と書きます。 </li>
+<li><strong>血行動態監査なしで神経差異に対する BOLD / fNIRS 振幅を促進しないでください:</strong>血管状態 / CVR キャリブレーション ルートまたは棄権を明示的に書き込みます。 </li>
+<li><strong>クレームの上限を超える表現を禁止します:</strong>たとえば、EM 単独をエミュレーション完全、パッチシーケンスを全脳状態完全、瞳孔を送信機グラウンド トゥルース、受容体アトラスを現在の送信機状態、占有 PET を全脳送信機状態読み出し、またはディスプレイスメント PET を全脳神経調節グラウンド トゥルースと書かないでください。 </li>
 </ul>
 
 <table>
 <thead>
 <tr>
-<th>Current stack</th>
-<th>What to add next</th>
-<th>Stronger argument</th>
-<th>Claim to stop</th>
+<th>現在のスタック</th>
+<th>次に追加するもの</th>
+<th>正論</th>
+<th>停止を要求</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EEG / MEG / fMRI</strong></td>
-<td>External ground truth, invasion record, structure/function correspondence of the same individual, and intervention response. </td>
-<td>The rationale for moving from macro decode to weak L2 is a little stronger. </td>
-<td>Stop cell/synapse state sufficiency, whole-brain WBE, and state-complete claims. </td>
+<td>外部グラウンドトゥルース、侵入記録、同一個体の構造・機能対応、介入対応。 </td>
+<td> マクロ デコードから弱い L2 に移行する理論的根拠は、もう少し強力です。 </td>
+<td>Stop セル/シナプス状態の十分性、全脳 WBE、状態完全性の主張。 </td>
 </tr>
 <tr>
-<td><strong>whole-brain atlas</strong></td>
-<td>Patch-seq, same-brain physiology, perturbation/recovery log. </td>
-<td>Easier to connect cell-type prior and spatial prior to local parameter prior. </td>
-<td>Turn off the sufficiency of current network state and longitudinal maintenance-state. </td>
+<td><strong>全脳アトラス</strong></td>
+<td>Patch-seq、同一脳生理学、摂動/回復ログ。 </td>
+<td>セルタイプ事前接続およびローカルパラメータ事前空間接続が容易になります。 </td>
+<td>T 現在のネットワーク状態と長期的なメンテナンス状態の十分性をオフにします。 </td>
 </tr>
 <tr>
-<td><strong>volume EM</strong></td>
-<td>Same-brain function, cell-type bridge, perturbation, uncertainty are public. </td>
-<td>It is easier to proceed from structural scaffold to local conditional prediction. </td>
-<td>Stop rephrasing connectome-complete as emulation-complete. </td>
+<td><strong>容量EM</strong></td>
+<td>同一脳機能、細胞型ブリッジ、摂動、不確実性が公開されています。 </td>
+<td> 構造足場から局所条件予測に進むのが簡単です。 </td>
+<td>Sconnectome-complete をエミュレーション-complete と言い換えるのはやめてください。 </td>
 </tr>
 <tr>
-<td><strong>same-brain functional connectomics</strong></td>
-<td>Direct label assay or explicit label-transfer route, current synaptic-state assay, extra recordings / perturbations, and bridge disclosure. </td>
-<td>It becomes easier to separate local structure-function scaffold, morphology-bridged label transfer, current synaptic-state evidence, and identifiable dynamics. </td>
-<td>Stop whole-brain twin, current synaptic-state, direct transcriptomic-truth, and unique-dynamics claims from the modality label alone. </td>
+<td><strong>同一脳機能コネクトミクス</strong></td>
+<td>直接ラベルアッセイまたは明示的なラベル転送ルート、現在のシナプス状態アッセイ、追加の記録/摂動、およびブリッジの開示。 </td>
+<td>局所的な構造と機能の足場、形態に架橋されたラベル伝達、現在のシナプス状態の証拠、および識別可能なダイナミクスを分離することが容易になります。 </td>
+<td>Stop 全脳双生児、現在のシナプス状態、直接トランスクリプトームの真実、およびモダリティ ラベルのみからの独自のダイナミクスの主張。 </td>
 </tr>
 <tr>
-<td><strong>mixed proxy / transmitter sensor / receptor atlas / occupancy PET / displacement PET</strong></td>
-<td>cross-stack calibration, ligand / drug / challenge / dose disclosure, cross-state validation, and abstention boundary. </td>
-<td>It becomes easier to distinguish coarse arousal covariate, local calibration, regional prior, exogenous target engagement, and challenge-limited release proxy. </td>
-<td>Stop whole-brain transmitter-field ground truth and receptor-family-complete internal-state claims. </td>
+<td><strong>混合プロキシ / 送信センサー / 受信アトラス / 占有 PET / 変位 PET</strong></td>
+<td>クロススタックキャリブレーション、リガンド/薬物/チャレンジ/用量開示、クロスステート検証、および棄権境界。 </td>
+<td>粗い覚醒共変量、局所的キャリブレーション、局所的事前、外因性標的関与、およびチャレンジ限定放出プロキシを区別することが容易になります。 </td>
+<td>S全脳送信機フィールドのグラウンドトゥルースと受容体ファミリーの完全な内部状態の主張を停止します。 </td>
 </tr>
 <tr>
-<td><strong>human maintenance-state proxies</strong></td>
-<td>class-labeled submission, calibrator-role disclosure, external calibration route, cross-stack comparison, and bridge disclosure when acquisition is sequential. </td>
-<td>It becomes easier to separate local scaffold, synaptic-density proxy, biochemical scaffold, perturbation-conditioned plasticity proxy, energetic / ionic / thermal / myelin, BBB, blood-CSF-barrier / choroid-plexus, astrocyte, neuroimmune, and clearance proxy classes, the bounded hidden-state family each route safely calibrates, and still-missing human routes. </td>
-<td>Stop near-direct human maintenance-state and state-complete claims. </td>
+<td><strong>人間のメンテナンス状態プロキシ</strong></td>
+<td> クラスラベル付きの提出、キャリブレーターの役割の開示、外部キャリブレーション ルート、スタック間の比較、取得が順次行われる場合のブリッジの開示。 </td>
+<td>局所足場、シナプス密度プロキシ、生化学足場、摂動条件可塑性プロキシ、エネルギー/イオン/熱/ミエリン、BBB、血液CSF関門/脈絡叢、星状細胞、神経免疫、およびクリアランスプロキシクラス、各ルートが安全に校正される境界付き隠れ状態ファミリー、およびまだ欠落している人間のルートを分離することが容易になります。 </td>
+<td>S人間によるほぼ直接的な維持状態および状態完了の主張を停止します。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>References</h2>
+<h2>参考資料</h2>
 <ol>
-<li>Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <em>Nature</em>, 634, 124-138. <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
-<li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <em>Cell Reports Methods</em>, 3(7), 100520. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
-<li>Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <em>Nature</em>, 624, 317-332. <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
-<li>Gouwens, N. W., et al. (2021). Phenotypic variation of transcriptomic cell types in mouse motor cortex. <em>Nature</em>, 598, 144-150. <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
-<li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
-<li>Gamlin, C. R., et al. (2025). Connectomics of predicted Sst transcriptomic types in mouse visual cortex. <em>Nature</em>, 640, 497-505. <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
-<li>Bosch, C., Pacureanu, A., Patino, J., et al. (2022). Functional and multiscale 3D structural investigation of brain tissue through correlative in vivo physiology, synchrotron microtomography and volume electron microscopy. <em>Nature Communications</em>, 13, 2923. <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">doi:10.1038/s41467-022-30199-6</a></li>
-<li>Ding, Z., et al. (2025). Functional connectomics reveals a general wiring rule in mouse visual cortex. <em>Nature</em>, 640, 459-469. <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">doi:10.1038/s41586-025-08840-3</a></li>
-<li>Holler, S., et al. (2021). Structure and function of a neocortical synapse. <em>Nature</em>, 591, 111-116. <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">doi:10.1038/s41586-020-03134-2</a></li>
-<li>D&uuml;rst, C. D., Wiegert, J. S., Schulze, C., et al. (2022). Vesicular release probability sets the strength of individual Schaffer collateral synapses. <em>Nature Communications</em>, 13, 6126. <a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">doi:10.1038/s41467-022-33565-6</a></li>
-<li>Mittermaier, V., Kononenko, N. L., Jin, Y., et al. (2024). Membrane potential states gate synaptic consolidation in human neocortical tissue. <em>Nature Communications</em>, 15, 10340. <a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">doi:10.1038/s41467-024-53901-2</a></li>
-<li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561-2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
-<li>Ahlfors, S. P., Han, J., Belliveau, J. W., &amp; H&auml;m&auml;l&auml;inen, M. S. (2010). Sensitivity of MEG and EEG to source orientation. <em>Brain Topography</em>, 23(3), 227-232. <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">doi:10.1007/s10548-010-0154-x</a></li>
-<li>Ahlfors, S. P., Han, J., Lin, F.-H., Witzel, T., Belliveau, J. W., H&auml;m&auml;l&auml;inen, M. S., &amp; Halgren, E. (2010). Cancellation of EEG and MEG signals generated by extended and distributed sources. <em>Human Brain Mapping</em>, 31(1), 140-149. <a href="https://doi.org/10.1002/hbm.20851" target="_blank">doi:10.1002/hbm.20851</a></li>
-<li>Goldenholz, D. M., Ahlfors, S. P., H&auml;m&auml;l&auml;inen, M. S., Sharon, D., Ishitobi, M., Vaina, L. M., &amp; Stufflebeam, S. M. (2009). Mapping the signal-to-noise-ratios of cortical sources in magnetoencephalography and electroencephalography. <em>Human Brain Mapping</em>, 30(4), 1077-1086. <a href="https://doi.org/10.1002/hbm.20571" target="_blank">doi:10.1002/hbm.20571</a></li>
-<li>Piastra, M. C., N&uuml;&szlig;ing, A., Vorwerk, J., Clerc, M., Engwer, C., &amp; Wolters, C. H. (2021). A comprehensive study on electroencephalography and magnetoencephalography sensitivity to cortical and subcortical sources. <em>Human Brain Mapping</em>, 42(4), 978-992. <a href="https://doi.org/10.1002/hbm.25272" target="_blank">doi:10.1002/hbm.25272</a></li>
-<li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
-<li>Unnwongse, K., Rampp, S., Wehner, T., et al. (2023). Validating EEG source imaging using intracranial electrical stimulation. <em>Brain Communications</em>, 5(1), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
-<li>Pizzo, F., Roehri, N., Medina Villalon, S., et al. (2019). Deep brain activities can be detected with magnetoencephalography. <em>Nature Communications</em>, 10, 971. <a href="https://doi.org/10.1038/s41467-019-08665-5" target="_blank">doi:10.1038/s41467-019-08665-5</a></li>
-<li>Zauli, F. M., Del Vecchio, M., Pigorini, A., et al. (2024). Localizing hidden Interictal Epileptiform Discharges with simultaneous intracerebral and scalp high-density EEG recordings. <em>Journal of Neuroscience Methods</em>, 409, 110193. <a href="https://doi.org/10.1016/j.jneumeth.2024.110193" target="_blank">doi:10.1016/j.jneumeth.2024.110193</a></li>
-<li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
-<li>Boto, E., Holmes, N., Leggett, J., et al. (2018). Moving magnetoencephalography towards real-world applications with a wearable system. <em>Nature</em>, 555, 657-661. <a href="https://doi.org/10.1038/nature26147" target="_blank">doi:10.1038/nature26147</a></li>
-<li>Seymour, R. A., Alexander, N., Mellor, S., O'Neill, G. C., Tierney, T. M., Barnes, G. R., &amp; Maguire, E. A. (2021). Using OPMs to measure neural activity in standing, mobile participants. <em>NeuroImage</em>, 244, 118604. <a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">doi:10.1016/j.neuroimage.2021.118604</a></li>
-<li>Rea, M., Holmes, N., Hill, R. M., Boto, E., Leggett, J., Edwards, L. J., Woolger, D., Dawson, E., Shah, V., Osborne, J., Bowtell, R., &amp; Brookes, M. J. (2021). Precision magnetic field modelling and control for wearable magnetoencephalography. <em>NeuroImage</em>, 241, 118401. <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">doi:10.1016/j.neuroimage.2021.118401</a></li>
-<li>Mellor, S. J., Tierney, T. M., O'Neill, G. C., Alexander, N., Seymour, R. A., Holmes, N., Lopez, J. D., Hill, R. M., Boto, E., Rea, M., Roberts, G., Leggett, J., Bowtell, R., Brookes, M. J., Maguire, E. A., Walker, M. C., &amp; Barnes, G. R. (2022). Magnetic field mapping and correction for moving OP-MEG. <em>IEEE Transactions on Biomedical Engineering</em>, 69(2), 528-536. <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">doi:10.1109/TBME.2021.3100770</a></li>
-<li>Holmes, N., Leggett, J., Hill, R. M., Rier, L., Boto, E., Schofield, H., Hayward, T., Dawson, E., Woolger, D., Shah, V., Taulu, S., Brookes, M. J., &amp; Bowtell, R. (2025). Wearable magnetoencephalography in a lightly shielded environment. <em>IEEE Transactions on Biomedical Engineering</em>, 72(2), 609-618. <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">doi:10.1109/TBME.2024.3465654</a></li>
-<li>Rhodes, N., Rier, L., Boto, E., Hill, R. M., &amp; Brookes, M. J. (2025). Source reconstruction without an MRI using optically pumped magnetometer-based magnetoencephalography. <em>Imaging Neuroscience</em>, 3, IMAG.a.8. <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">doi:10.1162/IMAG.a.8</a></li>
-<li>Wu, T., Xiao, W., Peng, X., Wu, T., &amp; Guo, H. (2025). Crosstalk reduction in optically pumped magnetometers arrays for biomagnetic measurement. <em>Review of Scientific Instruments</em>, 96(8), 085004. <a href="https://doi.org/10.1063/5.0273491" target="_blank">doi:10.1063/5.0273491</a></li>
-<li>Spedden, M. E., O'Neill, G. C., West, T. O., Tierney, T. M., Mellor, S., Alexander, N. A., Seymour, R., Lundbye-Jensen, J., Nielsen, J. B., Farmer, S. F., &amp; Barnes, G. R. (2025). Using wearable MEG to study the neural control of human stepping. <em>Sensors</em>, 25(13), 4160. <a href="https://doi.org/10.3390/s25134160" target="_blank">doi:10.3390/s25134160</a></li>
-<li>Murphy, K., Harris, A. D., &amp; Wise, R. G. (2011). Robustly measuring vascular reactivity differences with breath-hold: normalising stimulus-evoked and resting state BOLD fMRI data. <em>NeuroImage</em>, 54(1), 369-379. <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
-<li>Williams, R. J., Specht, J. L., Mazerolle, E. L., Lebel, R. M., MacDonald, M. E., &amp; Pike, G. B. (2023). Correspondence between BOLD fMRI task response and cerebrovascular reactivity across the cerebral cortex. <em>Frontiers in Physiology</em>, 14, 1167148. <a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
-<li>Wu, S., Tyler, L. K., Henson, R. N. A., Rowe, J. B., Cam-CAN, &amp; Tsvetanov, K. A. (2023). Cerebral blood flow predicts multiple demand network activity and fluid intelligence across the adult lifespan. <em>Neurobiology of Aging</em>, 121, 1-14. <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">doi:10.1016/j.neurobiolaging.2022.09.006</a></li>
-<li>Özbay, P. S., Chang, C., Picchioni, D., et al. (2019). Sympathetic activity contributes to the fMRI signal. <em>Communications Biology</em>, 2, 421. <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">doi:10.1038/s42003-019-0659-0</a></li>
-<li>Yucel, M. A. Y., Selb, J., Aasted, C. M. A., Petkov, M. P., Becerra, L., Borsook, D., &amp; Boas, D. A. (2015). Short separation regression improves statistical significance and better localizes the hemodynamic response obtained by near-infrared spectroscopy for tasks with differing autonomic responses. <em>Neurophotonics</em>, 2(3), 035005. <a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
-<li>An, J., Goyal, P., Luft, A. R., &amp; Schönhammer, J. G. (2025). Functional near-infrared spectroscopy short-channel regression improves cortical activation estimates of working memory load. <em>Neurophotonics</em>, 12(3), 035009. <a href="https://doi.org/10.1117/1.NPh.12.3.035009" target="_blank">doi:10.1117/1.NPh.12.3.035009</a></li>
-<li>Bolt, T., Wang, S., Nomi, J. S., et al. (2025). Autonomic physiological coupling of the global fMRI signal. <em>Nature Neuroscience</em>, 28, 1327-1335. <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
-<li>Epp, S. M., Castrillon, G., Yuan, B., Andrews-Hanna, J., Preibisch, C., &amp; Riedl, V. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
-<li>Jaroszynski, K. M., Lee, H., Langham, M. C., &amp; Wehrli, F. W. (2025). Comparison of brain oxygen metabolic parameters between constrained qBOLD and whole-brain oximetric methods at baseline and in response to a physiologic stimulus. <em>NMR in Biomedicine</em>, 38(9), e70120. <a href="https://doi.org/10.1002/nbm.70120" target="_blank">doi:10.1002/nbm.70120</a></li>
-<li>Reimer, J., McGinley, M. J., Liu, Y., et al. (2016). Pupil fluctuations track rapid changes in adrenergic and cholinergic activity in cortex. <em>Nature Communications</em>, 7, 13289. <a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
-<li>Lohani, S., Moberly, A. H., Benisty, H., et al. (2022). Spatiotemporally heterogeneous coordination of cholinergic and neocortical activity. <em>Nature Neuroscience</em>, 25(12), 1706-1713. <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">doi:10.1038/s41593-022-01202-6</a></li>
-<li>Hansen, J. Y., Shafiei, G., Markello, R. D., et al. (2022). Mapping neurotransmitter systems to the structural and functional organization of the human neocortex. <em>Nature Neuroscience</em>, 25(11), 1569-1581. <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
-<li>Goulas, A., Changeux, J.-P., Wagstyl, K., Amunts, K., Palomero-Gallagher, N., &amp; Hilgetag, C. C. (2021). The natural axis of transmitter receptor distribution in the human cerebral cortex. <em>PNAS</em>, 118(3), e2020574118. <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
-<li>Naganawa, M., Li, S., Nabulsi, N., et al. (2021). First-in-human evaluation of <sup>18</sup>F-SynVesT-1, a radioligand for PET imaging of synaptic vesicle glycoprotein 2A. <em>Journal of Nuclear Medicine</em>, 62(4), 561-567. <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
-<li>Smart, K., Liu, H., Matuskey, D., et al. (2021). Binding of the synaptic vesicle radiotracer [<sup>11</sup>C]UCB-J is unchanged during functional brain activation using a visual stimulation task. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>, 41(5), 1067-1079. <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">doi:10.1177/0271678X20946198</a></li>
-<li>Johansen, A., Beliveau, V., Colliander, E., et al. (2024). An in vivo high-resolution human brain atlas of synaptic density. <em>Journal of Neuroscience</em>, 44(33), e1750232024. <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
-<li>Shatalina, E., Onwordi, E. C., Whitehurst, T., et al. (2024). The relationship between SV2A levels, neural activity, and cognitive function in healthy humans: A [<sup>11</sup>C]UCB-J PET and fMRI study. <em>Imaging Neuroscience</em>, 2, 1-16. <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
-<li>Holmes, S. E., Finnema, S. J., Naganawa, M., et al. (2022). Imaging the effect of ketamine on synaptic density (SV2A) in the living brain. <em>Molecular Psychiatry</em>, 27(4), 2273-2281. <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">doi:10.1038/s41380-022-01465-2</a></li>
-<li>Shapson-Coe, A., Januszewski, M., Berger, D. R., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <em>Science</em>, 384(6696), eadk4858. <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
-<li>Kothe, C., Shirazi, S. Y., Stenner, T., Medine, D., Boulay, C., Grivich, M. I., Artoni, F., Mullen, T., Delorme, A., &amp; Makeig, S. (2025). The lab streaming layer for synchronized multimodal recording. <em>Imaging Neuroscience</em>, 3, IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
-<li>Wei, H., Jafarian, A., Zeidman, P., Litvak, V., Razi, A., Garrido, M., Friston, K., &amp; Daunizeau, J. (2020). Bayesian fusion and multimodal DCM for EEG and fMRI. <em>NeuroImage</em>, 211, 116595. <a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
-<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
-<li>Chen, J. E., Lewis, L. D., Coursey, S. E., Catana, C., Polimeni, J. R., Fan, J., Droppa, K. S., Patel, R., Wey, H.-Y., Chang, C., Manoach, D. S., Price, J. C., Sander, C. Y., &amp; Rosen, B. R. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
-<li>Reveley, C., Seth, A. K., Pierpaoli, C., Silva, A. C., Yu, D., Saunders, R. C., Leopold, D. A., &amp; Ye, F. Q. (2015). Superficial white matter fiber systems impede detection of long-range cortical connections in diffusion MR tractography. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 112(21), E2820-E2828. <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">doi:10.1073/pnas.1418198112</a></li>
-<li>Schilling, K. G., Gao, Y., Janve, V., Stepniewska, I., Landman, B. A., &amp; Anderson, A. W. (2018). Confirmation of a gyral bias in diffusion MRI fiber tractography. <em>Human Brain Mapping</em>, 39(3), 1449-1466. <a href="https://doi.org/10.1002/hbm.23936" target="_blank">doi:10.1002/hbm.23936</a></li>
-<li>Gajwani, M., Oldham, S., Pang, J. C., Arnatkevičiūtė, A., Tiego, J., Bellgrove, M. A., &amp; Fornito, A. (2023). Can hubs of the human connectome be identified consistently with diffusion MRI? <em>Network Neuroscience</em>, 7(4), 1326-1350. <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">doi:10.1162/netn_a_00324</a></li>
-<li>He, Y., Hong, Y., Wu, Y., et al. (2024). Spherical-deconvolution informed filtering of tractograms changes laterality of structural connectome. <em>NeuroImage</em>, 303, 120904. <a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">doi:10.1016/j.neuroimage.2024.120904</a></li>
-<li>McMaster, E. M., Newlin, N. R., Rudravaram, G., et al. (2025). Harmonized connectome resampling for variance in voxel sizes. <em>Magnetic Resonance Imaging</em>, 121, 110424. <a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>
-<li>Bramati, I. B., Szczupak, D., Carneiro Monteiro, M., Meireles, F., Menezes Guimarães, D., Dean, R. J., Paul, L. K., &amp; Tovar-Moll, F. (2026). Diffusion MRI sampling schemes bias diffusion metrics and tractography. <em>Frontiers in Neuroimaging</em>, 5, 1670604. <a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">doi:10.3389/fnimg.2026.1670604</a></li>
-<li>Manzano-Patrón, J. P., Deistler, M., Schröder, C., et al. (2025). Uncertainty mapping and probabilistic tractography using Simulation-based Inference in diffusion MRI: A comparison with classical Bayes. <em>Medical Image Analysis</em>, 103, 103580. <a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">doi:10.1016/j.media.2025.103580</a></li>
-<li>Zhu, S., Huszar, I. N., Cottaar, M., et al. (2025). Imaging the structural connectome with hybrid MRI-microscopy tractography. <em>Medical Image Analysis</em>, 102, 103498. <a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">doi:10.1016/j.media.2025.103498</a></li>
-<li>Lucchetti, F., C&eacute;l&eacute;reau, E., Steullet, P., et al. (2025). Constructing the human brain metabolic connectome with MR spectroscopic imaging reveals cerebral biochemical organization. <em>Nature Communications</em>, 16, 11344. <a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
-<li>Ren, J., Sherry, A. D., &amp; Malloy, C. R. (2015). <sup>31</sup>P-MRS of healthy human brain: ATP synthesis, metabolite concentrations, pH, and T1 relaxation times. <em>NMR in Biomedicine</em>, 28(11), 1455-1462. <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
-<li>Guo, R., Yang, S., Wiesner, H. M., Li, Y., Zhao, Y., Liang, Z.-P., Chen, W., &amp; Zhu, X.-H. (2024). Mapping intracellular NAD content in entire human brain using phosphorus-31 MR spectroscopic imaging at 7 Tesla. <em>Frontiers in Neuroscience</em>, 18, 1389111. <a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">doi:10.3389/fnins.2024.1389111</a></li>
-<li>Kaiser, A., Vind, F. A., Duarte, J. M. N., Jelescu, I., Lin, Y., Yu, X., Widmaier, M., Wenz, D., &amp; Xin, L. (2026). Ultra-high field <sup>31</sup>P functional magnetic resonance spectroscopy reveals NAD<sup>+</sup> dynamics in brain energy metabolism during visual stimulation. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>. <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">doi:10.1177/0271678X261415784</a></li>
-<li>Bhogal, A. A., Broeders, T. A. A., Morsinkhof, L., et al. (2020). Lipid-suppressed and tissue-fraction corrected metabolic distributions in human central brain structures using 2D <sup>1</sup>H magnetic resonance spectroscopic imaging at 7 T. <em>Brain and Behavior</em>, 10(10), e01852. <a href="https://doi.org/10.1002/brb3.1852" target="_blank">doi:10.1002/brb3.1852</a></li>
-<li>Wright, A. M., Murali-Manohar, S., &amp; Henning, A. (2022). Quantitative T<sub>1</sub>-relaxation corrected metabolite mapping of 12 metabolites in the human brain at 9.4 T. <em>NeuroImage</em>, 261, 119574. <a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">doi:10.1016/j.neuroimage.2022.119574</a></li>
-<li>Baboli, M., Wang, F., Dong, Z., et al. (2024). Absolute Metabolite Quantification in Individuals with Glioma and Healthy Individuals Using Whole-Brain Three-dimensional MR Spectroscopic and Echo-planar Time-resolved Imaging. <em>Radiology</em>, 311(3), e232401. <a href="https://doi.org/10.1148/radiol.232401" target="_blank">doi:10.1148/radiol.232401</a></li>
-<li>Li, X., Zhu, X.-H., Li, Y., et al. (2025). Quantitative mapping of key glucose metabolic rates in the human brain using dynamic deuterium magnetic resonance spectroscopic imaging. <em>PNAS Nexus</em>, 4(3), pgaf072. <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
-<li>Guo, R., Li, Y., Zhao, Y., et al. (2025). High-Resolution Brain Metabolic Imaging at Ultrahigh Field Using Extended Spatiospectral Encoding and Subspace Modeling. <em>IEEE Transactions on Biomedical Engineering</em>, 72(12), 3558-3566. <a href="https://doi.org/10.1109/TBME.2025.3572448" target="_blank">doi:10.1109/TBME.2025.3572448</a></li>
-<li>Karkouri, J., Deelchand, D. K., Van de Moortele, P.-F., et al. (2026). Quantification of deuterated metabolite concentrations and rates in the human brain from dynamic deuterium metabolic imaging at 7 T. <em>Magnetic Resonance in Medicine</em>. <a href="https://doi.org/10.1002/mrm.70308" target="_blank">doi:10.1002/mrm.70308</a></li>
-<li>Qian, Y., Zhao, T., Zheng, H., Weimer, J., &amp; Boada, F. E. (2012). High-resolution sodium imaging of human brain at 7 T. <em>Magnetic Resonance in Medicine</em>, 68(1), 227-233. <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
-<li>Qian, Y., Lin, Y. C., Chen, X., et al. (2025). Single-quantum sodium MRI at 3 T for separation of mono- and bi-T<sub>2</sub> sodium signals. <em>Scientific Reports</em>, 15, 27427. <a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
-<li>Rzechorzek, N. M., Thrippleton, M. J., Chappell, F. M., et al. (2022). A daily temperature rhythm in the human brain predicts survival after brain injury. <em>Brain</em>, 145(6), 2031-2048. <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/brain/awab466</a></li>
-<li>van Blooijs, D., Nunes, A., van den Boom, M. A., et al. (2023). Developmental trajectory of transmission speed in the human brain. <em>Nature Neuroscience</em>, 26, 675-686. <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">doi:10.1038/s41593-023-01272-0</a></li>
-<li>Baadsvik, E. L., Weiger, M., Froidevaux, R., Schildknecht, C. M., Ineichen, B. V., &amp; Pruessmann, K. P. (2024). Myelin bilayer mapping in the human brain in vivo. <em>Magnetic Resonance in Medicine</em>, 91(6), 2332-2344. <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
-<li>Morgan, C. A., Thomas, D. L., Shao, X., et al. (2024). Measurement of blood-brain barrier water exchange rate using diffusion-prepared and multi-echo arterial spin labelling: Comparison of quantitative values and age dependence. <em>NMR in Biomedicine</em>, 37(12), e5256. <a href="https://doi.org/10.1002/nbm.5256" target="_blank">doi:10.1002/nbm.5256</a></li>
-<li>Padrela, B. E., Slivka, M., Sneve, M. H., et al. (2025). Blood-brain barrier water permeability across the adult lifespan: A multi-echo ASL study. <em>Neurobiology of Aging</em>, 147, 176-186. <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">doi:10.1016/j.neurobiolaging.2024.12.012</a></li>
-<li>Chung, K. J., Abdelhafez, Y. G., Spencer, B. A., et al. (2025). Quantitative PET imaging and modeling of molecular blood-brain barrier permeability. <em>Nature Communications</em>, 16, 3076. <a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
-<li>Zhao, L., Taso, M., Dai, W., Press, D. Z., &amp; Alsop, D. C. (2020). Non-invasive measurement of choroid plexus apparent blood flow with arterial spin labeling. <em>Fluids and Barriers of the CNS</em>. <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">doi:10.1186/s12987-020-00218-z</a></li>
-<li>Petitclerc, L., Hirschler, L., Wells, J. A., et al. (2021). Ultra-long-TE arterial spin labeling reveals rapid and brain-wide blood-to-CSF water transport in humans. <em>NeuroImage</em>, 245, 118755. <a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">doi:10.1016/j.neuroimage.2021.118755</a></li>
-<li>Anderson, V. C., Tagge, I. J., Doud, A., et al. (2022). DCE-MRI of brain fluid barriers: in vivo water cycling at the human choroid plexus. <em>Tissue Barriers</em>. <a href="https://doi.org/10.1080/21688370.2021.1963143" target="_blank">doi:10.1080/21688370.2021.1963143</a></li>
-<li>Wu, X., Tan, S., Zhang, Y., et al. (2026). Feasibility of relaxation-exchange magnetic resonance imaging (REXI) for measuring water exchange across the blood-CSF barrier in the human choroid plexus. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>. <a href="https://doi.org/10.1177/0271678X251369218" target="_blank">doi:10.1177/0271678X251369218</a></li>
-<li>Petitclerc, L., Durrant, H., Hirschler, L., V&aacute;clav&#367;, L., &amp; van Osch, M. J. P. (2026). Simultaneous measurement of water transport across the blood-brain and blood-CSF barrier in the human brain with arterial spin labeling MRI. <em>Journal of Cerebral Blood Flow &amp; Metabolism</em>. <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">doi:10.1177/0271678X261429042</a></li>
-<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). First-in-Humans Evaluation of <sup>18</sup>F-SMBT-1, a Novel <sup>18</sup>F-Labeled Monoamine Oxidase-B PET Tracer for Imaging Reactive Astrogliosis. <em>Journal of Nuclear Medicine</em>, 63(10), 1551-1559. <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
-<li>Villemagne, V. L., Harada, R., Dore, V., et al. (2022). Assessing reactive astrogliosis with <sup>18</sup>F-SMBT-1 across the Alzheimer disease spectrum. <em>Journal of Nuclear Medicine</em>, 63(12), 1900-1906. <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">doi:10.2967/jnumed.121.263255</a></li>
-<li>Hiraoka, K., Mesfin, B., Wu, Y., et al. (2025). Kinetic and quantitative analysis of [<sup>18</sup>F]SMBT-1 PET imaging for monoamine oxidase B. <em>Annals of Nuclear Medicine</em>. <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">doi:10.1007/s12149-025-02083-y</a></li>
-<li>Mesfin, B., Ishioka, Y., Ichinose, Y., et al. (2026). Whole-body biodistribution of [<sup>18</sup>F]SMBT-1: a novel PET tracer for monoamine oxidase B imaging in healthy humans. <em>Annals of Nuclear Medicine</em>. <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">doi:10.1007/s12149-025-02144-2</a></li>
-<li>Matsuoka, K., Matsuura, K., Kikuchi, T., et al. (2026). Quantification of monoamine oxidase B expression with <sup>11</sup>C-SL25.1188 for imaging reactive astrocytes in patients with Alzheimer's disease. <em>European Journal of Nuclear Medicine and Molecular Imaging</em>. <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">doi:10.1007/s00259-025-07542-2</a></li>
-<li>Tyacke, R. J., Myers, J. F. M., Venkataraman, A., et al. (2018). Evaluation of <sup>11</sup>C-BU99008, a PET Ligand for the Imidazoline<sub>2</sub> Binding Site in Human Brain. <em>Journal of Nuclear Medicine</em>, 59(10), 1597-1602. <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
-<li>Livingston, N. R., Calsolaro, V., Hinz, R., et al. (2022). Relationship between astrocyte reactivity, using novel <sup>11</sup>C-BU99008 PET, and glucose metabolism, grey matter volume and amyloid load in cognitively impaired individuals. <em>Molecular Psychiatry</em>, 27(4), 2019-2029. <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>
-<li>Best, L. M., Truong, J., McCluskey, T., et al. (2026). MAO-B status in alcohol use disorder: a [<sup>11</sup>C]SL25.1188 PET imaging study of putative astrogliosis. <em>Molecular Psychiatry</em>. <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">doi:10.1038/s41380-025-03355-9</a></li>
-<li>Jaisa-Aad, M., Muñoz-Castro, C., Healey, M. A., Hyman, B. T., &amp; Serrano-Pozo, A. (2024). Characterization of monoamine oxidase-B (MAO-B) as a biomarker of reactive astrogliosis in Alzheimer's disease and related dementias. <em>Acta Neuropathologica</em>, 147(1), 66. <a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">doi:10.1007/s00401-024-02712-2</a></li>
-<li>Biechele, G., Wind, K., Blume, T., et al. (2023). Translocator protein is a marker of activated microglia in rodent models but not human neurodegenerative diseases. <em>Nature Communications</em>, 14, 5247. <a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">doi:10.1038/s41467-023-40937-z</a></li>
-<li>Wijesinghe, S. S., Edison, P., Passamonti, L., et al. (2025). Post-mortem validation of in vivo TSPO PET as a microglial biomarker. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf078" target="_blank">doi:10.1093/brain/awaf078</a></li>
-<li>Horti, A. G., Naik, R., Foss, C. A., et al. (2022). PET imaging of microglia by targeting macrophage colony-stimulating factor 1 receptor (CSF1R). <em>EJNMMI Research</em>, 12, 81. <a href="https://doi.org/10.1186/s13550-022-00929-4" target="_blank">doi:10.1186/s13550-022-00929-4</a></li>
-<li>Ogata, A., Ikenuma, H., Yasuno, F., et al. (2025). First-in-Human Study of [<sup>11</sup>C]NCGG401 for Imaging Colony-Stimulating Factor 1 Receptors in the Brain. <em>Journal of Nuclear Medicine</em>, 66(2), 302-308. <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">doi:10.2967/jnumed.124.268699</a></li>
-<li>Yan, X., Noergaard, M., Morse, C. L., et al. (2025). PET Quantification in Healthy Humans of Cyclooxygenase-2, a Potential Biomarker of Neuroinflammation. <em>Journal of Nuclear Medicine</em>, 66(3), 398-404. <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">doi:10.2967/jnumed.124.268525</a></li>
-<li>Fultz, N. E., Bonmassar, G., Setsompop, K., et al. (2019). Coupled electrophysiological, hemodynamic, and cerebrospinal fluid oscillations in human sleep. <em>Science</em>, 366(6465), 628-631. <a href="https://doi.org/10.1126/science.aax5440" target="_blank">doi:10.1126/science.aax5440</a></li>
-<li>Kim, D., Huang, Y., &amp; Liu, J. (2025). Non-invasive MRI measurements of age-dependent in vivo human glymphatic exchange using magnetization transfer spin labeling. <em>NeuroImage</em>, 310, 121142. <a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">doi:10.1016/j.neuroimage.2025.121142</a></li>
-<li>Lim, C., Chen, C., Zhang, C., et al. (2025). Human cerebrospinal fluid net flow enhanced by respiration during the awake state. <em>Nature Communications</em>, 16, 595. <a href="https://doi.org/10.1038/s41467-025-66548-4" target="_blank">doi:10.1038/s41467-025-66548-4</a></li>
-<li>Yoo, R.-E., Kim, J.-H., Moon, H. Y., et al. (2025). Long-term physical exercise facilitates putative glymphatic and meningeal lymphatic vessel flow in humans. <em>Nature Communications</em>, 16, 3360. <a href="https://doi.org/10.1038/s41467-025-58726-1" target="_blank">doi:10.1038/s41467-025-58726-1</a></li>
-<li>Eide, P. K., Lashkarivand, A., Pripp, A. H., et al. (2023). Plasma neurodegeneration biomarker concentrations associate with glymphatic and meningeal lymphatic measures in neurological disorders. <em>Nature Communications</em>, 14, 2084. <a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">doi:10.1038/s41467-023-37685-5</a></li>
-<li>Huber, R., Mäki, H., Rosanova, M., Casarotto, S., Canali, P., Casali, A. G., Tononi, G., &amp; Massimini, M. (2013). Human cortical excitability increases with time awake. <em>Cerebral Cortex</em>, 23(2), 332-338. <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">doi:10.1093/cercor/bhs014</a></li>
-<li>Kuhn, M., Wolf, E., Maier, J. G., Mainberger, F., Feige, B., Schmid, H., et al. (2016). Sleep recalibrates homeostatic and associative synaptic plasticity in the human cortex. <em>Nature Communications</em>, 7, 12455. <a href="https://doi.org/10.1038/ncomms12455" target="_blank">doi:10.1038/ncomms12455</a></li>
-<li>Tallman, C. W., Siler, S. N., Lee, H., et al. (2025). Neuronal allocation and sparse coding of episodic memories in the human hippocampus. <em>Scientific Reports</em>, 15, 21967. <a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">doi:10.1038/s41598-025-21967-7</a></li>
-<li>Zrenner, C., Desideri, D., Belardinelli, P., &amp; Ziemann, U. (2018). Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. <em>Brain Stimulation</em>, 11(2), 374-389. <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
-<li>Khatri, U. U., Pulliam, K., Manesiya, M., Vieyra Cortez, M., Millán, J. del R., &amp; Hussain, S. J. (2025). Personalized whole-brain activity patterns predict human corticospinal tract activation in real-time. <em>Brain Stimulation</em>, 18(1), 64-76. <a href="https://doi.org/10.1016/j.brs.2024.12.1193" target="_blank">doi:10.1016/j.brs.2024.12.1193</a></li>
-<li>Fehér, K. D., Henckaerts, P., Hirsch, V., Bucsenez, U., Kuhn, M., Maier, J. G., et al. (2026). A nap can recalibrate homeostatic and associative synaptic plasticity in the human cortex. <em>NeuroImage</em>, 327, 121723. <a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">doi:10.1016/j.neuroimage.2026.121723</a></li>
-<li>Hirschler, L., Runderkamp, B. A. R., Decker, A., et al. (2025). Region-specific drivers of CSF mobility measured with MRI in humans. <em>Nature Neuroscience</em>, 28(11), 2392-2401. <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
-<li>Dagum, P., Elbert, D. L., Giovangrandi, L., et al. (2026). The glymphatic system clears amyloid beta and tau from brain to plasma in humans. <em>Nature Communications</em>, 17, 715. <a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
-<li>Wong, D. F., Kuwabara, H., Hsu, D. J., et al. (2013). Determination of dopamine D<sub>2</sub> receptor occupancy by lurasidone using positron emission tomography in healthy male subjects. <em>Psychopharmacology</em>, 229(2), 245-252. <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">doi:10.1007/s00213-013-3103-z</a></li>
-<li>Koepp, M. J., Gunn, R. N., Lawrence, A. D., et al. (1998). Evidence for striatal dopamine release during a video game. <em>Nature</em>, 393(6682), 266-268. <a href="https://doi.org/10.1038/30498" target="_blank">doi:10.1038/30498</a></li>
-<li>Lippert, R. N., Cremer, A. L., Edwin Thanarajah, S., et al. (2019). Time-dependent assessment of stimulus-evoked regional dopamine release. <em>Nature Communications</em>, 10, 336. <a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">doi:10.1038/s41467-018-08143-4</a></li>
-<li>Erritzoe, D., Ashok, A. H., Searle, G. E., et al. (2020). Serotonin release measured in the human brain: a PET study with [<sup>11</sup>C]CIMBI-36 and d-amphetamine challenge. <em>Neuropsychopharmacology</em>, 45(5), 804-810. <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">doi:10.1038/s41386-019-0567-5</a></li>
-<li>Neyhart, E., Zhou, N., Munn, B. R., et al. (2024). Cortical acetylcholine dynamics are predicted by cholinergic axon activity and behavioral state. <em>Cell Reports</em>, 43(10), 114808. <a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
-<li>Cahill, M. K., et al. (2024). Network-level encoding of local neurotransmitters in cortical astrocytes. <em>Nature</em>, 629, 146-153. <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
-<li>Xu, W., et al. (2024). Sleep restores an optimal computational regime in cortical networks. <em>Nature Communications</em>, 15, 3820. <a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">doi:10.1038/s41467-024-47838-5</a></li>
+<li>Dorkenwald, S. 他（2024年）。成人の脳の神経配線図。 <em>ネイチャー</em>、634、124-138。 <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">doi:10.1038/s41586-024-07558-y</a></li>
+<li>Lu, X.、Han, X.、Meirovitch, Y. 他（2023年）。哺乳動物の脳全体の高品質な光学的および超微細構造研究のために細胞外空間を保存します。 <em>Cell レポート メソッド</em>、3(7)、100520。<a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>Yao、Z.、他。 （2023年）。マウス脳全体の細胞タイプの高解像度トランスクリプトームおよび空間アトラス。 <em>Nature</em>、624、317-332。 <a href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank">doi:10.1038/s41586-023-06812-z</a></li>
+<li>Gouwens、N.W.、他（2021年）。マウス運動野におけるトランスクリプトーム細胞タイプの表現型の変動。 <em>Nature</em>、598、144-150。 <a href="https://doi.org/10.1038/s41586-020-2907-3" target="_blank">doi:10.1038/s41586-020-2907-3</a></li>
+<li>MICronSコンソーシアムほか(2025年)。マウス視覚野の複数の領域にわたる機能的コネクトミクス。 <em>ネイチャー</em>、640、435-447。 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Gamlin, C.R., et al. (2025年)。マウス視覚野における予測されるSstトランスクリプトームタイプのコネクトミクス。 <em>ネイチャー</em>、640、497-505。 <a href="https://doi.org/10.1038/s41586-025-08805-6" target="_blank">doi:10.1038/s41586-025-08805-6</a></li>
+<li>Bosch, C.、Pacureanu, A.、Patino, J. 他（2022年）。相関生体内生理学、シンクロトロンマイクロトモグラフィー、体積電子顕微鏡法による脳組織の機能的かつマルチスケール 3D 構造研究。 <em>Nature Communications</em>、13、2923。<a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">doi:10.1038/s41467-022-30199-6</a></li>
+<li>Ding、Z.、他。 (2025年)。機能的コネクトミクスにより、マウスの視覚野における一般的な配線規則が明らかになりました。 <em>ネイチャー</em>、640、459-469。 <a href="https://doi.org/10.1038/s41586-025-08840-3" target="_blank">doi:10.1038/s41586-025-08840-3</a></li>
+<li>Holler, S. 他（2021年）。新皮質シナプスの構造と機能。 <em>ネイチャー</em>、591、111-116。 <a href="https://doi.org/10.1038/s41586-020-03134-2" target="_blank">ドイ:10.1038/s41586-020-03134-2</a></li>
+<li>D&uuml;rst、C.D.、Wiegert、J.S.、Schulze、C.、他。 （2022年）。小胞放出確率は、個々のシェーファー側副シナプスの強度を設定します。 <em>Nature Communications</em>、13、6126。<a href="https://doi.org/10.1038/s41467-022-33565-6" target="_blank">doi:10.1038/s41467-022-33565-6</a></li>
+<li>Mittermaier, V.、Kononenko, N.L.、Jin, Y. 他（2024年）。膜電位状態は、ヒト新皮質組織におけるシナプスの強化をゲートします。 <em>Nature Communications</em>、15、10340。<a href="https://doi.org/10.1038/s41467-024-53901-2" target="_blank">doi:10.1038/s41467-024-53901-2</a></li>
+<li>ベイラン、M.、＆amp;リトウィン・クマール、A. (2025)。コネクトーム制約付きリカレント ネットワークにおける神経活動の予測。 <em>Nature Neuroscience</em>、28、2561-2574。 <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Ahlfors、S. P.、Han、J.、Belliveau、J. W.、およびH&auml;m&auml;l&auml;inen、M.S. (2010)。音源方向に対する MEG と EEG の感度。 <em>脳トポグラフィー</em>、23(3)、227-232。 <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">doi:10.1007/s10548-010-0154-x</a></li>
+<li>Ahlfors、S. P.、Han、J.、Lin、F.-H.、Witzel、T.、Belliveau、J. W.、H&auml;m&auml;l&auml;inen、M. S.、&amp;ハルグレン、E. (2010)。拡張および分散ソースによって生成される EEG および MEG 信号のキャンセル。 <em>人間の脳のマッピング</em>、31(1)、140-149。 <a href="https://doi.org/10.1002/hbm.20851" target="_blank">doi:10.1002/hbm.20851</a></li>
+<li>Goldenholz, D.M.、Ahlfors, S.P.、H&auml;m&auml;l&auml;inen, M.S.、Sharon, D.、Ishitobi, M.、Vaina, L.M.、&amp; Stufflebeam、S.M. (2009)。脳磁図と脳波における皮質信号源の信号対雑音比のマッピング。 <em>人間の脳のマッピング</em>、30(4)、1077-1086。 <a href="https://doi.org/10.1002/hbm.20571" target="_blank">doi:10.1002/hbm.20571</a></li>
+<li>Piastra、M. C.、N&uuml;szlig;ing、A.、Vorwerk、J.、Clerc、M.、Engwer、C.、およびウォルターズ、C.H. (2021)。皮質および皮質下の信号源に対する脳波検査および脳磁気検査の感度に関する包括的な研究。 <em>人間の脳のマッピング</em>、42(4)、978-992。 <a href="https://doi.org/10.1002/hbm.25272" target="_blank">doi:10.1002/hbm.25272</a></li>
+<li>Mikulan, E.、Russo, S.、Bares, M. 他（2020年）。人間の脳内刺激と HD-EEG の同時、音源位置特定方法のグラウンドトゥルース。 <em>科学データ</em>、7、127。<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Unnwongse, K.、Rampp, S.、Wehner, T. 他（2023年）。頭蓋内電気刺激を使用したEEGソースイメージングの検証。 <em>ブレインコミュニケーションズ</em>、5(1)、fcad023。 <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
+<li>Pizzo, F.、Roehri, N.、Medina Villalon, S. 他（2019年）。脳深部の活動は脳磁図で検出できます。 <em>Nature Communications</em>、10、971。<a href="https://doi.org/10.1038/s41467-019-08665-5" target="_blank">doi:10.1038/s41467-019-08665-5</a></li>
+<li>Zauli, F.M.、Del Vecchio, M.、Pigorini, A. 他（2024年）。脳内と頭皮の同時高密度EEG記録により、隠れた発作間欠性てんかん放電の位置を特定します。 <em>Journal of Neuroscience Methods</em>、409、110193.<a href="https://doi.org/10.1016/j.jneumeth.2024.110193" target="_blank">doi:10.1016/j.jneumeth.2024.110193</a></li>
+<li>Hao, S.、Zhao, H.、Feng, Z. 他(2025年)。薬剤耐性てんかんにおける HD-EEG ソースイメージングと同時 SEEG 記録。 <em>てんかん</em>、66(11)、4451-4464。 <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Boto, E.、Holmes, N.、Leggett, J. 他（2018年）。ウェアラブル システムを使用して、脳磁図を現実世界のアプリケーションに移行します。 <em>ネイチャー</em>、555、657-661。 <a href="https://doi.org/10.1038/nature26147" target="_blank">ドイ:10.1038/nature26147</a></li>
+<li>Seymour、R.A.、Alexander、N.、Mellor、S.、O'Neill、G.C.、Tierney、T.M.、Barnes、G.R.、およびマグワイア、EA (2021)。 OPM を使用して、立っているモバイル参加者の神経活動を測定します。 <em>NeuroImage</em>、244、118604.<a href="https://doi.org/10.1016/j.neuroimage.2021.118604" target="_blank">doi:10.1016/j.neuroimage.2021.118604</a></li>
+<li>Rea, M.、Holmes, N.、Hill, R.M.、Boto, E.、Leggett, J.、Edwards, L. J.、Wolger, D.、Dawson, E.、Shah, V.、Osborne, J.、Bowtell, R.、およびM.J.ブルックス (2021)。ウェアラブル脳磁計のための高精度の磁場のモデリングと制御。 <em>NeuroImage</em>、241、118401.<a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">doi:10.1016/j.neuroimage.2021.118401</a></li>
+<li>メラー、S.J.、ティアニー、T.M.、オニール、G.C.、アレクサンダー、N.、シーモア、R.A.、ホームズ、N.、ロペス、J.D.、ヒル、R.M.、ボトー、E.、レア、M.、ロバーツ、G.、レゲット、J.、ボウテル、R.、ブルックス、M.J.、マグワイア、 E.A.、ウォーカー、M.C.、およびバーンズ、G.R. (2022)。可動OP-MEGの磁場マッピングと補正。 <em>IEEE Transactions on Biomedical Engineering</em>、69(2)、528-536。 <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">doi:10.1109/TBME.2021.3100770</a></li>
+<li>Holmes, N.、Leggett, J.、Hill, R.M.、Rier, L.、Boto, E.、Schofield, H.、Hayward, T.、Dawson, E.、Wolger, D.、Shah, V.、Taulu, S.、Brookes, M. J.、およびボーテル、R. (2025)。軽く遮蔽された環境でのウェアラブル脳磁計。 <em>IEEE Transactions on Biomedical Engineering</em>、72(2)、609-618。 <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">doi:10.1109/TBME.2024.3465654</a></li>
+<li>Rhodes, N.、Rier, L.、Boto, E.、Hill, R.M.、およびM.J.ブルックス (2025)。光ポンピング磁力計ベースの脳磁図法を使用した、MRI を使用しない信号源再構成。 <em>画像神経科学</em>、3、IMAG.a.8。 <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">doi:10.1162/IMAG.a.8</a></li>
+<li>Wu、T.、Xiao、W.、Peng、X.、Wu、T.、&amp; Guo、H. (2025)。生体磁気測定用の光ポンピング磁力計アレイにおけるクロストークの低減。 <em>科学機器のレビュー</em>、96(8)、085004。<a href="https://doi.org/10.1063/5.0273491" target="_blank">doi:10.1063/5.0273491</a></li>
+<li>Spedden, M.E.、O'Neill, G.C.、West, T.O.、Tierney, T.M.、Mellor, S.、Alexander, N.A.、Seymour, R.、Lundbye-Jensen, J.、Nielsen, J.B.、Farmer, S.F.、および;バーンズ、G.R. (2025)。ウェアラブル MEG を使用して人間の歩行動作の神経制御を研究します。 <em>センサー</em>、25(13)、4160。<a href="https://doi.org/10.3390/s25134160" target="_blank">doi:10.3390/s25134160</a></li>
+<li>マーフィー、K.、ハリス、A.D.、およびワイズ、R.G. (2011)。息止めによる血管反応性の違いを確実に測定: 刺激誘発状態と安静状態の BOLD fMRI データを正規化します。 <em>NeuroImage</em>、54(1)、369-379。 <a href="https://doi.org/10.1016/j.neuroimage.2010.07.059" target="_blank">doi:10.1016/j.neuroimage.2010.07.059</a></li>
+<li>ウィリアムズ、R.J.、スペクト、J.L.、マゼロル、E.L.、レベル、R.M.、マクドナルド、M.E.、&amp;;パイク、GB (2023)。 BOLD fMRI タスクの反応と大脳皮質全体の脳血管反応性の対応。 <em>生理学におけるフロンティア</em>、14、1167148。<a href="https://doi.org/10.3389/fphys.2023.1167148" target="_blank">doi:10.3389/fphys.2023.1167148</a></li>
+<li>Wu、S.、タイラー、L.K.、ヘンソン、R.N.A.、ロウ、J.B.、Cam-CAN、およびツベタノフ、K.A. (2023)。脳血流は、成人の生涯にわたる複数の需要ネットワークの活動と流動性知能を予測します。 <em>老化の神経生物学</em>、121、1-14。 <a href="https://doi.org/10.1016/j.neurobiolaging.2022.09.006" target="_blank">doi:10.1016/j.neurobiolaging.2022.09.006</a></li>
+<li>Özbay, P.S.、Chang, C.、Picchioni, D. 他（2019年）。交感神経活動は fMRI 信号に寄与します。 <em>コミュニケーション生物学</em>、2、421。<a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">doi:10.1038/s42003-019-0659-0</a></li>
+<li>Yucel、M.A.Y.、Selb、J.、Aasted、C.M.A.、Petkov、M.P.、Becerra、L.、Borsook、D.、および;ボアス、D.A. (2015)。短い分離回帰により統計的有意性が向上し、異なる自律神経反応を伴うタスクについて近赤外分光法によって得られる血行力学的反応の局所性が向上します。 <em>ニューロフォトニクス</em>、2(3)、035005.<a href="https://doi.org/10.1117/1.NPh.2.3.035005" target="_blank">doi:10.1117/1.NPh.2.3.035005</a></li>
+<li>An、J.、Goyal、P.、Luft、A.R.、およびシェーンハマー、J.G. (2025)。機能的近赤外分光法短チャネル回帰は、作業記憶負荷の皮質活性化推定を改善します。 <em>ニューロフォトニクス</em>、12(3)、035009。<a href="https://doi.org/10.1117/1.NPh.12.3.035009" target="_blank">doi:10.1117/1.NPh.12.3.035009</a></li>
+<li>Bolt, T.、Wang, S.、Nomi, J.S. 他(2025年)。グローバル fMRI 信号の自律生理学的結合。 <em>Nature Neuroscience</em>、28、1327-1335。 <a href="https://doi.org/10.1038/s41593-025-01945-y" target="_blank">doi:10.1038/s41593-025-01945-y</a></li>
+<li>Epp、S.M.、Castrillon、G.、Yuan、B.、Andrews-Hanna、J.、Preibisch、C.、およびリードル、V. (2025)。大胆な信号変化は、人間の皮質全体の酸素代謝を妨げる可能性があります。 <em>Nature Neuroscience</em>。 <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Jaroszynski、K.M.、Lee、H.、Langham、M.C.、およびWehrli、F.W. (2025)。ベースライン時および生理的刺激に応答した、制約付き qBOLD 法と全脳酸素濃度測定法の間の脳酸素代謝パラメータの比較。 Biomedicine</em> の <em>NMR、38(9)、e70120。 <a href="https://doi.org/10.1002/nbm.70120" target="_blank">doi:10.1002/nbm.70120</a></li>
+<li>Reimer, J.、McGinley, M. J.、Liu, Y. 他（2016年）。瞳孔変動は、皮質におけるアドレナリン作動性およびコリン作動性活動の急速な変化を追跡します。 <em>Nature Communications</em>、7、13289。<a href="https://doi.org/10.1038/ncomms13289" target="_blank">doi:10.1038/ncomms13289</a></li>
+<li>LLohan, S.、Moberly, A. H.、Benisty, H. 他（2022年）。コリン作動性活性と新皮質活性の時空間的に不均一な調整。 <em>Nature Neuroscience</em>、25(12)、1706-1713。 <a href="https://doi.org/10.1038/s41593-022-01202-6" target="_blank">doi:10.1038/s41593-022-01202-6</a></li>
+<li>Hansen, J. Y.、Shafiei, G.、Markello, R. D. 他（2022年）。神経伝達物質システムをヒト新皮質の構造的および機能的組織にマッピングする。 <em>Nature Neuroscience</em>、25(11)、1569-1581。 <a href="https://doi.org/10.1038/s41593-022-01186-3" target="_blank">doi:10.1038/s41593-022-01186-3</a></li>
+<li>Goulas, A.、Changeux, J.-P.、Wagstyl, K.、Amunts, K.、Palomero-Gallagher, N.、およびヒルゲタグ、C.C. (2021)。人間の大脳皮質における伝達物質受容体の分布の自然な軸。 <em>PNAS</em>、118(3)、e2020574118。 <a href="https://doi.org/10.1073/pnas.2020574118" target="_blank">doi:10.1073/pnas.2020574118</a></li>
+<li>Naganawa, M.、Li, S.、Nabulsi, N. 他（2021年）。シナプス小胞糖タンパク質 2A の PET イメージング用の放射性リガンドである <sup>18</sup>F-SynVesT-1 のヒト初の評価。 <em>Journal of Nuclear Medicine</em>、62(4)、561-567。 <a href="https://doi.org/10.2967/jnumed.120.249144" target="_blank">doi:10.2967/jnumed.120.249144</a></li>
+<li>Smart, K.、Liu, H.、Matuskey, D. 他（2021年）。シナプス小胞放射性トレーサー [<sup>11</sup>C]UCB-J の結合は、視覚刺激課題を使用した脳機能活性化中に変化しません。 <em>脳血流と脳のジャーナル代謝</em>、41(5)、1067-1079。 <a href="https://doi.org/10.1177/0271678X20946198" target="_blank">ドイ:10.1177/0271678X20946198</a></li>
+<li>Johansen, A.、Beliveau, V.、Colliander, E. 他（2024年）。シナプス密度の生体内高解像度ヒト脳アトラス。 <em>Journal of Neuroscience</em>、44(33)、e1750232024。 <a href="https://doi.org/10.1523/JNEUROSCI.1750-23.2024" target="_blank">doi:10.1523/JNEUROSCI.1750-23.2024</a></li>
+<li>Shatalina, E.、Onwordi, E.C.、Whitehurst, T. 他（2024年）。健康なヒトにおける SV2A レベル、神経活動、および認知機能の関係: [<sup>11</sup>C]UCB-J PET および fMRI 研究。 <em>画像神経科学</em>、2、1-16。 <a href="https://doi.org/10.1162/imag_a_00190" target="_blank">doi:10.1162/imag_a_00190</a></li>
+<li>Holmes, S.E.、Finnema, S.J.、Naganawa, M. 他（2022年）。生きた脳のシナプス密度 (SV2A) に対するケタミンの影響を画像化します。 <em>分子精神医学</em>、27(4)、2273-2281。 <a href="https://doi.org/10.1038/s41380-022-01465-2" target="_blank">doi:10.1038/s41380-022-01465-2</a></li>
+<li>Shapson-Coe, A.、Januszewski, M.、Berger, D.R. 他（2024年）。ナノスケールの解像度で再構成された人間の大脳皮質のペタボクセル断片。 <em>Science</em>、384(6696)、eadk4858。 <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
+<li>Kothe, C.、Shirazi, S. Y.、Stenner, T.、Medine, D.、Boulay, C.、Grivich, M. I.、Artoni, F.、Mullen, T.、Delorme, A.、およびMakeig、S. (2025)。同期されたマルチモーダル記録のためのラボ ストリーミング レイヤー。 <em>画像化神経科学</em>、3、IMAG.a.136。 <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Wei, H.、Jafarian, A.、Zeidman, P.、Litvak, V.、Razi, A.、Garrido, M.、Friston, K.、およびドニゾー、J. (2020)。 EEG および fMRI 用のベイジアン フュージョンおよびマルチモーダル DCM。 <em>NeuroImage</em>、211、116595。<a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">doi:10.1016/j.neuroimage.2020.116595</a></li>
+<li>Vafaii, H.、Mandino, F.、Desrosiers-Grégoire, G.、他。 （2024年）。自発的な脳活動の多峰性測定により、皮質機能組織の共通パターンと多様なパターンの両方が明らかになります。 <em>ネイチャーコミュニケーションズ</em>。 <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen, J. E.、Lewis, L. D.、Courey, S. E.、Catana, C.、Polimeni, J. R.、Fan, J.、Droppa, K. S.、Patel, R.、Wey, H.-Y.、Chang, C.、Manoach, D. S.、Price, J. C.、Sander, C. Y.、および;ローゼン、B.R. (2025)。 EEG-PET-MRI を同時に行うことで、覚醒時とノンレム睡眠時の時間的に結合し、空間的に構造化された脳のダイナミクスを特定します。 <em>Nature Communications</em>。 <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Reveley, C.、Seth, A.K.、Pierpaoli, C.、Silva, A.C.、Yu, D.、Saunders, R.C.、Leopold, D.A.、およびそう、F.Q. (2015)。表在白質線維系は、拡散 MR トラクトグラフィーにおける長距離皮質接続の検出を妨げます。 <em>Proceedings of the National Academy of Sciences of United States of America</em>、112(21)、E2820-E2828。 <a href="https://doi.org/10.1073/pnas.1418198112" target="_blank">doi:10.1073/pnas.1418198112</a></li>
+<li>Schilling, K. G.、Gao, Y.、Janve, V.、Stepniewska, I.、Landman, B. A.、およびアンダーソン、AW (2018)。拡散 MRI ファイバートラクトグラフィーにおける回転偏りの確認。 <em>人間の脳のマッピング</em>、39(3)、1449-1466。 <a href="https://doi.org/10.1002/hbm.23936" target="_blank">doi:10.1002/hbm.23936</a></li>
+<li>Gajwani、M.、Oldham、S.、Pang、J.C.、Arnatkevičiėutė、A.、Tiego、J.、Bellgrove、M.A.、&amp;;フォルニト、A. (2023)。ヒトコネクトームのハブは拡散 MRI で一貫して特定できますか? <em>ネットワーク神経科学</em>、7(4)、1326-1350。 <a href="https://doi.org/10.1162/netn_a_00324" target="_blank">doi:10.1162/netn_a_00324</a></li>
+<li>He, Y.、Hong, Y.、Wu, Y. 他（2024年）。球面デコンボリューションに基づくトラクトグラムのフィルタリングにより、構造コネクトームの左右性が変化します。 <em>NeuroImage</em>、303、120904.<a href="https://doi.org/10.1016/j.neuroimage.2024.120904" target="_blank">doi:10.1016/j.neuroimage.2024.120904</a></li>
+<li>McMaster、E.M.、Newlin、NR、Rudravaram、G. 他(2025年)。ボクセル サイズの差異を考慮した調和のとれたコネクトーム リサンプリング。 <em>磁気共鳴画像</em>, 121, 110424.<a href="https://doi.org/10.1016/j.mri.2025.110424" target="_blank">doi:10.1016/j.mri.2025.110424</a></li>
+<li>Bramati、I.B.、Szczupak、D.、Carneiro Monteiro、M.、Meereles、F.、Menezes Guimarães、D.、Dean、R.J.、Paul、L.K.、および;トヴァー・モール、F. (2026)。拡散 MRI サンプリング スキームは、拡散測定基準とトラクトグラフィーに偏りをもたらします。 <em>ニューロイメージングのフロンティア</em>、5、1670604.<a href="https://doi.org/10.3389/fnimg.2026.1670604" target="_blank">doi:10.3389/fnimg.2026.1670604</a></li>
+<li>Manzano-Patrón, J.P.、Deistler, M.、Schröder, C. 他(2025年)。拡散 MRI におけるシミュレーションベースの推論を使用した不確実性マッピングと確率的トラクトグラフィー: 古典的なベイズとの比較。 <em>医療画像分析</em>、103、103580.<a href="https://doi.org/10.1016/j.media.2025.103580" target="_blank">doi:10.1016/j.media.2025.103580</a></li>
+<li>Zhu, S.、Huszar, I.N.、Cottaar, M. 他(2025年)。ハイブリッド MRI 顕微鏡トラクトグラフィーによる構造コネクトームの画像化。 <em>医療画像分析</em>、102、103498.<a href="https://doi.org/10.1016/j.media.2025.103498" target="_blank">doi:10.1016/j.media.2025.103498</a></li>
+<li>Llucchetti, F.、Céléreau, E.、Steullet, P.、他。 (2025年)。 MR 分光イメージングを使用して人間の脳の代謝コネクトームを構築すると、大脳の生化学的組織が明らかになります。 <em>Nature Communications</em>、16、11344.<a href="https://doi.org/10.1038/s41467-025-66124-w" target="_blank">doi:10.1038/s41467-025-66124-w</a></li>
+<li>レン、J.、シェリー、A.D.、およびマロイ、C.R. (2015)。健康な人間の脳の <sup>31</sup>P-MRS: ATP 合成、代謝産物濃度、pH、および T1 緩和時間。 Biomedicine</em> の <em>NMR、28(11)、1455-1462。 <a href="https://doi.org/10.1002/nbm.3384" target="_blank">doi:10.1002/nbm.3384</a></li>
+<li>Guo, R.、Yang, S.、Wiesner, H.M.、Li, Y.、Zhao, Y.、Liang, Z.-P.、Chen, W.、および朱、X.-H. （2024年）。 7 テスラでのリン 31 MR 分光イメージングを使用した、人間の脳全体の細胞内 NAD 含有量のマッピング。 <em>神経科学のフロンティア</em>、18、1389111.<a href="https://doi.org/10.3389/fnins.2024.1389111" target="_blank">doi:10.3389/fnins.2024.1389111</a></li>
+<li>Kaiser, A.、Vind, F.A.、Duarte, J.M.N.、Jelescu, I.、Lin, Y.、Yu, X.、Widmaier, M.、Wenz, D.、&amp;;シン、L. (2026)。超高磁場<sup>31</sup>P機能的磁気共鳴分光法は、視覚刺激中の脳エネルギー代謝におけるNAD<sup>+</sup>のダイナミクスを明らかにします。 <em>脳血流と脳のジャーナル代謝</em>。 <a href="https://doi.org/10.1177/0271678X261415784" target="_blank">ドイ:10.1177/0271678X261415784</a></li>
+<li>Bhogal, A.A.、Broeders, T.A.A.、Morsinkhof, L.、他（2020年）。 7 T での 2D <sup>1</sup>H 磁気共鳴分光イメージングを使用したヒト中央脳構造における脂質抑制および組織分画補正された代謝分布。<em>Brain and Behavior</em>、10(10)、e01852。 <a href="https://doi.org/10.1002/brb3.1852" target="_blank">doi:10.1002/brb3.1852</a></li>
+<li>Wright、A.M.、Murali-Manohar、S.、およびヘニング、A. (2022)。 9.4 T でのヒト脳内の 12 の代謝物の定量的 T<sub>1</sub> 緩和補正代謝物マッピング。<em>NeuroImage</em>、261、119574。<a href="https://doi.org/10.1016/j.neuroimage.2022.119574" target="_blank">doi:10.1016/j.neuroimage.2022.119574</a></li>
+<li>Baboli, M.、Wang, F.、Dong, Z. 他（2024年）。全脳三次元 MR 分光学およびエコープラナー時間分解イメージングを使用した、神経膠腫患者および健康な個人における絶対代謝物の定量化。 <em>放射線科</em>、311(3)、e232401。 <a href="https://doi.org/10.1148/radiol.232401" target="_blank">doi:10.1148/radiol.232401</a></li>
+<li>Li, X.、Zhu, X.-H.、Li, Y. 他(2025年)。動的重水素磁気共鳴分光イメージングを使用した、人間の脳における主要なグルコース代謝率の定量的マッピング。 <em>PNAS Nexus</em>、4(3)、pgaf072。 <a href="https://doi.org/10.1093/pnasnexus/pgaf072" target="_blank">doi:10.1093/pnasnexus/pgaf072</a></li>
+<li>Guo, R.、Li, Y.、Zhao, Y. 他(2025年)。拡張空間スペクトルエンコーディングと部分空間モデリングを使用した超高磁場での高解像度脳代謝イメージング。 <em>IEEE Transactions on Biomedical Engineering</em>、72(12)、3558-3566。 <a href="https://doi.org/10.1109/TBME.2025.3572448" target="_blank">doi:10.1109/TBME.2025.3572448</a></li>
+<li>Karkouri, J.、Deelchand, D. K.、Van de Moortele、P.-F. 他（2026年）。 7 T での動的重水素代謝イメージングによる人間の脳内の重水素化代謝物の濃度と速度の定量化。<em>Magnetic Resonance in Medicine</em>。 <a href="https://doi.org/10.1002/mrm.70308" target="_blank">doi:10.1002/mrm.70308</a></li>
+<li>Qian, Y.、Zhao, T.、Zheng, H.、Weimer, J.、およびボアダ、F.E. (2012)。 7 T での人間の脳の高解像度ナトリウムイメージング。<em>Magnetic Resonance in Medicine</em>、68(1)、227-233。 <a href="https://doi.org/10.1002/mrm.23225" target="_blank">doi:10.1002/mrm.23225</a></li>
+<li>Qian, Y.、Lin, Y.C.、Chen, X. 他(2025年)。モノT<sub>2</sub>ナトリウム信号を分離するための3Tの単一量子ナトリウムMRI。 <em>科学レポート</em>、15、27427。<a href="https://doi.org/10.1038/s41598-025-07800-1" target="_blank">doi:10.1038/s41598-025-07800-1</a></li>
+<li>Rzechorzek, N.M.、Thrippleton, M.J.、Chappell, F.M.、他（2022年）。人間の脳の毎日の温度リズムは、脳損傷後の生存を予測します。 <em>Brain</em>、145(6)、2031-2048。 <a href="https://doi.org/10.1093/brain/awab466" target="_blank">doi:10.1093/脳/awab466</a></li>
+<li>van Blooijs, D.、Nunes, A.、van den Boom, M. A. 他（2023年）。人間の脳における伝達速度の発達の軌跡。 <em>Nature Neuroscience</em>、26、675-686。 <a href="https://doi.org/10.1038/s41593-023-01272-0" target="_blank">doi:10.1038/s41593-023-01272-0</a></li>
+<li>Baadsvik、E.L.、Weiger、M.、Froidevaux、R.、Schildknecht、C.M.、Ineichen、B.V.、およびプルスマン、K.P. (2024)。生体内における人間の脳のミエリン二重層マッピング。 <em>医学における磁気共鳴</em>、91(6)、2332-2344。 <a href="https://doi.org/10.1002/mrm.29998" target="_blank">doi:10.1002/mrm.29998</a></li>
+<li>Morgan, C.A.、Thomas, D.L.、Shao, X.、他（2024年）。拡散処理およびマルチエコー動脈スピンラベリングを使用した血液脳関門の水交換率の測定: 定量値と年齢依存性の比較。 Biomedicine</em> の <em>NMR、37(12)、e5256。 <a href="https://doi.org/10.1002/nbm.5256" target="_blank">doi:10.1002/nbm.5256</a></li>
+<li>Padrela, B. E.、Slivka, M.、Sneve, M. H. 他(2025年)。成人生涯にわたる血液脳関門の水透過性: マルチエコー ASL 研究。 <em>老化の神経生物学</em>、147、176-186。 <a href="https://doi.org/10.1016/j.neurobiolaging.2024.12.012" target="_blank">doi:10.1016/j.neurobiolaging.2024.12.012</a></li>
+<li>Chung, K.J.、Abdelhafez, Y.G.、Spencer, B.A. 他(2025年)。分子血液脳関門透過性の定量的 PET イメージングとモデリング。 <em>Nature Communications</em>、16、3076。<a href="https://doi.org/10.1038/s41467-025-58356-7" target="_blank">doi:10.1038/s41467-025-58356-7</a></li>
+<li>Zhao, L.、Taso, M.、Dai, W.、Press、D. Z.、&amp;オルソップ、D.C. (2020)。動脈スピンラベリングによる脈絡叢の見かけの血流の非侵襲的測定。 <em> CNS</em> の流体とバリア。 <a href="https://doi.org/10.1186/s12987-020-00218-z" target="_blank">doi:10.1186/s12987-020-00218-z</a></li>
+<li>Petitclerc, L.、Hirschler, L.、Wells, J.A.、他。 （2021年）。超長 TE 動脈スピン標識により、ヒトにおける血液から脳髄液への迅速かつ脳全体にわたる水輸送が明らかになります。 <em>NeuroImage</em>、245、118755.<a href="https://doi.org/10.1016/j.neuroimage.2021.118755" target="_blank">doi:10.1016/j.neuroimage.2021.118755</a></li>
+<li>Anderson, V.C.、Tagge, I.J.、Doud, A. 他（2022年）。脳液関門の DCE-MRI: ヒト脈絡叢における生体内の水循環。 <em>ティッシュバリア</em>。 <a href="https://doi.org/10.1080/21688370.2021.1963143" target="_blank">doi:10.1080/21688370.2021.1963143</a></li>
+<li>Wu, X.、Tan, S.、Zhang, Y. 他（2026年）。ヒト脈絡叢の血液-CSF関門を越える水分交換を測定するための緩和交換磁気共鳴画像法(REXI)の実現可能性。 <em>脳血流と脳のジャーナル代謝</em>。 <a href="https://doi.org/10.1177/0271678X251369218" target="_blank">ドイ:10.1177/0271678X251369218</a></li>
+<li>プチクレール、L.、デュラント、H.、ヒルシュラー、L.、V&acute;clav&#367;、L.、&amp;;ヴァン・オッシュ、M.J.P. (2026)。動脈スピンラベリング MRI を使用した、人間の脳の血液脳関門および血液脳脊髄液関門を通過する水輸送の同時測定。 <em>脳血流と脳のジャーナルメタボリズム</em>。 <a href="https://doi.org/10.1177/0271678X261429042" target="_blank">ドイ:10.1177/0271678X261429042</a></li>
+<li>Villemagne, V. L.、原田 R.、Dore, V. 他（2022年）。反応性星膠症のイメージング用の新規 <sup>18</sup>F 標識モノアミンオキシダーゼ B PET トレーサーである <sup>18</sup>F-SMBT-1 のファーストインヒューマン評価。 <em>Journal of Nuclear Medicine</em>、63(10)、1551-1559。 <a href="https://doi.org/10.2967/jnumed.121.263254" target="_blank">doi:10.2967/jnumed.121.263254</a></li>
+<li>Villemagne, V. L.、原田 R.、Dore, V. 他（2022年）。アルツハイマー病スペクトル全体にわたる <sup>18</sup>F-SMBT-1 を使用した反応性星膠症の評価。 <em>核医学ジャーナル</em>、63(12)、1900-1906。 <a href="https://doi.org/10.2967/jnumed.121.263255" target="_blank">doi:10.2967/jnumed.121.263255</a></li>
+<li>Hiraoka, K.、Mesfin, B.、Wu, Y. 他(2025年)。モノアミンオキシダーゼ B の [<sup>18</sup>F]SMBT-1 PET イメージングの動態および定量分析。<em>Annals of Nuclear Medicine</em>。 <a href="https://doi.org/10.1007/s12149-025-02083-y" target="_blank">doi:10.1007/s12149-025-02083-y</a></li>
+<li>Mesfin, B.、Ishioka, Y.、Ichinose, Y., et al. （2026年）。 [<sup>18</sup>F]SMBT-1 の全身生体内分布: 健康なヒトにおけるモノアミンオキシダーゼ B イメージング用の新規 PET トレーサー。 <em>核医学年報</em>。 <a href="https://doi.org/10.1007/s12149-025-02144-2" target="_blank">doi:10.1007/s12149-025-02144-2</a></li>
+<li>松岡 和也、松浦 和也、菊池 達也、他（2026年）。アルツハイマー病患者の反応性アストロサイトをイメージングするための、<sup>11</sup>C-SL25.1188 を使用したモノアミンオキシダーゼ B 発現の定量化。 <em>ヨーロッパ核医学ジャーナルおよび分子イメージング</em>。 <a href="https://doi.org/10.1007/s00259-025-07542-2" target="_blank">doi:10.1007/s00259-025-07542-2</a></li>
+<li>Tyacke、R.J.、Myers、J.F.M.、Venkataraman、A. 他（2018年）。ヒト脳のイミダゾリン<sub>2</sub>結合部位のPETリガンドである<sup>11</sup>C-BU99008の評価。 <em>Journal of Nuclear Medicine</em>、59(10)、1597-1602。 <a href="https://doi.org/10.2967/jnumed.118.208009" target="_blank">doi:10.2967/jnumed.118.208009</a></li>
+<li>Lリビングストン、NR、カルソラーロ、V.、ヒンツ、R.、他。 （2022年）。新しい<sup>11</sup>C-BU99008 PETを使用したアストロサイトの反応性と、認知障害のある個人におけるグルコース代謝、灰白質体積およびアミロイド負荷との関係。 <em>分子精神医学</em>、27(4)、2019-2029。 <a href="https://doi.org/10.1038/s41380-021-01429-y" target="_blank">doi:10.1038/s41380-021-01429-y</a></li>
+<li>Best, L.M.、Truong, J.、McCluskey, T. 他（2026年）。アルコール使用障害における MAO-B の状態: 推定星状神経膠症の [<sup>11</sup>C]SL25.1188 PET 画像研究。 <em>分子精神医学</em>。 <a href="https://doi.org/10.1038/s41380-025-03355-9" target="_blank">doi:10.1038/s41380-025-03355-9</a></li>
+<li>Jaisa-Aad、M.、Muñoz-Castro、C.、Healey、M.A.、Hyman、B.T.、およびセラーノ・ポゾ、A. (2024)。アルツハイマー病および関連認知症における反応性星状神経膠症のバイオマーカーとしてのモノアミンオキシダーゼ-B (MAO-B) の特性評価。 <em>Acta Neuropathologica</em>、147(1)、66.<a href="https://doi.org/10.1007/s00401-024-02712-2" target="_blank">doi:10.1007/s00401-024-02712-2</a></li>
+<li>Biechele, G.、Wind, K.、Blume, T. 他（2023年）。トランスロケータータンパク質は、げっ歯類モデルにおける活性化ミクログリアのマーカーですが、ヒトの神経変性疾患ではマーカーではありません。 <em>Nature Communications</em>、14、5247.<a href="https://doi.org/10.1038/s41467-023-40937-z" target="_blank">doi:10.1038/s41467-023-40937-z</a></li>
+<li>Wijesinghe, S.S.、Edison, P.、Passamonti, L.、他(2025年)。ミクログリアのバイオマーカーとしての in vivo TSPO PET の死後検証。 <em>ブレイン</em>。 <a href="https://doi.org/10.1093/brain/awaf078" target="_blank">doi:10.1093/ブレイン/awaf078</a></li>
+<li>Horti, A.G.、Naik, R.、Foss, C.A. 他（2022年）。マクロファージコロニー刺激因子 1 受容体 (CSF1R) を標的としたミクログリアの PET イメージング。 <em>EJNMMI Research</em>、12、81.<a href="https://doi.org/10.1186/s13550-022-00929-4" target="_blank">doi:10.1186/s13550-022-00929-4</a></li>
+<li>尾形 明、池沼 博、安野 文 他(2025年)。脳内のコロニー刺激因子 1 受容体をイメージングするための [<sup>11</sup>C]NCGG401 のヒト初の研究。 <em>Journal of Nuclear Medicine</em>、66(2)、302-308。 <a href="https://doi.org/10.2967/jnumed.124.268699" target="_blank">doi:10.2967/jnumed.124.268699</a></li>
+<li>Yan、X.、Noergaard、M.、Morse、C.L.、他。 (2025年)。神経炎症の潜在的なバイオマーカーであるシクロオキシゲナーゼ-2 の健康なヒトにおける PET 定量。 <em>Journal of Nuclear Medicine</em>、66(3)、398-404。 <a href="https://doi.org/10.2967/jnumed.124.268525" target="_blank">doi:10.2967/jnumed.124.268525</a></li>
+<li>Fultz, N.E.、Bonmassar, G.、Setsompop, K. 他（2019年）。人間の睡眠中の電気生理学的、血行力学的、および脳脊髄液の振動を組み合わせたもの。 <em>Science</em>、366(6465)、628-631。 <a href="https://doi.org/10.1126/science.aax5440" target="_blank">doi:10.1126/science.aax5440</a></li>
+<li>Kim, D.、Huang, Y.、およびリュー、J. (2025)。磁化転移スピン標識を使用した、年齢依存性の生体内ヒトグリンファティック交換の非侵襲的 MRI 測定。 <em>NeuroImage</em>、310、121142.<a href="https://doi.org/10.1016/j.neuroimage.2025.121142" target="_blank">doi:10.1016/j.neuroimage.2025.121142</a></li>
+<li>Lim, C.、Chen, C.、Zhang, C. 他(2025年)。人間の脳脊髄液の正味の流れは、覚醒状態の呼吸によって強化されます。 <em>Nature Communications</em>、16、595。<a href="https://doi.org/10.1038/s41467-025-66548-4" target="_blank">doi:10.1038/s41467-025-66548-4</a></li>
+<li>Yoo, R.-E.、Kim, J.-H.、Moon, H. Y. 他(2025年)。長期にわたる身体運動は、ヒトのグリンパ管および髄膜リンパ管の流れを促進すると考えられます。 <em>Nature Communications</em>、16、3360。<a href="https://doi.org/10.1038/s41467-025-58726-1" target="_blank">doi:10.1038/s41467-025-58726-1</a></li>
+<li>Eide、P.K.、Lashkarivand、A.、Pripp、A.H.、他。 （2023年）。血漿神経変性バイオマーカー濃度は、神経障害におけるグリンパ管および髄膜リンパ管の測定と関連しています。 <em>Nature Communications</em>、14、2084。<a href="https://doi.org/10.1038/s41467-023-37685-5" target="_blank">doi:10.1038/s41467-023-37685-5</a></li>
+<li>Huber, R.、Mäki, H.、Rosanova, M.、Casarotto, S.、Canali, P.、Casali, A. G.、Tononi, G.、およびマッシミニ、M. (2013)。人間の皮質の興奮性は、起きている時間が経つにつれて増加します。 <em>C大脳皮質</em>、23(2)、332-338。 <a href="https://doi.org/10.1093/cercor/bhs014" target="_blank">doi:10.1093/cercor/bhs014</a></li>
+<li>Kuhn, M.、Wolf, E.、Maier, J. G.、Mainberger, F.、Feige, B.、Schmid, H.、他。 （2016年）。睡眠は、人間の皮質における恒常性と連合性のシナプス可塑性を再調整します。 <em>Nature Communications</em>、7、12455。<a href="https://doi.org/10.1038/ncomms12455" target="_blank">doi:10.1038/ncomms12455</a></li>
+<li>Tallman、C.W.、Siler、S.N.、Lee、H.、他(2025年)。人間の海馬におけるニューロンの割り当てとエピソード記憶のスパースコーディング。 <em>Scientific Reports</em>、15、21967。<a href="https://doi.org/10.1038/s41598-025-21967-7" target="_blank">doi:10.1038/s41598-025-21967-7</a></li>
+<li>Zrenner、C.、Desideri、D.、Belardinelli、P.、およびジーマン、U. (2018)。リアルタイムの EEG で定義された興奮状態は、人間の運動野における TMS 誘発可塑性の有効性を決定します。 <em>脳刺激</em>、11(2)、374-389。 <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">doi:10.1016/j.brs.2017.11.016</a></li>
+<li>Khatri、U. U.、Pulliam、K.、Manesiya、M.、Vieyra Cortez、M.、Millan、J. del R.、およびフセイン、S.J. (2025)。パーソナライズされた全脳活動パターンにより、人間の皮質脊髄路の活性化がリアルタイムで予測されます。 <em>脳刺激</em>、18(1)、64-76。 <a href="https://doi.org/10.1016/j.brs.2024.12.1193" target="_blank">doi:10.1016/j.brs.2024.12.1193</a></li>
+<li>Fehér、K.D.、Henckaerts、P.、Hirsch、V.、Bucsenez、U.、Kuhn、M.、Maier、J.G.、他。 （2026年）。昼寝は、人間の皮質における恒常性と連合性のシナプス可塑性を再調整することができます。 <em>NeuroImage</em>、327、121723.<a href="https://doi.org/10.1016/j.neuroimage.2026.121723" target="_blank">doi:10.1016/j.neuroimage.2026.121723</a></li>
+<li>Hirschler, L.、Runderkamp, B.A.R.、Decker, A. 他(2025年)。ヒトの MRI で測定された CSF 可動性の領域固有の要因。 <em>Nature Neuroscience</em>、28(11)、2392-2401。 <a href="https://doi.org/10.1038/s41593-025-02073-3" target="_blank">doi:10.1038/s41593-025-02073-3</a></li>
+<li>Dagum, P.、Elbert, D.L.、Giovangrandi, L. 他（2026年）。グリンファティック系は、ヒトの脳からアミロイド ベータとタウを血漿まで除去します。 <em>Nature Communications</em>、17、715。<a href="https://doi.org/10.1038/s41467-026-68374-8" target="_blank">doi:10.1038/s41467-026-68374-8</a></li>
+<li>Wong, D.F.、Kuwabara, H.、Hsu, D.J. 他（2013年）。健康な男性被験者における陽電子放射断層撮影法を使用したルラシドンによるドーパミン D<sub>2</sub> 受容体占有率の測定。 <em>精神薬理学</em>、229(2)、245-252。 <a href="https://doi.org/10.1007/s00213-013-3103-z" target="_blank">doi:10.1007/s00213-013-3103-z</a></li>
+<li>Koepp、M.J.、Gunn、R.N.、Lawrence、A.D.、他（1998年）。ビデオゲーム中に線条体からドーパミンが放出される証拠。 <em>Nature</em>、393(6682)、266-268。 <a href="https://doi.org/10.1038/30498" target="_blank">ドイ:10.1038/30498</a></li>
+<li>Lippert、R.N.、Cremer、A.L.、Edwin Thanarajah、S.、他（2019年）。刺激誘発性の局所ドーパミン放出の時間依存性評価。 <em>Nature Communications</em>、10、336。<a href="https://doi.org/10.1038/s41467-018-08143-4" target="_blank">doi:10.1038/s41467-018-08143-4</a></li>
+<li>Erritzoe, D.、Ashok, A. H.、Searle, G. E. 他（2020年）。人間の脳で測定されたセロトニン放出: [<sup>11</sup>C]CIMBI-36 と d-アンフェタミン負荷による PET 研究。 <em>神経精神薬理学</em>、45(5)、804-810。 <a href="https://doi.org/10.1038/s41386-019-0567-5" target="_blank">doi:10.1038/s41386-019-0567-5</a></li>
+<li>Neyhart、E.、Zhou、N.、Munn、B.R.、他。 （2024年）。皮質のアセチルコリン動態は、コリン作動性軸索の活性と行動状態によって予測されます。 <em>Cell レポート</em>、43(10)、114808。<a href="https://doi.org/10.1016/j.celrep.2024.114808" target="_blank">doi:10.1016/j.celrep.2024.114808</a></li>
+<li>Cahill、M.K.、他（2024年）。皮質星状細胞における局所神経伝達物質のネットワークレベルのエンコーディング。 <em>Nature</em>、629、146-153。 <a href="https://doi.org/10.1038/s41586-024-07311-5" target="_blank">doi:10.1038/s41586-024-07311-5</a></li>
+<li>Xu、W.、他。 （2024年）。睡眠は皮質ネットワークの最適な計算体制を回復します。 <em>Nature Communications</em>、15、3820。<a href="https://doi.org/10.1038/s41467-024-47838-5" target="_blank">doi:10.1038/s41467-024-47838-5</a></li>
 </ol>

@@ -1,33 +1,33 @@
 {
-  "Name": "Mind-Upload: A Framework for Whole Brain Emulation Research",
+  "Name": "Mind-Upload: 全脳エミュレーション研究のフレームワーク",
   "BIDSVersion": "1.9.0",
-  "DatasetType": "raw",
+  "DatasetType": "生",
   "License": "CC-BY-4.0",
   "Authors": [
-    "Yasufumi Nakata",
-    "Mind-Upload Project Team"
+    "中田康文",
+    "マインドアップロードプロジェクトチーム"
   ],
-  "Acknowledgements": "The project structure and placeholder analysis scripts were generated with assistance from Google's AI.",
-  "HowToAcknowledge": "Please cite the project's GitHub repository: https://github.com/yasufumi-nakata/mind-upload and the website https://mind-upload.com",
+  "Acknowledgements": "プロジェクト構造とプレースホルダー分析スクリプトは、Google の AI の支援を受けて生成されました。",
+  "HowToAcknowledge": "プロジェクトの GitHub リポジトリ: https://github.com/yasufumi-nakata/mind-upload および Web サイト https://mind-upload.com を引用してください。",
   "Funding": [
-    "This research is conceptual and not currently funded."
+    "この研究は概念的なものであり、現在は資金提供を受けていません。"
   ],
   "EthicsApprovals": [
-    "Conceptual stage; no data collected. Future data collection will adhere to the Declaration of Helsinki and seek approval from the relevant institutional review board."
+    "概念的な段階。データは収集されません。今後のデータ収集はヘルシンキ宣言に従い、関連する治験審査委員会の承認を得る予定です。"
   ],
   "ReferencesAndLinks": [
     "https://mind-upload.com",
     "https://github.com/yasufumi-nakata/mind-upload",
-    "Nakata, Y. et al. (in preparation). A technical and theoretical roadmap for whole brain emulation.",
-    "BIDS Specification for EEG: https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/03-electroencephalography.html"
+    "中田 裕也 ほか(準備中)。全脳エミュレーションの技術的および理論的ロードマップ。",
+    "EEG の BIDS 仕様: https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/03-electroencephalography.html"
   ],
   "DatasetDOI": "10.18112/openneuro.dsXXXXXX.v1.0.0",
   "GeneratedBy": [
     {
-      "Name": "Antigravity",
+      "Name": "反重力",
       "Version": "1.0",
-      "Description": "AI agent assisting in software development and scientific documentation."
+      "Description": "ソフトウェア開発と科学的文書化を支援する AI エージェント。"
     }
   ],
-  "Description": "This dataset description pertains to the conceptual framework of the Mind-Upload project. No real data is included yet. The project aims to collect multimodal neuroimaging data (HD-EEG, fMRI, MRI) to validate theories of consciousness and develop technologies for mind uploading. The repository includes placeholder scripts demonstrating the intended BIDS-compliant analysis pipeline, from preprocessing to source imaging and causal modeling."
+  "Description": "このデータセットの説明は、Mind-Upload プロジェクトの概念的なフレームワークに関係します。実際のデータはまだ含まれていません。このプロジェクトは、マルチモーダルな神経画像データ (HD-EEG、fMRI、MRI) を収集して、意識理論を検証し、マインド アップロードのための技術を開発することを目的としています。リポジトリには、前処理からソース イメージングおよび因果モデリングまで、意図した BIDS 準拠の分析パイプラインを示すプレースホルダー スクリプトが含まれています。"
 }

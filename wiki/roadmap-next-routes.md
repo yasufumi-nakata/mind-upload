@@ -1,181 +1,180 @@
 ---
 layout: default
-title: "Wiki: 5 paths to follow after the roadmap"
-description: "After reading the technology roadmap, this is a guide to organize where to dig deeper into measurement, reconfiguration, implementation, verification, and social implementation next."
-article_type: Wiki
-subtitle: "A guide to help you decide on the next page after looking at the dependency map"
-author: Mind Uploading Research Project
-last_updated: "2026-03-14"
-note: "Roadmap route"
-audience: "People who are confused about where to go next after reading a technology roadmap"
-reading_time: "6-10 minutes"
-page_intro: "This page is an auxiliary guide that helps you organize what points to discuss next after reading the technology roadmap. The next page will change depending on whether you go back to measurement, go to reconstruction and causal estimation, go down to implementation, go back to verification conditions, or look at systems and collaboration."
-accuracy_note: "What is shown here is the entry point after reading the roadmap. Please be sure to check the official points and achievement conditions for each node in the main text of the roadmap."
+title: 'Wiki: ロードマップ後にたどるべき 5 つの道'
+description: 技術ロードマップを読んだ上で、次に計測、再構成、実装、検証、社会実装のどこを深掘りすればよいのかを整理するためのガイドです。
+article_type: ウィキ
+subtitle: 依存関係マップを見て次のページを決定するためのガイド
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-03-14'
+note: ロードマップのルート
+audience: テクノロジーのロードマップを読んだ後、次にどこに行けばよいか混乱している人
+reading_time: 6～10分
+page_intro: このページは、技術ロードマップを読んだ後にどのような点を議論すべきかを整理するための補助的なガイドです。測定に戻るか、再構築と因果推定に行くか、実装に戻るか、検証条件に戻るか、システムと連携に戻るかによって、次のページが変わります。
+accuracy_note: ここに示されているのは、ロードマップを読んだ後のエントリーポイントです。各ノードの公式ポイントや達成条件はロードマップ本文で必ずご確認ください。
 page_highlights:
-  - "After Roadmap, we will organize it into five routes: measurement, reconstruction, implementation, verification, and social implementation."
-  - "After looking at P/M/R/I/V/D, fix what you should read next by purpose."
-  - "Reduce the situation where the map is too wide and stops after viewing it."
+- ロードマップの後は、測定、再構築、実装、検証、社会実装の5つのルートに整理します。
+- P/M/R/I/V/Dを見た後、次に何を読むべきかを目的別に固定します。
+- マップが広すぎて見てから止まってしまう事態を軽減します。
 known_points:
-  - "The technology roadmap is an overall map, so the next page is too wide as it is."
-  - "The page to return to is different for measurement, reconfiguration, implementation, verification, and social implementation."
-  - "After reading the Roadmap, narrowing down to one route will make it easier to understand and proceed."
+- 技術ロードマップは全体図なので、このままでは次のページが広すぎます。
+- 計測、再構成、実装、検証、社会実装で戻るページが異なります。
+- ロードマップを読んだ後、ルートを1つに絞ると分かりやすく進みやすくなります。
 unknown_points:
-  - "Which route is the shortest and most effective may change based on future data and bench development."
-  - "The final conditions for V and D still have many unresolved parts."
+- どのルートが最短で最も効果的かは、今後のデータやベンチの開発によって変わる可能性があります。
+- VとDの最終条件にはまだ未解決の部分が多い。
 wiki_links:
-  - label: "Wiki: How to read the roadmap"
-    url: "/wiki/roadmap-reading-guide.html"
-    description: "For those who want to get back to reading the Roadmap itself."
-  - label: "Wiki: How to read each L0 to L5"
-    url: "/wiki/claim-level-reading-routes.html"
-    description: "For those who want to see the lead from the assertion level."
-  - label: "Wiki: 4 paths after Verification"
-    url: "/wiki/verification-next-routes.html"
-    description: "This is for people who want to further refine their skills after moving on to the V series."
+- label: 'Wiki: ロードマップの見方'
+  url: /wiki/roadmap-reading-guide.html
+  description: ロードマップそのものをもう一度読みたい人向け。
+- label: 'Wiki: L0～L5の各読み方'
+  url: /wiki/claim-level-reading-routes.html
+  description: 主張レベルからリードを見たい人向け。
+- label: 'Wiki: 検証後の 4 つのパス'
+  url: /wiki/verification-next-routes.html
+  description: Vシリーズに移行してさらにスキルを磨きたい人向けです。
 recommended_pages:
-  - label: "Technology Roadmap"
-    url: "/tech_roadmap.html"
-  - label: "Verification base"
-    url: "/verification.html"
-  - label: "Introduction to EEG"
-    url: "/eeg_101.html"
+- label: テクノロジーロードマップ
+  url: /tech_roadmap.html
+- label: 検証ベース
+  url: /verification.html
+- label: 脳波検査の概要
+  url: /eeg_101.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Decide the route after the map</h2>
+<h2>地図を見てルートを決める</h2>
 <p>
-Technology roadmaps are useful for getting the "big picture," but they are too broad in terms of where to go next. Here, we will divide it into 5 paths depending on what we want to dig into right now and pin the next page.
+テクノロジーロードマップは「全体像」を把握するのには役立ちますが、次にどこに進むべきかという点では広すぎます。ここでは、今掘り下げたい内容に応じて5つのパスに分け、次のページを固定します。
 </p>
 </div>
 
 <section class="section" id="five-routes">
-<h2 class="section-title">Five paths to follow after the roadmap</h2>
+<h2 class="section-title">ロードマップ後にたどるべき 5 つの道</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>What I want to know next</th>
-<th>Next page</th>
-<th>What you can find out</th>
+<th>次に知りたいこと</th>
+<th>次のページ</th>
+<th>わかること</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I want to reduce the measurement limit</strong></td>
-<td><a href="../eeg_101.html">EEG 101</a> / <a href="../datasets.html">Datasets</a></td>
-<td>You can check what can be measured and what cannot be measured by itself, which is the premise of the M series. </td>
+<td><strong>測定限界を下げたい</strong></td>
+<td><a href="../eeg_101.html">EEG 101</a> / <a href="../datasets.html">データセット</a></td>
+<td>Mシリーズの前提である、単体で測定できるものと測定できないものを確認できます。 </td>
 </tr>
 <tr>
-<td><strong>I want to dig deeper into reconstruction and causal estimation</strong></td>
-<td><a href="../verification.html">Verification</a> / <a href="../perspective.html">Perspective</a></td>
-<td>You can see where the R series connects to evaluation and causal verification. </td>
+<td><strong>I再構成と因果推定をさらに掘り下げたい</strong></td>
+<td><a href="../verification.html">検証</a> / <a href="../perspective.html">視点</a></td>
+<td>Rシリーズが評価や因果関係検証につながるところがわかります。 </td>
 </tr>
 <tr>
-<td><strong>I want to get down to implementation and L0 work</strong></td>
-<td><a href="../datasets.html#l0-practice">Hands-on</a> / <a href="../datasets.html">Datasets</a></td>
-<td>I You can specify the minimum loop before proceeding to the series and the selection of input data. </td>
+<td><strong>I 実装と L0 の作業に取り掛かりたい</strong></td>
+<td><a href="../datasets.html#l0-practice">ハンズオン</a> / <a href="../datasets.html">データセット</a></td>
+<td>I シリーズや入力データの選択に進む前に、最小ループを指定できます。 </td>
 </tr>
 <tr>
-<td><strong>I want to focus on verification conditions</strong></td>
-<td><a href="../verification.html">Verification</a> / <a href="verification-next-routes.html">Four paths after Verification</a></td>
-<td>You can check the assertion level of the V series and the following branches of practice, closed loop, and identity. </td>
+<td><strong>検証条件を重視したい</strong></td>
+<td><a href="../verification.html">検証</a> / <a href="verification-next-routes.html">検証後の4つのパス</a></td>
+<td>V シリーズのアサーション レベルと、実践、クローズド ループ、アイデンティティの次のブランチを確認できます。 </td>
 </tr>
 <tr>
-<td><strong>I would like to see the system and external collaboration</strong></td>
-<td><a href="../issue.html#external-collaboration">Collaborations</a> / <a href="../issue.html">Issue</a></td>
-<td>You can check the D series and external dependencies while separating them from the preparations you can make now. </td>
+<td><strong>システムと外部連携を確認したい</strong></td>
+<td><a href="../issue.html#external-collaboration">コラボレーション</a> / <a href="../issue.html">発行</a></td>
+<td>今できる準備とは別に、Dシリーズと外部依存関係を確認できます。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="why">
-<h2 class="section-title">Why this division</h2>
+<h2 class="section-title">なぜこの部門なのか</h2>
 <table class="data-table">
 <thead>
 <tr>
 <th>way</th>
-<th>Reasons for going to that page after Roadmap</th>
+<th>ロードマップの後にそのページにアクセスする理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Measurement</strong></td>
-<td>Since the M series determines input limits, it is better to check the basics of measurement on a separate page to reduce misreading. </td>
+<td><strong>測定</strong></td>
+<td>Mシリーズでは入力限界が決められているため、測定の基礎は別ページで確認しておくと読み間違いが少なくなります。 </td>
 </tr>
 <tr>
-<td><strong>Reconfiguration</strong></td>
-<td>The R series is connected to evaluation and causal verification, so it needs to be supplemented with Verification and Perspective. </td>
+<td><strong>再構成</strong></td>
+<td>Rシリーズは評価と因果関係の検証につながるため、検証と視点を補う必要があります。 </td>
 </tr>
 <tr>
-<td><strong>Implementation</strong></td>
-<td>This is because it is difficult to make progress in the I-series unless you organize it not only on paper, but also through Hands-on and Datasets. </td>
+<td><strong>実装</strong></td>
+<td>Iシリーズは紙の上だけでなく、ハンズオンやデータセットなども含めて整理しないと先に進むことが難しいためです。 </td>
 </tr>
 <tr>
-<td><strong>Verification</strong></td>
-<td>Since it is necessary to look at the overall design and assertion level together in the V series, it is more natural to dig deeper into the Verification side. </td>
+<td><strong>検証</strong></td>
+<td>Vシリーズでは全体のデザインと主張レベルを合わせて見る必要があるため、検証側を深掘りする方が自然です。 </td>
 </tr>
 <tr>
-<td><strong>Social implementation</strong></td>
-<td>D series has a large system and external dependence, so it is easier to put it into practice if it is concreted in issues and collaborations. </td>
+<td><strong>社会実装</strong></td>
+<td>Dシリーズはシステムや外部依存が大きいため、課題や連携を具体化すると実践しやすくなります。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="helper-wiki">
-<h2 class="section-title">Assistance wiki when you stop midway</h2>
+<h2 class="section-title">途中でやめるときのサポートwiki</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Place to stop</th>
-<th>Go back to wiki</th>
+<th>停車場所</th>
+<th>ウィキに戻る</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Stops at reading P/M/R/I/V/D itself</td>
-<td><a href="roadmap-reading-guide.html">How to read the roadmap</a></td>
+<td>P/M/R/I/V/D自体の読み込みで停止</td>
+<td><a href="roadmap-reading-guide.html">ロードマップの読み方</a></td>
 </tr>
 <tr>
-<td>I want to look at it from the assertion level</td>
-<td><a href="claim-level-reading-routes.html">How to read each L0 to L5</a></td>
+<td>主張レベルから見てみたい</td>
+<td><a href="claim-level-reading-routes.html">各L0～L5の見方</a></td>
 </tr>
 <tr>
-<td>Stops in order of descending to the practical side</td>
-<td><a href="eeg-to-l0-route.html">One straight path from EEG to L0</a> / <a href="verification-next-routes.html">Four paths to follow after Verification</a></td>
+<td>実用側に降順で停止</td>
+<td><a href="eeg-to-l0-route.html">EEG から L0 までの 1 つの直線パス</a> / <a href="verification-next-routes.html">検証後にたどる 4 つのパス</a></td>
 </tr>
 <tr>
-<td>Stops in order of returning to theory side</td>
-<td><a href="wbe-to-theory-route.html">Four routes to get started with WBE and dig deeper into theory</a></td>
+<td>理論面に戻る順に停止</td>
+<td><a href="wbe-to-theory-route.html">WBE を開始し、理論をさらに深く掘り下げるための 4 つのルート</a></td>
 </tr>
 <tr>
-<td>Stops due to external dependence and participation path</td>
-<td><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies</a></td>
+<td>外部依存および参加パスにより停止</td>
+<td><a href="internal-prework-and-external-dependencies.html">社内生産と外部依存関係</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-mistakes">
-<h2 class="section-title">Common ways to get lost</h2>
+<h2 class="section-title">よくある迷い方</h2>
 <div class="key-points">
-<h4>Mistake</h4>
+<h4>間違い</h4>
 <ul>
-<li><strong>Just reading the Roadmap makes you feel like you've decided what to do next:</strong> Actually, you need to narrow it down to one route. </li>
-<li><strong>Skip M and R and move on to I and V:</strong> This makes it easier to move on to stronger arguments while still remaining within the limitations of input and estimation. </li>
-<li><strong>Leave the D series abstract:</strong> It is more practical to cut the preparations back to Issues and Collaborations. </li>
-<li><strong>If you go to Verification, you will understand everything:</strong> After the V series, there are the following branches at L0, L3, and L4. </li>
+<li><strong>ロードマップを読むだけで、次の行動が決まったような気分になります：</strong>実際には、ルートを1つに絞る必要があります。 </li>
+<li><strong>SM と R をスキップして I と V に進む:</strong> これにより、入力と推定の制限内に留まりながら、より強力な議論に進むことが容易になります。 </li>
+<li><strong>D シリーズの要約はそのままにします:</strong> 準備を課題とコラボレーションに切り戻す方が現実的です。 </li>
+<li><strong>検証に行けばすべてわかります:</strong>Vシリーズ以降、L0、L3、L4に以下の分岐があります。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">Where to return next</h2>
+<h2 class="section-title">次に戻る場所</h2>
 <p>
-Roadmap Please use <a href="../tech_roadmap.html">Technology Roadmap</a> to return to the text, <a href="../verification.html">Verification Platform</a> to return to the verification side, and <a href="wbe-to-theory-route.html">4 routes from WBE introduction to deep dive into theory</a> to return to the theory side branch.
+ロードマップ本文に戻るには<a href="../tech_roadmap.html">テクノロジーロードマップ</a>、検証側に戻るには<a href="../verification.html">Verification Platform</a>、理論サイドブランチに戻るにはWBE入門からの<a href="wbe-to-theory-route.html">4ルート</a>を使用してください。
 </p>
 </section>
 
@@ -183,19 +182,19 @@ Roadmap Please use <a href="../tech_roadmap.html">Technology Roadmap</a> to retu
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="roadmap-reading-guide.html">How to read the roadmap →</a></li>
-<li><a href="verification-next-routes.html">Four paths after Verification →</a></li>
-<li><a href="eeg-to-l0-route.html">Single road from EEG to L0 →</a></li>
+<li><a href="roadmap-reading-guide.html">ロードマップの見方→</a></li>
+<li><a href="verification-next-routes.html">検証後の4つのパス→</a></li>
+<li><a href="eeg-to-l0-route.html">EEGからL0までの一本道→</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../tech_roadmap.html">Technology roadmap →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
-<li><a href="../datasets.html#l0-practice">Hands-on →</a></li>
+<li><a href="../tech_roadmap.html">テクノロジーロードマップ→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン→</a></li>
 </ul>
 </div>
 </aside>

@@ -1,480 +1,480 @@
-# Wiki: Decode and Emulate
+# Wiki: デコードとエミュレート
 
-> Output matching is only the entrance; intervention matching and closed-loop stability are another wall.
+> 出力マッチングは入り口にすぎません。介入のマッチングと閉ループの安定性は別の壁です。
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-01 / Role: Technical / natural science only
+- Updated: 2026-04-01 / Role: 技術/自然科学のみ
 
-## Role Of This Page
-This page is an auxiliary guide that organizes the difference between decode and emulate, one of the key distinctions in Mind-Upload, on the basis of primary literature. It separates a high-performance translator from a system that moves internal states by using observation, intervention, and closed-loop evidence.
-
-
-## Accuracy Notes
-What is presented here are technical boundary conditions. This page does not provide a final agreement on sufficient conditions, nor a sole determination of success, for WBE as a whole.
+## このページの役割
+このページは、Mind-Upload の重要な違いの 1 つであるデコードとエミュレートの違いを一次文献に基づいて整理した補助ガイドです。これにより、観察、介入、閉ループの証拠を使用して内部状態を移行するシステムから高性能のトランスレータが分離されます。
 
 
-## Back To Public Pages
-- [WBE 101](https://mind-upload.com/wbe_101.html)
-- [Verification](https://mind-upload.com/verification.html)
-- [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
+## 正確性に関する注記
+ここで提示されているのは技術的な境界条件です。このページは、WBE 全体に関する十分条件に関する最終的な合意や成功の唯一の決定を提供するものではありません。
 
-## Related Wiki Pages
-- [Wiki: How to read claims and evidence](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - Return to L0-L5 claim strength and the evidence required for each level.
-- [Wiki: Why wiring diagrams alone are not enough](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - Clarifies what remains missing at the level of state completeness.
-- [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Adds the end-to-end conditions required for L3 claims.
-- [Wiki: state / trait / drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Explains how to read drift and recalibration burden in cross-day and chronic claims.
 
-## What Is Currently Known
-- Decode is mainly an L1 claim, while local closed-loop performance and intervention responses are closer to L2-L3.
-- Output matching alone does not establish internal causal structure or the sufficiency of state variables.
-- Non-invasive decoding is easy to overestimate unless language priors, candidate sets, and subject cooperation are separated.
-- With speech decoding, if causal versus non-causal paths, look-ahead windows, and auditory-feedback contamination are not separated, offline scores are easy to misread as deployable loops.
-- Tail latency, silence/abstention, and recalibration burden are separate axes from offline accuracy and are required logs for closed-loop claims.
-- Therapeutic invasive decoders also need their own split: connectomics-informed across-patient symptom decoding, controller family, and physiological-state guards are separate from communication throughput.
-- In microelectrode systems, the same neuron across days is not an observed fact, but an estimate built from motion correction, sorting, and probabilistic matching.
+## 公開ページへ戻る
+- [WBE101](https://mind-upload.com/wbe_101.html)
+- [検証](https://mind-upload.com/verification.html)
+- [テクノロジーロードマップ](https://mind-upload.com/tech_roadmap.html)
 
-## What Is Still Unknown
-- It is unclear how much intervention matching and state-variable completeness is required to count as sufficiently emulated.
-- There is still no public benchmark for extrapolating from local-circuit successes to whole-brain emulation.
-- It is unclear how much same-brain function and maintenance-state must be added to connectome-constrained models to constrain degeneracy sufficiently.
-- It remains unclear how far across-patient therapeutic decoding survives changes in implant coverage, symptom family, and everyday physiological context.
+## 関連 Wiki ページ
+- [Wiki: 主張と証拠の読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence) - L0 ～ L5 の主張の強さと各レベルに必要な証拠に戻ります。
+- [Wiki: 配線図だけでは不十分な理由](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - 状態の完全性のレベルで何が欠けているのかを明確にします。
+- [Wiki: 閉ループ、遅延、ジッター、安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - L3 クレームに必要なエンドツーエンドの条件を追加します。
+- [Wiki: 状態/特性/ドリフト](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - 日をまたぐ請求および慢性的な請求におけるドリフトと再調整の負担を読み取る方法について説明します。
+
+## 現在わかっていること
+- デコードは主に L1 クレームですが、ローカル閉ループ パフォーマンスと介入応答は L2 ～ L3 に近いものになります。
+- 出力の一致だけでは、内部の因果構造や状態変数の十分性は確立されません。
+- 非侵襲的デコードは、言語事前分布、候補セット、被験者の協力が分離されていない限り、過大評価されやすくなります。
+- 音声デコードでは、因果パスと非因果パス、先読みウィンドウ、および聴覚フィードバックの汚染が分離されていない場合、オフライン スコアが展開可能なループとして誤読されやすくなります。
+- テール レイテンシー、沈黙/棄権、および再キャリブレーション負荷は、オフライン精度とは別の軸であり、閉ループ クレームに必要なログです。
+- 治療用の侵襲的デコーダにも独自の分割が必要です。コネクトミクスに基づいた患者全体の症状のデコード、コントローラ ファミリ、および生理学的状態のガードは通信スループットから分離されています。
+- 微小電極システムでは、数日にわたって同じニューロンが存在することは観察された事実ではなく、動きの補正、分類、および確率的マッチングから構築された推定値です。
+
+## まだわかっていないこと
+- 十分にエミュレートされているとみなされるために、どの程度の介入マッチングと状態変数の完全性が必要かは不明です。
+- 局所回路の成功から脳全体のエミュレーションを推定するための公的ベンチマークはまだありません。
+- 縮退を十分に抑制するには、どれだけの同一脳機能と維持状態をコネクトーム制約モデルに追加する必要があるかは不明です。
+- 患者全体の治療の解読が、インプラントの適用範囲、症状群、日常の生理学的状況の変化にどこまで耐えられるかは、依然として不明である。
 
 ---
 
-<h2>First of all, the conclusion in one word</h2>
+<h2>まずは一言で結論</h2>
 <p>
-Decode means ``to infer something from an observed signal,'' and emulate means ``the internal state evolves over time and responds consistently to changes in conditions or interventions.'' Even if the visual outputs are similar, it does not necessarily mean that they are<strong>operating by the same causal mechanism</strong>.
+デコードとは、「`to infer something from an observed signal,'' and emulate means `」「内部状態は時間の経過とともに進化し、条件や介入の変化に一貫して反応する」ことを意味します。たとえ視覚的な出力が類似していても、それが必ずしもそれらが同じ因果メカニズム<strong>によって動作していることを意味するわけではありません</strong>。
 </p>
 
-<strong>Scope of this page</strong>
+<strong>このページの範囲</strong>
 <p>
-I am not going to deal with philosophy or legal systems here. From only the aspects of technology and natural science, we will clarify the conditions under which decode can be read as emulate.
+ここでは哲学や法制度について扱うつもりはありません。デコードがエミュレートして読み取れる条件をテクノロジーと自然科学の側面だけから明らかにします。
 </p>
 
-<strong>2026-03 Points revised in literature audit</strong>
+<strong>2026-03 文献監査の修正点</strong>
 <p>
-The weakness of the previous version is that while the principle difference between decode and emulate was correct, it did not reach the level of <strong>site rule</strong> to stop <strong>open-vocabulary non-invasive decode</strong>, <strong>streaming / voice-synthesis neuroprosthesis</strong>, and <strong>connectome-constrained prediction</strong>, which were promoted in the primary literature of 2025. This update promotes <strong>language prior</strong>, <strong>tail latency / silence / recalibration burden</strong>, <strong>fixed decoder interval</strong>, <strong>same-neuron tracking audit</strong>, and <strong>parameter degeneracy</strong> to mandatory audit items at the decode/emulate boundary.
+以前のバージョンの弱点は、デコードとエミュレートの原理的な違いは正しかったものの、2025 年の一次文献で推進されていた <strong> オープン語彙の非侵襲的デコード </strong>、<strong> ストリーミング / 音声合成神経人工装具 </strong>、<strong> コネクトーム制約予測 </strong> を阻止する <strong> サイト ルール </strong> のレベルに達していなかったことです。 <strong>言語優先</strong>、<strong>テールレイテンシ/沈黙/再キャリブレーション負担</strong>、<strong>固定デコーダ間隔</strong>、<strong>同一ニューロン追跡監査</strong>、および<strong>パラメータ縮退</strong>デコード/エミュレート境界での必須監査項目。
 </p>
 
-<strong>2026-04-01 correction: therapeutic invasive decoding is not the communication route</strong>
+<strong>2026-04-01 訂正: 治療的侵襲的デコードは通信ルートではありません</strong>
 <p>
-The previous page split non-invasive language decode, speech neuroprosthesis, and connectome-constrained prediction, but it still left one invasive route too implicit: <strong>connectomics-informed therapeutic decoding</strong>. <a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">Merk et al. (2025)</a> showed across-patient movement decoding without patient individual training in <strong>56 implanted patients</strong> and <strong>1,480 ECoG channels</strong>, and extended the same platform to emotion and seizure-related use cases with connectomics-informed channel selection. That is an important step toward symptom-linked therapeutic control, but it is not the same as subject-free universal decoding or state-complete reconstruction. <a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">Zhu et al. (2026)</a> then showed in <strong>18 Parkinson's disease</strong> and <strong>18 dystonia</strong> patients that eyes-closed physiology can shift basal-ganglia theta/alpha feedback signals enough that a fixed threshold risks treating benign state change as pathology. Therefore, this site now separates <strong>communication throughput</strong>, <strong>transfer-assisted initialization</strong>, <strong>connectomics-informed across-patient therapeutic decoding</strong>, <strong>physiological-state guard</strong>, and <strong>adaptive rescue</strong> rather than treating them as one invasive decode ladder.
+前のページでは、非侵襲的言語解読、音声神経補綴、およびコネクトーム制約予測を分割しましたが、それでも暗黙的すぎる 1 つの侵襲的ルート、<strong> コネクトミクスに基づく治療的解読 </strong> を残しました。 <a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">Merk et al. (2025) </a> は、<strong>56 の植込み患者 </strong> および <strong>1,480 個の ECoG チャネル </strong> において、患者個別のトレーニングを行わずに患者間の動きのデコードを示し、コネクトミクスに基づいたチャネル選択により、同じプラットフォームを感情および発作関連のユースケースに拡張しました。これは症状に関連した治療制御に向けた重要なステップですが、被験者を必要としない普遍的な解読や状態の完全な再構成とは異なります。 <a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">Zhu et al. (2026) </a> はその後、<strong>18 パーキンソン病 </strong> および <strong>18 ジストニア </strong> 患者において、目を閉じた生理機能が大脳基底核のシータ/アルファフィードバック信号を十分にシフトさせる可能性があることを示し、固定閾値では良性の状態変化を病理として扱う危険性があることを示しました。したがって、このサイトでは、<strong> 通信スループット </strong>、<strong> 転送支援初期化 </strong>、<strong> コネクトミクス情報に基づく全患者治療デコーディング </strong>、<strong> 生理学的状態ガード </strong>、および <strong> アダプティブ レスキュー </strong> を 1 つの侵襲的なデコード ラダーとして扱うのではなく、分離するようになりました。
 </p>
 
-<h2>The shortest difference</h2>
+<h2>最短差</h2>
 <table>
 <thead>
 <tr>
-<th>Viewing Points</th>
-<th>Decode</th>
-<th>Emulate</th>
-<th>Minimum required verification</th>
+<th>ビューポイント</th>
+<th>デコード</th>
+<th>エミュレート</th>
+<th>最低限必要な検証</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>What to reproduce</td>
-<td>Infer states, stimuli, meanings, motor intentions, etc. from observations. </td>
-<td>Internal states evolve over time and produce future outputs and intervention responses. </td>
-<td>Evaluate not only supervised prediction accuracy but also time evolution and condition changes. </td>
+<td>再現するもの</td>
+<td>観察から状態、刺激、意味、運動意図などを推測します。 </td>
+<td>内部状態は時間の経過とともに進化し、将来の出力と介入応答を生成します。 </td>
+<td>は教師付き予測精度だけでなく、時間発展や条件変化も評価します。 </td>
 </tr>
 <tr>
-<td>Strengths</td>
-<td>It is easy to achieve high performance under the observed conditions, and it is easy to connect directly to practical BCI. </td>
-<td>A stronger case can be made for intervention, counterfactuals, and closed-loop control. </td>
-<td>OOD generalization, perturbation matching, and closed-loop stability are evaluated separately. </td>
+<td>強み</td>
+<td>観測条件下で高いパフォーマンスを発揮しやすく、実用的なBCIに直結しやすい。 </td>
+<td>A は、介入、反事実、閉ループ制御に対してより強力なケースを作ることができます。 </td>
+<td>OOD 一般化、摂動マッチング、閉ループ安定性は個別に評価されます。 </td>
 </tr>
 <tr>
-<td>Misreadings that will increase in 2025</td>
-<td>It is easy to read open-vocabulary word decode and streaming voice output as "free thinking mind reading" or "internal reproduction". </td>
-<td>It is easy to read connectome-constrained prediction and local closed loop as evidence of whole-brain emulation. </td>
-<td>LM-only / no-brain / shuffle baseline, subsystem scope, and state completeness are issued at the same time. </td>
+<td>2025年に増える誤読</td>
+<td>オープンボキャブラリーの単語デコードやストリーミング音声出力を「自由思考読心」や「内部再生」として読みやすくなっています。 </td>
+<td>全脳エミュレーションの証拠として、コネクトーム制約付き予測とローカル閉ループを読み取るのは簡単です。 </td>
+<td>LM-only / no-brain / shuffle ベースライン、サブシステム スコープ、および状態の完全性が同時に発行されます。 </td>
 </tr>
 <tr>
-<td>Misreading when insufficient</td>
-<td>It is easy to translate correlative translation into "internal reproduction". </td>
-<td>It is easy to misread it as "faithful reproduction" just by matching the output. </td>
-<td>Separately audits the completeness and identifiability of state variables. </td>
+<td>不足時の誤読</td>
+<td>相関翻訳を「内部再現」と言い換えるのは簡単です。 </td>
+<td>出力を合わせただけでは「忠実再現」と誤解されやすい。 </td>
+<td>状態変数の完全性と識別可能性を個別に監査します。 </td>
 </tr>
 <tr>
-<td>Typical failure modes</td>
-<td>Even if the accuracy is high within a subject or within a task, it will collapse under unlearning conditions or on a different day. </td>
-<td>Even if the behavior seems to match, different internal parameters may produce the same output. </td>
-<td>Disclose the division unit, number of recalibrations, post-intervention error, and abstention conditions. </td>
+<td>典型的な故障モード</td>
+<td>科目内や課題内では精度が高くても、学習していない状況や日が変わると精度が崩れてしまいます。 </td>
+<td>動作が一致しているように見えても、内部パラメータが異なると同じ出力が生成される場合があります。 </td>
+<td> 分割単位、再校正回数、介入後のエラー、および棄権条件を開示します。 </td>
 </tr>
 <tr>
-<td>Minimum log to keep</td>
-<td>candidate set, presence or absence of LM, subject cooperation, proofreading and abstention rate, and cross-day degradation. </td>
-<td>Perturbation log, P50/P95/P99 latency, silence/abstention, recalibration burden, residuals of latent state. </td>
-<td>Leave speed, accuracy, stability, and hidden state as separate columns. </td>
+<td>保存する最小ログ</td>
+<td>候補セット、LMの有無、被験者の協力、校正と棄権率、日をまたぐ劣化。 </td>
+<td>摂動ログ、P50/P95/P99 待ち時間、沈黙/棄権、再校正負担、潜在状態の残差。 </td>
+<td>速度、精度、安定性、および非表示状態を別の列として残します。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>2026-03-17 Addendum: Arrange representative papers in the same coordinate system</h2>
+<h2>2026-03-17 追記：代表論文を同一座標系に並べる</h2>
 <p>
-One area where there was a lot of room for improvement with the current site was that representative papers showing natural text/voice output could easily be compared on the same axis. However, looking at the primary literature, semantic reconstruction of perceived / imagined content, known-onset word decoding, prompt-conditioned language continuation, attempted speech communication, and streaming voice synthesis are all different in training depth, subject route, prior scaffold, and time axis. Therefore, on this page we normalize the main papers into a single comparison table, fixing what is directly shown and what is not yet shown.
+現在のサイトに改善の余地が多かった点の 1 つは、自然なテキスト/音声出力を示す代表的な論文を同じ軸で簡単に比較できることでした。しかし、一次文献を見ると、知覚/想像内容の意味論的再構成、既知の開始単語の解読、プロンプト条件付き言語継続、音声コミュニケーションの試み、およびストリーミング音声合成は、トレーニングの深さ、対象ルート、事前の足場、および時間軸がすべて異なります。したがって、このページでは、主要な論文を 1 つの比較表に正規化し、直接表示されるものとまだ表示されていないものを固定します。
 </p>
 <table>
 <thead>
 <tr>
-<th>Representative paper</th>
-<th>Signals and issues</th>
-<th>Limitations directly shown by primary literature</th>
-<th>ceiling on this site</th>
+<th>代表紙</th>
+<th>シグナルと問題</th>
+<th>L一次文献によって直接示された制限</th>
+<th>このサイトの天井</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Tang et al. (2023)</strong><br>semantic reconstruction</td>
-<td>Reconstruct the semantic representation of perceived speech / imagined speech / silent video from fMRI. </td>
-<td>Within-subject, the recovered time-points reached 65-82%, but with cross-subject, it remained at 1-5%, and the learning gain also plateaued at about 7.5 hours. Countermeasures like counting by sevens and naming animals reduced recovery to 0-50%. </td>
-<td>Subject-cooperative task-limited semantic reconstruction. It will not be promoted to subject-free thought reader or unrestricted mental-state readout. </td>
+<td><strong>Tangら(2023)</strong><br>意味的再構成</td>
+<td>fMRI から知覚音声 / 想像音声 / 無音ビデオの意味表現を再構築します。 </td>
+<td>被験者内では、回復された時点は 65 ～ 82% に達しましたが、被験者間では 1 ～ 5% に留まり、学習ゲインも約 7.5 時間で頭打ちになりました。 7つずつ数えたり、動物に名前を付けたりするなどの対策により、回復は0〜50％に減少しました。 </td>
+<td>サブジェクト協力タスク限定の意味論的再構成。主体のない思考読み取りや無制限の精神状態の読み取りには昇格しません。 </td>
 </tr>
 <tr>
-<td><strong>Défossez et al. (2023)</strong><br>speech-segment retrieval from M/EEG</td>
-<td>Identify the correct 3 s speech segment from non-invasive M/EEG recorded while participants passively listened to natural speech. </td>
-<td>The route decoded perceived speech segments from more than 1,000 possibilities with much stronger performance in MEG than EEG, and the model predictions primarily tracked lexical and contextual semantic representations. It still depended on a fixed candidate bank of speech segments at test time. </td>
-<td>Candidate-bank segment retrieval for perceived speech. It will not be promoted to free-form generation, production decode, or unrestricted thought reading. </td>
+<td><strong>Défossez et al. (2023)</strong><br>M/EEG</td> からの音声セグメントの取得
+<td>参加者が自然な音声を受動的に聞いている間に記録された非侵襲性 M/EEG から、正しい 3 秒間の音声セグメントを特定します。 </td>
+<td> ルートは、EEG よりも MEG の方がはるかに優れたパフォーマンスで 1,000 を超える可能性から知覚された音声セグメントをデコードし、モデル予測は主に語彙および文脈上の意味表現を追跡しました。テスト時には依然として音声セグメントの固定候補バンクに依存していました。 </td>
+<td>C 知覚された音声の候補バンク セグメントの取得。自由形式の生成、実稼働デコード、または無制限の思考読み取りには昇格されません。 </td>
 </tr>
 <tr>
-<td><strong>d'Ascoli et al. (2025)</strong><br>open-vocabulary word decoding</td>
-<td>Estimating word identity under known word onset from M/EEG of 723 people and 5 million words. </td>
-<td>With the design using sentence-level context, performance was strongly dependent on additional training data, test averaging, MEG &gt; EEG, and reading &gt; listening. Therefore, even with "open-vocabulary", task structure and modality advantage remain. </td>
-<td>Open-vocabulary word decode with known-onset and perception-heavy conditions. I will not promote it to free thought reading or unrestricted language generation. </td>
+<td><strong>d'Ascoli et al. (2025)</strong><br>オープン語彙単語解読</td>
+<td> 723 人の M/EEG と 500 万単語から、既知の単語の開始時の単語の同一性を推定します。 </td>
+<td>文レベルのコンテキストを使用した設計では、パフォーマンスは追加のトレーニング データ、テストの平均化、MEG > に大きく依存していました。脳波と読書 >リスニング。したがって、「オープンボキャブラリー」であっても、タスクの構造とモダリティの利点は残ります。 </td>
+<td>Open 語彙単語は、既知の開始条件と認識負荷の高い条件でデコードされます。私は、自由な思考による読書や無制限の言語生成を促進するつもりはありません。 </td>
 </tr>
 <tr>
-<td><strong>Ye et al. (2025)</strong><br>generative language reconstruction + LLM</td>
-<td>Feed fMRI-derived representations and a text prompt into an autoregressive LLM to generate a continuation rather than rerank a fixed candidate list. </td>
-<td>BrainLLM beat a permuted-brain control across three fMRI datasets, but performance still depended on prompt length, LLM size, and data volume; no-prompt generation remained harder by language-similarity metrics even when brain input helped relative to the control. </td>
-<td>prompt-conditioned generative language reconstruction. It does not advance to brain-only text generation or hidden-state recovery. </td>
+<td><strong>Ye ら(2025)</strong><br>生成言語再構成 + LLM</td>
+<td> fMRI 由来の表現とテキスト プロンプトを自己回帰 LLM にフィードして、固定された候補リストを再ランク付けするのではなく、継続を生成します。 </td>
+<td>BrainLLM は 3 つの fMRI データセットにわたって並べ替え脳制御を上回りましたが、パフォーマンスは依然としてプロンプトの長さ、LLM サイズ、データ量に依存していました。たとえ脳の入力がコントロールに比べて役に立ったとしても、言語類似性の指標によれば、プロンプトなしの生成は依然として困難でした。 </td>
+<td>プロンプト条件付き生成言語再構築。頭脳のみのテキスト生成や隠れ状態の回復には進みません。 </td>
 </tr>
 <tr>
-<td><strong>Willett et al. (2023)</strong><br>high-performance speech neuroprosthesis</td>
-<td>Decodes attempted speech from intracortical array and returns large vocabulary text output. </td>
-<td>With a vocabulary of 125,000 words, we achieved 62 words/min and 23.8% WER for attempted speech decoding of a participant-specific invasive route. </td>
-<td>It is a high-bandwidth communication subsystem. It does not promote semantic autonomy or whole-brain state reconstruction. </td>
+<td><strong>ウィレットら(2023)</strong><br>高性能音声神経人工装具</td>
+<td> 皮質内アレイから試みられた音声をデコードし、大量の語彙のテキスト出力を返します。 </td>
+<td> 125,000 ワードの語彙により、参加者固有の侵襲ルートの音声デコード試行で 62 ワード/分、23.8% の WER を達成しました。 </td>
+<td>高帯域通信サブシステムです。意味の自律性や脳全体の状態の再構築を促進するものではありません。 </td>
 </tr>
 <tr>
-<td><strong>Littlejohn et al. (2025)<br>Wairagkar et al. (2025)</strong><br>streaming brain-to-voice / instantaneous voice synthesis</td>
-<td>Synthesize a voice similar to own-voice from the invasive signal using streaming / low-latency. </td>
-<td>Littlejohn showed streaming brain-to-voice every 80 ms, and Wairagkar showed less than 10 ms inference and silence fallback. On the other hand, in Wairagkar, the decoder fixed on post-implant day 165 deteriorated significantly after about 15 days. </td>
-<td>Invasive communication route from same-session to short-horizon. Chronic deployability or long-term stability of a fixed decoder is not claimed without a Temporal Validity Card. </td>
+<td><strong>Lリトルジョンら。 (2025)<br>Wairragkar et al. (2025)</strong><br>ストリーミング脳から音声への/瞬間音声合成</td>
+<td>Sストリーミング/低遅延を利用して侵入信号から自分の声に近い音声を合成します。 </td>
+<td>Littlejohn は 80 ミリ秒ごとの頭脳から音声へのストリーミングを示し、Wiragkar は 10 ミリ秒未満の推論と沈黙のフォールバックを示しました。一方、ワイラグカルでは、移植後 165 日目に固定されたデコーダーは、約 15 日後に著しく劣化しました。 </td>
+<td> 同一セッションから短距離への侵入通信ルート。固定デコーダの長期展開可能性や長期安定性は、Temporal Validity Card がなければ保証されません。 </td>
 </tr>
 </tbody>
 </table>
 
-<strong>Why do we need this table</strong>
+<strong>このテーブルが必要な理由</strong>
 <p>
-Even if the "natural language output" looks the same, <strong>semantic reconstruction</strong>, <strong>candidate-bank segment retrieval</strong>, <strong>known-onset word decode</strong>, <strong>prompt-conditioned continuation</strong>, <strong>attempted speech communication</strong>, and <strong>streaming voice synthesis</strong> are different routes. If we do a side-by-side comparison without separating these areas, it is easy to misinterpret deep single-subject fMRI, broad multi-subject M/EEG, participant-specific invasive BCI, and generation systems with LLM scaffold as evidence of the same strength. Therefore, on this site, when looking at natural sentence output, we first return <strong>task regime</strong>, <strong>training depth / subject route</strong>, <strong>prior scaffold</strong>, and <strong>fixed decoder horizon</strong>, and read it based on the type of evidence rather than the flashiness of the medium.
+「自然言語出力」は同じに見えても、<strong>意味再構築</strong>、<strong>候補バンクセグメント検索</strong>、<strong>既知単語解読</strong>、<strong>プロンプト条件付き継続</strong>、<strong>音声通信試行</strong>、<strong>ストリーミング音声合成</strong>は異なるルートとなる。これらの領域を分離せずに並べて比較すると、単一被験者の深部 fMRI、広範な複数被験者の M/EEG、参加者固有の侵襲的 BCI、および LLM スキャフォールドを備えた生成システムが同じ強度の証拠であると誤って解釈されやすくなります。そこで、当サイトでは、自然な文章の出力を見る際に、まず<strong>タスクレジーム</strong>、<strong>トレーニング深度/主題ルート</strong>、<strong>事前足場</strong>、<strong>固定デコーダーホライズン</strong>を返し、媒体の派手さではなく証拠の種類に基づいて読み取ります。
 </p>
 
-<h2>2026-03-17 Addendum: chronic ceiling of invasive communication route</h2>
+<h2>2026-03-17 追記: 侵襲的通信経路の慢性的な上限</h2>
 <table>
 <thead>
 <tr>
-<th>Wall</th>
-<th>What the primary literature now supports</th>
-<th>How to read this page</th>
-<th>Claims not raised yet</th>
+<th>壁</th>
+<th>一次文献が現在サポートしているもの</th>
+<th>このページの見方</th>
+<th>まだ申し立てが行われていません</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>same-session streaming ceiling</strong></td>
-<td><a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> is streaming brain-to-voice, <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> advances instantaneous voice synthesis and silence fallback. </td>
-<td>Read as evidence of strong L2-L3 communication subsystem. </td>
-<td>We do not claim long-term retention or chronic deployability of fixed decoders. </td>
+<td><strong>同一セッションストリーミング上限</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Lリトルジョンら。 (2025) </a> は頭脳から音声へのストリーミング、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairragkar ら。 (2025)</a> は、瞬時の音声合成と無音フォールバックを進化させます。 </td>
+<td> は、強力な L2-L3 通信サブシステムの証拠として読み取れます。 </td>
+<td>当社は、固定デコーダーの長期保存または長期展開可能性を主張しません。 </td>
 </tr>
 <tr>
-<td><strong>recalibration ceiling</strong></td>
-<td><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> tested one-month unsupervised recalibration and <a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">Pun et al. (2024)</a> showed that chronic human intracortical recording instability is strongly associated with decreased BCI performance. </td>
-<td>As long as <code>time since last supervised calibration</code>, recovery time, and recalibration burden are recorded in separate logs, it can be read as a preliminary step toward long-term operation. </td>
-<td>We do not write that "it worked on that day" as "it held true over a long period of time without recalibration." </td>
+<td><strong>再校正天井</strong></td>
+<td><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">ウィルソンら(2025) </a> は 1 か月間教師なし再校正をテストし、<a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">Pun et al. (2024) </a> は、ヒトの皮質内記録の慢性的な不安定性が BCI パフォーマンスの低下と強く関連していることを示しました。 </td>
+<td><code>最後の監視校正からの時間</code>、回復時間、および再校正負荷が個別のログに記録されるため、長期運用に向けた準備段階として読み取ることができます。 </td>
+<td>「その日はうまくいった」とは書かず、「再校正なしで長期間にわたって有効であった」と書きます。 </td>
 </tr>
 <tr>
-<td><strong>same-neuron tracking ceiling</strong></td>
-<td><a href="https://doi.org/10.1126/science.abf4588" target="_blank">Steinmetz et al. (2021)</a> is stable recording with motion correction, <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">Pachitariu et al. al. (2024)</a> advanced sorting centered on drift / split / merge, and <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beest et al. (2025)</a> advanced probabilistic cross-day neural tracking. </td>
-<td>In the microelectrode system, the same-neuron claim is read as an estimate with <code>sorting version + drift correction + unit-match probability</code>. </td>
-<td>Successful chronic decoding cannot be written as direct reading of a stable single-neuron mechanism. </td>
+<td><strong>同じニューロン追跡上限</strong></td>
+<td><a href="https://doi.org/10.1126/science.abf4588" target="_blank">Steinmetz et al. (2021)</a>は動き補正で安定録画、<a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">パチタリウ他アル。 (2024)ドリフト/スプリット/マージを中心とした高度なソート機能を備えた</a>と、<a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beestら。 (2025)</a> 高度な確率的クロスデイ ニューラル トラッキング。 </td>
+<td> 微小電極システムでは、同一ニューロンの主張は <code> ソート バージョン + ドリフト補正 + ユニット一致確率 </code> による推定値として読み取られます。 </td>
+<td>慢性的な解読の成功は、安定した単一ニューロン機構の直接読み取りとして記述することはできません。 </td>
 </tr>
 </tbody>
 </table>
 
-<strong>Practical rules for this section</strong>
+<strong>このセクションの実践ルール</strong>
 <p>
-When promoting invasive speech BCI to a higher level, we will not only consider same-day streaming performance, but also <strong>how many days the fixed decoder lasts</strong>, <strong>how much it relies on manual recalibration</strong>, <strong>how did we estimate same-neuron tracking for microelectrode systems</strong>, and <strong>how did we audit the implant age / material / geometry / tissue-response proxy</strong>. For a long background, see <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift">Wiki: state, trait, drift</a>.
+侵襲的音声 BCI をより高いレベルに推進する場合、同日ストリーミングのパフォーマンスだけでなく、<strong> 固定デコーダーの持続日数</strong>、<strong> 手動再キャリブレーションにどの程度依存するか</strong>、<strong> 微小電極システムの同一ニューロン追跡をどのように推定したか</strong>、<strong> インプラントの年齢 / 材料 / 形状 / 組織反応をどのように監査したかも考慮します。プロキシ</strong>。詳しい背景については、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift">Wiki: state、trait、drift</a> を参照してください。
 </p>
 
-<h2>2026-04-01 Addendum: therapeutic invasive decoding has a different ceiling</h2>
+<h2>2026-04-01 追記: 治療的侵襲的デコードには異なる上限がある</h2>
 <table>
 <thead>
 <tr>
-<th>Wall</th>
-<th>What the primary literature now supports</th>
-<th>How to read this page</th>
-<th>Claims not raised yet</th>
+<th>壁</th>
+<th>一次文献が現在サポートしているもの</th>
+<th>このページの見方</th>
+<th>まだ申し立てが行われていません</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>across-patient network-prior ceiling</strong></td>
-<td><a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">Merk et al. (2025)</a> used <strong>56 patients</strong> and <strong>1,480 ECoG channels</strong> across four cohorts to decode movement without patient individual training, and extended the platform to emotion and seizure-related use cases with connectomics-based channel selection.</td>
-<td>Read as <strong>connectomics-informed symptom-linked invasive decoding</strong> for therapeutic control or decoder initialization.</td>
-<td>Do not raise this to subject-free universal decoding, unrestricted internal-state readout, or WBE-level state completeness.</td>
+<td><strong>患者ネットワーク前天井</strong></td>
+<td><a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">Merk et al. (2025)</a> は、4 つのコホートにわたって <strong>56 人の患者</strong> と <strong>1,480 の ECoG チャネル</strong> を使用して、患者個別のトレーニングを行わずに動きを解読し、コネクトミクスベースのチャネル選択によりプラットフォームを感情および発作関連のユースケースに拡張しました。</td>
+<td> <strong> として読み取られます。コネクトミクス情報に基づいた症状に関連した侵襲的デコーディング</strong> 治療制御またはデコーダーの初期化用。</td>
+<td>これをサブジェクトフリーのユニバーサル デコード、無制限の内部状態の読み出し、または WBE レベルの状態の完全性まで引き上げないでください。</td>
 </tr>
 <tr>
-<td><strong>personalized-controller ceiling</strong></td>
-<td><a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024)</a> identified stimulation-entrained gamma markers of high versus low dopaminergic states in four patients with Parkinson's disease and used those data-driven markers to drive adaptive DBS.</td>
-<td>Read as <strong>personalized biomarker / controller selection</strong> within one disorder and one implant/control regime.</td>
-<td>Do not treat one successful adaptive controller as a generic therapeutic decoder law across symptom families, implant targets, or daily contexts.</td>
+<td><strong>パーソナライズコントローラー天井</strong></td>
+<td><a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024) </a> は、パーキンソン病患者 4 人の高ドーパミン作動性状態と低ドーパミン作動性状態の刺激に同調したガンマ マーカーを特定し、それらのデータ駆動型マーカーを使用して適応 DBS を推進しました。</td>
+<td><strong>と読み替えます。1つの疾患および1つのインプラント/制御レジーム内でのパーソナライズされたバイオマーカー/コントローラーの選択</strong>。</td>
+<td>成功した 1 つの適応コントローラーを、症状群、インプラントのターゲット、または日常の状況全体にわたる一般的な治療デコーダーの法則として扱わないでください。</td>
 </tr>
 <tr>
-<td><strong>physiological-state guard ceiling</strong></td>
-<td><a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">Zhu et al. (2026)</a> showed in <strong>18 Parkinson's disease</strong> and <strong>18 dystonia</strong> patients that eyes-closed physiology can shift basal-ganglia theta/alpha biomarkers enough that fixed thresholds risk mistaking benign state changes for pathology.</td>
-<td>Read adaptive control only after the paper discloses a <strong>state-recognition / contextual guard</strong>, not from one oscillatory threshold alone.</td>
-<td>Do not write one band-limited biomarker as a stable disease-state meter across vigilance or everyday physiological context.</td>
+<td><strong>生理状態ガード天井</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">Zhu et al. (2026) </a> は、<strong>18 パーキンソン病 </strong> および <strong>18 ジストニア </strong> 患者において、目を閉じた生理機能が大脳基底核のシータ/アルファ バイオマーカーを十分にシフトさせる可能性があり、固定閾値では良性の状態の変化を病理と誤認する危険性があることを示しました。</td>
+<td>論文が開示した後にのみ適応制御を読み取ります<strong>状態認識/コンテキストガード</strong>、1つの振動閾値だけからではありません。</td>
+<td>警戒や日常の生理学的状況全体にわたる安定した病状のメーターとして 1 つの帯域限定バイオマーカーを作成しないでください。</td>
 </tr>
 </tbody>
 </table>
 
-<strong>Why this extra split is necessary</strong>
+<strong>この追加の分割が必要な理由</strong>
 <p>
-The important progress here is real: therapeutic decoding may need less patient-specific training, and symptom-linked adaptive control is becoming more data-driven. But the object is still <strong>named symptom/state decoding under declared implant coverage, network prior, and controller policy</strong>. That is much narrower than universal invasive decode, and much narrower again than emulate.
+ここでの重要な進歩は現実のものです。治療の解読には患者固有のトレーニングがあまり必要なくなる可能性があり、症状にリンクした適応制御はよりデータ主導型になりつつあります。しかし、オブジェクトは依然として <strong>、宣言されたインプラント カバレッジ、ネットワーク プリア、およびコントローラー ポリシー </strong> に基づいて、症状/状態のデコードと名付けられています。これはユニバーサル侵入型デコードよりもはるかに狭く、エミュレートよりもさらに狭いです。
 </p>
 
-<h2>2026-03-17 Addendum: 4 scaffolds that make it easy to expand speech decode</h2>
+<h2>2026-03-17 追記: 音声デコード</h2> の拡張を容易にする 4 つの足場
 <table>
 <thead>
 <tr>
-<th>Scaffold</th>
-<th>What the primary literature now supports</th>
-<th>How to read this page</th>
-<th>Claims not raised yet</th>
+<th>足場</th>
+<th>一次文献が現在サポートしているもの</th>
+<th>このページの見方</th>
+<th>まだ申し立てが行われていません</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>task / vocabulary scaffold</strong></td>
-<td><a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> advanced open-vocabulary word decoding, but also showed that performance changes significantly depending on word onset, task structure, modality, amount of training data, and test averaging. </td>
-<td>Read as an advance in conditional language/communication decoding. </td>
-<td>I will not post it as free thought reading or state-complete reconstruction. </td>
+<td><strong>タスク/語彙足場</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025) </a> は、オープンボキャブラリーの単語デコードを高度化しましたが、単語の始まり、タスク構造、モダリティ、トレーニング データの量、テストの平均化に応じてパフォーマンスが大幅に変化することも示しました。 </td>
+条件付き言語/通信デコードの進歩としての <td>Read。 </td>
+<td>I は、自由な思考の読書や状態の完全な再構築として投稿しません。 </td>
 </tr>
 <tr>
-<td><strong>causal / non-causal scaffold</strong></td>
-<td><a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">Chen et al. (2024)</a> showed that in 48-participant EEG speech decoding, an offline non-causal model can boost performance using post-onset auditory feedback, while a real-time causal model can boost performance. We have shown that model has stricter constraints. </td>
-<td>Read offline retrospective decode and causal real-time route separately. </td>
-<td>Offline gain with look-ahead cannot be directly written as deployable streaming loop. </td>
+<td><strong>因果的/非因果的足場</strong></td>
+<td><a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">チェンら(2024) </a> は、参加者 48 人の EEG 音声デコードにおいて、オフラインの非因果モデルは発症後の聴覚フィードバックを使用してパフォーマンスを向上させることができる一方、リアルタイムの因果モデルはパフォーマンスを向上させることができることを示しました。モデルにはより厳しい制約があることが示されました。 </td>
+<td>オフライン遡及デコードと因果リアルタイム ルートを個別に読み取ります。 </td>
+<td>先読みによるオフライン ゲインは、展開可能なストリーミング ループとして直接書き込むことはできません。 </td>
 </tr>
 <tr>
-<td><strong>transfer / adaptation scaffold</strong></td>
-<td><a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025)</a> advanced transfer learning of phonemic speech decoding with a group-derived decoder with distributed minimally invasive recordings, but shared task structure and speech network coverage are still prerequisites. </td>
-<td>Read as decode engineering to boost clinical scalability. </td>
-<td>I will not promote zero-shot as a general thought decoder or subject-free universal reader. </td>
+<td><strong>移送/適応足場</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025) </a> は、分散型低侵襲録音を備えたグループ派生デコーダを使用した音素音声デコードの転移学習を高度にしましたが、共有タスク構造と音声ネットワーク カバレッジは依然として前提条件です。 </td>
+<td>Read as Decode エンジニアリングにより、臨床の拡張性が向上します。 </td>
+<td>I は、ゼロショットを一般的な思考デコーダーや主題のないユニバーサル リーダーとして宣伝するものではありません。 </td>
 </tr>
 <tr>
-<td><strong>LLM / prompt scaffold</strong></td>
-<td><a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> generated text continuations by inputting fMRI-derived expressions into a prompt and large language model. </td>
-<td>Read as prompt-conditioned generative language reconstruction. </td>
-<td>Do not directly equate output fluency with brain-only reconstruction or hidden-state recovery. </td>
+<td><strong>LLM / プロンプト足場</strong></td>
+<td><a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Yeら(2025)</a> は、fMRI から派生した表現をプロンプトおよび大規模な言語モデルに入力することによってテキストの継続を生成しました。 </td>
+<td>プロンプト条件付き生成言語再構築として読み取られます。 </td>
+<td>出力の流暢性と脳のみの再構成または隠れ状態の回復を直接同一視しないでください。 </td>
 </tr>
 </tbody>
 </table>
 
-<strong>Critiques of this section</strong>
+<strong>このセクションの批判</strong>
 <p>
-A common misinterpretation of current news and demonstrations is to interpret the four advances of <strong>natural output</strong>, <strong>large vocabulary</strong>, <strong>effective transfer learning</strong>, and<strong>LLM documentation</strong> as ``we were able to read the internal state of the brain fairly directly.'' However, what primary literature directly supports is the advancement of decode engineering to the extent that task scaffolding, causal deployment conditions, adaptation routes, and language prior are clearly specified, not the state completeness itself required for WBE.
+現在のニュースやデモでよくある誤解は、<strong>自然な出力</strong>、<strong>大語彙</strong>、<strong>効果的な転移学習</strong>、<strong>LLMドキュメンテーション</strong>の4つの進歩を「脳の内部状態をかなり直接的に読み取ることができた」と解釈することだが、一次文献が直接裏付けているのは、タスクの足場、因果的展開条件、適応ルート、言語事前が明確に分かる範囲でのデコードエンジニアリングの進歩である。 WBE に必要な状態の完全性そのものではなく、指定されています。
 </p>
 
-<h2>Boundary cases seen in primary literature</h2>
+<h2>一次文献に見られる境界例</h2>
 <table>
 <thead>
 <tr>
-<th>Example</th>
-<th>What we have achieved now</th>
-<th>Why not just emulate</th>
+<th>例</th>
+<th>今できること</th>
+<th></th> をエミュレートしてみませんか
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Tang et al. (2023)</strong><br>non-invasive semantic decoding</td>
-<td>We showed semantic recovery of continuous language from fMRI and demonstrated decoding across perceived speech, imagined speech, and silent video. </td>
-<td>Subject cooperation is required for both learning and application, and translation of the observed semantic representation. We do not demonstrate internal causal structure or replication of intervention responses. </td>
+<td><strong>Tangら(2023)</strong><br>非侵襲的セマンティック デコーディング</td>
+<td>fMRI からの連続言語の意味的回復を示し、知覚された音声、想像上の音声、およびサイレント ビデオにわたるデコードを実証しました。 </td>
+<td>学習と応用の両方、および観察された意味表現の翻訳には被験者の協力が必要です。私たちは内部の因果構造や介入反応の再現を実証しません。 </td>
 </tr>
 <tr>
-<td><strong>Défossez et al. (2023)</strong><br>non-invasive speech-segment retrieval</td>
-<td>Three-second speech segments were identified from non-invasive MEG/EEG while participants passively listened to natural speech, with much stronger performance in MEG than EEG. </td>
-<td>This is evidence for candidate-bank retrieval of perceived speech segments, not for unrestricted word-level or sentence-level generation without a fixed comparison bank. </td>
+<td><strong>Défossez et al. (2023)</strong><br>非侵襲的音声セグメント検索</td>
+<td>3 秒間の音声セグメントは、参加者が受動的に自然音声を聞いている間に、非侵襲性 MEG/EEG から識別され、EEG よりも MEG の方がはるかに優れたパフォーマンスを示しました。 </td>
+<td>これは、知覚された音声セグメントの候補バンク検索の証拠であり、固定比較バンクなしの無制限の単語レベルまたは文レベルの生成の証拠ではありません。 </td>
 </tr>
 <tr>
-<td><strong>d'Ascoli et al. (2025)</strong><br>open-vocabulary non-invasive word decoding</td>
-<td>We advanced individual word decoding from non-invasive recordings with 723 people and showed that the amount of training data, test averaging, modality, and task dependence greatly affect performance. </td>
-<td>Although this is an advance in open-vocabulary, dependence on word onset, task structure, and participant conditions remains. The progress here is in decoding the communication route, not in state-complete reconstruction. </td>
+<td><strong>d'Ascoli et al. (2025)</strong><br>オープンボキャブラリーの非侵襲的単語デコード</td>
+<td>私たちは、723 人の非侵襲的録音から個々の単語の解読を進め、トレーニング データの量、テストの平均化、モダリティ、およびタスクの依存性がパフォーマンスに大きく影響することを示しました。 </td>
+<td> これはオープンボキャブラリーの進歩ではありますが、単語の始まり、タスクの構造、および参加者の条件への依存が残っています。ここでの進歩は、状態を完全に再構成することではなく、通信ルートを解読することです。 </td>
 </tr>
 <tr>
-<td><strong>Chen et al. (2024)</strong><br>EEG speech decoding with causal / non-causal comparison</td>
-<td>We compared speech decoding using EEG of 48 participants and clarified the difference in the apparent gain of the acausal model and the constraints of the causal path for real-time. </td>
-<td>This is primary evidence for separating offline retrospective score and deployable real-time route, but it does not indicate general thought reading. </td>
+<td><strong>チェンら(2024)</strong><br>EEG音声デコード因果/非因果比較</td>
+<td>参加者48名の脳波を用いた音声復号化を比較し、非因果モデルの見かけ上のゲインの違いやリアルタイムの因果パスの制約を明らかにしました。 </td>
+<td>これは、オフラインの遡及スコアと展開可能なリアルタイム ルートを区別するための主要な証拠ですが、一般的な思考の読み取りを示すものではありません。 </td>
 </tr>
 <tr>
-<td><strong>Singh et al. (2025)</strong><br>transfer learning with distributed brain recordings</td>
-<td>Using distributed minimally invasive recordings, they show that a group-derived decoder improves the reliability of phonemic speech decoding. </td>
-<td>It is an advance in transfer learning that assumes a shared task structure and calibration route, rather than a subject-free universal decoder. It does not directly lead to WBE internal state identification or unrestricted decoding. </td>
+<td><strong>Singh et al. (2025)</strong><br>分散脳記録による転移学習</td>
+<td>分散型低侵襲録音を使用して、グループ導出デコーダが音素音声デコードの信頼性を向上させることを示しています。 </td>
+<td>これは、主体のないユニバーサル デコーダではなく、共有タスク構造とキャリブレーション ルートを想定した転移学習の進歩です。これは、WBE の内部状態の識別や無制限のデコードに直接つながるものではありません。 </td>
 </tr>
 <tr>
-<td><strong>Willett et al. (2023)</strong><br>invasive speech BCI</td>
-<td>Large-vocabulary speech decoding of 62 words/min was demonstrated with a vocabulary of 125,000 words from the intracortical array. </td>
-<td>Even at high bandwidth, the main focus is on decoding attempted speech. It does not show autonomous internal generation or causal agreement with changing conditions. </td>
+<td><strong>ウィレットら(2023)</strong><br>侵襲的音声 BCI</td>
+<td>62 ワード/分の大語彙音声デコードが、皮質内アレイからの 125,000 ワードの語彙を使用して実証されました。 </td>
+<td>高帯域幅であっても、主な焦点は試行された音声のデコードにあります。自律的な内部生成や、変化する条件との因果関係は示されません。 </td>
 </tr>
 <tr>
-<td><strong>Littlejohn et al. (2025) / Wairagkar et al. (2025)</strong><br>streaming brain-to-voice / voice synthesis</td>
-<td>Littlejohn et al. showed streaming brain-to-voice every 80 ms, and Wairagkar et al. showed sub-10 ms inference, silence fallback, and short horizon of a fixed decoder for a neural-to-voice algorithm. </td>
-<td>This is strong L2-L3 evidence of a communication subsystem, but not whole-brain emulation. In addition to speed, long-term deployability cannot be determined unless it also provides tail latency, dropout, silence/false speech, recalibration burden, and fixed decoder horizon. </td>
+<td><strong>リトルジョンら。 (2025) / ワイラグカールら。 (2025)</strong><br>ストリーミング脳から音声への/音声合成</td>
+<td>Lリトルジョンらは脳から音声へのストリーミングを 80 ミリ秒ごとに示し、Wiragkar らはは、ニューラルから音声へのアルゴリズムの固定デコーダーの 10 ミリ秒未満の推論、沈黙フォールバック、および短いホライズンを示しました。 </td>
+<td>これは通信サブシステムの強力な L2-L3 証拠ですが、全脳エミュレーションではありません。速度に加えて、テール レイテンシー、ドロップアウト、沈黙/誤った音声、再キャリブレーション負荷、および固定デコーダー ホライズンも提供しない限り、長期的な展開可能性を判断することはできません。 </td>
 </tr>
 <tr>
-<td><strong>Ye et al. (2025)</strong><br>generative language reconstruction + LLM</td>
-<td>fMRI-derived brain representations and text prompts were combined inside an autoregressive LLM to generate language continuations. </td>
-<td>This is an advance in generative language interfaces, but the fluency of the output still depends strongly on prompt and LLM scaffold, and no-prompt generation remains harder. From here, you cannot immediately proceed to brain-only reconstruction or emulation. </td>
+<td><strong>Yeら(2025)</strong><br>生成言語再構成 + LLM</td>
+<td>fMRI 由来の脳表現とテキスト プロンプトが自己回帰 LLM 内で結合され、言語の継続が生成されました。 </td>
+<td>これは生成言語インターフェイスの進歩ですが、出力の流暢さは依然としてプロンプトと LLM スキャフォールドに大きく依存しており、プロンプトなしの生成は依然として困難です。ここから、すぐに脳だけの再構成やエミュレーションに進むことはできません。 </td>
 </tr>
 <tr>
-<td><strong>Flesher et al. (2021)</strong><br>bidirectional closed-loop BCI</td>
-<td>By returning tactile feedback to motor decode, the time required for the robot grasp task was reduced from 20.9 seconds to 10.2 seconds. </td>
-<td>This is a locally closed loop demonstration that is even stronger than decode, but it targets the sensorimotor subsystem. Rather than whole-brain emulation, it is appropriate to read this as <strong>evidence close to L3 in local circuits</strong>. </td>
+<td><strong>Flesher et al. (2021)</strong><br>双方向閉ループ BCI</td>
+<td>触覚フィードバックをモーターデコードに戻すことで、ロボットの掴み作業にかかる時間を20.9秒から10.2秒に短縮しました。 </td>
+<td>これは、デコードよりもさらに強力なローカル閉ループのデモンストレーションですが、感覚運動サブシステムをターゲットとしています。これは全脳エミュレーションというよりも、<strong> ローカル回路の L3 に近い証拠 </strong> と読むのが適切です。 </td>
 </tr>
 <tr>
-<td><strong>Merk et al. (2025) / Zhu et al. (2026)</strong><br>connectomics-informed therapeutic decoding</td>
-<td>Across-patient invasive decoding without patient individual training was shown for movement, while physiological-state decoding was shown for adaptive-DBS feedback guards under named disease and implant regimes. </td>
-<td>This is strong progress in <strong>symptom- and state-conditioned therapeutic decoding</strong>, but it remains implant-target-, label-, and controller-conditioned. It does not show a universal invasive decoder, unrestricted internal-state readout, or emulation of causal brain dynamics. </td>
+<td><strong>Merk et al. (2025) / 朱ら。 (2026)</strong><br>コネクトミクスに基づいた治療的解読</td>
+<td>A 患者個別のトレーニングを必要としない患者間での侵襲的デコードは動作について示された一方、生理学的状態のデコードは、指定された疾患およびインプラント管理下での適応 DBS フィードバック ガードについて示されました。 </td>
+<td>これは、<strong>症状および状態条件付けされた治療的解読</strong>における大きな進歩であるが、インプラントターゲット、ラベル、およびコントローラー条件付けのままである。それは、普遍的な侵襲的デコーダ、無制限の内部状態の読み出し、または因果的な脳のダイナミクスのエミュレーションを示していません。 </td>
 </tr>
 <tr>
-<td><strong>MICrONS (2025) / Billeh et al. (2020) / Beiran &amp; Litwin-Kumar (2025)</strong><br>stimulus-conditioned digital twin / connectome-constrained model</td>
-<td>Sequential same-brain connectomics datasets, multiscale models, and connectome-constrained recurrent networks have advanced local conditional prediction under named tasks and recordings. </td>
-<td>This is an important foundation in a direction similar to emulate, but the scope remains local and regime-bounded. Furthermore, as MICrONS (2025), Beiran &amp; Litwin-Kumar (2025), and Prinz et al. (2004) show, output matching alone cannot be said to be faithful reproduction or the only solution because degeneracy remains, including unmeasured parameters, unrecorded neurons, and omitted state families. </td>
+<td><strong>MICrONS (2025) / Billeh et al. (2020) / ベイラン＆amp; Litwin-Kumar (2025)</strong><br>刺激条件付きデジタルツイン / コネクトーム制約モデル</td>
+<td>逐次同一脳コネクトミクス データセット、マルチスケール モデル、およびコネクトーム制約付きリカレント ネットワークは、名前付きタスクと記録の下で高度なローカル条件付き予測を備えています。 </td>
+<td> これはエミュレートと同様の方向における重要な基盤ですが、範囲は依然としてローカルでレジームに制限されています。さらに、MICrONS (2025) として、Beiran &amp; Litwin-Kumar (2025)、および Prinz et al. (2004) によると、出力マッチングだけでは、未測定のパラメータ、未記録のニューロン、省略された状態ファミリーなどの縮退が残るため、忠実な再現や唯一の解決策とは言えません。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>2026-03 Literature audit: 4 alternative readings prohibited here</h2>
+<h2>2026-03 文献監査: ここでは 4 つの代替読書が禁止されています</h2>
 <table>
 <thead>
 <tr>
-<th>Dangerous transliteration</th>
-<th>Why is it dangerous</th>
-<th>Boundaries currently supported by primary literature</th>
+<th>危険な音訳</th>
+<th>なぜ危険なのか</th>
+<th>一次文献で現在サポートされている境界</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>open-vocabulary non-invasive decode → unrestricted thought reading</strong></td>
-<td>The word decoding in 2025 is certainly a step forward, but it is strongly influenced by task structure, candidate sets, participant cooperation, and modality differences. </td>
-<td>What can be said relatively strongly from Tang (2023) and d'Ascoli (2025) is that <strong>conditional language / communication decoding</strong> has progressed. From there, it is not possible to go directly to general unique restoration of internal states or retrieval of WBE-required states. </td>
+<td><strong>オープン語彙の非侵襲的解読 → 無制限の思考読み取り</strong></td>
+<td>2025 年の単語解読は確かに前進ですが、タスク構造、候補セット、参加者の協力、モダリティの違いに強く影響されます。 </td>
+<td>Tang (2023) と d'Ascoli (2025) から比較的強く言えることは、<strong> 条件付き言語/通信の解読</strong> が進歩したということです。そこから、内部状態の一般的な一意の復元や WBE に必要な状態の取得に直接進むことはできません。 </td>
 </tr>
 <tr>
-<td><strong>streaming speech neuroprosthesis → emulate / WBE</strong></td>
-<td>Streaming and voice synthesis are great achievements of the communication subsystem, but being able to speak quickly and having internal causality are two different things. </td>
-<td>Littlejohn (2025) and Wairagkar (2025) pushed the <strong>L2-L3 of the invasive communication route</strong>, and as Wilson (2025) shows, long-term recalibration burden is another barrier. </td>
+<td><strong>ストリーミング音声ニューロプロテーゼ → エミュレート / WBE</strong></td>
+<td>ストリーミングと音声合成は通信サブシステムの素晴らしい成果ですが、速く話せることと内部因果関係があることは別のことです。 </td>
+<td>Littlejohn (2025) と Wairagkar (2025) は、侵襲的通信ルート </strong> の <strong>L2-L3 を推進しましたが、Wilson (2025) が示すように、長期的な再調整の負担がもう 1 つの障壁となっています。 </td>
 </tr>
 <tr>
-<td><strong>non-causal offline gain → deployable real-time loop</strong></td>
-<td>Decoders that can use future context or post-onset auditory feedback can have an advantage over causal decoders that can be used in closed loops. </td>
-<td>What we can say relatively strongly from Chen (2024) is that <strong>real-time claims cannot be made unless the causal path is reported separately.</strong> </td>
+<td><strong>非因果的オフラインゲイン → 導入可能なリアルタイムループ</strong></td>
+将来のコンテキストまたは発症後の聴覚フィードバックを使用できる <td>Decoder は、閉ループで使用できる Causal Decoder よりも利点があります。 </td>
+<td>Chen (2024) から比較的強く言えることは、因果関係が別途報告されない限り、<strong>リアルタイムの主張はできないということです。</strong> </td>
 </tr>
 <tr>
-<td><strong>connectome-constrained prediction → unique internal mechanism</strong></td>
-<td>Even if a connectome or same-brain function is included, internal dynamics can degenerate if unmeasured biophysical parameters and hidden states remain. </td>
-<td>What can be said relatively strongly from MICrONS (2025), Billeh (2020), and Beiran &amp; Litwin-Kumar (2025) is that <strong>structural constraints help prediction</strong>. From there, you cannot proceed directly to state-complete reconstruction or a unique internal model. </td>
+<td><strong>コネクトーム制約付き予測 → 独自の内部メカニズム</strong></td>
+<td>コネクトームや同一脳機能が含まれている場合でも、測定されていない生物物理学的パラメーターや隠れた状態が残っている場合、内部ダイナミクスは退化する可能性があります。 </td>
+<td>MICrONS (2025)、Billeh (2020)、および Beiran &amp; から比較的強く言えることLitwin-Kumar (2025) は、<strong> 構造制約が </strong> の予測に役立つと述べています。そこから、状態完全な再構築や固有の内部モデルに直接進むことはできません。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Six gates before replacing decode with emulate</h2>
+デコードをエミュレート</h2>に置き換える前の<h2>Sixゲート
 <table>
 <thead>
 <tr>
-<th>Gate</th>
-<th>Why is it necessary</th>
-<th>Minimum evidence you want</th>
+<th>ゲート</th>
+<th>なぜ必要なのか</th>
+<th>必要な最低限の証拠</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>G1: Does brain-derived information exceed prior</strong></td>
-<td>If the language prior or candidate set is strong, the neural contribution can be mistaken based on the fluency of the output alone. </td>
-<td><code>LM-only</code>, <code>no-brain</code>, time-shuffle, trial-shuffle, candidate set size, participant cooperation disclosure. </td>
+<td><strong>G1: 脳由来の情報は以前の</strong></td>を超えていますか
+<td>事前言語または候補セットが強力な場合、出力の流暢さのみに基づいて神経の寄与が誤られる可能性があります。 </td>
+<td><code>LM-only</code>、<code>no-brain</code>、タイムシャッフル、トライアルシャッフル、候補者セットのサイズ、参加者の協力開示。 </td>
 </tr>
 <tr>
-<td><strong>G2: Are you following the causal deployment path?</strong></td>
-<td>When using future frames, teacher forcing, post-onset auditory feedback, and acausal windows, offline scores overestimate the real-time ceiling. </td>
-<td>Disclosure of causal/non-causal, look-ahead window, feedback contamination guard, and online inference path. </td>
+<td><strong>G2: 因果関係のある展開パスに従っていますか?</strong></td>
+<td>将来のフレーム、教師の強制、発症後の聴覚フィードバック、および非因果ウィンドウを使用すると、オフライン スコアはリアルタイムの上限を過大評価します。 </td>
+<td>因果関係/非因果関係、先読みウィンドウ、フィードバック汚染ガード、およびオンライン推論パスの開示。 </td>
 </tr>
 <tr>
-<td><strong>G3: Should it be kept on a different day from the unlearned condition?</strong></td>
-<td>Even if the accuracy is high based on the same subject, same day, and same task, the mechanism does not necessarily match. </td>
-<td>OOD conditions, cross-day, separate stimulus set, out-of-subject evaluation, fixed decoder deterioration curve, abstention rate. </td>
+<td><strong>G3: 未学習状態とは別の日に保管する必要がありますか? </strong></td>
+<td>同じ被験者、同じ日、同じ課題で精度が高くても、仕組みが必ずしも一致するとは限りません。 </td>
+<td>OOD 条件、日をまたぐ、別個の刺激セット、被験者外の評価、固定デコーダ劣化曲線、棄権率。 </td>
 </tr>
 <tr>
-<td><strong>G4: Respond to intervention</strong></td>
-<td>If you call yourself emulate, you need to guess not only the observation but also the branch after perturbation. </td>
-<td>Predictive matching for stimulus changes, ICMS/TMS, pharmacology, and task rule changes. </td>
+<td><strong>G4: 介入に応答</strong></td>
+<td> エミュレートを名乗る場合は、観測だけでなく摂動後の分岐も推測する必要があります。 </td>
+<td>刺激の変化、ICMS/TMS、薬理学、およびタスクルールの変化に対する予測マッチング。 </td>
 </tr>
 <tr>
-<td><strong>G5: Is it stable with closed loop and long-term operation?</strong></td>
-<td>If the output changes the next input, offline accuracy no longer applies. Furthermore, within-session speed and long-term deployability are another issue. </td>
-<td>end-to-end latency at <code>P50/P95/P99</code>, tail latency, silence / abstention, dropout, <strong>fixed decoder interval</strong>, <code>time since last supervised calibration</code>, recalibration burden, recovery time, and, for therapeutic decoding, the <strong>controller family</strong> plus any <strong>physiological-state guard</strong>.</td>
+<td><strong>G5: 閉ループおよび長期動作で安定していますか?</strong></td>
+<td>出力が次の入力を変更した場合、オフライン精度は適用されなくなります。さらに、セッション内の速度と長期的な展開可能性も別の問題です。 </td>
+<td> <code>P50/P95/P99 でのエンドツーエンド レイテンシ</code>、テール レイテンシ、沈黙/棄権、ドロップアウト、<strong> 固定デコーダ間隔</strong>、<code> 最後に監視されたキャリブレーションからの時間</code>、再キャリブレーション負荷、回復時間、および治療用デコードの場合は、<strong> コントローラ ファミリ</strong> と任意の<strong>生理学的状態ガード</strong>.</td>
 </tr>
 <tr>
-<td><strong>G6: Are there enough state variables and have you audited degeneracy?</strong></td>
-<td>The same output can have different sets of internal parameters. If we hide the state deficit and the degeneracy of the model family, it becomes an overstatement. </td>
-<td>In addition to auditing connectome-only baseline and augmentation comparison, family comparison, uncertainty, cell type / synaptic state / delay / neuromodulation / glia, we also record <strong>sorting version</strong>, <strong>drift correction</strong>, and <strong>unit-match probability</strong> for chronic microelectrode systems. </td>
+<td><strong>G6: 十分な状態変数があり、縮退を監査しましたか? </strong></td>
+<td>同じ出力に異なる内部パラメータのセットを含めることができます。国家の赤字と模範家族の退廃を隠すと、それは誇張になってしまう。 </td>
+<td>コネクトームのみのベースラインと増強の比較、家族比較、不確実性、細胞タイプ/シナプス状態/遅延/神経調節/グリアの監査に加えて、慢性微小電極システムの<strong>ソーティングバージョン</strong>、<strong>ドリフト補正</strong>、および<strong>ユニットマッチ確率</strong>も記録します。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Operation rules for this site</h2>
+<h2>このサイトの運用ルール</h2>
 
 <h4>Rule</h4>
 <ul>
-<li>Conditions for writing <strong>decode:</strong>This is when the demonstration focuses on predicting meanings, stimuli, actions, and sentences from observed signals, and even if a neural contribution that exceeds <code>LM-only</code> or shuffle baseline is shown, intervention matching or causal real-time path is not shown. </li>
-<li><strong>Conditions written as L2 to L3 of communication subsystem: Even if a local loop is established such as speech BCI or tactile BCI, clearly state that the target is a limited subsystem, include causal decoder path, latency / silence / <strong>fixed decoder interval</strong> / recalibration burden, and if it is a microelectrode system, also include unit identity audit. </li>
-<li><strong>Conditions written as therapeutic invasive decoding:</strong>If the paper aims at symptom-linked adaptive stimulation or therapeutic state recognition, name the symptom/state label, implant target / coverage, whether the model works without patient individual training or only after warm-up, any connectomics / network prior, the controller family, and any physiological-state guard before raising the claim ceiling. </li>
-<li><strong>Conditions for writing local emulation:</strong>When a local circuit shows both a closed loop and a causal intervention, and what is replaced is specified in a limited manner. </li>
-<li><strong>Conditions for writing close to WBE:</strong>Only when six points are met: exceedance of prior, causal deployment guard, OOD/cross-day generalization, perturbation matching, closed-loop long-term stability, and integrity audit of state variables. </li>
-<li><strong>When only matching output:</strong> Use expressions such as avatar, behavioral clone, decoder, and language interface, not emulate. </li>
-<li><strong>Treatment of connectome-constrained success: Predictive gain, stimulus-conditioned digital-twin models, and connectome-constrained success are positioned as advancements in structural/functional scaffolds, and are not described as the only solution or state-complete reconstruction. </li>
+<li><strong>decode:</strong>を記述するための条件これは、観測された信号から意味、刺激、動作、文章を予測することに焦点を当てたデモンストレーションを行う場合であり、<code>LM-only</code>またはシャッフルベースラインを超える神経寄与が示されても、介入マッチングや因果的リアルタイムパスは示されません。 </li>
+<li><strong>通信サブシステムのL2～L3として書かれた条件：音声BCIや触覚BCIなどのローカルループが確立されている場合でも、対象が限定されたサブシステムであることを明記し、因果デコーダパス、潜時/沈黙/<strong>固定デコーダ間隔</strong>/再校正負荷を含め、微小電極システムの場合はユニットアイデンティティ監査も含める。 </li>
+<li><strong>治療的侵襲的解読として書かれた条件:</strong>論文が症状に関連した適応刺激または治療状態の認識を目的としている場合は、症状/状態ラベル、インプラントのターゲット/適用範囲、モデルが患者の個別トレーニングなしで機能するかウォームアップ後にのみ機能するかどうか、事前のコネクトミクス/ネットワーク、コントローラーファミリー、およびクレーム上限を上げる前に生理学的状態のガードに名前を付けます。 </li>
+<li><strong>ローカルエミュレーションを記述するための条件:</strong>ローカル回路が閉ループと因果的介入の両方を示し、置き換えられるものが限定的に指定される場合。 </li>
+<li><strong>WBE に近い書き込みの条件:</strong> 6 つのポイントが満たされた場合のみ: 以前の因果的展開ガードの超過、OOD/日を超えた一般化、摂動マッチング、閉ループの長期安定性、および状態変数の整合性監査。 </li>
+<li><strong>出力のみを一致させる場合:</strong>エミュレートではなく、アバター、動作クローン、デコーダ、言語インターフェースなどの式を使用します。 </li>
+<li><strong>Tコネクトーム制約による成功の治療: 予測利得、刺激条件付きデジタルツインモデル、およびコネクトーム制約による成功は、構造的/機能的足場の進歩として位置付けられており、唯一の解決策や状態完全な再構築とは説明されていません。 </li>
 </ul>
 
-<h2>References</h2>
+<h2>参考資料</h2>
 <ol>
-<li>Tang, J., LeBel, A., Jain, S., et al. (2023). Semantic reconstruction from non-invasive brain recordings. <em>Nature Neuroscience</em>, 26, 858–866. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
-<li>Défossez, A., Caucheteux, C., Rapin, J., et al. (2023). Decoding speech perception from non-invasive brain recordings. <em>Nature Machine Intelligence</em>, 5, 1097–1107. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
-<li>d'Ascoli, S., Bel, C., Rapin, J., et al. (2025). Towards decoding individual words from non-invasive brain recordings. <em>Nature Communications</em>, 16, 10521. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
-<li>Chen, Z., Yao, D., Wang, M., et al. (2024). A neural speech decoding framework leveraging deep learning and speech synthesis. <em>Nature Machine Intelligence</em>, 6, 1816–1827. <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">doi:10.1038/s42256-024-00837-5</a></li>
-<li>Singh, V., Papangelou, A., Sharma, M., et al. (2025). Transfer learning via distributed brain recordings enables reliable speech decoding. <em>Nature Communications</em>, 16, 5364. <a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
-<li>Willett, F. R., Kunz, E. M., Fan, C., et al. (2023). A high-performance speech neuroprosthesis. <em>Nature</em>, 620, 1031–1036. <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
-<li>Littlejohn, K. T., Dabagia, M., Ladwig, A., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>, 28, 902–912. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
-<li>Wairagkar, M., Card, N. S., Singer-Clark, T., et al. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644, 145–152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
-<li>Ye, Z., Ai, Q., Liu, Y., de Rijke, M., Zhang, M., Lioma, C., &amp; Ruotsalo, T. (2025). Generative language reconstruction from brain recordings. <em>Communications Biology</em>, 8, 346. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
-<li>Merk, T., Li, N.-F., Butenko, K., et al. (2025). Invasive neurophysiology and whole brain connectomics for neural decoding in patients with brain implants. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">doi:10.1038/s41551-025-01467-9</a></li>
-<li>Oehrn, C. R., Roediger, J., Diehl, A., et al. (2024). Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial. <em>Nature Medicine</em>, 30, 2613–2622. <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
-<li>Zhu, G.-Y., Merk, T., Butenko, K., et al. (2026). Decoding the impact of visual states on adaptive deep brain stimulation feedback signals in movement disorders. <em>npj Parkinson's Disease</em>, 12, 61. <a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">doi:10.1038/s41531-026-01273-3</a></li>
-<li>Wilson, G. H., Stein, E. A., Kamdar, F., et al. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
-<li>Pun, T. K., Khoshnevis, M., Hosman, T., et al. (2024). Measuring instability in chronic human intracortical neural recordings towards stable, long-term brain-computer interfaces. <em>Communications Biology</em>, 7, 1363. <a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">doi:10.1038/s42003-024-06784-4</a></li>
-<li>Steinmetz, N. A., Aydin, C., Lebedeva, A., et al. (2021). Neuropixels 2.0: A miniaturized high-density probe for stable, long-term brain recordings. <em>Science</em>, 372(6539), eabf4588. <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
-<li>Pachitariu, M., Sridhar, S., Pennington, J., &amp; Stringer, C. (2024). Spike sorting with Kilosort4. <em>Nature Methods</em>, 21, 914–921. <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">doi:10.1038/s41592-024-02595-5</a></li>
-<li>van Beest, E. H., Bimbard, C., Fabre, J. M. J., et al. (2025). Tracking neurons across days with high-density probes. <em>Nature Methods</em>, 22, 778–787. <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
-<li>Flesher, S. N., Downey, J. E., Weiss, J. M., et al. (2021). A brain-computer interface that evokes tactile sensations improves robotic arm control. <em>Science</em>, 372(6544), 831–836. <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
-<li>MICrONS Consortium, et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435–447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
-<li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 1323–1334. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
-<li>Billeh, Y. N., Cai, B., Gratiy, S. L., et al. (2020). Systematic Integration of Structural and Functional Data into Multi-scale Models of Mouse Primary Visual Cortex. <em>Neuron</em>, 106(3), 388–403.e18. <a href="https://doi.org/10.1016/j.neuron.2020.01.040" target="_blank">doi:10.1016/j.neuron.2020.01.040</a></li>
-<li>Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <em>Nature Neuroscience</em>, 7, 1345–1352. <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
+<li>Tang、J.、LeBel、A.、Jain、S. 他（2023年）。非侵襲的な脳記録からの意味的再構築。 <em>Nature Neuroscience</em>、26、858–866。 <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>Défossez, A.、Caucheteux, C.、Rapin, J. 他（2023年）。非侵襲的な脳記録から音声知覚を解読します。 <em>Nature Machine Intelligence</em>、5、1097–1107。 <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
+<li>d'Ascoli, S.、Bel, C.、Rapin, J.、他。 (2025年)。非侵襲的な脳記録から個々の単語を解読する方向へ。 <em>Nature Communications</em>、16、10521.<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
+<li>Chen、Z.、Yao、D.、Wang、M.、他。 （2024年）。深層学習と音声合成を活用したニューラル音声デコード フレームワーク。 <em>Nature Machine Intelligence</em>、6、1816 ～ 1827 年。 <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">doi:10.1038/s42256-024-00837-5</a></li>
+<li>Singh、V.、Papangelou、A.、Sharma、M.、他。 (2025年)。分散型脳記録による転移学習により、信頼性の高い音声デコードが可能になります。 <em>Nature Communications</em>、16、5364。<a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
+<li>Willett, F. R.、Kunz, E.M.、Fan, C. 他（2023年）。高性能言語人工神経。 <em>ネイチャー</em>、620、1031–1036。 <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>LLittlejohn, K.T.、Dabagia, M.、Ladwig, A. 他(2025年)。自然なコミュニケーションを復元するためのストリーミング脳から音声へのニューロプロテーゼ。 <em>Nature Neuroscience</em>、28、902–912。 <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar, M.、Card, N.S.、Singer-Clark, T. 他(2025年)。瞬間的に音声を合成する神経人工器官。 <em>Nature</em>、644、145–152。 <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Ye, Z.、Ai, Q.、Liu, Y.、de Rijke, M.、Zhang, M.、Lioma, C.、およびRuotsalo、T. (2025)。脳の記録からの生成言語の再構築。 <em>コミュニケーション生物学</em>、8、346。<a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
+<li>Merk, T.、Li, N.-F.、Butenko, K. 他(2025年)。脳インプラント患者の神経解読のための侵襲性神経生理学と全脳コネクトミクス。 <em>Nature Biomedical Engineering</em>。 <a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">doi:10.1038/s41551-025-01467-9</a></li>
+<li>Oehrn、C.R.、Roediger、J.、Diehl、A.、他。 （2024年）。パーキンソン病における慢性適応脳深部刺激と従来の刺激の比較: 盲検ランダム化実現可能性試験。 <em>Nature Medicine</em>、30、2613–2622。 <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
+<li>Zhu、G.-Y.、Merk、T.、Butenko、K.、他。 （2026年）。運動障害における適応型深部脳刺激フィードバック信号に対する視覚状態の影響を解読します。 <em>npj パーキンソン病</em>、12、61。<a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">doi:10.1038/s41531-026-01273-3</a></li>
+<li>Wilson, G. H.、Stein, E. A.、Kamdar, F. 他(2025年)。隠れマルコフ モデルを使用した、カーソルベースの皮質内脳コンピューター インターフェイスの長期教師なし再調整。 <em>Nature Biomedical Engineering</em>。 <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Pun, T. K.、Khoshnevis, M.、Hosman, T. 他（2024年）。安定した長期にわたる脳とコンピューターのインターフェースに向けた慢性的な人間の皮質内神経記録の不安定性を測定します。 <em>コミュニケーション生物学</em>、7、1363。<a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">doi:10.1038/s42003-024-06784-4</a></li>
+<li>Steinmetz, N.A.、Aydin, C.、Lebedeva, A. 他（2021年）。 Neuropixels 2.0: 安定した長期の脳記録のための小型高密度プローブ。 <em>Science</em>、372(6539)、eabf4588。 <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
+<li>Pachitariu、M.、Sridhar、S.、Pennington、J.、およびストリンガー、C. (2024)。 Kilosort4 によるスパイクソーティング。 <em>Nature Methods</em>、21、914–921。 <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">doi:10.1038/s41592-024-02595-5</a></li>
+<li>van Beest, E.H.、Bimbard, C.、Fabre、J.M.J. 他(2025年)。高密度プローブを使用して数日間にわたってニューロンを追跡します。 <em>Nature Methods</em>、22、778–787。 <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
+<li>Flesher、S.N.、Downey、J.E.、Weiss、J.M.、他（2021年）。触覚を呼び起こすブレイン コンピューター インターフェイスにより、ロボット アームの制御が向上します。 <em>Science</em>、372(6544)、831–836。 <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>MICrONSコンソーシアムほか(2025年)。マウス視覚野の複数の領域にわたる機能的コネクトミクス。 <em>Nature</em>、640、435–447。 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>ベイラン、M.、＆amp;リトウィン・クマール、A. (2025)。コネクトーム制約付きリカレント ネットワークにおける神経活動の予測。 <em>Nature Neuroscience</em>、28、1323–1334。 <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Billeh, Y. N.、Cai, B.、Gratiy, S. L.、他（2020年）。マウス一次視覚野のマルチスケールモデルへの構造および機能データの体系的な統合。 <em>ニューロン</em>、106(3)、388–403.e18。 <a href="https://doi.org/10.1016/j.neuron.2020.01.040" target="_blank">doi:10.1016/j.neuron.2020.01.040</a></li>
+<li>Prinz、A.A.、Bucher、D.、およびマーダー、E. (2004)。異なる回路パラメータからの同様のネットワーク アクティビティ。 <em>Nature Neuroscience</em>、7、1345–1352。 <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
 </ol>
 
-<h2>Why is this distinction important</h2>
+<h2>この区別が重要な理由</h2>
 <p>
-Without this distinction, individual advances such as ``we were able to produce sentences from brain signals,'' ``a little bit better with closed loop,'' and ``the stimulus-conditioned digital twin worked'' would be mistakenly interpreted as an overall achievement of WBE. At Mind-Upload, in order to avoid this leap forward, we put the complaint ladder and verification foundation first.
+この区別がなければ、「`we were able to produce sentences from brain signals,'' ``a little bit better with closed loop,'' and `『刺激条件付きデジタルツインが機能した』」などの個々の進歩が、WBE の全体的な成果として誤って解釈されてしまいます。マインドアップロードでは、この飛躍を避けるために、苦情のはしごと検証基盤を最優先にしました。
 </p>
 
-<h4>Next</h4>
-<p>Click here if you would like to see the level of assertion and the strength of required evidence. </p>
-<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">How to read claims and evidence →</a>
+<h4>次</h4>
+<p>主張の度合いや必要な証拠の強さを知りたい方はこちら。 </p>
+<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">クレームと証拠の読み方→</a>

@@ -1,184 +1,184 @@
-# Wiki: U Number Guide
+# Wiki: U 番号ガイド
 
-> U is a name tag for unresolved problems.
+> U は未解決の問題の名前タグです。
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-19 / Role: Reading guide
+- Updated: 2026-03-19 / Role: 読書ガイド
 
-## Role Of This Page
-This page helps translate the U numbers that appear in the literature map into everyday language. The goal is not to memorize the numbers, but to make it easier to find which block a reader should start with.
-
-
-## Accuracy Notes
-The explanations here are entry-point paraphrases. For exact definitions and the latest status, always return to the main literature map.
+## このページの役割
+このページは、文献マップに表示される U 番号を日常言語に翻訳するのに役立ちます。目的は番号を記憶することではなく、読者がどのブロックから始めるべきかを見つけやすくすることです。
 
 
-## Back To Public Pages
-- [Literature Map](https://mind-upload.com/research_harvest_50.html)
-- [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
-- [Verification](https://mind-upload.com/verification.html)
+## 正確性に関する注記
+ここでの説明は入り口の言い換えです。正確な定義と最新のステータスについては、常にメインの文献マップに戻ってください。
 
-## Related Wiki Pages
-- [Wiki: How to read the literature and evidence page](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - For readers who want to understand the role of the literature map itself first.
-- [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - For readers who want to see the big picture behind the U numbers first.
-- [Wiki Home](https://github.com/yasufumi-nakata/mind-upload/wiki) - A route back to the other foundational pages.
 
-## What Is Currently Known
-- U is an internal code used to organize unresolved problems in the literature map.
-- Looking at larger problem groups makes it much easier to see where to start reading.
-- Citation count or the size of the number does not directly express claim strength or importance.
-- For technology and natural-science readers, it is better not to treat U0/U12/U15 as the default entry point.
+## 公開ページへ戻る
+- [文学マップ](https://mind-upload.com/research_harvest_50.html)
+- [テクノロジーロードマップ](https://mind-upload.com/tech_roadmap.html)
+- [検証](https://mind-upload.com/verification.html)
 
-## What Is Still Unknown
-- The content and boundaries of each U may change as the literature map evolves.
-- It has not yet been fixed which U should receive the greatest concentration of research resources.
-- Whether U11's consciousness-metric comparison returns to the main route may change with future prediction competitions and benchmark development.
+## 関連 Wiki ページ
+- [Wiki: 文献と証拠のページの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading) - まず文献マップ自体の役割を理解したい読者向け。
+- [Wiki: WBE の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - まず、U 番号の背後にある全体像を確認したい読者向け。
+- [ウィキホーム](https://github.com/yasufumi-nakata/mind-upload/wiki) - 他の基本ページに戻るルート。
+
+## 現在わかっていること
+- U は、文献マップ内の未解決の問題を整理するために使用される内部コードです。
+- より大きな問題グループを見ると、どこから読み始めるべきかがはるかに簡単になります。
+- 引用数やその数の大きさは、主張の強さや重要性を直接表すものではありません。
+- テクノロジーおよび自然科学の読者の場合は、U0/U12/U15 をデフォルトのエントリ ポイントとして扱わない方がよいでしょう。
+
+## まだわかっていないこと
+- 各 U の内容と境界は、文献マップが進化するにつれて変更される可能性があります。
+- どの大学が研究資源を最大限集中して受け取るべきかはまだ決まっていない。
+- U11の意識とメトリクスの比較がメインルートに戻るかどうかは、今後の予測競争やベンチマークの開発によって変わる可能性があります。
 
 ---
 
-<h2>What you don't need to remember first</h2>
+<h2>最初に覚えなくてもよいこと</h2>
 <p>
-The U number is not a memorized item for the exam. The role is a name tag that helps you identify which unresolved problems this document is related to. First of all, it is more important to look at which block is the problem than the number itself.
+U 番号は試験の暗記項目ではありません。この役割は、この文書がどの未解決の問題に関連しているかを識別するのに役立つ名前タグです。まず第一に、番号自体よりもどのブロックに問題があるかを調べることが重要です。
 </p>
 
-<h2>Looking at big problems</h2>
+<h2>大きな問題に直面している</h2>
 <table>
 <thead>
 <tr>
-<th>Big problems</th>
-<th>Main U</th>
-<th>In everyday language</th>
+<th>大きな問題</th>
+<th>メイン U</th>
+<th>日常の言葉で</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Definition and evaluation</strong></td>
+<td><strong>定義と評価</strong></td>
 <td>U0 / U11 / U13 / U14</td>
-<td>The problem is what to call "same", "successful", and "able to try again". </td>
+<td>問題は、何を「同じ」「成功」「再挑戦可能」と呼ぶかです。 </td>
 </tr>
 <tr>
-<td><strong>Measurement and estimation</strong></td>
+<td><strong>測定と見積り</strong></td>
 <td>U1 / U7</td>
-<td>The question is how much of the brain and behavior can be measured and how much can be estimated. </td>
+<td>問題は、脳と行動をどこまで測定し、どこまで推定できるかです。 </td>
 </tr>
 <tr>
-<td><strong>Causality and implementation stability</strong></td>
+<td><strong>因果関係と実装の安定性</strong></td>
 <td>U4 / U8 / U10</td>
-<td>It is a matter of model-conditioned causal claims, reaction to changes in conditions, stability of the closed loop, and physical cost. </td>
+<td>これは、モデル条件付き因果関係主張、条件変化への反応、閉ループの安定性、および物理的コストの問題です。 </td>
 </tr>
 <tr>
-<td><strong>Boundaries and identity</strong></td>
+<td><strong>境界とアイデンティティ</strong></td>
 <td>U3 / U12</td>
-<td>The problem is how much to include in the subject and how to handle the identity after branching. </td>
+<td>件名にどこまで含めるか、分岐後のアイデンティティをどうするかが問題です。 </td>
 </tr>
 <tr>
-<td><strong>System and public operation</strong></td>
+<td><strong>システムと公開操作</strong></td>
 <td>U15</td>
-<td>This is an operational issue, including suspension standards, disclosure standards, and how to place responsibility. </td>
+<td>停止基準、開示基準、責任の所在など運用上の問題です。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Entrance by interest</h2>
+<h2>興味による入場</h2>
 <table>
 <thead>
 <tr>
-<th>What I'm curious about now</th>
-<th>First look at U group</th>
+<th>今気になること</th>
+<th>初見Uグループ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>EEG, inverse problems, and limits of time synchronization</td>
+<td>EEG、逆問題、時間同期の限界</td>
 <td>U1 / U7</td>
 </tr>
 <tr>
-<td>How to read effective-connectivity / DCM claims without overpromoting them</td>
+<td>効果的な接続/DCM の主張を過剰に宣伝せずに読み取る方法</td>
 <td>U4</td>
 </tr>
 <tr>
-<td>Difference between decode success and WBE claim</td>
+<td>デコード成功と WBE クレームの違い</td>
 <td>U13</td>
 </tr>
 <tr>
-<td>Long-term closed-loop stability</td>
+<td>長期閉ループ安定性</td>
 <td>U8</td>
 </tr>
 <tr>
-<td>Maintenance-state and support system outside the connectome</td>
+<td>コネクトーム外部のメンテナンス状態とサポート システム</td>
 <td>U3</td>
 </tr>
 <tr>
-<td>I want to include physical costs and dissipation</td>
+<td>I 物理的コストと損失を考慮したい</td>
 <td>U10</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Order of viewing first by technology/natural science</h2>
+<h2>技術・自然科学別の閲覧順</h2>
 <table>
 <thead>
 <tr>
-<th>Order</th>
-<th>U Groups</th>
-<th>Reasons for viewing in this order</th>
+<th>注文</th>
+<th>Uグループ</th>
+<th>この順序で見る理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>1</strong></td>
 <td><strong>U1 / U7</strong></td>
-<td>First, if we do not fix what is directly observed and what can still be estimated, all subsequent assertion levels will be unstable. </td>
+<td>まず、直接観察されるものとまだ推定できるものを修正しないと、その後のすべてのアサーション レベルが不安定になります。 </td>
 </tr>
 <tr>
 <td><strong>2</strong></td>
 <td><strong>U4</strong></td>
-<td>This is to avoid misreading a directed graph or DCM fit as discovered causal wiring before candidate model space and observation assumptions are checked. </td>
+<td>これは、候補モデル空間と観測仮定がチェックされる前に、有向グラフまたは DCM フィットが発見された因果関係として誤って読み取られるのを避けるためです。 </td>
 </tr>
 <tr>
 <td><strong>3</strong></td>
 <td><strong>U13</strong></td>
-<td>This is to avoid misinterpreting successful decoding or imitation as causal conservation or emulation. </td>
+<td>これは、成功したデコードまたは模倣が因果関係の保存またはエミュレーションとして誤解されるのを避けるためです。 </td>
 </tr>
 <tr>
 <td><strong>4</strong></td>
 <td><strong>U8</strong></td>
-<td>The success of within-session does not necessarily mean stable long-term operation. </td>
+<td>セッション内での成功は、必ずしも長期安定稼働を意味するものではありません。 </td>
 </tr>
 <tr>
 <td><strong>5</strong></td>
 <td><strong>U3</strong></td>
-<td>If you do not read sleep/homeostasis, myelin/metabolic support, astrocyte ensemble, and clearance/immune support separately, you will read structural progress too much into long-term subject equivalence. </td>
+<td>睡眠/ホメオスタシス、ミエリン/代謝サポート、アストロサイトアンサンブル、およびクリアランス/免疫サポートを個別に読まないと、構造的進歩を長期的な被験者の同等性と捉えすぎてしまいます。 </td>
 </tr>
 <tr>
 <td><strong>6</strong></td>
 <td><strong>U10</strong></td>
-<td>Finally, we bring back dissipation and effective cost as refutation conditions, so that we don't end the discussion with computability alone. </td>
+<td>最後に、計算可能性だけで議論を終わらせないよう、反駁条件として散逸と実効コストを持ち帰っています。 </td>
 </tr>
 </tbody>
 </table>
 
-<strong>Why U4 now comes before U13</strong>
+<strong>U4 が U13</strong> の前に来る理由
 <p>
-On the public pages, effective-connectivity / DCM claims are already read as <strong>model-conditioned causal hypotheses</strong>. This guide now mirrors that rule. The reason is practical: if a reader first sees a directed graph and reads it as discovered causal wiring, the later distinction between <strong>decode success</strong> and <strong>WBE-level causal preservation</strong> becomes harder to recover. So in the literature route, U4 is now checked before U13.
+公開ページでは、有効接続性 / DCM の主張はすでに <strong> モデル条件付き因果仮説 </strong> として読み取られています。このガイドではそのルールが反映されています。その理由は実際的なものです。読者が最初に有向グラフを見て、それを因果関係の配線が発見されたものとして読むと、後の <strong> デコード成功 </strong> と <strong>WBE レベルの因果保存 </strong> との区別を回復するのが難しくなります。したがって、文献ルートでは、U4 が U13 の前にチェックされるようになりました。
 </p>
 
-<strong>Group removed from lead line</strong>
+<strong>グループをリード線から取り外した</strong>
 <p>
-Although <strong>U0 / U12 / U15</strong> are important, they should not be placed at the default entry point for technology and natural sciences. What is needed here is to fix what can be measured, to what extent it can be directly validated, where the closed loop breaks, and what hidden state remains, rather than focusing on identity or institutional theory.
+<strong>U0 / U12 / U15</strong> は重要ですが、テクノロジーや自然科学のデフォルトのエントリ ポイントに配置すべきではありません。ここで必要なのは、アイデンティティや制度理論に焦点を当てるのではなく、何が測定できるのか、どの程度直接検証できるのか、閉じたループがどこで切れるのか、どのような隠れた状態が残っているのかを修正することです。
 </p>
 
-<h2>To avoid misreading the U number</h2>
+<h2>U番号の読み間違いを防ぐため</h2>
 
-<h4>Checklist</h4>
+<h4>チェックリスト</h4>
 <ul>
-<li><strong>Don't memorize numbers:</strong> Start with the problem group. </li>
-<li><strong>Don't judge by the number of citations:</strong> There is a difference between having a lot and being solved. </li>
-<li><strong>Return to strict definition:</strong> When you actually use it, return to the definition table in the main text of the bibliographic map. </li>
+<li><strong>数字は覚えないでください:</strong> 問題グループから始めます。 </li>
+<li><strong>引用の数で判断しないでください:</strong>たくさんあることと解決していることは違います。 </li>
+<li><strong>厳密な定義に戻る:</strong> 実際に使用する場合は書誌マップ本文の定義表に戻ります。 </li>
 </ul>
 
-<h2>Where to return next</h2>
+<h2>次に戻る場所</h2>
 <p>
-Once you understand the meaning of the numbers, please return to <a href="https://mind-upload.com/research_harvest_50.html">Bibliography Map</a>. If the role of the literature page as a whole is still unclear, it will be easier to read if you first look at <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading">How to read the literature and evidence page</a>.
+数字の意味を理解したら、<a href="https://mind-upload.com/research_harvest_50.html">書誌マップ</a>に戻ってください。文献ページ全体の役割がまだ不明な場合は、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-and-evidence-reading">文献・エビデンスページの読み方</a>を先に見ていただくと読みやすいと思います。
 </p>

@@ -1,39 +1,39 @@
 ---
 layout: default
-title: "Mind-Upload Summary Booklet"
-description: "An auto-generated A4-style briefing page built from the site's public pages."
-article_type: "Briefing Booklet"
-subtitle: "An A4 briefing regenerated from public-page front matter and lead summaries"
-author: Mind Uploading Research Project
-last_updated: "2026-04-04"
-note: "Auto-generated from public pages"
+title: "マインドアップロード要約冊子"
+description: "サイトの公開ページから作成した、自動生成の A4 形式ブリーフィングページ。"
+article_type: "ブリーフィング冊子"
+subtitle: "公開ページの front matter と冒頭要約から再生成した A4 ブリーフィング"
+author: マインドアップロード研究プロジェクト
+last_updated: "2026-04-12"
+note: "公開ページから自動生成"
 body_class: "summary-booklet-page"
 ---
-<!-- AUTO-GENERATED FILE. Run `ruby scripts/build_summary_booklet.rb`. -->
-<!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
+<!-- 自動生成ファイルです。`ruby scripts/build_summary_booklet.rb` を実行してください。 -->
+<!-- 重要: この情報を削除したり上書きしたりしないでください。これはプロジェクトの恒久的な知識ベースです。 -->
 
 <main class="main-container summary-booklet-main">
 <article class="content-column">
 
 <section class="booklet-sheet booklet-cover">
-  <p class="booklet-kicker">Mind-Upload Commons</p>
-  <h2 class="booklet-cover-title">Public Page Summary Booklet</h2>
+  <p class="booklet-kicker">マインドアップロード・コモンズ</p>
+<h2 class="booklet-cover-title">公開ページ要約冊子</h2>
   <p class="booklet-cover-lead">
-    This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is trying to do, where to start reading, and which pages matter first.
+    このページは、Mind-Upload への主要なエントリ ポイントです。このサイトが何をしようとしているのか、どこから読み始めればよいのか、どのページが最初に重要なのかをできるだけ早く示すように設計されています。
   </p>
 
   <div class="booklet-cover-band">
     <div>
   <span>Reference Date</span>
-  <strong>2026-04-04</strong>
+  <strong>2026-04-12</strong>
 </div>
 <div>
   <span>Current Focus</span>
-  <strong>Connectome-complete is not emulation-complete.</strong>
+  <strong>同日内の成功は、別日や長期の主張ではありません。</strong>
 </div>
 <div>
   <span>Primary Entry</span>
-  <strong>Mind-Upload -&gt; Verification Commons</strong>
+  <strong>Mind-Upload -&gt; 検証コモンズ</strong>
 </div>
 
   </div>
@@ -41,18 +41,18 @@ body_class: "summary-booklet-page"
   <div class="booklet-card-grid booklet-card-grid-3">
     <article class="booklet-card">
   <h3>What This Site Builds First</h3>
-  <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
+  <p>アップロードと WBE が単なる夢物語にならないよう、最初の要件は <strong>a 共有ルール set</strong> です。 Mind-Uploadでは、データの配置、評価、故障判定、再現手順を最初に整備し、誰でも同じ結果を同じ基準で確認することができます。</p>
 </article>
 <article class="booklet-card">
   <h3>What It Does Not Claim Yet</h3>
   <ul class="booklet-list">
-  <li>Connectome-complete is not emulation-complete.</li><li>Human evidence remains layered and proxy-based.</li><li>Same-subject wording does not make one state sample.</li><li>Proxy bundles need compatibility, repeatability, and disagreement audits.</li>
+  <li>同日内の成功は、別日や長期の主張ではありません。</li><li>Connectome が完了しても、エミュレーションが完了したことを意味するわけではありません。欠落しているメンテナンス状態変数は個別に監査す…</li><li>R0 は構造スキャフォールド、高速実行可能状態、およびメンテナンス状態ファミリを分離するようになりました。そのため、`connectome…</li><li>人間の証拠は階層化されています：局所超微細構造、シナプス密度PET、受容体/輸送体アトラスの事前分布、選択された占有PETルート、チャレンジ制…</li>
 </ul>
 
 </article>
 <article class="booklet-card">
   <h3>Core Pages To Read Now</h3>
-  <p>Mind-Upload / Verification: Mind Uploading Verification Commons / Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation / Toward Mind Uploading: An Integrated Technical and Theoretical Approach / Data &amp; Hands-on: Where to start and how to get to L0 / Contribution Guide</p>
+  <p>マインドアップロード / 検証: マインドアップロード検証コモンズ / 技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する / マインドアップロードに向けて: 統合された技術的および理論的アプローチ / データとハンズオン: どこから始めて、どのようにして L0 に到達するか / 貢献ガイド</p>
 </article>
 
   </div>
@@ -67,23 +67,23 @@ body_class: "summary-booklet-page"
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card">
   <h3>1. Site Scope</h3>
-  <p>This page is the main entry point to Mind-Upload.</p>
+  <p>このページは、Mind-Upload への主要なエントリ ポイントです。このサイトが何をしようとしているのか、どこから読み始めればよいのか、どのページが最初に重要なのかをできるだけ早く示すように設計されています。</p>
 </article>
 <article class="booklet-card">
   <h3>2. Known vs Unknown</h3>
-  <p>This page does not claim that WBE is already possible. It defines the substrate needed to test whether it is.</p>
+  <p>このページは、WBE がすでに可能であるとは主張しません。それがそうであるかどうかをテストするために必要な基質を定義します。</p>
 </article>
 <article class="booklet-card">
   <h3>3. Core Page Roles</h3>
-  <p>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and…</p>
+  <p>このページは、WBEの質問を測定、再構築、実装、検証、社会展開に分けて整理したマップです。その目的は、どの問題が根本的なもので、どの問題が未解決のままなのかを読者が見失わないようにすることです。</p>
 </article>
 <article class="booklet-card">
   <h3>4. Support Routes</h3>
-  <p>This page is the operations hub for fixing where public content should go so material does not scatter across the site.</p>
+  <p>このページは、マテリアルがサイト全体に散在しないように、パブリック コンテンツの配置先を決定するための運用ハブです。また、技術的なファストパスも提供されるため、文献の更新が年順だけで誤って配信されることがなくなります。</p>
 </article>
 <article class="booklet-card">
   <h3>5. Next Actions</h3>
-  <p>This page explains how to participate in Mind-Upload, how to read issue status, and how to separate changes that can…</p>
+  <p>このページでは、Mind-Upload に参加する方法、問題のステータスを読み取る方法、および外部に依存したままのタスクから今すぐ実行できる変更を分離する方法について説明します。</p>
 </article>
 <article class="booklet-card">
   <h3>6. Source Pages</h3>
@@ -95,7 +95,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-status-grid">
     <div class="booklet-status-card booklet-status-card-strong">
   <span>In One Sentence</span>
-  <strong>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</strong>
+  <strong>Mind-Upload の核心は、大胆な結論ではなく、進捗状況を測定できる検証コモンズです。</strong>
 </div>
 <div class="booklet-status-card">
   <span>Main Takeaway</span>
@@ -112,20 +112,20 @@ body_class: "summary-booklet-page"
   </div>
 
   <div class="booklet-quote">
-    <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
+    <p>アップロードと WBE が単なる夢物語にならないよう、最初の要件は <strong>a 共有ルール set</strong> です。 Mind-Uploadでは、データの配置、評価、故障判定、再現手順を最初に整備し、誰でも同じ結果を同じ基準で確認することができます。</p>
   </div>
 
   <div class="booklet-two-column">
     <div>
       <h3>What We Fix First</h3>
       <ul class="booklet-list">
-        <li>Standards, repositories, benchmarks, and audits must be built as one package.</li><li>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</li><li>For maintenance-state claims, local causal evidence and living-human proxy evidence are kept on separate axes, so bridge assumptions must be disclosed rather than silently fused.</li><li>For decode / biomarker scores, the Specificity &amp; Shortcut Card separates the target neural variable from nuisance routes and audits subject / session fingerprint plus acquisition-distribution shortcuts independently.</li>
+        <li>標準、リポジトリ、ベンチマーク、監査は 1 つのパッケージとして構築する必要があります。</li><li>クレームレベルと障害条件は事前に固定されているため、デコードがエミュレーションと混同されることはありません。</li><li>維持状態の主張の場合、局所的な因果関係の証拠と生きている人間の代理証拠は別の軸に保持されるため、橋渡しの仮定は黙って融合されるのではなく開示される必要があります。</li><li>デコード/バイオマーカースコアの場合、特異性とショートカットカードは、ターゲットの神経変数を迷惑ルートから分離し、被験者/セッションのフィンガープリントと取得-配布ショートカットを個別に監査します。</li>
       </ul>
     </div>
     <div>
       <h3>What We Do Not Claim Up Front</h3>
       <ul class="booklet-list">
-        <li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout.</li><li>Current human astrocyte-related PET route-role families, target-defined neuroimmune PET target families, and transport-side clearance routes remain non-equivalent proxy classes: SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / pathology-validated PET, CSF1R first-in-human route-setting PET, COX-2 celecoxib-blockade / test-retest-bounded enzyme PET, and human macroscopic CSF-oscillation / parenchyma-CSF water-exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes still do not identify which astrocyte, microglial controller, or synapse is responsible.</li><li>A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling.</li>
+        <li>コネクトームと細胞の種類だけでは長期的な動態を決定するものではありません。活性依存性転写/クロマチン状態、転写後RNA状態、睡眠/ホメオスタシス、睡眠構造/リプレイカップリング、リン酸シグナル伝達/セカンドメッセンジャー状態、局所プロテオスタシス/カーゴルーティング状態、髄鞘形成、熱状態、生体エネルギー/ミトコンドリア状態、神経血管ユニット/BBB/周皮細胞状態、グリア基質ルーティング、アストロサイトの状態とクリアランス/免疫サポートは別個の変数のままです。</li><li>転写後の RNA 証拠は 1 つのクラスではなく、スプライスアイソフォーム制御、m6A 依存性翻訳、m6A 依存性分解、RNA 編集、およびアトラスの天井は別々に保たれます。</li><li>貨物輸送の証拠は 1 つのクラスではなく、AMPAR / リサイクルエンドソーム送達、微小管経路の状態、局所小胞閉じ込め、樹状突起 / シナプス RNA 顆粒組織化、軸索 RNA 局在、およびシナプス前貨物保持は別々に保たれます。</li><li>シナプス リストまたは重み推定は、それ自体ではシナプス周囲 ECM / PNN 状態を修正しないため、可塑性と安定化の主張には別の上限が必要です。</li>
       </ul>
     </div>
   </div>
@@ -139,20 +139,20 @@ body_class: "summary-booklet-page"
     </thead>
     <tbody>
       <tr>
-  <td>Entry</td>
-  <td><strong><a href="/index.html">Mind-Upload</a></strong><br>This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is trying to do, where to start reading, and which pages matter first.</td>
+  <td>入口</td>
+  <td><strong><a href="/index.html">マインドアップロード</a></strong><br>このページは、Mind-Upload への主要なエントリ ポイントです。このサイトが何をしようとしているのか、どこから読み始めればよいのか、どのページが最初に重要なのかをできるだけ早く示すように設計されています。</td>
 </tr>
 <tr>
-  <td>Verification Commons</td>
-  <td><strong><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></strong><br>This page is the core blueprint of Mind-Upload.</td>
+  <td>検証コモンズ</td>
+  <td><strong><a href="/verification.html">検証: マインドアップロード検証コモンズ</a></strong><br>このページは Mind-Upload の核となる設計図です。最初にデータ、評価、障害条件、再現手順を調整することで、遡及的にではなく事前に進捗状況を定義する方法について説明します。</td>
 </tr>
 <tr>
-  <td>Technical Map</td>
-  <td><strong><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></strong><br>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and social deployment.</td>
+  <td>技術マップ</td>
+  <td><strong><a href="/tech_roadmap.html">技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する</a></strong><br>このページは、WBEの質問を測定、再構築、実装、検証、社会展開に分けて整理したマップです。その目的は、どの問題が根本的なもので、どの問題が未解決のままなのかを読者が見失わないようにすることです。</td>
 </tr>
 <tr>
-  <td>Theory Framing</td>
-  <td><strong><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></strong><br>This page is a long research note that starts from observability, identifiability, and maintenance-state burdens, and only then asks what kinds of theoretical interpretation survive those…</td>
+  <td>理論的整理</td>
+  <td><strong><a href="/perspective.html">マインドアップロードに向けて: 統合された技術的および理論的アプローチ</a></strong><br>このページは、可観測性、識別可能性、および維持状態の負担から始まり、その後、どのような種類の理論的解釈がそれらの限界を乗り越えられるかを問う長い研究ノートです。一次文献、隠れ状態のギャップ、実装の制約を 1 ページにまとめているため、過剰な要求が難しくなります。</td>
 </tr>
 
     </tbody>
@@ -169,37 +169,37 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-positive">
       <h3>Relatively Well Supported</h3>
       <ul class="booklet-list">
-        <li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Human evidence is layered: local ultrastructure, synaptic-density PET, receptor / transporter atlas priors, selected occupancy PET routes, challenge-limited displacement / release PET routes, five-metabolite 1H-MRSI similarity scaffolds, high-resolution 1H-MRSI metabolite-distribution routes, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined ionic proxy families, tract-scale transmission-speed routes, myelin-sensitive / tissue-health-sensitive MRI ratio families, macro thermal / perturbation-conditioned thermal proxy families, BBB water-exchange proxies, tracer-specific BBB transport proxies, blood-CSF barrier / choroid-plexus perfusion / blood-to-CSF transport / water-cycling / apparent-exchange proxies, SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution routes, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / validation-bounded PET, CSF1R route-setting target-defined PET, COX-2 enzyme-defined PET, and macroscopic CSF oscillation / parenchyma-CSF water exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes are not one near-direct readout.</li><li>Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter.</li><li>Several living-human proxy rows are not promoted together unless same-subject relation, effective time window / physiological-regime compatibility, route-local repeatability versus transfer, disagreement handling, model burden, and residual hidden-state ceilings are disclosed explicitly.</li><li>The Temporal Validity Card is now part of the public workflow so same-day success is not silently promoted to cross-day or long-term claims.</li>
+        <li>Temporal Validity Card は公開ワークフローの一部となっているため、同日の成功が暗黙のうちに日をまたぐ請求や長期請求に昇格することはありません。</li><li>Connectome が完了しても、エミュレーションが完了したことを意味するわけではありません。欠落しているメンテナンス状態変数は個別に監査する必要があります。</li><li>R0 は構造スキャフォールド、高速実行可能状態、およびメンテナンス状態ファミリを分離するようになりました。そのため、`connectome + state` は 1 つのノブとして扱われません。</li><li>日をまたぐまたは長期的なクレームの場合、Temporal Validity Card は、固定デコーダ間隔、状態注釈、再校正負荷、および転送上限を個別に監査します。</li><li>日をまたぐまたは長期のクレームの場合、Temporal Validity Card は、固定デコーダ間隔、状態の注釈、および再調整の負担を個別に監査します。</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
       <h3>Still Open or Conditional</h3>
       <ul class="booklet-list">
-        <li>It remains unresolved whether noninvasive measurement alone can capture enough internal state for WBE.</li><li>Recent rodent causal studies show that astrocyte-state can matter for recall, multiday stabilization, and fear-state representations, but this still does not provide a human whole-brain readout.</li><li>Current human astrocyte-related PET route-role families, target-defined neuroimmune PET target families, and transport-side clearance routes remain non-equivalent proxy classes: SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / pathology-validated PET, CSF1R first-in-human route-setting PET, COX-2 celecoxib-blockade / test-retest-bounded enzyme PET, and human macroscopic CSF-oscillation / parenchyma-CSF water-exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes still do not identify which astrocyte, microglial controller, or synapse is responsible.</li><li>A connectome, cell type, and glial proxy do not by themselves fix local ATP reserve or mitochondrial positioning, so repeated-burst and dendritic-plasticity claims need a separate bioenergetic ceiling.</li><li>A glial proxy or generic metabolic note does not by itself fix astrocyte network / ensemble state, so recall, reconsolidation, and multiday-stabilization claims need a separate astrocyte-state ceiling.</li>
+        <li>コネクトームと細胞の種類だけでは長期的な動態を決定するものではありません。活性依存性転写/クロマチン状態、転写後RNA状態、睡眠/ホメオスタシス、睡眠構造/リプレイカップリング、リン酸シグナル伝達/セカンドメッセンジャー状態、局所プロテオスタシス/カーゴルーティング状態、髄鞘形成、熱状態、生体エネルギー/ミトコンドリア状態、神経血管ユニット/BBB/周皮細胞状態、グリア基質ルーティング、アストロサイトの状態とクリアランス/免疫サポートは別個の変数のままです。</li><li>転写後の RNA 証拠は 1 つのクラスではなく、スプライスアイソフォーム制御、m6A 依存性翻訳、m6A 依存性分解、RNA 編集、およびアトラスの天井は別々に保たれます。</li><li>貨物輸送の証拠は 1 つのクラスではなく、AMPAR / リサイクルエンドソーム送達、微小管経路の状態、局所小胞閉じ込め、樹状突起 / シナプス RNA 顆粒組織化、軸索 RNA 局在、およびシナプス前貨物保持は別々に保たれます。</li><li>シナプス リストまたは重み推定は、それ自体ではシナプス周囲 ECM / PNN 状態を修正しないため、可塑性と安定化の主張には別の上限が必要です。</li><li>細胞アトラスや遺伝子レベルの転写物数は、それ自体では転写後の RNA の状態を修正しないため、アイソフォーム、m6A、および RNA 編集に依存する主張には別の上限が必要です。</li>
       </ul>
     </article>
   </div>
 
   <div class="booklet-timeline">
     <div class="booklet-step">
-  <span>Step 1</span>
-  <strong>Entry</strong>
-  <p>The core of Mind-Upload is not bold conclusions but a verification commons that lets progress be measured.</p>
+  <span>ステップ 1</span>
+  <strong>入口</strong>
+  <p>Mind-Upload の核心は、大胆な結論ではなく、進捗状況を測定できる検証コモンズです。</p>
 </div>
 <div class="booklet-step">
-  <span>Step 2</span>
+  <span>ステップ 2</span>
   <strong>L0</strong>
-  <p>We look at the shared infrastructure first, then the starter datasets.</p>
+  <p>最初に共有インフラストラクチャを見て、次にスターター データセットを見ていきます。</p>
 </div>
 <div class="booklet-step">
-  <span>Step 3</span>
+  <span>ステップ 3</span>
   <strong>L1-L2</strong>
-  <p>Claim levels and failure conditions are fixed up front so decoding is not confused with emulation.</p>
+  <p>クレームレベルと障害条件は事前に固定されているため、デコードがエミュレーションと混同されることはありません。</p>
 </div>
 <div class="booklet-step">
-  <span>Later</span>
-  <strong>Higher-Level Claims</strong>
-  <p>It is still unsettled which measurement granularity will ultimately be sufficient for WBE.</p>
+  <span>後続</span>
+  <strong>高レベル主張</strong>
+  <p>最終的にどの測定粒度が WBE に十分であるかはまだ決まっていません。</p>
 </div>
 
   </div>
@@ -215,19 +215,19 @@ body_class: "summary-booklet-page"
     <article class="booklet-card booklet-card-positive">
       <h3>Observation Ceiling</h3>
       <ul class="booklet-list">
-        <li>Maintenance-state variables such as sleep/homeostasis, sleep architecture / replay-coupling, myelin, thermal-state, ionic milieu / chloride homeostasis, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic tagging, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, neurovascular-unit / BBB / pericyte state, glial substrate-routing, astrocyte-state, and clearance / immune support remain outside the wiring diagram.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li><li>Human evidence is layered: local ultrastructure, synaptic-density PET, receptor / transporter atlas priors, selected occupancy PET routes, challenge-limited displacement / release PET routes, five-metabolite 1H-MRSI similarity scaffolds, high-resolution 1H-MRSI metabolite-distribution routes, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, deuterium kinetic-rate imaging, quantity-defined ionic proxy families, tract-scale transmission-speed routes, myelin-sensitive / tissue-health-sensitive MRI ratio families, macro thermal / perturbation-conditioned thermal proxy families, BBB water-exchange proxies, tracer-specific BBB transport proxies, blood-CSF barrier / choroid-plexus perfusion / blood-to-CSF transport / water-cycling / apparent-exchange proxies, SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution routes, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / validation-bounded PET, CSF1R route-setting target-defined PET, COX-2 enzyme-defined PET, and macroscopic CSF oscillation / parenchyma-CSF water exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes are not one near-direct readout.</li><li>Human whole-brain evidence remains layered and proxy-based; no current route directly fixes current transcription / chromatin state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local electrical-coupling / extracellular-geometry / inhibitory-driving-force regime, ECM / PNN gate state, local proteostasis / synaptic-tag capture, cargo-routing state, neuromodulatory occupancy / release state, chloride set point, neurovascular-unit / BBB / pericyte controller state, or branch-local mitochondrial positioning.</li>
+        <li>Connectome が完了しても、エミュレーションが完了したことを意味するわけではありません。欠落しているメンテナンス状態変数は個別に監査する必要があります。</li><li>R0 は構造スキャフォールド、高速実行可能状態、およびメンテナンス状態ファミリを分離するようになりました。そのため、`connectome + state` は 1 つのノブとして扱われません。</li><li>人間の証拠は階層化されています：局所超微細構造、シナプス密度PET、受容体/輸送体アトラスの事前分布、選択された占有PETルート、チャレンジ制限変位/放出PETルート、5つの代謝物1H-MRSI類似性足場、高解像度1H-MRSI代謝物分布ルート、31P代謝物/pHバランス、31P MT交換フラックス、31P NAD含有量マッピング、31P機能的NADダイナミクスルート、重水素代謝物マッピング/絶対定量ルート、重水素運動速度イメージング、量で定義されたイオンプロキシファミリー、管スケールの伝達速度ルート、ミエリン感受性/組織健康感受性MRI比率ファミリー、マクロサーマル/摂動条件付きサーマルプロキシファミリー、BBB水交換プロキシ、トレーサー特異的BBB輸送プロキシ、血液CSFバリア/脈絡叢灌流 / 血液から CSF への輸送 / 水循環 / 見かけの交換代理、SMBT-1 MAO-B ターゲット検証 / 疾患コンテキスト / 定量化 / 生体内分布ルート、SL25.1188 MAO-B 定量化 / 重症度条件付きルート、I2BS ルート、TSPO 疾患コンテキスト / 検証境界内 PET、CSF1R ルート設定ターゲット定義 PET、COX-2酵素定義PET、および肉眼的CSF振動/実質-CSF水交換/呼吸条件付き正味流量/運動条件付き造影剤流入/髄膜リンパ流/くも膜下腔内トレーサー/CSFから血液へのクリアランス/CSF移動性/モデルベースのバイオマーカー流出経路は、1つのほぼ直接的な読み取り値ではない。</li><li>分光法由来のヒトルートは 1 つのクラスではありません: 5 つの代謝物 1H-MRSI 類似性足場、高分解能 1H-MRSI 代謝物分布ルート、31P 代謝物 / pH バランス、31P MT 交換フラックス、31P NAD 含有量マッピング、31P 機能的 NAD ダイナミクスルート、重水素代謝物マッピング / 絶対定量ルート、重水素運動速度イメージングは 1 行に圧縮しないでください。</li>
       </ul>
     </article>
     <article class="booklet-card booklet-card-caution">
       <h3>Interpretation Ceiling</h3>
       <ul class="booklet-list">
-        <li>Same-subject or same-brain wording does not by itself make a live-to-fix, cross-regime, or cross-day workflow one state sample; bridge delay, regime continuity, coordinate transfer, and bridge validation still matter.</li><li>Several living-human proxy rows are not promoted together unless same-subject relation, effective time window / physiological-regime compatibility, route-local repeatability versus transfer, disagreement handling, model burden, and residual hidden-state ceilings are disclosed explicitly.</li><li>The Temporal Validity Card is now part of the public workflow so same-day success is not silently promoted to cross-day or long-term claims.</li><li>High decode / biomarker scores can rise from subject / session fingerprint alone, so the Specificity &amp; Shortcut Card audits that shortcut independently.</li>
+        <li>Temporal Validity Card は公開ワークフローの一部となっているため、同日の成功が暗黙のうちに日をまたぐ請求や長期請求に昇格することはありません。</li><li>日をまたぐまたは長期的なクレームの場合、Temporal Validity Card は、固定デコーダ間隔、状態注釈、再校正負荷、および転送上限を個別に監査します。</li><li>日をまたぐまたは長期のクレームの場合、Temporal Validity Card は、固定デコーダ間隔、状態の注釈、および再調整の負担を個別に監査します。</li><li>マルチモーダルまたはアトラス事前の結果の場合、Fusion Card が Observability Budget の上に追加されるため、取得関係、同期、有効ウィンドウ / 時間的カーネル関係、融合モデル、可用性 / 完全症例スライス、血管状態 / CVR 監査と量のブリッジを含む血行動態ルート ファミリ、転送ウィンドウ、および外部検証が明示的に修正されます。</li>
       </ul>
     </article>
   </div>
 
   <div class="booklet-quote">
-    <p>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</p>
+    <p>Temporal Validity Card は公開ワークフローの一部となっているため、同日の成功が暗黙のうちに日をまたぐ請求や長期請求に昇格することはありません。 / Connectome が完了しても、エミュレーションが完了したことを意味するわけではありません。欠落しているメンテナンス状態変数は個別に監査する必要があります。 / R0 は構造スキャフォールド、高速実行可能状態、およびメンテナンス状態ファミリを分離するようになりました。そのため、`connectome + state` は 1…</p>
   </div>
 </section>
 
@@ -247,34 +247,34 @@ body_class: "summary-booklet-page"
     </thead>
     <tbody>
       <tr>
-  <td><a href="/index.html">Mind-Upload</a></td>
-  <td>Start Here - Define success criteria, standards, benchmarks, and preregistration first</td>
-  <td>This page is the main entry point to Mind-Upload. It is designed to show, as quickly as possible, what this site is trying to do, where to start reading, and which pages matter first.</td>
+  <td><a href="/index.html">マインドアップロード</a></td>
+  <td>ここから始めましょう - 最初に成功基準、基準、ベンチマーク、事前登録を定義します</td>
+  <td>このページは、Mind-Upload への主要なエントリ ポイントです。このサイトが何をしようとしているのか、どこから読み始めればよいのか、どのページが最初に重要なのかをできるだけ早く示すように設計されています。</td>
 </tr>
 <tr>
-  <td><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></td>
-  <td>Platform - Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress</td>
-  <td>This page is the core blueprint of Mind-Upload.</td>
+  <td><a href="/verification.html">検証: マインドアップロード検証コモンズ</a></td>
+  <td>プラットフォーム - PDB x BIDS x PhysioNet x OSF のロジックを使用して、WBE の成功条件と再現可能な進行状況を定義します。</td>
+  <td>このページは Mind-Upload の核となる設計図です。最初にデータ、評価、障害条件、再現手順を調整することで、遡及的にではなく事前に進捗状況を定義する方法について説明します。</td>
 </tr>
 <tr>
-  <td><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></td>
-  <td>Roadmap (Definition #1) - Break &#39;what counts as progress&#39; into a question tree with reading order and minimum arrival conditions</td>
-  <td>This page is a map of WBE questions arranged under measurement, reconstruction, implementation, verification, and social deployment.</td>
+  <td><a href="/tech_roadmap.html">技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する</a></td>
+  <td>ロードマップ (定義 #1) - 「何を進捗としてカウントするか」を、読む順序と最小到達条件を含む質問ツリーに分割します。</td>
+  <td>このページは、WBEの質問を測定、再構築、実装、検証、社会展開に分けて整理したマップです。その目的は、どの問題が根本的なもので、どの問題が未解決のままなのかを読者が見失わないようにすることです。</td>
 </tr>
 <tr>
-  <td><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></td>
-  <td>Perspective - Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state</td>
-  <td>This page is a long research note that starts from observability, identifiability, and maintenance-state burdens, and only then asks what kinds of theoretical interpretation survive those…</td>
+  <td><a href="/perspective.html">マインドアップロードに向けて: 統合された技術的および理論的アプローチ</a></td>
+  <td>視点 - 測定可能性、識別可能性、維持状態の壁を越えて脳情報処理を別の基板上で再現するという仮説を検証する</td>
+  <td>このページは、可観測性、識別可能性、および維持状態の負担から始まり、その後、どのような種類の理論的解釈がそれらの限界を乗り越えられるかを問う長い研究ノートです。一次文献、隠れ状態のギャップ、実装の制約を 1 ページにまとめているため、過剰な要求が難しくなります。</td>
 </tr>
 <tr>
-  <td><a href="/datasets.html">Data &amp; Hands-on: Where to start and how to get to L0</a></td>
-  <td>Resource - Connect ``what to use&#39;&#39; and ``how to reproduce&#39;&#39; in the shortest route without separating them.</td>
-  <td>This page is a practical guide that answers both ``Which public data should I start validation with first?&#39;&#39; and ``How do I proceed to L0 reproducible analysis?&#39;&#39; in one place.</td>
+  <td><a href="/datasets.html">データとハンズオン: どこから始めて、どのようにして L0 に到達するか</a></td>
+  <td>リソース - 「`what to use&#39;&#39; and `「再現方法」」を分けずに最短ルートで接続します。</td>
+  <td>このページは、「`Which public data should I start validation with first?&#39;&#39; and `「L0 再現性解析を行うにはどうすればよいですか?」の両方に 1 か所で答える実践的なガイドです。データセット名のリストにとどまりません。 BIDS、QC、分割、ベースラインを 1 つのパスで接続します。</td>
 </tr>
 <tr>
-  <td><a href="/issue.html">Contribution Guide</a></td>
-  <td>Guide - Join the research workflow and read the issue tracker</td>
-  <td>This page explains how to participate in Mind-Upload, how to read issue status, and how to separate changes that can be made now from tasks that remain externally dependent.</td>
+  <td><a href="/issue.html">貢献ガイド</a></td>
+  <td>ガイド - リサーチ ワークフローに参加し、問題トラッカーを読んでください。</td>
+  <td>このページでは、Mind-Upload に参加する方法、問題のステータスを読み取る方法、および外部に依存したままのタスクから今すぐ実行できる変更を分離する方法について説明します。</td>
 </tr>
 
     </tbody>
@@ -282,80 +282,80 @@ body_class: "summary-booklet-page"
 
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card booklet-page-card">
-  <h3><a href="/index.html">Mind-Upload</a></h3>
-  <p class="booklet-page-meta">Start Here - Define success criteria, standards, benchmarks, and preregistration first / 5-10 min</p>
-  <p>Mind-Upload is a site for breaking the large question, "Can a mind be reproduced on a computer?", into <strong>small, testable tasks</strong>. Instead of rushing to a final conclusion, it starts by defining <strong>what counts as progress</strong> and <strong>whether other people can verify the same result</strong>.</p>
+  <h3><a href="/index.html">マインドアップロード</a></h3>
+  <p class="booklet-page-meta">ここから始めましょう - 最初に成功基準、基準、ベンチマーク、事前登録を定義します / 5～10分</p>
+  <p>Mind-Upload は、「心はコンピューター上で再現できるか?」という大きな疑問を <strong>小さくてテスト可能なタスク</strong> に分割するためのサイトです。最終的な結論を急ぐのではなく、<strong>何が進捗としてカウントされるか</strong>、<strong>他の人が同じ結果を検証できるかどうか</strong>を定義することから始めます。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Several living-human proxy rows are not promoted together unless same-subject relation, effective time window / physiological-regime compatibility, route-local repeatability versus transfer, disagreement handling, model burden, and residual hidden-state ceilings are disclosed explicitly.</li><li>Current human astrocyte-related PET route-role families, target-defined neuroimmune PET target families, and transport-side clearance routes remain non-equivalent proxy classes: SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution, SL25.1188 MAO-B quantification / severity-conditioned routes, I2BS routes, TSPO disease-context / pathology-validated PET, CSF1R first-in-human route-setting PET, COX-2 celecoxib-blockade / test-retest-bounded enzyme PET, and human macroscopic CSF-oscillation / parenchyma-CSF water-exchange / respiration-conditioned net-flow / exercise-conditioned contrast-influx / meningeal-lymphatic-flow / intrathecal-tracer / CSF-to-blood-clearance / CSF-mobility / model-based biomarker-efflux routes still do not identify which astrocyte, microglial controller, or synapse is responsible.</li><li>Connectome-complete does not mean emulation-complete; missing maintenance-state variables must be audited separately.</li>
+    <li>Connectome が完了しても、エミュレーションが完了したことを意味するわけではありません。欠落しているメンテナンス状態変数は個別に監査する必要があります。</li><li>Temporal Validity Card は公開ワークフローの一部となっているため、同日の成功が暗黙のうちに日をまたぐ請求や長期請求に昇格することはありません。</li><li>人間の証拠は階層化されています：局所超微細構造、シナプス密度PET、受容体/輸送体アトラスの事前分布、選択された占有PETルート、チャレンジ制限変位/放出PETルート、5つの代謝物1H-MRSI類似性足場、高解像度1H-MRSI代謝物分布ルート、31P代謝物/pHバランス、31P MT交換フラックス、31P NAD含有量マッピング、31P機能的NADダイナミクスルート、重水素代謝物マッピング/絶対定量ルート、重水素運動速度イメージング、量で定義されたイオンプロキシファミリー、管スケールの伝達速度ルート、ミエリン感受性/組織健康感受性MRI比率ファミリー、マクロサーマル/摂動条件付きサーマルプロキシファミリー、BBB水交換プロキシ、トレーサー特異的BBB輸送プロキシ、血液CSFバリア/脈絡叢灌流 / 血液から CSF への輸送 / 水循環 / 見かけの交換代理、SMBT-1 MAO-B ターゲット検証 / 疾患コンテキスト / 定量化 / 生体内分布ルート、SL25.1188 MAO-B 定量化 / 重症度条件付きルート、I2BS ルート、TSPO 疾患コンテキスト / 検証境界内 PET、CSF1R ルート設定ターゲット定義 PET、COX-2酵素定義PET、および肉眼的CSF振動/実質-CSF水交換/呼吸条件付き正味流量/運動条件付き造影剤流入/髄膜リンパ流/くも膜下腔内トレーサー/CSFから血液へのクリアランス/CSF移動性/モデルベースのバイオマーカー流出経路は、1つのほぼ直接的な読み取り値ではない。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/faq.html">FAQ</a></li>
+  <li><a href="/verification.html">検証</a></li><li><a href="/wbe_101.html">WBE101</a></li><li><a href="/faq.html">よくある質問</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></h3>
-  <p class="booklet-page-meta">Platform - Use the logic of PDB x BIDS x PhysioNet x OSF to define WBE success conditions and reproducible progress / 15-25 min</p>
-  <p>To keep mind uploading and WBE from remaining only a dream narrative, the first requirement is <strong>a shared rule set</strong>. Mind-Upload puts data layout, evaluation, failure judgment, and reproduction procedures in place first so anyone can check the same result against the same criteria.</p>
+  <h3><a href="/verification.html">検証: マインドアップロード検証コモンズ</a></h3>
+  <p class="booklet-page-meta">プラットフォーム - PDB x BIDS x PhysioNet x OSF のロジックを使用して、WBE の成功条件と再現可能な進行状況を定義します。 / 15～25分</p>
+  <p>アップロードと WBE が単なる夢物語にならないよう、最初の要件は <strong>a 共有ルール set</strong> です。 Mind-Uploadでは、データの配置、評価、故障判定、再現手順を最初に整備し、誰でも同じ結果を同じ基準で確認することができます。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>A spectroscopy label without quantity-type disclosure remains too coarse; 1H-MRSI similarity, high-resolution 1H-MRSI metabolite-distribution mapping, 31P metabolite / pH balance, 31P MT exchange-flux, 31P NAD-content mapping, 31P functional NAD-dynamics routes, deuterium metabolite-mapping / absolute-quantification routes, and deuterium kinetic-rate imaging are not interchangeable proxy classes.</li><li>A maintenance-state claim that combines rodent causal evidence with human proxy evidence still needs an explicit bridge statement naming the matched state family, proxy class, and remaining latent controller.</li><li>For living-human proxy bundles, the Human Proxy Composition Card fixes direct observable by row, same-subject relation, effective time window / state axis, physiological / perturbation regime compatibility, repeatability / transfer window, model burden, incremental evidence, and residual latent-state ceiling before several proxy routes may be promoted together.</li>
+    <li>日をまたぐまたは長期的なクレームの場合、Temporal Validity Card は、固定デコーダ間隔、状態注釈、再校正負荷、および転送上限を個別に監査します。</li><li>MRSI 由来の代謝コネクトーム主張の場合、可観測性バジェットには、代謝物セット、パーセル化、補正モデル、スペクトル QC、およびオブジェクトが静的類似性、高解像度代謝物分布マッピング、または動態レート イメージングであるかどうかを指定する代謝類似性ルート カードが必要になりました。</li><li>分光学由来のヒト維持ルートの場合、予算は現在、5 つの代謝物 1H-MRSI 類似性足場、高解像度 1H-MRSI 代謝物分布マッピング、31P 代謝物 / pH バランス、31P MT 交換フラックス、31P NAD 含有量マッピング、31P 機能的 NAD ダイナミクス ルート、重水素代謝物マッピング / 絶対定量ルート、重水素の運動速度イメージングは、異なる推論オブジェクトを制約し、異なるコホート、ハードウェア、モデルの負担を伴うためです。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/tech_roadmap.html">Technical Roadmap</a></li><li><a href="/datasets.html">Datasets and Benchmarks</a></li><li><a href="/issue.html">Contribution Guide</a></li>
+  <li><a href="/tech_roadmap.html">技術ロードマップ</a></li><li><a href="/datasets.html">データセットとベンチマーク</a></li><li><a href="/issue.html">貢献ガイド</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></h3>
-  <p class="booklet-page-meta">Roadmap (Definition #1) - Break &#39;what counts as progress&#39; into a question tree with reading order and minimum arrival conditions / 20-30 min (5 min for the index only)</p>
-  <p>This page is the map of mind-uploading research. Instead of jumping straight to conclusions, it organizes in sequence <strong>what to measure</strong>, <strong>what to reconstruct</strong>, <strong>how to run it</strong>, and <strong>how to verify it</strong>. In practice, it visualizes where the field currently stands across <strong>measurement -> reconstruction -> implementation -> verification -> social deployment</strong>.</p>
+  <h3><a href="/tech_roadmap.html">技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する</a></h3>
+  <p class="booklet-page-meta">ロードマップ (定義 #1) - 「何を進捗としてカウントするか」を、読む順序と最小到達条件を含む質問ツリーに分割します。 / 20～30分（インデックスのみ5分）</p>
+  <p>このページはマインドアップロード研究のマップです。いきなり結論に向かうのではなく、<strong>何を測定するか</strong>、<strong>何を再構築するか</strong>、<strong>実行方法</strong>、<strong>検証方法</strong>の順序で整理します。実際には<strong>測定→再構築→導入→検証→社会展開まで現場の現状を可視化</strong>.</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>M1 / M3 now also split human astrocyte-related PET into SMBT-1 MAO-B target-validation / disease-context / quantification / biodistribution routes, SL25.1188 MAO-B quantification / severity-conditioned routes, and I2BS routes, so `astrocyte PET` is not treated as one interchangeable human row.</li><li>R0 now separates structural scaffold, fast executable state, and maintenance-state families, so `connectome + state` is not treated as one knob.</li><li>Even if connectome or local-activity evidence improves, latent-state and maintenance-state audits are still separate requirements.</li>
+    <li>R0 は構造スキャフォールド、高速実行可能状態、およびメンテナンス状態ファミリを分離するようになりました。そのため、`connectome + state` は 1 つのノブとして扱われません。</li><li>また、M1 / M3 は、ヒト星状細胞関連 PET を SMBT-1 MAO-B ターゲット検証 / 疾患コンテキスト / 定量 / 生体内分布ルート、SL25.1188 MAO-B 定量 / 重症度条件付きルート、および I2BS ルートに分割するため、`astrocyte PET` は 1 つの交換可能なヒト行として扱われません。</li><li>ヒューマン ルート ファミリ名はまだ 1 行ではありません。 1H-MRSI類似性、高分解能1H-MRSI代謝物分布マッピング、31P代謝物/pHバランス、31P MT交換フラックス、31P NAD含有量マッピング、局所機能的31P NADダイナミクス、重水素代謝物マッピング/絶対定量ルート、重水素速度イメージング、管スケールの伝達速度推定、量定義ミエリンMRI /組織健康感受性比、BBB水交換、トレーサー特異的BBB PET輸送、血液CSF関門/脈絡叢潅流/血液-CSF輸送/水循環/見かけの交換ルート、SMBT-1 MAO-Bターゲット検証/疾患コンテキスト/定量化/生体内分布ルート、SL25.1188 MAO-B定量化/重症度条件付きルート、およびI2BSルートは別個のルートのまま天井が異なります。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/eeg_101.html">EEG 101</a></li><li><a href="/verification.html">Verification</a></li>
+  <li><a href="/wbe_101.html">WBE101</a></li><li><a href="/eeg_101.html">脳波101</a></li><li><a href="/verification.html">検証</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></h3>
-  <p class="booklet-page-meta">Perspective - Audit the hypothesis of reproducing brain information processing on another substrate through the barriers of measurability, identifiability, and maintenance state / 30-45 min</p>
-  <p>This page is a long-form research note aimed at turning mind uploading (WBE) into something that can be evaluated as real research. It is organized around four technical questions: <strong>what can be observed directly</strong>, <strong>what remains latent</strong>, <strong>what can be perturbed or calibrated</strong>, and <strong>what has to stay stable during implementation</strong>. It treats recent results, failures, and limits with the same weight so that the boundary between scaffold progress and state-complete claims remains explicit.</p>
+  <h3><a href="/perspective.html">マインドアップロードに向けて: 統合された技術的および理論的アプローチ</a></h3>
+  <p class="booklet-page-meta">視点 - 測定可能性、識別可能性、維持状態の壁を越えて脳情報処理を別の基板上で再現するという仮説を検証する / 30～45分</p>
+  <p>このページは、マインド アップロード (WBE) を実際の研究として評価できるものに変えることを目的とした長文の研究ノートです。これは 4 つの技術的な質問を中心に構成されています:<strong> 直接観察できるもの</strong>、<strong> 潜在的に残るもの</strong>、<strong> 摂動または校正できるもの</strong>、<strong> 実装中に安定しなければならないもの</strong>。最近の結果、失敗、および制限を同じ重みで扱うため、スキャフォールドの進行状況と状態完全な主張の間の境界が明確なままになります。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Inside SV2A / synaptic-density PET, quantification route, same-subject repeatability, healthy atlas, cross-sectional risk contrast, task / cognition association, activation-null stability, and 24 h intervention-response are now kept separate rather than treated as one reusable human row.</li><li>The connectome-dynamics gap is now written as 19 maintenance-state families plus a separate shared electrical-state class, rather than a loose warning that wiring alone is not enough.</li><li>Memory-relevant variables extend beyond wiring into transcriptional, glial, vascular, extracellular, and metabolic maintenance-state families.</li>
+    <li>このページは現在、ローカル コネクトミクス、ヒト構造足場の証拠、シナプス密度 PET、受容体 / 輸送体アトラスの事前分布、占有 PET 標的関与ルート、チャレンジ関連変位 / 解放 PET ルート、生化学的類似性足場、高分解能 1H-MRSI 代謝物分布ルート、31P 代謝物 / pH バランス、31P MT 交換フラックス、31P を分離しています。 NAD含有量マッピング、局所機能的31P NADダイナミクス、重水素代謝物マッピング/絶対定量、重水素速度イメージング、量で定義されたイオン/熱/ミエリンルート、BBB水交換ルート、トレーサー特異的BBB輸送ルート、血液-CSF関門/脈絡叢灌流/血液からCSFへの輸送/水循環/見かけの交換ルート、ターゲットが定義されたアストロサイトPET、クリアランスそれらを 1 つの「マルチモーダル」な進歩に折りたたむのではなく、サポート状態の代理と血行力学的移行の監査を行います。</li><li>SV2A 内部 / シナプス密度 PET、定量化ルート、同一被験者の再現性、健康なアトラス、断面リスク コントラスト、課題/認知関連、活性化 - ヌル安定性、および 24 時間の介入 - 反応は、再利用可能な 1 つのヒトの列として扱われるのではなく、個別に保持されるようになりました。</li><li>現在のヒト SV2A 証拠も内部的に分割されています。トレーサー / 定量化ルート、ルート局所再現性、健康アトラス、断面リスク コントラスト、タスク関連、活性化 - 無効安定性、および介入 - 応答は異なる証拠の役割を果たしており、黙って交換することはできません。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/verification.html">Verification</a></li><li><a href="/tech_roadmap.html">Roadmap</a></li><li><a href="/wbe_101.html">WBE 101</a></li>
+  <li><a href="/verification.html">検証</a></li><li><a href="/tech_roadmap.html">ロードマップ</a></li><li><a href="/wbe_101.html">WBE101</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/datasets.html">Data &amp; Hands-on: Where to start and how to get to L0</a></h3>
-  <p class="booklet-page-meta">Resource - Connect ``what to use&#39;&#39; and ``how to reproduce&#39;&#39; in the shortest route without separating them. / 12-20 minutes</p>
-  <p>This page is a practical list to help you decide which data to practice with first. First, we use public data to create a state in which we can reproduce the same results (L0), and then check to see if we can predict and withstand changes in conditions (L1-L2).</p>
+  <h3><a href="/datasets.html">データとハンズオン: どこから始めて、どのようにして L0 に到達するか</a></h3>
+  <p class="booklet-page-meta">リソース - 「`what to use&#39;&#39; and `「再現方法」」を分けずに最短ルートで接続します。 / 12～20分</p>
+  <p>このページは、最初にどのデータを使用して練習するかを決定するのに役立つ実用的なリストです。まず、公開データを使って同じ結果を再現できる状態（L0）を作り、状況の変化を予測して耐えられるかどうかを確認します（L1～L2）。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Foundation-model improvements are not comparable unless the pretraining corpus, channel-mismatch handling, acquisition-distribution summary, and adaptation regime are disclosed.</li><li>A same-subject support-state bundle is no longer treated as self-interpreting; route class, effective window, quantity bridge, common-driver audit, missingness policy, disagreement topology, repeatability, transfer window, and abstention are now fixed as practical fields.</li><li>Even when foundation / self-supervised EEG models are used, pretraining-corpus, coordinate-route / reference-family, omitted-channel, and label-budget audits are still required.</li>
+    <li>最初に共有インフラストラクチャを見て、次にスターター データセットを見ていきます。</li><li>スターター データは L0 ～ L1 の練習用ボードであり、EEG ソース イメージングのグラウンド トゥルースではありません。</li><li>このページでは、維持状態ルートのコンポーネント追加 / アブレーション ラダーも修正されているため、グリア基質ルーティング、星状細胞状態、神経血管 / BBB、およびクリアランス増強が、1 つのマルチモーダル ブーストに積み上げられるのではなく、指定されたニューロン優先ベースラインと比較されます。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/eeg_101.html">Introduction to EEG</a></li><li><a href="/verification.html">Verification base</a></li><li><a href="/tech_roadmap.html">Technology Roadmap</a></li>
+  <li><a href="/eeg_101.html">脳波検査の概要</a></li><li><a href="/verification.html">検証ベース</a></li><li><a href="/tech_roadmap.html">テクノロジーロードマップ</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/issue.html">Contribution Guide</a></h3>
-  <p class="booklet-page-meta">Guide - Join the research workflow and read the issue tracker / 10-20 minutes</p>
-  <p>Mind-Upload is an open community that advances mind uploading into verifiable research. Regardless of your field or experience, you can immediately participate in tasks that directly lead to improved reproducibility, such as improving sentences, organizing terminology, and pointing out misunderstandings.</p>
+  <h3><a href="/issue.html">貢献ガイド</a></h3>
+  <p class="booklet-page-meta">ガイド - リサーチ ワークフローに参加し、問題トラッカーを読んでください。 / 10～20分</p>
+  <p>Mind-Upload は、マインド アップロードを検証可能な研究に発展させるオープン コミュニティです。分野や経験を問わず、文章の改善や用語の整理、誤解の指摘など、再現性の向上に直結する業務にすぐに参加できます。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>It highlights small but valuable ways to participate, such as improving writing, terminology, and link structure.</li><li>It lets you track issue status without confusing document-level reflection with implemented artifacts.</li><li>It prioritizes issues with clear achievement conditions and falsification conditions over vague strong claims.</li>
+    <li>文章、用語、リンク構造の改善など、小さいながらも価値のある参加方法を紹介します。</li><li>これにより、ドキュメントレベルの反映と実装されたアーティファクトを混同することなく、問題のステータスを追跡できます。</li><li>曖昧な強い主張よりも、達成条件や反証条件が明確な問題を優先する。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/index.html">Start Page</a></li><li><a href="/verification.html">Verification</a></li><li><a href="/glossary.html">Glossary</a></li>
+  <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証</a></li><li><a href="/glossary.html">用語集</a></li>
 </ul>
 
 </article>
@@ -379,29 +379,29 @@ body_class: "summary-booklet-page"
     </thead>
     <tbody>
       <tr>
-  <td><a href="/wbe_101.html">Introduction: Making Mind Uploading / WBE a Measurable Problem</a></td>
-  <td>Primer - To protect the dream, build the measuring stick first</td>
-  <td>This page is an introduction to mind uploading and WBE for readers who do not want to leave the topic at the level of a dream or a slogan.</td>
+  <td><a href="/wbe_101.html">はじめに: マインド アップロード / WBE を測定可能な問題にする</a></td>
+  <td>プライマー - 夢を守るために、まず物差しを作りましょう</td>
+  <td>このページは、この話題を夢やスローガンのレベルに留めたくない読者のための、マインド アップロードと WBE の紹介です。その目的は、現在言えること、まだ言えないこと、そしてより深い哲学的議論に迷う前に主張の強さを比較する方法を整理することです。</td>
 </tr>
 <tr>
-  <td><a href="/eeg_101.html">Introduction: What EEG Measures, What It Can Do, and What It Cannot Do</a></td>
-  <td>Primer - A realistic guide that refuses to turn EEG into magical mind reading</td>
-  <td>This page is an introduction that sorts out what EEG measures, what it is good at, and what it is bad at.</td>
+  <td><a href="/eeg_101.html">はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか</a></td>
+  <td>プライマー - 脳波を魔法の読心術に変えることを拒否する現実的なガイド</td>
+  <td>このページでは脳波測定が何を測定するのか、何が得意で何が苦手なのかを整理して紹介します。これは、EEG が Mind-Upload のどこに当てはまるかを説明しながら、EEG が単に心を読み取ることができるという誤解を避けるように設計されています。</td>
 </tr>
 <tr>
-  <td><a href="/faq.html">FAQ: Common Questions and Common Failure Modes</a></td>
-  <td>FAQ - Prefer verifiable progress to flashy conclusions</td>
-  <td>This page is a Q&amp;A for the questions many readers hit first when reading Mind-Upload. It stays short as an entry point, but every strong claim is tied back to a page with evidence.</td>
+  <td><a href="/faq.html">FAQ: よくある質問と一般的な障害モード</a></td>
+  <td>よくある質問 - 派手な結論よりも検証可能な進捗状況を好む</td>
+  <td>このページは、多くの読者が Mind-Upload を読んだときに最初に抱く疑問に対する Q&amp;A です。入り口としては短いですが、強力な主張はすべて証拠を含むページに結び付けられています。</td>
 </tr>
 <tr>
-  <td><a href="/glossary.html">Glossary</a></td>
-  <td>Reference - Start by keeping the words straight</td>
-  <td>This page is a glossary for the terms that appear most often in Mind-Upload. It starts with short everyday-language explanations, then points you back to the more rigorous pages when needed.</td>
+  <td><a href="/glossary.html">用語集</a></td>
+  <td>参照 - まずは言葉をまっすぐにすることから始めましょう</td>
+  <td>このページは、Mind-Upload でよく出てくる用語の用語集です。最初は短い日常用語の説明から始まり、必要に応じてより厳密なページに戻ります。</td>
 </tr>
 <tr>
-  <td><a href="/content_hub.html">Public Content Integration Hub</a></td>
-  <td>Navigation - A single routing layer to prevent content sprawl and literature-route compression</td>
-  <td>This page is the operations hub for fixing where public content should go so material does not scatter across the site.</td>
+  <td><a href="/content_hub.html">パブリック コンテンツ統合ハブ</a></td>
+  <td>ナビゲーション - コンテンツの拡散と文献ルートの圧縮を防ぐ単一のルーティング層</td>
+  <td>このページは、マテリアルがサイト全体に散在しないように、パブリック コンテンツの配置先を決定するための運用ハブです。また、技術的なファストパスも提供されるため、文献の更新が年順だけで誤って配信されることがなくなります。</td>
 </tr>
 
     </tbody>
@@ -409,67 +409,67 @@ body_class: "summary-booklet-page"
 
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card booklet-page-card">
-  <h3><a href="/wbe_101.html">Introduction: Making Mind Uploading / WBE a Measurable Problem</a></h3>
-  <p class="booklet-page-meta">Primer - To protect the dream, build the measuring stick first / 10-15 minutes</p>
-  <p>If you want to move mind uploading forward seriously, the fastest route is to define in advance both the condition under which you can say “this worked” and the condition under which you must say “this failed.” Mind-Upload is building the verification infrastructure needed to make those checks comparable.</p>
+  <h3><a href="/wbe_101.html">はじめに: マインド アップロード / WBE を測定可能な問題にする</a></h3>
+  <p class="booklet-page-meta">プライマー - 夢を守るために、まず物差しを作りましょう / 10～15分</p>
+  <p>アップロードを真剣に進めたい場合は、「これはうまくいった」と言える条件と、「これは失敗した」と言わなければならない条件の両方を事前に定義しておくのが一番の近道です。 Mind-Upload は、これらのチェックを比較できるようにするために必要な検証インフラストラクチャを構築しています。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>For several maintenance-state families, the strongest causal evidence is still local and rodent while the best human routes remain perturbation-conditioned or macro proxy classes, so bridge assumptions must stay explicit.</li><li>Maintenance-state variables such as sleep/homeostasis, sleep architecture / replay-coupling, myelin, thermal-state, ionic milieu / chloride homeostasis, post-transcriptional RNA-state, phospho-signaling / second-messenger state, local proteostasis / synaptic tagging, cargo-transport / cytoskeletal trafficking state, perisynaptic ECM / PNN state, bioenergetic / mitochondrial state, neurovascular-unit / BBB / pericyte state, glial substrate-routing, astrocyte-state, and clearance / immune support remain outside the wiring diagram.</li><li>Same-subject or same-brain language is not enough by itself: landmarks, latent manifolds, representational geometry, and fingerprint features are different bridge witnesses, and stable use can still depend on alignment or recalibration.</li>
+    <li>人間の証拠は階層化されています：局所超微細構造、シナプス密度PET、受容体/輸送体アトラスの事前分布、選択された占有PETルート、チャレンジ制限変位/放出PETルート、5つの代謝物1H-MRSI類似性足場、高解像度1H-MRSI代謝物分布ルート、31P代謝物/pHバランス、31P MT交換フラックス、31P NAD含有量マッピング、31P機能的NADダイナミクスルート、重水素代謝物マッピング/絶対定量ルート、重水素運動速度イメージング、量で定義されたイオンプロキシファミリー、管スケールの伝達速度ルート、ミエリン感受性/組織健康感受性MRI比率ファミリー、マクロサーマル/摂動条件付きサーマルプロキシファミリー、BBB水交換プロキシ、トレーサー特異的BBB輸送プロキシ、血液CSFバリア/脈絡叢輸送プロキシ、SMBT-1 MAO-B ターゲット検証 / 疾患コンテキスト / 定量化 / 生体内分布ルート、SL25.1188 MAO-B 定量化 / 重症度条件付きルート、I2BS ルート、およびクリアランス輸送プロキシは、1 つのほぼ直接的な読み取りではありません。</li><li>分光法由来のヒトルートは 1 つのクラスではありません: 5 つの代謝物 1H-MRSI 類似性足場、高解像度 1H-MRSI 代謝物分布ルート、31P 代謝物 / pH バランス、31P MT 交換フラックス、31P NAD 含有量マッピング、31P 機能的 NAD ダイナミクスルート、絶対重水素代謝物マップ、および重水素運動速度イメージング1 行に圧縮しないでください。</li><li>1H-MRSI からのヒトの「代謝コネクトーム」は、軸索配線や運動束イメージングではなく、5 つの代謝産物のパーセル類似性グラフです。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/verification.html">Verification</a></li><li><a href="/tech_roadmap.html">Technical Roadmap</a></li><li><a href="/faq.html">FAQ</a></li>
+  <li><a href="/verification.html">検証</a></li><li><a href="/tech_roadmap.html">技術ロードマップ</a></li><li><a href="/faq.html">よくある質問</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/eeg_101.html">Introduction: What EEG Measures, What It Can Do, and What It Cannot Do</a></h3>
-  <p class="booklet-page-meta">Primer - A realistic guide that refuses to turn EEG into magical mind reading / 12-18 minutes</p>
-  <p>EEG does not directly show the inside of the brain. It measures a mixed electrical pattern at the scalp. That gives EEG strong temporal resolution, but weak and blurry spatial localization. For that reason, Mind-Upload prioritizes data quality control (QC) and shared data-organization rules such as BIDS before anything else.</p>
+  <h3><a href="/eeg_101.html">はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか</a></h3>
+  <p class="booklet-page-meta">プライマー - 脳波を魔法の読心術に変えることを拒否する現実的なガイド / 12～18分</p>
+  <p>脳波は脳の中を直接示すものではありません。頭皮の混合電気パターンを測定します。これにより、EEG に強力な時間分解能が与えられますが、空間的位置特定は弱くぼやけます。そのため、Mind-Upload では、データ品質管理 (QC) と BIDS などの共有データ編成ルールを何よりも優先します。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Foundation / self-supervised EEG models improve representation learning, but without a Pretraining Card they still remain qualified transfer evidence rather than portable robustness or source-identifiable recovery.</li><li>For foundation-model claims, benchmark object, independent prediction unit, grouped hold-out unit, and inference-stage budget remain separate disclosure fields.</li><li>For large pretrained EEG models, official benchmark operations and postmortems are treated as evidence-bearing conditions, so leaderboard rank is not read apart from split construction, inference-stage budget, or later organizer corrections.</li>
+    <li>日をまたぐまたは長期のクレームの場合、Temporal Validity Card は、固定デコーダ間隔、状態の注釈、および再調整の負担を個別に監査します。</li><li>EEG は時間的変化を追跡することに優れていますが、空間的原点を高精度に特定することには弱いのです。</li><li>「信号に情報がある」、「内部状態が一意に固定されている」、「結果が長期使用に耐えられる」という質問には、異なる監査が必要です。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/datasets.html">Data and Benchmarks</a></li><li><a href="/datasets.html#l0-practice">L0 Practice</a></li><li><a href="/faq.html">FAQ</a></li>
+  <li><a href="/datasets.html">データとベンチマーク</a></li><li><a href="/datasets.html#l0-practice">L0 練習</a></li><li><a href="/faq.html">よくある質問</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/faq.html">FAQ: Common Questions and Common Failure Modes</a></h3>
-  <p class="booklet-page-meta">FAQ - Prefer verifiable progress to flashy conclusions / 8-15 minutes</p>
-  <p>This page is designed to block common misunderstandings early. The stronger the claim, the more carefully you should check, in order, (1) the definition of terms, (2) the measurement scale, (3) the condition that would count as failure, and (4) the reproduction procedure.</p>
+  <h3><a href="/faq.html">FAQ: よくある質問と一般的な障害モード</a></h3>
+  <p class="booklet-page-meta">よくある質問 - 派手な結論よりも検証可能な進捗状況を好む / 8～15分</p>
+  <p>このページは、よくある誤解を早期にブロックするように設計されています。主張が強いほど、(1) 用語の定義、(2) 測定スケール、(3) 失敗とみなされる条件、(4) 再現手順の順に注意深く確認する必要があります。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>At the FAQ front door, EEG foundation-model evidence is now split into representation learning / efficiency, recording-frame compatibility, label-limited adaptation rescue, and benchmark governance / postmortem rather than one `general decoder progress` ladder.</li><li>Recent EEG foundation-model benchmarks still show regime-dependent trade-offs: narrow-source checkpoints can win linear probes while more diverse pretraining can win after fine-tuning, so model rank is not one monotonic capability scale.</li><li>For same-subject / same-brain bridges, landmarks, latent manifolds, representational geometry, and fingerprint features are different carried objects, and stable scores can still depend on alignment, recalibration, or a short fixed-decoder horizon.</li>
+    <li>破壊的な局所超微細構造と生きた人間の生体内プロキシルートは、異なる測定クラスと異なるルート負担を引き起こすため、局所超微細構造、SV2A PET、5つの代謝物1H-MRSI類似性、高解像度1H-MRSI代謝物分布マッピング、31P代謝物/pHバランス、31P MT交換フラックス、31P NAD含有量マッピング、局所機能的31P NADダイナミクス、重水素絶対代謝物マッピング/定量化、重水素速度イメージング、管スケールの伝達速度推定、ミエリン二重層マッピング、BBB水交換、トレーサー特異的BBB輸送、血液CSF関門/脈絡叢潅流/輸送/水循環/見かけの交換、アストロサイトターゲット/ルート役割PET、神経免疫ターゲットファミリー、およびクリアランス輸送ルートファミリーは、1つのプログレスバーに圧縮すべきではありません。</li><li>このサイトは何のためにあるのか、EEG や脳からテキストへの作業で何がサポートできるのか、何がサポートできないのかなど、最初の疑問がすぐに解決されます。</li><li>フロントドアでは、侵入言語 BCI は、1 つの `speech BCI success` ラベルではなく、同一セッション通信スループット、対象者間の転送/初期化、固定デコーダ耐久性スライス、および適応型レスキュー ルートに分割されるようになりました。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/glossary.html">Glossary</a></li>
+  <li><a href="/verification.html">検証</a></li><li><a href="/wbe_101.html">WBE101</a></li><li><a href="/glossary.html">用語集</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/glossary.html">Glossary</a></h3>
-  <p class="booklet-page-meta">Reference - Start by keeping the words straight / 3 to 10 minutes for only the necessary items</p>
-  <p>This glossary is a quick reference for the meaning of terms. It starts with everyday-language explanations, moves to stricter definitions only when needed, and ties the discussion back to measurement, modeling, and verification.</p>
+  <h3><a href="/glossary.html">用語集</a></h3>
+  <p class="booklet-page-meta">参照 - まずは言葉をまっすぐにすることから始めましょう / 必要な項目だけで3分～10分程度</p>
+  <p>この用語集は、用語の意味を簡単に確認できるリファレンスです。日常用語の説明から始まり、必要な場合にのみより厳密な定義に移り、議論を測定、モデリング、検証に戻します。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Readers now also need term-level separation for hidden-state, shortcut-route, maintenance-state, post-transcriptional RNA-state, phospho-signaling / second-messenger state, glial substrate-routing, astrocyte-state, target-defined astrocyte-related proxy, clearance / immune support, macro clearance-transport proxy family, cargo-transport state, thermal-state, timing-state, vascular-state, proxy-class, route-role, route-maturity, and calibrator-role language.</li><li>Readers also need a term-level split between same-subject / same-brain labels and the specific bridge witness being claimed, such as landmarks, latent manifolds, representational geometry, fingerprints, alignment rescue, or recalibration rescue.</li><li>It now also includes the human-observability and support-state terms needed after the late-March and early-April 2026 deepening passes, such as proxy class, route maturity / model burden, route role, calibrator role, support-state proxy, glial substrate-routing, target-defined astrocyte-related proxy, and macro clearance-transport proxy family.</li>
+    <li>用語の簡単な説明と、各概念が重要となる箇所を示します。</li><li>これには、請求限度額、ショートカット監査、メンテナンス状態、血管状態/CVR監査など、2026年3月の再監査で追加されたフロントドア検証条件が含まれています。</li><li>これには、プロキシクラス、ルート成熟度/モデル負荷、ルート役割、キャリブレーター役割、サポート状態プロキシ、グリア基質ルーティング、ターゲット定義アストロサイト関連プロキシ、マクロクリアランス輸送プロキシファミリーなど、2026年3月下旬から4月上旬の深化パス後に必要となる人間の観察可能性とサポート状態の条件も含まれています。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/wbe_101.html">Introduction to WBE</a></li><li><a href="/eeg_101.html">Introduction to EEG</a></li><li><a href="/faq.html">FAQ</a></li>
+  <li><a href="/wbe_101.html">WBE の概要</a></li><li><a href="/eeg_101.html">脳波検査の概要</a></li><li><a href="/faq.html">よくある質問</a></li>
 </ul>
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/content_hub.html">Public Content Integration Hub</a></h3>
-  <p class="booklet-page-meta">Navigation - A single routing layer to prevent content sprawl and literature-route compression / 5-10 min</p>
-  <p>This page is the hub for deciding the <strong>integration target</strong> and <strong>update destination</strong> of public content. Before adding new information, check the mapping tables here and prefer merging into an existing page.</p>
+  <h3><a href="/content_hub.html">パブリック コンテンツ統合ハブ</a></h3>
+  <p class="booklet-page-meta">ナビゲーション - コンテンツの拡散と文献ルートの圧縮を防ぐ単一のルーティング層 / 5～10分</p>
+  <p>このページは、公開コンテンツの<strong>統合対象</strong>および<strong>更新先</strong>を決定するためのハブです。新しい情報を追加する前に、ここで予定のテーブルを確認し、該当のページにマージすることを優先してください。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>Technical readers are now told to split local causal maintenance-state papers, bounded living-human observability papers, and bridge-limited same-subject / same-brain papers before year order is allowed to shape judgment.</li><li>For living-human technical evidence, the entrance order is now route family first, then route role / human-proxy role, then proxy class / operational maturity / calibrator role, and only then composition or bridge stop lines.</li><li>A same-subject label is one proxy role, not a route-family substitute, and spectroscopy, barrier, astrocyte-related PET, neuroimmune PET, and clearance transport cannot be bundled before their route families are typed.</li>
+    <li>各ドメインには、固定のメイン ページとサポート ページがあります。</li><li>新しいページを作成する前に、デフォルトでは、マテリアルを既存のページにマージできるかどうかがチェックされます。</li><li>パブリック ナビゲーションと操作の参照が 1 か所に表示されます。</li>
   </ul>
-  <p class="booklet-page-meta">Read next</p>
+  <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/index.html">Start</a></li><li><a href="/mind_uploading_papers.html">Paper Collection</a></li><li><a href="/research_harvest_50.html">Research Harvest</a></li>
+  <li><a href="/index.html">始める</a></li><li><a href="/mind_uploading_papers.html">ペーパーコレクション</a></li><li><a href="/research_harvest_50.html">研究成果</a></li>
 </ul>
 
 </article>
@@ -485,24 +485,24 @@ body_class: "summary-booklet-page"
 
   <div class="booklet-card-grid booklet-card-grid-3">
     <article class="booklet-card">
-  <h3>Get the Overview</h3>
-  <p>Mind-Upload -&gt; Verification: Mind Uploading Verification Commons -&gt; Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</p>
+  <h3>全体像をつかむ</h3>
+  <p>マインドアップロード -&gt; 検証: マインドアップロード検証コモンズ -&gt; 技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/verification.html">Verification</a></li><li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/faq.html">FAQ</a></li>
+    <li><a href="/verification.html">検証</a></li><li><a href="/wbe_101.html">WBE101</a></li><li><a href="/faq.html">よくある質問</a></li>
   </ul>
 </article>
 <article class="booklet-card">
-  <h3>Audit Human Proxy Bundles</h3>
-  <p>Introduction: Making Mind Uploading / WBE a Measurable Problem -&gt; Human Proxy Composition -&gt; Measurement Stack</p>
+  <h3>ヒト・プロキシ束を監査する</h3>
+  <p>はじめに: マインド アップロード / WBE を測定可能な問題にする -&gt; ヒト・プロキシ構成 -&gt; 測定スタック</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/wiki/human-proxy-composition.html">Human Proxy Composition</a></li><li><a href="/wiki/measurement-stack-and-claim-ceiling.html">Measurement Stack</a></li>
+    <li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/wiki/human-proxy-composition.html">ヒト・プロキシ構成</a></li><li><a href="/wiki/measurement-stack-and-claim-ceiling.html">測定スタック</a></li>
   </ul>
 </article>
 <article class="booklet-card">
-  <h3>Participate and Integrate</h3>
-  <p>Contribution Guide / Public Content Integration Hub</p>
+  <h3>参加して統合する</h3>
+  <p>貢献ガイド / パブリック コンテンツ統合ハブ</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/index.html">Start Page</a></li><li><a href="/verification.html">Verification</a></li><li><a href="/glossary.html">Glossary</a></li>
+    <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証</a></li><li><a href="/glossary.html">用語集</a></li>
   </ul>
 </article>
 
@@ -511,7 +511,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-status-grid">
     <div class="booklet-status-card booklet-status-card-strong">
   <span>Working Principle</span>
-  <strong>It highlights small but valuable ways to participate, such as improving writing, terminology, and link structure.</strong>
+  <strong>文章、用語、リンク構造の改善など、小さいながらも価値のある参加方法を紹介します。</strong>
 </div>
 <div class="booklet-status-card">
   <span>Update Rule</span>
@@ -522,7 +522,7 @@ body_class: "summary-booklet-page"
 
   <h3>Source Pages</h3>
   <ul class="booklet-link-list">
-    <li><a href="/index.html">Mind-Upload</a></li><li><a href="/verification.html">Verification: Mind Uploading Verification Commons</a></li><li><a href="/tech_roadmap.html">Technical Roadmap: Understanding WBE Through Measurement, Reconstruction, and Implementation</a></li><li><a href="/perspective.html">Toward Mind Uploading: An Integrated Technical and Theoretical Approach</a></li><li><a href="/datasets.html">Data &amp; Hands-on: Where to start and how to get to L0</a></li><li><a href="/issue.html">Contribution Guide</a></li><li><a href="/content_hub.html">Public Content Integration Hub</a></li><li><a href="/wbe_101.html">Introduction: Making Mind Uploading / WBE a Measurable Problem</a></li><li><a href="/eeg_101.html">Introduction: What EEG Measures, What It Can Do, and What It Cannot Do</a></li><li><a href="/faq.html">FAQ: Common Questions and Common Failure Modes</a></li><li><a href="/glossary.html">Glossary</a></li>
+    <li><a href="/index.html">マインドアップロード</a></li><li><a href="/verification.html">検証: マインドアップロード検証コモンズ</a></li><li><a href="/tech_roadmap.html">技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する</a></li><li><a href="/perspective.html">マインドアップロードに向けて: 統合された技術的および理論的アプローチ</a></li><li><a href="/datasets.html">データとハンズオン: どこから始めて、どのようにして L0 に到達するか</a></li><li><a href="/issue.html">貢献ガイド</a></li><li><a href="/content_hub.html">パブリック コンテンツ統合ハブ</a></li><li><a href="/wbe_101.html">はじめに: マインド アップロード / WBE を測定可能な問題にする</a></li><li><a href="/eeg_101.html">はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか</a></li><li><a href="/faq.html">FAQ: よくある質問と一般的な障害モード</a></li><li><a href="/glossary.html">用語集</a></li>
   </ul>
 
   <div class="booklet-quote">

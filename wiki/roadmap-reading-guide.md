@@ -1,148 +1,135 @@
 ---
 layout: default
-title: 'Wiki: How to read the roadmap'
-description: This is a supplementary page that explains what the symbols P/M/R/I/V/D
-  mean and in what order they should be read to avoid confusion.
-article_type: Wiki
-subtitle: Read your technology roadmap as a dependency map rather than a long list
-author: Mind Uploading Research Project
+title: 'Wiki: ロードマップの見方'
+description: これは、P/M/R/I/V/D の記号の意味と、混乱を避けるためにどのような順序で読むべきかを説明する補足ページです。
+article_type: ウィキ
+subtitle: テクノロジーのロードマップを長いリストではなく依存関係マップとして読む
+author: マインドアップロード研究プロジェクト
 last_updated: '2026-03-06'
-note: Reading guide
-audience: People who get lost because of the many symbols on the technology roadmap,
-  and people who want to know the order in which to read them.
-reading_time: 8-12 minutes
-page_intro: This page is a supplementary page that explains what P/M/R/I/V/D in the
-  technology roadmap means and where to start to read them to avoid getting lost.
-  Rather than resummarizing the main text of the roadmap, we will organize the ``how
-  to read the map'' itself.
-accuracy_note: This page is a reading aid. Please be sure to return to the main text
-  of the technology roadmap for the official list of issues and current arrangement.
+note: 読書ガイド
+audience: 技術ロードマップの記号が多くて迷ってしまう方、読む順番を知りたい方。
+reading_time: 8～12分
+page_intro: このページは、技術ロードマップにおける P/M/R/I/V/D の意味と、どこから読めば迷わないかを説明する補足ページです。ロードマップ本文を改めてまとめるのではなく、「マップの読み方」そのものを整理します。
+accuracy_note: このページは読書補助です。問題の正式なリストと現在の取り決めについては、必ず技術ロードマップの本文に戻ってください。
 page_highlights:
-- We will explain P/M/R/I/V/D not as mere symbols but as ``types of questions.''
-- It shows in which order the layers tend to get clogged and why the previous layer
-  cannot be skipped.
-- There are also separate entrances for reading according to interest.
+- P/M/R/I/V/Dを単なる記号ではなく「質問の種類」として解説していきます。
+- どの順番でレイヤーが詰まりやすいのか、なぜ前のレイヤーをスキップできないのかがわかります。
+- 興味に応じて読むための入り口も別にあります。
 known_points:
-- P is the definition of progress, M is measurement, R is reconstruction, I is implementation,
-  V is verification, and D is social implementation.
-- The stronger the argument, the further back it is, and the more unorganized the
-  previous layer is, the more difficult it is to move forward.
-- It's best to read a roadmap as a map of dependencies rather than a collection of
-  conclusions.
+- Pは進捗の定義、Mは測定、Rは再構築、Iは実行、Vは検証、Dは社会実装です。
+- 議論が強ければ強いほど、議論は後退し、前の層が組織化されていないほど、前に進むことが難しくなります。
+- ロードマップは、結論をまとめたものではなく、依存関係のマップとして読むのが最善です。
 unknown_points:
-- Which route is the shortest and most effective may change as data benches are developed
-  in the future.
-- The final conditions for V and D still have many unresolved issues.
+- どのルートが最短で最も効果的であるかは、将来データベンチが開発されるにつれて変わる可能性があります。
+- VとDの最終条件には未解決の問題がまだ多く残っている。
 wiki_links:
-- label: 'Wiki: Basics of WBE'
+- label: 'Wiki: WBE の基本'
   url: /wiki/mind-upload-basics.html
-  description: This is for people who want to see the overall picture of why this
-    map is needed.
-- label: 'Wiki: Basics of verification infrastructure'
+  description: このマップが必要な理由の全体像を知りたい人向けです。
+- label: 'Wiki: 検証インフラストラクチャの基本'
   url: /wiki/verification-basics.html
-  description: Complement what you want to fix in the V series.
-- label: Wiki Home
+  description: Vシリーズで直したいところを補完。
+- label: ウィキホーム
   url: /wiki/
-  description: You can return to other basic pages.
+  description: 他の基本ページに戻ることができます。
 recommended_pages:
-- label: technology roadmap
+- label: 技術ロードマップ
   url: /tech_roadmap.html
-- label: Introduction to WBE
+- label: WBE の概要
   url: /wbe_101.html
-- label: Verification platform
+- label: 検証プラットフォーム
   url: /verification.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>First of all, in a nutshell</h2>
+<h2>まず一言で言うと</h2>
 <p>
-A technology roadmap is a map that shows what needs to be solved first before the future story will collapse. Although it may seem like a long list, it actually represents the dependency relationship of ``Assumption → Measurement → Estimation → Implementation → Verification → Social Implementation''.
+テクノロジーロードマップとは、将来のストーリーが崩壊する前に、最初に解決する必要があるものを示す地図です。長いリストのように見えますが、実際には「仮定→測定→見積もり→実装→検証→社会実装」という依存関係を表しています。
 </p>
 </div>
 
 <div class="note-box">
-<strong>After deciding how to read, you also want to decide on the next page</strong>
+<strong>読み方を決めたら次のページも決めたい</strong>
 <p>
-If you want to see not only the meaning of the symbols on the roadmap, but also where to go in measurement, reconfiguration, implementation, verification, and social implementation after reading it, please see <a href="roadmap-next-routes.html">Five paths to follow after the roadmap</a>.
+ロードマップ上の記号の意味だけでなく、ロードマップを読んだ後に測定、再構成、実装、検証、社会実装のどこに進むべきか知りたい場合は、<a href="roadmap-next-routes.html">、ロードマップ後にたどるべき5つの道筋</a>をご覧ください。
 </p>
 </div>
 
 <section class="section" id="letters">
-<h2 class="section-title">P/M/R/I/V/D in everyday language</h2>
+日常言語の<h2 class="section-title">P/M/R/I/V/D</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Symbol</th>
-<th>What question is it?</th>
-<th>What will be the problem if this goes out</th>
+<th>シンボル</th>
+<th>何の質問ですか？</th>
+<th>これが出たらどうなる</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>P</strong></td>
-<td>What we call success</td>
-<td>The goal is not set, and the victory conditions can be changed later. </td>
+<td>私たちが成功と呼ぶもの</td>
+<td>ゴールは設定されておらず、勝利条件は後から変更可能。 </td>
 </tr>
 <tr>
 <td><strong>M</strong></td>
-<td>What can be measured and with what precision</td>
-<td>In the first place, I don't know what is in the input. </td>
+<td>何をどのくらいの精度で測定できるのか</td>
+<td>そもそも入力に何が入っているのか分かりません。 </td>
 </tr>
 <tr>
 <td><strong>R</strong></td>
-<td>What can we infer from observations</td>
-<td>The measured signal is interpreted to have a stronger meaning than necessary. </td>
+<td>観察から何が推測できるか</td>
+<td>測定された信号が必要以上に強い意味を持つように解釈されます。 </td>
 </tr>
 <tr>
 <td><strong>I</strong></td>
-<td>How to move the model</td>
-<td>Even if it looks good on paper, it may not turn in reality. </td>
+<td>モデルの動かし方</td>
+<td>机上では良く見えても、実際にはうまくいかない場合があります。 </td>
 </tr>
 <tr>
 <td><strong>V</strong></td>
-<td>What and how to check</td>
-<td>I can't tell if I've moved forward or if it's just an appearance. </td>
+<td></td>の確認内容と確認方法
+<td>I 前に進んでいるのか、それとも見た目だけなのかわかりません。 </td>
 </tr>
 <tr>
 <td><strong>D</strong></td>
-<td>How to be treated in society</td>
-<td>Even if the technology works, it cannot be used due to rights and safety concerns. </td>
+<td>社会でどのように扱われるか</td>
+<td>技術が動作しても、権利や安全上の理由から使用することはできません。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="routes">
-<h2 class="section-title">Reading order by interest</h2>
+<h2 class="section-title">関心ごとの閲覧順序</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>What I'm curious about now</th>
-<th>Symbol to read first</th>
-<th>Next symbol</th>
+<th>今気になること</th>
+<th>最初に読む記号</th>
+<th>次のシンボル</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>I want to know what I need to accomplish to move forward</td>
+<td>前進するために何を達成する必要があるのか知りたい</td>
 <td><strong>P</strong></td>
 <td><strong>V</strong></td>
 </tr>
 <tr>
-<td>I want to get into the limitations of EEG and fMRI</td>
+<td>I 脳波と fMRI</td> の限界について知りたい
 <td><strong>M</strong></td>
 <td><strong>R</strong></td>
 </tr>
 <tr>
-<td>I want to know how the model works</td>
+<td>モデルの仕組みを知りたい</td>
 <td><strong>R</strong></td>
 <td><strong>I</strong></td>
 </tr>
 <tr>
-<td>I want to see the identity and social system</td>
+<td>アイデンティティや社会システムを見たい</td>
 <td><strong>V</strong></td>
 <td><strong>D</strong></td>
 </tr>
@@ -151,14 +138,14 @@ If you want to see not only the meaning of the symbols on the roadmap, but also 
 </section>
 
 <section class="section" id="not-timeline">
-<h2 class="section-title">This is a dependency, not a chronology</h2>
+<h2 class="section-title">これは依存関係であり、年表ではありません</h2>
 <p>
-Even if the numbers are arranged in the order P → M → R → I → V → D, it does not mean that they will definitely go this far in this year. The important thing is that the later arguments are more vulnerable to the failures of the earlier layers. For example, if we proceed to a strong identity claim in V while M and R are ambiguous, input limitations and estimation uncertainties remain.
+P→M→R→I→V→Dという順番で数字が並んでいるとしても、今年必ずここまで行くというわけではありません。重要なことは、後の議論は前の層の失敗に対してより脆弱であるということです。たとえば、M と R があいまいなまま V の強い同一性主張に進むと、入力制限と推定の不確実性が残ります。
 </p>
 <div class="cta-box">
-<h4>Next</h4>
-<p>Please check the official issue list and index in the technology roadmap text. </p>
-<a href="../tech_roadmap.html">Go to technology roadmap →</a>
+<h4>次</h4>
+<p>公式の問題リストと技術ロードマップ本文のインデックスを確認してください。 </p>
+<a href="../tech_roadmap.html">技術ロードマップへ→</a>
 </div>
 </section>
 
@@ -166,18 +153,18 @@ Even if the numbers are arranged in the order P → M → R → I → V → D, i
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="mind-upload-basics.html">WBE basics →</a></li>
-<li><a href="verification-basics.html">Basics of verification infrastructure →</a></li>
-<li><a href="eeg-preprocessing-and-qc.html">EEG preprocessing and QC →</a></li>
+<li><a href="mind-upload-basics.html">WBE 基本→</a></li>
+<li><a href="verification-basics.html">検証基盤の基礎→</a></li>
+<li><a href="eeg-preprocessing-and-qc.html">EEG 前処理と QC →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../tech_roadmap.html">Technology roadmap →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
+<li><a href="../tech_roadmap.html">テクノロジーロードマップ→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
 <li><a href="../wbe_101.html">WBE 101 →</a></li>
 </ul>
 </div>

@@ -1,185 +1,185 @@
 ---
 layout: default
-title: "Wiki: 5 paths to follow after participation/collaboration page"
-description: "After reading the Issues and Collaborations, this is a guide to organize where to go for small modifications, condition design, working from literature, decomposition of external dependencies, and preparation for L0 implementation."
-article_type: Wiki
-subtitle: "A guide to help you decide the next page without hesitation after viewing the participation path"
-author: Mind Uploading Research Project
-last_updated: "2026-03-14"
-note: "Participation route"
-audience: "People who are confused about where to go next after reading Issues and Collaborations"
-reading_time: "6-10 minutes"
-page_intro: "This page is an auxiliary guide that helps you organize which public page or wiki to open next after reading the contribution guide and collaboration candidates. The next page will change depending on whether you want to make small corrections, fill in passing and disproving conditions, turn the literature into work that can be done now, break down external dependencies into preparations, or go down to L0 artifacts."
-accuracy_note: "This is the entry point after reading the participation page. Be sure to check the original page for the conditions for individual issues and external collaboration."
+title: 'Wiki: 参加/コラボレーション後にたどる 5 つの道筋ページ'
+description: これは、問題とコラボレーションを読んだ後、小さな変更、条件設計、文献からの作業、外部依存関係の分解、L0 実装の準備をどこに行えばよいかを整理するためのガイドです。
+article_type: ウィキ
+subtitle: 参加パスを見て迷わず次のページを決めるためのガイド
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-03-14'
+note: 参加ルート
+audience: 「問題とコラボレーション」を読んだ後、次にどこに行けばよいか迷っている人
+reading_time: 6～10分
+page_intro: このページは、貢献ガイドとコラボレーション候補を読んだ後、次にどの公開ページまたは Wiki を開くかを整理するのに役立つ補助ガイドです。次のページは、小さな修正を加えたいか、合格条件と反証条件を埋めたいか、文献を今すぐ実行できる作業に変えるか、外部依存関係を準備に分解するか、L0
+  成果物に進むかによって変わります。
+accuracy_note: 参加ページを読んだ後のエントリーポイントです。個別課題や外部連携の条件については必ずオリジナルページをご確認ください。
 page_highlights:
-  - "The participatory page will be organized into five areas: small modifications, condition design, working from literature, decomposition of external dependencies, and preparation for L0 implementation."
-  - "Reducing the situation of ``I want to participate, but I don't know where to start.''"
-  - "This is a guide to avoid confusing changes that can be made in this repository with changes that are stopped by external dependencies."
+- 参加型ページは、小さな変更、条件設計、文献からの作業、外部依存関係の分解、L0 実装の準備の 5 つの領域で構成されます。
+- 「参加したいけど何から始めれば良いか分からない」という状況を軽減します。
+- これは、このリポジトリ内で行うことができる変更と、外部の依存関係によって停止される変更との混同を避けるためのガイドです。
 known_points:
-  - "If you narrow down your routes to one after reading the participation-related pages, your work will become much more concrete."
-  - "The page to return to is different for small modifications, conditional design, and decomposition of external dependencies."
-  - "Even when it comes to external dependencies, there are quite a few preparations that can be made in-house first."
+- 参加関連ページを読んだ上でルートを1つに絞ると、仕事がより具体的になります。
+- 小さな変更、条件付き設計、および外部依存関係の分解では、戻るページが異なります。
+- 外部依存関係であっても、最初に社内で準備できることはかなりあります。
 unknown_points:
-  - "Which route will lead to the greatest results depends on the unresolved issues and implementation status at the time."
-  - "The extent to which external cooperation and system development will progress depends on the partner and external conditions."
+- どのルートが最大の成果につながるかは、その時点での未解決課題や実行状況によって異なります。
+- 外部連携やシステム開発がどこまで進むかは、取引先や外部条件によって異なります。
 wiki_links:
-  - label: "Wiki: What to do first in-house and external dependencies"
-    url: "/wiki/internal-prework-and-external-dependencies.html"
-    description: "This is for people who are externally dependent but want to check what they can prepare now."
-  - label: "Wiki: Straight path back from literature to implementation and participation"
-    url: "/wiki/literature-to-action-route.html"
-    description: "For people who want to see the route back to participating work after reading the literature."
-  - label: "Wiki: Minimum artifact pack for L0"
-    url: "/wiki/l0-minimum-artifact-pack.html"
-    description: "You can see what you leave behind as a set when you go down to the implementation side."
+- label: 'Wiki: 社内および外部の依存関係について最初に行うべきこと'
+  url: /wiki/internal-prework-and-external-dependencies.html
+  description: 外部依存だけど今から準備できるものを確認したい人向けです。
+- label: 'Wiki: 文献から実装と参加への直線的な道筋'
+  url: /wiki/literature-to-action-route.html
+  description: 文献を読んだあと、参加作品に戻るルートを知りたい人向け。
+- label: 'Wiki: L0 の最小アーティファクト パック'
+  url: /wiki/l0-minimum-artifact-pack.html
+  description: 実装側に降りると、セットとして何を残すかがわかります。
 recommended_pages:
-  - label: "Contribution Guide"
-    url: "/issue.html"
-  - label: "Collaboration candidate"
-    url: "/issue.html#external-collaboration"
-  - label: "Public Content Integration Hub"
-    url: "/content_hub.html"
+- label: 貢献ガイド
+  url: /issue.html
+- label: 連携候補者
+  url: /issue.html#external-collaboration
+- label: パブリック コンテンツ統合ハブ
+  url: /content_hub.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Determine the route after the participating route</h2>
+<h2>参加ルート後のルートを決定</h2>
 <p>
-Issues and Collaborations are important as entry points, but leaving them as they are leaves too many questions as to what to do next. Here, we will divide it into 5 paths based on <strong>What we want to do now</strong> and pin the next page.
+課題とコラボレーションは入り口として重要ですが、それをそのままにしておくと、次に何をすべきかについて多くの疑問が残ります。ここでは<strong>今やりたいこと</strong>をベースに5つのパスに分けて次のページを固定していきます。
 </p>
 </div>
 
 <section class="section" id="five-routes">
-<h2 class="section-title">Five paths to follow after participation/collaboration page</h2>
+<h2 class="section-title">参加/コラボレーション後にたどる5つの道ページ</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>What I want to do next</th>
-<th>Next page</th>
-<th>What to decide there</th>
+<th>次にやりたいこと</th>
+<th>次のページ</th>
+<th>そこで何を決めるか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I want to make small corrections now</strong></td>
-<td><a href="../issue.html">Issue</a> / <a href="../content_hub.html">Content Hub</a></td>
-<td>Fix which paragraphs and terms on which pages will be corrected and where they will be integrated. </td>
+<td><strong>ちょっと修正したい</strong></td>
+<td><a href="../issue.html">問題</a> / <a href="../content_hub.html">コンテンツハブ</a></td>
+<td>どのページのどの段落と用語を修正し、どこに統合するかを修正します。 </td>
 </tr>
 <tr>
-<td><strong>I want to figure out what needs to be met to move forward</strong></td>
-<td><a href="../verification.html">Verification</a> / <a href="../tech_roadmap.html">Roadmap</a></td>
-<td>Distinguish the passing conditions, disproving conditions, and what level of assertion. </td>
+<td><strong>I 前進するために満たす必要があるものを見つけたい</strong></td>
+<td><a href="../verification.html">検証</a> / <a href="../tech_roadmap.html">ロードマップ</a></td>
+<td>合格条件、反証条件、主張のレベルを区別します。 </td>
 </tr>
 <tr>
-<td><strong>I want to turn literature into work that can be done now</strong></td>
-<td><a href="literature-to-action-route.html">A straight path back from literature to implementation and participation</a> / <a href="../research_harvest_50.html">Research Harvest</a></td>
-<td>Decide where to return the document to: Open Problems, Proposals, Issues, or Collaboration Preparations. </td>
+<td><strong>文学を今すぐできる作品にしたい</strong></td>
+<td><a href="literature-to-action-route.html">文献から実装および参加までの直線的なパス</a> / <a href="../research_harvest_50.html">リサーチハーベスト</a></td>
+<td>ドキュメントをどこに返却するかを決定します: 未解決の問題、提案、問題、またはコラボレーションの準備。 </td>
 </tr>
 <tr>
-<td><strong>I want to break down external dependencies into preparations</strong></td>
-<td><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies</a> / <a href="../issue.html#external-collaboration">Collaborations</a></td>
-<td>We will distinguish between things that can be produced in-house and things that require a partner or system. </td>
+<td><strong>I 外部依存関係を準備に分割したい</strong></td>
+<td><a href="internal-prework-and-external-dependencies.html">社内生産と外部依存関係</a> / <a href="../issue.html#external-collaboration">コラボレーション</a></td>
+<td>自社で生産できるものと、パートナーやシステムが必要なものを区別します。 </td>
 </tr>
 <tr>
-<td><strong>I want to descend to the minimum loop of L0 implementation</strong></td>
-<td><a href="../datasets.html#l0-practice">Hands-on</a> / <a href="l0-minimum-artifact-pack.html">L0 minimum artifact pack</a></td>
-<td>Fix the minimum deliverables of what should remain as a set of reproducible analyses. </td>
+<td><strong>I L0実装の最小ループまで下りたい</strong></td>
+<td><a href="../datasets.html#l0-practice">ハンズオン</a> / <a href="l0-minimum-artifact-pack.html">L0最小アーティファクトパック</a></td>
+<td>再現可能な分析のセットとして残すべき最小限の成果物を修正します。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="why">
-<h2 class="section-title">Why this division</h2>
+<h2 class="section-title">なぜこの部門なのか</h2>
 <table class="data-table">
 <thead>
 <tr>
 <th>way</th>
-<th>Reasons for going to the page after joining page</th>
+<th>ページ入会後にそのページに行く理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Small fixes</strong></td>
-<td>The initial value of participation lies in identifying and correcting specific points to be corrected, rather than in a big plan. </td>
+<td><strong>小さな修正</strong></td>
+<td>参加の最初の価値は、大きな計画ではなく、具体的な修正すべき点を特定して修正することにあります。 </td>
 </tr>
 <tr>
-<td><strong>Condition design</strong></td>
-<td>In order to reduce ambiguous issues, it is necessary to first determine on the Verification side what needs to be met to move forward. </td>
+<td><strong>コンディションデザイン</strong></td>
+<td>曖昧な問題を減らすためには、まず検証側で、先に進むために何を満たさなければならないかを決定する必要があります。 </td>
 </tr>
 <tr>
-<td><strong>Working from literature</strong></td>
-<td>Thesis notes tend to get scattered, and it is easier to move forward by deciding which public page to return to. </td>
+<td><strong>文献からの作業</strong></td>
+<td>論文ノートは散らかりがちなので、どの公開ページに戻るかを決めておくと先に進みやすいです。 </td>
 </tr>
 <tr>
-<td><strong>Decomposing external dependencies</strong></td>
-<td>Even if the work looks like it is waiting for a partner, specifications, comparison tables, minimum deliverables, etc. can be produced in-house first. </td>
+<td><strong>外部依存関係の分解</strong></td>
+<td>パートナー待ちのような仕事でも、まずは仕様書・比較表・最低成果物などを社内で作成できます。 </td>
 </tr>
 <tr>
-<td><strong>L0 implementation preparation</strong></td>
-<td>Part of participating is not just about writing, but also about creating the smallest loop of reproducible artifacts. </td>
+<td><strong>L0実装準備</strong></td>
+<td> への参加には、単に書くだけではなく、再現可能なアーティファクトの最小ループを作成することも含まれます。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="helper-wiki">
-<h2 class="section-title">Assistance wiki when you stop midway</h2>
+<h2 class="section-title">途中でやめるときのサポートwiki</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Place to stop</th>
-<th>Go back to wiki</th>
+<th>停車場所</th>
+<th>ウィキに戻る</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Stops at the boundary between external dependencies and executable changes</td>
-<td><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies</a></td>
+<td>外部依存関係と実行可能変更の間の境界で停止</td>
+<td><a href="internal-prework-and-external-dependencies.html">社内生産と外部依存関係</a></td>
 </tr>
 <tr>
-<td>Stop thinking about what to write in the issue</td>
-<td><a href="issue-writing-basics.html">How to write your first issue</a></td>
+<td>号に何を書こうか考えるのをやめる</td>
+<td><a href="issue-writing-basics.html">最初の問題の書き方</a></td>
 </tr>
 <tr>
-<td>Stops depending on where you want to return the paper</td>
-<td><a href="literature-to-action-route.html">A straight path back from literature to implementation and participation</a></td>
+<td>用紙返却場所に応じて停止します</td>
+<td><a href="literature-to-action-route.html">文献から実装および参加までの直線的なパス</a></td>
 </tr>
 <tr>
-<td>Stops at public page and wiki locations</td>
-<td><a href="content-placement-basics.html">Basics of deciding where to place new information</a> / <a href="../content_hub.html">Content Hub</a></td>
+<td>公開ページと Wiki の場所で停止</td>
+<td><a href="content-placement-basics.html">新しい情報を配置する場所を決める基本</a> / <a href="../content_hub.html">コンテンツハブ</a></td>
 </tr>
 <tr>
-<td>Stop at L0 minimum deliverables</td>
-<td><a href="l0-minimum-artifact-pack.html">L0 minimum artifact pack</a></td>
+<td>最小成果物L0で停止</td>
+<td><a href="l0-minimum-artifact-pack.html">L0 最小アーティファクト パック</a></td>
 </tr>
 <tr>
-<td>Stop depending on what level of argument you are talking about</td>
-<td><a href="claim-level-reading-routes.html">How to read each L0 to L5</a></td>
+<td>議論のレベルに応じて停止</td>
+<td><a href="claim-level-reading-routes.html">各L0～L5の見方</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-mistakes">
-<h2 class="section-title">Common ways to get lost</h2>
+<h2 class="section-title">よくある迷い方</h2>
 <div class="key-points">
-<h4>Mistake</h4>
+<h4>間違い</h4>
 <ul>
-<li><strong>Just opening the issue makes you feel like you have decided what to do next:</strong> In reality, you need to focus on things like modification, condition design, and decomposition of external dependencies. </li>
-<li><strong>Start with the big collaboration:</strong> It will be easier to proceed if you create a one-page summary or minimum deliverables in-house first. </li>
-<li><strong>Read the article and think you've already joined:</strong> You need to decide which public page or issue to return to. </li>
-<li><strong>Treating text corrections and assertion-level corrections with the same weight:</strong> It is safer to distinguish between terminology corrections and passing condition corrections first. </li>
+<li><strong>問題を開くだけで、次に何をするかが決まったような気分になります:</strong> 実際には、変更、条件設計、外部依存関係の分解などに集中する必要があります。 </li>
+<li><strong>大規模なコラボレーションから始める:</strong> 最初に 1 ページの概要や最小限の成果物を社内で作成すると、進めやすくなります。 </li>
+<li><strong>記事を読んで、すでに参加していると考えてください:</strong>どの公開ページまたは問題に戻るかを決定する必要があります。 </li>
+<li><strong>テキストの修正とアサーションレベルの修正を同じ重みで扱う:</strong> 最初に用語の修正と通過条件の修正を区別する方が安全です。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">Where to return next</h2>
+<h2 class="section-title">次に戻る場所</h2>
 <p>
-Please use <a href="../issue.html">Contribution Guide</a> to return to the entry point for participation, <a href="../issue.html#external-collaboration">Collaboration candidates</a> to return to external collaboration candidates, and <a href="../content_hub.html">Public content integration hub</a> to return to organizing publishing destinations.
+参加エントリーポイントに戻るには<a href="../issue.html">投稿ガイド</a>、外部コラボレーション候補に戻るには<a href="../issue.html#external-collaboration">コラボレーション候補</a>、公開先の整理に戻るには<a href="../content_hub.html">パブリックコンテンツ統合ハブ</a>をご利用ください。
 </p>
 </section>
 
@@ -187,19 +187,19 @@ Please use <a href="../issue.html">Contribution Guide</a> to return to the entry
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="internal-prework-and-external-dependencies.html">In-house production and external dependencies →</a></li>
-<li><a href="literature-to-action-route.html">A straight path back from literature to implementation and participation →</a></li>
-<li><a href="l0-minimum-artifact-pack.html">L0 minimum artifact pack →</a></li>
+<li><a href="internal-prework-and-external-dependencies.html">社内生産と外部依存関係 →</a></li>
+<li><a href="literature-to-action-route.html">A 文献から実装および参加までの直線的なパス → </a></li>
+<li><a href="l0-minimum-artifact-pack.html">L0 最小アーティファクトパック→</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../issue.html">Contribution guide →</a></li>
-<li><a href="../issue.html#external-collaboration">Collaboration candidates →</a></li>
-<li><a href="../content_hub.html">Public content integration hub →</a></li>
+<li><a href="../issue.html">投稿ガイド→</a></li>
+<li><a href="../issue.html#external-collaboration">連携候補→</a></li>
+<li><a href="../content_hub.html">パブリックコンテンツ統合ハブ→</a></li>
 </ul>
 </div>
 </aside>

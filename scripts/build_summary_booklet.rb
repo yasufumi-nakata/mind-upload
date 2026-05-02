@@ -103,27 +103,27 @@ FAQ_PRIORITY_QUERIES = [
 ].freeze
 
 COMPACT_STOPLINE_RULES = [
-  [/Connectome-complete does not mean emulation-complete/i, "Connectome-complete is not emulation-complete."],
-  [/human evidence is layered/i, "Human evidence remains layered and proxy-based."],
-  [/Several living-human proxy rows are not promoted together/i, "Proxy bundles need compatibility, repeatability, and disagreement audits."],
-  [/same-subject or same-brain.*one state sample/i, "Same-subject wording does not make one state sample."],
-  [/foundation-model|leaderboard result.*general neural decoder/i, "Foundation-model scores are benchmark-conditioned, not general decoders."],
-  [/same decode score is not a target-specific biomarker/i, "High decode scores can still be shortcut-driven."],
-  [/Temporal Validity Card/i, "Same-day success is not a cross-day or long-term claim."]
+  [/Connectome-complete does not mean emulation-complete|コネクトーム.*エミュレーション.*同じではない/i, "コネクトーム完全性はエミュレーション完全性ではありません。"],
+  [/human evidence is layered|ヒト.*証拠.*階層/i, "ヒト証拠は階層的で、なおプロキシに基づきます。"],
+  [/Several living-human proxy rows are not promoted together|複数.*ヒト.*プロキシ/i, "プロキシ束には互換性、反復性、不一致監査が必要です。"],
+  [/same-subject or same-brain.*one state sample|同一被験者|同一脳/i, "同一被験者という表現だけでは、一つの状態サンプルにはなりません。"],
+  [/foundation-model|leaderboard result.*general neural decoder|基盤モデル|リーダーボード/i, "基盤モデルのスコアはベンチマーク条件付きであり、汎用デコーダではありません。"],
+  [/same decode score is not a target-specific biomarker|デコード.*バイオマーカー/i, "高いデコードスコアでもショートカット駆動の可能性があります。"],
+  [/Temporal Validity Card|時間的妥当性/i, "同日内の成功は、別日や長期の主張ではありません。"]
 ].freeze
 
 COMPACT_TITLE_MAP = {
   "index" => "Mind-Upload",
-  "verification" => "Verification Commons",
-  "tech_roadmap" => "Technical Roadmap",
-  "perspective" => "Perspective",
-  "datasets" => "Datasets & L0",
-  "issue" => "Contribution Guide",
-  "content_hub" => "Content Hub",
+  "verification" => "検証コモンズ",
+  "tech_roadmap" => "技術ロードマップ",
+  "perspective" => "展望",
+  "datasets" => "データセットと L0",
+  "issue" => "参加ガイド",
+  "content_hub" => "コンテンツハブ",
   "wbe_101" => "WBE 101",
   "eeg_101" => "EEG 101",
   "faq" => "FAQ",
-  "glossary" => "Glossary"
+  "glossary" => "用語集"
 }.freeze
 
 PageData = Struct.new(
@@ -231,24 +231,24 @@ class SummaryBookletTemplate
     <<~'ERB'
       ---
       layout: default
-      title: "Mind-Upload Summary Booklet"
-      description: "An auto-generated A4-style briefing page built from the site's public pages."
-      article_type: "Briefing Booklet"
-      subtitle: "An A4 briefing regenerated from public-page front matter and lead summaries"
-      author: Mind Uploading Research Project
+      title: "マインドアップロード要約冊子"
+      description: "サイトの公開ページから作成した、自動生成の A4 形式ブリーフィングページ。"
+      article_type: "ブリーフィング冊子"
+      subtitle: "公開ページの front matter と冒頭要約から再生成した A4 ブリーフィング"
+      author: マインドアップロード研究プロジェクト
       last_updated: "<%= latest_date %>"
-      note: "Auto-generated from public pages"
+      note: "公開ページから自動生成"
       body_class: "summary-booklet-page"
       ---
-      <!-- AUTO-GENERATED FILE. Run `ruby scripts/build_summary_booklet.rb`. -->
-      <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
+      <!-- 自動生成ファイルです。`ruby scripts/build_summary_booklet.rb` を実行してください。 -->
+      <!-- 重要: この情報を削除したり上書きしたりしないでください。これはプロジェクトの恒久的な知識ベースです。 -->
 
       <main class="main-container summary-booklet-main">
       <article class="content-column">
 
       <section class="booklet-sheet booklet-cover">
-        <p class="booklet-kicker">Mind-Upload Commons</p>
-        <h2 class="booklet-cover-title">Public Page Summary Booklet</h2>
+        <p class="booklet-kicker">マインドアップロード・コモンズ</p>
+      <h2 class="booklet-cover-title">公開ページ要約冊子</h2>
         <p class="booklet-cover-lead">
           <%= intro_page.page_intro %>
         </p>
@@ -589,10 +589,10 @@ class SummaryBookletTemplate
 
   def overview_rows_html
     rows = [
-      ["Entry", intro_page],
-      ["Verification Commons", verification_page],
-      ["Technical Map", roadmap_page],
-      ["Theory Framing", perspective_page]
+      ["入口", intro_page],
+      ["検証コモンズ", verification_page],
+      ["技術マップ", roadmap_page],
+      ["理論的整理", perspective_page]
     ]
 
     rows.map do |label, page_data|
@@ -615,10 +615,10 @@ class SummaryBookletTemplate
 
   def timeline_cards_html
     items = [
-      ["Step 1", "Entry", intro_page.page_highlights.first || intro_page.page_intro],
-      ["Step 2", "L0", datasets_page.page_highlights.first || datasets_page.page_intro],
-      ["Step 3", "L1-L2", verification_page.page_highlights[1] || verification_page.page_intro],
-      ["Later", "Higher-Level Claims", roadmap_page.unknown_points.first || perspective_page.unknown_points.first]
+      ["ステップ 1", "入口", intro_page.page_highlights.first || intro_page.page_intro],
+      ["ステップ 2", "L0", datasets_page.page_highlights.first || datasets_page.page_intro],
+      ["ステップ 3", "L1-L2", verification_page.page_highlights[1] || verification_page.page_intro],
+      ["後続", "高レベル主張", roadmap_page.unknown_points.first || perspective_page.unknown_points.first]
     ]
 
     items.map do |label, title, body|
@@ -669,7 +669,7 @@ class SummaryBookletTemplate
     end.join
 
     <<~HTML
-      <p class="booklet-page-meta">Read next</p>
+      <p class="booklet-page-meta">次に読む</p>
       <ul class="booklet-link-list booklet-page-link-list">
         #{items}
       </ul>
@@ -678,13 +678,13 @@ class SummaryBookletTemplate
 
   def next_action_cards_html
     cards = [
-      ["Get the Overview", "#{intro_page.title} -> #{verification_page.title} -> #{roadmap_page.title}", intro_page.recommended_pages],
-      ["Audit Human Proxy Bundles", "#{wbe_page.title} -> Human Proxy Composition -> Measurement Stack", [
+      ["全体像をつかむ", "#{intro_page.title} -> #{verification_page.title} -> #{roadmap_page.title}", intro_page.recommended_pages],
+      ["ヒト・プロキシ束を監査する", "#{wbe_page.title} -> ヒト・プロキシ構成 -> 測定スタック", [
         { "label" => "WBE 101", "url" => wbe_page.url },
-        { "label" => "Human Proxy Composition", "url" => "/wiki/human-proxy-composition.html" },
-        { "label" => "Measurement Stack", "url" => "/wiki/measurement-stack-and-claim-ceiling.html" }
+        { "label" => "ヒト・プロキシ構成", "url" => "/wiki/human-proxy-composition.html" },
+        { "label" => "測定スタック", "url" => "/wiki/measurement-stack-and-claim-ceiling.html" }
       ]],
-      ["Participate and Integrate", "#{issue_page.title} / #{content_hub_page.title}", issue_page.recommended_pages]
+      ["参加して統合する", "#{issue_page.title} / #{content_hub_page.title}", issue_page.recommended_pages]
     ]
 
     cards.map do |title, body, links|
@@ -925,4 +925,4 @@ end
 pages = SOURCE_PATHS.map { |path| load_page(path) }
 output = SummaryBookletTemplate.new(pages).render
 File.write(OUTPUT_PATH, output)
-puts "generated #{OUTPUT_PATH}"
+puts "生成しました: #{OUTPUT_PATH}"

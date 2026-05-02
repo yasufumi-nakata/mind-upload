@@ -1,548 +1,548 @@
-# Wiki: Uncertainty, Calibration, and Abstention
+# Wiki: 不確実性、校正、および棄権
 
-> Confidence is not the same thing as reliability. Calibration and coverage must be read separately.
+> 自信は信頼性と同じではありません。キャリブレーションとカバレッジは個別に読む必要があります。
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-31 / Role: Technical / natural science only
+- Updated: 2026-03-31 / Role: 技術/自然科学のみ
 
-## Role Of This Page
-This page organizes uncertainty, confidence intervals, calibration, and abstention in EEG source imaging, EEG classification, language decoding, and closed-loop BCI using primary literature. It is not only about how much to trust a number when it appears, but also about which output space was fixed in advance, which uncertainty object is actually being reported, and when output should stop.
-
-
-## Accuracy Notes
-This page prioritizes technical and natural-science audit items over textbook completeness in statistics. Some strict definitions are compressed, but the core points remain explicit: confidence and calibration are different, risk can be lowered by lowering coverage, and recalibration burden is itself a performance metric in online systems.
+## このページの役割
+このページでは、一次文献を使用して、EEG ソース イメージング、EEG 分類、言語デコード、および閉ループ BCI における不確実性、信頼区間、キャリブレーション、および棄権を整理します。それは、数値が表示されたときにその数値をどの程度信頼するかということだけでなく、どの出力空間が事前に固定されているか、どの不確実性オブジェクトが実際に報告されているか、いつ出力を停止すべきかについても重要です。
 
 
-## Back To Public Pages
-- [EEG Basics](https://mind-upload.com/eeg_101.html)
-- [Verification](https://mind-upload.com/verification.html)
-- [Technology Roadmap](https://mind-upload.com/tech_roadmap.html)
+## 正確性に関する注記
+このページでは、統計における教科書の完全性よりも、技術的および自然科学の監査項目を優先します。一部の厳密な定義は圧縮されていますが、核心点は明確なままです。つまり、信頼性とキャリブレーションは異なり、カバレッジを下げることでリスクを下げることができ、再キャリブレーションの負担自体がオンライン システムのパフォーマンス指標です。
 
-## Related Wiki Pages
-- [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Returns to the point where an argument stops by using inverse problems and causal inference.
-- [Wiki: Baselines / pre-registration / model cards](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Places Calibration & Abstention Cards alongside the rest of the submission set.
-- [Wiki: state / trait / drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Separates day-scale variation, longitudinal change, and decoder drift.
-- [Wiki: Counterfactuals / interventions / perturbations](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - Explains how to incorporate uncertainty into interventions and held-out conditions.
-- [Wiki: Closed loop, delay, jitter, safe stop](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - Adds guidance for separating abstention, freeze, and stop behavior in online systems.
 
-## What Is Currently Known
-- Head geometry, conductivity, subject shift, session drift, and decoder drift all strongly affect estimated width and real-world performance.
-- If fit / calibration / test separation is ambiguous, the meaning of confidence and thresholds collapses.
-- Even with high accuracy, poor calibration can still produce overconfident wrong answers under low-confidence conditions.
-- In EEG source imaging, inverse family, target object, uncertainty object, forward-model uncertainty, and validation board are separate burdens; one width or one validator is not enough.
-- In language-facing outputs, top-k success or confidence from a fixed candidate bank, known-onset protocol, or prompt scaffold should not be read as open-world uncertainty.
-- Structural pass/fail rules for language-facing confidence are route-specific even when the numeric thresholds remain task-dependent.
-- Online BCI requires not only latency, but also abstention rate, dropout, recalibration burden, and recovery time.
+## 公開ページへ戻る
+- [脳波検査の基礎](https://mind-upload.com/eeg_101.html)
+- [検証](https://mind-upload.com/verification.html)
+- [テクノロジーロードマップ](https://mind-upload.com/tech_roadmap.html)
 
-## What Is Still Unknown
-- The Calibration & Abstention Card is fixed as a minimum site-wide submission, but numeric pass/fail thresholds for each task are not finalized yet.
-- It is not yet fixed which coverage / abstention thresholds should become the common pass/fail rule for L2 and L3.
-- The structural pass/fail bundle for candidate-conditioned confidence in language-facing decode is fixed here, but the numeric threshold values remain route-dependent.
-- A unified uncertainty-accounting scheme across source imaging, language decoding, and online BCI is still in progress.
+## 関連 Wiki ページ
+- [Wiki: 観察から推定へ](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - 逆問題と因果推論を使って議論が止まったところまで戻ります。
+- [Wiki: ベースライン / 事前登録 / モデルカード](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - 校正および棄権カードを提出セットの残りの部分と並べて配置します。
+- [Wiki: 状態/特性/ドリフト](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - 日スケール変動、経度変化、デコーダドリフトを分離します。
+- [Wiki: 反事実/介入/摂動](https://github.com/yasufumi-nakata/mind-upload/wiki/counterfactual-and-perturbation-verification) - 介入や継続的な状況に不確実性を組み込む方法を説明します。
+- [Wiki: 閉ループ、遅延、ジッター、安全停止](https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops) - オンライン システムでの棄権、凍結、停止の動作を区別するためのガイダンスを追加します。
+
+## 現在わかっていること
+- ヘッドの形状、導電率、被験者のシフト、セッション ドリフト、およびデコーダー ドリフトはすべて、推定幅と実際のパフォーマンスに大きな影響を与えます。
+- フィット/キャリブレーション/テストの分離があいまいな場合、信頼性としきい値の意味が崩壊します。
+- 精度が高くても、校正が不十分な場合、信頼性の低い条件下では、自信過剰な誤った答えが生じる可能性があります。
+- EEG ソース イメージングでは、逆ファミリ、ターゲット オブジェクト、不確実性オブジェクト、フォワード モデルの不確実性、および検証ボードは別個の負担となります。 1 つの幅または 1 つのバリデータでは十分ではありません。
+- 言語に直面した出力では、固定された候補バンク、既知の開始プロトコル、または即時足場からのトップ k の成功または信頼を、オープンワールドの不確実性として解釈すべきではありません。
+- 言語に面した信頼性に関する構造的な合否ルールは、数値しきい値がタスクに依存する場合でもルート固有です。
+- オンライン BCI では、待ち時間だけでなく、棄権率、ドロップアウト、再調整の負担、および回復時間も必要になります。
+
+## まだわかっていないこと
+- 校正および棄権カードはサイト全体の最小限の提出物として固定されていますが、各タスクの合格/不合格のしきい値の数値はまだ最終決定されていません。
+- どのカバレッジ/棄権しきい値が L2 と L3 の共通の合否ルールとなるかはまだ決まっていません。
+- 言語対応デコードにおける候補条件付き信頼度の構造的な合格/不合格バンドルはここで固定されていますが、数値しきい値はルートに依存したままです。
+- ソース画像、言語デコード、オンライン BCI にわたる統一された不確実性会計スキームはまだ進行中です。
 
 ---
 
-<h2>Conclusion</h2>
+<h2>結論</h2>
 <p>
-This site does not treat <strong>point estimates only</strong>, <strong>uncalibrated confidence only</strong>, <strong>untyped source-imaging widths</strong>, or <strong>output without abstention conditions</strong> as strong evidence. The four points to be audited first are <strong>where does the uncertainty come from</strong>, <strong>which split and evaluation family was used to calibrate the probability/interval/prediction set</strong>, <strong>where to stop when reliability is low</strong>, and <strong>how to record the recalibration load in the case of an online system</strong>. In the re-audit in March 2026, we did not end this with an auxiliary explanation, but connected it to <a href="https://mind-upload.com/verification.html#calibration-abstention-card">Verification's Calibration &amp; Abstention Card</a>.
+このサイトでは、<strong> ポイント推定値のみ </strong>、<strong> 校正されていない信頼性のみ </strong>、<strong> 型指定されていないソース イメージング幅 </strong>、または <strong> 棄権条件なしの出力 </strong> を強力な証拠として扱いません。最初に監査する 4 つのポイントは、<strong> 不確実性はどこから来るのか</strong>、<strong> 確率/間隔/予測セットの校正にどの分割と評価ファミリを使用したか</strong>、<strong> 信頼性が低い場合にどこで停止するか</strong>、<strong> オンライン システムの場合に再校正負荷を記録する方法</strong> です。 2026年3月の再監査では、これを補助的な説明で終わらせるのではなく、<a href="https://mind-upload.com/verification.html#calibration-abstention-card">VerificationのCalibration &amp; 2026年3月の再監査につなげました。棄権カード</a>。
 </p>
 
-<strong>Scope of this page</strong>
+<strong>このページの範囲</strong>
 <p>
-I am not going to deal with philosophy or legal systems here. We sort out uncertainties, calibrations, and abstentions from only the technical and natural science aspects of EEG source imaging, EEG classification, language decoding, and closed-loop BCI.
+ここでは哲学や法制度について扱うつもりはありません。私たちは、EEGソースイメージング、EEG分類、言語解読、および閉ループBCIの技術的および自然科学的側面のみから、不確実性、校正、および棄権を整理します。
 </p>
 
-<strong>2026-03 Weaknesses revealed in re-audit</strong>
+<strong>2026-03 再監査で明らかになった弱点</strong>
 <p>
-The previous version was useful as a support page for teaching <strong>confidence ≠ calibration</strong>, but it had not yet become a <strong>reusable submission specification</strong> like the Observability Budget or Temporal Validity Card. Looking at the primary literature, it is dangerous to directly extrapolate within-session calibration to cross-day / cross-subject / temporal shift, and if you touch the threshold without separating fit / calibration / test, the evidence gate itself will collapse. In addition, the earlier page still let language-facing outputs sound too generic: a retrieval score from a fixed bank, a top-k score at known word onsets, and a prompt-conditioned LLM output were still too easy to misread as if they all expressed the same kind of uncertainty. Therefore, on this page, split, slice, candidate scaffold, coverage-risk, and fallback policy are fixed together as <strong>Calibration &amp; Abstention Card</strong>, and language-facing outputs are explicitly stacked with the <a href="https://mind-upload.com/verification.html#neural-contribution-card">Neural Contribution Card</a>.
+以前のバージョンは、<strong>confidence≠calibration</strong>を教えるためのサポートページとして役立ちましたが、まだObservability BudgetやTemporal Validity Cardのような<strong>再利用可能な提出仕様</strong>にはなっていませんでした。一次文献を見ると、セッション内キャリブレーションを日を越える/被験者を越える/時間的シフトに直接外挿するのは危険であり、フィット/キャリブレーション/テストを分離せずに閾値に触れてしまうと、エビデンスゲート自体が崩壊してしまいます。さらに、前のページでは、依然として言語対応の出力が一般的すぎるように聞こえていました。固定バンクからの検索スコア、既知の単語の先頭での上位 k スコア、およびプロンプト条件付き LLM 出力は、依然として、あたかもすべて同じ種類の不確実性を表現しているかのように誤読されやすかったのです。したがって、このページでは、スプリット、スライス、候補スキャフォールド、カバレッジ リスク、およびフォールバック ポリシーがまとめて <strong>Calibration &amp; として固定されています。 Abstention Card</strong>、および言語対応の出力は、<a href="https://mind-upload.com/verification.html#neural-contribution-card">Neural Contribution Card</a> と明示的にスタックされます。
 </p>
 
-<strong>2026-03-31 correction: source-imaging uncertainty is not one generic width</strong>
+<strong>2026-03-31 修正: ソース画像の不確実性は 1 つの一般的な幅ではない</strong>
 <p>
-This page still lagged behind the site's newer source-imaging rule. It was already correct to say that <strong>point estimates are too weak</strong>, but it still left too much room to read <strong>posterior band</strong>, <strong>solver spread</strong>, <strong>conductivity sensitivity</strong>, and <strong>external-validator distance</strong> as if they were interchangeable uncertainty objects. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a> showed large pipeline-conditioned variability across inverse methods and toolboxes, <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> showed strong conductivity-driven localization and depth error, <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> described posterior support over focal-source configurations, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> derived variance and hypothesis tests for a sparse debiased estimator, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> targeted extended-source location-plus-extent reconstruction with empirical-Bayesian uncertainty quantification. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> then show that external validators themselves answer different error questions. This page now types the uncertainty object before it allows confidence language.
+このページは、サイトの新しいソース イメージング ルールに依然として遅れをとっています。 <strong>point 推定値が弱すぎる </strong> ということはすでに正しかったのですが、<strong> 事後バンド </strong>、<strong> ソルバー スプレッド </strong>、<strong> 導電率感度 </strong>、<strong> 外部検証器距離 </strong> を、あたかも交換可能な不確実性オブジェクトであるかのように読み取るには、まだ余地が多すぎます。現在の一次文献はそのショートカットをサポートしていません。 <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory 他(2017) </a> は、逆メソッドとツールボックス間でパイプライン条件付きの大きな変動性を示しました。<a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024) </a> は、強い導電率による局在化と深さの誤差を示しました。<a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024) </a> は、焦点源構成上の後方サポートについて説明しました。<a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025) </a> は、スパースバイアス推定量の分散検定と仮説検定を導き出しました。<a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025) </a> は、経験的ベイジアン不確実性定量化を使用した、拡張音源の位置と範囲の再構成をターゲットとしました。 <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">ミクランら(2020)</a> および <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> は、外部バリデータ自体がさまざまなエラーの質問に答えることを示します。このページでは、信頼性言語を許可する前に不確実性オブジェクトを入力するようになりました。
 </p>
 
-<h2>Four audit gates to be fixed first</h2>
+<h2>最初に修正される 4 つの監査ゲート</h2>
 <table>
 <thead>
 <tr>
-<th>Audit gate</th>
-<th>What I want at least</th>
-<th>Claim that it stops when there is not enough</th>
+<th>監査ゲート</th>
+<th>最低限欲しいもの</th>
+<th>足りないときは止まると主張</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Gate 1: Isolating the source</strong></td>
-<td>Breakdown of observation noise, preprocessing difference, head geometry, conductivity, subject shift, session drift, and decoder drift. </td>
-<td>It cannot be said that ``the cause of the error is known'' or ``the improvement measures were effective.'' </td>
+<td><strong>ゲート 1: ソースの分離</strong></td>
+<td>観測ノイズ、前処理の差分、ヘッド形状、導電率、被写体シフト、セッションドリフト、デコーダドリフトの内訳。 </td>
+<td>「`the cause of the error is known'' or `」は「改善策が効果があったとは言えない」。
 </tr>
 <tr>
-<td><strong>Gate 2: Proofreading</strong></td>
-<td>Separation of fit/calibration/test, coverage of intervals and sets, ECE/Brier/NLL, named uncertainty object (such as posterior support, debiased interval, extent uncertainty, or cross-pipeline spread), slice-wise calibration audit, and declared output scaffold when the task is language-facing. </td>
-<td>confidence, posterior, or interval width cannot be read as usable probabilities, calibrated coverage, or one generic uncertainty scale. </td>
+<td><strong>ゲート 2: 校正</strong></td>
+<td>フィット/キャリブレーション/テストの分離、間隔とセットのカバレッジ、ECE/Brier/NLL、名前付き不確実性オブジェクト (事後サポート、偏りのない間隔、範囲の不確実性、またはパイプライン間スプレッドなど)、スライスごとのキャリブレーション監査、タスクが言語対応している場合の宣言された出力足場。 </td>
+<td> 信頼性、事後幅、または間隔幅は、使用可能な確率、校正されたカバレッジ、または 1 つの一般的な不確実性スケールとして読み取ることはできません。 </td>
 </tr>
 <tr>
-<td><strong>Gate 3: Abstain</strong></td>
-<td>Reject/abstain conditions when low reliability, exchange of coverage reduction and risk reduction, prediction-set size, false alarm ceiling, branching of remeasurement and reanalysis, and disclosure of candidate bank / prompt dependence where relevant. </td>
-<td>We cannot claim to suppress incorrect answers or operate on the safe side under low reliability conditions. </td>
+<td><strong>ゲート 3: 棄権</strong></td>
+<td>信頼性が低い場合の条件の拒否/回避、カバレッジ削減とリスク削減の交換、予測セットのサイズ、誤った警報の上限、再測定と再分析の分岐、および関連する場合、候補銀行/迅速な依存関係の開示。 </td>
+<td>不正解を抑制したり、信頼性の低い条件下で安全側で動作したりすることはできません。 </td>
 </tr>
 <tr>
-<td><strong>Gate 4: online load</strong></td>
-<td>Distinction between recalibration frequency, recalibration trigger, dropout, recovery time, hold-last-output / silence / freeze / hard stop. </td>
-<td>Operation stability in a closed loop cannot be expressed only in terms of average accuracy. </td>
+<td><strong>ゲート 4: オンライン ロード</strong></td>
+<td>再キャリブレーション周波数、再キャリブレーショントリガー、ドロップアウト、回復時間、最終出力ホールド/サイレンス/フリーズ/ハードストップの区別。 </td>
+<td>閉ループにおける動作の安定性は平均精度だけでは表現できません。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Do not mix confidence, intervals, proofreading, and abstention</h2>
+<h2>信頼性、間隔、校正、棄権を混同しないでください</h2>
 <table>
 <thead>
 <tr>
-<th>Concept</th>
-<th>What do we know</th>
-<th>What we still don't know</th>
+<th>コンセプト</th>
+<th>私たちが知っていること</th>
+<th>まだ知らないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Point Presumption</strong></td>
-<td>You can see the current representative value. </td>
-<td>We don't know how unstable it is or whether it will collapse if conditions are changed. </td>
+<td><strong>点推定</strong></td>
+<td>現在の代表値がわかります。 </td>
+<td>どのくらい不安定なのか、条件を変えると崩れてしまうのかわかりません。 </td>
 </tr>
 <tr>
-<td><strong>Interval / posterior band</strong></td>
-<td>You can see how much width there is around the estimated value. </td>
-<td>It is necessary to separately check whether the width actually has a reasonable coverage and where it comes from. </td>
+<td><strong>インターバル/後部バンド</strong></td>
+<td>推定値の周囲にどのくらいの幅があるかがわかります。 </td>
+<td>実際に適度なカバー力がある幅なのか、どこから出ているのかを別途確認する必要があります。 </td>
 </tr>
 <tr>
-<td><strong>Prediction set</strong></td>
-<td>You can see how many candidates can be narrowed down under these conditions. </td>
-<td>It is necessary to separately check under what assumptions the set guarantees coverage and how much the set size has increased. </td>
+<td><strong>予測セット</strong></td>
+<td>この条件でどれだけ候補が絞り込めるかがわかります。 </td>
+<td>どのような前提でセットがカバー範囲を保証しているのか、セットサイズがどの程度増加しているのかを別途確認する必要があります。 </td>
 </tr>
 <tr>
-<td><strong>confidence</strong></td>
-<td>You can see the ordering of scores and confidence inside the model. </td>
-<td>I don't know if that number matches the actual probability of hitting the mark. </td>
+<td><strong>自信</strong></td>
+<td>モデル内のスコアと信頼度の順序を確認できます。 </td>
+<td>その数字が実際の的中確率と一致するかどうかはわかりません。 </td>
 </tr>
 <tr>
-<td><strong>Calibration</strong></td>
-<td>When you get 0.8, you can see whether it really hits about 80% or whether the interval is covered as expected. </td>
-<td>Even if proofreading is good, lack of expressiveness and lack of OOD generalization remain separate issues. </td>
+<td><strong>校正</strong></td>
+<td>0.8が出ると本当に8割くらい当たるのか、期待通りの区間をカバーしているのかが分かります。 </td>
+<td>たとえ校正が優れていたとしても、表現力の欠如と OOD の一般化の欠如は別個の問題として残ります。 </td>
 </tr>
 <tr>
-<td><strong>Abstain</strong></td>
-<td>Output can be stopped under low reliability conditions and exchange conditions between coverage and risk can be specified. </td>
-<td>It is necessary to determine whether the threshold setting is appropriate and whether there is a remeasurement/recalibration flow after abstention. </td>
+<td><strong>棄権</strong></td>
+<td>信頼性の低い条件で出力を停止したり、カバレッジとリスクの交換条件を指定したりできます。 </td>
+<td>閾値設定が適切かどうか、棄権後の再測定・再校正フローの有無を判断する必要があります。 </td>
 </tr>
 </tbody>
 </table>
 
-<strong>Replacement on this site</strong>
+<strong>このサイトの交換品</strong>
 <p>
-Softmax, posterior probability, decoder class score, and prediction set are not considered as <strong>calibrated probabilities</strong> or <strong>safe sets</strong> as they are. Calibration error, coverage-risk, interval/set coverage, and separation of fit/calibration/test must be presented together before they can be considered reliable for actual operation.
+ソフトマックス、事後確率、デコーダクラススコア、予測セットは、そのままでは<strong>校正確率</strong>または<strong>安全セット</strong>とはみなされません。キャリブレーションエラー、カバレッジリスク、インターバル/セットカバレッジ、およびフィット/キャリブレーション/テストの分離は、実際の動作に対して信頼できるとみなされる前に、一緒に提示する必要があります。
 </p>
 
-<strong>Additional replacement for language-facing outputs</strong>
+<strong>言語対応出力の追加代替品</strong>
 <p>
-If the output is a word, sentence, or speech candidate, the score must also disclose whether it was conditioned on a <strong>fixed retrieval bank</strong>, a <strong>known-onset protocol</strong>, or a <strong>prompt / language-model scaffold</strong>. On this site, that score is not read as open-world uncertainty until the scaffold itself has been fixed and audited.
+出力が単語、文、または音声候補の場合、スコアは、それが <strong> 固定検索バンク </strong>、<strong> 既知開始プロトコル </strong>、または <strong> プロンプト / 言語モデル スキャフォールド </strong> で条件付けされたかどうかも明らかにする必要があります。このサイトでは、足場自体が修正され監査されるまで、そのスコアはオープンワールドの不確実性として解釈されません。
 </p>
 
-<h2>Calibration is managed separately for fit / calibration / test</h2>
+<h2>キャリブレーションはフィット/キャリブレーション/テスト用に個別に管理されます</h2>
 <table>
 <thead>
 <tr>
-<th>Stage</th>
-<th>Put it here</th>
-<th>What breaks when you mix</th>
+<th>ステージ</th>
+<th>ここに置きます</th>
+<th>混ぜると壊れるもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>fit</strong></td>
-<td>Learn the model parameter, feature extractor, and decoder body. </td>
-<td>If you mix this stage with calibration, you will lose track of the contribution of model improvement and threshold adjustment. </td>
+<td><strong>フィット</strong></td>
+<td>モデルパラメータ、特徴抽出器、デコーダ本体について学習します。 </td>
+<td>この段階とキャリブレーションを組み合わせると、モデルの改善としきい値の調整の寄与がわからなくなります。 </td>
 </tr>
 <tr>
-<td><strong>calibration</strong></td>
-<td>Adjust temperature scaling, threshold tuning, conformal score, and prediction-set size to the frozen model. </td>
-<td>If you move the threshold while looking at the test, you cannot claim calibrated probabilities or coverage. </td>
+<td><strong>校正</strong></td>
+<td>温度スケーリング、しきい値調整、コンフォーマルスコア、および予測セットサイズをフリーズモデルに調整します。 </td>
+<td>テストを見ながらしきい値を移動すると、調整された確率やカバレッジを主張できなくなります。 </td>
 </tr>
 <tr>
-<td><strong>test</strong></td>
-<td>Fix final ECE/Brier/NLL, empirical coverage, false alarm rate, coverage-risk. </td>
-<td>When retuning with test, held-out evidence and local tuning are indistinguishable. </td>
+<td><strong>テスト</strong></td>
+<td>最終的な ECE/Brier/NLL、経験的カバレッジ、誤報率、カバレッジ リスクを修正します。 </td>
+<td>テストで再チューニングすると、保持された証拠とローカルチューニングは区別できません。 </td>
 </tr>
 <tr>
-<td><strong>deployment / temporal audit</strong></td>
-<td>Fix the handling of cross-day, cross-subject, temporal shift, recalibration trigger, and human intervention. </td>
-<td>The same-day calibration is mistakenly read as deployable threshold. </td>
+<td><strong>展開 / 一時的な監査</strong></td>
+<td>日をまたいで、被験者を超えて、時間的シフト、再調整トリガー、人間の介入の処理を修正します。 </td>
+<td>同日校正が誤って展開可能なしきい値として読み取られてしまいます。 </td>
 </tr>
 </tbody>
 </table>
 <p>
-<a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">Lei et al. (2018)</a> specified the calibration split necessary for split conformal, and <a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">Chernozhukov et al. (2021)</a> extended the distributional conformal route. Therefore, on this site, we do not refer to proofreading as ``setting a threshold value after the fact,'' but treat it as a submission that requires an independent split.
+<a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">Leiら。 (2018)</a> はスプリットコンフォーマルに必要なキャリブレーションスプリットを指定し、<a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">Chernozhukov et al. (2021)</a>は流通コンフォーマルルートを拡張しました。したがって、当サイトでは校正を「事後的に閾値を設ける」とは呼ばず、独立分割が必要な投稿として扱います。
 </p>
 
-<h2>The same calibration has different meanings if the evaluation family is different</h2>
+<h2>同じキャリブレーションでも評価ファミリが異なれば意味も異なります</h2>
 <table>
 <thead>
 <tr>
-<th>evaluation family</th>
-<th>Minimum desired slice</th>
-<th>Stop misreading here</th>
+<th>評価ファミリー</th>
+<th>必要な最小スライス</th>
+<th>ここを間違えないでください</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>within-session</strong></td>
-<td>Calibration per trial / block / state / artifact burden. </td>
-<td>The same-day confidence should not be translated into another day or person. </td>
+<td><strong>セッション内</strong></td>
+<td>トライアル/ブロック/状態/アーティファクト負荷ごとのキャリブレーション。 </td>
+<td>同じ日の信頼を別の日や人物に置き換えるべきではありません。 </td>
 </tr>
 <tr>
-<td><strong>cross-session</strong></td>
-<td>Calibration per recording day, electrode replacement, state annotation. </td>
-<td>Do not write stable decoder while leaving the day shift within the same subject as hidden. </td>
+<td><strong>クロスセッション</strong></td>
+<td>記録日ごとの校正、電極交換、状態の注釈。 </td>
+<td>同じサブジェクト内の日勤を非表示のままにしたまま、安定したデコーダを書き込まないでください。 </td>
 </tr>
 <tr>
-<td><strong>cross-subject / cross-site / cross-device</strong></td>
-<td>Calibration by cohort, site, device, reference scheme, and population subgroup. </td>
-<td>Confidence provided by mixed validation is not misinterpreted as patient-independent reliability. </td>
+<td><strong>クロスサブジェクト / クロスサイト / クロスデバイス</strong></td>
+<td>コホート、施設、デバイス、参照スキーム、および母集団サブグループによるキャリブレーション。 </td>
+<td>混合検証によって提供される信頼性は、患者に依存しない信頼性として誤解されません。 </td>
 </tr>
 <tr>
-<td><strong>temporal / longitudinal / OOD</strong></td>
-<td>Calibration per time-since-fit, time-since-calibration, novel task, drug/vigilance state, and covariate shift. </td>
-<td>We do not increase the short-term success of a fixed model to long-term deployability or OOD safety. </td>
+<td><strong>側頭方向 / 縦方向 / OOD</strong></td>
+<td>Cフィット以降の時間、キャリブレーション以降の時間、新規タスク、薬物/警戒状態、および共変量シフトごとのキャリブレーション。 </td>
+<td>固定モデルの短期的な成功を長期的な導入可能性や OOD の安全性に高めることはありません。 </td>
 </tr>
 </tbody>
 </table>
 <p>
-<a href="https://www.mdpi.com/2227-7390/11/7/1650" target="_blank">Shafiezadeh et al. (2023)</a> showed that the split design itself greatly influenced the results in patient-independent seizure prediction, and <a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">Ovadia et al. (2019)</a> showed that predictive uncertainty can widely collapse under dataset shift. Furthermore, <a href="https://proceedings.mlr.press/v235/han24b.html" target="_blank">Han et al. (2024)</a> showed that in temporal distribution shift, assessment and selection themselves need to be aligned with the time axis. Therefore, on this site, we do not read <strong>global 1-digit ECE</strong> as final proof of reliability.
+<a href="https://www.mdpi.com/2227-7390/11/7/1650" target="_blank">シャフィエザデ他(2023) </a> は、分割設計自体が患者に依存しない発作予測の結果に大きく影響することを示しました。また、<a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">Ovadia et al. (2019)</a> は、データセットのシフトにより予測の不確実性が広範囲に崩壊する可能性があることを示しました。さらに、ＰＨ６２ＸＨａｎら。 (2024)</a> は、時間的分布のシフトでは、評価と選択自体を時間軸に合わせる必要があることを示しました。したがって、このサイトでは、<strong>global 1 桁 ECE</strong> を信頼性の最終的な証拠として読みません。
 </p>
 
-<h2>Probability, interval, prediction set, and abstention are separate outputs</h2>
+<h2>確率、間隔、予測セット、および棄権は別個の出力</h2>
 <table>
 <thead>
 <tr>
-<th>Output type</th>
-<th>Minimum guarantee you want</th>
-<th>Things that should be brought together</th>
+<th>出力タイプ</th>
+<th>ご希望の最低保証</th>
+<th>まとめるべきもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>scalar probability / confidence</strong></td>
-<td>ECE, Brier, NLL, reliability diagram, and slice-wise calibration.</td>
-<td>Fit/calibration/test separation, evaluation family, and the claim being stopped.</td>
+<td><strong>スカラー確率/信頼度</strong></td>
+<td>ECE、Brier、NLL、信頼性図、スライスごとのキャリブレーション。</td>
+<td>フィット/校正/テストの分離、評価ファミリー、クレームは停止中です。</td>
 </tr>
 <tr>
-<td><strong>interval / posterior band</strong></td>
-<td>Alignment with empirical coverage, interval width, sensitivity analysis, and external validation. </td>
-<td>Whether the coverage is marginal or local, increase or decrease the width, and for which variable. </td>
+<td><strong>インターバル/後部バンド</strong></td>
+<td>経験的カバレッジ、間隔幅、感度分析、外部検証との調整。 </td>
+<td>カバレッジが周辺か局所か、幅を増減するか、どの変数に対応するか。 </td>
 </tr>
 <tr>
-<td><strong>prediction set / conformal output</strong></td>
-<td>Set coverage, average set size, the validity assumption, and the exchangeability / time-order rule.</td>
-<td>Calibration split, set-size cost, marginal vs conditional validity, arguments that stop at OOD. </td>
+<td><strong>予測セット/コンフォーマル出力</strong></td>
+<td>セットカバレッジ、平均セットサイズ、妥当性の仮定、および交換可能性/時間順序ルール。</td>
+<td>キャリブレーション分割、セットサイズコスト、限界妥当性と条件妥当性、OOD で停止する引数。 </td>
 </tr>
 <tr>
-<td><strong>abstention / selective prediction</strong></td>
-<td>Coverage-risk curve, false-alarm ceiling, fallback path, and human-review trigger.</td>
-<td>Threshold, coverage drop, silence/freeze/stop distinction, recovery rule. </td>
+<td><strong>棄権/選択的予測</strong></td>
+<td>カバレッジリスク曲線、誤警報上限、フォールバックパス、人間によるレビュートリガー。</td>
+<td>しきい値、カバレッジドロップ、沈黙/フリーズ/停止の区別、回復ルール。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Candidate-bank and prompt-conditioned confidence are not open-world uncertainty</h2>
+<h2>候補銀行と即時条件付きの信頼はオープンワールドの不確実性ではない</h2>
 <table>
 <thead>
 <tr>
-<th>Route type</th>
-<th>What the reported score is conditional on</th>
-<th>What it must not be overread as</th>
+<th>ルートタイプ</th>
+<th>報告されるスコアの条件は</th>です
+<th>深読みしてはいけないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Fixed-bank retrieval</strong></td>
-<td>Bank contents, segment definition, retrieval metric, and top-k cutoff.</td>
-<td>Uncertainty over unrestricted language or free-form generation.</td>
+<td><strong>固定バンク検索</strong></td>
+<td>バンクの内容、セグメント定義、取得メトリック、および上位 K カットオフ。</td>
+<td>無制限の言語または自由形式の生成に関する不確実性。</td>
 </tr>
 <tr>
-<td><strong>Known-onset word decoding</strong></td>
-<td>Declared word boundaries, retrieval-set size, averaging rule, and vocabulary family.</td>
-<td>Confidence for free-running segmentation plus decoding in natural conversation.</td>
+<td><strong>既知の開始単語のデコード</strong></td>
+<td>宣言された単語の境界、検索セットのサイズ、平均化ルール、および語彙ファミリー。</td>
+<td>自然な会話におけるフリーランニング セグメンテーションとデコードの信頼性。</td>
 </tr>
 <tr>
-<td><strong>Prompt-conditioned generation</strong></td>
-<td>Prompt tokens, LLM prior, vocabulary, and beam / decoding strategy.</td>
-<td>Brain-only generative likelihood over the full space of possible continuations.</td>
+<td><strong>プロンプト条件付き生成</strong></td>
+<td>プロンプト トークン、LLM 事前、語彙、およびビーム/デコード戦略。</td>
+<td>可能な継続の全空間にわたる脳のみの生成尤度。</td>
 </tr>
 <tr>
-<td><strong>Autoregressive semantic reconstruction</strong></td>
-<td>Subject-specific fit, previous decoded context, and the evaluation candidate regime.</td>
-<td>Subject-independent or prior-free semantic access.</td>
-</tr>
-</tbody>
-</table>
-<p>
-<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> explicitly separated encoding-model and language-model contributions by ranking the actual word against distractors, while also showing that the decoder relies on both autoregressive context and fMRI. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">Défossez et al. (2023)</a> reported segment-level top-k retrieval for 3 s speech segments rather than open-vocabulary decoding. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> explicitly framed prior M/EEG retrieval work as requiring access to the ground-truth speech segments at test time, and their own word-level results still report top-k accuracy under a fixed retrieval set with known word onsets. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> concatenated brain and text embeddings into the LLM prompt itself. Therefore, on this site, language-facing confidence is read only after the scaffold is disclosed through the <a href="https://mind-upload.com/verification.html#neural-contribution-card">Neural Contribution Card</a>, and any cross-day or deployment claim must still pass the <a href="https://mind-upload.com/verification.html#temporal-validity-card">Temporal Validity Card</a>.
-</p>
-
-<h2>Uncertainty comes in four layers</h2>
-<table>
-<thead>
-<tr>
-<th>Layer</th>
-<th>Representative examples</th>
-<th>Mainly effective pages/issues</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Observation noise</strong></td>
-<td>Electrode contact, synchronization, myoelectricity/blinks, defects, stimulation artifacts. </td>
-<td>Introduction to EEG, event sync, closed-loop implementation. </td>
-</tr>
-<tr>
-<td><strong>Model/geometry uncertainties</strong></td>
-<td>Head model, cranial conductivity, source depth, solver dependence. </td>
-<td>Source imaging, multimodal integration, and observation-to-estimation.</td>
-</tr>
-<tr>
-<td><strong>Distribution shift</strong></td>
-<td>Subject differences, different days, pharmacological conditions, anesthesia, task changes, OOD conditions. </td>
-<td>Decode, forecasting, and counterfactual / perturbation.</td>
-</tr>
-<tr>
-<td><strong>Operation Drift</strong></td>
-<td>decoder drift, electrode reseating, learning, fatigue, recalibration loads. </td>
-<td>Closed-loop BCI, state-trait-drift, and longitudinal evaluation.</td>
+<td><strong>自己回帰セマンティック再構築</strong></td>
+<td>被験者固有の適合、以前にデコードされたコンテキスト、および評価候補レジーム。</td>
+<td>主題に依存しない、または事前に自由なセマンティック アクセス。</td>
 </tr>
 </tbody>
 </table>
 <p>
-The important thing is not to talk about uncertainty in one box. Source imaging width strongly depends on geometry and conductivity, EEG classification overconfidence strongly depends on calibration error and subject shift, and closed-loop failure strongly depends on drift and recalibration load. <strong>Even though the word "uncertainty" is the same, accounting methods differ depending on the issue</strong>.
+<a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tangら(2023) </a> は、実際の単語を注意をそらすものに対してランク付けすることによって、符号化モデルと言語モデルの寄与を明示的に分離し、デコーダが自己回帰コンテキストと fMRI の両方に依存していることも示しました。 <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">デフォセズ 他(2023) </a> は、オープン語彙デコードではなく、3 秒の音声セグメントに対するセグメントレベルの top-k 検索を報告しました。 <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025) </a> は、以前の M/EEG 検索作業を、テスト時にグラウンドトゥルースの音声セグメントへのアクセスを必要とするものとして明示的に構成し、独自の単語レベルの結果は、既知の単語のオンセットを含む固定検索セットの下で依然としてトップ k の精度を報告しています。 <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Yeら。 (2025)</a> は、脳とテキストの埋め込みを LLM プロンプト自体に連結しました。したがって、このサイトでは、言語に面した信頼性は、<a href="https://mind-upload.com/verification.html#neural-contribution-card">Neural Contribution Card</a> を通じて足場が開示された後にのみ読み取られ、クロスデイまたは展開の主張は <a href="https://mind-upload.com/verification.html#temporal-validity-card">Temporal Validity Card</a> を通過する必要があります。
 </p>
 
-<h2>Change the indicators to be published for each issue</h2>
+<h2>不確実性は 4 つの層からなる</h2>
 <table>
 <thead>
 <tr>
-<th>Task</th>
-<th>Minimum desired indicators</th>
-<th>Why point estimation alone is dangerous</th>
+<th>レイヤー</th>
+<th>代表例</th>
+<th>主に効果的なページ/号</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG source imaging</strong></td>
-<td>Inverse family / target object, uncertainty object, forward-model uncertainty route, cross-family comparison rule, named validation board / operating regime, and abstention boundary.</td>
-<td>The same scalp data can support different focal, sparse, or extent-aware uncertainty objects, so one width is not a generic confidence scale.</td>
+<td><strong>観測ノイズ</strong></td>
+<td>電極接触、同期、筋電/瞬き、欠陥、刺激アーティファクト。 </td>
+<td>EEG、イベント同期、閉ループ実装の紹介。 </td>
 </tr>
 <tr>
-<td><strong>Offline EEG classification</strong></td>
-<td>ECE, Brier score, NLL, fit/calibration/test separation, out-of-subject evaluation, coverage-risk curve. </td>
-<td>Even if the accuracy is high, the confidence created by mixed validation is dangerous during operation. </td>
+<td><strong>モデル/形状の不確実性</strong></td>
+<td>Head モデル、頭蓋伝導率、ソース深さ、ソルバー依存性。 </td>
+<td>ソースイメージング、マルチモーダル統合、観察から推定まで。</td>
 </tr>
 <tr>
-<td><strong>Speech / brain-to-text decode</strong></td>
-<td>Neural Contribution Card fields, cue regime, output family, candidate bank or retrieval-set size, prompt / LM scaffold, onset regime or caption scaffold, no-brain / no-LM / shuffle controls, calibration / abstention slices, and Temporal Validity Card when the claim leaves same-session.</td>
-<td>Fluent output or top-k success can be carried by the scaffold more than by the neural contribution if the task constraints are left implicit.</td>
+<td><strong>分配シフト</strong></td>
+<td>被験者の違い、異なる日、薬理学的条件、麻酔、タスクの変更、OOD 条件。 </td>
+<td>デコード、予測、反事実/摂動。</td>
 </tr>
 <tr>
-<td><strong>Rare event prediction</strong></td>
-<td>False alarm rate, sensitivity, calibration curve, risk-controlling threshold, and coverage for each alarm horizon.</td>
-<td>In low-frequency tasks such as seizure prediction, even a small amount of overconfidence can greatly impair practicality. </td>
+<td><strong>オペレーションドリフト</strong></td>
+<td>デコーダのドリフト、電極の再装着、学習、疲労、再校正負荷。 </td>
+<td>閉ループBCI、状態特性ドリフト、および長期的評価。</td>
+</tr>
+</tbody>
+</table>
+<p>
+重要なことは、不確実性について一つの枠で語らないことです。ソースイメージングの幅は形状と導電率に大きく依存し、EEG分類の過信はキャリブレーションエラーと被験者のシフトに大きく依存し、閉ループ障害はドリフトと再キャリブレーション負荷に大きく依存します。 <strong>同じ「不確実性」という言葉でも、問題によって会計処理の方法が異なります</strong>。
+</p>
+
+<h2>銘柄ごとに公開する指標を変更</h2>
+<table>
+<thead>
+<tr>
+<th>Tタスク</th>
+<th>最低限必要なインジケーター</th>
+<th>ポイント推定のみが危険な理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG ソースイメージング</strong></td>
+<td>逆ファミリ/ターゲット オブジェクト、不確実性オブジェクト、順モデル不確実性ルート、ファミリ間比較ルール、名前付き検証ボード/動作レジーム、および棄権境界。</td>
+<td>同じ頭皮データは、異なる焦点、スパース、または範囲を認識した不確実性オブジェクトをサポートできるため、1 つの幅は一般的な信頼度スケールではありません。</td>
 </tr>
 <tr>
-<td><strong>online / closed-loop BCI</strong></td>
-<td>abstention rate, dropout, recalibration burden, recovery time, time-since-calibration, number of silence / freeze / hard stops. </td>
-<td>Average accuracy alone hides breakdowns in continuous operation and time when intervention is unavailable. </td>
+<td><strong>オフラインEEG分類</strong></td>
+<td>ECE、ブライアースコア、NLL、フィット/キャリブレーション/テスト分離、被験者外評価、カバレッジリスク曲線。 </td>
+<td>たとえ精度が高くても、混合検証による信頼性は運用上危険です。 </td>
+</tr>
+<tr>
+<td><strong>S音声 / 脳からテキストへのデコード</strong></td>
+<td>ニューラル貢献カードフィールド、キューレジーム、出力ファミリー、候補バンクまたは検索セットサイズ、プロンプト/LMスキャフォールド、オンセットレジームまたはキャプションスキャフォールド、脳なし/LMなし/シャッフルコントロール、キャリブレーション/棄権スライス、およびクレームが同じセッションを離れるときの時間的有効性カード。</td>
+<td>Fluent 出力または上位 k の成功は、タスクの制約が暗黙的なままにされている場合、ニューラルの寄与よりもスキャフォールドによって伝達される可能性があります。</td>
+</tr>
+<tr>
+<td><strong>稀なイベントの予測</strong></td>
+<td>誤警報率、感度、校正曲線、リスク管理閾値、および各警報範囲のカバレッジ。</td>
+<td>発作予測などの低頻度のタスクでは、わずかな過信でも実用性を大きく損なう可能性があります。 </td>
+</tr>
+<tr>
+<td><strong>オンライン/閉ループ BCI</strong></td>
+<td>棄権率、ドロップアウト、再校正負荷、回復時間、校正後の時間、沈黙/フリーズ/ハードストップの回数。 </td>
+<td>平均精度だけでは、連続運転や介入が利用できない時間の故障は隠れます。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>What the primary literature actually shows</h2>
+<h2>一次文献が実際に示していること</h2>
 
-<h3>1. For source imaging, width without a typed uncertainty object is still too much reading</h3>
+<h3>1。ソースイメージングの場合、型付き不確実性オブジェクトのない幅は依然として読み取り値が多すぎます</h3>
 <p>
-The current source-imaging literature no longer supports the shortcut that any reported <strong>width</strong> or <strong>posterior</strong> can be treated as one common confidence object. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a> showed substantial cross-pipeline variability across forward models, inverse methods, and software implementations. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> showed that tissue-conductivity uncertainty can drive localization and depth errors, especially for quasi-tangential sources on sulcal walls. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> describe a Bayesian focal-source route that returns posterior support over alternative source configurations. <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> derive variance and hypothesis testing for a sparse debiased estimator, while <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target the locations and spatial extents of extended sources with empirical-Bayesian uncertainty quantification. These are not one interchangeable width. In parallel, <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> show that external validators themselves answer different error questions. Therefore, on this site, source-imaging uncertainty is not accepted unless the <strong>inverse family</strong>, <strong>target object</strong>, <strong>uncertainty object</strong>, <strong>forward-model uncertainty route</strong>, and <strong>named validation board</strong> are all declared.
+現在の情報源画像化文献は、報告された <strong>width</strong> または <strong>posterior</strong> を 1 つの共通の信頼オブジェクトとして扱うことができるというショートカットをサポートしていません。 <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory 他(2017) </a> は、フォワード モデル、インバース メソッド、およびソフトウェア実装間でパイプライン間の大幅な変動性を示しました。 <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerkら(2024) </a> は、組織の伝導性の不確実性が、特に溝壁上の準接線源の場合、局在化と深さの誤差を引き起こす可能性があることを示しました。 <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> は、代替ソース構成を介して事後サポートを返すベイジアン焦点ソース ルートについて説明しています。 <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tongら(2025) </a> は、疎な偏りのない推定量の分散と仮説検定を導き出します。一方、<a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al。 (2025) </a> は、経験的ベイジアン不確実性定量化を使用して、拡張ソースの位置と空間範囲をターゲットにします。これらは交換可能な 1 つの幅ではありません。並行して、<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> および <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> は、外部バリデータ自体がさまざまなエラーの質問に答えることを示しています。したがって、このサイトでは、<strong>inverse family</strong>、<strong>target object</strong>、<strong>uncertainty object</strong>、<strong>forward-model不確実性ルート</strong>、および<strong>named validation board</strong>がすべて宣言されていない限り、ソースイメージングの不確実性は受け入れられません。
 </p>
 
 <table>
 <thead>
 <tr>
-<th>Uncertainty object</th>
-<th>Representative literature</th>
-<th>What it actually describes</th>
-<th>What it must not be treated as</th>
+<th>不確実性オブジェクト</th>
+<th>代表文献</th>
+<th>実際に説明している内容</th>
+<th></th>として扱ってはいけないもの
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Cross-pipeline spread</strong></td>
-<td><a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a></td>
-<td>Variability across forward models, inverse methods, templates, and software implementations on the same data.</td>
-<td>A calibrated posterior or a confidence interval for one fixed inverse family.</td>
+<td><strong>パイプライン間スプレッド</strong></td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory 他(2017)</a></td>
+<td>同じデータに対するフォワード モデル、インバース メソッド、テンプレート、およびソフトウェア実装間のばらつき。</td>
+<td>A 1 つの固定逆ファミリの校正済み事後または信頼区間。</td>
 </tr>
 <tr>
-<td><strong>Forward-model / conductivity sensitivity</strong></td>
+<td><strong>前進型/導電率感度</strong></td>
 <td><a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a>; <a href="https://doi.org/10.1016/j.neuroimage.2018.11.058" target="_blank">Rimpil&auml;inen et al. (2019)</a></td>
-<td>How geometry and tissue-conductivity uncertainty move localization, depth, or magnitude.</td>
-<td>Solver-internal uncertainty about source support when upstream physics is treated as fixed.</td>
+<td>幾何学形状と組織伝導性の不確実性が局在化、深さ、または大きさをどのように動かすか。</td>
+<td>ソルバー - 上流の物理現象が固定として扱われる場合のソース サポートに関する内部の不確実性。</td>
 </tr>
 <tr>
-<td><strong>Posterior support over focal-source configurations</strong></td>
+<td><strong>焦点ソース構成上の後方サポート</strong></td>
 <td><a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a></td>
-<td>Probability mass over candidate focal-source number and configuration under a Bayesian focal-source model.</td>
-<td>A debiased interval for sparse amplitudes or an extent-aware uncertainty map for spatially extended sources.</td>
+<td>ベイジアン震源モデルに基づく候補震源数と構成にわたる確率質量。</td>
+<td>A まばらな振幅の偏りを軽減した間隔、または空間的に拡張されたソースの範囲を認識した不確実性マップ。</td>
 </tr>
 <tr>
-<td><strong>Debiased interval / test uncertainty for sparse activity</strong></td>
+<td><strong>偏りのない間隔/まばらなアクティビティのテストの不確実性</strong></td>
 <td><a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a></td>
-<td>Variance-aware inference for sparse source amplitude, orientation, and depth after debiasing regularized estimates.</td>
-<td>A posterior over alternative source configurations or an uncertainty map for arbitrary spatial extent.</td>
+<td>正則化推定値の偏りを解消した後の、まばらなソースの振幅、方向、および深さの分散を意識した推論。</td>
+<td>A 代替光源構成または任意の空間範囲の不確実性マップよりも後方。</td>
 </tr>
 <tr>
-<td><strong>Extent-aware empirical-Bayesian uncertainty</strong></td>
+<td><strong>範囲を意識した経験ベイズ不確実性</strong></td>
 <td><a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a></td>
-<td>Uncertainty tied to the locations and spatial extents of extended sources.</td>
-<td>Peak-only confidence for focal solutions or one generic ``better uncertainty'' label.</td>
+<td>拡張ソースの位置と空間範囲に関連する不確実性。</td>
+<td>焦点ソリューションに対するピークのみの信頼性、または 1 つの一般的な「より良い不確実性」ラベル。</td>
 </tr>
 </tbody>
 </table>
 
-<strong>External validation is also not one generic coverage claim</strong>
+<strong>外部検証も 1 つの一般的な補償範囲の主張ではありません</strong>
 <p>
-<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> provide a precisely known stimulation-site board for focal localization under simultaneous intracerebral stimulation and HD-EEG, whereas <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> use simultaneous HD-EEG and SEEG in drug-resistant epilepsy and show regime-dependent accuracy tied to source depth and spike power. On this site, those do not collapse into one generic ``external validator'' field. A named board is required because different boards answer different error questions.
+<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">ミクランら(2020)</a> は、脳内刺激と HD-EEG を同時に行うと、焦点の位置を特定するための正確に既知の刺激部位ボードを提供します。 (2025)</a> は薬剤耐性てんかんに対して HD-EEG と SEEG を同時に使用し、発生源の深さとスパイク出力に関連付けられた体制依存の精度を示します。このサイトでは、これらは 1 つの一般的な「外部バリデーター」フィールドに集約されません。ボードごとに異なるエラー質問に答えるため、名前付きボードが必要です。
 </p>
 
-<h3>2. In EEG classification, calibration without fixing split and shift is reading too much</h3>
+<h3>2。 EEG分類において、スプリットとシフトを修正しないキャリブレーションは読みすぎです</h3>
 <p>
-<a href="https://www.mdpi.com/2227-7390/11/7/1650" target="_blank">Shafiezadeh et al. (2023)</a> showed that random cross-validation and leave-one-patient-out give different estimates in patient-independent seizure prediction, and <a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">Ovadia et al. (2019)</a> showed that predictive uncertainty methods can be widely degraded under dataset shifts. Furthermore, <a href="https://proceedings.mlr.press/v235/han24b.html" target="_blank">Han et al. (2024)</a> showed that model assessment and selection should be designed according to the temporal order with temporal distribution shift. Duan et al.'s UNCER, Hu et al., and Shafiezadeh et al. (2024) showed that calibration itself is important, but the inference that can be drawn from this is that even if the ECE is the same, different split and shift families are different evidence. Therefore, this site does not equate within-session calibration with cross-day / cross-subject reliability.
+<a href="https://www.mdpi.com/2227-7390/11/7/1650" target="_blank">Shafiezadeh et al. (2023) </a> は、ランダム交差検証と 1 人の患者を除外すると、患者に依存しない発作予測において異なる推定値が得られることを示しました。 (2019) </a> は、予測不確実性手法がデータセットのシフトの下で大幅に低下する可能性があることを示しました。さらに、ＰＨ７ＸＨａｎら。 (2024)</a> は、モデルの評価と選択が、時間的分布のシフトを伴う時間的順序に従って設計される必要があることを示しました。 Duan らの UNCER、Hu ら、Shafiezadeh ら。 (2024) は、キャリブレーション自体が重要であることを示しましたが、ここから導き出される推論は、たとえ ECE が同じであっても、異なるスプリットおよびシフト ファミリは異なる証拠であるということです。したがって、このサイトでは、セッション内キャリブレーションを日を超えた/被験者を超えた信頼性と同一視するものではありません。
 </p>
 
-<h3>3. In language decoding, confidence must be read through the scaffold</h3>
+<h3>3。言語のデコードでは、足場</h3>を通じて信頼性を読み取る必要があります
 <p>
-Language-decoding papers make the same lesson concrete in a different form: the uncertainty object changes when the output scaffold changes. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> used subject-specific fMRI together with autoregressive context, and their ablations show that removing fMRI drops performance while isolated scoring still compares the actual word to distractors. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">Défossez et al. (2023)</a> reported top-10 segment retrieval for fixed 3 s speech windows. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> scaled known-word-onset decoding to 723 participants, but still reported top-10 accuracy with a retrieval set of 250 words and found strong protocol effects such as <strong>MEG &gt; EEG</strong> and <strong>reading &gt; listening</strong>. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> directly concatenated brain and text prompt embeddings for LLM generation and outperformed prompt-only or permuted-brain controls. Therefore, on this site, apparently fluent text output is not accepted as a generic uncertainty object: it must declare the candidate bank, prompt scaffold, onset rule, and neural-contribution controls first.
+言語解読論文は、同じレッスンを別の形式で具体化します。つまり、出力足場が変化すると、不確実性オブジェクトも変化します。 <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tangら(2023) </a> は、自己回帰コンテキストとともに被験者固有の fMRI を使用しました。そのアブレーションは、fMRI を除去するとパフォーマンスが低下する一方、分離スコアリングでは依然として実際の単語と注意をそらすものとを比較することを示しています。 <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">デフォセズ 他(2023)</a> は、固定 3 秒の音声ウィンドウのトップ 10 セグメントの検索を報告しました。 <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> は、既知の単語オンセットのデコーディングを 723 人の参加者に拡張しましたが、それでも 250 単語の検索セットでトップ 10 の精度を報告し、<strong>MEG > などの強力なプロトコル効果を発見しました。 EEG</strong> および <strong> の読み取り >リスニング</strong>。 <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Yeら(2025) </a> は、LLM 生成のためにブレインとテキスト プロンプト埋め込みを直接連結し、プロンプトのみまたは並べ替えブレイン コントロールよりも優れたパフォーマンスを発揮しました。したがって、このサイトでは、一見流暢なテキスト出力は一般的な不確実性オブジェクトとして受け入れられません。候補バンク、プロンプト スキャフォールド、オンセット ルール、および神経寄与コントロールを最初に宣言する必要があります。
 </p>
 
-<h3>3A. 2026-03-29 addendum: structural pass/fail bundle for language-facing confidence</h3>
+<h3>3A。 2026-03-29 追記: 言語対応の信頼性</h3> のための構造的合格/不合格バンドル
 <table>
 <thead>
 <tr>
-<th>Route family</th>
-<th>Minimum disclosure before the score is read</th>
-<th>Minimum pass condition on this site</th>
-<th>Claim still blocked</th>
+<th>ルートファミリー</th>
+<th>スコアが読み取られる前の最小限の開示</th>
+<th>このサイトの最低合格条件</th>
+<th>クレームはまだブロックされています</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Fixed-bank retrieval</strong></td>
-<td>Bank contents, segment definition, bank size, cue policy, and whether cue-presentation data entered train / validation / test.</td>
-<td>It can count only as retrieval-conditioned evidence if calibration and accuracy are reported on held-out trials under the same bank and cue policy, with no-brain, time-shuffle, or cue-separated comparison.</td>
-<td>Open-world semantic access or free-choice communication.</td>
+<td><strong>固定バンク検索</strong></td>
+<td>バンクの内容、セグメント定義、バンクサイズ、キューポリシー、およびキュープレゼンテーションデータがトレーニング/検証/テストに入ったかどうか。</td>
+<td>ノーブレイン、タイムシャッフル、またはキュー分離比較により、同じバンクおよびキューポリシーの下で開催されたトライアルでキャリブレーションと精度が報告された場合、検索条件付き証拠としてのみカウントできます。</td>
+<td>オープンワールド セマンティック アクセスまたは自由選択通信。</td>
 </tr>
 <tr>
-<td><strong>Known-onset word decoding</strong></td>
-<td>Word-onset source, retrieval-set size, vocabulary policy, averaging rule, and whether the decoder uses only causal information around the onset.</td>
-<td>It can count only as onset-conditioned word-decoding evidence if top-k or calibration is reported within the declared retrieval set and onset regime together with Neural Contribution Card controls.</td>
-<td>Free-running continuous speech or unrestricted language readout.</td>
+<td><strong>既知の始まりの単語のデコード</strong></td>
+<td>単語の開始ソース、検索セットのサイズ、語彙ポリシー、平均化ルール、およびデコーダーが開始の周りの因果情報のみを使用するかどうか。</td>
+<td>Top-k またはキャリブレーションが、宣言された検索セットおよびニューラル コントリビューション カード コントロールとともにオンセット レジーム内で報告される場合、オンセット条件付き単語解読証拠としてのみカウントできます。</td>
+<td>フリーラン連続音声または無制限の言語読み上げ。</td>
 </tr>
 <tr>
-<td><strong>Prompt-conditioned generation</strong></td>
-<td>Prompt tokens, prompt length, prompt-only and permuted-brain controls, LLM family, decoding strategy, and output-length rule.</td>
-<td>It can count only as prompt-conditioned generative evidence if the paper shows what changes when the brain input is removed or permuted under the same prompt scaffold.</td>
-<td>Brain-only generative likelihood or prior-free semantic reconstruction.</td>
+<td><strong>プロンプト条件付き生成</strong></td>
+<td>プロンプト トークン、プロンプトの長さ、プロンプトのみおよび並べ替えられたブレイン コントロール、LLM ファミリ、デコード戦略、および出力長ルール。</td>
+<td>脳の入力が同じプロンプト足場の下で削除または並べ替えられたときに何が変化するかを論文が示している場合、プロンプト条件付き生成証拠としてのみカウントできます。</td>
+<td>脳のみの生成尤度または事前フリーの意味再構成。</td>
 </tr>
 <tr>
-<td><strong>Viewed/recalled content captioning</strong></td>
-<td>Stimulus family, semantic feature extractor, candidate-initialization policy, cue or recall prompt route, and whether caption optimization started from noninformative or content-bearing seeds.</td>
-<td>It can count only as captioning of bounded viewed/recalled content if identification or discriminability and caption quality are reported under the declared caption scaffold and compared against scaffold-preserving controls such as word-order shuffle or feature-mismatch baselines.</td>
-<td>General inner-speech decoding or unrestricted thought reading.</td>
+<td><strong>表示/呼び出したコンテンツのキャプション</strong></td>
+<td>Stimulus ファミリ、セマンティック特徴抽出器、候補初期化ポリシー、キューまたはリコール プロンプト ルート、およびキャプションの最適化が非情報シードまたはコンテンツを含むシードから開始されたかどうか。</td>
+<td>識別または識別可能性とキャプションの品質が宣言されたキャプション スキャフォールドに基づいて報告され、語順シャッフルや特徴の不一致ベースラインなどのスキャフォールドを保持するコントロールと比較される場合、限定された視聴/想起コンテンツのキャプションとしてのみカウントできます。</td>
+<td>一般的な内なる言葉の解読または無制限の思考の読み取り。</td>
 </tr>
 <tr>
-<td><strong>Streaming speech neuroprosthesis</strong></td>
-<td>Latency quantiles, silence or abstention rule, same-day training versus fixed-decoder interval, recalibration burden, and durability slice.</td>
-<td>It can count only as communication-subsystem evidence if online performance is reported together with abstention or silence behavior and the time window over which the decoder was kept fixed.</td>
-<td>Long-term general communication ability, emulate, or WBE-relevant state recovery.</td>
+<td><strong>ストリーミング音声ニューロプロテーゼ</strong></td>
+<td>L遅延分位数、沈黙または棄権ルール、同日トレーニングと固定デコーダー間隔、再キャリブレーション負荷、耐久性スライス。</td>
+<td>オンライン パフォーマンスが棄権または沈黙の行動およびデコーダが固定されていた時間枠とともに報告される場合、通信サブシステムの証拠としてのみカウントできます。</td>
+<td>長期にわたる一般的な通信能力、エミュレート、または WBE 関連の状態回復。</td>
 </tr>
 </tbody>
 </table>
 <p>
-The point of this bundle is not to assign one universal numeric threshold. It is to stop readers from comparing unlike uncertainty objects as if they were one probability scale. <a href="https://doi.org/10.1038/s41598-024-79309-y" target="_blank">Ryb&aacute;r et al. (2024)</a> showed that cue-presentation data can grossly overestimate semantic BCI performance. <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">Horikawa (2025)</a> added a viewed/recalled content-captioning route built from decoded semantic features and iterative text optimization. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tang et al. (2023)</a> remained subject-cooperative autoregressive semantic reconstruction. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025)</a> remained known-onset top-10 retrieval over a fixed vocabulary. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Ye et al. (2025)</a> remained prompt-conditioned LLM generation. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Littlejohn et al. (2025)</a> and <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairagkar et al. (2025)</a> remained invasive communication-subsystem routes. The confidence object changes before the score changes.
+このバンドルのポイントは、1 つの普遍的な数値しきい値を割り当てることではありません。それは、読者が異なる不確実性の対象をあたかも 1 つの確率尺度であるかのように比較することを防ぐためです。 <a href="https://doi.org/10.1038/s41598-024-79309-y" target="_blank">Ryb’r et al. (2024) </a> は、キュー表示データがセマンティック BCI パフォーマンスを著しく過大評価する可能性があることを示しました。 <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">Horikawa (2025)</a> は、デコードされたセマンティック機能と反復的なテキスト最適化から構築された、表示/リコールされたコンテンツ キャプション ルートを追加しました。 <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">Tangら(2023) </a> は被験者協力型自己回帰意味再構成のままでした。 <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025) </a> は、固定語彙を使用してトップ 10 検索が開始されたことが知られているままでした。 <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Yeら(2025)</a> は即時条件付き LLM 世代のままでした。 <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Lリトルジョンら(2025) </a> および <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairragkar ら。 (2025) </a> は侵入的な通信サブシステム ルートのままでした。信頼度オブジェクトは、スコアが変化する前に変化します。
 </p>
 
-<h3>4. Conformal / risk-controlling routes are effective, but the assumptions and set size need to be stated separately</h3>
+<h3>4。コンフォーマル/リスク管理ルートは効果的ですが、前提条件とセットサイズを別途記載する必要があります</h3>
 <p>
-<a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">Lei et al. (2018)</a> gives finite-sample marginal coverage by split conformal, and <a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">Chernozhukov et al. (2021)</a> presented distributional conformal prediction using a conditional distribution model. <a href="https://papers.nips.cc/paper/8522-conformal-prediction-under-covariate-shift" target="_blank">Tibshirani et al. (2019)</a> then made explicit that once exchangeability breaks under covariate shift, the conformal procedure itself must be modified rather than rhetorically extended. Furthermore, <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)</a> showed a direction to suppress false alarm rate by risk-controlling prediction calibration in seizure prediction, and <a href="https://proceedings.mlr.press/v105/eliades19a.html" target="_blank">Eliades &amp; Papadopoulos (2019)</a> applied conformal prediction to BCI / exoskeleton control. Therefore, set-valued output and risk-controlled threshold are effective, but it is necessary to separately state <strong>which split was used for calibration</strong>, <strong>how coverage and set size were exchanged</strong>, and which of <strong>marginal / conditional / temporal validity</strong> is claimed.
+<a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">Leiら。 (2018)</a> は分割等角法により有限サンプルの周辺範囲を提供します。<a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">Chernozhukov et al. (2021)</a> は、条件付き分布モデルを使用した分布等形予測を発表しました。 <a href="https://papers.nips.cc/paper/8522-conformal-prediction-under-covariate-shift" target="_blank">Tibshirani et al. (2019)</a> はその後、共変量シフトの下で交換可能性が崩れると、修辞的に拡張するのではなく等角手続き自体を修正する必要があることを明示しました。さらに、ＰＨ９ＸＳｅｇａｌら。 (2023)</a>は発作予測におけるリスク管理予測校正により誤報率を抑制する方向性を示し、<a href="https://proceedings.mlr.press/v105/eliades19a.html" target="_blank">Eliades &amp; Papadopoulos (2019)</a> は、BCI / 外骨格制御に等角予測を適用しました。したがって、設定値の出力とリスク管理された閾値は有効ですが、<strong>キャリブレーションにどの分割を使用したか</strong>、<strong>カバレッジとセットサイズをどのように交換したか</strong>、<strong>限界/条件/時間的妥当性のどれを主張する</strong>を個別に記載する必要があります。
 </p>
 
-<h3>5. Abstaining is not "because it seems safe", but disclosure of coverage and risk</h3>
+<h3>5。棄権は「安全そうだから」ではなく、保障内容とリスクの開示</h3>
 <p>
-Ganeshkumar et al. showed that the false prediction rate can be reduced by including a reject option in the EEG motor imagery BCI. What is important here is to show <strong>how much coverage has been reduced</strong> in exchange for reducing errors. Therefore, it is not enough to show only abstention rate or accuracy alone, and it is necessary to disclose coverage-risk exchange conditions together.
+ガネーシュクマールら。 EEG 運動画像 BCI に拒否オプションを含めることで誤予測率を低減できることを示しました。ここで重要なのは、エラーを減らす代わりに<strong>カバレッジがどのくらい減少したか</strong>を示すことです。したがって、棄権率や確度だけを示すだけでは不十分であり、報道とリスクの交換条件も併せて開示する必要がある。
 </p>
 
-<h3>6. With online BCI, recalibration and silence are also performance features</h3>
+<h3>6。オンラインBCIにより、再キャリブレーションと静音性もパフォーマンス機能となる</h3>
 <p>
-Wairagkar et al.'s instantaneous voice-synthesis neuroprosthesis showed a low-latency loop, but at the same time it was important to design it to return silence in non-speech sections. Wilson et al. demonstrated long-term unsupervised recalibration of intracortical BCIs and showed that not only accuracy but also <strong>how much recalibration is required</strong> is the bottleneck for continued operation. Therefore, in the closed-loop system, in addition to latency and accuracy, <strong>abstention / silence / recalibration burden / recovery time</strong> are kept as separate indicators.
+Wairagkar らの瞬間音声合成神経人工器官は低遅延ループを示しましたが、同時に非音声部分で沈黙を返すように設計することが重要でした。ウィルソンら。らは皮質内 BCI の長期間にわたる監視なしの再校正を実証し、精度だけでなく <strong> どれだけの再校正が必要か、</strong> が継続的な運用のボトルネックであることを示しました。したがって、閉ループシステムでは、遅延と精度に加えて、<strong> 棄権 / 沈黙 / 再校正負荷 / 回復時間 </strong> が別個の指標として保持されます。
 </p>
 
-<h2>Operation rules adopted by this site</h2>
+<h2>当サイトが採用している運用ルール</h2>
 
 <h4>Rule</h4>
 <ul>
-<li><strong>Do not read confidence as just probability:</strong>If there is no calibration error or interval / set coverage, treat it as an internal score. </li>
-<li><strong>Separate fit/calibration/test:</strong>Temperature scaling, threshold tuning, and conformal score are managed as independent splits, and they are not readjusted by looking at the test. </li>
-<li><strong>Calibration is issued for each evaluation family:</strong>Do not read within-session ECE or coverage as cross-day / cross-subject / temporal shift reliability. </li>
-<li><strong>Language-facing scores must disclose their scaffold:</strong>Fixed candidate banks, known onsets, prompt tokens, beam search, and language-model priors are reported before score or fluency is read as neural uncertainty. </li>
-<li><strong>Source imaging requires typed uncertainty objects, not one generic width:</strong>Separate cross-pipeline spread, forward-model sensitivity, focal posterior support, sparse debiased intervals, extent-aware uncertainty, and the named validation board before reading confidence strongly. </li>
-<li><strong>EEG classification gives coverage-risk:</strong>Do not pass with accuracy alone, include ECE/Brier/NLL, slice-wise calibration, and coverage after abstention. </li>
-<li><strong>Set-valued / conformal results also reveal assumptions:</strong>Do not hide marginal / conditional / temporal validity, set size, or exchangeability / time-order rule. </li>
-<li><strong>Manage false alarms separately for seizure prediction and rare events:</strong>In addition to sensitivity, include false alarm cost and threshold control as key metrics. </li>
-<li><strong>Online BCI publishes the recalibration load as performance:</strong>Publishes the breakdown of the number of recalibrations, required time, recovery time, silence / freeze / hard stop. </li>
-<li><strong>Make it possible to choose to abstain when reliability is low:</strong>Rather than forcefully returning a single answer, branch to the options that require remeasurement, reanalysis, or stoppage that requires intervention. </li>
-<li><strong>Attach a Calibration &amp; Abstention Card to results that highlight probabilities, intervals, prediction sets, and abstentions:</strong> Fix split, slice, coverage-risk, and fallback policy in the common submission on the <a href="https://mind-upload.com/verification.html#calibration-abstention-card">Verification</a> side. </li>
-<li><strong>Stack the Neural Contribution Card when the output is language-like:</strong>For text / speech / brain-to-text outputs, calibrate the score only together with candidate-set, prompt, and no-brain / no-LM / shuffle disclosure on the <a href="https://mind-upload.com/verification.html#neural-contribution-card">Verification</a> side. </li>
+<li><strong>信頼性を単なる確率として解釈しないでください:</strong>キャリブレーションエラーまたは間隔/セットカバレッジがない場合、内部スコアとして扱います。 </li>
+<li><strong>個別のフィット/キャリブレーション/テスト:</strong>T温度スケーリング、しきい値調整、およびコンフォーマルスコアは独立した分割として管理され、テストを見て再調整されることはありません。 </li>
+<li><strong>キャリブレーションは評価ファミリーごとに発行されます:</strong>セッション内ECEまたはカバレッジを日をまたぐ/被験者間/時間的シフト信頼性として読み取りません。 </li>
+<li><strong>L言語対応スコアは、その足場を開示する必要があります。</strong>固定候補バンク、既知のオンセット、プロンプトトークン、ビームサーチ、および言語モデル事前分布は、スコアまたは流暢性が神経の不確実性として読み取られる前に報告されます。 </li>
+<li><strong>ソース イメージングには、1 つの一般的な幅ではなく、型付けされた不確実性オブジェクトが必要です。</strong>個別のクロスパイプライン スプレッド、フォワード モデル感度、焦点事後サポート、疎な偏りのない間隔、範囲を意識した不確実性、および信頼性を強く読み取る前の名前付き検証ボード。 </li>
+<li><strong>EEG 分類により、カバレッジ リスクが与えられます。</strong> 精度だけでは合格せず、ECE/Brier/NLL、スライスごとのキャリブレーション、および棄権後のカバレッジが含まれます。 </li>
+<li><strong>集合値/等角結果は仮定も明らかにします:</strong>限界/条件付き/時間的妥当性、集合サイズ、または交換可能性/時間順序規則を隠蔽しません。 </li>
+<li><strong>発作予測とまれなイベントの誤警報を個別に管理:</strong>感度に加えて、誤警報コストとしきい値制御を主要な指標として含めます。 </li>
+<li><strong>オンラインBCIは再キャリブレーション負荷をパフォーマンスとして公開します:</strong>再キャリブレーション回数、所要時間、回復時間、サイレンス/フリーズ/ハードストップの内訳を公開します。 </li>
+<li><strong>信頼性が低い場合に棄権を選択できるようにする：</strong>強制的に単一の回答を返すのではなく、再測定、再解析、介入が必要な停止が必要な選択肢に分岐します。 </li>
+<li><strong>キャリブレーションとアンプの取り付け確率、間隔、予測セット、および棄権を強調表示する結果への棄権カード:</strong> <a href="https://mind-upload.com/verification.html#calibration-abstention-card">Verification</a> 側の共通送信のスプリット、スライス、カバレッジ リスク、およびフォールバック ポリシーを修正しました。 </li>
+<li><strong>出力が言語に似ている場合は、ニューラル貢献カードをスタックします。</strong>テキスト/音声/脳からテキストへの出力の場合、<a href="https://mind-upload.com/verification.html#neural-contribution-card">Verification</a> 側での候補セット、プロンプト、および脳なし / LM なし / シャッフル開示と一緒にのみスコアを調整します。 </li>
 </ul>
 
-<h2>References</h2>
+<h2>参考資料</h2>
 <ol>
-<li>Mahjoory, K., Nikulin, V. V., Botrel, L., Linkenkaer-Hansen, K., Fato, M. M., &amp; Haufe, S. (2017). Consistency of EEG source localization and connectivity estimates. <em>NeuroImage</em>, 152, 590-601. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">doi:10.1016/j.neuroimage.2017.02.076</a></li>
-<li>Vorwerk, J., Wolters, C. H., &amp; Baumgarten, D. (2024). Global sensitivity of EEG source analysis to tissue conductivity uncertainties. <em>Frontiers in Human Neuroscience</em>, 18, 1335212. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
-<li>Rimpiläinen, I., Solis-Lemus, J. A., &amp; Särkkä, S. (2019). Improved EEG source localization with Bayesian uncertainty modelling of unknown skull conductivity. <em>NeuroImage</em>, 184, 52-60. <a href="https://doi.org/10.1016/j.neuroimage.2018.11.058" target="_blank">doi:10.1016/j.neuroimage.2018.11.058</a></li>
-<li>Luria, G., Viani, A., Pascarella, A., Bornfleth, H., Sommariva, S., &amp; Sorrentino, A. (2024). The SESAMEEG package: a probabilistic tool for source localization and uncertainty quantification in M/EEG. <em>Frontiers in Human Neuroscience</em>, 18, 1359753. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">doi:10.3389/fnhum.2024.1359753</a></li>
-<li>Tong, P. F., Yang, H., Ding, X., Ding, Y., Geng, X., An, S., Wang, G., &amp; Chen, S. X. (2025). Debiased Estimation and Inference for Spatial-Temporal EEG/MEG Source Imaging. <em>IEEE Transactions on Medical Imaging</em>, 44(3), 1480-1493. <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">doi:10.1109/TMI.2024.3506596</a></li>
-<li>Feng, Z., Guan, C., &amp; Sun, Y. (2025). Block-Champagne: A Novel Bayesian Framework for Imaging Extended E/MEG Source. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
-<li>Mikulan, E., Russo, S., Parmigiani, S., Sarasso, S., Zauli, F. M., Rubino, A., Avanzini, P., Cattani, A., Sorrentino, A., Gibbs, S., Cardinale, F., Sartori, I., Nobili, L., Massimini, M., &amp; Pigorini, A. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
-<li>Hao, S., Zhao, H., Feng, Z., Liu, W., Zhang, C., Ping, H., Zhou, Q., Sun, B., Zhan, S., &amp; Cao, C. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
-<li>Ovadia, Y., Fertig, E., Ren, J., Nado, Z., Sculley, D., Nowozin, S., Dillon, J. V., Lakshminarayanan, B., &amp; Snoek, J. (2019). Can You Trust Your Model's Uncertainty? Evaluating Predictive Uncertainty Under Dataset Shift. <a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">NeurIPS 2019</a></li>
-<li>Han, E., Huang, C., &amp; Wang, K. (2024). Model Assessment and Selection under Temporal Distribution Shift. <em>Proceedings of Machine Learning Research</em>, 235. <a href="https://proceedings.mlr.press/v235/han24b.html" target="_blank">PMLR 235</a></li>
-<li>Tang, J., LeBel, A., Jain, S., &amp; Huth, A. G. (2023). Semantic reconstruction of continuous language from non-invasive brain recordings. <em>Nature Neuroscience</em>, 26, 858-866. <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
-<li>Défossez, A., Caucheteux, C., Rapin, J., Kabeli, O., &amp; King, J.-R. (2023). Decoding speech perception from non-invasive brain recordings. <em>Nature Machine Intelligence</em>, 5, 1097-1107. <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
-<li>d'Ascoli, S., Bel, C., Rapin, J., Banville, H., Benchetrit, Y., Pallier, C., &amp; King, J.-R. (2025). Towards decoding individual words from non-invasive brain recordings. <em>Nature Communications</em>, 16, 10521. <a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
-<li>Ye, X., Liu, X., Wang, Y., Jiang, F., Geng, J., Ye, Q., &amp; Wang, J. (2025). Generative language reconstruction from brain recordings. <em>Communications Biology</em>, 8, 285. <a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
-<li>Ryb&aacute;r, M., Poli, R., &amp; Daly, I. (2024). Using data from cue presentations results in grossly overestimating semantic BCI performance. <em>Scientific Reports</em>, 14, 28003. <a href="https://doi.org/10.1038/s41598-024-79309-y" target="_blank">doi:10.1038/s41598-024-79309-y</a></li>
-<li>Horikawa, T. (2025). Mind captioning: Evolving descriptive text of mental content from human brain activity. <em>Science Advances</em>, 11(45), eadw1464. <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">doi:10.1126/sciadv.adw1464</a></li>
-<li>Littlejohn, K. T., Cho, C. J., Liu, J. R., et al. (2025). A streaming brain-to-voice neuroprosthesis to restore naturalistic communication. <em>Nature Neuroscience</em>, 28, 902-912. <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
-<li>Duan, T., Wang, Z., Liu, S., Yin, Y., &amp; Srihari, S. N. (2023). UNCER: A framework for uncertainty estimation and reduction in neural decoding of EEG signals. <em>Neurocomputing</em>, 538, 126210. <a href="https://doi.org/10.1016/j.neucom.2023.03.071" target="_blank">doi:10.1016/j.neucom.2023.03.071</a></li>
-<li>Hu, J., Ur Rahman, M. M., Al-Naffouri, T., &amp; Laleg-Kirati, T.-M. (2024). Uncertainty Estimation and Model Calibration in EEG Signal Classification for Epileptic Seizures Detection. In <em>2024 46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)</em> (pp. 1-5). <a href="https://doi.org/10.1109/EMBC53108.2024.10782858" target="_blank">doi:10.1109/EMBC53108.2024.10782858</a></li>
-<li>Shafiezadeh, S., Mento, G., &amp; Testolin, A. (2023). Methodological Issues in Evaluating Machine Learning Models for Patient-Independent Epileptic Seizure Prediction. <em>Mathematics</em>, 11(7), 1650. <a href="https://doi.org/10.3390/math11071650" target="_blank">doi:10.3390/math11071650</a></li>
-<li>Shafiezadeh, S., Duma, G. M., Mento, G., Danieli, A., Antoniazzi, L., Del Popolo Cristaldi, F., Bonanni, P., &amp; Testolin, A. (2024). Calibrating Deep Learning Classifiers for Patient-Independent Electroencephalogram Seizure Forecasting. <em>Sensors</em>, 24(9), 2863. <a href="https://doi.org/10.3390/s24092863" target="_blank">doi:10.3390/s24092863</a></li>
-<li>Lei, J., G'Sell, M., Rinaldo, A., Tibshirani, R. J., &amp; Wasserman, L. (2018). Distribution-Free Predictive Inference for Regression. <em>Journal of the American Statistical Association</em>, 113(523), 1094-1111. <a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">doi:10.1080/01621459.2017.1307116</a></li>
-<li>Chernozhukov, V., Wüthrich, K., &amp; Zhu, Y. (2021). Distributional conformal prediction. <em>Proceedings of the National Academy of Sciences</em>, 118(48), e2107794118. <a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">doi:10.1073/pnas.2107794118</a></li>
-<li>Tibshirani, R. J., Barber, R. F., Candès, E. J., &amp; Ramdas, A. (2019). Conformal Prediction Under Covariate Shift. <em>Advances in Neural Information Processing Systems</em>, 32. <a href="https://papers.nips.cc/paper/8522-conformal-prediction-under-covariate-shift" target="_blank">NeurIPS 2019</a></li>
-<li>Segal, G., Keidar, N., Lotan, R. M., Romano, Y., Herskovitz, M., &amp; Yaniv, Y. (2023). Utilizing risk-controlling prediction calibration to reduce false alarm rates in epileptic seizure prediction. <em>Frontiers in Neuroscience</em>, 17, 1184990. <a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">doi:10.3389/fnins.2023.1184990</a></li>
-<li>Ganeshkumar, P., Maheswari, U., &amp; Vasant, P. (2017). Reject Option to Reduce False Prediction Rates for EEG-Motor Imagery Based BCI. In <em>2017 International Conference on Advances in Computing, Communications and Informatics (ICACCI)</em>. <a href="https://doi.org/10.1109/ICACCI.2017.8125908" target="_blank">doi:10.1109/ICACCI.2017.8125908</a></li>
-<li>Eliades, G., &amp; Papadopoulos, H. (2019). Applying conformal prediction to control an exoskeleton. <em>Proceedings of Machine Learning Research</em>, 105, 44-51. <a href="https://proceedings.mlr.press/v105/eliades19a.html" target="_blank">PMLR 105</a></li>
-<li>Wilson, G. H., Stein, E. A., Kamdar, F., Avansino, D. T., Pun, T. K., Gross, R., Hosman, T., Singer-Clark, T., Kapitonava, A., Hochberg, L. R., Simeral, J. D., Shenoy, K. V., Druckmann, S., Henderson, J. M., &amp; Willett, F. R. (2025). Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model. <em>Nature Biomedical Engineering</em>. <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
-<li>Wairagkar, M., Card, N. S., Singer-Clark, T., Hou, X., Iacobacci, C., Miller, L. M., Hochberg, L. R., Brandman, D. M., &amp; Stavisky, S. D. (2025). An instantaneous voice-synthesis neuroprosthesis. <em>Nature</em>, 644(8075), 145-152. <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Mahjoory, K.、Nikulin, V.V.、Botrel, L.、Linkenkaer-Hansen, K.、Fato, M.M.、&amp;;ハウフェ、S. (2017)。 EEG ソース位置特定と接続性推定の一貫性。 <em>NeuroImage</em>、152、590-601。 <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">doi:10.1016/j.neuroimage.2017.02.076</a></li>
+<li>Vorwerk、J.、Wolters、C.H.、&amp;バウムガルテン、D. (2024)。組織の伝導率の不確実性に対するEEGソース分析のグローバルな感度。 <em>人間の神経科学のフロンティア</em>、18、1335212.<a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
+<li>Rimpiläinen、I.、Solis-Lemus、J.A.、およびサーッカ、S. (2019)。未知の頭蓋骨の伝導率のベイジアン不確実性モデリングにより、EEG ソースの位置特定が向上しました。 <em>NeuroImage</em>、184、52-60。 <a href="https://doi.org/10.1016/j.neuroimage.2018.11.058" target="_blank">doi:10.1016/j.neuroimage.2018.11.058</a></li>
+<li>Luria, G.、Viani, A.、Pascarella, A.、Bornfleth, H.、Sommariva, S.、およびソレンティーノ、A. (2024)。 SESAMEEG パッケージ: M/EEG における信号源の位置特定と不確実性の定量化のための確率的ツール。 <em>人間の神経科学のフロンティア</em>、18、1359753.<a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">doi:10.3389/fnhum.2024.1359753</a></li>
+<li>Tong, P. F.、Yang, H.、Ding, X.、Ding, Y.、Geng, X.、An, S.、Wang, G.、&amp;;チェン、SX (2025)。時空間 EEG/MEG ソース イメージングのための偏りのない推定と推論。 <em>医用画像に関するIEEEトランザクション</em>、44(3)、1480-1493。 <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">doi:10.1109/TMI.2024.3506596</a></li>
+<li>Feng、Z.、Guan、C.、および日曜日、Y. (2025)。 Block-Champagne: 拡張 E/MEG ソースをイメージングするための新しいベイジアン フレームワーク。 <em>医用画像に関するIEEEトランザクション</em>。 <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
+<li>Mikulan, E.、Russo, S.、Parmigiani, S.、Sarasso, S.、Zauli, F.M.、Rubino, A.、Avanzini, P.、Cattani, A.、Sorrentino, A.、Gibbs, S.、Cardinale, F.、Sartori, I.、Nobili, L.、Massimini, M.、&amp;;ピゴリーニ、A. (2020)。人間の脳内刺激と HD-EEG の同時、音源位置特定方法のグラウンドトゥルース。 <em>科学データ</em>、7、127。<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Hao, S.、Zhao, H.、Feng, Z.、Liu, W.、Zhang, C.、Ping, H.、Zhou, Q.、Sun, B.、Zhan, S.、および曹C. (2025)。薬剤耐性てんかんにおける HD-EEG ソースイメージングと同時 SEEG 記録。 <em>てんかん</em>、66(11)、4451-4464。 <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Ovadia, Y.、Fertig, E.、Ren, J.、Nado, Z.、Sculley, D.、Nowozin, S.、Dillon, J. V.、Lakshminarayanan, B.、およびスヌーク、J. (2019)。モデルの不確実性を信頼できますか?データセットシフトの下での予測不確実性の評価。 <a href="https://papers.nips.cc/paper_files/paper/2019/hash/8558cb408c1d76621371888657d2eb1d-Abstract.html" target="_blank">NeurIPS 2019</a></li>
+<li>Han, E.、Huang, C.、および王 K. (2024)。時間的分布シフトの下でのモデルの評価と選択。 <em>機械学習研究論文集</em>、235.<a href="https://proceedings.mlr.press/v235/han24b.html" target="_blank">PMLR 235</a></li>
+<li>Tang、J.、LeBel、A.、Jain、S.、およびヒュース、A.G. (2023)。非侵襲的な脳記録からの連続言語の意味的再構築。 <em>Nature Neuroscience</em>、26、858-866。 <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>Défossez、A.、Caucheteux、C.、Rapin、J.、Kabeli、O.、&amp;キング、J.-R. （2023年）。非侵襲的な脳記録から音声知覚を解読します。 <em>Nature Machine Intelligence</em>、5、1097-1107。 <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
+<li>d'Ascoli, S.、Bel, C.、Rapin, J.、Banville, H.、Benchetrit, Y.、Pallier, C.、およびキング、J.-R. (2025年)。非侵襲的な脳記録から個々の単語を解読する方向へ。 <em>Nature Communications</em>、16、10521.<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
+<li>Ye, X.、Liu, X.、Wang, Y.、Jiang, F.、Geng, J.、Ye, Q.、およびワン、J. (2025)。脳の記録からの生成言語の再構築。 <em>コミュニケーション生物学</em>、8、285。<a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
+<li>Ryb’r、M.、Poli、R.、およびデイリー、I. (2024)。キュー プレゼンテーションからのデータを使用すると、セマンティック BCI パフォーマンスが大幅に過大評価されます。 <em>Scientific Reports</em>、14、28003.<a href="https://doi.org/10.1038/s41598-024-79309-y" target="_blank">doi:10.1038/s41598-024-79309-y</a></li>
+<li>堀川哲也 (2025)心のキャプション: 人間の脳の活動から得られる精神的な内容の進化する説明文。 <em>Science Advances</em>、11(45)、eadw1464。 <a href="https://doi.org/10.1126/sciadv.adw1464" target="_blank">doi:10.1126/sciadv.adw1464</a></li>
+<li>Littlejohn, K.T.、Cho, C.J.、Liu, J.R.、他(2025年)。自然なコミュニケーションを復元するためのストリーミング脳から音声へのニューロプロテーゼ。 <em>Nature Neuroscience</em>、28、902-912。 <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Duan, T.、Wang, Z.、Liu, S.、イン, Y.、&amp;;スリハリ、S.N. (2023)。 UNCER: EEG 信号のニューラル デコーディングにおける不確実性の推定と削減のためのフレームワーク。 <em>ニューロコンピューティング</em>、538、126210。<a href="https://doi.org/10.1016/j.neucom.2023.03.071" target="_blank">doi:10.1016/j.neucom.2023.03.071</a></li>
+<li>Hu、J.、Ur Rahman、M.M.、Al-Naffouri、T.、およびラレグ・キラティ、T.-M. （2024年）。てんかん発作検出のための EEG 信号分類における不確実性の推定とモデルの校正。 <em>2024 の第 46 回 IEEE Engineering in Medicine and Biology Society (EMBC)</em> 年次国際会議 (pp. 1-5)。 <a href="https://doi.org/10.1109/EMBC53108.2024.10782858" target="_blank">doi:10.1109/EMBC53108.2024.10782858</a></li>
+<li>Shafiezadeh、S.、Mento、G.、およびテストリン、A. (2023)。患者に依存しないてんかん発作予測のための機械学習モデルを評価する際の方法論的問題。 <em>数学</em>、11(7)、1650。<a href="https://doi.org/10.3390/math11071650" target="_blank">doi:10.3390/math11071650</a></li>
+<li>シャフィエザデ、S.、ドゥマ、GM、メント、G.、ダニエリ、A.、アントニアッツィ、L.、デル ポポロ クリスタルディ、F.、ボナンニ、P.、&amp;;テストリン、A. (2024)。患者に依存しない脳波発作予測のための深層学習分類器の調整。 <em>センサー</em>、24(9)、2863。<a href="https://doi.org/10.3390/s24092863" target="_blank">doi:10.3390/s24092863</a></li>
+<li>Lei、J.、G'Sell、M.、Rinaldo、A.、Tibshirani、R.J.、およびワッサーマン、L. (2018)。回帰に対する分布フリーの予測推論。 <em>Journal of the American Statistical Association</em>、113(523)、1094-1111。 <a href="https://doi.org/10.1080/01621459.2017.1307116" target="_blank">doi:10.1080/01621459.2017.1307116</a></li>
+<li>チェルノジュコフ、V.、ヴュートリッヒ、K.、＆amp;朱 裕（2021）。分布等角予測。 <em>米国科学アカデミー紀要</em>、118(48)、e2107794118。 <a href="https://doi.org/10.1073/pnas.2107794118" target="_blank">doi:10.1073/pnas.2107794118</a></li>
+<li>Tibshirani、R. J.、Barber、R. F.、Candes、E. J.、およびラムダス、A. (2019)。共変量シフトの下での等角予測。 <em>神経情報処理システムの進歩</em>、32. <a href="https://papers.nips.cc/paper/8522-conformal-prediction-under-covariate-shift" target="_blank">NeurIPS 2019</a></li>
+<li>Segal、G.、Keidar、N.、Lotan、R.M.、Romano、Y.、Herskovitz、M.、およびヤニフ、Y. (2023)。リスク管理予測キャリブレーションを利用して、てんかん発作予測における誤報率を低減します。 <em>神経科学のフロンティア</em>、17、1184990。<a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">doi:10.3389/fnins.2023.1184990</a></li>
+<li>ガネーシュクマール、P.、マヘスワリ、U.、＆amp;ヴァサント、P. (2017)。 EEG 運動画像ベースの BCI の誤予測率を減らすオプションを拒否します。 <em>2017 コンピューティング、通信、情報学の進歩に関する国際会議 (ICACCI)</em> で。 <a href="https://doi.org/10.1109/ICACCI.2017.8125908" target="_blank">doi:10.1109/ICACCI.2017.8125908</a></li>
+<li>エリアデス、G.、＆amp;パパドプロス、H. (2019)。等角予測を適用して外骨格を制御する。 <em>機械学習研究論文集</em>、105、44-51。 <a href="https://proceedings.mlr.press/v105/eliades19a.html" target="_blank">PMLR 105</a></li>
+<li>Wilson, G. H.、Stein, E. A.、Kamdar, F.、Avansino, D. T.、Pun, T. K.、Gros, R.、Hosman, T.、Singer-Clark, T.、Kapitonava, A.、Hochberg, L. R.、Simeral、J. D.、Shenoy, K. V.、Druckmann、S.、ヘンダーソン、J.M.、＆amp;ウィレット、F.R. (2025)。隠れマルコフ モデルを使用した、カーソルベースの皮質内脳コンピューター インターフェイスの長期教師なし再調整。 <em>Nature Biomedical Engineering</em>。 <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Wairragkar, M.、Card, N.S.、Singer-Clark, T.、Hou, X.、Iacobacci, C.、Miller, L.M.、Hochberg, L.R.、Brandman, D.M.、&amp;;スタヴィスキー、SD (2025)。瞬間的に音声を合成する神経人工器官。 <em>Nature</em>、644(8075)、145-152。 <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
 </ol>
 
-<h2>Where to go back next</h2>
+<h2>次に戻る場所</h2>
 <p>
-To return to the source imaging side, please use <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation">From observation to estimation</a>. To return to the closed-loop side, please use <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">Closed-loop, delay, jitter, and safety stops</a>. To return to the entire public rule, please use <a href="https://mind-upload.com/verification.html">Verification platform</a>.
+ソースイメージング側に戻るには<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation">、観測から推定まで</a>をご利用ください。閉ループ側に戻すには、<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/closed-loop-latency-jitter-and-safety-stops">閉ループ、遅延、ジッター、および安全停止</a>を使用してください。公開ルール全体に戻るには、<a href="https://mind-upload.com/verification.html">Verification platform</a> を使用してください。
 </p>

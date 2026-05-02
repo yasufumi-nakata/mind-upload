@@ -1,289 +1,290 @@
 ---
 layout: default
-title: "Wiki: Straight path from EEG to L0"
-description: "A practical route from EEG basics to L0 that now fixes benchmark object, temporal regime, event semantics, and artifact lineage before any score is interpreted."
-article_type: Wiki
-subtitle: "Freeze benchmark object, temporal regime, and observation logs before touching the model"
-author: Mind Uploading Research Project
-last_updated: "2026-04-03"
-note: "Practical route / temporal-validity sync"
-audience: "People who want to move from EEG basics to reproducible L0 work without collapsing dataset choice, split hygiene, temporal validity, and verification into one step"
-reading_time: "12-18 minutes"
-page_intro: "This page is a practical route from EEG basics to a reproducible L0 artifact pack. The 2026-03 rebuild fixes one weakness in the old route: choosing a dataset and running a model still sounded too simple because benchmark object, temporal regime, event semantics, and verification gates were not kept separate enough."
-accuracy_note: "This page does not claim that passing L0 solves identity, WBE, or higher-level state recovery. It is an entry point for reproducible analysis only. The stronger public rules still live on Verification."
+title: 'Wiki: EEG から L0 への直線パス'
+description: EEG の基礎から L0 への実用的なルートで、スコアが解釈される前にベンチマーク オブジェクト、時間レジーム、イベント セマンティクス、およびアーティファクト リネージが修正されるようになりました。
+article_type: ウィキ
+subtitle: モデルに触れる前に、ベンチマーク オブジェクト、時間領域、観察ログをフリーズします。
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-04-03'
+note: 実用的なルート/時間的有効性の同期
+audience: EEG の基本から再現可能な L0 に移行したい人は、データセットの選択、衛生状態の分割、時間的妥当性、検証を 1 つのステップにまとめることなく作業できます。
+reading_time: 12～18分
+page_intro: このページは、EEG の基礎から再現可能な L0 アーティファクト パックまでの実践的なルートです。 2026-03 の再構築では、古いルートの 1 つの弱点が修正されています。ベンチマーク オブジェクト、時間レジーム、イベント
+  セマンティクス、および検証ゲートが十分に分離されていなかったため、データセットの選択とモデルの実行が依然として単純すぎるように思えました。
+accuracy_note: このページは、L0 を渡すことでアイデンティティ、WBE、またはより高いレベルの状態回復が解決されるとは主張しません。これは、再現可能な分析のみを行うためのエントリ ポイントです。より強力な公開ルールは今でも Verification
+  に存在します。
 page_highlights:
-  - "The route is still short, but it is no longer a generic six-step checklist."
-  - "Dataset choice is now treated as benchmark design, not only file selection."
-  - "Subject/session split and same-day/cross-day regime are fixed before modeling, and temporal validity now separates fast labels from slow internal-milieu disclosure."
-  - "BIDS events, HED semantics, and LSL synchronization are treated as different layers."
-  - "A score does not become progress until benchmark object, temporal validity, lineage, and stopped claim are all visible."
+- このルートはまだ短いですが、もはや一般的な 6 段階のチェックリストではありません。
+- データセットの選択は、ファイルの選択だけでなくベンチマーク設計として扱われるようになりました。
+- 被験者/セッションの分割と同日/日をまたぐ体制はモデリング前に修正され、時間的妥当性により、迅速なラベルと遅い内部環境の開示が区別されるようになりました。
+- BIDS イベント、HED セマンティクス、および LSL 同期は、別のレイヤーとして扱われます。
+- スコアは、ベンチマーク オブジェクト、一時的有効性、リネージ、および停止されたクレームがすべて表示されるまで進行状況になりません。
 known_points:
-  - "L0 is about reproducible input, logs, preprocessing, baselines, and failure disclosure rather than high headline accuracy."
-  - "A starter dataset is not enough by itself; the independent hold-out unit, metric bundle, and benchmark-governance status also change what the score means."
-  - "Observation logs, derivative lineage, and temporal-validity fields are separate artifacts."
-  - "Current literature supports careful separation of subject/session shortcuts, acquisition-distribution shortcuts, clock-domain logs, and cross-day validity."
+- L0 は、ヘッドラインの高い精度ではなく、再現可能な入力、ログ、前処理、ベースライン、障害の開示に重点を置いています。
+- スターター データセットだけでは十分ではありません。独立したホールドアウト ユニット、メトリック バンドル、ベンチマーク ガバナンスのステータスによっても、スコアの意味が変わります。
+- 観察ログ、派生系統、および時間的有効性フィールドは別個の成果物です。
+- 現在の文献では、サブジェクト/セッションのショートカット、取得と配布のショートカット、クロック ドメイン ログ、および日をまたぐ有効性の慎重な分離がサポートされています。
 unknown_points:
-  - "Which starter route best prepares later L1-L2 work still depends on task family and target variable."
-  - "The field still lacks one universally accepted default card bundle for all EEG benchmarks."
-  - "How much temporal-validity disclosure will become standard across EEG benchmarks remains unsettled."
+- どのスターター ルートが後の L1 ～ L2 作業の準備に最適であるかは、やはりタスク ファミリとターゲット変数によって異なります。
+- この分野には、すべての EEG ベンチマークに対して広く受け入れられているデフォルトのカード バンドルがまだ 1 つありません。
+- EEG ベンチマーク全体でどの程度の時間的有効性の開示が標準となるかはまだ決まっていません。
 wiki_links:
-  - label: "Wiki: Basics of EEG"
-    url: "/wiki/eeg-basics.html"
-    description: "Return here when the measurement ceiling of EEG itself is still unclear."
-  - label: "Wiki: Data partitioning and data leakage"
-    url: "/wiki/dataset-splits-and-leakage.html"
-    description: "Use this when split hygiene, benchmark provenance, or acquisition shortcuts become the main issue."
-  - label: "Wiki: Basics of event synchronization and observation logs"
-    url: "/wiki/event-sync-and-measurement-logs.html"
-    description: "Use this when events, semantics, timestamps, and clock domains start to blur together."
-  - label: "Wiki: State, trait, and drift"
-    url: "/wiki/state-trait-and-drift.html"
-    description: "Use this when same-session and cross-day claims start to blur together."
-  - label: "Wiki: Baseline / Benchmark / Pre-registration / Model Card"
-    url: "/wiki/baselines-prereg-and-model-cards.html"
-    description: "Use this when a dataset name and one score start to sound like the whole benchmark object."
+- label: 'Wiki: 脳波の基礎'
+  url: /wiki/eeg-basics.html
+  description: EEG 自体の測定上限がまだ不明な場合は、ここに戻ってください。
+- label: 'Wiki: データの分割とデータ漏洩'
+  url: /wiki/dataset-splits-and-leakage.html
+  description: これは、分割の衛生状態、ベンチマークの来歴、または取得のショートカットが主な問題となる場合に使用します。
+- label: 'Wiki: イベント同期と監視ログの基本'
+  url: /wiki/event-sync-and-measurement-logs.html
+  description: これは、イベント、セマンティクス、タイムスタンプ、クロック ドメインが曖昧になり始めた場合に使用します。
+- label: 'Wiki: 状態、特性、およびドリフト'
+  url: /wiki/state-trait-and-drift.html
+  description: これは、同じセッションと日をまたいだ主張が曖昧になり始めた場合に使用します。
+- label: 'Wiki: ベースライン / ベンチマーク / 事前登録 / モデルカード'
+  url: /wiki/baselines-prereg-and-model-cards.html
+  description: データセット名と 1 つのスコアがベンチマーク オブジェクト全体のように聞こえる場合は、これを使用します。
 recommended_pages:
-  - label: "Introduction to EEG"
-    url: "/eeg_101.html"
-  - label: "Data & Bench"
-    url: "/datasets.html"
-  - label: "Verification"
-    url: "/verification.html"
+- label: 脳波検査の概要
+  url: /eeg_101.html
+- label: データとベンチ
+  url: /datasets.html
+- label: 検証
+  url: /verification.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>What this route now fixes first</h2>
+<h2>このルートで最初に修正されること</h2>
 <p>
-The short path from EEG to L0 still exists, but it now starts with a stricter question: <strong>what exactly will your score mean</strong>? Current primary literature and official standards do not support the shortcut that says "pick a public dataset, run preprocessing, train a model, report accuracy." Before a score matters, this site now fixes <strong>benchmark object</strong>, <strong>temporal regime</strong>, <strong>event semantics and clock domain</strong>, <strong>artifact lineage</strong>, and the <strong>stopped claim</strong>.
+EEG から L0 までの短いパスはまだ存在しますが、今度はより厳密な質問から始まります: <strong> あなたのスコアは正確に何を意味しますか?</strong>?現在の一次文献と公式標準は、「公開データセットを選択し、前処理を実行し、モデルをトレーニングし、精度を報告する」というショートカットをサポートしていません。スコアが問題になる前に、このサイトでは <strong> ベンチマーク オブジェクト </strong>、<strong> 時間レジーム </strong>、<strong> イベント セマンティクスとクロック ドメイン </strong>、<strong> アーティファクト リネージ </strong>、および <strong> 停止クレーム </strong> を修正しました。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Why this page needed a 2026-03 rebuild</strong>
+<strong>このページに 2026 年 3 月の再構築が必要な理由</strong>
 <p>
-The old route was too permissive. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>, the current <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">BIDS specification</a>, and <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">Pernet et al. (2020)</a> show why raw identity, derivatives, and reporting provenance must be explicit. <a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">Hermes et al. (2025)</a> and <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> show why event semantics and synchronization still need separate audits. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a>, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a>, and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> show why subject and acquisition shortcuts can survive loose evaluation. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show that even within roughly half a day, EEG decoding conditions can shift enough to matter for robustness. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025)</a> pages then show that benchmark governance itself can change what a leaderboard means. Therefore, this page no longer treats "dataset -> preprocessing -> score" as a sufficient beginner route.
+古いルートは寛容すぎました。 <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet ら(2019)</a>、現在の<a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">BIDS仕様</a>、および<a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">Pernetら。 (2020)</a> は、生のアイデンティティ、派生品、および報告の出所を明示する必要がある理由を示しています。 <a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">エルメス他(2025)</a> および <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> は、イベントのセマンティクスと同期に依然として個別の監査が必要な理由を示しています。 <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>、<a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik 他(2017)</a>、<a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu 他(2020)</a>、<a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di 他(2021)</a> は、主題と取得のショートカットが緩やかな評価に耐えられる理由を示しています。 <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> は、およそ半日以内であっても、EEG デコード条件が堅牢性にとって問題になるほど十分に変化する可能性があることを示しています。 <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025)</a> の公式ページでは、ベンチマーク ガバナンス自体がリーダーボードの意味を変える可能性があることが示されています。したがって、このページでは、「データセット -> 前処理 -> スコア」を初心者向けの十分なルートとして扱うことはなくなりました。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Scope of this page</strong>
+<strong>このページの範囲</strong>
 <p>
-This page stays on the technical and natural science side. It does not argue about philosophy, law, or identity. It only fixes what must be observable, logged, and audited before an EEG result can count as reproducible L0 work on this site.
+このページは技術および自然科学側にとどまります。哲学、法律、アイデンティティについて議論するものではありません。このサイトで EEG 結果が再現可能な L0 作業としてカウントされる前に、観察可能、ログ記録、および監査する必要があるもののみを修正します。
 </p>
 </div>
 
 <section class="section" id="route">
-<h2 class="section-title">Six gates from EEG to L0</h2>
+<h2 class="section-title">SEEG から L0</h2> までの 6 つのゲート
 <table class="data-table">
 <thead>
 <tr>
-<th>Order</th>
-<th>Page to open</th>
-<th>What is fixed here</th>
-<th>What must exist before moving on</th>
+<th>注文</th>
+<th>開くページ</th>
+<th>ここでの修正点</th>
+<th>次に進む前に必要なもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>1</strong></td>
 <td><a href="../eeg_101.html">EEG 101</a></td>
-<td>Fix the measurement ceiling: what EEG directly observes, what remains latent, and what kind of claim it cannot support on its own.</td>
-<td>A one-line stopped claim such as "this route aims at reproducible macro-state analysis, not source-complete or WBE-complete recovery."</td>
+<td>測定の上限を修正します。EEG が直接観察するもの、潜在的に残っているもの、およびそれ自体ではサポートできない種類の主張。</td>
+<td>A は、「このルートは、ソース完全または WBE 完全な回復ではなく、再現可能なマクロ状態の分析を目的としています。」などの 1 行の主張を停止しました。</td>
 </tr>
 <tr>
 <td><strong>2</strong></td>
-<td><a href="../datasets.html">Datasets</a> and <a href="baselines-prereg-and-model-cards.html">Baseline / Benchmark / Pre-registration / Model Card</a></td>
-<td>Choose a <strong>benchmark object</strong>, not just a file bundle: task, target, independent hold-out unit, metric bundle, version, extra-data policy, and benchmark-governance status.</td>
-<td>A short benchmark card naming dataset/version, task, target, split unit, main metric bundle, and whether official rules or postmortems changed the benchmark meaning.</td>
+<td><a href="../datasets.html">データセット</a>および<a href="baselines-prereg-and-model-cards.html">ベースライン/ベンチマーク/事前登録/モデルカード</a></td>
+<td>ファイル バンドルだけでなく、<strong>ベンチマーク オブジェクトを選択します</strong>: タスク、ターゲット、独立したホールドアウト ユニット、メトリック バンドル、バージョン、追加データ ポリシー、ベンチマーク ガバナンス ステータス。</td>
+<td>A 短いベンチマーク カードの命名データセット/バージョン、タスク、ターゲット、分割ユニット、メイン メトリック バンドル、および公式ルールまたは事後検証によりベンチマークの意味が変更されたかどうか。</td>
 </tr>
 <tr>
 <td><strong>3</strong></td>
-<td><a href="dataset-splits-and-leakage.html">Dataset splits and data leakage</a> and <a href="state-trait-and-drift.html">State, trait, and drift</a></td>
-<td>Freeze the <strong>temporal regime</strong>: subject, session, and time disjointness; same-session versus cross-day scope; fixed versus recalibrated decoder interval.</td>
-<td>A split manifest plus a temporal-validity note stating whether the result is same-session, same-day, cross-day, or longer-horizon, and whether the decoder stays fixed.</td>
+<td><a href="dataset-splits-and-leakage.html">データセットの分割とデータ漏洩</a> および <a href="state-trait-and-drift.html">状態、特性、ドリフト</a></td>
+<td><strong>時間体制を凍結する</strong>: 主題、セッション、および時間がバラバラである。同一セッションと日をまたぐ範囲。固定デコーダ間隔と再調整されたデコーダ間隔。</td>
+<td>A 分割マニフェストと、結果が同一セッション、同日、日をまたぐか、またはより長い期間であるかどうか、およびデコーダーが固定されたままであるかどうかを示す時間的有効性に関するメモ。</td>
 </tr>
 <tr>
 <td><strong>4</strong></td>
-<td><a href="event-sync-and-measurement-logs.html">Event synchronization and observation logs</a></td>
-<td>Freeze the <strong>observation contract</strong>: event times, event semantics, label provenance, clock domain, delay/jitter/drift notes, and report-usage flags.</td>
-<td>An observation log that separates time anchor, semantics, and synchronization layer instead of mixing them into one generic metadata note.</td>
+<td><a href="event-sync-and-measurement-logs.html">イベント同期および観察ログ</a></td>
+<td><strong>観測コントラクトを凍結する</strong>: イベント時間、イベント セマンティクス、ラベルの出所、クロック ドメイン、遅延/ジッター/ドリフト ノート、およびレポート使用フラグ。</td>
+<td>時間アンカー、セマンティクス、同期層を 1 つの汎用メタデータ ノートに混合するのではなく、分離する観察ログ。</td>
 </tr>
 <tr>
 <td><strong>5</strong></td>
-<td><a href="../datasets.html#l0-practice">Hands-on</a> and <a href="l0-minimum-artifact-pack.html">L0 minimum artifact pack</a></td>
-<td>Produce the first reproducible artifact bundle: <strong>raw identity</strong>, <strong>derivative identity</strong>, <strong>run identity</strong>, QC, baseline output, and failure registry.</td>
-<td>A rerunnable derivative package with dataset provenance, command or pipeline provenance, environment pin, QC report, baseline output, and at least one named failure mode.</td>
+<td><a href="../datasets.html#l0-practice">ハンズオン</a>および<a href="l0-minimum-artifact-pack.html">L0最小アーティファクトパック</a></td>
+<td>最初の再現可能なアーティファクト バンドルを生成します: <strong>生のアイデンティティ</strong>、<strong>派生アイデンティティ</strong>、<strong>実行アイデンティティ</strong>、QC、ベースライン出力、および失敗レジストリ。</td>
+<td>A データセットの出所、コマンドまたはパイプラインの出所、環境ピン、QC レポート、ベースライン出力、および少なくとも 1 つの名前付き障害モードを備えた再実行可能な派生パッケージ。</td>
 </tr>
 <tr>
 <td><strong>6</strong></td>
-<td><a href="../verification.html">Verification</a></td>
-<td>Convert the artifact bundle into a bounded claim: L0 ceiling, observability ceiling, shortcut ceiling, and temporal-validity ceiling.</td>
-<td>A submission-ready stopped claim plus the required companion cards if the result starts to imply target specificity or temporal durability.</td>
+<td><a href="../verification.html">検証</a></td>
+<td>アーティファクト バンドルを制限付きクレームに変換します: L0 上限、可観測性上限、ショートカット 上限、および時間的有効性上限。</td>
+<td>A 提出準備完了の停止済みクレームと、結果がターゲットの特異性または一時的な耐久性を暗示し始めた場合に必要なコンパニオン カード。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="why-gates">
-<h2 class="section-title">Why these gates must stay separate</h2>
+<h2 class="section-title">これらのゲートを分離しておく必要がある理由</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>What older beginner routes tended to compress</th>
-<th>What current sources actually support</th>
-<th>How this site now reads the route</th>
+<th>古い初心者ルートが圧縮する傾向にあったもの</th>
+<th>実際にサポートされる電流源</th>
+<th>このサイトの現在のルートの見方</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>"Dataset choice" as only a file download step</strong></td>
-<td><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015)</a> show why metric choice changes what a binary score means, and the official <a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025) rules</a> plus <a href="https://eeg2025.github.io/leaderboard/" target="_blank">final leaderboard</a> show that governance changes can alter benchmark meaning after launch.</td>
-<td>Choosing data now means choosing the benchmark object: task, target, split/randomization rule, metric bundle, version, and governance status.</td>
+<td><strong>ファイルのダウンロード手順のみとしての「データセットの選択」</strong></td>
+<td><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">斉藤＆amp; Rehmsmeier (2015)</a> は、メトリクスの選択によってバイナリ スコアの意味が変わる理由を示し、公式 <a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025) ルール </a> と <a href="https://eeg2025.github.io/leaderboard/" target="_blank"> 最終リーダーボード </a> は、ガバナンスの変更が開始後にベンチマークの意味を変える可能性があることを示しています。</td>
+<td>データの選択は、ベンチマーク オブジェクト (タスク、ターゲット、分割/ランダム化ルール、メトリック バンドル、バージョン、ガバナンス ステータス) を選択することを意味します。</td>
 </tr>
 <tr>
-<td><strong>"Clean split" as the whole leakage solution</strong></td>
-<td><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a>, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a>, and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> show that subject/session and acquisition-distribution structure can remain highly predictive.</td>
-<td>The route now fixes both split hygiene and shortcut resistance. A clean split is necessary, but it is not treated as proof that the target neural variable was isolated.</td>
+<td><strong>漏れ全体を解決する「クリーンスプリット」</strong></td>
+<td><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>、<a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik 他(2017)</a>、<a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu 他(2020)</a>、<a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di 他(2021)</a> は、被験者/セッションおよび取得分配構造が依然として高い予測性を維持できることを示しています。</td>
+<td>ルートはスプリット衛生とショートカット耐性の両方を修正しました。きれいな分割は必要ですが、ターゲットの神経変数が分離されたという証拠としては扱われません。</td>
 </tr>
 <tr>
-<td><strong>"Same-session score" as temporal generalization</strong></td>
-<td><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> show that EEG decoding conditions can change materially across a day-night window, and this site's <a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> plus <a href="/wiki/state-trait-and-drift.html">state-trait-drift rule</a> now separate fixed-decoder interval, <strong>fast labels</strong>, <strong>slow internal-milieu disclosure</strong>, and recalibration burden.</td>
-<td>The route now asks the reader to decide same-session, same-day, cross-day, or longer-horizon scope before training, and to log whether the regime changed through movement / arousal alone or through slower circadian / endocrine-metabolic state as well.</td>
+<td><strong>時間的一般化としての「同一セッションスコア」</strong></td>
+<td><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">エガー他(2024)</a> は、EEG デコード条件が昼夜のウィンドウにわたって大幅に変化する可能性があることを示しており、このサイトの <a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> プラス <a href="/wiki/state-trait-and-drift.html">state-trait-drift ルール </a> は、固定デコーダ間隔を分離するようになり、<strong> 高速ラベル </strong>、<strong> 遅い内部環境開示 </strong>、および再調整負荷 </td>
+<td>このルートでは、トレーニング前に同一セッション、同じ日、日をまたぐ、またはより長い期間の範囲を決定し、その体制が運動/覚醒のみによって変化したか、それともより遅い概日リズム/内分泌代謝状態によっても変化したかを記録するよう読者に求めます。</td>
 </tr>
 <tr>
-<td><strong>"Events are in BIDS" as if semantics and timing were solved together</strong></td>
-<td>The current <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">BIDS specification</a> and <a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">Hermes et al. (2025)</a> support structured events and machine-readable semantics, while <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> makes clear that synchronization middleware does not by itself measure device-side delay.</td>
-<td>This route now separates <strong>time anchor</strong>, <strong>event semantics</strong>, and <strong>clock/synchronization audit</strong> into distinct observation artifacts.</td>
+<td><strong>あたかもセマンティクスとタイミングが一緒に解決されたかのように「イベントは BIDS にあります」</strong></td>
+<td>現行<a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">BIDS仕様</a>と<a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">エルメス他(2025) </a> は構造化イベントと機械可読セマンティクスをサポートしていますが、<a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> は、同期ミドルウェア自体がデバイス側の遅延を測定しないことを明確にしています。</td>
+<td>このルートは、<strong> 時間アンカー </strong>、<strong> イベント セマンティクス </strong>、および <strong> クロック/同期監査 </strong> を個別の観測アーティファクトに分離するようになりました。</td>
 </tr>
 <tr>
-<td><strong>"Pipeline ran" as if provenance were sufficient</strong></td>
-<td><a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">Gorgolewski et al. (2016)</a>, <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019)</a>, <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">Pernet et al. (2020)</a>, and the current <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">BIDS specification</a> separate raw datasets, derivatives, and generated-by provenance.</td>
-<td>The route now requires raw identity, derivative identity, and run identity to be visible as different objects before L0 is called complete.</td>
+<td><strong>出所が十分であるかのように「パイプラインが実行されました」</strong></td>
+<td><a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">Gorgolewski et al. (2016)</a>、<a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">パーネット 他(2019)</a>、<a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">パーネット 他(2020)</a>、および現在の <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">BIDS 仕様 </a> は、生のデータセット、派生データ、および来歴によって生成されたデータを分離します。</td>
+<td>ルートでは、L0 が完了と呼ばれる前に、生の ID、派生 ID、および実行 ID が別のオブジェクトとして表示されることが必要になりました。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="artifact-bundle">
-<h2 class="section-title">Minimum artifact bundle before one score matters</h2>
+<h2 class="section-title">スコアが重要になる前の最小アーティファクト バンドル</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Artifact</th>
-<th>What it must disclose</th>
-<th>What goes wrong if it is missing</th>
+<th>アーティファクト</th>
+<th>開示すべきこと</th>
+<th>これがないとどうなる</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Benchmark object</strong></td>
-<td>Dataset/version, task, target, independent hold-out unit, metric bundle, extra-data policy, and benchmark-governance status.</td>
-<td>A score can be overread as if it applied to a different task, split regime, or official rule set.</td>
+<td><strong>ベンチマークオブジェクト</strong></td>
+<td>データセット/バージョン、タスク、ターゲット、独立したホールドアウト ユニット、メトリック バンドル、追加データ ポリシー、およびベンチマーク ガバナンス ステータス。</td>
+<td>A スコアは、別のタスク、分割レジーム、または公式ルール セットに適用されているかのようにオーバーリードできます。</td>
 </tr>
 <tr>
-<td><strong>Split manifest</strong></td>
-<td>Which subject/session/time units are disjoint, how folds were frozen, and which grouping variables were respected.</td>
-<td>The evaluation can drift silently as folds or grouping assumptions change.</td>
+<td><strong>分割マニフェスト</strong></td>
+<td>どの件名/セッション/時間単位が素であるか、フォールドがどのように凍結されたか、どのグループ化変数が尊重されたか。</td>
+<td>フォールドやグループ化の前提が変化すると、評価が静かに変動する可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Temporal-validity note</strong></td>
-<td>Same-session versus cross-day scope, fixed versus recalibrated decoder, fast state labels, and any relevant slow internal-milieu disclosure.</td>
-<td>Same-day success can be silently promoted to longitudinal stability or deployability.</td>
+<td><strong>時間的有効性メモ</strong></td>
+<td>同一セッションと日をまたぐスコープ、固定デコーダと再調整されたデコーダ、高速状態ラベル、および関連する遅い内部環境の開示。</td>
+<td>即日の成功は、長期的な安定性や展開性をサイレントに促進できます。</td>
 </tr>
 <tr>
-<td><strong>Observation log</strong></td>
-<td>Event times, semantics, scorer or report provenance, clock domain, delay/jitter/drift notes, and bad-segment annotations.</td>
-<td>The route cannot distinguish a signal problem from a label or timing problem.</td>
+<td><strong>観察記録</strong></td>
+<td>イベント時間、セマンティクス、スコアラーまたはレポートの出自、クロック ドメイン、遅延/ジッター/ドリフト ノート、および不良セグメントの注釈。</td>
+<td>ルートは信号の問題とラベルまたはタイミングの問題を区別できません。</td>
 </tr>
 <tr>
-<td><strong>Derivative lineage</strong></td>
-<td>Source dataset, generated-by pipeline, version or commit, environment pin, command provenance, and output locations.</td>
-<td>Reanalysis and audit become impossible even if the main score is reproducible once.</td>
+<td><strong>派生系統</strong></td>
+<td>Sソース データセット、パイプラインによって生成、バージョンまたはコミット、環境ピン、コマンド来歴、および出力場所。</td>
+<td>メインスコアは一度再現できても再解析・監査は不可能となります。</td>
 </tr>
 <tr>
-<td><strong>Stopped claim</strong></td>
-<td>What the result supports and what it still does not support, in one or two sentences.</td>
-<td>L0 can be overread as source localization truth, stable biomarker evidence, or WBE-relevant state capture.</td>
+<td><strong>請求停止</strong></td>
+<td>結果で何がサポートされ、何がまだサポートされていないのかを 1 ～ 2 文で説明します。</td>
+<td>L0 は、ソース位置特定の真実、安定したバイオマーカーの証拠、または WBE 関連の状態キャプチャとしてオーバーリードできます。</td>
 </tr>
 </tbody>
 </table>
 
 <div class="note-box">
-<strong>Operational inference used on this site</strong>
+<strong>このサイトで使用されている操作推論</strong>
 <p>
-Not every field above is a single mandatory key in one external standard. The stronger requirement on this site is an <strong>operational inference</strong> from current standards, primary literature, and challenge practice: if a result is to count as comparable L0 progress, the benchmark object, temporal regime, observation contract, and derivative lineage all need their own artifacts rather than one mixed prose paragraph.
+上記のすべてのフィールドが、1 つの外部標準における単一の必須キーであるわけではありません。このサイトのより強力な要件は、現在の標準、一次文献、および課題の実践からの <strong> 操作推論 </strong> です。結果が同等の L0 進捗としてカウントされる場合、ベンチマーク オブジェクト、時間レジーム、観察契約、および派生系統はすべて、1 つの混合散文段落ではなく、独自の成果物を必要とします。
 </p>
 </div>
 </section>
 
 <section class="section" id="common-accidents">
-<h2 class="section-title">Five accidents this route now tries to stop early</h2>
+<h2 class="section-title">このルートでは 5 件の事故が発生しており、早期に停止しようとしています</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Common accident</th>
-<th>Why it is scientifically weak</th>
-<th>Where to return</th>
+<th>よくある事故</th>
+<th>なぜ科学的に弱いのか</th>
+<th>返却先</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Choosing a starter dataset without naming the benchmark object</strong></td>
-<td>The data may be fine, but the score will still be uninterpretable if task, metric bundle, and governance status are missing.</td>
-<td><a href="baselines-prereg-and-model-cards.html">Baseline / Benchmark / Pre-registration / Model Card</a></td>
+<td><strong>ベンチマーク オブジェクトに名前を付けずにスターター データセットを選択</strong></td>
+<td>データは問題ないかもしれませんが、タスク、メトリクス バンドル、ガバナンス ステータスが欠落している場合、スコアは依然として解釈できません。</td>
+<td><a href="baselines-prereg-and-model-cards.html">ベースライン / ベンチマーク / 事前登録 / モデルカード</a></td>
 </tr>
 <tr>
-<td><strong>Using a subject/session split but not naming temporal scope</strong></td>
-<td>The result can still be same-session or same-day only, even if the split sounds clean.</td>
-<td><a href="state-trait-and-drift.html">State, trait, and drift</a></td>
+<td><strong>サブジェクト/セッション分割を使用するが、時間スコープに名前を付けない</strong></td>
+<td>分割音がきれいに聞こえる場合でも、結果は同じセッションまたは同じ日のみになる可能性があります。</td>
+<td><a href="state-trait-and-drift.html">状態、特性、ドリフト</a></td>
 </tr>
 <tr>
-<td><strong>Treating `events.tsv` as if it fully solved label meaning</strong></td>
-<td>Time anchors, condition semantics, and report-derived labels are different objects and can fail independently.</td>
-<td><a href="event-sync-and-measurement-logs.html">Event synchronization and observation logs</a></td>
+<td><strong>ラベルの意味を完全に解決したかのように`events.tsv`を扱う</strong></td>
+<td>時間アンカー、条件セマンティクス、およびレポート派生ラベルは異なるオブジェクトであり、独立して失敗する可能性があります。</td>
+<td><a href="event-sync-and-measurement-logs.html">イベント同期および観察ログ</a></td>
 </tr>
 <tr>
-<td><strong>Treating LSL or trigger lines as hardware ground truth</strong></td>
-<td>Network synchronization does not automatically measure display, audio, amplifier, or device-internal delays.</td>
-<td><a href="event-sync-and-measurement-logs.html">Event synchronization and observation logs</a></td>
+<td><strong>LSL またはトリガー ラインをハードウェア グラウンド トゥルースとして扱う</strong></td>
+<td>ネットワーク同期では、ディスプレイ、オーディオ、アンプ、またはデバイス内部の遅延は自動的に測定されません。</td>
+<td><a href="event-sync-and-measurement-logs.html">イベント同期および観察ログ</a></td>
 </tr>
 <tr>
-<td><strong>Reporting one score without lineage and failure disclosure</strong></td>
-<td>The route becomes impossible to audit, extend, or compare even if the run once looked successful.</td>
-<td><a href="l0-minimum-artifact-pack.html">L0 minimum artifact pack</a> and <a href="../verification.html">Verification</a></td>
+<td><strong>系統と失敗の開示なしで 1 つのスコアを報告</strong></td>
+<td>一度実行が成功したように見えても、ルートの監査、拡張、または比較が不可能になります。</td>
+<td><a href="l0-minimum-artifact-pack.html">L0 最小アーティファクト パック</a> および <a href="../verification.html">検証</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">Where to go next</h2>
+<h2 class="section-title">次の行き先</h2>
 <p>
-If the measurement ceiling of EEG is still not clear, return to <a href="../eeg_101.html">EEG 101</a>. If the main uncertainty is split hygiene or benchmark provenance, go to <a href="dataset-splits-and-leakage.html">Dataset splits and data leakage</a>. If time anchors, label provenance, or synchronization are the problem, go to <a href="event-sync-and-measurement-logs.html">Event synchronization and observation logs</a>. Once the first artifact bundle exists, route it through <a href="../verification.html">Verification</a> and attach the <a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> or <a href="../verification.html#specificity-shortcut-card">Specificity &amp; Shortcut Card</a> whenever the claim starts to reach beyond plain reproducible analysis.
+EEG の測定上限がまだ明確でない場合は、<a href="../eeg_101.html">EEG 101</a> に戻ります。主な不確実性が分割の衛生状態またはベンチマークの来歴である場合は、<a href="dataset-splits-and-leakage.html">データセットの分割とデータ漏洩</a>に進みます。タイム アンカー、ラベルの来歴、または同期が問題となる場合は、<a href="event-sync-and-measurement-logs.html">イベントの同期と観察ログ</a> に移動してください。最初のアーティファクト バンドルが存在したら、それを <a href="../verification.html">Verification</a> 経由でルーティングし、<a href="../verification.html#temporal-validity-card">Temporal Validity Card</a> または <a href="../verification.html#specificity-shortcut-card">Specificity &amp; をアタッチします。主張が単純な再現可能な分析を超え始めたときはいつでも、Card</a> をショートカットします。
 </p>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">References</h2>
+<h2 class="section-title">参考資料</h2>
 <ul>
-<li>Gorgolewski KJ, Auer T, Calhoun VD, et al. The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments. <em>Sci Data</em>. 2016. <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">https://doi.org/10.1038/sdata.2016.44</a></li>
-<li>Pernet CR, Appelhoff S, Gorgolewski KJ, et al. EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Sci Data</em>. 2019. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">https://doi.org/10.1038/s41597-019-0104-8</a></li>
-<li>Pernet C, Garrido MI, Gramfort A, et al. Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. <em>Nat Neurosci</em>. 2020. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">https://doi.org/10.1038/s41593-020-00709-0</a></li>
-<li>Brain Imaging Data Structure (stable): dataset_description.json, derived dataset and pipeline description. <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html</a></li>
-<li>Hermes D, Bigdely-Shamlo N, Niso G, et al. HED library schema for EEG data annotation. <em>Sci Data</em>. 2025. <a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">https://doi.org/10.1038/s41597-025-05791-2</a></li>
-<li>Kothe C, Grivich M, Stenner T, et al. The lab streaming layer for synchronized multimodal recording. <em>Imaging Neurosci</em>. 2025. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">https://doi.org/10.1162/IMAG.a.136</a></li>
-<li>Chaibub Neto E, Pratap A, Perumal TM, et al. Detecting the impact of subject characteristics on machine learning-based diagnostic applications. <em>npj Digit Med</em>. 2019. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">https://doi.org/10.1038/s41746-019-0178-x</a></li>
-<li>Melnik A, Legkov P, Izdebski K, et al. Systems, subjects, sessions: to what extent do these factors influence EEG data? <em>Front Hum Neurosci</em>. 2017. <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">https://doi.org/10.3389/fnhum.2017.00150</a></li>
-<li>Xu M, Han J, Wang Y, et al. Cross-dataset variability problem in EEG decoding with deep learning. <em>Front Hum Neurosci</em>. 2020. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">https://doi.org/10.3389/fnhum.2020.00103</a></li>
-<li>Di M, Han J, Wang Y, et al. The time-robustness analysis of individual identification based on resting-state EEG. <em>Front Hum Neurosci</em>. 2021. <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">https://doi.org/10.3389/fnhum.2021.672946</a></li>
-<li>Egger M, Haden B, Bernarding J, et al. Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <em>Sci Rep</em>. 2024. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">https://doi.org/10.1038/s41598-024-70609-x</a></li>
-<li>Saito T, Rehmsmeier M. The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. <em>PLoS One</em>. 2015. <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">https://doi.org/10.1371/journal.pone.0118432</a></li>
-<li>EEG Challenge (2025) official website. <a href="https://eeg2025.github.io/" target="_blank">https://eeg2025.github.io/</a></li>
-<li>EEG Challenge (2025) official rules. <a href="https://eeg2025.github.io/rules/" target="_blank">https://eeg2025.github.io/rules/</a></li>
-<li>EEG Challenge (2025) final leaderboard and organizer postmortem. <a href="https://eeg2025.github.io/leaderboard/" target="_blank">https://eeg2025.github.io/leaderboard/</a></li>
+<li>Gorgolewski KJ、Auer T、Calhoun VD、他。脳画像データ構造。神経画像実験の出力を整理して記述するための形式です。 <em>Sciデータ</em>。 2016.<a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">https://doi.org/10.1038/sdata.2016.44PH8XPH9X
+<li>Pernet CR、Appelhoff S、Gorgolewski KJ、他EEG-BIDS、脳波検査用の脳画像データ構造の拡張。 <em>Sciデータ</em>。 2019.<a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">https://doi.org/10.1038/s41597-019-0104-8PH14XPH15X
+<li>Pernet C、Garrido MI、Gramfort A、他。再現可能なEEGおよびMEG研究のためのOHBM COBIDAS MEEG委員会からの問題と推奨事項。 <em>Nat Neurosci</em>。 2020.<a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">https://doi.org/10.1038/s41593-020-00709-0PH20XPH21X
+<li>Brain Imaging データ構造 (安定版): dataset_description.json、派生データセットとパイプラインの説明。 <a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.html" target="_blank">https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/dataset-description.htmlPH24XPH25X
+<li>エルメス D、ビッグデリー・シャムロ N、ニーソ G 他EEG データ注釈用の HED ライブラリ スキーマ。 <em>Sciデータ</em>。 2025.<a href="https://doi.org/10.1038/s41597-025-05791-2" target="_blank">https://doi.org/10.1038/s41597-025-05791-2PH30XPH31X
+<li>Kothe C、Grivich M、Stenner T、他。同期されたマルチモーダル記録のためのラボ ストリーミング レイヤー。 <em>イメージングニューロサイエンス</em>。 2025.<a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">https://doi.org/10.1162/IMAG.a.136PH36XPH37X
+<li>Chaibub Neto E、Pratap A、Permal TM、他機械学習ベースの診断アプリケーションに対する被験者の特性の影響を検出します。 <em>npj 桁 Med</em>。 2019.<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">https://doi.org/10.1038/s41746-019-0178-xPH42XPH43X
+<li>Melnik A、Legkov P、Izdebski K、他。システム、被験者、セッション: これらの要因はEEGデータにどの程度影響しますか? <em>フロントハムニューロサイエンス</em>。 2017.<a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">https://doi.org/10.3389/fnhum.2017.00150PH48XPH49X
+<li>Xu M、Han J、Wang Y 他深層学習による EEG デコードにおけるデータセット間の変動性の問題。 <em>フロントハムニューロサイエンス</em>。 2020.<a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">https://doi.org/10.3389/fnhum.2020.00103PH4XPH5X
+<li>Di M、Han J、Wang Y 他安静状態の脳波に基づく個人識別の時間堅牢性分析。 <em>フロントハムニューロサイエンス</em>。 2021.<a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">https://doi.org/10.3389/fnhum.2021.672946PH10XPH11X
+<li>Egger M、Haden B、Bernarding J 他手のジェスチャーの解読に影響を与える時間脳波ダイナミクス: 10 時間の研究。 <em>Sciレップ</em>。 2024.<a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">https://doi.org/10.1038/s41598-024-70609-xPH16XPH17X
+<li>Saito T、Rehmsmeier M。不均衡なデータセットでバイナリ分類器を評価する場合、適合率-再現率プロットは ROC プロットよりも有益です。 <em>PLoS One</em>。 2015.<a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">https://doi.org/10.1371/journal.pone.0118432PH22XPH23X
+<li>EEG チャレンジ (2025) 公式ウェブサイト。 <a href="https://eeg2025.github.io/" target="_blank">https://eeg2025.github.io/PH26XPH27X
+<li>EEG チャレンジ (2025) 公式ルール。 <a href="https://eeg2025.github.io/rules/" target="_blank">https://eeg2025.github.io/rules/PH30XPH31X
+<li>EEG Challenge (2025) の最終リーダーボードと主催者の事後分析。 <a href="https://eeg2025.github.io/leaderboard/" target="_blank">https://eeg2025.github.io/leaderboard/PH34XPH35X
 </ul>
 </section>
 
@@ -291,20 +292,20 @@ If the measurement ceiling of EEG is still not clear, return to <a href="../eeg_
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="dataset-splits-and-leakage.html">Dataset splits and leakage -</a></li>
-<li><a href="event-sync-and-measurement-logs.html">Event synchronization and logs -</a></li>
-<li><a href="state-trait-and-drift.html">State, trait, and drift -</a></li>
-<li><a href="l0-minimum-artifact-pack.html">L0 minimum artifact pack -</a></li>
+<li><a href="dataset-splits-and-leakage.html">データセットの分割と漏洩 -</a></li>
+<li><a href="event-sync-and-measurement-logs.html">イベントの同期とログ -</a></li>
+<li><a href="state-trait-and-drift.html">状態、特性、ドリフト -</a></li>
+<li><a href="l0-minimum-artifact-pack.html">L0 最小アーティファクト パック -</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../eeg_101.html">Introduction to EEG -</a></li>
-<li><a href="../datasets.html">Data &amp; Bench -</a></li>
-<li><a href="../verification.html">Verification -</a></li>
+<li><a href="../eeg_101.html">EEG の概要 -</a></li>
+<li><a href="../datasets.html">データ＆アンプ;ベンチ-</a></li>
+<li><a href="../verification.html">検証 -</a></li>
 </ul>
 </div>
 </aside>

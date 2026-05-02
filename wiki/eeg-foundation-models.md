@@ -1,518 +1,518 @@
 ---
 layout: default
-title: "Wiki: EEG foundation models and pretraining"
-description: "This page organizes how to read EEG foundation / self-supervised models using primary sources, the site's Pretraining Card workflow, and shortcut-resistance checks."
-article_type: Wiki
-subtitle: "Read advances in representation learning separately from claims that still need to be stopped"
-author: Mind Uploading Research Project
-last_updated: "2026-04-04"
-note: "Technical / natural science only"
-audience: "Readers who want to assess EEG foundation models such as LaBraM, BIOT, EEGPT, and BENDR without overclaiming"
-reading_time: "10-15 min"
-page_intro: "This page is a learning wiki that organizes how to read EEG foundation / self-supervised models. Recent large-scale pretraining is clearly an advance, but to avoid jumping from that advance to claims such as 'generalization is solved' or 'we are one step closer to WBE,' we separate pretraining corpus, channel mismatch, adaptation regime, benchmark object / supervision unit, and evaluation family."
-accuracy_note: "This page covers only how to read the technical and natural-science evidence. It does not address overall WBE completion criteria or philosophical questions."
+title: 'Wiki: EEG 基礎モデルと事前トレーニング'
+description: このページでは、一次ソースを使用した EEG 基礎 / 自己教師ありモデルの読み取り方法、サイトの事前トレーニング カード ワークフロー、およびショートカット耐性チェックを整理します。
+article_type: ウィキ
+subtitle: 表現学習の進歩を、まだ阻止する必要がある主張とは分けて読む
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-04-04'
+note: 技術/自然科学のみ
+audience: LaBraM、BIOT、EEGPT、BENDR などの EEG 基礎モデルを過度に主張することなく評価したい読者
+reading_time: 10～15分
+page_intro: このページはEEG基礎・自己教師ありモデルの読み方をまとめた学習Wikiです。最近の大規模な事前トレーニングは明らかに進歩ですが、その進歩から「一般化が解決された」または「WBE に一歩近づいた」などの主張に飛びつくことを避けるために、事前トレーニング
+  コーパス、チャネル不一致、適応レジーム、ベンチマーク オブジェクト/監視ユニット、および評価ファミリーを分離します。
+accuracy_note: このページでは、技術的および自然科学的証拠の読み方のみを説明します。 WBE の全体的な完了基準や哲学的な質問には触れません。
 page_highlights:
-  - "Foundation models can improve EEG decoding, but they do not solve observability, identifiability, and deployability all at once."
-  - "Recent primary papers themselves treat electrode mismatch, sampling-rate differences, missing channels, low SNR, and inter-subject variability as major open problems."
-  - "Accepted papers, official challenge rules, and arXiv preprints / under-review manuscripts are not treated as the same evidence tier."
-  - "Challenge and benchmark papers from 2025-2026 show that standardized cross-task / cross-subject evaluation is itself still unfinished."
-  - "Foundation-model benchmarks are not one object: window / trial classification, event detection, sequence labeling, subject-level regression, and retrieval-style tasks still need separate benchmark-object disclosure."
-  - "Benchmark object, independent prediction unit, grouped hold-out unit, and inference-stage budget are separate fields; one leaderboard name does not fix all four."
-  - "The official EEG Challenge leaderboard later disclosed a split-construction error in Challenge 2, so benchmark provenance here includes sample randomization, hidden grouping, and inference-stage constraints rather than only benchmark name."
-  - "A setup-agnostic foundation model or a very large pretraining corpus is not yet shortcut-resistant transfer; subject / site / reference / protocol shortcuts still need an explicit specificity audit."
-  - "A unified spatial embedding or channel-permutation-equivariant backbone is still not a shared physiological coordinate system; coordinate route, reference family, and omitted-channel policy remain separate evidence fields."
-  - "Larger models do not automatically win; rankings move with parameter efficiency, training time, and benchmark design."
-  - "To preserve comparability, a standard model card is not enough; a Pretraining Card is also required."
-  - "A pretraining corpus is also a dataset, so overlap audit here now splits raw-recording, subject/session, setup, task/object, and benchmark-operations ancestry instead of one yes/no box."
+- 基盤モデルは EEG デコードを改善できますが、可観測性、識別可能性、展開可能性をすべて一度に解決するわけではありません。
+- 最近の主要論文自体は、電極の不一致、サンプリング レートの違い、チャネルの欠落、低い SNR、および被験者間の変動を主要な未解決の問題として扱っています。
+- 受理された論文、公式異議申し立てルール、arXiv プレプリント/審査中の原稿は、同じ証拠層として扱われません。
+- 2025 年から 2026 年までのチャレンジおよびベンチマーク ペーパーは、標準化されたクロスタスク/クロスサブジェクト評価自体がまだ未完成であることを示しています。
+- 基礎モデルのベンチマークは 1 つのオブジェクトではありません。ウィンドウ/トライアルの分類、イベント検出、シーケンスのラベル付け、被験者レベルの回帰、および検索スタイルのタスクは、依然として個別のベンチマーク オブジェクトの開示が必要です。
+- ベンチマーク オブジェクト、独立した予測ユニット、グループ化されたホールドアウト ユニット、および推論段階のバジェットは別個のフィールドです。 1 つのリーダーボード名では 4 つすべてが固定されるわけではありません。
+- 公式 EEG チャレンジ リーダーボードは後にチャレンジ 2 の分割構築エラーを明らかにしたため、ここでのベンチマークの来歴には、ベンチマーク名だけではなく、サンプルのランダム化、非表示のグループ化、および推論段階の制約が含まれます。
+- セットアップに依存しない基礎モデルや非常に大規模な事前トレーニング コーパスは、まだショートカット耐性のある転送ではありません。件名/サイト/参照/プロトコルのショートカットには、依然として明示的な特異性監査が必要です。
+- 統一された空間埋め込みまたはチャネル順列等変バックボーンは、まだ共有された生理学的座標系ではありません。座標ルート、参照ファミリー、省略チャネル ポリシーは別個の証拠フィールドのままです。
+- より大きなモデルが自動的に勝つわけではありません。ランキングはパラメーターの効率、トレーニング時間、ベンチマーク設計によって変動します。
+- 比較可能性を維持するには、標準モデルのカードだけでは十分ではありません。プレトレーニングカードも必要です。
+- 事前トレーニング コーパスもデータセットであるため、ここでのオーバーラップ監査は、1 つの「はい/いいえ」ボックスではなく、生の記録、サブジェクト/セッション、セットアップ、タスク/オブジェクト、およびベンチマーク操作の祖先を分割するようになりました。
 known_points:
-  - "Self-supervised / foundation models show promising gains under limited-label conditions and across mixed-task downstream settings."
-  - "EEG has severe format heterogeneity, and differences in channel count, reference, sample rate, and window length easily break comparison."
-  - "The meaning of a downstream score changes across frozen, linear-probe, and fine-tuning regimes."
-  - "Papers from 2025-2026 are beginning to show that model rankings can change even with benchmark split construction and preprocessing alone."
-  - "Recent 2025-2026 model and benchmark papers show that 'works with any setup', 'wins under linear probing', and 'transfers under fine-tuning' are different claims that can reverse across evaluation regimes."
-  - "Benchmark name alone is still too coarse; the supervision unit can shift from windows or trials to epochs, events, or subjects, which changes what transfer means."
-  - "Benchmark object, independent prediction unit, grouped hold-out unit, and inference-stage budget can all change the meaning of the same leaderboard entry."
-  - "Official challenge operations can themselves expose hidden subject-order shortcuts or score-definition changes, so benchmark postmortems are treated here as primary evidence about comparability rather than as afterthoughts."
-  - "A successful foundation model cannot be read directly as source identifiability or WBE state-completeness."
-  - "Recent heterogeneous-device papers show that layout compatibility itself is still an active model-design target, which means geometry-route equivalence should not be silently assumed."
+- 自己教師あり/基礎モデルは、限定されたラベル条件下および混合タスクの下流設定全体で有望な利益を示します。
+- EEG には深刻なフォーマットの不均一性があり、チャネル数、基準、サンプル レート、ウィンドウの長さが異なると、比較が簡単に中断されます。
+- 下流スコアの意味は、凍結、線形プローブ、および微調整レジーム間で変化します。
+- 2025 年から 2026 年の論文では、ベンチマークの分割構築と前処理だけでもモデルのランキングが変化する可能性があることが示され始めています。
+- 最近の 2025 ～ 2026 年のモデルとベンチマークの論文では、「あらゆるセットアップで動作する」、「線形プローブでの勝利」、「微調整での移行」は、評価体制全体で逆転する可能性がある異なる主張であることが示されています。
+- ベンチマーク名だけではまだ粗すぎます。監視ユニットはウィンドウやトライアルからエポック、イベント、または主題に移行することができ、それによって転送の意味が変わります。
+- ベンチマーク オブジェクト、独立した予測ユニット、グループ化されたホールドアウト ユニット、および推論段階のバジェットはすべて、同じリーダーボード エントリの意味を変える可能性があります。
+- 公式チャレンジ操作自体が、隠れた被験者順序のショートカットやスコア定義の変更を暴露する可能性があるため、ここではベンチマークの事後分析を結果論としてではなく、比較可能性に関する主要な証拠として扱います。
+- 成功した基盤モデルは、ソースの識別可能性や WBE 状態の完全性として直接読み取ることはできません。
+- 最近の異種デバイスに関する論文では、レイアウトの互換性自体が依然としてアクティブなモデル設計のターゲットであることが示されています。これは、ジオメトリとルートの同等性が黙って仮定されるべきではないことを意味します。
 unknown_points:
-  - "It is still unsettled which pretraining objective is the most stable across broad downstream families."
-  - "There is still no default path that simultaneously satisfies cross-day, cross-device, cross-task, and longitudinal deployability."
-  - "There is also no fixed common standard for auditing benchmark version, split rules, and checkpoint selection together."
-  - "There is still no fixed common standard for reporting benchmark object / supervision unit alongside benchmark provenance."
-  - "Cross-project reporting still varies on how raw-recording ancestry, grouped hold-out unit, and benchmark-object ancestry are disclosed together."
-  - "It is not yet a settled law when targeted diversity beats indiscriminate scale."
-  - "It also remains unresolved how to show that a pretrained EEG representation is resisting identity / setup shortcuts rather than merely tolerating them on one benchmark."
-  - "It also remains unresolved how far reference-family shifts, coordinate-route mismatch, and label-limited clinical adaptation can be handled without heavy downstream rescue."
+- どの事前トレーニング目標が幅広い下流ファミリーにわたって最も安定しているかはまだ決まっていません。
+- 日をまたぐ、デバイスをまたぐ、タスクをまたぐ、および長期的な導入可能性を同時に満たすデフォルト パスはまだありません。
+- また、ベンチマーク バージョン、分割ルール、およびチェックポイントの選択を一緒に監査するための固定された共通基準もありません。
+- ベンチマークの来歴とともにベンチマーク オブジェクト/監視ユニットを報告するための固定された共通基準はまだありません。
+- プロジェクト間のレポートは、未加工のレコーディングの祖先、グループ化されたホールドアウト ユニット、およびベンチマーク オブジェクトの祖先をどのようにまとめて開示するかによって依然として異なります。
+- 対象を絞った多様性が無差別の規模を上回る場合、この法律はまだ確立されていません。
+- また、事前トレーニングされた EEG 表現が、単に 1 つのベンチマークでアイデンティティ/セットアップのショートカットを許容するのではなく、これらのショートカットに抵抗していることを示す方法も未解決のままです。
+- また、参照ファミリーのシフト、座標ルートの不一致、およびラベルが限定された臨床適応が、下流での大規模な救助なしでどこまで処理できるかは未解決のままです。
 wiki_links:
-  - label: "Wiki: Baselines, preregistration, and model cards"
-    url: "/wiki/baselines-prereg-and-model-cards.html"
-    description: "Use this page to connect the Pretraining Card to the standard model-card workflow."
-  - label: "Wiki: Dataset splits and leakage"
-    url: "/wiki/dataset-splits-and-leakage.html"
-    description: "This page explains why an overlap audit is necessary."
-  - label: "Wiki: State, trait, and drift"
-    url: "/wiki/state-trait-and-drift.html"
-    description: "Use this page to return to the basics when separating cross-day and longitudinal claims."
+- label: 'Wiki: ベースライン、事前登録、およびモデル カード'
+  url: /wiki/baselines-prereg-and-model-cards.html
+  description: このページを使用して、事前トレーニング カードを標準のモデル カード ワークフローに接続します。
+- label: 'Wiki: データセットの分割と漏洩'
+  url: /wiki/dataset-splits-and-leakage.html
+  description: このページでは、重複監査が必要な理由について説明します。
+- label: 'Wiki: 状態、特性、およびドリフト'
+  url: /wiki/state-trait-and-drift.html
+  description: このページを使用して、日をまたぐクレームと長期的なクレームを区別する際の基本に立ち返ってください。
 recommended_pages:
-  - label: "EEG Basics"
-    url: "/eeg_101.html"
-  - label: "Data and Benchmarks"
-    url: "/datasets.html"
-  - label: "Verification Stack"
-    url: "/verification.html"
+- label: 脳波検査の基礎
+  url: /eeg_101.html
+- label: データとベンチマーク
+  url: /datasets.html
+- label: 検証スタック
+  url: /verification.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Bottom line in one sentence</h2>
+<h2>一文の最後の行</h2>
 <p>
-EEG foundation models are an important advance for <strong>representation learning</strong> and <strong>low-label downstream tasks</strong>. However, that advance is readable only after separating <strong>what data the model was pretrained on</strong>, <strong>how formats were harmonized</strong>, and <strong>how far adaptation went downstream</strong>. A large model name alone does not determine either the strength of generalization or which claims still need to be stopped.
+EEG 基礎モデルは、<strong> 表現学習 </strong> および <strong> 低ラベルの下流タスク </strong> にとって重要な進歩です。ただし、その進歩は、<strong> モデルが事前トレーニングされたデータ </strong>、<strong> フォーマットがどのように調和されたか </strong>、<strong> 適応がダウンストリームにどの程度進んだか </strong> を分離した後にのみ読み取れます。大きなモデル名だけでは、一般化の強さや、どの主張を中止する必要があるかを決定することはできません。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Scope of this page</strong>
+<strong>このページの範囲</strong>
 <p>
-This page does not cover philosophy or legal institutions. It covers only how to read EEG foundation / self-supervised models from technical and natural-science evidence.
+このページでは哲学や法制度については扱いません。技術的および自然科学的証拠からEEG基礎/自己教師ありモデルを読み取る方法のみをカバーします。
 </p>
 </div>
 
 <div class="note-box">
-<strong>What the 2026-03 literature audit identified as missing</strong>
+<strong>2026-03 年の文献監査で不足していると判明したもの</strong>
 <p>
-The previous site had already strengthened QC, splits, multimodality, and drift, but it was missing <strong>how to read foundation models themselves</strong>. Without that layer, recent large-scale pretraining can still be misread too quickly as "dataset shift is solved," "a general decoder exists," or "we are closer to WBE." This page therefore separates what the primary literature actually advances from what it still leaves unresolved.
+以前のサイトではすでに QC、スプリット、マルチモダリティ、ドリフトが強化されていましたが、<strong>基礎モデル自体を読み取る方法</strong>が欠けていました。この層がなければ、最近の大規模な事前トレーニングは依然として、「データセットのシフトが解決された」、「一般的なデコーダーが存在する」、または「WBE に近づいている」などとすぐに誤読される可能性があります。したがって、このページでは、一次文献が実際に進歩しているものと、未解決のまま残されているものを区別します。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Source types fixed in advance as of 2026-03-25</strong>
+<strong>ソース タイプは 2026 年 3 月 25 日の時点で事前に修正されました</strong>
 <p>
-The sources on this page mix <strong>peer-reviewed journal / accepted conference papers</strong>, <strong>accepted posters / workshops</strong>, <strong>official challenge websites / rules</strong>, <strong>arXiv preprints</strong>, and <strong>under-review manuscripts</strong>. These are not evidence of the same strength. For example, the official EEG Foundation Challenge site states in its 2025-11-17 update that the <strong>proposal preprint does not reflect changes made during the execution phase and that the current website and starter kit should be used instead</strong>. The final leaderboard then disclosed that Challenge 2 had not randomized samples, which allowed teams to exploit the fact that contiguous trials likely came from the same subjects. Accordingly, this page does not place model-capability comparisons, benchmark-governance warnings, and moving-target competition rules into the same single frontier ranking.
+このページのソースには、<strong> 査読済みジャーナル / 受理された会議論文</strong>、<strong> 受理されたポスター / ワークショップ</strong>、<strong> 公式チャレンジ Web サイト / ルール</strong>、<strong>arXiv プレプリント</strong>、および<strong> 査読中の原稿</strong>が含まれています。これらは同じ強さの証拠ではありません。たとえば、EEG Foundation Challenge の公式サイトは、2025 年 11 月 17 日の更新で、<strong> 提案のプレプリントには実行フェーズ中に加えられた変更が反映されておらず、現在の Web サイトとスターター キットを代わりに </strong> を使用する必要があると述べています。その後、最終的なリーダーボードでは、チャレンジ 2 ではサンプルがランダム化されていないことが明らかになり、チームは連続する試験が同じ被験者からのものである可能性が高いという事実を利用することができました。したがって、このページでは、モデルの機能比較、ベンチマークとガバナンスの警告、および移動ターゲットの競争ルールを同じ単一のフロンティア ランキングに入れません。
 </p>
 </div>
 
 <div class="note-box">
-<strong>"Adapting to any setup" is not yet shortcut-resistant transfer</strong>
+<strong>「どんな設定にも適応」はまだショートカット耐性のない転送</strong>
 <p>
-This was the next weak point on this page. <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> is important because it explicitly targets arbitrary length and electrode arrangement with pretraining on more than <strong>60,000 hours</strong> from <strong>92 datasets</strong>. But that is still not the same as proving that the learned representation stopped reading <strong>subject identity</strong>, <strong>reference / device / protocol structure</strong>, or other recording-distribution cues. <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> then showed that narrow-source versus diverse-source pretraining can trade places depending on whether the downstream regime is <strong>linear-probe</strong> or <strong>fine-tuning</strong>, while <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> showed across <strong>12 open-source foundation models</strong> and <strong>13 datasets</strong> that linear probing is often insufficient, specialist models trained from scratch remain competitive, and larger models do not automatically generalize better. Those benchmark-side warnings line up with the shortcut literature already used elsewhere on this site: <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a>, <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a>, and <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di et al. (2021)</a> show why identity confounding, acquisition variability, and time-robust fingerprints must be audited separately from headline transfer. Therefore, on this site, <strong>setup-agnostic pretraining</strong> is not read as <strong>shortcut-resistant neural representation</strong> unless the downstream claim also passes the <a href="../verification.html#specificity-shortcut-card">Specificity &amp; Shortcut Card</a>.
+これがこのページの次の弱点でした。 <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025) </a> は、<strong>92 データセット </strong> からの <strong>60,000 時間 </strong> を超える事前トレーニングで、任意の長さと電極配置を明示的にターゲットにしているため重要です。しかし、それは学習された表現が<strong>サブジェクトアイデンティティ</strong>、<strong>参照/デバイス/プロトコル構造</strong>、またはその他の録音配信キューの読み取りを停止したことを証明することと同じではありません。 <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は、下流レジームが <strong>linear-probe</strong> か <strong>fine-tuning</strong> かに応じて、ナローソース事前トレーニングと多様ソース事前トレーニングが入れ替わることを示しました。 (2026)</a> は、<strong>12 オープンソース基盤モデル </strong> および <strong>13 データセット </strong> にわたって、線形プロービングでは不十分な場合が多く、ゼロからトレーニングされた専門家モデルは引き続き競争力を維持し、より大きなモデルは自動的により適切に一般化されないことを示しました。これらのベンチマーク側の警告は、このサイトの他の場所ですでに使用されているショートカットの文献 (<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al.) と一致しています。 (2019)</a>、<a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu 他(2020)</a>、<a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di 他(2021)</a> は、ID の交絡、取得の変動性、および時間に強いフィンガープリントをヘッドライン転送とは別に監査する必要がある理由を示しています。したがって、このサイトでは、下流のクレームが <a href="../verification.html#specificity-shortcut-card">Specificity および <a href="../verification.html#specificity-shortcut-card"> の要求にも合格しない限り、<strong>setup-agnostic pretraining</strong> は <strong>shortcut- resistance neuralpresentation</strong> として読み取られません。ショートカットカード</a>。
 </p>
 </div>
 
 <div class="note-box">
-<strong>A unified spatial embedding is not yet a common physiological coordinate system</strong>
+<strong>A 統合された空間埋め込みはまだ一般的な生理学的座標系ではありません</strong>
 <p>
-This was the next remaining compression on this page. <a href="https://arxiv.org/abs/2507.14141" target="_blank">Han et al. (2025)</a> targeted <strong>channel-permutation equivariance</strong> so arbitrary electrode configurations could be handled more robustly, <a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al. (2025)</a> introduced a <strong>coordinate-based spatial embedding</strong> for more than <strong>150 electrode layouts</strong>, and <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al. (2025)</a> pushed further toward <strong>any-setup pretraining</strong>. Those are real advances in <strong>recording-frame compatibility</strong>. But they still do not prove that different montages, coordinate routes, and reference families have become one shared <strong>physiology-preserving coordinate system</strong>. <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a> then showed that even strong EEG foundation models can generalize poorly when <strong>subject-level supervision is limited</strong> unless extra adaptation structure is added, while <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> showed that split construction, checkpoint selection, segment length, and normalization can still dominate comparison. Therefore, on this site, <strong>layout support</strong>, <strong>reference-family robustness</strong>, <strong>coordinate-route disclosure</strong>, and <strong>label-limited adaptation burden</strong> remain separate fields rather than being collapsed into one word such as <code>generalization</code>.
+これは、このページに次に残っている圧縮です。 <a href="https://arxiv.org/abs/2507.14141" target="_blank">ハンら。 (2025) </a> は、<strong> チャネル順列等分散 </strong> をターゲットとしたため、任意の電極構成をより堅牢に処理できるようになりました。<a href="https://arxiv.org/abs/2510.12515" target="_blank">Chen et al。 (2025) </a> は、<strong>150 を超える電極レイアウトに対して <strong> 座標ベースの空間埋め込み </strong> を導入しました。</strong> および <a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi et al。 (2025) </a> は、<strong> 任意のセットアップの事前トレーニング </strong> に向けてさらに前進しました。これらは<strong>と</strong>のレコーディングフレームの互換性における真の進歩です。しかし、異なるモンタージュ、座標ルート、参照ファミリーが 1 つの共有 <strong> 生理機能を保持する座標系 </strong> になったことはまだ証明されていません。 <a href="https://arxiv.org/abs/2602.17251" target="_blank">Maら。 (2026)</a> は、その後、<strong> 被験者レベルの監視が制限されている場合、追加の適応構造が追加されない限り、</strong> 強力な EEG 基礎モデルであっても一般化が不十分になる可能性があることを示しました。 (2026) </a> は、分割構築、チェックポイント選択、セグメント長、および正規化が依然として比較を支配できることを示しました。したがって、このサイトでは、<strong>レイアウトサポート</strong>、<strong>リファレンスファミリーロバストネス</strong>、<strong>座標ルート開示</strong>、および<strong>ラベル限定適応負担</strong>は、<code>一般化</code>などの1つの単語にまとめられるのではなく、別個のフィールドのままになります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Benchmark object, independent unit, and hold-out unit are separate axes</strong>
+<strong>ベンチマークオブジェクト、独立ユニット、ホールドアウトユニットは別軸</strong>
 <p>
-This was the next remaining weakness on this page. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge homepage</a> states that <strong>Challenge 1</strong> predicts <strong>response time from CCD trials</strong>, whereas <strong>Challenge 2</strong> predicts <strong>externalizing scores from EEG across multiple paradigms</strong>. The official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> then add that Challenge 1 is scored <strong>per trial</strong>, submissions are <strong>inference-only</strong>, and models must run on a <strong>single GPU with 20 GB memory</strong>. <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> fine-tuned large brainwave foundation models across <strong>memory tasks</strong> and <strong>sleep stage classification</strong>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> explicitly compared <strong>leave-one-subject-out cross-subject evaluation</strong> with <strong>within-subject few-shot calibration</strong>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> showed that <strong>six benchmark inconsistencies</strong> can reverse rankings on identical datasets by up to <strong>24 percentage points</strong>. Therefore, on this site, benchmark name, predicted object, independent prediction unit, grouped hold-out unit, and operations budget are separate disclosure fields rather than one merged "benchmark provenance" box.
+これが、このページに残っている次の弱点でした。 <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge の公式ホームページ </a> には、<strong>Challenge 1</strong> は CCD トライアル </strong> からの <strong> 応答時間を予測するのに対し、<strong>Challenge 2</strong> は複数のパラダイム</strong> にわたる脳波からの <strong> スコアの外部化を予測すると記載されています。公式の <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> では、チャレンジ 1 のスコアはトライアルごとに <strong></strong>、提出物は <strong>推論のみ </strong>、モデルは 20 GB メモリを備えた <strong>シングル GPU で実行する必要がある</strong> と追加されています。 <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Leeら(2025)</a> <strong> 記憶タスクにわたる大規模な脳波基礎モデルを微調整</strong> および <strong> 睡眠段階分類</strong>、<a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al。 (2026)</a> は、<strong>1 被験者抜きの被験者間評価 </strong> と <strong> 被験者内数ショット校正 </strong> および <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. を明示的に比較しました。 (2026)</a> は、<strong>6 ベンチマークの不一致</strong> が同一のデータセットのランキングを最大 <strong>24 パーセント ポイント逆転できることを示しました</strong>。したがって、このサイトでは、ベンチマーク名、予測オブジェクト、独立した予測ユニット、グループ化されたホールドアウト ユニット、運用予算は、1 つの統合された「ベンチマーク来歴」ボックスではなく、別個の開示フィールドとなります。
 </p>
 </div>
 
 <section class="section" id="object-matrix">
-<h2 class="section-title">2026-03-30 correction: benchmark object still needs an explicit matrix</h2>
+<h2 class="section-title">2026-03-30 修正: ベンチマーク オブジェクトには依然として明示的な行列が必要です</h2>
 <p>
-The older wording on this page already required benchmark-object disclosure, but it still left one practical shortcut open: a reader could talk as if <strong>benchmark object</strong>, <strong>independent prediction unit</strong>, <strong>hold-out unit</strong>, and <strong>challenge operations budget</strong> were all fixed by the benchmark name alone. The current primary and official sources do not support that shortcut. On this site, those fields now have to be read separately.
+このページの古い文言ではすでにベンチマーク オブジェクトの開示が必要でしたが、実際的な近道が 1 つ残されていました。読者は、<strong> ベンチマーク オブジェクト </strong>、<strong> 独立予測ユニット </strong>、<strong> ホールドアウト ユニット </strong>、および <strong> チャレンジ運用予算 </strong> がすべてベンチマーク名だけで固定されているかのように話すことができます。現在の一次ソースと公式ソースはそのショートカットをサポートしていません。このサイトでは、これらのフィールドを個別に読み取る必要があります。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Case</th>
-<th>What is predicted</th>
-<th>What unit must still be named separately</th>
-<th>Safe ceiling on this site</th>
+<th>ケース</th>
+<th>予測されるもの</th>
+<th>まだ個別に名前を付ける必要があるユニット</th>
+<th>このサイトの安全天井</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EEG Challenge 1</strong><br>official homepage + rules</td>
-<td><strong>Trial-level</strong> response-time regression from the CCD task.</td>
-<td>The <strong>trial</strong> is the scoring unit, but grouped subject structure and the <strong>inference-only single-GPU 20 GB</strong> operations budget still have to be disclosed separately.</td>
-<td>A named cross-task-transfer benchmark under a fixed operations budget, not a general decoder verdict.</td>
+<td><strong>EEG チャレンジ 1</strong><br>公式ホームページ + ルール</td>
+<td><strong>トライアルレベル</strong> CCD タスクからの応答時間回帰。</td>
+<td><strong>trial</strong> はスコアリング ユニットですが、グループ化されたサブジェクト構造と <strong> 推論専用のシングル GPU 20 GB</strong> の操作予算は、依然として個別に開示する必要があります。</td>
+<td>A は、一般的なデコーダの判定ではなく、固定運用予算に基づいてクロスタスク転送ベンチマークと名付けられました。</td>
 </tr>
 <tr>
-<td><strong>EEG Challenge 2</strong><br>official homepage + leaderboard</td>
-<td><strong>Subject-level</strong> externalizing-factor prediction from EEG across multiple paradigms.</td>
-<td>The <strong>subject</strong> is the natural independent unit, and the leaderboard postmortem shows that hidden contiguous-trial grouping can still change what the benchmark measured.</td>
-<td>A subject-invariant benchmark attempt whose interpretation remains contingent on grouping policy, not proof that subject invariance is solved.</td>
+<td><strong>EEG チャレンジ 2</strong><br>公式ホームページ + リーダーボード</td>
+<td><strong>被験者レベル</strong>複数のパラダイムにわたる脳波からの外在化因子予測</td>
+<td><strong>被験者</strong>は本来の独立した単位であり、リーダーボードの事後分析では、隠れた連続トライアルのグループ化がベンチマークの測定結果を依然として変える可能性があることを示しています。</td>
+<td>A サブジェクト不変ベンチマークの試行。その解釈は依然としてグループ化ポリシーに依存しており、サブジェクト不変が解決されていることを証明するものではありません。</td>
 </tr>
 <tr>
-<td><strong>Lee et al. (2025)</strong><br>ICML proceedings</td>
-<td>Fine-tuning results across <strong>memory tasks</strong> and <strong>sleep stage classification</strong>.</td>
-<td>The task family, label granularity, adaptation regime, and metric family still have to be named because sleep-stage labels and memory-task outputs are not one prediction object.</td>
-<td>A fine-tuning / PEFT audit across named tasks, not a universal frontier ranking for EEG foundation models.</td>
+<td><strong>リーら(2025)</strong><br>ICML議事録</td>
+<td><strong>記憶タスク全体にわたる結果の微調整</strong>および<strong>睡眠段階の分類</strong>.</td>
+<td>睡眠段階のラベルとメモリタスクの出力は 1 つの予測オブジェクトではないため、タスク ファミリ、ラベルの粒度、適応レジーム、およびメトリック ファミリには依然として名前を付ける必要があります。</td>
+<td>A は、EEG 基礎モデルのユニバーサル フロンティア ランキングではなく、名前付きタスクにわたる微調整 / PEFT 監査です。</td>
 </tr>
 <tr>
-<td><strong>Liu et al. (2026)</strong><br>benchmarking preprint</td>
-<td>Cross-model comparison across <strong>13 EEG datasets</strong> and <strong>nine paradigms</strong>.</td>
-<td>The paper explicitly separates <strong>leave-one-subject-out</strong> evaluation from <strong>within-subject few-shot</strong> calibration, so the hold-out unit cannot be collapsed into one transfer score.</td>
-<td>A benchmark matrix for transfer-regime tradeoffs, not a settled answer to which model generalizes best.</td>
+<td><strong>Liu et al. (2026)</strong><br>ベンチマークプレプリント</td>
+<td><strong>13 EEG データセットにわたるモデル間の比較</strong> および <strong>9 つのパラダイム</strong>.</td>
+<td>論文では、<strong>1被験者抜き</strong>評価と<strong>被験者内少数ショット</strong>キャリブレーションを明示的に分離しているため、ホールドアウトユニットを1つの転送スコアにまとめることができません。</td>
+<td>A 転送体制のトレードオフに関するベンチマーク マトリックス。どのモデルが最適に一般化するかについての確定した答えではありません。</td>
 </tr>
 <tr>
 <td><strong>Lahiri et al. (2026)</strong><br>PRISM</td>
-<td>Clinical differential diagnosis from interictal EEG, including epilepsy versus mimickers.</td>
-<td>The clinically interesting object is subject-level diagnosis, but the paper also shows that split construction, checkpoint selection, segment length, and normalization can dominate comparison.</td>
-<td>Evidence that protocol differences can dominate rankings, not an accepted law of clinical transfer.</td>
+<td>C発作間欠期脳波からの臨床鑑別診断（てんかんと模倣者を含む）</td>
+<td>臨床的に興味深い対象は被験者レベルの診断ですが、この論文では、分割構築、チェックポイント選択、セグメント長、正規化が比較を支配する可能性があることも示しています。</td>
+<td>プロトコルの違いがランキングを支配する可能性があるという証拠であり、臨床移植の受け入れられた法則ではありません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="setup-equivalence">
-<h2 class="section-title">2026-04-02 correction: setup compatibility is not physiological equivalence</h2>
+<h2 class="section-title">2026-04-02 訂正: セットアップの互換性は生理学的同等性ではありません</h2>
 <p>
-The older wording on this page already warned against shortcut-resistant overclaims, but one practical shortcut was still left open. A reader could still move from <strong>heterogeneous-device support</strong> to <strong>a shared physiology-preserving representation</strong> without naming which part of the cross-setup gap had actually been closed. The current 2025-2026 model literature does not support that shortcut. On this site, recording-frame compatibility and physiology-side equivalence are now kept separate explicitly.
+このページの古い文言はすでにショートカット耐性のあるオーバークレームに対して警告していましたが、実際的なショートカットが 1 つまだ残されていました。読者は、クロスセットアップギャップのどの部分が実際に埋められたかを明らかにすることなく、<strong>異種デバイスサポート</strong>から<strong>共有生理学保持表現</strong>に移行することができます。現在の 2025 ～ 2026 年モデルの資料では、そのショートカットはサポートされていません。このサイトでは、記録フレームの互換性と生理学側の同等性が明示的に分離されるようになりました。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Case</th>
-<th>What the paper directly advances</th>
-<th>What still must be disclosed separately on this site</th>
+<th>ケース</th>
+<th>紙が直接前進するもの</th>
+<th>このサイトで別途開示する必要があるもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>DIVER-0 (2025)</strong><br>workshop / arXiv</td>
-<td>Channel-permutation-equivariant modeling and robust adaptation to <strong>arbitrary electrode configurations unseen during pretraining</strong>.</td>
-<td>Coordinate route, reference family, omitted-channel policy, downstream adaptation regime, and whether the target variable stayed identifiable rather than merely layout-tolerant.</td>
+<td><strong>DIVER-0 (2025)</strong><br>ワークショップ / arXiv</td>
+<td>チャネル順列等変モデリングと<strong>へのロバストな適応事前トレーニング中には見られない任意の電極構成</strong>.</td>
+<td>座標ルート、参照ファミリー、省略チャネル ポリシー、ダウンストリーム適応レジーム、およびターゲット変数が単にレイアウト耐性があるだけでなく識別可能であったかどうか。</td>
 </tr>
 <tr>
 <td><strong>HEAR (2025)</strong><br>arXiv</td>
-<td>A coordinate-based embedding that supports <strong>heterogeneous EEG devices</strong>, <strong>varying electrode counts</strong>, and more than <strong>150 layouts</strong>.</td>
-<td>Whether the geometry route is subject-specific or template-based, whether reference mismatch was neutralized or only absorbed, and what claim ceiling remains for cross-montage physiology.</td>
+<td>A 座標ベースの埋め込みで、<strong> 異種 EEG デバイス</strong>、<strong> 可変電極数</strong>、<strong> 150 以上のレイアウト</strong>.</td>
+<td>ジオメトリ ルートが被験者固有かテンプレート ベースか、参照の不一致が無効化されたか吸収されただけか、クロス モンタージュ生理学にどのようなクレームの上限が残っているか。</td>
 </tr>
 <tr>
-<td><strong>REVE (2025)</strong><br>accepted poster / arXiv</td>
-<td>Large-scale setup-agnostic pretraining across <strong>92 datasets</strong> and more than <strong>60,000 hours</strong>.</td>
-<td>Overlap audit, covered reference-system distribution, coordinate-route disclosure, and whether a downstream gain survived shortcut slices rather than only mixed-corpus transfer.</td>
+<td><strong>REVE (2025)</strong><br>受理されたポスター / arXiv</td>
+<td><strong>92 データセットにわたる大規模なセットアップに依存しない事前トレーニング</strong>、<strong>60,000 時間以上</strong>.</td>
+<td>オーバーラップ監査、参照系分布、座標ルート開示、下流ゲインが混合コーパス転送のみではなくショートカット スライスを存続したかどうかをカバー。</td>
 </tr>
 <tr>
 <td><strong>SCOPE (2026)</strong><br>arXiv</td>
-<td>A structured adaptation route for <strong>label-limited cross-subject settings</strong> where EEG foundation models otherwise generalize poorly.</td>
-<td>The label budget, pseudo-label / prototype burden, and whether the result is a property of the pretrained representation or of extra downstream rescue.</td>
+<td>A <strong>ラベル制限された被験者間設定の構造化適応ルート</strong>、それ以外の場合、EEG 基礎モデルの一般化が不十分な場合。</td>
+<td>ラベル バジェット、疑似ラベル/プロトタイプ負荷、および結果が事前トレーニングされた表現のプロパティであるか、追加のダウンストリーム レスキューのプロパティであるか。</td>
 </tr>
 <tr>
 <td><strong>PRISM (2026)</strong><br>arXiv</td>
-<td>Clinical-transfer evidence plus a warning that <strong>split construction</strong>, <strong>checkpoint selection</strong>, <strong>segment length</strong>, and <strong>normalization</strong> can dominate rankings.</td>
-<td>Benchmark provenance, independent hold-out unit, preprocessing path, and the exact comparison regime before any statement about portable clinical generalization.</td>
+<td>C臨床移行の証拠と、<strong>分割構築</strong>、<strong>チェックポイント選択</strong>、<strong>セグメント長</strong>、<strong>正規化</strong>がランキングを支配する可能性があるという警告。</td>
+<td>ベンチマークの来歴、独立したホールドアウト ユニット、前処理パス、移植可能な臨床一般化に関する記述前の正確な比較体制。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="paper-boundaries">
-<h2 class="section-title">Read primary sources by evidence tier</h2>
+<h2 class="section-title">証拠階層別に一次情報源を読む</h2>
 <p>
-The biggest weakness that needed correction here was that <strong>accepted model papers</strong>, <strong>official challenge documentation</strong>, <strong>benchmark-warning preprints</strong>, and <strong>under-review manuscripts</strong> were too easy to read as equally strong "latest research." Technically, that matters because accepted model papers support <strong>advances in representation learning / transfer under specific settings</strong>, official rules support <strong>the exposure conditions of the benchmark</strong>, and benchmark-audit preprints support <strong>warnings about instability in comparison</strong>. A table that hides source type therefore becomes a source of misreading by itself.
+ここで修正が必要な最大の弱点は、<strong> 承認されたモデル論文 </strong>、<strong> 公式チャレンジ文書 </strong>、<strong> ベンチマーク警告プレプリント </strong>、<strong> 審査中の原稿 </strong> が、同様に強力な「最新研究」として読みやすすぎたことです。技術的には、これが重要なのは、承認されたモデルペーパーが <strong> 特定の設定下での表現学習/転送の進歩 </strong> をサポートし、公式ルールが <strong> ベンチマークの曝露条件をサポート </strong> し、ベンチマーク監査プレプリントが <strong> 比較における不安定性に関する警告 </strong> をサポートしているためです。したがって、ソースタイプを隠すテーブルは、それ自体が誤読の原因になります。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Example</th>
-<th>Source type / as of 2026-03-25</th>
-<th>What can be said relatively strongly</th>
-<th>What barrier the paper itself leaves unresolved</th>
+<th>例</th>
+<th>ソースタイプ / 2026-03-25現在</th>
+<th>比較的強く言えること</th>
+<th>紙そのものが未解決のまま残している障壁とは</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Kostas et al. (2021)</strong><br>BENDR</td>
-<td>Peer-reviewed journal paper</td>
-<td>It showed that self-supervised pretraining can provide breadth across novel subjects, hardware, and tasks.</td>
-<td>Downstream applicability remained unsettled; pretraining alone did not guarantee universal transfer.</td>
+<td>査読付き雑誌論文</td>
+<td>自己教師ありの事前トレーニングが、新しい主題、ハードウェア、およびタスクにわたる幅を提供できることを示しました。</td>
+<td> の下流への適用性は未確定のままです。事前トレーニングだけでは普遍的な転移は保証されません。</td>
 </tr>
 <tr>
 <td><strong>Wang et al. (2023)</strong><br>BIOT</td>
-<td>Accepted conference paper</td>
-<td>It provided a concrete strategy for bringing heterogeneous biosignals with different sampling rates, channels, recording durations, and missing values into cross-dataset learning.</td>
-<td>Conversely, any result that does not report format harmonization is not meaningfully comparable.</td>
+<td>採択された会議論文</td>
+<td>これは、異なるサンプリング レート、チャネル、記録期間、欠損値を持つ異種の生体信号をクロスデータセット学習に組み込むための具体的な戦略を提供しました。</td>
+<td>逆に、フォーマットの調和を報告しない結果は、意味のある比較ができません。</td>
 </tr>
 <tr>
 <td><strong>Jiang et al. (2024)</strong><br>LaBraM</td>
-<td>Accepted conference paper</td>
-<td>It performed cross-dataset pretraining on about 20 datasets and roughly 2,500 hours of EEG, and showed strong performance across multiple downstream tasks.</td>
-<td>It explicitly leaves electrode mismatch, unequal length, varied task design, and low SNR as central EEG-side challenges.</td>
+<td>承認された会議論文</td>
+<td>約 20 のデータセットと約 2,500 時間の脳波に対してデータセット間の事前トレーニングを実行し、複数の下流タスクにわたって強力なパフォーマンスを示しました。</td>
+<td>電極の不一致、不等長、多様なタスク設計、低 SNR が脳波側の中心的な課題として明確に残されています。</td>
 </tr>
 <tr>
 <td><strong>Wang et al. (2024)</strong><br>EEGPT</td>
-<td>Accepted conference presentation</td>
-<td>It reported strong downstream performance with a pretrained transformer and linear probing under low SNR, inter-subject variability, and channel mismatch.</td>
-<td>A high score there does not automatically imply cross-day deployability or source identifiability.</td>
+<td>学会発表受理</td>
+<td>低い SNR、被験者間の変動、チャネル不一致の下で、事前トレーニング済みトランスフォーマーと線形プローブによる強力なダウンストリーム パフォーマンスを報告しました。</td>
+<td>A の高いスコアは、日をまたがる導入可能性やソースの識別可能性を自動的に意味するものではありません。</td>
 </tr>
 <tr>
-<td><strong>Lee et al. (2025)</strong><br>ICML fine-tuning audit</td>
-<td>Accepted conference poster</td>
-<td>It showed that current large brainwave foundation models only slightly outperform conventional deep baselines, while PEFT methods such as LoRA can greatly reduce the number of trainable parameters.</td>
-<td>The gain is small, around 0.5% even at the abstract level, so the result does not support the claim that "larger models win by default."</td>
+<td><strong>Lee et al. (2025)</strong><br>ICML 微調整監査</td>
+<td>採択されたカンファレンスポスター</td>
+<td>現在の大規模な脳波基礎モデルは従来の深層ベースラインよりもわずかに優れているだけである一方、LoRA などの PEFT 手法はトレーニング可能なパラメーターの数を大幅に削減できることを示しました。</td>
+<td> ゲインは抽象レベルでも約 0.5% と小さいため、この結果は「大きいモデルがデフォルトで勝つ」という主張を裏付けません。
 </tr>
 <tr>
-<td><strong>EEG Foundation Challenge (2025)</strong><br>NeurIPS competition</td>
-<td>Official competition website / rules</td>
-<td>It attempts to standardize measurement of cross-task transfer and subject-invariant representation over more than 3,000 HBN-EEG participants.</td>
-<td>What it provides directly is current benchmark governance, not a final verdict on model capability. The official site also states that the proposal preprint is outdated, so operational conditions should be read from the current rules and starter kit.</td>
+<td><strong>EEG Foundation Challenge (2025)</strong><br>NeurIPS コンテスト</td>
+<td>公式大会サイト・ルール</td>
+<td>3,000 人以上の HBN-EEG 参加者を対象に、クロスタスク伝達と被験者不変表現の測定の標準化を試みます。</td>
+<td> 直接提供されるのは、現在のベンチマーク ガバナンスであり、モデルの機能に関する最終的な判断ではありません。公式サイトには、提案プレプリントが古いため、運用条件は現在のルールとスターターキットから読み取る必要があると記載されています。</td>
 </tr>
 <tr>
-<td><strong>EEG Foundation Challenge final leaderboard (2025)</strong><br>Governance postmortem</td>
-<td>Official leaderboard / postmortem</td>
-<td>It shows that benchmark operations themselves can expose hidden subject-order shortcuts: the organizers reported that Challenge 2 samples had not been randomized, so contiguous trials could reveal same-subject structure and the final prize logic had to be changed.</td>
-<td>This is strong evidence about benchmark fragility, not a stable capability ranking of the submitted models. It tells us the measurement changed, not which architecture is universally best.</td>
+<td><strong>EEG Foundation Challenge 最終リーダーボード (2025)</strong><br>ガバナンス事後分析</td>
+<td>公式リーダーボード / 事後</td>
+<td>ベンチマーク操作自体が、隠れた被験者順序のショートカットを明らかにする可能性があることを示しています。主催者は、チャレンジ 2 のサンプルがランダム化されていないため、連続した試験で同じ被験者の構造が明らかになる可能性があり、最終的な賞のロジックを変更する必要があると報告しました。</td>
+<td>これはベンチマークの脆弱性に関する強力な証拠であり、提出されたモデルの安定した機能ランキングではありません。これは、どのアーキテクチャが普遍的に最適であるかではなく、測定値が変更されたことを示します。</td>
 </tr>
 <tr>
-<td><strong>Xiong et al. (2025)</strong><br>EEG-FM-Bench</td>
-<td>arXiv benchmark preprint</td>
-<td>It states explicitly that the rapid proliferation of foundation models has outpaced standardized evaluation and that fragmented comparison is slowing scientific progress.</td>
-<td>Unharmonized comparisons do create scientific inefficiency, but this is safest to read as a benchmark warning rather than as a final frontier ranking.</td>
+<td><strong>Xiong ら(2025)</strong><br>EEG-FM-ベンチ</td>
+<td>arXiv ベンチマーク プレプリント</td>
+<td>基礎モデルの急速な普及が標準化された評価を上回っており、断片的な比較が科学の進歩を遅らせていることが明確に述べられています。</td>
+<td>調和のとれていない比較は科学的な非効率を生み出しますが、これは最終的なフロンティアランキングとしてではなく、ベンチマークの警告として読むのが最も安全です。</td>
 </tr>
 <tr>
 <td><strong>El Ouahidi et al. (2025)</strong><br>REVE</td>
-<td>Accepted poster / arXiv manuscript</td>
-<td>It introduced a 4D positional encoding that can handle arbitrary length and electrode arrangement, pointing toward better transfer across diverse setups.</td>
-<td>What can be read relatively strongly here is a direction for handling heterogeneity, not a stable universal ranking across accepted benchmarks.</td>
+<td>受理されたポスター / arXiv 原稿</td>
+<td>任意の長さと電極配置を処理できる 4D 位置エンコーディングを導入し、多様なセットアップ間でのより良い転送を目指しています。</td>
+<td>ここで比較的強く読み取れるのは、異質性を処理するための方向性であり、受け入れられたベンチマーク全体での安定した普遍的なランキングではありません。</td>
 </tr>
 <tr>
-<td><strong>Han et al. (2025)</strong><br>DIVER-1</td>
-<td>Under-review / arXiv manuscript</td>
-<td>It presented a largest-scale corpus and a systematic scaling-law analysis, arguing that electrophysiology raises a data-constrained scaling question.</td>
-<td>The warning that smaller models trained longer can outperform larger models trained briefly under fixed data / compute is important, but an under-review source alone is not enough to fix the field's default scaling-law interpretation.</td>
+<td><strong>ハンら。 (2025)</strong><br>DIVER-1</td>
+<td>審査中 / arXiv 原稿</td>
+<td>最大規模のコーパスと体系的なスケーリング則分析を提示し、電気生理学がデータに制約されたスケーリングの問題を提起すると主張しました。</td>
+<td>より長くトレーニングされた小規模なモデルは、固定データ/コンピューティングの下で短期間トレーニングされたより大きなモデルよりも優れたパフォーマンスを発揮する可能性があるという警告は重要ですが、レビュー中のソースだけでは、フィールドのデフォルトのスケーリング則の解釈を修正するには十分ではありません。</td>
 </tr>
 <tr>
-<td><strong>Wang et al. (2025)</strong><br>NeuroTTT</td>
-<td>arXiv method preprint</td>
-<td>It showed that domain-tuned self-supervision and test-time training can help with pretraining-downstream misalignment and cross-subject shift.</td>
-<td>Conversely, the results do not support the assumption that a foundation model alone is sufficient without downstream adaptation. Results that include TTT are also not read here as evidence of deployment simplicity.</td>
+<td><strong>Wang et al. (2025)</strong><br>ニューロTTT</td>
+<td>arXiv メソッド プレプリント</td>
+<td>ドメイン調整された自己監視とテスト時のトレーニングが、トレーニング前の下流側のミスアライメントと被験者間のシフトに役立つことが示されました。</td>
+<td> 逆に、この結果は、下流の適応なしで基礎モデルだけで十分であるという仮定を裏付けません。 TTT を含む結果も、展開の簡素性の証拠としてここでは読み取られません。</td>
 </tr>
 <tr>
 <td><strong>Lahiri et al. (2026)</strong><br>PRISM</td>
-<td>arXiv clinical-transfer preprint</td>
-<td>It reported that pretraining with targeted diversity can become advantageous under fine-tuning and can improve performance on a clinical mimicker task.</td>
-<td>The warning that benchmark inconsistency alone can strongly reverse rankings on the same dataset is important, but it still should not be fixed as a shared conclusion of accepted clinical benchmarks.</td>
+<td>arXiv 臨床移行プレプリント</td>
+<td>ターゲットを絞った多様性を使用した事前トレーニングは、微調整の下で有利になり、臨床模倣タスクのパフォーマンスを向上させることができると報告しました。</td>
+<td>ベンチマークの不一致だけで、同じデータセットのランキングが大幅に逆転する可能性があるという警告は重要ですが、それでも、受け入れられている臨床ベンチマークの共通の結論として修正されるべきではありません。</td>
 </tr>
 <tr>
-<td><strong>Liu et al. (2026)</strong><br>EEG FM benchmarking</td>
-<td>arXiv benchmark / review preprint</td>
-<td>It compared 12 open-source foundation models and specialist baselines across 13 EEG datasets, and argued that linear probing is often insufficient, scratch specialists remain competitive, and larger models do not automatically generalize better.</td>
-<td>Because it is still a preprint and a benchmark study, it does not by itself prove shortcut resistance, deployment readiness, or a settled ranking across future accepted evaluations.</td>
+<td><strong>Liu et al. (2026)</strong><br>EEG FM ベンチマーク</td>
+<td>arXiv ベンチマーク / レビュー プレプリント</td>
+<td>それは、12 のオープンソース基盤モデルと専門家のベースラインを 13 の EEG データセットにわたって比較し、線形プロービングでは不十分な場合が多く、スクラッチ スペシャリストの競争力は依然として高く、より大きなモデルが自動的により適切に一般化するわけではないと主張しました。</td>
+<td>これはまだプレプリントであり、ベンチマーク調査であるため、それ自体では、ショートカット耐性、展開の準備状況、または将来受け入れられる評価全体での安定したランキングを証明するものではありません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="nine-gates">
-<h2 class="section-title">The 10 gates before reading a foundation model</h2>
+<h2 class="section-title">基礎モデルを読む前の10の門</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Gate</th>
-<th>Why it is needed</th>
-<th>Minimum evidence we want</th>
+<th>ゲート</th>
+<th>必要な理由</th>
+<th>最低限必要な証拠</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>G0: source type / maturity</strong></td>
-<td>Accepted papers, accepted posters, official rules, arXiv preprints, and under-review manuscripts support claims of different strength.</td>
-<td>The source type, whether it is accepted / preprint / under review, and for moving-target rules pages, the last verified date.</td>
+<td><strong>G0: ソースタイプ/成熟度</strong></td>
+<td>受理された論文、受理されたポスター、公式ルール、arXiv プレプリント、および審査中の原稿は、さまざまな強度の主張をサポートします。</td>
+<td>ソース タイプ、承認済み/プレプリント/レビュー中かどうか、および移動ターゲット ルール ページの場合は、最終検証日。</td>
 </tr>
 <tr>
-<td><strong>G1: corpus identity / overlap</strong></td>
-<td>A pretraining corpus is also a dataset. If closely related data leak into the downstream side, the split no longer means what it appears to mean, and that leakage can happen through multiple ancestry axes rather than one route.</td>
-<td>Corpus name, version / snapshot, total hours, and a multi-axis overlap audit covering raw-recording / window ancestry, subject / session ancestry, site / device / reference / layout ancestry, task / benchmark-object ancestry, and extra-data / checkpoint ancestry.</td>
+<td><strong>G1: コーパス同一性 / オーバーラップ</strong></td>
+<td>A 事前学習コーパスもデータセットです。密接に関連したデータが下流側に漏洩した場合、分割は見かけ上の意味を持たなくなり、漏洩は 1 つのルートではなく複数の祖先軸を通じて発生する可能性があります。</td>
+<td>Corpus 名、バージョン / スナップショット、合計時間、および生の記録 / ウィンドウの祖先、サブジェクト / セッションの祖先、サイト / デバイス / 参照 / レイアウトの祖先、タスク / ベンチマーク オブジェクトの祖先、および追加データ / チェックポイントの祖先をカバーする多軸オーバーラップ監査。</td>
 </tr>
 <tr>
-<td><strong>G2: population / setup diversity</strong></td>
-<td>The number of datasets or total hours is not enough. If population, device, or electrode layout are biased, pretraining may simply learn recording-distribution artifacts.</td>
-<td>The covered population, device types, clinical vs. lab setting, electrode schema, and the distribution of reference systems.</td>
+<td><strong>G2: 人口/セットアップの多様性</strong></td>
+<td>データセットの数または合計時間が十分ではありません。人口、デバイス、または電極のレイアウトに偏りがある場合、事前トレーニングは単に記録と配信のアーティファクトを学習するだけである可能性があります。</td>
+<td>対象となる集団、デバイスの種類、臨床設定と実験室設定、電極スキーマ、参照システムの分布。</td>
 </tr>
 <tr>
-<td><strong>G3: harmonization / geometry route</strong></td>
-<td>EEG differs greatly in channel count, electrode geometry, reference family, sample rate, and window length, and even a layout-tolerant model does not automatically erase those differences.</td>
-<td>Channel map, electrode-coordinate route or template, reference family, resampling, token length, and the policy for missing, omitted, or interpolated channels / segments.</td>
+<td><strong>G3: ハーモナイゼーション / ジオメトリ ルート</strong></td>
+<td>EEG は、チャネル数、電極形状、基準ファミリー、サンプル レート、ウィンドウの長さが大きく異なり、レイアウトに寛容なモデルであっても、それらの違いが自動的に消去されるわけではありません。</td>
+<td>チャネル マップ、電極座標のルートまたはテンプレート、参照ファミリー、リサンプリング、トークンの長さ、欠落、省略、または補間されたチャネル/セグメントのポリシー。</td>
 </tr>
 <tr>
-<td><strong>G4: adaptation regime</strong></td>
-<td>Frozen feature extraction, full fine-tuning, and test-time training do not mean the same thing when one asks what actually transferred.</td>
-<td>Whether the regime is frozen, linear-probe, PEFT, full fine-tune, or TTT, plus target-data usage, label budget, and recalibration amount.</td>
+<td><strong>G4: 適応レジーム</strong></td>
+<td>凍結された特徴抽出、完全な微調整、およびテスト時のトレーニングは、実際に何が転送されたかを尋ねると、同じ意味を持ちません。</td>
+<td>レジームがフリーズ、リニアプローブ、PEFT、完全な微調整、または TTT のいずれであるかに加えて、ターゲット データの使用量、ラベル バジェット、および再キャリブレーション量。</td>
 </tr>
 <tr>
-<td><strong>G5: benchmark object / supervision unit / independent prediction unit</strong></td>
-<td>Per-window classification, event detection, sequence labeling, subject-level regression, and retrieval / ranking do not test the same scientific object. Official foundation-model benchmarks already mix these families.</td>
-<td>The supervision unit, label provenance, output family, metric bundle, what counts as one independent prediction, and whether that unit inherits raw-recording or subject grouping.</td>
+<td><strong>G5: ベンチマークオブジェクト/監視ユニット/独立予測ユニット</strong></td>
+<td> ウィンドウごとの分類、イベント検出、シーケンスのラベル付け、被験者レベルの回帰、および検索/ランキングは、同じ科学的対象をテストするものではありません。公式の基礎モデル ベンチマークでは、すでにこれらのファミリが混合されています。</td>
+<td>監視ユニット、ラベルの出自、出力ファミリー、メトリック バンドル、1 つの独立した予測としてカウントされるもの、およびそのユニットが生の記録または主題のグループ化を継承するかどうか。</td>
 </tr>
 <tr>
-<td><strong>G6: benchmark provenance / operations budget</strong></td>
-<td>Benchmark papers from 2025-2026 show that rankings can move with split construction, checkpoint selection, segment length, hidden sample ordering, and challenge-stage compute restrictions. The official EEG Challenge postmortem made that point operationally explicit.</td>
-<td>Benchmark name, version, split rule, sample-randomization / hidden-grouping policy, checkpoint selection, segment length, normalization, how the external hold-out was built, and any inference-stage compute / training restrictions.</td>
+<td><strong>G6: ベンチマークの来歴 / 運用予算</strong></td>
+2025 年から 2026 年の <td>Benchmark 論文では、分割構造、チェックポイントの選択、セグメントの長さ、隠れたサンプルの順序付け、チャレンジ段階のコンピューティング制限によってランキングが変動する可能性があることが示されています。公式 EEG チャレンジの事後分析により、その点が運用上明確になりました。</td>
+<td>ベンチマーク名、バージョン、分割ルール、サンプルランダム化/非表示グループ化ポリシー、チェックポイント選択、セグメント長、正規化、外部ホールドアウトの構築方法、および推論段階の計算/トレーニング制限。</td>
 </tr>
 <tr>
-<td><strong>G7: shortcut-resistance / specificity bridge</strong></td>
-<td>A good transfer score can still come from subject identity, site / device / reference structure, or protocol distribution rather than the intended neural variable. Foundation-model headlines do not remove that risk.</td>
-<td>A task-matched nuisance audit, including participant / site / device / reference disjointness, metadata-only or identity baselines where applicable, shortcut slices, and the linked <a href="../verification.html#specificity-shortcut-card">Specificity &amp; Shortcut Card</a>.</td>
+<td><strong>G7: ショートカット耐性 / 特異性ブリッジ</strong></td>
+<td>A の良好な伝達スコアは、意図した神経変数ではなく、被験者のアイデンティティ、部位 / デバイス / 参照構造、またはプロトコルの分布から得られる可能性があります。基礎モデルの見出しではそのリスクは除去されません。</td>
+<td>A タスクに一致する迷惑監査。これには、参加者 / サイト / デバイス / 参照の不整合性、該当する場合はメタデータのみまたは ID ベースライン、ショートカット スライス、およびリンクされた <a href="../verification.html#specificity-shortcut-card">Specificity と ID ベースラインが含まれます。ショートカットカード</a>.</td>
 </tr>
 <tr>
-<td><strong>G8: scale / efficiency</strong></td>
-<td>In EEG, "bigger is stronger" does not always hold. It is easy to misread results unless parameter count, data, compute, and trainable fraction are read together.</td>
-<td>Total parameter count, trainable parameter count, pretraining epochs / steps, corpus size, training time, and adapter size.</td>
+<td><strong>G8: スケール/効率</strong></td>
+<td>脳波では、「大きいほど強い」ということは必ずしも成り立ちません。パラメーターの数、データ、計算、およびトレーニング可能な部分を一緒に読み取らないと、結果を誤解しやすくなります。</td>
+<td>合計パラメータ数、トレーニング可能なパラメータ数、事前トレーニング エポック/ステップ、コーパス サイズ、トレーニング時間、アダプター サイズ。</td>
 </tr>
 <tr>
-<td><strong>G9: claim ceiling</strong></td>
-<td>Success for a foundation model is still an advance in macro decoding / representation learning.</td>
-<td>An explicit statement of what remains latent, and an explicit stop against source identifiability, direct validation, and WBE state-completeness claims.</td>
+<td><strong>G9: クレーム天井</strong></td>
+<td>基礎モデルの成功は、マクロのデコード/表現学習においてはまだ進歩しています。</td>
+<td>潜在的に残っているものについての明示的な記述、およびソースの特定可能性、直接検証、および WBE の状態完全性の主張に対する明示的な停止。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>Official challenge postmortems count as benchmark evidence</strong>
+<strong>公式チャレンジの事後分析はベンチマーク証拠としてカウントされます</strong>
 <p>
-The EEG Challenge submission page defines an <strong>inference-only code submission</strong> setting, while the final leaderboard discloses that Challenge 2 accidentally preserved same-subject trial contiguity. Those facts are not side notes. They directly change what a reported ranking means, because one result was obtained under a fixed inference budget and another could exploit an unintended grouping cue. On this site, benchmark provenance therefore includes <strong>operational constraints</strong> and <strong>postmortem disclosures</strong>, not only the benchmark title.
+EEG チャレンジの提出ページでは、<strong> 推論のみのコード提出 </strong> 設定が定義されていますが、最終的なリーダーボードでは、チャレンジ 2 が誤って同じ被験者のトライアルの連続性を保持したことが明らかにされています。これらの事実は余談ではありません。ある結果は固定推論予算の下で得られたものであり、別の結果は意図しないグループ化の手がかりを悪用する可能性があるため、報告されたランキングの意味を直接変更します。したがって、このサイトでは、ベンチマークの来歴には、ベンチマークのタイトルだけでなく、<strong> 運用上の制約 </strong> および <strong> 事後開示 </strong> が含まれます。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-04-04 correction: overlap audit must be split by ancestry axis</strong>
+<strong>2026-04-04 修正: 重複監査は祖先軸ごとに分割する必要があります</strong>
 <p>
-The older wording on this page still made <strong>overlap audit</strong> sound too much like one checkbox. Current primary and official sources do not support that compression. <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a> show a <strong>raw-window ancestry</strong> failure mode, <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> show a <strong>subject-characteristic</strong> failure mode, <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> and <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> show a <strong>setup-distribution</strong> failure mode, and the official EEG Challenge <a href="https://eeg2025.github.io/data/" target="_blank">data</a>, <a href="https://eeg2025.github.io/submission/" target="_blank">submission</a>, and <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> pages show a <strong>benchmark-object / benchmark-operations</strong> failure mode. On this site, those are now read as separate ancestry axes rather than one generic overlap warning.
+このページの古い表現では、<strong>overlap Audit</strong> が 1 つのチェックボックスのように聞こえすぎていました。現在の一次ソースと公式ソースはその圧縮をサポートしていません。 <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">ブルックシャーら(2024) </a> は <strong>raw ウィンドウの祖先を示す </strong> 障害モード、<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> は <strong> 被験者特性を示す </strong> 故障モード、<a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al。 (2017)</a> および <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu ら。 (2020)</a> は <strong>setup-distribution</strong> 障害モードを示し、公式 EEG Challenge <a href="https://eeg2025.github.io/data/" target="_blank">data</a>、<a href="https://eeg2025.github.io/submission/" target="_blank">submission</a>、<a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> ページは <strong>benchmark-object / benchmark-operations</strong> 障害モードを示します。このサイトでは、これらは 1 つの一般的な重複警告ではなく、別個の祖先軸として読み取られるようになりました。
 </p>
 </div>
 
 <section class="section" id="pretraining-card">
-<h2 class="section-title">The Pretraining Card required on this site</h2>
+<h2 class="section-title">このサイトで必要な事前トレーニング カード</h2>
 <p>
-For foundation / self-supervised results, this site requires a <strong>Pretraining Card</strong> in addition to the standard model card. This is not an external publication standard; it is <strong>an operating rule of this site</strong> for keeping heterogeneous-corpus pretraining comparable.
+基礎/自己監視結果の場合、このサイトでは標準モデル カードに加えて <strong>Pretraining Card</strong> が必要です。これは外部出版標準ではありません。これは、異種コーパスの事前トレーニングを同等に保つためのこのサイトの <strong> 運用ルール </strong> です。
 </p>
 
 <table class="data-table">
 <thead>
 <tr>
-<th>Item</th>
-<th>Minimum required content</th>
-<th>Dangerous misreading if omitted</th>
+<th>アイテム</th>
+<th>最低限必要な内容</th>
+<th>省略すると危険な読み間違い</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Corpus</strong></td>
-<td>Pretraining corpus name, version, total hours, exclusion criteria, and a multi-axis overlap audit covering raw-recording / window, subject / session, site / device / reference / layout, task / benchmark-object, and extra-data / checkpoint ancestry.</td>
-<td>You may miss the possibility that what looked like generalization was actually reuse of the same recording family, person, setup, task object, or benchmark lineage.</td>
+<td><strong>コーパス</strong></td>
+<td>事前トレーニング コーパス名、バージョン、合計時間、除外基準、および生の記録 / ウィンドウ、サブジェクト / セッション、サイト / デバイス / 参照 / レイアウト、タスク / ベンチマーク オブジェクト、および追加データ / チェックポイントの祖先をカバーする多軸重複監査。</td>
+<td>一般化のように見えたものが、実際には同じレコーディング ファミリ、人物、セットアップ、タスク オブジェクト、またはベンチマーク リネージュの再利用であったという可能性を見逃す可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Population / Setup</strong></td>
-<td>Population, device, electrode layout, reference system, and whether the setting is clinical or lab-based.</td>
-<td>You may misread the number of datasets as recording diversity itself.</td>
+<td><strong>人口/セットアップ</strong></td>
+<td>母集団、デバイス、電極レイアウト、参照システム、および設定が臨床ベースか研究室ベースか。</td>
+<td>データセットの数を記録ダイバーシティそのものと誤解する可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Harmonization / Geometry Route</strong></td>
-<td>Channel schema, electrode-coordinate route or template, reference family, sample rate, tokenization, normalization, and missing / omitted / interpolated-channel policy.</td>
-<td>You may misread recording-frame translation as physiology-preserving model capability.</td>
+<td><strong>調和・幾何学ルート</strong></td>
+<td>チャネル スキーマ、電極座標ルートまたはテンプレート、参照ファミリー、サンプル レート、トークン化、正規化、および欠落/省略/補間チャネル ポリシー。</td>
+<td>記録フレームの変換を生理機能保存モデルの機能と誤解する可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Objective</strong></td>
-<td>The pretraining objective, such as masked, autoregressive, or contrastive.</td>
-<td>You cannot compare which inductive bias actually mattered.</td>
+<td><strong>対物レンズ</strong></td>
+<td>マスク、自己回帰、対照などの事前トレーニング目標。</td>
+<td>どの誘導バイアスが実際に重要だったかを比較することはできません。</td>
 </tr>
 <tr>
-<td><strong>Source Type / Maturity</strong></td>
-<td>Whether the source is an accepted journal / conference paper, accepted poster / workshop, official rules page, arXiv preprint, or under-review manuscript, and for a rules page, the last verified date.</td>
-<td>You may misread under-review warnings or operational documentation as frontier evidence of the same strength as accepted model papers.</td>
+<td><strong>ソースタイプ/完成度</strong></td>
+<td>ソースが受理されたジャーナル/会議論文、受理されたポスター/ワークショップ、公式ルールページ、arXivプレプリント、または審査中の原稿であるかどうか、およびルールページの場合は、最終検証日。</td>
+<td>承認されたモデル論文と同じ強度の最先端の証拠として、審査中の警告や運用文書を誤読する可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Adaptation</strong></td>
-<td>Frozen / linear-probe / PEFT / full fine-tune / TTT, target-data usage, label budget, and whether recalibration is used.</td>
-<td>You may conflate "a general representation transferred well" with "the model was strongly adapted to the target."</td>
+<td><strong>適応</strong></td>
+<td>Frozen / リニアプローブ / PEFT / フルファインチューン / TTT、ターゲットデータの使用量、ラベルバジェット、および再キャリブレーションが使用されるかどうか。</td>
+<td>「一般的な表現がうまく転送された」ことと「モデルがターゲットに強く適合した」ことを混同する可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Benchmark Provenance / Operations</strong></td>
-<td>Benchmark name, version, split rule, checkpoint selection, segment length, normalization, and any inference-stage compute or no-training restriction.</td>
-<td>You may misread ranking changes caused by benchmark design as differences in the model itself.</td>
+<td><strong>ベンチマークの来歴/運用</strong></td>
+<td>ベンチマーク名、バージョン、分割ルール、チェックポイントの選択、セグメント長、正規化、および推論段階のコンピューティングまたはトレーニングなしの制限。</td>
+<td>ベンチマーク設計によるランキング変動をモデル自体の違いと誤認する可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Benchmark Object / Supervision Unit</strong></td>
-<td>Whether the downstream object is window / trial classification, event detection, sequence labeling, subject-level regression / diagnosis, retrieval / ranking, or another family, together with label provenance, output family, metric bundle, the independent prediction unit, and whether grouped ancestry from the same recording or subject remains.</td>
-<td>You may collapse heterogeneous wins into one story about portable EEG generalization even though the model solved different objects with different error surfaces.</td>
+<td><strong>ベンチマークオブジェクト/監視ユニット</strong></td>
+<td>ダウンストリーム オブジェクトがウィンドウ/トライアル分類、イベント検出、シーケンス ラベリング、被験者レベルの回帰/診断、検索/ランキング、または別のファミリーであるかどうか、ラベルの来歴、出力ファミリー、メトリック バンドル、独立した予測単位とともに、同じ記録または被験者からのグループ化された祖先が残っているかどうか。</td>
+<td>モデルが異なるエラー曲面で異なるオブジェクトを解決したとしても、異種の勝利をポータブル EEG 一般化に関する 1 つのストーリーにまとめることができます。</td>
 </tr>
 <tr>
-<td><strong>Shortcut-resistance / Specificity Bridge</strong></td>
-<td>For any downstream decode / biomarker / clinical claim, report participant / site / device / reference disjointness, metadata-only or subject-ID baselines where relevant, nuisance-route checks, shortcut slices, and the linked <a href="../verification.html#specificity-shortcut-card">Specificity &amp; Shortcut Card</a>.</td>
-<td>You may misread a representation that mainly preserves identity or recording-distribution cues as if it had become invariant to those shortcuts.</td>
+<td><strong>ショートカット耐性 / 特異性ブリッジ</strong></td>
+<td>ダウンストリームのデコード/バイオマーカー/臨床クレームについては、参加者/部位/デバイス/参照の不一致、関連する場合はメタデータのみまたは被験者IDベースライン、迷惑ルートチェック、ショートカットスライス、およびリンクされた<a href="../verification.html#specificity-shortcut-card">特異性と関連性を報告します。ショートカットカード</a>.</td>
+<td>主にアイデンティティや録音配布キューを保存する表現を、それらのショートカットに対して不変であるかのように誤解する可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Scale / Efficiency</strong></td>
-<td>Total parameter count, trainable parameter count, pretraining steps / epochs, training time, adapter size, and inference cost.</td>
-<td>You may read "the foundation model won because it is large" when the real driver was compute allocation or PEFT.</td>
+<td><strong>スケール/効率</strong></td>
+<td>合計パラメーター数、トレーニング可能なパラメーター数、事前トレーニング ステップ/エポック、トレーニング時間、アダプター サイズ、および推論コスト。</td>
+<td>実際のドライバーがコンピューティング割り当てまたは PEFT であった場合、「基盤モデルが大きいため勝った」と表示される場合があります。</td>
 </tr>
 <tr>
-<td><strong>Evaluation</strong></td>
-<td>Evaluation family, hold-out unit, device hold-out, cross-day evaluation, abstention policy, and failure conditions.</td>
-<td>You may mistake a high same-day score for deployability.</td>
+<td><strong>評価</strong></td>
+<td>評価ファミリー、ホールドアウト ユニット、デバイス ホールドアウト、日をまたぐ評価、棄権ポリシー、および障害条件。</td>
+<td>高い同日スコアを導入可能性と誤解する可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Stopped claim</strong></td>
-<td>A one-line statement of what still cannot be claimed.</td>
-<td>You may over-extrapolate foundation-model success to source truth or WBE.</td>
+<td><strong>請求停止</strong></td>
+<td>A まだ請求できない内容を 1 行で説明。</td>
+<td>真実や WBE をソースにするために、基礎モデルの成功を過剰に推定する可能性があります。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="site-rules">
-<h2 class="section-title">Operating rules on this site</h2>
+<h2 class="section-title">このサイトの運用ルール</h2>
 <div class="key-points">
 <h4>Rule</h4>
 <ul>
-<li><strong>We do not hide source type:</strong> accepted papers, official rules, and preprints / under-review manuscripts are not listed as evidence of the same strength.</li>
-<li><strong>Foundation-model results are not exempt from split auditing:</strong> independence must be checked including the pretraining corpus.</li>
-<li><strong>We do not hide population / setup diversity:</strong> we report not just the number of datasets, but which recording distributions were actually included.</li>
-<li><strong>We do not hide format harmonization:</strong> channel / reference / sampling harmonization must always be reported.</li>
-<li><strong>We do not read heterogeneous-device support as physiology equivalence:</strong> coordinate route, reference family, and omitted-channel policy stay visible even when a model accepts arbitrary layouts.</li>
-<li><strong>We do not hide the amount of adaptation:</strong> linear probing, full fine-tuning, and TTT are not all listed as the same kind of "transfer success."</li>
-<li><strong>We do not hide benchmark object:</strong> window classification, event detection, sequence labeling, subject-level regression, and retrieval-like tasks are not compressed into one frontier score.</li>
-<li><strong>We do not hide independent units or grouped hold-outs:</strong> trial, epoch, recording, and subject are different prediction objects and need separate disclosure.</li>
-<li><strong>We do not hide benchmark provenance:</strong> because rankings move with split / checkpoint / preprocessing differences, benchmark specification is part of the result.</li>
-<li><strong>We do not hide challenge operations budgets:</strong> inference-only settings, no-training rules, and memory limits are part of what the leaderboard score means.</li>
-<li><strong>We do not treat "any setup" as shortcut-resistant by title alone:</strong> foundation-model transfer claims also need a shortcut-resistance bridge to the <a href="../verification.html#specificity-shortcut-card">Specificity &amp; Shortcut Card</a>.</li>
-<li><strong>Current competition rules are checked on the official site:</strong> proposal papers or companion preprints are background material; current rules / submission instructions / starter kits take priority for operations.</li>
-<li><strong>We do not hide benchmark postmortems:</strong> if organizers later disclose split flaws, sample-order shortcuts, or scoring changes, that disclosure changes how we read the leaderboard.</li>
-<li><strong>Benchmark-warning preprints are not treated as frontier verdicts:</strong> ranking reversals and scaling-law claims remain exploratory until reinforced by accepted papers or independent reruns.</li>
-<li><strong>We do not hide scale / efficiency:</strong> we do not write that a foundation model won without reporting parameter count, trainable fraction, and training time.</li>
-<li><strong>Even at high scores, the claim ceiling is kept in place:</strong> source identifiability, direct validation, closed-loop deployability, and WBE state-completeness are separate gates.</li>
-<li><strong>Results without a Pretraining Card are treated only as qualified decoding evidence:</strong> they are not automatically promoted to L2 or above.</li>
+<li><strong>ソースタイプは非表示にしません:</strong> 受理された論文、公式ルール、およびプレプリント/査読中の原稿は、同じ強度の証拠としてリストされません。</li>
+<li><strong>基礎モデルの結果は分割監査から免除されません:</strong> 事前トレーニング コーパスを含めて独立性をチェックする必要があります。</li>
+<li><strong>人口/セットアップの多様性は隠蔽しません:</strong>データセットの数だけでなく、どの記録分布が実際に含まれているかを報告します。</li>
+<li><strong>フォーマット調和を非表示にしません:</strong>チャンネル/リファレンス/サンプリング調和は常に報告する必要があります。</li>
+<li><strong>生理学的等価性として異種デバイスのサポートは読み取られません:</strong> モデルが任意のレイアウトを受け入れる場合でも、座標ルート、参照ファミリ、および省略チャネル ポリシーは表示されたままになります。</li>
+<li><strong>適応の量は隠していません:</strong> 線形プローブ、完全な微調整、TTT はすべて同じ種類の「転送成功」としてリストされているわけではありません。</li>
+<li><strong>ベンチマーク オブジェクトは非表示にしません。</strong> ウィンドウ分類、イベント検出、シーケンス ラベリング、被験者レベルの回帰、および検索のようなタスクは 1 つのフロンティア スコアに圧縮されません。</li>
+<li><strong>独立したユニットやグループ化されたホールドアウトは非表示にしません:</strong>トライアル、エポック、記録、主題は異なる予測対象であり、個別の開示が必要です。</li>
+<li><strong>ベンチマークの来歴を隠しません:</strong> ランキングは分割 / チェックポイント / 前処理の違いによって変動するため、ベンチマークの仕様は結果の一部です。</li>
+<li><strong>チャレンジ操作の予算は非表示にしません:</strong>推論のみの設定、トレーニングなしのルール、およびメモリ制限は、リーダーボード スコアの意味の一部です。</li>
+<li><strong>タイトルだけで「あらゆるセットアップ」をショートカット耐性があるものとして扱うわけではありません。</strong> 基礎モデル移転の主張には、<a href="../verification.html#specificity-shortcut-card">Specificity および <a href="../verification.html#specificity-shortcut-card"> へのショートカット耐性ブリッジも必要です。ショートカットカード</a>.</li>
+<li><strong>現在の競技規則は公式サイトで確認できます。</strong> 提案書または関連プレプリントは背景資料です。現在のルール/提出手順/スターターキットが優先して運営されます。</li>
+<li><strong>ベンチマークの事後分析は非表示にしません:</strong> 主催者が後で分割欠陥、サンプル順序のショートカット、またはスコアの変更を開示した場合、その開示によってリーダーボードの見方が変わります。</li>
+<li><strong>ベンチマーク警告のプレプリントはフロンティアの評決として扱われない:</strong>のランキング逆転とスケーリング則の主張は、受理された論文や独立した再実行によって裏付けられるまでは探索的なままである。</li>
+<li><strong>スケール/効率性は隠蔽しません:</strong>パラメータ数、トレーニング可能な割合、トレーニング時間を報告せずに基礎モデルが勝利したとは書きません。</li>
+<li><strong>高スコアであっても、クレームの上限は維持されます。</strong> ソースの識別性、直接検証、閉ループの展開可能性、および WBE の状態完全性は別個のゲートです。</li>
+<li><strong>事前トレーニング カードのない結果は、適格なデコード証拠としてのみ扱われます:</strong>それらは自動的に L2 以上に昇格されません。</li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">References</h2>
+<h2 class="section-title">参考資料</h2>
 <ol>
-<li>Kostas, D., Aroca-Ouellette, S., &amp; Rudzicz, F. (2021). BENDR: Using Transformers and a Contrastive Self-Supervised Learning Task to Learn From Massive Amounts of EEG Data. <em>Frontiers in Human Neuroscience</em>, 15, 653659. <a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">doi:10.3389/fnhum.2021.653659</a></li>
-<li>Wang, H., Lu, C., Xie, B., et al. (2023). BIOT: Biosignal Transformer for Cross-data Learning in the Wild. <em>NeurIPS 2023</em>. <a href="https://papers.nips.cc/paper_files/paper/2023/file/f6b30f3e2dd9cb53bbf2024402d02295-Paper-Conference.pdf" target="_blank">paper</a></li>
-<li>Jiang, W.-B., Zhao, L., &amp; Lu, B.-L. (2024). Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI. <em>ICLR 2024</em>. <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">proceedings</a></li>
-<li>Wang, G., Liu, W., He, Y., Xu, C., Ma, L., &amp; Li, H. (2024). EEGPT: Pretrained Transformer for Universal and Reliable Representation of EEG Signals. <em>NeurIPS 2024</em>. <a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">poster / abstract</a></li>
-<li>Lee, N., Barmpas, K., Panagakis, Y., Adamos, D., Laskaris, N., &amp; Zafeiriou, S. (2025). Are Large Brainwave Foundation Models Capable Yet? Insights from Fine-Tuning. <em>Proceedings of the 42nd International Conference on Machine Learning</em>, PMLR 267, 32878-32888. <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">PMLR</a></li>
-<li>EEG Foundation Challenge (2025). From Cross-Task to Cross-Subject EEG Decoding. <em>NeurIPS 2025 competition</em>. <a href="https://eeg2025.github.io/" target="_blank">official website</a></li>
-<li>EEG Foundation Challenge (2025). Data. <a href="https://eeg2025.github.io/data/" target="_blank">official data page</a></li>
-<li>EEG Foundation Challenge (2025). Rules. <a href="https://eeg2025.github.io/rules/" target="_blank">official rules</a></li>
-<li>EEG Foundation Challenge (2025). Submission. <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a></li>
-<li>EEG Foundation Challenge (2025). Leaderboard. <a href="https://eeg2025.github.io/leaderboard/" target="_blank">official leaderboard / postmortem</a></li>
-<li>Xiong, W., Li, J., Li, J., &amp; Zhu, K. (2025). EEG-FM-Bench: A Comprehensive Benchmark for the Systematic Evaluation of EEG Foundation Models. <em>arXiv</em>. <a href="https://arxiv.org/abs/2508.17742" target="_blank">arXiv:2508.17742</a></li>
-<li>El Ouahidi, Y., Lys, J., Thölke, P., Farrugia, N., Pasdeloup, B., Gripon, V., Jerbi, K., &amp; Lioi, G. (2025). REVE: A Foundation Model for EEG -- Adapting to Any Setup with Large-Scale Pretraining on 25,000 Subjects. <em>accepted poster / arXiv manuscript</em>. <a href="https://arxiv.org/abs/2510.21585" target="_blank">arXiv:2510.21585</a></li>
-<li>Han, D. D., Lee, A. L., Lee, T., Gwon, Y., Lee, S., Lee, S., Park, D. K., Yoo, S., Cha, J., &amp; Chung, C. K. (2025). DIVER-0: A Fully Channel Equivariant EEG Foundation Model. <em>ICML 2025 Workshop on GenBio / arXiv manuscript</em>. <a href="https://arxiv.org/abs/2507.14141" target="_blank">arXiv:2507.14141</a></li>
-<li>Chen, Z., Qin, C., You, W., Liu, R., Chu, C., Yang, R., Tan, K. C., &amp; Wu, J. (2025). HEAR: An EEG Foundation Model with Heterogeneous Electrode Adaptive Representation. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2510.12515" target="_blank">arXiv:2510.12515</a></li>
-<li>Han, D. D., Gwon, Y., Lee, A. L., et al. (2025). DIVER-1: Deep Integration of Vast Electrophysiological Recordings at Scale. <em>under-review / arXiv manuscript</em>. <a href="https://arxiv.org/abs/2512.19097" target="_blank">arXiv:2512.19097</a></li>
-<li>Wang, S., Deng, Y., Bao, Z., Zhan, X., &amp; Duan, Y. (2025). NeuroTTT: Bridging Pretraining-Downstream Task Misalignment in EEG Foundation Models via Test-Time Training. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2509.26301" target="_blank">arXiv:2509.26301</a></li>
-<li>Ma, J., Wu, F., Xing, Y., Lin, Q., Liu, T., Liu, C., Jia, Z., &amp; Feng, M. (2026). Structured Prototype-Guided Adaptation for EEG Foundation Models. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2602.17251" target="_blank">arXiv:2602.17251</a></li>
-<li>Lahiri, J. B., Runwal, P., Kulkarni, A., Jain, M., Mishra, A. R., Panwar, S., &amp; Singh, S. (2026). PRISM: Exploring Heterogeneous Pretrained EEG Foundation Model Transfer to Clinical Differential Diagnosis. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2603.02268" target="_blank">arXiv:2603.02268</a></li>
-<li>Liu, D., Chen, Y., Chen, Z., Cui, Z., Wen, Y., An, J., Luo, J., &amp; Wu, D. (2026). EEG Foundation Models: Progresses, Benchmarking, and Open Problems. <em>arXiv preprint</em>. <a href="https://arxiv.org/abs/2601.17883" target="_blank">arXiv:2601.17883</a></li>
-<li>Brookshire, G., Kasper, J., Blauch, N. M., Wu, Y. C., Glatt, R., Merrill, D. A., Gerrol, S., Yoder, K. J., Quirk, C., &amp; Lucero, C. (2024). Data leakage in deep learning studies of translational EEG. <em>Frontiers in Neuroscience</em>, 18, 1373515. <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">doi:10.3389/fnins.2024.1373515</a></li>
-<li>Chaibub Neto, E., Pratap, A., Perumal, T. M., et al. (2019). Detecting the impact of subject characteristics on machine learning-based diagnostic applications. <em>npj Digital Medicine</em>, 2, 99. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
-<li>Xu, M., Yao, S., Wei, Z., et al. (2020). Cross-dataset variability problem in EEG decoding with deep learning. <em>Frontiers in Human Neuroscience</em>, 14, 103. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
-<li>Di, Y., An, X., Zhong, W., Liu, S., &amp; Ming, D. (2021). The time-robustness analysis of individual identification based on resting-state EEG. <em>Frontiers in Human Neuroscience</em>, 15, 672946. <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
+<li>Kostas、D.、Aroca-Ouellette、S.、＆amp;ルジッチ、F. (2021)。 BENDR: トランスフォーマーと対照的な自己教師あり学習タスクを使用して、大量の EEG データから学習します。 <em>人間の神経科学のフロンティア</em>、15、653659.<a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">doi:10.3389/fnhum.2021.653659</a></li>
+<li>Wang, H.、Lu, C.、Xie, B. 他（2023年）。 BIOT: 野生環境でのクロスデータ学習のための生体信号変換器。 <em>NeurIPS 2023</em>。 <a href="https://papers.nips.cc/paper_files/paper/2023/file/f6b30f3e2dd9cb53bbf2024402d02295-Paper-Conference.pdf" target="_blank">ペーパー</a></li>
+<li>Jiang、W.-B.、Zhao、L.、&amp;ルー、B.-L. （2024年）。 BCI の膨大な EEG データを使用して一般的な表現を学習するための大規模な脳モデル。 <em>ICLR 2024</em>。 <a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/47393e8594c82ce8fd83adc672cf9872-Abstract-Conference.html" target="_blank">議事録</a></li>
+<li>Wang, G.、Liu, W.、He, Y.、Xu, C.、Ma, L.、およびリー、H. (2024)。 EEGPT: EEG 信号の普遍的かつ信頼性の高い表現のための事前トレーニング済みトランスフォーマー。 <em>NeurIPS 2024</em>。 <a href="https://neurips.cc/virtual/2024/poster/93793" target="_blank">ポスター/アブストラクト</a></li>
+<li>Lee、N.、Barmpas、K.、Panagakis、Y.、Adamos、D.、Laskaris、N.、およびザフェイリウ、S. (2025)。大規模な脳波基盤モデルはまだ可能ですか?微調整からの洞察。 <em>第 42 回機械学習国際会議議事録</em>、PMLR 267、32878-32888。 <a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">PMLR</a></li>
+<li>EEG 財団チャレンジ (2025)。クロスタスクからクロス被験者のEEGデコーディングまで。 <em>NeurIPS 2025 コンペティション</em>。 <a href="https://eeg2025.github.io/" target="_blank">公式サイト</a></li>
+<li>EEG 財団チャレンジ (2025)。データ。 <a href="https://eeg2025.github.io/data/" target="_blank">公式データページ</a></li>
+<li>EEG 財団チャレンジ (2025)。ルール。 <a href="https://eeg2025.github.io/rules/" target="_blank">公式ルール</a></li>
+<li>EEG 財団チャレンジ (2025)。提出。 <a href="https://eeg2025.github.io/submission/" target="_blank">投稿ページ</a></li>
+<li>EEG 財団チャレンジ (2025)。リーダーボード。 <a href="https://eeg2025.github.io/leaderboard/" target="_blank">公式リーダーボード / 事後</a></li>
+<li>Xiong, W.、Li, J.、Li, J.、およびZhu, K. (2025)。 EEG-FM-Bench: EEG 基礎モデルの系統的評価のための包括的なベンチマーク。 <em>arXiv</em>。 <a href="https://arxiv.org/abs/2508.17742" target="_blank">arXiv:2508.17742</a></li>
+<li>El Ouahidi、Y.、Lys、J.、Thölke、P.、Farrugia、N.、Pasdeloup、B.、Gripon、V.、Jerbi、K.、&amp;;リオイ、G. (2025)。 REVE: EEG の基礎モデル -- 25,000 人の被験者に対する大規模な事前トレーニングにより、あらゆるセットアップに適応します。 <em>受理されたポスター/arXiv原稿</em>。 <a href="https://arxiv.org/abs/2510.21585" target="_blank">arXiv:2510.21585</a></li>
+<li>Han, D.D.、Lee, A.L.、Lee, T.、Gwon, Y.、Lee, S.、Lee, S.、Park, D.K.、Yoo, S.、Cha, J.、&amp; Chung、C.K. (2025)。 DIVER-0: 完全にチャネル等変の EEG 基礎モデル。 <em>ICML 2025 GenBio / arXiv 原稿に関するワークショップ</em>。 <a href="https://arxiv.org/abs/2507.14141" target="_blank">arXiv:2507.14141</a></li>
+<li>Chen, Z.、Qin, C.、You, W.、Liu, R.、Chu, C.、Yang, R.、Tan, K.C.、およびウー、J. (2025)。 HEAR: 異種電極適応表現を備えた EEG 基礎モデル。 <em>arXiv プレプリント</em>。 <a href="https://arxiv.org/abs/2510.12515" target="_blank">arXiv:2510.12515</a></li>
+<li>Han, D.D.、Gwon, Y.、Lee, A.L. 他(2025年)。 DIVER-1: 膨大な電気生理学的記録を大規模に深く統合。 <em>審査中/arXiv原稿</em>。 <a href="https://arxiv.org/abs/2512.19097" target="_blank">arXiv:2512.19097</a></li>
+<li>Wang, S.、Deng, Y.、Bao, Z.、Zhan, X.、およびドゥアン、Y. (2025)。 NeuroTTT: テスト時トレーニングによる EEG 基礎モデルにおける事前トレーニングと下流タスクの不整合をブリッジします。 <em>arXiv プレプリント</em>。 <a href="https://arxiv.org/abs/2509.26301" target="_blank">arXiv:2509.26301</a></li>
+<li>Ma, J.、Wu, F.、Xing, Y.、Lin, Q.、Liu, T.、Liu, C.、Jia, Z.、およびフェン、M. (2026)。 EEG 基礎モデルの構造化プロトタイプに基づく適応。 <em>arXiv プレプリント</em>。 <a href="https://arxiv.org/abs/2602.17251" target="_blank">arXiv:2602.17251</a></li>
+<li>Lahiri、J.B.、Runwal、P.、Kulkarni、A.、Jain、M.、Mishra、A.R.、Panwar、S.、およびシン、S. (2026)。 PRISM: 異種の事前学習済み EEG 基礎モデルの臨床鑑別診断への移行の探索。 <em>arXiv プレプリント</em>。 <a href="https://arxiv.org/abs/2603.02268" target="_blank">arXiv:2603.02268</a></li>
+<li>Liu, D.、Chen, Y.、Chen, Z.、Cui, Z.、Wen, Y.、An, J.、Luo, J.、およびウー、D. (2026)。 EEG 基礎モデル: 進捗状況、ベンチマーク、未解決の問題。 <em>arXiv プレプリント</em>。 <a href="https://arxiv.org/abs/2601.17883" target="_blank">arXiv:2601.17883</a></li>
+<li>Brookshire, G.、Kasper, J.、Blauch, N.M.、Wu, Y.C.、Glatt, R.、Merrill, D.A.、Gerrol, S.、Yoder, K.J.、Quirk, C.、およびルセロ、C. (2024)。トランスレーショナルEEGの深層学習研究におけるデータ漏洩。 <em>神経科学のフロンティア</em>、18、1373515.<a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">doi:10.3389/fnins.2024.1373515</a></li>
+<li>Chaibub Neto, E.、Pratap, A.、Perumal, T.M. 他（2019年）。機械学習ベースの診断アプリケーションに対する被験者の特性の影響を検出します。 <em>npj デジタルメディシン</em>、2、99.<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
+<li>Xu、M.、Yao、S.、Wei、Z.、他。 （2020年）。深層学習による EEG デコードにおけるデータセット間の変動性の問題。 <em>人間の神経科学のフロンティア</em>、14、103.<a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
+<li>Di, Y.、An, X.、Zhong, W.、Liu, S.、およびミン、D. (2021)。安静状態の脳波に基づく個人識別の時間堅牢性分析。 <em>人間の神経科学のフロンティア</em>、15、672946.<a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">doi:10.3389/fnhum.2021.672946</a></li>
 </ol>
 </section>
 
@@ -520,19 +520,19 @@ For foundation / self-supervised results, this site requires a <strong>Pretraini
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="baselines-prereg-and-model-cards.html">Baselines, preregistration, and model cards →</a></li>
-<li><a href="dataset-splits-and-leakage.html">Dataset splits and leakage →</a></li>
-<li><a href="state-trait-and-drift.html">State, trait, and drift →</a></li>
+<li><a href="baselines-prereg-and-model-cards.html">ベースライン、事前登録、およびモデルカード→</a></li>
+<li><a href="dataset-splits-and-leakage.html">データセットの分割と漏洩 →</a></li>
+<li><a href="state-trait-and-drift.html">状態、特性、ドリフト →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public Pages</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../eeg_101.html">EEG Basics →</a></li>
-<li><a href="../datasets.html">Data and Benchmarks →</a></li>
-<li><a href="../verification.html">Verification Stack →</a></li>
+<li><a href="../eeg_101.html">EEGの基礎 →</a></li>
+<li><a href="../datasets.html">データとベンチマーク →</a></li>
+<li><a href="../verification.html">検証スタック→</a></li>
 </ul>
 </div>
 </aside>

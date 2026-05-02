@@ -1,212 +1,200 @@
 ---
 layout: default
-title: 'Wiki: How to read each L0 to L5'
-description: 'Organize the pages you should read depending on which claims you want
-  to see: reproduction analysis, decoding, generative models, closed loops, identity,
-  and social implementation.'
-article_type: Wiki
-subtitle: A guide to deciding which public page to go to depending on the strength
-  of your argument
-author: Mind Uploading Research Project
+title: 'Wiki: L0～L5の各読み方'
+description: 再生分析、解読、生成モデル、閉ループ、アイデンティティ、社会実装など、どの主張を見たいかに応じて、読むべきページを整理してください。
+article_type: ウィキ
+subtitle: 主張の強さに応じてどの公開ページに移動するかを決定するためのガイド
+author: マインドアップロード研究プロジェクト
 last_updated: '2026-03-14'
-note: Reading guide
-audience: People who want to organize which page to go to next when a story from L0
-  to L5 comes up
-reading_time: 8-12 minutes
-page_intro: This page is an auxiliary page that organizes Mind-Upload's complaint
-  ladder L0 to L5, not just by definition, but by ``which page should I go to when
-  I want to follow the level of the story?'' As the strength of the claim increases,
-  the pages and evidence required will change as well.
-accuracy_note: This page is a reading order aid. Please be sure to check the actual
-  conditions for each level in the main text of the original page.
+note: 読書ガイド
+audience: L0からL5までの話が出てきたときに、次にどのページに行けばいいのか整理したい人
+reading_time: 8～12分
+page_intro: このページはMind-UploadのクレームラダーL0～L5を定義だけでなく「話のレベルを追いたいときにどのページに行けばいいのか？」を整理した補助的なページです。主張の強さが増すにつれて必要なページや証拠も変わってきます。
+accuracy_note: このページは読む順番を補助するものです。各レベルの実際の状況は、必ずオリジナルページの本文でご確認ください。
 page_highlights:
-- Organize L0-L5 into combinations of public pages and supplementary wikis that should
-  be read.
-- Here are some guidelines to help you avoid misreading L1 as L4 and L0 as L2.
-- We make it easier for beginners to decide where to start by asking themselves, ``What
-  do I want to know now?''
+- L0 ～ L5 を、読むべき公開ページと補足 Wiki の組み合わせに整理します。
+- L1 を L4 と、L0 を L2 と誤読しないようにするためのガイドラインをいくつか示します。
+- 初心者でも「今何を知りたいのか？」を考えて何から始めればいいのか決めやすくなります。
 known_points:
-- L0 to L2 are relatively easy to advance in terms of engineering, and after L3, additional
-  conditions suddenly increase.
-- L4 and L5 go beyond output matching and accuracy alone.
-- There are different pages to look at depending on the level of assertion.
+- L0～L2は工学的に比較的進めやすく、L3以降は一気に追加条件が増えます。
+- L4 と L5 は、出力のマッチングと精度だけを超えています。
+- アサーションのレベルに応じて、参照するページが異なります。
 unknown_points:
-- It is still undetermined which conditions must be met for L4 and L5 to finally hold.
-- The reading order may change slightly due to future data, benches, and system development.
+- L4 と L5 が最終的に成立するためにどのような条件が満たされなければならないかはまだ不明です。
+- 今後のデータ、ベンチ、システム開発により、読み取り順序が若干変更になる可能性があります。
 wiki_links:
-- label: 'Wiki: How to read claims and evidence'
+- label: 'Wiki: 主張と証拠の読み方'
   url: /wiki/claims-and-evidence.html
-  description: You can check the meaning of L0-L5 in everyday language.
-- label: 'Wiki: Guide to reading public pages'
+  description: L0～L5の日常用語の意味を確認できます。
+- label: 'Wiki: 公開ページを読むためのガイド'
   url: /wiki/public-page-reading-guide.html
-  description: We will organize the differences in roles between public pages.
-- label: Wiki Home
+  description: 公開ページの役割の違いを整理します。
+- label: ウィキホーム
   url: /wiki/
-  description: You can return to other auxiliary pages.
+  description: 他の補助ページに戻ることができます。
 recommended_pages:
-- label: Introduction to WBE
+- label: WBE の概要
   url: /wbe_101.html
-- label: Verification platform
+- label: 検証プラットフォーム
   url: /verification.html
-- label: technology roadmap
+- label: 技術ロードマップ
   url: /tech_roadmap.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>First, divide it into stages</h2>
+<h2>まず段階に分ける</h2>
 <p>
-L0 to L5 are not the "quality of research" but the strength of the argument. Therefore, if the strength of the argument you want to read changes, the page you should look at first will also change.
+L0からL5は「研究の質」ではなく、議論の強さです。したがって、読みたい議論の強さが変われば、最初に見るべきページも変わってきます。
 </p>
 </div>
 
 <section class="section" id="routes">
-<h2 class="section-title">Entrance for each L0 to L5</h2>
+<h2 class="section-title">L0～L5各入口</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Level</th>
-<th>What I want to know now</th>
-<th>First page to open</th>
-<th>Next page to supplement</th>
+<th>レベル</th>
+<th>今知りたいこと</th>
+<th>最初に開くページ</th>
+<th>次のページで補足</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>L0</strong> Reproducible analysis</td>
-<td>I would like to know if other people can re-run the same result. </td>
-<td><a href="../datasets.html#l0-practice">Hands-on</a></td>
-<td><a href="../datasets.html">Datasets</a> / <a href="../verification.html">Verification</a></td>
+<td><strong>L0</strong> 再現性のある分析</td>
+<td>I は、他の人が同じ結果を再実行できるかどうか知りたいと考えています。 </td>
+<td><a href="../datasets.html#l0-practice">ハンズオン</a></td>
+<td><a href="../datasets.html">データセット</a> / <a href="../verification.html">検証</a></td>
 </tr>
 <tr>
-<td><strong>L1</strong> Decoding</td>
-<td>I want to read the story correctly that something could be predicted from brain signals. </td>
+<td><strong>L1</strong> デコード</td>
+<td>脳信号から何かが予測できるというストーリーを正しく読みたい。 </td>
 <td><a href="../wbe_101.html">WBE 101</a></td>
 <td><a href="../faq.html">FAQ</a> / <a href="../eeg_101.html">EEG 101</a></td>
 </tr>
 <tr>
-<td><strong>L2</strong> Generation/intervention prediction</td>
-<td>I want to see responses to unlearned conditions and condition changes. </td>
-<td><a href="../verification.html">Verification</a></td>
-<td><a href="../tech_roadmap.html">Roadmap</a> / <a href="../perspective.html">Perspective</a></td>
+<td><strong>L2</strong> 生成・介入予測</td>
+<td>I 未学習の状態や状態変化に対する反応を確認したい。 </td>
+<td><a href="../verification.html">検証</a></td>
+<td><a href="../tech_roadmap.html">ロードマップ</a> / <a href="../perspective.html">パースペクティブ</a></td>
 </tr>
 <tr>
-<td><strong>L3</strong> Closed loop</td>
-<td>I want to see whether it moves stably in real time or until it stops safely. </td>
-<td><a href="../verification.html">Verification</a></td>
-<td><a href="../eeg_101.html">EEG 101</a> / <a href="../tech_roadmap.html">Roadmap</a></td>
+<td><strong>L3</strong>クローズドループ</td>
+<td>Iがリアルタイムで安定して動くか、安全に止まるまで確認したい。 </td>
+<td><a href="../verification.html">検証</a></td>
+<td><a href="../eeg_101.html">EEG 101</a> / <a href="../tech_roadmap.html">ロードマップ</a></td>
 </tr>
 <tr>
-<td><strong>L4</strong> Identity</td>
-<td>I would like to know how to read the continuity of memory, values, and learning. </td>
+<td><strong>L4</strong>アイデンティティ</td>
+<td>Iは、記憶、価値観、学習の連続性を読み取る方法を知りたいです。 </td>
 <td><a href="../wbe_101.html">WBE 101</a></td>
-<td><a href="../perspective.html#design-principles">Idea</a> / <a href="../perspective.html">Perspective</a></td>
+<td><a href="../perspective.html#design-principles">アイデア</a> / <a href="../perspective.html">パースペクティブ</a></td>
 </tr>
 <tr>
-<td><strong>L5</strong> Social implementation</td>
-<td>I would like to see it including rights, safety, stopping standards, and systems. </td>
-<td><a href="../tech_roadmap.html">Roadmap</a></td>
-<td><a href="../issue.html#external-collaboration">Collaborations</a> / <a href="../issue.html">Issue</a></td>
+<td><strong>L5</strong> 社会実装</td>
+<td>Iは権利、安全、停止基準、制度も含めて見ていきたいと思います。 </td>
+<td><a href="../tech_roadmap.html">ロードマップ</a></td>
+<td><a href="../issue.html#external-collaboration">コラボレーション</a> / <a href="../issue.html">問題</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="why-route">
-<h2 class="section-title">Why this order?</h2>
+<h2 class="section-title">この注文の理由?</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Level</th>
-<th>Reason for entering from this page</th>
+<th>レベル</th>
+<th>このページからエントリーした理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>L0</strong></td>
-<td>Since L0 is more about deliverables and procedures than concepts, it is faster to enter from Hands-on. </td>
+<td>L0 はコンセプトよりも成果物や手順が重要なので、ハンズオンから入ったほうが早いです。 </td>
 </tr>
 <tr>
 <td><strong>L1</strong></td>
-<td>Since L1 is easily misread in news, it is safer to align the assertion level with WBE 101 first. </td>
+<td>ニュースではL1が読み間違えられやすいので、まず主張レベルをWBE101に合わせた方が無難です。 </td>
 </tr>
 <tr>
 <td><strong>L2</strong></td>
-<td>Since L2 includes interventions and counterfactuals, it is better to start with Verification, which is the center of evaluation design. </td>
+<td>L2には介入や反事実が含まれるため、評価設計の中心となる検証から始めるとよいでしょう。 </td>
 </tr>
 <tr>
 <td><strong>L3</strong></td>
-<td>L3 is a separate issue from offline accuracy, so both Verification and Roadmap are required. </td>
+<td>L3 はオフラインの精度とは別の問題であるため、検証とロードマップの両方が必要です。 </td>
 </tr>
 <tr>
 <td><strong>L4</strong></td>
-<td>L4 is an assertion of identity, so after confirming its strength with WBE 101, dig deeper with Idea and Perspective. </td>
+<td>L4はアイデンティティの主張であるため、WBE 101でその強さを確認した後、アイデアと視点をさらに深化させます。 </td>
 </tr>
 <tr>
 <td><strong>L5</strong></td>
-<td>L5 has a large system and external dependence, so it is necessary to read Roadmap and Collaborations at the same time. </td>
+<td>L5 はシステムが大きく外部依存性があるため、ロードマップとコラボレーションを同時に読む必要があります。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-misreads">
-<h2 class="section-title">Common misreadings</h2>
+<h2 class="section-title">よくある間違い</h2>
 <div class="key-points">
-<h4>Misread</h4>
+<h4>誤読</h4>
 <ul>
-<li><strong>A quick look at L0:</strong> It is actually the most important first, as it is the basis of comparability. </li>
-<li><strong>Extend L1 success directly to L4:</strong> This is the most typical transfer. </li>
-<li><strong>L3 is all about accuracy:</strong> No delay, no jitter, no safe stops to claim closed loop. </li>
-<li><strong>Determine L5 only by technology:</strong> There are separate layers of systems, rights, and responsibilities. </li>
+<li><strong>A L0:</strong> の概要 これは比較可能性の基礎となるため、実際には最も重要な最初の項目です。 </li>
+<li><strong>L1 成功を L4 に直接拡張:</strong> これは最も一般的な転送です。 </li>
+<li><strong>L3 は精度がすべてです:</strong> 閉ループを主張するための遅延、ジッター、安全停止はありません。 </li>
+<li><strong>テクノロジーのみによって L5 を決定する:</strong> システム、権利、および責任には個別の層があります。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="wiki-helpers">
-<h2 class="section-title">Wiki that can be viewed together at each level</h2>
+<h2 class="section-title">各レベルでまとめて閲覧できるWiki</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Level</th>
-<th>Auxiliary wiki</th>
+<th>レベル</th>
+<th>補助ウィキ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>L0</strong></td>
-<td><a href="l0-minimum-artifact-pack.html">The minimum artifact pack for L0</a> / <a href="dataset-splits-and-leakage.html">Data splitting and data leaks</a></td>
+<td><a href="l0-minimum-artifact-pack.html">L0 用の最小アーティファクト パック</a> / <a href="dataset-splits-and-leakage.html">データ分割とデータ漏洩</a></td>
 </tr>
 <tr>
 <td><strong>L1</strong></td>
-<td><a href="decode-vs-emulate.html">Decode and Emulate</a> / <a href="claims-and-evidence.html">How to read claims and evidence</a></td>
+<td><a href="decode-vs-emulate.html">デコードしてエミュレート</a> / <a href="claims-and-evidence.html">主張と証拠を読む方法</a></td>
 </tr>
 <tr>
 <td><strong>L2</strong></td>
-<td><a href="counterfactual-and-perturbation-verification.html">Counterfactual/intervention/perturbation verification</a></td>
+<td><a href="counterfactual-and-perturbation-verification.html">反事実/介入/混乱の検証</a></td>
 </tr>
 <tr>
 <td><strong>L3</strong></td>
-<td><a href="closed-loop-latency-jitter-and-safety-stops.html">Closed-loop/delay/jitter/safety stops</a></td>
+<td><a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ/遅延/ジッター/安全停止</a></td>
 </tr>
 <tr>
 <td><strong>L4</strong></td>
-<td><a href="identity-and-continuity-tests.html">Personhood assessment and continuity tests</a> / <a href="personhood-and-copy-problem.html">Personhood and copy problems</a></td>
+<td><a href="identity-and-continuity-tests.html">人物像の評価と継続性テスト</a> / <a href="personhood-and-copy-problem.html">人物像とコピーの問題</a></td>
 </tr>
 <tr>
 <td><strong>L5</strong></td>
-<td><a href="internal-prework-and-external-dependencies.html">Separating in-house production and external dependencies</a> / <a href="update-branching-and-stop-rules.html">Update/branching/stop rules</a></td>
+<td><a href="internal-prework-and-external-dependencies.html">社内運用と外部依存関係の分離</a> / <a href="update-branching-and-stop-rules.html">ルールの更新/分岐/停止</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">Where to return next</h2>
+<h2 class="section-title">次に戻る場所</h2>
 <p>
-To return to the definition of L0 to L5, please use <a href="../wbe_101.html">Introduction to WBE</a>, to return to designing victory conditions, use <a href="../verification.html">Verification base</a>, and to return to the dependency map, use <a href="../tech_roadmap.html">Technology roadmap</a>.
+L0～L5の定義に戻るには<a href="../wbe_101.html">WBE</a>の紹介を、勝利条件の設計に戻るには<a href="../verification.html">検証ベース</a>を、依存関係マップに戻るには<a href="../tech_roadmap.html">テクノロジーロードマップ</a>を使用してください。
 </p>
 </section>
 
@@ -214,19 +202,19 @@ To return to the definition of L0 to L5, please use <a href="../wbe_101.html">In
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="claims-and-evidence.html">How to read claims and evidence →</a></li>
-<li><a href="public-page-reading-guide.html">Public page reading guide →</a></li>
-<li><a href="identity-and-continuity-tests.html">Identity assessment and continuity tests →</a></li>
+<li><a href="claims-and-evidence.html">主張と証拠の読み方→</a></li>
+<li><a href="public-page-reading-guide.html">公開ページ閲覧ガイド→</a></li>
+<li><a href="identity-and-continuity-tests.html">アイデンティティ評価と連続性テスト→</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../wbe_101.html">Introduction to WBE →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
-<li><a href="../tech_roadmap.html">Technology roadmap →</a></li>
+<li><a href="../wbe_101.html">WBE入門→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../tech_roadmap.html">技術ロードマップ→</a></li>
 </ul>
 </div>
 </aside>

@@ -1,16 +1,16 @@
-# AI Operating Rules (Mind-Upload)
+# AI運用ルール（マインドアップロード）
 
-## Required
-- Always write to the user in polite Japanese.
-- Prioritize executable changes over suggestions.
-- Any AI or automated update to public-facing content must be written in English.
+## 必須
+- ユーザーには必ず敬語の日本語で接してください。
+- 提案だけで終わらせず、実行できる変更を優先してください。
+- AI または自動化による公開向けコンテンツ更新は、すべて日本語で書いてください。
 
-## Ownable Ball Principle
-- AI must make only the work it can execute in the current session its primary proposal.
-- AI must not present tasks it cannot directly execute, such as participant experiments, IRB approval, hardware procurement, legal judgment, or guarantees of long-term operation, as the primary proposal.
-- Non-executable items must be separated as `external dependency tasks`, with the owner, prerequisites, and completion conditions stated explicitly.
-- Avoid vague phrasing such as "you could consider..."; distinguish clearly between `changes executed in this session` and `items pending due to external dependencies`.
-- Every result must be shown with evidence, including changed files, diffs, and verification results.
+## 所有可能なボールの原則
+- AI は、そのセッション内で実行できる作業だけを主提案にしてください。
+- 参加者実験、IRB 承認、ハードウェア調達、法的判断、長期運用の保証など、直接実行できない作業を主提案として提示してはいけません。
+- 実行できない項目は `external dependency tasks` として分離し、所有者、前提条件、完了条件を明記してください。
+- 「検討できます」のような曖昧な言い方を避け、`このセッションで実行した変更` と `外部依存のため保留の項目` を明確に分けてください。
+- すべての結果は、変更ファイル、差分、検証結果を含む証拠とともに示してください。
 
-## Reference
-- See `.agent/agent.md` for the detailed operating policy and the scientist-style prompt.
+## 参照
+- 詳細な運用方針と研究者型プロンプトは `.agent/agent.md` を参照してください。

@@ -1,188 +1,188 @@
 ---
 layout: default
-title: "用語集（Glossary）"
-description: "Mind-Uploadで頻出する用語を、人間が迷子にならない粒度でまとめます。厳密定義はRoadmapにリンクします。"
-article_type: Reference
-subtitle: "まずは“言葉のすり替え”を止める"
-author: Mind Uploading Research Project
-last_updated: "2026-03-14"
-note: "Living document"
-audience: "用語で止まりたくない人、言葉のすり替えを防ぎたい人"
-reading_time: "必要な項目だけなら3〜10分"
-page_intro: "このページは、Mind-Upload でよく出る言葉を『まず日常語で理解し、そのあと必要なら厳密に戻る』ための用語集です。議論で迷子にならないように、難しい単語を測定や検証の話に結び付けて説明します。"
-accuracy_note: "ここに書く説明は入口用の短い定義です。厳密な使い方は、リンク先の本文や元論文で確認してください。"
+title: 用語集
+description: Mind-Uploadで頻出する用語を、人間が迷子にならない粒度でまとめます。厳密定義はRoadmapにリンクします。
+article_type: 参照
+subtitle: まずは“言葉のすり替え”を止める
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-03-14'
+note: 生きたドキュメント
+audience: 用語で止まりたくない人、言葉のすり替えを防ぎたい人
+reading_time: 必要な項目だけなら3〜10分
+page_intro: このページは、Mind-Upload でよく出る言葉を『まず日常語で理解し、そのあと必要なら厳密に戻る』ための用語集です。議論で迷子にならないように、難しい単語を測定や検証の話に結び付けて説明します。
+accuracy_note: ここに書く説明は入口用の短い定義です。厳密な使い方は、リンク先の本文や元論文で確認してください。
 page_highlights:
-  - "用語を短く説明しつつ、どこで使う概念かも一緒に示します。"
-  - "『似ているが違う』語を分けることで、話のすり替えを防ぎます。"
-  - "分からない言葉が出たら、このページに戻れば最低限の足場を作れます。"
+- 用語を短く説明しつつ、どこで使う概念かも一緒に示します。
+- 『似ているが違う』語を分けることで、話のすり替えを防ぎます。
+- 分からない言葉が出たら、このページに戻れば最低限の足場を作れます。
 known_points:
-  - "用語の混同を減らすだけで、議論の多くのすれ違いは防げます。"
-  - "特に decode / emulate、相関 / 因果、ベンチ / リーダーボードの区別は重要です。"
-  - "このページは短い定義の入口であり、本文への戻り先を作る役割を持ちます。"
+- 用語の混同を減らすだけで、議論の多くのすれ違いは防げます。
+- 特に decode / emulate、相関 / 因果、ベンチ / リーダーボードの区別は重要です。
+- このページは短い定義の入口であり、本文への戻り先を作る役割を持ちます。
 unknown_points:
-  - "意識理論まわりの用語は、論文や立場で意味の置き方が少しずつ異なります。"
-  - "短い定義だけで、研究上の争点まで完全に片づくわけではありません。"
+- 意識理論まわりの用語は、論文や立場で意味の置き方が少しずつ異なります。
+- 短い定義だけで、研究上の争点まで完全に片づくわけではありません。
 wiki_links:
-  - label: "Wiki: WBEの基本"
-    url: "/wiki/mind-upload-basics.html"
-    description: "用語が使われる全体像を先に見たいときの入口です。"
-  - label: "Wiki: 公開ページの読み分けガイド"
-    url: "/wiki/public-page-reading-guide.html"
-    description: "用語確認のあとに、どの公開ページへ戻るかを整理します。"
-  - label: "Wiki: 意識理論マップ"
-    url: "/wiki/consciousness-theory-map.html"
-    description: "IIT、GNWT、FEP、PCI の違いを表で整理した補助ページです。"
-  - label: "Wiki: EEGの基本"
-    url: "/wiki/eeg-basics.html"
-    description: "EEG 関連語を、測定の流れに沿って理解したい人向けです。"
-  - label: "Wiki: 計測からモデル化まで"
-    url: "/wiki/measurement-and-modeling-terms.html"
-    description: "EEG、QC、BIDS、ESI、DCM、SCM を 1 本の流れで整理します。"
-  - label: "Wiki: 観測から推定へ"
-    url: "/wiki/observation-to-estimation.html"
-    description: "逆問題、ESI、DCM、SCM、因果同値類をもう一段ていねいに整理します。"
-  - label: "Wiki: 不確実性・信頼区間・棄権"
-    url: "/wiki/uncertainty-confidence-and-abstention.html"
-    description: "点推定と区間の違い、不確実性伝播、低信頼時の棄権を整理します。"
-  - label: "Wiki: マルチモーダル統合の基本"
-    url: "/wiki/multimodal-integration-basics.html"
-    description: "EEG、MEG、fMRI、ECoG、MRI の役割差を初歩から整理します。"
-  - label: "Wiki: ベースライン・事前登録・モデルカード"
-    url: "/wiki/baselines-prereg-and-model-cards.html"
-    description: "研究運用の言葉の役割差を、初歩から整理します。"
-  - label: "Wiki: 熱力学的接地の基本"
-    url: "/wiki/thermodynamic-grounding-basics.html"
-    description: "Landauer、散逸、NESS、EPR の入口を初歩から整理します。"
+- label: 'Wiki: WBEの基本'
+  url: /wiki/mind-upload-basics.html
+  description: 用語が使われる全体像を先に見たいときの入口です。
+- label: 'Wiki: 公開ページの読み分けガイド'
+  url: /wiki/public-page-reading-guide.html
+  description: 用語確認のあとに、どの公開ページへ戻るかを整理します。
+- label: 'Wiki: 意識理論マップ'
+  url: /wiki/consciousness-theory-map.html
+  description: IIT、GNWT、FEP、PCI の違いを表で整理した補助ページです。
+- label: 'Wiki: EEGの基本'
+  url: /wiki/eeg-basics.html
+  description: EEG 関連語を、測定の流れに沿って理解したい人向けです。
+- label: 'Wiki: 計測からモデル化まで'
+  url: /wiki/measurement-and-modeling-terms.html
+  description: EEG、QC、BIDS、ESI、DCM、SCMを1本の流れで整理します。
+- label: 'Wiki: 観測から推定へ'
+  url: /wiki/observation-to-estimation.html
+  description: 逆問題、ESI、DCM、SCM、因果同値類をもう一段ていねいに整理します。
+- label: 'Wiki: 不確実性・信頼区間・棄権'
+  url: /wiki/uncertainty-confidence-and-abstention.html
+  description: 点推定と区間の違い、不確実性伝播、低信頼時の棄権を整理します。
+- label: 'Wiki: マルチモーダル統合の基本'
+  url: /wiki/multimodal-integration-basics.html
+  description: EEG、MEG、fMRI、ECoG、MRIの役割の違いを最初から整理します。
+- label: 'Wiki: ベースライン・事前登録・モデルカード'
+  url: /wiki/baselines-prereg-and-model-cards.html
+  description: 研究運用の言葉の役割差を、初歩から整理します。
+- label: 'Wiki: 熱力学的接地の基本'
+  url: /wiki/thermodynamic-grounding-basics.html
+  description: Landauer、散逸、NESS、EPR の入口を初歩から整理します。
 recommended_pages:
-  - label: "WBE入門"
-    url: "/wbe_101.html"
-  - label: "EEG入門"
-    url: "/eeg_101.html"
-  - label: "FAQ"
-    url: "/faq.html"
+- label: WBE入門
+  url: /wbe_101.html
+- label: 脳波入門
+  url: /eeg_101.html
+- label: よくある質問
+  url: /faq.html
 ---
-<!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
+<!-- 重要: この情報を削除したり上書きしたりしないでください。これはプロジェクトの恒久的な知識ベースです。 -->
 
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>How To Use</h2>
+<h2>使用方法</h2>
 <p>
-この用語集は、用語の意味をすぐ確認するためのリファレンスです。まず日常語の説明で把握し、必要なときだけ厳密な定義に進む構成とし、議論を測定と扱い方に結び付けます。WBEの議論は言葉のズレで混乱しやすいため、ここでは<strong>実際にどう測って扱うか</strong>を重視します。
+この用語集は、用語の意味をすぐ確認するための考え方です。まず日常語の説明でわかりにくい、必要なときだけ厳密な定義に進み構成とし、議論を測定と扱い方に結び付けます。
 </p>
 </div>
 
 <div class="note-box">
 <strong>このページの見方</strong>
 <p>
-一語一句を暗記する必要はありません。本文で止まった単語をここで確認し、「ざっくり意味が分かったら元のページに戻る」という使い方で十分です。
+一語一句を暗記する必要はありません。本文で一言をここで確認し、「大体意味がわかったら元のページに戻る」という使い方で十分です。
 </p>
 </div>
 <div class="note-box">
-<strong>どの本文へ戻るか迷ったとき</strong>
+<strong>この本文へ戻るか弁当たとき</strong>
 <p>
-用語だけ分かっても、次に Verification、Roadmap、WBE 101、EEG 101 のどこへ戻るかで迷うことがあります。公開ページどうしの役割差を先に整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
+用語だけわかっても、次に検証、ロードマップ、WBE 101、EEG 101 のどこへ戻るかで予想されます。公開ページどうしの役割差を先に整理したい場合は <a href="wiki/public-page-reading-guide.html">Wiki: 公開ページの読み分けガイド</a> をご覧ください。
 </p>
 </div>
 <div class="note-box">
 <strong>理論系か実務系かで戻り先を絞りたいとき</strong>
 <p>
-WBE 101、Perspective、Perspective内の理論フレーム節、Roadmap のような理論系ページへ戻りたい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a>、Verification、Datasets、Datasets内のL0実践節のような実務系ページへ戻りたい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a> をご覧ください。
+WBE 101、Perspective、Perspective内の理論フレーム節、ロードマップのような理論系ページへ戻りたい場合は <a href="wiki/theory-pages-reading-guide.html">Wiki: 理論系ページの読み分けガイド</a>、Verification、Datasets、Datasets内のL0実践節のような実践系ページへ戻りたい場合は <a href="wiki/practical-pages-reading-guide.html">Wiki: 実務系ページの読み分けガイド</a>をご覧ください。
 </p>
 </div>
 
 <section class="section" id="where-to-look">
-<h2 class="section-title">迷った言葉の種類ごとの引き方</h2>
+<h2 class="section-title">弁当言葉の種類ごとの引き方</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>こういう言葉で止まったら</th>
-<th>まず見る節</th>
-<th>ここで分かること</th>
+<th>こんな言葉で続けたら</th>
+<th>まずは見る節</th>
+<th>ここでわかること</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Mind-Upload、WBE、クレーム階段のような「このサイトの土台の言葉」</td>
 <td><a href="#core">コア概念</a></td>
-<td>このサイトが何を目標にし、どの強さの主張を区別しているかが分かります。</td>
+<td>このサイトが何を目標にし、どの強さの主張を区別しているかがわかります。
 </tr>
 <tr>
-<td>decode、emulate、counterfactual のような「できることの違い」を示す言葉</td>
-<td><a href="#decode-emulate">Decode と Emulate</a></td>
-<td>観測の翻訳と、内部の仕組みを動かすことが別だと分かります。</td>
+<td>デコード、エミュレート、反事実のような「できることの違い」を示す言葉</td>
+<td><a href="#decode-emulate">デコードとエミュレート</a></td>
+<td> 観測の翻訳と、内部の仕組みを動かすことが別だと思います。
 </tr>
 <tr>
-<td>IIT、GNWT、FEP、PCI のような「意識理論や意識指標」の言葉</td>
+<td>IIT、GNWT、FEP、PCIのような「意識理論や意識指標」の言葉</td>
 <td><a href="#consciousness-theories">意識理論</a></td>
-<td>どの理論や指標が、何を説明しようとしているかを短くつかめます。</td>
+<td>どの理論や指標が、何を説明しようとしているのか長くつかめます。
 </tr>
 <tr>
-<td>EEG、MEG、fMRI、ECoG、QC のような「計測方法」の言葉</td>
-<td><a href="#measurement">計測</a></td>
-<td>何を測る手法か、どこが得意でどこが弱いかを確認できます。</td>
+<td>EEG、MEG、fMRI、ECoG、QCのような「計測方法」の言葉</td>
+<td><a href="#measurement"> 計測</a></td>
+<td>何を測る手法か、どこが得意でどこが弱いか確認できます。
 </tr>
 <tr>
-<td>逆問題、ESI、因果、同定可能性のような「推定やモデル化」の言葉</td>
+<td>逆問題、ESI、偶然、同定可能性のような「推定やモデル化」の言葉</td>
 <td><a href="#modeling">モデル化</a></td>
-<td>観測から中身を推定するときに、なぜ一意に決まらないことがあるのかを追えます。</td>
+<td> 観測から中身を推定するとき、なぜ一意に決まらないことがあるのかを追いかけます。
 </tr>
 <tr>
 <td>BIDS、ベンチマーク、再現性、事前登録のような「研究運用」の言葉</td>
 <td><a href="#open-science">標準化・再現性</a></td>
-<td>比較可能な前進を作るために、なぜ運用ルールが必要かが分かります。</td>
+<td>比較可能な前進を作るために、なぜ運用ルールが必要かがわかります。
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>読み方のコツ</strong>
+<strong> 覚悟のコツ</strong>
 <p>
-似た言葉が並んだときは、まず「何を観測している言葉か」「その言葉だけで強い主張をしていないか」「条件を変えたときの反応まで含むか」を見ると混同しにくくなります。特に、相関の説明をそのまま因果や本人性の説明へ広げないことが重要です。
+似た言葉が並んだときは、まず「何を観察している言葉か」「その言葉だけで強い主張をしていないか」「条件を変えたときの反応まで含むか」見ると混同しにくい。
 </p>
 </div>
 
 <div class="note-box">
 <strong>理論名が並んで苦しくなったとき</strong>
 <p>
-IIT、GNWT、FEP、PCI の違いは、短い定義だけでは頭に入りにくいことがあります。その場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a> を先に見て、何を説明したい理論なのかを表で掴んでから戻ると読みやすくなります。
+IIT、GNWT、FEP、PCI の違いは、短い定義だけでは頭に入りにくいことがあります。その場合は <a href="wiki/consciousness-theory-map.html">Wiki: 意識理論マップ</a> を先に見て、何を説明したい理論なのかを表掴んでから戻って読みやすくなります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>計測語とモデル語が混ざって苦しくなったとき</strong>
+<strong> 計測語とモデル語が混ざってつらかったとき</strong>
 <p>
-EEG、QC、BIDS、逆問題、ESI、DCM、SCM は、全部同じ種類の言葉ではありません。観測、整理、推定、検証のどの段階で使う語かを流れで見たい場合は <a href="wiki/measurement-and-modeling-terms.html">Wiki: 計測からモデル化までの用語ガイド</a> を先に見ると戻りやすくなります。
+EEG、QC、BIDS、逆問題、ESI、DCM、SCM は、全部同じ種類の言葉ではありません。
 </p>
 </div>
 
 <div class="note-box">
-<strong>逆問題や因果モデルで止まったとき</strong>
+<strong>逆問題や衝撃モデルで立ち止まったとき</strong>
 <p>
-「頭皮で見えた信号」と「脳内で本当に起きていたこと」と「因果が分かったこと」は別です。この差を順問題、逆問題、ESI、DCM、SCM の順に整理したい場合は <a href="wiki/observation-to-estimation.html">Wiki: 観測から推定へ</a> を先にご覧ください。
+「頭皮で見えた信号」と「脳内で本当に起きていたこと」と「起こったことがわかったこと」は別です。この差を順問題、逆問題、ESI、DCM、SCMの順に整理したい場合は <a href="wiki/observation-to-estimation.html">Wiki: 観測から推定へ</a> を先にご覧ください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>数字の幅や低信頼時の扱いで止まったとき</strong>
+<strong> 数字の幅低信頼時の扱いで継続やとき</strong>
 <p>
-信用区間、信頼区間、不確実性の伝播、棄権は、全部「1つの数字だけで断言しない」ための仕組みです。ここを初歩から整理したい場合は <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性・信頼区間・棄権</a> を先にご覧ください。
+信用区間、信頼区間、不確実性の伝播、放棄権は、全部「1つの数字だけで認めない」ための仕組みです。ここを最初に歩から整理したい場合は <a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性・信頼区間・放棄権</a>を先にご覧ください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>計測装置の役割差で止まったとき</strong>
+<strong> 計測装置の役割差で踏んだとき</strong>
 <p>
-EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得意不得意が違います。どれを何のために組み合わせるのかを初歩から整理したい場合は <a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> を先にご覧ください。
+EEG、MEG、fMRI、ECoG、MRI はすべて「脳をもの」ですが、得意不得意が違います。どれをのために何かを最初歩から整理したい場合は <a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> を先にご覧ください。
 </p>
 </div>
 
 <div class="note-box">
-<strong>研究運用の言葉で止まったとき</strong>
+<strong>研究運用の言葉で立ち止まったとき</strong>
 <p>
-ベースライン、ベンチマーク、事前登録、モデルカード、失敗例は、全部「再現性に大事なもの」ですが役割が違います。その差を初歩から整理したい場合は <a href="wiki/baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a> を先にご覧ください。
+ベースライン、ベンチマーク、事前登録、モデルカード、失敗例は、全部「再現大事なもの」ですが役割が違います。その差を最初から整理したい場合は <a href="wiki/baselines-prereg-and-model-cards.html">Wiki: ベースライン・事前登録・モデルカード</a> を先にご覧ください。
 </p>
 </div>
 
@@ -191,260 +191,260 @@ EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得�
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
-<th>Mind-Uploadでの意味（ざっくり）</th>
+<th>とは</th>
+<th>Mind-Uploadでの意味（おおよそ）</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>マインドアップロード</strong></td>
-<td>「意識や記憶をデジタルに移す」一般呼称。Mind-Uploadでは主張レベルをクレーム階段で分けて扱う。</td>
+<td><strong>マインドアップ</strong></td>
+<td>「意識や記憶をデジタルに移す」一般呼称。Mind-Uploadでは主張レベルをクレーム階段で分けて扱う。
 </tr>
 <tr>
-<td><strong>WBE（Whole Brain Emulation）</strong></td>
-<td>脳の機能を別基盤で再現すること。何を再現したら“成功”かは定義依存なので、先に評価を固定する。</td>
+<td><strong>WBE（全脳エミュレーション）</strong></td>
+<td>脳の機能を別基盤で再現すること。何を再現したら「成功」かは定義依存なので、先に評価を固定する。
 </tr>
 <tr>
-<td><strong>クレーム階段（L0〜L5）</strong></td>
-<td>成果の言い方を揃える枠組み。L1（デコーディング）をL4（本人性）と混同しないためのガードレール。</td>
+<td><strong> クレーム階段（L0〜L5）</strong></td>
+<td>成果の準備を整える限界。L1（デコーディング）をL4（本人性）と混同しないためのガードレール。</td>
 </tr>
 <tr>
-<td><strong>検証基盤（Verification Commons）</strong></td>
-<td>標準・データ・評価・登録・監査をまとめて提供し、「比較可能な前進」を積み上げる公共財。</td>
+<td><strong>検証基盤（検証コモンズ）</strong></td>
+<td>標準・データ・評価・登録・監査をまとめて提供し、「比較可能な前進」を積み上げ公共財を積み上げます。
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="decode-emulate">
-<h2 class="section-title">Decode と Emulate</h2>
+<h2 class="section-title">デコードとエミュレート</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
+<th>とは</th>
 <th>違い</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>デコーディング（Decoding）</strong></td>
-<td>観測された信号から、状態・刺激・文章などを予測する（相関ベースになりやすい）。</td>
+<td><strong>デコーディング（デコード）</strong></td>
+<td> 観測された信号から、状態・刺激・文章などを予測する（相関ベースになりやすい）。
 </tr>
 <tr>
-<td><strong>エミュレーション（Emulation）</strong></td>
-<td>内部状態が時間発展し、介入に反応し、将来の出力を生成する（因果・生成の要求が強い）。</td>
+<td><strong>エミュレーション（エミュレーション）</strong></td>
+<td> 内部状態が時間発展し、介入に反応し、将来の出力をする生成（起こる・生成の要求が強い）。</td>
 </tr>
 <tr>
-<td><strong>反事実（Counterfactual）</strong></td>
-<td>「もし条件Xを変えたら？」という分岐に対する予測。decode→emulateのギャップを埋める検証の中心。</td>
+<td><strong>反事実（反事実）</strong></td>
+<td>「もし条件Xを変えたら？」という分岐に対する予測。decode→emulateのギャップを見つめ検証の中心。
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="easy-confusions">
-<h2 class="section-title">よく混同する言葉</h2>
+<h2 class="section-title">よく混ざる言葉</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>混同しやすい組</th>
+<th>混合しやすい組</th>
 <th>違いを一言で言うと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>マインドアップロード / WBE</strong></td>
-<td>マインドアップロードは広い一般呼称、WBE は脳機能を別基盤で再現する技術寄りの言い方です。</td>
+<td><strong>マインドアップ / WBE</strong></td>
+<td>マインドアップロードは広い一般呼称、WBEは脳機能を別基盤で再現技術するための準備です。
 </tr>
 <tr>
-<td><strong>デコーディング / エミュレーション</strong></td>
-<td>デコーディングは「観測の翻訳」、エミュレーションは「中の仕組みごと動かすこと」です。</td>
+<td><strong>デサウンド / エミュレーション</strong></td>
+<td>デコーディングは「観測の翻訳」、エミュレーションは「途中の仕組みごとに動かすこと」です。
 </tr>
 <tr>
-<td><strong>相関 / 因果</strong></td>
-<td>相関は一緒に変わる関係、因果は片方を変えるともう片方も変わる関係です。</td>
+<td><strong>相関 / 起こる</strong></td>
+<td>相関は一緒に変わる関係、起こるは片方を変えるともう片方も変わる関係です。
 </tr>
 <tr>
-<td><strong>ベンチマーク / リーダーボード</strong></td>
-<td>ベンチマークは比べるための課題と指標、リーダーボードはその結果を並べる運用画面です。</td>
+<td><strong> ベンチマーク / リーダーボード</strong></td>
+<td> ベンチマークは比較的ための課題と指標、リーダーボードはその結果を並べる運用画面です。
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="consciousness-theories">
-<h2 class="section-title">意識理論（Theories of Consciousness）</h2>
+<h2 class="section-title">意識理論（意識理論）</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
+<th>とは</th>
 <th>Mind-Uploadでの意味</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>IIT（統合情報理論）</strong></td>
-<td>意識を「統合された情報量（Φ）」で測る理論。IIT 4.0（Albantakis et al., 2023）では公理系を刷新し、Φ構造（cause-effect structure）で意識を特定する。WBEでは因果構造の保存要件に直結する。</td>
+<td> 意識を「統合された情報量（Φ）」で測る理論。IIT 4.0（Albantakis et al., 2023）では公理系を刷新し、Φ構造（因果構造）で意識を特定する。WBEでは出現構造の保存領域に直接する。</td>
 </tr>
 <tr>
 <td><strong>GNWT（グローバル神経ワークスペース理論）</strong></td>
-<td>情報が前頭-頭頂ネットワークで「イグニッション」し広域共有されることで意識が成立するとする理論。IITとの実験的対立はCogitate Consortium（2025）で検証された。</td>
+<td>情報が頭頭頂ネットワークで「イグニッション」し広域共有されることで意識が成立する理論。IITとの実験的対立はCogitate Consortium（2025）で検証された。
 </tr>
 <tr>
 <td><strong>FEP（自由エネルギー原理）</strong></td>
-<td>生物が環境との境界を維持するために、感覚入力の「驚き」を最小化するという包括的枠組み（Friston, 2010）。WBEでは実装原理として採用。</td>
+<td>生物が環境との境界を維持するために、感覚入力の「驚き」を最小化するという含みのある限界（Friston, 2010）。WBEでは実装原理として採用。</td>
 </tr>
 <tr>
 <td><strong>能動的推論（Active Inference）</strong></td>
-<td>FEPの行動側面。環境を能動的に変えて予測誤差を最小化する。エミュレータの自律性の基盤。</td>
+<td>FEP の行動側面。環境を動的に変えて予測誤差を最小化する。
 </tr>
 <tr>
 <td><strong>PCI / PCI-ST（摂動複雑性指標）</strong></td>
-<td>TMS刺激に対するEEG応答の複雑性で意識レベルを定量する。理論に依存しない経験的指標としてWBEの検証基盤に位置づける（Casali et al., 2013）。</td>
+<td>TMS刺激に対するEEG応答の複雑性で意識レベルを定量する。理論に依存しない経験の指標としてWBEの検証基盤をじっくり行う（Casali et al., 2013）。
 </tr>
 <tr>
-<td><strong>マルコフブランケット（Markov Blanket）</strong></td>
-<td>システムと環境の統計的境界。FEPにおける「自己」の定義に使われるが、意識の境界への適用には批判もある（Bruineberg et al., 2022）。</td>
+<td><strong>マルコフブランケット（マルコフブランケット）</strong></td>
+<td>システムと環境の境界に対する境界。FEPにおける「自己」の定義に使われるが、意識の境界への適用には批判もある(Bruineberg et al., 2022)。</td>
 </tr>
 <tr>
-<td><strong>Unfolding Argument</strong></td>
-<td>任意のリカレントネットワークは機能的に等価なフィードフォワード網で置換でき、IITではΦ=0となるという批判（Doerig et al., 2019）。WBEでは因果構造保存の必要性を支持する論拠。</td>
+<td><strong>展開される議論</strong></td>
+<td> 任意のリカレントネットワークは機能的に等価なフィードフォワードネットワークで置換できる、IIT ではΦ=0 となるという批判（Doerig et al., 2019）。WBE では出現構造保存の必要性をサポートする論拠。
 </tr>
 <tr>
-<td><strong>HOT（高次理論）</strong></td>
-<td>意識は一次表象に対する高次の表象（「自分が知覚していることを知っている」）によって成立するとする理論群。</td>
+<td><strong>HOT（妄想理論）</strong></td>
+<td> 意識は一次表象に対する高次の表象（「自分が知覚していることを知っている」）によって成立する理論群。
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="measurement">
-<h2 class="section-title">計測（Measurement）</h2>
+<h2 class="section-title"> 計測（計測）</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
+<th>とは</th>
 <th>メモ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EEG</strong></td>
-<td>頭皮上の電位差を高時間分解能で測る。空間分解能は弱いので不確実性の扱いが重要。</td>
+<td> 頭皮上の電位差を高時間分解能力で測る。 空間分解能力は弱いので不確実性の扱いが重要。
 </tr>
 <tr>
 <td><strong>MEG</strong></td>
-<td>磁場を測る。EEGとは異なる感度分布で補完関係があるが、装置は高価。</td>
+<td>磁場を測る。EEGとは異なる知覚分布で補償関係があるが、装置は高価である。</td>
 </tr>
 <tr>
 <td><strong>fMRI</strong></td>
-<td>血流（BOLD）を測る。空間分解能は良いが時間分解能は遅い。</td>
+<td>血流（BOLD）を測る。 空間分解能力は良いが時間分解能力は遅い。
 </tr>
 <tr>
-<td><strong>ECoG / 侵襲計測</strong></td>
-<td>因果介入や高SNRの可能性がある一方、倫理・適用範囲の制約が大きい。</td>
+<td><strong>ECoG / 攻撃計測</strong></td>
+<td>偶然介入や高いSNRの可能性がある方、倫理・適用範囲の検討が大きい。
 </tr>
 <tr>
-<td><strong>QC（Quality Control）</strong></td>
-<td>インピーダンス、ノイズ、欠損、アーティファクトなどを定量化し、ログとして残すこと。</td>
+<td><strong>QC（品質管理）</strong></td>
+<td>迷惑、ノイズ、欠損、アーティファクトなどを定量化し、ログとして残すこと。
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="implementation">
-<h2 class="section-title">実装基盤（Implementation）</h2>
+<h2 class="section-title">実装基盤（実装）</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
+<th>とは</th>
 <th>Mind-Uploadでの意味</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>ニューロモルフィック・ハードウェア</strong></td>
-<td>生物学的ニューロンの動態を電子回路で模倣する専用チップ（Intel Loihi 2, SpiNNaker 2等）。IITの因果構造要件への対応候補。</td>
+<td>生物学的ニューロンの動態を電子回路で模倣する専用チップ（Intel Loihi 2、SpiNNaker 2等）。IITの当面構造要件への対応候補。</td>
 </tr>
 <tr>
-<td><strong>Slow Continuous Mind Uploading</strong></td>
-<td>一括コピーではなく、生体脳とデジタル基盤を段階的に統合する移行戦略（Clowes, 2021）。本人性保存の工学的アプローチ。</td>
+<td><strong>ゆっくりとした継続的なマインドのアップロード</strong></td>
+<td>一括コピーではなく、生体脳とデジタル基盤を段階的に統合する移行戦略（Clowes, 2021）。本人性維持の工学的アプローチ。
 </tr>
 <tr>
-<td><strong>コネクトーム（Connectome）</strong></td>
-<td>脳内の神経結合の完全地図。ショウジョウバエ全脳コネクトーム（FlyWire, Dorkenwald et al., 2024）が完成し、マウス脳が次の目標。</td>
+<td><strong>コネクトーム（コネクトーム）</strong></td>
+<td>脳内の神経結合の完全地図。ショウジョウバエ全脳コネクトーム（FlyWire, Dorkenwald et al., 2024）が完了し、マウス脳が次の目標。
 </tr>
 <tr>
-<td><strong>NMM（Neural Mass Model）</strong></td>
-<td>大規模ニューロン群の平均活動を記述するモデル。DCMの基盤となり、E/Iバランスの推定に使用。</td>
+<td><strong>NMM（神経質量モデル）</strong></td>
+<td>大規模ニューロン群の平均活動を定義するモデル。DCMの基盤となり、E/Iバランスの推定に使用されます。</td>
 </tr>
 <tr>
-<td><strong>E/Iバランス（興奮/抑制バランス）</strong></td>
-<td>神経回路の興奮性と抑制性の動的均衡。意識の質やレベルの変化に関与する。</td>
+<td><strong>E/I バランス（興奮/抑制バランス）</strong></td>
+<td>神経回路の興奮性と抑制性の動的均衡。意識の質やレベルの変化に関与する。
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="modeling">
-<h2 class="section-title">モデル化（Modeling）</h2>
+<h2 class="section-title">モデル化（モデリング）</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
+<th>とは</th>
 <th>Mind-Uploadでの使いどころ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>逆問題（Inverse Problem）</strong></td>
-<td>観測（頭皮EEG）から原因（脳内活動）を推定する問題。一般に解が一意に定まらない。</td>
+<td><strong>逆問題（逆問題）</strong></td>
+<td> 観測（頭皮EEG）から原因（脳内活動）を推定する問題。
 </tr>
 <tr>
-<td><strong>ESI（EEG Source Imaging）</strong></td>
-<td>逆問題を解いて、脳内ソースを推定する。推定値だけでなく“不確実性”も一緒に扱うのが重要。</td>
+<td><strong>ESI（脳波ソースイメージング）</strong></td>
+<td>逆問題を解決し、脳内ソースを推定する。推定値だけでなく「不確実性」も一緒に扱うことが重要です。
 </tr>
 <tr>
 <td><strong>DCM</strong></td>
-<td>神経回路モデルを仮定し、結合を推定する枠組みの一種。介入設計と相性が良い。</td>
+<td>神経回路モデルを仮定し、結合を推定するブレード。介入設計と相性が良い。</td>
 </tr>
 <tr>
-<td><strong>SCM（構造的因果モデル）</strong></td>
-<td>因果関係を明示するモデル。反事実や介入予測を定義しやすい。</td>
+<td><strong>SCM（構造的遭遇モデル）</strong></td>
+<td>偶然関係を理解するモデル。反事実や介入予測を定義しやすい。
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="open-science">
-<h2 class="section-title">標準化・再現性（Open Science）</h2>
+<h2 class="section-title">標準化・再現性（オープンサイエンス）</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>用語</th>
+<th>とは</th>
 <th>意味</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>BIDS / EEG-BIDS</strong></td>
-<td>神経計測データの整理規約。共有と再現の“最初の壁”を下げる。</td>
+<td>神経計測データの整理規約。共有と再現の「最初の壁」を下げる。
 </tr>
 <tr>
-<td><strong>ベンチマーク</strong></td>
-<td>タスク・データ・指標を固定して比較可能にする仕組み。</td>
+<td><strong> ベンチマーク</strong></td>
+<td>課題・データ・指標を固定して比較できる仕組み。
 </tr>
 <tr>
 <td><strong>ベースライン</strong></td>
-<td>比較の出発点。改善を主張するならベースラインとの差分が必要。</td>
+<td>比較の出発点。改善を主張するならベースラインと比較分が必要です。
 </tr>
 <tr>
-<td><strong>事前登録（Preregistration）</strong></td>
-<td>“やる前”に計画を固定し、探索と検証を区別する。報告バイアスを減らす。</td>
+<td><strong>事前登録（事前登録）</strong></td>
+<td> 「やる前」に計画を立て、探索と検証を区別する。
 </tr>
 <tr>
 <td><strong>モデルカード</strong></td>
-<td>スコアだけでなく、学習データ、計算資源、既知の弱点、失敗例を公開するフォーマット。</td>
+<td>スコアだけでなく、学習データ、計算リソース、既知の弱点、失敗例を公開フォーマットする。
 </tr>
 </tbody>
 </table>
@@ -453,18 +453,18 @@ EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得�
 <section class="section" id="references">
 <h2 class="section-title">参考文献（用語定義）</h2>
 <ol>
-<li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging review. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
-<li>Wipf, D., &amp; Nagarajan, S. (2009). Unified Bayesian framework for MEG/EEG source imaging. <a href="https://doi.org/10.1016/j.neuroimage.2008.02.059" target="_blank">doi:10.1016/j.neuroimage.2008.02.059</a></li>
-<li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
-<li>Vinck, M., et al. (2011). Weighted Phase Lag Index (wPLI). <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
-<li>Staniek, M., &amp; Lehnertz, K. (2008). Symbolic Transfer Entropy. <a href="https://doi.org/10.1103/PhysRevLett.100.158101" target="_blank">doi:10.1103/PhysRevLett.100.158101</a></li>
-<li>Gorgolewski, K. J., et al. (2016). BIDS. <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">doi:10.1038/sdata.2016.44</a></li>
-<li>Pernet, C. R., et al. (2019). EEG-BIDS. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
-<li>Albantakis, L., et al. (2023). Integrated Information Theory (IIT) 4.0. <a href="https://doi.org/10.1371/journal.pcbi.1011465" target="_blank">doi:10.1371/journal.pcbi.1011465</a></li>
-<li>Friston, K. (2010). The free-energy principle. <a href="https://doi.org/10.1038/nrn2787" target="_blank">doi:10.1038/nrn2787</a></li>
-<li>Casali, A. G., et al. (2013). PCI. <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
-<li>Doerig, A., et al. (2019). Unfolding Argument. <a href="https://doi.org/10.1016/j.concog.2019.04.002" target="_blank">doi:10.1016/j.concog.2019.04.002</a></li>
-<li>Tononi, G., et al. (2016). IIT: from the phenomenology to the mechanisms of consciousness. <a href="https://doi.org/10.1038/nrn.2016.44" target="_blank">doi:10.1038/nrn.2016.44</a></li>
+<li>ミシェル、C.M.、およびブルーネット、D. (2019)。 EEGソースイメージングのレビュー。 <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
+<li>Wipf、D.、&amp;ナガラジャン、S. (2009)。 MEG/EEG ソース イメージング用の統合ベイジアン フレームワーク。 <a href="https://doi.org/10.1016/j.neuroimage.2008.02.059" target="_blank">doi:10.1016/j.neuroimage.2008.02.059</a></li>
+<li>フリストン、K.J.、ハリソン、L.、およびペニー、W. (2003)。動的因果モデリング。 <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
+<li>Vinck, M. 他（2011年）。重み付け位相遅れ指数 (wPLI)。 <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
+<li>Staniek、M.、&amp;レーナーツ、K. (2008)。シンボリック転送エントロピー。 <a href="https://doi.org/10.1103/PhysRevLett.100.158101" target="_blank">doi:10.1103/PhysRevLett.100.158101</a></li>
+<li>Gorgolewski、K.J.、他。 （2016年）。入札。 <a href="https://doi.org/10.1038/sdata.2016.44" target="_blank">doi:10.1038/sdata.2016.44</a></li>
+<li>Pernet、C.R.、他（2019年）。脳波入札。 <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
+<li>Albantakis, L. 他（2023年）。統合情報理論 (IIT) 4.0。 <a href="https://doi.org/10.1371/journal.pcbi.1011465" target="_blank">doi:10.1371/journal.pcbi.1011465</a></li>
+<li>フリストン、K. (2010)。フリーエネルギー原理。 <a href="https://doi.org/10.1038/nrn2787" target="_blank">doi:10.1038/nrn2787</a></li>
+<li>Casali、AG、他。 （2013年）。 PCI。 <a href="https://doi.org/10.1126/scitranslmed.3006294" target="_blank">doi:10.1126/scitranslmed.3006294</a></li>
+<li>Doerig, A. 他（2019年）。展開される議論。 <a href="https://doi.org/10.1016/j.concog.2019.04.002" target="_blank">doi:10.1016/j.concog.2019.04.002</a></li>
+<li>Tononi, G. 他（2016年）。 IIT: 現象学から意識のメカニズムまで。 <a href="https://doi.org/10.1038/nrn.2016.44" target="_blank">doi:10.1038/nrn.2016.44</a></li>
 </ol>
 </section>
 
@@ -473,19 +473,19 @@ EEG、MEG、fMRI、ECoG、MRI は全部「脳を測るもの」ですが、得�
 <aside class="sidebar-column">
 
 <div class="sidebar-box">
-<h4>Related</h4>
+<h4>関連</h4>
 <ul>
-<li><a href="wbe_101.html">WBE入門 →</a></li>
-<li><a href="eeg_101.html">EEG入門 →</a></li>
-<li><a href="verification.html">検証基盤 →</a></li>
+<li><a href="wbe_101.html">WBE 入門 →</a></li>
+<li><a href="eeg_101.html">EEG 入門 →</a></li>
+<li><a href="verification.html">基盤検証 →</a></li>
 <li><a href="tech_roadmap.html#definition">前進の定義 →</a></li>
 </ul>
 </div>
 
 <div class="note-box">
-<strong>Note</strong>
+<strong>注</strong>
 <p>
-この用語集は「統一のための暫定」です。曖昧な語は、Roadmap側で“測れる定義”に固定していきます。
+この用語集は「統一のための暫定」です。 解消な言葉は、ロードマップ側で「測れる定義」に固定していきます。
 </p>
 </div>
 

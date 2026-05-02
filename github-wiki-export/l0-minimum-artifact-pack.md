@@ -1,344 +1,344 @@
-# Wiki: Minimum artifact pack for L0
+# Wiki: L0 の最小アーティファクト パック
 
-> Do not call it reproducible until version, observability, benchmark meaning, lineage, and replay are fixed together
+> バージョン、可観測性、ベンチマークの意味、リネージ、およびリプレイが修正されるまでは、再現可能とは呼ばないでください。
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-03 / Role: Operational guide / temporal-validity sync
+- Updated: 2026-04-03 / Role: 操作ガイド / 時間的有効性の同期
 
-## Role Of This Page
-This page is an auxiliary page that fixes what must be bundled together before an L0 result can be called reproducible analysis on this site. It is not a procedure manual; it is a submission-shape check that asks whether a third party can reconstruct not only the score, but also what was actually observed, which prediction object and metric bundle were used, which benchmark rules were in force, what was held out, and what remained outside scope.
+## このページの役割
+このページは、このサイトで L0 結果が再現可能な分析と呼ばれる前に、何をバンドルする必要があるかを修正する補助ページです。これは手順書ではありません。これは、サードパーティがスコアだけでなく、実際に観察された内容、どの予測オブジェクトとメトリクス バンドルが使用されたか、どのベンチマーク ルールが適用されていたか、何が適用され、何が範囲外に残ったかを再構築できるかどうかを問う提出形式のチェックです。
 
-## Accuracy Notes
-This page defines the current minimum for L0. It does not by itself justify causal or identity claims, but without these fields even L0 comparability remains too weak.
+## 正確性に関する注記
+このページでは、L0 の現在の最小値を定義します。それ自体は因果関係や同一性の主張を正当化するものではありませんが、これらのフィールドがなければ、L0 の比較可能性さえも弱すぎるままです。
 
-## Back To Public Pages
-- [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
-- [Data & Bench](https://mind-upload.com/datasets.html)
-- [Verification base](https://mind-upload.com/verification.html)
+## 公開ページへ戻る
+- [実践](https://mind-upload.com/datasets.html#l0-practice)
+- [データとベンチ](https://mind-upload.com/datasets.html)
+- [検証ベース](https://mind-upload.com/verification.html)
 
-## Related Wiki Pages
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - You can see from the beginning why artifacts are fixed first.
-- [Wiki: Data partitioning and leaks](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - Supplements the reason why splitting rules go into artifacts.
-- [Wiki: Baseline/Pre-registration/Model Card](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - Compensates for the role differences between baseline and failure examples.
-- [Wiki: State, trait, and drift](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - Use this when cross-session or longitudinal results start to be read as durable operation.
-- [Wiki: EEG foundation models and pretraining](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models) - Use this when benchmark governance and prediction-object differences start to dominate leaderboard interpretation.
+## 関連 Wiki ページ
+- [Wiki: 検証インフラストラクチャの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - 最初からアーティファクトが最初に修正される理由がわかります。
+- [Wiki: データの分割と漏洩](https://github.com/yasufumi-nakata/mind-upload/wiki/dataset-splits-and-leakage) - 分割ルールがアーティファクトに適用される理由を補足します。
+- [Wiki: ベースライン/事前登録/モデルカード](https://github.com/yasufumi-nakata/mind-upload/wiki/baselines-prereg-and-model-cards) - ベースライン例と失敗例の間の役割の違いを補正します。
+- [Wiki: 状態、特性、およびドリフト](https://github.com/yasufumi-nakata/mind-upload/wiki/state-trait-and-drift) - これは、セッション間または長期的な結果が永続的な操作として読み取られ始める場合に使用します。
+- [Wiki: EEG 基礎モデルと事前トレーニング](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-foundation-models) - これは、ベンチマークのガバナンスと予測オブジェクトの違いがリーダーボードの解釈を支配し始める場合に使用します。
 
-## What Is Currently Known
-- For L0, it is more important than high accuracy that a third party can rerun under the same conditions and still understand what the score is allowed to mean.
-- BIDS / EEG-BIDS makes data traceable, but it does not by itself fix event fidelity, label provenance, or leak-free evaluation.
-- The same score can change meaning not only across within-session, cross-session, cross-subject, and adaptation settings, but also across prediction objects and metric bundles.
-- The same benchmark name can still hide different predicted objects, grouped hold-out units, and inference budgets unless those fields are frozen explicitly.
-- Challenge, leaderboard, or benchmark names alone are still too coarse because rules snapshots, randomization policies, extra-data rules, and later postmortems can materially change what the score means.
-- Cross-session and unsupervised recalibration results still do not by themselves tell you the fixed decoder interval, recalibration burden, or operational transfer ceiling.
-- The same task can still run under different circadian / endocrine-metabolic regimes, so temporal validity does not reduce to movement labels or session IDs alone.
-- Preloaded or modified recordings should be written as derivatives with explicit lineage rather than silently overwriting raw.
-- Derivative lineage and workflow provenance are separate: the run still needs config, software / container version, and replayable commands.
-- Examples of failures, setup shortcuts, and stopping claims belong in the artifact pack, not only in side notes.
+## 現在わかっていること
+- L0 の場合、精度の高さよりも、第三者が同じ条件で再実行でき、スコアの意味を理解できることが重要です。
+- BIDS / EEG-BIDS はデータを追跡可能にしますが、それ自体ではイベントの忠実性、ラベルの来歴、またはリークのない評価を修正するものではありません。
+- 同じスコアでも、セッション内、セッション間、被験者間、適応設定間だけでなく、予測オブジェクトやメトリクス バンドル間でも意味が変わる可能性があります。
+- 同じベンチマーク名でも、フィールドが明示的に凍結されていない限り、異なる予測オブジェクト、グループ化されたホールドアウト ユニット、および推論バジェットを非表示にすることができます。
+- ルールのスナップショット、ランダム化ポリシー、追加データ ルール、およびその後の事後分析によってスコアの意味が大幅に変わる可能性があるため、チャレンジ、リーダーボード、またはベンチマークの名前だけではまだ粗すぎます。
+- セッション間および教師なしの再キャリブレーションの結果だけでは、固定デコーダ間隔、再キャリブレーション負荷、または運用上の転送上限は依然としてわかりません。
+- 同じタスクは、異なる概日/内分泌代謝体制下でも実行できるため、時間的妥当性は動作ラベルやセッション ID のみに限定されません。
+- プリロードまたは変更された録音は、生の録音を黙って上書きするのではなく、明示的な系統を持つ派生ファイルとして書き込む必要があります。
+- 派生リネージュとワークフローの出自は別のものです。実行には引き続き構成、ソフトウェア/コンテナーのバージョン、および再生可能なコマンドが必要です。
+- 失敗、セットアップのショートカット、クレームの停止の例は、サイド ノートだけでなくアーティファクト パックにも含まれています。
 
-## What Is Still Unknown
-- Which QC metrics, nuisance-only baselines, and harmonization transforms should become defaults still depends on the task and dataset.
-- How the L0 pack should expand into standard L1/L2 cards will depend on future benchmark design.
-- The best reusable format for benchmark-governance snapshots across rapidly changing challenge sites is still evolving.
-- The best reusable format for acquisition-distribution summaries across multi-site datasets is still evolving.
+## まだわかっていないこと
+- どの QC メトリクス、迷惑のみのベースライン、および調和変換をデフォルトにするかは、タスクとデータセットによって異なります。
+- L0 パックを標準の L1/L2 カードにどのように拡張するかは、将来のベンチマーク設計によって異なります。
+- 急速に変化するチャレンジ サイトにわたるベンチマーク ガバナンス スナップショットに最適な再利用可能な形式は、依然として進化しています。
+- マルチサイト データセットにわたる取得分布の概要に最適な再利用可能な形式は、現在も進化しています。
 
 ---
 
-<h2>Think in terms of one pack</h2>
+<h2>1パックで考える</h2>
 <p>
-The L0 artifact is not a single file or a single score. Only when <strong>dataset identity</strong>, <strong>what was actually observed</strong>, <strong>how train/test was separated</strong>, <strong>how derivatives were produced</strong>, and <strong>how to replay the run</strong> are fixed together can a third party track the result honestly.
+L0 アーティファクトは、単一のファイルまたは単一のスコアではありません。 <strong>データセットの同一性</strong>、<strong>実際に観察されたこと</strong>、<strong>どのようにトレーニング/テストが分離されたか</strong>、<strong>どのように派生が生成されたか</strong>、<strong>どのように実行を再生するか</strong>がまとめて修正された場合にのみ、第三者は結果を正直に追跡できます。
 </p>
 
-<strong>2026-03-20 addendum: the old 8-point pack was too weak</strong>
+<strong>2026-03-20 追記: 古い 8 ポイント パックは弱すぎました</strong>
 <p>
-This site's practical pages now require more than <strong>version + BIDS + QC + split + baseline</strong>. The reason is simple: EEG-BIDS, MOABB, official dataset pages, and MNE-BIDS docs together make clear that <strong>event fidelity</strong>, <strong>label provenance</strong>, <strong>evaluation family</strong>, <strong>acquisition-distribution summary</strong>, and <strong>derivative lineage</strong> materially change what a later score means. This page is now synchronized with that stricter rule.
+このサイトの実用的なページには、<strong>version + BIDS + QC + Split + Baseline</strong> 以上が必要です。理由は簡単です。EEG-BIDS、MOABB、公式データセット ページ、および MNE-BIDS ドキュメントを総合すると、<strong> イベント忠実度 </strong>、<strong> ラベル来歴 </strong>、<strong> 評価ファミリー </strong>、<strong> 取得分布概要 </strong>、および <strong> 派生系統 </strong> が、後のスコアの意味を大きく変えることが明らかになっています。このページは、より厳格なルールで同期されるようになりました。
 </p>
 
-<strong>2026-03-28 addendum: the 11-point pack was still under-specified</strong>
+<strong>2026-03-28 追記: 11 ポイント パックは依然として仕様不足でした</strong>
 <p>
-The remaining weakness on this page was subtler than the 2026-03-20 tightening. The current practical rule had already become stricter about <strong>event fidelity</strong>, <strong>label provenance</strong>, <strong>setup distribution</strong>, and <strong>lineage</strong>, but it still left three score-defining fields too implicit. First, the official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> now states that the proposal preprint became <strong>out of date during execution</strong> and that the current website plus Starter Kit should be treated as authoritative. Second, the same official benchmark family still mixes different prediction objects, from <strong>per-trial response-time regression</strong> to <strong>subject-level psychopathology regression</strong>, and even its current <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> and <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> record later execution changes and organizer corrections. Third, <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> and <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> show that <strong>cross-session</strong>, <strong>adaptation</strong>, and <strong>long-term use</strong> still hide different temporal burdens, while <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015)</a> and <a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021)</a> show that one headline metric can still hide task-specific failure. Therefore, the L0 pack on this site now adds <strong>benchmark object + metric bundle</strong>, <strong>benchmark provenance / governance</strong>, and a conditional <strong>Temporal-Validity addendum</strong>.
+このページに残っている弱点は、2026 年 3 月 20 日の引き締めよりも微妙でした。現在の実際的なルールは、<strong>event fidelity</strong>、<strong>label provenance</strong>、<strong>setup distribution</strong>、および <strong>lineage</strong> に関してすでに厳格になっていますが、依然として 3 つのスコア定義フィールドが暗黙的すぎるままになっています。まず、<a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) の公式ホームページ</a> には、提案のプレプリントが実行中に期限切れになった<strong></strong>、現在の Web サイトとスターター キットを権威あるものとして扱うべきであると記載されています。第二に、同じ公式ベンチマーク ファミリは依然として、<strong> 試験ごとの応答時間回帰 </strong> から <strong> 被験者レベルの精神病理回帰 </strong> まで、さまざまな予測オブジェクトを混合しており、さらに現在の <a href="https://eeg2025.github.io/rules/" target="_blank"> ルール </a> および <a href="https://eeg2025.github.io/leaderboard/" target="_blank"> リーダーボード </a> は、後の実行変更とオーガナイザー修正を記録します。第三に、<a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger ら。 (2024)</a> および <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025)</a> は、<strong> クロスセッション </strong>、<strong> 適応 </strong>、および <strong> 長期使用</strong> は依然として異なる時間的負担を隠していることを示しています。レームスマイヤー (2015)</a> および <a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021)</a> は、1 つのヘッドライン指標が依然としてタスク固有の失敗を隠してしまう可能性があることを示しています。したがって、このサイトの L0 パックには、<strong>benchmark オブジェクト + メトリック バンドル </strong>、<strong>benchmark 来歴 / ガバナンス </strong>、および条件付き <strong>Temporal-Validity addendum</strong> が追加されました。
 </p>
 
-<strong>2026-03-31 addendum: benchmark name is not yet the benchmark object</strong>
+<strong>2026-03-31 追記: ベンチマーク名はまだベンチマーク オブジェクトではありません</strong>
 <p>
-One more ambiguity remained inside items 7 and 8. Even when benchmark governance is logged, the benchmark name alone still does not fix the <strong>predicted object</strong>, <strong>independent prediction unit</strong>, <strong>grouped hold-out unit</strong>, <strong>adaptation regime</strong>, or <strong>operations budget</strong>. The official <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) homepage</a> separates trial-level response-time regression from subject-level externalizing prediction, the official <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> and <a href="https://eeg2025.github.io/submission/" target="_blank">submission page</a> impose an <strong>inference-only code-submission workflow</strong> under a <strong>single-GPU 20 GB</strong> budget, <a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022)</a> use one motor-imagery dataset to separate <strong>within-session</strong>, <strong>cross-session</strong>, and <strong>cross-session adaptation</strong>, <a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> separate <strong>leave-one-subject-out</strong> transfer from <strong>within-subject few-shot calibration</strong>, and <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> show that <strong>six benchmark inconsistencies</strong> can reverse rankings on identical datasets by up to <strong>24 percentage points</strong>. Therefore items 7 and 8 on this page are now read together as an <strong>object / unit / budget disclosure</strong>, not as a benchmark name plus an administrative appendix.
+項目 7 と 8 には、もう 1 つのあいまいさが残っています。ベンチマーク ガバナンスがログに記録されている場合でも、ベンチマーク名だけでは、<strong> 予測オブジェクト </strong>、<strong> 独立予測ユニット </strong>、<strong> グループ化ホールドアウト ユニット </strong>、<strong> 適応レジーム </strong>、または <strong> 運用予算 </strong> を修正することはできません。公式 <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) ホームページ</a> は試験レベルの応答時間回帰を被験者レベルの外部化予測から分離し、公式 <a href="https://eeg2025.github.io/rules/" target="_blank"> ルール</a> および <a href="https://eeg2025.github.io/submission/" target="_blank"> 提出ページ</a> <strong> 推論のみのコード提出ワークフローを課す</strong> <strong> シングル GPU 20 GB</strong> 予算、<a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma etアル。 (2022) </a> は 1 つの運動画像データセットを使用して、<strong> セッション内 </strong>、<strong> セッション間適応 </strong>、<strong> セッション間適応 </strong>、<a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu らを分離します。 (2026)</a> 個別の <strong> 一人の被験者を残す</strong> <strong> 被験者内の数ショット校正からの転送</strong>、および <a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al。 (2026)</a> は、<strong>6 のベンチマークの不一致を示しています</strong> は、同一のデータセットのランキングを最大 <strong>24 パーセント ポイント</strong> 逆転させる可能性があります。したがって、このページの項目 7 と 8 は、ベンチマーク名と管理上の付録としてではなく、<strong> オブジェクト / ユニット / 予算開示 </strong> としてまとめて読み取られます。
 </p>
 
-<strong>2026-04-02 addendum: derivative lineage is not yet workflow provenance</strong>
+<strong>2026-04-02 追記: 派生リネージュはまだワークフローの来歴ではありません</strong>
 <p>
-One more L0 shortcut remained. BIDS Derivatives make it possible to say <strong>which outputs came from which sources</strong>, but that still does not freeze <strong>which recipe produced them</strong>. The current BIDS specification requires derived datasets to record <strong>GeneratedBy</strong> and supports <strong>SourceDatasets</strong>; <a href="https://doi.org/10.1371/journal.pcbi.1005209" target="_blank">Gorgolewski et al. (2017)</a> showed that BIDS Apps improve software portability; and <a href="https://mne.tools/mne-bids-pipeline/stable/" target="_blank">MNE-BIDS-Pipeline</a> explicitly exposes a text configuration file, cached steps, and summary reports. Therefore, on this site, the L0 pack now treats <strong>lineage</strong>, <strong>workflow recipe</strong>, and <strong>runtime pin</strong> as separate fields that must travel together.
+L0 ショートカットがもう 1 つ残っています。 BIDS デリバティブを使用すると、<strong> どの出力がどのソースから来たのか </strong> を言うことができますが、それでも <strong> どのレシピがそれらを生成したか </strong> はフリーズしません。現在の BIDS 仕様では、派生データセットが <strong>GeneratedBy</strong> を記録する必要があり、<strong>SourceDatasets</strong> をサポートしています。 <a href="https://doi.org/10.1371/journal.pcbi.1005209" target="_blank">ゴルゴレフスキーら。 (2017)</a> は、BIDS アプリがソフトウェアの移植性を向上させることを示しました。 <a href="https://mne.tools/mne-bids-pipeline/stable/" target="_blank">MNE-BIDS-Pipeline</a> は、テキスト構成ファイル、キャッシュされたステップ、および概要レポートを明示的に公開します。したがって、このサイトでは、L0 パックは <strong>lineage</strong>、<strong>workflow Recipe</strong>、および <strong>runtime pin</strong> を、一緒に移動する必要がある別個のフィールドとして扱うようになりました。
 </p>
 
-<strong>2026-04-03 addendum: temporal-validity addendum must split fast labels from slow internal milieu</strong>
+<strong>2026-04-03 追記: 一時的有効性に関する追記: 遅い内部環境から高速ラベルを分割する必要がある</strong>
 <p>
-One more L0 ambiguity still remained. The pack already required a <strong>Temporal-Validity addendum</strong>, but it still left too much room to write <strong>state annotation</strong> as one vague sentence about movement, arousal, or session ID. The current primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> showed that movement-related EEG decoding conditions change across a long day-night window, while <a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a>, <a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a>, <a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al. (2023)</a>, <a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">Birnie et al. (2023)</a>, and <a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015)</a> show that slower circadian / glucocorticoid / endocrine-metabolic regime changes can also move memory-relevant operating state. Therefore the L0 pack now treats <strong>fast labels</strong> and <strong>slow internal-milieu disclosure</strong> as separate parts of item 9 rather than one free-text temporal note.
+もう 1 つの L0 のあいまいさがまだ残っています。このパックにはすでに <strong>Temporal-Validity addendum</strong> が必要でしたが、動作、覚醒、またはセッション ID に関する 1 つの曖昧な文として <strong>state アノテーション </strong> を記述するにはまだ余地が多すぎました。現在の一次文献はそのショートカットをサポートしていません。 <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger ら(2024) </a> は、運動に関連した EEG デコード条件が長い昼夜の窓にわたって変化することを示しました。一方、<a href="https://doi.org/10.1038/29542" target="_blank">de Quervain et al. (1998)</a>、<a href="https://doi.org/10.1007/s11682-007-9003-2" target="_blank">Oei et al. (2007)</a>、<a href="https://doi.org/10.1126/sciadv.adj1010" target="_blank">Barone et al。 (2023)</a>、<a href="https://doi.org/10.1073/pnas.2211996120" target="_blank">バーニー他(2023)</a>、<a href="https://doi.org/10.1016/j.neuropsychologia.2015.07.020" target="_blank">Sherman et al. (2015) </a> は、概日リズム / グルココルチコイド / 内分泌代謝体制の変化が遅いと、記憶に関連した動作状態も変化する可能性があることを示しています。したがって、L0 パックは、<strong> 高速ラベル </strong> および <strong> 低速内部環境開示 </strong> を、1 つのフリーテキスト一時メモではなく項目 9 の別個の部分として扱うようになりました。
 </p>
 
-<h2>Minimum 14 items now required in the L0 pack</h2>
+<h2>L0 パックには最低 14 個のアイテムが必要になります</h2>
 <table>
 <thead>
 <tr>
-<th>Deliverables</th>
-<th>Minimum desired contents</th>
-<th>What is the problem if it is missing</th>
+<th>納品物</th>
+<th>最低限必要な内容</th>
+<th>足りない場合はどうすればいいですか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. Dataset identity</strong></td>
-<td>Snapshot / version / DOI / retrieval date / license / persistent URL.</td>
-<td>Even with the same dataset name, different versions or releases get mixed and reproduction breaks.</td>
+<td><strong>1。データセットのアイデンティティ</strong></td>
+<td>スナップショット / バージョン / DOI / 取得日 / ライセンス / 永続 URL.</td>
+<td>同じデータセット名であっても、異なるバージョンまたはリリースが混在し、再現が中断されます。</td>
 </tr>
 <tr>
-<td><strong>2. BIDS / EEG-BIDS skeleton</strong></td>
-<td><code>dataset_description.json</code>, <code>README</code>, participant/session/run structure, <code>*_eeg.json</code>, <code>*_channels.tsv</code>, <code>*_electrodes.tsv</code>, and <code>*_coordsystem.json</code> when positions exist.</td>
-<td>Third parties cannot reconstruct the same raw input or its measurement condition.</td>
+<td><strong>2。 BIDS / EEG-BIDS スケルトン</strong></td>
+<td><code>dataset_description.json</code>、<code>README</code>、参加者/セッション/実行構造、<code>*_eeg.json</code>、<code>*_channels.tsv</code>、<code>*_electrodes.tsv</code>、および <code>*_coordsystem.json</code>ポジションが存在する場合。</td>
+<td>サードパーティは、同じ生の入力またはその測定条件を再構築できません。</td>
 </tr>
 <tr>
-<td><strong>3. Event Fidelity Card</strong></td>
-<td>Onset / duration / sample, clock domain, delay / jitter evidence, event semantics, and any HED or scoring rule used to interpret them.</td>
-<td>The result may look aligned to behavior while event meaning and timing remain ambiguous.</td>
+<td><strong>3。イベントフィデリティカード</strong></td>
+<td>オンセット / 継続時間 / サンプル、クロック ドメイン、遅延 / ジッターの証拠、イベント セマンティクス、およびそれらを解釈するために使用される HED またはスコアリング ルール。</td>
+<td>イベントの意味とタイミングがあいまいなままでも、結果は動作と一致しているように見える可能性があります。</td>
 </tr>
 <tr>
-<td><strong>4. Label provenance</strong></td>
-<td>Whether the target comes from annotation channels, manual scoring, clinician reports, keyword rules, or another derived source, plus a report-usage flag when relevant.</td>
-<td>A signal-only benchmark and a report-assisted benchmark get silently mixed.</td>
+<td><strong>4。ラベルの由来</strong></td>
+<td>ターゲットがアノテーション チャネル、手動スコアリング、臨床医レポート、キーワード ルール、または別の派生ソースからのものかどうか、および関連する場合はレポート使用フラグも追加されます。</td>
+<td>A 信号のみのベンチマークとレポート支援ベンチマークがサイレントに混合されます。</td>
 </tr>
 <tr>
-<td><strong>5. Standards confirmation</strong></td>
-<td>Validator output together with any remaining warnings and why they are acceptable.</td>
-<td>Non-shareable structural violations remain hidden behind a seemingly clean dataset name.</td>
+<td><strong>5。規格確認</strong></td>
+<td>Validator の出力と残りの警告、およびそれらが許容される理由。</td>
+<td>共有不可能な構造違反は、一見クリーンなデータセット名の背後に隠されたままです。</td>
 </tr>
 <tr>
-<td><strong>6. Split family + hold-out ancestry</strong></td>
-<td>Within-session / cross-session / cross-subject / adaptation family, the independent hold-out unit, and whether windows from the same raw recording can cross the boundary.</td>
-<td>The score becomes uninterpretable because train/test independence is unclear.</td>
+<td><strong>6。分割家族 + ホールドアウト祖先</strong></td>
+<td>セッション内 / セッション間 / 主題間 / アダプテーション ファミリ、独立したホールドアウト ユニット、および同じ生の録画からのウィンドウが境界を越えることができるかどうか。</td>
+<td>トレーニング/テストの独立性が不明瞭であるため、スコアが解釈できなくなります。</td>
 </tr>
 <tr>
-<td><strong>7. Benchmark object + metric bundle</strong></td>
-<td>Task family, predicted object, independent prediction unit, grouped hold-out unit when different, output family, and the task-matched metric bundle that makes the score interpretable.</td>
-<td>A headline number hides whether the benchmark was cue-locked classification, event detection, sleep staging, trial-wise regression, or subject-level regression, and whether the metric actually matches the task.</td>
+<td><strong>7。ベンチマーク オブジェクト + メトリック バンドル</strong></td>
+<td>Tタスクファミリー、予測オブジェクト、独立した予測ユニット、異なる場合のグループ化されたホールドアウトユニット、出力ファミリー、およびスコアを解釈可能にするタスクに一致するメトリックバンドル。</td>
+<td>A ヘッドライン番号は、ベンチマークがキューロック分類、イベント検出、睡眠ステージング、トライアルごとの回帰、被験者レベルの回帰のいずれであるか、およびメトリクスが実際にタスクに一致するかどうかを隠します。</td>
 </tr>
 <tr>
-<td><strong>8. Benchmark provenance + governance</strong></td>
-<td>Benchmark or leaderboard name, version, current rules snapshot, split / randomization policy, hidden grouping, extra-data or pretrained-checkpoint policy, inference-stage restrictions / operations budget, and postmortem / correction status.</td>
-<td>The same challenge or benchmark name can silently point to different score objects after execution changes or organizer corrections.</td>
+<td><strong>8。ベンチマークの来歴 + ガバナンス</strong></td>
+<td>ベンチマークまたはリーダーボードの名前、バージョン、現在のルールのスナップショット、分割/ランダム化ポリシー、非表示のグループ化、追加データまたは事前トレーニングされたチェックポイント ポリシー、推論段階の制限/操作予算、および事後分析/修正ステータス。</td>
+<td>実行の変更やオーガナイザーの修正後、同じチャレンジ名またはベンチマーク名が別のスコア オブジェクトを暗黙的にポイントする可能性があります。</td>
 </tr>
 <tr>
-<td><strong>9. Temporal-Validity addendum</strong><br><em>Required when the claim spans &gt;1 session/day or uses adaptation</em></td>
-<td>State annotation split into fast labels and slow internal-milieu disclosure, fixed decoder interval, recalibration amount and timing, and transfer ceiling.</td>
-<td>Cross-session or adaptation labels get overread as fixed-decoder durability or low-burden operation.</td>
+<td><strong>9。時間的有効性に関する補遺</strong><br><em>申し立てが1日あたり1セッションを超える場合、または適応を使用する場合に必須</em></td>
+<td>State アノテーションは高速ラベルと低速内部環境開示に分割され、固定デコーダ間隔、再キャリブレーション量とタイミング、および転送上限。</td>
+<td>クロスセッションまたはアダプテーションラベルは、固定デコーダの耐久性または低負荷操作としてオーバーリードされます。</td>
 </tr>
 <tr>
-<td><strong>10. Acquisition-distribution summary</strong></td>
-<td>Site / device / reference / channel map / electrode layout / protocol distribution, plus the harmonization policy and any metadata-only baseline.</td>
-<td>Signal differences and setup differences get collapsed into one accuracy number.</td>
+<td><strong>10。取得・配布概要</strong></td>
+<td>Site / デバイス / リファレンス / チャネル マップ / 電極レイアウト / プロトコル配布、さらに調和ポリシーおよびメタデータのみのベースライン。</td>
+<td>信号の違いとセットアップの違いが 1 つの精度数値に集約されます。</td>
 </tr>
 <tr>
-<td><strong>11. QC / exclusion log</strong></td>
-<td>Missingness, bad channels, bad segments, artifacts, exclusions, and thresholds in numerical form.</td>
-<td>No one can tell which recordings were removed or why.</td>
+<td><strong>11。 QC / 除外ログ</strong></td>
+<td>欠落、不良チャネル、不良セグメント、アーティファクト、除外、およびしきい値を数値形式で表示します。</td>
+<td>どの録音が削除されたのか、またその理由は誰にもわかりません。</td>
 </tr>
 <tr>
-<td><strong>12. Baseline + shortcut checks</strong></td>
-<td>At least one simple baseline, plus any nuisance-only or metadata-only comparison needed to keep shortcut routes visible.</td>
-<td>Apparent improvement may come from identity, setup, or label shortcuts rather than the intended signal.</td>
+<td><strong>12。ベースライン + ショートカット チェック</strong></td>
+<td>少なくとも 1 つの単純なベースラインと、ショートカット ルートを表示し続けるために必要な迷惑のみまたはメタデータのみの比較。</td>
+<td>見かけの改善は、意図した信号ではなく、アイデンティティ、セットアップ、またはラベルのショートカットによってもたらされる可能性があります。</td>
 </tr>
 <tr>
-<td><strong>13. Derivative lineage + workflow provenance + replay steps</strong></td>
-<td><code>GeneratedBy</code> / <code>SourceDatasets</code> or equivalent lineage, commands, config or model recipe, container or lockfile, environment, random seeds, preprocessing boundaries, and explicit raw-to-derivative lineage.</td>
-<td>Preprocessed data can be mistaken for raw, and other people cannot rerun the same flow.</td>
+<td><strong>13。派生リネージ + ワークフローの出自 + リプレイ ステップ</strong></td>
+<td><code>GeneratedBy</code> / <code>SourceDatasets</code> または同等の系統、コマンド、構成またはモデルのレシピ、コンテナーまたはロックファイル、環境、ランダム シード、前処理境界、および明示的な生から派生への系統。</td>
+<td>前処理されたデータは生のデータと間違われる可能性があり、他の人は同じフローを再実行できません。</td>
 </tr>
 <tr>
-<td><strong>14. Failure examples + stopping claim</strong></td>
-<td>Known failure modes, exclusions, pending conditions, and the strongest claim the result is still allowed to stop at.</td>
-<td>Only successes remain and later readers overread L0 as if it already implied stronger evidence.</td>
+<td><strong>14。失敗例 + クレームの停止</strong></td>
+<td>既知の故障モード、除外、保留状態、および結果がまだ停止できる最も強力な主張。</td>
+<td>成功だけが残り、後の読者はあたかもより強力な証拠をすでに暗示しているかのように L0 を読みすぎます。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Why the old 8-point pack is now too weak</h2>
+<h2>なぜ古い8ポイントパックは弱すぎるのか</h2>
 <table>
 <thead>
 <tr>
-<th>Weak point</th>
-<th>Why it fails now</th>
-<th>What the pack must add</th>
+<th>ウィークポイント</th>
+<th>なぜ今失敗するのか</th>
+<th>パックに追加する必要があるもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>BIDS shape without annotation depth</strong></td>
-<td>BIDS and EEG-BIDS make the dataset traceable, but they do not by themselves tell you whether an outcome came from cue markers, manual stage scoring, clinician reports, or a derived rule.</td>
-<td>Add <strong>Event Fidelity Card</strong> plus <strong>label provenance</strong> to the pack itself.</td>
+<td><strong>注釈深さのないBIDS形状</strong></td>
+<td>BIDS と EEG-BIDS はデータセットを追跡可能にしますが、それら自体では、結果が合図マーカー、手動ステージスコアリング、臨床医のレポート、または派生ルールから来たのかを示しません。</td>
+<td><strong>イベントフィデリティカード</strong>プラス<strong>来歴ラベル</strong>をパック自体に追加します。</td>
 </tr>
 <tr>
-<td><strong>Split rule without evaluation family</strong></td>
-<td>Within-session, cross-session, cross-subject, and adaptation all answer different questions, and the same accuracy number does not transfer across them.</td>
-<td>Add <strong>evaluation family</strong>, <strong>independent hold-out unit</strong>, and <strong>window ancestry</strong>.</td>
+<td><strong>評価ファミリなしの分割ルール</strong></td>
+<td>セッション内、セッション間、被験者間、適応はすべて異なる質問に答えます。同じ精度の数値はそれらの間で転送されません。</td>
+<td><strong>評価ファミリの追加</strong>、<strong>独立ホールドアウトユニット</strong>、および<strong>ウィンドウ系</strong>.</td>
 </tr>
 <tr>
-<td><strong>Benchmark family without prediction object or metric bundle</strong></td>
-<td>Per-trial response-time regression, subject-level factor prediction, seizure alarm behaviour, and sleep-stage scoring do not test the same scientific object even when all are reported as EEG decoding.</td>
-<td>Add <strong>benchmark object</strong>, <strong>independent prediction unit</strong>, and a <strong>task-matched metric bundle</strong>.</td>
+<td><strong>予測オブジェクトまたはメトリックバンドルを含まないベンチマークファミリー</strong></td>
+<td>試験ごとの応答時間回帰、被験者レベルの因子予測、発作警報動作、および睡眠段階スコアリングは、すべてがEEGデコードとして報告されている場合でも、同じ科学的対象をテストするものではありません。</td>
+<td><strong>ベンチマークオブジェクト</strong>、<strong>独立予測ユニット</strong>、および<strong>タスク一致メトリックバンドル</strong>.</td>
 </tr>
 <tr>
-<td><strong>Challenge or leaderboard name without governance snapshot</strong></td>
-<td>The official EEG Challenge site now says the proposal preprint is outdated during execution, the current website plus Starter Kit are authoritative, and the later leaderboard note revised what the rankings meant after a sample-randomization error.</td>
-<td>Add the current <strong>benchmark provenance / governance snapshot</strong> instead of treating it as an administrative footnote.</td>
+<td><strong>ガバナンス スナップショットのないチャレンジまたはリーダーボード名</strong></td>
+<td>公式 EEG チャレンジ サイトは現在、提案のプレプリントは実行中に古いものであり、現在の Web サイトとスターター キットが信頼できるものであり、後のリーダーボードの注記ではサンプルのランダム化エラーの後にランキングの意味が修正されていると述べています。</td>
+<td>現在の <strong>ベンチマークの来歴/ガバナンスのスナップショットを追加します</strong>、管理上の脚注として扱う代わりに</td>
 </tr>
 <tr>
-<td><strong>Cross-session or adaptation label without temporal-validity fields</strong></td>
-<td>Daily drift, recalibration burden, and fixed-decoder durability remain different questions, so cross-session and adaptation labels still underdescribe what survived across time.</td>
-<td>Add a conditional <strong>Temporal-Validity addendum</strong> with state annotation split into fast labels and slow internal-milieu disclosure, fixed decoder interval, recalibration amount, and transfer ceiling.</td>
+<td><strong>一時的有効性フィールドのないクロスセッションまたはアダプテーションラベル</strong></td>
+<td>毎日のドリフト、再キャリブレーションの負荷、固定デコーダの耐久性は依然として異なる問題であるため、クロスセッションやアダプテーションのラベルでは、時を超えて何が生き残ったのかがまだ十分に説明されていません。</td>
+<td>条件付き<strong>時間的有効性の付録を追加</strong>、高速ラベルと低速内部環境開示に分割された状態注釈、固定デコーダ間隔、再キャリブレーション量、および転送上限を備えています。</td>
 </tr>
 <tr>
-<td><strong>Replay steps without lineage, workflow recipe, or setup summary</strong></td>
-<td>Preloaded / modified data can silently become derivatives, setup differences such as site, device, reference, and electrode layout can still dominate the result, and the same pipeline name can still hide a different config.</td>
-<td>Add <strong>acquisition-distribution summary</strong>, <strong>harmonization log</strong>, <strong>derivative lineage</strong>, and a <strong>workflow / runtime pin</strong>.</td>
+<td><strong>リネージ、ワークフロー レシピ、またはセットアップの概要を含まないステップの再生</strong></td>
+<td>プリロード/変更されたデータは、サイレントに派生データになる可能性があり、サイト、デバイス、リファレンス、電極レイアウトなどのセットアップの違いが依然として結果を支配する可能性があり、同じパイプライン名が異なる構成を隠す可能性があります。</td>
+<td><strong>取得配布概要</strong>、<strong>調和ログ</strong>、<strong>派生系統</strong>、<strong>ワークフロー/ランタイムピン</strong>.</td>を追加
 </tr>
 </tbody>
 </table>
 
-<h2>Five bundles to keep together</h2>
+<h2>まとめて保管できる 5 つのバンドル</h2>
 
-<h4>Bundles</h4>
+<h4>バンドル</h4>
 <ul>
-<li><strong>Identity:</strong> freeze snapshot, version, DOI, retrieval date, and license.</li>
-<li><strong>Observability:</strong> fix BIDS / EEG-BIDS shape, event fidelity, and label provenance.</li>
-<li><strong>Evaluation:</strong> fix evaluation family, hold-out ancestry, benchmark object, metric bundle, current benchmark rules, temporal scope when needed, setup distribution, harmonization, and baselines.</li>
-<li><strong>Lineage:</strong> keep raw-to-derivative boundaries explicit instead of silently rewriting modified data as raw.</li>
-<li><strong>Replay:</strong> keep commands, config, environment, failures, and the stopping claim together.</li>
+<li><strong>Identity:</strong> スナップショット、バージョン、DOI、取得日、ライセンスを凍結します。</li>
+<li><strong>オブザーバビリティ:</strong> BIDS / EEG-BIDS 形状、イベント忠実度、およびラベルの出自を修正します。</li>
+<li><strong>評価:</strong> 評価ファミリー、ホールドアウト祖先、ベンチマーク オブジェクト、メトリック バンドル、現在のベンチマーク ルール、必要に応じて時間的スコープ、セットアップ分布、調和、およびベースラインを修正します。</li>
+<li><strong>Lineage:</strong> は、変更されたデータを raw としてサイレントに書き換えるのではなく、raw と派生の境界を明示的に保ちます。</li>
+<li><strong>Replay:</strong> コマンド、設定、環境、障害、および停止要求をまとめて保持します。</li>
 </ul>
 
-<h2>Common omissions</h2>
+<h2>一般的な省略</h2>
 <table>
 <thead>
 <tr>
-<th>Common conditions</th>
-<th>What is still missing</th>
+<th>一般条件</th>
+<th>まだ足りないもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>dataset name exists</strong></td>
-<td>Snapshot, version, DOI, retrieval date, and license may not remain.</td>
+<td><strong>データセット名が存在します</strong></td>
+<td>スナップショット、バージョン、DOI、取得日、ライセンスが残らない場合があります。</td>
 </tr>
 <tr>
-<td><strong>Waveform file is available</strong></td>
-<td>Events, synchronization, label provenance, event semantics, and bad segments may still be missing.</td>
+<td><strong>波形ファイルが利用可能</strong></td>
+<td>イベント、同期、ラベルの出自、イベント セマンティクス、および不良セグメントがまだ欠落している可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Accuracy is there</strong></td>
-<td>Evaluation family, independent hold-out unit, benchmark object, metric bundle, harmonization log, or stopping claim may still be absent.</td>
+<td><strong>精度はあります</strong></td>
+<td>評価ファミリ、独立したホールドアウト ユニット、ベンチマーク オブジェクト、メトリック バンドル、調和ログ、または停止要求がまだ存在しない可能性があります。</td>
 </tr>
 <tr>
-<td><strong>There is a leaderboard or challenge name</strong></td>
-<td>The current rules snapshot, randomization policy, extra-data policy, inference-stage restriction, or later organizer correction may still be absent.</td>
+<td><strong>リーダーボードまたはチャレンジ名があります</strong></td>
+<td>現在のルールのスナップショット、ランダム化ポリシー、追加データ ポリシー、推論段階の制限、またはその後のオーガナイザー修正がまだ存在しない可能性があります。</td>
 </tr>
 <tr>
-<td><strong>There is a cross-session or adaptation result</strong></td>
-<td>State annotation, fixed decoder interval, recalibration burden, and transfer ceiling may still be absent.</td>
+<td><strong>クロスセッションまたは適応結果があります</strong></td>
+<td>State アノテーション、固定デコーダ間隔、再キャリブレーション負担、および転送上限はまだ存在しない可能性があります。</td>
 </tr>
 <tr>
-<td><strong>There is a code</strong></td>
-<td>Environment, random numbers, derivative lineage, execution order, and known failure conditions may not be written.</td>
+<td><strong>コードあり</strong></td>
+<td>環境、乱数、派生系統、実行順序、既知の失敗条件は書き込めない場合があります。</td>
 </tr>
 <tr>
-<td><strong>I thought I did QC</strong></td>
-<td>Numeric logs, exclusion reasons, and the stopping claim may not remain.</td>
+<td><strong>やったと思った QC</strong></td>
+<td>数値ログ、除外理由、停止要求は残らない場合があります。</td>
 </tr>
 </tbody>
 </table>
 
-<h2>A stricter L0 completion check</h2>
+<h2>A より厳格な L0 完了チェック</h2>
 <table>
 <thead>
 <tr>
-<th>Question</th>
-<th>If yes, move forward</th>
-<th>If no, what to do next</th>
+<th>質問</th>
+<th>「はい」の場合は、次に進みます</th>
+<th>「いいえ」の場合、次に行うべきこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Can other people recover the same input identity?</td>
-<td>Snapshot / version / DOI / retrieval date / license and BIDS skeleton are complete.</td>
-<td>Freeze the dataset identity and the BIDS skeleton first.</td>
+<td>他の人も同じ入力 ID を復元できますか?</td>
+<td>スナップショット / バージョン / DOI / 取得日 / ライセンスおよび BIDS スケルトンが完成しました。</td>
+<td>最初にデータセット ID と BIDS スケルトンをフリーズします。</td>
 </tr>
 <tr>
-<td>Can they tell what was actually annotated and by whom?</td>
-<td>Event fidelity and label provenance are written, including any report-usage flag.</td>
-<td>Fix events, annotation rules, and label provenance before trusting the score.</td>
+<td>実際に何が、誰によって注釈が付けられたのかわかりますか?</td>
+<td>イベントの再現性とラベルの来歴が、レポート使用フラグを含めて書き込まれます。</td>
+<td>スコアを信頼する前に、イベント、注釈ルール、およびラベルの来歴を修正します。</td>
 </tr>
 <tr>
-<td>Can they explain what one prediction and one score mean?</td>
-<td>Evaluation family, hold-out ancestry, benchmark object, independent prediction unit, and task-matched metric bundle are fixed.</td>
-<td>Fix the prediction object and metric semantics before trusting the headline score.</td>
+<td>1 つの予測と 1 つのスコアが何を意味するのか説明できますか? </td>
+<td>評価ファミリー、ホールドアウト祖先、ベンチマーク オブジェクト、独立した予測ユニット、およびタスクに一致するメトリック バンドルは修正されています。</td>
+<td>ヘッドライン スコアを信頼する前に、予測オブジェクトとメトリックのセマンティクスを修正します。</td>
 </tr>
 <tr>
-<td>Can they explain which benchmark rules were in force?</td>
-<td>Benchmark provenance, current rules snapshot, hidden grouping / randomization policy, extra-data rules, and any later corrections are fixed.</td>
-<td>Freeze the governance snapshot before comparing yourself to a challenge or leaderboard.</td>
+<td>どのベンチマーク ルールが適用されていたのか説明できますか? </td>
+<td>ベンチマークの来歴、現在のルールのスナップショット、非表示のグループ化/ランダム化ポリシー、追加データ ルール、およびその後の修正が修正されました。</td>
+<td>自分自身をチャレンジやリーダーボードと比較する前に、ガバナンスのスナップショットを凍結します。</td>
 </tr>
 <tr>
-<td>If the claim spans more than one session or uses adaptation, is the temporal scope explicit?</td>
-<td>State annotation, fixed decoder interval, recalibration amount, and transfer ceiling are written.</td>
-<td>Add the Temporal-Validity fields before treating the result as durability evidence.</td>
+<td>クレームが複数のセッションにまたがる場合、または適応を使用する場合、時間的範囲は明示的ですか?</td>
+<td>状態アノテーション、固定デコーダ間隔、リキャリブレーション量、転送上限が記載されます。</td>
+<td>結果を耐久性の証拠として扱う前に、Temporal-Validity フィールドを追加します。</td>
 </tr>
 <tr>
-<td>Can they tell whether setup distribution still dominates?</td>
-<td>Acquisition-distribution summary, harmonization policy, and shortcut-aware baselines are fixed.</td>
-<td>Fix setup distribution, nuisance baselines, and harmonization before trusting generalization claims.</td>
+<td>セットアップの分布が依然として優勢であるかどうかわかりますか?</td>
+<td>取得配布の概要、調和ポリシー、およびショートカット対応ベースラインが修正されました。</td>
+<td>一般化の主張を信頼する前に、セットアップの配布、迷惑なベースライン、および調和を修正します。</td>
 </tr>
 <tr>
-<td>Can someone else replay the same derivatives?</td>
-<td>Command, environment, preprocessing boundaries, and raw-to-derivative lineage remain.</td>
-<td>Create a short runbook and make derivative lineage explicit.</td>
+<td>他の人が同じ派生作品をリプレイできますか? </td>
+<td>コマンド、環境、前処理境界、生から派生への系統は残ります。</td>
+<td>短いランブックを作成し、派生リネージを明示的にします。</td>
 </tr>
 <tr>
-<td>Can the claim stop at the right ceiling?</td>
-<td>Failure examples and the stopping claim are written next to the result.</td>
-<td>State explicitly what the current pack does <strong>not</strong> justify.</td>
+<td>右天井でクレームは止まりますか?</td>
+<td>失敗例と停止要求は結果の横に書かれています。</td>
+<td>現在のパックの機能を明示的に説明します<strong>not</strong> justify.</td>
 </tr>
 </tbody>
 </table>
 
-<strong>What this page still does not do</strong>
+<strong>このページでまだできないこと</strong>
 <p>
-This page still does not decide which model is strongest or which metric bundle is universally best. The first objective of L0 is still to create a comparable starting point. The change on this page is only that the starting point is now defined more strictly, including the rule that benchmark meaning and temporal scope are part of the artifact rather than optional commentary.
+このページでは、どのモデルが最も強いか、またはどのメトリック バンドルが普遍的に最適であるかはまだ決定されていません。 L0 の最初の目的は、依然として同等の開始点を作成することです。このページの変更は、ベンチマークの意味と時間的範囲がオプションの解説ではなく成果物の一部であるというルールを含め、開始点がより厳密に定義されるようになったことだけです。
 </p>
 
-<h2>References</h2>
+<h2>参考資料</h2>
 <ul>
-<li><a href="https://bids.neuroimaging.io/getting_started/tutorials/annotation.html" target="_blank">BIDS Website: Annotating a BIDS dataset</a></li>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS Specification 1.11.1: Events</a></li>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS Specification 1.11.1: Electroencephalography</a></li>
-<li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">Pernet et al. (2019), EEG-BIDS</a></li>
-<li><a href="https://mne.tools/mne-bids/stable/generated/mne_bids.write_raw_bids.html" target="_blank">MNE-BIDS Docs: write_raw_bids</a></li>
-<li><a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">Jayaram &amp; Barachant (2018), MOABB</a></li>
-<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.WithinSessionEvaluation.html" target="_blank">MOABB Docs: WithinSessionEvaluation</a></li>
-<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSessionEvaluation.html" target="_blank">MOABB Docs: CrossSessionEvaluation</a></li>
-<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSubjectEvaluation.html" target="_blank">MOABB Docs: CrossSubjectEvaluation</a></li>
-<li><a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022), A large EEG dataset for studying cross-session variability in motor imagery BCI</a></li>
-<li><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019), identity confounding in machine learning-based disease diagnosis</a></li>
-<li><a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017), Systems, subjects, sessions</a></li>
-<li><a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020), Cross-dataset deep learning for EEG</a></li>
-<li><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025): Homepage</a></li>
-<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG Challenge (2025): Rules</a></li>
-<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG Challenge (2025): Leaderboard</a></li>
-<li><a href="https://eeg2025.github.io/faq/" target="_blank">EEG Challenge (2025): FAQ</a></li>
-<li><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024), Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study</a></li>
-<li><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">Wilson et al. (2025), Long-term unsupervised recalibration of cursor-based intracortical brain-computer interfaces using a hidden Markov model</a></li>
-<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">Saito &amp; Rehmsmeier (2015), The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</a></li>
-<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">Vallat &amp; Walker (2021), An open-source, high-performance tool for automated sleep staging</a></li>
-<li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG Motor Movement/Imagery Dataset</a></li>
-<li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT Scalp EEG Database</a></li>
-<li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF Database Expanded</a></li>
-<li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid &amp; Picone (2016), TUH EEG Corpus</a></li>
+<li><a href="https://bids.neuroimaging.io/getting_started/tutorials/annotation.html" target="_blank">BIDS Web サイト: BIDS データセットへの注釈付け</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/events.html" target="_blank">BIDS 仕様 1.11.1: イベント</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS 仕様 1.11.1: 脳波検査</a></li>
+<li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">パーネット他(2019)、EEG-BIDS</a></li>
+<li><a href="https://mne.tools/mne-bids/stable/generated/mne_bids.write_raw_bids.html" target="_blank">MNE-BIDS ドキュメント: write_raw_bids</a></li>
+<li><a href="https://doi.org/10.1088/1741-2552/aadea0" target="_blank">ジャヤラム＆amp;バラチャント (2018)、MOABB</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.WithinSessionEvaluation.html" target="_blank">MOABB ドキュメント: WithinSessionEvaluation</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSessionEvaluation.html" target="_blank">MOABB ドキュメント: CrossSessionEvaluation</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSubjectEvaluation.html" target="_blank">MOABB ドキュメント: CrossSubjectEvaluation</a></li>
+<li><a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma 他(2022)、運動イメージのセッション間の変動を研究するための大規模な EEG データセット BCI</a></li>
+<li><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)、機械学習に基づく疾患診断における同一性交絡</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)、システム、主題、セッション</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu 他(2020)、EEG</a></li> のクロスデータセット深層学習
+<li><a href="https://eeg2025.github.io/" target="_blank">EEG チャレンジ (2025): ホームページ</a></li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG チャレンジ (2025): ルール</a></li>
+<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG チャレンジ (2025): リーダーボード</a></li>
+<li><a href="https://eeg2025.github.io/faq/" target="_blank">EEG チャレンジ (2025): FAQ</a></li>
+<li><a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger ら(2024)、手のジェスチャーの解読に影響を与える時間脳波ダイナミクス: 10 時間の研究</a></li>
+<li><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">ウィルソンら(2025)、隠れマルコフ モデル</a></li>を使用した、カーソルベースの皮質内ブレインコンピューターインターフェイスの長期教師なし再調整
+<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">斉藤＆amp; Rehmsmeier (2015)、不均衡なデータセットでバイナリ分類器を評価する場合、適合率-再現率プロットは ROC プロットよりも有益です</a></li>
+<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">ヴァラット＆アンプ; Walker (2021)、自動睡眠ステージング用のオープンソースの高性能ツール</a></li>
+<li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG 運動動作/画像データセット</a></li>
+<li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT 頭皮脳波データベース</a></li>
+<li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF データベースの拡張</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid＆amp; Picone (2016)、TUH EEG コーパス</a></li>
 </ul>
 
-<h2>Where to return next</h2>
+<h2>次に戻る場所</h2>
 <p>
-Return to <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-On</a> if you want to follow the actual steps, <a href="https://mind-upload.com/datasets.html">Data & Bench</a> if you want to reselect the input data, or return to <a href="https://mind-upload.com/verification.html">Verification Infrastructure</a> if you want to see how this product stacks up as a public good.
+実際の手順に従いたい場合は <a href="https://mind-upload.com/datasets.html#l0-practice">Hands-On</a> に戻り、入力データを再選択したい場合は <a href="https://mind-upload.com/datasets.html">Data & Bench</a> に戻り、この製品が公共財としてどのように評価されるかを確認したい場合は <a href="https://mind-upload.com/verification.html">Verification Infrastructure</a> に戻ってください。
 </p>

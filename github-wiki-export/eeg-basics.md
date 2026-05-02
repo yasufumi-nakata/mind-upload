@@ -1,290 +1,290 @@
-# Wiki: Basics of EEG
+# Wiki: 脳波の基礎
 
-> Basic knowledge to prevent EEG from becoming a magical mind-reading technique
+> 脳波検査が魔法の読心術にならないための基礎知識
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-01 / Role: Beginner guide
+- Updated: 2026-04-01 / Role: 初心者ガイド
 
-## Role Of This Page
-This page is a wiki that explains from the basics what EEG measures. Beyond complicated formulas, the goal is to understand ``what kind of signals are mixed together and where'' and ``why preprocessing and QC are important.''
+## このページの役割
+このページは脳波とは何を測るのかを基礎から解説するwikiです。複雑な数式を超えて、「`what kind of signals are mixed together and where'' and `」の前処理と QC がなぜ重要なのかを理解することが目標です。
 
-## Accuracy Notes
-We highlight the limitations of EEG so as not to overestimate it, but that doesn't mean it's useless.
+## 正確性に関する注記
+脳波を過大評価しないように脳波の限界を強調しますが、それは役に立たないという意味ではありません。
 
-## Back To Public Pages
-- [Introduction to EEG](https://mind-upload.com/eeg_101.html)
-- [Data & Bench](https://mind-upload.com/datasets.html)
-- [Hands-on](https://mind-upload.com/datasets.html#l0-practice)
+## 公開ページへ戻る
+- [脳波検査の概要](https://mind-upload.com/eeg_101.html)
+- [データとベンチ](https://mind-upload.com/datasets.html)
+- [実践](https://mind-upload.com/datasets.html#l0-practice)
 
-## Related Wiki Pages
-- [Wiki: Basics of WBE](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - If you want to see first where EEG fits into the overall WBE, click here.
-- [Wiki: EEG pretreatment and QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - We will organize preprocessing and logging methods in a practical manner.
-- [Wiki: Basics of verification infrastructure](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - Understand why EEG also requires standards and QC.
-- [Wiki: From observation to estimation](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - Use this page when you want the limits of ESI, DCM, and SCM organized together.
-- [Wiki: Basics of multimodal integration](https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics) - Use this page when EEG starts to be combined with fMRI, PET, MEG, or invasive recording.
+## 関連 Wiki ページ
+- [Wiki: WBE の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/mind-upload-basics) - まず EEG が全体的な WBE のどこに当てはまるかを確認したい場合は、ここをクリックしてください。
+- [Wiki: EEG の前処理と QC](https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc) - 前処理とロギングの方法を実践的に整理していきます。
+- [Wiki: 検証インフラストラクチャの基本](https://github.com/yasufumi-nakata/mind-upload/wiki/verification-basics) - EEG にも標準と QC が必要な理由を理解します。
+- [Wiki: 観察から推定へ](https://github.com/yasufumi-nakata/mind-upload/wiki/observation-to-estimation) - ESI、DCM、および SCM の制限をまとめて整理する場合は、このページを使用します。
+- [Wiki: マルチモーダル統合の基本](https://github.com/yasufumi-nakata/mind-upload/wiki/multimodal-integration-basics) - EEG を fMRI、PET、MEG、または侵襲的記録と組み合わせ始める場合は、このページを使用してください。
 
-## What Is Currently Known
-- EEG is good at looking at time changes in milliseconds.
-- The observed signal is the result of a mixture of many activities, and interpretation requires assumptions.
-- Including individualized MRI and external references improves source imaging, but uncertainty remains for deep and weak sources.
-- A stronger EEG source-imaging paper can improve detectability, conductivity calibration, inverse-family uncertainty reporting, or direct validation without solving the others.
-- Reference choice, recording setup, and channel layout can materially change ERP, connectivity, and decoding conclusions.
-- Artifact cleanup does not by itself solve source leakage or turn directed connectivity into causal proof.
-- Adding fMRI, PET, or other modalities can strengthen one audit layer while still leaving fusion validity, shared-factor specificity, and bundle robustness unresolved.
-- Wearable OPM-MEG strengthens movement-tolerant macro electrophysiology only under named shielding, field-control, calibration, anatomy, crosstalk, and task-regime conditions.
-- Public data provides plenty of practice with preprocessing and baseline comparisons.
+## 現在わかっていること
+- EEG は時間の変化をミリ秒単位で見るのが得意です。
+- 観測された信号は多くの活動が混合した結果であり、解釈には仮定が必要です。
+- 個別の MRI と外部参照を含めることで線源イメージングは​​改善されますが、深部および弱い線源については不確実性が残ります。
+- より強力な EEG ソースイメージングペーパーは、他の問題を解決することなく、検出可能性、導電率校正、逆族不確かさレポート、または直接検証を向上させることができます。
+- リファレンスの選択、録音セットアップ、チャネル レイアウトによって、ERP、接続性、およびデコードの結論が大きく変わる可能性があります。
+- アーティファクトのクリーンアップだけでは、ソース漏洩を解決したり、有向接続を因果関係の証明に変えたりすることはできません。
+- fMRI、PET、またはその他のモダリティを追加すると、融合の妥当性、共有因子の特異性、およびバンドルの堅牢性が未解決のままのまま、1 つの監査レイヤーを強化できます。
+- ウェアラブル OPM-MEG は、指定されたシールド、フィールド制御、キャリブレーション、解剖学的構造、クロストーク、およびタスク体制条件下でのみ、運動耐性マクロ電気生理学を強化します。
+- 公開データは、前処理とベースライン比較に関する豊富な練習を提供します。
 
-## What Is Still Unknown
-- It remains unresolved whether non-invasive EEG alone is sufficient to reconstruct detailed causal structures within the brain.
-- The choice of preprocessing does not uniformly change the conclusion for each task.
-- It is not yet fixed which external benchmark will be the standard validation set for source imaging.
-- How far wearable OPM-MEG generalizes beyond shielded proof-of-concept and narrow task regimes remains unresolved.
+## まだわかっていないこと
+- 脳内の詳細な因果構造を再構築するのに非侵襲的EEGだけで十分であるかどうかは未解決のままである。
+- 前処理の選択によって、各タスクの結論が一律に変わるわけではありません。
+- どの外部ベンチマークがソース イメージングの標準検証セットになるかはまだ決まっていません。
+- ウェアラブル OPM-MEG が、シールドされた概念実証や狭いタスク領域を超えてどこまで一般化するかは未解決のままです。
 
 ---
 
-<h2>What does the EEG see?</h2>
+<h2>脳波では何が見えますか?</h2>
 <p>
-EEG is a method that measures electrical potential differences using electrodes placed on the scalp. In other words, we are not looking directly into the brain with a camera, but are reading the mixed signals that are transmitted to the outside as a result of many overlapping activities.
+脳波検査は、頭皮に配置された電極を使用して電位差を測定する方法です。言い換えれば、私たちはカメラで脳を直接覗いているのではなく、多くの活動が重なり合った結果として外部に送信される混合信号を読み取っているのです。
 </p>
 
-<strong>Switch to stop on this page first</strong>
+<strong>このページで最初に停止するスイッチ</strong>
 <p>
-With EEG, it is different to <strong>observe scalp signals</strong>, <strong>conditionally estimate brain sources</strong>, <strong>estimate interactions</strong>, and <strong>uniquely identify internal states</strong>. If these are confused, beginners will read "seen" and "estimated" as if they were the same thing.
+EEG では、<strong> 頭皮信号の観察 </strong>、<strong> 条件付きで脳ソースを推定する </strong>、<strong> 相互作用を推定する </strong>、<strong> 内部状態を独自に識別する </strong> とは異なります。これらを混同すると、初心者は「見た」と「推定した」を同じものであるかのように読んでしまいます。
 </p>
 
-<strong>2026-03 correction for the beginner route</strong>
+<strong>2026-03初心者ルート修正</strong>
 <p>
-The older beginner route on this site stopped at "EEG is mixed and source imaging is hard." That was too weak. For EEG, <strong>measurement condition itself</strong> matters: reference system, electrode layout, device chain, and protocol can change what the scalp signal even means. It was also necessary to say more clearly that a <strong>connectivity map or directed graph</strong> is a stronger claim than a sensor trace or even a source estimate.
+このサイトの古い初心者ルートは、「EEG が混在しており、信号源のイメージングが難しい」で停止していました。それは弱すぎました。 EEG の場合、<strong> 測定条件そのもの </strong> が重要です。基準システム、電極レイアウト、デバイス チェーン、プロトコルによって、頭皮信号の意味が変わることもあります。また、<strong> 接続マップや有向グラフ </strong> は、センサー トレースやソース推定よりも強力な主張であることを、より明確に伝える必要もありました。
 </p>
 
-<strong>Adding another modality does not make EEG a solved state meter</strong>
+<strong>別のモダリティを追加してもEEGは解決済み状態メーターにはなりません</strong>
 <p>
-The next beginner shortcut to stop is the word <strong>multimodal</strong>. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> describe LSL as synchronization infrastructure rather than device-side delay truth, <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> show that simultaneous multimodal recordings retain both common and divergent organization, and <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> show that simultaneous EEG-PET-MRI can contain coupled global dynamics together with modality-specific structure. Therefore, even when EEG is combined with other stacks, the site still separates <strong>synchronized acquisition</strong>, <strong>shared statistical structure</strong>, and <strong>one externally calibrated biological variable</strong> rather than treating them as one achievement.
+次に停止すべき初心者向けショートカットは、<strong>multimodal</strong> という単語です。 <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">Kothe et al. (2025)</a> は、デバイス側の遅延の真実ではなく、LSL を同期インフラストラクチャとして説明しています。<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024) </a> は、同時マルチモーダル記録が共通の組織と発散的な組織の両方を保持していることを示しています。 (2025)</a> は、EEG-PET-MRI を同時に行うと、結合した全体的なダイナミクスとモダリティ固有の構造が含まれる可能性があることを示しています。したがって、EEG が他のスタックと組み合わされた場合でも、サイトは <strong> 同期取得 </strong>、<strong> 共有統計構造 </strong>、および <strong> 外部で校正された生物学的変数 </strong> を 1 つの成果として扱うのではなく、依然として分離します。
 </p>
 
-<strong>2026-04-01 correction: wearable OPM-MEG is not a portable free pass</strong>
+<strong>2026-04-01 訂正: ウェアラブル OPM-MEG はポータブル フリーパスではありません</strong>
 <p>
-The beginner route still had one coarse object left: <strong>wearable MEG</strong>. The current primary literature does <strong>not</strong> support treating OPM-MEG as if movement tolerance automatically removed shielding, field-control, anatomy, and calibration burden. <a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a> established wearable feasibility but also showed saturation risk without background-field control. <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">Rea et al. (2021)</a> and <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">Mellor et al. (2022)</a> show that precision field modeling and nulling are part of the route, <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025)</a> show that lightly shielded operation still depends on active compensation plus tSSS, <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes et al. (2025)</a> show that pseudo-MRI is useful but does not replace individual MRI as the gold standard, <a href="https://doi.org/10.1063/5.0273491" target="_blank">Wu et al. (2025)</a> show that crosstalk remains an array-level burden, and <a href="https://doi.org/10.3390/s25134160" target="_blank">Spedden et al. (2025)</a> show whole-body stepping feasibility in only three healthy adults under a narrow sensorimotor beta task. Therefore, even on this beginner page, the minimum safe question is whether a paper strengthens <strong>field control</strong>, <strong>lighter-shield deployment</strong>, <strong>MRI-light anatomy substitution</strong>, <strong>array engineering</strong>, or only a <strong>narrow task proof-of-concept</strong>. Without that split, <strong>wearable OPM-MEG</strong> is too coarse an object.
+初心者ルートには、<strong>wearable MEG</strong> という粗いオブジェクトが 1 つ残っていました。現在の一次文献では、<strong>not</strong> は、動作許容度によってシールド、フィールド制御、解剖学的構造、および校正の負担が自動的に除去されたかのように OPM-MEG を扱うことをサポートしています。 <a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018) </a> はウェアラブルの実現可能性を確立しましたが、背景フィールド制御なしでは飽和リスクも示しました。 <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">Reaら(2021)</a> および <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">Mellor et al. (2022)</a> は、精密フィールド モデリングとヌリングがそのルートの一部であることを示しています。<a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025)</a> は、軽くシールドされた動作が依然としてアクティブ補償と tSSS に依存していることを示しています。<a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes et al. (2025)</a> は、擬似 MRI は有用であるが、ゴールドスタンダードとしての個別の MRI に代わるものではないことを示しています。<a href="https://doi.org/10.1063/5.0273491" target="_blank">Wu et al. (2025)</a> は、クロストークが依然としてアレイレベルの負担であることを示し、<a href="https://doi.org/10.3390/s25134160" target="_blank">Spedden らは、 (2025) </a> は、狭い感覚運動ベータ課題の下で 3 人の健康な成人のみで全身ステッピングの実行可能性を示しました。したがって、この初心者ページでも、論文が強化する<strong>フィールドコントロール</strong>、<strong>軽量シールド展開</strong>、<strong>MRIライト解剖学置換</strong>、<strong>アレイ工学</strong>、それとも<strong>狭いタスクの概念実証</strong>のみを強化するのか、というのが最低限の安全な質問です。その分割がなければ、<strong>wearable OPM-MEG</strong> は粗すぎるオブジェクトです。
 </p>
 
-<h2>What EEG is good at</h2>
+<h2>EEG の得意分野</h2>
 <table>
 <thead>
 <tr>
-<th>What I'm good at</th>
-<th>Reason</th>
+<th>得意なこと</th>
+<th>理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Seeing changes over time</td>
-<td>Because EEG can capture signals in milliseconds, it is easy to track when changes occur. </td>
+<td>時間の経過による変化を見る</td>
+<td>EEG はミリ秒単位で信号をキャプチャできるため、変化がいつ発生したかを追跡するのが簡単です。 </td>
 </tr>
 <tr>
-<td>State transition and event detection</td>
-<td>It is suitable for observing conditions that change over time, such as sleep stages and seizure events. </td>
+<td>状態遷移とイベント検出</td>
+<td>睡眠段階や発作事象など、時間とともに変化する状態の観察に適しています。 </td>
 </tr>
 <tr>
-<td>Reproduction practice with public data</td>
-<td>PhysioNet has standard data and it is easy to start practicing L0. </td>
+<td>公開データによる複製実践</td>
+<td>PhysioNet には標準データがあり、簡単に L0 の練習を始めることができます。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Things that EEG is bad at</h2>
+<h2>脳波が苦手なもの</h2>
 <table>
 <thead>
 <tr>
-<th>Things I'm not good at</th>
-<th>Why is it difficult</th>
+<th>苦手なこと</th>
+<th>なぜ難しいのか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Accurately stating "somewhere in the brain"</td>
-<td>This is because the signal becomes blurred while passing through the skull and scalp, and the inverse problem cannot be solved uniquely. </td>
+<td>「脳のどこか」を正確に表現</td>
+<td>これは、信号が頭蓋骨や頭皮を通過する際にぼやけてしまい、逆問題を一意に解くことができないためです。 </td>
 </tr>
 <tr>
-<td>Knowing the deep structure in detail</td>
-<td>Activities far from the scalp and weak signals are difficult to observe. </td>
+<td>深層構造を詳しく知る</td>
+<td>頭皮から遠く離れた活動や微弱な信号の観測が困難です。 </td>
 </tr>
 <tr>
-<td>Making a strong claim of identity using EEG alone</td>
-<td>EEG is an important clue, but it alone cannot confirm memories, values, or causal continuity. </td>
+<td>脳波のみを使用してアイデンティティを強く主張する</td>
+<td>EEGは重要な手がかりですが、それだけでは記憶や価値観、因果関係の連続性を確認することはできません。 </td>
 </tr>
 <tr>
-<td>Treating a connectivity map or directed graph as discovered causal wiring</td>
-<td>Reference choice, sensor mixing, source leakage, parcellation, and missing external validation can all change the network result even after the waveform looks clean. </td>
+<td>T接続マップまたは有向グラフを発見された因果関係として扱う</td>
+<td>Reference の選択、センサーの混合、ソースの漏れ、分割、および外部検証の欠落はすべて、波形がきれいに見えた後でもネットワークの結果を変える可能性があります。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Observation, estimation, and identification are different</h2>
+<h2>観察・推定・同定は異なります</h2>
 <table>
 <thead>
 <tr>
-<th>stage</th>
-<th>What can be said with EEG</th>
-<th>Things I can't say yet</th>
+<th>ステージ</th>
+<th>EEG</th>で言えること
+<th>まだ言えないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Observation</strong></td>
-<td>The mixed potential on the scalp can be taken on the ms scale. It is good at tracking state transitions and event times. </td>
-<td>We cannot say that we have directly seen which deep source is the sole cause, including cell types and neuronal modifications. </td>
+<td><strong>観察</strong></td>
+<td>頭皮上の混合電位をmsスケールで測定できます。状態遷移やイベント時間の追跡に優れています。 </td>
+<td>細胞の種類や神経細胞の修飾など、どの深部原因が唯一の原因であるかを直接観察したとは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Conditional estimation</strong></td>
-<td>Including individual MRI, electrode coordinates, and forward model will improve the estimation of near-cortical and some deep activities. </td>
-<td>Being able to detect when the conditions are severe is different from being able to restore uniqueness in general. </td>
+<td><strong>条件付き推定</strong></td>
+<td> 個別の MRI、電極座標、およびフォワード モデルを含めることで、皮質付近および一部の深部の活動の推定が向上します。 </td>
+<td>深刻な状態を検出できることと、一般に一意性を復元できることは異なります。 </td>
 </tr>
 <tr>
-<td><strong>Network / directed-connectivity estimate</strong></td>
-<td>With source modeling, parcellation, and explicit metrics, one can estimate conditional interaction structure more strongly than at pure sensor level. </td>
-<td>That still does not prove leak-free inter-areal coupling or causal direction. Connectivity and directed connectivity need their own validation and abstention rules. </td>
+<td><strong>ネットワーク/有向接続の見積もり</strong></td>
+<td>ソース モデリング、分割、および明示的なメトリクスを使用すると、純粋なセンサー レベルよりも強力に条件付き相互作用構造を推定できます。 </td>
+<td>それでも、領域間結合や因果方向に漏れがないことは証明されていません。接続と有向接続には、独自の検証ルールと棄権ルールが必要です。 </td>
 </tr>
 <tr>
-<td><strong>Identification</strong></td>
-<td>External criteria such as intracranial stimulation, simultaneous SEEG/ECoG, phantoms, and postoperative outcomes allow for error auditing. </td>
-<td>Without an external standard, it is impossible to say ``I have found the source'' or ``I have achieved a sufficient state for WBE.'' </td>
+<td><strong>識別</strong></td>
+<td>頭蓋内刺激、同時 SEEG/ECoG、ファントム、術後の転帰などの外部基準により、エラー監査が可能になります。 </td>
+<td>外部基準がなければ「`I have found the source'' or `」は「WBEとして十分な状態に達した」とは言えません。
 </tr>
 </tbody>
 </table>
 
-<strong>2026-03 actual measurement evidence</strong>
+<strong>2026-03 実測証拠</strong>
 <p>
-Seeber et al. (2019) demonstrated detectability of subcortical signals with 256ch scalp EEG and simultaneous DBS recordings, but did not claim general unique reconstruction. Unnwongse et al. (2023) reported that localization error depends on cranial conductivity and source depth in direct validation for intracranial stimulation, and Hao et al. (2025) showed that source power and source depth strongly influence error in 29 cases of simultaneous HD-EEG/SEEG. Therefore, the correct way to read it is ``partially auditable if the conditions are strictly fixed'', not ``the brain source can be uniquely read using EEG alone''.
+シーバーら。 (2019) は、256ch 頭皮脳波と同時 DBS 記録による皮質下信号の検出可能性を実証しましたが、一般的な独自の再構成については主張しませんでした。 Unnwongse et al. (2023) は、頭蓋内刺激の直接検証において、位置特定エラーが頭蓋伝導率とソースの深さに依存すると報告しました。 (2025) は、同時 HD-EEG/SEEG の 29 件のエラーにソースパワーとソース深度が強く影響することを示しました。したがって、正しい読み方は「`partially auditable if the conditions are strictly fixed'', not `『脳波だけで脳の情報源を独自に読み取ることができる』」となります。
 </p>
 
-<strong>2026-03-30 re-audit: better EEG source imaging is still four different advances</strong>
+<strong>2026-03-30 再監査: 脳波ソースイメージングの改善には依然として 4 つの異なる進歩がある</strong>
 <p>
-This beginner page still needed one more correction. Current primary literature does <strong>not</strong> support reading all EEG source-imaging progress as one continuous ladder. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019)</a> strengthen <strong>field-formation visibility</strong> for a specific subcortical regime, <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> and <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a> show that <strong>tissue and skull conductivity assumptions</strong> still move the result materially, <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a>, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a>, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> strengthen <strong>uncertainty exposure inside a stated inverse family</strong>, and <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a>, <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>, and <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a> validate <strong>different source regimes and error objects</strong> rather than one universal source-recovery claim. Therefore, on this site, a "better ESI result" is now read through four floors rather than as one progress bar.
+この初心者向けページには、もう 1 つ修正が必要でした。現在の主な文献では、<strong>not</strong> は、すべての EEG ソース イメージングの進行状況を 1 つの連続したラダーとして読み取ることをサポートしています。 <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeberら。 (2019) </a> は、<strong> フィールド形成の可視性を強化します。</strong> は、特定の皮質下領域に対して、<a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> および <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk ら。 (2026)</a> は、<strong> 組織と頭蓋骨の導電率の仮定 </strong> が依然として結果を実質的に動かすことを示しています。<a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a>、<a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong 他(2025)</a>、<a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al。 (2025) </a> は、明示された逆ファミリー </strong> および <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank"> 内の <strong> 不確実性曝露を強化する Pascarella et al。 (2023)</a>、<a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 他(2023)</a>、<a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025) </a> は、1 つの普遍的なソース回復要求ではなく、<strong> さまざまなソース体制とエラー オブジェクト </strong> を検証します。したがって、このサイトでは、「より良い ESI 結果」が 1 つの進行状況バーではなく 4 つのフロアで表示されるようになりました。
 </p>
 
 <table>
 <thead>
 <tr>
-<th>Four-floor split for EEG source imaging</th>
-<th>What got stronger</th>
-<th>Representative primary papers</th>
-<th>What it still does not buy</th>
+<th>脳波ソースイメージング用の4フロアスプリット</th>
+<th>何が強くなったのか</th>
+<th>代表的な一次論文</th>
+<th>まだ買えないもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>1. Field-formation visibility</strong></td>
-<td>Whether a target source class reaches the sensors under a specific depth, orientation, extent, and montage regime.</td>
+<td><strong>1。フィールド形成の可視性</strong></td>
+<td>ターゲット ソース クラスが特定の深さ、方向、範囲、モンタージュ領域でセンサーに到達するかどうか。</td>
 <td><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber et al. (2019)</a></td>
-<td>It does not by itself fix conductivity sensitivity, inverse-family spread, or general source recovery.</td>
+<td>それ自体では、導電率感度、逆族拡散、または一般的なソース回復は修正されません。</td>
 </tr>
 <tr>
-<td><strong>2. Forward-model / conductivity burden</strong></td>
-<td>How much skull or tissue conductivity and geometry assumptions still move localization, depth, or amplitude.</td>
-<td><a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a>; <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)</a></td>
-<td>Reducing conductivity-driven spread does not by itself prove that the solver family or validation regime is sufficient.</td>
+<td><strong>2。前進モデル/導電性負担</strong></td>
+<td>頭蓋骨または組織の導電率と幾何学的仮定が、どの程度の位置、深さ、または振幅を動かすか。</td>
+<td><a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a>; <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerkら(2026)</a></td>
+<td>導電率による拡散を低減すること自体は、ソルバー ファミリまたは検証レジームが十分であることを証明するものではありません。
 </tr>
 <tr>
-<td><strong>3. Solver-family uncertainty</strong></td>
-<td>How clearly the inverse family reports posterior width, alternative configurations, debiased intervals, or uncertainty maps.</td>
-<td><a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a>; <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a>; <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a></td>
-<td>Better uncertainty exposure does not by itself prove that the reported candidates are externally correct.</td>
+<td><strong>3。ソルバーファミリーの不確実性</strong></td>
+<td>逆ファミリーが事後幅、代替構成、偏りのない間隔、または不確実性マップをどの程度明確に報告するか。</td>
+<td><a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a>; <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tongら(2025)</a>; <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Fengら(2025)</a></td>
+<td>不確実性エクスポージャーの改善は、それ自体で報告された候補が外部的に正しいことを証明するものではありません。</td>
 </tr>
 <tr>
-<td><strong>4. Validation class</strong></td>
-<td>Which external standard was actually passed: focal-source comparison, intracranial stimulation, simultaneous invasive recording, or another regime-specific ladder.</td>
-<td><a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">Pascarella et al. (2023)</a>; <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a>; <a href="https://doi.org/10.1111/epi.18552" target="_blank">Hao et al. (2025)</a></td>
-<td>A direct-validation result in one source regime does not automatically transfer to all depths, source extents, or clinical settings.</td>
+<td><strong>4。検証クラス</strong></td>
+<td>実際に合格した外部基準: 焦点源比較、頭蓋内刺激、同時侵襲的記録、または別の体制固有のラダー。</td>
+<td><a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">パスカレラら(2023)</a>; <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse 他(2023)</a>; <a href="https://doi.org/10.1111/epi.18552" target="_blank">ハオら。 (2025)</a></td>
+<td>A 1 つのソース レジームでの直接検証の結果は、すべての深さ、ソース範囲、または臨床設定に自動的に転送されません。</td>
 </tr>
 </tbody>
 </table>
 
-<strong>Connectivity is not just one more EEG output</strong>
+<strong>Connectivity は単なる脳波出力の 1 つではありません</strong>
 <p>
-It is tempting to think that once a source estimate exists, a connectivity graph is just the next summary. That is too strong. Vinck et al. (2011) made wPLI safer against some zero-lag mixing, but Haufe et al. (2013) showed that sensor-space connectivity remains strongly limited by volume conduction, Palva et al. (2018) showed that even source-space measures can create ghost interactions, and Miljevic et al. (2025) showed that sensor-space network results move with rereferencing, epoch design, and metric choice. On this site, EEG connectivity is therefore read as a <strong>model- and pipeline-conditioned estimator</strong>, not as automatically discovered wiring.
+ソース推定値が存在すると、接続性グラフは次の概要にすぎないと考えたくなります。それは強すぎます。ヴィンクら。 (2011) は wPLI をラグゼロ混合に対してより安全にしましたが、Haufe et al. Palva et al. (2013) は、センサーと空間の接続が体積伝導によって依然として強く制限されていることを示しました。 (2018) は、ソース空間の測定であってもゴースト相互作用を引き起こす可能性があることを示しました。 (2025) は、センサー空間ネットワークの結果が、再参照、エポックデザイン、およびメトリックの選択によって変化することを示しました。したがって、このサイトでは、EEG 接続は、自動的に検出された配線としてではなく、<strong> モデルおよびパイプライン条件付き推定器 </strong> として解釈されます。
 </p>
 
-<h2>Why QC and pretreatment are important</h2>
+<h2>QC と前処理が重要な理由</h2>
 <p>
-EEG is a measurement that is susceptible to noise, but the important correction is that the issue is not only noise. Results can move with eye blinks, myoelectricity, body movements, power supply noise, <strong>reference choice</strong>, <strong>electrode layout</strong>, <strong>device-side filtering</strong>, and <strong>site-specific setup</strong>. Therefore, it is not enough to keep only a clean-looking figure; one must also record the measurement condition that made that figure possible.
+EEG はノイズの影響を受けやすい測定ですが、重要な修正は、問題はノイズだけではないということです。結果は、まばたき、筋電位、体の動き、電源ノイズ、<strong> 基準選択</strong>、<strong> 電極レイアウト</strong>、<strong> デバイス側フィルタリング</strong>、<strong> 部位固有セットアップ</strong> によって変化する可能性があります。したがって、単にきれいな体型を保つだけでは十分ではありません。また、その数値を可能にした測定条件も記録する必要があります。
 </p>
 
-<h4>What you want to keep as a minimum</h4>
+<h4>最低限抑えておきたいこと</h4>
 <ul>
-<li><strong>Reference method:</strong>What standard was used to measure the potential difference? </li>
-<li><strong>Recording setup:</strong>Which device chain, sampling policy, and electrode layout were used? </li>
-<li><strong>Filter:</strong>Which frequency band is passed through? </li>
-<li><strong>Artifact processing:</strong>Which noise was removed and how? </li>
-<li><strong>Exclusion criteria:</strong>Which data were excluded and why? </li>
+<li><strong>参考方法：</strong>電位差の測定に使用した基準は何ですか? </li>
+<li><strong>記録セットアップ:</strong>どのデバイスチェーン、サンプリングポリシー、電極レイアウトが使用されましたか? </li>
+<li><strong>フィルター:</strong>どの周波数帯域を通過させますか？ </li>
+<li><strong>アーティファクト処理:</strong>どのノイズをどのように除去しましたか? </li>
+<li><strong>除外基準:</strong>除外されたデータとその理由? </li>
 </ul>
 
-<strong>Same task does not guarantee the same measurement condition</strong>
+<strong>同じタスクでも同じ測定条件を保証するものではありません</strong>
 <p>
-Xu et al. (2020) showed that cross-dataset deep-learning results move with environmental variability such as amplifier, cap, sampling rate, and filtering. That is why this site does not treat setup as a background nuisance. It is part of the observation model and has to be logged before the score is interpreted.
+徐ら。 (2020) は、クロスデータセットの深層学習の結果が、アンプ、キャップ、サンプリング レート、フィルタリングなどの環境変動に応じて変化することを示しました。このため、このサイトではセットアップをバックグラウンドでの迷惑行為として扱いません。これは観察モデルの一部であり、スコアが解釈される前にログに記録する必要があります。
 </p>
 
-<strong>Shared multimodal factors can still be mixed physiology</strong>
+<strong>共有された多峰性因子は依然として混合生理学である可能性がある</strong>
 <p>
-Even when a paper reports one common EEG-fMRI or EEG-PET-MRI factor, that factor can still mix neural and non-neural contributions. <a href="https://doi.org/10.1162/imag_a_00287" target="_blank">Gold et al. (2024)</a> show that fMRI-autonomic covariance grows as vigilance decreases in simultaneous EEG-fMRI-autonomic recordings, <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a> show sympathetic contributions to the fMRI signal, and <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025)</a> show that BOLD changes can oppose oxygen-metabolism changes across a large fraction of cortex. On this site, a common factor is therefore not promoted automatically to the target neural variable.
+論文で 1 つの一般的な EEG-fMRI 因子または EEG-PET-MRI 因子が報告されている場合でも、その因子には神経系と非神経系の寄与が混在している可能性があります。 <a href="https://doi.org/10.1162/imag_a_00287" target="_blank">ゴールド他(2024) </a> は、EEG-fMRI と自律神経の同時記録において、警戒が低下するにつれて fMRI と自律神経の共分散が増大することを示しています。<a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al。 (2019)</a> は fMRI 信号に対する交感神経の寄与を示し、<a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">Epp et al. (2025) </a> は、大胆な変更が皮質の大部分にわたる酸素代謝の変化に対抗できることを示しています。したがって、このサイトでは、共通因子はターゲットの神経変数に自動的にプロモートされません。
 </p>
 
-<h2>How to connect with WBE</h2>
+<h2>WBE</h2>との接続方法
 <p>
-EEG is not a device that suddenly completes WBE. However, it is important for providing time information on state changes, baseline comparison, and reproducibility with public data. At Mind-Upload, we treat EEG not as a device that reads everything, but as an observation tool that provides macroscopic constraints. The practical consequence is that <strong>measurement condition, source-imaging floor (visibility / conductivity / solver uncertainty / validation class), and connectivity ceiling</strong> all have to be disclosed separately before an EEG result is promoted.
+EEG は、突然 WBE を完了するデバイスではありません。ただし、状態の変化に関する時間情報、ベースラインの比較、公開データとの再現性を提供するためには重要です。 Mind-Upload では、脳波をすべてを読み取る装置としてではなく、巨視的な制約を与える観察ツールとして扱います。実際的な結果は、EEG 結果が宣伝される前に、<strong> 測定条件、ソースイメージング フロア (可視性 / 導電率 / ソルバーの不確実性 / 検証クラス)、および接続上限 </strong> をすべて個別に開示する必要があるということです。
 </p>
 
-<strong>When multimodal bundles look stronger than they really are</strong>
+<strong>マルチモーダルバンドルが実際よりも強く見えるとき</strong>
 <p>
-More modalities can improve prediction while the bundle still remains fragile. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a> show real multimodal prognostic gains, but <a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> and <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026)</a> show that same-sample analysis, missing-modality handling, cross-centre transfer, and inter-modality disagreement still matter. That is why this site routes EEG-plus-other-stack arguments through the <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a>, and when living-human proxy rows are mixed, also the <a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Human Proxy Composition Card</a>.
+モダリティを増やすと、バンドルがまだ脆弱なままでも予測を改善できます。 <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">ローハウトら。 (2024) </a> は実際の多峰性予後利益を示していますが、<a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> および <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">Manasova et al. (2026) </a> は、同一サンプル分析、欠落モダリティの処理、施設間移行、およびモダリティ間の不一致が依然として重要であることを示しています。そのため、このサイトは、EEG プラスその他のスタック引数を <a href="https://mind-upload.com/verification.html#fusion-card">Fusion Card</a> 経由でルーティングし、生きている人間のプロキシ行が混在する場合は、<a href="https://mind-upload.com/verification.html#human-proxy-composition-card">Human Proxy Composition Card</a> も経由します。
 </p>
 
-<h4>Next</h4>
-<p>Click here to read research involving EEG based on the strength of claims and evidence. </p>
-<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">How to read claims and evidence →</a>
+<h4>次</h4>
+<p> ここをクリックして、主張と証拠の強さに基づく脳波に関する研究をご覧ください。 </p>
+<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/claims-and-evidence">クレームと証拠の読み方→</a>
 
-<h4>Practical Next</h4>
-<p>Click here if you want to see what changes with reference methods, filters, and artifact processing from a practical perspective. </p>
-<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc">To EEG preprocessing and QC →</a>
+<h4>実用的な次へ</h4>
+<p>参照メソッド、フィルター、アーティファクト処理で何が変わるのかを実践的な観点から確認したい場合は、ここをクリックしてください。 </p>
+<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/eeg-preprocessing-and-qc">脳波前処理とQCへ→</a>
 
-<h4>Technical Next</h4>
-<p>Click here if you would like to see the boundaries between observation and estimation, and the connections between ESI, DCM, and SCM. </p>
-<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms">From measurement to modeling →</a>
+<h4>テクニカルネクスト</h4>
+<p>観測と推定の境界、ESI、DCM、SCMの関係を知りたい方はこちら。 </p>
+<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-and-modeling-terms">測定からモデリングまで→</a>
 
-<h2>References</h2>
+<h2>参考資料</h2>
 <ol>
-<li>Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., et al. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Scientific Data</em>, 6, 103. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
-<li>Pernet, C., Garrido, M. I., Gramfort, A., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. <em>Nature Neuroscience</em>, 23, 1473-1483. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
-<li>Michel, C. M., &amp; Brunet, D. (2019). EEG source imaging: a practical review of the analysis steps. <em>Frontiers in Neurology</em>, 10, 325. <a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
-<li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
-<li>Seeber, M., Cantonas, L.-M., Hoevels, M., et al. (2019). Subcortical electrophysiological activity is detectable with high-density EEG source imaging. <em>Nature Communications</em>, 10, 753. <a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
-<li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(2), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
-<li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
-<li>Pascarella, A., Mikulan, E., Sciacchitano, F., et al. (2023). An in-vivo validation of ESI methods with focal sources. <em>NeuroImage</em>, 277, 120219. <a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">doi:10.1016/j.neuroimage.2023.120219</a></li>
-<li>Vorwerk, J., Wolters, C. H., &amp; Baumgarten, D. (2024). Global sensitivity of EEG source analysis to tissue conductivity uncertainties. <em>Frontiers in Human Neuroscience</em>, 18, 1335212. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
-<li>Luria, G., Viani, S., Pascarella, A., et al. (2024). The SESAMEEG package: a probabilistic tool for source localization and uncertainty quantification in M/EEG. <em>Frontiers in Human Neuroscience</em>, 18, 1359753. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">doi:10.3389/fnhum.2024.1359753</a></li>
-<li>Tong, P. F., Yang, H., Ding, X., et al. (2025). Debiased Estimation and Inference for Spatial-Temporal EEG/MEG Source Imaging. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">doi:10.1109/TMI.2024.3506596</a></li>
-<li>Feng, Z., Mishne, G., Hashemi, A., et al. (2025). Block-Champagne: Imaging extended E/MEG source activation with empirical Bayesian uncertainty quantification. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
-<li>Vorwerk, J., K&ouml;hler, T., G&uuml;llmar, D., et al. (2026). Potential of EEG and EEG/MEG skull conductivity estimation to improve source analysis in presurgical evaluation of epilepsy. <em>Journal of Neural Engineering</em>, 23(1), 016007. <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">doi:10.1088/1741-2552/ae2f01</a></li>
-<li>Xu, M., Yao, S., Wei, Z., et al. (2020). Cross-dataset variability problem in EEG decoding with deep learning. <em>Frontiers in Human Neuroscience</em>, 14, 103. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
-<li>Vinck, M., Oostenveld, R., van Wingerden, M., Battaglia, F., &amp; Pennartz, C. M. A. (2011). An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. <em>NeuroImage</em>, 55(4), 1548-1565. <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
-<li>Haufe, S., Nikulin, V. V., Müller, K.-R., &amp; Nolte, G. (2013). A critical assessment of connectivity measures for EEG data: a simulation study. <em>NeuroImage</em>, 64, 120-133. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
-<li>Palva, J. M., Wang, S. H., Palva, S., et al. (2018). Ghost interactions in MEG/EEG source space: a note of caution on inter-areal coupling measures. <em>NeuroImage</em>, 173, 632-643. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
-<li>Miljevic, A., Murphy, O. W., Fitzgerald, P. B., &amp; Bailey, N. W. (2025). Estimating sensor-space EEG connectivity PART 1: Identifying best performing methods for functional connectivity in simulated data. <em>Clinical Neurophysiology</em>, 174, 73-83. <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">doi:10.1016/j.clinph.2025.03.043</a></li>
-<li>Kothe, C., Shirazi, S. Y., Stenner, T., et al. (2025). The lab streaming layer for synchronized multimodal recording. <em>Imaging Neuroscience</em>, 3, IMAG.a.136. <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
-<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 581. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
-<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
-<li>Gold, B. P., Goodale, S. E., Zhao, C., et al. (2024). Functional MRI signals exhibit stronger covariation with peripheral autonomic measures as vigilance decreases. <em>Imaging Neuroscience</em>, 2, IMAG.a.00287. <a href="https://doi.org/10.1162/imag_a_00287" target="_blank">doi:10.1162/imag_a_00287</a></li>
-<li>Özbay, P. S., Chang, C., Picchioni, D., et al. (2019). Sympathetic activity contributes to the fMRI signal. <em>Communications Biology</em>, 2, 421. <a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">doi:10.1038/s42003-019-0659-0</a></li>
-<li>Epp, S. M., Castrillón, G., Yuan, B., et al. (2025). BOLD signal changes can oppose oxygen metabolism across the human cortex. <em>Nature Neuroscience</em>. <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
-<li>Rohaut, B., Hermann, B., Kaufmann, B. C., et al. (2024). Multimodal assessment improves neuroprognosis performance in clinically unresponsive critical-care patients with brain injury. <em>Nature Medicine</em>, 30, 2482-2491. <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
-<li>Amiri, M., Bødker Andersen, M., Jørgensen, S. H., et al. (2023). Multimodal prediction of residual consciousness in the intensive care unit: the CONNECT-ME study. <em>Brain</em>, 146(1), 50-64. <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/brain/awac335</a></li>
-<li>Manasova, D., Belloli, L. M. L., Rosenfelder, M. J., et al. (2026). Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness. <em>Brain</em>. <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/brain/awaf412</a></li>
-<li>Boto, E., Holmes, N., Leggett, J., et al. (2018). Moving magnetoencephalography towards real-world applications with a wearable system. <em>Nature</em>, 555, 657-661. <a href="https://doi.org/10.1038/nature26147" target="_blank">doi:10.1038/nature26147</a></li>
-<li>Rea, M., Holmes, N., Hill, R. M., et al. (2021). Precision magnetic field modelling and control for wearable magnetoencephalography. <em>NeuroImage</em>, 241, 118401. <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">doi:10.1016/j.neuroimage.2021.118401</a></li>
-<li>Mellor, S. J., Tierney, T. M., O'Neill, G. C., et al. (2022). Magnetic field mapping and correction for moving OP-MEG. <em>IEEE Transactions on Biomedical Engineering</em>, 69(2), 528-536. <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">doi:10.1109/TBME.2021.3100770</a></li>
-<li>Holmes, N., Leggett, J., Hill, R. M., et al. (2025). Wearable magnetoencephalography in a lightly shielded environment. <em>IEEE Transactions on Biomedical Engineering</em>, 72(2), 609-618. <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">doi:10.1109/TBME.2024.3465654</a></li>
-<li>Rhodes, N., Rier, L., Boto, E., Hill, R. M., &amp; Brookes, M. J. (2025). Source reconstruction without an MRI using optically pumped magnetometer-based magnetoencephalography. <em>Imaging Neuroscience</em>, 3, IMAG.a.8. <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">doi:10.1162/IMAG.a.8</a></li>
-<li>Wu, T., Xiao, W., Peng, X., Wu, T., &amp; Guo, H. (2025). Crosstalk reduction in optically pumped magnetometers arrays for biomagnetic measurement. <em>Review of Scientific Instruments</em>, 96(8), 085004. <a href="https://doi.org/10.1063/5.0273491" target="_blank">doi:10.1063/5.0273491</a></li>
-<li>Spedden, M. E., O'Neill, G. C., West, T. O., et al. (2025). Using wearable MEG to study the neural control of human stepping. <em>Sensors</em>, 25(13), 4160. <a href="https://doi.org/10.3390/s25134160" target="_blank">doi:10.3390/s25134160</a></li>
+<li>Pernet, C.R.、Appelhoff, S.、Gorgolewski, K.J. 他（2019年）。 EEG-BIDS、脳波検査用の脳画像データ構造の拡張。 <em>S科学的データ</em>、6、103。<a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
+<li>Pernet, C.、Garrido, M.I.、Gramfort, A. 他（2020年）。再現可能なEEGおよびMEG研究のためのOHBM COBIDAS MEEG委員会からの問題と推奨事項。 <em>Nature Neuroscience</em>、23、1473-1483。 <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
+<li>ミシェル、C.M.、＆amp;ブルーネット、D. (2019)。 EEG ソース イメージング: 分析ステップの実践的なレビュー。 <em>神経学の最前線</em>、10、325。<a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">doi:10.3389/fneur.2019.00325</a></li>
+<li>Mikulan, E.、Russo, S.、Bares, M.、他（2020年）。人間の脳内刺激と HD-EEG の同時、音源位置特定方法のグラウンドトゥルース。 <em>S科学データ</em>、7、127。<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Seeber, M.、Cantonas, L.-M.、Hoevels, M.、他。 （2019年）。皮質下の電気生理学的活動は、高密度EEGソースイメージングで検出可能です。 <em>Nature Communications</em>、10、753.<a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">doi:10.1038/s41467-019-08725-w</a></li>
+<li>Unnwongse、K.、Achakulvisut、T.、Wu、J.Y.、他。 （2023年）。人間の患者における頭蓋内電気刺激によるEEGソースイメージングの直接検証。 <em>ブレインコミュニケーションズ</em>、5(2)、fcad023。 <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/ブレインコム/fcad023</a></li>
+<li>Hao, S.、Zhao, H.、Feng, Z. 他(2025年)。薬剤耐性てんかんにおける HD-EEG ソースイメージングと同時 SEEG 記録。 <em>てんかん</em>、66(11)、4451-4464。 <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Pascarella, A.、Mikulan, E.、Sciacchitano, F.、他。 （2023年）。焦点ソースを使用した ESI メソッドの生体内検証。 <em>NeuroImage</em>、277、120219.<a href="https://doi.org/10.1016/j.neuroimage.2023.120219" target="_blank">doi:10.1016/j.neuroimage.2023.120219</a></li>
+<li>Vorwerk、J.、Wolters、C.H.、&amp;バウムガルテン、D. (2024)。組織の伝導率の不確実性に対するEEGソース分析のグローバルな感度。 <em>人間の神経科学のフロンティア</em>、18、1335212。<a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
+<li>Luria, G.、Viani, S.、Pascarella, A. 他（2024年）。 SESAMEEG パッケージ: M/EEG における信号源の位置特定と不確実性の定量化のための確率的ツール。 <em>人間の神経科学のフロンティア</em>、18、1359753.<a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">doi:10.3389/fnhum.2024.1359753</a></li>
+<li>Tong、P. F.、Yang、H.、Ding、X.、他(2025年)。時空間 EEG/MEG ソース イメージングのための偏りのない推定と推論。 <em>医用画像に関するIEEEトランザクション</em>。 <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">doi:10.1109/TMI.2024.3506596</a></li>
+<li>Feng, Z.、Mishne, G.、Hashemi, A. 他(2025年)。 Block-Champagne: 経験的なベイジアン不確実性定量化を使用した拡張 E/MEG ソース活性化のイメージング。 <em>医用画像に関するIEEEトランザクション</em>。 <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
+<li>Vorwerk, J.、K&ouml;hler, T.、G&uuml;llmar, D. 他（2026年）。てんかんの術前評価における信号源分析を改善するための EEG および EEG/MEG 頭蓋骨伝導率推定の可能性。 <em>Journal of Neural Engineering</em>、23(1)、016007.<a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">doi:10.1088/1741-2552/ae2f01</a></li>
+<li>Xu、M.、Yao、S.、Wei、Z.、他。 （2020年）。深層学習による EEG デコードにおけるデータセット間の変動性の問題。 <em>人間の神経科学のフロンティア</em>、14、103.<a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
+<li>Vinck、M.、Oostenveld、R.、van Wingerden、M.、Battaglia、F.、およびPennartz、C.M.A. (2011)。体積伝導、ノイズ、サンプルサイズのバイアスが存在する場合の電気生理学的データの位相同期の指標が改善されました。 <em>NeuroImage</em>、55(4)、1548-1565。 <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
+<li>ハウフェ、S.、ニクリン、V.V.、ミュラー、K.-R.、&amp;ノルテ、G. (2013)。 EEG データの接続性測定の重要な評価: シミュレーション研究。 <em>NeuroImage</em>、64、120-133。 <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
+<li>Palva, J.M.、Wang, S. H.、Palva, S.、他（2018年）。 MEG/EEG ソース空間におけるゴースト インタラクション: エリア間のカップリング対策に関する注意事項。 <em>NeuroImage</em>、173、632-643。 <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
+<li>Miljevic、A.、Murphy、O.W.、Fitzgerald、P.B.、およびニューウェスト州ベイリー (2025)。センサー空間の EEG 接続性の推定 パート 1: シミュレートされたデータにおける機能的接続性の最もパフォーマンスの高い方法を特定します。 <em>C臨床神経生理学</em>、174、73-83。 <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">doi:10.1016/j.clinph.2025.03.043</a></li>
+<li>Kothe, C.、Shirazi, S. Y.、Stenner, T. 他(2025年)。同期されたマルチモーダル記録のためのラボ ストリーミング レイヤー。 <em>画像神経科学</em>、3、IMAG.a.136。 <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">doi:10.1162/IMAG.a.136</a></li>
+<li>Vafaii、H.、Mandino、F.、Desrosiers-Grégoire、G.、他。 （2024年）。自発的な脳活動の多峰性測定により、皮質機能組織の共通パターンと多様なパターンの両方が明らかになります。 <em>Nature Communications</em>、15、581.<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen、J. E.、Lewis、L. D.、Coursey、S. E.、他(2025年)。 EEG-PET-MRI を同時に行うことで、覚醒時とノンレム睡眠時の時間的に結合し、空間的に構造化された脳のダイナミクスを特定します。 <em>Nature Communications</em>、16、8887。<a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Gold, B.P.、Goodale, S.E.、Zhao, C. 他（2024年）。機能的 MRI 信号は、警戒が低下するにつれて、末梢自律神経の測定値とのより強い共変動を示します。 <em>イメージング神経科学</em>、2、IMAG.a.00287。 <a href="https://doi.org/10.1162/imag_a_00287" target="_blank">doi:10.1162/imag_a_00287</a></li>
+<li>Özbay, P.S.、Chang, C.、Picchioni, D. 他（2019年）。交感神経活動は fMRI 信号に寄与します。 <em>コミュニケーション生物学</em>、2、421。<a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">doi:10.1038/s42003-019-0659-0</a></li>
+<li>Epp、S.M.、Castrillon、G.、Yuan、B. 他(2025年)。大胆な信号変化は、人間の皮質全体の酸素代謝を妨げる可能性があります。 <em>Nature Neuroscience</em>。 <a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">doi:10.1038/s41593-025-02132-9</a></li>
+<li>Rohaut, B.、Hermann, B.、Kaufmann, B. C.、他。 （2024年）。マルチモーダル評価は、臨床的に反応性のない脳損傷のある救命救急患者の神経予後成績を改善します。 <em>Nature Medicine</em>、30、2482-2491。 <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">doi:10.1038/s41591-024-03019-1</a></li>
+<li>Amiri、M.、Bødker Andersen、M.、Jørgensen、S.H.、他（2023年）。集中治療室における残留意識のマルチモーダル予測: CONNECT-ME 研究。 <em>ブレイン</em>、146(1)、50-64。 <a href="https://doi.org/10.1093/brain/awac335" target="_blank">doi:10.1093/ブレイン/awac335</a></li>
+<li>Manasova, D.、Belloli, L.M.L.、Rosenfelder, M.J. 他（2026年）。意識障害における診断および予後マーカーの多角的多施設研究。 <em>脳</em>。 <a href="https://doi.org/10.1093/brain/awaf412" target="_blank">doi:10.1093/ブレイン/awaf412</a></li>
+<li>Boto, E.、Holmes, N.、Leggett, J. 他（2018年）。ウェアラブル システムを使用して、脳磁図を現実世界のアプリケーションに移行します。 <em>ネイチャー</em>、555、657-661。 <a href="https://doi.org/10.1038/nature26147" target="_blank">ドイ:10.1038/nature26147</a></li>
+<li>Rea、M.、Holmes、N.、Hill、R.M.、他。 （2021年）。ウェアラブル脳磁計のための高精度の磁場のモデリングと制御。 <em>NeuroImage</em>、241、118401.<a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">doi:10.1016/j.neuroimage.2021.118401</a></li>
+<li>Mellor, S.J.、Tierney, T.M.、O'Neill, G.C. 他（2022年）。可動OP-MEGの磁場マッピングと補正。 <em>IEEE Transactions on Biomedical Engineering</em>、69(2)、528-536。 <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">doi:10.1109/TBME.2021.3100770</a></li>
+<li>Holmes, N.、Leggett, J.、Hill, R.M.、他(2025年)。軽く遮蔽された環境でのウェアラブル脳磁計。 <em>IEEE Transactions on Biomedical Engineering</em>、72(2)、609-618。 <a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">doi:10.1109/TBME.2024.3465654</a></li>
+<li>Rhodes, N.、Rier, L.、Boto, E.、Hill, R.M.、およびM.J.ブルックス (2025)。光ポンピング磁力計ベースの脳磁図法を使用した、MRI を使用しない信号源再構成。 <em>画像神経科学</em>、3、IMAG.a.8。 <a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">doi:10.1162/IMAG.a.8</a></li>
+<li>Wu, T.、Xiao, W.、Peng, X.、Wu, T.、およびGuo、H. (2025)。生体磁気測定用の光ポンピング磁力計アレイにおけるクロストークの低減。 <em>科学機器のレビュー</em>、96(8)、085004。<a href="https://doi.org/10.1063/5.0273491" target="_blank">doi:10.1063/5.0273491</a></li>
+<li>Spedden、M.E.、O'Neill、G.C.、West、T.O.、他。 (2025年)。ウェアラブル MEG を使用して人間の歩行動作の神経制御を研究します。 <em>センサー</em>、25(13)、4160。<a href="https://doi.org/10.3390/s25134160" target="_blank">doi:10.3390/s25134160</a></li>
 </ol>

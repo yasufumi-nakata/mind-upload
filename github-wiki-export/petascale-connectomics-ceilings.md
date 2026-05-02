@@ -1,46 +1,34 @@
----
-layout: default
-title: 'Wiki: ペタスケールのコネクトミクスが依然として早期に停止する理由'
-description: ペタスケール、ナノスケール、および同一脳コネクトミクスが、保存反応速度論、逐次ブリッジング、校正範囲、および動的過小決定によって制限されたままである理由の一次文献監査。
-article_type: ウィキ
-subtitle: 解像度とデータ量は確かに進歩していますが、保存性、完全性、ダイナミクスの上限が消えるわけではありません。
-author: マインドアップロード研究プロジェクト
-last_updated: '2026-04-04'
-note: 技術/自然科学のみ
-audience: ペタスケール コネクトミクスが構造的には真の進歩であるにもかかわらず、WBE への完全なルートではない理由を知りたい読者
-reading_time: 12～18分
-page_intro: このページでは、まだサイト全体に散らばっていた 1 つの技術的批判を集中させています。それは、ペタスケール コネクトミクスと同一脳構造機能パイプラインが依然として科学的に重要であるにもかかわらず、ネイティブ状態完全またはダイナミクス完全な
-  WBE 主張のかなり前に止まっている理由です。
-accuracy_note: このページの天井は、何が直接保存されるか、何が逐次的にのみ再構築されるか、何がまだ選択的な校正を必要とするか、そして何が配線がわかっている場合でも動的に未決定のままであるかについて、一次文献からのサイトレベルの推論です。
-wiki_links:
-- label: 'Wiki: コネクトームだけでは不十分な理由'
-  url: /wiki/connectome-is-not-enough.html
-  description: 欠落状態変数とコネクトーム制約縮退に関するより広範なページ。
-- label: 'Wiki: 状態継続ブリッジ'
-  url: /wiki/state-continuity-bridge.html
-  description: 同じ脳または同じ被験者が自動的に同じ状態を意味しない理由の背景ルール。
-- label: 'Wiki: 測定スタックごとの可観測性とクレームの上限'
-  url: /wiki/measurement-stack-and-claim-ceiling.html
-  description: ボリューム EM と同一脳機能コネクトミクスを、より大きなスタックごとの天井テーブル内に配置します。
-recommended_pages:
-- label: WBE101
-  url: /wbe_101.html
-- label: 検証
-  url: /verification.html
-- label: 視点
-  url: /perspective.html
----
-<main class="main-container">
-<article class="content-column">
+# Wiki: ペタスケールのコネクトミクスが依然として早期に停止する理由
 
-<div class="abstract-box">
+> 解像度とデータ量は確かに進歩していますが、保存性、完全性、ダイナミクスの上限が消えるわけではありません。
+>
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
+
+- Updated: 2026-04-04 / Role: 技術/自然科学のみ
+
+## このページの役割
+このページでは、まだサイト全体に散らばっていた 1 つの技術的批判を集中させています。それは、ペタスケール コネクトミクスと同一脳構造機能パイプラインが依然として科学的に重要であるにもかかわらず、ネイティブ状態完全またはダイナミクス完全な WBE 主張のかなり前に止まっている理由です。
+
+## 正確性に関する注記
+このページの天井は、何が直接保存されるか、何が逐次的にのみ再構築されるか、何がまだ選択的な校正を必要とするか、そして何が配線がわかっている場合でも動的に未決定のままであるかについて、一次文献からのサイトレベルの推論です。
+
+## 公開ページへ戻る
+- [WBE101](https://mind-upload.com/wbe_101.html)
+- [検証](https://mind-upload.com/verification.html)
+- [視点](https://mind-upload.com/perspective.html)
+
+## 関連 Wiki ページ
+- [Wiki: コネクトームだけでは不十分な理由](https://github.com/yasufumi-nakata/mind-upload/wiki/connectome-is-not-enough) - 欠落状態変数とコネクトーム制約縮退に関するより広範なページ。
+- [Wiki: 状態継続ブリッジ](https://github.com/yasufumi-nakata/mind-upload/wiki/state-continuity-bridge) - 同じ脳または同じ被験者が自動的に同じ状態を意味しない理由の背景ルール。
+- [Wiki: 測定スタックごとの可観測性とクレームの上限](https://github.com/yasufumi-nakata/mind-upload/wiki/measurement-stack-and-claim-ceiling) - ボリューム EM と同一脳機能コネクトミクスを、より大きなスタックごとの天井テーブル内に配置します。
+
+---
+
 <h2>最短の結論</h2>
 <p>
 ペタスケール コネクトミクスは、<strong> 構造足場の主要な成果 </strong> です。 <strong> ネイティブのライブ状態が保存されたと言うライセンスはまだありません</strong>、<strong>同じ脳は同じ状態を意味します</strong>、<strong>再構成はデフォルトでグローバルに完了します</strong>、または<strong>配線のみでダイナミクスを修正する</strong>。一次文献は 4 つの個別の停止ルールをサポートしています:<strong> 保存動力学 </strong>、<strong> シーケンシャル ブリッジ スコープ </strong>、<strong> 校正 / 完全性負荷 </strong>、<strong> 配線を超えた動的過少決定 </strong>。
 </p>
-</div>
 
-<div class="key-points">
 <h4>早めに止める4つの壁</h4>
 <ul>
 <li><strong>保存壁:</strong> 固定は、独自の時間経過と形状効果による介入です。</li>
@@ -48,25 +36,19 @@ recommended_pages:
 <li><strong>完全性の壁:</strong> ペタスケールの取得には、依然としてセクション損失、マージ エラー、誤検知、および選択的校正が存在します。</li>
 <li><strong>ダイナミクスの壁:</strong> 既知のコネクトームであっても、生物物理学的パラメーターが不確実なままでは、リカレントダイナミクスを一意に決定することはできません。</li>
 </ul>
-</div>
 
-<div class="note-box">
 <strong>このページが追加された理由</strong>
 <p>
 このサイトは、<strong>connectome-complete</strong> が <strong>emulation-complete</strong> ではないことをすでに警告しています。まだ拡散しすぎていたのは、現在の主力コネクトミクスに対するより狭い技術的批判でした。問題は、注意喚起の文言が不足していることではなく、ペタスケール画像化が</strong>に続いた後も工学と自然科学の限界が残る<strong>を正確に示す集中的かつ定量的なページが1ページ欠如していることであった。このページはそのギャップを埋めます。
 </p>
-</div>
 
-<div class="note-box">
 <strong>このページで実行できないこと</strong>
 <p>
 このページは、コネクトミクスが重要ではないということを主張するものではありません。それは、より限定的でよりテスト可能なものを主張しています: <strong> コネクトミクスが直接購入するもの </strong>、<strong> まだ購入していないもの </strong>、および <strong> より強力な WBE 言語が許可される前に追加の開示が必要なもの </strong>。
 </p>
-</div>
 
-<section class="section" id="four-walls">
-<h2 class="section-title">現在の4つの壁</h2>
-<table class="data-table">
+<h2>現在の4つの壁</h2>
+<table>
 <thead>
 <tr>
 <th>壁</th>
@@ -97,26 +79,21 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="preservation-wall">
-<h2 class="section-title">1。保存は介入であり、透過的な引き継ぎではない</h2>
+<h2>1。保存は介入であり、透過的な引き継ぎではない</h2>
 <p>
 最初の技術的な壁は再構築の上流にあります。 <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Luら。 (2023)</a> は固定をニュートラル ストレージとして扱いません。彼らは、従来の固定が細胞外空間の損失を引き起こすことを示し、高圧凍結によって細胞外空間が保存されるのは、約<strong>200μm</strong>よりも薄いサンプルのみであると報告している。これは、<strong>ナノスケール画質</strong>から<strong>ネイティブ状態の完全性</strong>へのショートカットをブロックするにはすでに十分です。
 </p>
 <p>
 <a href="https://doi.org/10.1038/s41598-018-36112-w" target="_blank">Huebinger et al. (2018)</a>は同じ箇所を別の面から研ぎます。彼らは、培養細胞において、サイトゾルタンパク質のホルムアルデヒド固定には <strong> 1 時間 </strong> を超えるのに対し、グルタルアルデヒドベースの固定は <strong> 4 分 </strong> よりも速いことを報告しており、テストされた最速の化学固定であっても、瞬間的なスナップショットとしてではなく、依然として数分のタイムスケールで作用すると明確に結論付けています。このサイトでは、これは、<strong>not</strong> の高解像度ポストフィックス再構成によって、高速または脆弱な生存パターンが再構成されたオブジェクトへの移行後に生き残ったことを自動的に証明することを意味します。
 </p>
-<div class="note-box">
+
 <strong>ここに安全な読書が追加されました</strong>
 <p>
 コネクトミクスの結果が<strong>保存ルート</strong>、<strong>ライブから固定までのタイミング</strong>、<strong>厚さ制限保存天井</strong>を明らかにしていない場合、このサイトは<strong>ネイティブ状態完全読み出し</strong>ではなく、<strong>固定後の構造足場</strong>で主張を維持する。
 </p>
-</div>
-</section>
 
-<section class="section" id="bridge-wall">
-<h2 class="section-title">2。 Same-Brain ワークフローは引き続きシーケンシャル ローカル ブリッジ</h2>
+<h2>2。 Same-Brain ワークフローは引き続きシーケンシャル ローカル ブリッジ</h2>
 <p>
 2 番目の壁は橋そのものです。 <a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">ボッシュら(2022)</a> は、ブリッジ問題を可視化しておかないと読み飛ばされかねない種類の結果をまさに提示しています。生体内二光子生理学からシンクロトロンマイクロトモグラフィー、そしてターゲットを絞った連続ブロック面 EM までの相関パイプラインです。成果は本物ですが、教訓も本物です。それら自体の記述は、1 つの同時状態キャプチャではなく、多段階、ランドマークベース、およびサブボリュームを対象としています。
 </p>
@@ -126,23 +103,20 @@ recommended_pages:
 <p>
 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICronSコンソーシアムほか(2025)</a>は、<strong>75,000個のニューロン</strong>の生体内カルシウムイメージングを、<strong>200,000個を超える細胞</strong>および<strong>0億のシナプス</strong>を使用した後のEM再構成に結び付けることで、さらに橋渡しをします。しかし、この論文では、最初に機能的画像化、次に固定、組織学、切片化、画像化、自動再構成、校正という一連の順序も可視化しています。 EM ブランチだけでも、<strong>26、652</strong> の画像化セクション、<strong>5</strong> のカスタマイズされた autoTEM、約 <strong>6 か月 </strong> の取得、および約 <strong>2 Pb</strong> の生データが必要でした。このサイトでは、同時全状態キャプチャではなく、<strong> シーケンシャル同一脳ローカル スキャフォールド </strong> のままです。
 </p>
-<div class="note-box">
+
 <strong>ブリッジ言語が重要な理由</strong>
 <p>
 フレーズ <strong>same-brain</strong> は標本のリンクをサポートできます。それ自体では <strong>same-state</strong> をサポートしません。ルートにライブ測定、その後の固定、セクショニング、アライメント、およびターゲットを絞った対応が含まれると、引数は 1 つの潜在状態サンプルとしてではなく、独自の故障モードを持つブリッジとして読み取られる必要があります。
 </p>
-</div>
-</section>
 
-<section class="section" id="completeness-wall">
-<h2 class="section-title">3。ペタスケールは精査完了</h2>を意味するものではありません
+<h2>3。ペタスケールは精査完了</h2>を意味するものではありません
 <p>
 第三の壁は再構築の完全性です。 <a href="https://doi.org/10.1126/science.adk4858" target="_blank">Shapson-Coe et al. (2024)</a> は、データセットが <strong>large であり、精査が不完全な </strong> であることを明示し、分析と校正のための公開ツールを提供しています。また、凝集マージ エラーとシナプスの誤検知が残るため、パス クエリには <strong> 手動検証 </strong> が必要であると警告しています。それはその論文に対する批判ではありません。これは、ペタスケールの自動化が現在どのようなものであるかを正確に解釈したものです。
 </p>
 <p>
 同じ教訓が他の主力リソースにも現れています。 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICronSコンソーシアムほか(2025)</a> は、この規模のデータセットの完全なセグメンテーションには依然として <strong> 膨大な量の校正が必要であると書いています</strong>。 <a href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank">ドーケンワルドら。 (2024) </a> は、成虫のハエの全脳再構成には約 <strong>33 人年 </strong> の手動校正が必要であると推定しており、リソースは将来の修正に備えて <strong> オープンのままであると明示的に述べています </strong>。したがって、安全な読み取り値は、<strong>petascale が完全な </strong> を意味するのではなく、<strong>petascale は、隠れた </strong> ではなく露出された残りの補正負担を伴う新しい動作範囲を意味します。
 </p>
-<table class="data-table">
+<table>
 <thead>
 <tr>
 <th>代表リソース</th>
@@ -168,30 +142,25 @@ recommended_pages:
 </tr>
 </tbody>
 </table>
-</section>
 
-<section class="section" id="dynamics-wall">
-<h2 class="section-title">4。既知のコネクトームでもダイナミクス</h2>を一意に修正できるわけではありません
+<h2>4。既知のコネクトームでもダイナミクス</h2>を一意に修正できるわけではありません
 <p>
 4 番目の壁は、ピクセルの欠落ではなく、動的制約の欠落に関するものです。 <a href="https://doi.org/10.1038/s41586-024-07939-3" target="_blank">Lappalainen et al. (2024) </a> は強力な肯定的な結果を示しました。コネクトーム制約とタスク最適化モデルは、ハエの視覚系全体にわたる豊富な活動を予測できます。しかし、彼ら自身の分析では、<strong>タスク最適化</strong>と<strong>詳細なコネクトーム制約</strong>の両方が重要であり、<strong>細胞型接続性</strong>のみを持つモデルでは神経活動の予測が不十分であることも示しています。彼らはまた、その縮小モデルでは電気シナプス、非線形化学シナプス、および神経調節が省略されていると明言しています。
 </p>
 <p>
 <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">ベイラン＆amp; Litwin-Kumar (2025)</a> は理論的に上限を明示しています。2 つのリカレント ネットワークが <strong> 同じシナプスの重み </strong> を共有している場合でも、ニューロンおよびシナプスの生物物理学的パラメーターの不確実性により、ダイナミクスが非常に非固有なままになる可能性があります。アクティビティ記録の小さなサブセットはその縮退を軽減できますが、コネクトームだけでは正しいダイナミクスを実質的に制約しないことがよくあります。このサイトでは、ペタスケール配線は、自動 <strong> ダイナミクス完全回復 </strong> ではなく、仮説空間 </strong> 上の強力な <strong> 制約として解釈するのが最適であることを意味します。
 </p>
-<div class="note-box">
+
 <strong>ここに安全な読書が追加されました</strong>
 <p>
 コネクトーム論文にアクティビティ モデルも含まれている場合、著者らが残りの適合自由度、省略されたメカニズム、検証クラス、および存続する同値族も開示しない限り、ここでの結果はせいぜい <strong> タスク境界条件付き予測子 </strong> に昇格します。
 </p>
-</div>
-</section>
 
-<section class="section" id="operating-rule">
-<h2 class="section-title">ペタスケール コネクトミクス クレームの運用ルール</h2>
+<h2>ペタスケール コネクトミクス クレームの運用ルール</h2>
 <p>
 このサイトで論文が <strong>petascale</strong>、<strong>nanoscale</strong>、<strong>same-brain</strong>、または <strong>digital Twin</strong> などの言葉で紹介されると、次の 4 つの質問が最初に表示されます。
 </p>
-<table class="data-table">
+<table>
 <thead>
 <tr>
 <th>質問</th>
@@ -218,12 +187,10 @@ recommended_pages:
 </tbody>
 </table>
 <p>
-運用上、これは、このページが <a href="../verification.html#destructive-structure-card">Verification: Destructive-Structure Route Card</a>、<a href="../verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a>、および <a href="../wiki/connectome-is-not-enough.html">Wiki: Why A Connectome Is Not Enough</a> 内の <a href="../wiki/connectome-is-not-enough.html#conditional-predictor-route-card"> 条件モデル ルート カード </a> と一緒に読まれることを意図していることを意味します。
+運用上、これは、このページが <a href="https://mind-upload.com/verification.html#destructive-structure-card">Verification: Destructive-Structure Route Card</a>、<a href="https://mind-upload.com/verification.html#state-continuity-bridge-card">Verification: State-Continuity Bridge Card</a>、および <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/../wiki/connectome-is-not-enough">Wiki: Why A Connectome Is Not Enough</a> 内の <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/../wiki/connectome-is-not-enough#conditional-predictor-route-card"> 条件モデル ルート カード </a> と一緒に読まれることを意図していることを意味します。
 </p>
-</section>
 
-<section class="section" id="references">
-<h2 class="section-title">参考資料</h2>
+<h2>参考資料</h2>
 <ul>
 <li>ベイラン、M.、＆amp;リトウィン・クマール、A. (2025)。 <em>コネクトームに制約されたリカレント ネットワークにおける神経活動の予測</em>。 <em>Nature Neuroscience</em>、28、2561-2574。 <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
 <li>Bosch, C.、Ackels, T.、Pacureanu, A. 他（2022年）。 <em>相関生体内生理学、シンクロトロンマイクロトモグラフィーおよび体積電子顕微鏡による脳組織の機能的かつマルチスケール3D構造研究</em>。 <em>Nature Communications</em>、13、2923。<a href="https://doi.org/10.1038/s41467-022-30199-6" target="_blank">doi:10.1038/s41467-022-30199-6</a></li>
@@ -234,7 +201,3 @@ recommended_pages:
 <li>MICrONS コンソーシアム、Bae、J.A.、Collman、F. 他(2025年)。 <em>マウス視覚野の複数の領域にわたる機能的コネクトミクス</em>。 <em>ネイチャー</em>、640、435-447。 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
 <li>Shapson-Coe, A.、Januszewski, M.、Berger, D.R. 他（2024年）。 <em>ナノスケール解像度</em>で再構成されたヒト大脳皮質のペタボクセル断片。 <em>Science</em>、384、eadk4858。 <a href="https://doi.org/10.1126/science.adk4858" target="_blank">doi:10.1126/science.adk4858</a></li>
 </ul>
-</section>
-
-</article>
-</main>

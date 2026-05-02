@@ -1,36 +1,36 @@
-# Automation
+# 自動化
 
-This folder contains an automated flow that fetches open GitHub issues, asks an AI CLI to resolve them, commits changes, posts a fix proposal/change summary comment, and closes the issues.
+このフォルダーには、GitHub の未解決 Issue を取得し、AI CLI に解決を依頼し、変更をコミットし、修正提案または変更概要コメントを投稿して、Issue をクローズする自動フローが含まれています。
 
-## Files
-- `resolve-issues.sh`: main automation script
-- `server.js`: HTTP trigger for running the script
-- `.env.example`: configuration template (copy to `.env`)
-- `logs/`: runtime logs (ignored by git)
-- `EegflowResolver.app/`: optional app bundle (ignored by git)
-- `swarm150_site/out/worker_suggestions.jsonl`: aggregated output from the 150-worker run (`worker*.md` per-worker files were retired as redundant)
+## ファイル
+- `resolve-issues.sh`: メイン自動化スクリプト
+- `server.js`: スクリプトを実行するための HTTP トリガー
+- `.env.example`: 構成テンプレート (`.env` にコピー)
+- `logs/`: 実行時ログ (git によって無視されます)
+- `EegflowResolver.app/`: オプションのアプリバンドル (git によって無視されます)
+- `swarm150_site/out/worker_suggestions.jsonl`: 150 ワーカーの実行からの集約出力 (`worker*.md` ワーカーごとのファイルは冗長として廃止されました)
 
-## Setup
-1. Copy `.env.example` to `.env`.
-2. Optional: set `AI_CMD` to your local AI runner command that reads the prompt from STDIN (e.g. `your-ai-cli --non-interactive`). If omitted, `resolve-issues.sh` uses `codex exec --full-auto -`.
-3. Optionally set `AI_WORKDIR` if the AI tool must run outside the repo root.
-4. Ensure `gh` and `jq` are installed and authenticated.
-5. Keep execution-environment values only in local `.env` (git-ignored), not in tracked files.
-6. Optional safety settings in `.env`:
-   - `RUN_TIMEOUT_SECONDS` / `RUN_TIMEOUT_GRACE_SECONDS` to prevent hung runs.
-   - `QUEUE_ON_BUSY=true` to queue one follow-up run instead of skipping when a run is already in progress.
-   - `AUTO_STASH_DIRTY=true` to stash pre-existing changes once at startup and restore them at the end.
-   - `SCHEDULE_MINUTE=0` to run once per hour at minute 0 (`server.js`).
+## セットアップ
+1. `.env.example` を `.env` にコピーします。
+2. オプション: `AI_CMD` を、STDIN からプロンプトを読み取るローカル AI ランナー コマンド (例: `your-ai-cli --non-interactive`) に設定します。省略した場合、`resolve-issues.sh` は `codex exec --full-auto -` を使用します。
+3. AI ツールをリポジトリ ルートの外部で実行する必要がある場合は、オプションで `AI_WORKDIR` を設定します。
+4. `gh` と `jq` がインストールされ、認証されていることを確認します。
+5. 実行環境の値は、追跡対象ファイルではなく、ローカル `.env` (git 無視) にのみ保持します。
+6. `.env` のオプションの安全設定:
+   - `RUN_TIMEOUT_SECONDS` / `RUN_TIMEOUT_GRACE_SECONDS` によりハングした実行を防止します。
+   - `QUEUE_ON_BUSY=true` は、実行がすでに進行中の場合、スキップする代わりに 1 つのフォローアップ実行をキューに入れます。
+   - `AUTO_STASH_DIRTY=true` は、既存の変更を起動時に一度退避し、最後に復元します。
+   - `SCHEDULE_MINUTE=0` は 1 時間に 1 回、0 分に実行されます (`server.js`)。
 
-The script sets `AI_PROMPT_FILE` to the prompt file path if your command prefers reading from a file.
-By default the script stops if there are tracked, uncommitted changes. Set `ALLOW_DIRTY=true` to bypass that check. Pre-existing untracked files are excluded from auto-commits.
+コマンドがファイルからの読み取りを優先する場合、スクリプトは `AI_PROMPT_FILE` をプロンプト ファイル パスに設定します。
+デフォルトでは、追跡されたコミットされていない変更がある場合、スクリプトは停止します。このチェックをバイパスするには、`ALLOW_DIRTY=true` を設定します。既存の追跡されていないファイルは自動コミットから除外されます。
 
-## Run
-- Dry run:
+## 実行
+- ドライラン:
   - `bash resolve-issues.sh --dry-run`
-- Normal run:
+- 通常の実行:
   - `bash resolve-issues.sh`
-- Start the server:
+- サーバーを起動:
   - `node server.js`
-  - Call `http://localhost:3000/resolve`
-  - The server also runs automatically once per hour.
+  - `http://localhost:3000/resolve` を呼び出す
+  - サーバーも 1 時間に 1 回自動的に実行されます。

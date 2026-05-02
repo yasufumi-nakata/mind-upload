@@ -1,747 +1,700 @@
 ---
 layout: default
-title: 'Wiki: From observation to estimation'
-description: We organize forward problems, inverse problems, ESI, DCM, SCM, and causal
-  equivalence classes, including observability budget, identifiability, bridge/composition
-  validity, and external validation.
-article_type: Wiki
-subtitle: Being consistent with observation, understanding internal states, and understanding
-  cause and effect are different things.
-author: Mind Uploading Research Project
+title: 'Wiki: 観察から推定へ'
+description: 順問題、逆問題、ESI、DCM、SCM、および可観測性バジェット、識別可能性、ブリッジ/構成の妥当性、外部検証を含む因果等価性クラスを整理します。
+article_type: ウィキ
+subtitle: 観察に一貫性があること、内部状態を理解すること、原因と結果を理解することは別のことです。
+author: マインドアップロード研究プロジェクト
 last_updated: '2026-03-31'
-note: Technical / natural science only
-audience: People who want to organize inverse problems and the limitations of causal
-  models based on primary literature
-reading_time: 12-18 minutes
-page_intro: This page is a wiki that organizes where to stop making claims and what
-  to add to make them even stronger when estimating brain states and causal structures
-  from observational signals such as EEG. Connect forward problems, inverse problems,
-  ESI, DCM, SCM, and causal equivalence classes in the order of ``observation → estimation
-  → intervention → validation.''
-accuracy_note: This is not a fixed recipe for which method to use. This page first
-  fixes audit items that cannot be avoided no matter what method you use.
+note: 技術/自然科学のみ
+audience: 一次文献に基づいて逆問題や因果モデルの限界を整理したい人
+reading_time: 12～18分
+page_intro: このページは、脳波などの観測信号から脳の状態や因果構造を推定する際に、どこで主張を止めるべきか、さらに主張を強めるために何を付け加えるべきかを整理したWikiです。順問題、逆問題、ESI、DCM、SCM、因果等価クラスを「観察→推定→介入→検証」の順につなぎます。
+accuracy_note: これは、どの方法を使用するかについての固定レシピではありません。このページでは、どのような方法を使用しても避けられない監査項目をまず修正します。
 page_highlights:
-- Inverse problems are not evaluated solely by the solver name, but are also audited
-  for geometry, conductivity, uncertainty, and external validation.
-- For ESI, cross-solver / cross-parameter disagreement is itself evidence about uncertainty,
-  but probabilistic, debiased, and extent-aware inverse families still expose different
-  uncertainty objects rather than one interchangeable answer.
-- This page now separates observability, structural identifiability, and practical
-  identifiability so richer measurements are not overread as uniqueness.
-- "Different ambiguity classes need different remedies: symmetry-breaking observables, regime design, model-discrepancy stress tests, and task-interaction perturbations are not interchangeable."
-- Same-session multimodal acquisition, same-brain sequential linkage, and connectome
-  constraints do not collapse the candidate set by themselves; fusion, bridge, and
-  conditional-model audits remain separate gates.
-- DCM is a candidate model comparison rather than an automatic detector, and SCM is
-  a language that facilitates describing interventions.
-- Effective-connectivity claims now use a route card that names candidate model space,
-  observed-subsystem closure / latent-confound audit, node-definition policy, processing
-  / first-level design policy, sampling / transformation sensitivity, observation
-  assumptions, validation, reliability, and abstention before the claim ceiling
-  is raised.
-- The key is to what extent we can narrow down the causal equivalence classes that
-  remain based on observational data alone through intervention and calibration.
+- 逆問題はソルバー名だけで評価されるのではなく、形状、導電率、不確実性、外部検証についても監査されます。
+- ESI の場合、クロスソルバー/クロスパラメータの不一致自体が不確実性に関する証拠ですが、確率的でバイアスが軽減され、範囲を意識した逆族は、依然として 1 つの交換可能な答えではなく、異なる不確実性オブジェクトを明らかにします。
+- このページでは、観測可能性、構造的識別可能性、および実用的な識別可能性を分離することで、より豊富な測定値が一意性として読み取られないようにすることができます。
+- 曖昧性クラスが異なれば、異なる救済策が必要になります。対称性の破れたオブザーバブル、レジーム設計、モデル不一致ストレス テスト、およびタスク相互作用の摂動は互換性がありません。
+- 同一セッションのマルチモーダル取得、同一脳の逐次リンケージ、およびコネクトーム制約は、候補セット自体を崩壊させません。フュージョン、ブリッジ、および条件付きモデルの監査は依然として別個のゲートです。
+- DCM は自動検出器ではなく候補モデルの比較であり、SCM は介入の記述を容易にする言語です。
+- 有効接続性の主張では、候補モデル空間、観察されたサブシステムの閉包/潜在交絡監査、ノード定義ポリシー、処理/第 1 レベルの設計ポリシー、サンプリング/変換の感度、観察の仮定、検証、信頼性、主張の上限が引き上げられる前の棄権を指定するルート
+  カードが使用されるようになりました。
+- 観察データのみに基づいて残る因果的等価クラスを、介入やキャリブレーションによってどこまで絞り込めるかが鍵となる。
 known_points:
-- In principle, it is difficult to uniquely determine brain activity from scalp EEG,
-  and estimation requires assumptions.
-- High-density EEG, individualized MRI, FEM/BEM, and empirical Bayesian estimation
-  can improve conditions, but alone do not guarantee unique recovery.
-- More direct observables do not by themselves guarantee unique recovery; degeneracy
-  can persist unless candidate space, recorded subset, and experiment design are
-  exposed.
-- Ambiguity is not one scalar; symmetry / reparameterization, narrow-regime degeneracy,
-  omitted-mechanism discrepancy, and representation ambiguity require different
-  fixes.
-- Simultaneous multimodal acquisition can still retain shared and modality-specific
-  structure, so a richer stack does not by itself define one validated latent target.
-- For ESI, method/package/parameter choice can materially move the estimated source,
-  and probabilistic / debiased / extent-aware inverse families do not report the same
-  claim object by default.
-- In effective connectivity, hidden nodes/common drives, node-definition choices,
-  and sampling or observation transforms are separate failure modes; a winning model
-  comparison does not erase them.
-- Same-brain or same-subject linkage can still be a sequential bridge rather than
-  same-state evidence.
-- The causal structure cannot be determined by observational fit alone; a set of candidate
-  models and an intervention design are required.
-- Whole-brain or faster DCM improves tractability, but does not erase candidate-model
-  dependence, processing-policy sensitivity, or observation-model assumptions.
+- 頭皮脳波から脳活動を一意に求めることは原理的に難しく、推定には仮定が必要です。
+- 高密度脳波検査、個別化 MRI、FEM/BEM、および経験的ベイズ推定は状態を改善する可能性がありますが、それだけでは独自の回復を保証するものではありません。
+- より直接的に観測できるもの自体は、一意の回復を保証するものではありません。候補空間、記録されたサブセット、および実験計画が公開されない限り、縮退は持続する可能性があります。
+- 曖昧さは 1 つのスカラーではありません。対称性/再パラメータ化、狭いレジームの縮退、省略されたメカニズムの不一致、および表現の曖昧さには、さまざまな修正が必要です。
+- 同時マルチモーダル取得でも、共有されたモダリティ固有の構造を保持できるため、より豊富なスタック自体が 1 つの検証済みの潜在ターゲットを定義することはありません。
+- ESI の場合、メソッド/パッケージ/パラメーターの選択により、推定ソースが大幅に変更される可能性があり、確率的 / 偏り解消 / エクステントを意識した逆ファミリは、デフォルトでは同じクレーム オブジェクトを報告しません。
+- 効果的な接続では、隠れノード/共通ドライブ、ノード定義の選択、およびサンプリングまたは観測変換が別個の障害モードになります。勝ったモデルを比較しても、それらは消去されません。
+- 同じ脳または同じ対象のつながりは、依然として同じ状態の証拠ではなく、連続的な橋渡しとなる可能性があります。
+- 因果構造は観察上の適合だけでは決定できません。一連の候補モデルと介入設計が必要です。
+- 全脳またはより高速な DCM は扱いやすさを向上させますが、候補モデルの依存性、処理ポリシーの感度、または観測モデルの仮定は消去されません。
 unknown_points:
-- It remains unclear which measurement/modeling combination is most effective for
-  validating WBE.
-- Research is currently underway to determine how detailed the causal structure and
-  state variables can be stably restored using non-invasive measurements alone.
-- How much same-session multimodal fusion, sequential same-brain linkage, and connectome-constrained
-  prediction can jointly narrow the candidate set without recreating hidden-state
-  ambiguity remains unresolved.
-- Which external validation ladders will be pinned to the site-wide benchmark is still
-  being worked out.
+- WBE を検証するためにどの測定とモデリングの組み合わせが最も効果的であるかは依然として不明です。
+- 非侵襲的な測定のみを使用して、因果構造と状態変数をどの程度詳細に安定して復元できるかを判断するための研究が現在進行中です。
+- 同一セッションのマルチモーダル融合、逐次同一脳リンケージ、およびコネクトーム制約付き予測が、隠れ状態のあいまいさを再作成することなく、どの程度共同して候補セットを絞り込めるかは未解決のままです。
+- どの外部検証ラダーをサイト全体のベンチマークに固定するかはまだ検討中です。
 wiki_links:
-- label: 'Wiki: From measurement to modeling'
+- label: 'Wiki: 測定からモデリングまで'
   url: /wiki/measurement-and-modeling-terms.html
-  description: You can return to the overall map of measurement, organization, estimation,
-    and verification.
-- label: 'Wiki: EEG pretreatment and QC'
+  description: 測定、整理、推定、検証の全体マップに戻ることができます。
+- label: 'Wiki: EEG の前処理と QC'
   url: /wiki/eeg-preprocessing-and-qc.html
-  description: In the first stage of estimation, we compensate for what changes the
-    results.
-- label: 'Wiki: Uncertainty, proofreading, abstaining'
+  description: 推定の最初の段階では、結果の変化を補正します。
+- label: 'Wiki: 不確実性、校正、棄権'
   url: /wiki/uncertainty-confidence-and-abstention.html
-  description: Instead of point estimation, we supplement the width and how to leave
-    conditions for abstention.
-- label: 'Wiki: Observability and claim ceiling by measurement stack'
+  description: 得点予想ではなく、棄権条件の残し方や幅を補います。
+- label: 'Wiki: 測定スタックごとの可観測性とクレーム上限'
   url: /wiki/measurement-stack-and-claim-ceiling.html
-  description: Use this when you first need to separate direct observables from latent
-    state families before asking identifiability questions.
-- label: 'Wiki: Multimodal integration basics'
+  description: 識別可能性について質問する前に、まず直接観測可能量を潜在状態ファミリーから分離する必要がある場合に、これを使用します。
+- label: 'Wiki: マルチモーダル統合の基本'
   url: /wiki/multimodal-integration-basics.html
-  description: Use this when richer stacks could otherwise be misread as self-validating
-    fusion.
-- label: 'Wiki: State-Continuity Bridge'
+  description: これを使用しないと、よりリッチなスタックが自己検証型フュージョンとして誤って読み取られる可能性がある場合に使用します。
+- label: 'Wiki: 状態継続ブリッジ'
   url: /wiki/state-continuity-bridge.html
-  description: Use this when same-subject or same-brain linkage is sequential across
-    live, fixed, or cross-day stages.
-- label: 'Wiki: Counterfactuals/Interventions/Perturbations'
+  description: これは、ライブ、固定、または日を跨ぐステージにわたって、同じ主題または同じ脳の連携が連続している場合に使用します。
+- label: 'Wiki: 反事実/介入/摂動'
   url: /wiki/counterfactual-and-perturbation-verification.html
-  description: It supplements the conditions for proceeding from observational adaptation
-    to intervention validation.
+  description: これは、観察による適応から介入の検証に進むための条件を補足します。
 recommended_pages:
-- label: Introduction to EEG
+- label: 脳波検査の概要
   url: /eeg_101.html
-- label: Verification platform
+- label: 検証プラットフォーム
   url: /verification.html
-- label: technology roadmap
+- label: 技術ロードマップ
   url: /tech_roadmap.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Conclusion</h2>
+<h2>結論</h2>
 <p>
-Even if a model that matches the observed signal is found, it cannot be said that the internal state has been uniquely determined or that the causal structure has been identified. Therefore, on this site, we now audit six points, <strong>geometry</strong>, <strong>observability budget</strong>, <strong>uncertainty</strong>, <strong>candidate model set</strong>, <strong>bridge / composition validity</strong>, and <strong>external validation</strong>, before looking at the solver name or theory name.
+たとえ観測信号と一致するモデルが見つかったとしても、内部状態が一意に決定したり、因果構造が特定されたとは言えません。そこで当サイトでは、ソルバー名や理論名を見る前に、<strong>geometry</strong>、<strong>observability Budget</strong>、<strong>uncertainty</strong>、<strong>candidate model set</strong>、<strong>bridge/composition validity</strong>、<strong>external validation</strong>の6点を監査するようになりました。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Scope of this page</strong>
+<strong>このページの範囲</strong>
 <p>
-I am not going to deal with philosophy or legal systems here. We will organize the boundaries between observation, estimation, and causal claims based on primary literature from only the aspects of technology and natural science.
+ここでは哲学や法制度について扱うつもりはありません。技術と自然科学の側面のみから、一次文献に基づいて観察、推定、因果関係の主張の境界を整理します。
 </p>
 </div>
 
 <section class="section" id="audit-gates">
-<h2 class="section-title">Six audit gates to be fixed first</h2>
+<h2 class="section-title">S6 つの監査ゲートが最初に修正される</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Audit gate</th>
-<th>What I want at least</th>
-<th>Claim that it stops when there is not enough</th>
+<th>監査ゲート</th>
+<th>最低限欲しいもの</th>
+<th>足りないときは止まると主張</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Gate 1: Geometry and forward model</strong></td>
-<td>Electrode coordinates, head model, conductivity assumption, presence or absence of individual MRI, sensitivity analysis. </td>
-<td>I cannot make strong anatomical source claims. </td>
+<td><strong>ゲート 1: ジオメトリおよびフォワード モデル</strong></td>
+<td>電極座標、頭部モデル、導電率仮定、個別MRIの有無、感度解析。 </td>
+<td>I は、解剖学的ソースを強く主張することはできません。 </td>
 </tr>
 <tr>
-<td><strong>Gate 2: Observability budget</strong></td>
-<td>Named measurement stack, direct observable, what remained latent, and the strongest stack-specific ceiling. </td>
-<td>``More channels / modalities / same-brain registration'' cannot be rephrased as ``the target internal state was now directly seen.'' </td>
+<td><strong>ゲート 2: 可観測性バジェット</strong></td>
+<td>名前付き測定スタック、直接観察可能、潜在的に残ったもの、およびスタック固有の最強の天井。 </td>
+<td>「`More channels / modalities / same-brain registration'' cannot be rephrased as `」「ターゲットの内部状態を直接見ることができるようになりました。」</td>
 </tr>
 <tr>
-<td><strong>Gate 3: Visualizing uncertainty</strong></td>
-<td>Posterior distribution, confidence interval, bootstrap/ensemble width, or solver/preprocessing sensitivity analysis. </td>
-<td>It is not possible to write it as the only solution using only point estimation. </td>
+<td><strong>ゲート 3: 不確実性の視覚化</strong></td>
+<td>事後分布、信頼区間、ブートストラップ/アンサンブル幅、またはソルバー/前処理感度分析。 </td>
+<td>点推定のみを使用した唯一の解決策として記述することはできません。 </td>
 </tr>
 <tr>
-<td><strong>Gate 4: Specifying candidate model set</strong></td>
-<td>Compared model spaces, family comparisons, remaining equivalence classes, abstention conditions. </td>
-<td>Even if we use DCM or SCM, we cannot say that we have uniquely discovered cause and effect. </td>
+<td><strong>ゲート 4: 候補モデル セットの指定</strong></td>
+<td>モデル空間、ファミリー比較、残りの同値クラス、棄権条件を比較します。 </td>
+<td>DCMやSCMを使っても、因果関係を独自に発見したとは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Gate 5: Bridge / composition validity</strong></td>
-<td>Same-session relation, acquisition order, elapsed time, regime continuity, fusion model, shared-vs-specific disclosure, strongest-single-row gain, and bridge-validation rung. </td>
-<td>``same-subject cross-stack'' or ``same-brain sequential'' cannot be rephrased as fused ground truth or same-state evidence. </td>
+<td><strong>ゲート 5: ブリッジ/構成有効性</strong></td>
+<td>S同一セッション関係、取得順序、経過時間、レジーム連続性、融合モデル、共有対固有の開示、最強の単一行ゲイン、およびブリッジ検証ラング。 </td>
+<td>「`same-subject cross-stack'' or `「同一脳シーケンシャル」」は、融合されたグラウンドトゥルースまたは同一状態証拠として言い換えることはできません。 </td>
 </tr>
 <tr>
-<td><strong>Gate 6: External validation/intervention</strong></td>
-<td>Named validation classes such as simulation, phantom, simultaneous invasive recording, intracranial stimulation, postsurgical outcome, and held-out prediction of stimulus/lesion/task perturbations. </td>
-<td> Observed fit cannot be promoted to causal validity or generalization performance. </td>
+<td><strong>ゲート 6: 外部検証/介入</strong></td>
+<td>シミュレーション、ファントム、同時侵襲記録、頭蓋内刺激、術後結果、刺激/病変/タスクの摂動の保留予測などの名前付き検証クラス。 </td>
+<td> 観察された適合度を因果関係の妥当性や汎化パフォーマンスに昇格させることはできません。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="three-layers">
-<h2 class="section-title">Keep three layers separate: observability, structural identifiability, practical identifiability</h2>
+<h2 class="section-title"> 可観測性、構造的識別可能性、実用的な識別可能性の 3 つのレイヤーを分離する</h2>
 <p>
-One remaining weakness in inverse-problem discussions is to let <strong>"more measured signals"</strong> sound too close to <strong>"the internal state is now uniquely known"</strong>. The systems-identification literature does not support that shortcut. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> reviews that observability and structural identifiability are related but different questions, and <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> show that unknown inputs, states, and parameters often have to be analysed jointly rather than one at a time.
+逆問題の議論に残る弱点の 1 つは、<strong> の「より多くの測定信号」</strong> の音が <strong> の「内部状態が一意にわかっている」</strong> に近すぎることです。システム識別に関する文献では、そのショートカットはサポートされていません。 <a href="https://doi.org/10.1155/2019/8497093" target="_blank">Villaverde (2019)</a> は、可観測性と構造識別可能性は関連しているが異なる問題であるとレビューしており、<a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">Villaverde et al. (2019)</a> は、未知の入力、状態、パラメーターは、多くの場合、一度に 1 つずつではなく、一緒に分析する必要があることを示しています。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Layer</th>
-<th>Question</th>
-<th>What can still fail even if this layer looks good</th>
+<th>レイヤー</th>
+<th>質問</th>
+<th>この層がうまく見えてもまだ失敗する可能性があるもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Observability</strong></td>
-<td>Does the chosen output route contain information about the target state at all?</td>
-<td>You may still have multiple different internal states or parameter sets that generate the same observable pattern.</td>
+<td><strong>可観測性</strong></td>
+<td>選択された出力ルートにはターゲットの状態に関する情報が含まれていますか?</td>
+<td>同じ観察可能なパターンを生成する複数の異なる内部状態またはパラメータ セットが存在する可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Structural identifiability</strong></td>
-<td>Given the declared equations and ideal noise-free data, is the target uniquely recoverable up to named symmetries or reparameterizations?</td>
-<td>The real dataset may still be too short, too noisy, too sparse, or too weakly excited to recover that target in practice.</td>
+<td><strong>構造識別可能性</strong></td>
+<td>宣言された方程式とノイズのない理想的なデータが与えられた場合、ターゲットは名前付きの対称性または再パラメータ化まで一意に回復可能ですか?</td>
+<td>実際のターゲットを回復するには、実際のデータセットがまだ短すぎる、ノイズが多すぎる、まばらすぎる、または励起が弱すぎる可能性があります。</td>
 </tr>
 <tr>
-<td><strong>Practical identifiability</strong></td>
-<td>Under the actual finite data, SNR, sampling window, and perturbation design, does the compatible solution set become narrow enough to support the stated claim?</td>
-<td>A theoretically identifiable model can still remain numerically or experimentally degenerate.</td>
+<td><strong>実用的な識別性</strong></td>
+<td>実際の有限データ、SNR、サンプリング ウィンドウ、および摂動設計の下では、互換性のあるソリューション セットは、記載されている主張をサポートできるほど十分に狭くなりますか?</td>
+<td>A 理論的に識別可能なモデルは、数値的または実験的に縮退したままである可能性があります。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <div class="note-box">
-<strong>2026-03-20 deepening: similar outputs do not prove similar internal states</strong>
+<strong>2026-03-20 深化: 同様の出力は同様の内部状態を証明しない</strong>
 <p>
-This separation is not only a control-theory point. <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> showed that similar circuit activity can arise from disparate parameters, <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024)</a> showed that similar human activation patterns can still hide different macroscopic network states, and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that even connectome-constrained recurrent networks remain degenerate until additional recordings are supplied. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> then showed that practical identifiability depends on data-collection policy, not only on the fitting method. On this site, that means <strong>observability</strong> and <strong>identifiability</strong> are audited separately.
+この分離は、制御理論上の点だけではありません。 <a href="https://doi.org/10.1038/nn1352" target="_blank">プリンツら。 (2004) </a> は、同様の回路活動が異なるパラメータから発生する可能性があることを示しました。<a href="https://doi.org/10.1162/netn_a_00354" target="_blank">Rasero et al. (2024) </a> は、同様の人間の活性化パターンが依然として異なる巨視的ネットワーク状態を隠すことができることを示しました。 Litwin-Kumar (2025)</a> は、コネクトームに制約されたリカレント ネットワークであっても、追加の記録が提供されるまで縮退したままであることを示しました。 <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al.その後、(2025)</a> は、実際の識別可能性はフィッティング方法だけではなく、データ収集ポリシーに依存することを示しました。このサイトでは、<strong>observability</strong> と <strong>identifiability</strong> が個別に監査されることを意味します。
 </p>
 </div>
 
 <section class="section" id="ambiguity-classes">
-<h2 class="section-title">Name the ambiguity class before saying more data will help</h2>
+<h2 class="section-title">より多くのデータが役立つと言う前に、あいまいさのクラスに名前を付けてください</h2>
 <p>
-One remaining weakness was to describe all non-uniqueness as if it were one scalar problem of simply needing <strong>more data</strong>. The primary literature does not support that shortcut. <a href="https://doi.org/10.3390/sym12030469" target="_blank">Massonis &amp; Villaverde (2020)</a> showed that structural unidentifiability can come from <strong>symmetry</strong> and may require symmetry-breaking observables or reformulation. <a href="https://doi.org/10.1038/nn1352" target="_blank">Prinz et al. (2004)</a> and <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that different parameters can still generate near-equivalent dynamics even when connectivity is fixed. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that complementary experiments can mainly expose <strong>omitted mechanisms</strong> rather than identify the intended parameters. <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Langdon &amp; Engel (2025)</a> showed that preserving <strong>causal interactions among task variables</strong> can recover behaviorally relevant computations that correlation-only reductions miss. On this site, a stronger protocol therefore has to name <strong>which ambiguity class</strong> survives first.
+残りの 1 つの弱点は、すべての非一意性を、単に <strong>more data</strong> が必要であるという 1 つのスカラー問題であるかのように説明することでした。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.3390/sym12030469" target="_blank">マソニス＆amp; Villaverde (2020)</a> は、構造の特定不能性が <strong> 対称性 </strong> から生じる可能性があり、対称性を破る観測値または再定式化が必要になる可能性があることを示しました。 <a href="https://doi.org/10.1038/nn1352" target="_blank">プリンツら。 (2004)</a>と<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">ベイラン＆アンプ。 Litwin-Kumar (2025)</a> は、接続が固定されている場合でも、異なるパラメーターがほぼ同等のダイナミクスを生成できることを示しました。 <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">ホワイト他(2016) </a> は、相補的な実験により、意図したパラメーターを特定するのではなく、主に <strong> の省略されたメカニズム </strong> を明らかにできることを示しました。 <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Lラングドン&アンプ; Engel (2025)</a> は、タスク変数 </strong> 間の <strong> 因果的相互作用を保存すると、相関のみの削減では見逃した行動的に関連する計算を回復できることを示しました。したがって、このサイトでは、より強力なプロトコルは、あいまい性クラス </strong> が最初に生き残る <strong> という名前を付ける必要があります。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Ambiguity class</th>
-<th>How it fools the reader</th>
-<th>What would actually raise the claim ceiling</th>
-<th>What this site still refuses to count</th>
+<th>曖昧性クラス</th>
+<th>読者をだます方法</th>
+<th>実際に保険金請求の上限が上がるもの</th>
+<th>このサイトがまだカウントを拒否しているもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Symmetry / reparameterization ambiguity</strong></td>
-<td>Several parameter or state transformations produce the same declared outputs, so a good fit looks unique when it is not.</td>
-<td>Add a symmetry-breaking observable, a known input / initial condition, or a reformulation that removes the hidden transformation.</td>
-<td>More fitting time, more random restarts, or more repeats of the same uninformative protocol.</td>
+<td><strong>対称/再パラメータ化の曖昧さ</strong></td>
+<td>いくつかのパラメータまたは状態の変換は、宣言された同じ出力を生成するため、適切な適合は、そうでない場合でも一意に見えます。</td>
+<td>対称性を破るオブザーバブル、既知の入力/初期条件、または隠れた変換を削除する再定式化を追加します。</td>
+<td>より多くのフィッティング時間、よりランダムな再起動、または同じ有益でないプロトコルのより多くの繰り返し。</td>
 </tr>
 <tr>
-<td><strong>Regime-restricted degeneracy</strong></td>
-<td>Different internal states or parameter sets agree inside one narrow operating regime and only diverge outside it.</td>
-<td>Use state transitions, persistent excitation, targeted recordings, or perturbation contrasts that make the surviving candidates separate.</td>
-<td>More passive samples from the same regime when the alternatives remain co-linear.</td>
+<td><strong>体制制限型縮退</strong></td>
+<td>さまざまな内部状態またはパラメータ セットは、1 つの狭い動作領域内では一致し、その外側でのみ発散します。</td>
+<td>状態遷移、持続的な励起、ターゲットを絞った記録、または摂動コントラストを使用して、生き残った候補者を分離します。</td>
+<td>代替案が同一線上にある場合、同じレジームからのより多くのパッシブ サンプル。</td>
 </tr>
 <tr>
-<td><strong>Model-family / omitted-mechanism ambiguity</strong></td>
-<td>An approximate model appears well identified until a complementary condition reveals systematic residuals or missing mechanisms.</td>
-<td>Run a discrepancy stress test, compare richer / alternative model families, and require held-out falsification rather than post hoc explanation.</td>
-<td>Narrower intervals inside one misspecified family or one headline accuracy gain.</td>
+<td><strong>モデルファミリー/省略されたメカニズムのあいまいさ</strong></td>
+<td>相補的な条件によって系統的な残差や欠落したメカニズムが明らかになるまで、近似モデルはよく特定されているように見えます。</td>
+<td>R不一致ストレス テストを実行し、より豊富な/代替モデル ファミリを比較し、事後説明ではなく保留された反証を要求します。</td>
+<td>1 つの誤って指定されたファミリーまたは 1 つのヘッドライン内の間隔が狭くなり、精度が向上します。</td>
 </tr>
 <tr>
-<td><strong>Task-variable interaction / representation ambiguity</strong></td>
-<td>A latent factor or reduced representation predicts correlations but misses the interaction structure that actually drives behavior.</td>
-<td>Preserve or perturb the task-variable interaction, and compare the intervention-side predictions of the competing representations.</td>
-<td>Correlation-only dimensionality reduction, generic multimodal fusion, or interpretability language without perturbation.</td>
+<td><strong>Tタスク変数の相互作用/表現の曖昧さ</strong></td>
+<td>A 潜在因子または縮小表現は相関関係を予測しますが、実際に行動を引き起こす相互作用構造を見逃します。</td>
+<td>タスク変数の相互作用を保存または撹乱し、競合する表現の介入側の予測を比較します。</td>
+<td>相関のみの次元削減、汎用マルチモーダル融合、または摂動のない解釈可能言語。</td>
 </tr>
 </tbody>
 </table>
 <p>
-If the apparent ambiguity mainly comes from shared modality drivers or physiology-linked common factors, this site routes the claim to the <a href="../verification.html#fusion-card">Fusion Card</a> instead of calling it solved identification.
+明らかな曖昧さが主に共有モダリティ要因または生理学に関連した共通要因に起因する場合、このサイトは解決された識別と呼ぶのではなく、<a href="../verification.html#fusion-card">Fusion Card</a> に主張を送ります。
 </p>
 </section>
 
 <section class="section" id="conditioning-is-not-closure">
-<h2 class="section-title">Richer conditioning is not candidate-set closure</h2>
+<h2 class="section-title">より豊富な条件付けは候補セットのクロージャではありません</h2>
 <p>
-One remaining weakness was to let a richer setup sound too close to a closed candidate set. The recent primary literature does not support that shortcut. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> showed that simultaneous multimodal recordings retain both common and divergent structure. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> showed in simultaneous EEG-PET-MRI that tightly coupled temporal progression can coexist with distinct network patterns across wakefulness and NREM sleep. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Lu et al. (2023)</a> showed that preservation route changes extracellular-space retention, and <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025)</a> explicitly describe a sequential in vivo-to-postmortem workflow rather than one simultaneous state sample. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024)</a> then showed that within-day EEG dynamics drift enough to motivate adaptive decoders. Therefore, on this site, richer conditioning is split into three separate audits instead of being read as one generic march toward uniqueness.
+残りの 1 つの弱点は、よりリッチなセットアップがクローズド候補セットに近すぎるように聞こえることです。最近の一次文献はそのショートカットをサポートしていません。 <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii ら。 (2024) </a> は、同時マルチモーダル記録が共通構造と発散構造の両方を保持していることを示しました。 <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">チェンら。 (2025) </a> は、同時 EEG-PET-MRI において、密接に結合した時間的進行が、覚醒時と NREM 睡眠全体にわたる異なるネットワーク パターンと共存できることを示しました。 <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">Luら(2023)</a> は保存経路によって細胞外空間保持が変化することを示し、<a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">MICrONS Consortium et al. (2025) </a> は、1 つの同時状態サンプルではなく、生体内から死後までの一連のワークフローを明示的に説明しています。 <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">Egger et al. (2024) </a> はその後、適応デコーダーを動機付けるのに十分な日内の EEG ダイナミクスのドリフトを示しました。したがって、このサイトでは、より豊富な条件付けを、独自性を目指す 1 つの一般的な行程として解釈するのではなく、3 つの個別の監査に分割しています。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>What got richer</th>
-<th>What the primary literature really strengthened</th>
-<th>What it still does not support</th>
-<th>Card or rule required on this site</th>
+<th>何が豊かになった</th>
+<th>一次文献が本当に強化したもの</th>
+<th>まだ対応していないもの</th>
+<th>このサイトではカードまたはルールが必要です</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Same-session multimodal acquisition</strong></td>
-<td>Shared clock, cross-modal comparison, and a bounded decomposition of common versus modality-specific structure.</td>
-<td>One validated latent state, self-validating fusion, or state-complete measurement.</td>
-<td><strong>Fusion Card</strong> plus the stack-specific <strong>Observability Budget</strong>.</td>
+<td><strong>同一セッションマルチモーダル収集</strong></td>
+<td>共有クロック、クロスモーダル比較、共通構造とモダリティ固有構造の限定分解。</td>
+<td>1 つの検証された潜在状態、自己検証融合、または状態完全測定。</td>
+<td><strong>Fusion Card</strong> とスタック固有の <strong>Observability Budget</strong>.</td>
 </tr>
 <tr>
-<td><strong>Same-brain or same-subject sequential linkage</strong></td>
-<td>Specimen linkage, local correlative workflow, or repeated-acquisition design with named bridge burden.</td>
-<td>Same-state evidence across live-to-fix transformation, cross-day drift, or separated physiological regimes.</td>
-<td><strong>State-Continuity Bridge Card</strong>, and <strong>Temporal Validity Card</strong> when live drift across hours or days matters.</td>
+<td><strong>同一脳または同一被験者の逐次結合</strong></td>
+<td>標本リンケージ、ローカル相関ワークフロー、または名前付きブリッジ負担による反復取得設計。</td>
+<td>ライブからフィックスへの変換、日をまたぐドリフト、または分離された生理学的体制にわたる同じ状態の証拠。</td>
+<td><strong>状態継続性ブリッジ カード</strong>、<strong>時間または日にわたるライブ ドリフトが重要な場合の時間的有効性カード</strong>。</td>
 </tr>
 <tr>
-<td><strong>Connectome-constrained prediction</strong></td>
-<td>A narrower conditional model family under a declared structural prior and recorded subset.</td>
-<td>Unique dynamics, solved omitted-mechanism risk, or in-principle internal-state recovery.</td>
-<td><strong>Connectome-Constrained Model Card</strong> together with the <strong>Identifiability Card</strong>.</td>
+<td><strong>コネクトーム制約付き予測</strong></td>
+<td>A 宣言された事前の構造サブセットおよび記録されたサブセットに基づく、より狭い条件付きモデル ファミリ。</td>
+<td>ユニークなダイナミクス、解決された省略されたメカニズムのリスク、または原理的な内部状態の回復。</td>
+<td><strong>Connectome-Constrained Model Card</strong> と <strong> 識別性カード</strong>.</td>
 </tr>
 </tbody>
 </table>
 <p>
-If these cards are missing, the ceiling stays at the strongest directly supported route: the strongest unimodal or prior-conditioned stack, the strongest directly supported bridge stage, or a conditional-model predictor rather than unique recovery.
+これらのカードが欠落している場合、上限は、固有の回復ではなく、直接サポートされている最も強力なルート、つまり最も強力な単峰性または事前条件付きスタック、直接サポートされている最も強いブリッジ ステージ、または条件付きモデルの予測子に留まります。
 </p>
 </section>
 
 <section class="section" id="levels">
-<h2 class="section-title">Do not mix observation, estimation, and causal verification</h2>
+<h2 class="section-title">観察、推定、因果関係の検証を混合しないでください</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>stage</th>
-<th>What we're doing here</th>
-<th>Things that cannot be said at this stage yet</th>
+<th>ステージ</th>
+<th>ここでやっていること</th>
+<th>現段階ではまだ言えないこと</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Observation</strong></td>
-<td>Measures signals visible on the scalp and outside. </td>
-<td>It cannot be said that the brain state has been uniquely restored. </td>
+<td><strong>観察</strong></td>
+<td>頭皮と外側に見える信号を測定します。 </td>
+<td>独自に脳の状態が回復したとは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Estimation</strong></td>
-<td>Place a head model or generative model to infer activity sources and connections. </td>
-<td>It cannot be said that it is true even outside the candidate model. </td>
+<td><strong>お見積り</strong></td>
+<td>アクティビティのソースと接続を推測するために頭部モデルまたは生成モデルを配置します。 </td>
+<td>候補機種以外でもそうとは言えません。 </td>
 </tr>
 <tr>
-<td><strong>Intervention/validation</strong></td>
-<td>Calibrate predictions with stimuli, lesions, task changes, intracranial stimulation, and concurrent invasive recordings. </td>
-<td>Even with this, the branch-equivalence of whole-brain WBE cannot be said. </td>
+<td><strong>介入/検証</strong></td>
+<td>刺激、病変、タスク変更、頭蓋内刺激、および同時侵襲記録を使用して予測を調整します。 </td>
+<td>これでも全脳WBEのブランチ同等とは言えません。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="forward-inverse">
-<h2 class="section-title">Forward and inverse problems</h2>
+<h2 class="section-title">正問題と逆問題</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Term</th>
-<th>Meaning</th>
-<th>Effective points in auditing</th>
+<th>期間</th>
+<th>意味</th>
+<th>監査の有効なポイント</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Order questions</strong></td>
-<td>If there is this activity in the brain, calculate what it looks like in the scalp. </td>
-<td>Head model, conductivity, and electrode placement assumptions come to the fore. </td>
+<td><strong>注文に関する質問</strong></td>
+<td>脳にこの活動がある場合、それが頭皮でどのように見えるかを計算してください。 </td>
+<td>ヘッドのモデル、導電性、電極配置の仮定が重要になります。 </td>
 </tr>
 <tr>
-<td><strong>Inverse problem</strong></td>
-<td>We estimate the brain activity that can explain the signals seen on the scalp. </td>
-<td>Uncertainty and sensitivity analysis is essential because multiple solutions can produce the same observation. </td>
+<td><strong>逆問題</strong></td>
+<td>頭皮に見られる信号を説明できる脳活動を推定します。 </td>
+<td>複数の解が同じ観測値を生成する可能性があるため、不確実性と感度の分析は不可欠です。 </td>
 </tr>
 </tbody>
 </table>
 <p>
-The inverse problem is difficult because<strong>multiple internal states can produce the same observation</strong>. Therefore, the important thing here is not to strongly insist on the "best one point" but to reveal what assumptions made and how far the results were narrowed down.
+<strong>複数の内部状態が同じ観測値を生成する可能性があるため、逆問題は困難です</strong>。したがって、ここで重要なことは、「最良の一点」を強く主張するのではなく、どのような前提を立てて、その結果をどこまで絞り込んだのかを明らかにすることである。
 </p>
 </section>
 
 <section class="section" id="esi">
-<h2 class="section-title">Read ESI in the validation ladder first, rather than the solver name</h2>
+<h2 class="section-title">ソルバー名ではなく、検証ラダーで最初にESIを読み取ります</h2>
 <p>
-ESI is a framework for estimating source from scalp signals. However, as shown by direct validation studies by Mikulan et al. and Unnwongse et al., the error varies greatly depending on source depth, cranial conductivity, head model, electrode geometry, solver family, and implementation choice. Therefore, it is not possible to make a strong argument just by saying<strong>Because it is a high-density EEG or because it is a Bayesian solver</strong>.
+ESI は、頭皮信号から信号源を推定するためのフレームワークです。ただし、Mikulan らによる直接検証研究で示されているように、 Unnwongse らによると、誤差は線源の深さ、頭蓋伝導率、頭部モデル、電極の形状、ソルバー ファミリ、および実装の選択によって大きく異なります。したがって、<strong>は高密度脳波だからとか、ベイジアンソルバーだから</strong>というだけでは強く主張することはできません。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Check with ESI first</th>
-<th>Why is it important</th>
+<th>最初にESIでチェック</th>
+<th>なぜ重要ですか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Geometry</strong></td>
-<td>The source error will change if the electrode position, individual MRI, FEM/BEM, and conductivity assumptions are different. </td>
+<td><strong>ジオメトリ</strong></td>
+<td>電極の位置、個々の MRI、FEM/BEM、および導電率の仮定が異なる場合、ソース誤差は変化します。 </td>
 </tr>
 <tr>
-<td><strong>Uncertainty</strong></td>
-<td>Empirical Bayes and ensemble are powerful, but what is essential is visualization of the width, not the solver name. </td>
+<td><strong>不確実性</strong></td>
+<td>Empirical Bayes とアンサンブルは強力ですが、重要なのはソルバー名ではなく幅の視覚化です。 </td>
 </tr>
 <tr>
-<td><strong>Cross-solver stability</strong></td>
-<td>If WMNE / eLORETA / beamformer / Bayesian families or reasonable parameter windows disagree materially, the spread itself has to be reported. </td>
+<td><strong>クロスソルバーの安定性</strong></td>
+<td>WMNE / eLORETA / ビームフォーマー / ベイジアン ファミリまたは合理的なパラメーター ウィンドウが実質的に一致しない場合は、スプレッド自体を報告する必要があります。 </td>
 </tr>
 <tr>
-<td><strong>Withholding deep/micro sources</strong></td>
-<td>Detectable and general reconstruction are different, and deep generalization requires a suspension condition. </td>
+<td><strong>深部/微小発生源を抑制</strong></td>
+<td> 検出可能な再構築と一般的な再構築は異なり、深い一般化には一時停止条件が必要です。 </td>
 </tr>
 <tr>
-<td><strong>External validation</strong></td>
-<td>It is necessary to know which validation class was used and where the simulation, phantom, simultaneous invasive recording, intracranial stimulation, or postsurgical outcome was calibrated. </td>
+<td><strong>外部検証</strong></td>
+<td>どの検証クラスが使用されたか、およびシミュレーション、ファントム、同時侵襲記録、頭蓋内刺激、または術後結果がどこで校正されたかを知る必要があります。 </td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Replacement on this site</strong>
+<strong>このサイトの交換品</strong>
 <p>
-Bayesian / empirical Bayes / sparse Bayesian learning is a good candidate for<strong>estimation with uncertainty</strong>. However, on this site, rather than ``accepting a proposal because it is Bayesian'', the criteria for acceptance or rejection are <strong>how uncertainty is disclosed and what external standards were used for calibration</strong>.
+ベイジアン / 経験的ベイズ / スパース ベイジアン学習は、<strong> 不確実性のある推定 </strong> の良い候補です。ただし、このサイトでは「ベイジアンだから提案を受け入れる」のではなく、<strong>不確かさをどのように開示するか、校正にどのような外部標準を使用したか</strong>を採否の基準としています。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-19 deepening: one best map is not the same as a stable solution</strong>
+<strong>2026-03-19 深化: 1 つの最良のマップは安定したソリューションと同じではありません</strong>
 <p>
-The weak point here was to separate solver name from audit items, but still leave room for a reader to overtrust one polished map. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a> showed that inverse-method and software-package choice induces considerable variability and explicitly encouraged verifying results with more than one source-imaging procedure. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">Mikulan et al. (2020)</a> then showed on intracranial-stimulation ground truth that only a small fraction of tested solutions reached the session-wise optimum. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> further showed that skull/skin conductivity uncertainty can move reconstructed depth and localization. Therefore, on this site, one best inverse map is read only as a <strong>candidate solution</strong> unless the paper also exposes <strong>cross-solver / cross-parameter spread</strong> or a <strong>posterior / ensemble width</strong>.
+ここでの弱点は、ソルバー名を監査項目から分離しながらも、読者が 1 つの洗練されたマップを過信する余地を残していることでした。 <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)</a> は、逆法とソフトウェア パッケージの選択がかなりのばらつきを引き起こすことを示し、複数のソース イメージング手順で結果を検証することを明示的に推奨しました。 <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">ミクランら(2020)その後、</a> は、頭蓋内刺激のグラウンド トゥルースで、テストされたソリューションのごく一部のみがセッションごとの最適値に達したことを示しました。 <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk ら(2024) </a> はさらに、頭蓋骨/皮膚の伝導率の不確実性が再構成された深さと位置を変える可能性があることを示しました。したがって、このサイトでは、論文が <strong> クロスソルバー / クロスパラメータスプレッド </strong> または <strong> 事後 / アンサンブル幅 </strong> も公開していない限り、1 つの最良の逆マップは <strong> 候補解 </strong> としてのみ読み取られます。
 </p>
 </div>
 <div class="note-box">
-<strong>2026-03-31 deepening: inverse-family labels still hide different source regimes and uncertainty objects</strong>
+<strong>2026-03-31 深化: 逆族ラベルは依然として異なるソース体制と不確実性オブジェクトを隠している</strong>
 <p>
-The remaining weakness was to ask for <strong>cross-solver spread</strong> as if every inverse family were estimating the same scientific object. Current primary literature does not support that shortcut. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024)</a> expose posterior support and alternative configurations for focal-source hypotheses, <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al. (2025)</a> target sparse spatial-temporal source imaging with debiased estimation and inference, and <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">Feng et al. (2025)</a> target extended-source reconstruction with empirical-Bayesian uncertainty maps. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)</a> further showed that conductivity uncertainty shifts localization differently across source geometry and depth regimes. Therefore, on this site, inverse families are not read on one generic leaderboard: before an anatomical claim is raised, the paper must disclose <strong>source regime and target object</strong>, <strong>uncertainty object</strong>, <strong>forward-model uncertainty route</strong>, <strong>validation board / operating regime</strong>, and <strong>abstention boundary</strong>. If those are missing, cross-family disagreement is not collapsed into a winner.
+残りの弱点は、あたかもすべての逆ファミリが同じ科学的オブジェクトを推定しているかのように、<strong> クロスソルバー スプレッド </strong> を要求することでした。現在の一次文献はそのショートカットをサポートしていません。 <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">Luria et al. (2024) </a> は、焦点源仮説に対する事後サポートと代替構成を明らかにする、<a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">Tong et al。 (2025) </a> は、偏りのない推定と推論による疎な時空間ソース イメージングをターゲットとしています。 (2025) </a> は、経験的ベイジアン不確実性マップを使用した拡張ソース再構成をターゲットとしています。 <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerkら(2024) </a> はさらに、導電率の不確実性がソースの形状と深さの領域全体で局在化を異なる方向にシフトさせることを示しました。したがって、このサイトでは、逆ファミリーは 1 つの一般的なリーダーボードで読み取られません。解剖学的主張が提起される前に、論文は <strong> ソース レジームとターゲット オブジェクト </strong>、<strong> 不確実性オブジェクト </strong>、<strong> 前方モデル不確実性ルート </strong>、<strong> 検証ボード/動作レジーム </strong>、および <strong> 棄権境界 </strong> を開示する必要があります。これらが欠けていても、家族間の意見の相違が勝者に崩壊することはありません。
 </p>
 </div>
 <table class="data-table">
 <thead>
 <tr>
-<th>Inverse-family route-card field</th>
-<th>What must be named</th>
-<th>What misreading it blocks</th>
+<th>インバース ファミリ ルート カード フィールド</th>
+<th>必ず名前を付けてください</th>
+<th>誤読をブロックする</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Source regime and target object</strong></td>
-<td>Whether the method is targeting focal support, a sparse spatial-temporal set, an extended source extent, or another named source regime.</td>
-<td>A solver that is strong for focal recovery is not silently promoted to a generic winner for extended or spontaneous sources.</td>
+<td><strong>ソースレジームとターゲットオブジェクト</strong></td>
+<td>メソッドが焦点サポート、疎な時空間セット、拡張ソース範囲、または別の名前付きソース レジームをターゲットにしているかどうか。</td>
+焦点回復に強い <td>A ソルバーは、拡張ソースまたは自発的ソースの一般的な勝者に黙って昇格するわけではありません。</td>
 </tr>
 <tr>
-<td><strong>Uncertainty object</strong></td>
-<td>State whether the paper reports posterior support, ensemble width, debiased intervals / tests, extent-overlap maps, or only headline location spread.</td>
-<td>Different uncertainty outputs are not collapsed into one interchangeable ``confidence'' number.</td>
+<td><strong>不確実性物体</strong></td>
+<td>論文が事後サポート、アンサンブル幅、偏りのない間隔/テスト、範囲重複マップ、またはヘッドライン位置の広がりのみを報告しているかどうかを述べます。</td>
+<td>さまざまな不確実性の出力は、交換可能な 1 つの「信頼性」数値に集約されません。</td>
 </tr>
 <tr>
-<td><strong>Forward-model uncertainty route</strong></td>
-<td>Report how conductivity, head-model, CSF, electrode-coordinate, and orientation sensitivity were stress-tested or propagated into the displayed map.</td>
-<td>A polished inverse map is not overread as if upstream physics were already fixed.</td>
+<td><strong>順モデル不確かさルート</strong></td>
+<td>導電率、頭部モデル、CSF、電極座標、方向感度がどのようにストレス テストされたか、または表示されたマップに反映されたかをレポートします。</td>
+<td>A 洗練された逆マップは、上流の物理学がすでに修正されているかのようにオーバーリードされません。</td>
 </tr>
 <tr>
-<td><strong>Validation board / operating regime</strong></td>
-<td>Name whether the evidence comes from known-site stimulation, focal in-vivo benchmark, simultaneous invasive concordance, extended-source simulation, or another explicit board.</td>
-<td>Success in one board is not transferred automatically to another source regime.</td>
+<td><strong>検証ボード/運用体制</strong></td>
+<td>証拠が既知の部位の刺激、局所的な生体内ベンチマーク、同時侵襲的一致、拡張ソースシミュレーション、または別の明示的なボードから得られたものであるかどうかを指定します。</td>
+<td>あるボードでの成功は、別のソース レジームに自動的に転送されません。</td>
 </tr>
 <tr>
-<td><strong>Cross-family comparison rule</strong></td>
-<td>Compare inverse families only after matching the source regime, uncertainty object, and parameter window; then report overlap, spread, or disagreement instead of a generic winner.</td>
-<td>Method comparison is not mistaken for universal source recovery.</td>
+<td><strong>ファミリー間比較ルール</strong></td>
+<td> ソース レジーム、不確実性オブジェクト、およびパラメーター ウィンドウを一致させた後でのみ逆ファミリを比較します。次に、一般的な勝者ではなく、重複、広がり、または不一致を報告します。</td>
+<td>メソッドの比較は、ユニバーサル ソース リカバリと誤解されません。</td>
 </tr>
 <tr>
-<td><strong>Abstention boundary</strong></td>
-<td>Name when disagreement across inverse families or conductivity sweeps is large enough that the claim stays at the method-conditioned source-hypothesis level.</td>
-<td>Readers are not pushed toward anatomical certainty when the compatible solution set is still wide.</td>
+<td><strong>棄権境界</strong></td>
+<td>逆ファミリまたは導電率スイープ間の不一致が十分に大きく、主張がメソッド条件付きソース仮説レベルにとどまる場合の名前。</td>
+<td>Readers は、互換性のあるソリューション セットがまだ幅広い場合、解剖学的確実性を追求しません。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="dcm">
-<h2 class="section-title">DCM is not "a device that automatically discovers true cause and effect"</h2>
+<h2 class="section-title">DCMは「真の原因と結果を自動的に発見する装置」ではありません</h2>
 <p>
-DCM is a framework that specifies candidate generative models and compares them to see which one is easier to explain observations. As shown in Friston et al.'s original paper and Penny et al.'s model comparison study, DCM conclusions depend on the candidate model space entered into the comparison. Therefore, winning in a model comparison means that it is ``good among the candidate set'' and does not mean that it is<strong>the only correct one in</strong>the world.
+DCM は、生成モデルの候補を指定し、それらを比較して、どちらが観測を説明しやすいかを確認するフレームワークです。 Friston らの元の論文と Penny らのモデル比較研究で示されているように、DCM の結論は、比較に入力された候補モデル空間に依存します。したがって、モデル比較で勝ったということは「候補セットの中で優れている」という意味であり、</strong>の中で<strong>が唯一正しいという意味ではありません。
 </p>
 <div class="key-points">
-<h4>Four points when reading DCM</h4>
+<h4>DCM</h4>を読むときの4つのポイント
 <ul>
-<li><strong>Candidate model space:</strong> Which nodes and join candidates were initially included in the comparison. </li>
-<li><strong>Family comparison:</strong>Is the upper family stable, not the details? </li>
-<li><strong>model recovery:</strong>Can the correct model be recovered through simulation? </li>
-<li><strong>Intervention Calibration:</strong>Is the held-out prediction correct with the stimulus or perturbation? </li>
+<li><strong>候補モデル空間:</strong> 最初に比較に含まれたノードと結合候補。 </li>
+<li><strong>ファミリーの比較：</strong>詳細ではなく、上位ファミリーは安定していますか？ </li>
+<li><strong>モデル復元:</strong>シミュレーションを通じて正しいモデルを復元できますか? </li>
+<li><strong>介入キャリブレーション:</strong>提示された予測は、刺激または摂動に関して正しいですか? </li>
 </ul>
 </div>
 </section>
 
 <div class="note-box">
-<strong>2026-03-19 deepening: why this page now needs a route card</strong>
+<strong>2026-03-19 の深化: このページにルート カードが必要な理由</strong>
 <p>
-The weak point here was not that it separated DCM from SCM, but that scaling advances could still be overread as if they had solved identifiability. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">Rosa et al. (2012)</a> showed that DCM can search a potentially huge model space quickly from one full model, <a href="https://doi.org/10.1002/hbm.23061" target="_blank">Frässle et al. (2016)</a> showed that reliability itself must be checked rather than assumed, <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021)</a> pushed directed-connectivity estimation to whole-brain human fMRI, and <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu et al. (2024)</a> reduced computation time further. Those are real advances in tractability, but they still operate inside explicit choices about node set, priors, hemodynamics, and omitted competitors. Therefore, on this site, scaling is read as <strong>better searchability of candidate models</strong>, not as automatic causal discovery.
+ここでの弱点は、DCM を SCM から分離していることではなく、スケーリングの進歩が、あたかも識別可能性を解決したかのように読み取られる可能性があることでした。 <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">ローザら。 (2012)</a> は、DCM が 1 つの完全なモデルから潜在的に巨大なモデル空間を迅速に検索できることを示しました。<a href="https://doi.org/10.1002/hbm.23061" target="_blank">Frässle ら。 (2016)</a> は、信頼性自体を仮定するのではなくチェックする必要があることを示しました。<a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">Frässle et al. (2021) </a> は有向接続性推定を全脳ヒト fMRI に推し進め、<a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">Wu らは (2021) (2024)</a> では計算時間がさらに短縮されました。これらは扱いやすさにおける真の進歩ですが、依然としてノードセット、事前分布、血行動態、除外された競合他社に関する明示的な選択の範囲内で機能します。したがって、このサイトでは、スケーリングを自動因果発見ではなく、<strong>候補モデルの検索性の向上</strong>と読み替えます。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-29 deepening: directed graphs still fail under partial observation, node policy, and sampling transforms</strong>
+<strong>2026-03-29 深化: 有向グラフは部分的な観察、ノード ポリシー、およびサンプリング変換の下ではまだ失敗します</strong>
 <p>
-The remaining weakness after adding a route card was that <strong>candidate model space</strong> could still be read too narrowly, as if it already covered the practically important failure modes of a directed graph. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">Smith et al. (2011)</a> showed in a large simulation benchmark that lag-based approaches perform poorly for fMRI and that <strong>functionally inaccurate ROIs</strong> are especially damaging to network estimation. <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">Barnett &amp; Seth (2017)</a> then showed that subsampling can create <strong>detectability black spots</strong> for Granger-causal interactions rather than a simple monotonic loss. <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">Vink et al. (2020)</a> showed in TMS-EEG that resting-state EEG functional connectivity explains <strong>less than 10% of the variance</strong> in evoked propagation and varies substantially across stimulation sites and participants. <a href="https://doi.org/10.1002/hbm.70285" target="_blank">Novelli et al. (2025)</a> refined the hemodynamic objection: if the HRF is minimum-phase, HRF variability alone need not create false positives across a wide range of plausible parameters, but <strong>slow BOLD sampling</strong> can still induce spurious Granger-causal inference. Most recently, <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">Yan et al. (2026)</a> showed that dynamical causal inference under <strong>latent confounders</strong> remains an active method-development problem in biological network reconstruction. Therefore, on this site, effective-connectivity claims must now separate <strong>observed-subsystem closure / latent-confound audit</strong>, <strong>node-definition policy</strong>, and <strong>sampling / transformation sensitivity</strong> from the older questions of model comparison and external validation.
+ルート カードを追加した後に残った弱点は、あたかも有向グラフの実質的に重要な障害モードをすでにカバーしているかのように、<strong> 候補モデル空間 </strong> の読み取り範囲が依然として狭すぎる可能性があることでした。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">Smith et al. (2011)</a> は、大規模なシミュレーション ベンチマークで、遅延ベースのアプローチが fMRI に対してパフォーマンスが悪く、<strong> の機能的に不正確な ROIs</strong> がネットワーク推定に特に悪影響を及ぼすことを示しました。 <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">バーネット＆アンプ;次に、Seth (2017)</a> は、サブサンプリングによって単純な単調損失ではなく、グレンジャー因果相互作用の検出可能性黒スポット <strong> </strong> を作成できることを示しました。 <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">ヴィンクら(2020)</a> は、TMS-EEG において、安静状態の EEG 機能的接続性が <strong> を説明し、誘発伝播における分散 </strong> の 10% 未満であり、刺激部位と参加者によって大きく異なることを示しました。 <a href="https://doi.org/10.1002/hbm.70285" target="_blank">Novelli 他(2025) </a> は血行動態の反論を洗練しました。HRF が最小位相の場合、HRF の変動だけでは、広範囲の妥当なパラメーターにわたって偽陽性を生み出す必要はありませんが、<strong> の遅い BOLD サンプリング </strong> は依然として偽のグレンジャー因果推論を誘発する可能性があります。ごく最近では、<a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">Yan ら。 (2026) </a> は、<strong> 潜在交絡因子 </strong> の下での動的な因果推論が、生物学的ネットワーク再構成において依然として活発な方法開発の問題であることを示しました。したがって、このサイトでは、有効な接続性の主張では、<strong> 観察されたサブシステムの閉鎖 / 潜在交絡監査 </strong>、<strong> ノード定義ポリシー </strong>、および <strong> サンプリング / 変換感度 </strong> を、モデルの比較と外部検証の古い問題から分離する必要があります。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-30 deepening: reasonable processing policy can also move directed edges and parameter certainty</strong>
+<strong>2026-03-30 深化: 合理的な処理ポリシーにより、有向エッジとパラメータ確実性も移動可能</strong>
 <p>
-The next weak point was to let directed-graph caution stop at <strong>candidate models</strong>, <strong>node policy</strong>, and <strong>sampling</strong>, as if preprocessing were only housekeeping. The primary literature does not support that shortcut. <a href="https://doi.org/10.1016/j.neuroimage.2019.116435" target="_blank">Almgren et al. (2020)</a> already showed that <strong>global signal regression</strong> changes DCM estimates of noise and effective connectivity in resting-state fMRI. <a href="https://doi.org/10.1002/hbm.26751" target="_blank">Zhang et al. (2024)</a> then showed that reasonable task-fMRI choices such as <strong>GLM design</strong> and <strong>activation contrast</strong> can materially alter group-averaged effective-connectivity patterns and parameter certainty, while <strong>GSR</strong> and significance-thresholding choices still remain named processing conditions rather than ignorable details. <a href="https://doi.org/10.1016/j.neuroimage.2024.120604" target="_blank">Ma et al. (2024)</a> further showed that even when DCM reliability is promising, it still depends on <strong>scan duration</strong> and <strong>sample size</strong>. Therefore, on this site, effective-connectivity claims must now separate <strong>processing / first-level design policy</strong> from both <strong>candidate model space</strong> and later <strong>external validation</strong>: a graph that survives only one reasonable pipeline is not yet a preprocessing-robust causal claim.
+次の弱点は、あたかも前処理が単なるハウスキーピングであるかのように、有向グラフの警戒が <strong> 候補モデル </strong>、<strong> ノード ポリシー </strong>、および <strong> サンプリング </strong> で停止することでした。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.1016/j.neuroimage.2019.116435" target="_blank">Almgren et al. (2020)</a> は、<strong> グローバル信号回帰 </strong> が静止状態 fMRI におけるノイズと有効接続性の DCM 推定値を変化させることをすでに示しています。 <a href="https://doi.org/10.1002/hbm.26751" target="_blank">Zhang et al. (2024) </a> はその後、<strong>GLM 設計 </strong> や <strong> 活性化コントラスト </strong> などの合理的なタスク fMRI の選択は、グループ平均の有効接続性パターンとパラメーターの確実性を大幅に変更できる一方、<strong>GSR</strong> と有意性閾値の選択は依然として無視できる詳細ではなく名前付きの処理条件のままであることを示しました。 <a href="https://doi.org/10.1016/j.neuroimage.2024.120604" target="_blank">Maら。 (2024)</a> はさらに、DCM の信頼性が有望な場合でも、それは依然として <strong> スキャン期間 </strong> および <strong> サンプル サイズ </strong> に依存することを示しました。したがって、このサイトでは、有効接続性の主張は、<strong> 処理 / 第 1 レベルの設計ポリシー </strong> を、<strong> 候補モデル空間 </strong> とそれ以降の <strong> 外部検証 </strong> の両方から分離する必要があります。1 つの合理的なパイプラインのみを存続するグラフは、まだ前処理に堅牢な因果関係の主張ではありません。
 </p>
 </div>
 
 <section class="section" id="effective-connectivity-route-card">
-<h2 class="section-title">Effective-connectivity route card</h2>
+<h2 class="section-title">有効接続ルートカード</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Route-card field</th>
-<th>What must be written</th>
-<th>What misreading it blocks</th>
+<th>ルートカードフィールド</th>
+<th>必ず書かなければいけないこと</th>
+<th>ブロックする誤読</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Candidate model space</strong></td>
-<td>Compared node set, omitted nodes / edges, exogenous inputs, and the family of alternatives that were allowed to compete.</td>
-<td>It blocks “the best compared model” from being rephrased as “the true circuit was found.”</td>
+<td><strong>候補モデル空間</strong></td>
+<td>ノード セット、省略されたノード/エッジ、外生入力、および競合が許可された代替のファミリーを比較しました。</td>
+<td>「比較した中で最も優れたモデル」が「真の回路が見つかった」と言い換えられるのを防ぎます。
 </tr>
 <tr>
-<td><strong>Observed subsystem / latent-confound audit</strong></td>
-<td>Name which candidate hidden nodes, common drives, instantaneous interactions, or unmeasured exogenous inputs remain outside the observed subsystem, what sensitivity analysis or latent-confound method was used, and whether the reported directions survive that audit.</td>
-<td>It blocks a partial recording or atlas-defined subgraph from sounding like a causally closed system.</td>
+<td><strong>観察されたサブシステム / 潜在的交絡監査</strong></td>
+<td>どの候補の隠れノード、共通ドライブ、瞬間的な相互作用、または観察されたサブシステムの外に残っている未測定の外因性入力の名前、どの感度分析または潜在交絡法が使用されたか、報告された方向がその監査を生き残るかどうか。</td>
+<td>部分的な録音またはアトラスで定義されたサブグラフが因果的に閉じたシステムのように聞こえるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Node-definition policy</strong></td>
-<td>State how ROIs or nodes were defined, whether alternative parcellations / functional localizers / decompositions were tested, and whether edge directions or family ranking change materially across those alternatives.</td>
-<td>It blocks one directed graph from sounding node-invariant when the result actually depends on the chosen parcellation or ROI recipe.</td>
+<td><strong>ノード定義ポリシー</strong></td>
+<td>ROI またはノードがどのように定義されたか、代替パーセルレーション / 機能ローカライザー / 分解がテストされたかどうか、およびエッジ方向またはファミリー ランキングがそれらの代替案間で大きく変化したかどうかを説明します。</td>
+<td>結果が実際に選択したパーセルレーションまたは ROI レシピに依存する場合、1 つの有向グラフがノード不変であるように聞こえるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Observation model and priors</strong></td>
-<td>Neural-mass assumptions, linearization, HRF choice, mean-field or independence assumptions, sparsity priors, and any structural constraints.</td>
-<td>It blocks “effective connectivity” from sounding as if the result were independent of hemodynamic and prior assumptions.</td>
+<td><strong>観測モデルと従来モデル</strong></td>
+<td>神経質量の仮定、線形化、HRF の選択、平均場または独立性の仮定、スパース事前分布、および構造的制約。</td>
+<td>「効果的な接続」が、結果が血行力学や事前の仮定から独立しているかのように聞こえることをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Processing / first-level design policy</strong></td>
-<td>State the preprocessing and first-level choices that can move the inferred edges, such as nuisance-regression / GSR policy, task GLM design, contrast definition, thresholding or ROI-extraction policy, and whether parallel analyses were used to check convergence across reasonable pipelines.</td>
-<td>It blocks one reasonable analysis recipe from sounding preprocessing-invariant when directed edges or parameter certainty actually depend on the chosen pipeline.</td>
+<td><strong>処理/第1レベルの設計ポリシー</strong></td>
+<td>迷惑回帰 / GSR ポリシー、タスク GLM 設計、コントラスト定義、しきい値処理または ROI 抽出ポリシーなど、推論されたエッジを移動できる前処理と第 1 レベルの選択について説明します。また、合理的なパイプライン全体での収束をチェックするために並列分析が使用されたかどうかを示します。</td>
+<td>有向エッジまたはパラメーターの確実性が実際に選択されたパイプラインに依存する場合、1 つの合理的な分析レシピが前処理不変であるように聞こえるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Sampling / transformation sensitivity</strong></td>
-<td>State the sampling interval relative to the neural delays of interest, any downsampling, filtering or deconvolution choices, HRF / observation-transform assumptions, and whether inferred directions survive plausible transform alternatives or only one time-resolution regime.</td>
-<td>It blocks directed-lag estimates from sounding biologically directional when they may still be shaped by sampling, filtering, or observation transforms.</td>
+<td><strong>サンプリング/変換感度</strong></td>
+<td>対象の神経遅延に対するサンプリング間隔、ダウンサンプリング、フィルタリングまたはデコンボリューションの選択、HRF / 観測変換の仮定、推定された方向が妥当な変換の代替案または 1 つの時間分解能レジームのみに耐えるかどうかを述べます。</td>
+<td>サンプリング、フィルタリング、または観測変換によって形成される可能性がある場合でも、有向ラグ推定が生物学的に指向的に聞こえるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Family comparison / model recovery</strong></td>
-<td>Family-level stability, simulation-based recovery, and whether nearby model families are confusable under the same data regime.</td>
-<td>It blocks fragile one-model wins from being promoted to robust identifiability.</td>
+<td><strong>ファミリー比較/モデルリカバリ</strong></td>
+<td>ファミリー レベルの安定性、シミュレーション ベースの回復、および同じデータ体制下で近くのモデル ファミリが混同可能かどうか。</td>
+<td>脆弱な 1 モデルの勝利が堅牢な識別可能性に昇格するのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Perturbation or external validation</strong></td>
-<td>Held-out perturbation prediction, stimulation / lesion validation, or an external standard that the model had to predict rather than explain post hoc.</td>
-<td>It blocks observational fit from being rephrased as causal validation.</td>
+<td><strong>摂動または外部検証</strong></td>
+<td>保留された摂動予測、刺激/病変の検証、またはモデルが事後説明するのではなく予測する必要があった外部標準。</td>
+<td>観察的適合が因果関係の検証として言い換えられるのを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>Reliability window</strong></td>
-<td>Session interval, task or rest condition, site / scanner dependence, and whether reproducibility was shown only under closely matched conditions.</td>
-<td>It blocks a same-lab repeatability result from being rephrased as general portability.</td>
+<td><strong>信頼性ウィンドウ</strong></td>
+<td>Sセッション間隔、タスクまたは休憩条件、部位/スキャナ依存性、および厳密に一致した条件下でのみ再現性が示されたかどうか。</td>
+<td>同じラボでの再現性の結果が一般的な移植性として言い換えられるのを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>Abstention boundary</strong></td>
-<td>Which edge directions, strengths, or mechanisms remain unresolved and under what alternative assumptions the interpretation changes.</td>
-<td>It blocks incomplete recovery from being silently collapsed into a complete causal graph.</td>
+<td><strong>棄権境界</strong></td>
+<td>どのエッジの方向、強度、メカニズムが未解決のままであり、どのような代替仮定の下で解釈が変わるのか。</td>
+<td>不完全な回復がサイレントに完全な因果関係グラフに折りたたまれるのをブロックします。</td>
 </tr>
 </tbody>
 </table>
 <p>
-If this card is missing, this site stops at <strong>model-conditioned causal hypothesis</strong>. A whole-brain DCM graph, an atlas-wide regression DCM estimate, or an activity-flow-compatible diagram is not promoted here to discovered wiring merely because it is dense, scalable, atlas-complete, predictive, or reported only under one preprocessing recipe.
+このカードが欠落している場合、このサイトは <strong> モデル条件付き因果仮説 </strong> で停止します。全脳 DCM グラフ、アトラス全体の回帰 DCM 推定値、またはアクティビティ フロー互換図は、密度が高く、スケーラブルで、アトラス完全で、予測的であるか、または 1 つの前処理レシピでのみ報告されるという理由だけで、ここでは発見された配線に昇格しません。
 </p>
 </section>
 
 <section class="section" id="identifiability-card">
-<h2 class="section-title">Identifiability card for inverse and model-based claims</h2>
+<h2 class="section-title">逆およびモデルベースの主張のための識別可能性カード</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Card field</th>
-<th>What must be written</th>
-<th>What misreading it blocks</th>
+<th>カードフィールド</th>
+<th>必ず書かなければいけないこと</th>
+<th>ブロックする誤読</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Claim object</strong></td>
-<td>Name whether the target is source location, latent state, parameter, connectivity, controller variable, or connectome-conditioned predictor, together with its timescale and spatial unit.</td>
-<td>It blocks different kinds of "recovery" from being read as one common achievement.</td>
+<td><strong>オブジェクトの請求</strong></td>
+<td>ターゲットがソースの場所、潜在状態、パラメーター、接続性、コントローラー変数、またはコネクトーム条件付き予測子のいずれであるか、そのタイムスケールおよび空間単位とともに名前を付けます。</td>
+<td>さまざまな種類の「回復」が 1 つの共通の成果として読み取られるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Structural identifiability layer</strong></td>
-<td>Name whether the declared model is identifiable in principle and disclose known symmetries, reparameterizations, or variables that remain non-identifiable even with ideal data.</td>
-<td>It blocks finite-data success from being overread as in-principle uniqueness.</td>
+<td><strong>構造識別層</strong></td>
+<td>宣言されたモデルが原理的に識別可能かどうかを指定し、既知の対称性、再パラメータ化、または理想的なデータであっても識別不可能なままの変数を開示します。</td>
+<td>原理的な一意性として、有限データの成功がオーバーリードされるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Practical identifiability layer</strong></td>
-<td>Report posterior/profile-likelihood width, ensemble spread, SNR dependence, sample-size or time-window dependence, and other finite-data limits under the submitted experiment.</td>
-<td>It blocks a theoretically identifiable model from being overread as practically recovered.</td>
+<td><strong>実用的な識別層</strong></td>
+<td>提出された実験に基づく事後/プロファイル尤度幅、アンサンブルスプレッド、SNR依存性、サンプルサイズまたはタイムウィンドウ依存性、およびその他の有限データ制限をレポートします。</td>
+<td>理論的に識別可能なモデルが実際に回復されるようにオーバーリードされるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Competing solution set</strong></td>
-<td>Name the alternative model families, local optima, or near-equivalent solutions that remain compatible with the observations.</td>
-<td>It blocks one good fit from sounding like the only explanation.</td>
+<td><strong>競合ソリューションセット</strong></td>
+<td>観測値との互換性を維持する代替モデル ファミリ、局所最適化、またはほぼ同等のソリューションに名前を付けます。</td>
+<td>1 つの適切な説明が唯一の説明のように聞こえることをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Design objective</strong></td>
-<td>Name whether the next condition was chosen to optimize practical identifiability, model discrimination, posterior contraction, profile-likelihood width, or another declared criterion, and say explicitly if the choice was driven only by convenience, prediction score, or a sloppiness proxy.</td>
-<td>It blocks a richer protocol from sounding informative merely because some generic score improved.</td>
+<td><strong>設計目標</strong></td>
+<td>実際の識別可能性、モデルの識別、事後収縮、プロファイル尤度の幅、または別の宣言された基準を最適化するために次の条件が選択されたかどうかを指定し、その選択が利便性、予測スコア、またはずさんなプロキシのみによってもたらされたかどうかを明示的に示します。</td>
+<td>一般的なスコアが向上したという理由だけで、よりリッチなプロトコルが有益に聞こえることをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Experiment-design leverage</strong></td>
-<td>Name which unresolved ambiguity the protocol targeted, which orthogonal perturbations, regime shifts, targeted recordings, or active data-collection choices were used to reduce it, which identifiability objective selected them, and say explicitly if the evidence is passive only.</td>
-<td>It blocks "better prediction" from being rephrased as "solved identification."</td>
+<td><strong>実験設計の活用</strong></td>
+<td>プロトコルが対象とした未解決の曖昧さ、それを軽減するためにどの直交摂動、レジームシフト、対象を絞った記録、またはアクティブなデータ収集の選択肢が使用されたか、どの識別可能性の目的がそれらを選択したか、および証拠が受動的のみであるかどうかを明示的に示す名前。</td>
+<td>「より良い予測」が「解決された識別」と言い換えられるのを防ぎます。
 </tr>
 <tr>
-<td><strong>Model-discrepancy stress test</strong></td>
-<td>Report whether the new condition exposed systematic residuals, failed fits, or omitted mechanisms, what hierarchy of richer or alternative models was checked, and whether the protocol was revised after that stress test.</td>
-<td>It blocks tighter nominal parameter estimates from being overread when the design only forced hidden model error into view.</td>
+<td><strong>モデル不一致ストレステスト</strong></td>
+<td>新しい条件によって体系的な残差、適合の失敗、メカニズムの省略が暴露されたかどうか、より豊富なモデルまたは代替モデルのどの階層がチェックされたか、ストレス テスト後にプロトコルが改訂されたかどうかを報告します。</td>
+<td>設計が隠れたモデルエラーのみを強制的に表示する場合、より厳密な公称パラメータ推定値がオーバーリードされるのをブロックします。</td>
 </tr>
 <tr>
-<td><strong>Minimum-sufficiency stop rule</strong></td>
-<td>State the smallest condition/time-point/recording set required to raise the claim, the stopping threshold on uncertainty or overlap, and how much ambiguity remained once that minimum design was reached.</td>
-<td>It blocks endless data collection from sounding like solved identifiability.</td>
+<td><strong>最小十分停止ルール</strong></td>
+<td>クレームを引き上げるのに必要な最小の条件/時点/記録セット、不確実性または重複の停止閾値、および最小設計に達した後にどの程度のあいまいさが残るかを述べます。</td>
+<td>識別可能性が解決されたかのように聞こえる無限のデータ収集をブロックします。</td>
 </tr>
 <tr>
-<td><strong>Recorded subset and abstention</strong></td>
-<td>Name which parts of the system were actually observed, what remained latent, and where the uniqueness claim stops.</td>
-<td>It blocks sparse coverage from being overread as state closure.</td>
+<td><strong>記録されたサブセットと棄権</strong></td>
+<td>システムのどの部分が実際に観察されたのか、何が潜在的に残っているのか、そしてどこで一意性の主張が止まるのかを示します。</td>
+<td>スパース カバレッジが状態終了としてオーバーリードされるのをブロックします。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>2026-03-28 deepening: informative experiments must optimize identifiability, stress omitted mechanisms, and declare minimum sufficiency</strong>
+<strong>2026-03-28 深化: 有益な実験では、識別可能性を最適化し、メカニズムを強調し、最小限の十分性を宣言する必要があります</strong>
 <p>
-This card needed one more tightening step. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">Diop &amp; Fliess (1991)</a> made persistent trajectories explicit, and <a href="https://doi.org/10.1063/1.3528102" target="_blank">Raue et al. (2010)</a> showed that identifiability analysis can guide new experiments rather than only criticize old ones. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">Chis et al. (2016)</a> then showed that <strong>sloppiness is not identifiability</strong> and that design should optimize explicit identifiability criteria rather than proxy notions of being merely less sloppy. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">White et al. (2016)</a> showed that complementary experiments can make previously omitted mechanisms relevant, so a nominally more informative design can simultaneously create large <strong>model discrepancy</strong>. In neurophysiology, <a href="https://doi.org/10.1162/neco.2008.08-07-594" target="_blank">Lewi et al. (2009)</a> showed that adaptive information-maximizing stimuli can accelerate parameter learning, and <a href="https://doi.org/10.1371/journal.pcbi.1011342" target="_blank">Gontier et al. (2023)</a> brought that logic to synaptic characterization. In current systems neuroscience, <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran &amp; Litwin-Kumar (2025)</a> showed that a <strong>small targeted recording set</strong> can remove degeneracy in connectome-constrained networks and even prioritize which neurons should be recorded next, while <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">Langdon &amp; Engel (2025)</a> showed that preserving <strong>causal interactions among task variables</strong> can recover behaviorally relevant computation that correlation-only reductions miss. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">Gevertz &amp; Kareva (2024)</a> then showed that identifiability analysis can derive a <strong>minimally sufficient</strong> schedule, and <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025)</a> showed that active learning can reduce the observations needed to reach practical identifiability. Therefore, on this site, a stronger ambiguity-breaking design now has to answer four extra questions: <strong>Which identifiability objective chose the next condition?</strong> <strong>Why is the added regime or recording panel orthogonal enough to separate the survivors?</strong> <strong>Did the new condition expose omitted-mechanism error?</strong> and <strong>What minimum-sufficiency design would have been enough to stop?</strong> The submission-side operational version is <a href="../verification.html#experiment-design-leverage">Verification: experiment-design leverage</a>.
+このカードにはもう 1 回締め付ける必要がありました。 <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">ディオプ＆アンプ; Fliess (1991)</a> は持続的な軌道を明示し、<a href="https://doi.org/10.1063/1.3528102" target="_blank">Raue et al. (2010) </a> は、識別可能性分析が古い実験を批判するだけでなく、新しい実験を導くことができることを示しました。 <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">Chisら。 (2016)</a> は、その後、<strong> のずさんさは識別可能性ではなく、</strong> であり、設計は単にずさんでないという代替概念ではなく、明示的な識別可能性の基準を最適化する必要があることを示しました。 <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">ホワイト他(2016)</a> は、相補的な実験により、以前は省略されていたメカニズムを関連性のあるものにすることができるため、名目上より有益な設計が同時に <strong> モデルと </strong> の大きな矛盾を生み出す可能性があることを示しました。神経生理学では、<a href="https://doi.org/10.1162/neco.2008.08-07-594" target="_blank">Lewi et al. (2009) </a> は、適応情報を最大化する刺激がパラメータ学習を加速できることを示しました。 (2023) </a> は、そのロジックをシナプスの特性評価にもたらしました。現在のシステム神経科学では、<a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">Beiran とLitwin-Kumar (2025)</a> は、<strong> 小規模のターゲット記録セット </strong> がコネクトーム制約のあるネットワークの縮退を除去し、次にどのニューロンを記録すべきかを優先することさえできることを示しました。 Engel (2025)</a> は、タスク変数 </strong> 間の <strong> 因果的相互作用を保存すると、相関のみの削減では見逃される行動的に関連する計算を回復できることを示しました。 <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">ゲベルツ&アンプ;次に、Kareva (2024)</a> は、識別可能性分析によって <strong> の最小限十分な </strong> スケジュールを導き出すことができることを示し、<a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">Liu et al. (2025) </a> は、アクティブ ラーニングにより、実用的な識別可能性を達成するために必要な観察を削減できることを示しました。したがって、このサイトでは、より強力な曖昧性解消設計は、次の 4 つの追加の質問に答える必要があります: <strong>どの識別可能性目標が次の条件を選択しましたか?</strong> <strong>追加されたレジームまたは記録パネルは、生存者を分離するのに十分直交しているのはなぜですか?</strong> <strong>新しい条件は、メカニズムの省略エラーを明らかにしましたか?</strong> および <strong>最小十分性設計はどのようなものになるでしょうか?停止するには十分ですか?</strong> 提出側の運用バージョンは <a href="../verification.html#experiment-design-leverage"> 検証: 実験設計の活用 </a> です。
 </p>
 </div>
 <p>
-If this card is missing, this site stays at <strong>observed-fit / candidate-model</strong> level. The submission-side operational version is <a href="../verification.html#identifiability-card">Verification: Identifiability Card</a>.
+このカードが欠落している場合、このサイトは <strong>observed-fit/candidate-model</strong> レベルに留まります。提出側の運用バージョンは<a href="../verification.html#identifiability-card">Verification: Identifiability Card</a>です。
 </p>
 </section>
 
 <section class="section" id="scm">
-<h2 class="section-title">SCM and causal discovery only become stronger with intervention</h2>
+<h2 class="section-title">SCM と因果関係の発見は介入によってのみ強化されます</h2>
 <p>
-SCM is a framework that makes it easy to write down interventions and counterfactuals explicitly. However, when we learn only from observational data, we are often left with a<strong>Markov equivalence class</strong>. As shown by Hauser and Buhlmann, intervention data are important for narrowing this class of equivalences. Even in brain data, Vink et al. showed that resting-state functional connectivity remains a weak predictor of causal interaction, and it is dangerous to determine direction and mechanism based on correlation alone.
+SCM は、介入と反事実を明示的に書き留めることを容易にするフレームワークです。ただし、観測データのみから学習すると、多くの場合、a<strong>マルコフ同値クラス</strong>が残ります。ハウザーとビュールマンが示したように、介入データはこのクラスの同等性を狭めるために重要です。脳のデータでも、Vink et al.は、静止状態の機能的接続性が依然として因果関係の弱い予測因子であり、相関関係のみに基づいて方向とメカニズムを決定するのは危険であることを示しました。
 </p>
 <div class="note-box">
-<strong>Difference in role between SCM and DCM</strong>
+<strong>SCMとDCM</strong>の役割の違い
 <p>
-DCM is useful for comparing neural circuit candidate generation models, and SCM is useful as a language for expressing interventions and counterfactuals. Both are important, but adding one does not automatically establish cause and effect.
+DCM は神経回路候補生成モデルを比較するのに役立ち、SCM は介入や反事実を表現するための言語として役立ちます。どちらも重要ですが、一方を追加しても原因と結果が自動的に確立されるわけではありません。
 </p>
 </div>
 </section>
 
 <section class="section" id="validation">
-<h2 class="section-title">External validation ladder for progressing to stronger claims</h2>
+<h2 class="section-title">より強力な主張に進むための外部検証ラダー</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Validation ladder</th>
-<th>What do we know</th>
-<th>Limits that still remain</th>
+<th>検証ラダー</th>
+<th>私たちが知っていること</th>
+<th>まだ残る限界</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Simulation</strong></td>
-<td>You can see the lower limit performance of solver and model recovery. </td>
-<td>It does not completely reproduce the real head geometry and biological noise. </td>
+<td><strong>シミュレーション</strong></td>
+<td>ソルバーとモデルリカバリの下限性能を確認できます。 </td>
+<td>実際のヘッド形状や生体ノイズを完全に再現するものではありません。 </td>
 </tr>
 <tr>
-<td><strong>Phantom</strong></td>
-<td>You can calibrate the geometry and validity of the forward model. </td>
-<td>There is no biological plasticity or state dependence. </td>
+<td><strong>ファントム</strong></td>
+<td>フォワードモデルの形状と有効性を校正できます。 </td>
+<td> 生物学的な可塑性や状態依存性はありません。 </td>
 </tr>
 <tr>
-<td><strong>Simultaneous invasive/non-invasive record</strong></td>
-<td>Comparisons can be made close to the local ground truth. </td>
-<td>coverage-limited, not whole-brain ground truth. </td>
+<td><strong>侵襲的/非侵襲的同時記録</strong></td>
+<td>ローカルのグラウンドトゥルースに近い比較が可能です。 </td>
+<td> 範囲が限定されており、全脳のグラウンド トゥルースではありません。 </td>
 </tr>
 <tr>
-<td><strong>Intracranial stimulation/perturbation</strong></td>
-<td>Enables validation of intervention responses and time order. </td>
-<td>Highly dependent on stimulus conditions and observation window design. </td>
+<td><strong>頭蓋内刺激/摂動</strong></td>
+<td>介入応答と時間順序の検証を可能にします。 </td>
+<td>刺激条件と観察窓の設計に大きく依存します。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="site-rules">
-<h2 class="section-title">Operation rules adopted by this site</h2>
+<h2 class="section-title">当サイトが採用している運用ルール</h2>
 <div class="key-points">
 <h4>Rule</h4>
 <ul>
-<li><strong>Don't write solver names as standard:</strong>Bayesian solver, minimum norm, DCM, and SCM are candidates, and acceptance or rejection is determined by audit items. </li>
-<li><strong>Don't let richer conditioning stand in for closure:</strong>More modalities, same-brain linkage, and connectome constraints still need fusion, bridge, or identifiability disclosure. </li>
-<li><strong>Don't raise causal claims based on observed fit alone:</strong>In the absence of intervention or external validation, stay at the equivalence class or candidate model level. </li>
-<li><strong>Write with reservations for deep and fine-grained information:</strong>Do not confuse detectable with robust reconstruction. </li>
-<li><strong>Abstain when there is wide uncertainty:</strong>If the solutions overlap, do not force them to collapse into one, but make your reservations clear. </li>
+<li><strong>標準ではソルバー名を書かない:</strong>ベイジアンソルバー、最小ノルム、DCM、SCMが候補となり、監査項目により合否が決定されます。 </li>
+<li><strong>より豊富な条件付けをクロージャの代わりにさせないでください:</strong>より多くのモダリティ、同一脳結合、およびコネクトーム制約には、依然として融合、ブリッジ、または識別可能性の開示が必要です。 </li>
+<li><strong>観察された適合のみに基づいて因果関係を主張しないでください:</strong>介入または外部検証がない場合は、同等クラスまたは候補モデルのレベルに留まります。 </li>
+<li><strong>深く詳細な情報を予約して書き込みます:</strong>検出可能とロバストな再構成を混同しないでください。 </li>
+<li><strong>不確実性が大きい場合は棄権する:</strong>解決策が重なっている場合は、無理に一つにまとめず、留保事項を明確にしてください。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">References</h2>
+<h2 class="section-title">参考資料</h2>
 <ol>
-<li>Wipf, D., &amp; Nagarajan, S. (2009). A unified Bayesian framework for MEG/EEG source imaging. <em>NeuroImage</em>, 44(3), 947-966. <a href="https://doi.org/10.1016/j.neuroimage.2008.02.059" target="_blank">doi:10.1016/j.neuroimage.2008.02.059</a></li>
-<li>Mahjoory, K., Nikulin, V. V., Botrel, L., Linkenkaer-Hansen, K., Fato, M. M., &amp; Haufe, S. (2017). Consistency of EEG source localization and connectivity estimates. <em>NeuroImage</em>, 152, 590-601. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">doi:10.1016/j.neuroimage.2017.02.076</a></li>
-<li>Aydin, U., Vorwerk, J., Kupper, P., et al. (2019). Influence of head tissue conductivity uncertainties on EEG dipole reconstruction. <em>Frontiers in Neuroscience</em>, 13, 531. <a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
-<li>Mikulan, E., Russo, S., Bares, M., et al. (2020). Simultaneous human intracerebral stimulation and HD-EEG, ground-truth for source localization methods. <em>Scientific Data</em>, 7, 127. <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
-<li>Unnwongse, K., Achakulvisut, T., Wu, J. Y., et al. (2023). Direct validation of EEG source imaging by intracranial electric stimulation in human patients. <em>Brain Communications</em>, 5(1), fcad023. <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/braincomms/fcad023</a></li>
-<li>Vorwerk, J., Wolters, C. H., &amp; Baumgarten, D. (2024). Global sensitivity of EEG source analysis to tissue conductivity uncertainties. <em>Frontiers in Human Neuroscience</em>, 18, 1335212. <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
-<li>Luria, G., Viani, S., Pascarella, A., et al. (2024). The SESAMEEG package: a probabilistic tool for source localization and uncertainty quantification in M/EEG. <em>Frontiers in Human Neuroscience</em>, 18, 1359753. <a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">doi:10.3389/fnhum.2024.1359753</a></li>
-<li>Hao, S., Zhao, H., Feng, Z., et al. (2025). HD-EEG source imaging with simultaneous SEEG recording in drug-resistant epilepsy. <em>Epilepsia</em>, 66(11), 4451-4464. <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
-<li>Tong, P. F., Yang, H., Ding, X., et al. (2025). Debiased estimation and inference for spatial-temporal EEG/MEG source imaging. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">doi:10.1109/TMI.2024.3506596</a></li>
-<li>Feng, Z., Mishne, G., Hashemi, A., et al. (2025). Block-Champagne: Imaging extended E/MEG source activation with empirical Bayesian uncertainty quantification. <em>IEEE Transactions on Medical Imaging</em>. <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
-<li>Friston, K. J., Harrison, L., &amp; Penny, W. (2003). Dynamic causal modelling. <em>NeuroImage</em>, 19(4), 1273-1302. <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
-<li>Penny, W. D., Stephan, K. E., Mechelli, A., &amp; Friston, K. J. (2004). Comparing dynamic causal models. <em>NeuroImage</em>, 22(3), 1157-1172. <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
-<li>Rosa, M. J., Friston, K., &amp; Penny, W. (2012). Post-hoc selection of dynamic causal models. <em>Journal of Neuroscience Methods</em>, 208(1), 66-78. <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
-<li>Lee, H.-L., Zahneisen, B., Hugger, T., et al. (2017). Tracking dynamic effective connectivity from fMRI using changes induced by anesthesia. <em>NeuroImage</em>, 149, 441-451. <a href="https://doi.org/10.1016/j.neuroimage.2017.02.012" target="_blank">doi:10.1016/j.neuroimage.2017.02.012</a></li>
-<li>Frässle, S., Paulus, F. M., Krach, S., &amp; Jansen, A. (2016). Test-retest reliability of effective connectivity in the face perception network. <em>Human Brain Mapping</em>, 37(2), 730-744. <a href="https://doi.org/10.1002/hbm.23061" target="_blank">doi:10.1002/hbm.23061</a></li>
-<li>Frässle, S., Manjaly, Z. M., Do, C. T., Kasper, L., Pruessmann, K. P., &amp; Stephan, K. E. (2021). Whole-brain estimates of directed connectivity for human connectomics. <em>NeuroImage</em>, 225, 117491. <a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
-<li>Wu, H., Hu, X., &amp; Zeng, Y. (2024). A fast dynamic causal modeling regression method for fMRI. <em>NeuroImage</em>, 304, 120954. <a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
-<li>Almgren, H., Van de Steen, F., Razi, A., Friston, K., &amp; Marinazzo, D. (2020). The effect of global signal regression on DCM estimates of noise and effective connectivity from resting state fMRI. <em>NeuroImage</em>, 208, 116435. <a href="https://doi.org/10.1016/j.neuroimage.2019.116435" target="_blank">doi:10.1016/j.neuroimage.2019.116435</a></li>
-<li>Zhang, S., Jung, K., Langner, R., Florin, E., Eickhoff, S. B., &amp; Popovych, O. V. (2024). Impact of data processing varieties on DCM estimates of effective connectivity from task-fMRI. <em>Human Brain Mapping</em>, 45(8), e26751. <a href="https://doi.org/10.1002/hbm.26751" target="_blank">doi:10.1002/hbm.26751</a></li>
-<li>Ma, L., Braun, S. E., Steinberg, J. L., Bjork, J. M., Martin, C. E., Keen II, L. D., &amp; Moeller, F. G. (2024). Effect of scanning duration and sample size on reliability in resting state fMRI dynamic causal modeling analysis. <em>NeuroImage</em>, 292, 120604. <a href="https://doi.org/10.1016/j.neuroimage.2024.120604" target="_blank">doi:10.1016/j.neuroimage.2024.120604</a></li>
-<li>Jafarian, A., Assem, M. K., Kocagoncu, E., et al. (2024). Reliability of dynamic causal modelling of resting-state magnetoencephalography. <em>Human Brain Mapping</em>. <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
-<li>Smith, S. M., Miller, K. L., Salimi-Khorshidi, G., Webster, M., Beckmann, C. F., Nichols, T. E., Ramsey, J. D., &amp; Woolrich, M. W. (2011). Network modelling methods for FMRI. <em>NeuroImage</em>, 54(2), 875-891. <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">doi:10.1016/j.neuroimage.2010.08.063</a></li>
-<li>Barnett, L., &amp; Seth, A. K. (2017). Detectability of Granger causality for subsampled continuous-time neurophysiological processes. <em>Journal of Neuroscience Methods</em>, 275, 93-121. <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">doi:10.1016/j.jneumeth.2016.10.016</a></li>
-<li>Vink, J. J. T., Klooster, D. C. W., Ozdemir, R. A., Westover, M. B., Pascual-Leone, A., &amp; Shafi, M. M. (2020). EEG Functional Connectivity is a Weak Predictor of Causal Brain Interactions. <em>Brain Topography</em>, 33(2), 221-237. <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">doi:10.1007/s10548-020-00757-6</a></li>
-<li>Novelli, L., Barnett, L., Seth, A. K., &amp; Razi, A. (2025). Minimum-Phase Property of the Hemodynamic Response Function, and Implications for Granger Causality in fMRI. <em>Human Brain Mapping</em>, 46(10), e70285. <a href="https://doi.org/10.1002/hbm.70285" target="_blank">doi:10.1002/hbm.70285</a></li>
-<li>Yan, J., Zhang, S.-W., Zhang, C., Huang, W., Shi, J., &amp; Chen, L. (2026). Dynamical Causality under Latent Confounders for Biological Network Reconstruction. <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>. <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">doi:10.1109/TPAMI.2026.3658839</a></li>
-<li>Hauser, A., &amp; Buhlmann, P. (2012). Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs. <em>Journal of Machine Learning Research</em>, 13, 2409-2464. <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
-<li>Vink, J. J., Ramos-Nuñez, A. I., Bellesi, A., et al. (2020). The brain's functional connectome is a poor predictor of the brain's causal activity flow. <em>PLOS Computational Biology</em>, 16(1), e1007866. <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
-<li>Villaverde, A. F. (2019). Observability and Structural Identifiability of Nonlinear Biological Systems. <em>Complexity</em>, 2019, 8497093. <a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
-<li>Villaverde, A. F., Tsiantis, N., &amp; Banga, J. R. (2019). Full observability and estimation of unknown inputs, states and parameters of nonlinear biological models. <em>Journal of The Royal Society Interface</em>, 16(156), 20190043. <a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">doi:10.1098/rsif.2019.0043</a></li>
-<li>Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <em>Nature Neuroscience</em>, 7, 1345-1352. <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
-<li>Rasero, J., Betzel, R., Sentis, A. I., Kraynak, T. E., Gianaros, P. J., &amp; Verstynen, T. (2024). Similarity in evoked responses does not imply similarity in macroscopic network states. <em>Network Neuroscience</em>, 8(1), 335-354. <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
-<li>Beiran, M., &amp; Litwin-Kumar, A. (2025). Prediction of neural activity in connectome-constrained recurrent networks. <em>Nature Neuroscience</em>, 28, 2561-2574. <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
-<li>Langdon, C., &amp; Engel, T. A. (2025). Latent circuit inference from heterogeneous neural responses during cognitive tasks. <em>Nature Neuroscience</em>, 28, 665-675. <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">doi:10.1038/s41593-025-01869-7</a></li>
-<li>Diop, S., &amp; Fliess, M. (1991). Nonlinear observability, identifiability, and persistent trajectories. <em>Proceedings of the 30th IEEE Conference on Decision and Control</em>, 714-719. <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">doi:10.1109/CDC.1991.261405</a></li>
-<li>Raue, A., Becker, V., Klingmüller, U., &amp; Timmer, J. (2010). Identifiability and observability analysis for experimental design in nonlinear dynamical models. <em>Chaos</em>, 20(4), 045105. <a href="https://doi.org/10.1063/1.3528102" target="_blank">doi:10.1063/1.3528102</a></li>
-<li>Chis, O.-T., Villaverde, A. F., Banga, J. R., &amp; Balsa-Canto, E. (2016). On the relationship between sloppiness and identifiability. <em>Mathematical Biosciences</em>, 282, 147-161. <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">doi:10.1016/j.mbs.2016.10.009</a></li>
-<li>Lewi, J., Butera, R., &amp; Paninski, L. (2009). Sequential Optimal Design of Neurophysiology Experiments. <em>Neural Computation</em>, 21(3), 619-687. <a href="https://doi.org/10.1162/neco.2008.08-07-594" target="_blank">doi:10.1162/neco.2008.08-07-594</a></li>
-<li>Gontier, C., Surace, S. C., Delvendahl, I., Müller, M., &amp; Pfister, J.-P. (2023). Efficient sampling-based Bayesian Active Learning for synaptic characterization. <em>PLOS Computational Biology</em>, 19(8), e1011342. <a href="https://doi.org/10.1371/journal.pcbi.1011342" target="_blank">doi:10.1371/journal.pcbi.1011342</a></li>
-<li>White, A., Tolman, M., Thames, H. D., Withers, H. R., Mason, K. A., &amp; Transtrum, M. K. (2016). The limitations of model-based experimental design and parameter estimation in sloppy systems. <em>PLOS Computational Biology</em>, 12(12), e1005227. <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">doi:10.1371/journal.pcbi.1005227</a></li>
-<li>Gevertz, J. L., &amp; Kareva, I. (2024). Minimally sufficient experimental design using identifiability analysis. <em>npj Systems Biology and Applications</em>, 10, 2. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">doi:10.1038/s41540-023-00325-1</a></li>
-<li>Liu, X., Wanika, L., Chappell, M. J., &amp; Branke, J. (2025). Efficient data collection for establishing practical identifiability via active learning. <em>Computational and Structural Biotechnology Journal</em>, 27, 4992-5006. <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
-<li>Vafaii, H., Mandino, F., Desrosiers-Grégoire, G., et al. (2024). Multimodal measures of spontaneous brain activity reveal both common and divergent patterns of cortical functional organization. <em>Nature Communications</em>, 15, 229. <a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
-<li>Chen, J. E., Lewis, L. D., Coursey, S. E., et al. (2025). Simultaneous EEG-PET-MRI identifies temporally coupled and spatially structured brain dynamics across wakefulness and NREM sleep. <em>Nature Communications</em>, 16, 8887. <a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
-<li>Lu, X., Han, X., Meirovitch, Y., et al. (2023). Preserving extracellular space for high-quality optical and ultrastructural studies of whole mammalian brains. <em>Cell Reports Methods</em>, 3(7), 100520. <a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
-<li>MICrONS Consortium, Bae, J. A., et al. (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <em>Nature</em>, 640, 435-447. <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
-<li>Egger, J., Kostoglou, K., &amp; Müller-Putz, G. R. (2024). Chrono-EEG dynamics influencing hand gesture decoding: a 10-hour study. <em>Scientific Reports</em>, 14, 20247. <a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
+<li>Wipf、D.、＆amp;ナガラジャン、S. (2009)。 MEG/EEG ソース イメージング用の統合ベイジアン フレームワーク。 <em>NeuroImage</em>、44(3)、947-966。 <a href="https://doi.org/10.1016/j.neuroimage.2008.02.059" target="_blank">doi:10.1016/j.neuroimage.2008.02.059</a></li>
+<li>Mahjoory, K.、Nikulin, V.V.、Botrel, L.、Linkenkaer-Hansen, K.、Fato, M.M.、&amp;;ハウフェ、S. (2017)。 EEG ソース位置特定と接続性推定の一貫性。 <em>ニューロイメージ</em>、152、590-601。 <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">doi:10.1016/j.neuroimage.2017.02.076</a></li>
+<li>Aydin, U.、Vorwerk, J.、Kupper, P. 他（2019年）。 EEG双極子再構成に対する頭部組織の伝導性の不確実性の影響。 <em>神経科学のフロンティア</em>、13、531.<a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">doi:10.3389/fnins.2019.00531</a></li>
+<li>Mikulan, E.、Russo, S.、Bares, M.、他（2020年）。人間の脳内刺激と HD-EEG の同時、音源位置特定方法のグラウンドトゥルース。 <em>S科学データ</em>、7、127。<a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">doi:10.1038/s41597-020-0467-x</a></li>
+<li>Unnwongse、K.、Achakulvisut、T.、Wu、J.Y.、他。 （2023年）。人間の患者における頭蓋内電気刺激によるEEGソースイメージングの直接検証。 <em>ブレインコミュニケーションズ</em>、5(1)、fcad023。 <a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">doi:10.1093/ブレインコム/fcad023</a></li>
+<li>Vorwerk、J.、Wolters、C.H.、およびバウムガルテン、D. (2024)。組織の伝導率の不確実性に対するEEGソース分析のグローバルな感度。 <em>人間の神経科学のフロンティア</em>、18、1335212.<a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">doi:10.3389/fnhum.2024.1335212</a></li>
+<li>Luria, G.、Viani, S.、Pascarella, A.、他。 （2024年）。 SESAMEEG パッケージ: M/EEG における信号源の位置特定と不確実性の定量化のための確率的ツール。 <em>人間の神経科学のフロンティア</em>、18、1359753.<a href="https://doi.org/10.3389/fnhum.2024.1359753" target="_blank">doi:10.3389/fnhum.2024.1359753</a></li>
+<li>Hao, S.、Zhao, H.、Feng, Z. 他(2025年)。薬剤耐性てんかんにおける HD-EEG ソースイメージングと同時 SEEG 記録。 <em>てんかん</em>、66(11)、4451-4464。 <a href="https://doi.org/10.1111/epi.18552" target="_blank">doi:10.1111/epi.18552</a></li>
+<li>Tong、P.F.、Yang、H.、Ding、X. 他(2025年)。時空間 EEG/MEG ソース イメージングのための偏りのない推定と推論。 <em>医用画像に関するIEEEトランザクション</em>。 <a href="https://doi.org/10.1109/TMI.2024.3506596" target="_blank">doi:10.1109/TMI.2024.3506596</a></li>
+<li>Feng, Z.、Mishne, G.、Hashemi, A. 他(2025年)。 Block-Champagne: 経験的なベイジアン不確実性定量化を使用した拡張 E/MEG ソース活性化のイメージング。 <em>医用画像に関するIEEEトランザクション</em>。 <a href="https://doi.org/10.1109/TMI.2025.3642620" target="_blank">doi:10.1109/TMI.2025.3642620</a></li>
+<li>フリストン、K.J.、ハリソン、L.、＆amp;ペニー、W. (2003)。動的因果モデリング。 <em>NeuroImage</em>、19(4)、1273-1302。 <a href="https://doi.org/10.1016/S1053-8119(03)00202-7" target="_blank">doi:10.1016/S1053-8119(03)00202-7</a></li>
+<li>Penny、WD、Stephan、K.E.、Mechelli、A.、およびフリストン、K.J. (2004)。動的因果モデルの比較。 <em>NeuroImage</em>、22(3)、1157-1172。 <a href="https://doi.org/10.1016/j.neuroimage.2004.03.026" target="_blank">doi:10.1016/j.neuroimage.2004.03.026</a></li>
+<li>Rosa、M.J.、Friston、K.、およびペニー、W. (2012)。動的因果モデルの事後選択。 <em>Journal of Neuroscience Methods</em>、208(1)、66-78。 <a href="https://doi.org/10.1016/j.jneumeth.2012.04.013" target="_blank">doi:10.1016/j.jneumeth.2012.04.013</a></li>
+<li>Lee、H.-L.、Zahneisen、B.、Hugger、T.、他。 （2017年）。麻酔によって誘発される変化を使用して、fMRI から動的に効果的な接続を追跡します。 <em>NeuroImage</em>、149、441-451。 <a href="https://doi.org/10.1016/j.neuroimage.2017.02.012" target="_blank">doi:10.1016/j.neuroimage.2017.02.012</a></li>
+<li>Frässle、S.、Paulus、F.M.、Krach、S.、およびジャンセン、A. (2016)。顔認識ネットワークにおける効果的な接続の信頼性をテストおよび再テストします。 <em>人間の脳のマッピング</em>、37(2)、730-744。 <a href="https://doi.org/10.1002/hbm.23061" target="_blank">doi:10.1002/hbm.23061</a></li>
+<li>Frässle、S.、Manjaly、Z.M.、Do、C.T.、Kasper、L.、Pruessmann、K.P.、およびステファン、K.E. (2021)。人間のコネクトミクスのための有向接続性の全脳推定。 <em>NeuroImage</em>、225、117491.<a href="https://doi.org/10.1016/j.neuroimage.2020.117491" target="_blank">doi:10.1016/j.neuroimage.2020.117491</a></li>
+<li>Wu、H.、Hu、X.、およびZeng、Y. (2024)。 fMRI 用の高速動的因果モデリング回帰手法。 <em>NeuroImage</em>、304、120954.<a href="https://doi.org/10.1016/j.neuroimage.2024.120954" target="_blank">doi:10.1016/j.neuroimage.2024.120954</a></li>
+<li>Almgren、H.、Van de Steen、F.、Razi、A.、Friston、K.、およびマリナッツォ、D. (2020)。静止状態 fMRI からのノイズと有効接続性の DCM 推定に対するグローバル信号回帰の影響。 <em>NeuroImage</em>、208、116435。<a href="https://doi.org/10.1016/j.neuroimage.2019.116435" target="_blank">doi:10.1016/j.neuroimage.2019.116435</a></li>
+<li>Zhang、S.、Jung、K.、Langner、R.、Florin、E.、Eickhoff、S.B.、およびポポヴィチ、O.V. (2024)。タスク fMRI からの有効な接続性の DCM 推定に対するデータ処理の種類の影響。 <em>人間の脳のマッピング</em>、45(8)、e26751。 <a href="https://doi.org/10.1002/hbm.26751" target="_blank">doi:10.1002/hbm.26751</a></li>
+<li>Ma、L.、ブラウン、S.E.、スタインバーグ、J.L.、ビョーク、J.M.、マーティン、C.E.、キーン II、L.D.、&amp;; Moeller、F.G. (2024)。安静状態 fMRI 動的因果モデリング解析の信頼性に対するスキャン期間とサンプル サイズの影響。 <em>NeuroImage</em>、292、120604.<a href="https://doi.org/10.1016/j.neuroimage.2024.120604" target="_blank">doi:10.1016/j.neuroimage.2024.120604</a></li>
+<li>Jafarian, A.、Assem, M. K.、Kocagoncu, E. 他（2024年）。安静状態の脳磁図の動的因果モデリングの信頼性。 <em>人間の脳マッピング</em>。 <a href="https://doi.org/10.1002/hbm.26782" target="_blank">doi:10.1002/hbm.26782</a></li>
+<li>Smith、S.M.、Miller、K.L.、Salimi-Khorshidi、G.、Webster、M.、Beckmann、C.F.、Nichols、T.E.、Ramsey、J.D.、および;ウールリッチ、M.W. (2011)。 FMRI のネットワーク モデリング手法。 <em>NeuroImage</em>、54(2)、875-891。 <a href="https://doi.org/10.1016/j.neuroimage.2010.08.063" target="_blank">doi:10.1016/j.neuroimage.2010.08.063</a></li>
+<li>バーネット、L.、＆amp;セス、AK. (2017)。サブサンプリングされた連続時間神経生理学的プロセスに対するグレンジャー因果関係の検出可能性。 <em>Journal of Neuroscience Methods</em>、275、93-121。 <a href="https://doi.org/10.1016/j.jneumeth.2016.10.016" target="_blank">doi:10.1016/j.jneumeth.2016.10.016</a></li>
+<li>Vink、J.J.T.、Klooster、D.C.W.、Ozdemir、R.A.、Westover、MB、Pascual-Leone、A.、および;シャフィ、M.M. (2020)。 EEG の機能的接続性は、脳の因果関係の弱い予測因子です。 <em>脳トポグラフィー</em>、33(2)、221-237。 <a href="https://doi.org/10.1007/s10548-020-00757-6" target="_blank">doi:10.1007/s10548-020-00757-6</a></li>
+<li>Novelli, L.、Barnett, L.、Seth, A.K.、およびラジ、A. (2025)。血行動態応答関数の最小位相特性、および fMRI におけるグレンジャー因果関係への影響。 <em>人間の脳のマッピング</em>、46(10)、e70285。 <a href="https://doi.org/10.1002/hbm.70285" target="_blank">doi:10.1002/hbm.70285</a></li>
+<li>Yan, J.、Zhang, S.-W.、Zhang, C.、Huang, W.、Shi, J.、およびチェン、L. (2026)。生物学的ネットワーク再構築のための潜在交絡因子の下での動的因果関係。 <em>パターン分析とマシンインテリジェンスに関するIEEEトランザクション</em>。 <a href="https://doi.org/10.1109/TPAMI.2026.3658839" target="_blank">doi:10.1109/TPAMI.2026.3658839</a></li>
+<li>ハウザー、A.、＆amp;ブールマン、P. (2012)。有向非巡回グラフの介入マルコフ等価クラスの特性評価と貪欲な学習。 <em>Journal of Machine Learning Research</em>、13、2409-2464。 <a href="https://jmlr.org/papers/v13/hauser12a.html" target="_blank">JMLR</a></li>
+<li>Vink、J.J.、Ramos-Nuñez、A.I.、Bellesi、A.、他（2020年）。脳の機能的コネクトームは、脳の因果活動の流れを予測するのに十分ではありません。 <em>PLOS 計算生物学</em>、16(1)、e1007866。 <a href="https://doi.org/10.1371/journal.pcbi.1007866" target="_blank">doi:10.1371/journal.pcbi.1007866</a></li>
+<li>ビジャベルデ、A.F. (2019)。非線形生物システムの観察可能性と構造識別可能性。 <em>複雑性</em>、2019、8497093。<a href="https://doi.org/10.1155/2019/8497093" target="_blank">doi:10.1155/2019/8497093</a></li>
+<li>ビジャベルデ、A.F.、チアンティス、N.、およびJ. R. バンガ (2019)。非線形生物学モデルの未知の入力、状態、パラメーターの完全な可観測性と推定。 <em>王立協会インターフェースジャーナル</em>、16(156)、20190043。<a href="https://doi.org/10.1098/rsif.2019.0043" target="_blank">doi:10.1098/rsif.2019.0043</a></li>
+<li>Prinz、A.A.、Bucher、D.、およびマーダー、E. (2004)。異なる回路パラメータからの同様のネットワーク アクティビティ。 <em>Nature Neuroscience</em>、7、1345-1352。 <a href="https://doi.org/10.1038/nn1352" target="_blank">ドイ:10.1038/nn1352</a></li>
+<li>Rasero、J.、Betzel、R.、Sentis、A.I.、Kraynak、T.E.、Gianaros、P.J.、およびVerstynen、T. (2024)。誘発された反応の類似性は、巨視的なネットワーク状態の類似性を意味しません。 <em>ネットワーク神経科学</em>、8(1)、335-354。 <a href="https://doi.org/10.1162/netn_a_00354" target="_blank">doi:10.1162/netn_a_00354</a></li>
+<li>ベイラン、M.、＆amp;リトウィン・クマール、A. (2025)。コネクトーム制約付きリカレント ネットワークにおける神経活動の予測。 <em>Nature Neuroscience</em>、28、2561-2574。 <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Langdon、C.、＆amp;エンゲル、T.A. (2025)。認知課題中の異質な神経反応からの潜在回路推論。 <em>Nature Neuroscience</em>、28、665-675。 <a href="https://doi.org/10.1038/s41593-025-01869-7" target="_blank">doi:10.1038/s41593-025-01869-7</a></li>
+<li>ディオプ、S.、&amp;フライス、M. (1991)。非線形の観測可能性、識別可能性、および永続的な軌跡。 <em>決定と制御に関する第 30 回 IEEE 会議議事録</em>、714-719。 <a href="https://doi.org/10.1109/CDC.1991.261405" target="_blank">doi:10.1109/CDC.1991.261405</a></li>
+<li>Raue、A.、Becker、V.、Klingmüller、U.、およびティマー、J. (2010)。非線形力学モデルにおける実験計画のための識別可能性と可観測性の解析。 <em>Chaos</em>、20(4)、045105。<a href="https://doi.org/10.1063/1.3528102" target="_blank">doi:10.1063/1.3528102</a></li>
+<li>Chis、O.-T.、Villaverde、A.F.、Banga、JR.、およびBalsa-Canto、E. (2016)。ずさんさと識別可能性の関係について。 <em>数理生物科学</em>、282、147-161。 <a href="https://doi.org/10.1016/j.mbs.2016.10.009" target="_blank">doi:10.1016/j.mbs.2016.10.009</a></li>
+<li>Lewi、J.、Butera、R.、&amp;パニンスキー、L. (2009)。神経生理学実験の逐次最適設計。 <em>神経計算</em>、21(3)、619-687。 <a href="https://doi.org/10.1162/neco.2008.08-07-594" target="_blank">doi:10.1162/neco.2008.08-07-594</a></li>
+<li>Gontier, C.、Surace, S.C.、Delvendahl, I.、Müller, M.、およびフィスター、J.-P. （2023年）。シナプスの特性評価のための効率的なサンプリングベースのベイジアンアクティブラーニング。 <em>PLOS 計算生物学</em>、19(8)、e1011342。 <a href="https://doi.org/10.1371/journal.pcbi.1011342" target="_blank">doi:10.1371/journal.pcbi.1011342</a></li>
+<li>ホワイト、A.、トールマン、M.、テムズ、H.D.、ウィザーズ、H.R.、メイソン、K.A.、およびトランストラム、M.K. (2016)。ずさんなシステムにおけるモデルベースの実験計画とパラメータ推定の限界。 <em>PLOS 計算生物学</em>、12(12)、e1005227。 <a href="https://doi.org/10.1371/journal.pcbi.1005227" target="_blank">doi:10.1371/journal.pcbi.1005227</a></li>
+<li>Gevertz、J.L.、およびカレヴァ、I. (2024)。識別可能性分析を使用した最小限で十分な実験計画。 <em>npj システム生物学とアプリケーション</em>、10、2. <a href="https://doi.org/10.1038/s41540-023-00325-1" target="_blank">doi:10.1038/s41540-023-00325-1</a></li>
+<li>Liu、X.、Wanika、L.、Chappell、M.J.、およびブランケ、J. (2025)。アクティブラーニングによる実用的な識別可能性を確立するための効率的なデータ収集。 <em>Computational and Structural Biotechnology Journal</em>、27、4992-5006。 <a href="https://doi.org/10.1016/j.csbj.2025.10.058" target="_blank">doi:10.1016/j.csbj.2025.10.058</a></li>
+<li>Vafaii、H.、Mandino、F.、Desrosiers-Grégoire、G.、他。 （2024年）。自発的な脳活動の多峰性測定により、皮質機能組織の共通パターンと多様なパターンの両方が明らかになります。 <em>Nature Communications</em>、15、229.<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">doi:10.1038/s41467-023-44363-z</a></li>
+<li>Chen、J. E.、Lewis、L. D.、Coursey、S. E.、他(2025年)。 EEG-PET-MRI を同時に行うことで、覚醒時とノンレム睡眠時の時間的に結合し、空間的に構造化された脳のダイナミクスを特定します。 <em>Nature Communications</em>、16、8887。<a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">doi:10.1038/s41467-025-64414-x</a></li>
+<li>Lu, X.、Han, X.、Meirovitch, Y. 他（2023年）。哺乳動物の脳全体の高品質な光学的および超微細構造研究のために細胞外空間を保存します。 <em>Cell レポート メソッド</em>、3(7)、100520。<a href="https://doi.org/10.1016/j.crmeth.2023.100520" target="_blank">doi:10.1016/j.crmeth.2023.100520</a></li>
+<li>MICrONS コンソーシアム、Bae、J.A. 他(2025年)。マウス視覚野の複数の領域にわたる機能的コネクトミクス。 <em>Nature</em>、640、435-447。 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>Egger、J.、Kostoglou、K.、およびミュラー・プッツ、G.R. (2024)。手のジェスチャーの解読に影響を与える時間脳波ダイナミクス: 10 時間の研究。 <em>Scientific Reports</em>、14、20247.<a href="https://doi.org/10.1038/s41598-024-70609-x" target="_blank">doi:10.1038/s41598-024-70609-x</a></li>
 </ol>
 </section>
 
@@ -749,21 +702,21 @@ DCM is useful for comparing neural circuit candidate generation models, and SCM 
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="measurement-and-modeling-terms.html">From measurement to modeling →</a></li>
-<li><a href="measurement-stack-and-claim-ceiling.html">Observability and claim ceiling →</a></li>
-<li><a href="uncertainty-confidence-and-abstention.html">Uncertainty/proofreading/abstention →</a></li>
-<li><a href="state-continuity-bridge.html">State-continuity bridge →</a></li>
-<li><a href="counterfactual-and-perturbation-verification.html">Counterfactual/intervention/perturbation →</a></li>
+<li><a href="measurement-and-modeling-terms.html">測定からモデリングまで→</a></li>
+<li><a href="measurement-stack-and-claim-ceiling.html">可観測性とクレーム上限 →</a></li>
+<li><a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権 →</a></li>
+<li><a href="state-continuity-bridge.html">状態継続ブリッジ→</a></li>
+<li><a href="counterfactual-and-perturbation-verification.html">反事実/介入/摂動 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../eeg_101.html">Introduction to EEG →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
-<li><a href="../tech_roadmap.html#qa-r1">R1 inverse problem →</a></li>
+<li><a href="../eeg_101.html">脳波入門→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../tech_roadmap.html#qa-r1">R1 逆問題→</a></li>
 </ul>
 </div>
 </aside>

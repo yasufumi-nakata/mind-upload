@@ -1,7 +1,7 @@
 ---
 
-The source files for this learning wiki are managed under `wiki/` in the repository.
+この学習 Wiki のソースファイルは、リポジトリ内の `wiki/` で管理しています。
 
-- Public portal: [mind-upload.com](https://mind-upload.com)
-- Integration routing: [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
-- Error reports and improvement proposals: [GitHub Issues](https://github.com/yasufumi-nakata/mind-upload/issues)
+- 公開ポータル: [mind-upload.com](https://mind-upload.com)
+- 統合先ルーティング: [公開コンテンツ統合ハブ](https://mind-upload.com/content_hub.html)
+- 誤りの報告と改善提案: [GitHub Issues](https://github.com/yasufumi-nakata/mind-upload/issues)

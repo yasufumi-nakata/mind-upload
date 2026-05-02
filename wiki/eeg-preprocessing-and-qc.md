@@ -1,602 +1,601 @@
 ---
 layout: default
-title: "Wiki: EEG Preprocessing and QC"
-description: "Organizes EEG preprocessing as a claim contract, including split-locked transforms, recording-frame harmonization, reference families, derivative lineage, and retention."
-article_type: Wiki
-subtitle: "Preprocessing is not cleanup; it is part of the claim contract"
-author: Mind Uploading Research Project
-last_updated: "2026-04-04"
-note: "Technical / practical guide (updated for recording-frame contract clarity)"
-audience: "Readers who want to judge how EEG preprocessing, QC, and setup harmonization change the claim ceiling."
-reading_time: "14-20 minutes"
-page_intro: "This page treats EEG preprocessing and QC not as the final cosmetic cleanup step, but as an audit of which signals remain usable, which derivative branches stay reusable, and which claims must still stop."
-accuracy_note: "This page does not prescribe one universal pipeline. It extracts the minimum disclosure and stop rules that primary literature and official specifications currently support."
+title: 'Wiki: EEG の前処理と QC'
+description: スプリットロック変換、記録フレームの調和、参照ファミリー、派生系統、保持などの EEG 前処理をクレーム コントラクトとして整理します。
+article_type: ウィキ
+subtitle: 前処理はクリーンアップではありません。それは請求契約の一部です
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-04-04'
+note: 技術/実践ガイド (録画フレーム契約を明確にするために更新)
+audience: EEG 前処理、QC、セットアップの調和によって請求の上限がどのように変化するかを判断したい読者。
+reading_time: 14～20分
+page_intro: このページでは、EEG 前処理と QC を、最終的な表面上のクリーンアップ ステップとしてではなく、どの信号が引き続き使用可能か、どの派生ブランチが再利用可能のままか、どのクレームを停止する必要があるかを監査するものとして扱います。
+accuracy_note: このページでは、1 つのユニバーサル パイプラインを規定するものではありません。一次文献および公式仕様書が現在サポートしている最小限の開示および停止ルールを抽出します。
 page_highlights:
-  - "Reference methods, filters, artifact processing, and split-locked transforms can drive the very conclusions of ERP, connectivity, and decoding."
-  - "EEG-BIDS, COBIDAS-MEEG, and BIDS Derivatives put metadata, source lineage, and processing labels ahead of pipeline names."
-  - "Any preprocessing step that learns from data must be fitted inside the training split; only the learned transform may cross into the hold-out data."
-  - "Site, device, electrode layout, coordinate route, and reference family are part of the measurement condition rather than background implementation detail."
-  - "Common-channel reduction, interpolation, and REST-based transformation are different harmonization branches, not one interchangeable `preprocessed EEG` object."
-  - "Artifact removal does not always increase decoding accuracy, and reducing confound may result in decreased accuracy."
-  - "Cleanup tools do not by themselves solve source leakage, ghost interactions, causal direction, or subject/session shortcut risk."
-  - "High beta/gamma bands overlap with myoelectric contamination, so don't make a strong case without myoelectric audit."
+- 参照メソッド、フィルター、アーティファクト処理、およびスプリットロック変換は、ERP、接続性、およびデコードのまさに結論を導き出すことができます。
+- EEG-BIDS、COBIDAS-MEEG、および BIDS Derivatives は、メタデータ、ソース系統、および処理ラベルをパイプライン名の前に置きます。
+- データから学習する前処理ステップはすべて、トレーニング分割内に適合させる必要があります。学習された変換のみがホールドアウト データと交差する可能性があります。
+- 部位、デバイス、電極レイアウト、座標ルート、基準ファミリーは、バックグラウンド実装の詳細ではなく、測定条件の一部です。
+- 共通チャネルの削減、補間、および REST ベースの変換は、異なる調和ブランチであり、1 つの交換可能な `preprocessed EEG` オブジェクトではありません。
+- アーティファクトの除去によって常にデコードの精度が向上するとは限らず、交絡を減らすと精度が低下する可能性があります。
+- クリーンアップ ツールは、それ自体ではソース漏洩、ゴースト インタラクション、因果関係、またはサブジェクト/セッションのショートカット リスクを解決しません。
+- 高ベータ/ガンマ帯域は筋電汚染と重なるため、筋電検査なしで強い主張をしないでください。
 known_points:
-  - "Preprocessing is not a small implementation difference, but a choice that determines which signals are considered neural."
-  - "Preprocessing and split design are coupled; fitting ICA, autoreject, normalization, feature selection, or learned denoisers before hold-out can leak test information."
-  - "EEG-BIDS, COBIDAS-MEEG, and BIDS Derivatives provide a concrete floor for reproducible EEG reporting and derivative reuse."
-  - "Cross-dataset scores can move with amplifier, cap, channel layout, coordinate route, reference system, and protocol differences."
-  - "A harmonized branch is not one thing: common-channel intersection, interpolated target montages, and REST-based transformations preserve different objects and ceilings."
-  - "Subject- and session-specific EEG structure is strong enough that sample-based holdouts can overestimate generalization."
-  - "Artifact suppression and signal preservation are different; accuracy alone does not determine the quality of preprocessing."
-  - "A cleaner waveform does not automatically justify a stronger connectivity or causality claim."
+- 前処理は実装上の小さな違いではなく、どの信号がニューラルであるとみなされるかを決定する選択です。
+- 前処理と分割設計は結合されています。ホールドアウトの前に ICA、自動拒否、正規化、特徴選択、または学習されたノイズ除去機能をフィッティングすると、テスト情報が漏洩する可能性があります。
+- EEG-BIDS、COBIDAS-MEEG、および BIDS デリバティブは、再現可能な EEG レポートとデリバティブの再利用のための具体的な基盤を提供します。
+- データセット間のスコアは、アンプ、キャップ、チャネル レイアウト、座標ルート、参照システム、プロトコルの違いによって変動する可能性があります。
+- 調和されたブランチは単一のものではありません。共通チャネルの交差、補間されたターゲット モンタージュ、および REST ベースの変換は、さまざまなオブジェクトと上限を保持します。
+- 被験者およびセッション固有の EEG 構造は十分に強力であるため、サンプルベースのホールドアウトでは一般化を過大評価する可能性があります。
+- アーチファクトの抑制と信号の保存は異なります。精度だけで前処理の品質が決まるわけではありません。
+- よりきれいな波形は、より強い接続性や因果関係の主張を自動的に正当化するものではありません。
 unknown_points:
-  - "It has not yet been decided which split-locked preprocessing bundle is optimal for each EEG problem."
-  - "To determine how much of the high-frequency components can be treated as neural, it is necessary to audit myoelectricity, body movement, and task dependence."
-  - "Which harmonization branches preserve which benchmark objects best across heterogeneous EEG setups remains unresolved."
-  - "Which sensitivity-analysis and transform-lineage bundle should become the site-wide standard is still a bench-governance issue."
+- どのスプリットロック前処理バンドルが各 EEG 問題に最適であるかはまだ決定されていません。
+- 高周波成分のどれだけを神経として扱うことができるかを判断するには、筋電、体の動き、タスク依存性を監査する必要があります。
+- どの調和ブランチが、異種の EEG セットアップ全体でどのベンチマーク オブジェクトを最もよく保存するかは未解決のままです。
+- どの感度分析と変換リネージのバンドルをサイト全体の標準にするかは、依然としてベンチガバナンスの問題です。
 wiki_links:
-  - label: "Wiki: Basics of EEG"
-    url: "/wiki/eeg-basics.html"
-    description: "Click here if you want to return from the nature of the signal itself."
-  - label: "Wiki: Event synchronization and observation log"
-    url: "/wiki/event-sync-and-measurement-logs.html"
-    description: "Supplements the time synchronization, event, and bad segment recording required before preprocessing."
-  - label: "Wiki: Dataset splits and leakage"
-    url: "/wiki/dataset-splits-and-leakage.html"
-    description: "Use this when you need the split unit and hold-out ancestry itself clarified."
-  - label: "Wiki: Uncertainty, proofreading, abstaining"
-    url: "/wiki/uncertainty-confidence-and-abstention.html"
-    description: "It supplements the idea of estimation width and abstention using preprocessing differences."
-  - label: "Wiki: Standards/Location/Validator/Benchmark"
-    url: "/wiki/standards-repositories-validators-and-benchmarks.html"
-    description: "Compensates for the role differences between BIDS, derivatives, public version, loader, and benchmark."
+- label: 'Wiki: 脳波の基礎'
+  url: /wiki/eeg-basics.html
+  description: 信号自体の性質から戻りたい場合は、ここをクリックしてください。
+- label: 'Wiki: イベント同期と監視ログ'
+  url: /wiki/event-sync-and-measurement-logs.html
+  description: 前処理前に必要な時刻同期、イベント、不良セグメントの記録を補足します。
+- label: 'Wiki: データセットの分割と漏洩'
+  url: /wiki/dataset-splits-and-leakage.html
+  description: 分割ユニットとホールドアウトの祖先自体を明確にする必要がある場合にこれを使用します。
+- label: 'Wiki: 不確実性、校正、棄権'
+  url: /wiki/uncertainty-confidence-and-abstention.html
+  description: これは、前処理の違いを使用した推定幅と棄権の概念を補足します。
+- label: 'Wiki: 標準/場所/バリデータ/ベンチマーク'
+  url: /wiki/standards-repositories-validators-and-benchmarks.html
+  description: BIDS、デリバティブ、パブリック バージョン、ローダー、ベンチマーク間の役割の違いを補います。
 recommended_pages:
-  - label: "Introduction to EEG"
-    url: "/eeg_101.html"
-  - label: "Hands-on"
-    url: "/datasets.html#l0-practice"
-  - label: "Data & Bench"
-    url: "/datasets.html"
+- label: 脳波検査の概要
+  url: /eeg_101.html
+- label: 実践
+  url: /datasets.html#l0-practice
+- label: データとベンチ
+  url: /datasets.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Shortest conclusion</h2>
+<h2>最短の結論</h2>
 <p>
-EEG preprocessing is not a process to clean up the diagram. <strong>It is an auditing process that determines which signals are considered neural, which derived files remain reusable, and which claims to withhold.</strong> Therefore, this site treats split-locked transforms, reference methods, filters, artifact treatments, retention rates, setup logs, derivative lineage, and sensitivity analyses as <strong>acceptance conditions</strong> rather than supplements attached to results.
+EEG の前処理は、図をクリーンアップするプロセスではありません。 <strong>どの信号がニューラルであるとみなされるか、どの派生ファイルが再利用可能であり、どのファイルが保留を主張するかを決定する監査プロセスです。</strong>したがって、このサイトでは、分割ロック変換、参照メソッド、フィルター、アーティファクト処理、保持率、セットアップ ログ、派生リネージ、および感度分析を、結果に添付された補足ではなく、<strong>受け入れ条件</strong>として扱います。
 </p>
 </div>
 
 <div class="note-box">
-<strong>Scope of this page</strong>
+<strong>このページの範囲</strong>
 <p>
-This page stays on the technical and natural-science side only. It does not discuss philosophy, law, or personhood. The question here is narrower: <strong>which preprocessing and setup conditions must be fixed before an EEG-derived claim can be read strongly?</strong>
+このページは技術および自然科学の側面のみに留まります。哲学、法律、人格については議論しません。ここでの質問はより限定的です: <strong>EEG から得られたクレームを強力に読み取ることができる前に、どの前処理とセットアップ条件を修正する必要がありますか?</strong>
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03 correction for the beginner route</strong>
+<strong>2026-03初心者ルート修正</strong>
 <p>
-The older beginner route on this site treated preprocessing mostly as cleanup. That was too weak. For EEG, <strong>site / device / reference system / electrode layout / protocol</strong> are part of the measurement condition, and cleanup tools do not by themselves solve <strong>source leakage</strong>, <strong>ghost interactions</strong>, or <strong>directional identifiability</strong>.
+このサイトの古い初心者向けルートでは、前処理は主にクリーンアップとして扱われていました。それは弱すぎました。 EEG の場合、<strong> サイト / デバイス / 参照システム / 電極レイアウト / プロトコル</strong> は測定条件の一部であり、クリーンアップ ツール自体は <strong> ソース漏洩 </strong>、<strong> ゴースト相互作用 </strong>、または <strong> 方向識別性 </strong> を解決しません。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-03-26 correction: preprocessing is also part of split design</strong>
+<strong>2026-03-26 修正: 前処理も分割設計の一部</strong>
 <p>
-One more stop line had to be promoted. The older page still let readers imagine that preprocessing ends before train/test design starts. The recent literature does not support that shortcut. If a step <strong>learns parameters from data</strong>, such as ICA components, autoreject thresholds, ASR calibration, z-score statistics, PCA bases, or learned denoisers, it belongs to the <strong>training split</strong> rather than the pooled dataset. Otherwise the clean derivative has already seen the hold-out distribution.
+もう 1 つの停止線を昇格させる必要がありました。古いページでは依然として読者に、トレーニング/テスト設計が開始される前に前処理が終了することを想像させていました。最近の文献では、そのショートカットはサポートされていません。ステップ <strong> が、ICA コンポーネント、自動拒否しきい値、ASR キャリブレーション、Z スコア統計、PCA ベース、学習されたデノイザーなどのパラメーターを data</strong> から学習する場合、そのステップは、プールされたデータセットではなく <strong>training Split</strong> に属します。それ以外の場合、クリーンな導関数はすでにホールドアウト分布を示しています。
 </p>
 </div>
 
 <div class="note-box">
-<strong>2026-04-04 correction: harmonization is a recording-frame contract, not one checkbox</strong>
+<strong>2026-04-04 訂正: ハーモナイゼーションはレコーディング フレームの契約であり、1 つのチェックボックスではありません</strong>
 <p>
-The next weakness was that this page still treated <strong>setup harmonization</strong> too much like a generic background adjustment. The current literature does not support that shortcut. EEG-BIDS already separates <strong>electrodes</strong>, <strong>channels</strong>, <strong>coordinate system</strong>, and <strong>reference scheme</strong>. <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Hu et al. (2018)</a> showed that measured scalp potentials depend on both <strong>reference montage</strong> and <strong>electrode setup</strong>. <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that <strong>system</strong>, <strong>subject</strong>, and <strong>session</strong> each contribute variance to EEG recordings. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that environmental variability such as amplifier, cap, sampling rate, and filtering can break cross-dataset decoding, and <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dong et al. (2024)</a> showed that channel-location harmonization itself needs an explicit offline route such as REST-based transformation rather than a vague statement that datasets were simply `made comparable`. Therefore, on this site, harmonization is now read as a <strong>recording-frame contract</strong> that must name the <strong>coordinate route</strong>, <strong>reference family</strong>, <strong>omitted/interpolated-channel policy</strong>, and <strong>harmonized branch</strong>.
+次の弱点は、このページが依然として <strong>setup Harmonization</strong> を一般的な背景調整のように扱っていることです。現在の文献では、そのショートカットはサポートされていません。 EEG-BIDS はすでに、<strong> 電極 </strong>、<strong> チャネル </strong>、<strong> 座標系 </strong>、および <strong> 参照スキーム </strong> を分離しています。 <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Huら。 (2018)</a> は、測定された頭皮電位が <strong> 参照モンタージュ </strong> と <strong> 電極セットアップ </strong> の両方に依存することを示しました。 <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> は、<strong>system</strong>、<strong>subject</strong>、および <strong>session</strong> がそれぞれ EEG 記録の分散に寄与することを示しました。 <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xuら。 (2020)</a> は、アンプ、キャップ、サンプリング レート、フィルタリングなどの環境変動によってデータセット間のデコードが中断される可能性があることを示しました。 (2024)</a> は、データセットが単なる `made comparable` であるという曖昧な記述ではなく、チャネルと位置の調和自体が REST ベースの変換などの明示的なオフライン ルートを必要とすることを示しました。したがって、このサイトでは、調和は現在、<strong> 座標ルート </strong>、<strong> 参照ファミリー </strong>、<strong> 省略/補間チャネル ポリシー </strong>、および <strong> 調和ブランチ </strong> を指定する必要がある <strong> レコーディング フレーム コントラクト </strong> として読み取られます。
 </p>
 </div>
 
 <section class="section" id="why-this-matters">
-<h2 class="section-title">Weaknesses to be explored in depth</h2>
+<h2 class="section-title">徹底的に調査すべき弱点</h2>
 <p>
-The older page already treated reference methods, filters, artifact handling, and exclusion criteria as major issues. The remaining weakness was narrower but still important: it still let readers imagine preprocessing as if it were mostly <strong>waveform cleanup</strong>, with setup differences folded into one generic <strong>harmonization</strong> line. The current literature and official specifications do not support that compression. COBIDAS-MEEG and EEG-BIDS already provide the reporting floor, the PREP pipeline shows the interdependence of bad-channel detection and rereference, and Widmann et al. established that filter design itself can move waveform and latency. Recent work forces four more corrections. <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">Kessler et al. (2025)</a> explicitly discuss latent leakage in preprocessing operations such as ICA and autoreject, <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a> show that segment-based holdout leaks subject-specific information in translational EEG, <a href="https://doi.org/10.1016/j.compbiomed.2025.110608" target="_blank">Del Pup et al. (2025)</a> show that sample-based cross-validation overestimates performance and that nested subject-based strategies are more realistic, and <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Hu et al. (2018)</a> plus <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dong et al. (2024)</a> show that <strong>reference family</strong> and <strong>channel-location transformation route</strong> are themselves part of what the measurement means. Therefore, preprocessing here is read not only as cleanup, but also as <strong>split design</strong>, <strong>derivative provenance</strong>, <strong>shortcut control</strong>, and <strong>recording-frame contract disclosure</strong>.
+古いページでは、参照メソッド、フィルター、アーティファクトの処理、および除外基準がすでに主要な問題として扱われていました。残りの弱点は狭いものでしたが、依然として重要でした。読者は、セットアップの違いが 1 つの汎用 <strong>harmonization</strong> ラインに組み込まれている、ほとんどが <strong>waveform cleanup</strong> であるかのように前処理を想像させることができました。現在の文献および公式仕様は、その圧縮をサポートしていません。 COBIDAS-MEEG と EEG-BIDS はすでにレポートフロアを提供しており、PREP パイプラインは不良チャネルの検出と再参照の相互依存性を示しています。フィルタ設計自体が波形とレイテンシを変更できることが確立されました。最近の作業ではさらに 4 つの修正が必要です。 <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">ケスラーら。 (2025)</a> は、ICA や自動拒否などの前処理操作における潜在的な漏洩について明示的に説明しています。<a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024) </a> は、セグメントベースのホールドアウトが並進脳波における被験者固有の情報を漏らすことを示しています。<a href="https://doi.org/10.1016/j.compbiomed.2025.110608" target="_blank">Del Pup et al. (2025) </a> は、サンプルベースの相互検証はパフォーマンスを過大評価し、入れ子になった被験者ベースの戦略がより現実的であることを示しています。 (2018)</a> プラス <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dong et al. (2024)</a> は、<strong> 参照ファミリー </strong> および <strong> チャネル位置変換ルート </strong> 自体が測定の意味の一部であることを示しています。したがって、ここでの前処理はクリーンアップだけでなく、<strong>分割設計</strong>、<strong>派生来歴</strong>、<strong>ショートカット制御</strong>、<strong>録画フレーム契約開示</strong>とも読み替えられます。
 </p>
 </section>
 
 <section class="section" id="audit-gates">
-<h2 class="section-title">Ten audit gates to fix first</h2>
+<h2 class="section-title">最初に修正するための 10 の監査ゲート</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Gate</th>
-<th>What primary documents and official specifications currently support</th>
-<th>Assertion to stop when not passing</th>
+<th>ゲート</th>
+<th>現在サポートされている主要文書と公式仕様</th>
+<th>通過しない場合に停止するアサーション</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>metadata / reporting gate</strong></td>
-<td>EEG-BIDS and COBIDAS-MEEG require minimal recording of references, ground, sampling rate, filters, bad channels, electrode coordinates, events, and exclusion rules.</td>
-<td>Write it as ``reproducible EEG analysis'' or ``comparable clean EEG.''</td>
+<td><strong>メタデータ/レポートゲート</strong></td>
+<td>EEG-BIDS および COBIDAS-MEEG では、基準、グランド、サンプリング レート、フィルター、不良チャネル、電極座標、イベント、および除外ルールの最小限の記録が必要です。</td>
+<td>「`reproducible EEG analysis'' or `「同等のきれいな脳波」」と書きます。</td>
 </tr>
 <tr>
-<td><strong>split-locked transform gate</strong></td>
-<td>Generic ML guidance and EEG-specific studies now support the stricter rule that any transform fitted from data must be learned on the training split, not the pooled dataset.</td>
-<td>Reading a cross-session or cross-subject score as if the hold-out data were genuinely unseen.</td>
+<td><strong>スプリットロック変換ゲート</strong></td>
+<td>汎用 ML ガイダンスと EEG 固有の研究では、データから当てはめた変換はプールされたデータセットではなくトレーニング分割で学習する必要があるという、より厳格なルールがサポートされるようになりました。</td>
+<td>あたかもホールドアウト データが本当に見えていないかのように、クロスセッションまたはクロスサブジェクトのスコアを読み取ります。</td>
 </tr>
 <tr>
-<td><strong>derivative-lineage / ancestry gate</strong></td>
-<td>BIDS Derivatives require explicit source lineage, processing labels, and derivative naming to make cleaned data critically reusable in later processing.</td>
-<td>Reading a clean derivative as reusable or comparable when the source files and processing branch are not recoverable.</td>
+<td><strong>派生系統・祖先ゲート</strong></td>
+<td>BIDS デリバティブでは、クリーンなデータを後の処理で非常に再利用可能にするために、明示的なソース系統、処理ラベル、および派生命名が必要です。</td>
+<td>ソース ファイルと処理ブランチが回復できない場合に、クリーンな派生ファイルを再利用可能または同等のものとして読み取る。</td>
 </tr>
 <tr>
-<td><strong>reference gate</strong></td>
-<td>PREP pipeline and reference comparison studies show that bad-channel processing and rereference drive waveform and network metrics.</td>
-<td>Reading topology, connectivity, or topography in sensor space without reference dependence disclosure.</td>
+<td><strong>リファレンスゲート</strong></td>
+<td>PREP パイプラインとリファレンスの比較調査により、不良チャネルの処理とリファレンスが波形とネットワーク メトリクスを駆動していることがわかりました。</td>
+<td>参照依存性の開示なしでセンサー空間のトポロジー、接続性、またはトポグラフィーを読み取ります。</td>
 </tr>
 <tr>
-<td><strong>recording-frame contract / harmonization gate</strong></td>
-<td>Cross-dataset studies and channel-location transformation papers show that amplifier, cap, channel map, coordinate route, reference family, omitted/interpolated-channel policy, sampling rate, and protocol differences can change the result before the model changes.</td>
-<td>Reading a cross-dataset or cross-site score as if it reflected only the target neural variable, or as if the harmonized branch were automatically equivalent to the raw measurement object.</td>
+<td><strong>レコーディングフレーム契約/ハーモナイゼーションゲート</strong></td>
+<td>データセット間の研究とチャネル位置変換に関する論文では、アンプ、キャップ、チャネル マップ、座標ルート、リファレンス ファミリ、省略/補間チャネル ポリシー、サンプリング レート、プロトコルの違いにより、モデルが変更される前に結果が変わる可能性があることが示されています。</td>
+<td>あたかもターゲットの神経変数のみを反映しているかのように、またはあたかも調和されたブランチが生の測定オブジェクトと自動的に同等であるかのように、クロスデータセットまたはクロスサイトスコアを読み取ります。</td>
 </tr>
 <tr>
-<td><strong>filter gate</strong></td>
-<td>Widmann et al. explained that cutoff, transition band, filter order, and causal/acausal application can distort waveform and latency.</td>
-<td>Emphasizing ERP onset, slow components, or high-frequency gain without knowing the filter design.</td>
+<td><strong>フィルターゲート</strong></td>
+<td>ウィドマンら。カットオフ、遷移帯域、フィルター次数、および因果的/非因果的アプリケーションによって波形とレイテンシーが歪む可能性があると説明しました。</td>
+<td>フィルター設計を知らずにERPの立ち上がり、遅い成分、または高周波ゲインを強調します。</td>
 </tr>
 <tr>
-<td><strong>artifact gate</strong></td>
-<td>ICA, ICLabel, Autoreject, PREP, ASR, and ZapLine are promising cleanup tools, but research in 2025 showed that artifact correction does not necessarily improve decoding accuracy.</td>
-<td>Reading ``the preprocessing that produces the highest accuracy'' as automatically the best preprocessing.</td>
+<td><strong>アーティファクトゲート</strong></td>
+<td>ICA、ICLabel、Autoreject、PREP、ASR、ZapLine は有望なクリーンアップ ツールですが、2025 年の研究では、アーティファクト修正が必ずしもデコード精度を向上させるわけではないことが示されました。</td>
+<td>「最高の精度を生み出す前処理」を自動で最適な前処理と読み込む。</td>
 </tr>
 <tr>
-<td><strong>shortcut / fingerprint gate</strong></td>
-<td>Subject-specific and session-specific EEG structure can dominate the score if split design, nuisance channels, and residual acquisition fingerprints are not audited separately.</td>
-<td>Reading a diagnostic or decoding score as target-specific neural evidence before ruling out subject/session shortcut routes.</td>
+<td><strong>ショートカット/指紋ゲート</strong></td>
+<td>分割設計、迷惑チャネル、および残留取得フィンガープリントが個別に監査されない場合、被験者固有およびセッション固有の EEG 構造がスコアを支配する可能性があります。</td>
+<td>対象/セッションのショートカット ルートを除外する前に、ターゲット固有の神経証拠として診断スコアまたはデコード スコアを読み取ります。</td>
 </tr>
 <tr>
-<td><strong>connectivity ceiling gate</strong></td>
-<td>wPLI can reduce some zero-lag mixing, but simulation and source-space studies show that source leakage, ghost interactions, and pipeline dependence remain separate limits.</td>
-<td>Reading artifact-cleaned connectivity or directed metrics as leak-proof or causal by metric name alone.</td>
+<td><strong>接続天井ゲート</strong></td>
+<td>wPLI はゼロラグミキシングをある程度軽減できますが、シミュレーションとソース空間の研究では、ソースリーク、ゴースト相互作用、パイプライン依存性は依然として別個の限界であることが示されています。</td>
+<td>アーティファクト除去された接続または指示されたメトリクスを、メトリクス名のみでリークプルーフまたは因果関係として読み取ります。</td>
 </tr>
 <tr>
-<td><strong>retention / high-frequency audit gate</strong></td>
-<td>Myoelectricity overlaps with high beta/gamma, and aggressive cleaning can also reduce neural signals. Therefore retained trials, interpolation rate, exclusion rate, and raw-clean differences must remain numeric.</td>
-<td>Reading high beta/gamma claims or heavily cleaned data as sufficient by default.</td>
+<td><strong>保持/高頻度監査ゲート</strong></td>
+<td>筋電気は高ベータ/ガンマと重なっており、積極的な洗浄も神経信号を減少させる可能性があります。したがって、保持されたトライアル、内挿率、除外率、生とクリーンの差は数値のままでなければなりません。</td>
+<td>高ベータ/ガンマ要求または高度にクリーン化されたデータをデフォルトで十分に読み取ることができます。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="reporting-floor">
-<h2 class="section-title">1. The reporting floor is the metadata, not the algorithm name</h2>
+<h2 class="section-title">1。レポートフロアはアルゴリズム名</h2>ではなくメタデータです
 <p>
-What EEG-BIDS and its official specifications first fix is not the flashy pipeline name, but what is measured, how it is measured, and in what state it is stored. You can write sampling frequency, low / high cutoff, notch, and channel status in <code>channels.tsv</code>, while <code>electrodes.tsv</code> and <code>coordsystem.json</code> fix the electrode position and coordinate system. COBIDAS-MEEG similarly requires detailed reporting of reference methods, filters, bad-channel handling, exclusion rules, and artifact handling. The simple conclusion here is that <strong>clean EEG without metadata cannot be treated as a reproducible artifact</strong>.
+EEG-BIDS とその公式仕様で最初に修正されるのは、派手なパイプライン名ではなく、何が測定されるか、どのように測定されるか、そしてどのような状態で保存されるかです。 <code>channels.tsv</code> にはサンプリング周波数、ロー/ハイカットオフ、ノッチ、チャンネルステータスを書き込むことができ、<code>electrodes.tsv</code> と <code>coordsystem.json</code> には電極の位置と座標系を固定します。 COBIDAS-MEEG も同様に、参照メソッド、フィルター、不良チャネルの処理、除外ルール、およびアーティファクトの処理に関する詳細なレポートを必要とします。ここでの単純な結論は、メタデータのない <strong>clean EEG は再現可能なアーティファクト </strong> として扱うことができないということです。
 </p>
 <div class="note-box">
-<strong>Rules on this site</strong>
+<strong>このサイトのルール</strong>
 <p>
-At a minimum, leave the <strong>raw reference</strong>, <strong>rereference method</strong>, <strong>filters</strong>, <strong>bad channel / bad segment criteria</strong>, <strong>electrode coordinates</strong>, <strong>event timing</strong>, and <strong>exclusion rules</strong>. Even if you only post processed data, it will not be accepted unless you can track the difference from raw to clean.
+少なくとも、<strong> raw リファレンス </strong>、<strong> 再リファレンス メソッド </strong>、<strong> フィルタ </strong>、<strong> 不良チャネル / 不良セグメント基準 </strong>、<strong> 電極座標 </strong>、<strong> イベント タイミング </strong>、および <strong> 除外ルール </strong> はそのままにしておきます。加工したデータだけを投稿しても、生からクリーンまでの違いを追跡できなければ受け付けられません。
 </p>
 </div>
 </section>
 
 <section class="section" id="split-aware-preprocessing">
-<h2 class="section-title">2. If preprocessing learns from data, it belongs inside the training split</h2>
+<h2 class="section-title">2。前処理がデータから学習する場合、それはトレーニング Split</h2> 内に属します。
 <p>
-This is the correction that needed to become explicit on this page. The general ML rule is already simple: split first, then fit preprocessing on the training data and apply it to the hold-out data. EEG-specific work now shows why that generic rule matters here. <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">Kessler et al. (2025)</a> explicitly discuss latent leakage from operations such as high-pass filtering, ocular ICA, and autoreject, and consider temporally separated segments or fold-wise preprocessing as countermeasures. <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a> show that random segment-based holdout can leak subject-specific patterns, and <a href="https://doi.org/10.1016/j.compbiomed.2025.110608" target="_blank">Del Pup et al. (2025)</a> show that sample-based cross-validation overestimates performance and that nested subject-based cross-validation is more realistic. Therefore, on this site, <strong>any preprocessing step that estimates parameters from data is part of split design, not a pre-split background routine</strong>.
+これは、このページで明示する必要がある修正です。一般的な ML ルールはすでに単純です。最初に分割し、次にトレーニング データに前処理を適用して、それをホールドアウト データに適用します。 EEG 固有の研究により、一般的なルールがここで重要である理由が明らかになりました。 <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">ケスラーら。 (2025)</a> では、ハイパス フィルタリング、眼球 ICA、自動拒否などの操作による潜在的な漏洩について明示的に説明し、対策として時間的に分離されたセグメントまたはフォールドワイズ前処理を検討しています。 <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">ブルックシャーら(2024) </a> は、ランダムなセグメントベースのホールドアウトが被験者固有のパターンを漏らす可能性があることを示し、<a href="https://doi.org/10.1016/j.compbiomed.2025.110608" target="_blank">Del Pup et al. (2025)</a> は、サンプルベースの相互検証はパフォーマンスを過大評価しており、ネストされたサブジェクトベースの相互検証の方が現実的であることを示しています。したがって、このサイトでは、<strong> データからパラメーターを推定する前処理ステップは分割設計の一部であり、分割前のバックグラウンド ルーチン </strong> ではありません。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Transform family</th>
-<th>What is learned from data</th>
-<th>Site rule</th>
+<th>トランスフォームファミリー</th>
+<th>データからわかること</th>
+<th>サイトルール</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Fixed preregistered transforms</strong></td>
-<td>Nothing is estimated from the specific dataset once coefficients are fixed in advance.</td>
-<td>These may be applied consistently across the dataset, but their parameters still have to be disclosed and sensitivity checked.</td>
+<td><strong>事前登録された変換を修正</strong></td>
+<td>係数が事前に固定されると、特定のデータセットからは何も推定されません。</td>
+<td>これらはデータセット全体に一貫して適用できますが、パラメータは依然として開示され、感度がチェックされる必要があります。</td>
 </tr>
 <tr>
-<td><strong>ICA / ASR / Autoreject / bad-channel models</strong></td>
-<td>Components, thresholds, subspaces, or channel / epoch decisions are learned from the data.</td>
-<td>Fit on the training subset or train-only raw segment within each fold, then apply the learned transform to the hold-out data.</td>
+<td><strong>ICA / ASR / 自動拒否 / 不良チャンネルモデル</strong></td>
+<td>コンポーネント、しきい値、部分空間、またはチャネル/エポックの決定はデータから学習されます。</td>
+<td>各フォールド内のトレーニング サブセットまたはトレーニングのみの生セグメントにフィットし、学習された変換をホールドアウト データに適用します。</td>
 </tr>
 <tr>
-<td><strong>Normalization / PCA / feature selection / learned denoising</strong></td>
-<td>Means, variances, bases, selected features, or denoiser weights are learned from the data.</td>
-<td>Never estimate these on pooled train+test data if the claim is cross-session, cross-subject, or otherwise hold-out based.</td>
+<td><strong>正規化 / PCA / 特徴選択 / 学習されたノイズ除去</strong></td>
+<td>平均、分散、基数、選択された特徴、またはデノイザーの重みがデータから学習されます。</td>
+<td>クレームがセッション間、被験者間、またはその他のホールドアウト ベースである場合は、プールされたトレイン + テスト データからこれらを決して推定しないでください。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Rules on this site</strong>
+<strong>このサイトのルール</strong>
 <p>
-Do not write ``hold-out performance'' unless the transform-fit boundary is explicit. For every data-fitted step, leave <strong>what was fitted</strong>, <strong>on which split unit</strong>, <strong>using which data subset</strong>, and <strong>which learned object was applied to the test fold</strong>.
+変換フィット境界が明示的でない限り、「ホールドアウトパフォーマンス」とは書かないでください。データフィッティングステップごとに、<strong> 何がフィッティングされたか</strong>、<strong> どの分割ユニットに適用されたか</strong>、<strong>どのデータサブセットを使用したか</strong>、<strong>どの学習オブジェクトがテストフォールドに適用されたか</strong>を残します。
 </p>
 </div>
 </section>
 
 <section class="section" id="derivative-lineage">
-<h2 class="section-title">3. Clean EEG is reusable only when derivative lineage and ancestry remain explicit</h2>
+<h2 class="section-title">3。クリーンな EEG は、派生系統と祖先が明示的に残っている場合にのみ再利用可能</h2>
 <p>
-The next weakness was provenance. BIDS Derivatives now makes the rule concrete: derivatives are outputs of common processing pipelines that must capture enough data and metadata for a researcher to understand and <strong>critically reuse</strong> them. The specification explicitly provides <strong><code>Sources</code></strong>, <strong><code>source_entities</code></strong>, <strong><code>desc-&lt;label&gt;</code></strong>, and <strong><code>descriptions.tsv</code></strong> so later users can tell which raw or prior derivative files directly generated the cleaned EEG branch. This matters even more in EEG decoding, because windows, epochs, or averaged segments can inherit strong similarity from the same raw recording, the same session, or the same subject. If raw-window ancestry is lost, a clean derivative can look portable even when nearby windows from the same run crossed the hold-out boundary.
+次の弱点は出所でした。 BIDS デリバティブにより、ルールが具体化されました。デリバティブは、研究者が理解し、<strong>重要に再利用できる</strong>の十分なデータとメタデータを取得する必要がある共通処理パイプラインの出力です。この仕様では、<strong><code>Sources</code></strong>、<strong><code>source_entities</code></strong>、<strong><code>desc-<label></code></strong>、および <strong><code>descriptions.tsv</code></strong> を明示的に提供しているため、後のユーザーは、どの生のファイルまたは以前の派生ファイルがクリーン化された EEG を直接生成したかを知ることができます。枝。これは、EEG デコードではさらに重要になります。ウィンドウ、エポック、または平均化されたセグメントは、同じ生の記録、同じセッション、または同じ主題から強い類似性を継承する可能性があるためです。生のウィンドウの祖先が失われると、同じ実行からの近くのウィンドウがホールドアウト境界を越えた場合でも、クリーンな導関数は移植可能に見える可能性があります。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>What to keep</th>
-<th>Why it matters</th>
+<th>保管するもの</th>
+<th>それが重要な理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Direct source files</strong></td>
-<td>It shows which raw run or prior derivative directly generated the cleaned file.</td>
+<td><strong>ダイレクトソースファイル</strong></td>
+<td>どの生の実行または以前の派生ファイルがクリーンなファイルを直接生成したかを示します。</td>
 </tr>
 <tr>
-<td><strong><code>desc-&lt;label&gt;</code> processing branch</strong></td>
-<td>It distinguishes filtered, downsampled, rereferenced, or otherwise different clean versions of the same raw input.</td>
+<td><strong><code>desc-<label></code> 処理ブランチ</strong></td>
+<td>同じ生の入力のフィルタリング、ダウンサンプリング、再参照、またはその他の異なるクリーン バージョンを区別します。</td>
 </tr>
 <tr>
-<td><strong>Window / epoch ancestry</strong></td>
-<td>It prevents adjacent or overlapping segments from being mistaken for independent evidence.</td>
+<td><strong>ウィンドウ/エポック祖先</strong></td>
+<td>隣接または重複するセグメントが独立した証拠と誤認されるのを防ぎます。</td>
 </tr>
 <tr>
-<td><strong>Split unit and hold-out ancestry</strong></td>
-<td>It shows whether train and test were disjoint by subject, session, run, or continuous raw recording.</td>
+<td><strong>分割ユニットとホールドアウトの祖先</strong></td>
+<td>トレーニングとテストが主題、セッション、実行、または連続生記録ごとに分離されているかどうかを示します。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Rules on this site</strong>
+<strong>このサイトのルール</strong>
 <p>
-If you publish a cleaned EEG derivative, leave enough information to reconstruct the branch: <strong>source files</strong>, <strong>processing labels</strong>, <strong>software / version</strong>, <strong>split unit</strong>, and <strong>raw-window ancestry</strong>. A pretty cleaned file name is not enough provenance.
+クリーン化された EEG 派生物を公開する場合は、ブランチを再構築するのに十分な情報を残してください:<strong> ソース ファイル </strong>、<strong> 処理ラベル </strong>、<strong> ソフトウェア / バージョン </strong>、<strong> 分割ユニット </strong>、および <strong> raw ウィンドウの祖先 </strong>。きれいに整理されたファイル名では、出所が十分ではありません。
 </p>
 </div>
 </section>
 
 <section class="section" id="reference-choice">
-<h2 class="section-title">4. The reference method is not a small implementation difference; it is part of the observation model</h2>
+<h2 class="section-title">4。参照メソッドの実装上の小さな違いはありません。観測モデル</h2>の一部です
 <p>
-EEG is a potential-difference measurement, so changing the reference changes the waveform, topography, and sensor-space connectivity. What the PREP pipeline emphasized is that <strong>taking the average reference while overlooking bad channels contaminates the rereference itself</strong>. Furthermore, reference comparison studies show that functional-connectivity graphs and task-related network metrics change depending on the reference. Therefore, on this site, references are treated as <strong>premises that determine the meaning of results</strong>, rather than as ``implementation notes.''
+EEG は電位差の測定であるため、基準を変更すると、波形、トポグラフィー、およびセンサー空間の接続が変化します。 PREP パイプラインが強調していたのは、<strong> が不良チャネルを見逃しながら平均リファレンスを取得すると、</strong> リファレンス自体が汚染されてしまうということです。さらに、リファレンスの比較研究では、機能接続グラフとタスク関連のネットワーク メトリクスがリファレンスに応じて変化することが示されています。したがって、このサイトでは、参考文献は「実装ノート」ではなく、結果</strong>の意味を決定する<strong>前提として扱われます。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Minimum things to write</th>
-<th>Why it is necessary</th>
+<th>最低限書くべきこと</th>
+<th>なぜ必要なのか</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Recording reference / ground</strong></td>
-<td>The assumption behind the raw potential difference changes with it.</td>
+<td><strong>録画基準/地上</strong></td>
+<td>生の電位差の背後にある仮定はそれに応じて変化します。</td>
 </tr>
 <tr>
-<td><strong>Rereference method</strong></td>
-<td>The meaning of a sensor-space metric changes with average, linked mastoid, REST, and other schemes.</td>
+<td><strong>参照方法</strong></td>
+<td>センサー空間メトリックの意味は、平均、リンクされたマストイド、REST、およびその他のスキームによって変化します。</td>
 </tr>
 <tr>
-<td><strong>Bad-channel handling before rereference</strong></td>
-<td>Broken channels contaminate the rereference itself if they are included.</td>
+<td><strong>再参照前の不良チャネル処理</strong></td>
+<td>壊れたチャネルが含まれている場合、参照自体が汚染されます。</td>
 </tr>
 <tr>
-<td><strong>Number of interpolated channels</strong></td>
-<td>It separates what was truly measured from what was spatially reconstructed.</td>
+<td><strong>補間チャンネル数</strong></td>
+<td>実際に測定されたものと空間的に再構築されたものを分離します。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="setup-distribution">
-<h2 class="section-title">5. Harmonization is a recording-frame contract, not background cleanup</h2>
+<h2 class="section-title">5。ハーモナイゼーションはレコーディング フレームの契約であり、バックグラウンド クリーンアップではありません</h2>
 <p>
-Two EEG datasets can use the same task name and still represent different measurement conditions. EEG-BIDS already distinguishes <strong>electrodes</strong>, <strong>channels</strong>, <strong>coordinate system</strong>, and <strong>reference scheme</strong>, which means the format itself does not treat those as cosmetic details. <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Hu et al. (2018)</a> then showed that the measured scalp potentials change with both <strong>reference montage</strong> and <strong>electrode setup</strong>. <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> showed that <strong>system</strong>, <strong>subject</strong>, and <strong>session</strong> each influence EEG recordings. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al. (2020)</a> showed that cross-dataset deep-learning decoding breaks under environmental variability such as amplifier, cap, sampling rate, and filtering. <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dong et al. (2024)</a> then showed that different channel-location schemes can be brought closer only through an explicit offline transform route, with reported correlations above <strong>0.9</strong> rather than identity by default. Therefore, this site does not treat <strong>site / device / reference system / electrode layout / coordinate route / protocol</strong> as background nuisance. They are part of the observation model.
+2 つの EEG データセットは同じタスク名を使用しても、異なる測定条件を表すことができます。 EEG-BIDS はすでに <strong> 電極 </strong>、<strong> チャネル </strong>、<strong> 座標系 </strong>、および <strong> 参照スキーム </strong> を区別しています。これは、形式自体がこれらを表面的な詳細として扱っていないことを意味します。 <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">Huら(2018)</a> は、<strong> 参照モンタージュ </strong> と <strong> 電極セットアップ </strong> の両方で測定された頭皮電位が変化することを示しました。 <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)</a> は、<strong>system</strong>、<strong>subject</strong>、<strong>session</strong> がそれぞれ脳波記録に影響を与えることを示しました。 <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xuら。 (2020)</a> は、増幅器、キャップ、サンプリング レート、フィルタリングなどの環境変動下ではクロスデータセットのディープラーニング デコーディングが機能しないことを示しました。 <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">Dongら(2024) </a> は、明示的なオフライン変換ルートを通じてのみ、異なるチャネル位置スキームを近づけることができることを示し、デフォルトでの同一性ではなく、<strong>0.9</strong> を超える相関関係が報告されました。したがって、このサイトでは<strong>サイト/デバイス/参照システム/電極レイアウト/座標ルート/プロトコル</strong>を背景迷惑として扱いません。これらは観測モデルの一部です。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Harmonization branch</th>
-<th>What it preserves best</th>
-<th>What it still does not make equivalent by default</th>
+<th>調和ブランチ</th>
+<th>保存に最適な物</th>
+<th>デフォルトではまだ同等になっていないもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Common-channel intersection</strong></td>
-<td>The subset of channels that was directly measured in every dataset.</td>
-<td>Coverage outside the shared subset, or the original spatial support of denser setups.</td>
+<td><strong>共通チャネル交差点</strong></td>
+<td>すべてのデータセットで直接測定されたチャネルのサブセット。</td>
+<td>共有サブセット外のカバレッジ、またはより高密度なセットアップの元の空間サポート。</td>
 </tr>
 <tr>
-<td><strong>Interpolation to a target montage</strong></td>
-<td>A declared target layout under explicit spatial assumptions.</td>
-<td>Direct measurement at the interpolated channels, or route-free equivalence to the original montage.</td>
+<td><strong>ターゲット モンタージュへの補間</strong></td>
+<td>A 明示的な空間仮定に基づいてターゲット レイアウトを宣言しました。</td>
+<td>補間されたチャンネルでの直接測定、またはオリジナルのモンタージュとのルートフリーの同等性。</td>
 </tr>
 <tr>
-<td><strong>REST / coordinate transformation to a common distribution</strong></td>
-<td>A transformed branch with a declared reference and channel-location route that may improve comparability.</td>
-<td>Identity of the raw reference family, raw channel geometry, or proof that physiology was preserved exactly.</td>
+<td><strong>REST / 共通分布への座標変換</strong></td>
+<td>A 比較可能性を向上させる可能性がある、宣言された参照およびチャネル位置ルートを含む変換されたブランチ。</td>
+<td>生の参照ファミリーのアイデンティティ、生のチャネル形状、または生理機能が正確に保存されたことの証明。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Rules on this site</strong>
+<strong>このサイトのルール</strong>
 <p>
-If the claim spans more than one site, dataset, or recording setup, disclose the <strong>recording-frame contract</strong>: original channel map and coordinate system, raw reference plus rereference family, omitted/interpolated-channel policy, and whether harmonization used <strong>common-channel reduction</strong>, <strong>interpolation</strong>, or <strong>REST / another explicit transform route</strong>. Without that, a score is not read here as clean evidence of neural generalization, and the harmonized branch is not treated as equivalent to the original benchmark object.
+主張が複数のサイト、データセット、または録画設定にまたがる場合は、<strong> 録画フレーム契約</strong>: 元のチャネル マップと座標系、生の参照と参照ファミリ、省略/補間チャネル ポリシー、および調和に <strong> 共通チャネル削減 </strong>、<strong> 補間 </strong>、または <strong>REST / 別の明示的な変換ルート </strong> を使用したかどうかを開示します。それがなければ、スコアは神経汎化の明確な証拠としてここで読み取られず、調和されたブランチは元のベンチマーク オブジェクトと同等のものとして扱われません。
 </p>
 </div>
 </section>
 
 <section class="section" id="filter-design">
-<h2 class="section-title">6. A filter is not only a "pass-through band" but also a distortion design</h2>
+<h2 class="section-title">6。フィルターは「通過帯域」だけでなく歪み設計もできる</h2>
 <p>
-As explained by Widmann et al., it is not enough to write only the cutoff frequency of a filter. Transition band, filter order, passband / stopband ripple, causal / acausal application, and forward-backward usage can all move latency and waveform shape. Therefore, claims such as seeing a <strong>slow wave</strong>, an <strong>earlier onset</strong>, or an <strong>increase in gamma</strong> cannot be accepted without a record of the filter design.
+Widmann らによって説明されているように、フィルターのカットオフ周波数のみを記述するだけでは十分ではありません。遷移帯域、フィルター次数、通過帯域/阻止帯域リップル、因果関係/非因果関係、前後方向の使用法はすべて、レイテンシーと波形形状を変化させる可能性があります。したがって、<strong>遅い波</strong>、<strong>早期発症</strong>、または<strong>ガンマ</strong>の増加が見られるなどの主張は、フィルター設計の記録がなければ受け入れられません。
 </p>
 <div class="note-box">
-<strong>Rules on this site</strong>
+<strong>このサイトのルール</strong>
 <p>
-Regarding filters, leave not only the cutoff of <strong>high-pass</strong>, <strong>low-pass</strong>, and <strong>notch</strong>, but also <strong>filter type</strong>, <strong>order</strong>, <strong>causal / acausal</strong>, and the presence of <strong>forward-backward</strong>. When claiming ERP or latency, check conclusion drift in at least one alternative setting.
+フィルターに関しては<strong>ハイパス</strong>、<strong>ローパス</strong>、<strong>ノッチ</strong>のカットオフだけでなく、<strong>フィルタータイプ</strong>、<strong>オーダー</strong>、<strong>causal/acausal</strong>、<strong>forward-backward</strong>の有無も残します。 ERP または遅延を主張する場合は、少なくとも 1 つの代替設定で結論のドリフトを確認してください。
 </p>
 </div>
 </section>
 
 <section class="section" id="artifact-control">
-<h2 class="section-title">7. Artifact suppression is not always an improvement</h2>
+<h2 class="section-title">7。アーティファクトの抑制は必ずしも改善になるわけではない</h2>
 <p>
-ICA, ICLabel, Autoreject, PREP, ASR, and ZapLine are strong practical candidates. However, the important point here is not ``which one was used,'' but whether it is possible to audit what was cut, what was left, and where each step was fitted. <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">Kessler et al. (2025)</a> showed that artifact correction does not necessarily improve decoding performance and can reduce accuracy when artifact-related confounds are removed. This does not mean that cleaning is meaningless, but rather that maximizing accuracy and maximizing neural specificity are not synonymous.
+ICA、ICLabel、Autoreject、PREP、ASR、および ZapLine が有力な実用的な候補です。ただし、ここで重要なのは「どれを使ったか」ではなく、何を削って何を残し、各ステップをどこに当てはめたかを監査できるかどうかです。 <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">ケスラーら。 (2025)</a> は、アーティファクト補正が必ずしも復号パフォーマンスを向上させるわけではなく、アーティファクト関連の交絡が除去された場合に精度が低下する可能性があることを示しました。これは、クリーニングが無意味であるという意味ではなく、精度を最大化することと神経特異性を最大化することは同義ではないということです。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Candidate method</th>
-<th>Role</th>
-<th>Reason why it is not automatically promoted to standard solution</th>
+<th>候補方法</th>
+<th>ロール</th>
+<th>標準ソリューションに自動的に昇格しない理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>PREP</strong></td>
-<td>Clean the floor for line noise, bad channels, and robust reference.</td>
-<td>Task-specific artifacts and signal preservation still require a separate audit.</td>
+<td>回線ノイズ、不良チャンネル、堅牢なリファレンスを除去します。</td>
+<td>Tタスク固有のアーティファクトと信号の保存には、引き続き個別の監査が必要です。</td>
 </tr>
 <tr>
-<td><strong>Autoreject</strong></td>
-<td>Automate threshold adjustment and interpolation in trial/sensor units.</td>
-<td>Retention, signal preservation, and split-aware fitting still have to be checked separately.</td>
+<td><strong>自動拒否</strong></td>
+<td>トライアル/センサーユニットでの閾値調整と補間を自動化します。</td>
+<td>保持、信号保持、および分割認識フィッティングは個別にチェックする必要があります。</td>
 </tr>
 <tr>
-<td><strong>ICA + ICLabel</strong></td>
-<td>Flag candidate ocular, myoelectric, and cardiac components.</td>
-<td>Component removal can also reduce neural signal, and pooled fitting can leak structure across folds.</td>
+<td><strong>ICA + ICラベル</strong></td>
+<td>Flag 候補の眼球、筋電、心臓コンポーネント。</td>
+<td>コンポーネントの除去により神経信号も減少する可能性があり、プールされたフィッティングによりひだ全体に構造が漏れる可能性があります。</td>
 </tr>
 <tr>
-<td><strong>ASR / ZapLine</strong></td>
-<td>Suppress large-amplitude artifacts and line-noise contamination in a reproducible way.</td>
-<td>They are cleanup tools; they do not by themselves solve source leakage, directional identifiability, or shortcut risk.</td>
+<td><strong>ASR / ザップライン</strong></td>
+<td>S は、再現可能な方法で大振幅アーチファクトとラインノイズ汚染を抑制します。</td>
+<td>これらはクリーンアップ ツールです。それら自体では、ソース漏洩、方向の特定、またはショートカットのリスクを解決しません。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Rules on this site</strong>
+<strong>このサイトのルール</strong>
 <p>
-When reporting artifact processing, the <strong>method name</strong> is not sufficient. Include <strong>number of components / epochs / channels removed</strong>, <strong>interpolation rate</strong>, <strong>minutes / trials retained</strong>, <strong>raw-clean key metric differences</strong>, and, where possible, <strong>comparison with one alternative pipeline</strong>. If the method was fitted from data, also state <strong>where it was fitted</strong>.
+アーティファクト処理を報告する場合、<strong> メソッド名 </strong> では不十分です。 <strong>削除されたコンポーネント/エポック/チャネルの数</strong>、<strong>補間率</strong>、<strong>保持された分/トライアル数</strong>、<strong>生クリーンな主要メトリクスの違い</strong>、および可能であれば<strong>1つの代替パイプラインとの比較</strong>を含みます。メソッドがデータから当てはめられた場合は、当てはめられた箇所に <strong> </strong> も記載します。
 </p>
 </div>
 </section>
 
 <section class="section" id="shortcut-audit">
-<h2 class="section-title">8. Shortcut and fingerprint audit starts before the classifier</h2>
+<h2 class="section-title">8。ショートカットとフィンガープリントの監査は分類子</h2>の前に開始されます
 <p>
-One more weakness on the older page was to leave shortcut auditing to later decoding pages. That is too weak. <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a> show that segments from the same subject are more similar to each other than to segments from different subjects, which is exactly why segment-based holdout can look deceptively strong. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> show how subject characteristics can confound machine-learning performance, and <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> show that EEG variability can track stable subject identity more strongly than dynamic task state. Therefore, preprocessing review must already ask which residual patterns could still carry <strong>subject identity</strong>, <strong>session identity</strong>, or <strong>acquisition-distribution identity</strong>.
+古いページのもう 1 つの弱点は、ショートカットの監査を後のページのデコードに任せることでした。それは弱すぎます。 <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">ブルックシャーら(2024)</a> は、同じ被験者からのセグメントは、異なる被験者からのセグメントよりも互いに類似していることを示しています。これがまさに、セグメントベースのホールドアウトが一見強力に見える理由です。 <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a> は、被験者の特性が機械学習のパフォーマンスをどのように混乱させるかを示し、<a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a> は、EEG 変動が動的課題状態よりも安定した被験者の同一性をより強力に追跡できることを示しています。したがって、前処理レビューでは、どの残差パターンが <strong> サブジェクト ID</strong>、<strong> セッション ID</strong>、または <strong> 取得配布 ID</strong> を依然として保持できるかをすでに尋ねる必要があります。
 </p>
 <table class="data-table">
 <thead>
 <tr>
-<th>Residual pattern to audit</th>
-<th>Why preprocessing has to log it</th>
+<th>監査する残留パターン</th>
+<th>前処理でログを記録する必要がある理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Subject-specific spectrum / noise floor</strong></td>
-<td>It can travel through normalization and windowing into the classifier as a stable identity cue.</td>
+<td><strong>被写体固有のスペクトル/ノイズフロア</strong></td>
+<td>正規化とウィンドウ処理を介して、安定した識別キューとして分類子に伝達できます。</td>
 </tr>
 <tr>
-<td><strong>Bad-channel map / interpolation pattern</strong></td>
-<td>It can act as a recording signature rather than a neural variable of interest.</td>
+<td><strong>不良チャネルマップ/補間パターン</strong></td>
+<td>関心のある神経変数ではなく、記録シグネチャとして機能します。</td>
 </tr>
 <tr>
-<td><strong>Reference / montage / device chain</strong></td>
-<td>It can create acquisition fingerprints that survive cleanup and inflate apparent transfer.</td>
+<td><strong>リファレンス / モンタージュ / デバイス チェーン</strong></td>
+<td>クリーンアップに耐える取得フィンガープリントを作成し、見かけの転送を誇張することができます。</td>
 </tr>
 <tr>
-<td><strong>EOG / EMG / motion residuals</strong></td>
-<td>They can correlate with task labels and raise accuracy while reducing neural specificity.</td>
+<td><strong>EOG / EMG / 運動残差</strong></td>
+<td>タスクラベルと関連付けることができ、神経特異性を低下させながら精度を向上させることができます。</td>
 </tr>
 <tr>
-<td><strong>Temporal adjacency of windows</strong></td>
-<td>Neighboring windows from one run can look independent while still carrying nearly identical nuisance structure.</td>
+<td><strong>ウィンドウの時間的隣接</strong></td>
+<td>1 回の実行で隣接する窓は、ほぼ同一の迷惑構造を持ちながらも独立しているように見えます。</td>
 </tr>
 </tbody>
 </table>
 <div class="note-box">
-<strong>Rules on this site</strong>
+<strong>このサイトのルール</strong>
 <p>
-Before promoting a score, log at least one <strong>nuisance-only or shortcut-aware baseline</strong>, the <strong>hold-out unit</strong>, and which <strong>residual fingerprint routes</strong> remain unresolved after preprocessing.
+スコアを昇格する前に、少なくとも 1 つの <strong>迷惑専用またはショートカット認識ベースライン </strong>、<strong>ホールドアウト ユニット </strong>、および前処理後に未解決のまま残っている <strong>残留指紋ルート </strong> をログに記録します。
 </p>
 </div>
 </section>
 
 <section class="section" id="connectivity-ceiling">
-<h2 class="section-title">9. Cleanup is not connectivity validation</h2>
+<h2 class="section-title">9。クリーンアップは接続検証ではありません</h2>
 <p>
-It is tempting to think that once artifacts and line noise are suppressed, network metrics can be read more strongly. That is still too aggressive. Vinck et al. (2011) made wPLI safer against some zero-lag mixing, but Haufe et al. (2013) showed severe limits of sensor-space connectivity under volume conduction, Palva et al. (2018) showed ghost interactions even in source space, and Miljevic et al. (2025) showed strong dependence on rereference and epoch design. Therefore, this site does not promote a connectivity or directed-connectivity result only because the cleanup pipeline looks stronger.
+アーティファクトと回線ノイズが抑制されると、ネットワーク メトリクスをより正確に読み取ることができると考えたくなります。それはまだ攻撃的すぎます。ヴィンクら。 (2011) は wPLI をラグゼロ混合に対してより安全にしましたが、Haufe et al. Palva et al. (2013) は、体積伝導下でのセンサーと空間の接続の厳しい限界を示しました。 (2018) はソース空間でもゴースト相互作用を示しました。 (2025) は参照と時代設計への強い依存性を示しました。したがって、このサイトでは、クリーンアップ パイプラインが強力であるように見えるという理由だけで、接続性や有向接続性の結果を推奨することはありません。
 </p>
 <div class="note-box">
-<strong>Rules on this site</strong>
+<strong>このサイトのルール</strong>
 <p>
-If a paper or result outputs connectivity, directed connectivity, STE, Granger, or source-space graph measures, add a separate note stating what leakage control, external validation, and abstention boundary are still missing. Cleanup logs and connectivity validation logs are not interchangeable.
+論文または結果が接続性、有向接続性、STE、グレンジャー、またはソース空間グラフ測定を出力する場合、どのような漏れ制御、外部検証、および棄権境界がまだ欠けているかを示す別の注記を追加してください。クリーンアップ ログと接続検証ログは互換性がありません。
 </p>
 </div>
 </section>
 
 <section class="section" id="high-frequency-caution">
-<h2 class="section-title">10. High beta/gamma does not write strongly without electromyographic audit</h2>
+<h2 class="section-title">10。高ベータ/ガンマは筋電検査</h2>なしでは強く書き込まれません
 <p>
-As outlined by Muthukumaraswamy, muscle artifacts overlap widely around 20-300 Hz and can be difficult to distinguish from high beta/gamma neural components. Therefore, if you claim increased <strong>high-frequency power</strong> in a task that tends to recruit forehead, jaw, or temporalis muscles, at least check <strong>topography</strong>, <strong>EOG / EMG auxiliary channels</strong>, and <strong>residual jaw / brow activity before and after cleaning</strong>. On this site, gamma is not read as neural gain without passing that audit.
+Muthukumaraswamy によって概説されているように、筋肉アーチファクトは 20 ～ 300 Hz 付近で広く重複しており、高ベータ/ガンマ神経成分と区別するのが難しい場合があります。したがって、額、顎、または側頭筋を動員する傾向のある作業で <strong> 高周波出力 </strong> の増加を主張する場合は、少なくとも <strong> 地形図 </strong>、<strong>EOG / EMG 補助チャネル </strong>、および <strong> 洗浄前後の残存顎 / 眉毛の活動</strong> を確認してください。このサイトでは、その監査に合格しない限り、ガンマはニューラルゲインとして読み取られません。
 </p>
 </section>
 
 <section class="section" id="minimum-deliverables">
-<h2 class="section-title">Minimum submissions</h2>
+<h2 class="section-title">最小提出数</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Submission</th>
-<th>Minimum desired content</th>
+<th>提出</th>
+<th>最低限必要なコンテンツ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>acquisition metadata</strong></td>
-<td>Reference, ground, device chain, sampling rate, line frequency, electrode coordinates, and event timing.</td>
+<td><strong>メタデータ取得</strong></td>
+<td>リファレンス、グランド、デバイス チェーン、サンプリング レート、ライン周波数、電極座標、およびイベント タイミング。</td>
 </tr>
 <tr>
-<td><strong>split / evaluation manifest</strong></td>
-<td>Evaluation family, hold-out unit, and whether train and test were disjoint by subject, session, run, and raw-recording ancestry.</td>
+<td><strong>分割/評価マニフェスト</strong></td>
+<td>評価ファミリー、ホールドアウトユニット、およびトレーニングとテストが主題、セッション、実行、生記録の祖先ごとに素であったかどうか。</td>
 </tr>
 <tr>
-<td><strong>transform-fit ledger</strong></td>
-<td>For each step, state whether it was fixed in advance or learned from data, what was fitted, and on which split subset it was fitted.</td>
+<td><strong>トランスフォームフィット元帳</strong></td>
+<td>各ステップについて、事前に修正されたのかデータから学習されたのか、何を当てはめたのか、どの分割サブセットに当てはめたのかを述べます。</td>
 </tr>
 <tr>
-<td><strong>derivative-lineage manifest</strong></td>
-<td>Leave source files, processing labels, software version, and raw-to-clean ancestry so the clean branch remains auditable.</td>
+<td><strong>派生系統マニフェスト</strong></td>
+<td>ソース ファイル、処理ラベル、ソフトウェア バージョン、および raw からクリーンへの先祖を残して、クリーン ブランチを監査可能な状態に保ちます。</td>
 </tr>
 <tr>
-<td><strong>bad channel / bad segment ledger</strong></td>
-<td>Leave the criteria used to judge what was bad and what was interpolated or removed.</td>
+<td><strong>不良チャネル/不良セグメント台帳</strong></td>
+<td>何が不良で、何が補間または削除されたかを判断するために使用した基準を残します。</td>
 </tr>
 <tr>
-<td><strong>filter design report</strong></td>
-<td>Leave cutoff, order, type, causal / acausal choice, and notch.</td>
+<td><strong>フィルター設計レポート</strong></td>
+<td>残すカットオフ、順序、タイプ、因果関係/非因果関係の選択、およびノッチ。</td>
 </tr>
 <tr>
-<td><strong>artifact model report</strong></td>
-<td>Leave the presence of PREP / ICA / ICLabel / Autoreject / ASR / ZapLine, their thresholds, removal counts, and interpolation rate.</td>
+<td><strong>アーティファクトモデルレポート</strong></td>
+<td>PREP / ICA / ICLabel / Autoreject / ASR / ZapLine の存在、そのしきい値、除去数、および補間率を残します。</td>
 </tr>
 <tr>
-<td><strong>recording-frame contract / harmonization log</strong></td>
-<td>Disclose site, device, original channel map, coordinate route, raw reference plus rereference family, omitted/interpolated-channel policy, protocol differences, and the exact harmonized branch used for comparison.</td>
+<td><strong>レコーディングフレーム契約/ハーモナイゼーションログ</strong></td>
+<td>サイト、デバイス、元のチャネル マップ、座標ルート、生の参照と参照ファミリ、省略/補間されたチャネル ポリシー、プロトコルの違い、および比較に使用された正確に調和されたブランチを開示します。</td>
 </tr>
 <tr>
-<td><strong>raw-clean delta</strong></td>
-<td>Compare the amount of change in power spectrum, trial count, channel count, and major features between raw and clean.</td>
+<td><strong>raw-clean デルタ</strong></td>
+<td>生とクリーンの間のパワースペクトル、試行回数、チャンネル数、および主要な機能の変化量を比較します。</td>
 </tr>
 <tr>
-<td><strong>retention summary</strong></td>
-<td>Display the number of minutes, number of trials, and number of channels remaining as numeric values.</td>
+<td><strong>保持の概要</strong></td>
+<td>分数、試行回数、残りチャンネル数を数値で表示します。</td>
 </tr>
 <tr>
-<td><strong>sensitivity analysis</strong></td>
-<td>Check conclusion drift with at least one alternative reference, artifact, or transform-fit configuration.</td>
+<td><strong>感度分析</strong></td>
+<td>少なくとも 1 つの代替リファレンス、アーティファクト、またはトランスフォームフィット構成を使用して結論のドリフトをチェックします。</td>
 </tr>
 <tr>
-<td><strong>high-frequency exception note</strong></td>
-<td>If you claim beta/gamma, explain separately how you passed the EMG audit.</td>
+<td><strong>高周波例外メモ</strong></td>
+<td>ベータ/ガンマを主張する場合は、EMG 監査にどのように合格したかを別途説明してください。</td>
 </tr>
 <tr>
-<td><strong>connectivity-ceiling note</strong></td>
-<td>If connectivity or directionality is reported, state separately what leakage control, external validation, and abstention boundary remain.</td>
+<td><strong>接続天井メモ</strong></td>
+<td>接続性または方向性が報告される場合は、どのような漏洩制御、外部検証、および棄権境界が残っているかを別途記載してください。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="misreadings">
-<h2 class="section-title">Misinterpretations that should be avoided from this criticism</h2>
+<h2 class="section-title">この批判から避けるべき誤解</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Misreading</th>
-<th>Replacement on this site</th>
+<th>誤読</th>
+<th>このサイトの交換品</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>I got a clean waveform, so that is enough</td>
-<td>No. Metadata, transform-fit boundary, retention, and raw-clean diffs are all part of the acceptance condition.</td>
+<td>Iは綺麗な波形が出たので十分</td>
+<td>No.メタデータ、変換フィット境界、保持、生クリーンの差分はすべて受け入れ条件の一部です。</td>
 </tr>
 <tr>
-<td>I split after ICA / normalization, so the hold-out is still fair</td>
-<td>No. Once the transform has seen pooled data, the test distribution has already influenced the clean derivative.</td>
+<td>I は ICA/正規化後に分割されたため、ホールドアウトは依然として公平です</td>
+<td>No.変換がプールされたデータを確認すると、テスト配布はすでにクリーンな導関数に影響を与えています。</td>
 </tr>
 <tr>
-<td>Balanced random windows are enough for evaluation</td>
-<td>No. Subject identity and temporal adjacency can still leak across train and test.</td>
+<td>バランスのとれたランダムウィンドウで評価には十分</td>
+<td>No.被験者の身元と時間的隣接性は依然としてトレーニングとテスト間で漏洩する可能性があります。</td>
 </tr>
 <tr>
-<td>The pipeline with the highest decoding accuracy is the best</td>
-<td>Artifact confounds and shortcut routes may be driving the score, so specificity and sensitivity analysis come first.</td>
+<td>デコード精度が最も高いパイプラインが最高</td>
+<td>アーティファクトの混乱とショートカット ルートがスコアを左右する可能性があるため、特異性と感度の分析が優先されます。</td>
 </tr>
 <tr>
-<td>Average reference is safe, so you do not need to write it</td>
-<td>Reference is part of the observation model, so write both raw and rereference.</td>
+<td>平均参照は安全なので書く必要はありません</td>
+<td>Reference は観測モデルの一部であるため、raw と rereference の両方を記述します。</td>
 </tr>
 <tr>
-<td>It is enough to write only cutoff in the filter</td>
-<td>Order, type, and causal / acausal application are also required.</td>
+<td>フィルターにカットオフだけを書き込めば十分</td>
+<td>順序、種類、因果関係/非因果関係の適用も必要です。</td>
 </tr>
 <tr>
-<td>High beta/gamma increase would be neural</td>
-<td>The myoelectric overlap is strong, so do not write it strongly without an EMG audit.</td>
+<td>ベータ/ガンマの増加は神経質になる可能性があります</td>
+<td>筋電の重なりが強いので、筋電図検査なしで強く書かないでください。</td>
 </tr>
 <tr>
-<td>An automatic pipeline is automatically reproducible</td>
-<td>Automation and reproducibility are different; you still need source lineage, fitted-transform logs, removal amounts, and retention rates.</td>
+<td>自動パイプラインを自動で再現可能</td>
+<td>自動化と再現性は異なります。ソース系統、近似変換ログ、削除量、保持率が引き続き必要です。</td>
 </tr>
 <tr>
-<td>We harmonized the datasets, so the signals are now equivalent</td>
-<td>No. Common-channel reduction, interpolation, and REST-based transformation create different benchmark objects and must be declared separately.</td>
+<td>データセットを調和させたので、信号は同等になりました</td>
+<td>No.共通チャネルの削減、補間、および REST ベースの変換は、異なるベンチマーク オブジェクトを作成するため、個別に宣言する必要があります。</td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="references">
-<h2 class="section-title">References</h2>
+<h2 class="section-title">参考資料</h2>
 <ol>
-<li>BIDS Specification: Electroencephalography. <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">official docs</a></li>
-<li>BIDS Derivatives: Common data types and metadata. <a href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html" target="_blank">official docs</a></li>
-<li>Scikit-learn: Common pitfalls and recommended practices. <a href="https://scikit-learn.org/stable/common_pitfalls.html" target="_blank">official docs</a></li>
-<li>Pernet CR, Appelhoff S, Gorgolewski KJ, et al. EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. <em>Scientific Data</em>. 2019. <a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
-<li>Pernet C, Garrido MI, Gramfort A, et al. Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. <em>Nature Neuroscience</em>. 2020. <a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
-<li>Melnik A, Legkov P, Izdebski K, et al. Systems, subjects, sessions: to what extent do these factors influence EEG data? <em>Frontiers in Human Neuroscience</em>. 2017;11:150. <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">doi:10.3389/fnhum.2017.00150</a></li>
-<li>Hu S, Lai Y, Valdes-Sosa PA, Bringas-Vega ML, Yao D. How do reference montage and electrodes setup affect the measured scalp EEG potentials? <em>Journal of Neural Engineering</em>. 2018;15(2):026013. <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">doi:10.1088/1741-2552/aaa13f</a></li>
-<li>Bigdely-Shamlo N, Mullen T, Kothe C, Su K-M, Robbins KA. The PREP pipeline: standardized preprocessing for large-scale EEG analysis. <em>Journal of Neuroscience Methods</em>. 2015. <a href="https://doi.org/10.1016/j.jneumeth.2015.06.014" target="_blank">doi:10.1016/j.jneumeth.2015.06.014</a></li>
-<li>Widmann A, Schröger E, Maess B. Digital filter design for electrophysiological data: a practical approach. <em>Journal of Neuroscience Methods</em>. 2015. <a href="https://doi.org/10.1016/j.jneumeth.2014.08.002" target="_blank">doi:10.1016/j.jneumeth.2014.08.002</a></li>
-<li>Muthukumaraswamy SD. High-frequency brain activity and muscle artifacts in MEG/EEG: a review and recommendations. <em>Frontiers in Human Neuroscience</em>. 2013. <a href="https://doi.org/10.3389/fnhum.2013.00138" target="_blank">doi:10.3389/fnhum.2013.00138</a></li>
-<li>Huang Y, Zhang J, Cui Y, et al. How Different EEG References Influence Sensor Level Functional Connectivity Graphs. <em>Frontiers in Neuroscience</em>. 2017;11:368. <a href="https://doi.org/10.3389/fnins.2017.00368" target="_blank">doi:10.3389/fnins.2017.00368</a></li>
-<li>Jas M, Engemann DA, Bekhti Y, Raimondo F, Gramfort A. Autoreject: automated artifact rejection for MEG and EEG data. <em>NeuroImage</em>. 2017. <a href="https://doi.org/10.1016/j.neuroimage.2017.08.030" target="_blank">doi:10.1016/j.neuroimage.2017.08.030</a></li>
-<li>Pion-Tonachini L, Kreutz-Delgado K, Makeig S. ICLabel: An automated electroencephalographic independent component classifier, dataset, and website. <em>NeuroImage</em>. 2019. <a href="https://doi.org/10.1016/j.neuroimage.2019.05.026" target="_blank">doi:10.1016/j.neuroimage.2019.05.026</a></li>
-<li>Chang C-Y, Hsu S-H, Pion-Tonachini L, Jung T-P. Evaluation of Artifact Subspace Reconstruction for automatic EEG artifact removal. <em>Proc IEEE EMBC</em>. 2018. <a href="https://doi.org/10.1109/EMBC.2018.8512547" target="_blank">doi:10.1109/EMBC.2018.8512547</a></li>
-<li>de Cheveigné A. ZapLine: A simple and effective method to remove power line artifacts. <em>NeuroImage</em>. 2020;207:116356. <a href="https://doi.org/10.1016/j.neuroimage.2019.116356" target="_blank">doi:10.1016/j.neuroimage.2019.116356</a></li>
-<li>Kessler V, et al. How EEG preprocessing shapes decoding performance. <em>Communications Biology</em>. 2025. <a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">doi:10.1038/s42003-025-08464-3</a></li>
-<li>Brookshire G, Kasper J, Blauch NM, et al. Data leakage in deep learning studies of translational EEG. <em>Frontiers in Neuroscience</em>. 2024;18:1373515. <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">doi:10.3389/fnins.2024.1373515</a></li>
-<li>Del Pup F, Zanola A, Tshimanga LF, et al. The role of data partitioning on the performance of EEG-based deep learning models in supervised cross-subject analysis: A preliminary study. <em>Computers in Biology and Medicine</em>. 2025;196(Pt A):110608. <a href="https://doi.org/10.1016/j.compbiomed.2025.110608" target="_blank">doi:10.1016/j.compbiomed.2025.110608</a></li>
-<li>Chaibub Neto E, Pratap A, Perumal TM, et al. Detecting the impact of subject characteristics on machine learning-based diagnostic applications. <em>npj Digital Medicine</em>. 2019;2:99. <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
-<li>Gibson E, Lobaugh NJ, Joordens S, McIntosh AR. EEG variability: Task-driven or subject-driven signal of interest? <em>NeuroImage</em>. 2022;252:119034. <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">doi:10.1016/j.neuroimage.2022.119034</a></li>
-<li>Xu M, Yao S, Wei Z, et al. Cross-dataset variability problem in EEG decoding with deep learning. <em>Frontiers in Human Neuroscience</em>. 2020;14:103. <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
-<li>Dong L, Yang R, Xie A, et al. Transforming of scalp EEGs with different channel locations by REST for comparative study. <em>Brain Research Bulletin</em>. 2024;217:111064. <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">doi:10.1016/j.brainresbull.2024.111064</a></li>
-<li>Vinck M, Oostenveld R, van Wingerden M, Battaglia F, Pennartz CMA. An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. <em>NeuroImage</em>. 2011;55(4):1548-1565. <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
-<li>Haufe S, Nikulin VV, Müller K-R, Nolte G. A critical assessment of connectivity measures for EEG data: A simulation study. <em>NeuroImage</em>. 2013;64:120-133. <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
-<li>Palva JM, Wang SH, Palva S, et al. Ghost interactions in MEG/EEG source space: A note of caution on inter-areal coupling measures. <em>NeuroImage</em>. 2018;173:632-643. <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
-<li>Miljevic A, Murphy OW, Fitzgerald PB, Bailey NW. Estimating sensor-space EEG connectivity PART 1: Identifying best performing methods for functional connectivity in simulated data. <em>Clinical Neurophysiology</em>. 2025;174:73-83. <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">doi:10.1016/j.clinph.2025.03.043</a></li>
+<li>BIDS 仕様: 脳波検査。 <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">公式ドキュメント</a></li>
+<li>BIDS 派生: 共通のデータ型とメタデータ。 <a href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html" target="_blank">公式ドキュメント</a></li>
+<li>Scikit-learn: よくある落とし穴と推奨される実践方法。 <a href="https://scikit-learn.org/stable/common_pitfalls.html" target="_blank">公式ドキュメント</a></li>
+<li>Pernet CR、Appelhoff S、Gorgolewski KJ、他。 EEG-BIDS、脳波検査用の脳画像データ構造の拡張。 <em>科学データ</em>。 2019.<a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">doi:10.1038/s41597-019-0104-8</a></li>
+<li>Pernet C、Garrido MI、Gramfort A など。再現可能なEEGおよびMEG研究のためのOHBM COBIDAS MEEG委員会からの問題と推奨事項。 <em>Nature Neuroscience</em>。 2020.<a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">doi:10.1038/s41593-020-00709-0</a></li>
+<li>Melnik A、Legkov P、Izdebski K、他。システム、被験者、セッション: これらの要因はEEGデータにどの程度影響しますか? <em>人間の神経科学のフロンティア</em>。 2017;11:150。 <a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">doi:10.3389/fnhum.2017.00150</a></li>
+<li>Hu S、Lai Y、Valdes-Sosa PA、Bringas-Vega ML、Yao D. 基準モンタージュと電極のセットアップは、測定された頭皮 EEG 電位にどのような影響を与えますか? <em>Journal of Neural Engineering</em>。 2018;15(2):026013。 <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">doi:10.1088/1741-2552/aaa13f</a></li>
+<li>Bigdely-Shamlo N、Mullen T、Kothe C、Su K-M、Robbins KA。 PREP パイプライン: 大規模な EEG 解析のための標準化された前処理。 <em>Journal of Neuroscience Methods</em>。 2015.<a href="https://doi.org/10.1016/j.jneumeth.2015.06.014" target="_blank">doi:10.1016/j.jneumeth.2015.06.014</a></li>
+<li>Widmann A、Schröger E、Maess B. 電気生理学的データのデジタル フィルター設計: 実用的なアプローチ。 <em>ジャーナル・オブ・ニューロサイエンス・メソッド</em>。 2015.<a href="https://doi.org/10.1016/j.jneumeth.2014.08.002" target="_blank">doi:10.1016/j.jneumeth.2014.08.002</a></li>
+<li>ムトゥクマラスワミSD。 MEG/EEG における高周波脳活動と筋肉アーチファクト: レビューと推奨事項。 <em>人間の神経科学のフロンティア</em>。 2013.<a href="https://doi.org/10.3389/fnhum.2013.00138" target="_blank">doi:10.3389/fnhum.2013.00138</a></li>
+<li>Huang Y、Zhang J、Cui Y 他異なる EEG 参照がセンサー レベルの機能接続グラフに与える影響。 <em>神経科学のフロンティア</em>。 2017;11:368。 <a href="https://doi.org/10.3389/fnins.2017.00368" target="_blank">doi:10.3389/fnins.2017.00368</a></li>
+<li>Jas M、Engemann DA、Bekhti Y、Raimondo F、Gramfort A. 自動拒否: MEG および EEG データの自動アーティファクト拒否。 <em>ニューロイメージ</em>。 2017.<a href="https://doi.org/10.1016/j.neuroimage.2017.08.030" target="_blank">doi:10.1016/j.neuroimage.2017.08.030</a></li>
+<li>Pion-Tonachini L、Kreutz-Delgado K、Makeig S. ICLabel: 自動化された脳波独立成分分類器、データセット、および Web サイト。 <em>ニューロイメージ</em>。 2019.<a href="https://doi.org/10.1016/j.neuroimage.2019.05.026" target="_blank">doi:10.1016/j.neuroimage.2019.05.026</a></li>
+<li>Chang C-Y、Hsu S-H、Pion-Tonachini L、Jung T-P。自動 EEG アーティファクト除去のためのアーティファクト部分空間再構成の評価。 <em>Proc IEEE EMBC</em>。 2018.<a href="https://doi.org/10.1109/EMBC.2018.8512547" target="_blank">doi:10.1109/EMBC.2018.8512547</a></li>
+<li>de Cheveigné A. ZapLine: 電力線アーティファクトを除去するシンプルかつ効果的な方法。 <em>ニューロイメージ</em>。 2020;207:116356。 <a href="https://doi.org/10.1016/j.neuroimage.2019.116356" target="_blank">doi:10.1016/j.neuroimage.2019.116356</a></li>
+<li>ケスラー V 他EEG 前処理がデコード パフォーマンスをどのように形成するか。 <em>コミュニケーション生物学</em>。 2025.<a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">doi:10.1038/s42003-025-08464-3</a></li>
+<li>Brookshire G、Kasper J、Blauch NM、他。トランスレーショナルEEGの深層学習研究におけるデータ漏洩。 <em>神経科学のフロンティア</em>。 2024;18:1373515。 <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">doi:10.3389/fnins.2024.1373515</a></li>
+<li>Del Pup F、Zanola A、Tshimanga LF、他教師あり被験者横断分析における EEG ベースの深層学習モデルのパフォーマンスに対するデータ分割の役割: 予備研究。 <em>生物学と医学におけるコンピューター</em>。 2025;196(Pt A):110608。 <a href="https://doi.org/10.1016/j.compbiomed.2025.110608" target="_blank">doi:10.1016/j.compbiomed.2025.110608</a></li>
+<li>Chaibub Neto E、Pratap A、Permal TM、他。機械学習ベースの診断アプリケーションに対する被験者の特性の影響を検出します。 <em>npjデジタルメディシン</em>。 2019;2:99。 <a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">doi:10.1038/s41746-019-0178-x</a></li>
+<li>ギブソン E、ニュージャージー州ロボー、ジョーデンズ S、アーカンソー州マッキントッシュ。 EEG の変動性: 対象となる信号はタスク主導型か被験者主導型か? <em>ニューロイメージ</em>。 2022;252:119034。 <a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">doi:10.1016/j.neuroimage.2022.119034</a></li>
+<li>Xu M、Yao S、Wei Z、他深層学習による EEG デコードにおけるデータセット間の変動性の問題。 <em>人間の神経科学のフロンティア</em>。 2020;14:103。 <a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">doi:10.3389/fnhum.2020.00103</a></li>
+<li>Dong L、Yang R、Xie A 他比較研究のため、REST による異なるチャネル位置の頭皮脳波の変換。 <em>脳研究紀要</em>。 2024;217:111064。 <a href="https://doi.org/10.1016/j.brainresbull.2024.111064" target="_blank">doi:10.1016/j.brainresbull.2024.111064</a></li>
+<li>ヴィンク M、オーステンフェルト R、ヴァン ウィンガーデン M、バタグリア F、ペンナーツ CMA。体積伝導、ノイズ、サンプルサイズのバイアスが存在する場合の電気生理学的データの位相同期の指標が改善されました。 <em>ニューロイメージ</em>。 2011;55(4):1548-1565。 <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">doi:10.1016/j.neuroimage.2011.01.055</a></li>
+<li>Haufe S、Nikulin VV、Müller K-R、Nolte G. EEG データの接続性測定の重要な評価: シミュレーション研究。 <em>ニューロイメージ</em>。 2013;64:120-133。 <a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">doi:10.1016/j.neuroimage.2012.09.036</a></li>
+<li>Palva JM、Wang SH、Palva S 他MEG/EEG ソース空間におけるゴースト インタラクション: エリア間のカップリング対策に関する注意事項。 <em>ニューロイメージ</em>。 2018;173:632-643。 <a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">doi:10.1016/j.neuroimage.2018.02.032</a></li>
+<li>ミリェビッチ A、マーフィー OW、フィッツジェラルド PB、ベイリー NW。センサー空間の EEG 接続性の推定 パート 1: シミュレートされたデータにおける機能的接続性の最もパフォーマンスの高い方法を特定します。 <em>臨床神経生理学</em>。 2025;174:73-83。 <a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">doi:10.1016/j.clinph.2025.03.043</a></li>
 </ol>
 </section>
 
@@ -604,34 +603,34 @@ As outlined by Muthukumaraswamy, muscle artifacts overlap widely around 20-300 H
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="eeg-basics.html">EEG basics →</a></li>
-<li><a href="dataset-splits-and-leakage.html">Dataset splits and leakage →</a></li>
-<li><a href="event-sync-and-measurement-logs.html">Event synchronization and observation logs →</a></li>
-<li><a href="uncertainty-confidence-and-abstention.html">Uncertainty/proofreading/abstention →</a></li>
+<li><a href="eeg-basics.html">EEGの基礎→</a></li>
+<li><a href="dataset-splits-and-leakage.html">データセットの分割と漏洩 →</a></li>
+<li><a href="event-sync-and-measurement-logs.html">イベント同期および観測ログ →</a></li>
+<li><a href="uncertainty-confidence-and-abstention.html">不確実性・校正・棄権 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
 <li><a href="../eeg_101.html">EEG 101 →</a></li>
-<li><a href="../datasets.html#l0-practice">Hands-on →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Reference</h4>
+<h4>リファレンス</h4>
 <ul>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS EEG Specification</a></li>
-<li><a href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html" target="_blank">BIDS Derivatives</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS EEG 仕様</a></li>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html" target="_blank">BIDS デリバティブ</a></li>
 <li><a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">COBIDAS-MEEG</a></li>
-<li><a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">Kessler et al. (2025)</a></li>
-<li><a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">Brookshire et al. (2024)</a></li>
+<li><a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">ケスラーら。 (2025)</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">ブルックシャーら(2024)</a></li>
 <li><a href="https://doi.org/10.1016/j.compbiomed.2025.110608" target="_blank">Del Pup et al. (2025)</a></li>
-<li><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)</a></li>
-<li><a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">Gibson et al. (2022)</a></li>
-<li><a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">Haufe et al. (2013)</a></li>
+<li><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">チャイブブ・ネトら。 (2019)</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2022.119034" target="_blank">ギブソン他(2022)</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">ハウフェら(2013)</a></li>
 </ul>
 </div>
 </aside>

@@ -1,168 +1,168 @@
-# Wiki: Basics of deciding where to put new information
+# Wiki: 新しい情報をどこに配置するかを決定するための基本
 
-> Before deciding what to write, the basics of deciding where to put it
+> 何を書くかを決める前に、配置場所を決める基本
 >
-> This learning page is generated for GitHub Wiki. The public portal is managed on [mind-upload.com](https://mind-upload.com).
+> この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-03-14 / Role: Content placement basics
+- Updated: 2026-03-14 / Role: コンテンツ配置の基本
 
-## Role Of This Page
-This page is a supplementary material that helps you organize from the beginning where to put new information when adding it to Mind-Upload. Public pages are information portals, wikis are detailed explanations for learning, Issues are changes to be made, Collaborations are for organizing external dependencies, and operations areas are intermediate results. You can check the role differences with examples.
+## このページの役割
+このページは、Mind-Uploadに新しい情報を追加する際に、どこに載せるかを最初から整理するための補足資料です。公開ページは情報ポータル、Wiki は学習のための詳細な説明、問題は行われる変更、コラボレーションは外部依存関係を整理するため、操作領域は中間結果です。役割の違いを例で確認できます。
 
-## Accuracy Notes
-What is shown here is the basics of placement. Please be sure to return to the main text and basis of the original page to judge the correctness or rejection of individual claims.
+## 正確性に関する注記
+ここで示しているのは配置の基本です。個々の主張の正否を判断するには、必ず元のページの本文と根拠に戻ってください。
 
-## Back To Public Pages
-- [Public Content Integration Hub](https://mind-upload.com/content_hub.html)
-- [Contribution Guide](https://mind-upload.com/issue.html)
-- [Collaboration candidate](https://mind-upload.com/issue.html#external-collaboration)
+## 公開ページへ戻る
+- [パブリック コンテンツ統合ハブ](https://mind-upload.com/content_hub.html)
+- [貢献ガイド](https://mind-upload.com/issue.html)
+- [連携候補者](https://mind-upload.com/issue.html#external-collaboration)
 
-## Related Wiki Pages
-- [Wiki: Guide to reading public pages](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - This is for people who want to see the role differences between public pages first.
-- [Wiki: 5 paths to follow after participation/collaboration page](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes) - This is for people who want to move on to the next task after determining the location.
-- [Wiki: How to write your first issue](https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics) - Additional information on how to write when the location becomes an issue.
+## 関連 Wiki ページ
+- [Wiki: 公開ページを読むためのガイド](https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide) - これは、公開ページ間の役割の違いを最初に確認したい人向けです。
+- [Wiki: 参加/コラボレーション後にたどる 5 つの道筋ページ](https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes) - 場所を決めたら次の作業に移りたい人向けです。
+- [Wiki: 最初の問題の書き方](https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics) - 場所が問題になる場合の書き方についての追加情報。
 
-## What Is Currently Known
-- Determining the location first reduces duplication of information and dissipation of leads.
-- Separating the public page and the wiki makes it easier to both make the entrance more visible and provide more detailed explanations.
-- Externally dependent tasks should be managed separately from changes made here and now.
+## 現在わかっていること
+- 最初に場所を特定すると、情報の重複やリードの散逸が減少します。
+- 公開ページとWikiを分離することで、入り口の視認性の向上とより詳しい説明の両方が容易になります。
+- 外部に依存するタスクは、現在行われた変更とは別に管理する必要があります。
 
-## What Is Still Unknown
-- Which issues will become independent pages in the future will change depending on the amount of content and reader demand.
-- Some topics span multiple pages, so the final destination will continue to be adjusted.
+## まだわかっていないこと
+- 将来的にどの号が独立したページになるかは、コンテンツの量と読者の需要に応じて変わります。
+- 一部のトピックは複数のページにまたがるため、最終的な行き先は引き続き調整されます。
 
 ---
 
-<h2>The first thing to decide is "location" rather than "content"</h2>
+<h2>最初に決めるのは「内容」よりも「場所」</h2>
 <p>
-If you start writing the main text immediately when you find new information, you will end up with more duplication and confusion. Deciding<strong>the role</strong> of that information first will make it easier to add the necessary details to the wiki while keeping the public page as a portal.
+新しい情報を見つけたときにすぐに本文を書き始めると、重複や混乱が増えることになります。最初にその情報の役割を決定すると、公開ページをポータルとして維持しながら、必要な詳細を Wiki に追加することが容易になります。
 </p>
 
-<h2>First, separate the 5 storage locations</h2>
+<h2>まずは5つの保管場所を分ける</h2>
 <table>
 <thead>
 <tr>
-<th>Location</th>
-<th>What to put</th>
-<th>Things that should not be placed</th>
+<th>場所</th>
+<th>何を入れるか</th>
+<th>置いてはいけないもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Public page</strong></td>
-<td>What we know now, what we don't know yet, where to read next, and a decision chart. </td>
-<td>Long material that teaches background knowledge from beginning to end. </td>
+<td><strong>公開ページ</strong></td>
+<td>今わかっていること、まだわかっていないこと、次に読むべきこと、そして意思決定チャート。 </td>
+<td>L背景知識を最初から最後まで学べる長尺教材。 </td>
 </tr>
 <tr>
 <td><strong>wiki</strong></td>
-<td>Basic explanations, differences between similar words, how to read pages, supplementary materials for learning. </td>
-<td>A primary repository for the latest operational decisions and implementation status. </td>
+<td>の基本解説、類語の違い、ページの見方、学習用補助資料。 </td>
+最新の運用上の決定と実装ステータスの <td>A プライマリ リポジトリ。 </td>
 </tr>
 <tr>
-<td><strong>Issue</strong></td>
-<td>The changes to be performed in this repository now, the modification location, advance conditions, and disproof conditions. </td>
-<td>Writing big plans that include external dependencies as if they were completed. </td>
+<td><strong>問題</strong></td>
+<td>このリポジトリで現在実行される変更、変更場所、進行条件、反抗条件。 </td>
+<td>あたかも完了したかのように外部依存関係を含む大きな計画を作成する。 </td>
 </tr>
 <tr>
-<td><strong>Collaborations</strong></td>
-<td> Talks that require partners and external conditions, such as joint research, standardization proposals, and institutional cooperation. </td>
-<td>A record of small corrections that can be completed only here. </td>
+<td><strong>コラボレーション</strong></td>
+<td> 共同研究、標準化提案、機関協力などのパートナーや外部条件を必要とする協議。 </td>
+<td>Aここでしか完結できない小さな修正の記録。 </td>
 </tr>
 <tr>
-<td><strong>Operation area</strong></td>
-<td>Unorganized memos, intermediate results, CSV, machine processing results, audit logs. </td>
-<td>Show the text as is for readers. </td>
+<td><strong>操作エリア</strong></td>
+<td>未整理のメモ、中間結果、CSV、機械処理結果、監査ログ。 </td>
+<td>読者向けにテキストをそのまま表示します。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>Decide where to place the information based on what it answers</h2>
+<h2>回答内容に基づいて情報を配置する場所を決定</h2>
 <table>
 <thead>
 <tr>
-<th>The question the information answers</th>
-<th>Where to put it first</th>
-<th>Reason</th>
+<th>情報が答える質問</th>
+<th>最初に置く場所</th>
+<th>理由</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>What is currently known and what remains unsolved in this field</strong></td>
-<td>Public pages such as <a href="https://mind-upload.com/verification.html">Verification</a>, <a href="https://mind-upload.com/tech_roadmap.html">Roadmap</a></td>
-<td>This is because the public page plays the role of indicating the known/unknown as an entry point for judgment. </td>
+<td><strong>この分野で現在わかっていることと未解決のまま残っていること</strong></td>
+<td><a href="https://mind-upload.com/verification.html">検証</a>、<a href="https://mind-upload.com/tech_roadmap.html">ロードマップ</a></td>などの公開ページ
+<td>公開ページは、判断の入り口として既知・未知を示す役割を果たしているからです。 </td>
 </tr>
 <tr>
-<td><strong>I want to explain terms and background knowledge from the beginning</strong></td>
+<td><strong>用語や予備知識を一から説明したい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki">wiki</a></td>
-<td>It is better to put the learning material on the wiki so that the entrance page can be kept more readable. </td>
+<td>入り口ページを読みやすくするために、学習資料を Wiki に置いたほうがよいでしょう。 </td>
 </tr>
 <tr>
-<td><strong>I want to fix something that can be fixed now</strong></td>
-<td><a href="https://mind-upload.com/issue.html">Issue</a></td>
-<td>This is because you can manage executable changes, including completion conditions. </td>
+<td><strong>今すぐ直せるものは直したい</strong></td>
+<td><a href="https://mind-upload.com/issue.html">問題</a></td>
+<td>これは、完了条件を含む実行可能な変更を管理できるためです。 </td>
 </tr>
 <tr>
-<td><strong>I want to organize candidates for joint research and standardization</strong></td>
-<td><a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
-<td>This is to avoid mixing external dependencies with in-house changes. </td>
+<td><strong>共同研究や標準化の候補を整理したい</strong></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">コラボレーション</a></td>
+<td>これは、外部の依存関係と社内の変更が混在することを避けるためです。 </td>
 </tr>
 <tr>
-<td><strong>I want to keep raw data and notes that have not been organized yet</strong></td>
-<td>Operation area</td>
-<td>This is to prevent fragments from being directly poured into the public text before the integration destination is determined. </td>
+<td><strong>生データや未整理のメモを残しておきたい</strong></td>
+<td>操作エリア</td>
+<td>統合先が決まる前に公開テキストに直接フラグメントが流し込まれることを防ぐためです。 </td>
 </tr>
 </tbody>
 </table>
 
-<h2>How to place common cases</h2>
+<h2>一般的なケースの置き方</h2>
 <table>
 <thead>
 <tr>
-<th>What I found</th>
-<th>Where to put it first</th>
-<th>Page to view with assistance</th>
+<th>見つけたもの</th>
+<th>最初に置く場所</th>
+<th>サポート付きで閲覧できるページ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Explanation for junior high school students</strong></td>
+<td><strong>中学生向け説明</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki">wiki</a></td>
-<td><a href="https://mind-upload.com/content_hub.html">Content Hub</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">Public page reading guide</a></td>
+<td><a href="https://mind-upload.com/content_hub.html">コンテンツハブ</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/public-page-reading-guide">公開ページ閲覧ガイド</a></td>
 </tr>
 <tr>
-<td><strong>Conditions and notes missing from existing claims</strong></td>
-<td><a href="https://mind-upload.com/issue.html">Issue</a> to target public page</td>
-<td><a href="https://mind-upload.com/verification.html">Verification</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">How to write your first issue</a></td>
+<td><strong>既存の申し立てに条件と注記がありません</strong></td>
+<td><a href="https://mind-upload.com/issue.html">公開ページをターゲットに</a>を発行</td>
+<td><a href="https://mind-upload.com/verification.html">検証</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">最初の問題の書き方</a></td>
 </tr>
 <tr>
-<td><strong>New papers and datasets</strong></td>
-<td><a href="https://mind-upload.com/research_harvest_50.html">Research Harvest</a> or <a href="https://mind-upload.com/datasets.html">Datasets</a></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">A straight path back from literature to implementation and participation</a></td>
+<td><strong>新しい論文とデータセット</strong></td>
+<td><a href="https://mind-upload.com/research_harvest_50.html">リサーチハーベスト</a>または<a href="https://mind-upload.com/datasets.html">データセット</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/literature-to-action-route">文献から実装および参加までの直線的なパス</a></td>
 </tr>
 <tr>
-<td><strong>One page summary to be handed over to joint research partner</strong></td>
-<td>Preparations for connecting to <a href="https://mind-upload.com/issue.html#external-collaboration">Collaborations</a></td>
-<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">In-house production and external dependencies</a></td>
+<td><strong>共同研究パートナーに引き渡す1ページの概要</strong></td>
+<td><a href="https://mind-upload.com/issue.html#external-collaboration">との接続準備</a></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/internal-prework-and-external-dependencies">社内生産と外部依存関係</a></td>
 </tr>
 <tr>
-<td><strong>Fragmented memo whose authenticity and location have not yet been determined</strong></td>
-<td>Operation area</td>
-<td><a href="https://mind-upload.com/content_hub.html">Content Hub</a></td>
+<td><strong>信憑性と場所がまだ特定されていない断片化されたメモ</strong></td>
+<td>操作エリア</td>
+<td><a href="https://mind-upload.com/content_hub.html">コンテンツハブ</a></td>
 </tr>
 </tbody>
 </table>
 
-<h2>Common mistakes</h2>
+<h2>よくある間違い</h2>
 
-<h4>Mistake</h4>
+<h4>間違い</h4>
 <ul>
-<li><strong>Create a new page for now:</strong> First, check if it can be integrated into an existing page. </li>
-<li><strong>Turn public pages into textbooks:</strong> It will be easier to see the entrance if you submit detailed explanations to the wiki. </li>
-<li><strong>Mix Issues and Collaborations:</strong> Separate changes you can make now from external dependencies. </li>
-<li><strong>Publishing unorganized notes as is:</strong> It is safer to organize them in the operational area first and then decide where to integrate them. </li>
+<li><strong>とりあえず新しいページを作成する:</strong> まず、既存のページに統合できるかどうかを確認します。 </li>
+<li><strong>公開ページを教科書化する:</strong> 詳しい説明をwikiに投稿していただくと入り口が分かりやすくなります。 </li>
+<li><strong>混合問題とコラボレーション:</strong> 外部依存関係から今すぐ実行できる個別の変更。 </li>
+<li><strong>未整理のメモをそのまま公開する：</strong> まずは業務領域で整理してからどこに統合するかを決める方が安全です。 </li>
 </ul>
 
-<h2>Where to return next</h2>
+<h2>次に戻る場所</h2>
 <p>
-To return to the list of integration destinations, go to <a href="https://mind-upload.com/content_hub.html">Public content integration hub</a>, to go back to participation routes, go to <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes">Five paths to take after the participation/collaboration page</a>, to go back to writing methods for writing issues, go to <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">How to write your first issue</a> Please use.
+統合先一覧に戻る場合は<a href="https://mind-upload.com/content_hub.html">パブリックコンテンツ統合ハブ</a>、参加ルートに戻る場合は<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/participation-next-routes">参加・連携ページ以降に進むべき5つの道</a>、課題の書き方に戻る場合は<a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">最初の課題の書き方</a>をご利用ください。
 </p>

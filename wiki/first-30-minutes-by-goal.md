@@ -1,147 +1,146 @@
 ---
 layout: default
-title: "Wiki: First 30 Minutes by Goal"
-description: "This guide shows what to read in your first 30 minutes depending on whether you want the big picture, theory, practical work, literature, or participation."
-article_type: Wiki
-subtitle: "A short guide for fixing what to look at first for each goal"
-author: Mind Uploading Research Project
-last_updated: "2026-03-14"
-note: "Reading route"
-audience: "People who feel there are too many entry points and do not want to waste their first 30 minutes"
-reading_time: "6-10 minutes"
-page_intro: "This page is a companion guide that explains how to read Mind-Upload in the first 30 minutes depending on your goal. The best first page differs for readers who want the big picture, theory, practical work, literature, or contribution routes."
-accuracy_note: "This page gives short entry routes only. For detailed conditions and exceptions, return to the relevant main pages."
+title: 'Wiki: 目標別の最初の 30 分間'
+description: このガイドでは、全体像、理論、実践、文学、参加のいずれを希望するかに応じて、最初の 30 分間で何を読むべきかを示します。
+article_type: ウィキ
+subtitle: 各目標に向けて最初に何を見るべきかを修正するための短いガイド
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-03-14'
+note: 読書ルート
+audience: エントリーポイントが多すぎると感じており、最初の 30 分を無駄にしたくない人
+reading_time: 6～10分
+page_intro: このページは、目的に応じて最初の 30 分で Mind-Upload を読む方法を説明するコンパニオン ガイドです。全体像、理論、実務、文学、貢献ルートを求める読者によって、最適な最初のページは異なります。
+accuracy_note: このページでは短い侵入ルートのみを示します。詳細な条件と例外については、関連するメイン ページに戻ってください。
 page_highlights:
-  - "Pin 3-4 pages to view in the first 30 minutes for each 'what you want to know'."
-  - "Lets you read the lines of theory, practice, literature, and participation without mixing them up."
-  - "This is a map to avoid getting lost and wasting too much time on the entrance page."
+- 「知りたいこと」ごとに、最初の 30 分で表示されるページを 3 ～ 4 ページ固定します。
+- 理論、実践、文献、参加の各行を混同することなく読むことができます。
+- これは、入り口ページで道に迷って時間を無駄にしないための地図です。
 known_points:
-  - "If you just fix your purpose first, you will be much less confused about the order of reading."
-  - "The first entrance is different for those who want to enter from theory and those who want to enter from practical."
-  - "In the first 30 minutes, it is important to grasp the ``next direction'' rather than reading everything."
+- 最初に目的を決めておけば、読む順番について迷うことは少なくなります。
+- 理論から入りたい人と実践から入りたい人では最初の入り口が異なります。
+- 最初の30分で全てを読むのではなく、「次の方向性」を掴むことが重要です。
 unknown_points:
-  - "Which route is ultimately the most efficient depends somewhat on the reader's background knowledge."
-  - "If the page structure increases in the future, the shortest route may be fine-tuned."
+- どのルートが最終的に最も効率的であるかは、読者の背景知識に多少依存します。
+- 今後ページ構成が増えた場合、最短ルートが微調整される可能性があります。
 wiki_links:
-  - label: "Wiki: Guide to reading public pages"
-    url: "/wiki/public-page-reading-guide.html"
-    description: "This is for people who want to see the role differences of the entire public page first."
-  - label: "Wiki: Guide to reading theory pages"
-    url: "/wiki/theory-pages-reading-guide.html"
-    description: "This is for people who want to read only theory-oriented pages."
-  - label: "Wiki: Guide to reading practical pages"
-    url: "/wiki/practical-pages-reading-guide.html"
-    description: "This is for people who want to focus on reading only the pages that involve moving their hands."
+- label: 'Wiki: 公開ページを読むためのガイド'
+  url: /wiki/public-page-reading-guide.html
+  description: これは、公開ページ全体の役割の違いを最初に確認したい人向けです。
+- label: 'Wiki: 理論ページを読むためのガイド'
+  url: /wiki/theory-pages-reading-guide.html
+  description: 理論系のページだけを読みたい人向けです。
+- label: 'Wiki: 実用的なページを読むためのガイド'
+  url: /wiki/practical-pages-reading-guide.html
+  description: 手を動かすページだけを集中して読みたい人向けです。
 recommended_pages:
-  - label: "Start Page"
-    url: "/index.html"
-  - label: "Wiki Home"
-    url: "/wiki/"
-  - label: "Verification base"
-    url: "/verification.html"
+- label: スタートページ
+  url: /index.html
+- label: ウィキホーム
+  url: /wiki/
+- label: 検証ベース
+  url: /verification.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>Determine your purpose first</h2>
+<h2>まず目的を決める</h2>
 <p>
-You don't need to understand everything in the first 30 minutes. All you need to do is fix<strong>what you want to know</strong> and look first at only 3-4 pages that fit that purpose.
+最初の 30 分ですべてを理解する必要はありません。必要なのは、<strong>知りたいこと</strong>を修正し、最初にその目的に合う3〜4ページだけを見るだけです。
 </p>
 </div>
 
 <section class="section" id="routes">
-<h2 class="section-title">First 30 minutes route by purpose</h2>
+<h2 class="section-title">目的別最初の30分ルート</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Purpose</th>
-<th>Order of viewing in first 30 minutes</th>
-<th>What you want to take home after 30 minutes</th>
+<th>目的</th>
+<th>最初の30分以内の視聴順</th>
+<th>30分後に持ち帰りたいもの</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>I want to get the big picture</strong></td>
-<td><a href="../index.html">Start page</a> → <a href="../verification.html">Verification</a> → <a href="../tech_roadmap.html">Roadmap</a></td>
-<td>You can see that the focus of this site is not ``affirming conclusions'' but ``defining progress and creating a foundation for verification.'' </td>
+<td><strong>全体像を把握したい</strong></td>
+<td><a href="../index.html">スタートページ</a> → <a href="../verification.html">検証</a> → <a href="../tech_roadmap.html">ロードマップ</a></td>
+<td>このサイトの焦点は「`affirming conclusions'' but `」の進捗状況の定義と検証のための基盤の作成ではないことがわかります。
 </tr>
 <tr>
-<td><strong>I want to start with theory</strong></td>
-<td><a href="../wbe_101.html">WBE 101</a> → <a href="theory-pages-reading-guide.html">Reading guide for theory pages</a> → <a href="../perspective.html">Perspective</a> or <a href="../perspective.html#design-principles">Idea</a></td>
-<td>Understand the differences in the roles of assertion level, long research notes, and design principles. </td>
+<td><strong>理論から始めたい</strong></td>
+<td><a href="../wbe_101.html">WBE 101</a> → <a href="theory-pages-reading-guide.html">理論ページの読書ガイド</a> → <a href="../perspective.html">Perspective</a> または <a href="../perspective.html#design-principles">Idea</a></td>
+<td>アサーション レベル、長い研究ノート、設計原則の役割の違いを理解します。 </td>
 </tr>
 <tr>
-<td><strong>I want to move my hands</strong></td>
-<td><a href="../eeg_101.html">EEG 101</a> → <a href="practical-pages-reading-guide.html">Reading guide for practical pages</a> → <a href="../datasets.html">Datasets</a> → <a href="../datasets.html#l0-practice">Hands-on</a></td>
-<td>Knowing which public data to start with and where to create a minimal loop of L0. </td>
+<td><strong>手を動かしたい</strong></td>
+<td><a href="../eeg_101.html">EEG 101</a> → <a href="practical-pages-reading-guide.html">実践ページの読書ガイド</a> → <a href="../datasets.html">データセット</a> → <a href="../datasets.html#l0-practice">ハンズオン</a></td>
+<td>どの公開データから開始するか、L0 の最小ループをどこに作成するかを知る。 </td>
 </tr>
 <tr>
-<td><strong>I want to organize my pile of literature</strong></td>
-<td><a href="../research_harvest_50.html">Research Harvest</a> → <a href="literature-and-evidence-reading.html">How to read the literature and evidence page</a> → <a href="../mind_uploading_papers.html">Papers</a></td>
-<td>You can see the difference between a map of each unsolved problem and a widely collected paper archive. </td>
+<td><strong>文献の山を整理したい</strong></td>
+<td><a href="../research_harvest_50.html">リサーチハーベスト</a> → <a href="literature-and-evidence-reading.html">文献・証拠ページの読み方</a> → <a href="../mind_uploading_papers.html">論文</a></td>
+<td>各未解決問題の地図と広く収集された紙のアーカイブの違いがわかります。 </td>
 </tr>
 <tr>
-<td><strong>I want to know how to participate or update</strong></td>
-<td><a href="../issue.html">Issue</a> → <a href="../content_hub.html">Content Hub</a> → <a href="internal-prework-and-external-dependencies.html">Separating internal and external dependencies</a></td>
-<td>Being able to understand the boundaries between work that can be done right now and work that needs to be put on hold due to external dependencies. </td>
+<td><strong>参加方法やアップデート方法を知りたい</strong></td>
+<td><a href="../issue.html">問題</a> → <a href="../content_hub.html">コンテンツ ハブ</a> → <a href="internal-prework-and-external-dependencies.html">内部依存関係と外部依存関係の分離</a></td>
+<td>今すぐに実行できる作業と、外部の依存関係により保留する必要がある作業の境界を理解できるようになります。 </td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="when-stuck">
-<h2 class="section-title">Replacement destination when stopped midway</h2>
+<h2 class="section-title">途中停止時の交換先</h2>
 <table class="data-table">
 <thead>
 <tr>
-<th>Place to stop</th>
-<th>Page that should be replaced</th>
+<th>停車場所</th>
+<th>置き換えるべきページ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Stop at theory name or philosophical term</td>
-<td><a href="../glossary.html">Glossary</a> / <a href="consciousness-theory-map.html">consciousness theory map</a></td>
+<td>理論名または哲学用語で停止</td>
+<td><a href="../glossary.html">用語集</a> / <a href="consciousness-theory-map.html">意識理論マップ</a></td>
 </tr>
 <tr>
-<td>Stop at EEG or measurement word</td>
-<td><a href="eeg-basics.html">EEG basics</a> / <a href="measurement-and-modeling-terms.html">Terminology guide from measurement to modeling</a></td>
+<td>脳波または測定ワードで停止</td>
+<td><a href="eeg-basics.html">EEGの基礎</a> / <a href="measurement-and-modeling-terms.html">測定からモデリングまでの用語ガイド</a></td>
 </tr>
 <tr>
-<td>Stops due to role difference on practical page</td>
-<td><a href="practical-pages-reading-guide.html">Reading guide for practical pages</a></td>
+<td>実践ページでの役割の違いにより停止</td>
+<td><a href="practical-pages-reading-guide.html">実践的なページの読書ガイド</a></td>
 </tr>
 <tr>
-<td>Stops due to role difference between public pages</td>
-<td><a href="public-page-reading-guide.html">Public page reading guide</a></td>
+<td>公開ページ間の役割の違いにより停止</td>
+<td><a href="public-page-reading-guide.html">公開ページの閲覧ガイド</a></td>
 </tr>
 <tr>
-<td>Stops at any story from L0 to L5</td>
-<td><a href="claim-level-reading-routes.html">How to read each L0 to L5</a></td>
+<td>L0～L5の任意の階で停止</td>
+<td><a href="claim-level-reading-routes.html">各L0～L5の見方</a></td>
 </tr>
 </tbody>
 </table>
 </section>
 
 <section class="section" id="common-mistakes">
-<h2 class="section-title">Reading methods to avoid in the first 30 minutes</h2>
+<h2 class="section-title">最初の 30 分間に避けるべき読書方法</h2>
 <div class="key-points">
-<h4>Mistake</h4>
+<h4>間違い</h4>
 <ul>
-<li><strong>Try to read all long passages from the beginning:</strong> At first, it is better to decide on one axis for more stable understanding. </li>
-<li><strong>Chasing theory and practice too much at the same time:</strong> It's better to decide which one you want to focus on first, so you don't get confused. </li>
-<li><strong>Conclude using the FAQ alone:</strong> The FAQ is the entry point, so if you have a strong argument, you need to go back to the main text. </li>
-<li><strong>I feel like I know the victory conditions just by looking at Hands-on:</strong> The design of the conditions must be confirmed in Verification. </li>
+<li><strong>T長文を最初から全部読んでみる：</strong>最初は1つの軸を決めたほうが理解が安定します。 </li>
+<li><strong>理論と実践を同時に追い込みすぎる：</strong> 混乱しないように、最初にどちらに集中するかを決めたほうがよいでしょう。 </li>
+<li><strong>FAQ のみを使用して結論を得る:</strong> FAQ は入り口であるため、強い議論がある場合は、本文に戻る必要があります。 </li>
+<li><strong>ハンズオンを見ただけで勝利条件がわかった気がする：</strong> 条件の設計は検証で確認する必要がある。 </li>
 </ul>
 </div>
 </section>
 
 <section class="section" id="next-step">
-<h2 class="section-title">Where to return next</h2>
+<h2 class="section-title">次に戻る場所</h2>
 <p>
-If you want to go back to the differences in the roles of public pages as a whole, please use <a href="public-page-reading-guide.html">Public page reading guide</a>. If you want to narrow it down to only theory-related pages, please use <a href="theory-pages-reading-guide.html">Reading guide for theoretical-related pages</a>. If you want to narrow it down only to practical-related pages, please use <a href="practical-pages-reading-guide.html">Reading guide for practical pages</a>.
+公開ページ全体の役割の違いに立ち返りたい場合は、<a href="public-page-reading-guide.html">公開ページ閲覧ガイド</a>をご利用ください。理論関連ページのみに絞り込みたい場合は<a href="theory-pages-reading-guide.html">理論関連ページの読み方ガイド</a>をご利用ください。実務関連のページのみに絞りたい場合は<a href="practical-pages-reading-guide.html">実務ページの読み方ガイド</a>をご利用ください。
 </p>
 </section>
 
@@ -149,19 +148,19 @@ If you want to go back to the differences in the roles of public pages as a whol
 
 <aside class="sidebar-column">
 <div class="sidebar-box">
-<h4>Related Wiki</h4>
+<h4>関連Wiki</h4>
 <ul>
-<li><a href="public-page-reading-guide.html">Public page reading guide →</a></li>
-<li><a href="theory-pages-reading-guide.html">Reading guide for theory pages →</a></li>
-<li><a href="practical-pages-reading-guide.html">Reading guide for practical pages →</a></li>
+<li><a href="public-page-reading-guide.html">公開ページの閲覧ガイド→</a></li>
+<li><a href="theory-pages-reading-guide.html">理論ページの読み方 →</a></li>
+<li><a href="practical-pages-reading-guide.html">実践ページの読み方 →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">
-<h4>Public page</h4>
+<h4>公開ページ</h4>
 <ul>
-<li><a href="../index.html">Start page →</a></li>
-<li><a href="../verification.html">Verification infrastructure →</a></li>
-<li><a href="../datasets.html#l0-practice">Hands-on →</a></li>
+<li><a href="../index.html">スタートページ→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン→</a></li>
 </ul>
 </div>
 </aside>

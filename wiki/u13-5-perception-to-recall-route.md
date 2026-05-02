@@ -1,153 +1,152 @@
 ---
 layout: default
-title: "Wiki: U13-5 perception-to-recall route packet"
-description: "Why U13-5 stays second in the current public six, why D03 stays the intended gated-support EEG anchor, and what the first artifact can honestly close."
-article_type: Wiki
-subtitle: "A row-specific packet for the second active public RQ"
-author: Mind Uploading Research Project
-last_updated: "2026-04-04"
-note: "U13-5 route packet"
-audience: "Readers who want the dataset-choice rationale and the honest claim ceiling for the current perception-to-recall row"
-reading_time: "8-12 minutes"
-page_intro: "This page fixes the current public route for U13-5 at the level of one question, one intended EEG route anchor, one bounded first artifact, and one funding bridge."
-accuracy_note: "This page does not claim shared internal mechanism across perception and recall. It only records what the present EEG route can honestly close first."
+title: 'Wiki: U13-5 認識から想起までのルート パケット'
+description: U13-5 が現在公開されている 6 つの中で 2 番目に留まる理由、D03 が意図されたゲートサポート EEG アンカーであり続ける理由、そして最初のアーティファクトが正直に閉じることができるものは何か。
+article_type: ウィキ
+subtitle: 2 番目のアクティブなパブリック RQ の行固有のパケット
+author: マインドアップロード研究プロジェクト
+last_updated: '2026-04-04'
+note: U13-5 ルート パケット
+audience: データセット選択の理論的根拠と、現在の認識から想起までの行の正直な主張の上限を知りたい読者
+reading_time: 8～12分
+page_intro: このページは、1 つの質問、1 つの意図された EEG ルート アンカー、1 つの境界付き最初のアーティファクト、および 1 つのファンディング ブリッジのレベルで、U13-5 の現在のパブリック ルートを修正します。
+accuracy_note: このページは、知覚と想起にわたって共有される内部メカニズムを主張するものではありません。現在の EEG ルートが最初に正直に閉じることができるものだけを記録します。
 wiki_links:
-  - label: "Wiki: Current public six route brief"
-    url: "/wiki/mind-upload-current-public-six-rq-brief.html"
-    description: "The compact six-row public route."
-  - label: "Wiki: Deep focus notes"
-    url: "/wiki/mind-upload-rq60-deep-focus-notes.html"
-    description: "The wider six-row working note."
-  - label: "Wiki: Grant and dataset playbook"
-    url: "/wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html"
-    description: "The fixed funding and anchor map."
+- label: 'Wiki: 現在公開されている 6 つのルート概要'
+  url: /wiki/mind-upload-current-public-six-rq-brief.html
+  description: コンパクトな6列パブリックルート。
+- label: 'Wiki: ディープ フォーカス ノート'
+  url: /wiki/mind-upload-rq60-deep-focus-notes.html
+  description: 幅広の6列ワーキングノート。
+- label: 'Wiki: 助成金とデータセットのプレイブック'
+  url: /wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html
+  description: 固定資金とアンカーマップ。
 recommended_pages:
-  - label: "Issue page"
-    url: "/issue.html"
-  - label: "Data & Bench"
-    url: "/datasets.html"
+- label: 発行ページ
+  url: /issue.html
+- label: データとベンチ
+  url: /datasets.html
 ---
-
 <main class="main-container">
 <article class="content-column">
 
-# U13-5 perception-to-recall route packet
+# U13-5 知覚から想起までのルート パケット
 
-This page does not change the current public six-question batch. It makes only the second active row more explicit, so readers can see why `U13-5` still stays next after `U13-2`, why `D03` now stays only as a gated support anchor for the present branch-point question, and what the next public-safe artifact can honestly close.
+このページでは、現在の公開されている 6 つの質問のバッチは変更されません。これにより、2 番目のアクティブな行のみがより明確になるため、読者は、なぜ `U13-5` が `U13-2` の次に留まるのか、なぜ `D03` が現在の分岐点の質問に対するゲート サポート アンカーとしてのみ留まるのか、そして次のパブリック セーフ アーティファクトが正直に閉じることができるのかを理解できます。
 
-## What still stays fixed after the 19:09 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 19:09 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 19:09 JST` after `mind-upload@399c6ce6f5ee`, `EEG-DATA@3848beee5e7c`, and `auto-research-funds@760f60b31eea` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now clarifies the front-door human-support-state split outside the current six, `EEG-DATA` adds the `EgoBrain` request-gated multimodal release while still reporting `30,932` merged-unique rows, `28,895` high-confidence rows, `24,910` immediate rows, and `24,540` high-confidence immediate rows, and `auto-research-funds` adds a `Taisei` legacy funding card without changing the practical shortlist.
-- The practical effect for this row stays narrow. The newest carry-forwards still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning. For stable cross-repo references, this row now stays anchored to the DOI/name pair `10.21227/6106-6120` / `Data of Multimodal Fusion System for Cognitive Load Assessment in Psychological Experiments: An EEG and Eye-Tracking Study`, with public-open backups `10.57760/sciencedb.20611` (`ChineseEEG-2`), `10.57702/hsybylv1` (`ZuCo 2.0`), `10.5281/zenodo.14645652` (spoken-plus-imagined robot-speech EEG), and `10.18112/openneuro.ds006465.v2.0.0` (`3M-CPSEED`).
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet. The checked front-door pages already surfaced `2026-04-04 17:07 JST` wording, while this row packet still surfaced `2026-04-04 14:10 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=207`, `projects=2`, `Taisei=0`), so this page only carries the same row-specific route forward onto the actual latest pulled heads while correcting the row-level anchor references to stable DOI form.
+- `mind-upload@399c6ce6f5ee`、`EEG-DATA@3848beee5e7c`、`auto-research-funds@760f60b31eea` の後の `2026-04-04 19:09 JST` での実際のプル再チェックでは、依然として `U13-5` が 2 番目に維持され、現在の分岐点の質問の計画されたゲート サポート アンカーとしてのみ `D03` が維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、現在の 6 つ以外のフロントドアのヒューマンサポート状態の分割を明確にし、`EEG-DATA` は、`EgoBrain` リクエストゲート型マルチモーダルリリースを追加しながら、`30,932` マージされた一意の行、`28,895` 高信頼行、`24,910` 即時行、および `24,540` 高信頼即時行を引き続き報告し、`auto-research-funds` は、実質的な候補リストを変更せずに、`Taisei` レガシーファンディングカードを追加します。
+- この行に対する実際的な影響は狭いままです。最新のキャリーフォワードでは、この行に必要なリコール ラベル付き分岐点がまだ公開されていないため、`D03` は計画における意図されたゲート サポート アンカーとしてのみ留まります。安定したクロスリポジトリ参照のために、この行は DOI/名前のペア `10.21227/6106-6120` / `Data of Multimodal Fusion System for Cognitive Load Assessment in Psychological Experiments: An EEG and Eye-Tracking Study` に固定され、パブリック オープン バックアップ `10.57760/sciencedb.20611` (`ChineseEEG-2`)、`10.57702/hsybylv1` (`ZuCo 2.0`)、`10.5281/zenodo.14645652` (音声と想像のロボット音声 EEG)、および `10.18112/openneuro.ds006465.v2.0.0` (`3M-CPSEED`) に固定されるようになりました。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページとこの行パケットに対して依然として `HTTP/2 200` が返されました。チェックされたフロントドア ページにはすでに `2026-04-04 17:07 JST` の文言が表示されていましたが、この行パケットはこのソース同期の前にまだ `2026-04-04 14:10 JST` の文言が表示されていました。新しい読み取り専用の Todoist 監査では、既存のファンディング タスクのカバレッジがまだ十分であることが示されているため (`items=207`、`projects=2`、`Taisei=0`)、このページでは行レベルのアンカー参照を安定した DOI 形式に修正しながら、同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 14:10 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 14:10 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 14:10 JST` after `mind-upload@cafeab4bc2a5`, `EEG-DATA@e0695bcac83d`, and `auto-research-funds@a4852d89376c` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` tightens glossary excitability and ionic terms on top of the earlier EEG foundation-model source-status split without widening the route, `EEG-DATA` still reports `30,930` merged-unique rows, `28,893` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the newest metadata deep dives, and `auto-research-funds` adds `JELA Diakonia` scholarship cards without changing the practical shortlist.
-- The practical effect for this row stays narrow. The newest carry-forwards still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning while `ZuCo 2.0`, `ChineseEEG-2`, and the spoken-plus-imagined robot-speech EEG family remain nearby backups.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT`; the checked front-door pages already surfaced `2026-04-04 12:02 JST` wording while this row packet still surfaced `2026-04-04 09:05 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `Kashinome=2`, `Secom=3`, `Brain Science Foundation=8`, `Okawa=2`, `Japan Industrial Science Research Institute=1`, `Doumei=0`, `Kenkyu no Susume=0`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@cafeab4bc2a5`、`EEG-DATA@e0695bcac83d`、`auto-research-funds@a4852d89376c` の後の `2026-04-04 14:10 JST` での実際のプル再チェックでは、依然として `U13-5` が 2 番目に維持され、現在の分岐点の質問の計画されたゲート サポート アンカーとしてのみ `D03` が維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、ルートを広げることなく、以前の EEG 基礎モデルのソースとステータスの分割に加えて、用語集の興奮性とイオン用語を強化します。`EEG-DATA` は、最新のメタデータの詳細を調査した後も、`30,930` マージされた一意の行、`28,893` 高信頼性の行、`24,909` 即時行、および `24,539` 高信頼性の即時行を報告し、`auto-research-funds` は、実質的な最終候補リストを変更せずに、`JELA Diakonia` 奨学金カードを追加します。
+- この行に対する実際的な影響は狭いままです。最新の繰り越しでは、この行に必要なリコールラベル付きの分岐点がまだ公開されていないため、`D03` は計画中の意図されたゲートサポートアンカーとしてのみ留まり、一方、`ZuCo 2.0`、`ChineseEEG-2`、および音声と想像によるロボット音声 EEG ファミリは近くのバックアップのままです。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Sat, 04 Apr 2026 04:18:04 GMT` が返されました。チェックされたフロントドア ページにはすでに `2026-04-04 12:02 JST` の文言が表示されていますが、この行パケットにはこのソース同期の前にまだ `2026-04-04 09:05 JST` の文言が表示されています。新しい読み取り専用の Todoist 監査では、既存のファンディング タスクのカバレッジが十分であることが示されたため (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`Kashinome=2`、`Secom=3`、`Brain Science Foundation=8`、`Okawa=2`、`Japan Industrial Science Research Institute=1`、`Doumei=0`、`Kenkyu no Susume=0`)、このページでは同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 09:05 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 09:05 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 09:05 JST` after `mind-upload@e571567f017d`, `EEG-DATA@fbbb0d8c01e0`, and `auto-research-funds@d7f6fb9bc158` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `08:07 JST` route-hold sync on top of a recent pretraining-overlap audit, `EEG-DATA` still reports `30,929` merged-unique rows, `28,892` high-confidence rows, `24,909` immediate rows, and `24,539` high-confidence immediate rows after the `OpenNeuro ds007020` deep dive, and `auto-research-funds` adds deeply reviewed April 4 scholarship updates without changing the practical shortlist.
-- The practical effect for this row stays narrow. The newest carry-forwards still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning while `ChineseEEG-2`, `ZuCo 2.0`, and the spoken-plus-imagined robot-speech EEG family remain nearby backups.
-- Browser-level live checks in this run still returned `HTTP/2 200` for the current public entry pages and this row packet with `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT`; the checked front-door pages already surfaced `2026-04-04 08:07 JST` wording while this row packet still surfaced `2026-04-04 01:04 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@e571567f017d`、`EEG-DATA@fbbb0d8c01e0`、`auto-research-funds@d7f6fb9bc158` の後の `2026-04-04 09:05 JST` での実際のプル再チェックでは、依然として `U13-5` が 2 番目に維持され、現在の分岐点の質問の計画されたゲート サポート アンカーとしてのみ `D03` が維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、最近のトレーニング前オーバーラップ監査に加えて、以前の `08:07 JST` ルートホールド同期を保持するだけです。`EEG-DATA` は、`OpenNeuro ds007020` の詳細な調査後に、`30,929` マージされた一意の行、`28,892` 高信頼行、`24,909` 即時行、および `24,539` 高信頼即時行を引き続き報告し、`auto-research-funds` は、実質的な候補者リストを変更することなく、深く検討された 4 月 4 日の奨学金の更新を追加します。
+- この行に対する実際的な影響は狭いままです。最新の繰り越しでは、この行に必要なリコールラベル付きの分岐点がまだ公開されていないため、`D03` は計画中の意図されたゲートサポートアンカーとしてのみ留まり、一方、`ChineseEEG-2`、`ZuCo 2.0`、および音声と想像によるロボット音声 EEG ファミリは近くのバックアップのままです。
+- この実行におけるブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対しては `HTTP/2 200` が返され、この行パケットには `Last-Modified: Sat, 04 Apr 2026 00:11:41 GMT` が返されました。チェックされたフロントドア ページにはすでに `2026-04-04 08:07 JST` の文言が表示されていますが、この行パケットにはこのソース同期の前にまだ `2026-04-04 01:04 JST` の文言が表示されています。新しい読み取り専用の Todoist 監査では、既存のファンディング タスクのカバレッジがまだ十分であることが示されているため (`items=206`、`projects=2`)、このページでは同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 01:04 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 01:04 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 01:04 JST` after `mind-upload@9b6a8b971ba0`, `EEG-DATA@56d765da60b`, and `auto-research-funds@3c8569e28` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now carries the earlier `00:06 JST` route reread plus field-level artifact-stack disclosure tightening, `EEG-DATA` still reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows after deepening `Numbers` and `PRIOS`, and `auto-research-funds` adds current coverage for `同盟育成会` and `研究のすゝめ奨学金` without changing the practical shortlist.
-- The practical effect for this row stays narrow. The newest public-open carry-forwards still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning while `ChineseEEG-2`, `ZuCo 2.0`, and the spoken-plus-imagined robot-speech EEG family remain nearby backups.
-- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages and row packets with `Last-Modified: Fri, 03 Apr 2026 15:13:06 GMT`; the checked bodies still surfaced `2026-04-04 00:06 JST` wording before this source sync. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `ENEOS=1`, `同盟会=0`, `研究のすゝめ=0`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@9b6a8b971ba0`、`EEG-DATA@56d765da60b`、`auto-research-funds@3c8569e28` の後の `2026-04-04 01:04 JST` での実際のプル再チェックでは、依然として `U13-5` が 2 番目に維持され、現在の分岐点の質問の計画されたゲート サポート アンカーとしてのみ `D03` が維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、以前の `00:06 JST` ルートの再読み取りとフィールド レベルのアーティファクト スタック開示の厳格化を実行し、`EEG-DATA` は、`Numbers` および `PRIOS` を深化した後も、`30,921` マージされた一意の行、`28,884` 高信頼行、`24,900` 即時行、および `24,530` 高信頼即時行を引き続き報告し、`auto-research-funds` は、実際的な内容を変更せずに、`同盟育成会` および `研究のすゝめ奨学金` の現在のカバレッジを追加します。候補者リスト。
+- この行に対する実際的な影響は狭いままです。最新のパブリックオープンキャリーフォワードでは、この行に必要なリコールラベル付きの分岐点がまだ公開されていないため、`D03` は計画中の意図されたゲートサポートアンカーとしてのみ留まり、一方、`ChineseEEG-2`、`ZuCo 2.0`、および音声+想像ロボット音声 EEG ファミリは近くのバックアップのままです。
+- このソース同期前のブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `HTTP/2 200` が返され、行パケットには `Last-Modified: Fri, 03 Apr 2026 15:13:06 GMT` が返されました。このソース同期の前に、チェックされたボディにはまだ `2026-04-04 00:06 JST` の文言が表示されていました。新しい読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`ENEOS=1`、`同盟会=0`、`研究のすゝめ=0`) がまだ十分であることが示されたため、このページでは、同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 00:06 JST actual-pull reread on April 4, 2026
+## 2026 年 4 月 4 日の 00:06 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-04 00:06 JST` after `mind-upload@84d84fb5a82d`, `EEG-DATA@b468ecc5f8c0`, and `auto-research-funds@eccee095a939` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `23:06 JST` route reread addenda, `EEG-DATA` now reports `30,921` merged-unique rows, `28,884` high-confidence rows, `24,900` immediate rows, and `24,530` high-confidence immediate rows after adding a fast-mapping semantic-integration EEG resource, and `auto-research-funds` adds `Iizuka current card and Korean legacy sync` without changing the practical shortlist.
-- The practical effect for this row stays narrow. The newest public-open carry-forwards still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning while `ChineseEEG-2`, `ZuCo 2.0`, and the spoken-plus-imagined robot-speech EEG family remain nearby backups.
-- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages and row packets; the checked bodies still surfaced `22:04 JST` on `brief / bridge / U13-2` and `22:04/22:05 JST` on `issue` rather than a new row-specific claim. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `ENEOS=1`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@84d84fb5a82d`、`EEG-DATA@b468ecc5f8c0`、`auto-research-funds@eccee095a939` の後の `2026-04-04 00:06 JST` での実際のプル再チェックでは、依然として `U13-5` が 2 番目に維持され、現在の分岐点の質問の計画されたゲート サポート アンカーとしてのみ `D03` が維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は以前の `23:06 JST` ルート再読み取り追加機能を保持するだけになり、`EEG-DATA` は高速マッピング セマンティック統合 EEG リソースを追加した後に `30,921` マージされた一意行、`28,884` 高信頼性行、`24,900` 即時行、および `24,530` 高信頼性即時行を報告するようになり、`auto-research-funds` は実際の候補リストを変更せずに `Iizuka current card and Korean legacy sync` を追加します。
+- この行に対する実際的な影響は狭いままです。最新のパブリックオープンキャリーフォワードでは、この行に必要なリコールラベル付きの分岐点がまだ公開されていないため、`D03` は計画中の意図されたゲートサポートアンカーとしてのみ留まり、一方、`ChineseEEG-2`、`ZuCo 2.0`、および音声+想像ロボット音声 EEG ファミリは近くのバックアップのままです。
+- このソース同期前のブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページと行パケットに対して `HTTP/2 200` が返されました。チェックされたボディは、新しい行固有のクレームではなく、`brief / bridge / U13-2` では `22:04 JST`、`issue` では `22:04/22:05 JST` を依然として表面化しました。新しい読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`ENEOS=1`) が依然として十分であることが示されたため、このページでは、同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 23:06 JST actual-pull reread on April 3, 2026
+## 2026 年 4 月 3 日の 23:06 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-03 23:06 JST` after `mind-upload@ec7a7dd713e9`, `EEG-DATA@46f6b56c693c`, and `auto-research-funds@b3d3c531729a` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` now just carries the earlier `22:04 JST` route-hold sync, `EEG-DATA` now reports `30,920` merged-unique rows, `28,883` high-confidence rows, `24,899` immediate rows, and `24,529` high-confidence immediate rows after adding `motion sickness` and `swallowing EEG` datasets, and `auto-research-funds` deepens `KIRII / Pigeon / Nakato / Takashima` scholarship coverage plus a `22:04 JST` funding addendum without changing the practical shortlist.
-- The practical effect for this row stays narrow. The newest public-open carry-forwards still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning while `ChineseEEG-2`, `ZuCo 2.0`, and the spoken-plus-imagined robot-speech EEG family remain nearby backups.
-- Browser-level live checks before this source sync still returned `HTTP/2 200` for the current public entry pages and row packets with `Last-Modified: Fri, 03 Apr 2026 13:18:48 GMT`; the checked live page for this row still surfaced `Updated: 2026-04-02` plus the earlier `23:08 JST` hold note. A fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient (`items=206`, `projects=2`, `Kura=2`, `Nakatani family=11`, `ENEOS=1`), so this page only carries the same row-specific route forward onto the actual latest pulled heads.
+- `mind-upload@ec7a7dd713e9`、`EEG-DATA@46f6b56c693c`、`auto-research-funds@b3d3c531729a` の後の `2026-04-03 23:06 JST` での実際のプル再チェックでは、依然として `U13-5` が 2 番目に維持され、現在の分岐点の質問の計画されたゲート サポート アンカーとしてのみ `D03` が維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は以前の `22:04 JST` ルートホールド同期のみを保持し、`EEG-DATA` は `motion sickness` および `swallowing EEG` データセットの追加後に、`30,920` マージされた一意の行、`28,883` 高信頼行、`24,899` 即時行、および `24,529` 高信頼即時行を報告するようになり、`auto-research-funds` は、実質的な最終候補リストを変更することなく、`KIRII / Pigeon / Nakato / Takashima` 奨学金の適用範囲と `22:04 JST` 資金の追加を強化しました。
+- この行に対する実際的な影響は狭いままです。最新のパブリックオープンキャリーフォワードでは、この行に必要なリコールラベル付きの分岐点がまだ公開されていないため、`D03` は計画中の意図されたゲートサポートアンカーとしてのみ留まり、一方、`ChineseEEG-2`、`ZuCo 2.0`、および音声+想像ロボット音声 EEG ファミリは近くのバックアップのままです。
+- このソース同期前のブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `HTTP/2 200` が返され、行パケットには `Last-Modified: Fri, 03 Apr 2026 13:18:48 GMT` が返されました。この行のチェックされたライブ ページには、`Updated: 2026-04-02` と以前の `23:08 JST` ホールド ノートがまだ表示されています。新しい読み取り専用の Todoist 監査では、既存のファンディング タスク カバレッジ (`items=206`、`projects=2`、`Kura=2`、`Nakatani family=11`、`ENEOS=1`) がまだ十分であることが示されたため、このページでは、同じ行固有のルートを実際の最新のプルされたヘッドに転送するだけです。
 
-## What still stays fixed after the 23:08 JST actual-pull reread on April 2, 2026
+## 2026 年 4 月 2 日の 23:08 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-02 23:08 JST` after `mind-upload@f5d1d1dd1683`, `EEG-DATA@ee1463d28288`, and `auto-research-funds@ec24a355abbc` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` clarifies the causal-versus-human-proxy bridge outside the current six, `EEG-DATA` now reports `30,896` merged-unique rows, `28,859` high-confidence rows, and `24,882` directly usable rows after candidate-curation refinement plus the `OpenNeuro ds007615` deep dive, and `auto-research-funds` adds `Geo-Kagaku` current cards without changing the practical shortlist.
-- The practical effect for this row stays narrow. The newest public-open carry-forwards widen perception-side and speech-side backups, but they still do not expose the recall-labeled branch point that this row needs, so `D03` stays only as the intended gated-support anchor in planning.
-- Browser-level live checks still returned `HTTP/2 200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
+- `mind-upload@f5d1d1dd1683`、`EEG-DATA@ee1463d28288`、`auto-research-funds@ec24a355abbc` の後の `2026-04-02 23:08 JST` での実際のプル再チェックでは、依然として `U13-5` が 2 番目に維持され、現在の分岐点の質問の計画されたゲート サポート アンカーとしてのみ `D03` が維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は、現在の 6 つ以外の因果関係と人間のプロキシ ブリッジを明確にし、`EEG-DATA` は、統合された固有の行 `30,896`、信頼性の高い行 `28,859`、および候補キュレーションの絞り込みと `OpenNeuro ds007615` の詳細調査後の直接使用可能な行 `24,882` を報告するようになり、`auto-research-funds` は、実質的な候補リストを変更せずに `Geo-Kagaku` の現在のカードを追加します。
+- この行に対する実際的な影響は狭いままです。最新のパブリックオープンキャリーフォワードは、知覚側と音声側のバックアップを拡大しますが、この行に必要なリコールラベルの分岐点はまだ公開されていないため、`D03` は計画における意図されたゲートサポートアンカーとしてのみ留まります。
+- ブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `Last-Modified: Thu, 02 Apr 2026 13:12:21 GMT` が引き続き `HTTP/2 200` として返され、新たな読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため、このページでは行固有のルート ホールドの文言のみが更新されます。
 
-## What still stays fixed after the 12:04 JST actual-pull reread on April 2, 2026
+## 2026 年 4 月 2 日の 12:04 JST の実際のプルの再読み込み後もまだ修正されている点
 
-- An actual-pull recheck at `2026-04-02 12:04 JST` after `mind-upload@dceb8bc`, `EEG-DATA@04b7fda167e`, and `auto-research-funds@4442e348a` still keeps `U13-5` second and still keeps `D03` only as the planned gated-support anchor for the present branch-point question.
-- The newest pulled deltas remain carry-forward rather than route replacement. `mind-upload` syncs a spectroscopy front door outside the current six, `EEG-DATA` now reports `30,888` merged-unique rows, `28,851` high-confidence rows, and `24,506` immediate rows after `THINGS-EEG`, an OSF orientation route, and a rat ECoG deep dive, and `auto-research-funds` only refreshes repository stats.
-- The practical effect for this row stays narrow. `ChineseEEG-2` and `THINGS-EEG` widen public-open perception-side backups, but they still do not expose the recall-labeled branch point that this row needs, while `auditory-eeg` and rat ECoG remain the wrong task family for the present mimic-separation route.
-- Browser-level live checks still returned `200` for the current public entry pages with `Last-Modified: Thu, 02 Apr 2026 02:37:04 GMT`, and a fresh read-only Todoist audit still showed the existing funding-task coverage as sufficient, so this page only refreshes the row-specific route-hold wording.
+- `mind-upload@dceb8bc`、`EEG-DATA@04b7fda167e`、`auto-research-funds@4442e348a` の後の `2026-04-02 12:04 JST` での実際のプル再チェックでは、依然として `U13-5` が 2 番目に維持され、現在の分岐点の質問の計画されたゲート サポート アンカーとしてのみ `D03` が維持されます。
+- プルされた最新のデルタは、ルートの置き換えではなく、繰り越されたままになります。 `mind-upload` は現在の 6 行の外側にある分光分析フロント ドアを同期し、`EEG-DATA` は `30,888` マージされた固有行、`28,851` 高信頼行、`THINGS-EEG` の直後の `24,506` 行、OSF オリエンテーション ルート、およびラット ECoG ディープ ダイブを報告するようになり、`auto-research-funds` はリポジトリ統計のみを更新します。
+- この行に対する実際的な影響は狭いままです。 `ChineseEEG-2` と `THINGS-EEG` は、パブリックオープンな知覚側バックアップを拡張しますが、この行に必要なリコールラベル付き分岐点はまだ公開されていません。一方、`auditory-eeg` と Rat ECoG は、現在の模倣分離ルートにとって間違ったタスク ファミリのままです。
+- ブラウザ レベルのライブ チェックでは、現在のパブリック エントリ ページに対して `Last-Modified: Thu, 02 Apr 2026 02:37:04 GMT` が引き続き `200` として返され、新たな読み取り専用 Todoist 監査では、既存のファンディング タスク カバレッジが十分であることが示されたため、このページでは行固有のルート ホールドの文言のみが更新されます。
 
-## What was rechecked for this row
+## この行で再チェックされた内容
 
-- `D03 Multimodal Fusion EEG + Eye-Tracking` still fixes the intended paired EEG + gaze route for this row, but the current IEEE DataPort page is subscription-gated and its visible metadata is still a `55`-student cognitive-load package with Chinese column guidance and no recall-specific label exposed on the public page.
-- The current funding bridge remains narrow and unchanged: `Kura Fund` stays the first route and `Nakatani Foundation graduate scholarship` stays second.
-- The public six-question batch also stays unchanged: `U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2`.
+- `D03 Multimodal Fusion EEG + Eye-Tracking` は依然としてこの行の意図されたペアの EEG + 視線ルートを修正しますが、現在の IEEE DataPort ページはサブスクリプションゲートであり、その表示メタデータは依然として `55` 学生認知負荷パッケージであり、中国語の列ガイダンスがあり、公開ページで公開されているリコール固有のラベルはありません。
+- 現在の資金調達ブリッジは狭く、変更されていません。`Kura Fund` が最初のルートのままで、`Nakatani Foundation graduate scholarship` が 2 番目のルートのままです。
+- 公開されている 6 つの質問のバッチも変更されず、`U13-2 / U13-5 / U0-2 / U0-3 / U14-4 / U14-2` です。
 
-## Why `U13-5` still stays second
+## `U13-5`が依然として2位に留まる理由
 
-- It is the next bounded row after `U13-2` because the route first needs a neural-contribution floor and then a transfer-gap floor.
-- The row can test where a shared decoder begins to fail when the route moves from perception to recall without pretending that shared decoder structure already proves shared mechanism.
-- If this row fails, stronger mimicry / mechanism wording should stay blocked for the current public route.
+- ルートには最初にニューラル寄与フロアが必要で、次に転送ギャップ フロアが必要であるため、これは `U13-2` の次の境界行です。
+- この行は、共有デコーダ構造が共有メカニズムをすでに証明しているかのように装うことなく、ルートが知覚から想起に移行するときに共有デコーダがどこで失敗し始めるかをテストできます。
+- この行が失敗した場合、より強力な模倣/メカニズムの文言は、現在のパブリック ルートではブロックされたままになるはずです。
 
-## Why `D03` stays in scope only as a gated support anchor
+## `D03` がゲート サポート アンカーとしてのみ範囲内に留まる理由
 
-| Candidate | What it helps with | Why it is not the first public anchor |
+| 候補者 | 何に役立つのか | なぜこれが最初の公共アンカーではないのか |
 |---|---|---|
-| `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`, DOI resolves to IEEE DataPort) | It still fixes the intended paired EEG + gaze target, which is enough to keep the bounded perception-to-recall branch-point question in scope if access is available. | The current landing page still does not expose a recall-specific label, so it no longer counts as an immediate public anchor in this run. |
-| `ChineseEEG-2` (`10.57760/sciencedb.20611`, immediate) | It adds a public-open multimodal language-decoding family that keeps cross-stream semantic alignment visible in the same row-level support space. | It is still a reading/listening family rather than the paired perception-to-recall branch point this row would need. |
-| `ZuCo 2.0` (`10.57702/hsybylv1`, immediate) | It restores a public EEG+ET paired-stream family that can be inspected without the IEEE DataPort landing page. | It is a natural-reading dataset and still does not expose the recall-labeled branch point this row would need. |
-| `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`, immediate) | It keeps public overt/imagination speech transfer stress tests on deck even when the main paired-stream page is not the first practical artifact. | It is speech-first and public, but it still does not recreate the paired `EEG + gaze` route or a recall-labeled branch point. |
-| `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`, immediate) | It gives a richer speech-side control family with overt, silent-intended, and imagined speech, and it remains a strong nearby control anchor. | It is better for neural-contribution control than for a paired perception-to-recall branch-point reading, so it stays support rather than primary for `U13-5`. |
+| `D03 Multimodal Fusion EEG + Eye-Tracking` (`10.21227/6106-6120`、DOI は IEEE DataPort に解決されます) | それでも、意図したペアの EEG + 視線ターゲットは修正されます。これは、アクセスが利用可能な場合に、境界のある知覚から想起までの分岐点の質問を範囲内に保つのに十分です。 | 現在のランディング ページはまだリコール固有のラベルを公開していないため、この実行では直接のパブリック アンカーとしてカウントされなくなりました。 |
+| `ChineseEEG-2` (`10.57760/sciencedb.20611`、即時) | これにより、同じ行レベルのサポート空間でクロスストリームのセマンティック調整を可視に保つ、パブリックにオープンなマルチモーダル言語デコーディング ファミリが追加されます。 | これは、この行に必要な、知覚と想起のペアの分岐点ではなく、依然として読み取り/リスニングのファミリーです。 |
+| `ZuCo 2.0` (`10.57702/hsybylv1`、即時) | IEEE DataPort ランディング ページなしで検査できるパブリック EEG+ET ペア ストリーム ファミリを復元します。 | これは自然な読み取りデータセットですが、この行に必要なリコールラベル付きの分岐点はまだ公開されていません。 |
+| `EEG data recorded during spoken and imagined speech interaction with a simulated robot` (`10.5281/zenodo.14645652`、即時) | これにより、メインのペアストリーム ページが最初の実用的な成果物ではない場合でも、公然/想像音声伝達ストレス テストがデッキ上に維持されます。 | これは音声優先で公開されていますが、それでもペアの `EEG + gaze` ルートやリコール ラベルの付いた分岐点は再作成されません。 |
+| `D10 3M-CPSEED` (`10.18112/openneuro.ds006465.v2.0.0`、即時) | それは、あからさまな、沈黙を意図した、そして想像上のスピーチを含む、より豊かなスピーチ側コントロールファミリーを提供し、それは強力な近くのコントロールアンカーであり続けます。 | これは、ペアになった知覚と想起の分岐点読み取りよりも神経寄与制御に優れているため、`U13-5` の主要な役割ではなくサポートのままです。 |
 
-If a reader insists on a public-open-only inspection path, the least-distorting backup now stays `ZuCo 2.0` for the paired EEG + eye-tracking family, with `ChineseEEG-2`, the spoken-plus-imagined robot-speech EEG family, and `D10 3M-CPSEED` kept nearby as decoder/control backups. Those public-open backups remain useful for decoder-side failure inspection and paired-stream inspection, but they still do not expose the recall-labeled branch point that keeps `D03` primary in planning.
+リーダーが公開のみの検査パスを主張する場合、最も歪みの少ないバックアップは、EEG + 視線追跡ファミリーのペアの `ZuCo 2.0` のままとなり、`ChineseEEG-2`、音声と想像によるロボット音声 EEG ファミリ、および `D10 3M-CPSEED` がデコーダ/制御バックアップとして近くに保持されます。これらの公開バックアップは、デコーダ側の障害検査やペアストリーム検査には依然として役立ちますが、計画において `D03` をプライマリに保つリコールラベルの付いた分岐点は依然として公開されていません。
 
-## What the first artifact can honestly close now
+## 最初のアーティファクトが今正直に閉じることができるもの
 
-| Artifact piece | What it closes now | What still stays outside the claim |
+| アーティファクトの欠片 | 今閉店しているもの | まだ主張の範囲外にあるもの |
 |---|---|---|
-| `Perception-to-recall degradation note` | A bounded report of where the shared decoder begins to lose stability when the route moves from perception to recall. | Any claim that shared decoder structure proves a shared preserved internal mechanism. |
-| `Transfer-gap table` | A narrow comparison of perception and recall conditions under one decoder and one explicit control family. | Any statement that the row demonstrates preserved mechanism or successful mind preservation. |
-| `Control-condition stability note` | A public-safe failure report when the branch point collapses toward chance or loses condition stability. | Any theory-level conclusion that goes beyond the present EEG artifact. |
+| `Perception-to-recall degradation note` | ルートが知覚から想起に移行するときに、共有デコーダが安定性を失い始める場所に関する限定レポート。 | デコーダ構造が共有されているという主張は、内部メカニズムが共有されて保存されていることを証明します。 |
+| `Transfer-gap table` | 1 つのデコーダーと 1 つの明示的制御ファミリーの下での知覚と再現条件の狭い比較。 | この列がメカニズムの保存または精神の保存に成功していることを示すすべてのステートメント。 |
+| `Control-condition stability note` | 分岐点が偶然に向かって崩れたり、状態の安定性を失ったりした場合の公衆安全障害レポート。 | 現在の EEG アーチファクトを超える理論レベルの結論。 |
 
-## First-pass KPI bundle and stop rule
+## ファーストパス KPI バンドルと停止ルール
 
-| Item | Current row-level fixation |
+| アイテム | 現在の行レベルの固定 |
 |---|---|
-| `First-pass KPI bundle` | `perception-to-recall degradation point`, `transfer gap`, `control-condition stability` |
-| `Stop rule` | Do not widen this row if the degradation point and the `transfer gap` fail to stay ordered after the control-family rerun. |
+| `First-pass KPI bundle` | `perception-to-recall degradation point`、`transfer gap`、`control-condition stability` |
+| `Stop rule` | コントロールファミリーの再実行後に劣化ポイントと `transfer gap` が正常な状態を維持できない場合は、この行を広げないでください。 |
 
-## Funding wording that still fits
+## まだ適切な資金調達の文言
 
-| Route | Submission wording that stays honest | Why it still fits this row |
+| ルート | 正直さを保つ提出文言 | それでもこの行に適合する理由 |
 |---|---|---|
-| `Kura Fund` | `A bounded EEG decoder-transfer benchmark for separating mimicry from mechanism in the mind-upload route` | The row still reads as a narrow benchmark and young-researcher route, not a solved-claim route. |
-| `Nakatani Foundation graduate scholarship` | `Doctoral-track EEG perception-to-recall transfer-gap evaluation for the mind-upload route` | The row stays compatible with a doctoral continuity narrative when kept narrow and benchmark-first. |
+| `Kura Fund` | `A bounded EEG decoder-transfer benchmark for separating mimicry from mechanism in the mind-upload route` | この列は依然として、解決済みの主張ルートではなく、狭いベンチマークおよび若手研究者ルートとして読み取れます。 |
+| `Nakatani Foundation graduate scholarship` | `Doctoral-track EEG perception-to-recall transfer-gap evaluation for the mind-upload route` | この行は、狭くベンチマークを優先した場合、博士の継続性の物語との互換性を保ちます。 |
 
-## External dependency tasks that stay outside this session
+## このセッションの外にある外部依存タスク
 
-- An external recall-validity layer is still needed before stronger wording about mechanism can be justified.
-- A public-open EEG+ET backup family is now in place, but it still does not replace the missing recall-labeled branch-point evidence.
-- Any claim that shared decoder structure implies shared internal mechanism remains outside the present EEG-only route.
+- メカニズムに関するより強力な文言が正当化される前に、外部の想起妥当性レイヤーが依然として必要です。
+- 現在、一般に公開されている EEG+ET バックアップ ファミリが導入されていますが、それでも、不足しているリコールのラベルが付けられた分岐点の証拠に代わるものではありません。
+- 共有デコーダ構造が共有内部メカニズムを意味するという主張は、現在の EEG のみのルートの外に残ります。
 
-## What changed in this run
+## 今回の実行で変わったこと
 
-- The public batch did not change.
-- The main change is that `U13-5` now records the anchor-choice rationale, one compact first-pass KPI bundle, and one explicit stop rule instead of leaving them implicit.
-- This is still a route-setting update, not a solved-claim update.
+- パブリックバッチは変更されませんでした。
+- 主な変更点は、`U13-5` がアンカー選択の根拠、1 つのコンパクトなファーストパス KPI バンドル、および 1 つの明示的な停止ルールを暗黙的なままにするのではなく記録するようになった点です。
+- これは依然としてルート設定の更新であり、解決された請求の更新ではありません。
 
 </article>
 </main>
