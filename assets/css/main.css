@@ -1094,6 +1094,44 @@ button:focus-visible {
     background: #fbfcfe;
 }
 
+.data-table th,
+.data-table td {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.data-table a {
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.content-hub-page .main-container {
+    max-width: 1440px;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.content-hub-page .content-column {
+    overflow-x: auto;
+}
+
+.content-hub-page .sidebar-column {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.content-hub-page .sidebar-box {
+    margin-bottom: 0;
+}
+
+.content-hub-page .data-table {
+    min-width: 980px;
+}
+
 /* References */
 .references {
     margin-top: 56px;
