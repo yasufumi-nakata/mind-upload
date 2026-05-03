@@ -226,6 +226,11 @@ Wiki はわかりやすい方法で説明していますが、未解決の問題
 <td><a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/content_hub.html">パブリック コンテンツ統合ハブ</a></td>
 </tr>
 <tr>
+<td><strong>クローズされた issue がどのページに反映されたか確認したい</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/open-issues-267-280-resolution">Issue #267-#280 対応監査</a> / <a href="https://github.com/yasufumi-nakata/mind-upload/wiki/omoikane-biodata-mind-state-bridge-gap-register">Omoikane BioData bridge ギャップ登録</a></td>
+<td><a href="https://mind-upload.com/verification.html">検証</a> / <a href="https://mind-upload.com/tech_roadmap.html">技術ロードマップ</a> / <a href="https://mind-upload.com/content_hub.html">パブリック コンテンツ統合ハブ</a></td>
+</tr>
+<tr>
 <td><strong>新しい情報を公開ページに載せるべきかウィキに載せるべきかわからない</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics">新しい情報を配置する場所を決める基本</a></td>
 <td><a href="https://mind-upload.com/content_hub.html">パブリック コンテンツ統合ハブ</a> / <a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/issue.html#external-collaboration">外部依存関係およびコラボレーション セクション</a></td>

@@ -5,8 +5,8 @@ description: マインド アップロードと WBE を目に見える進歩を�
 article_type: プラットフォーム
 subtitle: PDB x BIDS x PhysioNet x OSF のロジックを使用して、WBE の成功条件と再現可能な進行状況を定義します。
 author: マインドアップロード研究プロジェクト
-last_updated: '2026-04-04'
-note: 動作仕様 (多軸オーバーラップ監査および記録フレーム契約同期により更新)
+last_updated: '2026-05-03'
+note: 動作仕様 (Issue #267-#280 対応監査リンク同期により更新)
 audience: サイトのコアポリシーを必要とする読者や、進歩する前に何が必要かを確認している人は、正直に主張することができます
 reading_time: 15～25分
 page_intro: このページは Mind-Upload の核となる設計図です。最初にデータ、評価、障害条件、再現手順を調整することで、遡及的にではなく事前に進捗状況を定義する方法について説明します。
@@ -546,6 +546,12 @@ BIDS、OpenNeuro、PhysioNet、BIDS Validator、ベンチマークはすべて�
 <strong>L1 以上では、「直接観察されたもの」はアーティファクトの一部</strong>
 <p>
 この再監査で明らかになった弱点は、隠れた状態がリストされている場合でも、アーティファクトは依然としてどの測定スタックがどの変数を直接観測した <strong> </strong> を修正していないということでした。したがって、L1 以上の結果については、標準モデルのカードに加えて、請求上限および棄権条件を含む <a href="#observability-budget">Observability Budget</a> を添付します。
+</p>
+</div>
+<div class="note-box">
+<strong>Issue #267-#280 の対応監査を確認する</strong>
+<p>
+EEG/ESI/DCM/維持状態/熱力学/マルチモーダル統合に関する open issue をどの検証カードへ対応付けたかは、<a href="wiki/open-issues-267-280-resolution.html">Wiki: Issue #267-#280 対応監査</a> にまとめています。Omoikane BioData bridge から意識再現 claim へ進む前の研究ギャップは、<a href="wiki/omoikane-biodata-mind-state-bridge-gap-register.html">Wiki: Omoikane BioData bridge ギャップ登録</a> に分離しています。
 </p>
 </div>
 <div class="note-box">

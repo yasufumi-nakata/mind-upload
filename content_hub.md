@@ -131,6 +131,12 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
+<strong>issue 対応をクローズ根拠まで追跡したい場合</strong>
+<p>
+GitHub Issues の状態一覧は <a href="wiki/github-issues-inventory.html">Wiki: GitHub Issues 全件インベントリ</a>、2026 年 5 月 3 日にまとめて対応した #267-#280 の反映先と外部依存は <a href="wiki/open-issues-267-280-resolution.html">Wiki: Issue #267-#280 対応監査</a>、Omoikane BioData bridge の未解決研究ギャップは <a href="wiki/omoikane-biodata-mind-state-bridge-gap-register.html">Wiki: Omoikane BioData bridge ギャップ登録</a> に分けて置きます。
+</p>
+</div>
+<div class="note-box">
 <strong>公開ページ全体で「既知/未知」の意味を標準化したい場合</strong>
 <p>
 既知/未知のセクション、精度の仮定、情報ポータル ページの外部依存関係を読むための 1 ページのガイドが必要な場合は、<a href="wiki/known-unknown-and-status-reading.html">Wiki: 「既知の内容 / まだ知られていない内容」の認識</a> を参照してください。

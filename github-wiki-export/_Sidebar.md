@@ -30,6 +30,8 @@
 - [Wiki: 提案とステータス ラベルの見方](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading)
 - [Wiki: 最初の問題の書き方](https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics)
 - [Wiki: GitHub Issues 全件インベントリ](https://github.com/yasufumi-nakata/mind-upload/wiki/github-issues-inventory)
+- [Wiki: Issue #267-#280 対応監査](https://github.com/yasufumi-nakata/mind-upload/wiki/open-issues-267-280-resolution)
+- [Wiki: Omoikane BioData bridge ギャップ登録](https://github.com/yasufumi-nakata/mind-upload/wiki/omoikane-biodata-mind-state-bridge-gap-register)
 - [Wiki: 新しい情報をどこに配置するかを決定するための基本](https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics)
 - [Wiki: 読んだことが変わるまでの流れ](https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow)
 

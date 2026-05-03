@@ -44,6 +44,8 @@ SIDEBAR_GROUPS = {
     proposal-status-reading
     issue-writing-basics
     github-issues-inventory
+    open-issues-267-280-resolution
+    omoikane-biodata-mind-state-bridge-gap-register
     content-placement-basics
     reading-to-change-workflow
   ]

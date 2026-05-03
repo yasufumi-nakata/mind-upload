@@ -248,6 +248,11 @@ recommended_pages:
 <td><a href="../issue.html">貢献ガイド</a> / <a href="../content_hub.html">パブリック コンテンツ統合ハブ</a></td>
 </tr>
 <tr>
+<td><strong>クローズされた issue がどのページに反映されたか確認したい</strong></td>
+<td><a href="open-issues-267-280-resolution.html">Issue #267-#280 対応監査</a> / <a href="omoikane-biodata-mind-state-bridge-gap-register.html">Omoikane BioData bridge ギャップ登録</a></td>
+<td><a href="../verification.html">検証</a> / <a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../content_hub.html">パブリック コンテンツ統合ハブ</a></td>
+</tr>
+<tr>
 <td><strong>新しい情報を公開ページに載せるべきかウィキに載せるべきかわからない</strong></td>
 <td><a href="content-placement-basics.html">新しい情報を配置する場所を決める基本</a></td>
 <td><a href="../content_hub.html">パブリック コンテンツ統合ハブ</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../issue.html#external-collaboration">外部依存関係およびコラボレーション セクション</a></td>

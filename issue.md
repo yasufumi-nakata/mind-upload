@@ -98,6 +98,12 @@ Mind-Upload は、マインド アップロードを検証可能な研究に発�
 </p>
 </div>
 <div class="note-box">
+<strong>Issue #267-#280 の対応根拠を確認したい場合</strong>
+<p>
+2026 年 5 月 3 日の open issue 対応では、EEG/ESI/DCM/維持状態/熱力学/マルチモーダル統合の批判を、既存の検証カードと Wiki ルールへ対応付けました。issue ごとの反映先、残る外部依存、#280 の Omoikane BioData bridge 研究ギャップは、<a href="wiki/open-issues-267-280-resolution.html">Wiki: Issue #267-#280 対応監査</a> と <a href="wiki/omoikane-biodata-mind-state-bridge-gap-register.html">Wiki: Omoikane BioData bridge ギャップ登録</a> から確認してください。
+</p>
+</div>
+<div class="note-box">
 <strong>特に RQ ごとの助成金計画のためにここにいる場合</strong>
 <p>
 このページでは貢献ルートと発行作業を分けています。本当に必要なのは、マインド アップロードのリサーチ質問から資金提供可能なテーマと固定脳波データセット アンカーへの現在の 1 つずつ質問のルートである場合は、<a href="wiki/mind-upload-rq-solvability-bridge.html">RQ 解決可能性ブリッジ</a> から始めて、<a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">grant とデータセット プレイブック</a>、<a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ ごとのディープ書類</a>、<a href="wiki/mind-upload-current-public-six-rq-brief.html">現在の公開6RQ概要</a>、および<a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">現在の資金候補リスト</a>。
