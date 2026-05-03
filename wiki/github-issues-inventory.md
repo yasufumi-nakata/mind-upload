@@ -17,49 +17,36 @@ reading_time: 30～60分
 ## 取り込み範囲
 
 - 取得コマンド: `gh issue list --state all --limit 1000 --json number,title,state,createdAt,updatedAt,closedAt,labels,body,url,comments`
-- 取得日時: 2026-05-03 01:24 UTC
+- 取得日時: 2026-05-03 01:55 UTC
 - 取り込み件数: 273 件
-- open: 14 件
-- closed: 259 件
+- open: 0 件
+- closed: 273 件
 - issue 番号範囲: #2～#280
 - GitHub issue ではない番号または欠番: #3、#4、#5、#6、#17、#266
-- 取得したコメント数: 226 件
+- 取得したコメント数: 240 件
 
 ## 未完了 issue
 
-- [#280 Omoikane BDT後段: 意識再現までに必要な研究ギャップ整理](https://github.com/yasufumi-nakata/mind-upload/issues/280)（更新日: 2026-05-02）
-- [#279 【技術的批判】EEG中心の因果モデル同定における理論的限界と改善提案](https://github.com/yasufumi-nakata/mind-upload/issues/279)（更新日: 2026-03-24）
-- [#278 mind-upload.comの技術的・自然科学的記述に関する批判的分析と改善提案](https://github.com/yasufumi-nakata/mind-upload/issues/278)（更新日: 2026-03-23）
-- [#277 [技術的/科学的監査] WBE ロードマップにおける構造的および熱力学的接地の強化](https://github.com/yasufumi-nakata/mind-upload/issues/277)（更新日: 2026-03-22）
-- [#276 [技術的/科学的監査] WBE ロードマップにおける構造的および熱力学的接地の強化](https://github.com/yasufumi-nakata/mind-upload/issues/276)（更新日: 2026-03-22）
-- [#275 [技術的/科学的監査] WBE ロードマップにおける構造的および熱力学的接地の強化](https://github.com/yasufumi-nakata/mind-upload/issues/275)（更新日: 2026-03-22）
-- [#274 科学的および技術的な洗練: 定量的な状態変数と熱力学的監査による検証コモンズの強化](https://github.com/yasufumi-nakata/mind-upload/issues/274)（更新日: 2026-03-21）
-- [#273 【一流研究者による科学的批判】WBE検証基盤における「維持状態」の分離とEEG状態推定の理論的限界について](https://github.com/yasufumi-nakata/mind-upload/issues/273)（更新日: 2026-03-20）
-- [#272 [技術批評] マクロ観察からエミュレーションまでのギャップを埋める](https://github.com/yasufumi-nakata/mind-upload/issues/272)（更新日: 2026-03-19）
-- [#271 【技術的批判】脳波源推定(ESI)および動的因果モデリング(DCM)の検証要件の具体化と参考文献に基づく改善案](https://github.com/yasufumi-nakata/mind-upload/issues/271)（更新日: 2026-03-18）
-- [#270 技術的・自然科学的観点からの改善提案：WBE検証基盤の深化に向けて](https://github.com/yasufumi-nakata/mind-upload/issues/270)（更新日: 2026-03-17）
-- [#269 技術的・自然科学的観点からの改善提案：EEG 逆問題の厳密化と最新知見の反映](https://github.com/yasufumi-nakata/mind-upload/issues/269)（更新日: 2026-03-16）
-- [#268 【科学監査報告】WBE検証基盤における技術的・自然科学的妥当性の批判的検証](https://github.com/yasufumi-nakata/mind-upload/issues/268)（更新日: 2026-03-14）
-- [#267 [Proposed Improvement] EEGソース推定の厳密化と不確実性管理の閾値設定](https://github.com/yasufumi-nakata/mind-upload/issues/267)（更新日: 2026-03-13）
+- 現在、未完了 issue はありません。
 
 ## 全件一覧
 
 | 番号 | 状態 | 日本語タイトル | 要旨 | 主な反映先 | ラベル | コメント | 更新日 |
 |---:|---|---|---|---|---|---:|---|
-| [#280](https://github.com/yasufumi-nakata/mind-upload/issues/280) | 未完了 | Omoikane BDT後段: 意識再現までに必要な研究ギャップ整理 | 背景Omoikane側ではBioData Transmitterが、複数の人間由来生体信号特徴概要をphysiology-latent-body-state-v0に統合し、ターゲット生体信号/感情/思考圧力プロキシを生成し、校正信頼度ゲートまでダイジェストのみに束縛できる段階に達しました。 | src/omoikane/interface/biodata_transmitter.py / docs/02-subsystems/interface/biodata-transmitter.md | 改善、codex | 0 | 2026-05-02 |
-| [#279](https://github.com/yasufumi-nakata/mind-upload/issues/279) | 未完了 | 【技術的批判】EEG中心の因果モデル同定における理論的限界と改善提案 | mind-upload.com に対する技術的・自然科学の批判と改善提案 1. 概要 本レポートは、mind-upload.com（以下、当サイト）および関連プロジェクト EEGflowの内容を、神経科学、計算論的神経科学、およびバイオミメティクス・エミュレーションの観点から批判的に検討したものである。 当サイトは、全脳エミュレーション（WBE）を科学... | 03_causal_modeling.py | なし | 0 | 2026-03-24 |
-| [#278](https://github.com/yasufumi-nakata/mind-upload/issues/278) | 未完了 | mind-upload.comの技術的・自然科学的記述に関する批判的分析と改善提案 | Mind-Upload.com 技術的・自然科学的視点からの批判的分析と改善提案 1. 概要 本レポートは、mind-upload.com（および関連するGitHubリポジトリ やすふみ-nakata/eegflow）に掲載されている全脳エミュレーション (WBE)およびマインドアップローディングに関する技術的・自然科学的な主張を批判的に分析したもので... | perspective.md / eeg_101.md | なし | 0 | 2026-03-23 |
-| [#277](https://github.com/yasufumi-nakata/mind-upload/issues/277) | 未完了 | [技術的/科学的監査] WBE ロードマップにおける構造的および熱力学的接地の強化 | [技術/科学監査] WBE ロードマップにおける構造的および熱力学的根拠の強化 概要 mind-upload.com フレームワークをレビューする研究者として、私は全脳エミュレーション (WBE) ロードマップの技術的および自然科学的基盤を大幅に強化できるいくつかの重要な領域を特定しました。現在の P/M/R/I/V/D への分類は確実な出発点ですが、... | tech_roadmap.md / wbe_101.md | なし | 0 | 2026-03-22 |
-| [#276](https://github.com/yasufumi-nakata/mind-upload/issues/276) | 未完了 | [技術的/科学的監査] WBE ロードマップにおける構造的および熱力学的接地の強化 | [技術/科学監査] WBE ロードマップにおける構造的および熱力学的根拠の強化 概要 mind-upload.com フレームワークをレビューする研究者として、私は全脳エミュレーション (WBE) ロードマップの技術的および自然科学的基盤を大幅に強化できるいくつかの重要な領域を特定しました。現在の P/M/R/I/V/D への分類は確実な出発点ですが、... | tech_roadmap.md / wbe_101.md | なし | 0 | 2026-03-22 |
-| [#275](https://github.com/yasufumi-nakata/mind-upload/issues/275) | 未完了 | [技術的/科学的監査] WBE ロードマップにおける構造的および熱力学的接地の強化 | [技術/科学監査] WBE ロードマップにおける構造的および熱力学的根拠の強化 概要 mind-upload.com フレームワークをレビューする研究者として、私は全脳エミュレーション (WBE) ロードマップの技術的および自然科学的基盤を大幅に強化できるいくつかの重要な領域を特定しました。現在の P/M/R/I/V/D への分類は確実な出発点ですが、... | tech_roadmap.md / wbe_101.md | なし | 0 | 2026-03-22 |
-| [#274](https://github.com/yasufumi-nakata/mind-upload/issues/274) | 未完了 | 科学的および技術的な洗練: 定量的な状態変数と熱力学的監査による検証コモンズの強化 | mind-upload.com における技術的・自然科学的側面の批判的検討と改善提案 1. 概要 本レポートは、マインドアップロード（Whole Brain Emulation: WBE）の検証基盤を標榜する mind-upload.com のコンテンツに対し、一流研究者の視点から技術的・自然科学的妥当性を批判的に検討し、改善すべき点をまとめたものであ... | connectome-is-not-enough.md / eeg_101.md / thermodynamic-grounding-basics.md / verification.md | 改善 | 0 | 2026-03-21 |
-| [#273](https://github.com/yasufumi-nakata/mind-upload/issues/273) | 未完了 | 【一流研究者による科学的批判】WBE検証基盤における「維持状態」の分離とEEG状態推定の理論的限界について | 【一流研究者による科学的批判】WBE検証基盤における「維持状態」の分離とEEG状態推定の理論的限界について 1. 提案の要旨 本Issueは、mind-upload.comに掲載されている技術的・自然科学的記述に対し、最新の神経科学および計算機科学の知見に基づき、以下の2点について抜本的な改善を提案するものである。 1. 「維持状態（Maintenan... | 全体方針または未分類 | なし | 0 | 2026-03-20 |
-| [#272](https://github.com/yasufumi-nakata/mind-upload/issues/272) | 未完了 | [技術批評] マクロ観察からエミュレーションまでのギャップを埋める | [技術批評] マクロ観察からエミュレーションへのギャップを埋める: EEG ベースの WBE における潜在状態の縮退と原因の特定可能性に対処する | ignore/eegflow/03_causal_modeling.py / connectome-is-not-enough.md / homeostatic-plasticity-and-maintenance-state.md | なし | 0 | 2026-03-19 |
-| [#271](https://github.com/yasufumi-nakata/mind-upload/issues/271) | 未完了 | 【技術的批判】脳波源推定(ESI)および動的因果モデリング(DCM)の検証要件の具体化と参考文献に基づく改善案 | mind-upload.com 技術・自然科学的観点からの改善案と批判的分析 一流の研究者の立場から、mind-upload.comおよびeegflowリポジトリの内容を精査し、改善すべき点を論理的にまとめました。本分析は、哲学や法学を排除し、純粋に神経科学、計算論的神経科学、および計測工学の観点から行っています。 1. 脳波源推定（ESI）における「... | 03_causal_modeling.py / connectome-is-not-enough.md | なし | 0 | 2026-03-18 |
-| [#270](https://github.com/yasufumi-nakata/mind-upload/issues/270) | 未完了 | 技術的・自然科学的観点からの改善提案：WBE検証基盤の深化に向けて | Mind-Upload.comにおける全脳エミュレーション研究の技術的・自然科学的評価と改善の提案 はじめに 本レポートは、mind-upload.comが提唱する全脳エミュレーション（Whole Brain Emulation, WBE）に関する研究アプローチについて、純粋に技術的および自然科学的な観点から評価し、改善提案を行うことを目的とする。哲学... | 03_causal_modeling.py / 01_preprocess.py / 02_source_imaging.py / mind-upload.com/perspective.html | なし | 0 | 2026-03-17 |
-| [#269](https://github.com/yasufumi-nakata/mind-upload/issues/269) | 未完了 | 技術的・自然科学的観点からの改善提案：EEG 逆問題の厳密化と最新知見の反映 | 技術的・自然科学的観点からの改善提案：EEG 逆問題の厳密化と最新知見の反映 一流の研究者の視点から、mind-upload.com の技術的・自然科学的な記述について分析し、以下の 5 点の改善を提案します。 1. EEG 逆問題と空間分解能の定量的記述の強化 eeg101.md において、EEG の空間精度の限界を単なる「ぼやけ」ではなく、物理的・... | eeg_101.md / faq.md / wbe_101.md / tech_roadmap.md | なし | 0 | 2026-03-16 |
-| [#268](https://github.com/yasufumi-nakata/mind-upload/issues/268) | 未完了 | 【科学監査報告】WBE検証基盤における技術的・自然科学的妥当性の批判的検証 | 【科学監査報告】WBE検証基盤における技術的・自然科学的妥当性の批判的検証 1. 概要 本Issueは、mind-upload.comおよび本リポジトリで提示されているWBE（Whole Brain Emulation）の検証基盤に対し、一流の研究者の視点から技術的・自然科学的側面のみに限定した批判的分析を行うものです。現在の自然科学的知見に照らし、以... | ignore/eegflow/03_causal_modeling.py | なし | 0 | 2026-03-14 |
-| [#267](https://github.com/yasufumi-nakata/mind-upload/issues/267) | 未完了 | [Proposed Improvement] EEGソース推定の厳密化と不確実性管理の閾値設定 | [Proposed Improvement] EEGソース推定の厳密化と不確実性管理の閾値設定 背景と目的 現在の eeg101.md および techroadmap.md において、EEG（脳波）は「マクロな制約条件」として位置づけられ、ベイズ的アプローチによる不確実性の明示が方針として掲げられています。しかし、一流の研究者の視点から見ると、以下の点... | eeg_101.md / tech_roadmap.md / verification.md | なし | 0 | 2026-03-13 |
+| [#280](https://github.com/yasufumi-nakata/mind-upload/issues/280) | クローズ済み | Omoikane BDT後段: 意識再現までに必要な研究ギャップ整理 | 背景Omoikane側ではBioData Transmitterが、複数の人間由来生体信号特徴概要をphysiology-latent-body-state-v0に統合し、ターゲット生体信号/感情/思考圧力プロキシを生成し、校正信頼度ゲートまでダイジェストのみに束縛できる段階に達しました。 | src/omoikane/interface/biodata_transmitter.py / docs/02-subsystems/interface/biodata-transmitter.md | 改善、codex | 1 | 2026-05-03 |
+| [#279](https://github.com/yasufumi-nakata/mind-upload/issues/279) | クローズ済み | 【技術的批判】EEG中心の因果モデル同定における理論的限界と改善提案 | mind-upload.com に対する技術的・自然科学の批判と改善提案 1. 概要 本レポートは、mind-upload.com（以下、当サイト）および関連プロジェクト EEGflowの内容を、神経科学、計算論的神経科学、およびバイオミメティクス・エミュレーションの観点から批判的に検討したものである。 当サイトは、全脳エミュレーション（WBE）を科学... | 03_causal_modeling.py | なし | 1 | 2026-05-03 |
+| [#278](https://github.com/yasufumi-nakata/mind-upload/issues/278) | クローズ済み | mind-upload.comの技術的・自然科学的記述に関する批判的分析と改善提案 | Mind-Upload.com 技術的・自然科学的視点からの批判的分析と改善提案 1. 概要 本レポートは、mind-upload.com（および関連するGitHubリポジトリ やすふみ-nakata/eegflow）に掲載されている全脳エミュレーション (WBE)およびマインドアップローディングに関する技術的・自然科学的な主張を批判的に分析したもので... | perspective.md / eeg_101.md | なし | 1 | 2026-05-03 |
+| [#277](https://github.com/yasufumi-nakata/mind-upload/issues/277) | クローズ済み | [技術的/科学的監査] WBE ロードマップにおける構造的および熱力学的接地の強化 | [技術/科学監査] WBE ロードマップにおける構造的および熱力学的根拠の強化 概要 mind-upload.com フレームワークをレビューする研究者として、私は全脳エミュレーション (WBE) ロードマップの技術的および自然科学的基盤を大幅に強化できるいくつかの重要な領域を特定しました。現在の P/M/R/I/V/D への分類は確実な出発点ですが、... | tech_roadmap.md / wbe_101.md | なし | 1 | 2026-05-03 |
+| [#276](https://github.com/yasufumi-nakata/mind-upload/issues/276) | クローズ済み | [技術的/科学的監査] WBE ロードマップにおける構造的および熱力学的接地の強化 | [技術/科学監査] WBE ロードマップにおける構造的および熱力学的根拠の強化 概要 mind-upload.com フレームワークをレビューする研究者として、私は全脳エミュレーション (WBE) ロードマップの技術的および自然科学的基盤を大幅に強化できるいくつかの重要な領域を特定しました。現在の P/M/R/I/V/D への分類は確実な出発点ですが、... | tech_roadmap.md / wbe_101.md | なし | 1 | 2026-05-03 |
+| [#275](https://github.com/yasufumi-nakata/mind-upload/issues/275) | クローズ済み | [技術的/科学的監査] WBE ロードマップにおける構造的および熱力学的接地の強化 | [技術/科学監査] WBE ロードマップにおける構造的および熱力学的根拠の強化 概要 mind-upload.com フレームワークをレビューする研究者として、私は全脳エミュレーション (WBE) ロードマップの技術的および自然科学的基盤を大幅に強化できるいくつかの重要な領域を特定しました。現在の P/M/R/I/V/D への分類は確実な出発点ですが、... | tech_roadmap.md / wbe_101.md | なし | 1 | 2026-05-03 |
+| [#274](https://github.com/yasufumi-nakata/mind-upload/issues/274) | クローズ済み | 科学的および技術的な洗練: 定量的な状態変数と熱力学的監査による検証コモンズの強化 | mind-upload.com における技術的・自然科学的側面の批判的検討と改善提案 1. 概要 本レポートは、マインドアップロード（Whole Brain Emulation: WBE）の検証基盤を標榜する mind-upload.com のコンテンツに対し、一流研究者の視点から技術的・自然科学的妥当性を批判的に検討し、改善すべき点をまとめたものであ... | connectome-is-not-enough.md / eeg_101.md / thermodynamic-grounding-basics.md / verification.md | 改善 | 1 | 2026-05-03 |
+| [#273](https://github.com/yasufumi-nakata/mind-upload/issues/273) | クローズ済み | 【一流研究者による科学的批判】WBE検証基盤における「維持状態」の分離とEEG状態推定の理論的限界について | 【一流研究者による科学的批判】WBE検証基盤における「維持状態」の分離とEEG状態推定の理論的限界について 1. 提案の要旨 本Issueは、mind-upload.comに掲載されている技術的・自然科学的記述に対し、最新の神経科学および計算機科学の知見に基づき、以下の2点について抜本的な改善を提案するものである。 1. 「維持状態（Maintenan... | 全体方針または未分類 | なし | 1 | 2026-05-03 |
+| [#272](https://github.com/yasufumi-nakata/mind-upload/issues/272) | クローズ済み | [技術批評] マクロ観察からエミュレーションまでのギャップを埋める | [技術批評] マクロ観察からエミュレーションへのギャップを埋める: EEG ベースの WBE における潜在状態の縮退と原因の特定可能性に対処する | ignore/eegflow/03_causal_modeling.py / connectome-is-not-enough.md / homeostatic-plasticity-and-maintenance-state.md | なし | 1 | 2026-05-03 |
+| [#271](https://github.com/yasufumi-nakata/mind-upload/issues/271) | クローズ済み | 【技術的批判】脳波源推定(ESI)および動的因果モデリング(DCM)の検証要件の具体化と参考文献に基づく改善案 | mind-upload.com 技術・自然科学的観点からの改善案と批判的分析 一流の研究者の立場から、mind-upload.comおよびeegflowリポジトリの内容を精査し、改善すべき点を論理的にまとめました。本分析は、哲学や法学を排除し、純粋に神経科学、計算論的神経科学、および計測工学の観点から行っています。 1. 脳波源推定（ESI）における「... | 03_causal_modeling.py / connectome-is-not-enough.md | なし | 1 | 2026-05-03 |
+| [#270](https://github.com/yasufumi-nakata/mind-upload/issues/270) | クローズ済み | 技術的・自然科学的観点からの改善提案：WBE検証基盤の深化に向けて | Mind-Upload.comにおける全脳エミュレーション研究の技術的・自然科学的評価と改善の提案 はじめに 本レポートは、mind-upload.comが提唱する全脳エミュレーション（Whole Brain Emulation, WBE）に関する研究アプローチについて、純粋に技術的および自然科学的な観点から評価し、改善提案を行うことを目的とする。哲学... | 03_causal_modeling.py / 01_preprocess.py / 02_source_imaging.py / mind-upload.com/perspective.html | なし | 1 | 2026-05-03 |
+| [#269](https://github.com/yasufumi-nakata/mind-upload/issues/269) | クローズ済み | 技術的・自然科学的観点からの改善提案：EEG 逆問題の厳密化と最新知見の反映 | 技術的・自然科学的観点からの改善提案：EEG 逆問題の厳密化と最新知見の反映 一流の研究者の視点から、mind-upload.com の技術的・自然科学的な記述について分析し、以下の 5 点の改善を提案します。 1. EEG 逆問題と空間分解能の定量的記述の強化 eeg101.md において、EEG の空間精度の限界を単なる「ぼやけ」ではなく、物理的・... | eeg_101.md / faq.md / wbe_101.md / tech_roadmap.md | なし | 1 | 2026-05-03 |
+| [#268](https://github.com/yasufumi-nakata/mind-upload/issues/268) | クローズ済み | 【科学監査報告】WBE検証基盤における技術的・自然科学的妥当性の批判的検証 | 【科学監査報告】WBE検証基盤における技術的・自然科学的妥当性の批判的検証 1. 概要 本Issueは、mind-upload.comおよび本リポジトリで提示されているWBE（Whole Brain Emulation）の検証基盤に対し、一流の研究者の視点から技術的・自然科学的側面のみに限定した批判的分析を行うものです。現在の自然科学的知見に照らし、以... | ignore/eegflow/03_causal_modeling.py | なし | 1 | 2026-05-03 |
+| [#267](https://github.com/yasufumi-nakata/mind-upload/issues/267) | クローズ済み | [Proposed Improvement] EEGソース推定の厳密化と不確実性管理の閾値設定 | [Proposed Improvement] EEGソース推定の厳密化と不確実性管理の閾値設定 背景と目的 現在の eeg101.md および techroadmap.md において、EEG（脳波）は「マクロな制約条件」として位置づけられ、ベイズ的アプローチによる不確実性の明示が方針として掲げられています。しかし、一流の研究者の視点から見ると、以下の点... | eeg_101.md / tech_roadmap.md / verification.md | なし | 1 | 2026-05-03 |
 | [#265](https://github.com/yasufumi-nakata/mind-upload/issues/265) | クローズ済み | 追加 | https://neurosciencenews.com/brain-decoder-translates-visual-thoughts-into-text/ | 全体方針または未分類 | なし | 9 | 2026-02-24 |
 | [#264](https://github.com/yasufumi-nakata/mind-upload/issues/264) | クローズ済み | 内容追加できれば | https://www.cell.com/neuron/fulltext/S0896-6273(25)00843-8?rss=yes&utmsource=dlvr.it&utmmedium=twitter | 全体方針または未分類 | なし | 2 | 2026-02-24 |
 | [#263](https://github.com/yasufumi-nakata/mind-upload/issues/263) | クローズ済み | 内容の追加 | https://arxiv.org/abs/2305.19798 | 全体方針または未分類 | なし | 1 | 2026-02-23 |

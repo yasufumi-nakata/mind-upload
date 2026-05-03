@@ -94,7 +94,7 @@ Mind-Upload は、マインド アップロードを検証可能な研究に発�
 <div class="note-box">
 <strong>GitHub Issues 全件を確認したい場合</strong>
 <p>
-2026 年 5 月 3 日時点で取得できる GitHub Issues は 273 件です。未完了 14 件、クローズ済み 259 件、issue 番号範囲 #2～#280、取得コメント 226 件を、<a href="wiki/github-issues-inventory.html">Wiki: GitHub Issues 全件インベントリ</a> に取り込みました。各 issue は、状態、要旨、主な反映先、ラベル、コメント数と GitHub URL で追跡できます。
+2026 年 5 月 3 日時点で取得できる GitHub Issues は 273 件です。未完了 0 件、クローズ済み 273 件、issue 番号範囲 #2～#280、取得コメント 240 件を、<a href="wiki/github-issues-inventory.html">Wiki: GitHub Issues 全件インベントリ</a> に取り込みました。各 issue は、状態、要旨、主な反映先、ラベル、コメント数と GitHub URL で追跡できます。
 </p>
 </div>
 <div class="note-box">
