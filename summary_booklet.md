@@ -5,7 +5,7 @@ description: "サイトの公開ページから作成した、自動生成の A4
 article_type: "ブリーフィング冊子"
 subtitle: "公開ページの front matter と冒頭要約から再生成した A4 ブリーフィング"
 author: マインドアップロード研究プロジェクト
-last_updated: "2026-04-12"
+last_updated: "2026-05-03"
 note: "公開ページから自動生成"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>Reference Date</span>
-  <strong>2026-04-12</strong>
+  <strong>2026-05-03</strong>
 </div>
 <div>
   <span>Current Focus</span>

@@ -5,7 +5,7 @@ description: Mind-Uploadを初歩から学ぶためのwikiです。公開ペー�
 article_type: ウィキ
 subtitle: 公開ページは入り口であり、Wiki は学習の基盤です。
 author: マインドアップロード研究プロジェクト
-last_updated: '2026-04-03'
+last_updated: '2026-05-03'
 note: 学習優先 (ヒューマン ルートとファミリーの同期で更新)
 audience: 基礎から学びたい人、公開ページに入る前に足がかりが欲しい人。
 reading_time: 10～20分
@@ -20,6 +20,7 @@ page_highlights:
 - 要点は公開ページを読んで、背景を埋めるのにWikiを使うという役割分担です。
 - 説明は、証拠の強度や限界を弱めることなく、中学生の読者でも理解できるようにすることを目指しています。
 - 初心者ルートは、コア ページで使用されるより厳密な順序で生きた人間の可観測性を扱うようになりました。最初にルート ファミリ、次にプロキシ クラス / 運用の成熟度 / キャリブレーターの役割、次にブリッジと構成の停止ラインです。
+- GitHub Issues 全件は、状態、要旨、主な反映先つきのインベントリから確認できます。
 known_points:
 - 現在の研究により、脳の信号の一部を測定し、再現可能に分析することがすでに可能になっています。
 - 進捗状況と未解決のままが分離されていれば、Mind-Upload を追跡するのがはるかに簡単になります。
@@ -240,6 +241,11 @@ recommended_pages:
 <td><strong>初めて記事を書くので何を書けばいいのか知りたい</strong></td>
 <td><a href="issue-writing-basics.html">最初の問題の書き方</a></td>
 <td><a href="../issue.html">コントリビューションガイド</a> / <a href="../verification.html">検証インフラストラクチャ</a> / <a href="../content_hub.html">パブリックコンテンツ統合ハブ</a></td>
+</tr>
+<tr>
+<td><strong>GitHub Issues 全件の状態を一覧したい</strong></td>
+<td><a href="github-issues-inventory.html">GitHub Issues 全件インベントリ</a></td>
+<td><a href="../issue.html">貢献ガイド</a> / <a href="../content_hub.html">パブリック コンテンツ統合ハブ</a></td>
 </tr>
 <tr>
 <td><strong>新しい情報を公開ページに載せるべきかウィキに載せるべきかわからない</strong></td>

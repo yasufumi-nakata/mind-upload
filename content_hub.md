@@ -5,7 +5,7 @@ description: 技術文献の明示的な高速パスを備えた、公開ペー�
 article_type: ナビゲーション
 subtitle: コンテンツの拡散と文献ルートの圧縮を防ぐ単一のルーティング層
 author: マインドアップロード研究プロジェクト
-last_updated: '2026-04-03'
+last_updated: '2026-05-03'
 note: 公開ページおよび技術文献ルーティングの信頼できる唯一の情報源 (人によるルート順序の同期により更新)
 audience: 公開コンテンツがどこに属しているかをチェックしている人、および新しい素材をどこにマージすべきかを推測したくない人
 reading_time: 5～10分
@@ -18,6 +18,7 @@ page_highlights:
 - このサイトは現在、`mind_uploading_papers` と `research_harvest_50` を分離しています。1 つは紙レベルのフロンティア アーカイブであり、もう 1 つは未解決の問題の証拠マップです。
 - 技術読者は現在、年順が判断を形成する前に、局所的な因果関係維持に関する論文、境界のある生きている人間の可観測性に関する論文、およびブリッジ限定された同一被験者/同一脳に関する論文を分割するように言われています。
 - 生きている人間の技術的証拠の場合、入り口の順序は、最初にルート ファミリ、次にルートの役割 / 人間のプロキシの役割、次にプロキシ クラス / 運用の成熟度 / キャリブレータの役割、そしてその次にのみ構成または橋の停止線になります。
+- GitHub Issues 全件の状態と要旨は、Wiki 側の全件インベントリに集約します。
 known_points:
 - 公開ページは、重要なポイント、現在のステータス、既知/未知の境界、次のルートなどのポータルとして機能することを目的としています。
 - 詳細な背景説明は通常、Wiki に集中して記載するほうがよいため、エントリ ページは使いやすいままになります。
@@ -346,13 +347,13 @@ recommended_pages:
 <h2 class="section-title">公開ページの統合マップ</h2>
 <table class="data-table">
 <thead><tr><th>ドメイン</th><th>統合対象 (メインページ)</th><th>ものを含め</th><th>サポートページ</th></tr></thead><tbody>
-<tr><td>共通事項の検証</td><td><a href="verification.html">verification.html</a></td>__JA_PH_24_ _成功条件、変更ザン条件、監査契約、再現性基準</td><td><a href="datasets.html#l0-practice">datasets.html#l0-practice</a></td></tr>
+<tr><td>検証コモンズ</td><td><a href="verification.html">verification.html</a></td><td>成功条件、反証条件、監査契約、再現性基準</td><td><a href="datasets.html#l0-practice">datasets.html#l0-practice</a></td></tr>
 <tr><td>技術ロードマップ</td><td><a href="tech_roadmap.html">tech_roadmap.html</a></td><td>問題の分解、到達条件、実装order</td><td><a href="issue.html#proposal-integration">issue.html#proposal-integration</a></td></tr>
 <tr><td>研究上の質問</td><td><a href="perspective.html">perspective.html</a></td><td>理論構成、現状、文献証拠</td><td><a href="perspective.html#design-principles">perspective.html#design-principles</a></td></tr>
 <tr><td>未解決の問題 x 文献</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td><td>U固有の調査質問、文献監査、重複クリーンアップ、および未解決の質問構成</td><td><a href="datasets.html">datasets.html</a></td></tr>
 <tr><td>ペーパー アーカイブ x テクニカル ファスト レーン</td><td><a href="mind_uploading_papers.html">mind_uploading_papers.html</a></td><td>ペーパー レベルのアンカー、年表ポリシー、ルートファミリーの分割、混合年前のテクニカルエントリーカード</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td></tr>
-<tr><td>ブリッジ限定の同一認識/同一脳証拠</td><td><a href="verification.html#state-continuity-bridge-card">verification.html#state-continuity-bridge-card</a>__JA_PH_93_ _<td>ブリッジ負担、基準転送、レジーム連続性、残留ドリフト天井</td><td><a href="wiki/state-continuity-bridge.html">wiki/state-continuity-bridge.html</a></td></tr>
-<tr><td>人間のプロキシ構成と生きた人間のルートの上限</td><td><a href="verification.html#human-proxy-composition-card">verification.html#human-proxy-composition-card</a></td>__ JA_PH_108__同一の見通し関係、モデル負荷、増分ゲイン、および残留隠れ状態プロキシ行全体の上限</td><td><a href="wiki/human-proxy-composition.html">wiki/human-proxy-composition.html</a></td></tr>
+<tr><td>ブリッジ限定の同一被験者 / 同一脳証拠</td><td><a href="verification.html#state-continuity-bridge-card">verification.html#state-continuity-bridge-card</a></td><td>ブリッジ負担、座標転送、レジーム連続性、残留ドリフト上限</td><td><a href="wiki/state-continuity-bridge.html">wiki/state-continuity-bridge.html</a></td></tr>
+<tr><td>人間プロキシ構成と生きた人間ルートの上限</td><td><a href="verification.html#human-proxy-composition-card">verification.html#human-proxy-composition-card</a></td><td>同一被験者関係、モデル負担、増分ゲイン、プロキシ行をまたぐ残留隠れ状態上限</td><td><a href="wiki/human-proxy-composition.html">wiki/human-proxy-composition.html</a></td></tr>
 <tr><td>参加ルーティング</td><td><a href="issue.html">issue.html</a></td><td>問題のワークフロー、応答ステータス、外部依存関係の孤立タスク</td><td><a href="issue.html#external-collaboration">issue.html#external-collaboration</a></td></tr>
 <tr><td>プライマールーティング</td><td><a href="index.html">index.html</a></td><td>読み取り履歴、メジャーへのエントリーポイントページ</td><td><a href="wbe_101.html">wbe_101.html</a> / <a href="eeg_101.html">eeg_101.html</a></td></tr>
 <tr><td>基礎学習</td><td><a href="wiki/">wiki/</a></td> <td>初心者向けの説明、予備知識、読書サポート資料</td><td><a href="glossary.html">glossary.html</a> / <a href="faq.html">faq.html</a></td></tr>
@@ -470,6 +471,7 @@ recommended_pages:
 <ul>
 <li><a href="wiki/internal-prework-and-external-dependencies.html">wiki/internal-prework-and-external-dependency.html</a></li>
 <li><a href="wiki/issue-writing-basics.html">wiki/issue-writing-basics.html</a></li>
+<li><a href="wiki/github-issues-inventory.html">wiki/github-issues-inventory.html</a></li>
 <li><a href="wiki/content-placement-basics.html">wiki/content-placement-basics.html</a></li>
 <li><a href="wiki/reading-to-change-workflow.html">wiki/reading-to-change-workflow.html</a></li>
 <li><a href="wiki/understanding-vs-action-readiness.html">wiki/ アクションとアクションの準備の理解.html</a></li>
@@ -508,6 +510,7 @@ recommended_pages:
 <li><a href="wiki/literature-to-action-route.html">文献から実装/参加まで -></a></li>
 <li><a href="wiki/participation-next-routes.html">参加・連携後の次のルート -></a></li>
 <li><a href="wiki/issue-writing-basics.html">Issue の書き方 -></a></li>
+<li><a href="wiki/github-issues-inventory.html">GitHub Issues 全件 -></a></li>
 <li><a href="wiki/content-placement-basics.html">コンテンツ構成の基本 -></a></li>
 </ul>
 </div>

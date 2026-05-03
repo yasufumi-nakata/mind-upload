@@ -29,6 +29,7 @@
 - [Wiki: ソースタイプ、ステータスラベル、証拠クラスの読み方](https://github.com/yasufumi-nakata/mind-upload/wiki/paper-source-types-and-evidence-status)
 - [Wiki: 提案とステータス ラベルの見方](https://github.com/yasufumi-nakata/mind-upload/wiki/proposal-status-reading)
 - [Wiki: 最初の問題の書き方](https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics)
+- [Wiki: GitHub Issues 全件インベントリ](https://github.com/yasufumi-nakata/mind-upload/wiki/github-issues-inventory)
 - [Wiki: 新しい情報をどこに配置するかを決定するための基本](https://github.com/yasufumi-nakata/mind-upload/wiki/content-placement-basics)
 - [Wiki: 読んだことが変わるまでの流れ](https://github.com/yasufumi-nakata/mind-upload/wiki/reading-to-change-workflow)
 

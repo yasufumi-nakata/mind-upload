@@ -43,6 +43,7 @@ SIDEBAR_GROUPS = {
     paper-source-types-and-evidence-status
     proposal-status-reading
     issue-writing-basics
+    github-issues-inventory
     content-placement-basics
     reading-to-change-workflow
   ]

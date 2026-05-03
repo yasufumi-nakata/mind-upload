@@ -4,7 +4,7 @@
 >
 > この学習ページは GitHub Wiki 用に生成されています。公開ポータルは [mind-upload.com](https://mind-upload.com) で管理しています。
 
-- Updated: 2026-04-03 / Role: 学習優先 (ヒューマン ルートとファミリーの同期で更新)
+- Updated: 2026-05-03 / Role: 学習優先 (ヒューマン ルートとファミリーの同期で更新)
 
 ## このページの役割
 このページは、マインドアップロードの公開ページを見やすくするための学習ポータルです。公開ページには、現在わかっていること、まだわかっていないこと、次に読むべきことが示されていますが、Wiki では、それらのページの背後にある基本的な説明が意図的な順序で示されています。
@@ -219,6 +219,11 @@ Wiki はわかりやすい方法で説明していますが、未解決の問題
 <td><strong>初めて記事を書くので何を書けばいいのか知りたい</strong></td>
 <td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/issue-writing-basics">最初の問題の書き方</a></td>
 <td><a href="https://mind-upload.com/issue.html">コントリビューションガイド</a> / <a href="https://mind-upload.com/verification.html">検証インフラストラクチャ</a> / <a href="https://mind-upload.com/content_hub.html">パブリックコンテンツ統合ハブ</a></td>
+</tr>
+<tr>
+<td><strong>GitHub Issues 全件の状態を一覧したい</strong></td>
+<td><a href="https://github.com/yasufumi-nakata/mind-upload/wiki/github-issues-inventory">GitHub Issues 全件インベントリ</a></td>
+<td><a href="https://mind-upload.com/issue.html">貢献ガイド</a> / <a href="https://mind-upload.com/content_hub.html">パブリック コンテンツ統合ハブ</a></td>
 </tr>
 <tr>
 <td><strong>新しい情報を公開ページに載せるべきかウィキに載せるべきかわからない</strong></td>
