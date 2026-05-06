@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="only light">
-    <meta name="theme-color" content="#f8f9fa">
+    <meta name="theme-color" content="#ffffff">
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
     <meta property="og:title" content="{{ page.title | default: site.title }}">
@@ -27,19 +27,20 @@
 {% endif %}
 
 <body class="wiki-light{% if page.body_class %} {{ page.body_class | escape }}{% endif %}" data-article-type="{{ page.article_type | default: '' | escape }}" data-page-url="{{ page.url | escape }}" data-wiki-mode="{{ site.wiki_mode | default: 'local' }}" data-github-wiki-url="{{ site.github_wiki_url | default: '' | escape }}">
+    <a class="skip-link" href="#site-content">本文へ移動</a>
 
     <!-- グローバルヘッダー -->
     <header class="journal-header" role="banner">
         <a class="site-title" href="{{ '/' | relative_url }}">マインドアップロード・コモンズ</a>
         <nav aria-label="主要ナビゲーション">
-            <a href="{{ '/' | relative_url }}">はじめに</a>
-            <a href="{{ '/verification.html' | relative_url }}">検証</a>
-            <a href="{{ '/tech_roadmap.html' | relative_url }}">ロードマップ</a>
-            <a href="{{ '/content_hub.html' | relative_url }}">公開コンテンツ</a>
+            <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>はじめに</a>
+            <a href="{{ '/verification.html' | relative_url }}"{% if page.url == '/verification.html' %} aria-current="page"{% endif %}>検証</a>
+            <a href="{{ '/tech_roadmap.html' | relative_url }}"{% if page.url == '/tech_roadmap.html' %} aria-current="page"{% endif %}>ロードマップ</a>
+            <a href="{{ '/content_hub.html' | relative_url }}"{% if page.url == '/content_hub.html' %} aria-current="page"{% endif %}>公開コンテンツ</a>
             <a href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a>
-            <a href="{{ '/mind_uploading_papers.html' | relative_url }}">論文アーカイブ</a>
-            <a href="{{ '/issue.html' | relative_url }}">参加</a>
-            <a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank">GitHub</a>
+            <a href="{{ '/mind_uploading_papers.html' | relative_url }}"{% if page.url == '/mind_uploading_papers.html' %} aria-current="page"{% endif %}>論文アーカイブ</a>
+            <a href="{{ '/issue.html' | relative_url }}"{% if page.url == '/issue.html' %} aria-current="page"{% endif %}>参加</a>
+            <a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
     </header>
 
@@ -197,6 +198,7 @@
     </section>
 
     <!-- Main Content -->
+    <div id="site-content" class="site-content-anchor" tabindex="-1"></div>
     {{ content }}
 
     <!-- Footer -->
