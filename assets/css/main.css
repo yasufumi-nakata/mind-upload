@@ -2920,6 +2920,372 @@ footer p {
     }
 }
 
+/* 2026 fluid layout repair: remove fixed reading boxes and awkward CJK title breaks. */
+:root {
+    --page-gutter: clamp(16px, 4vw, 72px);
+    --max-width: 1680px;
+    --content-width: 100%;
+}
+
+@media screen {
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    body {
+        background:
+            linear-gradient(180deg, #ffffff 0, #ffffff 240px, var(--color-bg) 240px, var(--color-bg) 100%);
+    }
+
+    .journal-header {
+        padding-inline: var(--page-gutter);
+    }
+
+    .article-header,
+    .page-guide,
+    .easy-guide,
+    .section-map,
+    .topic-status,
+    .wiki-role-note,
+    .main-container,
+    .papers-page {
+        width: min(calc(100% - (var(--page-gutter) * 2)), var(--max-width));
+        max-width: none;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .article-header {
+        margin-top: 24px;
+        padding: clamp(28px, 4vw, 56px) 0 clamp(24px, 3.5vw, 44px);
+        border-right: 0;
+        border-left: 0;
+        border-radius: 0;
+        background:
+            linear-gradient(90deg, rgba(248, 195, 0, 0.24), rgba(248, 195, 0, 0) min(28vw, 440px)),
+            var(--color-surface);
+        box-shadow: none;
+    }
+
+    .article-title,
+    .page-guide-main h2,
+    .section-map-header h2,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        line-break: strict;
+        text-wrap: balance;
+    }
+
+    .article-title {
+        max-width: min(100%, 28ch);
+        font-size: clamp(34px, 4.3vw, 58px);
+        line-height: 1.16;
+    }
+
+    .article-subtitle {
+        max-width: min(100%, 92rem);
+    }
+
+    .article-meta {
+        max-width: 100%;
+    }
+
+    .article-meta span {
+        max-width: 100%;
+    }
+
+    .page-guide-inner {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+        padding: clamp(22px, 3vw, 38px);
+    }
+
+    .page-guide-lead,
+    .content-column p,
+    .content-column li,
+    .papers-page main p,
+    .papers-page main li,
+    .note-box,
+    .question-box,
+    .resolution-box,
+    .abstract-box,
+    .key-points,
+    .sidebar-box,
+    .topic-card {
+        word-break: normal;
+        overflow-wrap: break-word;
+        line-break: strict;
+        text-wrap: pretty;
+    }
+
+    .page-guide-points {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 34rem), 1fr));
+        column-gap: 24px;
+        max-height: min(62vh, 42rem);
+        overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior: contain;
+        padding-right: 10px;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        margin-bottom: 56px;
+        padding-bottom: 56px;
+    }
+
+    .content-column,
+    .papers-page > main {
+        width: 100%;
+        min-width: 0;
+        padding: clamp(26px, 3.6vw, 56px);
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .content-column > p,
+    .content-column > ul,
+    .content-column > ol,
+    .content-column > blockquote,
+    .content-column > h2,
+    .content-column > h3,
+    .content-column > h4,
+    .content-column > h5,
+    .content-column > h6,
+    .content-column > .references,
+    .papers-page main > p,
+    .papers-page main > ul,
+    .papers-page main > ol,
+    .note-box p,
+    .question-box p,
+    .resolution-box p {
+        max-width: none;
+    }
+
+    .content-column p,
+    .content-column li,
+    .papers-page main p,
+    .papers-page main li {
+        max-width: min(100%, 104rem);
+    }
+
+    .abstract-box p,
+    .note-box p,
+    .question-box p,
+    .resolution-box p,
+    .key-points li,
+    .sidebar-box li {
+        max-width: none;
+    }
+
+    .data-table {
+        width: 100%;
+        max-width: 100%;
+        table-layout: auto;
+    }
+
+    .data-table th,
+    .data-table td {
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .sidebar-column {
+        position: static;
+        top: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+        gap: 16px;
+        width: 100%;
+    }
+
+    .sidebar-box,
+    .papers-sidebar {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .topic-status-inner {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+    }
+
+    .topic-card {
+        max-height: min(60vh, 38rem);
+        overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior: contain;
+    }
+
+    .topic-point-list,
+    .topic-link-list {
+        padding-right: 8px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .article-title {
+        font-size: 60px;
+    }
+
+    .content-column,
+    .papers-page > main {
+        padding-right: 64px;
+        padding-left: 64px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .page-guide-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    :root {
+        --page-gutter: 14px;
+        --header-height: auto;
+    }
+
+    .journal-header {
+        padding: 10px var(--page-gutter) 12px;
+    }
+
+    .article-header,
+    .page-guide,
+    .easy-guide,
+    .section-map,
+    .topic-status,
+    .wiki-role-note,
+    .main-container,
+    .papers-page {
+        width: calc(100% - (var(--page-gutter) * 2));
+    }
+
+    .article-header {
+        margin-top: 16px;
+        padding-top: 28px;
+        padding-bottom: 24px;
+    }
+
+    .article-title {
+        max-width: 100%;
+        font-size: clamp(27px, 8vw, 34px);
+        line-height: 1.22;
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .page-guide-main h2,
+    .section-map-header h2,
+    .content-column h2,
+    .content-column h3,
+    .topic-card h2,
+    .papers-page main h2,
+    .papers-page main h3 {
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .article-subtitle,
+    .page-guide-lead {
+        font-size: 16px;
+        line-height: 1.82;
+    }
+
+    .article-meta span {
+        width: auto;
+        min-width: min(100%, 11rem);
+    }
+
+    .page-guide-inner,
+    .content-column,
+    .papers-page > main {
+        padding: 20px;
+    }
+
+    h2.section-title,
+    .category-title {
+        font-size: clamp(23px, 7vw, 31px);
+    }
+
+    .note-box,
+    .question-box,
+    .resolution-box,
+    .abstract-box,
+    .key-points {
+        padding: 18px;
+    }
+
+    .topic-status-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-card {
+        max-height: min(44vh, 24rem);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    :root {
+        --page-gutter: 12px;
+    }
+
+    .site-title {
+        gap: 10px;
+        font-size: 16px;
+        line-height: 1.35;
+    }
+
+    .site-title::before {
+        width: 22px;
+        height: 22px;
+    }
+
+    .journal-header nav a {
+        padding-right: 11px;
+        padding-left: 11px;
+    }
+
+    .article-title {
+        font-size: clamp(25px, 7.6vw, 31px);
+        line-height: 1.24;
+    }
+
+    .article-type {
+        margin-bottom: 16px;
+    }
+
+    .page-guide-inner,
+    .content-column,
+    .papers-page > main {
+        padding: 18px;
+    }
+
+    .page-guide-points {
+        display: block;
+        max-height: min(58vh, 31rem);
+        padding-right: 6px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 12px 10px;
+    }
+}
+
 @media print {
     body.summary-booklet-page {
         background: #fff;
