@@ -3286,6 +3286,34 @@ footer p {
     }
 }
 
+/* Single vertical scroll: long guide/status content should lengthen the page, not create nested panes. */
+@media screen {
+    .page-guide-points,
+    .topic-card,
+    .sidebar-column,
+    .papers-sidebar {
+        max-height: none;
+        overflow-y: visible;
+        overflow-x: visible;
+        overscroll-behavior: auto;
+    }
+
+    .sidebar-column,
+    .papers-sidebar {
+        position: static;
+        top: auto;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .journal-header nav {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: visible;
+        white-space: normal;
+    }
+}
+
 @media print {
     body.summary-booklet-page {
         background: #fff;
