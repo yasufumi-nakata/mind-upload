@@ -80,11 +80,23 @@
                 <p class="page-guide-lead">{{ page.page_intro }}</p>
                 {% endif %}
                 {% if page.page_highlights %}
+                {% assign visible_highlights = 3 %}
+                {% assign extra_highlight_count = page.page_highlights | size | minus: visible_highlights %}
                 <ul class="page-guide-points">
-                    {% for item in page.page_highlights %}
+                    {% for item in page.page_highlights limit: visible_highlights %}
                     <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
+                {% if extra_highlight_count > 0 %}
+                <details class="page-guide-details">
+                    <summary>詳細な注意点を {{ extra_highlight_count }} 件読む</summary>
+                    <ul class="page-guide-points page-guide-points-extra">
+                        {% for item in page.page_highlights offset: visible_highlights %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </details>
+                {% endif %}
                 {% endif %}
                 {% if page.recommended_pages %}
                 <div class="page-guide-links">
