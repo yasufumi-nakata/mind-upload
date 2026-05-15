@@ -3,20 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="only light">
     <meta name="theme-color" content="#ffffff">
-    <title>{{ page.title | default: site.title }}</title>
-    <meta name="description" content="{{ page.description | default: site.description }}">
-    <meta property="og:title" content="{{ page.title | default: site.title }}">
-    <meta property="og:description" content="{{ page.description | default: site.description }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    {% seo %}
     <meta property="og:image" content="{{ site.url }}/ogp.jpg">
-    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F9E0;</text></svg>">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% feed_meta %}
 </head>
 
 {% assign wiki_home_href = '/wiki/' | relative_url %}
@@ -30,18 +27,22 @@
     <a class="skip-link" href="#site-content">本文へ移動</a>
 
     <!-- グローバルヘッダー -->
-    <header class="journal-header" role="banner">
-        <a class="site-title" href="{{ '/' | relative_url }}">マインドアップロード・コモンズ</a>
-        <nav aria-label="主要ナビゲーション">
-            <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>はじめに</a>
-            <a href="{{ '/verification.html' | relative_url }}"{% if page.url == '/verification.html' %} aria-current="page"{% endif %}>検証</a>
-            <a href="{{ '/tech_roadmap.html' | relative_url }}"{% if page.url == '/tech_roadmap.html' %} aria-current="page"{% endif %}>ロードマップ</a>
-            <a href="{{ '/content_hub.html' | relative_url }}"{% if page.url == '/content_hub.html' %} aria-current="page"{% endif %}>公開コンテンツ</a>
-            <a href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a>
-            <a href="{{ '/mind_uploading_papers.html' | relative_url }}"{% if page.url == '/mind_uploading_papers.html' %} aria-current="page"{% endif %}>論文アーカイブ</a>
-            <a href="{{ '/issue.html' | relative_url }}"{% if page.url == '/issue.html' %} aria-current="page"{% endif %}>参加</a>
-            <a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <header class="site-header journal-header" role="banner">
+        <div class="wrapper journal-header-inner">
+            <a class="site-title" rel="author" href="{{ '/' | relative_url }}">マインドアップロード・コモンズ</a>
+            <nav class="site-nav" aria-label="主要ナビゲーション">
+                <div class="trigger">
+                    <a class="page-link" href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>はじめに</a>
+                    <a class="page-link" href="{{ '/verification.html' | relative_url }}"{% if page.url == '/verification.html' %} aria-current="page"{% endif %}>検証</a>
+                    <a class="page-link" href="{{ '/tech_roadmap.html' | relative_url }}"{% if page.url == '/tech_roadmap.html' %} aria-current="page"{% endif %}>ロードマップ</a>
+                    <a class="page-link" href="{{ '/content_hub.html' | relative_url }}"{% if page.url == '/content_hub.html' %} aria-current="page"{% endif %}>公開コンテンツ</a>
+                    <a class="page-link" href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a>
+                    <a class="page-link" href="{{ '/mind_uploading_papers.html' | relative_url }}"{% if page.url == '/mind_uploading_papers.html' %} aria-current="page"{% endif %}>論文アーカイブ</a>
+                    <a class="page-link" href="{{ '/issue.html' | relative_url }}"{% if page.url == '/issue.html' %} aria-current="page"{% endif %}>参加</a>
+                    <a class="page-link" href="https://github.com/yasufumi-nakata/mind-upload" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
         </nav>
+        </div>
     </header>
 
     {% if page.article_type %}
@@ -202,9 +203,12 @@
     {{ content }}
 
     <!-- Footer -->
-    <footer>
+    <footer class="site-footer h-card">
+        <data class="u-url" value="{{ '/' | relative_url }}"></data>
+        <div class="wrapper">
         <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案には GitHub Issues を使ってください。</p>
         <p>&copy; 2024-2026 Mind Uploading Research Project. <a href="https://github.com/yasufumi-nakata/mind-upload">GitHub</a></p>
+        </div>
     </footer>
 
     <script>

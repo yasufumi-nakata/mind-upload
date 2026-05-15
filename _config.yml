@@ -1,16 +1,23 @@
 title: マインドアップロード
 description: マインドアップロードへ向けた実践的で証拠に基づく作業の中核サイト
+lang: ja
+author: マインドアップロード研究プロジェクト
 url: https://mind-upload.com
 baseurl: ""
 wiki_mode: github
 github_wiki_url: https://github.com/yasufumi-nakata/mind-upload/wiki
 
 # ビルド設定
+theme: minima
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # 既定値
 defaults:
