@@ -20,7 +20,6 @@ page_highlights:
 - 要点は公開ページを読んで、背景を埋めるのにWikiを使うという役割分担です。
 - 説明は、証拠の強度や限界を弱めることなく、中学生の読者でも理解できるようにすることを目指しています。
 - 初心者ルートは、コア ページで使用されるより厳密な順序で生きた人間の可観測性を扱うようになりました。最初にルート ファミリ、次にプロキシ クラス / 運用の成熟度 / キャリブレーターの役割、次にブリッジと構成の停止ラインです。
-- GitHub Issues 全件は、状態、要旨、主な反映先つきのインベントリから確認できます。
 known_points:
 - 現在の研究により、脳の信号の一部を測定し、再現可能に分析することがすでに可能になっています。
 - 進捗状況と未解決のままが分離されていれば、Mind-Upload を追跡するのがはるかに簡単になります。
@@ -243,16 +242,6 @@ recommended_pages:
 <td><a href="../issue.html">コントリビューションガイド</a> / <a href="../verification.html">検証インフラストラクチャ</a> / <a href="../content_hub.html">パブリックコンテンツ統合ハブ</a></td>
 </tr>
 <tr>
-<td><strong>GitHub Issues 全件の状態を一覧したい</strong></td>
-<td><a href="github-issues-inventory.html">GitHub Issues 全件インベントリ</a></td>
-<td><a href="../issue.html">貢献ガイド</a> / <a href="../content_hub.html">パブリック コンテンツ統合ハブ</a></td>
-</tr>
-<tr>
-<td><strong>クローズされた issue がどのページに反映されたか確認したい</strong></td>
-<td><a href="open-issues-267-280-resolution.html">Issue #267-#280 対応監査</a> / <a href="omoikane-biodata-mind-state-bridge-gap-register.html">Omoikane BioData bridge ギャップ登録</a></td>
-<td><a href="../verification.html">検証</a> / <a href="../tech_roadmap.html">技術ロードマップ</a> / <a href="../content_hub.html">パブリック コンテンツ統合ハブ</a></td>
-</tr>
-<tr>
 <td><strong>新しい情報を公開ページに載せるべきかウィキに載せるべきかわからない</strong></td>
 <td><a href="content-placement-basics.html">新しい情報を配置する場所を決める基本</a></td>
 <td><a href="../content_hub.html">パブリック コンテンツ統合ハブ</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../issue.html#external-collaboration">外部依存関係およびコラボレーション セクション</a></td>
@@ -276,36 +265,6 @@ recommended_pages:
 <td><strong>U 番号が何を指すのかわかりません</strong></td>
 <td><a href="u-number-guide.html">U番号ガイド</a></td>
 <td><a href="../research_harvest_50.html">書誌マップ</a></td>
-</tr>
-<tr>
-<td><strong>現在強化されている 6 つの RQ への最短の公衆安全エントリーを希望します</strong></td>
-<td><a href="mind-upload-current-public-six-rq-brief.html">Mind-upload 現在のパブリック 6: EEG ルート ブリーフ</a></td>
-<td><a href="../issue.html">貢献ガイド</a> / <a href="../datasets.html">データとベンチ</a> / <a href="../research_harvest_50.html">書誌マップ</a></td>
-</tr>
-<tr>
-<td><strong>今何が EEG でクローズできるのか、何がまだ外部サポートを必要としているのか、そしてどの資金レーンがまだ適合しているのかを示す 1 ページが欲しい</strong></td>
-<td><a href="mind-upload-rq-solvability-bridge.html">マインドアップロード RQ 解決可能性ブリッジ</a></td>
-<td><a href="mind-upload-current-public-six-rq-brief.html">Current Public Six</a> / <a href="../issue.html">貢献ガイド</a> / <a href="../datasets.html">データとベンチ</a></td>
-</tr>
-<tr>
-<td><strong>I 各 RQ が脳波と資金調達テーマで解決できるかどうかを一度に確認したい</strong></td>
-<td><a href="mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60×EEG-DATA検証の実現可能性と資金調達テーマ</a></td>
-<td><a href="../research_harvest_50.html">書誌マップ</a> / <a href="../datasets.html">データ＆ベンチ</a> / <a href="../issue.html">貢献ガイド</a></td>
-</tr>
-<tr>
-<td><strong>I 各 RQ を深く読み込んで、EEG で直接検証できるコア要件を外部要件から分離したい</strong></td>
-<td><a href="mind-upload-rq60-deep-focus-notes.html">RQ60 ディープ フォーカス ノート (EEG-DATA x Grant)</a></td>
-<td><a href="mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 判定オリジナル</a> / <a href="mind-upload-eeg-rq60-grant-dataset-playbook.html">RQ60 アプリケーションプレイブック</a></td>
-</tr>
-<tr>
-<td><strong>Iアイテムごとに1つのディープカードを使用してRQごとの提出決定を修正したい</strong></td>
-<td><a href="mind-upload-rq60-deep-evaluation-cards.html">RQ60 ディープ評価カード (EEG-DATA × auto-research-funds)</a></td>
-<td><a href="mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 判定オリジナル</a> / <a href="mind-upload-eeg-rq60-grant-dataset-playbook.html">RQ60 アプリケーションプレイブック</a></td>
-</tr>
-<tr>
-<td><strong>RQを1つずつ深く理解して実行設計を進めたい</strong></td>
-<td><a href="mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ60 RQ ごとのディープドシエ (EEG-DATA × 自動研究資金)</a></td>
-<td><a href="mind-upload-rq60-deep-evaluation-cards.html">RQ60 ディープ評価カード</a> / <a href="mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 実現可能性オリジナル</a></td>
 </tr>
 <tr>
 <td><strong>部分解決、探索段階、未開発の違いで停止</strong></td>
@@ -636,11 +595,6 @@ recommended_pages:
 <li><a href="standards-repositories-validators-and-benchmarks.html">標準/リポジトリ/バリデータ/ベンチマーク →</a></li>
 <li><a href="closed-loop-latency-jitter-and-safety-stops.html">クローズドループ/遅延/ジッタ/安全停止→</a></li>
 <li><a href="thermodynamic-grounding-basics.html">熱力学的接地の基礎→</a></li>
-<li><a href="mind-upload-rq60-deep-focus-notes.html">RQ60 ディープフォーカスノート (EEG-DATA x Grant) →</a></li>
-<li><a href="mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60×EEG-DATA検証承認と助成テーマ（深掘り版）→</a></li>
-<li><a href="mind-upload-eeg-rq60-grant-dataset-playbook.html">RQ60 応募プレイブック（RQ単位固定）→</a></li>
-<li><a href="mind-upload-rq60-deep-evaluation-cards.html">RQ60 ディープ評価カード (EEG-DATA × auto-research-funds) →</a></li>
-<li><a href="mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ60 RQ ごとのディープドシエ (EEG-DATA × 自動研究資金) →</a></li>
 </ul>
 </div>
 <div class="sidebar-box">

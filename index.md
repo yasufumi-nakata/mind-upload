@@ -375,13 +375,13 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 </div>
 <div class="cta-box">
 <h4>貢献</h4>
-<p>GitHub の問題から直接ディスカッションを開始できます。</p>
+<p>提案や修正は、主張、根拠、統合先を分けて整理します。</p>
 <a href="issue.html">貢献ガイドを開く -></a>
 </div>
 <div class="cta-box">
-<h4>問題ステータス</h4>
-<p>実装ステータスと技術提案の問題に関する証拠リンクを追跡します。</p>
-<a href="issue.html#technical-issue-tracker">問題トラッカーを開く -></a>
+<h4>外部依存</h4>
+<p>このサイト内で完了できない実験、審査、調達、法的判断は別枠で扱います。</p>
+<a href="issue.html#external-collaboration">外部依存の扱いを開く -></a>
 </div>
 </section>
 
@@ -403,7 +403,7 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 <li><a href="verification.html#casework">検証ケースワーク -></a></li>
 <li><a href="issue.html#proposal-integration">統合提案 -></a></li>
 <li><a href="mind_uploading_papers.html">紙のコレクション -></a></li>
-<li><a href="issue.html#technical-issue-tracker">問題トラッカー -></a></li>
+<li><a href="issue.html#external-collaboration">外部依存 -></a></li>
 <li><a href="content_hub.html">コンテンツ ハブ -></a></li>
 </ul>
 </div>
@@ -412,9 +412,8 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 <h4>コンテンツ ガバナンス</h4>
 <ul>
 <li><a href="content_hub.html">パブリック コンテンツ統合ハブ -></a></li>
-<li><a href="https://github.com/yasufumi-nakata/mind-upload/blob/main/README.md" target="_blank">README.md ↗</a></li>
-<li><a href="https://github.com/yasufumi-nakata/mind-upload/tree/main/.agent" target="_blank">.agent/ ↗</a></li>
-<li><a href="https://github.com/yasufumi-nakata/mind-upload/tree/main/automation" target="_blank">自動化/ ↗</a></li>
+<li><a href="issue.html#safe-publication">公開しないもの -></a></li>
+<li><a href="wiki/content-placement-basics.html">配置の基本 -></a></li>
 </ul>
 </div>
 

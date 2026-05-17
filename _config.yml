@@ -4,8 +4,7 @@ lang: ja
 author: マインドアップロード研究プロジェクト
 url: https://mind-upload.com
 baseurl: ""
-wiki_mode: github
-github_wiki_url: https://github.com/yasufumi-nakata/mind-upload/wiki
+wiki_mode: local
 
 # ビルド設定
 theme: minima
@@ -29,15 +28,22 @@ defaults:
 
 # 処理対象から除外
 exclude:
+  - .agent
+  - .github
   - automation
   - github-wiki-export
   - ignore
+  - scripts
   - vendor
   - .bundle
   - _site
   - node_modules
+  - mind-upload.com
   - Gemfile
   - Gemfile.lock
   - .gitignore
+  - AGENTS.md
   - README.md
+  - requirements.txt
   - "*.json"
+  - "*.csv"

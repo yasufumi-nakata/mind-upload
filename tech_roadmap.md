@@ -2824,7 +2824,7 @@ R3 クレームが <strong> 永続性 </strong>、<strong> 再統合 </strong>�
 <li><a href="index.html">スタート</a></li>
 <li><a href="issue.html#proposal-integration">問題の提案統合条項</a></li>
 <li><a href="mind_uploading_papers.html">ペーパーコレクション</a></li>
-<li><a href="brain_science_dictionary.html">脳科学辞典</a></li>
+<li><a href="glossary.html">用語集</a></li>
 <li><a href="https://github.com/yasufumi-nakata/mind-upload" target="_blank">GitHub リポジトリ</a></li>
 <li><a href="issue.html">貢献ガイド</a></li>
 </ul>

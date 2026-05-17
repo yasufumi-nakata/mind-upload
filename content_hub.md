@@ -19,7 +19,6 @@ page_highlights:
 - このサイトは現在、`mind_uploading_papers` と `research_harvest_50` を分離しています。1 つは紙レベルのフロンティア アーカイブであり、もう 1 つは未解決の問題の証拠マップです。
 - 技術読者は現在、年順が判断を形成する前に、局所的な因果関係維持に関する論文、境界のある生きている人間の可観測性に関する論文、およびブリッジ限定された同一被験者/同一脳に関する論文を分割するように言われています。
 - 生きている人間の技術的証拠の場合、入り口の順序は、最初にルート ファミリ、次にルートの役割 / 人間のプロキシの役割、次にプロキシ クラス / 運用の成熟度 / キャリブレータの役割、そしてその次にのみ構成または橋の停止線になります。
-- GitHub Issues 全件の状態と要旨は、Wiki 側の全件インベントリに集約します。
 known_points:
 - 公開ページは、重要なポイント、現在のステータス、既知/未知の境界、次のルートなどのポータルとして機能することを目的としています。
 - 詳細な背景説明は通常、Wiki に集中して記載するほうがよいため、エントリ ページは使いやすいままになります。
@@ -129,12 +128,6 @@ recommended_pages:
 <strong>新しい情報の参照先に関する初心者向けガイドが必要な場合</strong>
 <p>
 公開ページ、Wiki、問題本文、問題内の外部依存関係セクション、および操作領域の中から選択するための学習指向のガイドが必要な場合は、<a href="wiki/content-placement-basics.html">Wiki: 新しい情報の所属先を決定する基本</a> を参照してください。
-</p>
-</div>
-<div class="note-box">
-<strong>issue 対応をクローズ根拠まで追跡したい場合</strong>
-<p>
-GitHub Issues の状態一覧は <a href="wiki/github-issues-inventory.html">Wiki: GitHub Issues 全件インベントリ</a>、2026 年 5 月 3 日にまとめて対応した #267-#280 の反映先と外部依存は <a href="wiki/open-issues-267-280-resolution.html">Wiki: Issue #267-#280 対応監査</a>、Omoikane BioData bridge の未解決研究ギャップは <a href="wiki/omoikane-biodata-mind-state-bridge-gap-register.html">Wiki: Omoikane BioData bridge ギャップ登録</a> に分けて置きます。
 </p>
 </div>
 <div class="note-box">
@@ -302,12 +295,6 @@ GitHub Issues の状態一覧は <a href="wiki/github-issues-inventory.html">Wik
 <td>慎重な用語の定義、ニュースの解釈、EEGの基本、検証の基本、公開ページの前提知識。</td>
 <td>最新の実装状況や運用判断の一時保存場所として使用します。</td>
 </tr>
-<tr>
-<td><strong>自動化などの運用領域/</strong></td>
-<td>下書き、機械生成の出力、中間結果を保存します。</td>
-<td>未分類のメモ、CSVファイル、生成されたアーティファクト、および監査ログ。</td>
-<td>統合せずに、読者向けの散文として直接公開します。</td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -337,7 +324,7 @@ GitHub Issues の状態一覧は <a href="wiki/github-issues-inventory.html">Wik
 </tr>
 <tr>
 <td>証拠が不明確な部分的なメモや構成が不明確なメモを公の散文に直接挿入する</td>
-<td>指名は `automation/` などの運用エリアに保管し、統合対象が決定した後にのみ公開ページに移動してください。</td>
+<td>未成熟なメモは公開成果物へ接続せず、証拠と統合先が固まってから該当ページへ要約します。</td>
 </tr>
 <tr>
 <td>このリポジトリ内ですぐに完了できる変更であるかのように外部依存関係タスクを大事</td>
@@ -371,7 +358,7 @@ GitHub Issues の状態一覧は <a href="wiki/github-issues-inventory.html">Wik
 <h2 class="section-title">スプロール防止ルール</h2>
 <ol>
 <li>新しいファイルを作成する前に、まずコンテンツがすべての統合目標に追加できるかどうかを確認してください。</li>
-<li>一時的なドラフトと中間結果は、公開ページに直接接続するのではなく、`automation/` などの操作ディレクトリに保存する必要があります。</li>
+<li>一時的なドラフトと中間結果は、公開ページへ載せず、読者向けに要約できる状態になってから統合します。</li>
 <li>パブリックナビゲーションは、どこにでも重複したルートを追加するのではなく、`index.html`とこのページに集中する必要があります。</li>
 <li>発行作業でコンテンツを追加する場合は、必ず宛先ページと証拠リンクに名前を付けてください。</li>
 <li>の隣接性を融合させないでください<strong>ローカル衝突関係維持状態論文</strong>、<strong>境界のある生きた人間の可観測性論文</strong>、および<strong>ブリッジ限定された同じ主題/同じ脳の論文</strong>を1つのフロンティアにまとめてください。</li>
@@ -478,7 +465,6 @@ GitHub Issues の状態一覧は <a href="wiki/github-issues-inventory.html">Wik
 <ul>
 <li><a href="wiki/internal-prework-and-external-dependencies.html">wiki/internal-prework-and-external-dependency.html</a></li>
 <li><a href="wiki/issue-writing-basics.html">wiki/issue-writing-basics.html</a></li>
-<li><a href="wiki/github-issues-inventory.html">wiki/github-issues-inventory.html</a></li>
 <li><a href="wiki/content-placement-basics.html">wiki/content-placement-basics.html</a></li>
 <li><a href="wiki/reading-to-change-workflow.html">wiki/reading-to-change-workflow.html</a></li>
 <li><a href="wiki/understanding-vs-action-readiness.html">wiki/ アクションとアクションの準備の理解.html</a></li>
@@ -488,15 +474,6 @@ GitHub Issues の状態一覧は <a href="wiki/github-issues-inventory.html">Wik
 
 </article>
 <aside class="sidebar-column">
-<div class="sidebar-box">
-<h4>オペレーションコンセプト (GitHub)</h4>
-<ul>
-<li><a href="https://github.com/yasufumi-nakata/mind-upload/blob/main/README.md" target="_blank">README.md ↗</a></li>
-<li><a href="https://github.com/yasufumi-nakata/mind-upload/blob/main/AGENTS.md" target="_blank">AGENTS.md ↗</a></li>
-<li><a href="https://github.com/yasufumi-nakata/mind-upload/tree/main/.agent" target="_blank">.agent/ ↗</a></li>
-<li><a href="https://github.com/yasufumi-nakata/mind-upload/tree/main/automation" target="_blank">自動化/ ↗</a></li>
-</ul>
-</div>
 <div class="sidebar-box">
 <h4>学習ウィキ</h4>
 <ul>
@@ -517,7 +494,6 @@ GitHub Issues の状態一覧は <a href="wiki/github-issues-inventory.html">Wik
 <li><a href="wiki/literature-to-action-route.html">文献から実装/参加まで -></a></li>
 <li><a href="wiki/participation-next-routes.html">参加・連携後の次のルート -></a></li>
 <li><a href="wiki/issue-writing-basics.html">Issue の書き方 -></a></li>
-<li><a href="wiki/github-issues-inventory.html">GitHub Issues 全件 -></a></li>
 <li><a href="wiki/content-placement-basics.html">コンテンツ構成の基本 -></a></li>
 </ul>
 </div>

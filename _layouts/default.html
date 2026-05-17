@@ -39,7 +39,6 @@
                     <a class="page-link" href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a>
                     <a class="page-link" href="{{ '/mind_uploading_papers.html' | relative_url }}"{% if page.url == '/mind_uploading_papers.html' %} aria-current="page"{% endif %}>論文アーカイブ</a>
                     <a class="page-link" href="{{ '/issue.html' | relative_url }}"{% if page.url == '/issue.html' %} aria-current="page"{% endif %}>参加</a>
-                    <a class="page-link" href="https://github.com/yasufumi-nakata/mind-upload" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
         </nav>
         </div>
@@ -218,8 +217,8 @@
     <footer class="site-footer h-card">
         <data class="u-url" value="{{ '/' | relative_url }}"></data>
         <div class="wrapper">
-        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案には GitHub Issues を使ってください。</p>
-        <p>&copy; 2024-2026 Mind Uploading Research Project. <a href="https://github.com/yasufumi-nakata/mind-upload">GitHub</a></p>
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="{{ '/issue.html' | relative_url }}">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
         </div>
     </footer>
 

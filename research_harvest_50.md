@@ -163,15 +163,9 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
-<strong>未解決の質問 1 つを EEG 対応または助成金対応の作業パッケージに変換したい場合</strong>
-<p>
-この公開文献マップはルーティング レベルにとどまります。未解決の質問から EEG 実行可能なテスト、資金提供可能なテーマ、および固定データセット アンカーへの現在の 1 問ずつのルートが必要な場合は、<a href="wiki/mind-upload-rq-solvability-bridge.html">RQ 解決可能性ブリッジ</a> から始めて、<a href="wiki/mind-upload-current-public-six-rq-brief.html"> 現在の公開 6 つの RQ 概要</a>、<a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG 実現可能性ページ</a>、<a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ-by-RQ 詳細ページに移動します。書類</a>、<a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">助成金とデータセットのプレイブック</a>、<a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">現在の資金調達候補リスト</a>。
-</p>
-</div>
-<div class="note-box">
 <strong>現在の働き方を正しく読みたい場合</strong>
 <p>
-アクティブなルートは、もはや広範なテーマの要約ではありません。現在、未解決の質問を一度に 1 つずつ深め、1 つの限定されたクレーム、1 つのデータセット アンカー、および 1 つの停止ルールを修正し、より強力なクレームまたは外部に依存するクレームを EEG 結果の外側に保ちます。文献マップではなく現在の深化キューが必要な場合は、<a href="wiki/mind-upload-current-public-six-rq-brief.html"> 現在の公開 6 つの RQ 概要</a>、<a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ ごとの RQ の詳細文書</a>、および <a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG 実現可能性ページ</a> を使用してください。
+アクティブなルートは、広範なテーマの要約ではありません。未解決の質問を 1 つずつ深める場合でも、1 つの限定されたクレーム、1 つのデータセットアンカー、1 つの停止ルールを修正し、より強い主張や外部依存のある主張を EEG 結果の外側に保ちます。
 </p>
 </div>
 <div class="note-box">
@@ -970,7 +964,7 @@ U 番号は内部管理コードであり、記憶されるものではありま
 <div class="note-box">
 <strong>このラウンドの組織ポリシー</strong>
 <p>
-第1回から第114回までの情報は削除されませんでしたが、公開テキストと<code>automation/</code>の役割が再分離されました。概要や判断材料を本文で読者に提示し、機械の処理結果や動作ログをCSV/監査メモに保存します。
+第1回から第114回までの作業ログは公開成果物から外し、本文には読者が検証方針を理解するための要約だけを残します。機械の処理結果や中間ログは、公開ページへ直接接続しません。
 </p>
 </div>
 <table class="data-table">
@@ -991,34 +985,34 @@ U 番号は内部管理コードであり、記憶されるものではありま
 <tr>
 <th>ラウンドグループ</th>
 <th>本文に残したもの</th>
-<th>代表的なトレイル</th>
+<th>公開ページに残す要約</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>ラウンド1～12</strong></td>
 <td>反映された U 固有の簡略化補足、追加証拠、および必要な書籍 2 冊 + 補足文書 1 冊の最小コア文献セット。 </td>
-<td><a href="automation/rq_core_reference_minset_round10_2026-03-01.csv" target="_blank">ラウンド10芯セット</a></td>
+<td>最小コア文献セットを本文要約へ統合済み。</td>
 </tr>
 <tr>
 <td><strong>ラウンド 13–18</strong></td>
 <td>補足文書の品質を検査し、タグを再分類し、必須文書と補助文書の2層に分け、3ステップの閲覧順序と時間の目安を設定しました。 </td>
-<td><a href="automation/rq_reference_layering_round17_2026-03-01.csv" target="_blank">ラウンド17レイヤリング</a> / <a href="automation/rq_reading_path_timed_round18_2026-03-01.csv" target="_blank">ラウンド18タイムドパス</a></td>
+<td>補助文献の品質、タグ、閲覧順序を本文の読書ガイドへ圧縮済み。</td>
 </tr>
 <tr>
 <td><strong>ラウンド 19–39</strong></td>
 <td>Aligned U12/U15 規制トラックと固定管轄ラベル、監査優先キュー、本体更新テンプレート。 </td>
-<td><a href="automation/rq_u12_regulation_alignment_round19_2026-03-01.csv" target="_blank">ラウンド 19 アライメント</a> / <a href="automation/rq_regulation_external_dependency_tasks_round28_2026-03-01.csv" target="_blank">ラウンド 28 外部依存性分割</a></td>
+<td>規制トラックは、公開本文では外部依存と検証条件の分離として扱います。</td>
 </tr>
 <tr>
 <td><strong>ラウンド40～61</strong></td>
 <td>公開前のトレイルの整合性、公開ゲート、未解決のエスカレーション、および終了条件を標準化しました。 </td>
-<td><a href="automation/rq_regulation_publish_gate_round57_2026-03-01.csv" target="_blank">ラウンド57パブリッシュゲート</a></td>
+<td>公開前の整合性と終了条件は、本文の主張上限として残します。</td>
 </tr>
 <tr>
 <td><strong>ラウンド62–114</strong></td>
 <td>リオープン・リエントリー・事後再監視と安定確認を別台帳として運用可能。 </td>
-<td><a href="automation/rq_regulation_reentry_execution_packet_round70_2026-03-01.csv" target="_blank">ラウンド70リエントリーパケット</a> / <a href="automation/rq_regulation_reentry_followup_reconnect_followup_reevaluation_followup_stability_confirmation_ledger_round100_2026-03-01.csv" target="_blank">ラウンド100安定台帳</a></td>
+<td>再監視や安定確認の履歴は公開ログにせず、再現性の考え方として要約します。</td>
 </tr>
 </tbody>
 </table>
@@ -1036,12 +1030,9 @@ U 番号は内部管理コードであり、記憶されるものではありま
 </ul>
 </div>
 
-<h3>生のアーティファクトと監査が存在する場所</h3>
+<h3>公開ページに残す範囲</h3>
 <p class="small">
-60 の質問すべてのカバレッジ監査は <a href="automation/rq_deepening_consistency_audit_2026-03-01.md" target="_blank">rq_deepening_consistency_audit_2026-03-01.md</a>、U による合計は <a href="automation/rq_deepening_coverage_summary_2026-03-01.csv" target="_blank">rq_deepening_coverage_summary_2026-03-01.csv</a>、引用関連性監査は<a href="automation/rq_reference_relevance_audit_2026-03-01.md" target="_blank">rq_reference_relevance_audit_2026-03-01.md</a>。
-</p>
-<p class="small">
-以前は操作ガイドとして機能していた古い <code>research_deepening_Continue_guide_2026-03-01.md</code> は、公開ページから削除されました。現在のポリシーでは、概要のみをここに保持し、生の成果物は <code>automation/</code> の下に残します。
+このセクションには、未解決課題を読むための要約だけを残します。生の作業ログ、監査ファイル、機械生成 CSV、再実行履歴は公開ページに載せません。
 </p>
 </section>
 

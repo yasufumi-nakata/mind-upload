@@ -131,12 +131,6 @@ recommended_pages:
 古い <code>hands_on.md</code> の最小限のループ プロシージャがこのページに統合されました。したがって、データ選択後に別のページに移動することなく、L0 スケルトン、QC、ベースライン、完了条件まで直接読むことができます。
 </p>
 </div>
-<div class="note-box">
-<strong>データセットからマインド アップロードの質問に戻る RQ ごとのルートが必要な場合</strong>
-<p>
-このページは実用的なデータポータルであり、完全な研究課題マップではありません。ここのデータセット バケットから、特定のマインド アップロード研究の質問、固定された EEG 対応の主張、助成金対応のテーマに移行したい場合は、<a href="wiki/mind-upload-current-public-six-rq-brief.html">現在の公開 6 つの RQ 概要</a> から始めて、<a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG 実現可能性ページ</a>、<a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ ごとの詳細書類</a>、<a href="wiki/mind-upload-eeg-rq60-grant-dataset-playbook.html">助成金とデータセットのプレイブック</a>、<a href="https://github.com/AoyamaLab/auto-research-funds/blob/main/wiki/Mind-Upload-Current-Funding-Shortlist.md">現在の資金候補リスト</a>。
-</p>
-</div>
 
 <table class="data-table">
 <thead>
@@ -172,9 +166,9 @@ recommended_pages:
 </p>
 </div>
 <div class="note-box">
-<strong>公開データセットのルートを控えめにしてください</strong>
+<strong>公開データセットの主張を控えめにしてください</strong>
 <p>
-この公開ページは入門レベルにとどまります。 1 つの未解決の質問が EEG 対応ワーク パッケージに積極的に変換されている場合、固定 <code>Dxx + DOI</code> アンカー、ファーストパス KPI、停止ルールなどのより強力なルーティングの詳細は、公開の結論としてここで宣伝されるのではなく、Wiki に保持されます。現在の 1 問ずつのパッケージが必要な場合は、<a href="wiki/mind-upload-current-public-six-rq-brief.html">現在の公開 6 つの RQ 概要</a>、<a href="wiki/mind-upload-eeg-rq60-feasibility-and-funds.html">RQ60 EEG 実現可能性ページ</a>、および <a href="wiki/mind-upload-rq60-rq-by-rq-deep-dossiers.html">RQ ごとの詳細文書</a> を使用してください。
+この公開ページは入門レベルにとどまります。データセット名だけで、同一性、意識、長期安定性、閉ループ安全性の主張まで進めることはできません。データセットを使う場合は、対象変数、評価単位、停止条件、再実行条件を先に固定してください。
 </p>
 </div>
 

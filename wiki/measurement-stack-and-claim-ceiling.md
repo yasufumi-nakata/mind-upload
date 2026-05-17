@@ -102,6 +102,7 @@ recommended_pages:
 </section>
 
 <section class="section" id="matrix">
+<span id="state-variable-matrix"></span>
 <h2 class="section-title">測定スタックごとの可観測性とクレーム上限</h2>
 <div class="note-box">
 <strong></strong>の読み方

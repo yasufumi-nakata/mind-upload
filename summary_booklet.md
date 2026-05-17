@@ -5,7 +5,7 @@ description: "サイトの公開ページから作成した、自動生成の A4
 article_type: "ブリーフィング冊子"
 subtitle: "公開ページの front matter と冒頭要約から再生成した A4 ブリーフィング"
 author: マインドアップロード研究プロジェクト
-last_updated: "2026-05-03"
+last_updated: "2026-05-17"
 note: "公開ページから自動生成"
 body_class: "summary-booklet-page"
 ---
@@ -25,7 +25,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-cover-band">
     <div>
   <span>Reference Date</span>
-  <strong>2026-05-03</strong>
+  <strong>2026-05-17</strong>
 </div>
 <div>
   <span>Current Focus</span>
@@ -52,7 +52,7 @@ body_class: "summary-booklet-page"
 </article>
 <article class="booklet-card">
   <h3>Core Pages To Read Now</h3>
-  <p>マインドアップロード / 検証: マインドアップロード検証コモンズ / 技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する / マインドアップロードに向けて: 統合された技術的および理論的アプローチ / データとハンズオン: どこから始めて、どのようにして L0 に到達するか / 貢献ガイド</p>
+  <p>マインドアップロード / 検証: マインドアップロード検証コモンズ / 技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する / マインドアップロードに向けて: 統合された技術的および理論的アプローチ / データとハンズオン: どこから始めて、どのようにして L0 に到達するか / 参加と提案のガイド</p>
 </article>
 
   </div>
@@ -83,7 +83,7 @@ body_class: "summary-booklet-page"
 </article>
 <article class="booklet-card">
   <h3>5. Next Actions</h3>
-  <p>このページでは、Mind-Upload に参加する方法、問題のステータスを読み取る方法、および外部に依存したままのタスクから今すぐ実行できる変更を分離する方法について説明します。</p>
+  <p>このページは、マインドアップロードに関する提案を、公開ページへ安全に統合できる形へ整えるためのガイドです。作業履歴ではなく、読者が次の提案を準備するための判断基準だけを残しています。</p>
 </article>
 <article class="booklet-card">
   <h3>6. Source Pages</h3>
@@ -272,9 +272,9 @@ body_class: "summary-booklet-page"
   <td>このページは、「`Which public data should I start validation with first?&#39;&#39; and `「L0 再現性解析を行うにはどうすればよいですか?」の両方に 1 か所で答える実践的なガイドです。データセット名のリストにとどまりません。 BIDS、QC、分割、ベースラインを 1 つのパスで接続します。</td>
 </tr>
 <tr>
-  <td><a href="/issue.html">貢献ガイド</a></td>
-  <td>ガイド - リサーチ ワークフローに参加し、問題トラッカーを読んでください。</td>
-  <td>このページでは、Mind-Upload に参加する方法、問題のステータスを読み取る方法、および外部に依存したままのタスクから今すぐ実行できる変更を分離する方法について説明します。</td>
+  <td><a href="/issue.html">参加と提案のガイド</a></td>
+  <td>参加ガイド - 実行できる変更、外部依存、証拠の強さを分けて提案するための入口</td>
+  <td>このページは、マインドアップロードに関する提案を、公開ページへ安全に統合できる形へ整えるためのガイドです。作業履歴ではなく、読者が次の提案を準備するための判断基準だけを残しています。</td>
 </tr>
 
     </tbody>
@@ -347,15 +347,15 @@ body_class: "summary-booklet-page"
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/issue.html">貢献ガイド</a></h3>
-  <p class="booklet-page-meta">ガイド - リサーチ ワークフローに参加し、問題トラッカーを読んでください。 / 10～20分</p>
-  <p>Mind-Upload は、マインド アップロードを検証可能な研究に発展させるオープン コミュニティです。分野や経験を問わず、文章の改善や用語の整理、誤解の指摘など、再現性の向上に直結する業務にすぐに参加できます。</p>
+  <h3><a href="/issue.html">参加と提案のガイド</a></h3>
+  <p class="booklet-page-meta">参加ガイド - 実行できる変更、外部依存、証拠の強さを分けて提案するための入口 / 5～10分</p>
+  <p>このサイトでは、マインドアップロードに関する提案を、読者が検証できる形で扱います。新しい主張を追加する場合は、何を主張しているのか、どの証拠に基づくのか、どこまでが未解決なのかを分けてください。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>文章、用語、リンク構造の改善など、小さいながらも価値のある参加方法を紹介します。</li><li>これにより、ドキュメントレベルの反映と実装されたアーティファクトを混同することなく、問題のステータスを追跡できます。</li><li>曖昧な強い主張よりも、達成条件や反証条件が明確な問題を優先する。</li>
+    <li>提案は、主張、根拠、反証条件、統合先を分けて書きます。</li><li>このリポジトリ内で実行できる変更と、外部依存のある作業を混ぜません。</li><li>公開ページに載せる前に、マインドアップロードの検証や学習導線に直接関係するかを確認します。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証</a></li><li><a href="/glossary.html">用語集</a></li>
+  <li><a href="/verification.html">検証</a></li><li><a href="/content_hub.html">コンテンツ統合ハブ</a></li><li><a href="/research_harvest_50.html">文献マップ</a></li>
 </ul>
 
 </article>
@@ -500,9 +500,9 @@ body_class: "summary-booklet-page"
 </article>
 <article class="booklet-card">
   <h3>参加して統合する</h3>
-  <p>貢献ガイド / パブリック コンテンツ統合ハブ</p>
+  <p>参加と提案のガイド / パブリック コンテンツ統合ハブ</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証</a></li><li><a href="/glossary.html">用語集</a></li>
+    <li><a href="/verification.html">検証</a></li><li><a href="/content_hub.html">コンテンツ統合ハブ</a></li><li><a href="/research_harvest_50.html">文献マップ</a></li>
   </ul>
 </article>
 
@@ -511,7 +511,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-status-grid">
     <div class="booklet-status-card booklet-status-card-strong">
   <span>Working Principle</span>
-  <strong>文章、用語、リンク構造の改善など、小さいながらも価値のある参加方法を紹介します。</strong>
+  <strong>提案は、主張、根拠、反証条件、統合先を分けて書きます。</strong>
 </div>
 <div class="booklet-status-card">
   <span>Update Rule</span>
@@ -522,7 +522,7 @@ body_class: "summary-booklet-page"
 
   <h3>Source Pages</h3>
   <ul class="booklet-link-list">
-    <li><a href="/index.html">マインドアップロード</a></li><li><a href="/verification.html">検証: マインドアップロード検証コモンズ</a></li><li><a href="/tech_roadmap.html">技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する</a></li><li><a href="/perspective.html">マインドアップロードに向けて: 統合された技術的および理論的アプローチ</a></li><li><a href="/datasets.html">データとハンズオン: どこから始めて、どのようにして L0 に到達するか</a></li><li><a href="/issue.html">貢献ガイド</a></li><li><a href="/content_hub.html">パブリック コンテンツ統合ハブ</a></li><li><a href="/wbe_101.html">はじめに: マインド アップロード / WBE を測定可能な問題にする</a></li><li><a href="/eeg_101.html">はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか</a></li><li><a href="/faq.html">FAQ: よくある質問と一般的な障害モード</a></li><li><a href="/glossary.html">用語集</a></li>
+    <li><a href="/index.html">マインドアップロード</a></li><li><a href="/verification.html">検証: マインドアップロード検証コモンズ</a></li><li><a href="/tech_roadmap.html">技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する</a></li><li><a href="/perspective.html">マインドアップロードに向けて: 統合された技術的および理論的アプローチ</a></li><li><a href="/datasets.html">データとハンズオン: どこから始めて、どのようにして L0 に到達するか</a></li><li><a href="/issue.html">参加と提案のガイド</a></li><li><a href="/content_hub.html">パブリック コンテンツ統合ハブ</a></li><li><a href="/wbe_101.html">はじめに: マインド アップロード / WBE を測定可能な問題にする</a></li><li><a href="/eeg_101.html">はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか</a></li><li><a href="/faq.html">FAQ: よくある質問と一般的な障害モード</a></li><li><a href="/glossary.html">用語集</a></li>
   </ul>
 
   <div class="booklet-quote">
