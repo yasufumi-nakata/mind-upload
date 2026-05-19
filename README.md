@@ -13,6 +13,22 @@
 
 本プロジェクトは、最終的にサイトの更新や運用プロセスを完全に自動化することを目指しています。現在は手動で行っているタスクも、順次自動化ツールやCI/CDパイプラインへ移行する予定です。
 
+## 定期データ更新
+
+GitHub Issue を Codex が処理する定期運用の実行入口:
+
+```bash
+bash ./update_data.sh --dry-run
+```
+
+実行（実際に修正・コミット・Issueコメントまで行う）:
+
+```bash
+bash ./update_data.sh
+```
+
+このコマンドは内部で `automation/resolve-issues.sh` を呼び出し、`REPO` 既定値は `yasufumi-nakata/mind-upload` です。
+
 ## 貢献方法
 
 - [issue.md](issue.md) を参照

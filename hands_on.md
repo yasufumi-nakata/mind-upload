@@ -5,7 +5,7 @@ description: "公開データでも自前データでも使える、BIDS→QC→
 article_type: Tutorial
 subtitle: "まずは“再現できる”を達成してから、性能を競う"
 author: Mind Uploading Research Project
-last_updated: "2026-02-10"
+last_updated: "2026-03-06"
 note: "Practical"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -17,6 +17,13 @@ note: "Practical"
 <h2>Goal</h2>
 <p>
 ここでの目標は「すごい精度を出す」ことではなく、<strong>他の人が同じ結果を再現できる最小ループ（L0）</strong>を作ることです。L0がないと、どれだけ高性能に見えても、あとから正しさを確認できません。
+</p>
+</div>
+
+<div class="note-box">
+<strong>補足Wiki</strong>
+<p>
+この手順の前提になる BIDS、QC、ベースライン、監査ログの意味は、<a href="{{ '/wiki/bids-and-eeg-bids.html' | relative_url }}">BIDS / EEG-BIDS</a>、<a href="{{ '/wiki/measurement-basics.html' | relative_url }}">計測とデータ</a>、<a href="{{ '/wiki/reproducibility-basics.html' | relative_url }}">再現性とベンチ</a> に整理しています。
 </p>
 </div>
 

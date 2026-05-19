@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Start Here
 subtitle: "勝利条件・標準・ベンチマーク・事前登録を先に作る"
 author: Mind Uploading Research Project
-last_updated: "2026-02-24"
+last_updated: "2026-03-06"
 note: "Human-friendly landing page"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -118,6 +118,14 @@ Mind-Uploadは、「心をコンピュータで再現できるのか？」とい
 <a href="datasets.html" class="btn-action">Open Datasets</a>
 </div>
 </div>
+<div class="stage-item">
+<div class="stage-number">E</div>
+<div class="stage-body">
+<h4>学習Wiki</h4>
+<p>初歩の用語整理から未解決点の意味まで、ページ間リンク付きで追える補足ガイドです。</p>
+<a href="{{ '/wiki/' | relative_url }}" class="btn-action">Open Wiki</a>
+</div>
+</div>
 </div>
 </section>
 
@@ -174,6 +182,7 @@ PDB、BIDS+OpenNeuro、PhysioNet、ImageNet、MLPerf、OSFで築かれた検証�
 <li><a href="eeg_101.html">EEG入門 →</a></li>
 <li><a href="datasets.html">データ&ベンチ →</a></li>
 <li><a href="glossary.html">用語集 →</a></li>
+<li><a href="{{ '/wiki/' | relative_url }}">学習Wiki →</a></li>
 <li><a href="faq.html">FAQ →</a></li>
 <li><a href="hands_on.html">ハンズオン →</a></li>
 <li><a href="casework.html">ケースワーク（歴史の型）→</a></li>

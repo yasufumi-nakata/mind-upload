@@ -5,7 +5,7 @@ description: "Mind-Uploadで頻出する用語を、人間が迷子にならな�
 article_type: Reference
 subtitle: "まずは“言葉のすり替え”を止める"
 author: Mind Uploading Research Project
-last_updated: "2026-02-10"
+last_updated: "2026-03-06"
 note: "Living document"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -19,6 +19,63 @@ note: "Living document"
 この用語集は、用語の意味をすぐ確認するためのリファレンスです。まず日常語の説明で把握し、必要なときだけ厳密な定義に進む構成とし、議論を測定と扱い方に結び付けます。WBEの議論は言葉のズレで混乱しやすいため、ここでは<strong>実際にどう測って扱うか</strong>を重視します。
 </p>
 </div>
+
+<section class="section" id="wiki-guide">
+<h2 class="section-title">補足Wikiへの導線</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>この用語集の領域</th>
+<th>補足Wiki</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>マインドアップロード / WBE / クレーム階段 / 本人性</td>
+<td><a href="{{ '/wiki/wbe-basics.html' | relative_url }}">WBEの基礎</a> / <a href="{{ '/wiki/identity-and-ethics.html' | relative_url }}">本人性と倫理</a></td>
+</tr>
+<tr>
+<td>EEG / MEG / fMRI / ECoG / QC / BIDS</td>
+<td><a href="{{ '/wiki/measurement-basics.html' | relative_url }}">計測とデータ</a></td>
+</tr>
+<tr>
+<td>逆問題 / ESI / DCM / SCM / 反事実</td>
+<td><a href="{{ '/wiki/modeling-basics.html' | relative_url }}">モデルと因果</a></td>
+</tr>
+<tr>
+<td>IIT / GNWT / FEP / PCI / Unfolding Argument</td>
+<td><a href="{{ '/wiki/consciousness-basics.html' | relative_url }}">意識理論</a></td>
+</tr>
+<tr>
+<td>BIDS / ベンチマーク / ベースライン / 事前登録 / モデルカード</td>
+<td><a href="{{ '/wiki/reproducibility-basics.html' | relative_url }}">再現性とベンチ</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="wiki-deep-dives">
+<h2 class="section-title">概念別の詳細ページ</h2>
+<div class="key-points">
+<h4>Deep Dives</h4>
+<ul>
+<li><a href="{{ '/wiki/claim-ladder.html' | relative_url }}">クレーム階段</a>：L0〜L5の必要証拠と言い過ぎ例</li>
+<li><a href="{{ '/wiki/decode-vs-emulate.html' | relative_url }}">decode と emulate</a>：相関と生成の違い</li>
+<li><a href="{{ '/wiki/bids-and-eeg-bids.html' | relative_url }}">BIDS / EEG-BIDS</a>：共有可能なデータの最小単位</li>
+<li><a href="{{ '/wiki/causal-verification.html' | relative_url }}">因果検証</a>：観察・介入・反事実の違い</li>
+<li><a href="{{ '/wiki/inverse-problem-and-esi.html' | relative_url }}">逆問題とESI</a>：なぜ脳内活動は一意に決まらないのか</li>
+<li><a href="{{ '/wiki/pci-and-perturbation.html' | relative_url }}">PCI と摂動応答</a>：複雑性指標の意味と限界</li>
+<li><a href="{{ '/wiki/consciousness-theory-comparison.html' | relative_url }}">意識理論比較</a>：IIT / GNWT / HOT / Unfolding Argument</li>
+<li><a href="{{ '/wiki/fep-active-inference.html' | relative_url }}">FEP / 能動的推論 / マルコフブランケット</a>：動的プロセスとしての脳</li>
+<li><a href="{{ '/wiki/copy-problem-and-continuity.html' | relative_url }}">コピー問題と連続性</a>：分岐本人性と段階的移行</li>
+<li><a href="{{ '/wiki/benchmark-pitfalls.html' | relative_url }}">ベンチマークの罠</a>：Goodhart、リーク、失敗公開</li>
+<li><a href="{{ '/wiki/dcm-and-scm.html' | relative_url }}">DCM / SCM</a>：因果モデルの実装と限界</li>
+<li><a href="{{ '/wiki/connectome-and-dynamics.html' | relative_url }}">コネクトームとダイナミクス</a>：配線図だけでは足りない理由</li>
+<li><a href="{{ '/wiki/neuromorphic-hardware.html' | relative_url }}">ニューロモルフィック基盤</a>：物理基盤の候補</li>
+<li><a href="{{ '/wiki/thermodynamics-and-ness.html' | relative_url }}">熱力学とNESS</a>：EPRと散逸条件</li>
+</ul>
+</div>
+</section>
 
 <section class="section" id="core">
 <h2 class="section-title">コア概念</h2>

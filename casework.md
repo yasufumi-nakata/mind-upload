@@ -5,7 +5,7 @@ description: "標準化・検証・比較可能性（何を満たせば前進と
 article_type: Casework
 subtitle: "PDB / INSDC / BIDS+OpenNeuro / ImageNet / MLPerf / OSF から学ぶ"
 author: Mind Uploading Research Project
-last_updated: "2026-02-10"
+last_updated: "2026-03-06"
 note: "Reference Collection"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -17,6 +17,20 @@ note: "Reference Collection"
 <h2>Why This Page</h2>
 <p>
 「前進を測れない」「結果を再現できない」「研究同士を比較できない」という問題は、昔から多くの分野で起きてきました。ここでは、<strong>Web上の公開基盤</strong>がどうやってその問題を減らしたかを、実例で分かりやすく整理します。Mind-Uploadは、その成功パターンをWBEにも適用します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>補足Wiki</strong>
+<p>
+ここで出る標準化、ベンチマーク、事前登録、モデルカードの基礎は、<a href="{{ '/wiki/reproducibility-basics.html' | relative_url }}">再現性とベンチ</a> と <a href="{{ '/wiki/benchmark-pitfalls.html' | relative_url }}">ベンチマークの罠</a> で初歩から整理しています。
+</p>
+</div>
+
+<div class="note-box">
+<strong>Related U</strong>
+<p>
+ケースワークから未解決問題へ戻る場合は、<a href="{{ '/wiki/u5-learning-and-identity-drift.html' | relative_url }}">U5 学習則と本人性ドリフト</a>、<a href="{{ '/wiki/u12-branching-identity.html' | relative_url }}">U12 分岐本人性</a>、<a href="{{ '/wiki/u14-reproducibility-operations.html' | relative_url }}">U14 追試可能性の実装</a>、<a href="{{ '/wiki/u15-governance-integration.html' | relative_url }}">U15 社会実装ガバナンス</a> が対応しています。
 </p>
 </div>
 

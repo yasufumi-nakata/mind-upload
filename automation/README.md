@@ -8,13 +8,14 @@ This folder contains an automated flow that fetches open GitHub issues, asks an 
 - `.env.example`: configuration template (copy to `.env`)
 - `logs/`: runtime logs (ignored by git)
 - `EegflowResolver.app/`: optional app bundle (ignored by git)
+- `local_codex_ops_digest.md`: `auto-startup` 側の統合ランナーが更新するローカル運用ダイジェスト
 - `swarm150_site/out/worker_suggestions.jsonl`: 150-worker提案の集約結果（`worker*.md` 個別ファイルは冗長のため廃止）
 
 ## Setup
 1. Copy `.env.example` to `.env`.
 2. Optional: set `AI_CMD` to your local AI runner command that reads the prompt from STDIN (e.g. `your-ai-cli --non-interactive`). If omitted, `resolve-issues.sh` uses `codex exec --full-auto -`.
 3. Optionally set `AI_WORKDIR` if the AI tool must run outside the repo root.
-4. Ensure `gh` and `jq` are installed and authenticated.
+4. Ensure `gh` is installed and authenticated. `jq` is optional; if it is missing, `resolve-issues.sh` falls back to `python3` for JSON parsing.
 5. Keep execution-environment values only in local `.env` (git-ignored), not in tracked files.
 6. Optional safety settings in `.env`:
    - `RUN_TIMEOUT_SECONDS` / `RUN_TIMEOUT_GRACE_SECONDS` to prevent hung runs.

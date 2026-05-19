@@ -5,7 +5,7 @@ description: "Mind-Uploadを読んでいて出やすい疑問に、短く正確�
 article_type: FAQ
 subtitle: "派手な結論より、検証できる前進を"
 author: Mind Uploading Research Project
-last_updated: "2026-02-10"
+last_updated: "2026-03-06"
 note: "Human-first"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -17,6 +17,20 @@ note: "Human-first"
 <h2>How To Read</h2>
 <p>
 ここは「よくある勘違い」を先に避けるためのページです。主張が大きいほど、(1)言葉の定義、(2)評価の物差し、(3)間違いと判定する条件、(4)再現手順の順で確認します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>質問から逆引き</strong>
+<p>
+各質問の背景を初歩から追う場合は、<a href="{{ '/wiki/' | relative_url }}">学習Wiki</a> を入口にして、<a href="{{ '/wiki/claim-ladder.html' | relative_url }}">クレーム階段</a>、<a href="{{ '/wiki/decode-vs-emulate.html' | relative_url }}">decode と emulate</a>、<a href="{{ '/wiki/bids-and-eeg-bids.html' | relative_url }}">BIDS / EEG-BIDS</a>、<a href="{{ '/wiki/pci-and-perturbation.html' | relative_url }}">PCI と摂動応答</a>、<a href="{{ '/wiki/benchmark-pitfalls.html' | relative_url }}">ベンチマークの罠</a>、<a href="{{ '/wiki/copy-problem-and-continuity.html' | relative_url }}">コピー問題と連続性</a> を辿ってください。
+</p>
+</div>
+
+<div class="note-box">
+<strong>Related U</strong>
+<p>
+質問から未解決問題へ掘る場合は、<a href="{{ '/wiki/u0-operational-identity.html' | relative_url }}">U0 操作的同一性</a>、<a href="{{ '/wiki/u3-subject-boundary.html' | relative_url }}">U3 主体境界</a>、<a href="{{ '/wiki/u11-consciousness-metric-approximation.html' | relative_url }}">U11 IIT近似の妥当性</a>、<a href="{{ '/wiki/u13-imitation-separation.html' | relative_url }}">U13 模倣分離テスト</a>、<a href="{{ '/wiki/u15-governance-integration.html' | relative_url }}">U15 社会実装ガバナンス</a> が直結しています。
 </p>
 </div>
 

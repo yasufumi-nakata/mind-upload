@@ -4,7 +4,7 @@ title: "技術ロードマップ：計測→再構成→実装でWBEを理解す
 description: "マインドアップロード（WBE）を技術面から俯瞰する学習ロードマップ。計測→再構成→実装→検証の問いの木で整理。"
 article_type: "Roadmap (Definition #1)"
 subtitle: "「何を解けたら前進か」を問いの木に分解し、読む順番と最低限の到達点を示す"
-last_updated: "2026-02-14"
+last_updated: "2026-03-06"
 note: "暫定版（随時更新）"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -20,7 +20,7 @@ note: "暫定版（随時更新）"
 <div class="note-box">
 <strong>新しく来た人へ</strong>
 <p>
-このページは情報量が多いので、先に <a href="wbe_101.html">WBE入門</a> と <a href="eeg_101.html">EEG入門</a>（必要なら <a href="glossary.html">用語集</a>）を読むと理解が早いです。
+このページは情報量が多いので、先に <a href="wbe_101.html">WBE入門</a> と <a href="eeg_101.html">EEG入門</a>（必要なら <a href="glossary.html">用語集</a>）を読み、その後に <a href="{{ '/wiki/' | relative_url }}">学習Wiki</a>、<a href="{{ '/wiki/claim-ladder.html' | relative_url }}">クレーム階段</a>、<a href="{{ '/wiki/causal-verification.html' | relative_url }}">因果検証</a>、<a href="{{ '/wiki/inverse-problem-and-esi.html' | relative_url }}">逆問題とESI</a>、<a href="{{ '/wiki/dcm-and-scm.html' | relative_url }}">DCM / SCM</a>、<a href="{{ '/wiki/copy-problem-and-continuity.html' | relative_url }}">コピー問題と連続性</a>、<a href="{{ '/wiki/thermodynamics-and-ness.html' | relative_url }}">熱力学とNESS</a> を補助線として使うと理解が早いです。
 </p>
 </div>
 
@@ -905,6 +905,13 @@ WBEにおける「プロセスの同期」要件は、単純な遅延閾値（�
 <p>
 ここでは「未解決」を曖昧語にせず、<strong>何が入力で、何を出力し、どの条件で合格/失敗か</strong>を定義します。先行研究が厚くても、判定条件が曖昧なら研究は積み上がりません。逆に、定義が厳密なら小さな前進を確実に蓄積できます。
 </p>
+
+<div class="note-box">
+<strong>補足Wiki</strong>
+<p>
+U0〜U15 を個別に読むための補助ページは <a href="{{ '/wiki/unsolved-questions.html' | relative_url }}">未解決問題カタログ</a> にまとめています。特に <a href="{{ '/wiki/u4-counterfactual-equivalence.html' | relative_url }}">U4 因果同値</a>、<a href="{{ '/wiki/u10-thermodynamic-consistency.html' | relative_url }}">U10 熱力学的一貫性</a>、<a href="{{ '/wiki/u12-branching-identity.html' | relative_url }}">U12 分岐本人性</a> を起点に読むと繋がります。
+</p>
+</div>
 
 <table class="data-table">
 <thead>

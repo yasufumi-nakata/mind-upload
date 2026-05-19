@@ -5,7 +5,7 @@ description: "公開ページの役割・統合先・更新先を1ページに�
 article_type: "Navigation"
 subtitle: "散逸防止のための単一導線"
 author: Mind Uploading Research Project
-last_updated: "2026-02-24"
+last_updated: "2026-03-06"
 note: "Single source of truth for public pages"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -30,6 +30,7 @@ note: "Single source of truth for public pages"
 <tr><td>未解決問題×文献</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td><td>U別のリサーチクエスチョン、文献監査、重複整理</td><td><a href="datasets.html">datasets.html</a></td></tr>
 <tr><td>参加導線</td><td><a href="issue.html">issue.html</a></td><td>Issue運用、対応状況、外部依存タスクの分離</td><td><a href="collaborations.html">collaborations.html</a></td></tr>
 <tr><td>入門導線</td><td><a href="index.html">index.html</a></td><td>読む順番、主要ページへの入口</td><td><a href="wbe_101.html">wbe_101.html</a> / <a href="eeg_101.html">eeg_101.html</a></td></tr>
+<tr><td>学習補助</td><td><a href="{{ '/wiki/' | relative_url }}">wiki/index.html</a></td><td>初歩の解説、未解決点の整理、概念別詳細ページへの導線</td><td><a href="glossary.html">glossary.html</a> / <a href="faq.html">faq.html</a></td></tr>
 </tbody></table>
 </section>
 
@@ -63,6 +64,7 @@ note: "Single source of truth for public pages"
 <li><a href="mind_uploading_papers.html">mind_uploading_papers.html</a></li>
 <li><a href="datasets.html">datasets.html</a></li>
 <li><a href="glossary.html">glossary.html</a></li>
+<li><a href="{{ '/wiki/' | relative_url }}">wiki/index.html</a></li>
 <li><a href="faq.html">faq.html</a></li>
 <li><a href="casework.html">casework.html</a></li>
 </ul>

@@ -5,7 +5,7 @@ description: "マインドアップロード/WBEを「進歩を測れる科学�
 article_type: Platform
 subtitle: "PDB×BIDS×PhysioNet×OSFの発想で、WBEの“勝利条件”と“再現可能な前進”を作る"
 author: Mind Uploading Research Project
-last_updated: "2026-02-23"
+last_updated: "2026-03-06"
 note: "Operational Specification"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -31,6 +31,20 @@ note: "Operational Specification"
 </ul>
 </div>
 </section>
+
+<div class="note-box">
+<strong>補足Wiki</strong>
+<p>
+このページで前提になる基礎概念は、<a href="{{ '/wiki/reproducibility-basics.html' | relative_url }}">再現性とベンチ</a>、<a href="{{ '/wiki/benchmark-pitfalls.html' | relative_url }}">ベンチマークの罠</a>、<a href="{{ '/wiki/claim-ladder.html' | relative_url }}">クレーム階段</a>、<a href="{{ '/wiki/bids-and-eeg-bids.html' | relative_url }}">BIDS / EEG-BIDS</a>、<a href="{{ '/wiki/causal-verification.html' | relative_url }}">因果検証</a>、<a href="{{ '/wiki/pci-and-perturbation.html' | relative_url }}">PCI と摂動応答</a>、<a href="{{ '/wiki/thermodynamics-and-ness.html' | relative_url }}">熱力学とNESS</a> で初歩から辿れます。
+</p>
+</div>
+
+<div class="note-box">
+<strong>Related U</strong>
+<p>
+検証契約から個別の未解決問題へ戻る場合は、<a href="{{ '/wiki/u1-inverse-identifiability.html' | relative_url }}">U1 逆問題の同定可能性</a>、<a href="{{ '/wiki/u4-counterfactual-equivalence.html' | relative_url }}">U4 因果同値</a>、<a href="{{ '/wiki/u6-personalization-vs-generalization.html' | relative_url }}">U6 個人化と汎化</a>、<a href="{{ '/wiki/u8-closed-loop-stability.html' | relative_url }}">U8 閉ループ安定性</a>、<a href="{{ '/wiki/u9-ood-robustness.html' | relative_url }}">U9 OOD 頑健性</a>、<a href="{{ '/wiki/u10-thermodynamic-consistency.html' | relative_url }}">U10 熱力学的一貫性</a>、<a href="{{ '/wiki/u11-consciousness-metric-approximation.html' | relative_url }}">U11 IIT近似の妥当性</a>、<a href="{{ '/wiki/u13-imitation-separation.html' | relative_url }}">U13 模倣分離テスト</a>、<a href="{{ '/wiki/u14-reproducibility-operations.html' | relative_url }}">U14 追試可能性の実装</a>、<a href="{{ '/wiki/u15-governance-integration.html' | relative_url }}">U15 社会実装ガバナンス</a> を併読してください。
+</p>
+</div>
 
 <section class="section" id="definition">
 <h2 class="section-title">このサイトで解く「1問」</h2>

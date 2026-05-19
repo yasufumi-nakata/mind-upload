@@ -67,6 +67,78 @@ require_cmd() {
     command -v "$cmd" >/dev/null 2>&1 || error_exit "必要なコマンドが見つかりません: $cmd"
 }
 
+JSON_TOOL=""
+
+detect_json_tool() {
+    if command -v jq >/dev/null 2>&1; then
+        JSON_TOOL="jq"
+        return
+    fi
+    require_cmd python3
+    JSON_TOOL="python3"
+    log "INFO: jq が見つからないため python3 を JSON パーサとして使用します"
+}
+
+json_array_length() {
+    local raw_json="$1"
+    if [[ "$JSON_TOOL" == "jq" ]]; then
+        printf '%s' "$raw_json" | jq 'length'
+        return
+    fi
+    printf '%s' "$raw_json" | python3 -c 'import json, sys; data = json.loads(sys.stdin.read()); print(len(data))'
+}
+
+json_stream_items() {
+    local raw_json="$1"
+    if [[ "$JSON_TOOL" == "jq" ]]; then
+        printf '%s' "$raw_json" | jq -c '.[]'
+        return
+    fi
+    printf '%s' "$raw_json" | python3 -c 'import json, sys; data = json.loads(sys.stdin.read()); [print(json.dumps(item, ensure_ascii=False)) for item in data]'
+}
+
+json_get_field() {
+    local raw_json="$1"
+    local field="$2"
+    if [[ "$JSON_TOOL" == "jq" ]]; then
+        case "$field" in
+            body)
+                printf '%s' "$raw_json" | jq -r '.body // ""'
+                ;;
+            *)
+                printf '%s' "$raw_json" | jq -r ".${field}"
+                ;;
+        esac
+        return
+    fi
+    printf '%s' "$raw_json" | python3 -c '
+import json
+import sys
+
+field = sys.argv[1]
+data = json.loads(sys.stdin.read())
+value = data.get(field)
+if value is None:
+    print("")
+elif isinstance(value, (dict, list)):
+    print(json.dumps(value, ensure_ascii=False))
+else:
+    print(value)
+' "$field"
+}
+
+project_display_name() {
+    if [[ -n "${PROJECT_NAME:-}" ]]; then
+        printf '%s' "$PROJECT_NAME"
+        return
+    fi
+    if [[ "$REPO" == */* ]]; then
+        printf '%s' "${REPO##*/}"
+        return
+    fi
+    basename "$REPO_DIR"
+}
+
 append_markdown_path_list() {
     local paths="$1"
     local out_file="$2"
@@ -288,7 +360,7 @@ log "=== Issue自動解決スクリプト開始 ==="
 
 require_cmd git
 require_cmd gh
-require_cmd jq
+detect_json_tool
 
 if [[ ! -d "$REPO_DIR/.git" ]]; then
     error_exit "REPO_DIR が Git リポジトリではありません: $REPO_DIR"
@@ -314,7 +386,7 @@ fi
 log "オープンIssueを取得中..."
 ISSUES=$(gh issue list --repo "$REPO" --state open --json number,title,body --limit "$ISSUE_LIMIT" 2>>"$LOG_FILE") || error_exit "Issueの取得に失敗しました"
 
-ISSUE_COUNT=$(echo "$ISSUES" | jq 'length')
+ISSUE_COUNT=$(json_array_length "$ISSUES")
 log "オープンIssue数: $ISSUE_COUNT"
 
 if [[ "$ISSUE_COUNT" -eq 0 ]]; then
@@ -323,10 +395,11 @@ if [[ "$ISSUE_COUNT" -eq 0 ]]; then
 fi
 
 # 各Issueを処理
-echo "$ISSUES" | jq -c '.[]' | while read -r issue; do
-    ISSUE_NUM=$(echo "$issue" | jq -r '.number')
-    ISSUE_TITLE=$(echo "$issue" | jq -r '.title')
-    ISSUE_BODY=$(echo "$issue" | jq -r '.body // ""')
+PROJECT_DISPLAY_NAME="$(project_display_name)"
+json_stream_items "$ISSUES" | while read -r issue; do
+    ISSUE_NUM=$(json_get_field "$issue" number)
+    ISSUE_TITLE=$(json_get_field "$issue" title)
+    ISSUE_BODY=$(json_get_field "$issue" body)
     
     log "--- Issue #${ISSUE_NUM} を処理中: ${ISSUE_TITLE} ---"
 
@@ -340,7 +413,7 @@ echo "$ISSUES" | jq -c '.[]' | while read -r issue; do
     fi
     
     # AIに渡すプロンプトを構築
-    PROMPT="あなたはeegflowプロジェクトの開発者です。以下のGitHub Issueを解決してください。
+    PROMPT="あなたは${PROJECT_DISPLAY_NAME}プロジェクトの開発者です。以下のGitHub Issueを解決してください。
 
 ## Issue #${ISSUE_NUM}: ${ISSUE_TITLE}
 

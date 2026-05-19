@@ -5,7 +5,7 @@ description: "公開データ（EEG中心）と共有基盤を、Mind-Uploadの�
 article_type: Resource
 subtitle: "「データがある」だけでは足りない。規格・メタデータ・評価がセット。"
 author: Mind Uploading Research Project
-last_updated: "2026-02-10"
+last_updated: "2026-03-06"
 note: "Curated List (v0)"
 ---
 <!-- IMPORTANT: Do not delete or overwrite this information. It serves as the project's permanent knowledge base. -->
@@ -17,6 +17,20 @@ note: "Curated List (v0)"
 <h2>How To Use</h2>
 <p>
 このページは、「最初にどのデータで練習すればよいか」を決めるための実用リストです。まずは公開データで、<strong>同じ結果を再現できる状態（L0）</strong>を作り、その次に<strong>予測できるか・条件変更に耐えるか（L1〜L2）</strong>を確かめます。
+</p>
+</div>
+
+<div class="note-box">
+<strong>補足Wiki</strong>
+<p>
+公開データの意味、BIDS、QC、ベンチマーク設計を初歩から押さえる場合は、<a href="{{ '/wiki/measurement-basics.html' | relative_url }}">計測とデータ</a>、<a href="{{ '/wiki/bids-and-eeg-bids.html' | relative_url }}">BIDS / EEG-BIDS</a>、<a href="{{ '/wiki/reproducibility-basics.html' | relative_url }}">再現性とベンチ</a> を先に読むと理解しやすいです。
+</p>
+</div>
+
+<div class="note-box">
+<strong>Related U</strong>
+<p>
+データ設計から未解決問題へ戻る場合は、<a href="{{ '/wiki/u2-resolution-limits.html' | relative_url }}">U2 時空間解像度の下限</a>、<a href="{{ '/wiki/u6-personalization-vs-generalization.html' | relative_url }}">U6 個人化と汎化</a>、<a href="{{ '/wiki/u7-multimodal-alignment.html' | relative_url }}">U7 マルチモーダル整合</a>、<a href="{{ '/wiki/u9-ood-robustness.html' | relative_url }}">U9 OOD 頑健性</a>、<a href="{{ '/wiki/u14-reproducibility-operations.html' | relative_url }}">U14 追試可能性の実装</a> が近い論点です。
 </p>
 </div>
 
