@@ -12,6 +12,7 @@
 - `datasets.md`: 公開データと L0 実践
 - `mind_uploading_papers.md`: 論文アーカイブ
 - `research_harvest_50.md`: 未解決課題と文献マップ
+- `classic_mu_archive.md`: ibiblio 版 Mind Uploading Home Page の日本語ガイド
 - `wiki/`: 基礎学習、用語、読み方の補助ページ
 
 ## 公開範囲

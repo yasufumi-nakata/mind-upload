@@ -198,6 +198,11 @@ recommended_pages:
 <td>これは、混合年の順序が別々の推論ラダーを黙って融合させずに、技術読者がアーカイブにアクセスする方法を修正するページであるためです。</td>
 </tr>
 <tr>
+<td>古典的な MU ホームページ群、1990年代の論点、歴史的な用語や政策想像</td>
+<td><a href="classic_mu_archive.html">classic_mu_archive.html</a></td>
+<td>現在の検証ページと混ぜず、出典つきの歴史資料として参照できるようにするためです。</td>
+</tr>
+<tr>
 <td>最初に読むべき内容に関する入力ガイド</td>
 <td><a href="index.html">index.html</a></td>
 <td> のナビゲーションパスを最初に統一し、同じガイダンスが複数のページに重複を防ぐためです。</td>
@@ -346,6 +351,7 @@ recommended_pages:
 <tr><td>研究上の質問</td><td><a href="perspective.html">perspective.html</a></td><td>理論構成、現状、文献証拠</td><td><a href="perspective.html#design-principles">perspective.html#design-principles</a></td></tr>
 <tr><td>未解決の問題 x 文献</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td><td>U固有の調査質問、文献監査、重複クリーンアップ、および未解決の質問構成</td><td><a href="datasets.html">datasets.html</a></td></tr>
 <tr><td>ペーパー アーカイブ x テクニカル ファスト レーン</td><td><a href="mind_uploading_papers.html">mind_uploading_papers.html</a></td><td>ペーパー レベルのアンカー、年表ポリシー、ルートファミリーの分割、混合年前のテクニカルエントリーカード</td><td><a href="research_harvest_50.html">research_harvest_50.html</a></td></tr>
+<tr><td>歴史資料</td><td><a href="classic_mu_archive.html">classic_mu_archive.html</a></td><td>ibiblio 版 Mind Uploading Home Page から辿れる MU 関連ページの日本語ガイド</td><td><a href="wbe_101.html">wbe_101.html</a> / <a href="verification.html">verification.html</a></td></tr>
 <tr><td>ブリッジ限定の同一被験者 / 同一脳証拠</td><td><a href="verification.html#state-continuity-bridge-card">verification.html#state-continuity-bridge-card</a></td><td>ブリッジ負担、座標転送、レジーム連続性、残留ドリフト上限</td><td><a href="wiki/state-continuity-bridge.html">wiki/state-continuity-bridge.html</a></td></tr>
 <tr><td>人間プロキシ構成と生きた人間ルートの上限</td><td><a href="verification.html#human-proxy-composition-card">verification.html#human-proxy-composition-card</a></td><td>同一被験者関係、モデル負担、増分ゲイン、プロキシ行をまたぐ残留隠れ状態上限</td><td><a href="wiki/human-proxy-composition.html">wiki/human-proxy-composition.html</a></td></tr>
 <tr><td>参加ルーティング</td><td><a href="issue.html">issue.html</a></td><td>問題のワークフロー、応答ステータス、外部依存関係の孤立タスク</td><td><a href="issue.html#external-collaboration">issue.html#external-collaboration</a></td></tr>
@@ -383,6 +389,7 @@ recommended_pages:
 <ul>
 <li><a href="research_harvest_50.html">research_harvest_50.html</a></li>
 <li><a href="mind_uploading_papers.html">mind_uploading_papers.html</a></li>
+<li><a href="classic_mu_archive.html">classic_mu_archive.html</a></li>
 <li><a href="summary_booklet.html">summary_booklet.html</a></li>
 <li><a href="datasets.html">datasets.html</a></li>
 <li><a href="glossary.html">glossary.html</a></li>

@@ -351,6 +351,12 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 <a href="datasets.html#l0-practice">L0 の練習を開く -></a>
 </div>
 
+<div class="cta-box">
+<h4>古典 MU ページの日本語ガイド</h4>
+<p>ibiblio の Mind Uploading Home Page から辿れる MU 関連ページを、歴史資料として日本語で確認する入口。</p>
+<a href="classic_mu_archive.html">古典資料を開く -></a>
+</div>
+
 <section class="section" id="cases">
 <h2 class="section-title">歴史的な事例</h2>
 <p>
@@ -403,6 +409,7 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 <li><a href="verification.html#casework">検証ケースワーク -></a></li>
 <li><a href="issue.html#proposal-integration">統合提案 -></a></li>
 <li><a href="mind_uploading_papers.html">紙のコレクション -></a></li>
+<li><a href="classic_mu_archive.html">古典 MU ページ -></a></li>
 <li><a href="issue.html#external-collaboration">外部依存 -></a></li>
 <li><a href="content_hub.html">コンテンツ ハブ -></a></li>
 </ul>
