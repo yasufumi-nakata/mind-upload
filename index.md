@@ -359,9 +359,10 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 
 <div class="cta-box">
 <h4>外部資料の日本語全文翻訳</h4>
-<p>compcogneuro リポジトリ群と NetPyNE docs を、原典の順序を保った日本語訳として読む入口。</p>
+<p>compcogneuro リポジトリ群、NetPyNE docs、OpenSourceBrain Documentation を、原典の順序を保った日本語訳として読む入口。</p>
 <a href="external/compcogneuro/">compcogneuro を開く -></a>
 <a href="external/netpyne/">NetPyNE を開く -></a>
+<a href="external/opensourcebrain/documentation/">OpenSourceBrain を開く -></a>
 </div>
 
 <section class="section" id="cases">
@@ -419,6 +420,7 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 <li><a href="classic_mu_archive.html">古典 MU ページ -></a></li>
 <li><a href="external/compcogneuro/">compcogneuro 翻訳 -></a></li>
 <li><a href="external/netpyne/">NetPyNE 翻訳 -></a></li>
+<li><a href="external/opensourcebrain/documentation/">OpenSourceBrain 翻訳 -></a></li>
 <li><a href="issue.html#external-collaboration">外部依存 -></a></li>
 <li><a href="content_hub.html">コンテンツ ハブ -></a></li>
 </ul>
