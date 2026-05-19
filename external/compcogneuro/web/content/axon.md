@@ -1,0 +1,143 @@
+---
+layout: default
+title: "compcogneuro/web: axon"
+description: "compcogneuro/web: axon.md の日本語訳"
+article_type: 翻訳資料
+last_updated: '2026-05-20'
+audience: 外部資料を日本語で原文順に読みたい読者
+reading_time: 原文量に依存
+page_intro: "このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。"
+accuracy_note: "機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。"
+---
+
+<main class="main-container">
+<article class="content-column">
+
+<div class="note-box">
+<strong>出典とライセンス</strong>
+<p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/axon.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/axon.md</a></p>
+<p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source" markdown="1">
++++
+Categories = ["Computation", "Cognition", "Neuroscience", "Activation", "Learning", "Rubicon"]
+bibfile = "ccnlab.json"
++++
+**Axon** は、生物学的に正確でありながら、哺乳類の脳 (齧歯類、サル、人間など) における神経計算の抽象化され、計算上扱いやすいモデルを構築する試みです。目標は、「手数料のエラー」をできるだけ少なくすることです。モデルの機能は、既知で確立された脳の特性に違反してはなりません。 _省略のエラー_が入る余地はまだたくさんあります。すべての詳細を含めることができるわけではありませんし、含めるべきではありません。
+
+このアプローチは、入手可能な [[neuroscience]] 文献の詳細な考察と、既知の [[cognition|cognitive]] およびそれぞれの生物の行動能力の理解に基づいて、機能的および [[computation]]al [[levels of analysis]] についての強力な考察によって導かれます。言い換えれば、これは [[Computational Cognitive Neuroscience]] であり、これらのさまざまなレベルの分析にわたって注目すべき [[synergies]] を活用しています。これらの相乗効果は、全体的なアプローチが基本的な質問の答えに向けて正しい軌道に乗っているというある程度の確信を与えてくれます。_脳の詳細な生物学的メカニズムは、どのようにして人間を含むさまざまな哺乳類種の計算上高度な認知能力を生み出すのか_?
+
+ここで取り上げる神経科学、認知、計算のかなりの範囲を、一貫した自己矛盾のない観点から考えると、この資料は [[intro book|introductory textbook]] として適しています。この教科書的な扱いは、[[@^OReillyMunakata00]] に遡る一連の以前の [[book|textbooks]] に基づいており、これらは Axon の直接の後継である [[Leabra]] フレームワークに基づいています。
+
+Axon は、Leabra に比べてより現実的な離散スパイキング ダイナミクスと関連する学習メカニズムを使用し、皮質および皮質下の脳領域の相互接続システムの相互作用に基づいて、[[Rubicon]] 目標駆動型学習システムの機能バージョンを実装するためのより高度な脳領域モデルをサポートします。この動機付けシステムは、生態学的に現実的な方法で認知スキルと行動スキルの自律的な学習を可能にするために重要です。
+
+脳のような複雑なものを理論的に理解する際の根本的な課題は、私たちが重大な「確証バイアス」に悩まされていることです。このバイアスにより、科学データがモデルと一致する形に歪められてしまうのですが、実際の仕組みはそうではありません。実際、私たちのモデルの中心となる脳の [[bidirectional connectivity]] は、この現象に大きく貢献しています。これにより、実際にそこにあるものではなく、見たいものを見ることができるようになります。実際、私たちは途中でこの批判を他のいくつかの代替仮説に対して課すことになります (たとえば、[[Hebbian learning]] を参照)。
+
+これに関連して、[compcogneuro.org](https://compcogneuro.org) で広範なコンテンツを生成する主な目的は、Axon の現在のバージョンが神経科学と認知心理学における既存の科学的知見をどの程度捉えているかを完全に文書化し、興味のある読者がモデルが脳機能の正確な画像を提供する範囲について独自の意見を形成できるようにすることです。このような問題に関するフィードバックは、[ギットハブディスカッション](https://github.com/compcogneuro/web/discussions) フォーラムを使用して行うことをお勧めします。 [ギットハブの問題](https://github.com/compcogneuro/web/issues) は、タイプミスやその他の「バグ」を報告するために使用できます。提案された修正やその他の貢献に対するプル リクエストは常に歓迎され、貢献を文書化する方法を提供します。
+
+最終的に、科学的方法における最終的なステップは、本明細書の関連箇所に記載されているように、モデルからの特定の予測を直接経験的にテストすることであり、その予測は長年にわたって多数行われてきました。おそらく、そのようなテストの最も中心的なものは [[Jang et al (2026)]] で報告されており、Axon モデルでの学習を促進する [[synaptic plasticity]] の [[temporal derivative]] 形式を直接テストします。
+
+## 計算上の動機付け
+
+[[search]] の計算レベルのプロセスは、スパイキングやシナプスの重みを含む基本的な神経処理要素から、目標駆動型 [[Rubicon]] システムの重要な役割に至るまで、軸索の神経機構を動機付けるための包括的なフレームワークを提供します。
+
+中心的な洞察は、認知に関連するすべての計算問題やプロセスは、さまざまな基準を満たす状態を見つけるために、選択肢の空間を検索するという観点から定式化できるということです。たとえば、チェスのゲームは、考えられるボード構成の非常に広い空間から、ゲームに勝利につながるそのような構成のシーケンスを検索するという観点から理解できます。実際、これはまさに [ディープブルー](https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)) チェス コンピューターが、最適化された「ブルート フォース」検索プロセスを通じてグランドマスター ゲイリー カスパロフを倒すために行ったことです。
+
+検索される空間のサイズ (次元数) が増加するにつれて、あらゆる検索プロセスの基本的な計算上の課題は [[curse of dimensionality]] になります。寸法を追加するたびに、空間のサイズに_指数関数_が加算されます。たとえば、8 次元の 2 値空間には $2^8 = 256$ 状態がありますが、次元数が 2 倍 (16) のバイナリ空間にはすでに $2^{16} = 65,536$ 要素があります。 「現実世界」の空間にはほぼ確実に、手に負えないほど多数の要素が含まれています。これが計算量に関する文献や _NP-complete_ 問題の空間とどのように関連するかについて詳しくは、[[search]] ページを参照してください。
+
+この検索ベースの観点から見ると、[[artificial intelligence]] (AI) が一般的に効果的でなかった理由は、関連する空間を検索するために基本的にシリアルな記号メカニズムに依存していたためであり、現実世界の複雑さに直面したときに機能不全に陥っただけです。そして、AI が現在成功している理由は、[[abstract neural network|neural networks]] が、重み付けされたシナプス接続を持つ_専用並列_要素のネットワーク上で動作する確率的勾配降下法を介して、高次元空間で効率的な検索を実行できるためです。このプロセスには、時間スケールの異なる 2 つのバージョンがあります。
+
+* [[Error backpropagation]] 学習は、相互接続されたニューロンのような処理要素のネットワーク全体で「偏導関数」 (つまり、勾配) を計算し、可能な表現 (重み付けされたシナプス接続によってパラメーター化された) の空間を効率的に検索し、特定の問題を解決できるものを見つけます。
+
+* [[bidirectional connectivity|bidirectionally connected]] ネットワークの [[Constraint satisfaction]] 処理では、勾配を使用して可能な表現の空間を効率的に検索し、ネットワークへの外部入力によって課される制約と、学習されたシナプスの重み (つまり、ネットワーク内の _knowledge_) からの制約の両方と一致する表現を見つけます。
+
+したがって、この計算レベルでは、Axon フレームワークの背後にある主要な仮説は、専用並列ニューラル ハードウェアを使用したこれらの勾配ベースの検索メカニズムが、現実世界の複雑さに直面して計算を成功させるために「不可欠」であるということです。重要なことに、ChatGPT などを強化する [[large language models]] を含むほとんどの既存の AI モデルは、誤差逆伝播学習の能力に依存していますが、双方向接続を持たず、より限られた形式の制約満足処理のみを備えています。
+
+対照的に、Axon フレームワークは、基本的に [[neocortex]] に存在する双方向接続に基づいており、これが使用する特定の生物学に基づくエラー逆伝播形式と、ニューラル処理の各ステップでの完全なネットワーク全体の制約を満たすプロセスの両方を推進します。概念的には、これは Axon ネットワークがあらゆるステップで [[optimized representations]] を使用してコンピューティングしていることを意味し、これは困難なタスク環境での動作に重要な意味を持ちます。実際、可能性のある表現の膨大な空間を約 200 ミリ秒以内に効率的に検索し、そうでなければ見つけるのに手に負えないほどの時間がかかる可能性がある問題を解決する方法を見つけることができます。
+
+既存の抽象ニューラル ネットワークに双方向接続が含まれていない理由は数多くあります。計算コストが高く、正のフィードバック ループを制御するために堅牢な [[inhibition|inhibitory]] やその他のメカニズムが必要です。また、興味深いことに、段階的で不確実な情報を効果的に表現し、分布のさまざまなモードのサンプリングを可能にするために離散スパイク ニューラル ダイナミクスが必要です ([[@McKeeCrandellChaudhuriEtAl22]])。これが、効率的な検索という計算レベルの問題には、かなり生物学的に詳細なモデルが必要とされる理由です。
+
+[[reinforcement learning]] (RL) の領域である、シリアルの試行錯誤の動作と学習という特定の問題は、必然的にシリアルであるため、検索の観点から特に重大な課題を引き起こします。問題を解決するために複数の異なる戦略を同時に採用することはできません。また、複数の異なるアクション シーケンスを同時に実行することもできません。このアクションの「連続的なボトルネック」 ([[@Pashler94]]) により、このような一連の各ステップが可能な限り効果的であることを保証するために、可能な限り高度に最適化された検索プロセスを採用することが絶対に不可欠になります。そうしないと、次元の呪いにより、たとえ控えめなサイズの空間を検索するためにも、手に負えないほど多くの一連のアクション ステップが必要になります。
+
+実際、現在の RL アルゴリズムは、比較的単純なビデオ ゲームでも学習するのに気の遠くなるような回数の試行を必要とし、研究の多くは、この大規模な検索プロセスを管理および分散する方法に焦点を当てています。このため、学習アルゴリズムの間で RL の評判が悪くなっていますが、RL アルゴリズムが本質的に愚かであるということではなく、RL ドメインが逐次探索の性質により本質的に扱いにくいだけであることを理解することが不可欠です。
+
+各タイム ステップでの専用並列の勾配ベースの制約満足処理の使用に加えて、シリアル アクションの問題を軽減するもう 1 つの重要な方法は、この貴重なシリアル検索リソースの割り当てを慎重に保護する、進化的に最適化されたニューラル メカニズムのシステムを持つことです。これは、Axon フレームワークの [[Rubicon]] 目標駆動型処理システムであり、実行されたアクションに関連する利益とコストのトレードオフについて継続的に学習し、この知識を適用して、今後追求する新しい目標の選択を慎重に評価します。
+
+やりがいのあるタスクや退屈なタスクに多くの時間を費やさず、結局先延ばしにしてしまうのは、脳のこの目標主導型の部分のせいかもしれません。これは、非常に合理的で進化的に最適化された脳が「特に今緊急に必要でない場合は、時間と労力がかかることをするな！」と言っているだけです。代わりに、自信を持って実行できるとわかっている、より短くて単純なタスクに取り組む方がはるかに合理的です。そうすることで、リストから外したときに [[dopamine]] のかなりのキックが得られます。
+
+現実世界に住む生物は、関連する問題空間を検索するという極めて限られた能力に基づいて、賢明な行動計画を選択するという課題を何らかの形で解決しなければならないことを考えると、これを効率的に機能させる神経機構の完全な補完を理解することは非常に優先度が高い。これは、目標主導型の行動の選択と関与のプロセスを実装する広範な皮質下および皮質ネットワークのしばしば当惑するほどの複雑さを理解するために費やされた多大な努力に反映されています。
+
+## 軸索のメカニズム
+
+神経および計算メカニズムの観点から見た軸索の中心的な要素は次のとおりです (そのほとんどは、哺乳類の [[neocortex]] の十分に確立された特性です)。
+
+* [[neuron|Spiking neurons]] は、約 200 ミリ秒にわたる [[theta rhythm|theta cycle]] にわたって [[stable activation]] 状態をサポートする比較的長時間持続する [[neuron channels#NMDA]] および [[neuron channels#GABA-B]] チャネルを備えています。これは、現在の入力状態の一貫した表現を確立するために不可欠です。この安定性は、時間的に拡張された [[temporal derivative]] メカニズムを使用して効果的な学習を推進するために必要です。
+
+    The Axon neuron model is fairly conventional from a computational neuroscience perspective, featuring two compartments (soma and [[neuron dendrites|dendrite]]) using a range of conductance-based electrophysiologically-accurate [[neuron channels|channels]] and the widely-used _AdEx_ adaptive exponential approximation to the full Hodgkin-Huxley spiking dynamics ([[@BretteGerstner05]]).
+
+    The discrete spiking behavior of these neurons enables effective graded information integration over time in a way that continuous [[rate code activation]] communication does not, by allowing many different signals to be communicated over time, competing for the overall control of the network activation state as a function of the collective integration of spikes within the neurons in the network. As a result, Axon models are overall much more robust and well-behaved overall compared to their [[Leabra]] rate-code based counterparts, especially with respect to [[constraint satisfaction]] computation.
+
+* [[Error-driven learning]] は、[[predictive learning]] を当然サポートする [[temporal derivative]] を介して計算された誤差に基づいており、ネットワーク アクティビティ状態の経時的な差異として、予測とそれに続く結果を表します。異なる速度で更新するキナーゼ間の競合に基づくローカル [[synaptic plasticity]]、つまり [[kinase algorithm]] は、時間微分ダイナミクスを介して誤差勾配を自然に計算します。その結果は、[[GeneRec]] アルゴリズムで示されているように、強力な計算能力を持つ [[error backpropagation]] アルゴリズムの完全に生物学的に妥当な形式です。このメカニズムの最初の経験的裏付けは、げっ歯類標本におけるシナプス可塑性の電気生理学的測定において、[[Jang et al (2026)]] で報告されています。
+
+    The combination of robust error-driven learning and biologically-detailed spiking neurons in Axon enables these neurons to learn to perform arbitrary computational and cognitive tasks. Furthermore, the availability of a clear computational measure of performance in terms of overall learning capability across a wide range of tasks has enabled the optimization of all the biological parameters to maximize learning performance. There is a consistent set of such parameters that generally works best across all the tasks investigated to date, and thus the additional degrees of freedom associated with these parameters are generally eliminated from consideration in constructing new models, greatly reducing the effective degrees of freedom of the model.
+
+* ネットワーク全体にエラー信号を伝播するために必要な興奮性ニューロン間の [[Bidirectional connectivity]]、および双方向の興奮性接続の効果を制御するために必要な [[inhibition]] をプールし、同時に [[attention]] と競合に関して有益な計算効果をもたらします。上で述べたように、双方向接続は [[constraint satisfaction]] ダイナミクスをサポートしており、現在のボトムアップ (感覚) およびトップダウン (目標) の制約を考慮して、大規模な高次元の知識空間を通じて効率的に [[search]] を介して最も関連性の高い情報を検索 (および合成) できます。これにより、処理の各ステップで [[optimized representations]] が使用されることになり、計算上の大きな利点があります。
+
+    Perhaps most importantly, this bidirectional connectivity is widely thought to be essential for [[conscious awareness]] ([[@Lamme06]]), which is likely critical for the system to access its own internal state of knowledge. This ability is notably absent in current [[abstract neural network]] models that drive the widely-used [[large language models]] (LLMs) for example, which are notorious for their inability to accurately evaluate their own knowledge states, resulting in significant _confabulation_. Most experts do not think these models are conscious, which is consistent with the fact that they are based exclusively on feedforward connectivity.
+
+    The central role of bidirectional connectivity in Axon represents one of the most important points of divergence relative to the vast majority of existing neural network models (along with the combination of biologically-detailed spiking dynamics and error-driven learning), and testing the functional importance of this property is a major overarching goal of this research.
+
+これらのニューラル メカニズムは、事後 [[neocortex]] に関連する学習と処理のための専用並列の勾配ベースの基盤を提供します。事後 [[neocortex]] は、私たちの周囲の世界の状態をエンコード、予測、推論するための強力な表現を学習します。これらの能力を示す特定のモデルについては、空間的に不変な [[object recognition]]、[[spatial attention]]、および [[language]] のコンテキストで説明します。これらの学習された表現の計算レベルのプロパティの概要と、それらが新しい状況に対して効果的な [[generalization]] をどのようにサポートするかについては、[[combinatorial vs conjunctive]] 表現に関する説明を参照してください。
+
+## 一般的な知性とモチベーション
+
+後部新皮質の並列分散処理は、哺乳類の知的行動の全範囲を理解するための全体像の一部にすぎません。上で述べたように、認知と行動の連続的な側面を慎重に保護する、進化的に最適化された実質的な皮質下および皮質メカニズムがあり、それらは時間の経過とともに並行する脳メカニズムから出現します。これらのシリアル モードは、専用並列検索に比べて非効率ではありますが、大幅に柔軟性が高いという独自の利点があります。
+
+実際、[[Turing machine]] の一見魔法のように普遍的な計算能力は、基本的な情報処理操作の任意のシーケンスを組み合わせてあらゆるタスクを実行できる、シリアル処理の本質的な柔軟性から正確に生まれています。したがって、人間の知能の全能力を理解するには (たとえば、真の [[artificial intelligence#artificial general intelligence]] または AGI を作成するため)、このシリアル処理が並列神経基板からどのように発生するかを理解する必要もあります。
+
+Axon プロジェクトの現在の焦点は、げっ歯類の目標と動機に関連する脳領域を理解することにあります。げっ歯類は、霊長類の脳の対応する領域と明確な相同体を持っていますが、すべてがはるかに小さくて単純です。げっ歯類が完全な一般的知能を持っていると誰も非難していないが、それでもなお、げっ歯類は一種の「ストリート・スマート」に依存する重要な生存能力を持っており、これは人間の一般的知能の重要な要素でもあると私たちは信じている。人間が困難な問題を解決するために実際に何が必要かを考えると、AGI には単なる生の [[generalization]] 以上のものが必要であることは明らかです。また、AGI は、解決に向けて認知を促進し、最も重要な問題 (つまり、「根性」; [[@Dweck08]]) に努力を集中させるための動機付けシステムにも大きく依存しています。
+
+これらの目標と動機に関連する脳領域には、[[prefrontal cortex]]、[[basal ganglia]]、および [[amygdala]] が含まれます。これらは、齧歯動物の目標主導型の計画と問題解決のための強力かつ柔軟な能力をサポートします (そして、総脳質量の約 3 分の 1 を占め、これらの領域の重要性を示しています)。高価で貴重なシリアル処理リソースを慎重に保護する必要性と一致して、この目標主導型システムは、特定の目標を達成するための一貫した行動計画に時間と労力を費やすために、アクションの全体的なコストと利点に敏感です。
+
+このシステムの軸索モデルは [[Rubicon]] と呼ばれます。これは、目標への取り組みが、作用する「価値関数」を支配する行動に大きな変化をもたらし、それが目標への集中力を維持し、強い価数の失望や、目標達成の失敗によるうつ病さえも引き起こすという証拠に基づいています ([[@HeckhausenGollwitzer87]]; [[@OReillyHazyMollickEtAl14]]; [[@OReilly20]])。このフレームワークは、広範囲の神経科学、認知、および計算データを統合し、シミュレートされた齧歯動物が、目標に取り組んだ状態によって引き起こされる時間的に延長された一連の行動の結果からどのように学習するかの堅牢なモデルを提供します。この目標主導型学習は、ネットワーク全体の学習を形作る重要なエラー信号を提供し、基本的な予測エラー主導型学習で可能なものを超えています。
+
+これらのメカニズムがなければ、大脳新皮質だけが、時間の経過とともに効果的に行動を組織化する能力を持たず、大部分が受動的な学習および知覚システムになるでしょう（基本的に、[[prefrontal cortex]] が選択的に非活性化されているときに夢を見ている間に経験すること）。
+
+計算レベルでは、[[reinforcement learning#model-based]] 強化学習の領域にはかなり重複する目標がありますが、この領域の作業のほとんどは、適切な目標とアクション プランに向けて高次元空間を介して [[search]] を試みることに関連する [[curse of dimensionality]] に対して十分に堅牢ではありません。たとえば、多くのモデルベースのモデルは、内部モデル ([[@HafnerLillicrapNorouziEtAl22]] など) を使用して一連のアクションの起こり得る影響を予測する逐次的な予測「ロールアウト」を採用しています (チェスのコンピューター「ディープ ブルー」とよく似ています)。しかし、これは現実の環境では扱いにくいものです。
+
+対照的に、Rubicon フレームワークは、前頭前皮質コンポーネントを含む新皮質ネットワークの双方向接続を活用して、各タイムステップでの勾配ベースの専用並列制約満足探索の使用に基づいています。結果として得られる [[optimized representations]] は、現在の目標と計画によって強く制約された方法で環境を自動的にエンコードし、新しいアフォーダンスと問題解決策の出現を可能にします。
+
+このダイナミクスは本質的に私たちが [[conscious awareness]] で主観的に経験するものであり、私たちの分析は、これが単なる付随現象ではなく、むしろシステムの本質的な反映であることを示唆しています。このシステムは、常に自身の知識状態の内容に広範にアクセスし、脳全体からのこれらすべての制約を使用して、純粋なフィードフォワード アーキテクチャでは不可能な方法で問題を解決するための「思考」の流れを形成することができます。
+
+## げっ歯類から人間へ
+
+げっ歯類レベルのモデルが完全に開発された後、次のステップでは、広く研究されているマカクザルなどの中間霊長類レベルのモデルを段階的に経て、ヒトレベルまでスケールアップします。マカクザルは、高度に発達した視覚知覚経路と衝動性運動制御ネットワークを備えており、これらは世界のますます豊かな内部モデルを構築するためのアクティブでダイナミックな様式を提供します。感覚予測学習の [[deepvision simulation]] は、このシステムをモデル化する最初の試みを提供します。
+
+人間の脳は、世界のより豊かでダイナミックなメンタル モデルを形成し、精神的に操作する能力に加えて、高度な思考と推論能力に不可欠な要素として広く認識されている [[language]] の驚異的なパワーを活用できます。言語の予測学習を通じて、世界の非常に有能な内部表現を開発するLLMの成功はこの点を明確に示しており、Axon / Rubiconフレームワークは、強力な目標駆動型の動機付けシステムと、自身の知識状態に意識的にアクセスするための上記のすべての能力を追加し、作話に関する長年の問題を解決する可能性があります。
+
+計算的には、言語と強力な目標主導型計画システムの組み合わせにより、人間の脳は [[self-programmable]] [[Turing machine]] のように機能し、非常に柔軟で体系的な方法で自身の行動を組織化できます。つまり、完全な人間レベルの AGI の鍵は、制約を満たすことで最適化された表現を自動的に生成する、完全に双方向に接続された並列処理基盤の上に、このシリアルで柔軟性の高い汎用形式の計算を搭載することです。これらはすべて、すべてを軌道に乗せ、最も関連性の高い問題に焦点を当てる強力な目標主導型の動機付けシステムによって駆動されます。
+
+<!--- TODO: turing with a twist citations! -->
+
+既存のより抽象的なモデルと比較して、生物学的現実性と複雑さが増すことを考慮すると、これらのモデルのスケールアップには多くの実際的な課題が存在します。さらに、人間が実際にかなりのレベルの一般的な問題解決能力を達成するには、長年にわたる学習と教育が必要であり、これは [[@^Piaget41]] によって計画される発達段階の頂点に相当します。したがって、これは依然として大きな課題ですが、現在の目標は、人間をこれほど賢くする重要な要素を理解するための、強固な生物学的、計算的、認知的基盤を確立することです。
+
+＃＃ まとめ
+
+人間の脳の理論的および計算モデルを評価する際に合理的に尋ねられるであろういくつかの重要な質問に答えることで、全体的なアプローチを要約することができます。
+
+1. _科学的に正確ですか?_ 軸索機構はすべて詳細な [[neuroscience]] データに基づいており、既知の [[cognition|cognitive]] および行動現象を正確に生成します。含まれるメカニズムには重大な委託エラーはありません。そのような各メカニズムには、[[kinase algorithm]] 内のより速い LTP 促進 CaMKII 経路と、より遅い反対側の LTD 促進 DAPK1 経路の間の競合によって計算される [[temporal derivative]] を介した強力なエラー駆動学習の基礎を含む、それを裏付ける確かな証拠があります。この仮説の最初の実験的テスト ([[Jang et al (2026)]]) では、一貫した証拠が示されています。
+
+2. _効果的な計算のための明確な原理的基盤はありますか?_ 高次元空間による [[search]] の原理は、[[optimized representations]] ([[bidirectional connectivity]] によってサポートされる [[constraint satisfaction]] 経由) による学習とオンライン計算の両方についての理解を統一します。主な課題は [[curse of dimensionality]] であり、これには_専用並列_、_勾配ベース_検索メカニズムが必要です。既存の [[reinforcement learning#model-based]] 強化学習メカニズムのほとんどは、何らかの形式の逐次検索を必要とするため、十分に拡張できません。対照的に、[[Rubicon]] フレームワークは、Axon の並列メカニズムと、数百万年にわたる [[evolution|evolutionary]] の並列検索の結果である神経科学に基づいた [[computational-cognitive-neuroscience#reverse engineering]] を利用して、目標駆動型学習を形成および制限する、より強力な [[bias-variance tradeoff|biases]] を構築します。
+
+    From a cognitive perspective, the most direct, intuitive basis for optimism about the overall approach is the connection to [[conscious awareness]] and its grounding in widespread bidirectional interactions among brain areas ([[@Lamme06]]), which suggests that this system could actually _think_ and _reason_ in the same kind of conscious, deliberative manner that we intuitively understand to be taking place in the human brain. Critically, this system should be able to directly access its own state of knowledge in a way that existing models cannot, and use this to direct further reasoning and problem-solving steps via goal-driven cognitive control mechanisms.
+
+3. _少なくとも小規模では実際に機能しますか?_ 広範な小規模 [[simulations]] は、Leabra の以前の [[rate-code activation]] およびほとんどの [[abstract neural network]] モデルと比較して、Axon でのスパイキングベースの活性化からの大きな利点を示すなど、実装されたモデルが実際に機能することを実証しています。
+
+4. _効果的にスケールアップできますか?_ 生物学的に詳細な神経活動関数とともに、処理の試行ごとに双方向の興奮性接続を介して制約を満たすプロセスをシミュレートする際には、かなりの追加計算が必要となるため、このアプローチをスケールアップするには大きな課題となります。したがって、必要な戦略は、最初の 3 つの質問に答える上でできるだけ強力な基盤を確立し、この最後の決定的なステップを実行するために必要なリソースを投資できるようにすることです。これまでの取り組みにより、少なくとも並列 GPU ハードウェア上での計算全体が非常に効率的な方法で行われるようになり、必要なインフラストラクチャの一部は整備されましたが、まだ多くの作業が残っています。
+
+
+</section>
+
+</article>
+</main>
