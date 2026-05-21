@@ -6,13 +6,13 @@
 
 ## 公開ページ
 
-- `index.md`: 最初に読む入口
-- `verification.md`: 検証条件、反証条件、再現性の基準
-- `tech_roadmap.md`: 技術ロードマップ
-- `datasets.md`: 公開データと L0 実践
-- `mind_uploading_papers.md`: 論文アーカイブ
-- `research_harvest_50.md`: 未解決課題と文献マップ
-- `classic_mu_archive.md`: ibiblio 版 Mind Uploading Home Page の日本語ガイド
+- `index.html`: 最初に読む入口
+- `verification.html`: 検証条件、反証条件、再現性の基準
+- `tech_roadmap.html`: 技術ロードマップ
+- `datasets.html`: 公開データと L0 実践
+- `mind_uploading_papers.html`: 論文アーカイブ
+- `research_harvest_50.html`: 未解決課題と文献マップ
+- `classic_mu_archive.html`: ibiblio 版 Mind Uploading Home Page の日本語ガイド
 - `external/compcogneuro/`: compcogneuro 公開リポジトリ群の日本語全文翻訳
 - `external/netpyne/`: NetPyNE docs の日本語全文翻訳
 - `external/opensourcebrain/documentation/`: OpenSourceBrain Documentation の日本語全文翻訳

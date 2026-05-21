@@ -7,19 +7,19 @@ require "erb"
 require "yaml"
 
 ROOT = File.expand_path("..", __dir__)
-OUTPUT_PATH = File.join(ROOT, "summary_booklet.md")
+OUTPUT_PATH = File.join(ROOT, "summary_booklet.html")
 SOURCE_PATHS = %w[
-  index.md
-  verification.md
-  tech_roadmap.md
-  perspective.md
-  datasets.md
-  issue.md
-  content_hub.md
-  wbe_101.md
-  eeg_101.md
-  faq.md
-  glossary.md
+  index.html
+  verification.html
+  tech_roadmap.html
+  perspective.html
+  datasets.html
+  issue.html
+  content_hub.html
+  wbe_101.html
+  eeg_101.html
+  faq.html
+  glossary.html
 ].freeze
 
 SCIENCE_STOPLINE_PATTERNS = [
@@ -193,7 +193,7 @@ end
 def load_page(path)
   absolute_path = File.join(ROOT, path)
   yaml, body = parse_front_matter(absolute_path)
-  slug = File.basename(path, ".md")
+  slug = File.basename(path, File.extname(path))
 
   PageData.new(
     path: path,
