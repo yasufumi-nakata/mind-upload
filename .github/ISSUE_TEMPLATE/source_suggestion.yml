@@ -1,0 +1,36 @@
+name: Source suggestion
+description: 論文、データセット、ツール、外部資料の追加を提案します。
+title: "[Source]: "
+labels: ["source"]
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: 追加したい資料
+      description: タイトル、URL、DOI、著者、公開年などを書いてください。
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 種別
+      options:
+        - 論文
+        - データセット
+        - ソフトウェア
+        - 外部ドキュメント
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: 関連性
+      description: マインドアップロード / WBE / 検証条件とどう関係するかを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: 追加先の候補
+      placeholder: mind_uploading_papers.md, datasets.md, external/... など

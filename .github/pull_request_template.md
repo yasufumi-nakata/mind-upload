@@ -1,15 +1,31 @@
-## Summary
+## 概要
 
 -
 
-## Checks
+## 変更の種類
 
+- [ ] 誤字・表記修正
+- [ ] 本文・構成改善
+- [ ] 出典・論文・データセット追加
+- [ ] 外部翻訳ページ修正
+- [ ] 表示・アクセシビリティ改善
+- [ ] ビルド・CI・運用保守
+
+## 確認したこと
+
+- [ ] 公開ページの導線は `index.md` / `content_hub.md` から自然につながっています。
+- [ ] 出典、原典URL、ライセンス表示を必要な箇所に残しています。
+- [ ] 秘密情報、非公開データ、個人情報、認証情報を含めていません。
+- [ ] 外部翻訳ページを変更した場合、該当 `.html` を直接確認しました。
+
+## 実行したチェック
+
+- [ ] `ruby scripts/build_summary_booklet.rb`
 - [ ] `bundle exec jekyll build`
-- [ ] `node --check automation/server.js`
-- [ ] `bash -n automation/*.sh`
+- [ ] `git diff --check`
+- [ ] `node --check .github/pdf/render-summary-pdf.mjs`（PDF生成や該当JSを変更した場合）
 
-## Notes
+## 補足
 
-- [ ] Public pages were integrated through existing navigation where possible.
-- [ ] No secrets, private biomedical data, or private service credentials are committed.
-
+- レビュー時に重点的に見てほしい点:
+- 未確認の点:

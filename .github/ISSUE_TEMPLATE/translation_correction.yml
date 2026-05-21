@@ -1,0 +1,36 @@
+name: Translation correction
+description: 外部翻訳ページの訳語、誤訳、表記ゆれを報告します。
+title: "[Translation]: "
+labels: ["translation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: 対象ページ
+      placeholder: external/compcogneuro/...html または公開URL
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 現在の訳文
+      description: 問題のある箇所を短く引用してください。
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: 修正案
+      description: 置き換えたい日本語を書いてください。
+    validations:
+      required: true
+  - type: input
+    id: original
+    attributes:
+      label: 原典の該当箇所
+      description: 原典URLや見出しが分かれば書いてください。
+  - type: textarea
+    id: note
+    attributes:
+      label: 補足
+      description: 訳語の根拠、専門分野での一般的な表記などがあれば書いてください。

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: セキュリティ報告
+    url: https://github.com/yasufumi-nakata/mind-upload/security/policy
+    about: 秘密情報、脆弱性、非公開データを含む報告はこちらを確認してください。

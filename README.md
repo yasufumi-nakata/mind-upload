@@ -32,3 +32,13 @@ bundle exec jekyll build
 ```
 
 ビルド後は `_site` の中身だけが公開成果物です。
+
+## コントリビューション
+
+誤字修正、翻訳修正、出典追加、表示改善、ビルド保守などを歓迎します。初めて参加する場合は [CONTRIBUTING.md](CONTRIBUTING.md) を読んでください。
+
+- 行動規範: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- セキュリティ報告: [SECURITY.md](SECURITY.md)
+- Pull Request の確認事項: [.github/pull_request_template.md](.github/pull_request_template.md)
+
+大きな新規ページ、大量翻訳、ライセンス判断が必要な変更は、先に Issue で相談してください。

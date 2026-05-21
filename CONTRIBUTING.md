@@ -1,29 +1,79 @@
-# Contributing
+# コントリビューションガイド
 
-## Setup
+このリポジトリは、マインドアップロードと Whole Brain Emulation を検証可能な研究課題として読むための公開サイトです。研究者、翻訳者、実装者、読者のどの立場からでも貢献できます。
+
+## 歓迎する貢献
+
+- 誤字、訳語、リンク切れ、表示崩れの修正
+- 論文、データセット、検証条件、反証条件の追加
+- 外部資料翻訳ページの日本語修正
+- 図表、アクセシビリティ、読みやすさの改善
+- ビルド、GitHub Actions、公開フローの保守
+- Issue での再現手順、出典、改善案の整理
+
+## 最初に読むもの
+
+- [README.md](README.md): サイトの目的と主要ページ
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md): 参加時の行動規範
+- [SECURITY.md](SECURITY.md): セキュリティや秘匿情報の報告方法
+- [.github/pull_request_template.md](.github/pull_request_template.md): Pull Request に必要な確認事項
+
+## 作業の進め方
+
+1. 既存 Issue を確認し、重複がないか見ます。
+2. 小さい変更なら Pull Request を直接送って構いません。
+3. 大きい構成変更、新規ページ、大量翻訳、ライセンス判断が絡む変更は、先に Issue で相談してください。
+4. Pull Request は、1つの目的に絞ってください。
+5. レビューで指摘が出た場合は、議論を残しながら差分を更新してください。
+
+## ローカル確認
+
+初回だけ依存関係を入れます。
 
 ```bash
 bundle install
-cd automation && npm install
 ```
 
-## Checks
+通常の本文・翻訳・ナビゲーション変更では、次を実行してください。
 
 ```bash
+ruby scripts/build_summary_booklet.rb
 bundle exec jekyll build
-cd automation && npm test
+git diff --check
 ```
 
-`automation` currently contains operational scripts. If `npm test` is still the placeholder script, use a dry run instead:
+PDF生成や GitHub Actions の JavaScript を変更した場合は、追加で確認します。
 
 ```bash
-bash ./update_data.sh --dry-run
+node --check .github/pdf/render-summary-pdf.mjs
 ```
 
-## Content Rules
+## 公開コンテンツのルール
 
-- Prefer updating existing pages before creating new public pages.
-- Keep public navigation centered on `index.md` and `content_hub.md`.
-- Put operational logs and generated intermediate artifacts under `automation/` or ignored paths.
-- Do not commit secrets, private biomedical data, or private service credentials.
+- 読者向けの本文は日本語で書いてください。
+- 主張、数値、論文情報、データセット情報には、できるだけ出典リンクを付けてください。
+- 既存ページへ統合できる内容は、独立ページを増やす前に統合を検討してください。
+- 公開ナビゲーションは `index.md` と `content_hub.md` を中心に保ちます。
+- 内部メモ、作業ログ、生成途中のファイル、個人的な記録は公開ページに入れないでください。
+- 秘密情報、非公開データ、個人情報、認証情報は絶対にコミットしないでください。
 
+## 外部翻訳ページのルール
+
+`external/compcogneuro/`、`external/netpyne/`、`external/opensourcebrain/` は、外部資料を日本語で読むための翻訳ページです。現在は Markdown からのコンパイルではなく、各ページが独立した HTML です。
+
+- 翻訳修正は該当する `.html` を直接編集してください。
+- 原典URL、ライセンス表示、出典メモは残してください。
+- コード、コマンド、URL、引用ラベルは、意味が変わらないように扱ってください。
+- 大量置換を行った場合は、代表ページをブラウザで確認してください。
+- 外部資料由来の画像や本文を追加する場合は、ライセンスと出典を確認してください。
+
+## 文体とレビュー基準
+
+- 断定が強すぎる表現は避け、検証可能な形で書いてください。
+- 「何が未確認か」「どの条件なら反証されるか」を可能な範囲で残してください。
+- 専門用語は、既存の訳語や `glossary.md` / `wiki/` の表記に合わせてください。
+- 読みやすさを優先し、巨大な段落や長すぎる箇条書きは分割してください。
+
+## ライセンス
+
+このリポジトリへの貢献は、リポジトリの [LICENSE](LICENSE) に従うものとして扱います。外部資料の翻訳や引用を含む場合は、原典側のライセンスと出典表示も維持してください。

@@ -44,6 +44,10 @@ exclude:
   - .gitignore
   - AGENTS.md
   - README.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - SECURITY.md
+  - CHANGELOG.md
   - requirements.txt
   - "*.json"
   - "*.csv"
