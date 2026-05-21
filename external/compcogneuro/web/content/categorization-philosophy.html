@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: categorization-philosophy | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: categorization-philosophy.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: categorization-philosophy</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/categorization-philosophy.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/categorization-philosophy.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Cognition”]
+bibfile = “ccnlab.json”
++++
+このセクションでは、精神的カテゴリーに関連する哲学的問題と、それらに明らかな「真実」の価値が明らかに欠如していること、そしてこれがどのような意味を持つのかをもう少し詳しく掘り下げます。このような精神カテゴリーの神経基盤への必要な入門については、[[categorization]] を参照してください。</p>
+
+  <p><em>重要な免責事項:</em> これはおそらくさまざまな人々にとって興味深いトピックになるでしょうし、確かにこのトピックについては哲学文献で多くのことが書かれています。この治療法は比較的最小限で、神経科学のアプローチに強く制約されています。</p>
+
+  <ul>
+    <li>
+      <p>[[categorization]] で述べたように、精神的なカテゴリーは学習や言語などを介した社会的相互作用によって形成されるようで、安定した内部カテゴリー表現を形成する私たちの能力を駆り立てるある種の基礎的な規則性がある可能性がありますが、実際には、それらはいかなる堅実な「現実」にも「根拠」を持っていません。</p>
+    </li>
+    <li>
+      <p>これは、人間の認知に関する多くの事実と一致します。認知は非常に誤りやすい、人々は常にあらゆる種類の完全に間違ったことを信じています (そして、これらの信念を非常に大切にしていることがよくあります…) など。</p>
+    </li>
+    <li>
+      <p>しかし、この見解を受け入れるのは、いささか不安です。なぜなら、それは完全な「文化的相対主義」陣営に一マス入れてしまうようなものであり、意味のある「普遍的真実」をもつことは決して期待できないからです。  これは客観主義者にとっては吐き気を催すものであり、一般に「世界の本当の性質」を発見しようとする科学者にとっては好ましくありません。</p>
+    </li>
+    <li>
+      <p>ただし、この問題には非常に優れた解決策があります。ただし、それは決して「絶対」ではなく、確かに多くの時間と忍耐 (そして個人間の協力) が必要です。  それは科学の基盤でもあります。  この解決策は、<strong>個人間で共有できる</strong>*再現可能な<strong>経験に基づいて、これまで以上に広範な</strong>自己一貫性のある**一連の精神カテゴリーを開発することです。  要するに、あなたが偶然に開発した特定の精神的カテゴリーは間違っている可能性が高いですが、あなたと他の人々のグループが、時間の経過とともにそのようなカテゴリーのセット全体にわたって自己一貫性のある非常に信頼できる基本的な経験のセットとそれらを分類する方法について全員が同意できる場合、それらは「真実」である可能性が非常に高いように思えます。</p>
+    </li>
+    <li>
+      <p>科学用語では、「経験」とは、さまざまな研究室で再現できる <strong>実験</strong> です。  そして精神的なカテゴリーは<strong>科学理論</strong>であり、これらは特定の一連の実験だけでなく、相互に、そして他のそのような理論をサポートする他のすべての実験とも一貫していなければなりません。</p>
+    </li>
+    <li>
+      <p>現時点では、物理学における「標準モデル」や化学、生物学、分子遺伝学など、自然界の多くの現象を包含する科学における集合的な理解が存在します。人間の認知や神経科学などのより高度なより複雑な現象には、さらに多くの未解決の問題がありますが、進歩は進んでおり、人々はおそらく、多くの重要な事柄が強力な全体的コンセンサスを持っていることに驚くでしょう。  しかし、もちろん、このすべてを知っている人は一人もいません。  しかし、とにかく、それは知るために存在しており、私たちがこれから得ようとしている真実に最も近いものを構成しているようです。</p>
+    </li>
+    <li>
+      <p>短い答え: 真実を見つけたいなら、科学者になりなさい!  そうでない場合は、ただでっち上げただけで満足してください。  脳はこの分野に非常に優れており、あなたにうまく役立つかもしれません。科学者になりたくない場合は、自分のさまざまな心のカテゴリー (信念) について考えて、どのカテゴリーが互いに一致しているように見え、どのカテゴリーが一致していないかを確認してみることもできます。  次に、現実世界での実際の物理的経験に最も一致する方法で、矛盾を解決してみます。  そうすることで、おそらくあなたの心のカテゴリーの質が向上し、ある種の根底にある真実にさらに近づくことになるでしょう。</p>
+    </li>
+  </ul>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>

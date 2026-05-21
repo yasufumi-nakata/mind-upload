@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: vision | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: vision.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: vision</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/vision.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/vision.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Neuroscience”]
+bibfile = “ccnlab.json”
++++
+<strong>視覚</strong>は、霊長類、特に人間にとって支配的な感覚様式です。しかし、げっ歯類やその他のほとんどの種では比較的未発達であり、[[olfaction]] (匂い) が支配的な感覚です。夜行性と昼行性のライフスタイルも、げっ歯類の視覚の有効性に大きな違いをもたらします。ラットとマウスは夜行性です ([[@KrubitzerCampiCooke11]])。霊長類では、視覚は遠方の世界の特性に即時かつ詳細にアクセスできるようにするのに特に役立ち、それ自体が [[motor]] の行動を計画し制御するための主要な基盤です。</p>
+
+  <p>霊長類以外のほとんどの種では、視覚入力から計算された [[#motion]] 信号が最も重要であり、潜在的な捕食者に警告し、[[vestibular]] システムとともに [[cerebellum]] への入力を駆動して行動の感覚的結果を表現します。前庭入力と運動入力のこの収束は、[[parietal]] 皮質における [[space]] の表現を固定する一連の中脳および視床経路を介して「頭部方向」システムを駆動します。これは、[[hippocampus]] における [[navigation]] および [[episodic memory]] にとって不可欠です。</p>
+
+  <p>げっ歯類と霊長類の頭頂経路は質的に類似しており、それに応じて、それらのナビゲーション能力も多くの点で同等です ([[@GrievesJeffery17]])。実際、視覚のこれらの空間的およびナビゲーション的側面は、多くの非哺乳類脊椎動物に共通しており、広範囲にわたる真に驚くべきナビゲーション能力をサポートしています ([[@GrievesJeffery17]])。</p>
+
+  <p>空間的に不変な方法 (すなわち、[[#object recognition]]) で物体を認識する能力には、低レベルの網膜トピック入力信号からより安定したより複雑な特徴を段階的に抽出する、比較的大きな皮質領域の 階層的に組織されたシーケンス が必要です。これは、霊長類の [[neocortex]] の一次視覚 <strong>後頭葉</strong>から<strong>側頭葉</strong>までの経路で発生し、霊長類の脳の神経ハードウェアへの多額の投資を表します。対照的に、げっ歯類の視覚野は比較的平坦で不均一であるため ([[@KrubitzerCampiCooke11]])、ラットはパターンに反応できますが、物体そのものを安定して表現する能力がありません。</p>
+
+  <h2 id="section">網膜</h2>
+
+  <p>視覚処理は明らかに目の<strong>網膜</strong>で始まり、そこには光を電気信号に変換する<strong>光受容体</strong>があり、最終的に<strong>網膜神経節</strong>ニューロンのスパイク出力を駆動し、脳のさまざまな部分に広く投影されます。これには、[[thalamus]]への主要な投影が含まれ、その後[[neocortex]]に続きます。</p>
+
+  <p>しかし、網膜は受動的な伝達システムとは程遠いものです。網膜は、[[evolution]] を通じて設計された複雑な回路に従って多数の重要な「信号処理」機能を実行し、その後の他の領域での処理のために視覚入力の最も関連性の高い特徴を抽出します。計算レベルでは、網膜は主に <strong>圧縮</strong>、<strong>コントラスト強調</strong>、および [[#motion]] 抽出を実行するため、出力信号は最大限に「効率的」かつ「有益」になります。</p>
+
+  <h2 id="section-1">モーション</h2>
+
+  <p>ほとんどの動物の網膜では運動処理が堅牢に計算されており、<strong>スターバースト アマクリン細胞 (SAC)</strong> が網膜の方向に敏感な信号の検出に重要な役割を果たしています ([[@Wei18]]; [[@MorrieFeller18]]; [[@BrombasKalita-deCroftCooper-WilliamsEtAl17]]; [[@JainMurphy-BaumdeRosenrollEtAl20]]; [[@GreeneKimSeung16]])。これらの細胞は放射状に対称な樹状突起を持ち、中心から外側への運動感度（遠心力場）を示すため、中心のRFから外側に伝播する視覚信号がニューロンを最大限に活性化します。したがって、最大の活性化刺激は、環状に迫り来るような刺激、例えば、中央のＲＦ点を中心とするリング状の刺激にズームインすることになる。</p>
+
+  <p>放射対称 DoG セルと同様に、このような放射対称検出器を組み合わせて、異なる SAC 入力の優先領域とヌル領域をオフセットすることにより、全体的な方向固有の検出器を生成することもできます。</p>
+
+  <p>遠位樹状枝は、異なる時間的ダイナミクスで双極細胞から入力を受け取り、各遠位枝内で独立した統合ダイナミクスを持ちます。したがって、SAC セルの全体的な応答は、より小さなサブ領域の独立した動き信号の空間統合です。 [[@^WuKimDaceyEtAl23]] は、文献における SAC 機能の 2 つの主な理論を特定します。樹状突起統合特性に基づく_形態学的_ (例: [[@EncisoRempeDmitrievEtAl10]]; [[@TukkerTaylorSmith04]])、および [[@^KimGreeneZlateskiEtAl14]] からの_時空_メカニズムです。</p>
+
+  <blockquote>
+    <p>体細胞から外側への動きにより、近位 BC が活性化され、続いて遠位 BC が活性化されます。刺激速度が時間差に対して適切であれば、両方の BC グループからの信号が同時に SAC 樹状突起に到達し、合計して大きな脱分極が生じます。体細胞に向かう内側への動きの場合、BC シグナルは非同期的に SAC 樹状突起に到達し、わずかな脱分極のみを引き起こします。したがって、実験的に観察されたように、樹状突起は外側への動きを「優先」します。</p>
+  </blockquote>
+
+  <p>これらは相互に互換性がないわけではなく、正確にどのように機能するかについては、現時点で最終的な合意はありません。 [[Axon]] モデルでは、信頼性が高く正確な運動方向と速度 (つまり、速度) 信号を生成する、別の非常に堅牢な運動メカニズムを使用します。これは、SAC ニューロンの特性とも互換性があります。このメカニズムは [[temporal derivative]] 原理に基づいており、以下で説明するように、「高速」と「低速」の時間統合プロセスの差に基づいて計算されます。</p>
+
+  <p>この時間微分メカニズムには、目の動きに依存する「ヘビ」のような運動錯視 ([[@ConwayKitaokaYazdanbakhshEtAl05]]) によって活用される、静的コントラスト パターンに基づいて運動アーティファクトを説明できる可能性があるという利点があり、ショウジョウバエでも実証されています ([[@AgrochaoTanakaSalazar-GatzimasEtAl20]])。ショウジョウバエのシステムには、提案されたメカニズムと一致して、速い減衰と遅い減衰、および抑制と興奮の異なる速度も含まれます。</p>
+
+  <h3 id="section-2">時間微分メカニズム</h3>
+
+  <p><em>fast – low</em> 時間導関数の背後にある重要な考え方は、より最近の変更は高速プロセスに反映され、古い変更は低速プロセスに反映されるということです。特に、運動メカニズムは 2 つの異なる <em>decay</em> 速度に依存します。</p>
+
+  <pre><code>  O o-o O
++||-   -||+
+ O       O
+</code></pre>
+
+  <p>In the above diagram, the receiving neurons at the top receive balanced fast excitatory + connections and slow inhibitory connections, with the same net synaptic strength. Two receiving neurons from spatially adjacent locations mutually inhibit each other. When there is no motion, the excitation and inhibition cancel out.</p>
+
+  <p>When visual input is moving from the right to the left, the right neuron experiences a net inhibitory signal because the slower inhibition persists longer than the fast excitation, while the opposite is true of the left neuron. The opposite pattern holds for motion in the opposite direction. Thus, the relative balance between these paired neurons provides a readout of the motion direction.</p>
+
+  <p>Critically, when there is a uniform onset of a novel input, both neurons receive the same initial excitatory transient, which then is balanced by the slower inhibition. Their mutual inhibition cancels this out. The circuit also needs to multiply by the min activity of any input, so that it doesn’t just respond to edges where there is nothing and then something. This however does contribute to the static contrast motion illusions.</p>
+
+  <p>To ensure zero responding for static elements, it is critical that the temporal integration has a quick (immediate) rise and the difference is in the decay times, so anything that is still is always equalized at the same values. Thus, motion is registered in the immediate trail of a moving element, where the fast trace decays away faster than the slow one. It is therefore always a net inhibitory signal, with the direction of motion experiencing less inhibition than the other.</p>
+
+  <p>The ability to capture not only direction but also speed at a fine-grained level is critical, and is a major limitation of the space-time mechanism, which requires different spacing to capture different speeds. In the temporal derivative version, speed correlates directly with the length of the <em>fast – slow</em> trace, because a more quickly moving object leaves a longer trace. Thus, speed is naturally and accurately computed by the simple summation of these differences, which the dendritic arbor of the SAC is well-configured to do. This speed value needs to be normalized by the instantaneous size of the visual input to be properly calibrated, so that differences in raw visual filter activity are controlled for.</p>
+
+  <h2 id="color">Color</h2>
+
+  <p>{id=”figure_cone_rod” style=”height:35em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_retina_cone_rod_color_tuning.png" alt="Light wavelength (color) sensitivity of human cone and rod photoreceptors. From Bowmaker &amp; Dartnall (1980)." /></p>
+
+  <p>The ability to perceive color depends on the presence of photoreceptors in the retina that are sensitive to different wavelengths of light. In humans, we have three <strong>cones</strong> that are maximally sensitive to long (L = Red), medium (M = Green) and short (S = Blue) wavelengths ([[#figure_cone_rod]]; [[@BowmakerDartnall80]]). In addition most vertebrates have <strong>rod</strong> receptors that have a blue-green color tuning, but are much more sensitive to low light and moving (short duration) stimuli.</p>
+
+  <h3 id="color-opponency">Color opponency</h3>
+
+  <p>To provide an even more compact representation of color, the visual system computes two <strong>opponent</strong> color contrasts, Red – Green (i.e., L – M) and Blue – Yellow (i.e., S - (LM), where Yellow is represented as a combination of red and green) ([[@Conway01]]; [[@Gegenfurtner03]]; [[@SolomonLennie07]]; [[@FieldGauthierSherEtAl10]]; [[@ShapleyHawken11]]; [[@ZhangBarhomiSerre12]]; [[@YangGaoLiEtAl13]])</p>
+
+  <ul>
+    <li>
+      <p>Double-opponent are most common, and define an edge in color space (e.g., R-G edge) by having offset opposing lobes of a gabor (e.g., one lobe is R+G- and the other lobe is G+R-) – this gives the usual zero response for uniform illumination, but a nice contrast response. We should probably turn on color responses in general in our V1 pathway, esp if it is just RG and BY instead of all those other guys. Can also have the color just be summarized in the PI polarity independent pathway.</p>
+    </li>
+    <li>
+      <p>Single-opponent which are similar-sized gaussians with opponent R-G and B-Y tuning. These are much fewer, and more concentrated in these CO-blob regions, that go to the “thin” V2 stripes. But the divisions are not perfect..</p>
+    </li>
+  </ul>
+
+  <h3 id="computational-color">Computational color</h3>
+
+  <p>To more accurately represent how humans perceive color as inputs to vision models, we can take advantage of decades of detailed psychophysics research that has developed progressively more accurate perceptual models. These models allow a standard RGB image to be transformed into the corresponding <em>LMS</em> (long, medium, short) responses of the three different cone types ([[@MoroneyFairchildHuntEtAl02]]; <a href="https://en.wikipedia.org/wiki/LMS_color_space">Wikipedia</a>).</p>
+
+  <p>We use the HPE (<em>Hunt-Pointer-Estevez</em>) version of the LMS transforms, which start by converting sRGB (s = standard) images into the <a href="https://en.wikipedia.org/wiki/CIE_1931_color_space">XYZ</a> color space, and from there, using different weights to produce L, M, S outputs.</p>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">網膜</a></li>
+<li class="toc-h2"><a href="#section-1">モーション</a></li>
+<li class="toc-h3"><a href="#section-2">時間微分メカニズム</a></li>
+<li class="toc-h2"><a href="#color">Color</a></li>
+<li class="toc-h3"><a href="#color-opponency">Color opponency</a></li>
+<li class="toc-h3"><a href="#computational-color">Computational color</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

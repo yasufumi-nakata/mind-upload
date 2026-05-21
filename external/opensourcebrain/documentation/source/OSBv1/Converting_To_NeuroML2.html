@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenSourceBrain Documentation: モデルを NeuroML 2 に変換する必要があるのはなぜですか? | マインドアップロード</title>
+<meta name="description" content="OpenSourceBrain/Documentation: source/OSBv1/Converting_To_NeuroML2.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">OpenSourceBrain 翻訳ページ</div>
+    <h1 class="title">OpenSourceBrain Documentation: モデルを NeuroML 2 に変換する必要があるのはなぜですか?</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/OpenSourceBrain/Documentation/blob/main/source/OSBv1/Converting_To_NeuroML2.md" target="_blank" rel="noopener noreferrer">https://github.com/OpenSourceBrain/Documentation/blob/main/source/OSBv1/Converting_To_NeuroML2.md</a></p>
+  <p>ライセンス: CC BY 4.0。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><a id="v1:convert_nml"></a>
+<a id="why-should-you-convert-your-model-to-neuroml-2"></a></p>
+  <h1 id="neuroml-2-">モデルを NeuroML 2 に変換する必要があるのはなぜですか?</h1>
+
+  <div class="note-box">
+    <p><strong><strong>注:</strong> 最新情報については、NeuroML ドキュメントを参照してください。</strong></p>
+
+    <p><a href="https://docs.neuroml.org">NeuroML ドキュメント</a> は最近徹底的に更新されており、モデルを NeuroML 2 に変換する理由と方法についての主要なガイドとして使用する必要があります。</p>
+  </div>
+
+  <p>モデルをシミュレータに依存しない形式 <a href="https://docs.neuroml.org/Userdocs/NeuroMLv2.html">ニューロML2</a> に変換すると、モデルを <a href="https://docs.neuroml.org/Userdocs/Software/SupportingTools.html">多くの異なる形式</a> に変換できるほか、OSB の高度な機能の多くをモデルで使用できるようになります (例: <a href="http://v1.opensourcebrain.org/projects/l5bpyrcellhayetal2011?explorer=https%3A%2F%2Fraw.github.com%2FOpenSourceBrain%2FL5bPyrCellHayEtAl2011%2Fmaster%2FneuroConstruct%2FgeneratedNeuroML2%2FL5PC.cell.nml">細胞の3D可視化</a> および <a href="http://v1.opensourcebrain.org/projects/acnet2?explorer=https%3A%2F%2Fraw.github.com%2FOpenSourceBrain%2FACnet2%2Fmaster%2FneuroConstruct%2FgeneratedNeuroML2%2FMediumNet.net.nml">ネットワーク</a>、<a href="http://v1.opensourcebrain.org/projects/acnet2?explorer=https%3A%2F%2Fraw.github.com%2FOpenSourceBrain%2FACnet2%2Fmaster%2FneuroConstruct%2FgeneratedNeuroML2%2FNa_pyr.channel.nml">チャネル動力学</a> に関する情報の抽出)。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/OSB_Documentation/master/resources/images/OSBfeatures.jpg" alt="OSBの機能" /></p>
+
+  <p>現時点では、モデルを有効な NeuroML 2 にエクスポートするためにシミュレータで押す「魔法のボタン」はありません。現時点での最良のアプローチは、<a href="https://github.com/NeuroML/NeuroML2/tree/master/examples">NeuroML 2 のコア例</a> や <a href="https://github.com/OpenSourceBrain/.github/blob/main/testsheet/README.md">NeuroML 2 に変換される OSB プロジェクト</a> の一部を確認し、そこにある XML サンプルを確認し、これらに基づいてモデルの手動変換を開始することです。</p>
+
+  <p><strong>ステップバイステップのガイドがあります: <em>コンダクタンスベースの細胞モデルを NeuroML2 に変換</em> <a href="https://docs.neuroml.org/Userdocs/CreatingNeuroMLModels.html#converting-cell-models-to-neuroml-and-sharing-them-on-open-source-brain">ここ</a>!</strong></p>
+
+  <p>このプロセスで使用するツールについては、以下にいくつかの提案があります。</p>
+
+  <p><strong>jNeuroML を使用して NeuroML 2 ファイルを検証/実行/変換/表示します</strong></p>
+
+  <p><a href="https://github.com/NeuroML/jNeuroML">jNeuroML</a> は、NeuroML2 ファイルの検証に使用できます。</p>
+
+  <pre><code> jnml -validate MyNeuroML2.nml
+</code></pre>
+
+  <p>これにより、最新の XSD スキーマ ドキュメントに対してファイルが検証されるだけでなく、モデルの構造に関してその他の多くのチェックが実行されます。</p>
+
+  <p>LEMS シミュレーション ファイルを作成して、シミュレーションの実行時間、タイムステップ、プロット/保存する内容などを指定すると、モデルを jNeuroML で実行できるようになります。例を参照してください。<a href="https://github.com/NeuroML/NeuroML2/tree/master/LEMSexamples">ここ</a> とほとんどの <a href="https://github.com/OpenSourceBrain/redmine/issues/125">これらの OSB プロジェクト</a> にも、少なくとも 1 つの LEMS シミュレーション ファイルがあります。</p>
+
+  <p>NeuroML 2 でセルとネットワークをすばやく視覚化するために (neuroConstruct にロードしたり OSB で表示したりするのではなく)、モデルを SVG 形式に変換できます (Web ブラウザーなどで表示するため)。</p>
+
+  <pre><code> jnml MyNeuron.cell.nml -svg
+ jnml MyCircuit.net.nml -svg
+</code></pre>
+
+  <p>jNeuroML の最新機能を入手するには、<a href="https://github.com/NeuroML/jNeuroML/blob/master/README.md">ここ</a> で説明されているように <strong>ソースから最新の開発バージョン</strong>をインストールすることを<strong>強くお勧めします</strong>。</p>
+
+  <p><strong>pyNeuroML を使用して NEURON から NeuroML2 形態をエクスポートします</strong></p>
+
+  <p><a href="https://github.com/NeuroML/pyNeuroML">pyNeuroML</a> は、jNeuroML jar ファイルをバンドルし、そのパッケージの機能を使用することで、<a href="https://github.com/NeuroML/jNeuroML">jNeuroML</a> の多くの機能に Python スクリプトでアクセスできるようにする Python パッケージです。</p>
+
+  <p>jNeuroML の機能に加えて、pyNeuroML には、NEURON から NeuroML2 への更新されたエクスポーターなど、多数の Python 固有の機能が追加されています。これは現在、ニューロン形態のエクスポートのみに限定されています (<a href="https://github.com/NeuroML/pyNeuroML/blob/master/examples/export_neuroml2.py">ここ</a> の例を参照) が、接続性 (およびチャネル、シナプスなどの NeuroML2 でのテンプレートの生成) などの他の機能の抽出が可能になるようにさらに開発される予定です。</p>
+
+  <p>この機能は、<a href="http://v1.opensourcebrain.org/projects/miglioreetal14_olfactorybulb3d">3D嗅球モデル</a> の元の NEURON コードから多数のセル モデルを抽出するために使用されました (<a href="https://github.com/OpenSourceBrain/MiglioreEtAl14_OlfactoryBulb3D/blob/master/NeuroML2/export_mitral.py">このスクリプト</a> を参照)。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/MiglioreEtAl14_OlfactoryBulb3D/master/images/30cells.jpg" alt="30セル" /></p>
+
+  <p><strong>pyNeuroML を使用してチャネルを NeuroML 2 に変換します</strong></p>
+
+  <p>取り組んでいるもう 1 つの機能は、イオン チャネル モデル (NEURON の NMODL 形式など) を NeuroML 2 に変換するのに役立つ一連のスクリプトです。これらのスクリプトは、pyNeuroML がインストールされた後に以下を使用してアクセスできます。</p>
+
+  <pre><code>pynml-channelanalysis NaConductance.channel.nml   # Analyse a NeuroML 2 channel
+pynml-modchananalysis NaConductance               # Analyse a NEURON channel e.g. from NaConductance.mod
+</code></pre>
+
+  <p>これらのスクリプトは、アクティブ化/非アクティブ化変数のトレースを生成するために異なるアプローチを採用していますが、同等のプロットを生成します。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/OSB_Documentation/master/resources/images/pynml_analyse.png" alt="ピンミリ" /></p>
+
+  <p>左側は NeuroML ファイルから生成されたプロット (<a href="https://github.com/NeuroML/pyNeuroML/blob/master/examples/analyseNaNml2.sh">ここ</a> を参照)、右側は NMODL バージョンから生成されたプロット (<a href="https://github.com/NeuroML/pyNeuroML/blob/master/examples/analyseNaMod.sh">ここ</a> を参照) です。</p>
+
+  <p>明確にしておきますが、これらのスクリプトは (現時点では) NMODL ファイルから方程式を抽出して NeuroML ファイル内の正しい場所に配置するのには役立ちません。単に 2 チャネル形式の動作を比較して手動変換でのエラーをチェックするのに役立つだけです。</p>
+
+  <p><strong>NeuroConstruct を使用して NeuroML v1/2 への変換を支援します</strong></p>
+
+  <p>OSB 上の多くのプロジェクトは元々、neuroConstruct を使用して元の形式 (NEURON、GENESIS など) から NeuroML v1.8.1 に変換されました (これらのリストについては <a href="http://www.opensourcebrain.org/search_custom_field?f[]=43&amp;op[43]=~&amp;v[43][]=neuroConstruct">ここ</a> を参照)。そこから、neuroConstruct 内での NeuroML2 への変換は簡単でした。 neoConstruct <a href="http://www.opensourcebrain.org/docs#Using_neuroConstruct_Based_Projects">ここ</a> の使用方法の詳細と、NeuroML v1 <a href="http://www.neuroconstruct.org/docs/importneuron.html#Converting+mod+file%2FGENESIS+script+channels+into+ChannelML">ここ</a> へのモデルの変換の詳細。</p>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/opensourcebrain/documentation/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>

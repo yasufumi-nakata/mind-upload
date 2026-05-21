@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: information-theory | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: information-theory.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: information-theory</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/information-theory.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/information-theory.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Computation”]
+bibfile = “ccnlab.json”
++++
+<strong>情報理論</strong>のフレームワークは、[[linear algebra]] のようなフレームワークで、ニューラル ネットワークの動作を理解するための中心的な概念を多数提供します。</p>
+
+  <p><em>information</em> の基本的な数学的定義は、Claude Shannon ([[@Shannon48]]) によって、確率論的な文脈における <em>uncertainty</em> に相当する <em>entropy</em> の概念に関して与えられました。直観的には、不確実性が最大の状況は、その状況についてさらに学ぶことで「最も多くの情報を得る」ことができる状況でもあります。逆に、ある状況についてすでにすべてを知っている場合は、それ以上の情報を得ることができません。</p>
+
+  <p>したがって、メッセージに含まれる情報の量は、そのメッセージの受信によってもたらされる不確実性の低減レベルの関数です。</p>
+
+  <p>これは、数値が 1 と 0 で表されるバイナリ コードにも適用できます。たとえば、数字 5 は 101 です。最初の 2 進数字 1 は数字 4 を表し、2 番目の数字 (0) は数字 2 を表し、最後の数字は数字 1 を表すため、1<em>4 + 0</em>2 + 1*1 = 5 となります。3 桁のメッセージにこれらの数字のいずれかが表示されると、不確実性が 2 分の 1 に減少します。これは、3 で表される可能性のある 8 つの異なる数字があるためです。 2 進数 (0 = 000 ～ 7 = 111) であり、その数字の 1 つを見ることは、その数値を 2 で割ることと同じです。最初の数字が 0 であることがわかった場合、残りの不確実性は、たとえば 0 ～ 3 の間の値に限定されます。</p>
+
+  <p>値 4 も表す 4 番目の 2 進数字を導入した場合、この冗長な数字は新しい情報を追加しません。つまり、他の 3 桁をすべて知っている場合、この 4 番目の数字の値を学習しても不確実性は軽減されません。あなたはすでにその価値を知っているでしょう。</p>
+
+  <p>同様に、2 進数の各値がメッセージのセット全体で等しく発生する可能性が低い場合 (たとえば、3 を超える値、つまり 4 値の数字の 1 が得られることは非常にまれです)、そのようなメッセージ内の合計情報は、この数字に関連する不確実性が減少するため、実際には減少します。その数字の値が 0 であるメッセージを受け取るたびに、「ああ、それはもう知っていた」と言うだけで、それが 1 だった場合にのみ驚くでしょう。</p>
+
+  <p>レアな 1 を手に入れることに伴う驚きが、予想される他の退屈なケースすべてを上回るように思えるかもしれませんが、エントロピーの数学ではそうではないことが判明しています。最大の情報は、常に各オプションの可能性が等しい場合に得られます。</p>
+
+  <p>数学的には、<em>entropy</em> の式で上記のすべてが説明されます。</p>
+
+  <p>{id=”eq_entropy” title=”エントロピー”}
+\(H = - \sum_i p_i \log_2(p_i)\)</p>
+
+  <p>ここで、インデックス $i$ は、そのような可能性の数え切れないセットからのそれぞれの個別の可能な結果を​​表します。たとえば、0 または 1 のいずれかになる単一のバイナリ値の式は、$p$ が 1 になる確率は次のようになります。</p>
+
+  <p>{id=”eq_entropy-bit” title=”ビットのエントロピー”}
+\(H = - p \log_2(p) - (1-p) \log_2(1-p)\)</p>
+
+  <p>この式の最大値は $p = 0.5$ のときに発生することがわかります。つまり、0 または 1 である可能性が等しく、どちらの側でも対称的に減少します。 $p = 0.5$ におけるこの式の数値は 1 です。これは、$\log_2$ の底 2 (バイナリ) 対数を使用しているため、情報が 1 ビット_ あることを意味します。したがって、ビットが同じ確率で 0 と 1 の状態を持つ場合にのみ、そのビットに実際に 1 ビットの情報が含まれることになります。</p>
+
+  <p>エントロピー測定は、層内のニューロンの集団の情報内容を定量化するために適用すると便利です。各ニューロンがアクティブになる確率が 0.5 で、どのニューロン間にも相関がない場合、全体の情報量が最大になります。これは、[[neocortex]] でのニューロン活動とはまったく異なります。ほとんどのニューロンはほとんどの時間、基本的に非活動的ですが、著しく活動化される可能性は約 15% です。さらに、異なるニューロン間には強い相関関係があることがよくあります。これは、これらのニューロンが表現できる情報量を最大化していないことを示しており、したがって、これらの表現の性質を決定する他の重要な基準があるに違いありません。</p>
+
+  <p>たとえば、相関関係は関係性に関する情報を伝達するのに役立ち、これは推論に役立ちます。また、全体的なアクティビティ レベルが低いスパース コードはエネルギー効率が高く、多くのことが低い確率で発生する自然界の統計とよりよく一致します。</p>
+
+  <p>それにもかかわらず、[[principal components analysis]] の一種が脳内で動作している場合、ニューロン間の相関が減少し、ニューロンの発火の分散が増加する傾向があるため、おそらく複数の相反する力が働いており、私たちが観察しているのはそれらの力のバランスです。</p>
+
+  <h2 id="section">相互情報</h2>
+
+  <p>「相互情報」の概念は、一方の信号を受信した後に他方の信号に残る不確実性の量という観点から、2 つの信号間の関係を定量化するのに非常に役立ちます。これは、異なる層内のニューラル表現間の関係、または 1 つの層内のニューロン間の関係を分析するためによく使用されます。たとえば、<em>独立成分分析 (ICA)</em> ([[@JuttenHerault91]]) の計算には、相互情報量を最小限に抑えることが含まれており、これにより、各成分が最大限に独立した情報を得ることができるようになります。</p>
+
+  <p>数学的には、相互情報量は次のように定義されます。</p>
+
+  <p>{id=”eq_mi” title=”相互情報”}
+\(I(X;Y) = \sum_{x,y} p(x,y) \log \frac{p(x,y)}{p(x) p(y)}\)</p>
+
+  <p>ここで、$p(x,y)$ は、一緒に発生する 2 つのイベントの_結合確率_であり、各イベント自体の_独立した確率_によって正規化されています ($p(x) p(y)$)。直観的には、結合確率が独立確率と同じであれば、それらのイベント間に特別な相互情報はありません。しかし、結合確率が独立確率よりもはるかに高い場合、それらの相互情報量は高くなります。</p>
+
+  <p>分数の対数をとることは、分子の対数から分母を差し引くことと同じであることを思い出してください。分母の指数が -1 であるため、両方の値が同じであれば、比率の右側の因数は 0 になります。</p>
+
+  <h2 id="kl--">KL ダイバージェンス (情報獲得)</h2>
+
+  <p>[[abstract neural network]] モデルに広く適用されている情報理論のもう 1 つの中心的な概念は、カルバック-ライブラー発散です。これは、2 つの異なる確率分布 $p$ と $q$ を比較する方法です。</p>
+
+  <p>{id=”eq_kl” title=”KL ダイバージェンス”}
+\(KL(p,q) = \sum_x p(x) \log \frac{p(x)}{q(x)}\)</p>
+
+  <p>これは相互情報量と同様の形式であり、同じ用語で理解できます。$p$ と $q$ が分布内の x の値全体で基本的に同じである場合、ログ内の値は相殺され、差は 0 になります。</p>
+
+  <p>エラー駆動学習は KL 発散の観点から定式化されており、$p$ がターゲット、正しい確率分布、$q$ がネットワークによって生成された現在の確率分布であり、学習はこの 2 つの間の KL 発散を削減しようとします。</p>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">相互情報</a></li>
+<li class="toc-h2"><a href="#kl--">KL ダイバージェンス (情報獲得)</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

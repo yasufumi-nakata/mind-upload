@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: transformer | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: transformer.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: transformer</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/transformer.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/transformer.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Learning”, “Activation”, “Computation”]
+bibfile = “ccnlab.json”
++++
+Google ([[@VaswaniShazeerParmarEtAl17]]) の研究者によって開発された <strong>transformer</strong> アーキテクチャは、[[large language models]] (LLM) を強化し、<em>self-attention</em> と高次元の_feedforward network_ (FFN) (つまり、標準 [[error-backpropagation]]) という 2 つの異なるメカニズムを含んでいます。いわば、attention コンポーネントはすべての [[attention]] を取得しますが、LLM ([[@NandaRajamanoharanKramarEtAl23]]) で明らかなように、明らかに FFN コンポーネントがこのアーキテクチャのかなりの記憶能力を担っています。トランスフォーマーは、ResNet (残留ネットワーク) [[@HeZhangRenEtAl15]] および正規化メカニズムを含む、他の広く採用されている多数の [[abstract neural network]] メカニズムにも依存します。</p>
+
+  <p>トランスフォーマーのメカニズムには神経科学との直接的な関連性がありそうもないという事実にもかかわらず、これは、人間のようなレベルでかなりのレベルの体系的で生成的な [[generalization]] を達成する、ニューロンのような処理メカニズムに基づく人工システムの既知の唯一の実用例を提供するため、[[Axon]] プロジェクト、および [[computational cognitive neuroscience]] をより広く理解するあらゆる試みにとって非常に重要です。 ([[@YangCampbellHuangEtAl25]]; [[@McGrathRussinPavlickEtAl24]]; [[@McClellandHillRudolphEtAl20]])。基本的なメカニズムを説明した後、これらのメカニズムがこの素晴らしい偉業をどのように達成するかを理解することで何が学べるかを考えます。</p>
+
+  <p>概要レベルでは、セルフ アテンションと ResNet アーキテクチャによって可能になる構造依存型処理と、フィードフォワード ネットワーク内の [[neocortex]] と [[hippocampus]] の両方の機能を組み合わせた強力なメモリ システムの組み合わせを通じて実現されます。したがって、変換は単なる各部分の合計ではありません。これらのコンポーネントは相乗的に連携して、複雑な [[emergent]] ダイナミクス ([[@ElhageNandaOlssonEtAl21]]) をサポートします。</p>
+
+  <h2 id="section">自分自身への注意</h2>
+
+  <p>{id=”figure_transformer-attn” style=”高さ:20em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_transformer_attention.png" alt="変圧器で実行される注意変調の図。各入力トークン (単語) は、他の各トークンのキーと乗算 (ドット積) されるクエリとして機能し、正規化された (ソフトマックス) 大きさが各トークンの値を乗算し、その結果が次のステージに進みます。各アテンション ヘッドは、文字通りトークン表現を使用するのではなく、トークンを変換してクエリ、キー、および値の表現を形成し、最終的に問題解決に役立つようにすることを学習します。複数のそのようなヘッドが各段階で適用されます。" /></p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>アテンションのメカニズムは [[#figure_transformer-attn]] に示されています。これは、他の各単語の <em>Key</em> 値と (ドット積、つまり [[linear algebra</td>
+        <td>matrix multiplication]] によって) 比較される <em>Query</em> として機能する入力トークンごとに計算されます。クエリとキーとしてのトークンの表現は、個別にトレーニングされた重み (ネットワーク全体を通じた誤差逆伝播を介して) によって決定されます。これにより、各トークンから何を抽出するか、およびキーとして他のトークンとどのように照合しようとするかに関して、注意をある程度柔軟にすることができます。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>注意の限定された焦点の性質は、Query-Key のドット積 (単一のスカラー値) の正規化された指数関数である <em>SoftMax</em> 関数の適用によって取得されます。</p>
+
+  <p>{id=”eq_attn” title=”注意”}
+\(\rm{注意}(Q, K) = \rm{ソフトマックス} \left( \frac{Q K^T}{\sqrt{d_k}} \right)\)</p>
+
+  <p>{id=”eq_softmax” title=”ソフトマックス”}
+\(\rm{softmax}(\bf{X}) = \left[ \frac{e^{x_i}}{\sum_j e^{x_j}}, ... \right]_i\)</p>
+
+  <p>各 <em>Key</em> の正規化されたスカラー アテンション値 (各クエリからの寄与の合計として計算され、[[#figure_transformer-attn]] の下向きの矢印で表されます) は、そのトークンの <em>Value</em> ベクトルを乗算し、線形重みによって再び変換され、この変換されたアテンションで変調された値が、アテンション メカニズムの出力結果になります (図の入力から出力に流れる大きな矢印で示されています)。</p>
+
+  <p>直感的には、この注意メカニズムにより、各入力単語がそれに最も関連性の高い他の単語を選択できるようになります。そのため、図の例では、入力単語「オレンジ」が「猫」を修飾するため、猫に強い注意の重みが与えられます。</p>
+
+  <p>指数関数的な SoftMax 正規化により、注意メカニズムは通常、他の比較的少数の単語に焦点を当てます。そのため、複数の注意焦点を同じフィードフォワード スイープで処理できるようにするために、そのような複数の注意ヘッドが並行して使用されます。モデルは標準の [[error backpropagation]] を使用してトレーニングされるため、クレジット割り当てプロセスでは、関連するすべてのものを同時に並行して存在させることが重要です。そうでないと、[[temporal credit assignment]] を達成するために、より複雑な時間プロセスによるバックプロパゲーションが必要になります。</p>
+
+  <h2 id="section-1">フィードフォワード ネットワーク: 高次元パターン分離器</h2>
+
+  <p>上で述べたように、実際には、トランス ([[@HuangYangPotts24]]) の記憶能力の大部分を占めるのは単なる標準的なフィードフォワード逆伝播ネットワークである FFN コンポーネントであり、セルフ アテンション メカニズムと同様にトランスの機能にとって重要です。これにより、これらのモードランセルは、このような膨大な量の情報を消化し、数十億の単語を含むデータベースに対して、あらゆる種類の予測を確率以上のレベルで生成できるようになります。</p>
+
+  <p>この記憶能力をサポートする FFN の重要な特徴は、隠れ層のサイズです。これはトークン入力ベクトルのサイズの 4 倍であり、典型的な GPT LLM モデル ([[@Aizi23]]) の LLM 学習可能なパラメーターの合計の約 70% を占めます。 FFN は、注意を払って重み付けされたトークン表現をこの大きな隠れ層に投影し、アクティビティ パターンを互いに比較的分離できるようにします (つまり、<em>パターン分離</em>)。これは、<em>サポート ベクター マシン</em> (SVM; [[@CortesVapnik95]])、および脳の [[hippocampus]] および [[cerebellum]] で使用されるのと同じ計算トリックです。</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>このパターン分離関数を実行した後、表現は入力と同じ次元に圧縮されます。これはオートエンコーダーとして (つまり、入力と同じ表現を使用する) としてではなく、大きな隠れ層によって発見された [[combinatorial vs conjunctive</td>
+        <td>conjunctive]] 特徴に基づいて構築できる新しい変換を作成します。次に説明するように、ネットワーク全体で同じ次元を維持することは、ResNet プロパティにとって重要です。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="resnet-">ResNet 残差ストリーム</h2>
+
+  <p>トランスフォーマーの ResNet プロパティは、情報がネットワーク ([[@ElhageNandaOlssonEtAl21]]) を通過するときにアテンション ヘッドが分割して操作できるバスのような経路を本質的に提供するために重要です。具体的には、ネットワークの各レベルはその出力をネットワーク全体の最終出力ステージに直接渡し、追加のレベルはその情報をこの「残りのストリーム」の情報に追加するだけです。</p>
+
+  <p>各上位層はその直下のレベルからのみ情報を取得するため、その層によって実行される処理のコンテキストが決まります。しかし、下位レベルの情報を直接出力に直接渡す機能は、誤差逆伝播を効果的に機能させるためだけでなく (そうしないと、上位層をすべてフィルタリングするまでに誤差勾配が大幅に薄まってしまいます)、上位層が入力から抽出された変換された情報の蓄積フローの「動的エディター」として機能できるようにするためにも不可欠です。</p>
+
+  <p>したがって、これらの上位層は、下位層によって抽出されたすべての情報_内容_を複製する必要はなく、代わりに、さまざまな抽象化レベルで入力に存在する関係をキャプチャする、より多くの_構造_情報を注入できます。これは、[[generalization]] ([[@YangCampbellHuangEtAl25]]; [[@WebbFranklandAltabaaEtAl24]]; [[@OReillyRanganathRussin22]]) で説明されているような体系的で生成的な動作に不可欠です。</p>
+
+  <h2 id="section-2">認知神経科学への影響</h2>
+
+  <p>反対のいくつかの否定的な主張にもかかわらず、トランスフォーマーは、たとえかなり顕著な記憶能力を示す傾向があるとしても、訓練された膨大なコーパスの純粋な暗記によってその驚くべき能力を獲得するわけではありません。その代わり、認知レベルでは、彼らの成功の背後にある「秘密のソース」は、この膨大な意味論的能力と [[episodic memory]] 能力を、抽象的で構造に敏感な [[generalization]] 能力と統合する能力です。</p>
+
+  <h3 id="section-3">構造ベースの体系性と最適化された表現</h3>
+
+  <p>認知レベルでは、この複数の頭の注意は、人間がテキストを読む際の並列的な [[constraint satisfaction]] と逐次的な逐次的な注意 ([[@McClellandHillRudolphEtAl20]]) の両方から生じるダイナミクスの一部を捉えている可能性があります。たとえば、より大きな複合表現を形成する相互に互換性のある単語がある場合 (たとえば、「ケーキの一部」)、注意メカニズムは相互興奮を生み出し、それらの単語を 1 つの単位として集中させ、単語がそのように処理されるのを助けます。既存の言語理論 ([[@TenneyDasPavlick19]]; [[@ManningClarkHewittEtAl20]]; [[@WarstadtBowman22]]; [[@ChenShwartz-ZivChoEtAl25]]; [[@McGrathRussinPavlickEtAl24]]) に示されているように、この種のメカニズムが複数の抽象レベルにわたって LLMS で動作していることについては十分な証拠があります。</p>
+
+  <p>[[language]] の理解に関与する一連のプロセスに関する広範な文献があります。このプロセスは、文中の単語を読み進め、蓄積された_文脈_を使用して後続の単語を解釈するときに、自然に強い注意に似た効果を生み出します。 <em>garden path</em> 文のように、後続の単語がこれらの期待と一致しない場合、多くの場合、積極的な再解釈が必要になります ([[@FerreiraHenderson91]]; [[@Fujita21]])。トランスフォーマーにはアクティブな作業メモリのメンテナンスがありませんが、コンテキスト入力サイズはますます大きくなり、後続の処理のコンテキスト化に使用できる「インコンテキスト」アクティブ メモリ システムを効果的に提供します ([[@OlssonElhageNandaEtAl22]])。</p>
+
+  <p>全体として、アテンション メカニズムは、標準のフィードフォワード ネットワークと比較して、トランスフォーマー内で [[optimized representations]] の形式をもたらします。このような種類の異なる処理ストリーム間の強い相互作用は、特定のレイヤー内では発生せず、レイヤー間の変換の蓄積によってのみ蓄積されます。さらに、この層ごとの相互作用の蓄積でさえ、多くの場合、ReLU 活性化関数の使用によって制限されます。ReLU 活性化関数は、ほぼ線形であるため、線形の相加効果をもたらす傾向があります。対照的に、SoftMax 正規化ダイナミクスにより、トランスフォーマーでの注意はより非線形になります。</p>
+
+  <p>完全な [[bidirectional connectivity]] と、その結果として生じる [[Axon]] の制約を満たすダイナミクスと比較すると、トランスフォーマーの注意メカニズムは、これらのダイナミクスを捉える正しい方向への強力な一歩であることは確かです。ただし、トランスフォーマーは基本的にフィードフォワード アーキテクチャのままであるため、実際には、より高いレベルの表現を直接フィードバックして、以前の層のアクティビティを変調することはできません。代わりに、これらの上位層は、残留ストリームの下位層の出力の動的編集を実行します。</p>
+
+  <p>さらに、非常に多くのフィードフォワード層が、双方向ネットワークで発生するであろうダイナミクスを効果的に展開する方法を学習することができます ([[bidirectional connectivity#feedforward unrolling]] を参照)。それにもかかわらず、この方法で新皮質ネットワーク全体を展開することは計算的に扱いにくいため、トランスフォーマーは新皮質で真の双方向接続が達成できることのより限定された側面しか捉えることができません。</p>
+
+  <h3 id="section-4">スロットベースのバインディング</h3>
+
+  <p>いくつかの分析により、変圧器が系統的に [[binding problem]] を解決できるメカニズムが明らかになりました ([[@FengSteinhardt24]]; [[@Gur-AriehGevaGeiger25]])。まず、情報は明示的に構造化されたスロットベースのアーキテクチャで表現され、各単語が独自の異なる表現を持つため、関連情報が存在する適切なスロットを効果的にポイントするだけで、抽象的な方法でバインディングを行うことができます。これは明らかにそのスロットの内容とは独立しています。これは実質的にシンボリック コンピュータで行われることです。シンボリック コンピュータでは、任意のパターンの情報を特定のメモリ アドレスに配置し、そのメモリ アドレスを完全に抽象的で体系的な変数として使用して、特定の役割を果たすコンテンツを表すことができます。</p>
+
+  <p>たとえば、次の簡単なステートメントを考えてみましょう。</p>
+
+  <blockquote>
+    <p>アンはコーヒーを飲みます</p>
+  </blockquote>
+
+  <p>サブジェクト ロール (<em>Ann</em>) は、あるメモリ位置にあるビットのパターンであれば何でも構いませんが、オブジェクト ロール (<em>coffee</em>) は別の場所にあることができ、適切なメモリ位置にパターンを配置する適切な方法 (たとえば、語順やその他の言語規則に基づく) がある限り、任意のコンテンツ (たとえば、<em>Bazif は smalrog</em> を飲みます) に自動的に一般化できます。</p>
+
+  <p>キュー値アテンション メカニズムにより、トランスフォーマは、特定のスロットに注意を集中させるためのキューとして、任意のアドレスのようなアクティビティ パターンを使用できるようになります。そのため、バインディング問題に対するこの解決策の使用を可能にするのは、スロット ベースのアーキテクチャとキュー値アテンション メカニズムの存在の両方の組み合わせです。</p>
+
+  <p>興味深いことに、[[basal ganglia]] (BG) および [[prefrontal cortex]] (PFC) の動的ワーキング メモリ ゲート メカニズムに基づいて、同様のソリューションが提案されました。この場合、BG は、任意のアクティビティ パターンを PFC アクティブ メンテナンス ([[@KrieteNoelleCohenEtAl13]]) の特定のストライプ (スロット) にゲートできます。これにより、同じ種類のアドレスのような機能バインディングが実現され、その PFC スロット内のすべてのものが、この場所にゲートされているという理由だけで特定の機能的役割を引き受けます。</p>
+
+  <p>この PFC-BG モデルの重要な課題は、さまざまなスロットにわたってニューロンをトレーニングして、そのスロットに入れられる可能性のある関連コンテンツを表現する必要があることです。トランスフォーマーは、すべての物理バインディング スロットにわたって同じ学習されたシナプスの重みを再利用するだけで、この困難な偉業を達成します。このような余裕のない脳内でこれが実際にどのように機能するのかは不明ですが、おそらく単語を適切に抽象化した音素エンコーディングを使用すれば、人々は特定の音素セットをいくつかの異なる PFC 位置の 1 つにルーティングする方法を学習できるでしょう。したがって、言語のコンパクトで普遍的な音韻コードは、任意の結合問題を解決する上で重要な要素となる可能性があります。</p>
+
+  <h3 id="section-5">意味記憶とエピソード記憶</h3>
+
+  <p>トランスフォーマーには、[[neocortex]] ([[semantic memory]] 用) と [[hippocampus]] (エピソード記憶用) の間の解剖学的および機能的な違いに対応するいかなる種類の構造的区別もありませんが、フィードフォワード ネットワークの高次元の性質により、これらのモデルは、特定のテキストの高度に特殊な記憶と、より一般化された意味知識 ([[@NandaRajamanoharanKramarEtAl23]]) の両方をエンコードできます。 [[combinatorial vs conjunctive]] 表現で説明したように、これらの異なるタイプの表現の間にはトレードオフがあり、バックプロパゲーション メカニズムは、トランスフォーマーが通常使用される [[predictive learning]] タスクの必要に応じて、これらの異なるタイプの表現の有用な組み合わせを学習できます。</p>
+
+  <p>標準的な変換器に決定的に欠けているのは、最初のトレーニングセットを超えて「新しい」エピソードのような記憶を形成する能力です。そのため、トレーニングテキストの驚くべき真実の想起を示すことはできますが、人間のように、経験したその後の出来事を詳細に思い出すことはできません。多くの研究者が、LLM にこの能力を追加する方法に取り組んでおり、エピソード記憶のエンコードと取得に対する追加の制御レベルは、研究すべき興味深い問題です (例: [[@ZhengWolfRanganathEtAl25]])。</p>
+
+  <p>要約すると、トランスフォーマーは、基盤となる異なるニューラル ハードウェアを使用するだけで、人間の脳の [[cognitive architecture]] の本質的な特性をキャプチャしていると見なすことができます。したがって、これらのモデルの成功は、この認知アーキテクチャの人工バージョンが人間の認知の最も重要な側面の多くを実際に再現できること、そしてこれらすべてが実際にどのように機能するかをより深く理解することによって、[[Axon]] モデルについて学ぶべきことがたくさんあることを具体的に実証しています。</p>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">自分自身への注意</a></li>
+<li class="toc-h2"><a href="#section-1">フィードフォワード ネットワーク: 高次元パターン分離器</a></li>
+<li class="toc-h2"><a href="#resnet-">ResNet 残差ストリーム</a></li>
+<li class="toc-h2"><a href="#section-2">認知神経科学への影響</a></li>
+<li class="toc-h3"><a href="#section-3">構造ベースの体系性と最適化された表現</a></li>
+<li class="toc-h3"><a href="#section-4">スロットベースのバインディング</a></li>
+<li class="toc-h3"><a href="#section-5">意味記憶とエピソード記憶</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

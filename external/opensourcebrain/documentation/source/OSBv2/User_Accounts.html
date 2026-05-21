@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenSourceBrain Documentation: User_Accounts | マインドアップロード</title>
+<meta name="description" content="OpenSourceBrain/Documentation: source/OSBv2/User_Accounts.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">OpenSourceBrain 翻訳ページ</div>
+    <h1 class="title">OpenSourceBrain Documentation: User_Accounts</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/OpenSourceBrain/Documentation/blob/main/source/OSBv2/User_Accounts.md" target="_blank" rel="noopener noreferrer">https://github.com/OpenSourceBrain/Documentation/blob/main/source/OSBv2/User_Accounts.md</a></p>
+  <p>ライセンス: CC BY 4.0。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><a id="osbv2:useraccounts"></a>
+<a id="user-accounts-on-osbv2"></a>
+OSBv2 のユーザー アカウント数</p>
+
+  <p><a href="/external/opensourcebrain/documentation/source/OSBv2/Applications.html#osbv2:applications">アプリケーション</a>: <a href="/external/opensourcebrain/documentation/source/OSBv2/NWBE.html#osbv2:applications:nwbe">NWB エクスプローラー</a>、<a href="/external/opensourcebrain/documentation/source/OSBv2/NetPyNE.html#osbv2:applications:netpyne">NetPyNE</a>、または <a href="/external/opensourcebrain/documentation/source/OSBv2/JupyterLab.html#osbv2:applications:jupyterlab">ジュピターラボ</a> のいずれかで <a href="/external/opensourcebrain/documentation/source/OSBv2/Workspaces.html#osbv2:workspaces">ワークスペース</a> を開くには、ユーザーは OSBv2 に登録してログインする必要があります。</p>
+
+  <p><a id="osbv2:useraccounts:register"></a>
+<a id="registration"></a></p>
+  <h2 id="section">登録</h2>
+
+  <div class="note-box">
+    <p><strong>OSBv2 には OSBv1</strong> とは異なるユーザー データベースがあります</p>
+
+    <p>現在、<a href="/external/opensourcebrain/documentation/source/OSBv1/Getting_Started.html#v1:getting_started">OSBv1</a> のユーザー データベースと OSBv2 の間に重複はありません。 OSBv2 を使用するには、新しいユーザー アカウントを作成する必要があります。</p>
+  </div>
+
+  <p>OSBv2 ユーザー アカウント <a href="https://www.v2.opensourcebrain.org/register">ここをクリック</a> に登録するには。</p>
+
+  <p><a id="osbv2:useraccounts:signin"></a>
+<a id="signing-in"></a></p>
+  <h2 id="section-1">サインイン</h2>
+
+  <p>登録が完了すると、ユーザーはホームページの右上にあるリンクをクリックするか、<a href="https://www.v2.opensourcebrain.org/login">ここをクリックしてください</a> によってサインインできます。</p>
+
+  <p><a id="osbv2:useraccounts:storage"></a>
+<a id="user-data-storage-inside-a-workspace"></a></p>
+  <h2 id="section-2">ワークスペース内のユーザー データ ストレージ</h2>
+
+  <div class="note-box">
+    <p><strong>ユーザー ストレージに関する警告</strong></p>
+
+    <p>注: OSB プロジェクトの存続期間中、すべてのデータを安全に保存およびバックアップするよう努めますが (プラットフォーム上でも作業を行っています!) <strong>現時点ではいかなる保証も提供していません</strong>。そのため、ユーザーには貴重な研究データを定期的にバックアップすることをお勧めします。</p>
+  </div>
+
+  <p><a href="/external/opensourcebrain/documentation/source/OSBv2/Workspaces.html#osbv2:workspaces">ワークスペース</a> を開いたときにデータを保存できる場所はいくつかあります。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">場所</th>
+        <th style="text-align: left">説明</th>
+        <th style="text-align: left">永続性</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left"><code>/opt/user</code></td>
+        <td style="text-align: left">このユーザーが <strong>開いているすべてのワークスペース</strong> でアクセスできるプライベート ボリューム</td>
+        <td style="text-align: left">永続的<sup>*</sup></td>
+      </tr>
+      <tr>
+        <td style="text-align: left"><code>/opt/workspace</code></td>
+        <td style="text-align: left"><strong>このワークスペース</strong>が開かれるたびにアクセスできるボリューム (ワークスペースが共有されて別のユーザーによって開かれている場合でも、この場合は読み取り専用になります)。永続的<sup>*</sup></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"><code>/opt/workspace/my-shared</code></td>
+        <td style="text-align: left">上記の <code>/opt/user</code> へのリンク (<a href="/external/opensourcebrain/documentation/source/OSBv2/JupyterLab.html#osbv2:applications:jupyterlab">ジュピターラボ</a> のファイル メニューに表示されるようにここに追加)永続的<sup>*</sup></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"><code>/opt/home</code></td>
+        <td style="text-align: left">ワークスペースの使用中に使用するローカル ストレージ</td>
+        <td style="text-align: left">一時的<sup>^</sup></td>
+      </tr>
+      <tr>
+        <td style="text-align: left"><code>/opt/conda</code></td>
+        <td style="text-align: left">Python パッケージの場所 (プレインストールされたものとこのセッション中にインストールされたもの)。注: これはワークスペースが再ロードされるたびに更新されるため、セッションごとに新しいパッケージをインストールする必要があります。一時的<sup>^</sup></td>
+        <td style="text-align: left"> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><sup>*</sup> ユーザー ストレージに関する上記の警告を参照してください。</p>
+
+  <p><sup>^</sup> 注: ワークスペースが閉じられ、その後すぐに同じアプリケーションで開かれた場合、同じ Kubernetes ポッドが同じ一時ストレージとともに使用される可能性があり、その結果、<code>/opt/home</code> および <code>/opt/conda</code> 上のデータがこれらのセッション間で永続化される可能性があります。</p>
+
+  <p>これらの場所を参照する最も簡単な方法は、<a href="/external/opensourcebrain/documentation/source/OSBv2/JupyterLab.html#osbv2:applications:jupyterlab">ジュピターラボ</a> アプリケーションを開くことです (他のファイルは <a href="/external/opensourcebrain/documentation/source/OSBv2/Workspaces.html#osbv2:workspaces:addingmore">アップロードしたり、既存のファイルをダウンロードしたりできます</a>)。</p>
+
+  <p><a id="osbv2:useraccounts:quotas"></a>
+<a id="user-quotas"></a></p>
+  <h2 id="section-3">ユーザー割り当て</h2>
+
+  <p>現在、新規ユーザーが作成できるワークスペースの数は限られており、並行して実行できるアプリケーションの数には制限があります。</p>
+
+  <p>現在のクォータを表示するには、ログイン時に右上にあるユーザー名をクリックし、[<strong>マイ アカウント</strong>] を選択します。 <strong>実行中のワークスペースの管理</strong> へのリンクをクリックするか、<a href="https://notebooks.v2.opensourcebrain.org/hub/home">ここ</a> をクリックすると、現在実行中のワークスペースを表示し、停止/削除できます。</p>
+
+  <div class="note-box">
+    <p><strong>さらにリソースが必要ですか?</strong></p>
+
+    <p>OSBv2 インフラストラクチャのテストを支援したいユーザーやグループに追加のリソースを喜んで提供します。さらに詳しく話し合うには、要件を <a href="/external/opensourcebrain/documentation/source/General/Contacts.html#contact">連絡を取る</a> に記入してください。</p>
+  </div>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/opensourcebrain/documentation/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">登録</a></li>
+<li class="toc-h2"><a href="#section-1">サインイン</a></li>
+<li class="toc-h2"><a href="#section-2">ワークスペース内のユーザー データ ストレージ</a></li>
+<li class="toc-h2"><a href="#section-3">ユーザー割り当て</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

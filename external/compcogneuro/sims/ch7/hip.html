@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/sims: AB トレーニングとテスト | マインドアップロード</title>
+<meta name="description" content="compcogneuro/sims: README.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/sims: AB トレーニングとテスト</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch7/hip/README.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/sims/blob/main/ch7/hip/README.md</a></p>
+  <p>ライセンス: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><em><a href="https://compcogneuro.org/simulations">シミュレーションに戻る</a></em></p>
+
+  <p>＃ 導入</p>
+
+  <p>この海馬モデルの探索では、以前に標準的な皮質ネットワーク (<code>abac</code>) で使用したのと同じ、基本的な AB-AC ペア関連リスト学習パラダイムを使用します。海馬は、元の AB 関連付けに過度のレベルの干渉を引き起こすことなく、新しいペア関連付け (AC) を学習できる必要があります (図 1 を参照)。また、これを皮質モデルで可能であったよりもはるかに迅速に実行できる必要があります。このモデルは、海馬の <em>Theta Phase</em> モデル (<a href="#references">ケッツ、モルカンダ、オライリー、2013</a>) の更新バージョンである <a href="#references">鄭他、2022</a> の <em>Theremin</em> モデルを使用しています。 EC &lt;-&gt; CA1 投影は、他のすべての接続とともに、シータ位相リズムに従って構成された誤差駆動型の学習コンポーネントを備えています。</p>
+
+  <p><img src="https://raw.githubusercontent.com/compcogneuro/sims/main/ch7/hip/fig_ab_ac_data_catinf.png?raw=true" alt="AB-ACデータ" title="AB-AC Data" /></p>
+
+  <p><strong>図 1:</strong> AB-AC ペアのアソシエートを学習している人々からのデータ、および AB での AC 学習の <em>壊滅的な干渉</em> を示す McCloskey &amp; Cohen (1989) からの同等のデータ。</p>
+
+  <ul>
+    <li>左側のパネルの [[sim:TrainAB]] ボタンと [[sim:TestAB]] ボタンをクリックして、AB トレーニング リストとテスト リストがどのように構成されているかを確認します。 (これを詳しく見るのは難しいかもしれません。)「A」パターンは最初の 3 つのユニット グループ (各パターンの下部、左から右、下から上の順) で、「B」パターンは次の 3 つです。<code>Test AB</code> パターンでこれらが空白になっていることが最も簡単にわかります (海馬パターンの補完によって埋められます)。パターンの後半はリスト コンテキストです (<code>abac</code> プロジェクトと同様)。</li>
+  </ul>
+
+  <h1 id="ab-">AB トレーニングとテスト</h1>
+
+  <p>トレーニング中にネットワークを通じて活性化が広がる過程を観察してみましょう。</p>
+
+  <ul>
+    <li>ステップレベル ([[sim:Step]] の隣) を <code>Trial</code> ではなく <code>Cycle</code> に設定し、[[sim:Init]]、[[sim:Step]] <code>Cycle</code> を実行します。</li>
+  </ul>
+
+  <p>ネットワークに提示された AB トレーニング セットからの入力パターンが表示されます。予想どおり、トレーニング中に、入力パターンの 3 つの部分 (A、B、コンテキスト) がすべて表示されます。活性化が <code>ECin</code> 層から <code>DG, CA3</code> 経路を通って同時に <code>CA1</code> に流れることがわかります。そのため、スパース <code>CA3</code> 表現は可逆 <code>CA1</code> 表現に関連付けることができ、後で呼び出した場合にまさにこの <code>ECin</code> パターンが返されます。 <code>CA3</code>。  NetView の右下にある Time VCR ボタンを使用すると、整定プロセスをサイクルごとに再生できます。</p>
+
+  <ul>
+    <li>さらにいくつか (ただし 10 未満) のトレーニング イベントを通じて <code>Step</code> を <code>Trial</code> および <code>Step Trial</code> に戻し、<code>ActQ0</code> (前のトライアル) 間を前後にクリックして、<code>ECin, DG, CA3</code> 層と <code>CA1</code> 層の後続のイベント間のパターンの重複量の相対量を観察します。変数の <code>Phase</code> グループ内の <code>ActP</code> (現在のトライアル)。</li>
+  </ul>
+
+  <p><code>ECin</code> パターンの重複が最も多く、次に <code>CA1</code> の重複が多く、次に <code>CA3</code>、最後に <code>DG</code> の重複が最も少ないことが観察できたはずです。 FFFB 全体の阻害レベルはこの結果と一致しており、DG が非常に高い阻害レベルを示し、次に CA3、CA1、最後に EC が続きます。</p>
+
+  <blockquote>
+    <p><strong>質問 7.4:</strong> パターン分離メカニズムに関する本文前半の説明と、これらの異なる層における活性と抑制の相対レベルを使用して、これらの活性レベルに関する各層の重複結果を定性的な観点から説明してください。</p>
+  </blockquote>
+
+  <sim-question id="7.4">
+
+トレーニングの各エポックは 10 のリスト項目で構成され、その後 3 セットのテスト イベントでテストが行​​われます。最初のテスト セットには AB リスト項目が含まれ、2 番目には AC リスト項目が含まれ、3 番目にはネットワークが新しい項目をそのように扱っているかどうかを確認するための新しい _Lure_ 項目のセットが含まれています。 10 回のトレーニング イベントを通過するたびに、ネットワークは自動的にテストに切り替わります。
+
+* `Step` を `Epoch` および `Step Epoch` に設定すると、残りのトレーニング エポックをステップ実行し、自動的にパターンのテストに入ります。 `Train Epoch Plot` に切り替えて、再度 `Step Epoch` を実行すると、2 エポックが実行されます。  `Mem` 行が上昇しているのがわかります。これは、項目の約 50% が正確に記憶されていることを示しています。次に、`Network` タブに戻り、実行モードを `Train` ではなく `Test` に設定し、次に `Init`、`Step` を `Cycle` に変更し、`Step Cycle` を実行して、テスト入力がネットワークを介して伝播することを確認します (必ず に戻してください)。 `Act` を表示しています）。
+
+テスト中に、ネットワークに提示された入力パターンには、前に見たように 2 番目のアソシエート (ペアの B または C 項目) が欠落しており、ネットワーク内でアクティベーションが進行するにつれて、`CA3` を通って上向きに流れ、`CA1` を経由して `ECout` に戻るアクティベーションの結果として、EC 層のこの欠落部分が埋めら​​れる (パターン補完) ことが観察されるはずです。
+
+* `Test Trial Plot` タブをクリックし、`Test` モードで `Run` を実行します。
+
+`AB`、`AC`、および `Lure` 項目の全体的な `Mem` メモリー統計のプロットが表示されます。  これらのメモリ統計がどのようにスコアリングされるかを確認します。  まず、プロットの `TrgOnWasOffCmp` 行をクリックします。これには、「比較」領域 (B または C 項目が存在する) 内の `ECout` のうち、_off_ であったが _on_ であるべきユニットの数が表示されます。  これらは海馬が思い出す必要がある B 項目の特徴であり、この尺度は海馬がどの程度思い出すかを示し、高い値はネットワークがプローブ パターンの大部分を思い出すことができていないことを示します。
+
+次に、`TrgOffWasOn` 行をクリックすると、その逆、つまりオフにする必要があったが誤ってアクティブ化された機能が表示されます。したがって、大きな `TrgOffWasOn` は、ネットワークがキューされたパターンとは異なるパターンを構成しているか、別の方法で呼び出したことを示します。これらの測定値が両方とも比較的低い場合 (しきい値 0.34 未満)、ネットワークは元のパターンを正しく再現したものとしてスコア付けされます (つまり、`Mem` = 1)。これらの要素のしきい値は、パターン全体を呼び出す必要がないように、関連項目の分散表現を想定しています。
+
+一般に、`TrgOnWasOffCmp` が `TrgOffWasOn` よりも大きいことがわかります。海馬ネットワークは「高い閾値」であり、これは回想と想起に関する広範なデータと一致します (詳細については、[ノーマン＆オライリー、2003](#references) を参照してください)。
+
+* `Test` の代わりに `Train` モードに戻り、すべての AB 項目が `Mem = 1` スコアを取得するまで、さらに `Step Epoch` ステップを実行して AB 項目についてさらに学習します。
+
+&gt; **質問 7.5:** AB、AC、および Lure テストの `Mem` 回答の合計割合を報告してください。
+
+<sim-question id="7.5">
+
+
+# 詳細なテスト: パターン完成の動作
+
+ネットワークが何かを学習したので、一度に 1 サイクルずつステップを踏んでテスト プロセスを詳細に実行していきます。
+
+* `Network` をクリックして `Test` モードに戻り、次に `Init`、次に `Step Cycle` に戻ると、AB パターンのアクティブ化をサイクルごとに確認できます。
+
+調査された A 刺激、B 刺激が存在する空のギャップ、および `Input` および `ECin` の AB リストのリスト コンテキスト表現が表示されるはずです。ネットワークが B パターンを完了していることがわかります。これは、`EC` アクティベーション パターンのギャップが埋められることを視覚的に確認できるはずです。`CA3` ユニットがアクティベートされた結果、欠落している要素が埋められたことがわかるはずです。興味深いことに、これらの不足している要素が埋められ始めると、`ECout` のアクティベーションが `ECin` にフィードバックされ、`DG` レイヤーと `CA3` レイヤーを介してフィードバックされ、その結果全体のアクティベーション パターンがシフトする可能性があることもわかります。これは、`CA3` ユニット間の横方向の興奮性の接続により、`CA3` 自体内でのはるかに迅速な (多くの場合、見えにくい) パターン完成を補完する「ビッグ ループ」パターン完成プロセスです。
+
+# AC トレーニングと干渉
+
+* `Test Epoch Plot` タブを選択し、`Train` モードに戻り、`Init` で再起動し、`Step Run` を実行します。 `abac` モデルと同様に、ネットワークが `AB Mem` スコアで 1 (100% 正しい) を取得するまで AB で自動的にトレーニングされ (_testing_ の間 -- `Train Epoch Plot` 値は、完全な `B` パターンを持ち、より優れたトレーニング結果を示します)、その後自動的に AC に切り替えて、同様に完璧な Mem になるまでトレーニングします。
+
+AC でトレーニングした後、AB での干渉の量を観察できるようになりました。これは多少の量ではありますが、おそらく壊滅的な量ではありません。  全体的な感覚をより良く理解するには、複数のサンプルを実行する必要があります。
+
+* `Run` を実行して AB / AC トレーニングを通じて 10 回の実行を実行し、`Train Run Plot` をクリックして結果を、テスト実行からの `Tst*Mem` 統計とともに表示します。 10 回の実行が終了したら、`RunStats Plot` をクリックすると、`TstABMem` の結果に関する要約統計がレポートされます。
+
+&gt; **質問 7.6:** AB 項目の `TstABMem:Mean` (平均) 値を報告してください。一般に、AC アイテムとルアー アイテムはそれぞれすべて 1 と 0 である必要があります。この結果は、図 1 に示されている人間による結果とどの程度一致しますか?
+
+<sim-question id="7.6">
+
+要約すると、この海馬モデルは、同じタスクの以前の皮質モデルと比較して、干渉レベルを大幅に低減しながら、迅速に学習できることがわかります。したがって、海馬形成の特殊な生物学的特性と、エピソード記憶におけるその特殊な役割は、計算的および機能的な観点から理解することができます。
+
+# 参考文献
+
+* Ketz, N., Morkonda, S. G., &amp; O’Reilly, R. C. (2013).シータは海馬におけるエラー主導型の学習を調整しました。 PLoS 計算生物学、9、e1003067。 http://www.ncbi.nlm.nih.gov/pubmed/23762019 [PDF](https://ccnlab.org/papers/KetzMorkondaOReilly13.pdf)
+
+* ノーマン、K.A.、オライリー、R.C. (2003)。認識記憶への海馬および新皮質の寄与のモデル化: 補完学習システムのアプローチ。心理学的レビュー、110(4)、611–646。 [PDF](https://ccnlab.org/papers/NormanOReilly03.pdf)
+
+* Zheng, Y.、Liu, X.L.、Nishiyama, S.、Ranganath, C.、および O’Reilly, R.C. (2022)。ヘビアンの間違いを修正する: 完全にエラー駆動型の海馬に向けて。 PLOS 計算生物学、18(10)、e1010589。 https://doi.org/10.1371/journal.pcbi.1010589 [PDF](https://ccnlab.org/papers/ZhengLiuNishiyamaEtAl22.pdf)
+
+
+&lt;/section&gt;
+</sim-question></sim-question></sim-question>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>

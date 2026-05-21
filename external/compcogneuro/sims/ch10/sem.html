@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/sims: 個々のユニットの表現 | マインドアップロード</title>
+<meta name="description" content="compcogneuro/sims: README.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/sims: 個々のユニットの表現</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch10/sem/README.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/sims/blob/main/ch10/sem/README.md</a></p>
+  <p>ライセンス: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><em><a href="https://compcogneuro.org/simulations">シミュレーションに戻る</a></em></p>
+
+  <p>＃ 導入</p>
+
+  <p>このネットワークは、<em>Computational Explorations</em> 教科書の初期草案の段落に関するヘビアン学習を使用してトレーニングされており、異なる単語が他の単語と共起する場合の全体的な統計について学習することができ、それによって教科書で取り上げられているトピックについての有能な (明らかに不完全ではあるが) レベルの意味論的な知識を学習することができます。これは、<a href="#references">ランダウアーとデュメ (1997)</a> による <em>潜在意味分析</em> 研究の主要な結果を再現しています。これは現在の GPT スタイル モデルの初期バージョンであり、膨大な量のテキストを処理し、そこから膨大な量の意味論的な知識を吸収します。</p>
+
+  <p><code>Input</code> レイヤーには、5 以上の頻度で出現したさまざまな単語ごとに 1 つのユニットがあります (「the」などの純粋な機能単語は除きます)。合計 1920 単語です。  各段落は、トレーニング中に単一の入力パターンとして提示され、段落内の各単語が入力でアクティブ化されます (同じ単語が複数回出現する場合でも、同じ単位がアクティブ化されるだけです)。  このような各段落の後で、<a href="../../ch6/v1rf/README.html">v1rf</a> および <a href="../../ch4/self_org/README.html">自己組織</a> プロジェクトで以前に検討したように、標準の BCM スタイルの学習メカニズムを使用して、入力層ニューロンとアクティブな <code>Hidden</code> 層ニューロンの間のヘビアン学習が行われます。  このモデルには、<code>v1rf</code> のような反復的な側方興奮性および抑制性接続も含まれており、ニューロンのトポロジー的組織化を誘導することができます。  ビジュアル モデルとは異なり、セマンティクスの高次元の性質により、これを理解するのがやや難しくなりますが、それでも同じ原則が機能している可能性があります。</p>
+
+  <p>このネットワークのトレーニングには時間がかかるため、事前にトレーニングされた重みを読み込むことから始めます。</p>
+
+  <ul>
+    <li>ツールバーで [[sim:Open Trained Wts]] を実行します。</li>
+  </ul>
+
+  <h1 id="section">個々のユニットの表現</h1>
+
+  <p>まず、ネットワーク内の個々のユニットの重みを調べてみましょう。</p>
+
+  <ul>
+    <li>[[sim:Wts]] / [[sim:Wts/r.Wt]] を選択し、次にさまざまな <code>Hidden</code> ユニットをランダムに選択して表示します。</li>
+  </ul>
+
+  <p>異なるユニットが入力内の異なるパターンの単語を検出する、重みのまばらなパターンを観察する必要があります。ただし、入力単位が小さすぎてラベルを付けることができないため、特定の単位がどの単語によってアクティブ化されるのかを実際に知ることはできません。 [[sim:Wt Words]] ボタンは、この問題の解決策を提供します。</p>
+
+  <p>※左下の隠しユニットのすぐ右にあるユニットの重量を確認し、右上の[[sim:Wt Words]]ボタンを押してください。  これにより、重み値 &gt; [[sim:Wt Words Thr]] (0.75) を持つ単語のリストが表示されます。</p>
+
+  <p>ここで注目すべき最も興味深い点の 1 つは、単位が複数のほぼ同義の用語を表していることです。たとえば、「act」、「activation」、「activations」、「add」、「added」、「adding」、「Additional」という単語が表示される場合があります。</p>
+
+  <blockquote>
+    <p><strong>質問 10.1:</strong> この単位で表されるほぼ同義の用語の他の例をいくつか挙げてください。</p>
+  </blockquote>
+
+  <sim-question id="10.1">
+
+この表現の特性は 2 つの理由から興味深いものです。まず、意味的に関連する単語が同じ単位で表現されるという点で、表現が何か意味のあることを行っていることを示します。第二に、これらの同義語が同じ段落内で同時に出現することはおそらくほとんどありません。通常、特定の単語の 1 つのバージョンのみが特定の文脈で使用されます。たとえば、ある段落では「ユニットのアクティビティは...」と表示され、別の段落では「ユニットのアクティベーションは...」と表示される場合があります。したがって、そのような表現が発展するには、類似した単語が出現する一般的な文脈における類似性に基づいている必要があります（たとえば、前の例の「活動」および「活性化」と「単位」の共起）。この段落間の意味的類似構造の一般化は、ネットワークがテキスト自体の暗記を超えて、新しいテキスト項目の処理に効果的な表現を生成できるようにするために不可欠です。
+
+* 最初の行の 1 行後ろのユニットをクリックします (まだ左から 1 列上) -- このユニットには、最初にクリックしたユニットと比べて横方向の重みが比較的強いです。  次に、「[[sim:Wt Words]]」をクリックします。
+
+これら 2 つの単語には多くの重複があるだけでなく、多くの違いがあることに注意してください。  この部分的にオーバーラップする粗いコード化された分散表現は、ある程度の冗長性と、大規模な高次元意味空間のより体系的なカバーの両方を提供します。
+
+* ニューロンの「単語受容野」の多様性をよりよく理解するために、層内のさらに離れた他のいくつかのユニットの [[sim:Wt Words]] 表現を表示します。
+
+個々の単位の表現内には局所レベルで明らかに意味論的な構造が存在しますが、特定の単位で表されるすべての単語に関連する単一の一貫したテーマが存在しないことも明らかです。したがって、個々のユニットは、意味構造の多くの異なるクラスターの表現に参加し、より一貫した表現が現れるのは、多くのユニットにわたるアクティビティの集合的なパターンにおいてのみです。したがって、このネットワークは分散表現の優れた例を提供します。
+
+# コサインによる類似性の要約
+
+これらの分散表現をさらに詳しく調べるために、単語を入力に提示し、その結果得られる隠れ層の活性化パターンを測定できます。具体的には、さまざまな単語のセットで隠された表現がどの程度重複するかに興味があり、これによって内部の意味表現が全体的にどの程度類似しているかがわかります。パターンの重複にただ注目するのではなく、送信重みパターンのペア間の *正規化内積* または *コサイン* を使用して類似性の数値尺度を計算できます。コサイン値は -1 から +1 まで変化します。+1 は最大の類似度、0 は完全に無関係、-1 は最大の非類似性または逆相関です。  実際には、内積を計算する前に各パターンの平均アクティビティを減算します。これは最終的に *相関* と等価になります。これにより、すべてのアクティベーションが正であっても、負の相関値を確認できます。
+
+※コントロールパネルの[[sim:Words1]]に「アテンション」、[[sim:Words2]]に「バインディング」があることが分かります。実行モードを `Train` ではなく `Test` に設定し、[[sim:Init]] および [[sim:Run]] を実行して、これらの各ケースを順番にテストします。
+
+* 2 つのトライアルを再生するには、ネットワークの右下にある `Time` VCR ボタンを使用します。  これらの単語の実際の分散表現は非表示レイヤーで確認できます。これが相関関係の基礎となります。 2 つのパターンが約 50% 重複していることがわかります。
+
+* [[sim:Test Epoch Plot]] をクリックすると、2 つのアクティビティ パターン間の相関関係が表示されます。相関関係は 0.4 に近いはずです。  これは、今後の結果ごとに更新されます。
+
+* [[sim:Words2]] を「スペル」に置き換えて (引用符は含めないでください)、Return キーを押して、[[sim:Init]] と [[sim:Run]] を再度実行します (今後は、これを [[sim:Run]] としてラベル付けします)。
+
+注意とスペルの関係は約 0.06 のみであり、類似性が低いことがわかります。これは、あなたの全体的な直感と一致するはずです。私たちは、いくつかの異なる状況でバインディングの問題を解決するために注意が重要であることについて話しますが、スペルにおける注意の役割についてはあまり話しません。
+
+* この教科書を読んでネットワークが知っておくべき他のいくつかの単語を比較してください。有効な単語のリストに単語が見つからないというエラー メッセージが表示された場合は、別の単語を使用して再試行してください。また、左側のコントロール パネルで [[sim:Envs]] をクリックし、表示されるウィンドウで `Train`、`Words` をクリックしてすべての単語のリストを表示し、それをスクロールして有効なリストに含まれる単語を確認することもできます。 (これらは頻度が 5 を超える単語であり、純粋に構文的なものではありません。)
+
+&gt; **質問 10.2:** いくつかの追加の単語比較セットの相関値と、それぞれがこの教科書を読んだことによる直感的な意味論とどの程度一致するかを報告してください。
+
+<sim-question id="10.2">
+
+# 複数の単語の分散表現
+
+ここで、複数の単語入力を同時に提示し、ネットワークがこの単語の組み合わせに最適な隠れ層表現をどのように選択するかを確認します。したがって、新しい意味表現を個々の単語の意味表現の組み合わせとして生成することができます。この機能は、これらの意味論的表現のより興味深く強力なアプリケーション (多肢選択式の質問への回答、エッセイの採点など) の一部にとって重要です。
+
+私たちが探求できる興味深い質問の 1 つは、ある程度曖昧な用語を特定の方法で解釈するようどの程度揺さぶることができるかということです。たとえば、「バインディング」という用語は、本文中で 2 つの異なる文脈で使用されています。 1 つの状況は、物体認識のための視覚的特徴の結合の問題に関係しており、もう 1 つは、海馬内の記憶への情報の迅速な結合に関係しています。まず、「バインディング」と「オブジェクト認識」の間の基本的な関連性を確立することから、この探索を始めましょう。
+
+※[[sim:Words1]]に「バインド」、[[sim:Words2]]に「オブジェクト認識」を入力し、[[sim:Run]]を実行します。
+
+約 0.48 の相関が得られるはずです (興味深いことに、オブジェクトのみまたは認識のみと比較すると、相関は低くなります)。ここで、「バインディング」に加えて「特徴」を追加すると、隠れ層の類似性が高まり、オブジェクト認識に適した意味で隠れ層の類似性が高まるかどうかを見てみましょう。
+
+* [[sim:Words1]] に「機能」を追加し、[[sim:Run]] を実行します。
+
+確かに類似性は増加し、より高い相関関係が生じます。この増加を生み出す「バインディング」と「フィーチャー」の間に相互作用があることを確認するには、「フィーチャー」だけを単独でテストする必要もあります。
+
+* [[sim:Words1]] から「バインディング」を切り取って、「機能」だけを含め、[[sim:Run]] を実行します。
+
+類似性は下がります。したがって、「バインディング」と「機能」を組み合わせると、それぞれを単独で使用した場合には存在しない余分な重複が存在します。ここで、代わりに (依然として「オブジェクト認識」に対して)「急速な結合」を使用してプローブすると、異なる注意の感覚が活性化され、より小さな相関が得られるはずです。
+
+* [[sim:Words1]] を「高速バインディング」に設定し、words2 を「オブジェクト認識」に設定し、[[sim:Run]] を設定します。
+
+類似性は減少しました。したがって、ネットワークの活性化ダイナミクスが影響を受けて、単語のさまざまな意味が強調される可能性があることがわかります。
+
+* このテストを終了するには、[[sim:Words2]] と [[sim:Run]] に「海馬」と入力して、この結合の感覚によりよく一致するかどうかを確認します。
+
+類似性が戻っていることがわかります。したがって、これは、さまざまな単語の組み合わせの類似性を拡大または縮小できる、豊富で重複する分散表現と活性化ダイナミクスを組み合わせた、非常に強力で柔軟な意味表現の形式である可能性があります。
+
+&gt; **質問 10.3:** 異なる意味を持つ単語 (この教科書でよく表現されている) の別の例を考えて、これらの異なる意味を操作するために先ほど行ったのと同様の実験を実行してください。結果を文書化して議論します。
+
+<sim-question id="10.3">
+
+# 多肢選択式クイズ
+
+教科書の知識に基づいて、各「質問」に続く選択肢のうち、意味に最もよく一致するものはどれですか?
+
+0.神経活性化機能
+    - A. スパイク率コード膜電位点
+    - B. インタラクティブな双方向フィードフォワード
+    - C.言語の一般化非単語
+1. 変身
+    - A emphasizing distinctions collapsing differences
+    - B エラー駆動型ヘビアン タスク モデル ベース
+    - Cスパイク率コード膜電位点
+2. 双方向接続
+    - 増幅パターンの完成
+    - B競合阻害選択結合
+    - C言語の一般化非単語
+3. 皮質学習
+    - エラー駆動タスクベースのヘビアンモデル
+    - B エラー駆動タスクベース
+    - C gradual feature conjunction spatial invariance
+4. 物体認識
+    - A gradual feature conjunction spatial invariance
+    - B エラー駆動タスクベースのヘビアン モデル
+    - C増幅パターンの完成
+5.注意
+    - 競合阻害選択結合
+    - B gradual feature conjunction spatial invariance
+    - Cスパイク率コード膜電位点
+6. 重量ベースのプライミング
+    - 長期的には学習が変わる
+    - B アクティブメンテナンス短期残存
+    - C 高速の任意の詳細の接続詞
+7. 海馬の学習
+    - 高速の任意の詳細の接続詞
+    - B 遅い統合の一般的な構造
+    - C エラー駆動の hebbian タスク モデル ベース
+8.失読症
+    - A surface deep phonological reading problem damage
+    - B 音声出力聴覚言語非単語
+    - C競合阻害選択結合
+9. 過去形
+    - 過正則化形状の曲線
+    - B 音声出力聴覚言語非単語
+    - C 高速の任意の詳細の接続詞
+
+この同じクイズをネットワークに提示して、クラスの生徒と比較してどれだけうまくいったかを判断することができます。クイズが電文形式になっているのは、ネットワークが実際にトレーニングされた内容の単語のみが含まれているためです。最良の答えは常に A であり、B はもっともらしい引き立て役となるように設計されていますが、C は明らかに無関係です (人間とは異なり、ネットワークはテスト項目間のこうした規則性を認識できません)。クイズは、最初に「質問」を提示し、結果として得られる隠れたアクティブ化パターンを記録し、次に考えられるそれぞれの答えを提示し、結果として得られる隠れたアクティブ化と質問の相関関係を計算することによってネットワークに提示されます。最も近い相関関係を持つ回答がネットワークの回答として選択されます。
+
+* [[sim:Quiz All]] ボタンを押してから、[[sim:Validate Epoch]] タブをクリックすると、全体的な結果が表示されます。各質問の表が表示され、各列に示されているように、相関性が最も高い回答が回答となります。最後に、`Total` 行に全体的なパフォーマンスの概要統計が表示され、`Correct` 列に正解率が表示されます。
+
+ネットワークは完全ではありませんが、かなりうまく機能し、.8 = 80% の正解率を取得していることがわかります。ネットワークは、明らかに無関係な回答 C を非常にうまく拒否しますが、A が B よりも優れているという私たちの感覚と必ずしも一致するとは限りません。質問 6 では、B というフレーズが質問フレーズの文脈でよく言及されていますが、類似点ではなく、それに対する *対照* として言及されています。ネットワークにはこの種の区別を認識す​​るための構文知識がないため、これらは一緒に現れるため、密接に関連していると見なされます。これはおそらく、人間の体内で起こっていることの少なくとも一部を反映していると思われます。 「黒人」と「白人」は正反対であるにもかかわらず、私たちはそれらの間に強いつながりを持っています。ただし、構文情報を使用して意味表現をさらに改良することもできます。このスキルはこのネットワークには欠けており、この章の最後のシミュレーションで取り上げられます。
+
+# 参考文献
+
+* Landauer, T. K. &amp; Dumais, S. T. (1997)。プラトンの問題の解決策: 知識の獲得、誘導、表現に関する潜在意味分析理論。心理学的レビュー、104、211–240。
+
+
+&lt;/section&gt;
+</sim-question></sim-question></sim-question>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>

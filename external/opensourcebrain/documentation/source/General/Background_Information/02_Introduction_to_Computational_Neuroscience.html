@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenSourceBrain Documentation: 計算神経科学 | マインドアップロード</title>
+<meta name="description" content="OpenSourceBrain/Documentation: source/General/Background_Information/02_Introduction_to_Computational_Neuroscience.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">OpenSourceBrain 翻訳ページ</div>
+    <h1 class="title">OpenSourceBrain Documentation: 計算神経科学</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/OpenSourceBrain/Documentation/blob/main/source/General/Background_Information/02_Introduction_to_Computational_Neuroscience.md" target="_blank" rel="noopener noreferrer">https://github.com/OpenSourceBrain/Documentation/blob/main/source/General/Background_Information/02_Introduction_to_Computational_Neuroscience.md</a></p>
+  <p>ライセンス: CC BY 4.0。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><a id="bg:compneuro"></a>
+<a id="computational-neuroscience"></a></p>
+  <h1 id="section">計算神経科学</h1>
+
+  <p>この文書は、初心者が計算神経科学に入門できるよう支援することを目的としています。
+これは生きたドキュメントであり、定期的に更新されることに注意してください。
+<a href="https://github.com/OpenSourceBrain/Contribute/issues/3">援助の申し出</a> を完了することは大歓迎です!</p>
+
+  <p><a id="books"></a></p>
+  <h2 id="section-1">本</h2>
+
+  <ol>
+    <li>神経科学
+      <ul>
+        <li><a href="http://www.amazon.com/Cognitive-Neuroscience-Biology-Mind-4th/dp/0393913481/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1457248826&amp;sr=1-1&amp;keywords=cognitive+neuroscience+gazzaniga">認知神経科学</a>、マイケル S. ガザニガ、リチャード B. アイヴリー、ジョージ R. マングン</li>
+        <li><a href="http://www.amazon.com/Principles-Neural-Science-Eric-Kandel/dp/0838577016">神経科学の原理</a>、エリック カンデル</li>
+      </ul>
+    </li>
+    <li>計算モデリング/理論神経科学
+      <ul>
+        <li><a href="http://www.gatsby.ucl.ac.uk/~dayan/book/">理論的神経科学: 神経システムの計算および数学的モデリング</a>、Peter Dayan および LF Abbott</li>
+        <li>[ニューロン モデリングの方法: イオンからネットワークまで][kochsegev]、C. Koch および I. Segev (編)</li>
+        <li>[神経科学における計算モデリングの原理][willshaw]、David sterratt、Bruce Graham、Andrew Gillies、David Willshaw (編)</li>
+        <li><a href="http://neuronaldynamics.epfl.ch/">ニューロンダイナミクス - 単一ニューロンからネットワークおよび認知モデルまで</a>、ウルフラム ガースナー、ヴェルナー M. キスラー、リチャード ノー、リアム パニンスキー (<strong><a href="http://neuronaldynamics.epfl.ch/">オンラインで無料で入手可能!</a></strong>)</li>
+        <li>[計算神経科学: 実験家のための現実的なモデリング][deschutter]。 E.デ・シュッター (編)</li>
+        <li><a href="http://www.amazon.com/Introduction-Theory-Neural-Computation-Institute/dp/0201515601">ニューラル計算理論入門</a>、ジョン A. ハーツ、アンダース S. クロー、リチャード G. パーマー</li>
+        <li><a href="http://www.amazon.com/Vision-Computational-Investigation-Representation-Information/dp/0262514621">ビジョン: 人間の表現と視覚情報の処理に関する計算による調査</a>、デビッド マー</li>
+        <li><a href="http://www.amazon.com/Handbook-Brain-Theory-Neural-Networks/dp/0262011972">脳理論とニューラル ネットワークのハンドブック</a>、マイケル A. アービブ (編)</li>
+      </ul>
+    </li>
+    <li>プログラミング
+      <ul>
+        <li><a href="http://www.amazon.com/MATLAB-Neuroscientists-Introduction-Scientific-Computing/dp/0123745519">神経科学者のための Matlab</a></li>
+        <li><a href="http://shop.oreilly.com/product/0636920020219.do">SciPy と NumPy</a></li>
+        <li><a href="http://shop.oreilly.com/product/0636920023784.do">データ分析のためのPython</a></li>
+        <li><a href="http://greenteapress.com/thinkstats/">統計を考える</a></li>
+        <li><a href="http://www.diveintopython.net/">Python を詳しく見る</a></li>
+      </ul>
+    </li>
+    <li>機械学習
+      <ul>
+        <li><a href="http://www.amazon.com/Pattern-Recognition-Machine-Learning-Christopher/dp/8132209060/ref=pd_sim_14_4?ie=UTF8&amp;dpID=51qDRMnf9LL&amp;dpSrc=sims&amp;preST=_AC_UL160_SR118%2C160_&amp;refRID=1N99QG8VBWEBCHJ893BR">パターン認識と機械学習</a>、クリストファー M ビショップ</li>
+        <li><a href="https://mitpress.mit.edu/books/machine-learning-0">機械学習、確率的観点</a>、ケビン P. マーフィー</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><a id="publications"></a></p>
+  <h2 id="section-2">出版物</h2>
+
+  <ol>
+    <li>記事をレビューする
+      <ul>
+        <li>Atick、J.J.、1992年。<a href="http://invibe.net/biblio_database_dyva/woda/data/att/0b79.file.pdf">情報理論は感覚処理の生態学的理論を提供できるでしょうか?</a> ネットワーク: ニューラル システムの計算、3(2)、213-251 ページ。</li>
+        <li>Oztop, E.、Kawato, M.、Arbib, M.、2006 年。<a href="http://www.sciencedirect.com/science/article/pii/S0893608006000268">ミラー ニューロンと模倣: 計算によるガイド付きレビュー。</a> Neural Networks、19(3)、pp.254-271。</li>
+        <li>Bower、J.M.、2013。<a href="http://link.springer.com/book/10.1007/978-1-4614-1424-7">20 年間の計算神経科学。</a> ニューヨーク: Springer。</li>
+        <li>ブレット、R.、ルドルフ、M.、カーネヴァーレ、T.、ハインズ、M.、ビーマン、D.、バウワー、J.M.、ディーズマン、M.、モリソン、A.、グッドマン、P.H.、ハリス Jr、F.C. <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2638500/">スパイキング ニューロンのネットワークのシミュレーション: ツールと戦略のレビュー</a> Journal of computational Nuclearscience、23(3)、349-398 ページ。</li>
+      </ul>
+    </li>
+    <li>古典的な論文
+      <ul>
+        <li>Hodgkin, A.L. および Huxley, A.F.、1952 年。<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1392413/">膜電流の定量的説明と、神経の伝導と興奮へのその応用</a> The Journal of physiology、117(4)、p.500。</li>
+        <li>マカロック、W.S. <a href="http://www.minicomplexity.org/pubs/1943-mcculloch-pitts-bmb.pdf">神経活動に内在する概念の論理的計算。</a> 数理生物物理学紀要、5(4)、115-133 ページ。</li>
+        <li>Donald O.Hebb、<a href="http://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Fall.2013/slides.2014/3.Srivaths.Hebb.pdf">The Organization of Behavior</a> ニューヨーク: Wiley、序論と第 4 章、「認識の第一段階: 集会の成長」、pp. xi-xix、60-78。</li>
+        <li>ラシュリー、K.S.、1950年。 <a href="http://gureckislab.org/courses/fall13/learnmem/papers/Lashley1950.pdf">エングラムを探して</a></li>
+        <li>Von Neumann, J. および Kurzweil, R.、2012 年。<a href="https://books.google.co.in/books/about/The_Computer_and_the_Brain.html?id=Q30MqJjRv1gC&amp;redir_esc=y">コンピューターと脳。</a> エール大学出版局。</li>
+        <li>Rosenblatt, F.、1958. <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.335.3398">パーセプトロン: 脳内の情報の保存と組織化のための確率的モデル。</a> Psychological review、65(6)、p.386</li>
+        <li>Marr, D. および Poggio, T.、1976 年。<a href="http://www.dtic.mil/dtic/tr/fulltext/u2/a030748.pdf">ステレオ視差の共同計算</a> Science、194(4262)、283-287 ページ。</li>
+        <li>Grossberg, S.、1982. <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.228.3623&amp;rep=rep1&amp;type=pdf">脳はどのようにして認知コードを構築するのですか?</a> 心と脳の研究 (1-52 ページ)。オランダのシュプリンガー社。</li>
+        <li>アクリー、D.H.、ヒントン、G.E. <a href="http://onlinelibrary.wiley.com/doi/10.1207/s15516709cog0901_7/pdf">ボルツマン マシンの学習アルゴリズム</a> 認知科学、9(1)、147-169 ページ。</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><a id="open-source-brain-projects"></a></p>
+  <h2 id="brain-">オープンソース Brain プロジェクト</h2>
+
+  <p>計算神経科学のチュートリアル、演習などを含む OSB プロジェクトのリストについては、<a href="http://www.opensourcebrain.org/search_custom_field?f[]=43&amp;op[43]=~&amp;v[43][]=Tutorial">ここ</a> を参照してください。</p>
+
+  <p><a id="software"></a></p>
+  <h2 id="section-3">ソフトウェア</h2>
+
+  <ol>
+    <li>モデリング</li>
+  </ol>
+
+  <p>Open Source Brain のモデルの主なターゲット シミュレーターの概要については、<a href="https://github.com/OpenSourceBrain/OSB_Documentation/blob/master/contents/Help/08_Simulators.md">ここ</a> を参照してください。</p>
+
+  <ol>
+    <li>マークアップ言語
+      <ul>
+        <li>計算論的神経科学のためのモデル記述言語 <a href="http://www.neuroml.org/home">(NeuroML)</a></li>
+        <li>システム生物学マークアップ言語 <a href="http://sbml.org/Main_Page">(SBML)</a></li>
+        <li><a href="http://www.cellml.org/">CellML</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <ol>
+    <li>ライブラリ: データ分析と科学計算
+      <ul>
+        <li><a href="http://pandas.pydata.org">パンダ、Python</a></li>
+        <li><a href="http://www.numpy.org">NumPy、Python</a></li>
+        <li><a href="http://scipy.org/index.html">SciPy、Python</a></li>
+      </ul>
+    </li>
+    <li>ライブラリ: データの視覚化
+      <ul>
+        <li><a href="http://matplotlib.org/">matplotlib、python</a></li>
+        <li><a href="http://blog.olgabotvinnik.com/prettyplotlib/">prettyplotlib、Python</a></li>
+        <li><a href="http://bokeh.pydata.org/en/latest/">ボケ味、パイソン</a></li>
+        <li><a href="http://ggplot2.org/">ggplot、R</a></li>
+      </ul>
+    </li>
+    <li>ライブラリ: 機械学習
+      <ul>
+        <li><a href="http://pybrain.org">PyBrain、Python</a></li>
+        <li><a href="http://scikit-learn.org/stable/">SciKit、Python</a></li>
+        <li><a href="http://deeplearning.net/software/pylearn2/">Pylearn2、Python</a></li>
+        <li><a href="http://deeplearning.net/software/theano/">テアノ、パイソン</a></li>
+        <li><a href="http://nilearn.github.io/">ナイルラーン、Python</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><a id="databases"></a></p>
+  <h2 id="section-4">データベース</h2>
+
+  <ul>
+    <li>ModelDB: 計算神経科学用モデルデータベース <a href="https://senselab.med.yale.edu/ModelDB/">(ModelDB)</a></li>
+    <li>オープンソース ブレイン <a href="http://opensourcebrain.org/">(OSB)</a></li>
+    <li>デジタル再構成ニューロンデータベース<a href="http://neuromorpho.org/neuroMorpho/index.jsp">(ニューロモルフォ)</a></li>
+    <li>神経科学情報フレームワーク <a href="http://www.neuinfo.org/about/index.shtm">(NIF)</a></li>
+    <li>脳操作データベースシステム<a href="http://bodb.usc.edu/bodb/">(BODB)</a></li>
+    <li>BioModels データベース <a href="http://www.ebi.ac.uk/biomodels-main/">(BioModels)</a></li>
+  </ul>
+
+  <p><a id="organisations"></a></p>
+  <h2 id="section-5">組織</h2>
+
+  <ul>
+    <li>計算神経科学機構 <a href="http://www.cnsorg.org/">(OCNS)</a></li>
+    <li>国際神経情報学調整施設 <a href="http://www.incf.org/">(INCF)</a></li>
+  </ul>
+
+  <p><a id="institutions-laboratories-and-research-groups"></a></p>
+  <h2 id="section-6">機関、研究所、研究グループ</h2>
+
+  <ol>
+    <li>アジア
+      <ul>
+        <li><a href="http://www.cns.atr.jp/en/home-3/cns/">計算神経科学研究所、ATR</a></li>
+        <li><a href="http://www.brain.riken.jp/en/">理化学研究所脳科学総合研究センター(BSI)</a></li>
+        <li><a href="https://groups.oist.jp/ncu/research">神経計算ユニット、OIST</a></li>
+        <li><a href="https://groups.oist.jp/cnu/">OIST 計算神経科学ユニット</a></li>
+        <li><a href="http://neurophysics.huji.ac.il/">イスラエル、エルサレムのヘブライ大学神経物理学研究室</a></li>
+        <li><a href="https://www.ncbs.res.in/faculty/bhalla-research">教授。 Upinder S. Bhalla、NCBS、インド</a></li>
+      </ul>
+    </li>
+    <li>ヨーロッパ
+      <ul>
+        <li><a href="http://www.nncn.de/en">国立バーンスタイン ネットワーク計算神経科学</a></li>
+        <li><a href="http://www.gatsby.ucl.ac.uk/">ギャツビー計算神経科学ユニット</a></li>
+        <li><a href="http://www.birmingham.ac.uk/research/activity/cncr/index.aspx">計算神経科学および認知ロボット工学センター (CNCR)</a></li>
+        <li><a href="http://www.igi.tugraz.at/maass/#Research">教授。 Wolfgang Maass、理論計算機科学研究所、グラーツ工科大学</a></li>
+      </ul>
+    </li>
+    <li>アメリカ
+      <ul>
+        <li><a href="http://www.alleninstitute.org/our-science/brain-science/research/open-science-resources/">アレン脳科学研究所</a></li>
+        <li><a href="http://sccn.ucsd.edu/">スワーツ計算神経科学センター、UCSD、カリフォルニア州</a></li>
+        <li><a href="http://www.cnbc.cmu.edu/computational-neuroscience">認知の神経基盤センター</a></li>
+        <li><a href="http://seunglab.org/">スン研究所、ニューヨーク州プライストン</a></li>
+        <li><a href="http://ganguli-gang.stanford.edu/">ニューラルダイナミクスおよび計算研究所、カリフォルニア州スタンフォード</a></li>
+        <li><a href="http://www.neurotheory.columbia.edu/index.html">ニューヨーク州コロンビア大学理論神経科学センター</a></li>
+        <li><a href="http://cnl.salk.edu/">カリフォルニア州カリフォルニア州カリフォルニア州カリフォルニア州セジノウスキー研究所</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>研究室、センター、研究者のより包括的なリストは、<a href="https://compneuroweb.com/labs.html">ここ</a> でご覧いただけます。</p>
+
+  <p><a id="mailing-lists-blogs-and-news"></a></p>
+  <h2 id="section-7">メーリングリスト、ブログ、ニュース</h2>
+
+  <ol>
+    <li>メーリングリスト
+      <ul>
+        <li>計算神経科学 <a href="http://www.neuroinf.org/mailman/listinfo/comp-neuro">(Comp-neuro)</a></li>
+        <li>計算およびシステム神経科学 <a href="https://groups.google.com/forum/#!forum/cosyne-announce">(Cosyne)</a></li>
+        <li>コネクショニスト メーリング リスト <a href="http://www.cnbc.cmu.edu/connectionists">(コネクショニスト)</a></li>
+      </ul>
+    </li>
+    <li>ブログ
+      <ul>
+        <li><a href="http://blogs.discovermagazine.com/neuroskeptic/#.Vt59D5x9600">神経懐疑論者</a></li>
+        <li><a href="http://blog.ketyov.com/">振動する思考</a></li>
+        <li><a href="http://blogs.scientificamerican.com/scicurious-brain/">真面目な脳</a></li>
+        <li><a href="https://xcorr.net/">xcorr : コンプニューロ</a></li>
+        <li><a href="http://blogs.plos.org/neuro/">PLoS ニューロ</a></li>
+        <li><a href="http://the-brain-box.blogspot.in/">ブレインボックス</a></li>
+      </ul>
+    </li>
+    <li>ニュース
+      <ul>
+        <li><a href="http://www.sciencedaily.com/articles/c/computational_neuroscience.htm">サイエンスデイリー</a></li>
+        <li><a href="http://neurosciencenews.com/neuroscience-terms/computational-neuroscience/">神経科学ニュース</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><a id="online-courses"></a></p>
+  <h2 id="section-8">オンラインコース</h2>
+
+  <p>1.コーセラ</p>
+  <ul>
+    <li><a href="https://www.coursera.org/course/compneuro">計算神経科学</a></li>
+    <li><a href="https://www.coursera.org/learn/machine-learning">機械学習</a></li>
+    <li><a href="https://www.coursera.org/course/bluebrain">シナプス、ニューロン、脳</a></li>
+  </ul>
+
+  <p>2.edX</p>
+  <ul>
+    <li><a href="https://www.edx.org/course/fundamentals-neuroscience-part-i-harvardx-mcb80-1x#.VRv8q8svD0o">神経科学の基礎、パート I</a></li>
+    <li><a href="https://www.edx.org/course/fundamentals-neuroscience-part-2-neurons-harvardx-mcb80-2x#.VRv9qMsvD0o">神経科学の基礎、パート II</a></li>
+  </ul>
+
+  <ol>
+    <li>ウルフラム・ガースナー
+      <ul>
+        <li><a href="http://lcn.epfl.ch/~gerstner/NeuronalDynamics-MOOC1.html">ニューロンダイナミクス - 単一ニューロンの計算神経科学</a></li>
+        <li><a href="http://lcn.epfl.ch/~gerstner/VideoLecturesGerstner.html">生物学的ニューロンとニューラルネットワークのモデリング</a></li>
+      </ul>
+    </li>
+    <li>OCW MIT
+      <ul>
+        <li><a href="http://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-29j-introduction-to-computational-neuroscience-spring-2004">計算神経科学の概要</a></li>
+        <li><a href="http://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-66j-computational-cognitive-science-fall-2004/">計算認知科学</a></li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><a id="other-resources"></a></p>
+  <h2 id="section-9">その他のリソース</h2>
+
+  <ul>
+    <li><a href="https://compneuroweb.com">ウェブ上の計算論的神経科学</a></li>
+    <li><a href="http://compneuropapers.tumblr.com/">興味深い (計算) 神経科学論文 </a></li>
+    <li><a href="http://compneuro.uwaterloo.ca/research/theoretical-neuroscience/comments-on-theoretical-neuroscience-books.html">理論的な神経科学の書籍に関するコメント</a></li>
+    <li><a href="http://www.genesis-sim.org/cnslecs/cnslecs.html">計算神経科学の入門講義</a></li>
+  </ul>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/opensourcebrain/documentation/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section-1">本</a></li>
+<li class="toc-h2"><a href="#section-2">出版物</a></li>
+<li class="toc-h2"><a href="#brain-">オープンソース Brain プロジェクト</a></li>
+<li class="toc-h2"><a href="#section-3">ソフトウェア</a></li>
+<li class="toc-h2"><a href="#section-4">データベース</a></li>
+<li class="toc-h2"><a href="#section-5">組織</a></li>
+<li class="toc-h2"><a href="#section-6">機関、研究所、研究グループ</a></li>
+<li class="toc-h2"><a href="#section-7">メーリングリスト、ブログ、ニュース</a></li>
+<li class="toc-h2"><a href="#section-8">オンラインコース</a></li>
+<li class="toc-h2"><a href="#section-9">その他のリソース</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

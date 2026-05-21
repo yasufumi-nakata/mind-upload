@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: stn | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: stn.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: stn</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/stn.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/stn.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Rubicon”, “Neuroscience”]
+Name = “STN”
+bibfile = “ccnlab.json”
++++
+<strong>視床下核</strong> (STN) は、[[basal ganglia]] 回路の一部であり、[[neocortex]] から直接入力を受け取り、外淡蒼球 (GPe) と双方向に接続され、出力核 (SNr、GPi) に興奮を投影します。 PCore モデルでは、STN は、これらの出力核を励起することによって BG 脱抑制の初期ブレーキを駆動する役割を果たし、次に GPePr (プロトタイプ GPe) ニューロンからリバウンド抑制シグナルを受け取ります。これにより、活動が長期間停止し、BG が意思決定機能を実行するための短い時間枠が開かれます。これは、BG ニューロンの段階的発火の背後にあるメカニズムを提供します。</p>
+
+  <p>このページでは、STN が回路内で非常に重要でやや物議を醸す役割を果たすことを考慮して、STN の機能をよりよく理解するために、STN 上のニューラル データについてより詳細に説明します。</p>
+
+  <p>[[basal ganglia]] でレビューされているように、BG の発火に関する入手可能なデータの多くは、個々のニューロンの活動の短い周期的なウィンドウと一致しており、これらの短いウィンドウの外側にある線条体ニューロンは著しく沈黙しています。これは、仮説どおりの STN の貢献と全体的に一致しています。</p>
+
+  <p>{id=”figure_Fujimoto-kita93” style=”高さ:20em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_stn_pause_fujimoto_kita_93_fig3.png" alt="STN ニューロンからの神経記録。最初に 2 回の活動のバーストとその後の長期間の抑制が示され、その後回復します。上のパネルは 2 つの最初のバーストのより詳細なタイムスケールのズームインを示し、下のパネルは約 150 ミリ秒のより長いタイムスケールの抑制ウィンドウを示しています。藤本＆喜多著、1993年" /></p>
+
+  <p>{id=”figure_magill04” style=”高さ:20em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_stn_pause_magill_etal_04.png" alt="異なる応答プロファイルによる STN ニューロンからの神経記録。パネル A と B は、最初に 2 回の活動バーストと、それに続く長期間の抑制を示し、その後回復します。回復ウィンドウについては特に示されていませんが、論文で説明されています。マギルら、2004 年より" /></p>
+
+  <p>さらに、STN における神経活動の直接記録は、[[@^FujimotoKita93]] および [[@^MagillSharottBevanEtAl04]] からそれぞれ [[#figure_fujimoto-kita93]] および [[#figure_magill04]] に示されているように、一時停止動作を明確に示しています。 STN ニューロンが最初のバースト後に持続的な抑制を受ける期間は約 150 ミリ秒です。</p>
+
+  <p>この阻害の原因は上記の論文の著者には不明であり、残念なことに、一般にこの分野で集中的に研究される重要なテーマではありませんでした。既存の電気生理学文献からは 2 つの主要な候補があります。</p>
+
+  <ul>
+    <li>
+      <p>小さなコンダクタンスのカルシウム活性化 K チャネル ([[neuron channels#SKCa]])。[[@^HallworthWilsonBevan03]] によって説明され、現在の PCore モデルに含まれるメカニズムです。最初のバースト活動パターンの結果として入ってくる Ca++ イオンは、その後、さらなる発火を抑制する比較的長時間持続する K+ 電流をオンにします。</p>
+    </li>
+    <li>
+      <p>高い持続プラトー電位による Na+ スパイク駆動チャネルの不活性化 ([[@KassMintz06]])。 [[@BeurrierBioulacAudinEtAl01]])。この不活性化は樹状カルシウムスパイクによって逆転する可能性があり ([[@Kass09]])、STN ニューロンへの他の興奮性シナプス入力が休止を終了できる可能性があることを示唆しています ([[@ChopekHultbornBrownstone19]])。</p>
+    </li>
+  </ul>
+
+  <p>バーストでは NMDA チャネルにも役割があり、SKCa チャネル ([[@ZhuMunhallShenEtAl04]]) に結合する可能性があります。他の論文では、STN ニューロンのさまざまな電気生理学的特性を調査しています ([[@NakanishiKitaKitai87]]、[[@OtsukaAbeTsukagawaEtAl04]]、[[@KumaraveluBrockerGrill16), and [[@^ChopekHultbornBrownstone19]] では、発火の一時停止など、これらのニューロンの複雑な電気生理学的特性について説明しています。</p>
+
+  <h2 id="stn-">STN における異質性</h2>
+
+  <p>{id=”figure_stn-neurons” style=”高さ:20em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_stn_neurons_wallen_etal_2020.png" alt="分子マーカーに基づく STN 内のさまざまな細胞タイプの分布。腹内側から背外側への強い勾配を示し、DL のみが相性バーストに関連する PV+ タイプを持ちます。 Wallen-Mackenzie 他、2020 年より" /></p>
+
+  <p>STN 内の複数の細胞タイプ ([[@JeonLeeKwonEtAl22]]; [[@Wallen-MackenzieDumasPapathanouEtAl20]]) および STN ニューロンからの異なるタイプの投射経路 ([[@SatoParentLevesqueEtAl00]]; [[@KoshimizuFujiyamaNakamuraEtAl13]]) についてはかなりの証拠があるため、STN 機能の上記の特徴付けはおそらく話の一部にすぎません。 [[@^Wallen-MackenzieDumasPapathanouEtAl20]] からの [[#figure_stn-neurons]] は、PV+ タイプが STN の背外側部分にのみ存在し、BG の残りの部分の DL 部分と相​​互接続していることを示しています。この PV+ タイプはバーストを示しますが、PV- タイプはバーストを示しません ([[@JeonLeeKwonEtAl22]])。</p>
+
+  <p>{id=”figure_mirzaei” style=”高さ:10em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_stn_burst_pause_mirzaei_etal_17.png" alt="STN ニューロンからの神経記録。いくつかのニューロンは三相性のバーストと一時停止の活動パターンを示しますが、そうでないニューロンは、不均一なニューロン タイプの集団と一致します。これらのニューロンは、Go キューの前に負のランプ活動レベルを示しました。正のランプを示した他のニューロンは、バースト一時停止活動を示さなかったのです。ミルザエイら、2017 年より" /></p>
+
+  <p>したがって、[[basal ganglia]] の [[basal ganglia#figure_ds-actions]] に示される DLS ニューロンの活動の厳密な位相窓は PV+ タイプに限定されている可能性がありますが、VMS ニューロン ([[basal ganglia#figure_vs-maze]]) で見られるやや幅広く、より多様な活動プロファイルは PV-STN ニューロンに関連している可能性があります。 [[#figure_mirzaei]] は、手がかり選択課題中のラット STN からの記録データを示しています。記録されたニューロンのいくつかはバースト - 一時停止 - 発火の三相性活動を示しますが、他のニューロンは示さず、代わりに約 400 ミリ秒後に発火します。この論文には、GPe 神経発火パターンに関する [[basal ganglia]] でレビューされた他の論文と一致する関連データも含まれています。</p>
+
+  <!--- ## Hold-your-horses vs pause models -->
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#stn-">STN における異質性</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

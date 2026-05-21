@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: abstract-neural-network | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: abstract-neural-network.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: abstract-neural-network</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/abstract-neural-network.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/abstract-neural-network.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Learning”, “Computation”]
+bibfile = “ccnlab.json”
++++
+<strong>抽象ニューラル ネットワーク</strong> (<em>ANN</em>) モデルは、<em>人工ニューラル ネットワーク</em>、<em>接続主義</em>、<em>並列分散処理</em> (PDP)、<em>パーセプトロン</em>、<em>バックプロパゲーション ネットワーク</em>、<em>ディープ ネットワーク</em>、<em>AI</em> ([[artificial intelligence]]) モデル、および <em>ML (機械学習)</em> などさまざまな名前で知られており、実行される分散処理のコア メカニズムを含む大規模なモデル クラスを表します。相互接続されたニューロンのような処理要素 (<em>units</em>) によって。</p>
+
+  <p>おそらく、すべての ANN モデルに共通する最も基本的な特徴は、[[activation]] と [[weights]] の区別です。ここで、活性化は、重み付けされたシナプス接続を介して他のニューロンに伝達されるニューロン活動を表す動的状態変数です。 [[Learning]] は、通常は局所的な活性化状態の影響下で、これらのシナプスの重みの強度を変更することによって発生します。</p>
+
+  <p>これらのモデルの概要を説明した後、それらが一般に神経科学、より具体的には [[Axon]] にどのように関連するかを検討します。要約すると、Axon には、多くの ANN モデルとは大きく異なる、神経生物学的に動機付けられた特性が多数あり、機能的に重要な意味を持つ可能性があります。</p>
+
+  <p>歴史的には、初期の開発には Frank Rosenblatt の 2 層パーセプトロン モデル ([[@Rosenblatt59]]; [[@Rosenblatt62]]) が含まれていましたが、これは [[@^MinskyPapert69]] によって批判され、このフレームワークの広範な拒否につながりました (振り返ってみると、これは明らかに見当違いでした)。 [[@^RumelhartHintonWilliams86]] によって開発された [[error-backpropagation]] フレームワークを介して「隠しレイヤー」を使用できるようになったことで、これらのモデルへの関心が再び高まりました。しかし、その後の関心の低下（そしてより厳密な統計に基づくフレームワークに注目）の後、[[GPU]] 上で実行される [[@^KrizhevskySutskeverHinton12]] 「AlexNet」ディープ ニューラル ネットワークの驚くべきパフォーマンスが関心の復活を引き起こし、今日まで指数関数的に成長しています。歴史的なレビューについては [[@^LeCunBengioHinton15]] および [[@^Schmidhuber15a]] を参照し、今日に至るまで関連性の高い基本的な洞察については [[@^RumelhartMcClelland86]] を参照してください。</p>
+
+  <p>現在広く使用されている [[large language models]] (LLM) は、この一連の作業の最も影響力のある結果を表しており、ChatGPT やその他のさまざまな関連モデルの形で何百万もの人々によって毎日使用されています。興味深いことに、このモデルのコア メカニズムは 1980 年代の [[error-backpropagagion]] モデルに直接遡ることができ、[[GPU]] テクノロジーの大幅な改善の結果、両方のモデルのサイズとトレーニングできるデータ量が大幅に向上したことに大きな進歩が見られます。</p>
+
+  <p>インターネット上で人間が生成したテキストの基本的にコーパス全体で LLM をトレーニングできる機能 (つまり、「ビッグ データ」アプローチ) は、LLM が [[predictive learning]] に基づいているという事実に由来します。[[predictive learning]] は、[[Axon]] モデルの中核機能であり、仮説によれば、哺乳類の [[neocortex]] です。対照的に、AlexNet モデルでは、そのモデルや他の多くの誤差逆伝播モデルで誤差信号を駆動するカテゴリ ラベルを提供するために、人間がラベル付けした画像の大規模なコーパス (<em>ImageNet</em> コーパス; [[@DengDongSocherEtAl09]]) が必要でした。具体的には、LLM は、言語入力ストリーム内の次の単語を予測しようとすることによって生成されるエラー信号から学習します。この単純な原理がそのようなモデルの驚くべき能力につながる可能性があることは注目に値します。</p>
+
+  <p>一般に、ANN モデルの進歩は、Rich Sutton が明確に述べた <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html">苦い教訓</a> と一致しています。これは本質的に、比較的単純な汎用モデルによって消費される「ビッグ データ」が、より複雑なオーダーメイドのアルゴリズムと表現を開発する試みよりも最終的に優先されるということです。これは、[[bias-variance tradeoff]] のインスタンスです。これは、学習システムに強力なバイアスを組み込むことと、より汎用的な不偏モデルを使用することとの間のトレードオフを制御する基本的な統計原則です。データが不足している場合、学習結果の分散量を減らすために、より強いバイアスが有益です (これは、新しい入力に一般化するモデルの能力に直接関係します)。しかし、データが豊富であれば、バイアスは不要であり、有害ですらあります。</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>この文脈では、Axon はその中間に位置します。軸索の新皮質 [[error-driven learning]] メカニズムは、事実上、ほとんどの ANN モデルにおける主要な汎用学習メカニズムの生物学に基づいたバージョンです。ただし、[[Rubicon]] モデルは、より強くバイアスされた形式の目標駆動型学習を推進する、[[evolution</td>
+        <td>evolutionarily]] 形状の強い皮質下脳領域のセットを表しています。このシステムにより、シミュレートされた生物は、より強いバイアスと一致して、大幅に少ない学習試行で新しいスキルを学習できるようになります。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Axon フレームワークと大多数の ANN モデルの最も重要な違いの 1 つは、これらのモデルが厳密に [[feedforward connections]] を使用し、情報がネットワーク全体で一方向 (「順方向」) にのみ流れることです。この制約により、誤差勾配を効率的に計算できるようになり、モデルの活性化ダイナミクスも大幅に簡素化されます。 Axon の中核機能である [[bidirectional connectivity]] をネットワークに組み込むと、その結果生じる「正のフィードバック ループ」により、エラー逆伝播とネットワーク全体の動作の両方に重大な問題が発生します。</p>
+
+  <p>したがって、この研究の動機となる主要な科学的疑問は、なぜ脳が双方向接続に基づいているのか、そしてそれによってフィードフォワード ANN と比較して実行される計算の性質がどのように変化するのかを理解することです。中心的な仮説の 1 つは、双方向接続が [[conscious awareness]] にとって重要であるというもので、これにより、厳密なフィードフォワード モデルでは不可能な方法で、システムが独自の知識状態にアクセスできるようになります。したがって、意識の計算上の利点は、この質問に対する 1 つの潜在的な答えを表しており、LLM やその他のモデルを悩ませ続けている「敵対的攻撃」によって明らかにされる作話や「不自然な」失敗の問題を制限できる可能性があります。</p>
+
+  <h2 id="ann-">神経科学に関連した ANN の重要な進歩</h2>
+
+  <p>以下は、1980 年代のオリジナルのバックプロップ ネットと比べて、最新の ANN モデルの主な進歩の一部です。これらの進歩の中には、軸索の生物学的特性と一致するものもありますが、一致しないものもあります。</p>
+
+  <ul>
+    <li>
+      <p><strong>ReLu 線形化活性化関数。</strong> AlexNet モデルの主な進歩は、以前のモデルで使用されていた <em>saturating</em> シグモイド (S 字型) 活性化関数と比較して、<em>rectified Linear Unit</em> (ReLU) 活性化関数を使用したことでした。この関数の線形的な性質により、ディープ ニューラル ネットワークの複数の隠れ層にわたるエラー信号の指数関数的減衰の問題が解決されます。また、各ユニットにはるかに広い有効ダイナミック レンジを与えるという追加のボーナスもあり、1 つのユニットで多数のシグモイド関数の仕事を実行できるようになります。</p>
+
+      <p>This is <em>not</em> consistent with the known biology, where individual neurons in the cortex have strong saturation properties and a relatively limited dynamic range of activation signaling. This saturating nonlinearity is critical for bidirectional excitatory networks, providing a built-in damping limit on potentially runaway positive feedback dynamics.</p>
+
+      <p>Interestingly, the exponential decay phenomenon is at least partially mitigated in the brain despite the presence of saturating nonlinearities, by virtue of robust [[inhibition]] that keeps most neurons well below the saturation levels of activity. Indeed, neurons in awake behaving [[neocortex]] are characterized as being precisely balanced between inhibition and excitation ([[@ShadlenNewsome98]]; [[@OkunLampl08]]; [[@IsaacsonScanziani11]]; [[@RubinAbbottSompolinsky17]]). This balance right around the threshold of firing also makes them more chaotic and contributes to the Poisson noise observed in spiking neurons, which could also potentially amplify responses to the temporal differences that drive learning in the [[GeneRec]] and [[kinase algorithm]]s.</p>
+    </li>
+    <li>
+      <p>**ショートカット接続と <em>residual_error の重要性。** _residual_error</em> 信号に焦点を当てて学習すること (平均値を減算するなど) の重要性に関する [[@^Schraudolph98]] の元の洞察は、深い層間の広範な <em>shortcut</em> 接続を含む [[@^HeZhangRenEtAl15]] の <em>ResNet</em> アーキテクチャで増幅され、詳しく説明されました。重要なアイデアは、これらのショートカット接続により、上位層が下位層で表されるすべての知識から自動的に恩恵を受けることができるため、このより「基本的な」レベルを超えた「残りの」情報の学習に集中できるということです。これらの方向に沿った初期の影響力のあるアイデアは、[[@^FahlmanLebiere89]] の「カスケード相関」アルゴリズムであり、これには、残差の関数として新しいユニットを段階的に追加することが含まれていました。他の広く使用されている正規化メカニズム (「バッチ ノルム」など) も、センタリングと残差誤差に焦点を当てています。</p>
+
+      <p>Shortcut connections are a prominent feature of the brain and are often used in Axon models. Furthermore, the ubiquitous pooled [[inhibition]] in the brain, which is also essential for Axon, provides a form of normalization and dynamic range centering.</p>
+    </li>
+    <li>
+      <p><strong>トランスフォーマーのようなアテンション メカニズム。</strong> オリジナルのバックプロパゲーション ネットワークと比較して最も劇的な最近の革新は、おそらく、LLM で使用される [[transformer]] アーキテクチャへの「アテンション」メカニズムの導入です。確かに、[[attention]] は人間の認知の重要な側面ですが、トランスフォーマーのアーキテクチャは、脳内で動作する際の注意よりも、[[hippocampus]] の [[episodic memory]] 機能をより多く捉えている可能性があります。</p>
+    </li>
+  </ul>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#ann-">神経科学に関連した ANN の重要な進歩</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

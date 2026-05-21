@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/sims: パーキンソン病とドーパミン薬のシミュレーション | マインドアップロード</title>
+<meta name="description" content="compcogneuro/sims: README.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/sims: パーキンソン病とドーパミン薬のシミュレーション</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch8/bg/README.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/sims/blob/main/ch8/bg/README.md</a></p>
+  <p>ライセンス: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><em><a href="https://compcogneuro.org/simulations">シミュレーションに戻る</a></em></p>
+
+  <p>＃ 導入</p>
+
+  <p>この単純化された大脳基底核 (BG) ネットワークは、ドーパミン バーストが報酬につながる行動の <em>Go</em> (直接経路) の発火を強化し、ドーパミン ディップが肯定的な結果につながらない行動の <em>NoGo</em> (間接経路) の発火を強化し、手段条件付けのためのソーンダイクの古典的な <em>効果の法則</em> を生み出し、また、複数の経験にわたって異なる報酬確率を持つ行動を学習して選択するメカニズムを提供することを示しています。</p>
+
+  <p>このモデルは、もともと <a href="#references">フランク (2005)</a> に記載されているように、ドーパミン D1 および D2 受容体の特性と直接経路および間接経路の間の関係に基づいています。ここで使用されているバージョンは、簡単なデモンストレーションを目的としており、当初 <a href="#references">オライリーとフランク、2006</a> として公開された、実行機能の章で説明されている PBWM アルゴリズムと同じコア コードを使用しています。これには、BG の脱抑制ゲート回路のより詳細な側面は含まれていません。これらの側面は、出版された論文で検討されており、他の場所で入手できます (下記を参照)。</p>
+
+  <p>モデルの全体的な機能は、前頭皮質で考慮されている特定のアクションを評価し、そのアクションに関連する報酬/罰結果の学習履歴に基づいてそのアクションを実行するかどうかを決定することです。この報酬と罰の履歴は、各アクション オプションに関連付けられた正のドーパミン信号と負のドーパミン信号の頻度に基づいて、モデルを実行すると学習されます。各トライアルで、ドーパミンバーストがある場合 (つまり、肯定的な結果による)、直接経路内のシミュレートされたドーパミン D1 受容体により、線条体の MatrixGo (直接) 経路内の活動ニューロンの重みが増加します。</p>
+
+  <p>グルタミン酸や GABA とは異なり、ドーパミンの効果は直接興奮性または抑制性ではなく、影響を受けるニューロン内のドーパミン受容体の種類 (また、そのニューロンにすでに存在する興奮性入力の量) に依存します。ドーパミンの位相バーストは、興奮性シナプス入力を受け取る D1 ニューロンを興奮させ、その結果、アクティブな Go ニューロン (つまり、刺激入力に応じて PFC 動作を選択したニューロン) の活動を優先的に増幅します。この活動の増加は、私たちが使用してきたのと同じ XCAL ルールを使用して LTP に関連付けられますが、「プラス」段階での活動の変化はドーパミンの変化によってのみ引き起こされます。したがって、モデルをトレーニングするために何をすべきかという教師付きの「目標」はありませんが、アクションが予想よりも良い結果を生み出す場合（つまり、ドーパミンレベルが上昇し、Go ニューロンの活動が増加する場合）、アクションは強化される可能性があります。</p>
+
+  <p>Go ユニットとは対照的に、ドーパミンは D2 受容体に対する効果を介して NoGo ニューロンを阻害するため、これらのユニットは報酬中に LTD を受けます。この逆の効果は、ドーパミンの低下の場合にも発生します（つまり、予想より悪い結果、あるいは明らかにマイナスの結果によるもの）。この場合、選択されたばかりのアクションを表す (したがって興奮性入力を持つ) NoGo ニューロンは、実際にはドーパミン レベルが低下すると (抑制性 D2 効果の除去により) より活性化します。アクティブなニューロンの NoGo アクティビティが増加すると、重みが増加するため、将来このアクションがさらに「回避」される可能性が高くなります。</p>
+
+  <p>この「対抗」のメカニズムにより、大脳基底核は利益（報酬の予測確率）とコスト（マイナスの結果の予測確率）の両方を個別に学習して表現することができ、システム内のドーパミンのレベルを利用して、利益またはコストに基づいて選択が行われる程度を調節することができる（したがって、種を超えたドーパミン操作の影響と一致して、リスクテイクに影響を与える。詳細については、<a href="#references">コリンズとフランク (2014)</a>を参照）。このモデルのより最近の拡張では、これらが一見Go ニューロンと NoGo ニューロンの両方と動的ドーパミンを備えた非常に複雑な生物学的特性には実際に利点があり、さまざまなタスクにわたって従来の強化学習モデルよりも堅牢です <a href="#references">ジャスキルとフランク (2023)</a></p>
+
+  <p>＃ トレーニング</p>
+
+  <ul>
+    <li>いくつかのトライアルを実行することから始めましょう。 [[sim:Init]] および [[sim:Step]] <code>Trial</code> を実行します。</li>
+  </ul>
+
+  <p>これにより、6 つの入力刺激のうちの 1 つが提示され、PFC ニューロンの表層 (2 ～ 3 層) を表す <code>PFCout</code> 層の対応する動作表現が活性化されます。この場合は運動前野 (後の作業記憶モデルで考慮される前頭前野ではなく) です。 <code>MatrixGo</code> 層と <code>MatrixNoGo</code> 層でアクティベーションが確認されるはずです (視覚化の便宜上、すべての接続は入力ユニットと同じ位置にあるユニットに対してローカリストです)。これらの層は、線条体の「マトリソーム」（別名「マトリックス」という方がかっこいいですね）の中型有棘ニューロン（MSN）を表しており、例えば背側領域にあり、前頭葉皮質の行動計画脳領域（両方とも運動前野のレベルにありますが、抽象的な決定のためにさらに前方にもあります）と相互接続されています。</p>
+
+  <p>活性化は <code>GPeNoGo</code> (淡蒼球外節) と GPiThalamus 層に広がります。このモデルでは、簡素化のために GPi と視床を単一のレイヤーにまとめています。実際の BG システム (およびより詳細なモデル) では、Go ユニットが淡蒼球内節 (GPi) の下流ニューロンを抑制することに注意してください。 GPi ニューロンは通常、強直に活動しており、抑制性の投射を視床に送ります。したがって、Go ユニットの活性には「脱抑制」機能があり、GPi による持続性抑制を除去することで視床が活性化できるようになります。対照的に、NoGo ユニットは逆の効果をもたらします (GPe を阻害し、GPi が GPi を阻害し、GPi 自体が視床を阻害します…)。この脱抑制回路には独自の計算機能セットがあります (つまり、この狂気すべてを解決する方法があります) が、ここでは簡単にするために、GPi と視床の機能をまとめた 1 つの共通の <code>GPiThal</code> 層を使用して、この回路を抽象化します。</p>
+
+  <p>この抽象化では、Go ユニットは PFC を直接励起する <code>GPiThal</code> を励起しますが、NoGo ユニットは GPe を励起し、GPiThal を抑制します。これにより、直接 Go 経路の活動が、視床皮質の興奮度に影響を与えることによって各アクションの NoGo 経路と競合するという、対戦の基本的な概念を表すことができます。脱抑制ダイナミクスを使用して、より詳細な <em>緊急</em> モデルを探索することができます。これにより、<a href="http://ski.clps.brown.edu/BG_Projects/Emergent_7.0+/">マイケル・フランクのウェブサイト</a> でさまざまな生理学的および行動データをキャプチャできます。これらには現在、<a href="https://grey.colorado.edu/emergent">緊急ウェブサイト</a> で利用可能な追加の 7.1 “LTS” パッケージが必要です。</p>
+
+  <p>特定の GPiThal ユニットが活性化の閾値レベル (0.5) (実際のシステムに存在する脱抑制を捕捉) を超えると、活性化が <code>PFCout</code> 層から <code>PFCoutD</code> 層に流れることが可能になります (D = 深い、つまり、この前頭部の深層「出力」ニュ​​ーロン)。これが視床のBG脱抑制の最終的な効果についての我々の現在の理解である：視床は深層PFCニューロンと双方向に相互接続されており、それを脱抑制することによりこれらの深層ニューロンが活性化することが可能になる。</p>
+
+  <p>これらの PFC 深層ニューロンは、前頭皮質の他の領域や他の皮質下の標的に投射します。たとえば、前頭眼野 (FEF) ニューロンは上丘に投射し、衝動性運動作用に直接影響します。一方、一次運動野の深層ニューロンは脊髄までずっと投射し、そこで筋収縮パターンを駆動します。したがって、BG 脱抑制の制御下での表層活性化から深層活性化へのこの移行は、運動動作の実行を決定する神経相関です。</p>
+
+  <p>実行機能の章で詳しく説明しますが、前頭皮質のほとんどの領域では、この深層の活性化には、皮質の他の領域に強いトップダウンの活性化信号を維持するなど、より間接的な効果があり、最終的には、より抽象的な行動計画に従って行動を導き、形成します。つまり、ほとんどの場合、刺激入力に応じて一連の筋肉を直接活性化するほど単純ではありません。それにもかかわらず、複数のカスケード PFC-BG ループが相互作用する BG モデルの階層的拡張は、BG の基本的な計算機能が各レベルで類似する、より複雑なアクション選択プロセスをシミュレートするために使用されてきました。</p>
+
+  <ul>
+    <li>[[sim:Step]] <code>Trial</code> にさらにトライアルを進めて、初期のランダムな重みに基づいてモデルが示すさまざまな動作を確認します。</li>
+  </ul>
+
+  <p>＃ 学ぶ</p>
+
+  <p>SNc からのドーパミン (DA) は、シミュレートされた D1 および D2 受容体を介して、Go ユニットと NoGo ユニットの活動の相対的なバランスを変化させます。ドーパミンの効果は、皮質線条体のグルタミン酸作動性入力によってすでに活性化されている線条体単位で最も大きくなります。電流刺激と運動反応によって活性化された Go ユニットは、D1​​ 受容体刺激によってさらに興奮します。対照的に、DA は D2 受容体を介して NoGo ユニットを均一に阻害します。 D1 および D2 受容体を介した、Go ユニットと NoGo ユニットに対する DA のこの異なる効果は、パフォーマンスに直接影響を及ぼします (つまり、DA が増えると、Go の量が増加し、それに関連する反応の活発さが増し、反応時間が速くなります)、そして重要なことに、上記のように学習にも影響します。</p>
+
+  <p>具体的には、ドーパミンバーストは Go の学習を強化し、NoGo の学習を弱めるのに対し、ディップは逆の効果をもたらします。これらは、ポジティブな結果に関連するアクションを強化し、あまりポジティブではない、またはネガティブな結果に関連するアクションを回避するという点で理にかなっています。複数の試行にわたる強化履歴を統合することにより、このシステムは、どの行動が他の行動よりも確率的により報酬/罰が大きいかを学習することもでき、利用可能な代替案の中から最適な選択肢を選択できるようになります。</p>
+
+  <ul>
+    <li>この単純なモデルでは、左側のパネルで [[sim:Envs]] の右にあるボタンをクリックしてから <code>Train</code> をクリックするとわかるように、各アクションの SNc ドーパミン シグナルを事前に決定しました。  <code>P</code> フィールドには、各アクションに関連付けられた確率が表示されます。  つまり、モデルに複数のアクションから選択させ、その結果から学習させるのではなく（学習と選択に関するドーパミンの他のさまざまな側面をシミュレートするためのより精緻なBGモデルで行われているように）、ここでは、各アクションが正または負のドーパミン信号に関連付けられる試行の割合を制御し、各アクションのこれらの確率について線条体が何を学習するかを監視するだけであり、これは要点を理解するのに十分です。</li>
+  </ul>
+
+  <p>この環境は、<em>確率的選択タスク</em> (<a href="#references">フランク、ゼーバーガー、オライリー、2014</a>) の簡略版をシミュレートします。このタスクでは、人間の参加者は、2 つの選択肢からなる強制選択タスクでさまざまな日本語の文字の中から選択するように求められ、どの文字が確率的により報酬が得られるかを学習する必要がありました (たとえば、文字の A-B ペアでは、A には 80% の確率で報酬が得られましたが、B には 20% の報酬しか得られませんでした)。参加者 (およびモデル) は、A が最も報酬が高いこと、B が最も報酬が少ないこと、またはその両方を学習できることに注意してください。A と B の選択肢を見ただけではわかりません。</p>
+
+  <p>特定の刺激のペアで最初のトレーニングを行った後、すべての異なるペアの組み合わせでテストしました (たとえば、A は平均で中立の確率が 50% である他の刺激とペアになり、B はそれらの同じ刺激とペアになります。したがって、Go 対 NoGo の学習におけるバイアスは、これらのテスト試行では A に近づくか B を回避するより良いパフォーマンスとして現れます)。重要なことに、これにより、報酬のある刺激に対する Go バイアスと、報酬のない刺激に対する NoGo バイアスの違いを確認できるようになります。経験的に、投薬を中止したパーキンソン病患者は、ドーパミンのレベルが低下し、GoよりもNoGoを多く学習したが、投薬中の患者はNoGoよりもGoを多く学習したが、年齢が一致した対照群はその中間であることがわかった(図1)。この基本パターンは現在、他のさまざまな実験やタスクで報告されています。これらの結果を単純なモデルで説明できることがわかります。</p>
+
+  <p><img src="https://raw.githubusercontent.com/compcogneuro/sims/main/ch8/bg/fig_ps_pd_data.png?raw=true" alt="PDデータ" title="PD Data" /></p>
+
+  <p><strong>図 1:</strong> <a href="#references">フランク、ゼーバーガー、オライリー (2004)</a> のデータ。薬を服用していないパーキンソン病 (PD) 患者は 20% の確率でのみ報酬が得られる B 刺激を避けることを学習する可能性が高いのに対し、薬を服用している PD 患者は 80% の確率で報酬が得られる A 刺激を選択することをより多く学習することを示しています。年齢を一致させた対照では、高齢者のほうがどちらの場合でも学習においてよりバランスが取れていました。これらの結果は、PD OFF ではドーパミンが低く、D2 ドーパミンディップベースの学習を好むのに対し、PD ON では「ディップを埋める」薬によってドーパミンが上昇し、D1 バースト学習へのバイアスが生じ、D2 ディップ学習から遠ざかっているという点で理にかなっています。</p>
+
+  <ul>
+    <li>[[sim:Weights]] タブをクリックすると、Matrix Go の重みが表示されます。各行は 1 つの入力ユニットからの重みを表します。 [[sim:Run]] を実行します。これにより、ネットワークがトレーニングされます。 (処理を高速化してクラッシュを防ぐために、<code>Run</code> 中に <code>Weights</code> タブを表示することをお勧めします。) ウェイト パターンは、30 エポックのトレーニング後に安定するはずです。 [[[sim:Network]]] タブをクリックし、ネットワーク内の [[sim:Phase]] -&gt; <code>ActAvg</code> 変数をクリックします。これは、多くの試行にわたる移動平均アクティベーションを示しているため、ネットワーク内のユニットの一般的なアクティベーションに対する学習の効果を確認できます。  ネットワーク ビューの上部にある <code>Min</code> フィールドの横にある <code>+</code> ボタン (または Max では <code>-</code>) をクリックすると、値の表示範囲をズームして見やすくすることができます。 Go ユニットと NoGo ユニットへの重みにも対応するパターンが見られます。 [[sim:Step]] <code>Trial</code> を [[sim:Act]] -&gt; <code>Act</code> 変数を使用していくつかのトライアルで実行し、特定のトライアルでネットワークがどのように実行されているかを確認します。これは、<code>ActAvg</code> 平均で観察したものと一致するはずです。</li>
+  </ul>
+
+  <blockquote>
+    <p><strong>質問 8.1:</strong> 学習中に <code>MatrixGo</code>、<code>MatrixNoGo</code>、および <code>PFCoutD</code> 層に現れる活性化のパターンについて説明してください。さまざまな刺激や動作 (a ～ f) に関連するドーパミンのバーストとディップの確率を考慮して、なぜこれらのパターンが現れたのかを簡単に説明してください。 (このシミュレーションでは、B が最も報酬の少ないアクションだった経験的タスクのラベルとは異なり、報酬確率は A で最も高く、次に B であり、以下同様であることに注意してください。)</p>
+  </blockquote>
+
+  <sim-question id="8.1">
+
+確率的選択タスクの参加者と同様に、報酬の頻度が低い刺激よりも一貫して報酬が得られる刺激を選択することができた参加者と同様に、モデルがこれらの行動に関連する相対的なドーパミンの結果を考慮して、賢明な行動の評価表現を学習していることが観察できたはずです。また、行列ユニットが報酬確率のより連続的な表現をエンコードしている一方で、システムの最終出力は、逆のプロファイルを持つアクションを回避しながら、悪い結果よりも良い結果をもたらすアクションを選択するしきい値のような動作を反映していることにも気づいたはずです。
+
+# パーキンソン病とドーパミン薬のシミュレーション
+
+* 薬物治療を受けていないパーキンソン病 (PD) に存在するドーパミンの減少をシミュレートするには、[[sim:Burst da gain]] 値を 1 ではなく 0.25 に設定します。これは、PD における DA ニューロンの約 75% の損傷に相当し、したがってドーパミン バーストの影響を弱めますが、ディップはそのままにします (つまり、PD では DA レベルがゼロに減少することは妨げられません)。 [[[sim:Weights]]] タブをクリックし、モデルの [[sim:Init]] および [[sim:Run]] を再度クリックします。
+
+&gt; **質問 8.2:** `Burst da gain`=.25 を使用したこのモデルからの [[sim:Phase]] -&gt; `ActAvg` の結果は、MatrixGo および NoGo 経路、および PFCOutD 出力層における、`Burst da gain`=1 を使用した以前の「そのままの」ネットワークの結果とどのように比較されますか?これは、図 1 に示すように、PD 患者が薬を服用していない場合の結果とどのように対応しますか? PFCOutD 層はアクションの評価に対する学習の正味の影響を反映していることを思い出してください。そのため、`ActAvg` が高いユニットは、システムが平均して報酬があるとみなすユニットに対応します。システムがアクションを確実に選択する前に、アクションにどの程度報酬が必要かという違いに気づくはずです。
+
+<sim-question id="8.2">
+
+次に、PD 患者に投与された DA 薬の効果をシミュレートできます。たとえば、レボドパはドーパミンの合成を増加させます。ドーパミンの利用可能性を高めることに加えて、薬剤はドーパミン D2 受容体 (いわゆる D2 アゴニスト) を継続的かつ直接刺激します。これにより、ドーパミンの低下による影響を鈍らせる効果があります (つまり、ドーパミン レベルが低下した場合でも、薬剤は D2 受容体を占有し続け、NoGo ユニットの興奮と学習を妨げます)。
+
+* ドーパミン利用可能性の増加を反映するには [[sim:Burst da gain]] を 1 に戻し、D2 受容体を刺激し続けてディップの効果をブロックする D2 アゴニストの効果をシミュレートするには、[[sim:Dip da gain]] を 0.25 (またはより極端な効果を得るにはそれ以下) に設定します。 「[[sim:Weights]]」タブ、「[[sim:Init]]」および「[[sim:Train]]」モデルを再度クリックします。
+
+&gt; **質問 8.3:** [[sim:Phase]] -&gt; `ActAvg` の結果は、以前の両方の実行とどのように比較されますか?図 1 に示すように、これは薬を服用している PD 患者の結果とどのように対応しますか?
+
+<sim-question id="8.3">
+
+PD 薬の興味深い副作用の 1 つは、これらの薬を服用した結果、一部の患者がギャンブル癖を発症することです。これは、薬による Go 学習と NoGo 学習の間のバランスの変化という観点からモデルで説明できます。勝ちに失敗した場合はそれほどカウントされず、まれな勝ちはよりカウントされます。
+
+この非常に単純なモデルは、適応的行動選択を促進するBGにおけるドーパミンに基づく学習の重要な定性的特徴、およびPD患者におけるこれらの魅力的な効果パターンを説明できますが、複雑な行動の根底にある意思決定プロセスの完全な複雑さのより現実的なモデルを作成するには、解決しなければならないより複雑な問題が数多くあります。
+
+まず、意思決定は、単一のアクションに対する単純な Go/NoGo の決定ではありません。 BG 回路のより精巧なモデル ([マイケル・フランクのウェブサイト](http://ski.clps.brown.edu/BG_Projects/Emergent_7.0+/) で入手可能) では、複数のアクションの中から選択することができ (アクションの選択には、複数のアクションの Go アクティビティと NoGo アクティビティの両方が並行して含まれます)、i) 学習と選択 (つまり、危険な意思決定) におけるドーパミンの異なる役割、ii) 視床下核の機能と、衝動的な行動に反応する「ハイパーダイレクト」経路を調査します。 (iii) 不確実性の関数として学習を最適化するためのコリン作動性介在ニューロンの役割、(iv) 新しい状況への一般化をサポートする意思決定中のより高度な学習と階層的タスクルールの抽象化のための複数の皮質-BG 回路間の階層的相互作用。
+
+これらの機能を超えて、現実の世界では、行動に関連するドーパミン作動性の結果が行動が取られた直後に現れることはほとんどありません。多くの場合、複数の一連の行動が必要であり、結果は数分、数時間、あるいはさらに遅れて現れます。実行機能の章で取り上げる、より完全な PBWM (前頭前皮質大脳基底核ワーキング メモリ) モデルでは、これらの同じ BG ダイナミクスと学習メカニズムが、PFC における活性化ベースの「ワーキング メモリ」表現の維持と更新をどのようにサポートし、より長い時間のギャップを埋めることができるかを示します。
+
+さらに、RL モデルと PVLV モデルでカバーされている、段階的ドーパミン発火を引き起こす脳システムの特性は、段階的ドーパミン信号を、後の結果の発火時の発火から、これらの後の結果を確実に予測する初期の刺激に伝達するのに役立ちます。これは、より大きな望ましい結果に向かう途中で *サブ目標* または *マイルストーン * を達成するための行動学習を推進するのに役立ちます。また、シナプスのタグ付けベースの *トレース* 学習メカニズムが、これらの時間的なギャップを埋めるのに非常に効果的であり、他のメカニズムでは解決できないさまざまな問題を解決できることもわかります。
+
+このモデルに欠けているもう 1 つの重要な要素は、さまざまな行動の結果の性質を明示的に表現し、努力、困難、不確実性などの要因に関連してこれらの結果について推論する能力です。これらの能力には、眼窩前頭皮質 (OFC)、前帯状皮質 (ACC)、およびその他の腹側 / 内側 PFC 脳領域の機能が必要であり、すべてこれらの基本的な BG およびドーパミン作動性システムと連携して機能します。このようなモデルの開発は、現在の研究の最前線にあります。
+
+# 参考文献
+
+* コリンズ、A.G.E.、フランク、M.J. (2014)。相手役学習 (OpAL): 強化学習と選択インセンティブに対する線条体ドーパミンの相互作用効果をモデル化します。心理学的レビュー、121(3)、337–366。 http://www.ncbi.nlm.nih.gov/pubmed/25090423 から取得
+
+* フランク、M.J. (2005)。大脳基底核におけるドーパミンの動的調節：薬物療法および非薬物療法のパーキンソン病における認知障害の神経計算による説明。認知神経科学ジャーナル、17、51-72。
+
+* Frank, M.J.、Seeberger, L.C.、および O'Reilly, R.C. (2004)。アメでもムチでも：パーキンソン病における認知強化学習。科学、306(5703)、1940-1943年。
+
+* ジャスキル、A. &amp; フランク、M.J. (2023)。学習と選択に対するドーパミンと線条体の対立の規範的利点について。 eライフ、12、e85107。 https://elifesciences.org/articles/85107
+
+* オライリー、R.C.、フランク、M.J. (2006)。ワーキングメモリを機能させる: 前頭前野と大脳基底核における学習の計算モデル。ニューラルコンピューティング、18(2)、283-328。 http://www.ncbi.nlm.nih.gov/pubmed/16378516 から取得
+
+
+&lt;/section&gt;
+</sim-question></sim-question></sim-question>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>

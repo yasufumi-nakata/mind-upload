@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/sims: README | マインドアップロード</title>
+<meta name="description" content="compcogneuro/sims: README.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/sims: README</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch4/hebberr_combo/README.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/sims/blob/main/ch4/hebberr_combo/README.md</a></p>
+  <p>ライセンス: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><em><a href="https://compcogneuro.org/simulations">シミュレーションに戻る</a></em></p>
+
+  <p>＃ 導入</p>
+
+  <p>以前の <code>err_driven_hidden</code> プロジェクトは、難しい問題を解決するには、隠れ層を使用したエラー駆動学習が必要であることを示しました。このシミュレーションは、一般化をサポートするためにエラー駆動学習と組み合わせた場合のヘビアン学習の相補的な利点を示しています。</p>
+
+  <p>このプロジェクトでは、より豊富な入力セット、特に <code>self_org</code> で見た水平線と垂直線の同じ組み合わせを含む入力セットに対応するために、すべてのレイヤーのサイズを拡張しました。ただし、この場合、ネットワークにタスクの実行を依頼しているため、出力層もあります。タスクは、入力に存在する行の組み合わせにラベルを付けることであり、それを学習する必要があります。出力ユニットの 1 列目は垂直ラインに対応し、2 列目は水平ラインに対応します。たとえば、一番左の縦線と下から 2 番目の横線を組み合わせたイベント V0_H1 は、V0 の左列の下から 2 番目のユニット、H1 の右列の下から 2 番目のユニットの出力層ターゲットを持ちます。 <code>Lines2</code> をクリックして、これらのパターンを理解してください。</p>
+
+  <ul>
+    <li>
+      <p>[[[sim:Init]]] および [[[sim:Step]]: トライアル] をクリックして、ネットワークに提示されたパターンの 1 つを確認します。ネットワークに正しいターゲット パターンが表示されるため、トライアルの最後には出力層に正しいターゲットが表示されるはずです。  Netview で <code>Act</code> の代わりに [[sim:Phase]] -&gt; [[sim:Phase/ActM]] をクリックすると、正しいラベルが何であるかを通知される前に、ネットワークがマイナス フェーズでラベルを「推測」した内容が表示されます。ネットワークにはまだラベルを学習する機会がないため、これは通常は間違っているはずです。</p>
+    </li>
+    <li>
+      <p><code>Step</code> を <code>Run</code> および [[sim:Step]] に設定をクリックし、[[sim:Train Epoch Plot]] に切り替えて、トレーニング エポックにわたるエラーの割合を表示します。デフォルトの学習ルールが Hebbian であるため、ネットワークの学習に問題があることがわかります。次に、コントロール パネルの学習ルールを <code>Error Driven</code> に変更し、再度 [[sim:Init]] および <code>Step</code> <code>Run</code> をクリックします。ネットワークが純粋なエラー駆動学習を使用してラインのさまざまな組み合わせにラベルを付けることを学習するため、数エポック以内にエラーがゼロになることがわかります。 Netview に切り替えて、<code>Phase</code> -&gt; <code>ActM</code> を確認しながらいくつかのトライアルを実行して、これらが実際に学習されたことを確信できます。 [[sim:Wts]] -&gt; [[sim:Wts/r.Wt]] をクリックし、いくつかの非表示ユニットを見て、体系的な表現を学習しているかどうかを確認します (または、<code>Weights</code> タブに切り替えて、<code>self_org</code> と同様に、すべてのシナプス重みのグリッド ビューを表示します)。</p>
+    </li>
+  </ul>
+
+  <blockquote>
+    <p><strong>質問 4.10:</strong> 隠れユニットは、<code>self_org</code> で行ったように、個々の行を表すことを学習しますか?なぜ、あるいはなぜそうではないのでしょうか？誤差を最小限に抑える際に重みを調整するための学習ルールがどのように設計されているかを説明します。</p>
+  </blockquote>
+
+  <sim-question id="4.10">
+
+* このプロジェクトでは、水平線と垂直線のすべての可能な組み合わせを使用してネットワークを実際にトレーニングしたわけではありません。これまでに見たことのない、いくつかの斬新なラインの組み合わせを意図的に省略しました。これらを使用してネットワークをテストし、ネットワークがこれらの新しい組み合わせを記憶することなく正しく一般化できるかどうかを確認できます。新しいネットワークが実行されるたびに、プログラムは回線の組み合わせの 15% (ランダム) を自動的に選択し、それらをテスト テーブルに置きます。
+
+* ネットビューで [[sim:Act]] を表示しているときに、実行モードを `Train` ではなく `Test` に設定し、次に `Init` および `Run` を設定します。これにより、ネットワークがこれまで一度も見たことのない回線の新しい組み合わせをすべてステップ実行します。 (必要に応じて、一度に 1 つずつステップ実行することもできます)。  ネットワーク上の出力パターンを確認し、ターゲット (ネットワークが応答すべき内容) を示す [[sim:Act]] / [[sim:Act/Targ]] 値と比較します。  また、[[[sim:Test Trial]]] タブに切り替えて、すべてのテスト試行と、最後の列の正解 (ターゲット) と比較したネットワークの推測 (出力アクティベーションとして最後から 2 番目の列に表示) を確認することもできます。複数のネットワークにわたるパフォーマンスをより広範に把握するには、`Train` モード `Run` をクリックし、異なる初期重みとトレーニング/テスト パターンの異なる順列を使用して 10 個のネットワークで実行させます。 [[[sim:Test Epoch Plot]]] タブの表示に切り替えると、10 個のネットワークのそれぞれが学習しているときの、トレーニングの 5 エポックごとのテスト データのネットワーク エラー パーセントのグラフが表示されます。 (ここでも、[[sim:Train Epoch Plot]] を見ることで、ネットワークがトレーニング パターンを学習していることを確認できます)。
+
+&gt; **質問 4.11:** テスト試行および学習と実行のエポックにおける出力に表示された内容を報告してください。平均して、ネットワークは、これらの新しいパターンに対する正しい行の組み合わせを報告することによって、その学習を一般化しますか?前の質問で隠れ層によって学習された内部の隠れ表現の観点から、これがなぜ起こるかを考えてみましょう。
+
+<sim-question id="4.11">
+
+* 次に、学習ルールを `ErrorDriven` から `Hebbian` に戻し、`Init`、[[sim:Step]] `Run` を再度クリックします。ネットワークはタスクを学習できませんが、[[sim:Weights]] タブ (またはネットビューの [[sim:Wts/r.Wt]]) をクリックすると、隠れユニットが `self_org` で見たものと同様の学習されたライン表現を示していることがわかります。したがって、たとえヘビアン学習が出力ラベル付けタスクの学習に失敗したとしても（つまり、出力にどの行が表示されるかを「報告」することができません）、ヘビアン学習が開発する内部表現は依然として独立コンポーネントの影響を受けます。
+
+* この学習を活用して一般化を改善できるかどうかを見てみましょう。学習ルールを `ErrorHebbIn` に切り替え、[[sim:Init]] をクリックします。これにより、入力から非表示への投影における純粋なヘビアン学習が維持されます (`Learn.XCal` LLrn=1、MLrn=0 に設定、ここで、L = BCM の長期移動平均の量、M = エラー駆動の中期)。ただし、Hidden と Output (LLrn=0、MLrn=1) の間の接続では純粋なエラー駆動学習が行われるようになります。 「TrainRun」をクリックして、10 個のネットワークのフルセットを実行します。まず、ネットワークがトレーニング セットを学習できることを確認します ([[sim:Train Epoch Plot]] を見て、エラーがゼロになるかどうかを確認します)。次に、[Test Epoch Plot] タブを確認します。このタブには、トレーニングの 5 エポックごとに、各ネットワークのラインの新しい組み合わせのエラー率が再び表示されます。 ([[[sim:Test Trial ]]] タブを再度クリックして、各トライアルで個別のネットワークが一般化しているかどうかを確認することもできます)。
+
+&gt; **質問 4.12:** 平均して、隠れ層でのヘビアン学習は、ネットワークが新しい項目に一般化する際のパフォーマンスを向上させるのに役立ちますか?なぜ、あるいはなぜそうではないのでしょうか？  学習ルールの組み合わせが脳にとってどのように役立つかをより一般的に考えてみましょう。
+
+<sim-question id="4.12">
+
+
+
+&lt;/section&gt;
+</sim-question></sim-question></sim-question>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>

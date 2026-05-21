@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: combinatorial-vs-conjunctive | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: combinatorial-vs-conjunctive.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: combinatorial-vs-conjunctive</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/combinatorial-vs-conjunctive.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/combinatorial-vs-conjunctive.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Learning”, “Computation”]
+bibfile = “ccnlab.json”
++++
+<!--- TODO: mixed selectivity, Fusi et al --></p>
+
+  <p>[[generalization]] の <strong>組み合わせ</strong> コードの利点と、任意のタスク学習の <strong>結合</strong> コードの利点の間には、直接的な緊張関係があります。この緊張の性質とそれに伴うトレードオフを理解することは、さまざまなネットワーク アーキテクチャの相対的な成功と失敗を理解するための鍵となります。</p>
+
+  <p>この緊張は、古典的な「3 層パーセプトロン」 [[abstract neural network]] と <code>Input</code> $\rightarrow$ <code>Hidden</code> $\rightarrow$ <code>Output</code> 層のコンテキストで理解できます。任意の問題を学習し、新しい入力にうまく一般化するために、2 つの相反する目標を達成する必要があります。</p>
+
+  <ol>
+    <li>
+      <table>
+        <tbody>
+          <tr>
+            <td>入力の「類似構造」を捕捉し、類似した入力が一般に類似した出力にマッピングされるようにします (つまり、「類似性に基づく一般化」)。これは、新しい状況における系統的な動作にとって重要です。これは、[[distributed representations</td>
+            <td>distributed]] の_組み合わせ_ コードによって最もよく実現されます。このコードでは、Hidden アクティビティのパターンの重なりが入力のパターンを反映し、個々の Hidden ユニットが <em>「接続部分で入力を刻み込む」</em> ため、Hidden アクティビティの新しい組み合わせが体系的かつ感覚的に入力の新しい状態を表現します。</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <tbody>
+          <tr>
+            <td>This objective can be measured by the [[information theory#mutual information]] between the Input and Hidden layers ([[@Shwartz-ZivTishby17]]). The most efficient code from an information-theoretic sense is achieved when the individual Hidden units extract something like the [[principal components analysis</td>
+            <td>principal components]] (PCA) of variance across the inputs, such that each hidden unit is uncorrelated with the others, and thus contributes unique independent information.</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li>(生き残るために) 必要な任意のタスクを学習します。これが特に [[error-driven learning]] および [[error backpropagation]] の目標です。これは、Hidden から Output までの相互情報量の観点から測定できます。</li>
+  </ol>
+
+  <p>したがって、Hidden 層には 2 つの異なるマスターがあり、それぞれが異なる方向に引っ張り、その仕事は、正しい答え (出力) を取得するだけでなく、新しい状況に体系的に一般化できる入力空間の「より深い理解」を使用して、それらの間のマッピングを合成することです。多くの場合、このマジック マッピングは 1 つのステップでは実行できないため、([[categorization]] で説明されているように) 入力の適切な抽象化 (つまり、<em>ディープ ネットワーク</em>) を開発するには、複数の隠し層が必要になります。</p>
+
+  <p>「ノー フリー ランチ」[[bias-variance-tradeoff]] 分析 ([[@GemanGeman84]] および [[@VapnikChervonenkis71]]) は、<em>ルックアップ テーブル</em> が最も柔軟な任意関数学習メカニズムであり、関数の形状に制約 (バイアス) をまったく課さないことを示しています。ただし、最大数のパラメーター、つまり各データ ポイントごとのテーブル エントリ全体が必要です。神経用語で言えば、これは「ワンホット」または「ローカル主義」の「結合」コードであり、単一の個別の非表示ユニットが個別の入力パターンごとにアクティブ化されます（つまり、そのユニットは入力アクティビティの完全な結合に対して非常に敏感です）。このコードは一般化が不十分です。テーブルに何かが存在しない場合 (つまり、新しくアクティブ化された Hidden ユニットには出力に対する学習された重みがない場合) に何をすべきかが示されていないからです。</p>
+
+  <p>トレーニング データの量が限られている場合、ネットワークでの一般化は、入力と非表示の間の相互情報を強化し、組み合わせコードを促進する「バイアス」の恩恵を受けます。たとえば、明示的な自動エンコーダ項を目的関数に追加すると、隠れ層が入力を直接キャプチャするようになります (そして PCA の結果、[[@BaldiHornik89]] を近似します)。 PCA は、エラー駆動学習に加えて、[[Hebbian learning]] を使用して実行することもできます。これが [[Leabra]] アルゴリズムの重要なポイントでした。これらのバイアスと分散のトレードオフ制約の例は他にもたくさんあります。</p>
+
+  <p>トレーニング データの量が増加するにつれて、データ自体が空間全体をカバーし始めるため、これらのバイアスの利点は徐々に減少します。直感的には、ルックアップ テーブルに十分な密度が入力されるため、テーブル内の最近傍間の単純な補間が効果的になります。これは、Rich Sutton の <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html">苦い教訓</a> であり、「ビッグ データ」が成功する理由です。</p>
+
+  <p>[[transformer]] アーキテクチャと [[large language models]] のスケーリング プロパティは、明確なデモンストレーションを提供します。トランスフォーマーは、少量のデータでは「ひどく」一般化しますが、大量のデータでは正常に学習できるルックアップ テーブルのような容量を備えています。変換器のフィードフォワード ネットワーク コンポーネントで使用される高次元の隠れ層は、トレーニング コーパス ([[@HuangYangPotts24]]) の長い文章の広範な暗記と、任意の意味論的事実の知識 ([[@NandaRajamanoharanKramarEtAl23]]) をサポートすることが示されています。ルックアップ テーブルのような機能は、パターン分離ダイナミクスによるものであり、類似性に基づく一般化もサポートしています。</p>
+
+  <h2 id="section">バインディングの問題</h2>
+
+  <p>[[binding problem]] に関しては、上記の学習と一般化の側面に加えて、組み合わせ対結合のトレードオフには時間領域の側面もあります。組み合わせコードはバインディング エラーに直接つながりますが、結合エラーは結合コードによって最小限に抑えられます。たとえば、色と形状を表す個別の非表示ユニットがあり、赤、緑、三角形、四角形がすべてアクティブになっている場合、赤い三角形と緑の四角形が表示されているのか、それとも他の組み合わせが表示されているのかわかりません。</p>
+
+  <p>バインディングの問題は、<em>Parallel</em> と <em>serial</em> で何ができるかに重大な影響を及ぼします (詳細については、[[search]] を参照してください)。 Anne Treisman は、分離可能に表現された特徴 (色と形状) の視覚検索は効率的に並行して実行できるが、結合エラーを減らすために、視覚空間の異なる領域に対するトップダウンの空間的注意によって制約される低速のシリアル処理が必要であることを示しました ([[@Treisman77]]; [[@TreismanGelade80]])。</p>
+
+  <p>脳がこれらの結合を個別の神経集団で表現できれば、並列検索が可能になりますが、必要なニューロンの数が指数関数的に増加するため、[[curse of dimensionality]] によってこれが妨げられます。</p>
+
+  <p>人間と LLM モデルによる視覚的結合エラーの分析 ([[@CampbellRaneGiallanzaEtAl24]])、およびマルチタスクと認知制御の場合 ([[@MusslickCohen21]]; [[@MusslickSaxeHoskinEtAl20]]) でも同様の結論に達しました。後者の場合、[[prefrontal cortex]] は、あるタスクと別のタスクに関連する機能にトップダウンの [[attention]]al 焦点を当て、並行して実行できる内容に強力な制限を課すと考えられます。</p>
+
+  <h2 id="section-1">壊滅的な干渉</h2>
+
+  <p>組み合わせ分散表現も [[catastrophic interference]] の影響を受けます。そのような分散システムでは、任意の入力の学習が多数の重みに影響を与えるのに対し、ワンホット結合コードは干渉を最小限に抑えます (制限内では、まったく新しいユニットが新しい入力ごとに割り当てられる可能性があります)。</p>
+
+  <p>大脳新皮質と [[hippocampus]] の役割を理解するための_相補学習システム (CLS)_ フレームワークは、このトレードオフに基づいており、連続体の両端を最適化する <em>2 つの別個のシステム</em> を用意することでトレードオフを最小限に抑えることができるという考えに基づいています。大脳皮質は分散型の組み合わせコードを使用して類似性に基づく一般化をサポートしますが、海馬は疎な結合コードを使用して干渉を最小限に抑え、特定のエピソードの学習のようなルックアップテーブルをサポートします。</p>
+
+  <p>対照的に、トランスフォーマー (LLM) は、ネットワーク全体でこの論理積符号化能力を統合するため、より純粋に組み合わせ的に偏った後部新皮質と同等のものを持ちません。それにも関わらず、十分に膨大な量のトレーニング データと非常に深い層状のアーキテクチャを使用すると、層にわたって、そして多くの連続した反復にわたって展開される十分な抽象化とダイナミクスを開発することができ ([[optimized-representations]] および [[@OswaldNiklassonRandazzoEtAl23]] を参照)、最終的には印象的なレベルの汎化パフォーマンスをサポートすることになります。</p>
+
+  <p>この点を強化するために、変圧器に不可欠なキーバリュー ソフトマックス メカニズムは、最近「モダン ホップフィールド ネットワーク」としてブランド名が変更され、海馬のエピソード記憶機能をシミュレートするために使用されています ([[@RamsauerSchaflLehnerEtAl21]]; [[@KrotovHopfield21]])。</p>
+
+  <h2 id="section-2">大脳新皮質は結合的なものよりも組み合わせ的なものです</h2>
+
+  <p>上記の現象は、膨大な量の直接的な神経記録やその他のデータと併せて、哺乳類 (人間を含む) の脳の新皮質がスペクトルの組み合わせの分散端に強く偏っているという考えを強く裏付けています。これは、現実世界の生存は「小さなデータで強く偏った」領域を扱うことに決定的に依存しているという考えと一致します。</p>
+
+  <p>言い換えれば、大量のデータで完全に正確であることよりも、ごく少量のデータに基づいてほぼ正確であることの方がはるかに重要です。この結論は、統計データのより正確ではあるが高価な処理の代わりに単純なヒューリスティックの使用に関する大規模な文献 ([[@KahnemanTversky84]]) とも一致しています。</p>
+
+  <p>したがって、この結論は、LLM はスペクトルの結合端に強く重み付けされているため、人間の脳の学習方法を正確に捉えていないことを示唆しています。彼らは、人間の脳が達成したことの正確なモデルを開発するために膨大な量のデータを使用することに長けていますが、そもそも人間の脳が実際にこれらすべてのアイデアをどのように思いついたのかを示す良いモデルではありません。それには、組み合わせに偏った新皮質だけが提供できる、世界の「深い」概念的理解を必要とします。</p>
+
+  <p>要約すると、「苦い教訓」、つまり「退屈な教訓」には必然的な帰結があります。</p>
+
+  <blockquote>
+    <p>強いバイアスではなくビッグデータに大きく依存するシステムは、そもそもこのすべてのデータがどこから来たのかについての生成的な解決策を提供しないため、基本的に退屈です。</p>
+  </blockquote>
+
+  <p>人間は強い偏見を持っており、世界の低次元表現を求め、それがどのように機能するかを理解し、それを私たちにとってうまく機能させたいという欲求を満たすために動機付けられています。</p>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">バインディングの問題</a></li>
+<li class="toc-h2"><a href="#section-1">壊滅的な干渉</a></li>
+<li class="toc-h2"><a href="#section-2">大脳新皮質は結合的なものよりも組み合わせ的なものです</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

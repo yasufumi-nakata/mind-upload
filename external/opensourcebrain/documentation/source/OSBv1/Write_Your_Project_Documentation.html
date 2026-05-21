@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenSourceBrain Documentation: プロジェクトを文書化する | マインドアップロード</title>
+<meta name="description" content="OpenSourceBrain/Documentation: source/OSBv1/Write_Your_Project_Documentation.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">OpenSourceBrain 翻訳ページ</div>
+    <h1 class="title">OpenSourceBrain Documentation: プロジェクトを文書化する</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/OpenSourceBrain/Documentation/blob/main/source/OSBv1/Write_Your_Project_Documentation.md" target="_blank" rel="noopener noreferrer">https://github.com/OpenSourceBrain/Documentation/blob/main/source/OSBv1/Write_Your_Project_Documentation.md</a></p>
+  <p>ライセンス: CC BY 4.0。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><a id="v1:document_project"></a>
+<a id="document-your-project"></a></p>
+  <h1 id="section">プロジェクトを文書化する</h1>
+  <p>OSB プロジェクトにドキュメントを追加し、注釈を付けるには、いくつかのオプションがあります。</p>
+
+  <p><a id="add-a-readme-file-in-your-github-repository-and-reuse-it-on-your-osb-projects"></a></p>
+  <h2 id="readme--github-osb-">README ファイルを GitHub リポジトリに追加し、OSB プロジェクトで再利用します</h2>
+
+  <p><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">READMEファイル</a> は、リポジトリの内容とその使用方法の概要を簡単に説明するのに最適な方法です。 GitHub でコードを共有する場合、最上位に README を追加すると、リポジトリにアクセスした人は誰でも内容の簡単な紹介を確認できるようになります。これらは通常、編集しやすい <a href="https://daringfireball.net/projects/markdown/basics">マークダウン形式</a> で作成されます。</p>
+
+  <p>説明をコピー/ペーストする必要性を回避し、概要が 1 か所のデータから消えてしまうのを避けるために、GitHub の README の正確な内容を OSB 上のメインの説明に再利用できます。 [設定] のメイン プロジェクトの説明のテキスト フィールドに次の内容を追加するだけです。</p>
+
+  <pre><code>github:README.md
+</code></pre>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/README_settings.png" alt="お読みください" /></p>
+
+  <p>たとえば、次のようになります: https://github.com/OpenSourceBrain/ACnet2/blob/master/README.md は、次の OSB プロジェクト ページでプロジェクトの説明としても使用されます: http://www.opensourcebrain.org/projects/acnet2.</p>
+
+  <p><a id="set-values-for-custom-fields"></a></p>
+  <h2 id="section-1">カスタムフィールドの値を設定します</h2>
+
+  <p>OSB のプロジェクトのフィールドに多数の値を設定して、モデルを分類し、他のリソースにリンクし、OSB でのモデルの検索を容易にすることができます。これらには、<a href="https://senselab.med.yale.edu/ModelDB/default">モデルDB</a> 上の元のスクリプトの場所、モデル化されている種と脳領域、モデルのキュレーションの状態が含まれます。</p>
+
+  <p>これらには「設定」からアクセスできます。 <strong>注: これらの値を変更するには、<u>管理設定</u> の下にある <u>カスタム フィールド</u> タブをクリックする必要があります。</strong></p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/Settings_fields.png" alt="お読みください" /></p>
+
+  <p><a id="add-wiki-pages-to-osb-projects"></a></p>
+  <h2 id="wiki--osb-">Wiki ページを OSB プロジェクトに追加する</h2>
+
+  <p>新しい Wiki ページを OSB プロジェクトに追加するには、プロジェクト オプション バー (ログイン時) の [Wiki] リンクをクリックし、Wiki ページの編集を開始します。</p>
+
+  <p>OSB ドキュメントは <a href="https://daringfireball.net/projects/markdown/basics">マークダウン形式の構文</a> で書かれており、Redmine および OSB 固有の追加機能もいくつか含まれています (詳細については以下を参照してください)。
+注 Markdown を使用すると、ほとんどの HTML 構文 (ビデオなど) を含めることができます。
+GitHub wiki と可能な限り互換性を保つために、OSB は <a href="https://help.github.com/articles/markdown-basics">GitHub 風味のマークダウン</a> を使用します。
+チートシート <a href="https:www.opensourcebrain.org/help/en/wiki_markdown_syntax.html">ここ</a> があります。</p>
+
+  <p>以下では、OSB 上の Wiki ページを強化するための OSB/Redmine の機能について簡単に説明します (これらは、[設定] のメイン プロジェクトの説明のテキスト フィールドでも使用できます)。</p>
+
+  <p><a id="reference-to-a-repository-file"></a></p>
+  <h3 id="section-2">リポジトリ ファイルへの参照。</h3>
+
+  <p>GitHub または Bitbucket リポジトリ (プロジェクトで使用されるリポジトリ) 内の任意のファイル (マークダウンまたはプレーン テキスト) を指定できます。</p>
+
+  <pre><code>github:[path]
+bitbucket:[path]
+</code></pre>
+
+  <p>これにより、ファイルのコンテンツが取得され、OSB wiki ページに表示されます。これにより、リポジトリ内の 1 つのファイル (メインの README.md など) がプロジェクトのドキュメントのマスター コピーとなり、OSB でプロジェクトを閲覧している人がそのファイルにアクセスできるようになります。</p>
+
+  <p><em>例：</em></p>
+
+  <pre><code>github:help/readme.md
+bitbucket:help.txt
+</code></pre>
+
+  <p><a id="reference-to-pubmed-publication"></a></p>
+  <h3 id="section-3"><a href="https://www.ncbi.nlm.nih.gov/pubmed/">パブメッド</a> 出版物への参照:</h3>
+
+  <pre><code>pubmed:[publicationID]
+</code></pre>
+
+  <p><em>例：</em></p>
+
+  <pre><code>pubmed:17442244
+</code></pre>
+
+  <p>この構文は、次のような参照リンクを生成します (リンクは OSB でのみ正しく表示されます): pubmed:17442244 と、参考文献セクションがページの下部に自動的に生成されます。</p>
+
+  <p><a id="create-a-formula"></a></p>
+  <h3 id="section-4">数式を作成する</h3>
+
+  <p>LaTeX 構文を使用してドキュメントに数式を記​​述することができます。次のように数式を囲むだけです。</p>
+
+  <pre><code>{{latex(formula)}}
+</code></pre>
+
+  <p><em>例：</em></p>
+
+  <pre><code>{{latex(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a})}}
+</code></pre>
+
+  <p>これにより、<a href="https://developers.google.com/chart/infographics/docs/formulas">GoogleチャートAPI</a> を使用して次のイメージが自動的に生成されます。
+<img src="https://raw.githubusercontent.com/OpenSourceBrain/OSB_Documentation/master/resources/images/formula.png" alt="" /></p>
+
+  <p><a id="link-to-wiki-page"></a></p>
+  <h3 id="wiki-">Wiki ページへのリンク</h3>
+
+  <p>他の Wiki ページにリンクしたい場合:</p>
+
+  <pre><code>[[Wiki page]]
+</code></pre>
+
+  <p><a href="#">ウィキページ</a></p>
+
+  <p><a id="link-to-an-issue"></a></p>
+  <h3 id="section-5">問題へのリンク</h3>
+
+  <p>プロジェクト内の課題にリンクしたい場合:</p>
+
+  <pre><code>Issue #12
+</code></pre>
+
+  <p><a href="#">#12</a> を発行します</p>
+
+  <p><a id="link-to-a-commit"></a></p>
+  <h3 id="section-6">コミットへのリンク</h3>
+
+  <p>リポジトリ内のコミットにリンクしたい場合:</p>
+
+  <pre><code>commit:f30e13e43
+</code></pre>
+
+  <p><a href="#">f30e13e4</a></p>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/opensourcebrain/documentation/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#readme--github-osb-">README ファイルを GitHub リポジトリに追加し、OSB プロジェクトで再利用します</a></li>
+<li class="toc-h2"><a href="#section-1">カスタムフィールドの値を設定します</a></li>
+<li class="toc-h2"><a href="#wiki--osb-">Wiki ページを OSB プロジェクトに追加する</a></li>
+<li class="toc-h3"><a href="#section-2">リポジトリ ファイルへの参照。</a></li>
+<li class="toc-h3"><a href="#section-3">パブメッド 出版物への参照:</a></li>
+<li class="toc-h3"><a href="#section-4">数式を作成する</a></li>
+<li class="toc-h3"><a href="#wiki-">Wiki ページへのリンク</a></li>
+<li class="toc-h3"><a href="#section-5">問題へのリンク</a></li>
+<li class="toc-h3"><a href="#section-6">コミットへのリンク</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

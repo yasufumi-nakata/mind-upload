@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: fsa-simulation | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: fsa-simulation.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: fsa-simulation</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/fsa-simulation.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/fsa-simulation.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Learning”, “Simulations”]
+Name = “FSA simulation”
+bibfile = “ccnlab.json”
++++</p>
+  <sim-deepfsa>
+
+<div>
+
+このシミュレーションは、人間の学習研究 ([[@Reber67]]; [[@CleeremansMcClelland91]]) で広く検討されているように、_有限状態オートマトン (FSA)_ によって生成されたトークンのシーケンスを予測するために学習する小規模な [[predictive learning]] [[Axon]] モデルを示します。ネットワークは、厳密にこれらのトークンのシーケンスを予測する際のエラーを通じて、部分的に曖昧な観察可能な状態トークンを生成する基礎となる文法の「深い構造」を学習し、より大きな予測学習フレームワークの単純で小規模なインスタンスとして機能します。このタスクは、表面トークンに曖昧さが存在するため比較的困難ですが、基礎となる学習メカニズムを適切にテストすることができます。
+
+{id="figure_fsa" style="高さ:15em"}
+![暗黙的逐次学習実験 (Reber、1967) および初期の単純再帰型ネットワーク (SRN) (Cleeremans &amp; McClelland、1991) で使用される有限状態オートマトン (FSA) 文法。これは、状態ノード間で遷移するリンクに従って一連の文字を生成します。各ノードのどの出力リンクをたどるかは 50% ランダムに選択されます。各文字 (B=begin と E=end を除く) は文法内の 2 つの異なる箇所に出現し、完全に曖昧になります。このランダム性と曖昧性の組み合わせにより、学習システムが文法の根底にある真の性質を推測することが困難になります。](media/fig_reber_grammar_fsa.png)
+
+[[#figure_fsa]] は、使用される FSA 文法を示します。各ノードは 50% の確率で他の 2 つの異なるノードに分岐し、ノード遷移によって生成されるラベルは局所的にあいまいです (B=begin 状態と E=end 状態を除く)。したがって、体系的な基礎となる文法を推論するには、時間の経過と反復にわたる統合が必要です。ランダムな分岐を考慮すると、たどる特定のパスを正確に予測することは不可能ですが、各状態で考えられる分岐のいずれかまたは両方をアクティブにする場合、モデルの出力を正しいものとしてスコアリングできます。
+
+{id="figure_deepfsa-net" style="高さ:30em"}
+![前の図に示す FSA 文法に適用された予測学習モデル。文法を学習した後のシーケンスの最初の 3 ステップの予測状態 (マイナス フェーズの終了) と、その後の 3 番目のステップ後のプラス フェーズを示しています。入力レイヤーは、対応する入力P プルビナー レイヤーの 5IB ドライバーを提供し、ターゲット レイヤーは純粋に表示用であり、予測された可能性のある 2 つの有効なラベルを示します。いずれかまたは両方のターゲットがアクティブ化された場合、モデルの予測は正確であるとスコア付けされます。 HiddenCT 層は肺床全体の予測を駆動し、前のタイム ステップの活性化状態を反映する入力を Hidden 層 (表層 2 ～ 3 ニューロン) から受け取ります。したがって、正しい答えが各ステップの入力層に常に存在するにもかかわらず、CT 層は前のタイム ステップからの情報に基づいてこの入力を予測しようとします。 a) 最初のステップでは、B ラベルは明確であり、(以前の E コンテキストに基づいて) 簡単に予測されます。 b) 2 番目のステップでは、ネットワークは T ラベルが次に来ると正しく推測しますが、他の P 代替がかすかに活性化されており、これも以前の学習履歴と関連する軽微な重み調整に基づいて活性化されることがあります。  c) 3 番目のステップでは、S と X の両方が同様に予測されます。  d) この試験のプラスフェーズでは、入力に存在する X のみが HiddenP 活性化を駆動し、肺から皮質に戻る経路がマイナスフェーズの予測とプラスフェーズの実際の入力の両方を伝えます。](media/fig_deepfsa_net_3step.png)
+
+[[#figure_deepfsa-net]] は、[[neocortex]] と視床を通る視床皮質ループに基づく [[predictive learning]] メカニズムが、これから調査を開始するモデルのコンテキストでどのように機能するかを示しています。マイナス相の予測は、新皮質の深層 6CT ニューロンを表す `HiddenCT` 層からの経路から得られ、マイナス相の予測を表す `InputP` 肺動脈層に投射します。プラス フェーズでの実際の結果は、`Input` 層のアクティビティから得られます。`InputP` 層には、プラス フェーズでのみ、対応するドライバー層のアクティビティを取得する特別なコードが含まれています (`InputP` 層をクリックすると、そこで指定されていることが確認できます)。
+
+* ネットワーク変数で [[#sim_fsa:Wts]] をクリックし、次に [[#sim_fsa:r.Wt]] をクリックすると、ネットワーク内でニューロンをクリックすると、ニューロンへの受信重みが表示されます。
+
+矢印で示された経路に関連付けられた初期のランダムな重みが表示されるはずです。 CT レイヤーには反復的な自己接続があり、長期にわたって情報をより適切に維持できるため、以前のトライアルよりも前の時点からの情報を活用できます。
+
+* [[#sim_fsa:Act]] (カテゴリ、次に変数) をクリックし、[[#sim_fsa:Step]] をクリックすると、200 ミリ秒の `Trial` 更新が 1 回実行されます。
+
+この最初のトライアルでは、CT ニューロンは非アクティブなままであるため、以前のトライアルの活動状態によってのみ活性化されることがはっきりとわかります。 CT ニューロンのこの遅延応答は、ネットワークの残りの部分が予測中の現在の入力情報を処理しているときでも、予測学習を可能にするために不可欠です。
+
+* 予測と結果のフェーズごとの違いを確認するには、[[#sim_fsa:Network/Stats]] を選択してから [[#sim_fsa:ActM]] を選択し、マイナスフェーズのアクティビティ状態を表示します。マイナス位相予測は CT 層によって生成されるため、`InputP` も空白になります。次に、[[#sim_fsa:ActP]] をクリックしてプラスフェーズのアクティベーションを確認します。`InputP` は現在の感覚 `Input` を反映しています。
+
+一連の入力とネットワークの予測を観察しながら、トライアルを通じて [[#sim_fsa:Step]] に進むことができますが、モデルがまだ学習していないため、これらの予測は通常は不正確になります。
+
+* [[#sim_fsa:Train Epoch Plot]] をクリックしてトレーニング エラーのプロットを表示し、ステップ レベルを `Run` に設定し、[[#sim_fsa:Step]] をクリックしてモデルのトレーニングを開始します。誤差がゼロに近づいたら、[[#sim_fsa:Stop]] をクリックしてトレーニングを停止します。
+
+* その後、[[#sim_fsa:Network]] の表示に戻り、再び一連の入力を通じてステップを `Trial` および [[#sim_fsa:Step]] に戻すことができます。マイナス位相の予測が正確になっていることがわかります。
+
+平均すると、ネットワークが 2 エポック連続でエラーがゼロという基準を学習するまでに約 60 エポックかかります。
+
+このモデルの主なポイントは、深層予測学習アルゴリズムの学習機能をテストすることです。
+
+</div>
+
+
+&lt;/section&gt;
+</sim-deepfsa>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>

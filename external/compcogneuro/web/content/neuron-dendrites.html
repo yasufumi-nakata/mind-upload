@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: neuron-dendrites | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: neuron-dendrites.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: neuron-dendrites</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron-dendrites.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/neuron-dendrites.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Activation”, “Neuroscience”]
+bibfile = “ccnlab.json”
++++
+神経モデルの生物学的リアリズムにおける重要な境界線は、樹状突起と細胞体に対する個別のダイナミクスを含めることに関係しており、重要な計算機能が樹状突起の統合プロセスにおける非線形ダイナミクスから生じると主張する文献が多数あります ([[@HausserMel03]]; [[@MiglioreHoffmanMageeEtAl99]]; [[@PoiraziBrannonMel03]]; [[@JarskyRoxinKathEtAl05]]; [[@Spruston08]]; [[@PoiraziPapoutsi20]])。これらの追加の樹状突起ダイナミクスを捕捉する標準的な方法は、樹状突起コンパートメントと細胞体の電気的およびチャネルダイナミクスを個別にシミュレートする「マルチコンパートメント」モデルを使用することです。対照的に、AdEx ([[@BretteGerstner05]]) は単一コンパートメントの「ポイント ニューロン」モデル (体細胞のみ) ですが、実際の新皮質ニューロンの発火特性を捉えるのに優れています。明らかに、個々のニューロン内の樹状突起のダイナミクスを詳細にモデル化することに関連する計算コストには大きなトレードオフがあります。</p>
+
+  <p>Axon では、樹状突起のダイナミクスを捕捉するために 3 つの異なるメカニズムを使用して (いつものように) 中間点を採用しました。</p>
+
+  <ol>
+    <li>
+      <p>特定のニューロンへの個別の入力ソース (つまり、<em>pathway</em>) はそれぞれ個別に統合され、全体的な体細胞膜電位 ($V_m$) に対する全体的な影響を決定する独自の <em>scaling</em> パラメーターのセットを持っています。したがって、たとえば、遠位樹状突起への入力は、近位樹状突起への入力よりも全体的に弱い可能性が高いという事実を捉えることができます。</p>
+    </li>
+    <li>
+      <p>経路の任意のサブセットは、その入力値がシナプス統合全体に対して <em>additive</em> ではなく <em>multiplicative</em> の影響を与えるように、<em>modulatory</em> input として指定できます (つまり、これらの入力が他の入力値を乗算します)。これは、再スケーリング パラメーターを使用して、乗算値が適切な範囲内にあることを確認します。</p>
+    </li>
+    <li>
+      <p>別の樹状突起膜電位 <code>VmDend</code> が計算されます。これは、細胞体への完全な統合を反映する標準 <code>Vm</code> と比較して、樹状突起における脱分極のダイナミクスをよりよく反映します。 NMDA や GABA-B など、樹状突起に局在する電位依存性チャネルは、この <code>VmDend</code> によって駆動され、そうすることで、体細胞の <code>Vm</code> を使用する場合と比較して、学習パフォーマンスが大幅に向上します。</p>
+    </li>
+  </ol>
+
+  <p>樹状突起のダイナミクスを捕捉するこれらの方法は、おそらく生物学における関連する機能特性の妥当な割合を捕捉しますが、これらの問題をよりよく理解するには、完全に詳細なコンパートメントモデルとの直接比較によるさらなる研究が必要です。</p>
+
+  <h2 id="section">入力経路の個別の統合とスケーリング</h2>
+
+  <p>ここでは、特定のニューロンへのさまざまな入力ソース間の差異を考慮して、ニューロンへの興奮性コンダクタンス $g_e$ または <em>net input</em> がどのように計算されるかを詳細に説明します。 [[neuron]] では、コアの計算が、重みと送信アクティベーションの平均として要約されます。</p>
+
+  <p>{id=”eq_gesum” title=”興奮度オープン”}
+\(g_e(t) = \frac{1}{n} \sum_i x_i w_i\)</p>
+
+  <p>ここで、<em>n</em> はチャネルの総数、$x_i$ は添え字 <em>i</em> でインデックス付けされた特定の送信ニューロンの <strong>アクティビティ</strong>、$w_i$ は送信ニューロン <em>i</em> を受信ニューロンに接続する <strong>シナプス重み強度</strong> です。</p>
+
+  <p>ここで説明するより精巧なネット入力計算 ([[Axon]] シミュレーションで実際に使用されるもの) の全体的な目標は、アクティビティの全体的なレベルが異なるさまざまな層からの入力が、ネット入力の全体的な大きさに関して受信ニューロンに同様の影響を与えることを保証すると同時に、機能的に動作し続ける方法でこれらのさまざまな入力の強度を操作できるようにすることです。たとえば、モデルが幻覚を起こさないようにするには、トップダウンの経路がボトムアップの経路よりも大幅に弱いことが重要です。</p>
+
+  <p>たとえば、「ローカリスト」入力層は 100 のうち 1 つのユニット (1%) だけをアクティブにすることができますが、隠れ層は 25% のアクティビティ (たとえば、100 のうち 25) を持つことができます。全体的なアクティビティ レベルのこの大きな違いにより、別の方法で補償しない場合、これらの層は受信層に対して非常に異なる影響を与えることになります。  用語的には、特定の送信層からの接続のセットを <strong>パスウェイ</strong> と呼びます。</p>
+
+  <p>正味入力の完全な方程式は次のとおりです。これには、最初に文字 <em>k</em> でインデックスが付けられたさまざまな経路にわたる二重和が含まれ、次にその内部で文字 <em>i</em> でインデックスが付けられた各経路の受信接続による二重和が含まれます (これらは外側の経路ループに応じて変化すると理解されています)。</p>
+
+  <p>{id=”eq_get” title=”ネット入力スケーリング”}
+\(g_e(t) = \sum_k \left[ s_k \left(\frac{r_k}{\sum_p r_p}\right) \frac{1}{\alpha_k} \frac{1}{n_k} \sum_i \left( x_i w_i \right) \right]\)</p>
+
+  <p>この方程式の係数は次のとおりです。</p>
+
+  <ul>
+    <li>
+      <p>$s_k$ = パスウェイの絶対乗法スケーリング パラメーター。Axon <code>PathParams</code> の <code>PathScale.Abs</code> パラメーターによって設定されます。</p>
+    </li>
+    <li>
+      <p>$r_k$ = 経路の相対スケーリング パラメーター。これは常に他のすべての経路の相対パラメーターの合計によって正規化されます。これが相対的なものになります。合計は一定であり、相対的な寄与のみを変更できます。これは、<code>PathParams</code> の <code>PathScale.Rel</code> によって設定されます。</p>
+    </li>
+    <li>
+      <p>$\alpha_k$ = 送信層の効果的な予想アクティビティ レベル。以下で説明するように計算され、予想アクティビティ レベルの違いに関係なく経路を均等化するのに役立ちます。</p>
+    </li>
+    <li>
+      <p>$n_k$ = このパスウェイ内の接続の数。</p>
+    </li>
+  </ul>
+
+  <p>効果的な期待される活動レベル $\alpha_k$ を計算するための方程式は、特定の経路上で期待されるアクティブな入力の数の整数カウントに基づいています。これには、送信層で予期されるアクティブ化と、受信される接続の数の両方が考慮されます。</p>
+
+  <p>たとえば、アクティビティが 1% (100 ユニット中 1 ユニットがアクティブ) で、その層からの着信接続が 1 つだけある層からのパスウェイを考えてみましょう。この 1 つの着信接続がアクティブな送信ユニットを持つ確率は平均 1% ですが、層内の「いくつかの」受信ユニットがその 1 つの送信ユニットをアクティブにする可能性が高くなります。したがって、平均予想送信確率 (1%) ではなく、レイヤー上の「最高予想アクティビティ レベル」(1) を使用します。</p>
+
+  <p>具体的には、数学記号の代わりに長い名前の疑似コード変数を使用した方程式は次のとおりです。</p>
+
+  <ul>
+    <li>
+      <p><code>alpha_k = min(pct_activity * n_recv_cons + sem_extra, r_max_act_n)</code></p>
+
+      <ul>
+        <li><code>pct_activity</code> = % expected activity on sending layer.</li>
+        <li><code>n_recv_cons</code> = number of receiving connections in pathway.</li>
+        <li><code>sem_extra</code> = standard error of the mean (SEM) extra buffer, set to 2 by default. This makes it the highest expected activity level by including effectively 4 SEM’s above the mean, where the real SEM depends on <code>pct_activity</code> and is a maximum of .5 when <code>pct_activity</code> = .5.</li>
+        <li><code>r_max_act_n = min(n_recv_cons, pct_activity * n_units_in_layer)</code> = hard upper limit maximum on number of active inputs: can’t be any more than either the number of connections we receive, or the total number of active units in the layer</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 id="section-1">変調入力</h2>
+
+  <p>生物学に基づいたマルチコンパートメントモデルからの一般的な結論は、樹状突起内の$V_m$の上昇の結果としてA型Kチャネルが不活性化され、樹状突起入力間の非線形ゲートのような相互作用を引き起こす可能性があるということです。十分な入力が（例えば2つの異なる経路から）入ってくると、残りの入力はすべて多かれ少なかれ線形に統合されますが、この臨界閾値を下回ると入力は大幅に減少します。アクティブな A タイプ K チャネルによってさらに減衰されます。また、通常の AMPA コンダクタンスを増幅させるために Ca スパイクを駆動する可能性がある VGCC L 型および T 型電位依存性 Ca チャネルに関連する他の合併症、樹状突起内の活性な HH Na スパイクチャネルの相対的な弱化と減衰、および阻害がどこで発生するかの問題もあります ([[@Spruston08]]; [[@PoiraziPapoutsi20]])。</p>
+
+  <p>考慮しなければならない重要な問題の 1 つは、関連する電気生理学的研究の多くは、麻酔をかけた動物または単離されたスライス標本 (<em>in vitro</em>) を使用して行われており、覚醒して行動している状況 (<em>in activo</em>) で行われた研究との比較では、多くの場合、重大な違いが明らかになることです。たとえば、覚醒している脳には常に合理的なバックグラウンドレベルのシナプス入力があり、A タイプ K チャネルはとにかくほとんど不活性化されています。したがって、「アップ状態」と「ダウン状態」の観点から説明されてきた神経統合とバースト特性の劇的な違いは、覚醒行動と麻酔下またはスライス標本ではほとんど消失します。</p>
+
+  <p>さらに、これらの調節的乗法的ダイナミクスは、一部の特定のニューロン タイプにとっては他のニューロン タイプよりも重要である可能性が高く、研究の多くは [[hipppocampus]] の CA1 錐体ニューロンと [[neocortex]] の第 5 層錐体路 (PT) ニューロンに焦点を当てています。 [[Axon]] では、モデルの計算の大部分を実行する「標準的な」層 2/3 表層皮質ニューロンは、変調ダイナミクスの恩恵を受けていないことがわかりました。これは、これらのニューロンと層 5 新皮質ニューロンの複雑さを定量化する最近の試みと一致しています ([[@BeniaguevSegevLondon21]]、詳細については [[predictive learning]] を参照)。</p>
+
+  <p>調節入力から恩恵を受けることが特にわかっているニューロンのタイプは次のとおりです。</p>
+
+  <ul>
+    <li>[[basal ganglia]] の MSN (中型有棘ニューロン)。</li>
+    <li><code>PT</code> (錐体路、層 5、IB 固有バースト) ニューロン。</li>
+  </ul>
+
+  <h2 id="section-2">樹状突起と細胞体電位の比較</h2>
+
+  <p>{id=”figure_dendrite-soma” style=”高さ:30em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_dendrite_soma_vm_larkum_etal99.png" alt="Larkum et al., 1999 より、細胞体 (緑の線) 対近位樹状突起 (青) および遠位樹状突起 (赤) で記録された膜電位トレース。樹状突起内の樹状突起電位は逆伝播する活動電位に対する反応が遅く、これはモデルの細胞体の Vm に対する VmDend 変数で捉えられます。" /></p>
+
+  <p>{id=”figure_vmdend” style=”高さ:30em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_axon_neuron_vmdend.png" alt="軸索における VmDend (樹状突起電位) 対 Vm (細胞体) ダイナミクス。" /></p>
+
+  <p>[[@^LarkumZhuSakmann99]] からの [[#figure_dendrite-soma]] は、樹状突起と細胞体における活動電位の逆伝播中の時間的積分特性に大きな違いがあることを示しています。これは軸索ニューロン モデル ([[#figure_vmdend]]、[[neuron simulation]] の <code>VmDend</code> 変数をクリックすると自分で再現できます) で次のメカニズムを使用してキャプチャされます。</p>
+
+  <ul>
+    <li>
+      <p>古典的な HH モデルの一部である <code>Kdr</code> 遅延整流器チャネルは、スパイク後に膜電位をリセットして静止状態に戻します。このチャネルを使用した [[@^UrakuboHondaFroemkeEtAl08]] モデルの詳細なトレースと上記の図によれば、これは完全に瞬間的なプロセスではなく、時定数は 1 ～ 2 ms の間です。これは、全体的なスパイク動作にとっては重要ではありませんが、Vm がより現実的な Ca ベースの学習に使用される場合 (Uurakubo モデルのように) は重要です。このより現実的な <code>VmR</code> リセット動作は、<code>RTau</code> 時定数を介して Axon でキャプチャされます。この時定数は、3 ms の <code>Tr</code> 不応期内に <code>Vm</code> を <code>VmR</code> に減衰させます。これは、孤立したスパイクの Urakubo トレースとよく一致します。</p>
+    </li>
+    <li>
+      <p><code>Dend</code> パラメータは、Exp スロープの一部を <code>VmDend</code> に適用する <code>GbarExp</code> パラメータと、スパイク リセット (<code>Tr</code>) ウィンドウ中に比例量のリーク電流を注入して Vm を少し下げ、より弱い量を反映する <code>GbarR</code> パラメータを指定します。 <code>Kdr</code> は樹状突起内にあります。これにより、<code>examples/neuron</code> モデルの次の実行に示すように、<code>VmDend</code> と <code>Vm</code> を比較する、上の図に似たトレースが生成されます。予備的な兆候は、おそらく NMDA および GABAB チャネルをより適切に関与させることにより、これがモデルのパフォーマンス全体 (これまでのところ ra25 および fsa で) に大きな利点があることを示唆しています。</p>
+    </li>
+  </ul>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">入力経路の個別の統合とスケーリング</a></li>
+<li class="toc-h2"><a href="#section-1">変調入力</a></li>
+<li class="toc-h2"><a href="#section-2">樹状突起と細胞体電位の比較</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/book-web: sims | マインドアップロード</title>
+<meta name="description" content="compcogneuro/book-web: sims.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/book-web: sims</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/book-web/blob/main/content/sims.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/book-web/blob/main/content/sims.md</a></p>
+  <p>ライセンス: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>以下のシミュレーションのリストにあるリンクを使用して、この書籍に関連するシミュレーション演習を Web 上で実行することをお勧めします。</p>
+
+  <p><strong>重要:</strong> 現在、これは macOS および Windows 上の Chrome の最新バージョンでのみ完全に動作します。そのため、Linux を使用している場合は、このページの下部にある別の手順を参照してください。</p>
+
+  <p>シミュレーションに関連するすべてのバグ レポートは、<a href="https://github.com/compcogneuro/sims/issues">問題トラッカー</a> に提出する必要があります。</p>
+
+  <p>さらに詳しい背景情報と基礎となるコードが必要な場合は、<a href="https://cogentcore.org/core">コージェントコア</a> を使用して、<a href="https://github.com/compcogneuro/sims">シムズ</a> リポジトリ内の <a href="https://github.com/emer/emergent">緊急の</a> フレームワークの Go バージョンでシミュレーションが実装されます。この Web サイトも Cogent Core で構築されています。</p>
+
+  <p>＃＃ 使用法</p>
+
+  <p>各シミュレーションには、ウィンドウの右側に完全なステップバイステップの説明があり、モデルの実行方法と、クラスの使用法について答えるための質問が含まれています (詳細については、シラバスを参照してください)。提供されたテキスト ボックスを使用して、シミュレーション内の質問に答えることができます。これらのテキスト ボックスは、作業内容の損失を防ぐためにブラウザに自動的に保存されます。すべての質問に回答したら、説明の上部にある [回答をコピー] ボタンをクリックします。次に、新しい Google ドキュメントと <a href="https://support.google.com/docs/answer/12014036">マークダウンから貼り付ける</a> を作成します ([ツール] &gt; [設定] で [マークダウンを有効にする] を選択し、右クリックして [マークダウンから貼り付け] をクリックします)。この Google ドキュメントを PDF としてダウンロードして、クラスに提出できます。</p>
+
+  <p>手順には、ユーザー インターフェイス内の要素を強調表示するためにクリックできる特別なリンクが含まれています。たとえば、「テスト サイクル プロット」へのリンクがある場合、それをクリックすると、「テスト サイクル プロット」のボタンが強調表示され、指示に従うのに役立ちます。</p>
+
+  <p>標準の <code>Ctrl+</code> および <code>Ctrl-</code> キー シーケンスを使用して、表示を希望のスケールにズームできます。また、Cogent Core 設定ウィンドウには、ライト/ダーク モードなどのその他の表示オプションがあります (これには、右クリック/2 本指のクリック/コントロール クリックしてから「設定」をクリックすることでアクセスできます)。</p>
+
+  <p>実行のための主なアクションは上部のツールバーにあり、モデルに最も関連するパラメータは左側のコントロール パネルにあります。ウィンドウの中央にあるタブ付きビューで、さまざまな出力表示を選択できます。</p>
+
+  <p><a href="https://github.com/emer/emergent/wiki/Home">Go Emergent Wiki</a> には、ネットワークを表示する <code>NetView</code> などを使用するためのさまざまなヘルプ ページが含まれています。</p>
+
+  <p>コントロール パネルの <code>Net</code> の右側にあるボタンをクリックすると (NetView でレイヤー名をクリックすることでも)、いつでも詳細なパラメータにアクセスでき、このモデルのカスタム パラメータは <code>Params</code> フィールドに設定されます。</p>
+
+  <h2 id="section">シムと演習の質問のリスト</h2>
+
+  <p>すべてのシミュレーションとそれに関連する教科書の演習問題の完全なリストを次に示します。</p>
+
+  <h2 id="section-1">第 2 章: ニューロン</h2>
+
+  <ul>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch2/neuron">ニューロン</a>: 統合、スパイク、およびレート コードのアクティブ化。 (質問 <strong>2.1 – 2.7</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch2/detector">検出器</a>: 検出器としてのニューロン – ニューロンが何を検出するかを決定する際のシナプス重みの重要な機能を示します。 (質問 <strong>2.8 ～ 2.10</strong>)</p>
+    </li>
+  </ul>
+
+  <h2 id="section-2">第 3 章: ネットワーク</h2>
+
+  <ul>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch3/faces">顔</a>: ボトムアップおよびトップダウンの処理を含む顔の分類 (ネットワークの章の複数の探索に使用) (質問 <strong>3.1 – 3.3</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch3/cats_dogs">猫_犬</a>: Cats and Dogs モデルの制約満足度。 (質問<strong>3.4</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch3/necker_cube">ネッカーキューブ</a>: ネッカー キューブ モデルにおける制約満足度およびノイズと調整の役割。 (質問<strong>3.5</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch3/inhib">インヒブ</a>: 抑制性介在ニューロンを介した抑制性相互作用、および FFFB 近似。 (質問 <strong>3.6 – 3.8</strong>)</p>
+    </li>
+  </ul>
+
+  <h2 id="section-3">第 4 章: 学習</h2>
+
+  <ul>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch4/self_org">自己組織</a>: XCAL の BCM のようなダイナミックを使用した自己組織化学習 (質問 <strong>4.1 – 4.2</strong>)。</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch4/pat_assoc">pat_assoc</a>: ヘビアンおよびエラー駆動メカニズムを使用した単純な入出力マッピング タスク (パターン アソシエーター) を学習する基本的な 2 層ネットワーク (質問 <strong>4.3 – 4.6</strong>)。</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch4/err_driven_hidden">err_driven_hidden</a>: 隠れ層を使用した完全なエラー駆動学習は、あらゆる入出力マッピングを解決できます (質問 <strong>4.7</strong>)。</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch4/family_trees">家系図</a>: 深い (多重隠れ層) ネットワークでの学習。自己組織化学習とエラー駆動型学習の組み合わせの利点を示します (質問 ** 4.8 – 4.9**)。</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch4/hebberr_combo">hebberr_combo</a>: ヘブビアン学習とエラー駆動を組み合わせると一般化が容易になります (質問 <strong>4.10 – 4.12</strong>)。</p>
+    </li>
+  </ul>
+
+  <p>注: チャプター 5 にはシムはありません</p>
+
+  <h2 id="section-4">第 6 章: 知覚と注意</h2>
+
+  <ul>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch6/v1rf">v1rf</a>: ヘビアン学習からの V1 受容野、側面トポグラフィー。 (質問 <strong>6.1 – 6.2</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch6/objrec">オブジェクト</a>: 階層変換に対する不変オブジェクト認識。 (質問 <strong>6.3 – 6.5</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch6/attn">注目</a>: 小規模モデルにおける物体認識経路と相互作用する空間的注意。 (質問 <strong>6.6 ～ 6.11</strong>)</p>
+    </li>
+  </ul>
+
+  <h2 id="section-5">第 7 章: 学習と記憶</h2>
+
+  <ul>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch7/abac">アバク</a>: ペアになったアソシエート AB-AC 学習と壊滅的な干渉。 (質問 <strong>7.1 – 7.3</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch7/hip">ヒップ</a>: 海馬モデルと干渉の克服。 (質問 <strong>7.4 – 7.6</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch7/priming">呼び水</a>: 重みとアクティベーションベースのプライミング。 (質問 <strong>7.7 – 7.8</strong>)</p>
+    </li>
+  </ul>
+
+  <h2 id="section-6">第 8 章: モーター制御と強化学習</h2>
+
+  <ul>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch8/bg">バックグラウンド</a>: 大脳基底核におけるアクション選択/ゲーティングおよび強化学習。 (質問 <strong>8.1 – 8.3</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch8/rl">rl</a>: 時間差強化学習を使用したパブロフ条件付け。 (質問 <strong>8.4 – 8.5</strong>)</p>
+    </li>
+    <li>
+      <p><code>pvlv</code>: PVLV モデルによるパブロフ条件付け (質問 <strong>8.6 – 8.8</strong>) <strong>まだ利用できません!</strong></p>
+    </li>
+    <li>
+      <p><code>cereb</code>: 運動学習、エラーからの学習における小脳の役割。 (質問 <strong>8.9 – 8.10</strong>) <strong>まだ利用できません!</strong></p>
+    </li>
+  </ul>
+
+  <h2 id="section-7">第 9 章: 実行機能</h2>
+
+  <ul>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch9/a_not_b">a_not_b</a>: PFC アクティブ保守と A-not-B タスクの開発 (質問 <strong>9.1 ～ 9.3</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch9/stroop">ストロープ</a>: ストループ効果と PFC トップダウン バイアス (質問 <strong>9.4 – 9.6</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch9/sir">お客様</a>: タスクの保存/無視/呼び出し - より複雑な PFC モデルでの更新とメンテナンス (質問 <strong>9.7 ～ 9.8</strong>)</p>
+    </li>
+  </ul>
+
+  <h2 id="section-8">第 10 章: 言語</h2>
+
+  <ul>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch10/sem">セム</a>: 世界の共起とヘビアン学習からの意味表現。 (質問 <strong>10.1 ～ 10.3</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch10/ss">ss</a>: 正書法から音韻論へのマッピングと規則性、周波数効果。 (質問 <strong>10.4 – 10.5</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch10/dyslexia">失読症</a>: 通常の読み取りと無秩序な読み取り、および分散辞書。 (質問 <strong>10.6 ～ 10.11</strong>)</p>
+    </li>
+    <li>
+      <p><a href="https://sims.compcogneuro.org/ch10/sg">sg</a>: 文のゲシュタルト モデル。 (質問<strong>10.12</strong>)</p>
+    </li>
+  </ul>
+
+  <h2 id="section-9">別の実行方法</h2>
+
+  <h3 id="section-10">ソースからビルドする</h3>
+
+  <p>任意のプラットフォーム上のコンピューター上でローカルに SIM を実行するには、まず <a href="https://www.cogentcore.org/core/install">Cogent Core のインストール手順</a> に従う必要があります。次に、SIM リポジトリのクローンを作成し、<code>core run</code> を使用して SIM を実行できます。</p>
+
+  <pre><code class="language-sh">git clone https://github.com/compcogneuro/sims
+cd sims/ch2/neuron # or any other sim
+core run
+</code></pre>
+
+  <p>You can also use <code>core run web</code> to run a sim on the web, which does not require running the <code>core setup</code> command in the setup instructions.</p>
+
+  <h3 id="prebuilt-executables">Prebuilt executables</h3>
+
+  <p>We will provide updated prebuilt versions of the sims soon. You can see old prebuilt versions in the <a href="https://github.com/compcogneuro/sims/releases">releases</a>, which are not recommended. The even older <a href="https://github.com/emer/cemer">C++ emergent (cemer)</a> sims project files are available here: <a href="https://github.com/compcogneuro/sims/releases/download/v1.2.2/cecn_8_5_2.zip">cecn_8_5_2.zip</a> (no longer updated or supported; recommend transitioning to new ones).</p>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">シムと演習の質問のリスト</a></li>
+<li class="toc-h2"><a href="#section-1">第 2 章: ニューロン</a></li>
+<li class="toc-h2"><a href="#section-2">第 3 章: ネットワーク</a></li>
+<li class="toc-h2"><a href="#section-3">第 4 章: 学習</a></li>
+<li class="toc-h2"><a href="#section-4">第 6 章: 知覚と注意</a></li>
+<li class="toc-h2"><a href="#section-5">第 7 章: 学習と記憶</a></li>
+<li class="toc-h2"><a href="#section-6">第 8 章: モーター制御と強化学習</a></li>
+<li class="toc-h2"><a href="#section-7">第 9 章: 実行機能</a></li>
+<li class="toc-h2"><a href="#section-8">第 10 章: 言語</a></li>
+<li class="toc-h2"><a href="#section-9">別の実行方法</a></li>
+<li class="toc-h3"><a href="#section-10">ソースからビルドする</a></li>
+<li class="toc-h3"><a href="#prebuilt-executables">Prebuilt executables</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

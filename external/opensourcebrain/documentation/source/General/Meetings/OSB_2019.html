@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenSourceBrain Documentation: サルデーニャでの OSB 会議、2019 | マインドアップロード</title>
+<meta name="description" content="OpenSourceBrain/Documentation: source/General/Meetings/OSB_2019.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">OpenSourceBrain 翻訳ページ</div>
+    <h1 class="title">OpenSourceBrain Documentation: サルデーニャでの OSB 会議、2019</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/OpenSourceBrain/Documentation/blob/main/source/General/Meetings/OSB_2019.md" target="_blank" rel="noopener noreferrer">https://github.com/OpenSourceBrain/Documentation/blob/main/source/General/Meetings/OSB_2019.md</a></p>
+  <p>ライセンス: CC BY 4.0。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><a id="meetings:sardinia2019"></a>
+<a id="osb-meeting-in-sardinia-2019"></a></p>
+  <h1 id="osb-2019">サルデーニャでの OSB 会議、2019</h1>
+
+  <p><img alt="OSB" src="https://raw.githubusercontent.com/OpenSourceBrain/OSB_Documentation/master/resources/images/OSB2019Banner.png" width="700" /></p>
+
+  <p><strong>OSB ワークショップ 2019</strong> は、2019 年 9 月にサルデーニャのアルゲーロで開催されました。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left"><strong>日付</strong></th>
+        <th><strong>2019年9月9日月曜日午前9時～2019年9月11日水曜日午後5時</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left"><strong>場所</strong></td>
+        <td><a href="http://www.hotelcalabona.com">ホテル カラボナ</a>、<a href="http://www.alghero-turismo.it/en/">アルゲーロ</a>、サルデーニャ</td>
+      </tr>
+      <tr>
+        <td style="text-align: left"><strong>組織委員会</strong></td>
+        <td><a href="http://www.opensourcebrain.org/users/4">パドレイグ・グリーソン</a>、<a href="http://www.opensourcebrain.org/users/751">マット・アーンショー</a>、<a href="http://www.opensourcebrain.org/users/6">アンガス・シルバー</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a id="overview-of-the-meeting"></a></p>
+  <h2 id="section">会議の概要</h2>
+
+  <p>Open Source Brain (http://www.opensourcebrain.org) は、計算神経科学におけるモデルを共有し、共同開発するためのプラットフォームとして作成されました。標準化された形式のセルと回路のモデルは、標準の Web ブラウザを通じて視覚化、分析、シミュレーションできます。その目的は、脳機能の調査に使用されるモデルの品質、アクセスしやすさ、科学的厳密性を向上させることでした。</p>
+
+  <p><a href="https://wellcome.ac.uk/">ウェルカムトラスト</a> からの資金調達の更新に続き、モデルの背後にある実験データの共有も可能にするためにプラットフォームの機能を拡張しています。 <strong>OSB ワークショップ 2019</strong> では、OSB の最新機能に焦点を当て、招待講演、実践的なデモンストレーション、ユーザー プレゼンテーションを通じて、プラットフォームの現在および将来のユーザーを魅了しました。</p>
+
+  <p>会議の <strong>2 つの主要なテーマ</strong>は次のとおりです。</p>
+
+  <p><strong>1) 細胞神経科学データのアクセス可能な共有</strong></p>
+
+  <p>OSB は、<a href="https://www.nwb.org/">国境なきニューロデータ</a> (NWB) 形式のサポートを通じて、電気生理学的記録、Ca<sup>2+</sup> 蛍光イメージング、2D、3D、4D イメージングおよび行動データを含む、計算モデルを制約するために使用される複数種類の実験データの共有を容易にします。</p>
+
+  <p><strong>2) 複数のスケールにわたる皮質のモデル化</strong></p>
+
+  <p>皮質ネットワークは、相互作用する集団 (神経塊) の抽象的な表現から、生物物理学的および形態学的に詳細な細胞モデルのネットワークに至るまで、さまざまなスケールでモデル化されます。
+<a href="https://www.neuroml.org/">ニューロML</a> は、これらのモデルのより広範囲をカバーするように拡張されており、OSB 上でモデルを共有してシミュレーションできるようになり、研究者間でのモデルやアイデアの比較が容易になります。
+この進行中の作業は、<a href="https://github.com/NeuralEnsemble/Networks_SIG">ネットワーク構造の標準化された表現に関する SIG</a> の一部として行われています。</p>
+
+  <p><a id="agenda"></a></p>
+  <h2 id="section-1">議題</h2>
+
+  <p><a id="mon-9th-sept-building-and-sharing-standardised-neuronal-models"></a></p>
+  <h3 id="section-2">9 月 9 日 (月) <em>標準化されたニューロン モデルの構築と共有</em></h3>
+
+  <p>    <strong>午前のセッション</strong></p>
+
+  <p>9:00 <strong>アンガス シルバー</strong> ようこそと会議の目標の紹介 (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/OSB_introduction_Final_Angus.ppt">スライド</a>)</p>
+
+  <p>9:10 <strong>Padraig Gleeson</strong> オープンソース Brain と NeuroML - 計算神経科学における共同モデル開発の実現 (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/OSB_NeuroML_Intro_Sardinia19.pptx">スライド</a>)</p>
+
+  <p>9:50 <strong>Yann Zerlaut</strong> Human Brain Project (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/OSB_2019_yann.pptx">スライド</a>) 内で開発されたモデリングおよびシミュレーション用ツールの概要</p>
+
+  <p><em>10:30 - 11:00 コーヒーブレイク</em></p>
+
+  <p>11:00 <strong>Sharon Crook</strong> NeuroML-DB: 効率的なモデルの選択と再利用を促進するモデル共有プラットフォーム (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/OSB_NeuroML2019.pdf">スライド</a>)</p>
+
+  <p>11:30 <strong>Rajnish Ranjan</strong> ホモマー電位依存性カリウム チャネル (Kv) ファミリーの動態マップ</p>
+
+  <p>12:00 <strong>Boris Marin</strong> モデルを NeuroML に変換する (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/BorisMarin_Sardinia2019.pptx">スライド</a>)</p>
+
+  <p><em>12:30 - 13:30 ランチ</em></p>
+
+  <p>    <strong>午後のセッション</strong></p>
+
+  <p>13:30 <strong>Matteo Cantarelli</strong> Geppetto: 神経科学アプリケーションを構築するためのオープンソース プラットフォーム (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/Geppetto_Presentation_OSB_2019.pdf">スライド</a>)</p>
+
+  <p>14:00 <strong>Ankur Sinha</strong> NeuroFedora: オープン サイエンス用のフリー ソフトウェア (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/20190909_neurofedora_presentation.pdf">スライド</a>)</p>
+
+  <p>14:30 <strong>ライトニング トーク</strong> Bence András Lázár、Bettina Kata Kádár、Csaba Kazinczi (セゲド大学)</p>
+
+  <p><em>15:00 - 15:30 コーヒーブレイク</em></p>
+
+  <p>15:45 - 17:30 <strong>ディスカッション セッション:</strong> 科学者にとってモデルをよりアクセスしやすく、役立つものにするにはどうすればよいでしょうか?</p>
+
+  <ul>
+    <li>OSB の現在の機能 (共有、視覚化、分析、シミュレーション、チュートリアル、テスト) は、モデルの開発と配布での使用に切り替えるのに十分ですか?</li>
+    <li>OSB はどのようにすれば、現場の他の取り組みとより良く連携できるでしょうか。 HBP/アレン?</li>
+    <li>モデル変換を容易にして、すべての主要なモデルを OSB に取り込むにはどうすればよいでしょうか?</li>
+    <li>新しい科学的疑問のために新しいモデルを構築し、既存のコンポーネントを再利用するための障壁をどのように下げることができるでしょうか?</li>
+    <li>NeuroML と PyNN の現在の制限は何ですか?</li>
+  </ul>
+
+  <p><a id="tues-10th-sept-standardising-and-sharing-experimental-neuroscience-data"></a></p>
+  <h3 id="section-3">9月10日火曜日 <em>神経科学実験データの標準化と共有</em></h3>
+
+  <p>    <strong>午前のセッション</strong></p>
+
+  <p>9:00 <strong>アンガス シルバー</strong> セッションの紹介 (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/OSB_introduction_Final_Angus.ppt">スライド</a>)</p>
+
+  <p>9:05 <strong>ディエゴ・レストレポ</strong> 連合学習における小脳の関与に光を当てる (<a href="https://www.dropbox.com/s/9jg0q7fa7vpk2bc/OSB2019_Restrepo.pptm?dl=0">スライド</a>)</p>
+
+  <p>9:50 <strong>Simon Schultz</strong> NeuroSEE: 多光子蛍光脳イメージング実験からのデータを処理および分析するためのパイプライン (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/Schultz_slides.pdf">スライド</a>)</p>
+
+  <p><em>10:35 - 11:00 コーヒーブレイク</em></p>
+
+  <p>11:00 <strong>ジェフリー S. ダイアモンド</strong> 視覚障害者と網膜: 自動セグメンテーション以前のコミュニティ コネクトミクス</p>
+
+  <p>11:45 <strong>オリバー ルーベル</strong> NWB:N 2.0: 神経生理学データ標準化のためのエコシステム (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/2019_09_09_opensourcebrain_nwbn_overview.pdf">スライド</a>)</p>
+
+  <p><em>12:30 - 13:30 ランチ</em></p>
+
+  <p>    <strong>午後のセッション</strong></p>
+
+  <p>13:30 <strong>Matteo Cantarelli &amp; Filippo Ledda</strong> NWB Explorer: 神経生理学データを視覚化して理解する (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/NWBExplorerOSBMeeting2019.pdf">スライド</a>)</p>
+
+  <p>13:50 <strong>Ian Duguid</strong> 意志運動制御のシステム レベルの理解に向けて: データの取得、管理、共有におけるアプローチと課題</p>
+
+  <p>14:35 <strong>Alex Cayco-Gajic (発表者: Angus Silver)</strong> 小脳軸索の集団イメージングと次元解析</p>
+
+  <p><em>15:00 - 15:30 コーヒーブレイク</em></p>
+
+  <p>15:30 - 17:00 <strong>ディスカッション セッション:</strong> データ共有をアクセスしやすく便利にするにはどうすればよいでしょうか?</p>
+
+  <ul>
+    <li>解析/再利用できるようにデータを標準化する際の主な課題は何ですか?</li>
+    <li>データ標準化に対して提案されたソリューションは、神経科学データ (例: 行動分析、高速 Ca2+ イメージング、マルチチャネル電気生理学、コネクトミクス、ゲノミクスなど) のサイズと異質性を処理するのに適切ですか?</li>
+    <li>データを利用可能にする際の主な課題は何ですか?
+-何を共有すべきですか？生データ、分析、数値のデータポイント?</li>
+    <li>データの共有には（かなりの）努力をする価値がありますか - 実際に誰がそれを使用するのでしょうか?</li>
+  </ul>
+
+  <p>18:00 <strong>バスで会議ディナーへ</strong> <a href="https://www.pedramare.com/">ペドラマーレ レストラン</a></p>
+
+  <p><a id="wed-11th-sept-investigating-brain-function-across-multiple-scales"></a></p>
+  <h3 id="section-4">9月11日水曜日 <em>複数のスケールで脳機能を調査</em></h3>
+
+  <p>    <strong>午前のセッション</strong></p>
+
+  <p>9:00 <strong>アンガス シルバー</strong> セッションの紹介 (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/OSB_introduction_Final_Angus.ppt">スライド</a>)</p>
+
+  <p>9:02 <strong>Jan Fousek</strong> 仮想脳: 全脳モデリングの構成要素 (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/tvb_osb2019.pdf">スライド</a>)</p>
+
+  <p>9:45 <strong>Sacha van Albada</strong> 霊長類の大脳皮質の大規模スパイキング ニューラル ネットワーク モデリング (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/multi-area_model_OSB_workshop_2019.pdf">スライド</a>)</p>
+
+  <p><em>10:30 - 11:00 コーヒーブレイク</em></p>
+
+  <p>11:00 <strong>Yazan Billeh</strong> アレン脳科学研究所の大規模データセットとモデリング ツール (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/2019-09-OSB_YazanBilleh_v2.pptx">スライド</a>)</p>
+
+  <p>11:45 <strong>フルール ゼルデンラスト</strong> 脳内の情報伝達の理解: 単一細胞からネットワークへ (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/OSB_workshop_zeldenrust.pdf">スライド</a>)</p>
+
+  <p>12:15 <strong>セルジオ ソリナス</strong> NeuroAgents ERC プロジェクト (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/Neuroagents_osb2019.pdf">スライド</a>)</p>
+
+  <p><em>12:30 - 13:30 ランチ</em></p>
+
+  <p>    <strong>午後のセッション</strong></p>
+
+  <p>13:30 <strong>オーレン・アムサレム</strong> 皮質微小回路の忠実なコンピューターレプリカにおける聴覚驚きの細胞メカニズム</p>
+
+  <p>14:00 <strong>Padraig Gleeson</strong> NeuroML でスケール全体の皮質モデルを作成する (<a href="https://github.com/OpenSourceBrain/OSB_Documentation/raw/master/resources/docs/OSB2019/MultiscaleNetworksNeuroML_Sardinia19.pptx">スライド</a>)</p>
+
+  <p><em>14:30 - 15:00 コーヒーブレイク</em></p>
+
+  <p>15:30 - 17:30 <strong>ディスカッション セッション:</strong> 回路のより優れたマルチスケール モデルを作成するにはどうすればよいでしょうか?</p>
+
+  <ul>
+    <li>脳のマルチスケール モデルは努力する価値がありますか?</li>
+    <li>マルチスケール モデルと、その構築とテストに使用される実験データを統合する利点は何ですか?</li>
+    <li>モデルの構造、最適化、テストを実験データに結び付ける際の主な課題は何ですか?</li>
+    <li>Python ノートブックは、OSB インフラストラクチャのモデル構築/データ分析におけるアクセシビリティと柔軟性の間の適切なバランスを提供しますか?</li>
+  </ul>
+
+  <p><a id="speakers"></a></p>
+  <h2 id="section-5">スピーカー</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>名前</th>
+        <th>機関</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>オーレン・アムサレム</strong></td>
+        <td>ヘブライ大学、イスラエル</td>
+      </tr>
+      <tr>
+        <td><strong>ヤザン・ビレ</strong></td>
+        <td>アレン研究所、米国</td>
+      </tr>
+      <tr>
+        <td><strong>マテオ カンタレッリ</strong></td>
+        <td>メタセル株式会社</td>
+      </tr>
+      <tr>
+        <td><strong>アレックス・ケイコ・ガジック</strong></td>
+        <td>ユニバーシティ・カレッジ・ロンドン、英国、エコール・ノルマル・シュペリウール、フランス</td>
+      </tr>
+      <tr>
+        <td><strong>シャロン・クルック</strong></td>
+        <td>アリゾナ州立大学、米国</td>
+      </tr>
+      <tr>
+        <td><strong>ジェフリー・S・ダイアモンド</strong></td>
+        <td>ナインズ、米国</td>
+      </tr>
+      <tr>
+        <td><strong>イアン・デュガイド</strong></td>
+        <td>エディンバラ大学、イギリス</td>
+      </tr>
+      <tr>
+        <td><strong>マット・アーンショー</strong></td>
+        <td>ユニバーシティ・カレッジ・ロンドン、イギリス</td>
+      </tr>
+      <tr>
+        <td><strong>ヤン・フーセク</strong></td>
+        <td>エクス・マルセイユ大学、フランス</td>
+      </tr>
+      <tr>
+        <td><strong>パドレイグ・グリーソン</strong></td>
+        <td>ユニバーシティ・カレッジ・ロンドン、イギリス</td>
+      </tr>
+      <tr>
+        <td><strong>ボリス マリン</strong></td>
+        <td>ABC連邦大学、ブラジル</td>
+      </tr>
+      <tr>
+        <td><strong>ラジニッシュ ランジャン</strong></td>
+        <td>ブルー ブレイン プロジェクト、EPFL、スイス</td>
+      </tr>
+      <tr>
+        <td><strong>ディエゴ・レストレポ</strong></td>
+        <td>コロラド大学、米国</td>
+      </tr>
+      <tr>
+        <td><strong>オリバー・ルーベル</strong></td>
+        <td>ローレンス・バークレー国立研究所、米国</td>
+      </tr>
+      <tr>
+        <td><strong>サイモン・シュルツ</strong></td>
+        <td>インペリアル・カレッジ、イギリス</td>
+      </tr>
+      <tr>
+        <td><strong>アンガス シルバー</strong></td>
+        <td>ユニバーシティ・カレッジ・ロンドン、イギリス</td>
+      </tr>
+      <tr>
+        <td><strong>アンカー シンハ</strong></td>
+        <td>ハートフォードシャー大学、英国</td>
+      </tr>
+      <tr>
+        <td><strong>サシャ ヴァン アルバダ</strong></td>
+        <td>ユーリッヒ研究センター、ドイツ</td>
+      </tr>
+      <tr>
+        <td><strong>フルール・ゼルデンラスト</strong></td>
+        <td>ラドボウド大学、オランダ</td>
+      </tr>
+      <tr>
+        <td><strong>ヤン・ゼルラウト</strong></td>
+        <td>国立科学研究センター、フランス</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a id="enquiries"></a></p>
+  <h2 id="section-6">お問い合わせ</h2>
+
+  <p>この会議に関するご質問がございましたら、お気軽に p.gleeson@ucl.ac.uk までご連絡ください。</p>
+
+  <p><a id="support"></a></p>
+  <h2 id="section-7">サポート</h2>
+
+  <p>この会議は以下の方々から多大なご支援をいただきました。</p>
+
+  <p><a href="https://wellcome.ac.uk/"><img src="http://www.opensourcebrain.org/images/wellcome-logo-black.png" height="150" /></a></p>
+
+  <p><sup><i>上の画像のデータは、Antoine Valera 氏のご提供、UCL</i></sup></p>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/opensourcebrain/documentation/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">会議の概要</a></li>
+<li class="toc-h2"><a href="#section-1">議題</a></li>
+<li class="toc-h3"><a href="#section-2">9 月 9 日 (月) 標準化されたニューロン モデルの構築と共有</a></li>
+<li class="toc-h3"><a href="#section-3">9月10日火曜日 神経科学実験データの標準化と共有</a></li>
+<li class="toc-h3"><a href="#section-4">9月11日水曜日 複数のスケールで脳機能を調査</a></li>
+<li class="toc-h2"><a href="#section-5">スピーカー</a></li>
+<li class="toc-h2"><a href="#section-6">お問い合わせ</a></li>
+<li class="toc-h2"><a href="#section-7">サポート</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenSourceBrain Documentation: OSB キックオフミーティング、サルデーニャ、2013 年 5 月 13 ～ 15 日 | マインドアップロード</title>
+<meta name="description" content="OpenSourceBrain/Documentation: source/General/Meetings/Sardinia_2013.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">OpenSourceBrain 翻訳ページ</div>
+    <h1 class="title">OpenSourceBrain Documentation: OSB キックオフミーティング、サルデーニャ、2013 年 5 月 13 ～ 15 日</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/OpenSourceBrain/Documentation/blob/main/source/General/Meetings/Sardinia_2013.md" target="_blank" rel="noopener noreferrer">https://github.com/OpenSourceBrain/Documentation/blob/main/source/General/Meetings/Sardinia_2013.md</a></p>
+  <p>ライセンス: CC BY 4.0。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><a id="meetings:sardinia2013"></a>
+<a id="osb-kick-off-meeting-sardinia-13-15-may-2013"></a></p>
+  <h1 id="osb-2013--5--13--15-">OSB キックオフミーティング、サルデーニャ、2013 年 5 月 13 ～ 15 日</h1>
+
+  <p><img src="http://opensourcebrain.org/attachments/download/42/osbbanner.png" alt="" /></p>
+
+  <p>日程: <strong>2013年5月13日月曜日午前9時～水曜日午後5時</strong></p>
+
+  <p>場所: <a href="http://www.hotelcalabona.com/">ホテル カラボナ</a>、<a href="http://www.alghero-turismo.it/en/">アルゲーロ</a>、サルデーニャ</p>
+
+  <p>地元主催者: <a href="https://www.opensourcebrain.org/users/23">セルヒオ・ソリナス</a>)、Irene Solinas
+組織委員会: <a href="https://www.opensourcebrain.org/users/43">マッテオ・カンタレッリ</a>)、<a href="https://www.opensourcebrain.org/users/8">シャロン・クルック</a>、<a href="https://www.opensourcebrain.org/users/4">パドレイグ・グリーソン</a>、<a href="https://www.opensourcebrain.org/users/3">エウジェニオ・ピアジーニ</a>、<a href="https://www.opensourcebrain.org/users/6">アンガス・シルバー</a></p>
+
+  <p><a id="focus-of-meeting"></a></p>
+  <h2 id="section">会議の焦点</h2>
+
+  <p>この会議の焦点は<strong>小脳細胞およびネットワークモデル</strong>でした。</p>
+
+  <p>多数の発表者による以下のスライドを参照するか、会議に関する <a href="http://blog.openworm.org/post/50745024122/tales-from-the-open-source-brain-kick-off">OpenWorm プロジェクトのブログ投稿</a> を参照してください。</p>
+
+  <p>会議の具体的な成果の 1 つは、<a href="http://www.opensourcebrain.org/projects/cerebellar-granule-cell-modelling/wiki/Wiki">小脳顆粒細胞</a> のコミュニティ開発モデルを作成しようとするプロジェクトの立ち上げでした。</p>
+
+  <p><a id="agenda"></a></p>
+  <h2 id="section-1">議題</h2>
+
+  <p><a id="monday-13th-may-9am-6pm"></a></p>
+  <h3 id="section-2">5月13日月曜日、午前9時～午後6時</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left"> </th>
+        <th style="text-align: left"><strong>午前のセッション</strong></th>
+        <th style="text-align: left"> </th>
+        <th> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">9:00       </td>
+        <td style="text-align: left"><strong><a href="http://www.opensourcebrain.org/users/6">アンガス・シルバー</a></strong></td>
+        <td style="text-align: left">この取り組みの目的の紹介</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">9:15</td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/43">マッテオ・カンタレッリ</a>)</strong>       </td>
+        <td style="text-align: left">現在の OSB の機能とモデルの概要、現在の Web サイト (<a href="https://www.opensourcebrain.org/attachments/download/66/OSBIntroduction_Cantarelli.pdf">スライド</a>)</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">10:00</td>
+        <td style="text-align: left"><em>NeuroML および LEMS 開発の最新情報</em></td>
+        <td style="text-align: left"> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/4">パドレイグ・グリーソン</a>)</strong></td>
+        <td style="text-align: left">NeuroML 2 の開発 ([スライド] (http://opensourcebrain.org/attachments/download/62/NeuroMLLatest_PG.odp))</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/21">ロバート・キャノン</a>)</strong></td>
+        <td style="text-align: left">LEMS の背景と最新の開発</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/8">シャロン・クルック</a>)</strong></td>
+        <td style="text-align: left">NeuroML モデルとモデル コンポーネントのアーカイブと検索</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">11:00</td>
+        <td style="text-align: left">コーヒーブレイク</td>
+        <td style="text-align: left"> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">11:15</td>
+        <td style="text-align: left"><em>大規模モデリング用のツールとリソース</em></td>
+        <td style="text-align: left"> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/50">マイク・ベラ</a>)</strong></td>
+        <td style="text-align: left">libNeuroML: NeuroML 用の Python API (<a href="https://www.opensourcebrain.org/attachments/download/75/libNeuroML_OSB_Presentation.pdf">スライド</a>)</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/65">リチャード・ガーキン</a>)</strong></td>
+        <td style="text-align: left">NeuroUnit: 神経科学モデルの単体テスト (<a href="https://www.opensourcebrain.org/attachments/download/72/Neurounit_Sardinia.pdf">スライド</a>)</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/33">ヒューゴ・コルネリス</a>)</strong></td>
+        <td style="text-align: left">GENESIS 3.0 Software Federation の相互運用性: 例としての NEURON シミュレーター</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">12:30</td>
+        <td style="text-align: left"><em>昼食</em></td>
+        <td style="text-align: left"> </td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left"> </th>
+        <th style="text-align: left"><strong>午後のセッション</strong></th>
+        <th style="text-align: left"> </th>
+        <th> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">13:30</td>
+        <td style="text-align: left"><em>大規模モデリング用のツールとリソース</em></td>
+        <td style="text-align: left"> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong>トーマス・クローズ</strong></td>
+        <td style="text-align: left">シミュレータに依存しないネットワーク モデリングの課題 (<a href="http://opensourcebrain.org/attachments/download/61/Tom_Close_OSB.pdf">スライド</a>)</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/94">スティーブ・マーシュ</a>)</strong></td>
+        <td style="text-align: left">HiveMind: NeuroML から効率的なシミュレーターを生成する (<a href="https://www.opensourcebrain.org/attachments/download/70/SteveMarsh_HiveMind_Overview_13_5_13.pdf">スライド</a>)</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/131">ポール・フォックス</a>)</strong></td>
+        <td style="text-align: left">数千万から数百万のニューロンまで: コンピューター アーキテクチャがどのように役立つか (<a href="https://www.opensourcebrain.org/attachments/download/74/Thousands-to-millions_PaulFox.ppt">スライド</a>)</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">14:30</td>
+        <td style="text-align: left"><em>NeuroML: 不足しているもの/必要なものは何ですか?</em></td>
+        <td style="text-align: left"> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left">オープンセッション。議長: <strong><a href="https://www.opensourcebrain.org/users/8">シャロン・クルック</a>)</strong></td>
+        <td style="text-align: left"> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">15:00</td>
+        <td style="text-align: left"><em>ポスターセッションとコーヒー</em></td>
+        <td style="text-align: left"> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">16:00</td>
+        <td style="text-align: left"><em>協調モデリングに関する公開ディスカッション</em></td>
+        <td style="text-align: left"> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left">議長:<strong><a href="https://www.opensourcebrain.org/users/21">ロバート・キャノン</a>)</strong></td>
+        <td style="text-align: left"> </td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a id="tuesday-14th-may-9am-6pm"></a></p>
+  <h3 id="section-3">5月14日火曜日、午前9時～午後6時</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left"> </th>
+        <th style="text-align: left"><strong>午前のセッション</strong></th>
+        <th style="text-align: left"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><em>小脳モデリングのプレゼンテーション</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">9:00</td>
+        <td style="text-align: left"><strong>エジディオ ディアンジェロ</strong></td>
+        <td style="text-align: left">小脳モデル: 細胞特性からネットワーク特性まで</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">9:45</td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/130">ステファン・デュドネ</a>)</strong></td>
+        <td style="text-align: left">小脳顆粒層トランスコーディングを理解する</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">10:30</td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/88">山崎正</a>)</strong></td>
+        <td style="text-align: left">GPU を使用した小脳スパイキング ネットワーク モデルのリアルタイム シミュレーション (<a href="http://www.opensourcebrain.org/attachments/download/69/yamazaki-osb.pdf">スライド</a>)</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">10:45</td>
+        <td style="text-align: left"><em>コーヒーブレイク＆ポスターセッション</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">11:30</td>
+        <td style="text-align: left"><em>小脳モデリングのプレゼンテーション (続き)</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong>ポール・ディーン</strong></td>
+        <td style="text-align: left">適応フィルター モデル (<a href="https://www.opensourcebrain.org/attachments/download/63/Sardinia13-Dean-Slides.ppt">スライド</a>)</td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong>クリスチャン・ロサート</strong></td>
+        <td style="text-align: left">小脳顆粒層処理の詳細モデルと適応フィルター計算の互換性</td>
+      </tr>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/128">ヘスス・ガリド</a>)</strong></td>
+        <td style="text-align: left">分散型シナプス可塑性が小脳顆粒層でのスパイクタイミングを制御: 計算モデルからの予測 (<a href="http://www.opensourcebrain.org/attachments/download/68/SpikeTime_OSB_Garrido_et_al.pdf">スライド</a>)</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">12:30</td>
+        <td style="text-align: left"><em>昼食</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left"> </th>
+        <th style="text-align: left"><strong>午後のセッション</strong></th>
+        <th style="text-align: left"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">13:30</td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/6">アンガス・シルバー</a>)</strong></td>
+        <td style="text-align: left">小脳顆粒細胞層を通る情報の流れ</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">14:15</td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/3">エウジェニオ・ピアジーニ</a>)</strong></td>
+        <td style="text-align: left"><a href="http://www.opensourcebrain.org/projects/gitintro/wiki/Wiki">Git と GitHub</a> のチュートリアル ([スライド] (http://www.opensourcebrain.org/attachments/download/71/piasini_git_tutorial.pdf)、<a href="http://www.opensourcebrain.org/projects/osbmeeting2013-piasini-and-cantarelli">デモに使用される OSB プロジェクト</a>)</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">14:30</td>
+        <td style="text-align: left"><em>共同モデリングの実践セッション</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">15:00</td>
+        <td style="text-align: left"><em>コーヒーブレイク</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">15:30</td>
+        <td style="text-align: left"><em>共同モデリングの実践セッション (続き)</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left"> </th>
+        <th style="text-align: left"><strong>夕方</strong></th>
+        <th style="text-align: left"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">19:30</td>
+        <td style="text-align: left"><em>カンファレンスディナー</em>: <a href="http://www.movidaristorante.com/">モヴィーダ レストラン</a></td>
+        <td style="text-align: left"> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a id="wednesday-15th-may-9am-5pm"></a></p>
+  <h3 id="section-4">5月15日水曜日、午前9時～午後5時</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left"> </th>
+        <th style="text-align: left"><strong>午前のセッション</strong></th>
+        <th style="text-align: left"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left"> </td>
+        <td style="text-align: left"><em>小脳モデリングのプレゼンテーション</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">9:00</td>
+        <td style="text-align: left"><strong>クリス・デ・ゼーウ</strong></td>
+        <td style="text-align: left">分散相乗可塑性による小脳調整の創出</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">9:45</td>
+        <td style="text-align: left"><strong><a href="http://www.opensourcebrain.org/users/10">フォルカー・シュタイバー</a></strong></td>
+        <td style="text-align: left">小脳におけるシナプス可塑性のマルチスケール モデル (<a href="https://www.opensourcebrain.org/attachments/download/64/Steuber_OSB_Sardinia_2013.pdf">スライド</a>)</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">10:30</td>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/23">セルヒオ・ソリナス</a>)</strong></td>
+        <td style="text-align: left">小脳皮質のリアルなモデリング (<a href="https://www.opensourcebrain.org/attachments/download/79/Solinas_OSB2013Alghero.pptx">スライド</a>)</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">10:45</td>
+        <td style="text-align: left"><em>コーヒーブレイク</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">11:00</td>
+        <td style="text-align: left"><strong><a href="http://www.opensourcebrain.org/users/108">アルンド・ロス</a></strong></td>
+        <td style="text-align: left">走査型電子顕微鏡と集束イオンビームミリングによる小脳回路のもつれの解明</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">11:45</td>
+        <td style="text-align: left"><em>引き続きハンズオン コラボレーション セッション</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">12:30</td>
+        <td style="text-align: left"><em>昼食</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left"> </th>
+        <th style="text-align: left"><strong>午後のセッション</strong></th>
+        <th style="text-align: left"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">13:30</td>
+        <td style="text-align: left"><em>引き続きハンズオン コラボレーション セッション</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">13:30</td>
+        <td style="text-align: left"><em>並行セッション: プライベート CEREBNET 計画会議</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">15:00</td>
+        <td style="text-align: left"><em>コーヒーブレイク</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">15:30</td>
+        <td style="text-align: left"><em>結果のプレゼンテーションとフィードバック</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: left">16:30</td>
+        <td style="text-align: left"><em>OSB の将来計画</em></td>
+        <td style="text-align: left"> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a id="posters-presented"></a></p>
+  <h2 id="section-5">ポスター発表</h2>
+
+  <p><strong><em>最大ポスターサイズ: 1.5m x 1.5m</em></strong></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">発表者</th>
+        <th style="text-align: left">タイトル</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/133">サティヤ・スブラマニヤム</a>)</strong></td>
+        <td style="text-align: left">単極ブラシ細胞の現実的なモデルにおける遅発性シナプス応答のメカニズム    </td>
+      </tr>
+      <tr>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/99">ジョバンニ・イディリ</a>)</strong></td>
+        <td style="text-align: left">OpenWorm - 進捗レポート</td>
+      </tr>
+      <tr>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/127">ステファノ・マソリ</a>)</strong></td>
+        <td style="text-align: left">現実的なプルキンエ細胞モデル</td>
+      </tr>
+      <tr>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/128">ヘスス・ガリド</a>)</strong></td>
+        <td style="text-align: left">CPU-GPU 共同処理で高速化されたイベントアンドタイム駆動シミュレーター (<a href="http://www.opensourcebrain.org/attachments/download/67/post_OSB_Garrido_et_al.pdf">PDF</a>)</td>
+      </tr>
+      <tr>
+        <td style="text-align: left"><strong><a href="https://www.opensourcebrain.org/users/69">ヘレナ・グウォブスカ</a>)</strong></td>
+        <td style="text-align: left">多電極 LFP 記録の意味のある分解 (<a href="http://www.opensourcebrain.org/attachments/download/78/Glabska_icakcsd.pdf">PDF</a>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a id="enquiries"></a></p>
+  <h2 id="section-6">お問い合わせ</h2>
+
+  <p>このミーティングに関するご質問がございましたら、お気軽に <a href="mailto:p.gleeson@ucl.ac.uk">p.gleeson@ucl.ac.uk</a> までご連絡ください。</p>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/opensourcebrain/documentation/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">会議の焦点</a></li>
+<li class="toc-h2"><a href="#section-1">議題</a></li>
+<li class="toc-h3"><a href="#section-2">5月13日月曜日、午前9時～午後6時</a></li>
+<li class="toc-h3"><a href="#section-3">5月14日火曜日、午前9時～午後6時</a></li>
+<li class="toc-h3"><a href="#section-4">5月15日水曜日、午前9時～午後5時</a></li>
+<li class="toc-h2"><a href="#section-5">ポスター発表</a></li>
+<li class="toc-h2"><a href="#section-6">お問い合わせ</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

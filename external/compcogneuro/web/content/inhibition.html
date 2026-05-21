@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: inhibition | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: inhibition.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: inhibition</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/inhibition.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/inhibition.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Activation”, “Neuroscience”]
+bibfile = “ccnlab.json”
++++
+[[neocortex]] ([[@Cardin18]]; [[@OkunLampl08]]) の特殊な <strong>抑制性介在ニューロン</strong>によって媒介される <strong>抑制性競合</strong>は、ネットワーク活動全体を動的に制御するために重要であり、[[bidirectional connectivity]] の場合のようにニューロン間に正のフィードバック ループがある場合に特に重要です。人間の新皮質におけるてんかんの存在は、抑制と興奮の間の適切なバランスを達成することが難しいことを示しています。新皮質がこれらの正のフィードバック ループを制御する限界に非常に近い位置にあるという事実は、この双方向の興奮性接続の多くの機能的利点が、[[evolution|evolutionary]] の観点から見て実際に重要であることを強く示唆しています。</p>
+
+  <p>阻害により<strong>まばら</strong> [[distributed representations]] (一度に活動するニューロンの割合が比較的少ない、たとえば15%程度)が生じます。これは、一度に多くのニューロンが活動する分散表現よりも多くの利点があり、皮質の十分に確立された特性です([[@SimoncelliOlshausen01]]; [[@OlshausenField96]]; [[@Barlow61]])。さらに、抑制性競争は、ダーウィンの「適者生存」力学 ([[@RumelhartZipser85]]; [[@Edelman87]]) に似て、学習プロセスにおいて重要な役割を果たしており、ソフトマックス関数と最大プーリング メカニズムを介して [[abstract neural network]] で広く使用されています。デモについては、[[Hebbian learning]] および [[self-organizing simulation]] を参照してください。</p>
+
+  <p>新皮質錐体ニューロンは、抑制と興奮のバランスが正確に保たれているという特徴があり、これにより計算上の利点が数多く得られます ([[@ShadlenNewsome98]]; [[@OkunLampl08]]; [[@IsaacsonScanziani11]]; [[@RubinAbbottSompolinsky17]])。また、発火閾値付近のこのバランスにより、ニューロンがより混沌となり、スパイクニューロンで観察されるポアソンノイズの一因となり、[[GeneRec]] および [[kinase algorithm]] の学習を促進する時間的差異に対する応答が増幅される可能性もあります。</p>
+
+  <p>エアコン (AC) は、周囲温度に応じていつオンになるかを決定するサーモスタット制御を使用して、抑制がどのように機能するかを示す有用な類似点を提供します。この種の<strong>フィードバック制御</strong> システムにより、暑さ対策を開始する前に、部屋を特定の<strong>設定値</strong> (例: 75 °F) まで暖めることができます。同様に、皮質における抑制は興奮の量に比例し、同様の設定値の動作を生成し、活動が高くなりすぎないようにします。通常、一度に活動するのは、特定の領域のニューロンのおよそ 15 ～ 25% だけです。</p>
+
+  <p>もう 1 つの有益なアナロジーは、マイクをそのマイクからの音を再生しているスピーカーの近くに置いたときに何が起こるかということから来ています。これは双方向の興奮システムであり、すぐにおなじみの非常に大きな「フィードバック」鳴き声が発生します。もしオーディオシステムが大脳皮質の抑制系と同等の機能を持っていれば、マイクの入力ゲインやスピーカーの出力ボリュームを動的に下げることで、実際にこのフィードバックを防ぐことができるでしょう。</p>
+
+  <p>多くの弱い入力のアクティビティを抑制し、最もアクティブな入力に処理を集中できるようにするために、[[attention]] にとっても阻害は重要です。たとえば、群衆の中で友人を検索する場合、すべての人を一度に処理することはできないため、比較的少数の人だけが注意を引き、残りは無視されます。神経用語で言うと、参加した少数の検出器は、高レベルの抑制のために発火閾値を下回ったままである他のすべての検出器を打ち負かすのに十分に興奮していたと言えます。ボトムアップ要因とトップダウン要因の両方が、どの神経検出器がしきい値を超えるかどうかに寄与する可能性がありますが、抑制がなければ、最初から焦点を当てるために少数の神経検出器だけを選択する機能は存在しません。</p>
+
+  <p>バリント症候群の人は、頭頂葉皮質（この種の空間的注意において重要な役割を果たす）に両側性の損傷があるため、注意効果が低下し、また、視覚的表示に複数の項目が含まれている場合には通常何も処理できなくなります（つまり、「同時失認」。シーン内に複数のものが同時に存在するときに物体を認識できない状態です）。 [[attention simulation]] でこの現象のシミュレーションを調べることができます。</p>
+
+  <h2 id="section">フィードフォワードとフィードバックの抑制</h2>
+
+  <p>{id=”figure_inhib-types”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_inhib_types.png" alt="フィードフォワードとフィードバックの抑制。フィードバック抑制は、興奮性ニューロンの実際の活動レベルに直接反応することにより、この活動に反応します (エアコンが過剰な熱に反応するのとよく似ています)。フィードフォワード抑制は、入力領域から得られる興奮性ニューロンの興奮性入力のレベルを測定することによって、興奮性ニューロンの興奮のレベルを予測します。両方のタイプのバランスが最もよく機能します。" /></p>
+
+  <p>皮質の抑制性介在ニューロンを駆動する神経接続には、<strong>フィードフォワード</strong> と <strong>フィードバック</strong> ([[#figure_inhib-types]]) という 2 つの異なるパターンがあります。興味深いことに、これらは興奮性ニューロン間の接続と同じではありません。機能的には、フィードフォワード抑制は興奮性ニューロンがどの程度興奮するかを「予測」できますが、フィードバックは興奮性ニューロンが達成する実際の活性化レベルを正確に反映します。</p>
+
+  <p>フィードバック抑制が最も直感的であるため、それから始めます。ここで、抑制性介在ニューロンは、同じ興奮性ニューロンによって駆動され、その後、抑制性介在ニューロンに戻って投影され、抑制されます。これは、AC の例からの古典的な「フィードバック」回路です。興奮性ニューロンのセットが活動し始めると、この活性化が抑制性介在ニューロンに伝達されます（抑制性介在ニューロンへの興奮性グルタミン酸作動性シナプスを介して、抑制性ニューロンも他のニューロンと同じように興奮しなければなりません）。抑制性ニューロンのこの興奮により、活動電位が発火し、興奮性ニューロンに直接戻ってきて、GABA 放出を介して抑制性ニューロンのチャネルが開きます。</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>これらの興奮性ニューロンに対する抑制性入力 [[neuron channels#GABA-A</td>
+        <td>channels]] からの $Cl^-$ (塩化物) イオンの流入は、興奮性ニューロンを抑制性駆動電位の方向に押し戻すように作用します ([[neuron]] の綱引きのたとえでは、抑制性ニューロンがより大きくなり、より強く引っ張られます)。したがって、励起は抑制を引き起こし、それが励起を打ち消し、AC ユニットからの冷気の噴出のように、すべてを制御下に保ちます。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>フィードフォワード抑制はおそらくもう少し微妙です。これは、特定の領域の興奮性ニューロンへの興奮性シナプス入力がその領域の抑制性介在ニューロンも駆動し、介在ニューロンが現在受け取っている興奮性入力の量に比例して興奮性ニューロンを抑制するときに動作します。これは、たとえば、外部温度に基づいて AC をオンにすることで、_予想される_熱量に反応するサーモスタットのようなものです。したがって、フィードフォワードとフィードバック抑制の主な違いは、<strong>フィードフォワードは正味の興奮性入力を反映する</strong>のに対し、<strong>フィードバックは特定の興奮性ニューロンのセットの実際の活性化出力</strong>を反映することです。</p>
+
+  <p>フィードフォワード阻害の予測機能は、純粋なフィードバック駆動型システムで発生する可能性のある劇的なフィードバック振動の種類を制限するために重要です。ただし、フィードフォワード抑制が多すぎるとシステムの応答が非常に遅くなるため、2 つのタイプの最適なバランスが保たれ、堅牢で応答性の高い抑制ダイナミクスが得られます。</p>
+
+  <p>さらに、[[neuron]] で見たように、抑制と興奮が綱引きのダイナミクスを通じて相互作用する方法は、これらの抑制ダイナミクスを堅牢なものにするために「不可欠」です。たとえば、膜電位が上昇し始めると初めて抵抗し始める抑制の分流特性により、ニューロンはある程度の活動レベルを得た後、再び引き下げられます。代替的な減算形式の抑制（つまり、単純に興奮から引き離す）では、活性化が完全に妨げられるか、興奮を制御するのに十分な抑制が生成されません。</p>
+
+  <p>フィードフォワードおよびフィードバック抑制接続の役割については、[[inhibition simulation]] を参照してください。</p>
+
+  <h2 id="section-1">急速にスパイクする抑制性介在ニューロンとゆっくりと作用する抑制性介在ニューロン</h2>
+
+  <p>{id=”figure_pv-sst-vip” style=”高さ:25em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_pv_sst_vip_types_rudy11.jpg" alt="抑制性介在ニューロンには、PV (パルブアルブミン)、SST (ソマトスタチン)、およびイオンチャネル型セロトニン受容体 (5Ht3aR) の神経マーカーに応じて、VIP (血管作動性腸管ペプチド) およびリーリン陽性サブタイプを含む 3 つのタイプがあります。これにより、形態学的タイプの多様性に比べて全体像が大幅に単純化されます (Rudy et al., 2011 より)。" /></p>
+
+  <p>{id=”figure_pv-sst-vip-layers” style=”高さ:20em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_pv_sst_vip_layers_rudy11.jpg" alt="げっ歯類の一次体性感覚皮質（S1）のさまざまな層にわたる抑制性介在ニューロンの種類の分布（Rudy et al., 2011より）。" /></p>
+
+  <p>[[neocortex]] のニューロン タイプの多様性がこれまでで最も大きいのは抑制性介在ニューロンであり、非常に詳細なモデルを開発しようとすると、最終的にこれらすべての詳細を捕捉するために多大な労力を費やすことになります ([[@MarkramMullerRamaswamyEtAl15]]; [[@Schneider-MizellBodorBrittainEtAl25]])。ただし、[[#figure_pv-sst-vip]] は、この複雑さを 3 つの主要なタイプ ([[@RudyFishellLeeEtAl11]]; [[@Cardin18]]) にはるかに単純に包括的に分類できることを示しています。</p>
+
+  <ul>
+    <li>
+      <p>高速スパイクのパルブアルブミン陽性 (PV) ニューロン。これには、細胞体を標的とする一般的な <em>basket</em> および <em>chandelier</em> の形態学的サブタイプが含まれます。これらは「ファーストレスポンダー」であり、活動を迅速に制御し、新たな興奮性入力に応答し、最初にスパイクする錐体ニューロンが他の競争相手を素早く遮断し、全体的な活動レベルをまばらに維持できるようにします。 PV 活動レベル (および結果として生じる錐体細胞への抑制性コンダクタンス <code>Gi</code>) は、ニューロンを敏感なダイナミック レンジ ([[@ShadlenNewsome94]]) に維持する入力興奮性コンダクタンス <code>Ge</code> を厳密に追跡します。</p>
+    </li>
+    <li>
+      <p>反応が遅いソマトスタチン陽性 (SST) ニューロン。主に錐体ニューロンの樹状突起を標的とする <em>Martinotti</em> 細胞です。これらのより高い閾値ニューロンは、求心性入力の活性化を促進する反復的な必要があり、より長いタイムスケールにわたってシナプス入力の樹状突起統合を調節している可能性があります。</p>
+    </li>
+    <li>
+      <p>セロトニン受容体 (5Ht3aR) を持つ調節ニューロン。最も関連性の高いサブタイプは VIP (血管作動性腸管ペプチド) およびリーリン陽性細胞です。これらは、覚醒状態と睡眠状態の間の移行に関与している可能性があります (セロトニンは、そのような移行に関与する主要な神経調節物質です) ([[@Cardin18]])。さらに、これらのニューロンは、[[thalamus]] からの顕著な投射を受け取る皮質層 1 ([[#figure_pv-sst-vip-layers]]) の優勢なタイプであり、これらの介在ニューロンが関与している可能性が高く、皮質全体に動的調節的な影響を及ぼしていると考えられています。視床の調節効果も、[[Rubicon]] モデルの [[basal ganglia]] の機能にとって重要です。</p>
+    </li>
+  </ul>
+
+  <p>急速スパイクの PV ニューロンと反応の遅い SST ニューロンは最も徹底的に研究されており、通常の覚醒行動状態中に新皮質ニューロンへの抑制入力を生成する際に支配的な役割を果たしている可能性が高く、一方、調節性 5Ht3aR 細胞はより長い時間スケールの調節機構を使用してシミュレートできます。</p>
+
+  <p>したがって、私たちは相補的な高速 PV と低速 PV および SST 介在ニューロンの寄与を理解することに焦点を当てています。これらのニューロンに存在する重要な生物学的メカニズムの 1 つは、ギャップ結合 ([[@GibsonBeierleinConnors99]]; [[@GalarretaHestrin99]]; [[@Cardin18]]) を介した直接的な電気的結合であり、これにより、このニューロンのネットワークは他のほとんどのニューロンよりもより調整された方法で連携します (たとえば、「集合意識」のように)。これは、個々のニューロンをレンダリングするために多くの追加の計算サイクルを費やすよりも、1 つの関数と共有状態変数を使用して、そのようなニューロンのより大きな集団をシミュレートする方が効率的かつ適度に正確であるのではないかという重要な疑問を引き起こします。</p>
+
+  <p>実際、私たちはそのようなフレームワークを開発し、それが双方向に接続されたニューロンの全体的な興奮レベルを制御し、大規模な多層（「深い」）ネットワークでの学習をサポートするのにうまく機能することを発見しました。これは、明示的に「プールされた」形式の抑制と考えることができます。興奮性ニューロンのグループまたはプールはすべて、対応するプールされた抑制性介在ニューロンのセットを共有しており、これらはギャップ結合を介して電気的に著しく相互接続されている可能性があります。私たちのシミュレーションでは、このようなプールのサイズを制御でき、シミュレーション対象の領域の規模や解剖学的特性に応じて調整できます。</p>
+
+  <h2 id="fs-fffb">FS-FFFB抑制機能</h2>
+
+  <p>個別の抑制性介在ニューロンの代わりに要約関数を使用するこのアプローチは、抽象的に計算された <em>k-Winners-Take-All</em> (kWTA) 形式の抑制を使用した [[Leabra]] の初期バージョンに遡ります。その後、より生物学に基づいた FFFB (フィードフォワード、フィードバック) 阻害関数が開発されました。この関数は、FF 成分を反映するプール内のニューロンの平均興奮性コンダクタンス ($\langle Ge \rangle$) と FB 成分を反映する平均レートコード活性化 ($\langle Act \rangle$) の単純なスケール関数として、プールされた抑制性コンダクタンス <code>Gi</code> を計算しました。</p>
+
+  <p>{id=”figure_fs_vs_fffb” style=”高さ:20em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_fs_vs_orig_fffb_layer2.png" alt="Axon で使用される新しいスパイクベースの FS-FFFB 関数の出力と、Leabra から採用された以前の FFFB 関数の出力の比較。これら 2 つの関数への入力はまったく異なり、それらのパラメーターは全体的な学習パフォーマンスに基づいてさまざまなモデルにわたって個別に最適化されました。この注目すべき対応関係は事後的に発見されたものであり、最も優れた阻害ダイナミクスが強く保存された機能形態であることを示唆しています。" /></p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>この阻害関数は、以下に説明する純粋にスパイクベースの方程式を開発する前に、最初は [[Axon]] で使用され、ある程度の成功を収めました。興味深いことに、[[#figure_fs_vs_fffb]] は、新しいスパイクベース関数の最良のパラメーターが、時間積分 Ge および Act レート コード関数に基づく以前の Leabra FFFB 関数とほぼ同じ結果の <code>Gi</code> 値を生成したことを示しています。この対応関係は、さまざまなモデルにわたる学習パフォーマンスに基づいて新しい方程式を最適化した後に初めて発見されました。当初は、ある種の新規で改善された抑制力学が現れることが期待されていました。その代わりに、最もよく機能する、かなり特殊な「保存された」機能形式があるようです。この形式が高速 PV のようなコンポーネントと低速の SST のようなコンポーネントの組み合わせに決定的に依存しているという事実は、計算と基礎となる神経生物学の間に優れた [[synergies</td>
+        <td>synergy]] を提供します。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>新しいスパイクベースの方程式には、PV (高速スパイク) ニューロン タイプと SST (低速スパイク) ニューロン タイプ、および FF および FB 接続パターンの異なる寄与が組み込まれているため、<code>FS-FFFB</code> (高速-低速 FFFB) と名付けられています。 SST ニューロンをシミュレートする遅い寄与は、元の FFFB モデルの時間積分活性化コンポーネントの遅い応答に対応し、PV ニューロンの速い寄与は、元の FFFB の Ge コンポーネントの速い応答に対応します。したがって、[[#figure_fs_vs_fffb]] で示された結果の強い一致と、高速信号と低速信号の混合への依存性は、これらの異なる時定数が効果的な阻害形態にとって重要であることを示唆しています。さらに、高速 PV コンポーネントまたは低速 SST コンポーネントのみを使用しても実際には機能しないことは簡単にわかります。</p>
+
+  <p>{id=”table_fs-fffb-params” title=”FS-FFFB パラメータ”}
+|パラム |デフォルト |ドクター |
+|———-|———–|——————————————————|
+|ギ | 1 |合計 Gi の全体的な乗数 |
+| FB | 1 |フィードバック (FB) スパイクを高速スパイク (FF = 1) に追加 |
+| FSTau | 6 |高速スパイク (PV) 減衰時定数 |
+| SS | 30 |スロースパイク (SST) スケーリング係数 (FS は常に * 1) |
+| SSfタウ | 20 |スロースパイク促進 (SSf) 減衰時定数 |
+|サシタウ | 50 |スロースパイク積分 (SSi) 時定数 (上昇と減衰) |
+| FS0 | 0.1 |高速スパイクゼロ点閾値 |
+| FFAvgTau | 50 |フィードフォワード移動平均積分時定数 |</p>
+
+  <p>{id=”table_fs-fffb-vals” title=”FS-FFFB 状態値”}
+|値 |ドクター |
+|———-|———————————————————————|
+| FF |すべてのフィードフォワード入力興奮性スパイクをプール サイズで正規化 |
+| FB |このプール内のニューロンからのすべてのフィードバック発信スパイク、正規化 |
+| FSi | FF フィードフォワード スパイクの高速スパイク PV 統合 |
+| ＳＳｉ | FB フィードバック スパイクの遅いスパイク SST の統合 |
+| ＳＳｆ |最近の活動に基づくスロースパイク促進因子 |
+| FSGi |全体的な高速スパイク抑制性コンダクタンス |
+| ＳＳＧｉ |全体的なスロースパイク抑制性コンダクタンス |
+|トータルギ |全体の抑制性コンダクタンス = FSGi + SSGi |</p>
+
+  <p>{id=”eq_fsi” title=”高速スパイク (PV) の統合”}
+\(FSi = FSi + (FF + FB * FB) - \frac{1}{FSTau} FSi\)</p>
+
+  <p>[[#eq_fsi]] は、PV ニューロンの活動を表す統合高速スパイク値 FSi を更新します。 FSTau [[exponential integration]] 時定数 (デフォルトは 6 ms) で瞬時に立ち上がり、立ち下がります。高速スパイク値は、フィードフォワード (FF) とフィードバック (FB) の両方の入力を統合します。FF は常に係数 1 で寄与し、FB には FB 寄与をスケールできるパラメーターがあります。デフォルトは 1 ですが、アクティビティが非常にまばらなレイヤーでは、値を大きくすることで恩恵を受ける場合があります。</p>
+
+  <p>{id=”eq_ssi” title=”スロースパイク (SST) の統合”}
+\(SSi = SSi + \frac{1}{SSiTau} (SSf * FBs - SSi)\)</p>
+
+  <p>[[#eq_ssi]] は、SST ニューロンの活動を表す統合スロー スパイク値 SSi を更新します。 SSi はフィードバック スパイク (FB) によってもっぱら駆動され、その上昇は SSf 促進因子に依存します。これは、SST ニューロンが、最初は弱く、SST ニューロンに入るスパイクに応じて強くなる強力な促進シナプスを持っているという事実を反映しています。立ち上がりと立ち下がりは同じ時定数 SSiTau によって支配されます。</p>
+
+  <p>{id=”eq_ssf” title=”スロースパイク促進因子 (SSf)”}
+\(SSf = SSf + FBs*(1-SSf) - \frac{1}{SSfTau} SSf\)</p>
+
+  <p>[[#eq_ssf]] は、受信 FB スパイクと低速減衰係数の関数として、低速スパイク促進係数 (SSf) を更新します。</p>
+
+  <p>{id=”eq_total” title=”総抑制性コンダクタンス”}
+\(TotalGi = Gi * (SS * SSi + [FSi - FS0]_+)\)</p>
+
+  <p>[[#eq_total]] は、SSi と FSi の積分値の関数として総抑制性コンダクタンスを計算します。 FSi 値は FS0 しきい値の影響を受け、FS0 未満の値は 0 に切り捨てられることに注意してください。</p>
+
+  <p>最後に、SST ニューロンは細胞体ではなく樹状突起を特異的に標的とするため、</p>
+
+  <p>もう一度 [[inhibition simulation]] を参照して、すべての FS-FFFB 値を記録する完全な計測器を備えた単純なネットワークでこれらの方程式とパラメーターを調べてください。</p>
+
+  <h2 id="section-2">抑制ページ</h2>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">フィードフォワードとフィードバックの抑制</a></li>
+<li class="toc-h2"><a href="#section-1">急速にスパイクする抑制性介在ニューロンとゆっくりと作用する抑制性介在ニューロン</a></li>
+<li class="toc-h2"><a href="#fs-fffb">FS-FFFB抑制機能</a></li>
+<li class="toc-h2"><a href="#section-2">抑制ページ</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

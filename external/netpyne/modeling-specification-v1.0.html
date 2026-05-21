@@ -1,0 +1,1974 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NetPyNE docs: NetPyNE モデリング仕様 v1.0 | マインドアップロード</title>
+<meta name="description" content="NetPyNE docs: modeling-specification-v1.0.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">NetPyNE 翻訳ページ</div>
+    <h1 class="title">NetPyNE docs: NetPyNE モデリング仕様 v1.0</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="http://doc.netpyne.org/modeling-specification-v1.0.html" target="_blank" rel="noopener noreferrer">http://doc.netpyne.org/modeling-specification-v1.0.html</a></p>
+  <p>ライセンス: MIT License for NetPyNE repository documentation/code。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <div class="document" role="main" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+    <div itemprop="articleBody">
+
+      <div id="netpyne-modeling-specification-v1-0" class="section">
+
+        <p><span id="modeling-specification"></span></p>
+
+        <h1 id="netpyne--v10">NetPyNE モデリング仕様 v1.0</h1>
+
+        <div class="toctree-wrapper compound">
+
+        </div>
+
+        <div id="overview-of-specification" class="section">
+
+          <h2 id="section">仕様の概要</h2>
+
+          <p>NetPyNE モデリング仕様は、分子スケールから回路スケールまでニューロン ネットワークの生物学的パラメーターを定義するための標準化された宣言言語を提供します。</p>
+
+          <p>これらの標準化された仕様は、人間が判読できる、クリーンでコンパクトな、ルールベースの JSON 互換形式を採用しています。この宣言型言語を使用すると、ユーザーは、NEURON での実装に必要な複雑な技術的側面をすべて隠しながら、各生物学的スケールで観察される特性とパターンを正確に記述することができます。たとえば、Python または hoc for ループを使用して潜在的に数百万のセル間接続を作成する代わりに、2 つの母集団間の確率的接続ルールを定義できます。宣言型言語により、すべてのモデル パラメーター (集団、細胞特性、接続性、刺激、分子反応拡散) の構造化された仕様が可能になります。</p>
+
+          <ul>
+            <li>
+              <p>参考文献: Dura-Bernal S、Suter B、Gleeson P、Cantarelli M、Quintana A、Rodriguez F、Kedziora DJ、Chadderdon GL、Kerr CC、Neymotin SA、McDougal R、Hines M、Shepherd GMG、Lytton WW。 (2019) NetPyNE: 脳回路のデータ駆動型マルチスケール モデリングのためのツール。 eLife 2019;8:e44494 - <a href="https://elifesciences.org/articles/44494" class="reference external">https://elifesciences.org/articles/44494</a></p>
+            </li>
+            <li>
+              <p>仕様 JSON ベースのスキーマ: <a href="https://github.com/suny-downstate-medical-center/netpyne/blob/development/netpyne/metadata/metadata.py" class="reference external">https://github.com/suny-downstate-medical-center/netpyne/blob/development/netpyne/metadata/metadata.py</a></p>
+            </li>
+            <li>
+              <p>スキーマパッケージ経由の仕様検証コード: <a href="https://github.com/suny-downstate-medical-center/netpyne/blob/development/netpyne/sim/validator.py" class="reference external">https://github.com/suny-downstate-medical-center/netpyne/blob/development/netpyne/sim/validator.py</a></p>
+            </li>
+          </ul>
+
+        </div>
+
+        <div id="authors-and-contributors" class="section">
+
+          <h2 id="section-1">著者と寄稿者</h2>
+
+          <p>この仕様のオリジナルの作成者は、Salvador Dura-Bernal (<a href="mailto:salvadordura%40gmail.com" class="reference external">salvadordura<span>@</span>gmail<span>.</span>com</a>) です。この仕様への貢献者には、Padraig Gleeson、Joe W Graham、Eugenio Urdapilleta、Valery Bragin、James Chen、William W Lytton、Michael L Hines、Ben Suter、Greg Patrick、Matteo Cantarelli、Dario del Piano、Filippo Ledda、Facundo Rodriguez、Nicolas Gomez、Afonso Pinto、Craig Kelley、Adrian Quintana、が含まれます。シッダールタ・ミトラ、アダム・ニュートン、ジョアン・ヴィトール、クリフ・カー、デヴィッド・ケジオラ。</p>
+
+        </div>
+
+        <div id="network-parameters" class="section">
+
+          <h2 id="section-2">ネットワークパラメータ</h2>
+
+          <p>クラス <span class="pre"><code>NetParams</code></span> の <span class="pre"><code>netParams</code></span> オブジェクトには、ネットワークを定義するために必要な情報がすべて含まれています。これは、次の順序付けられた辞書で構成されます。</p>
+
+          <ul>
+            <li>
+              <p><span class="pre"><code>cellParams</code></span> - セルのタイプとそれに関連するパラメータ (セルの形状など)</p>
+            </li>
+            <li>
+              <p><span class="pre"><code>popParams</code></span> - ネットワーク内の人口とそのパラメータ</p>
+            </li>
+            <li>
+              <p><span class="pre"><code>synMechParams</code></span> - シナプス機構とそのパラメータ</p>
+            </li>
+            <li>
+              <p><span class="pre"><code>connParams</code></span> - ネットワーク接続ルールとそれに関連するパラメータ。</p>
+            </li>
+            <li>
+              <p><span class="pre"><code>subConnParams</code></span> - ネットワークのセルラー接続ルールとそれに関連するパラメーター。</p>
+            </li>
+            <li>
+              <p><span class="pre"><code>stimSourceParams</code></span> - 刺激源パラメータ。</p>
+            </li>
+            <li>
+              <p><span class="pre"><code>stimTargetParams</code></span> - 刺激源と標的細胞間のマッピング。</p>
+            </li>
+            <li>
+              <p><span class="pre"><code>rxdParams</code></span> - 反応拡散 (RxD) コンポーネントとそのパラメーター。</p>
+            </li>
+          </ul>
+
+          <p><a href="assets/images/netparams.png" class="reference internal image-reference"><img src="assets/images/netparams.png" class="align-center" style="width: 60%;" alt="_images/netparams.png" /></a></p>
+
+          <p>これらの順序付けされた辞書はそれぞれ、直接入力することも、NetParams オブジェクト メソッドを使用して入力することもできます。どちらの方法も同等ですが、オブジェクト メソッドは追加されるパラメーターの構文をチェックします。以下は、popParams 順序付きディクショナリに項目を追加する 2 つの同等の方法です。</p>
+
+          <div class="highlight-default notranslate">
+
+            <div class="highlight">
+
+              <pre><code>from netpyne import specs
+netParams = specs.NetParams()
+
+# Method 1: direct
+netParams.popParams['Pop1'] = {'cellType': 'PYR', 'numCells': 20}
+
+# Method 2: using object method
+netParams.addPopParams(label='Pop1', params={'cellType': 'PYR', 'numCells': 20})
+</code></pre>
+
+            </div>
+
+          </div>
+
+          <p><span class="pre"><code>netParams</code></span> の構成は、フレームワークが内部で実行する標準的なイベント シーケンスと一致しています。</p>
+
+          <ul>
+            <li>
+              <p><span class="pre"><code>cellParams</code></span> に基づいてタイプに応じてセルのプロパティを設定します。</p>
+            </li>
+            <li>
+              <p><span class="pre"><code>Network</code></span> オブジェクトを作成し、その中に <span class="pre"><code>popParams</code></span> に基づく <span class="pre"><code>Cell</code></span> オブジェクトと <span class="pre"><code>Population</code></span> オブジェクトのセットを追加します</p>
+            </li>
+            <li>
+              <p><span class="pre"><code>connParams</code></span> および <span class="pre"><code>subConnParams</code></span> (どのシナプス前セルとシナプス後セルが接続ルールの条件に一致するかを確認) に基づいて、<span class="pre"><code>synMechParams</code></span> のシナプス パラメーターを使用して一連の接続を作成します。</p>
+            </li>
+            <li>
+              <p><span class="pre"><code>stimSourceParams</code></span> および <span class="pre"><code>stimTargetParams</code></span> に基づいて細胞に刺激を追加します</p>
+            </li>
+          </ul>
+
+          <p>さらに、<span class="pre"><code>netParams</code></span> には、次のカスタマイズ可能な単一値属性が含まれています (例: <span class="pre"><code>netParams.sizeX</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>100</code></span>)。</p>
+
+          <ul>
+            <li>
+              <p><strong>scale</strong>: セル数のスケール係数乗数 (デフォルト: 1)</p>
+            </li>
+            <li>
+              <p><strong>形状</strong>: ネットワークの形状: 「直方体」、「円柱」、または「楕円体」 (デフォルト: 「直方体」)</p>
+            </li>
+            <li>
+              <p><strong>sizeX</strong>: x 次元 (水平方向の長さ) ネットワーク サイズ (μm 単位) (デフォルト: 100)</p>
+            </li>
+            <li>
+              <p><strong>sizeY</strong>: y 次元 (垂直高さまたは皮質深さ) ネットワーク サイズ (μm 単位) (デフォルト: 100)</p>
+            </li>
+            <li>
+              <p><strong>sizeZ</strong>: Z 次元 (水平方向の奥行き) ネットワーク サイズ (μm 単位) (デフォルト: 100)</p>
+            </li>
+            <li>
+              <p><strong>rotateCellsRandomly</strong>: y 軸 [min,max] ラジアンを中心にセルをランダムに回転します。 [0, 3.0] (デフォルト: False)</p>
+            </li>
+            <li>
+              <p><strong>defaultWeight</strong>: デフォルトの接続の重み (デフォルト: 1)</p>
+            </li>
+            <li>
+              <p><strong>defaultDelay</strong>: デフォルトの接続遅延 (ミリ秒単位) (デフォルト: 1)</p>
+            </li>
+            <li>
+              <p><strong>propVelocity</strong>: um/ms 単位の伝導速度 (例: 500 um/ms = 0.5 m/s) (デフォルト: 500)</p>
+            </li>
+            <li>
+              <p><strong>scaleConnWeight</strong>: 接続重みスケール係数 (NetStims を除く) (デフォルト: 1)</p>
+            </li>
+            <li>
+              <p><strong>scaleConnWeightNetStims</strong>: NetStims の接続重みスケール係数 (デフォルト: 1)</p>
+            </li>
+            <li>
+              <p><strong>scaleConnWeightModels</strong>: 各セル モデルの接続重量スケール係数 (例: {‘HH’: 0.1、’Izhi’: 0.2} (デフォルト: {})</p>
+            </li>
+            <li>
+              <p><strong>popTagsCopiedToCells</strong>: 母集団からセルにコピーされるタグのリスト (デフォルト: [‘pop’, ‘cellModel’, ‘cellType’])</p>
+            </li>
+          </ul>
+
+          <p><span class="pre"><code>netParams</code></span> dict への他の任意のエントリを追加し、接続パラメーターのカスタム定義関数で使用できます (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a> を参照)。</p>
+
+          <div id="cell-types" class="section">
+
+            <p><span id="id1"></span></p>
+
+            <h3 id="section-3">セルの種類</h3>
+
+            <p><span class="pre"><code>cellParams</code></span> 順序付き辞書の各項目は、キーと値で構成されます。キーは、このセルの種類を識別するためのラベルです。値は、次のフィールドを含むセルのプロパティを定義するディクショナリで構成されます。</p>
+
+            <ul>
+              <li><strong>secs</strong> - セルのセクションを含むディクショナリ。各セクションには次のフィールドが含まれます (空のフィールドは省略できます)。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><strong>geom</strong>: <span class="pre"><code>diam</code></span>、<span class="pre"><code>L</code></span>、または <span class="pre"><code>Ra</code></span> などのジオメトリ プロパティを含むディクショナリ。
+オプションで、3D 点のリストを含むフィールド <span class="pre"><code>pt3d</code></span> を含めることができます。各点は <span class="pre"><code>(x,y,z,diam)</code></span> 形式のタプルとして定義されます。</p>
+                  </li>
+                  <li>
+                    <p><strong>topol</strong>: トポロジのプロパティを含むディクショナリ。
+<span class="pre"><code>parentSec</code></span> (親セクションのラベル)、<span class="pre"><code>parentX</code></span> (接続を行う親の場所)、および <span class="pre"><code>childX</code></span> (現在のセクション -子- 接続を行う場所) が含まれます。</p>
+                  </li>
+                  <li>
+                    <p><strong>mechs</strong>: 密度/分散メカニズムの辞書。
+キーにはメカニズムの名前が含まれます (例: 「hh」または「pas」)。 値にはメカニズムのプロパティを含む辞書が含まれます (例: <span class="pre"><code>{'g':</code></span><code> </code><span class="pre"><code>0.003,</code></span><code> </code><span class="pre"><code>'e':</code></span><code> </code><span class="pre"><code>-70}</code></span>)。</p>
+                  </li>
+                  <li>
+                    <p><strong>イオン</strong>: イオンの辞書。
+キーにはイオンの名前 (例: 「na」または「k」) が含まれます。 値には、特定のセクションのイオンのプロパティを含む辞書が含まれます (例: <span class="pre"><code>{'e':</code></span><code> </code><span class="pre"><code>-70}</code></span>)。利用可能なプロパティは、<span class="pre"><code>'e'</code></span>: 逆転電位、<span class="pre"><code>'i'</code></span>: そのセクションのイオンの内部濃度、および <span class="pre"><code>'o'</code></span>: そのセクションのイオンの細胞外濃度です。</p>
+                  </li>
+                  <li>
+                    <p><strong>pointps</strong>: 点プロセスの辞書 (シナプス機構を除く)。
+キーには任意のラベルが含まれます (例: 「Izhi」)。 値にはポイント プロセスのプロパティを含む辞書が含まれます (例: 「Izhi」)。 <span class="pre"><code>{'mod':'Izhi2007a',</code></span><code> </code><span class="pre"><code>'a':0.03,</code></span><code> </code><span class="pre"><code>'b':-2,</code></span><code> </code><span class="pre"><code>'c':-50,</code></span><code> </code><span class="pre"><code>'d':100,</code></span><code> </code><span class="pre"><code>'celltype':1})</code></span>。</p>
+                  </li>
+                </ul>
+
+                <p>内部ポイント プロセス変数とは別に、次のプロパティを各ポイント プロセスに指定できます。</p>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>mod</code></span>、NEURON メカニズムの名前。 <span class="pre"><code>'Izhi2007a'</code></span></p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>loc</code></span>、シナプス機構を配置するセクションの位置。 <span class="pre"><code>1.0</code></span>、デフォルト=0.5</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>vref</code></span> (オプション)、細胞膜電圧を含む内部メカニズム変数。 <span class="pre"><code>'V'</code></span></p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>synList</code></span> (オプション)、内部メカニズムのシナプスメカニズムラベルのリスト。 [「AMPA」、「NMDA」、「GABAB」]</p>
+                  </li>
+                  <li>
+                    <p><strong>vinit</strong> - (オプション) セクションの初期膜電圧 (mV 単位) (デフォルト: -65)</p>
+                  </li>
+                </ul>
+
+                <p>例: <span class="pre"><code>cellRule['secs']['soma']['vinit']</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>-72</code></span></p>
+
+                <ul>
+                  <li><strong>spikeGenLoc</strong> - (オプション) このセクションが (デフォルトの「soma」の代わりに) スパイクの生成を担当することを示し、スパイクが生成される場所 (セグメント) を提供します。</li>
+                </ul>
+
+                <p>例: <span class="pre"><code>cellRule['secs']['axon']['spikeGenLoc']</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>1.0</code></span></p>
+
+                <ul>
+                  <li><strong>閾値</strong> - (オプション) セルのこのセクションで発生するスパイクを検出するために使用される閾値電圧 (mV 単位)。省略した場合、デフォルトは <span class="pre"><code>netParams.defaultThreshold</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>10.0</code></span></li>
+                </ul>
+
+                <p>例: <span class="pre"><code>cellRule['secs']['soma']['threshold']</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>5.0</code></span></p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>secLists</strong> - (オプション) セクション リストの辞書 (例: {‘all’: [‘soma’, ‘dend’]})</li>
+            </ul>
+
+            <p>2 つの異なるセル タイプを追加する例:</p>
+
+            <div class="highlight-default notranslate">
+
+              <div class="highlight">
+
+                <pre><code>## PYR_HH cell properties
+soma = {'geom': {}, 'mechs': {}}  # soma properties
+soma['geom'] = {'diam': 18.8, 'L': 18.8, 'Ra': 123.0, 'pt3d': []}
+soma['geom']['pt3d'].append((0, 0, 0, 20))
+soma['geom']['pt3d'].append((0, 0, 20, 20))
+soma['mechs']['hh'] = {'gnabar': 0.12, 'gkbar': 0.036, 'gl': 0.003, 'el': -70}
+
+dend = {'geom': {}, 'topol': {}, 'mechs': {}}  # dend properties
+dend['geom'] = {'diam': 5.0, 'L': 150.0, 'Ra': 150.0, 'cm': 1}
+dend['topol'] = {'parentSec': 'soma', 'parentX': 1.0, 'childX': 0}
+dend['mechs']['pas'] = {'g': 0.0000357, 'e': -70}
+
+PYR_HH_dict = {'secs': {'soma': soma, 'dend': dend}}
+netParams.cellParams['PYR_HH'] = PYR_HH_dict  # add rule dict to list of cell property rules
+
+
+## PYR_Izhi cell properties
+Izhi_dict = {'secs': {'soma': {} }}
+Izhi_dict['secs']['soma'] = {'geom': {}, 'pointps':{}}  # soma properties
+Izhi_dict['secs']['soma']['geom'] = {'diam': 18.8, 'L': 18.8, 'Ra': 123.0}
+Izhi_dict['secs']['soma']['pointps']['Izhi'] = {'mod':'Izhi2007a', 'vref':'V', 'a':0.03, 'b':-2, 'c':-50, 'd':100, 'celltype':1}
+
+netParams.cellParams['PYR_Izhi'] = Izhi_dict  # add rule to list of cell property rules
+</code></pre>
+
+              </div>
+
+            </div>
+
+            <div class="admonition note">
+
+              <p>注記</p>
+
+              <p>上記の例のように、一時的な変数/構造体 (<span class="pre"><code>soma</code></span> や <span class="pre"><code>Izhi_dict</code></span> など) を使用して、最終的な辞書 <span class="pre"><code>netParams.cellParams</code></span> の作成を容易にすることができます。</p>
+
+            </div>
+
+            <div class="admonition note">
+
+              <p>注記</p>
+
+              <p><span class="pre"><code>netParams.cellParams</code></span> を介してセル パラメータを直接作成または変更できます。 <span class="pre"><code>netParams.cellParams['PYR_HH']['secs']['soma']['geom']['L']=16</code></span>。</p>
+
+            </div>
+
+            <div class="admonition seealso">
+
+              <p>こちらも参照</p>
+
+              <p>セルのプロパティは外部ファイルからインポートできます。詳細と例については、<a href="user_documentation.html#importing-cells" class="reference internal"><span class="std std-ref">外部定義セル モデルのインポート</span></a>を参照してください。</p>
+
+            </div>
+
+          </div>
+
+          <div id="population-parameters" class="section">
+
+            <p><span id="pop-params"></span></p>
+
+            <h3 id="section-4">母集団パラメータ</h3>
+
+            <p><span class="pre"><code>popParams</code></span> 順序付き辞書の各項目は、キーと値で構成されます。キーは母集団の任意のラベルであり、タグ <span class="pre"><code>pop</code></span> としてすべてのセルに割り当てられ、特定の接続ルールを適用するための条件として使用できます。</p>
+
+            <p>値は母集団のパラメータを含む辞書で構成され、次のフィールドが含まれます。</p>
+
+            <ul>
+              <li>
+                <p><strong>cellType</strong> - この集団内のすべての細胞に使用される細胞タイプ。
+例えば「Pyr」（錐体ニューロン用）または「FS」（高速スパイク介在ニューロン用）</p>
+              </li>
+              <li>
+                <p><strong>numCells</strong>、<strong>density</strong>、または <strong>gridSpacing</strong> - この集団内の細胞の総数、ニューロン/mm3 単位の密度、または固定グリッド間隔 (3 つのうち 1 つだけが必要です)。
+各母集団が占める体積はカスタマイズできます (<span class="pre"><code>xRange</code></span>、<span class="pre"><code>yRange</code></span>、および <span class="pre"><code>zRange</code></span> を参照)。それ以外の場合は、ネットワーク ボリューム全体が使用されます (<span class="pre"><code>netParams</code></span> で定義: <span class="pre"><code>sizeX</code></span>、<span class="pre"><code>sizeY</code></span>、<span class="pre"><code>sizeZ</code></span>)。</p>
+              </li>
+            </ul>
+
+            <p><span class="pre"><code>density</code></span> は、文字列に変数と一般的な Python 算術演算子/関数を指定することで、正規化された位置の関数 (<span class="pre"><code>xnorm</code></span>、<span class="pre"><code>ynorm</code></span>、または <span class="pre"><code>znorm</code></span>) として表現できます。例えば<span class="pre"><code>'1e5</code></span><code> </code><span class="pre"><code>*</code></span><code> </code><span class="pre"><code>exp(-ynorm/2)'</code></span>。</p>
+
+            <p><span class="pre"><code>gridSpacing</code></span> はセル間の間隔 (μm) です。セルの総数は、間隔と <span class="pre"><code>sizeX</code></span>、<span class="pre"><code>sizeY</code></span>、<span class="pre"><code>sizeZ</code></span> に基づいて決定されます。例えば<span class="pre"><code>10</code></span>。</p>
+
+            <ul>
+              <li>
+                <p><strong>xRange</strong> または <strong>xnormRange</strong> - x 軸のニューロン位置の範囲 (水平方向の長さ)、指定された 2 要素リスト [min, max]。
+um 単位の絶対値の場合は <span class="pre"><code>xRange</code></span> (例: [100,200])、または <span class="pre"><code>sizeX</code></span> の小数として 0 から 1 までの正規化された値の場合は <span class="pre"><code>xnormRange</code></span> (例: [0.1,0.2])。</p>
+              </li>
+              <li>
+                <p><strong>yRange</strong> または <strong>ynormRange</strong> - y 軸のニューロン位置の範囲 (垂直高さ = 皮質深さ)、指定された 2 要素リスト [min, max]。
+um 単位の絶対値の場合は <span class="pre"><code>yRange</code></span> (例: [100,200])、または <span class="pre"><code>sizeY</code></span> の小数として 0 から 1 までの正規化された値の場合は <span class="pre"><code>ynormRange</code></span> (例: [0.1,0.2])。注: NEURON オブジェクトの 3D ポイント (pt3d) <span class="pre"><code>y</code></span> 座標は、Y 軸を深度座標として正しく使用して表すために、NetPyNE/Python <span class="pre"><code>tags.y</code></span> 値と逆の符号を持ちます。 <span class="pre"><code>cell.tags.y</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>500</code></span>の場合、<span class="pre"><code>cell.secs.soma.geom.pt3d[0][1]</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>-500</code></span> ([0] は最初の pt3d を指し、[1] は y 座標を指します)</p>
+              </li>
+              <li>
+                <p><strong>zRange</strong> または <strong>znormRange</strong> - Z 軸 (水平方向の深さ) のニューロン位置の範囲、指定された 2 要素リスト [min, max]。
+um 単位の絶対値の場合は <span class="pre"><code>zRange</code></span> (例: [100,200])、または <span class="pre"><code>sizeZ</code></span> の小数として 0 から 1 までの正規化された値の場合は <span class="pre"><code>znormRange</code></span> (例: [0.1,0.2])。</p>
+              </li>
+            </ul>
+
+            <p>母集団を作成する例:</p>
+
+            <div class="highlight-default notranslate">
+
+              <div class="highlight">
+
+                <pre><code>netParams.popParams['Sensory'] = {'cellType': 'PYR', 'ynormRange':[0.2, 0.5], 'density': 50000}
+</code></pre>
+
+              </div>
+
+            </div>
+
+            <p>クラス <span class="pre"><code>netParams</code></span> の <span class="pre"><code>addPopParams(label,</code></span><code> </code><span class="pre"><code>params)</code></span> メソッドを使用して、項目を <span class="pre"><code>popParams</code></span> に追加できます。対話的に作業する場合、追加されたパラメーターの構文をチェックできるという利点があります。</p>
+
+            <div class="highlight-default notranslate">
+
+              <div class="highlight">
+
+                <pre><code>netParams.addPopParams('Sensory', {'cellType': 'PYR', 'ynormRange':[0.2, 0.5], 'density': 50000})
+</code></pre>
+
+              </div>
+
+            </div>
+
+            <p>また、スパイク イベントを生成するがセクションを持たない人工細胞の集団、つまり点プロセスを作成することも可能です (例: NEURON オブジェクト: <span class="pre"><code>NetStim</code></span>、<span class="pre"><code>VecStim</code></span>、または <span class="pre"><code>IntFire2</code></span>)。この場合、<span class="pre"><code>cellModel</code></span> フィールドはポイント プロセス メカニズムの名前を指定し、メカニズムのプロパティは追加フィールドとして指定されます。人工セルはより単純であるため、<span class="pre"><code>netParams.cellParams</code></span> 構造体で個別のセル パラメーターを定義する必要がないことに注意してください。たとえば、以下は NetStims (NEURON の人工スパイク ジェネレーター) の母集団を作成するために必要なフィールドです。</p>
+
+            <ul>
+              <li>
+                <p><strong>pop</strong> - すべてのセルに割り当てられるこの集団の任意のラベル (例: 「バックグラウンド」)。特定の接続ルールを適用する条件として使用できます。</p>
+              </li>
+              <li>
+                <p><strong>cellModel</strong> - ポイント プロセス人工セルの名前 (例: <span class="pre"><code>IntFire2</code></span>、<span class="pre"><code>NetStim</code></span>、または <span class="pre"><code>VecStim</code></span>)。</p>
+              </li>
+              <li>
+                <p><strong>numCells</strong> - セルの数</p>
+              </li>
+              <li>
+                <p><strong>人工セルのパラメータ</strong> - 各ポイントプロセス人工セルに固有 (例: <span class="pre"><code>IntFire2</code></span> には「taum」、「taus」、「ib」が含まれます)</p>
+              </li>
+            </ul>
+
+            <p><span class="pre"><code>cellModel</code></span> が「NetStim」または「VecStim」の場合、次のパラメータが許可されます。</p>
+
+            <ul>
+              <li>
+                <p><strong>間隔</strong> - スパイク間隔（ミリ秒）</p>
+              </li>
+              <li>
+                <p><strong>rate</strong> - 発火速度 (Hz) (これは NetStim 間隔プロパティの逆数であることに注意してください)</p>
+              </li>
+              <li>
+                <p><strong>ノイズ</strong> - NetStim のノイズの割合 (0 = 決定的; 1 = 完全にランダム)</p>
+              </li>
+              <li>
+                <p><strong>start</strong> - 最初のスパイクの時間 (ミリ秒) (デフォルト = 0)</p>
+              </li>
+              <li>
+                <p><strong>数値</strong> - 生成されるスパイクの最大数 (デフォルト = 1e12)</p>
+              </li>
+              <li>
+                <p><strong>シード</strong> - ランダマイザーのシード (オプション; デフォルトは <span class="pre"><code>simConfig.seeds['stim']</code></span> に設定された値)</p>
+              </li>
+              <li>
+                <p><strong>spkTimes</strong> (「VecStim」のみ) - スパイク時間のリスト (例: [1, 10, 40, 50]、range(1,500,10)、または Python リストを含む変数)</p>
+              </li>
+              <li>
+                <p><strong>パルス</strong> (「VecStim」のみ) - スパイクパルスのリスト。各項目には、<span class="pre"><code>start</code></span> (ms)、<span class="pre"><code>end</code></span> (ms)、<span class="pre"><code>rate</code></span> (Hz)、および <span class="pre"><code>noise</code></span> (0 ～ 1) のパルス パラメーターが含まれます。以下の例を参照してください。</p>
+              </li>
+            </ul>
+
+            <p>点プロセス人工細胞集団の例:</p>
+
+            <div class="highlight-default notranslate">
+
+              <div class="highlight">
+
+                <pre><code>netParams.popParams['artif1'] = {'cellModel': 'IntFire2', 'taum': 100, 'noise': 0.5, 'numCells': 100}  # Intfire2
+
+netParams.popParams['artif2'] = {'cellModel': 'NetStim', 'rate': 100, 'noise': 0.5, 'numCells': 100}  # NetsStim
+
+# create custom list of spike times
+spkTimes = range(0,1000,20) + [138, 155,270]
+
+# create list of pulses (each item is a dict with pulse params)
+pulses = [{'start': 10, 'end': 100, 'rate': 200, 'noise': 0.5},
+        {'start': 400, 'end': 500, 'rate': 1, 'noise': 0.0})]
+
+netParams.popParams['artif3'] = {'cellModel': 'VecStim', 'numCells': 100, 'spkTimes': spkTimes, 'pulses': pulses}  # VecStim with spike times
+</code></pre>
+
+              </div>
+
+            </div>
+
+            <p>最後に、<span class="pre"><code>cellsList</code></span> 辞書フィールドにセルのリストを含めることによって、個別に定義されたセルで構成される集団を定義できます。セルのリストの各要素は、<span class="pre"><code>cellLabel</code></span> や場所 (<span class="pre"><code>x</code></span> や <span class="pre"><code>ynorm</code></span> など) などのセル プロパティのセットを含む辞書になります。以下に例を示します。</p>
+
+            <div class="highlight-default notranslate">
+
+              <div class="highlight">
+
+                <pre><code>cellsList.append({'cellLabel':'gs15', 'x': 1, 'ynorm': 0.4 , 'z': 2})
+cellsList.append({'cellLabel':'gs21', 'x': 2, 'ynorm': 0.5 , 'z': 3})
+netParams.popParams['IT_cells'] = {'cellType':'IT', 'cellsList': cellsList} #  IT individual cells
+</code></pre>
+
+              </div>
+
+            </div>
+
+            <div class="admonition note">
+
+              <p>注記</p>
+
+              <p>VecStim を使用するには、 <a href="https://raw.githubusercontent.com/Neurosim-lab/netpyne/development/doc/source/code/mod/vecevent.mod" class="reference external">vecevent.mod ファイル</a> をダウンロードしてコンパイル (nrnivmodl) する必要があります。</p>
+
+            </div>
+
+          </div>
+
+          <div id="synaptic-mechanisms-parameters" class="section">
+
+            <h3 id="section-5">シナプス機構パラメータ</h3>
+
+            <p>シナプス メカニズムのパラメーターを定義するには、<span class="pre"><code>synMechParams</code></span> 順序付き辞書に項目を追加します。 addSynMechParams(label,params) メソッドを使用できます。各 <span class="pre"><code>synMechParams</code></span> 項目はキーと値で構成されます。キーはこのメカニズムの任意のラベルであり、接続ルールで参照するために使用されます。値は、次のフィールドを含むシナプス メカニズム パラメーターの辞書です。</p>
+
+            <ul>
+              <li>
+                <p><span class="pre"><code>mod</code></span> - NMODL メカニズム名 (例: 「ExpSyn」)。これは MOD ファイルの名前と必ずしも一致しないことに注意してください。</p>
+              </li>
+              <li>
+                <p>メカニズムパラメータ (<span class="pre"><code>tau</code></span> または <span class="pre"><code>e</code></span> など) - これらは特定の NMODL メカニズムに依存します。</p>
+              </li>
+              <li>
+                <p><span class="pre"><code>selfNetCon</code></span> (オプション) - 恒常性シナプス (hsyn) などの一部のシナプス メカニズムで必要な、セル電圧とシナプスの間の NetCon パラメーターを含む辞書。例えば<span class="pre"><code>'selfNetCon':</code></span><code> </code><span class="pre"><code>{'sec':</code></span><code> </code><span class="pre"><code>'soma'</code></span><code> </code><span class="pre"><code>,</code></span><code> </code><span class="pre"><code>'threshold':</code></span><code> </code><span class="pre"><code>-15,</code></span><code> </code><span class="pre"><code>'weight':</code></span><code> </code><span class="pre"><code>-1,</code></span><code> </code><span class="pre"><code>'delay':</code></span><code> </code><span class="pre"><code>0}</code></span> (デフォルトでは、ソースセクションはソーマに設定されています。例: <span class="pre"><code>'sec':</code></span><code> </code><span class="pre"><code>'soma'</code></span>)</p>
+              </li>
+            </ul>
+
+            <p>シナプス機構は、接続フェーズ中に必要に応じて細胞に追加されます。各接続ルールは、適切なラベルを参照することによって、どのシナプス メカニズム パラメーターを使用するかを指定します。</p>
+
+            <p>以下は、<span class="pre"><code>NMDA</code></span> というラベルが付いた単純な興奮性シナプス機構のシナプス機構パラメーターの例です。<span class="pre"><code>Exp2Syn</code></span> モデルを使用して実装され、立ち上がり時間 (<span class="pre"><code>tau1</code></span>) が 0.1 ミリ秒、減衰時間 (<span class="pre"><code>tau2</code></span>) が 5 ミリ秒、平衡電位が設定されています。 (<span class="pre"><code>e</code></span>) 0mV:</p>
+
+            <div class="highlight-python notranslate">
+
+              <div class="highlight">
+
+                <pre><code>## Synaptic mechanism parameters
+netParams.synMechParams['NMDA'] = {'mod': 'Exp2Syn', 'tau1': 0.1, 'tau2': 5.0, 'e': 0}  # NMDA synaptic mechanism
+</code></pre>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div id="connectivity-rules" class="section">
+
+            <h3 id="section-6">接続ルール</h3>
+
+            <p>接続ルールを使用する理論的根拠は、特定の基準に一致するニューロンのサブセット間に接続を作成できることです。特定の細胞型のシナプス前ニューロン、および特定の集団および/または特定の範囲の位置内のシナプス後ニューロンのみ。</p>
+
+            <p><span class="pre"><code>connParams</code></span> 順序付き辞書の各項目は、キーと値で構成されます。キーは、この接続ルールの参照として使用される任意のラベルです。値には、接続ルールのパラメーターを定義するディクショナリが含まれており、次のフィールドが含まれます。</p>
+
+            <ul>
+              <li><strong>preConds</strong> - シナプス前細胞の条件セット
+シナプス前細胞の属性/タグと必要な値を含む辞書として定義されます。 <span class="pre"><code>{'cellType':</code></span><code> </code><span class="pre"><code>'PYR'}</code></span>。</li>
+            </ul>
+
+            <p>値はリストにすることができます。 <span class="pre"><code>{'pop':</code></span><code> </code><span class="pre"><code>['Exc1',</code></span><code> </code><span class="pre"><code>'Exc2']}</code></span>。位置プロパティの場合、リストの値は最小値と最大値に対応します。 <span class="pre"><code>{'ynorm':</code></span><code> </code><span class="pre"><code>[0.1,</code></span><code> </code><span class="pre"><code>0.6]}</code></span>。</p>
+
+            <ul>
+              <li>
+                <p><strong>postConds</strong> - シナプス後細胞の条件セット
+<span class="pre"><code>preConds</code></span> (上記) と同じ形式。</p>
+              </li>
+              <li>
+                <p><strong>sec</strong> (オプション) - シナプス後ニューロンのターゲット セクションの名前 (例: <span class="pre"><code>'soma'</code></span>)
+省略した場合、デフォルトで「soma」が存在する場合は「soma」が使用され、存在しない場合はセルセクションリストの最初のセクションが使用されます。</p>
+              </li>
+            </ul>
+
+            <p><span class="pre"><code>synsPerConn</code></span> &gt; 1 で、セクションのリストまたはセクションリストが指定されている場合、シナプスは各セクションの長さを考慮して、指定されたセクションに沿って均一に分散されます。</p>
+
+            <p><span class="pre"><code>synsPerConn</code></span> == 1 で、セクションのリストまたはセクションリストが指定されている場合、シナプス (シナプス前セルごとに 1 つ) がリストからランダムに選択されたセクションに配置されます。リストの最初のセクションを常に使用するようにするには、<span class="pre"><code>cfg.connRandomSecFromList</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>False</code></span> を設定します。</p>
+
+            <ul>
+              <li><strong>loc</strong> (オプション) - ターゲット シナプス メカニズムの位置 (例: <span class="pre"><code>0.3</code></span>)
+省略した場合、デフォルトは 0.5 になります。</li>
+            </ul>
+
+            <p><span class="pre"><code>synMechs</code></span> のリストがある場合は、すべてに対して 1 つの loc を作成するか、または loc のリスト (synMech ごとに 1 つ、たとえば 2 つの synMech の場合: <span class="pre"><code>[0.4,</code></span><code> </code><span class="pre"><code>0.7]</code></span>) を作成できます。</p>
+
+            <p><span class="pre"><code>synsPerConn</code></span> &gt; 1 の場合、すべてに対して 1 つの loc を指定するか、または loc のリスト (シナプスごとに 1 つ、たとえば <span class="pre"><code>synsPerConn</code></span> = 3 の場合) を指定できます。 <span class="pre"><code>[0.4,</code></span><code> </code><span class="pre"><code>0.5,</code></span><code> </code><span class="pre"><code>0.7]</code></span>)</p>
+
+            <p><span class="pre"><code>synMechs</code></span> と <span class="pre"><code>synsPerConn</code></span> &gt; 1 の両方のリストがある場合、各 synMech の各シナプスの 2D リストを持つことができます (たとえば、2 つの synMech と <span class="pre"><code>synsPerConn</code></span> = 3 の場合)。 <span class="pre"><code>[[0.2,</code></span><code> </code><span class="pre"><code>0.3,</code></span><code> </code><span class="pre"><code>0.5],</code></span><code> </code><span class="pre"><code>[0.5,</code></span><code> </code><span class="pre"><code>0.6,</code></span><code> </code><span class="pre"><code>0.7]]</code></span>)</p>
+
+            <p><span class="pre"><code>synsPerConn</code></span> == 1 で、<a href="#id2"><span id="id3" class="problematic">``</span></a>loc``s のリストが指定されている場合、シナプス (シナプス前セルごとに 1 つ) がリストからランダムに選択された位置に配置されます (ランダムなセクションと位置は連動することに注意してください。つまり、両方に同じランダム インデックスが使用されます)。</p>
+
+            <ul>
+              <li><strong>synMech</strong> (オプション) - シナプス後ニューロン上のターゲット シナプス メカニズムのラベル (またはラベルのリスト) (例: <span class="pre"><code>'AMPA'</code></span> または <span class="pre"><code>['AMPA',</code></span><code> </code><span class="pre"><code>'NMDA']</code></span>)</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>省略した場合、セルのシナプス機構リストの最初のシナプス機構が使用されます。</p>
+
+                <p>リストがある場合は、各 synMech に対して個別の接続が作成されます。また、重み、遅延、位置のリストを提供することもできます。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>synsPerConn</strong> (オプション) - セル間接続 (<em>connection</em>) ごとの個々のシナプス接続 (<em>synapses</em>) の数</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>関数として定義できます (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a>を参照)。</p>
+
+                <p>省略した場合、デフォルトは 1 になります。</p>
+
+                <p>各シナプスの重み、遅延、位置、あるいはその両方をリストとして指定することも、単一の値をすべてに使用することもできます。</p>
+
+                <p><span class="pre"><code>synsPerConn</code></span> &gt; 1 で単一セクションを指定すると、<span class="pre"><code>loc</code></span> でシナプスの位置をリストとして指定できます。</p>
+
+                <p><span class="pre"><code>synsPerConn</code></span> &gt; 1 の場合、<span class="pre"><code>loc</code></span> が単一の値か省略された場合、またはターゲット セクションのリストが指定されている場合、シナプスは各セクションの長さを考慮して、指定されたセクションに沿って均一に分散されます。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>重量</strong> (オプション) - シナプス接続の強度 (例: <span class="pre"><code>0.01</code></span>)
+コンダクタンスの変化に関連しますが、シナプス機構と細胞モデルに応じて意味と規模が異なります。</li>
+            </ul>
+
+            <p>関数として定義できます (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a>を参照)。</p>
+
+            <p>省略した場合、デフォルトは <span class="pre"><code>netParams.defaultWeight</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>1</code></span> になります。</p>
+
+            <p><span class="pre"><code>synMechs</code></span> のリストがある場合は、すべての重みを 1 つ持つことも、重みのリスト (synMech ごとに 1 つ、たとえば 2 つの synMech の場合: <span class="pre"><code>[0.1,</code></span><code> </code><span class="pre"><code>0.01]</code></span>) を持つこともできます。</p>
+
+            <p><span class="pre"><code>synsPerConn</code></span> &gt; 1 の場合、すべてに対して単一の重みを指定することも、重みのリストを指定することもできます (シナプスごとに 1 つ、たとえば、<span class="pre"><code>synsPerConn</code></span> = 3 の場合: <span class="pre"><code>[0.2,</code></span><code> </code><span class="pre"><code>0.3,</code></span><code> </code><span class="pre"><code>0.4]</code></span>)。</p>
+
+            <p><span class="pre"><code>synMechs</code></span> と <span class="pre"><code>synsPerConn</code></span> &gt; 1 の両方のリストがある場合、各 synMech の各シナプスの 2D リストを持つことができます (たとえば、2 つの synMech と <span class="pre"><code>synsPerConn</code></span> = 3 の場合)。 <span class="pre"><code>[[0.2,</code></span><code> </code><span class="pre"><code>0.3,</code></span><code> </code><span class="pre"><code>0.4],</code></span><code> </code><span class="pre"><code>[0.02,</code></span><code> </code><span class="pre"><code>0.04,</code></span><code> </code><span class="pre"><code>0.03]]</code></span>)</p>
+
+            <ul>
+              <li><strong>遅延</strong> (オプション) - シナプス前スパイクがシナプス後ニューロンに到達するまでの時間 (ミリ秒)
+関数として定義できます (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a>を参照)</li>
+            </ul>
+
+            <p>省略した場合、デフォルトは <span class="pre"><code>netParams.defaultDelay</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>1</code></span> になります。</p>
+
+            <p><span class="pre"><code>synMechs</code></span> のリストがある場合は、すべてに対して 1 つの遅延を設定することも、遅延のリスト (synMech ごとに 1 つ、たとえば 2 つの synMech の場合: <span class="pre"><code>[5,</code></span><code> </code><span class="pre"><code>7]</code></span>) を設定することもできます。</p>
+
+            <p><span class="pre"><code>synsPerConn</code></span> &gt; 1 の場合、すべてに対して 1 つの重みを使用することも、重みのリスト (シナプスごとに 1 つ、たとえば <span class="pre"><code>synsPerConn</code></span> = 3 の場合) を使用することもできます。 <span class="pre"><code>[4,</code></span><code> </code><span class="pre"><code>5,</code></span><code> </code><span class="pre"><code>6]</code></span>)。</p>
+
+            <p><span class="pre"><code>synMechs</code></span> と <span class="pre"><code>synsPerConn</code></span> &gt; 1 の両方のリストがある場合、各 synMech の各シナプスの 2D リストを持つことができます (たとえば、2 つの synMech と <span class="pre"><code>synsPerConn</code></span> = 3 の場合)。 <span class="pre"><code>[[4,</code></span><code> </code><span class="pre"><code>6,</code></span><code> </code><span class="pre"><code>5],</code></span><code> </code><span class="pre"><code>[9,</code></span><code> </code><span class="pre"><code>10,</code></span><code> </code><span class="pre"><code>11]]</code></span>）。</p>
+
+            <ul>
+              <li><strong>しきい値</strong> (非推奨、使用しないでください)</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>ソース セルのしきい値 (mV 単位) を設定するには、<span class="pre"><code>cellParams</code></span> のセル ルールのセクション内で <span class="pre"><code>threshold</code></span> パラメータを使用するか、デフォルト値を設定します (例: <span class="pre"><code>netParams.defaultThreshold</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>10.0</code></span>)。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>確率</strong> (オプション) - 各シナプス前セルと後セル間の接続の確率 (0 ～ 1)</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>関数として定義できます (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a>を参照)。</p>
+
+                <p><span class="pre"><code>connFunc</code></span> を <span class="pre"><code>probConn</code></span> に設定します (内部確率的接続関数)。</p>
+
+                <p><span class="pre"><code>convergence</code></span>、<span class="pre"><code>divergence</code></span>、および <span class="pre"><code>fromList</code></span> パラメータをオーバーライドします。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>収束</strong> (オプション) - 各シナプス後セルに接続されているシナプス前セルの数</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>関数として定義できます (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a>を参照)。</p>
+
+                <p><span class="pre"><code>connFunc</code></span> を <span class="pre"><code>convConn</code></span> に設定します (内部コンバージェンス接続機能)。</p>
+
+                <p><span class="pre"><code>divergence</code></span> および <span class="pre"><code>fromList</code></span> パラメータをオーバーライドします。 <span class="pre"><code>probability</code></span> パラメータが含まれている場合は効果がありません。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>発散</strong> (オプション) - 各シナプス前セルに接続されているシナプス後セルの数</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>関数として定義できます (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a>を参照)。</p>
+
+                <p><span class="pre"><code>connFunc</code></span> を <span class="pre"><code>divConn</code></span> に設定します (内部分岐接続機能)。</p>
+
+                <p><span class="pre"><code>fromList</code></span> パラメータをオーバーライドします。 <span class="pre"><code>probability</code></span> または <span class="pre"><code>convergence</code></span> パラメーターが含まれている場合、効果はありません。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>connList</strong> (オプション) - 個々のシナプス前セルとシナプス後セル間の接続の明示的なリスト</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>各接続は、前集団と後集団のセルの相対 ID で示されます。 <span class="pre"><code>[[0,1],[3,1]]</code></span> は、前セル 0 と後セル 1、前セル 3 と後セル 1 の間の接続を作成します。</p>
+
+                <p>重み、遅延、および位置は、個々のセル接続ごとにリストとして指定することもできます。これらのリストは、複数の synMech および synsPerConn &gt; 1 と組み合わせると 2D または 3D になります (外側の次元は connList に対応します)。</p>
+
+                <p><span class="pre"><code>connFunc</code></span> を <span class="pre"><code>fromList</code></span> に設定します (明示的リスト接続機能)。</p>
+
+                <p><span class="pre"><code>probability</code></span>、<span class="pre"><code>convergence</code></span>、または <span class="pre"><code>divergence</code></span> パラメータが含まれている場合は効果がありません。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>connFunc</strong> (オプション) - 使用する内部接続関数</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p><span class="pre"><code>probability</code></span>、<span class="pre"><code>convergence</code></span>、<span class="pre"><code>divergence</code></span>、または <span class="pre"><code>connList</code></span> パラメーターが含まれる場合、それぞれ <span class="pre"><code>probConn</code></span>、<span class="pre"><code>convConn</code></span>、<span class="pre"><code>divConn</code></span>、または <span class="pre"><code>fromList</code></span> に自動的に設定されます。それ以外の場合は、デフォルトで <span class="pre"><code>fullConn</code></span>、つまり全対全接続になります。</p>
+
+                <p>ユーザー定義の接続機能を追加できます。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>shape</strong> (オプション) - 指定されたパターンに基づいて、シミュレーション中に接続の重みを動的に変更します。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>次のフィールドを含む辞書が含まれています。</p>
+
+                <blockquote>
+                  <div>
+
+                    <p><span class="pre"><code>'switchOnOff'</code></span> - 体重のオンとオフを切り替える時間</p>
+
+                    <p><span class="pre"><code>'pulseType'</code></span> - 生成するパルスのタイプ。 「平方」または「ガウス」のいずれか</p>
+
+                    <p><span class="pre"><code>'pulsePeriod'</code></span> - パルスの周期 (ミリ秒単位)</p>
+
+                    <p><span class="pre"><code>'pulseWidth'</code></span> - パルスの幅 (ミリ秒単位)</p>
+
+                  </div>
+                </blockquote>
+
+                <p>振動や特定の時間にオン/オフする複雑な刺激パターンを生成するために使用できます。</p>
+
+                <p>例: <span class="pre"><code>'shape':</code></span><code> </code><span class="pre"><code>{'switchOnOff':</code></span><code> </code><span class="pre"><code>[200,</code></span><code> </code><span class="pre"><code>800],</code></span><code> </code><span class="pre"><code>'pulseType':</code></span><code> </code><span class="pre"><code>'square',</code></span><code> </code><span class="pre"><code>'pulsePeriod':</code></span><code> </code><span class="pre"><code>100,</code></span><code> </code><span class="pre"><code>'pulseWidth':</code></span><code> </code><span class="pre"><code>50}</code></span></p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>可塑性</strong> (オプション) - この接続に使用する可塑性メカニズム</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>2 つのフィールドが必要です。塑性メカニズムの名前を指定する <span class="pre"><code>mech</code></span> と、メカニズムのパラメーターを含む辞書を含む <span class="pre"><code>params</code></span> です。</p>
+
+                <p>例: <span class="pre"><code>{'mech':</code></span><code> </code><span class="pre"><code>'STDP',</code></span><code> </code><span class="pre"><code>'params':</code></span><code> </code><span class="pre"><code>{'hebbwt':</code></span><code> </code><span class="pre"><code>0.01,</code></span><code> </code><span class="pre"><code>'antiwt':-0.01,</code></span><code> </code><span class="pre"><code>'wmax':</code></span><code> </code><span class="pre"><code>50,</code></span><code> </code><span class="pre"><code>'RLon':</code></span><code> </code><span class="pre"><code>1</code></span><code> </code><span class="pre"><code>'tauhebb':</code></span><code> </code><span class="pre"><code>10}}</code></span></p>
+
+              </div>
+            </blockquote>
+
+            <p>接続ルールの例を次に示します。</p>
+
+            <div class="highlight-python notranslate">
+
+              <div class="highlight">
+
+                <pre><code>## Cell connectivity rules
+netParams.connParams['S-&gt;M'] = {    #  S -&gt; M
+        'preConds': {'pop': 'S'},
+        'postConds': {'pop': 'M'},
+        'sec': 'dend',                  # target postsyn section
+        'synMech': 'AMPA',              # target synaptic mechanism
+        'weight': 0.01,                 # synaptic weight
+        'delay': 5,                     # transmission delay (ms)
+        'probability': 0.5}             # probability of connection
+
+netParams.connParams['bg-&gt;all'] = {      # background -&gt; S,M in ynorm range
+        'preConds': {'pop': 'background'},
+        'postConds': {'cellType': ['S','M'],
+                                  'ynorm': [0.1, 0.6]},
+        'synReceptor': 'AMPA',               # target synaptic mechanism
+        'weight': 0.01,                      # synaptic weight
+        'delay': 5}                          # transmission delay (ms)
+
+netParams.connParams['yrange-&gt;HH'] = {            # cells with y in range 100 to 600 -&gt; HH cells
+    'preConds': {'y': [100, 600]},
+    'postConds': {'cellType': 'HH'},
+    'synMech': ['AMPA', 'NMDA'],                  # target synaptic mechanisms
+    'synsPerConn': 3,                             # number of synapses per cell connection (per synMech, ie. total syns = 2 x 3)
+    'weight': 0.02,                               # single weight for all synapses
+    'delay': [5, 10],                             # different delays for each of 3 synapses per synMech
+    'loc': [[0.1, 0.5, 0.7], [0.3, 0.4, 0.5]]}    # different locations for each of the 6 synapses
+</code></pre>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div id="functions-as-strings" class="section">
+
+            <p><span id="function-string"></span></p>
+
+            <h3 id="section-7">文字列としての機能</h3>
+
+            <p>一部のパラメーター (<span class="pre"><code>weight</code></span>、<span class="pre"><code>delay</code></span>、<span class="pre"><code>probability</code></span>、<span class="pre"><code>convergence</code></span>、および <span class="pre"><code>divergence</code></span>) は、関数を含む文字列を使用して指定できます。文字列は NetPyNE によって内部的に解釈され、適切な <a href="https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions" class="reference external">lambda 関数 </a> に変換されます。この文字列には次の要素が含まれる場合があります。</p>
+
+            <ul>
+              <li>
+                <p>数値、例: 「3.56」</p>
+              </li>
+              <li>
+                <p>すべての Python 数学演算子: <span class="pre"><code>+</code></span>、<span class="pre"><code>-</code></span>、<span class="pre"><code>*</code></span>、<span class="pre"><code>/</code></span>、<span class="pre"><code>%</code></span>、<span class="pre"><code>**</code></span> (指数) など。</p>
+              </li>
+              <li>
+                <p>Python 数学関数: <span class="pre"><code>sin</code></span>、<span class="pre"><code>cos</code></span>、<span class="pre"><code>tan</code></span>、<span class="pre"><code>exp</code></span>、<span class="pre"><code>sqrt</code></span>、<span class="pre"><code>mean</code></span>、<span class="pre"><code>inf</code></span> (詳細については、<a href="https://docs.python.org/2/library/math.html" class="reference external">https://docs.python.org/2/library/math.html</a> を参照)</p>
+              </li>
+              <li>
+                <p>NEURON h.Random() メソッド: <span class="pre"><code>binomial</code></span>、<span class="pre"><code>discunif</code></span>、<span class="pre"><code>erlang</code></span>、<span class="pre"><code>geometric</code></span>、<span class="pre"><code>hypergeo</code></span>、<span class="pre"><code>lognormal</code></span>、<span class="pre"><code>negexp</code></span>、<span class="pre"><code>normal</code></span>、 <span class="pre"><code>poisson</code></span>、<span class="pre"><code>uniform</code></span>、<span class="pre"><code>weibull</code></span> (<a href="https://www.neuron.yale.edu/neuron/static/py_doc/programming/math/random.html" class="reference external">https://www.neuron.yale.edu/neuron/static/py_doc/programming/math/random.html</a> を参照)</p>
+              </li>
+              <li>
+                <p>セル位置変数:</p>
+              </li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>pre_x</code></span>、<span class="pre"><code>pre_y</code></span>、<span class="pre"><code>pre_z</code></span>: シナプス前細胞の x、y、または z の位置。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>pre_ynorm</code></span>、<span class="pre"><code>pre_ynorm</code></span>、<span class="pre"><code>pre_znorm</code></span>: 正規化されたシナプス前細胞の x、y、または z の位置。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>post_x</code></span>、<span class="pre"><code>post_y</code></span>、<span class="pre"><code>post_z</code></span>: シナプス後細胞の x、y、または z の位置。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>post_xnorm</code></span>、<span class="pre"><code>post_ynorm</code></span>、<span class="pre"><code>post_znorm</code></span>: 正規化されたシナプス後セルの x、y、または z の位置。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>dist_x</code></span>、<span class="pre"><code>dist_y</code></span>、<span class="pre"><code>dist_z</code></span>: シナプス前細胞とシナプス後細胞の x、y、または z 位置間の絶対ユークリッド距離。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>dist_xnorm</code></span>、<span class="pre"><code>dist_ynorm</code></span>、<span class="pre"><code>dist_znorm</code></span>: 正規化されたシナプス前細胞とシナプス後細胞の x、y、または z 位置間の絶対ユークリッド距離。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>dist_2D</code></span>、<span class="pre"><code>dist_3D</code></span>: シナプス前細胞とシナプス後細胞間の絶対ユークリッド 2D (x および z) または 3D (x、y および z) 距離。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>dist_norm2D</code></span>、<span class="pre"><code>dist_norm3D</code></span>: 正規化されたシナプス前細胞とシナプス後細胞間の絶対ユークリッド 2D (x および z) または 3D (x、y および z) 距離。</p>
+                  </li>
+                </ul>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><span class="pre"><code>netParams</code></span> ディクショナリで定義された単一値の数値ネットワーク パラメーター。既存のものをカスタマイズしたり、新たに任意のものを追加したりできます。デフォルトでは、次のパラメータが使用可能です。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>sizeX</code></span>、<span class="pre"><code>sizeY</code></span>、<span class="pre"><code>sizeZ</code></span>: ネットワーク サイズ (μm) (デフォルト: 100)</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>defaultWeight</code></span>: デフォルトの接続重み (デフォルト: 1)</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>defaultDelay</code></span>: デフォルトの接続遅延 (ミリ秒単位) (デフォルト: 1)</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>propVelocity</code></span>: 伝導速度 (um/ms) (デフォルト: 500)</p>
+                  </li>
+                </ul>
+
+              </div>
+            </blockquote>
+
+            <p>文字列ベースの関数は、NetPyNE 接続ルールに優れた柔軟性と機能を追加します。これらにより、ユーザーは、皮質深さに依存する接続確率や距離に依存する接続重みなど、さまざまな接続機能を定義できます。以下にいくつかの具体的な例を示します。</p>
+
+            <ul>
+              <li>収束 (シナプス後細胞をターゲットとするシナプス前細胞の数) は 1 ～ 15 の間で均一に分布します。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <div class="highlight-python notranslate">
+
+                  <div class="highlight">
+
+                    <p>netParams.connParams[…] = {
+‘収束’: ‘uniform(1, 15)’,</p>
+                    <h1 id="section-8">…</h1>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li>接続遅延を最小値 0.2 に平均 13.0、分散 1.4 のガウス分布値を加えた値に設定します。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <div class="highlight-python notranslate">
+
+                  <div class="highlight">
+
+                    <p>netParams.connParams[…] = {
+‘遅延’: ‘0.2 + 通常(13.0, 1.4)’,</p>
+                    <h1 id="section-9">…</h1>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li>上記と同じですが、<span class="pre"><code>netParams</code></span> 辞書で定義された変数を使用します。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <div class="highlight-python notranslate">
+
+                  <div class="highlight">
+
+                    <p>netParams[‘遅延最小’] = 0.2
+netParams[‘遅延平均’] = 13.0
+netParams[‘遅延変数’] = 1.4</p>
+
+                    <h1 id="section-10">…</h1>
+
+                    <p>netParams.connParams[…] = {
+‘遅延’: ‘遅延最小値 + 通常(遅延平均, 遅延変数)’,</p>
+                    <h1 id="section-11">…</h1>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li>接続遅延を <span class="pre"><code>defaultDelay</code></span> の最小値に伝播速度に基づく 3D 距離依存の遅延を加えたものに設定 (<span class="pre"><code>propVelocity</code></span>):</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <div class="highlight-python notranslate">
+
+                  <div class="highlight">
+
+                    <p>netParams.connParams[…] = {
+‘遅延’: ‘defaultDelay + dist_3D/propVelocity’,</p>
+                    <h1 id="section-12">…</h1>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li>接続の確率はシナプス後ニューロンの皮質深さに依存します:</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <div class="highlight-python notranslate">
+
+                  <div class="highlight">
+
+                    <p>netParams.connParams[…] = {
+‘確率’: ‘0.1 + 0.2*post_y’,</p>
+                    <h1 id="section-13">…</h1>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li>netParams の属性として定義された長さ定数 (<span class="pre"><code>lengthConst</code></span>) を使用して、2D 距離の関数として指数関数的に減衰する接続の確率:</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <div class="highlight-python notranslate">
+
+                  <div class="highlight">
+
+                    <p>netParams.lengthConst = 200</p>
+
+                    <h1 id="section-14">…</h1>
+
+                    <p>netParams.connParams[…] = {
+‘確率’: ‘exp(-dist_2D/lengthConst)’,</p>
+                    <h1 id="section-15">…</h1>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </blockquote>
+
+          </div>
+
+          <div id="sub-cellular-connectivity-rules-redistribution-of-synapses" class="section">
+
+            <h3 id="section-16">細胞内接続ルール - シナプスの再分配</h3>
+
+            <p><span class="pre"><code>connParams</code></span> 順序付き辞書を介して接続が定義されると、樹状ツリーに沿った特定のプロファイルに従ってシナプスを再分布することが必要になる場合があります。この目的のために、<span class="pre"><code>subConnParams</code></span> 順序付き辞書は、この再配布を管理するルールとパラメータを設定します。このディクショナリ内の各項目は、キーと値で構成されます。キーは、この再配布ルールの参照として使用されるラベルです。値は、このプロセスのパラメータを設定する辞書であり、次のフィールドが含まれます。</p>
+
+            <ul>
+              <li><strong>preConds / postConds</strong> - シナプス前セルとシナプス後セルの条件セット</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p><span class="pre"><code>connParams</code></span> 仕様と同様、これらのフィールドは、シナプス前側とシナプス後側で特定の条件を満たす、すでに確立されている接続を選択するための属性/タグを提供します。これらは、適切な属性/タグと必要な値を含む辞書として定義されます。 {‘cellType’: ‘PYR’}、{‘pop’: [‘Exc1’, ‘Exc2’]}、{‘ynorm’: [0.1, 0.6]}。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>groupSynMechs (オプション)</strong> – シナプスを再分配するときにグループ化されたシナプス メカニズムのリスト</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>省略した場合、すべての接続のシナプス後の位置 (preConds と postConds を満たす) は、指定されたプロファイル (以下で定義) を使用して独立して再分配されます。リストが提供される場合、共通接続のシナプス (各メカニズムの同じシナプス前およびシナプス後ニューロン) が同じ場所に再配置されます。たとえば、[‘AMPA’,’NMDA’]。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>sec (オプション)</strong> – 再分散シナプスを許可するセクションのリスト</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>省略した場合、シナプスの再分配に使用されるセクションは体細胞、または存在しない場合はシナプス後細胞の最初に利用可能なセクションです。たとえば、[‘Adend1’,’Adend2’, ‘Adend3’,’Bdend’] のようになります。</p>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>密度</strong> - 再配布のタイプ。事前定義されたルールが多数あります。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>uniform</code></span> - 条件を満たす各接続は、長さに応じて重み付けされ、指定されたセクションに沿って均一に再配分されます。</p>
+                  </li>
+                  <li>
+                    <p>さまざまなオプションを持つ辞書:</p>
+                  </li>
+                </ul>
+
+                <blockquote>
+                  <div>
+
+                    <ul>
+                      <li><span class="pre"><code>type</code></span> - シナプス密度マップのタイプ。利用可能なオプション: 1Dmap または 2Dmap。</li>
+                    </ul>
+
+                    <p>さらに、以下を含める必要があります。</p>
+
+                    <blockquote>
+                      <div>
+
+                        <ul>
+                          <li>
+                            <p><span class="pre"><code>gridY</code></span> – y 座標 (深さ) の位置のリスト</p>
+                          </li>
+                          <li>
+                            <p><span class="pre"><code>gridX</code></span> (2Dmap のみ) - x 座標 (または z) の位置のリスト。</p>
+                          </li>
+                          <li>
+                            <p><span class="pre"><code>fixedSomaY</code></span> (オプション) - ソーマの絶対位置 y 座標。gridY をシフトするために使用されます (絶対座標でも提供されます)。</p>
+                          </li>
+                          <li>
+                            <p><span class="pre"><code>gridValues</code></span> – (gridX および) GridY によって定義された座標の (相対) シナプス密度を表す 1 次元または 2 次元のリスト。</p>
+                          </li>
+                        </ul>
+
+                      </div>
+                    </blockquote>
+
+                    <p>たとえば、</p>
+
+                    <div class="highlight-python notranslate">
+
+                      <div class="highlight">
+
+                        <p>netParams.subConnParams[…] = {‘type’:’1Dmap’,’gridY’: [0,-200,-400,-600,-800], ‘fixedSomaY’:-700,’gridValues’:[0,0.2,0.7,1.0,0]}。</p>
+
+                      </div>
+
+                    </div>
+
+                    <p>一方、この選択のためには、シナプス後細胞が 3D 形態を持つ必要があります。単純なセクションの場合、<span class="pre"><code>netParams.defineCellShapes</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>True</code></span> を設定することにより、これを自動的に生成できます (Y 軸に沿った円柱が上向き)。</p>
+
+                    <ul>
+                      <li><span class="pre"><code>distance</code></span> - シナプスは参照から指定された距離 (許可されたセクション内) に再配置されました。</li>
+                    </ul>
+
+                    <p>さらに、次のものが含まれる場合があります。</p>
+
+                    <blockquote>
+                      <div>
+
+                        <ul>
+                          <li><span class="pre"><code>ref_sec</code></span> (オプション) – 文字列</li>
+                        </ul>
+
+                        <blockquote>
+                          <div>
+
+                            <p>距離を計算する基準となるセクション。省略した場合、距離の参照に使用されるセクションはソーマ、またはソーマが存在しない場合は「som」で始まるもの、それ以外の場合はシナプス後セルで最初に使用可能なセクションになります。</p>
+
+                          </div>
+                        </blockquote>
+
+                        <ul>
+                          <li><span class="pre"><code>ref_seg</code></span> (オプション) - 数値</li>
+                        </ul>
+
+                        <blockquote>
+                          <div>
+
+                            <p>距離の参照に使用されるセクション内のセグメント。省略した場合はデフォルト値(0.5)が使用されます。</p>
+
+                          </div>
+                        </blockquote>
+
+                        <ul>
+                          <li><span class="pre"><code>target_distance</code></span> (オプション) - シナプスが再割り当てされるリファレンスからのターゲット距離</li>
+                        </ul>
+
+                        <blockquote>
+                          <div>
+
+                            <p>省略した場合、この値は 0 に設定されます。選択された場所は、許可されたセクションの間で、このターゲットに最も近い場所になります。</p>
+
+                          </div>
+                        </blockquote>
+
+                        <ul>
+                          <li><span class="pre"><code>coord</code></span> (オプション) - 距離の計算に使用される座標系。省略した場合 (または「topol」に設定した場合)、距離は樹状木に沿って計算されます。あるいは、ユークリッド空間内の距離 (デカルト座標系における基準からターゲット セグメントまでの距離) を計算するために「デカルト」を使用することもできます。この場合、シナプス後細胞は 3D 形態を持つ必要があります (または <span class="pre"><code>netParams.defineCellShapes</code></span><code> </code><span class="pre"><code>=</code></span><code> </code><span class="pre"><code>True</code></span> を設定)。</li>
+                        </ul>
+
+                      </div>
+                    </blockquote>
+
+                    <p>たとえば、</p>
+
+                    <div class="highlight-python notranslate">
+
+                      <div class="highlight">
+
+                        <p>netParams.subConnParams[…] = {‘type’:’ distance’,’ref_sec’: ‘soma’, ‘ref_seg’: 1,’target_ distance’: 500}。</p>
+
+                      </div>
+
+                    </div>
+                    <blockquote>
+                      <blockquote>
+                        <p>&lt;/div&gt;</p>
+                      </blockquote>
+                    </blockquote>
+                  </div>
+                </blockquote>
+
+              </div>
+            </blockquote>
+
+          </div>
+
+          <div id="stimulation-parameters" class="section">
+
+            <p><span id="stimulation"></span></p>
+
+            <h3 id="section-17">刺激パラメータ</h3>
+
+            <p>2 つのデータ構造を使用して細胞刺激パラメータを指定します。<span class="pre"><code>stimSourceParams</code></span> は刺激源のパラメータを定義します。 <span class="pre"><code>stimTargetParams</code></span> は、どの細胞にどの刺激源を適用するかを指定します (刺激源のセルへのマッピング)。</p>
+
+            <p><span class="pre"><code>stimSourceParams</code></span> 順序付き辞書の各項目はキーと値で構成されます。ここで、キーはこの刺激源を参照するための任意のラベル (例: 「electrode_current」)、値はソース パラメータの辞書です。</p>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li><strong>タイプ</strong> - 刺激装置として使用されるポイントプロセス。許可される値: <span class="pre"><code>'IClamp'</code></span>、<span class="pre"><code>'VClamp'</code></span>、<span class="pre"><code>'SEClamp'</code></span>、<span class="pre"><code>'NetStim'</code></span>、および <span class="pre"><code>'AlphaSynapse'</code></span>。</li>
+                </ul>
+
+                <blockquote>
+                  <div>
+
+                    <p>NetStims は、この方法を使用するか、「cellModel」: 「NetStim」の母集団を作成して適切な接続を追加することによって追加できることに注意してください。</p>
+
+                  </div>
+                </blockquote>
+
+                <ul>
+                  <li><strong>stim params</strong> (オプション) - これらはスティミュレーターのタイプによって異なります (たとえば、<span class="pre"><code>'IClamp'</code></span> の場合は、<span class="pre"><code>'del'</code></span>、<span class="pre"><code>'dur'</code></span>、および <span class="pre"><code>'amp'</code></span> になります)</li>
+                </ul>
+
+                <blockquote>
+                  <div>
+
+                    <p>関数として定義できます (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a> を参照)。刺激の場合は、シナプス後細胞のパラメーターを使用することのみが意味があることに注意してください (例: <span class="pre"><code>'post_ynorm'</code></span>)。</p>
+
+                  </div>
+                </blockquote>
+
+              </div>
+            </blockquote>
+
+            <p><span class="pre"><code>stimTargetParams</code></span> の各項目は、ネットワーク内のセルのサブセットに刺激源をマッピングする方法を指定します。キーはこのマッピングの任意のラベルであり、値は次のパラメータを含む辞書です。</p>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><strong>ソース</strong> - 刺激ソースのラベル (例: <span class="pre"><code>'electrode_current'</code></span>)。</p>
+                  </li>
+                  <li>
+                    <p><strong>条件</strong> - スティムが適用されるセルの条件を含む辞書。
+選択したセルのサブセット内の相対セル インデックスを含むフィールド <span class="pre"><code>'cellList'</code></span> を含めることができます (例: <span class="pre"><code>'conds':</code></span><code> </code><span class="pre"><code>{'cellType':'PYR',</code></span><code> </code><span class="pre"><code>'y':[100,</code></span><code> </code><span class="pre"><code>200],</code></span><code> </code><span class="pre"><code>'cellList':</code></span><code> </code><span class="pre"><code>[1,</code></span><code> </code><span class="pre"><code>2,</code></span><code> </code><span class="pre"><code>3]}</code></span>)</p>
+                  </li>
+                  <li>
+                    <p><strong>sec</strong> (オプション) - ターゲットセクション (デフォルト: <span class="pre"><code>'soma'</code></span>)</p>
+                  </li>
+                  <li>
+                    <p><strong>loc</strong> (オプション) - ターゲットの場所 (デフォルト: 0.5)
+関数として定義可能 (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a>を参照)</p>
+                  </li>
+                  <li>
+                    <p><strong>synMech</strong> (オプション; NetStims のみ) - NetStim を接続するシナプス メカニズムのラベル</p>
+                  </li>
+                  <li>
+                    <p><strong>重み</strong> (オプション; NetStims のみ) - NetStim とセル間の接続の重み
+関数として定義可能 (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a>を参照)</p>
+                  </li>
+                  <li>
+                    <p><strong>遅延</strong> (オプション; NetStims のみ) - NetStim とセル間の接続の遅延 (デフォルト: 1)
+関数として定義可能 (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a>を参照)</p>
+                  </li>
+                  <li>
+                    <p><strong>synsPerConn</strong> (オプション; NetStims のみ) - NetStim とセル間の接続のシナプスの数 (デフォルト: 1)
+関数として定義可能 (<a href="user_documentation.html#function-string" class="reference internal"><span class="std std-ref">文字列としての関数</span></a>を参照)</p>
+                  </li>
+                </ul>
+
+              </div>
+            </blockquote>
+
+            <p>以下のコードは、さまざまなタイプの刺激を作成し、それらをセルのさまざまなサブセットにマッピングする方法の例を示しています。</p>
+
+            <div class="highlight-python notranslate">
+
+              <div class="highlight">
+
+                <pre><code># Stimulation parameters
+
+## Stimulation sources parameters
+netParams.stimSourceParams['Input_1'] =  {'type': 'IClamp', 'del': 10, 'dur': 800, 'amp': 'uniform(0.05, 0.5)'}
+
+netParams.stimSourceParams['Input_2'] = {'type': 'VClamp', 'dur': [0, 1, 1], 'amp':[1, 1, 1],'gain': 1, 'rstim': 0, 'tau1': 1, 'tau2': 1, 'i': 1}
+
+netParams.stimSourceParams(['Input_3'] = {'type': 'AlphaSynapse', 'onset': 'uniform(1, 500)', 'tau': 5, 'gmax': 'post_ynorm', 'e': 0}
+
+netParams.stimSourceParams['Input_4'] = {'type': 'NetStim', 'interval': 'uniform(20, 100)', 'number': 1000, 'start': 5, 'noise': 0.1}
+
+## Stimulation mapping parameters
+netParams.stimTargetParams['Input1-&gt;PYR'] = {
+        'source': 'Input_1',
+        'sec': 'soma',
+        'loc': 0.5,
+        'conds': {'pop':'PYR', 'cellList': range(8)}}
+
+netParams.stimTargetParams['Input3-&gt;Basket'] = {
+        'source': 'Input_3',
+        'sec': 'soma',
+        'loc': 0.5,
+        'conds': {'cellType': 'Basket'}}
+
+netParams.stimTargetParams['Input4-&gt;PYR3'] = {
+        'source': 'Input_4',
+        'sec': 'soma',
+        'loc': 0.5,
+        'weight': '0.1 + normal(0.2, 0.05)',
+        'delay': 1,
+        'conds': {'pop': 'PYR3', 'cellList': [0, 1, 2, 5, 10, 14, 15]}}
+</code></pre>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div id="reaction-diffusion-rxd-parameters" class="section">
+
+            <h3 id="rxd-">反応拡散 (RxD) パラメーター</h3>
+
+            <p><span class="pre"><code>rxdParams</code></span> 順序付き辞書を使用して、さまざまな RxD コンポーネントを定義できます。</p>
+
+            <ul>
+              <li><strong>領域</strong> - RxD 領域の辞書 (「細胞外」領域の定義にも使用できます)</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <p>このコンポーネントは必須であり、反応が起こる場所を定義するために必要です。 <span class="pre"><code>rxdParams['regions']</code></span> の各項目は、キーが領域の名前 (さらなる定義で使用される) を指定し、値が次のフィールドを含む辞書である。</p>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>cells</code></span>: 種、反応などを指定する必要がある細胞内ドメインの定義に関連する細胞のリスト。このリストには、セル gid (例: <span class="pre"><code>[1]</code></span> または <span class="pre"><code>[0,</code></span><code> </code><span class="pre"><code>3]</code></span>)、集団ラベル (例: <span class="pre"><code>['S']</code></span> または <span class="pre"><code>['all']</code></span>)、または混合 (例: <span class="pre"><code>[['S',[0,2]]]</code></span> または<span class="pre"><code>[('S',[0,2])]</code></span>)。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>secs</code></span>: 上記のセルに含めるセクションのリスト (有効にするためには、セルの「秒」内にある必要があります)。たとえば、[‘soma’,’Bdend’] などです。</p>
+                  </li>
+                </ul>
+
+                <p><span class="pre"><code>cells</code></span> と <span class="pre"><code>secs</code></span> は両方とも、(細胞内) RxD が関連コンポーネントである NEURON セクションを指定するために使用されます。</p>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>nrn_region</code></span>: 領域が細胞の細胞内/細胞質ドメイン (膜貫通電圧の計算対象) に対応するかどうかを定義するオプション。利用可能なオプションは次のとおりです: 「i」 (細胞膜のすぐ内側)、「o」 (血漿のすぐ外側)、または None (上記のどれでもない、たとえば細胞内小器官)。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>geometry</code></span>: このエントリは、領域に関連付けられたジオメトリを定義します。 NEURON のさまざまなオプションに応じて、文字列 (「inside」または「membrane」) または 2 つのエントリを持つ辞書のいずれかになります。ジオメトリの種類を示す「class」 (「DistributedBoundary」、「Fractional Volume」、「FixedCrossSection」、「FixedPerimeter」、「ScalableBorder」、「Shell」) と、構造化された定義に必要な特定の引数を含む「args」です。辞書で。たとえば、</p>
+                  </li>
+                </ul>
+
+                <blockquote>
+                  <div>
+
+                    <div class="highlight-python notranslate">
+
+                      <div class="highlight">
+
+                        <p>netParams.rxdParams[‘regions’] = {‘membrane_in’:{‘cells’: ‘all’, ‘secs’: ‘all’, ‘geometry’: {‘class’: ‘ScalableBorder’, ‘args’: {‘scale’: 1, ‘on_cell_surface’: False}}}}。</p>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </blockquote>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>dimension</code></span>: これは整数 (1 または 3) で、シミュレーションが 1D か 3D かを示します。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>dx</code></span>: 離散化を指定する float (または int)。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>extracellular</code></span>: 領域が細胞外空間を表すかどうかを示すブール オプション (指定されていない場合は <span class="pre"><code>False</code></span>)。 <span class="pre"><code>True</code></span> の場合、以前のすべての extries を指定する必要はありません。代わりに、<span class="pre"><code>rxdParams['extracellular']</code></span> (次を参照) に対応するエントリを考慮する必要がありますが、これは辞書階層の同じレベルにあります。たとえば、<span class="pre"><code>rxdParams['regions']={'ext':{'extracellular':True,</code></span><code> </code><span class="pre"><code>'xlo':</code></span><code> </code><span class="pre"><code>-100,</code></span><code> </code><span class="pre"><code>...}}</code></span> のようになります。</p>
+                  </li>
+                </ul>
+
+                <p>例、</p>
+
+                <blockquote>
+                  <div>
+
+                    <div class="highlight-python notranslate">
+
+                      <div class="highlight">
+
+                        <p>netParams.rxdParams[‘regions’] = {‘cyt’:{‘cells’: [‘all’], ‘secs’: [‘soma’,’Bdend’], ‘nrn_region’: ‘i’}}</p>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </blockquote>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>細胞外</strong> - RxD 細胞外領域を指定するために必要なパラメータを含む辞書。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>xlo</code></span>、<span class="pre"><code>ylo</code></span>、<span class="pre"><code>zlo</code></span>: 細胞外ドメインを指定するボックスの左下奥の隅を示す値。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>xhi</code></span>、<span class="pre"><code>yhi</code></span>、<span class="pre"><code>zhi</code></span>: 細胞外ドメインを指定するボックスの右上隅を示す値。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>dx</code></span>: 離散化を指定する値 (int、float)。この場合、細胞外領域は、正方形のボクセル以外が必要な場合、3D タプルになる可能性があります。</p>
+                  </li>
+                </ul>
+
+                <p>前のエントリは必須です。次の値はオプションです (デフォルト値が考慮されます。NEURON を参照)。</p>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>volume_fraction</code></span>: 拡散に利用可能なスペースを示す値。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>tortuosity</code></span>: 拡散する直進経路がどの程度制限されているかを示す値。</p>
+                  </li>
+                </ul>
+
+                <p>たとえば、</p>
+
+                <blockquote>
+                  <div>
+
+                    <div class="highlight-python notranslate">
+
+                      <div class="highlight">
+
+                        <p>netParams.rxdParams[‘extracular’] = {‘xlo’:-100, ‘ylo’:-100, ‘zlo’:-100, ‘xhi’:100, ‘yhi’:100, ‘zhi’:100, ‘dx’:(0.2,0.2,0.4), ‘volume_fraction’:0.2, 「ねじれ度」: 1.6}。</p>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </blockquote>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>種</strong> - このコンポーネントも必須であり、関連する種とそれらが関与するドメインを指定するためのすべての定義を含む辞書に対応します。キーは種の名前/ラベルで、値は次のエントリを含む辞書です。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>regions</code></span>: 種が存在する地域のリスト (<span class="pre"><code>rxdParams['regions']</code></span> にリストされている)。単一の地域の場合は、リストせずに指定することもできます。たとえば、<span class="pre"><code>'cyt'</code></span> または <span class="pre"><code>['cyt','er']</code></span> です。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>d</code></span>: 種の拡散係数。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>charge</code></span>: 種の署名済み請求 (存在する場合)。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>initial</code></span>: 濃度フィールドの初期状態 (mM 単位)。これは、その定義ドメイン全体に対する単一の値、または文字列ベースの関数であり、変数は (RxD のフレームワーク内の) ノード プロパティです。たとえば、 <span class="pre"><code>'1</code></span><code> </code><span class="pre"><code>if</code></span><code> </code><span class="pre"><code>(0.4</code></span><code> </code><span class="pre"><code>&lt;</code></span><code> </code><span class="pre"><code>node.x</code></span><code> </code><span class="pre"><code>&lt;</code></span><code> </code><span class="pre"><code>0.6)</code></span><code> </code><span class="pre"><code>else</code></span><code> </code><span class="pre"><code>0'</code></span>。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>ecs_boundary_conditions</code></span>: 細胞外領域が定義されている場合は、境界条件を指定する必要があります。オプションは、ゼロ磁束条件 (ノイマン型) または境界での濃度を示す値 (ディリクレ) の <span class="pre"><code>None</code></span> (デフォルト) です。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>atolscale</code></span>: この特定の種の濃度の可変ステップ積分における絶対許容誤差のスケール係数を示す数値 (デフォルト = 1)。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>name</code></span>: この種にラベルを付ける文字列。この名前は NEURON 範囲変数と同じである必要があるため、RxD が hoc モデルと種を共有する場合に重要です。</p>
+                  </li>
+                </ul>
+
+                <p>例、</p>
+
+                <blockquote>
+                  <div>
+
+                    <div class="highlight-python notranslate">
+
+                      <div class="highlight">
+
+                        <p>netParams.rxdParams[‘species’] = {‘ca’:{‘regions’: ‘cyt’, ‘d’: 0.25, ‘charge’: 2, ‘name’: ‘ca’, ‘initial’: ‘1 if node.sec in [‘Bdend’] else 0’}}</p>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </blockquote>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>states</strong> - シミュレーション中に反応以外を通じて変化する状態変数を宣言する辞書。キーはこの変数に割り当てられた名前で、値は次のエントリを含む辞書です。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>regions</code></span>: 状態変数が関連する (つまり、そこで展開される) 領域のリスト。単一の地域の場合は、リストせずに指定することもできます。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>initial</code></span>: この変数の初期状態。ドメイン全体 (この変数が指定されている場所) で有効な単一値、または独立変数としてノード プロパティを持つ文字列ベースの関数のいずれか。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>name</code></span>: この変数を内部的にラベル付けする文字列。</p>
+                  </li>
+                </ul>
+
+                <p>例、</p>
+
+                <blockquote>
+                  <div>
+
+                    <div class="highlight-python notranslate">
+
+                      <div class="highlight">
+
+                        <p>netParams.rxdParams[‘states’] = {‘mgate’:{‘regions’: ‘cyt’, ‘initial’: 0.05, ‘name’: ‘mgate’}}</p>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </blockquote>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>反応</strong> - 分析中の反応、誰がどこでしたかを指定する辞書。キーは反応にラベルを付け、値は次のエントリを含む辞書です。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>reactant</code></span>: 化学反応の左側を、種と適切な化学量論とともに宣言する文字列。たとえば、<span class="pre"><code>ca</code></span><code> </code><span class="pre"><code>+</code></span><code> </code><span class="pre"><code>2</code></span><code> </code><span class="pre"><code>*</code></span><code> </code><span class="pre"><code>cl</code></span> のようにします。ここで、「ca」と「cl」は「種」エントリーであり、反応が起こる地域で利用可能です (次を参照)。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>product</code></span>: 化学反応の右側についても同様です。たとえば、<span class="pre"><code>cacl2</code></span> の場合、「cacl2」は適切に定義された種です。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>rate_f</code></span>: 上で定義したスキームの順反応の速度。これは、数値または文字列ベースの関数のいずれかになります (種などに応じて、たとえば、ヒル方程式を実装するため)。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>rate_b</code></span>: 上記と同じ、逆方向の反応の場合。このエントリはオプションです。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>regions</code></span>: このエントリは、領域のリスト内でのみ反応が進行するように制限するために使用されます。単一の地域の場合は、リストせずに指定することもできます。指定しない場合、反応はすべての (妥当な) 領域で進行します。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>custom_dynamics</code></span>: このブール値エントリは、素反応に対する質量作用の法則が適用されるかどうかを指定します。 「True」の場合、各種の濃度のダイナミクスは質量作用スキームを満たします。</p>
+                  </li>
+                </ul>
+
+                <p>例、</p>
+
+                <blockquote>
+                  <div>
+
+                    <div class="highlight-python notranslate">
+
+                      <div class="highlight">
+
+                        <p>netParams.rxdParams[‘reactions’] = {‘リン酸化’:{‘反応剤’: ‘E’, ‘product’: ‘EP’, ‘rate_f’: ‘kmax1 * E/ (k1 + E)’, ‘rate_b’: ‘kmax2 * EP/ (k2 + EP)’,’custom_dynamics’: True}}</p>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </blockquote>
+
+              </div>
+            </blockquote>
+
+            <ul>
+              <li><strong>multicompartmentReactions</strong> - 異なる領域に属する種との反応を指定する辞書。前のケースと同様に、キーは反応にラベルを付け、値は以前とまったく同じエントリとさらに 2 つの (オプションの) エントリを含む辞書になります。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>membrane</code></span>: ある領域から別の領域へのイオンの通過に関与する領域 (膜または境界と互換性のある幾何学的形状を持つ)。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>membrane_flux</code></span>: このブール値のエントリは、反応によって膜電位に影響を与える細胞膜を横切る電流が生成されるかどうかを示します。</p>
+                  </li>
+                </ul>
+
+              </div>
+            </blockquote>
+
+            <p>。
+注: 「反応物」または「生成物」のエントリに表示される種は、反応スキーム内でそれらが取得された領域とともに指定する必要があることを考慮してください。たとえば、<span class="pre"><code>'ca[cyt]'</code></span> などです。</p>
+
+            <ul>
+              <li><strong>rates</strong> - 選択した種または状態のダイナミクスを制御するレートを指定する辞書。キーは動的スキームにラベルを付け、値は次のエントリを含む辞書です。</li>
+            </ul>
+
+            <blockquote>
+              <div>
+
+                <ul>
+                  <li>
+                    <p><span class="pre"><code>species</code></span>: どの種または状態が考慮されているかを示す文字列。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>rate</code></span>: 種/状態の時間的進化を支配する力学方程式における速度の値。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>regions</code></span>: このエントリは、ダイナミクスが領域のリスト内でのみ進行するように制約するために使用されます。単一の地域の場合は、リストせずに指定することもできます。</p>
+                  </li>
+                  <li>
+                    <p><span class="pre"><code>membrane_flux</code></span>: 前と同様、電流を考慮するかどうかを指定するブール値エントリ。 「True」の場合、「region」エントリは膜状のジオメトリを持つ固有の領域に対応する必要があります。</p>
+                  </li>
+                </ul>
+
+                <p>例、</p>
+
+                <blockquote>
+                  <div>
+
+                    <div class="highlight-python notranslate">
+
+                      <div class="highlight">
+
+                        <p>netParams.rxdParams[‘rates’] = {‘h_evol’:{‘species’: h_gate, ‘rate’: ‘(1. / (1 + 1000. * ca[cyt] / (0.3)) - h_gate) / tau’}}</p>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </blockquote>
+
+              </div>
+            </blockquote>
+
+            <p>各ディクショナリのパラメータは、RxD パッケージで説明されているものと同じ構造に従います: <a href="https://www.neuron.yale.edu/neuron/static/docs/rxd/index.html" class="reference external">https://www.neuron.yale.edu/neuron/static/docs/rxd/index.html</a></p>
+
+            <p>使用例を参照してください: <a href="https://github.com/Neurosim-lab/netpyne/tree/development/examples/rxd_buffering" class="reference external">RxD バッファリングの例</a> および <a href="https://github.com/Neurosim-lab/netpyne/tree/development/examples/rxd_buffering" class="reference external">RxD ネットワークの例</a>。</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/netpyne/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">仕様の概要</a></li>
+<li class="toc-h2"><a href="#section-1">著者と寄稿者</a></li>
+<li class="toc-h2"><a href="#section-2">ネットワークパラメータ</a></li>
+<li class="toc-h3"><a href="#section-3">セルの種類</a></li>
+<li class="toc-h3"><a href="#section-4">母集団パラメータ</a></li>
+<li class="toc-h3"><a href="#section-5">シナプス機構パラメータ</a></li>
+<li class="toc-h3"><a href="#section-6">接続ルール</a></li>
+<li class="toc-h3"><a href="#section-7">文字列としての機能</a></li>
+<li class="toc-h3"><a href="#section-16">細胞内接続ルール - シナプスの再分配</a></li>
+<li class="toc-h3"><a href="#section-17">刺激パラメータ</a></li>
+<li class="toc-h3"><a href="#rxd-">反応拡散 (RxD) パラメーター</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

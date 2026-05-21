@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: attractor-dynamics | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: attractor-dynamics.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: attractor-dynamics</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/attractor-dynamics.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/attractor-dynamics.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Activation”, “Cognition”]
+bibfile = “ccnlab.json”
++++
+{id=”フィギュア_アトラクター”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_attractor.png" alt="「重力井戸」という観点から見たアトラクターダイナミクスの図。科学博物館でコインを吸い込むおなじみの重力井戸では、アトラクター状態は井戸の底の穴であり、コインは必然的にそこに行き着きます。これと同じダイナミックが、双方向に接続されたネットワーク内でより抽象的なケースでも動作します。たとえば、この図の x 軸と y 軸は 2 つの異なるニューロンの活動を表すことができ、アトラクターの状態は、ネットワーク接続がニューロン x の活動性を高くすることを好み、ニューロン y の活動性を弱くすることを示しています。アトラクター盆地は、これら 2 つのニューロンがどのような構成で活性化を開始しても、最終的には全体として同じアトラクター状態になることを示しています。" /></p>
+
+  <p>ノイズが多い、弱い、または曖昧な入力が与えられた場合に適切な内部表現に収束するプロセス全体は、<strong>アトラクター ダイナミクス</strong> ([[#figure_attractor]]) の観点から要約できます。アトラクターは、動的システム理論からの概念であり、動的システムが引力で向かう傾向にある安定した構成を表します。アトラクター力学のよく知られた例は、科学博物館でよく見られるコイン重力井戸です。デバイスの上部にあるスロットにコインを転がすと、逆さまの鐘の形をした「重力井戸」の縁の周りにコインが転がり落ちます。この井戸の中央の穴の周りを周回し続けますが、回転するたびに中央の「アトラクター」状態に近づきます。どこからコインを開始しても、コインは常に同じ最終状態に吸い込まれます。</p>
+
+  <p>これがアトラクターの背後にある重要なアイデアです。多くの異なる入力はすべて同じ最終状態に吸い込まれます。アトラクター ダイナミックが成功した場合、この最終状態は入力パターンの正しい [[categorization]] になるはずです。おそらく、このアトラクターのダイナミクスを最も主観的に体験できるのは、<a href="http://en.wikipedia.org/wiki/Autostereogram">オートステレオグラム</a> (wikipedia リンク) を表示しているときです。このランダムに見えるパターンを寄り目で見つめているだけで、ゆっくりと脳が 3D アトラクターに落ち込み始め、画像がゆっくりと浮かび上がります。基礎となる画像には、異なる横方向のオフセットでの両目の間のランダム パターンの個別の一致が多数含まれています。これらは、最終的に連携して 3D 画像が表示される複数の制約満足問題における制約です。この 3D 画像は、これらすべての制約を最もよく満たす画像です。</p>
+
+  <p>{id=”フィギュア_ダルメシアン” スタイル=”高さ:20em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_dalmatian.png" alt="非常にあいまいな画像のよく知られた例ですが、適切な高レベルの手がかりが提供されれば、何が起こっているかを理解できます (例: 「ダルメシアン」)。ボトムアップのあいまいさを解決するのに役立つトップダウンの知識のプロセスは、双方向処理の好例です。" /></p>
+
+  <p>双方向の興奮ダイナミクスが明らかなさまざまな例が数多くあります。</p>
+
+  <ul>
+    <li>
+      <p><strong>トップダウンの画像</strong> — 紫色のカバがどのようなものかを想像してみてください。これまで見たことがなくても、おそらくうまく想像できるでしょう。トップダウンの興奮的なつながりを介して、高レベルの言語入力は、対応する視覚的表現を駆動することができます。たとえば、家やアパートのさまざまな物の位置を想像すると、それらの物体間の実際の空間距離を反映した反応時間が生じます。私たちは画像の中で実際の空間/視覚表現を使用しているようです。</p>
+    </li>
+    <li>
+      <p><strong>トップダウンの曖昧さの解決</strong> — 多くの刺激は、さらなるトップダウンの制約がなければ曖昧です。たとえば、これまで [[#figure_dalmatian]] を見たことがない場合、おそらくその中にダルメシアン犬を見つけることはできないでしょう。しかし、その手がかりを読んだので、ダルメシアンがどのように見えるかについてのトップダウンの意味論的な知識は、アトラクターのダイナミクスがシーンの一貫したビューに収束するのに役立ちます。</p>
+    </li>
+    <li>
+      <p><strong>パターンの完成</strong> — 「昨日の夕食は何を食べましたか」と尋ねると、この部分的な入力キューは脳内 (おそらく海馬内) の適切な記憶表現を部分的に興奮させることができますが、この部分的な興奮が記憶回路を通じて反響し、完全な記憶トレースの欠落部分を埋めるには、双方向の興奮ダイナミクスが必要です。この反響プロセスは、ちょうど重力井戸の周りを周回するコインのようなものです。システムが正しい記憶トレースの周りを「周回」するにつれて、さまざまなニューロンが活性化および抑制され、最終的には完全な正しい記憶トレースに収束します（またはそうでない場合もあります）。場合によっては、いわゆる <strong>舌先</strong> 状態では、取得しようとしている記憶が * 把握できず、システムがアトラクター状態に完全に収束できないことがあります。いやぁ、それはイライラするかもしれませんね！通常、最終的なアトラクターに到達するためにあらゆることを試みます。私たちは未解決の状態が長期間続くことを好みません。</p>
+    </li>
+  </ul>
+
+  <h3 id="section">エネルギーと調和</h3>
+
+  <p>アトラクターの垂直軸 ([[#figure_attractor]]) のようなものを捉える数学的な方法があります。これは、重力井戸の物理用語では「位置エネルギー」です。驚くことではないかもしれませんが、この尺度は <strong>エネルギー</strong> と呼ばれ、ジョン ホップフィールドという物理学者によって開発されました。彼は、重力井戸内でのコインの局所的な運動が全体の位置エネルギーを減少させるのと同じように、ユニットの活性化状態の局所的な更新が最終的に全体的なエネルギーの尺度を減少させることを示しました([[@Hopfield82]]; [[@Hopfield84]])。</p>
+
+  <p>別の物理学者、ポール・スモレンスキーは、符号を反転した代替フレームワークを開発しました。このフレームワークでは、ユニットの活性化状態のローカルな更新により、「グローバルな調和が増加」します ([[@Smolensky86]])。そのほうがいいですね。モデルを実行するためにこれらの方程式は実際には必要ありません。これらの方程式が私たちに伝えることの基本的な直感はアトラクターの概念によって捉えられますが、興味があるかもしれない人のために以下で方程式を展開します。</p>
+
+  <p>ホップフィールドのエネルギー方程式は次のとおりです。</p>
+
+  <p>{id=”eq_hopfield”}
+\(E = - \frac{1}{2} \sum_j \sum_i x_i w_{ij} y_j\)</p>
+
+  <p>ここで、<em>x</em> と <em>y</em> はそれぞれ送信ユニットと受信ユニットのアクティベーション (<em>i</em> と <em>j</em> でインデックス付け) を表し、<em>w</em> はそれらの間の重みです。</p>
+
+  <p>ハーモニーは文字通り、マイナス記号を除いたものと同じです。</p>
+
+  <p>{id=”eq_harmony”}
+\(H = \frac{1}{2} \sum_j \sum_i x_i w_{ij} y_j\)</p>
+
+  <p>送信ユニットと受信ユニットの各ペアについて、これらのユニット $x_i$ および $y_j$ のアクティブ化がこれら 2 つのユニット間の重みと一致する範囲までハーモニーが最大化されていることがわかります。重みが大きく正の場合、これら 2 つのユニットが両方とも同時にアクティブであれば調和するようにネットワークが構成されます。重みが負の場合 (抑制性投影の単純なバージョン)、それらのユニットは、反対の符号 (一方がアクティブで他方が非アクティブ) を持つ場合にのみ、より大きな調和に貢献します。</p>
+
+  <p>これらの方程式の重要な特徴は、_ローカルな更新がエネルギーまたはハーモニーに対する信頼性の高いグローバルな効果_を推進することです (エネルギーの減少またはハーモニーの増加)。これを確認するには、微積分の数学を使用して、受信ユニットの起動の変化に関するグローバル方程式の導関数を取得します。</p>
+
+  <p>{id=”eq_dh”}
+\(\frac{\partial H}{ \partial y_j} = \sum_i x_i w_{ij}\)</p>
+
+  <p>微分値を取得すると、微分値がゼロのときに発生する関数の最大値を見つけることができます。したがって、これにより、ハーモニーを最大化するために入力と重みの関数として $y_j$ をどのように変更 (更新) するかを決定するための規範的な公式が得られます。この方程式は本質的に、[[neuron]] への正味興奮性コンダクタンス、または「正味入力」として認識されるかもしれません。</p>
+
+  <p>これは、<em>linear</em> 活性化関数 (活性化 y = 直接正味入力) を使用してユニットを更新すると、調和が最大化されるかエネルギーが最小化されることを意味します。興味深いことに、<em>飽和非線形</em> を持つシグモイドやロジスティックなどの非線形活性化関数は、追加の「ペナルティ」項 (ホップフィールド フレームワークでは <em>entropy</em>、スモレンスキー フレームワークでは <em>stress</em> と呼ばれます) を導入することによって導出できます。これは本質的に正味入力の高い値または低い値に対する神経活性化関数の飽和を駆動します。</p>
+
+  <h2 id="section-1">シミュレーション</h2>
+
+  <ul>
+    <li>
+      <p>[[faces simulation]] (パート II) は、トップダウン処理とボトムアップ処理がどのように相互作用して画像を生成し、曖昧な入力 (部分的に遮られた顔) を解決するかを示します。</p>
+    </li>
+    <li>
+      <p>[[necker cube simulation]] は、古典的な曖昧な視覚刺激の場合に、側方の興奮性接続がどのようにしてアトラクターのダイナミクスを生み出すことができるかを示しています。</p>
+    </li>
+    <li>
+      <p>[[cats and dogs simulation]] は、猫と犬に関するさまざまなレベルの情報を表すセマンティック ネットワークにおけるボトムアップとトップダウンのダイナミクスを示します。</p>
+    </li>
+  </ul>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h3"><a href="#section">エネルギーと調和</a></li>
+<li class="toc-h2"><a href="#section-1">シミュレーション</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

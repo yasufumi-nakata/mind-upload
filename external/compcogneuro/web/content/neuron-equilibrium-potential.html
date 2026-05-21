@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: neuron-equilibrium-potential | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: neuron-equilibrium-potential.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: neuron-equilibrium-potential</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron-equilibrium-potential.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/neuron-equilibrium-potential.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Activation”, “Neuroscience”]
+bibfile = “ccnlab.json”
++++
+検出プロセスの最終ステップ (出力の生成) を完了する前に、<strong>平衡膜電位</strong> の概念を使用する必要があります。これは、<em>興奮性入力コンダクタンスと抑制性入力コンダクタンスの固定セットを仮定した場合</em>、ニューロンが安定してそこに留まる $V_m$ の値です (これらが安定していない場合、$V_m$ は変化に応じて常に変化する可能性があります)。この平衡値は、ニューロン内の綱引きプロセスが実際に最終的にどのようにバランスをとるかをより明確に示すため、興味深いものです。また、これが数学的に役立つことも次のセクションで説明します。</p>
+
+  <p>平衡膜電位 ($V_m^{eq}$) を計算するには、重要な数学的手法を使用できます。つまり、膜電位の変化 (上記の反復 $V_m$ 更新式に従って) を 0 に設定し、この条件下で $V_m$ の値の方程式を解きます。言い換えれば、平衡状態が何であるかを知りたい場合は、$V_m$ が変化しなくなる (つまり、変化率が 0 になる) ために必要な数値を計算するだけです。これを行う数学的手順は次のとおりです。</p>
+
+  <p>{id=”eq_vm_updt” title=”Vm アップデート”}
+\(V_m(t) = V_m(t-1) + dt_{vm} \left[ g_e (E_e-V_m) + g_i (E_i-V_m) + g_l (E_l-V_m) \right]\)</p>
+
+  <p>これは変化を引き起こす部分です (平衡を求めているため時定数は省略しています)。</p>
+
+  <p>{id=”eq_delta_vm” title=”デルタ Vm”}
+\(\デルタ V_m = g_e \left(E_e-V_m\right) + g_i (E_i-V_m) + g_l (E_l-V_m)\)</p>
+
+  <p>変化が止まった時点を見つけるためにこれをゼロに設定します。</p>
+
+\[0 = g_e \left(E_e-V_m\right) + g_i (E_i-V_m) + g_l (E_l-V_m)\]
+
+  <p>次に、代数を実行して $V_m$ を解決します。</p>
+
+  <p>{id=”eq_vm_eq” title=”平衡 Vm”}
+\(V_m = \frac{g_e}{g_e + g_i + g_l} E_e + \frac{g_i}{g_e + g_i + g_l} E_i + \frac{g_l}{g_e + g_i + g_l} E_l\)</p>
+
+  <p>詳細な計算は、以下の [[#Derivation]] に示されています。</p>
+
+  <p>言い換えれば、これは、興奮性ドライブ $E_e$ が、すべてのコンダクタンスの合計 ($g_e + g_i + g_l$) に対する興奮性コンダクタンス $g_e$ の割合の関数として、全体の $V_m$ に寄与していることを示しています。他のそれぞれについても同様です (阻害、漏れ)。これはまさに綱引きの図から予想されることです。$g_l$ を無視すると、$V_m$ の「フラグ」は、$g_e$ と $g_i$ の間の相対的なバランスの関数として配置されます — それらが等しい場合、$g_e / (g_e + g_i)$ は .5 になります (たとえば、各 g について — 1/2 = .5)、これは、$V_m$ フラグが $E_i$ と $E_e$ の中間にあることを意味します。</p>
+
+  <p>つまり、この計算はすべて、私たちがすでに直感的に知っていたことを再発見するためだけに行われたのです。 (実際、これが数学を行うための最良の方法です。適切な絵を描けば、すべての代数を行う前に答えがわかるはずです)。しかし、この計算が次に役立つことがわかります。</p>
+
+  <p>以下は、コンダクタンス項が「g-bar」定数と時間変化する「g(t)」部分に明示的に分割されたバージョンです。</p>
+
+  <p>{id=”eq_vm_eq” title=”Equilibrium Vm フル”}
+\(V_m = \frac{\overline{g}_e g_e(t)}{\overline{g}_e g_e(t) + \overline{g}_i g_i(t) + \overline{g}_l} E_e \frac{\overline{g}_i g_i(t)}{\overline{g}_e g_e(t) + \overline{g}_i g_i(t) + \overline{g}_l} E_i + \frac{\overline{g}_l}{\overline{g}_e g_e(t) + \overline{g}_i g_i(t) + \overline{g}_l} E_l\)</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>数学が本当に好きな人にとって、平衡膜電位方程式は [[neuron bayesian</td>
+        <td>Bayesian optimal detector]] として示すことができます。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="section">導出</h2>
+
+  <p>これは、更新方程式から平衡膜電位を導出するすべての代数を示しています。PDF バージョンでのみ表示されます。</p>
+
+  <p>反復 Vm 更新式:</p>
+
+\[V_m(t) = V_m(t-1) + dt_{vm} \left[ g_e (E_e-V_m) + g_i (E_i-V_m) + g_l (E_l-V_m) \right]\]
+
+  <p>変更部分だけ:</p>
+
+\[\デルタ Vm = g_e \left(E_e-V_m\right) + g_i (E_i-V_m) + g_l (E_l-V_m)\]
+
+  <p>それをゼロに設定します。</p>
+
+\[0 = g_e \left(E_e-V_m\right) + g_i (E_i-V_m) + g_l (E_l-V_m)\]
+
+  <p>Vm を解く: (すべての g を乗算します)</p>
+
+\[0 = g_e E_e - g_e V_m + g_i E_i - g_i V_m + g_l E_l - g_l V_m\]
+
+  <p>Vm を解く: (反対側の Vm 項を収集)</p>
+
+\[g_e V_m + g_i V_m + g_l V_m = g_e E_e + g_i E_i + g_l E_l\]
+
+  <p>Vm を解きます: (Vm ガイを 1 つだけ取得し、各辺を g で割って取得します。)</p>
+
+\[V_m (g_e + g_i + g_l ) = g_e E_e + g_i E_i + g_l E_l\]
+
+  <p>解決！</p>
+
+\[V_m = \frac{g_e E_e + g_i E_i + g_l E_l}{g_e + g_i + g_l}\]
+
+  <p>このソリューションを別の方法で記述すると、その意味がもう少し明確になります。</p>
+
+\[V_m = \frac{g_e}{g_e + g_i + g_l} E_e + \frac{g_i}{g_e + g_i + g_l} E_i + \frac{g_l}{g_e + g_i + g_l} E_l\]
+
+  <p>適応指数関数には、膜更新方程式に入る適応係数 $\omega$ (ギリシャ語オメガ) があり、これを平衡計算に含めることができます。</p>
+
+  <p>反復 Vm 更新式:</p>
+
+\[V_m(t) = V_m(t-1) + dt_{vm} \left[ g_e (E_e-V_m) + g_i (E_i-V_m) + g_l (E_l-V_m) - \omega \right]\]
+
+  <p>変更部分だけ:</p>
+
+\[\Delta Vm = g_e \left(E_e-V_m\right) + g_i (E_i-V_m) + g_l (E_l-V_m) - \omega\]
+
+  <p>それをゼロに設定します。</p>
+
+\[0 = g_e \left(E_e-V_m\right) + g_i (E_i-V_m) + g_l (E_l-V_m) - \omega\]
+
+  <p>Vm を解く: (すべての g を乗算します)</p>
+
+\[0 = g_e E_e - g_e V_m + g_i E_i - g_i V_m + g_l E_l - g_l V_m - \omega\]
+
+  <p>Vm を解く: (反対側の Vm 項を収集)</p>
+
+\[g_e V_m + g_i V_m + g_l V_m = g_e E_e + g_i E_i + g_l E_l - \omega\]
+
+  <p>Vm を解きます: (Vm ガイを 1 つだけ取得し、各辺を g で割って取得します。)</p>
+
+\[V_m (g_e + g_i + g_l ) = g_e E_e + g_i E_i + g_l E_l - \omega\]
+
+  <p>解決：</p>
+
+\[V_m = \frac{g_e E_e + g_i E_i + g_l E_l - \omega}{g_e + g_i + g_l}\]
+
+  <p>$g_e^{\Theta}$ の方程式の導出は次のとおりです。</p>
+
+  <p>閾値における平衡 Vm:</p>
+
+\[\Theta = \frac{g_e^{\Theta} E_e + g_i E_i + g_l E_l}{g_e^{\Theta} + g_i + g_l}\]
+
+  <p>g_e を解く：</p>
+
+\[\シータ (g_e^{\シータ} + g_i + g_l) = g_e^{\シータ} E_e + g_i E_i + g_l E_l\]
+
+  <p>(両辺に g を掛けます)、g_e を求めます。</p>
+
+\[\Theta g_e^{\Theta} = g_e^{\Theta} E_e + g_i E_i + g_l E_l - \Theta g_i - \Theta g_l\]
+
+  <p>(非 g_e を反対側に戻して)、g_e を解きます。</p>
+
+\[g_e^{\Theta} \Theta - g_e^{\Theta} E_e = g_i (E_i - \Theta) + g_l (E_l - \Theta)\]
+
+  <p>(他の g_e を持ってきて反対側を統合し、次に両側を分割して g_e を分離して取得します)、解決策:</p>
+
+\[g_e^{\Theta} = \frac{g_i (E_i - \Theta) + g_l (E_l - \Theta)}{\Theta - E_e}\]
+
+  <p>AdEx 関数には、膜更新方程式に入る適応係数 $\omega$ (ギリシャ語のオメガ) があり、上記のように平衡計算に含めることができます。</p>
+
+  <p>閾値における平衡 Vm:</p>
+
+\[\Theta = \frac{g_e^{\Theta} E_e + g_i E_i + g_l E_l - \omega}{g_e^{\Theta} + g_i + g_l}\]
+
+  <p>g_e を解く：</p>
+
+\[\シータ (g_e^{\シータ} + g_i + g_l) = g_e^{\シータ} E_e + g_i E_i + g_l E_l - \omega\]
+
+  <p>(両辺に g を掛けます)、g_e を求めます。</p>
+
+\[\Theta g_e^{\Theta} = g_e^{\Theta} E_e + g_i E_i + g_l E_l - \Theta g_i - \Theta g_l - \omega\]
+
+  <p>(非 g_e を反対側に戻して)、g_e を解きます。</p>
+
+\[g_e^{\Theta} \Theta - g_e^{\Theta} E_e = g_i (E_i - \Theta) + g_l (E_l - \Theta) - \omega\]
+
+  <p>(他の g_e を持ってきて反対側を統合し、次に両側を分割して g_e を分離して取得します)、解決策:</p>
+
+\[g_e^{\Theta} = \frac{g_i (E_i - \Theta) + g_l (E_l - \Theta) - \omega}{\Theta - E_e}\]
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">導出</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

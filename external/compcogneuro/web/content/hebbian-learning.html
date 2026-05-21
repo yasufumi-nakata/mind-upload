@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: hebbian-learning | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: hebbian-learning.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: hebbian-learning</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/hebbian-learning.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/hebbian-learning.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Learning”, “Computation”]
+bibfile = “ccnlab.json”
++++
+有名なカナダの心理学者ドナルド O. ヘブは、機能レベルで学習がどのように機能するかを考えるだけで、発見の何年も前に NMDA チャネルの性質を予測しました。重要な引用文は次のとおりです ([[@Hebb49]])。</p>
+
+  <blockquote>
+    <p><em>残響活動 (または「痕跡」) の持続または繰り返しが、その安定性を高める永続的な細胞変化を誘発する傾向があると仮定しましょう。… 細胞 A の軸索が細胞 B を興奮させるのに十分近くにあり、繰り返しまたは持続的にその発火に関与すると、一方または両方の細胞で何らかの成長プロセスまたは代謝変化が起こり、B を発火する細胞の 1 つとして A の効率が増加します。</em></p>
+  </blockquote>
+
+  <p>これは、_一緒に発火し、一緒に配線するセル_としてより簡潔に要約できます。 [[synaptic plasticity]] で詳しく説明したように、[[neuron channels#NMDA]] チャネルは、$Ca^{++}$ が学習に入って学習を促進できるようにするためにシナプス前とシナプス後の両方の活動を必要とするため、このプロセスには不可欠です。神経発火の_一致_を検出できます。興味深いことに、ヘブは、誰かがヘブの学習原理がNMDA受容体の形で発見されたと告げられたとき、「大したことだ、もうそうなるはずだと分かっていた」という趣旨のことを言ったとされている。</p>
+
+  <p>数学的には、ヘビアン学習は次のように要約できます。</p>
+
+  <p>{id=”eq_hebb” title=”ヘブ語の基本学習”}
+\(\デルタ w \プロプト xy\)</p>
+
+  <p>ここで、$\Delta w$ は、送信アクティビティ <em>x</em> と受信アクティビティ <em>y</em> の関数としてのシナプス重み <em>w</em> の変化です。この式のみを使用し、活動値が生物学的に現実的な発火率 (正の数のみ) である場合、シナプスの重みの値は増加するだけです。したがって、この場合、よりバランスの取れた重量増加 (LTP) と重量減少 (LTD) のパターンを生成するには、いくつかの追加要素が必要です。そのような要因のいくつかを以下で検討します。</p>
+
+  <p>しかし、バランスのとれた形式のヘビアン学習や、広く研究されているヘビアン学習の変種である [[synaptic plasticity#spike timing dependent plasticity]] (STDP; [[@BiPoo98]]) を含めたとしても、主な問題は、人間や他の動物が示す種類の認知機能や行動機能をニューロンのネットワークが実際に学習できるようになると期待できる数学的または計算的根拠がないことです。これは、直感的に理解できる単なる「ヒューリスティック」原理ですが、入手可能な証拠はすべて、[[error-driven learning]] メカニズムの汎用的な柔軟性が欠けていることを強く示しています。ヘビアン学習とエラー駆動学習の違いを示す簡単な例については、[[pattern associator simulation]] および [[hidden layer simulation]] を参照してください。</p>
+
+  <p>数学レベルでのヘビアン学習と誤差駆動学習の違いは、方程式内にある種の「差分ベース」要素が存在するかどうかに帰着します。この要素は、単なる生の関連性の「主効果」ではなく、2 つの要素間の「コントラスト」に基づいて学習を推進します。たとえば、[[error-backpropagation]] 学習の [[GeneRec]] バージョンでは、もともと [[Boltzmann machine]] で開発された <strong>対照ヘビアン学習</strong> (CHL) 方程式が生成されます ([[@MovellanMcClelland93]] も参照)。</p>
+
+  <p>{id=”eq_chl” title=”対照的なヘブ語学習”}
+\(\Delta w \propto (x^+ y^+) - (x^- y^-)\)</p>
+
+  <p>これは、[[#eq_hebb]] のような 2 つのヘビアン因子間の違いにすぎないことがわかります。ここで、上付き文字 <em>+</em> は、正解が存在する場合の <em>プラス フェーズ</em> の神経活動を示し、<em>-</em> は、ネットワーク内の既存のシナプス重みに基づいて、ネットワークが独自の答えを生成している <em>マイナス フェーズ</em> を示します。 [[predictive learning]] のコンテキストでは、マイナス フェーズはプラス フェーズの直前にあり、何が起こるかを予測し、その後に実際に何が起こるかを予測します。</p>
+
+  <p>この CHL 方程式は、Axon で使用される実際の [[kinase algorithm]] 方程式の有用な定性的要約を提供し、ヘビアン連合学習の直感的な核心と NMDA 受容体の事前事後偶然性がすべて、より強力な計算能力を持つエラー駆動学習領域にどのように引き継がれるかを示しています。</p>
+
+  <p>さらに、[[Leabra]] アルゴリズムの中心的な前提は、非常に少量のヘビアン学習をこの CHL ベースのエラー駆動学習と組み合わせることができるということです。この場合、ヘビアン係数は、統計的規則性をエンコードするための学習を形成する一種の「バイアス」または「正則化係数」として機能します (一般原則については、[[bias-variance tradeoff]] を参照)。これは、[[abstract neural network]] モデルや統計回帰で使用される [[weight decay]] に似ていますが、ヘビアン学習では重み値がゼロに向かって減衰するだけでなく増加する点が異なります。</p>
+
+  <p>興味深いことに、軸索の離散スパイキングダイナミクスに存在する固有のノイズは、Leabra に追加された追加のヘビアン コンポーネントと同じ効果の多くを生成します。したがって、主要なエラー駆動学習に加えてヘビアン コンポーネントを追加することは不必要 (そして有益ではない) であることがわかりました。</p>
+
+  <p>実装された軸索モデルでまだ調査されていない仮説の 1 つは、[[neocortex]] の層 4 が、一次感覚野で視床からボトムアップの感覚入力を受け取り、これらの感覚入力の「前処理」の主にヘブ型形式を実行するというものです。層 4 には、別のクラスの興奮性ニューロンである星状細胞 (他の層の主要な錐体ニューロンに対して) があり、より局所的な接続パターンがあり、主に表層 2/3 へのフィードフォワード出力があります。これらの特徴はすべて、入力信号に対して何らかの形で有用な変換を実行する局所的な処理段階を示唆しています。一次視覚野 (V1) 感覚入力に適用されるこの形式の処理の例については、[[V1 self organizing simulation]] を参照してください。</p>
+
+  <!--- todo: explore this in self org and v1rf -->
+
+  <p>このページの残りの部分では、ヘビアン学習のさまざまな標準形式をレビューし、このタイプの学習で何が達成できるかを理解するための基礎を提供します。</p>
+
+  <h2 id="section">抑制的な競争による自己組織化</h2>
+
+  <p>隠れ層内のニューロン間のさまざまな形式の [[inhibition]] とヘビアン学習を組み合わせた、自己組織化モデルが多数あります。抑制性競合により、個々のニューロンは、すべてのニューロンが同じことを学習するのではなく、入力環境の異なる「分離可能な特徴」のエンコードに「特化」するように強制されます。比喩的に言えば、抑制は進化における適者生存のようなものです。与えられた一連の入力刺激に最もよく反応するニューロンが、そのような入力を表現する競争に勝ち、最終的に空間全体のそのサブセットでのエンコーディングをさらに特殊化することになります。</p>
+
+  <p>抽象的な数学レベルでは、[[principal components analysis]] (PCA) メソッドは、入力に潜在する最も重要なコンポーネントをエンコードする新しいより効率的かつ体系的な方法を開発することにより、これらのアルゴリズムが達成できることの良い例を提供します。 PCA は入力信号間の_相関_を抽出し、ヘビアン学習がどのように入力の_相関構造_を学習するように同様に駆動されるかを示します。</p>
+
+  <p>このタイプの初期のモデルのいくつかは、Teuvo Kohonen らによって開発されました ([[@Kohonen77]]、[[@Kohonen98]]、[[@KohonenHari99]])。これらの_自己組織化マップ_ (SOM) モデルでは、ヘビアンのような反復学習と単純な形式の抑制的競争により、隠れ層の 2D ジオメトリ全体にわたって組織化された、入力空間内のフィーチャの_トポグラフィック マッピング_が生成されます。この種の地形図は、[[neocortex]] の主要な感覚領域で十分に確立されています。たとえば、一次視覚野 (V1) には、[[@HubelWiesel62]] がノーベル賞を受賞した研究で最初に発見したように、エッジ検出器の異なる方向角をコード化するニューロンのトポグラフィー構成があります ([[V1 self organizing simulation]] を参照)。</p>
+
+  <p>SOM モデルは、現在の入力から最大量の「興奮」を受けた個々のニューロンを選択することによって抑制性競合を実装します。これは通常、ドット積ではなく、シナプスの重みと入力アクティビティ ベクトルの間の最小距離の観点から計算されます。このニューロンは、各ニューロンが経験する学習量を定義する活動のガウス形状の「バンプ」の中心点として使用され、中心の最も適合するニューロンからの 2D 距離の関数として減少します。次のヘビアン学習方程式が使用されます。</p>
+
+  <p>{id=”eq_som_dwt” title=”SOM 学習ルール”}
+\(\Delta w_{ij} \propto y_j (x_i - w_{ij})\)</p>
+
+  <p>ここで、$y_j$ は受信ニューロン $j$ のガウス型バンプ アクティビティ、$x_i$ は入力ニューロン $i$ のアクティビティ、$w_{ij}$ は 2 つのニューロン間のシナプス重みです。</p>
+
+  <p>この学習ルールは、協働ニューロン間の重みを単に増加させるのではなく、入力アクティビティ パターンに一致するようにシナプスの重みを移動します。したがって、それらの違いに基づいて増加と減少 (LTP と LTD) が生じます。それにもかかわらず、純粋に入力アクティビティによって駆動され、エラー信号が含まれないという点で、本質的には依然として Hebbian です。以下で説明するアルゴリズムで、関連する学習形式を見ていきます。詳細については、<a href="https://en.wikipedia.org/wiki/Self-organizing_map">ウィキペディアの SOM ページ</a> を参照してください。</p>
+
+  <p>[[@^RumelhartZipser85]] の競合学習モデルとその後のソフト競合学習モデル ([[@Nowlan90]]; [[@NowlanHinton93]]) は、受信ニューロン間の強力な競合によって学習を推進するという点で SOM に似ていますが、活動のガウス バンプによって課せられる 2D トポグラフィーを無視し、より任意の高次元表現を学習します。これらのタイプのモデルが線要素で構成される単純な環境の相関構造を抽出する方法の例については、[[self organizing simulation]] を参照してください。</p>
+
+  <p>[[@^BednarMiikkulainen03]] および [[@^Bednar12]] のモデルは、一次視覚野に適用されるこの自己組織化学習プロセスの生物学的に詳細なモデルを提供します (関連モデルについては [[V1 self organizing simulation]] を参照)。</p>
+
+  <h2 id="bcm">BCM</h2>
+
+  <p>{id=”figure_bcm” style=”高さ:10em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_bcm_function.png" alt="BCM 学習関数は、細胞内 Ca++ とシナプス可塑性変化の兆候との間の経験的関係と一致しています。LTD は上昇しているが中等度であり、LTP はより高い閾値を超えています。 BCM では、LTD と LTP の間の閾値が受信ニューロン活動 y の関数として変化し、活動を妥当な範囲内に保つ恒常性 (負のフィードバック) ダイナミクスを生み出します。" /></p>
+
+  <p>Hebbian 自己組織化学習の <em>BCM</em> ([[@BienenstockCooperMunro82]]) バージョンでは、異なるアプローチを使用して、直接的な抑制的競争と同様の効果を達成します。具体的には、受信ニューロンの平均アクティビティ ([[#figure_bcm]]]) の関数として、重量減少 (LTD) と重量増加 (LTP) の間のバランスをシフトする動的な浮動しきい値を使用することで、各受信ニューロンを一貫した平均アクティビティ レベルに維持する_ホメオスタティック_メカニズムを使用します ([[#figure_bcm]]])。ニューロンの活動が比較的高い場合、LTP よりも LTD が多くなり、その結果活動が低下し、活動レベルが低い場合はその逆になります。</p>
+
+  <p>{id=”figure_bcm-dark” style=”高さ:20em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_kirkwood_et_al_96_bcm_thresh.png" alt="暗所飼育（黒丸）および通常飼育（白丸）ラットからのシナプス可塑性データ。暗所飼育ラットの方がLTPの閾値が低く、BCM浮遊閾値と一致しているようであることを示している。これらの動物のニューロンは、おそらく全体的にはるかに活性が低いため、その閾値が下がり、LTD と比較して LTP を示す可能性が高くなります。 Kirkwood、Rioult、および Bear (1996) から転載。" /></p>
+
+  <p>ランダムな初期重みをシードすると、この恒常性メカニズムにより、上記のアルゴリズムでの直接抑制性競合と同様に、個々のニューロンが入力空間の特定のサブセットに特化します。直接プールされた [[inhibition]] が [[neocortex]] の活動の形成に主要な役割を果たしていることは明らかですが、恒常性のようなメカニズムの証拠もあります。たとえば、[[#figure_bcm-dark]] は、LTP と LTD の相対しきい値が全体的なアクティビティ ([[@KirkwoodRioultBear96]]) の関数として変化することを示しています。</p>
+
+  <p>Axon アルゴリズムでは、[[@^TorradoPachecoBottorffGaoEtAl21]] で説明されている睡眠ベースのシナプス再構成メカニズムのバージョンを使用します。これは、各ニューロンの個別の目標平均活性化レベルに従って、日中に学習されたシナプスの重みを再スケールします ([[kinase algorithm#Slow weights]] を参照)。これは、BCM アルゴリズムと同様の恒常性特性を備えており、個々のニューロンが表現空間を「独占」するのを防ぐために重要です。 [[Leabra]] アルゴリズムは、BCM アルゴリズムのバージョンを使用してこの機能を実行し、ヘビアン学習の正則化効果を促進します。</p>
+
+  <h2 id="hebbian-">Hebbian は相関関係を学習します</h2>
+
+  <p>{id=”figure_hebb-demo” style=”height:20em”}
+<img src="https://raw.githubusercontent.com/compcogneuro/web/main/content/media/fig_hebb_demo_blank.png" alt="4 つのタイム ステップ (t=0 ～ 3) にわたる単純なヘビアン学習のデモンストレーション。一番下の行には 3 つの入力ユニットがあり、最後の入力ユニットは他の 2 つと「無相関」な方法で起動します。それらはすべて重み w = .1 から始まります。受信アクティビティは、送信アクティベーションと重みの単なる線形和です: 最初のタイム ステップでは y = \sum x w = 0.1。学習は簡単なヘブビアン: \Delta w = xy。残りのアクティベーション、重み、および重みの変更を入力すると、相関関係にある 2 つの入力ユニットが受信ユニットのアクティベーションを支配しており、その結果、それらのアクティビティが相関することになり、重みが常に増加することがわかります。 3 番目のユニットは時々上昇し、時には低下しますが、時間の経過とともに純増加はありません。  したがって、ヘビアン学習は入力内の相関関係を発見します。" /></p>
+
+  <p>[[#figure_hebb-demo]] は、ヘビアン学習によって受信ネットワークが入力ユニットのアクティブ化パターンの相関関係を発見する方法を示す簡単なデモンストレーションです。相関付けられた入力ユニットは最終的に受信ユニットのアクティビティを支配することになるため、受信ユニットは相関入力のこのサブセットと相関付けられることになり、ヘビアン学習関数の下でその重みが常に増加します。  Uncorrelated inputs bounce around without a systematic trend.続行すると、重みが際限なく急速に増加することがわかります。そのため、これは実用的な学習関数ではありませんが、ヘビアン学習の本質を示しています。</p>
+
+  <p>次に、ヘビアン相関学習の最も単純なバージョンでは、入力ユニットのセットから入力を受信する単一の線形受信ユニットの場合、ユニットが入力ユニットにわたるアクティビティのパターンにおける相関の最初の<strong>主成分</strong>を抽出する結果となることを示すためにいくつかの数学を実行します。</p>
+
+  <p>線形であるため、受信ユニットのアクティベーション関数は、その入力の加重和、つまり、<em>ドット積</em> ([[linear algebra]] を参照) にすぎません。</p>
+
+  <p>{id=”eq_linact” title=”線形活性化関数 (ドット積)”}
+\(y_j = \sum_k x_i w_{ij}\)</p>
+
+  <p>(すべての変数は暗黙的に、さまざまな入力を反映する現在のタイム ステップ $t$ の関数です)。体重の変化は以下の通りです。</p>
+
+  <p>{id=”eq_demo_dwt” title=”ヘブ語学習”}
+\(\Delta_t w_{ij} = \epsilon x_i y_j\)</p>
+
+  <p>ここで、$\epsilon$ は_学習率_、$i$ は特定の入力ユニットのインデックスであり、重みは時間の経過とともにこれらの変化を増加させるだけです。</p>
+
+  <p>{id=”eq_demo_wt” title=”ヘビアン学習重み更新”}
+\(w_{ij}(t+1) = w_{ij}(t) + \Delta_t w_{ij}\)</p>
+
+  <p>多くのパターンにわたる学習の総合的な効果を理解するには、時間の経過に伴う変化を合計するだけです。</p>
+
+  <p>{id=”eq_sum_dwt” title=”時間の経過に伴う合計体重変化”}
+\(\Delta w_{ij} = \epsilon \sum_t x_i(t) y_j(t)\)</p>
+
+  <p>$\epsilon = 1 / N$ ($N$ は入力内のパターンの総数) を設定すると、合計は <em>average</em> になります。</p>
+
+  <p>{id=”eq_avg_dwt” title=”平均体重は時間の経過とともに変化します”}
+\(\デルタ w_{ij} = \langle x_i y_j \rangle_t\)</p>
+
+  <p>次に、この式に $y_j$ の式を代入します (ここでは入力インデックスに $k$ を使用します)。これは、重みの変化が入力単位間の_相関_の関数であることを示します。</p>
+
+  <p>{id=”eq_correl” title=”相関学習”}
+\(\Delta w_{ij} = \langle x_i \left(\sum_k x_k w_{kj} \right) \rangle_t\)</p>
+
+\[= \sum_k \langle x_i x_k \rangle_t \langle w_{kj} \rangle_t\]
+
+\[= \sum_k \bf{C}_{ik} \langle w_{kj} \rangle_t\]
+
+  <p>この新しい変数 $\bf{C}<em>{ik}$ は、2 つの入力ユニット $i$ と $k$ の間の *相関行列* の要素です。ここでの相関は、時間の経過に伴うアクティビティ値の積 ($\bf{C}</em>{ik} = \langle x_i x_k \rangle_t$) の期待値 (平均) として定義されます。  あなたは、より標準的な相関測定に精通しているかもしれません。</p>
+
+  <p>{id=”eq_correl_norm” title=”相関定義”}
+\(\bf{C}_{ik} = \frac{\langle (x_i - \mu_i)(x_k - \mu_k) \rangle_t} {\sqrt{\sigma^2_i \sigma^2_k}}\)</p>
+
+  <p>これは、積を求める前に変数の平均値 ($\mu$) を減算し、結果を分散 ($\sigma^2$) で正規化します。  したがって、この形式のヘビアン相関学習における重要な単純化は、活性化変数の平均と単位分散がゼロであると仮定していることです。</p>
+
+  <p>これらすべてが意味するのは、入力単位間に強い相関が存在する場合、この平均相関値が比較的大きくなるため、それらの単位の重みが増加するということです。興味深いことに、この学習ルールを十分に長く実行すると、重みは入力に存在する最も強い相関セットによって支配されるようになり、最も強いセットと次に強いセットとの間のギャップがますます大きくなります。  したがって、この単純なヘビアン規則は、入力データの <em>最初</em> (最も強い) 主成分を学習します。</p>
+
+  <h2 id="section-1">減算正規化</h2>
+
+  <p>単純なヘビアン学習ルールの大きな問題は、学習が続くと重みが無限に大きくなることです。この問題に対する 1 つの解決策は、[[@^Oja82]] によって提案され、_減算正規化_として知られています。</p>
+
+  <p>{id=”eq_sub_norm” title=”減算正規化”}
+\(\デルタ w_{ij} = \epsilon (x_i y_j - y^2_j w_{ij})\)</p>
+
+  <p>各シナプス重みの更新からこの特定の値を減算すると有用な結果が得られる理由を確認するには、方程式を 0 に設定し、変化がなくなったときに得られる <em>equilibrium</em> または <em>asymptotic</em> の重み値を求めることができます。</p>
+
+  <p>{id=”eq_eq” title=”平衡重み”}
+\(0 = \epsilon (x_i y_j - y^2_j w_{ij})\)</p>
+
+\[w_{ij} = \frac{x_i}{y_j}\]
+
+\[w_{ij} = \frac{ x_i}{\sum_k x_k w_{kj}}\]
+
+  <p>したがって、特定の入力ユニットからの重みは、他のすべての入力に対する重み付けされたアクティベーションの合計に対するその入力のアクティベーションの割合を表すことになります。これにより、重量が際限なく増加することがなくなります。最後に、前の単純なヘビアン学習ルールと同じ相関項 $\bf{C}_{ik}$ に主に基づいているため、この Oja ルールは引き続き入力データの第 1 主成分を計算します (ただし、この証明は多少複雑です。優れた処理については [[@^HertzKroghPalmer91]] を参照してください)。</p>
+
+  <p>単一の隠れユニットを超えて、ユニットが相関行列の PCA 値のシーケンスを固有値順 ([[@Sanger89]]; [[@Oja89]]) で学習するように抑制を構成する方法があります。</p>
+
+  <h2 id="pca">条件付き PCA</h2>
+
+  <p>[[@^OReillyMunakata00]] では、<strong>条件付き主成分分析</strong> または CPCA として知られる別の代替方法を開発しました。これは、受信ユニット ($y_j$) もアクティブであることを前提として、特定の入力ユニットの重みが入力ユニット ($x_i$) がアクティブであったという条件付き確率を表すことを前提としています。</p>
+
+  <p>{id=”eq_cpca_wt” title=”CPCA 重み”}
+\(w_{ij} = P(x_i = 1 | y_j = 1)\)</p>
+
+\[w_{ij} = P(x_i | y_j)\]
+
+  <p>ここで、2 番目の形式では、以下でも引き続き使用される簡略化された表記が使用されます。</p>
+
+  <p>CPCA の重要な特性は、受信ユニットによって表される入力パターンのサブセット全体にわたって特定の入力ユニットがアクティブである (つまり、この受信ユニットに条件付けされている) 範囲を重みが反映することです。特定の入力パターンがそのような入力の典型的な側面である限り、その重みは大きく (1 に近く)、それほど典型的でない場合は小さくなります (0 に近く)。</p>
+
+  <p>[[@^RumelhartZipser85]] の分析に続いて、CPCA 学習ルールは次のように導出されます。</p>
+
+  <p>{id=”eq_cpca_dwt” title=”CPCA 学習ルール”}
+\(\デルタ w_{ij} = \epsilon [y_j x_i - y_j w_{ij}]\)</p>
+
+\[= \epsilon y_j (x_i - w_{ij})\]
+
+  <p>この方程式の 2 つの等価な形式は、この学習ルールと Oja の正規化 PCA 学習ルールの類似性を強調するために示されています。また、その単純な形式も示しています。これは、送信ユニットのアクティブ化 $x_i$ の値に一致するように重みが調整され、受信ユニットのアクティブ化に比例して重み付けされる (つまり、$x_i$ と $w_{ij}$ の差を最小化する) ことを強調します。 ($y_j$)。  この形式は、SOM 学習ルール [[#eq_som_dwt]] と同じです。</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>次に、この学習ルールが [[#eq_cpca_wt]] の CPCA 重み値を生成することを示します。式 $P(y_j</td>
+        <td>t)$ は、特定の入力パターン $t$ が提示された場合に、受信ユニット $y_j$ がアクティブである確率を表すために使用されます。 $P(x_i</td>
+        <td>t)$は送信ユニット$x_i$に対応するものを表します。これらを学習ルールに代入すると、考えられるすべてのパターン $t$ に対して計算された合計重み更新 (および各パターンが発生する確率 $P(t)$ を乗算) は次のようになります。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>{id=”eq_cpca_dwt_sum” title=”CPCA 合計体重変化”}
+\(\Delta w_{ij} = \epsilon \sum_t [P(y_j | t) P(x_i | t) - P(y_j | t) w_{ij}] P(t)\)</p>
+
+\[= \epsilon \left( \sum_t P(y_j | t) P(x_i | t) P(t) - \sum_t P(y_j | t) P(t) w_{ij} \right)\]
+
+  <p>いつものように、$\Delta w_{ij}$ をゼロに設定し、均衡の漸近重み値を求めるために解決します。</p>
+
+  <p>{id=”eq_cpca_wt_eq” title=”CPCA 均衡ウェイト”}
+\(w_{ij} = \frac{\sum_t P(y_j | t) P(x_i | t) P(t)} {\sum_t P(y_j | t) P(t)}\)</p>
+
+  <p>興味深いことに、分子は、すべてのパターン $t$ にわたって、送信ユニットと受信ユニットの両方が同時にアクティブになる同時確率の定義であり、これはまさに $P(y_j, x_i)$ です。同様に、分母は、受信ユニットがすべてのパターンにわたってアクティブである確率、つまり $P(y_j)$ を与えます。したがって、前述の式を次のように書き換えることができます。</p>
+
+  <p>{id=”eq_cpca_wt_eq2” title=”CPCA 均衡ウェイト”}
+\(w_{ij} = \frac{P(y_j, x_i)}{P(y_j)}\)</p>
+
+\[w_{ij} = P(x_i | y_j)\]
+
+  <p>この時点で、受信者の確率に対する結合確率のこの部分が、受信者を与えられた場合の送信者の条件付き確率の定義にすぎないことが明らかになります。</p>
+
+  <p>CPCA は効果的で数学的に明確に定義されていますが、大きな問題が 1 つあります。それは、送信ニューロンがアクティブではなく、受信ユニットがアクティブであるときに、大幅な LTD (重みの減少) を引き起こすということです。これは、時間の経過とともに学習にかなりの量の干渉をもたらし、Ca++が入って[[synaptic plasticity]]を駆動できるようにするためのシナプス後神経活動の必要性と矛盾します。  このような理由から、[[Leabra]] アルゴリズムは、ヘビアン学習用に [[#BCM]] アルゴリズムのバージョンを使用するようになりました。受信ニューロンが非アクティブな場合、BCM は可塑性を駆動しません。</p>
+
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section">抑制的な競争による自己組織化</a></li>
+<li class="toc-h2"><a href="#bcm">BCM</a></li>
+<li class="toc-h2"><a href="#hebbian-">Hebbian は相関関係を学習します</a></li>
+<li class="toc-h2"><a href="#section-1">減算正規化</a></li>
+<li class="toc-h2"><a href="#pca">条件付き PCA</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

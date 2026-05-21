@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/web: neuron-simulation | マインドアップロード</title>
+<meta name="description" content="compcogneuro/web: neuron-simulation.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/web: neuron-simulation</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron-simulation.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/web/blob/main/content/neuron-simulation.md</a></p>
+  <p>ライセンス: Text: CC BY 4.0; code: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p>+++
+Categories = [“Activation”, “Simulations”]
+bibfile = “ccnlab.json”
++++</p>
+  <sim-neuron>
+
+<div>
+
+＃＃ 導入
+
+このシミュレーションでは、重要な方法でダイナミクスを形成するさまざまな [[neuron channels]] を含む、個々の [[neuron]] 内の処理内部の詳細なビューが得られます。ソース コードについては、[軸索/シム/ニューロン](https://github.com/emer/axon/tree/main/sims/neuron) を参照してください。
+
+このモデルでは、`Network` は単一の `Neuron` を示します。これは、神経科学者が単一のニューロンに電流を注入する電極で行うように、興奮性電流と抑制性電流が「注入」されます。ツールバーで `Run Cycles` を実行すると、アクティブ化されることがわかりますが、何が起こっているのかを実際に理解するには、`Test Cycle Plot` に示されているように複数の変数間の関係を確認する必要があります。
+
+## 現象学全体
+
+※右パネルの「[[#sim-neuron:Test Cycle Plot]]」タブをクリックすると、グラフビュー表示が表示されます。 [[#sim-neuron:Run Cycles]] をまだ行っていない場合は、今すぐ実行して、デフォルトのパラメーターで実行した結果を確認します。左側のパネルには、注入されている興奮性 (`Ge`) および抑制性 (`Gi`) コンダクタンスのレベルが、すぐに操作する他のパラメーターとともに表示されます。
+
+まず、すべてのパラメーターを標準のデフォルト値 ([[Axon]] の他のほとんどのシミュレーションで使用される値) に設定して、このニューロンの動作を全体的かつ定性的なレベルで理解することから始めます。これらのニューロンには [[abstract neural network]] のユニットに関連する多くのパラメータがありますが、明確な生物学的または機能的動機がない限り、これらのパラメータをデフォルト値から変更することはほとんどありません。
+
+注入された入力のレベルによってニューロンが一連のスパイクを発生させることがわかります。これは [[#sim-neuron:Test Cycle Plot/Vm]] 膜電位プロットに表示され、[[#sim-neuron:Test Cycle Plot/Spike]] 変数にも個別に記録されます (`Vm` だけを見やすくするには、オフに切り替えます)。最も広いレベルでは、膜電位が発火閾値を超えると周期的なスパイクが発火し、その後休止レベルにリセットされ、そこから再び上昇して、このプロセスを何度も繰り返すことがわかります。
+
+励起と抑制のバランスが比較的密接に保たれているため、[[neuron]] で説明されている綱引きのダイナミクスにより、Vm が -50 mV をわずかに超える範囲付近で横ばいになり始めることがわかります。指数オフセット値が -50 に設定されているため、ここで AdEx 指数関数が影響し始めます。これにより、指数関数が指数関数的に作用するにつれて膜電位の明らかなスパイクが引き起こされるため、数サイクルにわたって指数関数的スパイク関数の段階的な影響を確認することができます。この指数関数的な動態は、指数関数が近似するホジキン・ハクスリーモデルで捉えられているように、電位依存性 Na チャネルの正のフィードバック ループが生成するものです。
+
+[[#sim-neuron:Test Cycle Plot/Act]] 値は、スパイク間間隔 (`ISIAvg`) の移動平均から計算されたレート コード アクティベーション値をプロットします。これは、各スパイク間のミリ秒数です。この `Act` 値は、スパイク自体で期待できることを示しています。スパイクの割合は時間の経過とともに増加しています。
+
+一定量の励起と抑制だけを注入しているのに、なぜスパイク率が増加するのでしょうか?
+
+* [[#sim-neuron:Test Cycle Plot/Gnmda]] をクリックすると、全体的な NMDA チャネル コンダクタンス (詳細については [[neuron channels#NMDA]] を参照) が表示されます。これは時間の経過とともに着実に増加しています。このチャネルには、[[stable activation]] パターンとなる遅いダイナミクスがあり、それがプロットで確認できます。これが時間の経過とともに発火率の増加を促進するものです。 [[#sim-neuron:Test Cycle Plot/Ge]] をクリックすると、この NMDA 寄与を含む総興奮性コンダクタンスを確認できます。
+
+* NMDA の影響をテストするには、[[#sim-neuron:NmdaGe]] 値をデフォルトの 0.006 ではなく 0 に設定し、[[#sim-neuron:Init]] (プロットをクリアするため) と [[#sim-neuron:Run Cycles]] を再度実行します。
+
+このパラメーターは、全体的な `Ge(t)` 値 (つまり、プロット内の `Ge` 値) に対する NMDA チャネルの寄与の強さを決定します。これは、時間変化する興奮性コンダクタンスです (NMDA チャネルは標準の興奮性 AMPA チャネルと同じ逆転電位を持っているため、この全体的な `Ge(t)` 値にそのコンダクタンスを加算するだけです)。 NMDA が完全になくなると、ニューロンが実際にスパイクをまったく発生しないことがわかります。
+
+* ニューロンは GABA-B 阻害チャネルからもかなりの量の阻害を受けています (詳細については [[neuron channels#GABA-B]] を参照)。したがって、これらも除去しましょう。 [[#sim-neuron:GababGk]] 値をデフォルトの 0.015 ではなく 0 に設定し、[[#sim-neuron:Init]] および [[#sim-neuron:Run Cycles]] を再度実行します。 GABA-B チャネルは K チャネルに結合されているため、このコンダクタンスは `Gk(t)` カリウム (K) コンダクタンスの全体値に含まれることに注意してください。
+
+## 適応
+
+ニューロンがいくつかのスパイクを生成する可能性がありますが、スパイクの速度は時間の経過とともに減少し、すぐに停止することがわかります。これは、ニューロンも [[adaptation]] の影響を受けるためです。[[adaptation]] は、異なる時間スケールで動作し、異なるアクティブ化信号に応答して動作するいくつかの異なるチャネルによって駆動されます。
+
+* これらの適応チャネルはすべて [[#sim-neuron:Test Cycle Plot/Gk]] コンダクタンスに寄与しており、時間の経過とともに増加することがわかります。この追加のリーク電流がニューロンの発火を停止させます。
+
+* まず、[[#sim-neuron:KNa]] をオフにします。これにより、適応源の 1 つである [[neuron channels#KNa]] ナトリウムゲート K チャネルがオフになります。 [[#sim-neuron:Run Cycles]] を使用して効果を確認します ([Init] を押さないと、前のものの上にオーバーレイされます)。さらに多くのスパイクが通過するのが見えるはずです。
+
+* 次に、[[#sim-neuron:MahpGk]] を 0 に設定します。これにより、中程度のタイムスケールの過分極後 (AHP) ダイナミクスを駆動する [[neuron channels#mAHP]] M 型電圧ゲート K チャネルがオフになります。 [[#sim-neuron:Run Cycles]] で効果を確認してください。一定レベルの興奮性入力と抑制性入力から予想されるように、スパイクの速度が時間の経過とともに完全に一定であることがわかります。
+
+## 基本的なコンダクタンス
+
+物事がより単純になったので、基本的な興奮性コンダクタンス、抑制性コンダクタンス、およびリークコンダクタンスと、それらが膜電位 Vm を更新する電流をどのように駆動するかを掘り下げて理解できるようになりました。
+
+* [[#sim-neuron:Test Cycle Plot/Ge]] = ニューロンへの合計興奮性入力コンダクタンス。これは通常、任意の時点で開いている興奮性シナプス入力チャネルの数 (`Ge(t)`) と、これらの入力チャネルの全体的な強度 (`Gbar E` で与えられます) の関数です。  この単純なモデルでは、`Ge(t)` はサイクル 10 の前では 0 から、10 ～ 160 で 0.75 になり、その後 0 に戻ります。
+
+[[#sim-neuron:Ge]] パラメータは 0.15 に設定されています。なぜプロットでは 0.75 になるのでしょうか?その理由は、AMPA チャネルから来ると考えられる 0.15 の _raw_ 新しいシナプス レベルのコンダクタンスを注入しているためです。ただし、これらの AMPA チャネルは 5 ミリ秒、つまり 5 タイム ステップ間開いたままになるため、実質的にステップごとの入力の 5 倍、つまり $5 * 0.15 = 0.75$ が蓄積されます。
+
+{id="question_gi"}
+&gt; これで、[[#sim-neuron:Gi]] パラメーター 0.1 に関連して、プロット内の [[#sim-neuron:Test Cycle Plot/Gi]] の値を説明できるはずです (ヒント: GABA-A 阻害チャネルの減衰時定数は 7 ミリ秒です)。
+
+* `Ge` と `Gi` をオフにし、[[#sim-neuron:Test Cycle Plot/Inet]] をオンにすると、正味電流が興奮性電流、抑制性電流、リーク電流の合計として表示されます。特にスパイク中はその値がかなり大きいため、左軸上の他のものを圧倒してしまうことに注意してください。 Vm は右軸にプロットされているため、両方を同時に見ることができます。
+
+{id="question_inet"}
+&gt; Inet と Vm の関係について学んだことに基づいて、入力が最初にオンになったときと各スパイクの後に Vm が最初に上昇し、-50 mV のしきい値レベルに近づくにつれて Vm の変化が止まり、0 に戻るときに Inet が「スパイク」する理由を説明していただけますか。
+
+## 興奮と抑制のバランス
+
+綱引きモデルから、ニューロンに入る興奮の量を増加させると、膜電位がより早く閾値に到達できるようになるため発火率が増加し、逆に膜電位を減少させると発火率が低下すると予想されるはずです。さらに、リークまたは抑制性コンダクタンスが増加すると、特定のレベルの励起に対してより強く引っ張られ、閾値に到達するのが遅くなり、したがって発火速度が低下します。
+
+この直感的な動作は、ニューロンの動作方法について理解する必要があるものの本質です。
+
+* [[#sim-neuron:Ge]] 励起を 0.15 から 0.16 に増加します (その後、Init と Run を実行して効果を確認します)。次に、[[#sim-neuron:Gi]] 阻害を 0.1 から 0.11 に増加させた場合の効果を観察します。さらに進んで、阻害を 0.12 に増やします。
+
+{id="質問ゲギ"}
+&gt; Ge を 0.15 から 0.16 に増加させ、次に Gi を 0.1 から 0.11 に増加させた場合の、ニューラル スパイクの速度に対する定性的な影響を説明してください。
+
+{id="question_gi-hi"}
+&gt; Gi が 0.12 に増加すると、ニューラル スパイクに定性的な違いはありますか -- これにより、ニューロンの動作のどのような重要な側面が明らかになりますか?
+
+### 推進/逆転の可能性
+
+* Ge を 0.15 に、Gi を 0.1 に戻し、[[#sim-neuron:ErevE]] を 0 ではなく -2 に設定して実行します。驚くべきことに、この小さな変化は、興奮の駆動力を低下させることにより、ニューロンのスパイクを防ぎます。同様に、[[#sim-neuron:ErevI]] を -90 から -92 に下げるだけでスパイクを排除できます。
+
+## ノイズ
+
+実際のニューロンにおけるスパイクの重要な側面は、スパイク間のタイミングと間隔が非常にランダムになる可能性があり、一般に、特定のスパイク率で最も高い分散を持つポアソン分布に従います。ここの例のように、皮質のほとんどの興奮性ニューロンは、[[inhibition]] で取り上げられているメカニズムにより、厳密にバランスのとれた興奮と抑制を受けています。そのため、入力のタイミングや相対的な強さの比較的小さな違いでさえ、強い閾値非線形性が存在するため、神経反応に大きな違いをもたらす可能性があります。たとえば、上記のパラメーター操作は、比較的小さな変化によってスパイクが発生する場合とまったくスパイクされない場合の違いがどのように生じるかを示しました。
+
+ノイズの多い入力の母集団をシミュレートするために、使用するノイズ メカニズムは、特定の周波数 (スパイク レートの一般的な違いを反映して、励起に 100 Hz、抑制に 200 Hz) のポアソン分布から生成された離散的な興奮性コンダクタンスと抑制性コンダクタンスを追加します。
+
+* まず、[[#sim-neuron:Defaults]] を実行してデフォルトのパラメータに戻し、次に [[#sim-neuron:Noise]] パラメータを介してノイズの多いコンダクタンスの強度を設定します。0 ではなく 0.05 に設定し、Init を実行せずに Run を複数回実行します。
+
+スパイクのタイミングが実行ごとに大きく異なり、特に最初の数回のスパイクの後にプロットが埋まり始めることが観察されるはずです。これをより明確に確認するには、`Spike` のプロットのみに切り替えることができます。次に、`Ge` のプロットに切り替えて、興奮性コンダクタンスに追加されるノイズの大きさを確認します。違いをよりよく確認するには、Init を実行し、ノイズ 0 と 0.05 を比較してみてください。
+
+したがって、ニューラル スパイキングに含まれる非線形の正のフィードバック ループにより、比較的少量のノイズでもスパイク タイミングに大きな差が生じる可能性があります。ノイズ コンダクタンス レベルをさらに増加すると、実行全体でスパイク タイミングの分布をさらに均一 (つまり、非常に可変) にすることができます。
+
+## リンク
+
+[[Intro Book]] の次: [[Detector simulation]]
+
+</div>
+
+
+
+&lt;/section&gt;
+</sim-neuron>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>

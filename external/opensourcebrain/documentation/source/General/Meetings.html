@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenSourceBrain Documentation: イベント | マインドアップロード</title>
+<meta name="description" content="OpenSourceBrain/Documentation: source/General/Meetings.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">OpenSourceBrain 翻訳ページ</div>
+    <h1 class="title">OpenSourceBrain Documentation: イベント</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/OpenSourceBrain/Documentation/blob/main/source/General/Meetings.md" target="_blank" rel="noopener noreferrer">https://github.com/OpenSourceBrain/Documentation/blob/main/source/General/Meetings.md</a></p>
+  <p>ライセンス: CC BY 4.0。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><a id="meetings"></a>
+<a id="events"></a></p>
+  <h1 id="section">イベント</h1>
+
+  <p align="centre"><a href="http://www.opensourcebrain.org/docs/Help/Meetings#Sardinia_2013"><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/osbbanner.png" height="80" /></a>   
+<a href="http://www.opensourcebrain.org/docs/Help/Meetings#Hackathon_2013"><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/OSBHackathon1.png" height="80" /></a>    
+<a href="http://www.opensourcebrain.org/docs/Help/Meetings#OSB_2014"><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/OSBalghero.png" height="80" /></a>    
+<a href="http://www.opensourcebrain.org/docs/Help/Meetings#OSB_2015"><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/osb2015.png" height="80" /></a> </p>
+
+  <p align="centre">            <a href="http://www.opensourcebrain.org/docs/Help/Meetings#CNS_2015"><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/CNS2105_WS.png" height="80" /></a>   
+<a href="http://www.cnsorg.org/cns-2018-tutorials"><img src="https://raw.githubusercontent.com/NeuralEnsemble/NeuroinformaticsTutorial/master/Exercises/images/Logos.png" height="80" /></a>   
+<a href="http://www.opensourcebrain.org/docs/Help/Meetings#Neuroinformatics_2018"><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/osb2018.png" height="80" /></a> </p>
+
+  <p>OSB および NeuroML などの関連テクノロジーを促進するために、次のような多くの会議が開催されているか、計画されています。</p>
+
+  <ul>
+    <li><a href="https://www.neurodatashare.org/">ニューロデータシェア 2023</a>、2023 年 2 月 20 ～ 23 日に <a href="http://www.sainsburywellcome.org/">セインズベリー ウェルカム センター</a> で開催されるワークショップおよびハッカソン。</li>
+    <li><a href="/external/opensourcebrain/documentation/source/General/Meetings/CNS_2022.html#meetings:cns2022">チュートリアル</a> <a href="https://ocns.github.io/SoftwareWG/pages/software-wg-satellite-tutorials-at-cns-2022.html">CNS*2022 サテライト チュートリアル</a> で Open Source Brain v2 統合 Web リサーチ プラットフォームを紹介します。</li>
+    <li>2021 年 10 月: COMBINE 2021 会議での <a href="https://docs.neuroml.org/Events/202109-COMBINE.html">NeuroML 開発ワークショップ</a></li>
+    <li>2021 年 8 月: INCF トレーニングウィークでの <a href="https://docs.neuroml.org/Events/202108-INCF-Training-Week.html">NeuroML チュートリアル</a></li>
+    <li>2021 年 7 月: CNS*2021 での <a href="https://docs.neuroml.org/Events/202107-CNS2021.html">NeuroML チュートリアル</a></li>
+    <li>2021 年 3 月: HARMONY 2021 での <a href="https://docs.neuroml.org/Events/202103-Harmony.html">NeuroML ハッカソン</a>。</li>
+    <li><a href="https://neuralensemble.github.io/Networks_SIG/CNS2020">計算神経科学におけるモデルを開発および共有するためのツールとリソース</a> のオンライン <a href="https://www.cnsorg.org/cns-2020">CNS*2020</a> でのワークショップ。</li>
+    <li>2019 年 9 月、サルデーニャ島の <a href="/external/opensourcebrain/documentation/source/General/Meetings/OSB_2019.html#meetings:sardinia2019">OSB 2019</a></li>
+    <li><a href="/external/opensourcebrain/documentation/source/General/Meetings/Neuroinformatics_2018.html#meetings:neuroinformatics2018">ニューロインフォマティクス 2018</a> でのオープンソース ブレインに関するワークショップ</li>
+    <li><a href="http://www.cnsorg.org/cns-2018-tutorials">計算モデラー向けの神経情報学リソース</a> に関するチュートリアル (<a href="http://www.cnsorg.org/cns-2018">CNS 2018 シアトル</a> にある OSB および関連リソースを含む)</li>
+    <li><a href="/external/opensourcebrain/documentation/source/General/Meetings/CNS_2018.html#meetings:cns2018">大規模皮質ネットワークモデルの開発、標準化、共有</a> に関するワークショップ (<a href="http://www.cnsorg.org/cns-2018">CNS 2018 シアトル</a>)</li>
+    <li><a href="http://www.cnsorg.org/cns-2017-tutorials#t6">計算モデラー向けの神経情報学リソース</a> に関するチュートリアル (<a href="http://www.cnsorg.org/cns-2017">CNS 2017 アントワープ</a> にある OSB および関連リソースを含む)</li>
+    <li><a href="https://www.janelia.org/you-janelia/conferences/collaborative-development-data-driven-models-neural-systems">ニューラルシステムのデータ駆動型モデルの共同開発</a>: <a href="/external/opensourcebrain/documentation/source/General/Meetings/Janelia_Research_Campus_2016.html#meetings:janelia2016">OSBチーム</a> が主催する 2016 年 9 月のジャネリア リサーチ キャンパスでのカンファレンス</li>
+    <li><a href="/external/opensourcebrain/documentation/source/General/Meetings/CNS_2015.html#meetings:cns2015">計算神経科学におけるオープンなコラボレーション</a>: <a href="http://www.cnsorg.org/cns-2015-prague">CNS2015</a> でのワークショップ</li>
+    <li>2015 年 5 月、サルデーニャ島の <a href="/external/opensourcebrain/documentation/source/General/Meetings/OSB_2015.html#meetings:osb2015">OSB2015</a></li>
+    <li>2014年8月にライデンの<a href="/external/opensourcebrain/documentation/source/General/Meetings/Neuroinformatics_2014.html#meetings:neuroinformatics2014">ニューロインフォマティクス 2014</a>でOSBを特集した計算神経科学におけるオープンコラボレーションに関するワークショップ</li>
+    <li>2014 年 5 月、サルデーニャ島の <a href="/external/opensourcebrain/documentation/source/General/Meetings/OSB_2014.html#meetings:osb2014">OSB2014</a></li>
+    <li>2013 年 11 月、ロンドンでの <a href="/external/opensourcebrain/documentation/source/General/Meetings/Hackathon_2013.html#meetings:hackathon2013">ハッカソン2013</a></li>
+    <li><a href="/external/opensourcebrain/documentation/source/General/Meetings/Sardinia_2013.html#meetings:sardinia2013">サルデーニャ 2013</a> 2013 年 5 月の OSB キックオフ ミーティング</li>
+  </ul>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/opensourcebrain/documentation/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>

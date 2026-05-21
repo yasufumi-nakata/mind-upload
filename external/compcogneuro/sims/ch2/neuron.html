@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/sims: 時間の経過に伴うニューロン変数のプロット | マインドアップロード</title>
+<meta name="description" content="compcogneuro/sims: README.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/sims: 時間の経過に伴うニューロン変数のプロット</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch2/neuron/README.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/sims/blob/main/ch2/neuron/README.md</a></p>
+  <p>ライセンス: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><em><a href="https://compcogneuro.org/simulations">シミュレーションに戻る</a></em></p>
+
+  <p>＃ 導入</p>
+
+  <p>このシミュレーションは、興奮性と抑制性の影響 (リークとシナプス抑制を含む) のバランスを反映した、ニューラル スパイキングとレート コード活性化の基本特性を示しています。</p>
+
+  <p>このモデルでは、[[sim:Network]] は、興奮性電流が「注入」された単一のニューロンのみを示しています (神経科学者が単一のニューロンに電流を注入する電極で行うように)。  ツールバーの [[sim:Run cycles]] をクリックすると、アクティブ化されることがわかりますが、何が起こっているのかを実際に理解するには、[[sim:Test Cycle Plot]] に示されているように、複数の変数間の関係を確認する必要があります。 (README リンクをクリックすると、シミュレーション内の対応する場所が強調表示されます。)</p>
+
+  <h1 id="section">時間の経過に伴うニューロン変数のプロット</h1>
+
+  <p>※右パネルの「[[sim:Test Cycle Plot]]」タブをクリックすると、グラフビュー表示が表示されます。  [[sim:Run Cycles]] をまだ実行していない場合は、ここで実行して、デフォルトのパラメーターで実行した結果を確認してください。</p>
+
+  <p>ここでは興奮電流と漏れ電流のみが動作しており、そのコンダクタンス (Gbar E、Gbar L) はコントロール パネルに示されています。  そうすべきです
+X 軸上の 200 タイム ステップ (<em>サイクル</em>) にわたってプロットされたさまざまな線を参照してください。</p>
+
+  <p>ここでは、各変数の簡単な概要を示します。次に、それらを個別に説明します (グラフ化される内容を決定する方法とその構成方法の詳細については、を参照してください)。</p>
+
+  <ul>
+    <li>
+      <p>[[sim:Test Cycle Plot/Ge]] = ニューロンへの総興奮性入力コンダクタンス。これは通常、任意の時点で開いている興奮性シナプス入力チャネルの数 (<code>Ge(t)</code>) と、<code>Gbar E</code> で与えられるこれらの入力チャネルの全体的な強度の関数です。  この単純なモデルでは、<code>Ge(t)</code> はサイクル 10 の前に 0 から 10 ～ 160 で 1 になり、その後 0 に戻ります。 <code>Gbar E = .3</code> (デフォルト) であるため、正味値はサイクル 10 ～ 160 で 0.3 まで増加します。入力のタイミングは、<code>OnCycle</code> および <code>OffCycle</code> パラメータによって制御されます。</p>
+    </li>
+    <li>
+      <p>[[sim:Test Cycle Plot/Inet]] = 正味電流 (個々の励起電流と漏れ電流の合計)。興奮性入力がオンになると興奮性 (上向き) になり、活動電位スパイクが発生すると振動します。一般に、これは興奮性正味入力と一定リーク電流 (およびこのシミュレーションには存在しない抑制) の間の正味バランスを反映します。</p>
+    </li>
+    <li>
+      <p>[[sim:Test Cycle Plot/Vm]] = 膜電位。ニューロンへのすべての入力の統合を表します。これは静止電位 0.3 (= 生物学的単位で -70mV) で始まり、その後興奮性入力とともに増加します。ご覧のとおり、正味電流 (Inet) は、スパイク前に膜電位が上昇している間の膜電位の <em>変化率</em> を示しています。 Vm が約 0.5 を超えると、スパイクが発生し、Vm は 0.3 にリセットされ、サイクルが再度開始されます。</p>
+    </li>
+    <li>
+      <p>[[sim:Test Cycle Plot/Act]] = アクティベーション。これは、活性化の量 (発火率) を示します。デフォルトでは、モデルは離散スパイクに設定されているため、この値は、測定されたスパイク間間隔 (<em>ISI</em>) の移動平均から計算されます。  ISI が利用可能な唯一のポイントであるため、<em>2 番目</em>のスパイク後に最初に計算されます。  [[sim:sim-form/Spike]] 設定をオフにすると、Act 値が直接計算されます。</p>
+    </li>
+    <li>
+      <p>[[sim:Test Cycle Plot/Spike]] = 離散スパイク – ニューロンが離散スパイクを起動すると 1 になり、それ以外の場合は 0 になります。</p>
+    </li>
+    <li>
+      <p>[[sim:Test Cycle Plot/Gk]] = 適応を促進するナトリウム依存性カリウム (k) チャネルのコンダクタンス。このコンダクタンスはスパイク中に増加し、その間にいくらか減衰し、時間の経過とともに蓄積して、スパイクの速度を適応または時間の経過とともに遅くします。</p>
+    </li>
+  </ul>
+
+  <h1 id="section-1">スパイク動作</h1>
+
+  <p>実行したばかりのデフォルト パラメーターは、ニューロンのスパイク動作を示します。これは、適応指数関数 (<a href="https://compcogneuro.org/book">CCN教科書</a> を参照) または AdEx モデルの修正バージョンを実装しており、実際の皮質錐体ニューロンの発火動作を非常によく再現することが示されています。したがって、これは実際のニューロンの動作をよく表しています。ここでは、パラメーター操作の信頼性を高めるために、AdEx モデルの指数関数的な側面をオフにしています。膜電位 Vm が単純なしきい値 0.5 を超えると、スパイクがトリガーされます。 (対照的に、指数関数がアクティブになっている場合 ([[sim:Spike params]] で確認できます)、スパイクのトリガーは、この 0.5 閾値レベル付近での動的な指数関数的なプロセスとなり、スパイクを引き起こすナトリウム チャネルの強い非線形性を反映しています。)</p>
+
+  <p>最も広いレベルでは、膜電位が発火閾値を超えると周期的なスパイクが発火し、その後休止レベルにリセットされ、そこから再び上昇して、このプロセスを何度も繰り返すことがわかります。スパイク間の間隔 (<em>ISI</em> またはスパイク間間隔) によって指標化されたスパイクの全体的な速度を見ると、時間の経過とともに間隔が増加し、したがって速度が時間の経過とともに減少することがわかります。  これは、AdEx モデルの <strong>適応</strong> プロパティによるものです。スパイク レートは時間の経過とともに適応します。</p>
+
+  <p>綱引きモデルから、ニューロンに入る興奮の量を増加させると、膜電位がより早く閾値に到達できるようになるため発火率が増加し、逆に膜電位を減少させると発火率が低下すると予想されるはずです。さらに、リークまたは抑制性コンダクタンスが増加すると、特定のレベルの励起に対してより強く引っ張られ、閾値に到達するのが遅くなり、したがって発火速度が低下します。</p>
+
+  <p>この直感的な動作は、ニューロンの動作方法について理解する必要があるものの本質です。次に、実際に動作する様子を見てみましょう。</p>
+
+  <h1 id="section-2">パラメータの操作</h1>
+
+  <p>次に、コントロール パネルのいくつかのパラメーターを使用して、点ニューロン活性化関数のプロパティを調べます。</p>
+
+  <h2 id="section-3">興奮する</h2>
+
+  <p>まず、興奮性コンダクタンスの量を制御する <code>Gbar E</code> に焦点を当てます。一般に、ニューロンの膜電位が、そこに入ってくるさまざまな入力（ここでは興奮と漏洩のみ）のバランスをどのように反映するか、また、スパイク率が結果として生じる膜電位にどのように反応するかを見ることに興味があります。</p>
+
+  <ul>
+    <li>[[sim:Gbar E]] を 0.3 から 0.4 に増やします (その後、[[sim:Run Cycles]] を実行して効果を確認します)。次に、Gbar E を 0.2 まで減少させ、さらに 0.1 まで減少させた場合の影響を観察します。</li>
+  </ul>
+
+  <blockquote>
+    <p><strong>質問 2.1:</strong> 初期値の 0.3 と比較して、Gbar E を 0.4 に増加させた場合と、Gbar E を 0.2 に減少させた場合のニューラル スパイクの速度への影響を説明してください (これは簡単な答えになるはずです)。</p>
+  </blockquote>
+
+  <sim-question id="2.1">
+
+&gt; **質問 2.2:** Gbar E を 0.1 まで減少させた場合、より高い値と比較して、ニューラル スパイクに定性的な違いはありますか。これにより、ニューロンの動作のどのような重要な側面が明らかになりますか?
+
+<sim-question id="2.2">
+
+0.1 から 0.2 までの `Gbar E` のパラメーター範囲を体系的に検索することで、膜電位がちょうど閾値に達するポイントを特定できるはずです。
+
+&gt; **質問 2.3:** 小数点以下 2 桁 (例: 0.15) まで、ニューロンがしきい値をわずかに超える `Gbar E` の値はどれですか? (この値でスパイクが発生しますが、その下の次の値ではスパイクが発生しません)。
+
+<sim-question id="2.3">
+
+* 注: グラフ内の任意の点の上にマウスを置くと、その点の具体的な数値を確認できます。  どの変数が値とともに報告されているかが報告されます。
+
+&gt; **質問 2.4 (上級):** ニューロンの章の平衡膜電位の方程式の 1 つを使用して、スパイク閾値で Vm を平衡に保つために必要な興奮性入力コンダクタンスの正確な値を計算します。あなたの計算を見せてください。これは、片側に興奮性コンダクタンスを持つように方程式を再配置し、既知の値を代入することを意味します。 (注意: Gl は定数 = 0.3; 入力がオンのとき Ge は 1; ここでは抑制は存在しないので無視できます) -- これは経験的に決定された値と一致するはずです。
+
+<sim-question id="2.4">
+
+## 漏れ
+
+また、リーク電流のサイズを制御するリーク コンダクタンス の値を操作することもできます。これは、神経綱引きにおける興奮性コンダクタンスとは逆の方向に引っ張られることを思い出してください。
+
+* ツールバーの [[sim:toolbar/Defaults]] ボタンをクリックしてデフォルトのパラメータを復元し、[[sim:Gbar L]] パラメータを 0.1 単位 (.4、0.5、0.2 など) で操作し、ニューラル スパイキングへの影響を観察します。
+
+&gt; **質問 2.5:** Gbar L の値によって、ニューロンのスパイク (0.1 刻み) が阻止される -- この結果を、Gbar E 興奮性コンダクタンスと比較した綱引きモデルの観点から説明してください。
+
+<sim-question id="2.5">
+
+&gt; **質問 2.6 (上級):** 質問 2.4 と同じ手法を使用して、他のパラメーターのデフォルト値を使用してニューロンをスパイク閾値に正しく配置する Gbar L の値を直接解きます。計算を示してください。
+
+<sim-question id="2.6">
+
+## 推進/逆転の可能性
+
+* デフォルトのパラメータを復元するには、ツールバーの [[sim:Defaults]] をクリックします。次に、[[sim:Erev E]] パラメーターと [[sim:Erev L]] パラメーターを操作し、スパイク率に対するそれらの影響を観察します。
+
+`Erev E` を減少させると、興奮性入力による膜電位の引き上げが弱まるため、スパイク率が減少することがわかります。 `Erev L` を増やすと、リークのプルダウンが弱くなり、スパイクが大きくなります。
+
+# レートコード化されたアクティベーション
+
+次に、ニューロンの離散スパイク動作を連続レート コード化値で近似する方法を見ていきます。グラフの `Act` 線は、ISI の逆数に基づいて、この時点までの実際のスパイク率を追跡しています。  *Noisy X-over-X-plus-1* 活性化関数は、観察されたスパイク率を測定するだけでなく、ニューロンのレートコード活性化値を直接計算できます。ニューロンの章で説明したように、このレート コードのアクティブ化には、ニューラル シミュレーションで使用する場合にいくつかの利点 (およびいくつかの欠点) があり、私たちが通常使用するものです。
+
+* [[sim:Defaults]] をクリックしてデフォルトのパラメーターで開始し、次に [[sim:sim-form/Spike]] パラメーターをオフにし、上で説明したさまざまなパラメーター操作を使用して [[sim:Run Cycles]] をオフにします。
+
+グラフの Act ラインが上昇し、以前に観察された離散的なスパイク値がなくなり、順応によりゆっくりと減少していることがわかります。同様に、Vm 膜電位値もスパイク後にリセットされるのではなく、ゆっくりと上昇および低下します。
+
+&gt; **質問 2.7:** `Spike` = false の Gbar E = .2、.3、.4 のサイクル 160 (サイクル 155 など) の直前の `Act` 値と、同じ Gbar E 値の `Spike` = true の場合の対応する値を報告することにより、レート コード化されたアクティベーションとスパイク レートを比較します。正確な値を取得するには、`Act` 行の上にマウスを置きます。
+
+<sim-question id="2.7">
+
+`Act` 値が実際のスパイク レートを適切に追跡していることがわかり、*Noisy X-over-X-plus-1* が実際のニューラル スパイキング レートの妥当な近似値であることがわかります。
+
+* スパイクとレート コード関数をより体系的に比較するには、[[[sim:SpikeVsRate Plot]]] タブをクリックし、ツールバーの [[[sim:toolbar/Spike Vs Rate]]] ボタンをクリックします。これにより、`Gbar E` 値の範囲に対してこれら 2 つの関数が交互に実行され、結果が SpikeVsRate プロットにプロットされます。
+
+結果のグラフは、*ノイズ X-over-X-plus-1* レート コード アクティベーション ([[sim:SpikeVsRate Plot/Rate]] 線) と Y 軸の実際のスパイク レート ([[sim:SpikeVsRate Plot/Spike]]) に対してプロットされた X 軸の `Gbar E` 値を示します。これは、レート コード関数が、少なくとも実際のスパイク レートを把握する上で、スパイク レート関数の合理的な近似であることを示しています。ネットワーク自体の情報処理ダイナミクスの観点から見ると、離散スパイクは多くの点でレート コード モデルとは必然的に異なるため、この 2 つが同一であると想定すべきではありません。それにもかかわらず、レートコード近似を使用する実際的な利点は非常に大きいため、この近似を使用してより複雑な認知機能の理解に関する初期の進歩を遂げるリスクを受け入れることがよくあります。
+
+# ノイズ
+
+実際のニューロンにおけるスパイクの重要な側面は、全体的な発火速度は依然として予測可能であるにもかかわらず、スパイク間のタイミングと間隔が非常にランダムになる可能性があることです。これは、これまで使用されてきた単一の定数入力では明らかに明らかではなく、結果的に定期的に発火することになります。  ただし、ランダムに生成された値を正味入力に追加してノイズを導入すると、ニューラル発火のより現実的なレベルの変動が確認できます。この追加のノイズは、ノイズのある XX1 関数における XX1 関数とのノイズの畳み込みと同様の役割を果たすことに注意してください。ただし、ノイズのある XX1 の場合、ノイズの平均化された効果を組み込んだ決定論的な関数が存在しますが、ここでは実際にランダムな値自体を追加して、動作を確率的にしています。
+
+※ノイズジェネレータ（コントロールパネルの[[sim:Noise]]）の分散を0から0.2に変更し、[[sim:Run Cycles]]を実行します。 `Ge` ラインがノイズによって大幅に乱れていることがわかります。
+
+スパイクのタイミングがランダムであるかどうかを 1 回の実行から判断するのは難しい場合があります。ニューロンは一定の規則性を持って発火します。
+
+* [[sim:Run Cycles]] を数多く実行し、プロットの更新に伴うスパイクの変動の程度を観察します。
+
+この比較的高いレベルのノイズがあっても、スパイクのタイミングは完全に均一ではありません。スパイクは依然として比較的規則的な間隔でクラスターを形成します。 `Noise` を 0.5 まで増やすと、スパイクはより均一に分散されます。ただし、特定のスパイク タイミングの変動レベルが高くても、入力の最後に `Act` によって記録されるスパイクの全体的なレートはそれほど変化しないことに注意してください。したがって、レート コードは、正味入力全体を非常に堅牢に反映したものになります。
+
+脳 (またはシミュレートされたスパイキング ニューロンの大規模ネットワーク) では、特定のニューロンに入るさまざまな入力のスパイク発火のばらつきにより、正味の入力に大きなばらつきが生じます。脳内で測定されるように、スパイク発射の統計は *ポアソン* 分布によってよく捕捉されます。この分布はスパイクの平均率に等しい変動性を持ち、基本的に特定のスパイク率におけるノイズの最大レベルを反映します。ニューロンはノイズが多いです。
+
+# 適応
+
+皮質錐体ニューロンはスパイク速度適応の特性を示します。現在、コントロール パネルの [[sim:K na adapt]] パラメーターによってオンになる、ナトリウム依存性カリウム チャネル (K_na) に基づいた、元の AdEx モデルの形式よりも高度な形式の適応を使用しています。これをオンまたはオフにすることで、適応の基本的な効果を調べることができます。
+
+適応がなければスパイクは活動期間全体を通して完全に規則的ですが、適応すると速度は時間の経過とともに大幅に減少することがわかります。適応の利点の 1 つは、システム全体が入力の変化に対してより敏感になることです。最大の信号強度は新しい入力の開始時に存在し、その後、一定の入力に「慣れる」ようになります。これは、おそらくある時点ですでに処理されていると思われる一定の入力信号に対して、高速でスパイクを伝達し続ける必要がないため、より効率的でもあります。後で他のいくつかのシミュレーションで見るように、この適応により、さまざまな知覚現象や認知現象を説明することもできます。
+
+ソフトウェアをもう少し詳しく知りたい方へ: 適応効果をより極端にしたい場合は、Netview で「Ne​​uron」ラベルをクリックすると、ダイアログ ボックスが開きます。下にスクロールすると、`Gbar E` や `Gbar L` (コントロール パネルで変更した値と同じ値である必要があります) など、ニューロン層に関連付けられたさまざまなパラメーターが表示されます。ただし、コントロール パネルにない他のものも表示されます。適応の効果を高めるには、コンダクタンスとしての KNA 適応効果の大きさである `Gbar K` を増やすことができます。これをデフォルトの 1 からさらに大きな値 (10 など) に増やすと、より強力な適応効果が見られるはずです。
+
+
+
+
+
+&lt;/section&gt;
+</sim-question></sim-question></sim-question></sim-question></sim-question></sim-question></sim-question>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#section-3">興奮する</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

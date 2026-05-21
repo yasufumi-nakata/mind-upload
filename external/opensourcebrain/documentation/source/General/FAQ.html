@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenSourceBrain Documentation: よくある質問 (FAQ) | マインドアップロード</title>
+<meta name="description" content="OpenSourceBrain/Documentation: source/General/FAQ.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">OpenSourceBrain 翻訳ページ</div>
+    <h1 class="title">OpenSourceBrain Documentation: よくある質問 (FAQ)</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/OpenSourceBrain/Documentation/blob/main/source/General/FAQ.md" target="_blank" rel="noopener noreferrer">https://github.com/OpenSourceBrain/Documentation/blob/main/source/General/FAQ.md</a></p>
+  <p>ライセンス: CC BY 4.0。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><a id="faq"></a>
+<a id="frequently-asked-questions-faq"></a></p>
+  <h1 id="faq">よくある質問 (FAQ)</h1>
+
+  <p><a id="faq:motivation"></a>
+<a id="what-is-the-motivation-behind-the-open-source-brain-repository"></a></p>
+  <h2 id="brain-">オープンソース Brain リポジトリの背後にある動機は何ですか?</h2>
+
+  <p>調査対象のシステム (例: <a href="http://senselab.med.yale.edu/ModelDB/default.asp*">モデルDB</a>) の解剖学的および電気生理学的特性に関する最新データをカプセル化した、さまざまな脳領域からの詳細な単一ニューロンおよびネットワーク モデルの数が増えています。これらの複雑なモデルは開発に長い時間がかかり、通常は多くの互換性のないシミュレータ固有の形式のうちの 1 つでしか利用できません。</p>
+
+  <p>Open Source Brain リポジトリ (OSB) は、標準化された形式の詳細なニューロン モデルの公開リポジトリであり、新しい実験結果、最新のモデリング パラダイム、シミュレータ テクノロジの開発に合わせて進化する厳選された安定リリースが含まれます。バグの修正、新機能の追加、公開モデルのドキュメントの改善を通じて、誰でも OSB 上のモデルに貢献できます。</p>
+
+  <p>モデルは任意のシミュレータ形式で共同開発できますが、最終的な目的は、モジュール性、アクセシビリティ、シミュレータ間での移植性を確保し、ブラウザ内での視覚化、分析、シミュレーションを可能にするために、可能な限り多くのモデルを <a href="http://www.neuroml.org">ニューロML</a> や <a href="http://neuralensemble.org/PyNN">ぴんん</a> などのシミュレータに依存しない形式に変換することです。</p>
+
+  <p><img src="https://docs.neuroml.org/_static/logo.png" alt="NeuroML ロゴ" /></p>
+
+  <p><a id="which-version-of-osb-should-i-use"></a></p>
+  <h2 id="osb-">OSB のどのバージョンを使用すればよいですか?</h2>
+
+  <p>私たちは OSB プラットフォームのバージョン 2 を積極的に開発しています。さまざまなバージョンの機能については、<a href="/external/opensourcebrain/documentation/source/General/GettingStarted.html#getting_started_osb">ここ</a> を参照してください。</p>
+
+  <p><a id="faq:funding"></a>
+<a id="whos-behind-osb"></a></p>
+  <h2 id="osb--1">OSB の背後にいるのは誰ですか?</h2>
+
+  <p>このプロジェクトは、計算神経科学におけるモデルの共同開発を促進するために、<a href="http://www.wellcome.ac.uk">ようこそ</a> 資金提供プロジェクトの一環として、UCL の <a href="http://silverlab.org">シルバーラボ</a> で開始されました。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/wtlogo.png" alt="ようこそ" /></p>
+
+  <p>OSB プロジェクトの主任研究者は <a href="https://www.opensourcebrain.org/users/6">アンガス・シルバー</a> です。
+UCL のコア チームは現在、<a href="https://www.opensourcebrain.org/users/4">パドレイグ・グリーソン</a> (プロジェクト マネージャー) と <a href="https://www.opensourcebrain.org/users/434">アンクール・シンハ</a> で構成されています。
+UCL 在籍中に OSB に多大な貢献をしてくれた <a href="https://www.opensourcebrain.org/users/43">マッテオ・カンタレッリ</a>、<a href="https://www.opensourcebrain.org/users311">エイドリアン・キンタン</a>、<a href="https://www.opensourcebrain.orgusers/751">マット・アーンショー</a>、<a href="https://www.opensourcebrain.org/users/67">ボリス・マリン</a>、<a href="https://www.opensourcebrain.org/users/3">エウジェニオ・ピアジーニ</a>、および <a href="https://www.metacell.us/">メタセル</a> のチームに感謝します。</p>
+
+  <p>私たちは、Open Source Brain プラットフォームで利用可能なモデルとデータを開発、保守、提供してくださっている科学コミュニティに感謝しています。
+個々のリポジトリで個々のプロジェクトの貢献者を確認できます。</p>
+
+  <p>多くの国際的な研究グループや組織が Open Source Brain Initiative に積極的に参加しています。
+詳細については、<a href="https://www.opensourcebrain.org/about">ここ</a> を参照してください。</p>
+
+  <p><a id="faq:neuroinformatics"></a>
+<a id="how-is-this-related-to-other-neuroinformatics-initiatives"></a></p>
+  <h2 id="section">これは他の神経情報学の取り組みとどのように関連していますか?</h2>
+
+  <p>私たちは、神経情報学および計算神経科学に関する他のデータベースやリポジトリと緊密に連携することに非常に熱心です。
+これらの多くは、<a href="http://neuromorpho.org/neuroMorpho/index.jsp">NeuroMorpho.org</a> や他の多くのツールやリソースで使用されているような NeuroML の共通使用を通じて有効になります。
+<a href="http://neuralensemble.org">ニューラルアンサンブル</a> は、OSB 内のモデルのシミュレーションと分析において重要な役割を果たす多数のソフトウェア ツールをホストします。</p>
+
+  <p>また、オリジナルのモデル スクリプト用の <a href="http://senselab.med.yale.edu/modeldb">モデルDB</a> やモデル コンポーネントの定義用の <a href="https://www.opensourcebrain.org/projects/nifshowcase">NIF/ニューロレックス</a> などのデータベースへのディープ リンクも計画しています。</p>
+
+  <p>他のニューロインフォマティクス リソースとの対話の詳細については、<a href="http://www.opensourcebrain.org/projects/neuroinformatics/wiki/Wiki">ここ</a> を参照してください。</p>
+
+  <p>この取り組みへの貢献者の多くは、<a href="http://www.incf.org">INCF</a> のさまざまな国内ノードに関与しています。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/incf.png" alt="INCF" /></p>
+
+  <p><a id="faq:modeltypes"></a>
+<a id="what-types-of-models-can-be-developed"></a></p>
+  <h2 id="section-1">どのようなタイプのモデルを開発できますか?</h2>
+
+  <p>神経系における情報処理のモデルは、認知プロセスと意識の高レベル モデルからシナプスでの信号伝達の低レベル モデルに至るまで、さまざまなレベルで作成されます。
+短期から中期的には、<strong>OSB はスパイク ニューロン モデル</strong>、つまり、標的細胞上のシナプスにイベントを送信することで通信する個々のニューロンのネットワークに焦点を当てます。
+OSB で現在開発中のモデルのコア セットは、(多くの場合マルチコンパートメントの) ニューロンのコンダクタンス ベースのモデルです。
+このクラスのニューロン モデルは、チャネルとシナプスのモデル、または細胞全体のモデルが研究間で再利用されることが多く、モデル自体が複雑なソフトウェア エンティティであるため、共同開発に特に適しています。
+<a href="http://www.neuroml.org/introduction.php">NeuroML v1.x</a> はこのタイプのモデルに焦点を当てていましたが、<a href="http://www.neuroml.org/neuroml2.php">バージョン2.0</a> では、サポートがより抽象的なニューロン モデル (リーキー積分と発火、適応閾値モデルなど) に拡張されました。</p>
+
+  <p>モデル コンポーネントを NeuroML に変換することは、モデルの透明性とアクセシビリティを高め、複数のシミュレーターで使用できるようにするための重要なステップですが、モデルの移植性を支援するために他のクロスプラットフォーム テクノロジが使用されます。
+Python は計算神経科学で一般的に使用されるスクリプト言語であり、OSB モデルの多くのターゲット シミュレーターで採用されています。
+<a href="http://neuralensemble.org/PyNN">ぴんん</a> は、ニューロン ネットワーク モデルをシミュレータに依存せずに仕様化するための Python パッケージであり、複雑なネットワーク構造の手続き型仕様に役立ちます。
+シミュレーション実験記述マークアップ言語 (<a href="http://sed-ml.org/">SED-ML</a>) は、モデルのシミュレーションを実行するための設定を指定するために使用されます。
+OSB のモデル コンポーネントから計算生物学の他の構造化言語へのマッピング (<a href="http://www.sbml.org">SBML</a>、<a href="http://www.cellml.org/">CellML</a>、<a href="http://software.incf.org/software/nineml">ナインML</a> など) も必要に応じてサポートされます。</p>
+
+  <p><a id="faq:simulatorX"></a>
+<a id="my-models-only-available-in-simulator-x-not-neuromlpynn-can-i-still-share-it-on-osb"></a></p>
+  <h2 id="x-neuromlpynn--osb-">私のモデルはシミュレーター X でのみ利用可能であり、NeuroML/PyNN では利用できません。 OSB で共有できますか?</h2>
+
+  <p>はい！
+<strong>モデルが既に公開されている場合は、まず <a href="http://senselab.med.yale.edu/modeldb">モデルDB</a> に送信してください</strong>。
+OSB では、任意の形式のコードの最新バージョンを含むパブリック リポジトリを喜んで参照し、ModelDB 上のバージョンへのリンクを用意しています。
+ただし、OSB の高度な機能の一部は、モデル (の一部) が NeuroML に変換された場合にのみ利用可能になります。</p>
+
+  <p>あなたのモデルがまだ公開されていないものの、まだ公開されている場合 (よろしくお願いします。あなたは <a href="http://www.openworm.org">未来</a> です)、私たちはそれを喜んで入手しますが、公開で使用されているバージョンが ModelDB にアーカイブされていることを確認するようお願いします。</p>
+
+  <p><a id="faq:registration"></a>
+<a id="do-i-have-to-be-registered-for-accessing-osb-projects-and-tools"></a></p>
+  <h2 id="osb--2">OSB プロジェクトやツールにアクセスするには登録する必要がありますか?</h2>
+
+  <p>いいえ。
+OSB プロジェクトを参照し、ほとんどの OSB ツールを使用できます。
+ただし、独自のプロジェクトを作成したい場合は、サインアップする必要があります。
+また、OSB インターフェイスを介して独自のシミュレーションを実行および再生するための新機能は、ログインしたユーザーのみが利用できます。</p>
+
+  <p><a id="faq:license"></a>
+<a id="what-is-the-licenceterms-of-use-for-models-on-osb"></a></p>
+  <h2 id="osb--3">OSB 上のモデルのライセンス/使用条件は何ですか?</h2>
+
+  <p>OSB 上のモデルのすべてのスクリプトは自律リポジトリ (GitHub など) に存在するため、各リポジトリには独自のライセンス情報を含めることができます (また、含めるべきです)。
+残念ながら、これは OSB 上のほとんどのリポジトリには当てはまりません (これは科学ソフトウェア開発においてより広範な問題です)。
+それにもかかわらず、ヒントはタイトルにあります…<strong>オープンソース</strong> Brain にモデルを配置するユーザーは、おそらくそれを広く使用して再利用してもらいたいと考えています。
+ただし、疑問があり、確実に確認したい場合は、問題のリポジトリで問題をオープンし (または <a href="mailto:info@opensourcebrain.org">info@opensourcebrain.org</a> にメールで)、リポジトリにライセンス情報を追加するようリクエストしてください。</p>
+
+  <p>ただし、黄金律を忘れないでください (科学者にとってソフトウェア ライセンスよりも重要です…): <strong>モデルを使用する場合は、そのモデルについて説明している元の出版物を参照してください</strong>。
+OSB リポジトリに引用したい元のモデルからの大幅な変更がある場合、モデルの特定のバージョンの DOI/リファレンスを生成できます (例: <a href="https://zenodo.org/communities/opensourcebrain/?page=1&amp;size=20">ここ</a>)。</p>
+
+  <p><a id="faq:contribute"></a>
+<a id="how-can-i-contribute"></a></p>
+  <h2 id="section-2">どうすれば貢献できるでしょうか?</h2>
+
+  <p>この取り組みにご協力いただける方からのご連絡をお待ちしております。
+私たちは特に、計算神経科学のモデラーやソフトウェア開発者に参加してもらいたいと考えています。</p>
+
+  <p><strong>OSB (および関連する NeuroML ツール) には、ボランティアの助けを必要とするプロジェクトの中心的なリストがあります。 <a href="#contribute">詳細はこのページ</a> を参照してください。</strong></p>
+
+  <p>プロジェクトまたは <a href="/external/opensourcebrain/documentation/source/General/Contacts.html#contact">連絡する</a> をフォローするすべての方法を確認してください。</p>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/opensourcebrain/documentation/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#brain-">オープンソース Brain リポジトリの背後にある動機は何ですか?</a></li>
+<li class="toc-h2"><a href="#osb-">OSB のどのバージョンを使用すればよいですか?</a></li>
+<li class="toc-h2"><a href="#osb--1">OSB の背後にいるのは誰ですか?</a></li>
+<li class="toc-h2"><a href="#section">これは他の神経情報学の取り組みとどのように関連していますか?</a></li>
+<li class="toc-h2"><a href="#section-1">どのようなタイプのモデルを開発できますか?</a></li>
+<li class="toc-h2"><a href="#x-neuromlpynn--osb-">私のモデルはシミュレーター X でのみ利用可能であり、NeuroML/PyNN では利用できません。 OSB で共有できますか?</a></li>
+<li class="toc-h2"><a href="#osb--2">OSB プロジェクトやツールにアクセスするには登録する必要がありますか?</a></li>
+<li class="toc-h2"><a href="#osb--3">OSB 上のモデルのライセンス/使用条件は何ですか?</a></li>
+<li class="toc-h2"><a href="#section-2">どうすれば貢献できるでしょうか?</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

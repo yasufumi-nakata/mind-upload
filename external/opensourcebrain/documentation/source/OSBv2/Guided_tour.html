@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenSourceBrain Documentation: OSBv2 のガイド付きツアー | マインドアップロード</title>
+<meta name="description" content="OpenSourceBrain/Documentation: source/OSBv2/Guided_tour.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">OpenSourceBrain 翻訳ページ</div>
+    <h1 class="title">OpenSourceBrain Documentation: OSBv2 のガイド付きツアー</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/OpenSourceBrain/Documentation/blob/main/source/OSBv2/Guided_tour.md" target="_blank" rel="noopener noreferrer">https://github.com/OpenSourceBrain/Documentation/blob/main/source/OSBv2/Guided_tour.md</a></p>
+  <p>ライセンス: CC BY 4.0。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><a id="osbv2:guidedtour"></a>
+<a id="guided-tour-of-osbv2"></a></p>
+  <h1 id="osbv2-">OSBv2 のガイド付きツアー</h1>
+
+  <p>このガイドでは、<a href="https://www.v2.opensourcebrain.org/repositories/38">OSBv2 ショーケース リポジトリ</a> の内容を使用して、OSBv2 プラットフォームの主な機能を簡単に説明します。</p>
+
+  <table>
+<tr>
+<td style="padding: 10px"><a href="#create-a-new-workspace"><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT1.png" height="170" title="ワークスペースを作成する" /></a>&nbsp;&nbsp;</td>
+<td style="padding: 10px"><a href="#explore-nwb-datasets"><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT20.png" height="170" title="NWB エクスプローラー" /></a></td>
+</tr>
+<tr>
+<td style="padding: 10px"><p align="centre"><a href="#create-a-network-simulation-using-netpyne"><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT34.png" height="180" title="NetPyNE" /></a></p></td>
+<td style="padding: 10px"><p align="centre"><a href="#open-notebooks-in-jupyterlab"><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT41a.png" height="180" title="ジュピターラボ" /></a></p></td>
+</tr>
+</table>
+
+  <p><a id="osbv2:guidedtour:register"></a>
+<a id="1-register-sign-in-to-osbv2"></a>
+<a id="register-sign-in-to-osbv2"></a></p>
+  <h2 id="osbv2--1">1) OSBv2 に登録してサインインする</h2>
+
+  <p>以下で説明するワークスペースを作成して開くには、OSBv2 アカウントが必要です (OSBv1 のユーザー名/パスワードは機能しません)。無料の OSBv2 ユーザー アカウントに登録するには、<a href="https://www.v2.opensourcebrain.org/register">ここ</a> または <a href="https://v2.opensourcebrain.org">OSBv2に向かう</a> をクリックし、右上隅にある [サインイン] をクリックします。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT0.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>OSBv2 に登録</em></p>
+
+  <p>OSBv2 ユーザー アカウント (ファイル ストレージ、クォータなど) の詳細については、<a href="/external/opensourcebrain/documentation/source/OSBv2/User_Accounts.html#osbv2:useraccounts">ここ</a> を参照してください。</p>
+
+  <p><a id="osbv2:guidedtour:createworkspace"></a>
+<a id="2-create-a-new-workspace"></a>
+<a id="create-a-new-workspace"></a></p>
+  <h2 id="section">2) 新しいワークスペースを作成する</h2>
+
+  <p>ここで、OSBv2 <a href="/external/opensourcebrain/documentation/source/OSBv2/Applications.html#osbv2:applications">アプリケーション</a> で表示および分析できるファイルを保持する <a href="/external/opensourcebrain/documentation/source/OSBv2/Workspaces.html#osbv2:workspaces">ワークスペース</a> を作成します。</p>
+
+  <p>このワークスペースは、OSBv2 でサポートされる多数のファイル タイプを含む <a href="/external/opensourcebrain/documentation/source/OSBv2/Repositories.html#osbv2:repositories">リポジトリ</a>、<strong>OSBv2 ショーケース</strong> のコピーになります。</p>
+
+  <p>このリポジトリの現在の内容を確認するには、https://www.v2.opensourcebrain.org/repositories/38 のリポジトリ ページに移動します。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT1.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em><a href="https://www.v2.opensourcebrain.org/repositories/38">OSBv2 ショーケース</a> リポジトリから新しいワークスペースを作成します</em></p>
+
+  <p>ご覧のとおり、GitHub 上のファイルのソースへのリンク、https://github.com/OpenSourceBrain/OSBv2_Showcase. があります。GitHub への追加/変更は、OSB リポジトリ ページのビューに反映されます。</p>
+
+  <p>新しいワークスペースを作成するには、青いボタン「<strong>CREATE NEW WORKSPACE</strong>」をクリックします。表示されるダイアログでは、ワークスペースに関連付けるタイトルやタグなどを設定して、見つけやすくします。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT2.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>ワークスペース作成ダイアログ</em></p>
+
+  <p>作成後、<strong>ワークスペースに移動</strong>するオプションが表示されます。ここに移動すると、ワークスペースのビューが表示され、右上隅に続行方法に関する多くのオプションが表示されます。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT3.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>ワークスペースを開くためのオプションは右上隅にあります</em></p>
+
+  <p><a id="osbv2:guidedtour:nwbe"></a>
+<a id="3-explore-nwb-datasets"></a>
+<a id="explore-nwb-datasets"></a></p>
+  <h2 id="nwb-">3) NWB データセットを探索する</h2>
+
+  <p>ドロップダウン メニューで <strong>NWB Explorer で開く</strong> を選択し、青いボタンをクリックします。 <a href="/external/opensourcebrain/documentation/source/OSBv2/NWBE.html#osbv2:applications:nwbe">NWB エクスプローラー</a> インターフェイスが開きます。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT20.png" alt="ガイド付きツアー..." /></p>
+
+  <p>*NWB Explorer のメイン インターフェイス。左側の <strong>リソース パネル</strong> (NWB ファイルのリストなど) は、パネルの下部にある矢印 (<strong>&gt;</strong>、<strong>&lt;</strong>) で開閉できることに注意してください。
+左側の列には、既知のタイプのファイル (NWB ファイル、Python ノートブックなど) がリストされています。この列で <strong>LanoreEtAl2019.nwb</strong> を選択すると、その NWB ファイルが NWB Explorer インターフェイスにロードされます。</p>
+
+  <p>この <a href="https://www.biorxiv.org/content/10.1101/567172v1">データセット</a> には、小脳からのゴルジ細胞の電気生理学的記録が含まれています。以下の左側の列には、NWB ファイルのメタデータから抽出されたデータ セットに関する一般情報が表示されます。この研究では、さまざまな条件下でのスパイク挙動を調べた: 1) 薬物ノルエピネフリンの適用前、2) 薬物の適用後、3) 脳スライスから薬物を洗い流した後。右上のパネル <strong>取得</strong> は、これらの条件下で取得されたデータ、膜電位トレースを示します。右上のテキスト ボックスに <em>Prior</em> と入力すると、薬剤を適用する前のトレースのみが選択されます。個々のトレースの 1 つの横にある目 (👁) を押すと、そのトレースがプロットされ、下部にある「41 件の一致結果」のアイコンを押すと、これらすべてが 1 つの図にプロットされます。これらのトライアル中に注入された電流の同様のトレースは、<strong>刺激</strong>で見つけることができます。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT21.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>Lanore らの NWB Explorer ビュー。 2019 年のデータセット。</em></p>
+
+  <p><a id="osbv2:guidedtour:netpyne"></a>
+<a id="4-create-a-network-simulation-using-netpyne"></a>
+<a id="create-a-network-simulation-using-netpyne"></a></p>
+  <h2 id="netpyne--">4) NetPyNE を使用してネットワーク シミュレーションを作成する</h2>
+
+  <p>次に、NetPyNE で同じワークスペースを開きます。これを行うには、ホームページに戻って (左上隅の OSB ロゴをクリックするなど) ワークスペース ページへのリンクを見つけるか、別のアプリケーションで開いているワークスペースから、左側の [リソース] パネルの上部にある 3 つの点 (<strong>…</strong>) をクリックし、[NetPyNE で開く] を選択します。</p>
+
+  <p>NetPyNE が開いた後、以下のインターフェイスが表示されるはずです。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT31.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>モデルがロード/作成される前の NetPyNE インターフェイス。</em></p>
+
+  <p>OSBv2 リポジトリには、簡単なネットワークの例が含まれています。これを開くには、メニュー項目 *[ファイル] -&gt; [開く…] を選択し、<code>/home/jovyan/netpyne/workspace/OSBv2 Showcase/main/NetPyNE/HHTut/HHTut_data.json</code> にある JSON ファイルを見つけます (または、このパスをダイアログの上部のテキスト フィールドに貼り付けます)。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT32.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>JSON ファイルを読み込みます。</em></p>
+
+  <p>モデルがロードされた後、設定を調べることができます。 <strong>Populations</strong> タブをクリックし、次に <strong>PYR</strong> をクリックすると、これが 20 個のセルの母集団であることがわかります。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT33.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>現在の人口を表示します。</em></p>
+
+  <p>次に、3D で表示してみます (右上の <strong>CREATE NETWORK</strong> をクリック)。下の左側のビューが表示されます。</p>
+
+  <p>ネットワークを実行することもできます (右上の <strong>SIMULATE</strong> をクリックします)。記録された膜トレースの 1 つを表示するには、左側の <strong>細胞トレース</strong> のアイコンを押すと、右側のプロットが表示されます。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT34.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>モデルの作成とシミュレーション後。</em></p>
+
+  <p><a id="osbv2:guidedtour:jupyter"></a>
+<a id="5-open-notebooks-in-jupyterlab"></a>
+<a id="open-notebooks-in-jupyterlab"></a></p>
+  <h2 id="jupyterlab-">5) JupyterLab でノートブックを開く</h2>
+
+  <p><a id="5a-nwb-data-loading"></a>
+<a id="nwb-data-loading"></a></p>
+  <h3 id="a-nwb-">5a) NWB データのロード</h3>
+
+  <p>次に、<a href="/external/opensourcebrain/documentation/source/OSBv2/JupyterLab.html#osbv2:applications:jupyterlab">ジュピターラボ</a> で同じワークスペースを開きます (もう一度 3 つの点 (<strong>…</strong>) をクリックするか、ホームページに移動します)。</p>
+
+  <p>以下に示すように、左側には <strong>ファイル ブラウザ</strong> があり、<a href="https://github.com/OpenSourceBrain/OSBv2_Showcase">OSBv2 ショーケース GitHub リポジトリ</a> からコピーされたすべてのファイルが含まれています。右側には <strong>ランチャー</strong> があり、さまざまなタイプの新しいファイルを作成したり、<strong>ターミナル</strong>を開いてシェル コマンドを入力したりできます。 <strong>+</strong> の付いた大きな青いボタンを押すと、いつでも新しいランチャーを作成できます。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT41.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em><a href="/external/opensourcebrain/documentation/source/OSBv2/JupyterLab.html#osbv2:applications:jupyterlab">ジュピターラボ</a>のメインインターフェイス</em></p>
+
+  <p>以下の画像は、JupyterLab でサポートされているインターフェイスとファイルの種類の一部を示しています。 4 つのパネルの左上はコマンドとスクリプトを実行するためのコマンド ライン <strong>ターミナル</strong>、右上は <strong>Markdown ファイル</strong> (テキスト エディターで変更することもできます) のプレビュー、左下は <strong>Python スクリプト</strong>、右下は <strong>JSON ファイル</strong>です。また、JupyterLab インターフェイスの軽量バージョンも示しています。メニューからアクセスできます: <em>設定 -&gt; テーマ -&gt; JupyterLab Light</em>。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT41a.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em><a href="/external/opensourcebrain/documentation/source/OSBv2/JupyterLab.html#osbv2:applications:jupyterlab">ジュピターラボ</a> (ライト テーマ) のインターフェイス。ターミナルを表示し、Markdown ファイルと JSON ファイル、および Python スクリプトを表示します。</em></p>
+
+  <p><code>OSBv2 Showcase/main/notebooks</code> に移動し、<code>LoadNWBData.ipynb</code> をダブルクリックします。これにより、NWB エクスプローラーで以前に視覚化された NWB ファイル <strong>LanoreEtAl2019.nwb</strong> の内容をプログラムで読み取るために使用されるノートブックが開きます。 <a href="https://pynwb.readthedocs.io/en/stable/">pyNWB</a> を使用してファイルをロードし、「コントロール」に一致する <code>nwbfile.acquisition</code> 内のエントリ、つまり薬物を適用する前の記録を選択し、これらをプロットします。</p>
+
+  <p>ノートブックを再実行するには、ノートブック パネルのアイコン バーにある二重矢印 (▶▶) (<strong>コード</strong> の左側) を押します。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT42.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>NWBデータをロードするためのノート</em></p>
+
+  <p><a id="5b-netpyne-simulation-results-loading"></a>
+<a id="netpyne-simulation-results-loading"></a></p>
+  <h3 id="b-netpyne-">5b) NetPyNE シミュレーション結果の読み込み</h3>
+
+  <p>再度、ディレクトリ <code>OSBv2 Showcase/main/notebooks</code> で <code>LoadNetPyNEData.ipynb</code> を開きます。これにより、上記の NetPyNE シミュレーションの実行時に生成されたファイル (ディレクトリ <code>../NetPyNE/HHTut/HHTut_data.json</code> 内) が検索され、そこから保存された膜電位トレースが抽出されます。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT44.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>NetPyNE データをロードするためのノートブック</em></p>
+
+  <p><a id="osbv2:guidedtour:simulators"></a>
+<a id="6-run-simulator-scripts-in-jupyterlab"></a>
+<a id="run-simulator-scripts-in-jupyterlab"></a></p>
+  <h2 id="jupyterlab--">6) JupyterLab でシミュレーター スクリプトを実行する</h2>
+
+  <p><a id="6a-run-netpyne-scripts"></a>
+<a id="run-netpyne-scripts"></a></p>
+  <h3 id="a-netpyne-">6a) NetPyNE スクリプトを実行する</h3>
+
+  <p>次に、ターミナルでいくつかのシミュレーター スクリプトを実行してみます。ランチャー (<strong>+</strong> の付いた大きな青いボタン) からターミナルを開き、<code>cd</code> から <code>/opt/workspace/OSBv2 Showcase/main/NetPyNE/HHTut</code> を開きます。 <code>python HHTut_run.py</code> と入力して、<em>グラフィカル インターフェイスで実行したのと同じシミュレーション</em> を実行します。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT61.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>ターミナルでの NetPyNE シミュレーションの実行</em></p>
+
+  <p><a id="6a-run-brian-eden-scripts"></a>
+<a id="run-brian-eden-scripts"></a></p>
+  <h3 id="a-brianeden-">6a) Brian、EDEN、… スクリプトを実行します。</h3>
+
+  <p>OSBv2 にプリインストールされている他のシミュレーター用の多数のスクリプトは、<code>/opt/workspace/OSBv2 Showcase/main/simulators</code> にあります。ターミナルのこの場所に移動し、これらを実行してみてください。 <code>brian2_example.py</code>。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT63.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>ターミナルでの Brian シミュレーションの実行</em></p>
+
+  <p>含まれている別の例では、Arbor で単純なネットワークを作成する方法を示しています。</p>
+
+  <p><img src="https://raw.githubusercontent.com/OpenSourceBrain/Documentation/main/source/images/GT64.png" alt="ガイド付きツアー..." /></p>
+
+  <p><em>ノートブックで Arbor シミュレーションを実行</em></p>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/opensourcebrain/documentation/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+    <div class="toc-section">
+  <h2>ページ内</h2>
+  <ul>
+    <li class="toc-h2"><a href="#osbv2--1">1) OSBv2 に登録してサインインする</a></li>
+<li class="toc-h2"><a href="#section">2) 新しいワークスペースを作成する</a></li>
+<li class="toc-h2"><a href="#nwb-">3) NWB データセットを探索する</a></li>
+<li class="toc-h2"><a href="#netpyne--">4) NetPyNE を使用してネットワーク シミュレーションを作成する</a></li>
+<li class="toc-h2"><a href="#jupyterlab-">5) JupyterLab でノートブックを開く</a></li>
+<li class="toc-h3"><a href="#a-nwb-">5a) NWB データのロード</a></li>
+<li class="toc-h3"><a href="#b-netpyne-">5b) NetPyNE シミュレーション結果の読み込み</a></li>
+<li class="toc-h2"><a href="#jupyterlab--">6) JupyterLab でシミュレーター スクリプトを実行する</a></li>
+<li class="toc-h3"><a href="#a-netpyne-">6a) NetPyNE スクリプトを実行する</a></li>
+<li class="toc-h3"><a href="#a-brianeden-">6a) Brian、EDEN、… スクリプトを実行します。</a></li>
+  </ul>
+</div>
+
+  </aside>
+</div>
+</body>
+</html>

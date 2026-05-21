@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro/sims: ネットワークと入力パターン | マインドアップロード</title>
+<meta name="description" content="compcogneuro/sims: README.md の日本語訳">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro/sims: ネットワークと入力パターン</h1>
+    <p class="description">このページは外部資料の日本語訳です。原文の見出し順と本文順を保ち、コード・URL・出典表記はできるだけ原形のまま残しています。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳資料</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+<div class="meta-card"><strong>対象</strong><p>外部資料を日本語で原文順に読みたい読者</p></div>
+<div class="meta-card"><strong>目安</strong><p>原文量に依存</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>機械翻訳をベースにした日本語訳です。実装手順や引用は必ず原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="note-box">
+  <p><strong>出典とライセンス</strong></p>
+  <p>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch2/detector/README.md" target="_blank" rel="noopener noreferrer">https://github.com/compcogneuro/sims/blob/main/ch2/detector/README.md</a></p>
+  <p>ライセンス: BSD 3-Clause。このページは日本語翻訳であり、変更点は翻訳とサイト内整形です。</p>
+</div>
+
+<section class="section translated-source">
+  <p><em><a href="https://compcogneuro.org/simulations">シミュレーションに戻る</a></em></p>
+
+  <p>＃ 導入</p>
+
+  <p>このシミュレーションでは、個々のニューロンがどのように検出器のように機能し、入力から特定のパターンを選択し、シナプスの重みと入力アクティビティ パターンの一致に対してさまざまな程度の選択性で応答するかを示します。</p>
+
+  <p>重みの特定のパターンにより、シミュレートされたニューロンが他の入力パターンよりも一部の入力パターンにどのように反応するかを見ていきます。ニューロンの興奮性のレベルを調整することで、ニューロンがその重みに最も適合するパターンにのみ反応するようにしたり、より段階的にその重みパターンに近い他のパターンに反応したりすることができます。これにより、点ニューロン活性化関数がなぜそのように機能するのかについての洞察が得られます。</p>
+
+  <h1 id="section">ネットワークと入力パターン</h1>
+
+  <p>まず、[[[sim:Network]]] タブを調べて、Detector ネットワークを表示します。ネットワークには、さまざまな数字の形の活性化パターンを持つ <code>Input</code> 層があり、これらの入力ニューロンは、一連の重み付けされたシナプス接続を介して受信ニューロン (<code>RecvNeuron</code>) に接続されます。この受信ユニットが入力から持つ重み (シナプスの強さ) のパターンを確認することができ、このユニットが何を検出するかについてのアイデアが得られるはずです。</p>
+
+  <ul>
+    <li>[ネットワーク] ビューの左側にあるネットワーク変数のリストの上部にある [[[sim:Wts]]] タブを選択し、表示する値として [[[sim:r.Wt]]] をクリックし、次に sim:RecvNeuron をクリックして受信重みを表示します。</li>
+  </ul>
+
+  <p><code>Input</code> グリッドが <code>8</code> のパターンで点灯しているのがわかります。入力ユニットからの接続に対する受信ユニットの重みパターンであり、対応する送信（入力）ユニットに重み値が表示されます。したがって、入力ユニットがこの重みパターンと一致する起動パターンを持っている場合、受信ユニットは最大限に起動されます。ターゲットの <code>8</code> 入力に近い入力パターンは、その近さに応じて段階的なアクティベーションを生成します。したがって、後で説明するように、この重みのパターンによってユニットが何を検出するかが決まります。まず、ネットワークに提示される入力のパターンを調べます。</p>
+
+  <ul>
+    <li>ウィンドウの左側にある [[sim:Digits]] ボタン (<code>Patterns</code> ラベルの隣) をクリックします。この <em>コントロール パネル</em> には、このモデルの主な設定が含まれています。</li>
+  </ul>
+
+  <p>表示されるディスプレイには、<code>Input</code> 層に提示される (「クランプ」される) さまざまな * 入力パターン * がすべて表示されるため、受信ユニットがどのように応答するかを確認できます。表示の各行は、ネットワークに提示される単一の <em>トライアル</em> を表します。ご覧のとおり、この場合の入力データには 0 から 9 までの数字が含まれており、5x7 のピクセル (画素) グリッド上の単純なフォントで表されます。特定のイベント (数字) の各ピクセルは、ネットワーク内の対応する入力ユニットを駆動します。</p>
+
+  <h1 id="section-1">ネットワークの実行</h1>
+
+  <p>受信ニューロンがこれらの入力パターンに応答することを確認するために、それらを 1 つずつ提示し、重みを与えられた場合にニューロンが応答する理由を判断します。したがって、ネットワーク ウィンドウでアクティベーションを再度表示する必要があります。</p>
+
+  <ul>
+    <li><code>Network</code> で [[sim:Act]]/<code>Act</code> を選択してアクティベーションを表示し、ウィンドウ上部のツールバーにある [[sim:Step]] ボタンをクリックします。これにより、示されているように <code>Trial</code> が 1 ステップ実行されます。</li>
+  </ul>
+
+  <p>これにより、<code>Input</code> の <code>0</code> (ゼロ) のパターンがアクティブになり、点ニューロン活性化関数に従って受信ユニットの活性化が一連の <strong>サイクル</strong>にわたって繰り返し更新される <strong>セトリング</strong> プロセスの 20 サイクルが示されます (<code>neuron</code> シミュレーションのユニットが時間の経過とともに更新されたのと同様です)。  受信ニューロンが入力に完全に応答するのに十分な時間として 20 サイクルを選択しました。</p>
+
+  <p>受信ユニットは、<code>0</code> 入力パターンによってしきい値を超えてアクティブ化されなかったため、アクティビティ値 0 を示しました。  ユニットがこのように応答した理由の核心に入る前に、残りの桁に進み、他の入力にどのように応答するかを観察してみましょう。</p>
+
+  <ul>
+    <li>番号 <code>8</code> が表示されるまで、他の各桁に対して [[sim:Step]] を押します。</li>
+  </ul>
+
+  <p><code>8</code> という数字が提示されたときに受信ユニットが最終的にアクティブになり、他のすべての数字についてはゼロがアクティブになることがわかるはずです。したがって、予想通り、受信ユニットは <code>8</code> 検出器のように動作します。入力が入力重みと完全に一致する場合にのみ、受信ニューロンを発火閾値を超えて駆動するのに十分な興奮性入力が得られます。</p>
+
+  <ul>
+    <li>
+      <p><code>Network</code> の下部にある時間ラベルの後にある「VCR」スタイル ボタンを使用して、更新の各サイクルを確認し、時間の経過に伴うアクティベーションの進行を確認できます。</p>
+    </li>
+    <li>
+      <p>先に進み、もう 1 回 [[sim:Step]] を実行して、<code>9</code> で何が起こるかを確認してください。</p>
+    </li>
+  </ul>
+
+  <p>グラフを使用して、さまざまな入力パターンにわたる受信ユニットのアクティブ化のパターンを表示できます。</p>
+
+  <p>※「[[sim:Test Trial Plot]]」タブをクリックします。</p>
+
+  <p>グラフは、ユニットのアクティベーション (<code>Act</code>) を X 軸に沿ったトライアル (および桁) 番号の関数として示します。 8 の位置に 1 つのピークがある平らな線が表示されるはずです。</p>
+
+  <h1 id="ge-">興奮性コンダクタンスの計算 <code>Ge</code> (ネット入力)</h1>
+
+  <p>ここで、なぜユニットがそのように反応するのかを正確に理解してみましょう。そのための鍵は、重みのパターンと入力パターンの関係を理解することです。</p>
+
+  <ul>
+    <li>ネットワークの [[sim:Wts]]/<code>r.Wt</code> 表示に戻り、(ウィンドウが閉じている場合は) [[sim:Digits]] ボタンを再度クリックし、重みも表示されていることを確認します。  アイデアは、重みを数字パターンと比較することです。</li>
+  </ul>
+
+  <blockquote>
+    <p><strong>質問 2.8:</strong> 各桁パターンについて、ネットワークの <code>r.Wt</code> ビューに表示される <code>8</code> 桁パターンに従って、重みが 1 であるパターン内のアクティブなユニットの数を報告してください。  言い換えれば、数字の入力アクティビティと重みパターンの間の <em>重複</em> を報告します。</p>
+  </blockquote>
+
+  <sim-question id="2.8">
+
+計算したばかりの重み 1 を持つ入力の数は、受信ユニットに入る総興奮性入力 `Ge` (**正味入力**とも呼ばれます) に対応する必要があります。これは、送信活性化の平均 `Act` とすべてのユニットの重み `Wt` を掛けた関数であり、層内の予想される活動レベルの補正係数が含まれます。 `Alpha`:
+
+```
+Ge = (1 / Alpha) * [Sum(Act * Wt) / N]
+```
+
+You can click on [[sim:Act]]/`Ge` in the `Network` to see these values as you step through the inputs.
+
+* Do `Init` and `Step` to see the `0` input again.  If you hover over the RecvUnit with your mouse, you should see it has a value of `Ge = .3352..`.  To apply the above equation, you should have observed that `0` has 6 units in common with `8`, and `N` = 35 (7*5), so that is about .1714.  Next, we need to apply the `Alpha` correction factor, which we set to be the activity level of the `8`, which is 17 of the 35 units active.  Thus, we should get:
+
+```
+Ge = (1 / (17 / 35)) * (6 / 35) = .3529...
+```
+
+それはまったく正しくありません。  問題は、`Input` アクティベーションが完全に 1 ではなく、むしろ 0.95 であることです。レート コード化されたニューロン アクティベーションが 1 まで到達することは不可能であるため、最大 0.95 でクリップします。  上記の数値に .95 を掛けると、確かに正しい `Ge = .3352..` が得られます。
+
+Ge の正味入力の計算を行った結果、ニューロンへの正味の興奮性入力が入力パターンと重みの間の一致度をどのように反映するかを詳細に理解できるようになりました。また、**しきい値** の存在により、この入力信号に存在する段階的な情報の多くがアクティベーション値によってどのように無視されるかについても観察しました。  これにより、ニューロンがこれらのしきい値を持っている理由がよくわかります。これにより、ニューロンはすべての「しきい値未満のノイズ」をフィルターで除去し、探しているものを検出した場合にのみ、明確で簡単に解釈できる信号を伝達できるようになります。
+
+# リークの操作
+
+次に、アクティベーション信号によって伝達される情報の量を変更する方法を検討します。デフォルト値は 2 のリーク電流 (`GbarL`) を操作します。このリークでは、最も強い (最適な) 入力パターン (8) のみがユニットをアクティブにします。このような強いリークがなければ、他の多くの入力パターンの興奮性入力により、受信ユニットが閾値を超える可能性があります。
+
+**重要:** `GbarL` の変更を有効にするには、`Init` を押す必要があります。
+
+* [[sim:Gbar L]] 値を 2 から 1.8 に減らし、[[sim:Init]] の次に [[sim:Step]] を実行します (`Cycle` ではなく [[sim:View update • test]] を `AlphaCycle` に変更して、各入力の設定の最終結果のみを表示し、表示に戻ることもできます) [[sim:Act]]/`Act`)。  あるいは、[[sim:Run]] を押して、[[sim:Test Trial Plot]] を確認することもできます。
+
+&gt; **質問 2.9:** GbarL を 1.8、1.5、および 2.3 に変更すると、さまざまな桁でニューロン アクティビティを受信するパターンはどうなりますか -- それぞれの場合、どの入力桁に応答しますか?  興奮性と抑制およびリークの間の綱引きモデル (つまり、GbarL = リーク) の観点から、リークを変更するとなぜこのような効果があるのでしょうか (単純な 1 文の答えで十分です)。
+
+<sim-question id="2.9">
+
+&gt; **質問 2.10:** このニューロンが「見ている」入力パターンについて伝えることができる全体的な情報の観点から、元のデフォルト値と比較して、リークのレベルが低い (例: GbarL = 1.8 または 1.5) ことがニューロンにとって有益であると考えられるのはなぜですか?
+
+<sim-question id="2.10">
+
+ニューロンが入力に対してどれだけ応答するかが重要であることは明らかです。ただし、応答性のレベルが異なるとトレードオフが発生します。脳は、多くのニューロンを使用して各入力をコード化することでこの種の問題を解決します。これにより、一部のニューロンはより「高い閾値」タイプになり、他のニューロンはより「低い閾値」タイプになることができ、応答の特異性と一般性において、対応する長所と短所が得られます。バイアスの重みは、この動作を決定する際の重要なパラメータとなる可能性があります。次の章で説明するように、リーク電流 Gbar.L の値の調整も部分的に抑制性入力に置き換えられます。これは、興奮性正味入力に対抗するために動的に調整された抑制レベルを提供する上で重要な役割を果たします。これにより、一般にニューロンが有用な情報を伝達するのに適切な応答範囲内にあることが保証され、各ニューロンの応答性が他のニューロンに依存することになります。これは、上記の調査から想像できるように、多くの重要な結果をもたらします。
+
+
+
+&lt;/section&gt;
+</sim-question></sim-question></sim-question>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>

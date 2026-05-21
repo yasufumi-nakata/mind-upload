@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compcogneuro リポジトリ日本語全文翻訳 | マインドアップロード</title>
+<meta name="description" content="外部資料翻訳インデックス">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --paper: #ffffff;
+  --ink: #20242c;
+  --muted: #5e6673;
+  --line: #d9e0ea;
+  --accent: #176b69;
+  --accent-dark: #0e4746;
+  --accent-soft: #e8f3f2;
+  --code-bg: #eef2f7;
+  --warn-bg: #fff7e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #0b3432; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: auto;
+}
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 28px;
+  align-items: start;
+}
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 46px);
+  box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
+  min-width: 0;
+}
+.kicker {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.description {
+  margin: 14px 0 22px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+.meta-card, .note-box, .abstract-box, .key-points, .cta-box {
+  background: var(--accent-soft);
+  border: 1px solid #c7ded8;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.meta-card strong, .note-box strong, .abstract-box h2, .key-points h4, .cta-box h4 {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--accent-dark);
+}
+.meta-card p, .note-box p, .abstract-box p, .key-points p, .cta-box p {
+  margin: 0;
+}
+.content {
+  font-size: 16px;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  line-height: 1.35;
+  margin: 2.2em 0 .7em;
+}
+.content h1 {
+  padding-bottom: .35em;
+  border-bottom: 2px solid var(--line);
+  font-size: 32px;
+}
+.content h2 {
+  padding-top: .25em;
+  font-size: 26px;
+}
+.content h3 { font-size: 20px; }
+.content p, .content ul, .content ol, .content table, .content pre, .content blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.content ul, .content ol { padding-left: 1.35em; }
+.content li + li { margin-top: .35em; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: block;
+  margin: 18px auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  vertical-align: top;
+}
+.content th {
+  background: #ece6dc;
+  font-weight: 700;
+}
+.content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid #e4d9cb;
+  border-radius: 5px;
+  padding: .12em .35em;
+  font-size: .92em;
+}
+.content pre {
+  overflow-x: auto;
+  background: #24201b;
+  color: #f7efe2;
+  border-radius: 8px;
+  padding: 16px;
+}
+.content pre code {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin-left: 0;
+  padding: 8px 0 8px 18px;
+  color: #3f3a35;
+  background: #fbf8f1;
+}
+.content .note, .content .admonition, .content .warning {
+  background: var(--warn-bg);
+  border: 1px solid #ead49c;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.side {
+  position: sticky;
+  top: 74px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  max-height: calc(100vh - 96px);
+  overflow: auto;
+}
+.side h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li + li { margin-top: 8px; }
+.side a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+.side a:hover { color: var(--accent-dark); }
+.toc-section {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.toc-h3 { padding-left: 12px; }
+@media (max-width: 920px) {
+  .shell { grid-template-columns: 1fr; padding: 18px 14px 42px; }
+  .side { position: static; max-height: none; order: -1; }
+  .paper { padding: 22px 18px; }
+  .topbar-inner { padding: 10px 14px; }
+  .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 22px; }
+}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="主要ナビゲーション">
+    <a class="brand" href="/">Mind-Upload</a>
+    <a class="nav-link" href="/external/compcogneuro/">compcogneuro</a>
+    <a class="nav-link" href="/external/netpyne/">NetPyNE</a>
+    <a class="nav-link" href="/external/opensourcebrain/documentation/">OpenSourceBrain</a>
+    <a class="nav-link" href="/content_hub.html">コンテンツハブ</a>
+  </nav>
+</header>
+<div class="shell">
+  <article class="paper">
+    <div class="kicker">compcogneuro 翻訳ページ</div>
+    <h1 class="title">compcogneuro リポジトリ日本語全文翻訳</h1>
+    <p class="description">compcogneuro の公開リポジトリに含まれる主要 Markdown 文書を、原文順を保って日本語訳した目録です。</p>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>種別</strong><p>翻訳目録</p></div>
+<div class="meta-card"><strong>更新日</strong><p>2026-05-20</p></div>
+      <div class="meta-card"><strong>確認メモ</strong><p>各ページは原文構成を保った日本語訳です。実装・引用・ライセンス条件は原典も確認してください。</p></div>
+    </div>
+    <div class="content">
+<div class="abstract-box">
+  <h2>compcogneuro リポジトリ日本語全文翻訳</h2>
+  <p>compcogneuro の公開リポジトリに含まれる主要 Markdown 文書を、原文順を保って日本語訳した目録です。</p>
+</div>
+
+<section class="section">
+  <h2 class="section-title">book</h2>
+  <ul>
+<li><a href="/external/compcogneuro/book/README.html">README</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/frontmatter.html">frontmatter</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/frontmatter.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/chapter-01.html">chapter-01</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/chapter-01.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/chapter-02.html">chapter-02</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/chapter-02.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/chapter-03.html">chapter-03</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/chapter-03.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/chapter-04.html">chapter-04</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/chapter-04.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/chapter-05.html">chapter-05</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/chapter-05.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/chapter-06.html">chapter-06</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/chapter-06.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/chapter-07.html">chapter-07</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/chapter-07.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/chapter-08.html">chapter-08</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/chapter-08.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/chapter-09.html">chapter-09</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/chapter-09.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/chapter-10.html">chapter-10</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/chapter-10.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/endmatter.html">endmatter</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/endmatter.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book/glossary.html">glossary</a> <span>原典: <a href="https://github.com/compcogneuro/book/blob/main/glossary.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+</ul>
+</section>
+
+<section class="section">
+  <h2 class="section-title">web</h2>
+  <ul>
+<li><a href="/external/compcogneuro/web/README.html">README</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/TODO.html">TODO</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/TODO.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/abstract-neural-network.html">content/abstract-neural-network</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/abstract-neural-network.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/acetylcholine.html">content/acetylcholine</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/acetylcholine.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/activation.html">content/activation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/activation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/adaptation.html">content/adaptation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/adaptation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/amygdala.html">content/amygdala</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/amygdala.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/anatomy.html">content/anatomy</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/anatomy.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/arm-maze-simulation.html">content/arm-maze-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/arm-maze-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/artificial-intelligence.html">content/artificial-intelligence</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/artificial-intelligence.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/attention-simulation.html">content/attention-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/attention-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/attention.html">content/attention</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/attention.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/attractor-dynamics.html">content/attractor-dynamics</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/attractor-dynamics.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/axon.html">content/axon</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/axon.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/basal-ganglia.html">content/basal-ganglia</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/basal-ganglia.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/bg-dorsal-simulation.html">content/bg-dorsal-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/bg-dorsal-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/bg-ventral-simulation.html">content/bg-ventral-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/bg-ventral-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/bias-variance-tradeoff.html">content/bias-variance-tradeoff</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/bias-variance-tradeoff.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/bidirectional-connectivity.html">content/bidirectional-connectivity</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/bidirectional-connectivity.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/boltzmann-machine.html">content/boltzmann-machine</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/boltzmann-machine.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/book.html">content/book</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/book.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/categorization-philosophy.html">content/categorization-philosophy</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/categorization-philosophy.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/categorization.html">content/categorization</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/categorization.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/cats-and-dogs-simulation.html">content/cats-and-dogs-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/cats-and-dogs-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/cerebellum.html">content/cerebellum</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/cerebellum.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/cognition.html">content/cognition</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/cognition.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/combinatorial-vs-conjunctive.html">content/combinatorial-vs-conjunctive</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/combinatorial-vs-conjunctive.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/computation.html">content/computation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/computation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/computational-cognitive-neuroscience.html">content/computational-cognitive-neuroscience</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/computational-cognitive-neuroscience.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/conscious-awareness.html">content/conscious-awareness</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/conscious-awareness.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/constraint-satisfaction.html">content/constraint-satisfaction</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/constraint-satisfaction.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/contributors.html">content/contributors</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/contributors.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/copyright.html">content/copyright</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/copyright.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/credit-assignment.html">content/credit-assignment</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/credit-assignment.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/curse-of-dimensionality.html">content/curse-of-dimensionality</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/curse-of-dimensionality.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/detector-simulation.html">content/detector-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/detector-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/distributed-representations.html">content/distributed-representations</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/distributed%20representations.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/dopamine.html">content/dopamine</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/dopamine.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/drift-diffusion.html">content/drift-diffusion</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/drift-diffusion.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/emergent.html">content/emergent</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/emergent.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/emotion.html">content/emotion</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/emotion.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/episodic-memory.html">content/episodic-memory</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/episodic-memory.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/error-backpropagation.html">content/error-backpropagation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/error-backpropagation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/error-driven-learning.html">content/error-driven-learning</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/error-driven-learning.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/evolution.html">content/evolution</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/evolution.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/experimental-methods.html">content/experimental-methods</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/experimental-methods.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/exponential-integration.html">content/exponential-integration</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/exponential-integration.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/eyeblink-simulation.html">content/eyeblink-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/eyeblink-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/faces-simulation.html">content/faces-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/faces-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/fsa-simulation.html">content/fsa-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/fsa-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/generalization.html">content/generalization</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/generalization.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/generec.html">content/generec</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/generec.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/genetic-algorithm.html">content/genetic-algorithm</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/genetic-algorithm.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/hebbian-learning.html">content/hebbian-learning</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/hebbian-learning.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/hidden-layer-simulation.html">content/hidden-layer-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/hidden-layer-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/hippocampus.html">content/hippocampus</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/hippocampus.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/home.html">content/home</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/home.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/hypothalamus.html">content/hypothalamus</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/hypothalamus.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/in-activo.html">content/in-activo</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/in-activo.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/information-theory.html">content/information-theory</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/information-theory.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/inhibition-simulation.html">content/inhibition-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/inhibition-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/inhibition.html">content/inhibition</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/inhibition.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/insula.html">content/insula</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/insula.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/intro-book.html">content/intro-book</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/intro-book.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/jang-et-al-2026.html">content/jang-et-al-2026</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/jang-et-al-2026.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/kinase-algorithm.html">content/kinase-algorithm</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/kinase-algorithm.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/large-language-models.html">content/large-language-models</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/large-language-models.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/leabra.html">content/leabra</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/leabra.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/learning.html">content/learning</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/learning.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/levels-of-analysis.html">content/levels-of-analysis</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/levels-of-analysis.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/limbic-system.html">content/limbic-system</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/limbic-system.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/linear-algebra.html">content/linear-algebra</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/linear-algebra.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/lstm.html">content/lstm</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/lstm.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/motor.html">content/motor</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/motor.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/necker-cube-simulation.html">content/necker-cube-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/necker-cube-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neocortex.html">content/neocortex</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neocortex.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/network.html">content/network</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/network.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neuromodulator.html">content/neuromodulator</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuromodulator.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neuron-bayesian.html">content/neuron-bayesian</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron-bayesian.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neuron-channels.html">content/neuron-channels</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron-channels.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neuron-dendrites.html">content/neuron-dendrites</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron-dendrites.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neuron-detector.html">content/neuron-detector</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron-detector.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neuron-electrophysiology.html">content/neuron-electrophysiology</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron-electrophysiology.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neuron-equilibrium-potential.html">content/neuron-equilibrium-potential</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron-equilibrium-potential.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neuron-simulation.html">content/neuron-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neuron.html">content/neuron</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuron.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/neuroscience.html">content/neuroscience</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/neuroscience.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/opponent.html">content/opponent</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/opponent.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/optimized-representations.html">content/optimized-representations</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/optimized-representations.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/oreilly-2026-cortlearn.html">content/oreilly-2026-cortlearn</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/oreilly-2026-cortlearn.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/pattern-associator-simulation.html">content/pattern-associator-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/pattern-associator-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/pbwm.html">content/pbwm</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/pbwm.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/predictive-learning.html">content/predictive-learning</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/predictive-learning.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/prefrontal-cortex.html">content/prefrontal-cortex</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/prefrontal-cortex.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/principal-components-analysis.html">content/principal-components-analysis</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/principal-components-analysis.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/pvlv.html">content/pvlv</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/pvlv.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/quantum-analogies.html">content/quantum-analogies</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/quantum-analogies.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/rate-code-activation.html">content/rate-code-activation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/rate-code-activation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/references.html">content/references</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/references.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/reinforcement-learning.html">content/reinforcement-learning</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/reinforcement-learning.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/representation.html">content/representation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/representation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/rubicon.html">content/rubicon</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/rubicon.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/search.html">content/search</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/search.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/self-organizing-simulation.html">content/self-organizing-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/self-organizing-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/self-programmable.html">content/self-programmable</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/self-programmable.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/semantic-memory.html">content/semantic-memory</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/semantic-memory.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/sims.html">content/sims</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/sims.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/simulations.html">content/simulations</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/simulations.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/space.html">content/space</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/space.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/stable-activation.html">content/stable-activation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/stable-activation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/stn.html">content/stn</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/stn.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/subsumption.html">content/subsumption</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/subsumption.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/superior-colliculus.html">content/superior-colliculus</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/superior-colliculus.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/synaptic-plasticity.html">content/synaptic-plasticity</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/synaptic-plasticity.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/synergies.html">content/synergies</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/synergies.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/teaching.html">content/teaching</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/teaching.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/temporal-derivative.html">content/temporal-derivative</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/temporal-derivative.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/thalamus.html">content/thalamus</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/thalamus.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/theta-rhythm.html">content/theta-rhythm</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/theta-rhythm.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/time.html">content/time</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/time.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/transformer.html">content/transformer</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/transformer.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/turing-machine.html">content/turing-machine</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/turing-machine.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/urakubo08-simulation.html">content/urakubo08-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/urakubo08-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/v1-self-organizing-simulation.html">content/v1-self-organizing-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/v1-self-organizing-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/vestibular.html">content/vestibular</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/vestibular.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/vision.html">content/vision</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/vision.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/vor-simulation.html">content/vor-simulation</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/vor-simulation.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/weight-decay.html">content/weight-decay</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/weight-decay.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/web/content/weights.html">content/weights</a> <span>原典: <a href="https://github.com/compcogneuro/web/blob/main/content/weights.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+</ul>
+</section>
+
+<section class="section">
+  <h2 class="section-title">book-web</h2>
+  <ul>
+<li><a href="/external/compcogneuro/book-web/README.html">README</a> <span>原典: <a href="https://github.com/compcogneuro/book-web/blob/main/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book-web/content/contributors.html">content/contributors</a> <span>原典: <a href="https://github.com/compcogneuro/book-web/blob/main/content/contributors.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book-web/content/home.html">content/home</a> <span>原典: <a href="https://github.com/compcogneuro/book-web/blob/main/content/home.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book-web/content/sims.html">content/sims</a> <span>原典: <a href="https://github.com/compcogneuro/book-web/blob/main/content/sims.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/book-web/content/teaching.html">content/teaching</a> <span>原典: <a href="https://github.com/compcogneuro/book-web/blob/main/content/teaching.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+</ul>
+</section>
+
+<section class="section">
+  <h2 class="section-title">sims</h2>
+  <ul>
+<li><a href="/external/compcogneuro/sims/README.html">README</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch10/dyslexia.html">ch10/dyslexia</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch10/dyslexia/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch10/sem.html">ch10/sem</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch10/sem/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch10/sg.html">ch10/sg</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch10/sg/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch10/ss.html">ch10/ss</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch10/ss/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch2/detector.html">ch2/detector</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch2/detector/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch2/neuron.html">ch2/neuron</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch2/neuron/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch3/cats_dogs.html">ch3/cats_dogs</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch3/cats_dogs/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch3/faces.html">ch3/faces</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch3/faces/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch3/inhib.html">ch3/inhib</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch3/inhib/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch3/necker_cube.html">ch3/necker_cube</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch3/necker_cube/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch4/err_driven_hidden.html">ch4/err_driven_hidden</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch4/err_driven_hidden/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch4/family_trees.html">ch4/family_trees</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch4/family_trees/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch4/hebberr_combo.html">ch4/hebberr_combo</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch4/hebberr_combo/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch4/pat_assoc.html">ch4/pat_assoc</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch4/pat_assoc/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch4/self_org.html">ch4/self_org</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch4/self_org/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch6/attn.html">ch6/attn</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch6/attn/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch6/objrec.html">ch6/objrec</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch6/objrec/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch6/v1rf.html">ch6/v1rf</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch6/v1rf/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch7/abac.html">ch7/abac</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch7/abac/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch7/hip.html">ch7/hip</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch7/hip/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch7/priming.html">ch7/priming</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch7/priming/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch8/bg.html">ch8/bg</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch8/bg/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch8/pvlv.html">ch8/pvlv</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch8/pvlv/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch8/rl.html">ch8/rl</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch8/rl/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch9/a_not_b.html">ch9/a_not_b</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch9/a_not_b/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch9/sir.html">ch9/sir</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch9/sir/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch9/stroop.html">ch9/stroop</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch9/stroop/README.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+<li><a href="/external/compcogneuro/sims/ch3/faces/ClusterPlot.html">ch3/faces/ClusterPlot</a> <span>原典: <a href="https://github.com/compcogneuro/sims/blob/main/ch3/faces/ClusterPlot.md" target="_blank" rel="noopener noreferrer">source</a></span></li>
+</ul>
+</section>
+
+    </div>
+  </article>
+  <aside class="side" aria-label="ページナビゲーション">
+    <h2>外部翻訳</h2>
+    <ul>
+      <li><a href="/external/compcogneuro/">この資料の目録</a></li>
+      <li><a href="/external/compcogneuro/">compcogneuro</a></li>
+      <li><a href="/external/netpyne/">NetPyNE</a></li>
+      <li><a href="/external/opensourcebrain/documentation/">OpenSourceBrain</a></li>
+      <li><a href="/">サイト入口</a></li>
+    </ul>
+
+  </aside>
+</div>
+</body>
+</html>
