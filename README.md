@@ -27,9 +27,20 @@ GitHub Pages には Jekyll が生成した `_site` だけを配信します。�
 ```bash
 ruby scripts/build_summary_booklet.rb
 bundle exec jekyll build
+bundle exec ruby scripts/build_language_package.rb
 ```
 
 ビルド後は `_site` の中身だけが公開成果物です。
+
+## リリース成果物
+
+GitHub Release には、公開サイト一式に加えて次の読者向け成果物を添付します。
+
+- `mind-upload-summary-booklet-a4.pdf`: 主要ページの内容をまとめたA4 PDF冊子
+- `mind-upload-language-package.tar.gz`: GPTなどのLLMや検索拡張生成で使いやすい自然言語パッケージ
+- `mind-upload-language-corpus.jsonl`: 1行1ページのJSON Linesコーパス
+- `mind-upload-language-corpus.txt`: 全ページを連結したプレーンテキスト
+- `mind-upload-language-manifest.json`: ページ一覧、URL、文字数、ハッシュの目録
 
 ## コントリビューション
 

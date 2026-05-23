@@ -22,6 +22,7 @@
 
 - [ ] `ruby scripts/build_summary_booklet.rb`
 - [ ] `bundle exec jekyll build`
+- [ ] `bundle exec ruby scripts/build_language_package.rb`
 - [ ] `git diff --check`
 - [ ] `node --check .github/pdf/render-summary-pdf.mjs`（PDF生成や該当JSを変更した場合）
 

@@ -417,6 +417,29 @@ class SummaryBookletTemplate
 
       <section class="booklet-sheet booklet-page-break">
         <div class="booklet-section-header">
+          <p class="booklet-kicker">Release Package</p>
+          <h2>PDF Book and Natural-Language Package</h2>
+        </div>
+
+        <div class="booklet-card-grid booklet-card-grid-3">
+          <%= release_package_cards_html %>
+        </div>
+
+        <table class="data-table booklet-table">
+          <thead>
+            <tr>
+              <th>Package Area</th>
+              <th>Included Content</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= release_package_rows_html %>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="booklet-sheet booklet-page-break">
+        <div class="booklet-section-header">
           <p class="booklet-kicker">Next Actions</p>
           <h2>What To Do Next</h2>
         </div>
@@ -558,8 +581,9 @@ class SummaryBookletTemplate
       ["2. Known vs Unknown", verification_page.accuracy_note],
       ["3. Core Page Roles", roadmap_page.page_intro],
       ["4. Support Routes", content_hub_page.page_intro],
-      ["5. Next Actions", issue_page.page_intro],
-      ["6. Source Pages", "The booklet closes with a compact route back to the detailed public pages."]
+      ["5. Release Package", "The release attaches a PDF booklet plus a natural-language corpus package for GPT and other LLM workflows."],
+      ["6. Next Actions", issue_page.page_intro],
+      ["7. Source Pages", "The booklet closes with a compact route back to the detailed public pages."]
     ]
     render_cards(cards.map { |title, body| [title, h(shorten(body, 120))] })
   end
@@ -674,6 +698,53 @@ class SummaryBookletTemplate
         #{items}
       </ul>
     HTML
+  end
+
+  def release_package_cards_html
+    cards = [
+      ["PDF Summary Book", "A4冊子として、サイト全体の目的、検証線、主要ページ、外部翻訳コーパスの構成を短く確認できます。"],
+      ["Natural-Language Corpus", "#{public_html_count}件の公開HTMLを、JSONL、単一テキスト、ページ別テキストに変換します。"],
+      ["LLM/RAG Use", "GPT等へ渡す場合は、corpus.jsonl を1行1ページの文書集合として扱うのが最も素直です。"]
+    ]
+    render_cards(cards.map { |title, body| [title, h(body)] })
+  end
+
+  def release_package_rows_html
+    rows = [
+      ["Core site", "#{top_level_html_count} public HTML pages, including the entry page, verification, roadmap, dataset map, FAQ, glossary, and this booklet."],
+      ["External translations", external_translation_summary],
+      ["Release artifacts", "mind-upload-summary-booklet-a4.pdf / mind-upload-language-package.tar.gz / corpus.jsonl / corpus.txt / manifest.json."]
+    ]
+
+    rows.map do |label, body|
+      <<~HTML
+        <tr>
+          <td>#{h(label)}</td>
+          <td>#{h(body)}</td>
+        </tr>
+      HTML
+    end.join
+  end
+
+  def public_html_count
+    top_level_html_count + external_html_count
+  end
+
+  def top_level_html_count
+    @top_level_html_count ||= Dir.glob(File.join(ROOT, "*.html")).count
+  end
+
+  def external_html_count
+    @external_html_count ||= Dir.glob(File.join(ROOT, "external", "**", "*.html")).count
+  end
+
+  def external_translation_summary
+    groups = {
+      "compcogneuro" => Dir.glob(File.join(ROOT, "external", "compcogneuro", "**", "*.html")).count,
+      "NetPyNE" => Dir.glob(File.join(ROOT, "external", "netpyne", "**", "*.html")).count,
+      "OpenSourceBrain" => Dir.glob(File.join(ROOT, "external", "opensourcebrain", "**", "*.html")).count
+    }
+    "#{external_html_count} translated HTML pages: #{groups.map { |name, count| "#{name} #{count}" }.join(", ")}."
   end
 
   def next_action_cards_html

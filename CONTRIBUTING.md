@@ -39,6 +39,7 @@ bundle install
 ```bash
 ruby scripts/build_summary_booklet.rb
 bundle exec jekyll build
+bundle exec ruby scripts/build_language_package.rb
 git diff --check
 ```
 

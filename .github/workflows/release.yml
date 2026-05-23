@@ -16,9 +16,40 @@ jobs:
       - uses: actions/checkout@v6
       - uses: ruby/setup-ruby@v1
         with:
+          ruby-version: "3.2"
           bundler-cache: true
+      - name: Generate summary booklet
+        run: ruby scripts/build_summary_booklet.rb
       - name: Build site
         run: bundle exec jekyll build
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.54.2
+          npx playwright install --with-deps chromium
+      - name: Render A4 summary PDF
+        run: |
+          mkdir -p release
+          python3 -m http.server 4010 --directory _site >/tmp/mind-upload-release-pdf.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+
+          for _ in $(seq 1 30); do
+            if curl --silent --fail http://127.0.0.1:4010/summary_booklet.html >/dev/null; then
+              break
+            fi
+            sleep 1
+          done
+
+          node .github/pdf/render-summary-pdf.mjs \
+            "http://127.0.0.1:4010/summary_booklet.html" \
+            "release/mind-upload-summary-booklet-a4.pdf"
+      - name: Build natural language package
+        run: |
+          bundle exec ruby scripts/build_language_package.rb _site output/language-package/mind-upload-language-package
+          tar -czf release/mind-upload-language-package.tar.gz -C output/language-package mind-upload-language-package
+          cp output/language-package/mind-upload-language-package/corpus.jsonl release/mind-upload-language-corpus.jsonl
+          cp output/language-package/mind-upload-language-package/corpus.txt release/mind-upload-language-corpus.txt
+          cp output/language-package/mind-upload-language-package/manifest.json release/mind-upload-language-manifest.json
       - name: Prepare release bundle
         run: |
           mkdir -p release
@@ -31,4 +62,3 @@ jobs:
         with:
           files: release/*
           generate_release_notes: true
-

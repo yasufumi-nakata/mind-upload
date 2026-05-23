@@ -82,11 +82,15 @@ body_class: "summary-booklet-page"
   <p>このページは、公開サイトの入口を少数の HTML ページに絞るための目録です。新しい内容は、原則として既存ページへ統合し、独立ページを増やしすぎないようにします。</p>
 </article>
 <article class="booklet-card">
-  <h3>5. Next Actions</h3>
+  <h3>5. Release Package</h3>
+  <p>The release attaches a PDF booklet plus a natural-language corpus package for GPT and other LLM workflows.</p>
+</article>
+<article class="booklet-card">
+  <h3>6. Next Actions</h3>
   <p>このページは、マインドアップロードに関する提案を、公開ページへ安全に統合できる形へ整えるためのガイドです。作業履歴ではなく、読者が次の提案を準備するための判断基準だけを残しています。</p>
 </article>
 <article class="booklet-card">
-  <h3>6. Source Pages</h3>
+  <h3>7. Source Pages</h3>
   <p>The booklet closes with a compact route back to the detailed public pages.</p>
 </article>
 
@@ -475,6 +479,53 @@ body_class: "summary-booklet-page"
 </article>
 
   </div>
+</section>
+
+<section class="booklet-sheet booklet-page-break">
+  <div class="booklet-section-header">
+    <p class="booklet-kicker">Release Package</p>
+    <h2>PDF Book and Natural-Language Package</h2>
+  </div>
+
+  <div class="booklet-card-grid booklet-card-grid-3">
+    <article class="booklet-card">
+  <h3>PDF Summary Book</h3>
+  <p>A4冊子として、サイト全体の目的、検証線、主要ページ、外部翻訳コーパスの構成を短く確認できます。</p>
+</article>
+<article class="booklet-card">
+  <h3>Natural-Language Corpus</h3>
+  <p>256件の公開HTMLを、JSONL、単一テキスト、ページ別テキストに変換します。</p>
+</article>
+<article class="booklet-card">
+  <h3>LLM/RAG Use</h3>
+  <p>GPT等へ渡す場合は、corpus.jsonl を1行1ページの文書集合として扱うのが最も素直です。</p>
+</article>
+
+  </div>
+
+  <table class="data-table booklet-table">
+    <thead>
+      <tr>
+        <th>Package Area</th>
+        <th>Included Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+  <td>Core site</td>
+  <td>14 public HTML pages, including the entry page, verification, roadmap, dataset map, FAQ, glossary, and this booklet.</td>
+</tr>
+<tr>
+  <td>External translations</td>
+  <td>242 translated HTML pages: compcogneuro 178, NetPyNE 8, OpenSourceBrain 56.</td>
+</tr>
+<tr>
+  <td>Release artifacts</td>
+  <td>mind-upload-summary-booklet-a4.pdf / mind-upload-language-package.tar.gz / corpus.jsonl / corpus.txt / manifest.json.</td>
+</tr>
+
+    </tbody>
+  </table>
 </section>
 
 <section class="booklet-sheet booklet-page-break">
