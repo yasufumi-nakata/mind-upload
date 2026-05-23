@@ -679,10 +679,10 @@ class SummaryBookletTemplate
   def next_action_cards_html
     cards = [
       ["全体像をつかむ", "#{intro_page.title} -> #{verification_page.title} -> #{roadmap_page.title}", intro_page.recommended_pages],
-      ["ヒト・プロキシ束を監査する", "#{wbe_page.title} -> ヒト・プロキシ構成 -> 測定スタック", [
+      ["ヒト・プロキシ束を監査する", "#{wbe_page.title} -> #{verification_page.title} -> #{glossary_page.title}", [
         { "label" => "WBE 101", "url" => wbe_page.url },
-        { "label" => "ヒト・プロキシ構成", "url" => "/wiki/human-proxy-composition.html" },
-        { "label" => "測定スタック", "url" => "/wiki/measurement-stack-and-claim-ceiling.html" }
+        { "label" => "検証", "url" => verification_page.url },
+        { "label" => "用語集", "url" => glossary_page.url }
       ]],
       ["参加して統合する", "#{issue_page.title} / #{content_hub_page.title}", issue_page.recommended_pages]
     ]

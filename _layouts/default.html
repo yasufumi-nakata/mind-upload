@@ -16,14 +16,7 @@
     {% feed_meta %}
 </head>
 
-{% assign wiki_home_href = '/wiki/' | relative_url %}
-{% assign wiki_home_label = 'Wiki' %}
-{% if site.wiki_mode == 'github' and site.github_wiki_url %}
-    {% assign wiki_home_href = site.github_wiki_url %}
-    {% assign wiki_home_label = 'GitHub Wiki' %}
-{% endif %}
-
-<body class="wiki-light{% if page.body_class %} {{ page.body_class | escape }}{% endif %}" data-article-type="{{ page.article_type | default: '' | escape }}" data-page-url="{{ page.url | escape }}" data-wiki-mode="{{ site.wiki_mode | default: 'local' }}" data-github-wiki-url="{{ site.github_wiki_url | default: '' | escape }}">
+<body class="{% if page.body_class %}{{ page.body_class | escape }}{% endif %}" data-article-type="{{ page.article_type | default: '' | escape }}" data-page-url="{{ page.url | escape }}">
     <a class="skip-link" href="#site-content">本文へ移動</a>
 
     <!-- グローバルヘッダー -->
@@ -36,8 +29,7 @@
                     <a class="page-link" href="{{ '/verification.html' | relative_url }}"{% if page.url == '/verification.html' %} aria-current="page"{% endif %}>検証</a>
                     <a class="page-link" href="{{ '/tech_roadmap.html' | relative_url }}"{% if page.url == '/tech_roadmap.html' %} aria-current="page"{% endif %}>ロードマップ</a>
                     <a class="page-link" href="{{ '/content_hub.html' | relative_url }}"{% if page.url == '/content_hub.html' %} aria-current="page"{% endif %}>公開コンテンツ</a>
-                    <a class="page-link" href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a>
-                    <a class="page-link" href="{{ '/mind_uploading_papers.html' | relative_url }}"{% if page.url == '/mind_uploading_papers.html' %} aria-current="page"{% endif %}>論文アーカイブ</a>
+                    <a class="page-link" href="{{ '/research_harvest_50.html' | relative_url }}"{% if page.url == '/research_harvest_50.html' %} aria-current="page"{% endif %}>文献マップ</a>
                     <a class="page-link" href="{{ '/issue.html' | relative_url }}"{% if page.url == '/issue.html' %} aria-current="page"{% endif %}>参加</a>
                 </div>
         </nav>
@@ -133,7 +125,7 @@
     </section>
     {% endif %}
 
-    {% if page.known_points or page.unknown_points or page.wiki_links %}
+    {% if page.known_points or page.unknown_points %}
     <section class="topic-status" aria-label="ここでわかっていることと追加学習先">
         <div class="topic-status-inner">
             {% if page.known_points %}
@@ -160,31 +152,6 @@
             </div>
             {% endif %}
 
-            {% if page.wiki_links %}
-            <div class="topic-card topic-card-wiki">
-                <p class="topic-card-kicker">基礎を学ぶ</p>
-                <h2>Wiki で基礎を確認する</h2>
-                <ul class="topic-link-list">
-                    {% for link in page.wiki_links %}
-                    <li>
-                        <a href="{{ link.url | relative_url }}" data-wiki-link="{{ link.url | escape }}">{{ link.label }}</a>
-                        {% if link.description %}
-                        <span>{{ link.description }}</span>
-                        {% endif %}
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
-        </div>
-    </section>
-    {% endif %}
-
-    {% if page.article_type == "Wiki" %}
-    <section class="wiki-role-note" aria-label="Wiki の役割">
-        <div class="wiki-role-note-inner">
-            <strong>Wiki の役割</strong>
-            <p>Wiki は学習補助です。プロジェクトの公式な現在の統合、成功条件、運用ルールを確認するときは、必ず公開ページに戻ってください。</p>
         </div>
     </section>
     {% endif %}
@@ -217,92 +184,13 @@
     <footer class="site-footer h-card">
         <data class="u-url" value="{{ '/' | relative_url }}"></data>
         <div class="wrapper">
-        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="{{ wiki_home_href }}"{% if site.wiki_mode == 'github' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ wiki_home_label }}</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="{{ '/issue.html' | relative_url }}">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点、現在の統合、検証条件を置きます。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="{{ '/issue.html' | relative_url }}">参加ガイド</a> の基準に沿って整理してください。</p>
         <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
         </div>
     </footer>
 
     <script>
         (function () {
-            var body = document.body;
-            var wikiMode = body ? body.getAttribute("data-wiki-mode") : "local";
-            var githubWikiUrl = body ? body.getAttribute("data-github-wiki-url") : "";
-            var pageUrl = body ? body.getAttribute("data-page-url") : "";
-            var isWikiPage = pageUrl.indexOf("/wiki/") === 0;
-
-            function splitHref(raw) {
-                var match = raw.match(/^([^?#]*)([?#].*)?$/);
-                if (!match) {
-                    return { path: raw, suffix: "" };
-                }
-                return { path: match[1], suffix: match[2] || "" };
-            }
-
-            function githubWikiTargetFromPath(path, suffix) {
-                var slug = path.replace(/^\/+/, "")
-                    .replace(/^wiki\//, "")
-                    .replace(/^\/wiki\//, "")
-                    .replace(/\.html$/, "")
-                    .replace(/\/$/, "");
-
-                if (!slug || slug === "index") {
-                    return githubWikiUrl + suffix;
-                }
-
-                return githubWikiUrl + "/" + slug + suffix;
-            }
-
-            function rewriteWikiLinksForMode() {
-                if (wikiMode !== "github" || !githubWikiUrl) {
-                    return;
-                }
-
-                var anchors = document.querySelectorAll("a[href]");
-                anchors.forEach(function (anchor) {
-                    var rawHref = anchor.getAttribute("href");
-                    if (!rawHref || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.charAt(0) === "#") {
-                        return;
-                    }
-
-                    if (rawHref.indexOf(githubWikiUrl) === 0) {
-                        return;
-                    }
-
-                    var resolved;
-                    try {
-                        resolved = new URL(rawHref, window.location.href);
-                    } catch (error) {
-                        return;
-                    }
-
-                    var targetHref = null;
-                    var split = splitHref(rawHref);
-
-                    if (resolved.origin === window.location.origin) {
-                        var resolvedPath = resolved.pathname;
-                        if (resolvedPath === "/wiki" || resolvedPath === "/wiki/" || resolvedPath === "/wiki/index.html") {
-                            targetHref = githubWikiUrl + resolved.search + resolved.hash;
-                        } else if (resolvedPath.indexOf("/wiki/") === 0) {
-                            targetHref = githubWikiTargetFromPath(resolvedPath, resolved.search + resolved.hash);
-                        }
-                    } else if (isWikiPage && /^(?:\.\/)?[^/]+\.html$/.test(split.path)) {
-                        targetHref = githubWikiTargetFromPath(split.path, split.suffix);
-                    } else if (/^(?:\.\.\/)?wiki\/.+\.html$/.test(split.path) || /^\/wiki\/.+\.html$/.test(split.path)) {
-                        targetHref = githubWikiTargetFromPath(split.path.replace(/^\.\.\//, ""), split.suffix);
-                    }
-
-                    if (!targetHref) {
-                        return;
-                    }
-
-                    anchor.setAttribute("href", targetHref);
-                    anchor.setAttribute("target", "_blank");
-                    anchor.setAttribute("rel", "noopener noreferrer");
-                });
-            }
-
-            rewriteWikiLinksForMode();
-
             var terms = [
                 ["再現性", "同じ手順をもう一度実行し、おおむね同じ結果を得られること。"],
                 ["反証可能性", "間違いだと示せる形で主張を書くこと。"],

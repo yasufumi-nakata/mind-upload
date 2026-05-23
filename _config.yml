@@ -4,8 +4,6 @@ lang: ja
 author: マインドアップロード研究プロジェクト
 url: https://mind-upload.com
 baseurl: ""
-wiki_mode: local
-
 # ビルド設定
 theme: minima
 markdown: kramdown
@@ -31,7 +29,6 @@ exclude:
   - .agent
   - .github
   - automation
-  - github-wiki-export
   - ignore
   - scripts
   - vendor

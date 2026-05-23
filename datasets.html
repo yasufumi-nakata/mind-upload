@@ -3,14 +3,13 @@ layout: default
 title: 'データとハンズオン: どこから始めて、どのようにして L0 に到達するか'
 description: 公開データ（主にEEG）の選定からBIDS→QC→前処理→評価の最小ループまでを1ページにまとめました。
 article_type: リソース
-subtitle: 「`what to use'' and `「再現方法」」を分けずに最短ルートで接続します。
+subtitle: "「`what to use'' and `「再現方法」」を分けずに最短ルートで接続します。"
 author: マインドアップロード研究プロジェクト
 last_updated: '2026-04-04'
 note: 厳選されたリスト + L0 Practice (EEG レコーディング フレーム コントラクト同期で更新)
 audience: どの公開データから始めようか迷っている人、L0の練習板を探している人
 reading_time: 12～20分
-page_intro: このページは、「`Which public data should I start validation with first?'' and `「L0 再現性解析を行うにはどうすればよいですか?」の両方に 1 か所で答える実践的なガイドです。データセット名のリストにとどまりません。
-  BIDS、QC、分割、ベースラインを 1 つのパスで接続します。
+page_intro: このページは、「`Which public data should I start validation with first?'' and `「L0 再現性解析を行うにはどうすればよいですか?」の両方に 1 か所で答える実践的なガイドです。データセット名のリストにとどまりません。 BIDS、QC、分割、ベースラインを 1 つのパスで接続します。
 accuracy_note: ここにリストされているデータセットはエントリ候補です。使いやすさや再現性の観点から記載したものであり、WBE の課題をすべて網羅しているわけではありません。
 page_highlights:
 - 最初に共有インフラストラクチャを見て、次にスターター データセットを見ていきます。
@@ -46,7 +45,7 @@ known_points:
 - クラス不均衡または稀なイベントのタスクの場合は、タスクに一致するメトリクス バンドルが必要です。つまり、1 つのヘッドライン番号ではなく、イベントの感度と発作タスクの誤警報、および睡眠ステージングのマクロ / ステージごとの一致です。
 - クロスセッション精度とクロスセッション適応は、固定デコーダが生き残ったかどうか、どの程度の再キャリブレーションが必要か、またはどの程度の転送上限が残っているかをまだ示していません。
 - 同じタスクとデコーダ ウィンドウは、異なる遅い内部環境環境下でも実行できるため、`state annotation` は移動、覚醒、またはセッション ID だけによって使い果たされることはありません。
-- '`events.tsv` または `LSL` のみを示すデータセット カードでは、タイミングが保存データ、トリガー、物理出力、または非制御応答レベルでチェックされたかどうかは未解決のままです。'
+- "`events.tsv` または `LSL` のみを示すデータセット カードでは、タイミングが保存データ、トリガー、物理出力、または非制御応答レベルでチェックされたかどうかは未解決のままです。"
 - 同日のスコアは、ターゲット信号ではなく、動き / EOG / EMG / フィードバック ルート、被験者 / セッションのフィンガープリント、または取得と配信のショートカットを反映する場合があります。
 - 基礎モデルの改善は、事前トレーニング コーパス、チャネル不一致の処理、取得と配信の概要、および適応レジームが開示されない限り比較できません。
 - ベンチマーク名だけでは十分ではありません。バージョン、分割/ランダム化ルール、非表示グループ化、追加データ ポリシー、事前トレーニング済みチェックポイント ポリシー、および推論段階の制限はすべて、スコアの意味を変更する可能性があります。
@@ -65,41 +64,13 @@ unknown_points:
 - 状態の注釈、固定デコーダ間隔、再調整負荷、および 1 つの共有時間的有効性スキーマの下での転送上限を記録するデフォルトの公開 EEG ベンチマークはまだありません。
 - 迅速なラベルと遅い内部環境の開示を 1 つの一時的有効性に関する補遺の中にまとめて凍結する共有のパブリック テンプレートはまだありません。
 - 1 つの共有欠損と共通ドライバー監査の下で、ニューロン優先のベースライン、ファミリー分割サポート状態の拡張、および最強の単一行とバンドルの比較を共同で修正するデフォルトのパブリック データセット バンドルはまだありません。
-wiki_links:
-- label: 'Wiki: 脳波の基礎'
-  url: /wiki/eeg-basics.html
-  description: データセットを見る前に脳波信号自体を理解したい人向け。
-- label: 'Wiki: L0 の最小アーティファクト パック'
-  url: /wiki/l0-minimum-artifact-pack.html
-  description: BIDS、QC、分割、ベースライン、実行ステップなどの L0 成果物を整理します。
-- label: 'Wiki: 検証インフラストラクチャの基本'
-  url: /wiki/verification-basics.html
-  description: データだけでなくベンチと登録が必要な理由を学びましょう。
-- label: 'Wiki: データの分割と漏洩'
-  url: /wiki/dataset-splits-and-leakage.html
-  description: 列車・試験と一般的な漏水事故の分け方を最初から解説します。
-- label: 'Wiki: イベント同期と監視ログ'
-  url: /wiki/event-sync-and-measurement-logs.html
-  description: イベントと同期の観点から、生の EEG だけでは十分ではない理由を説明します。
-- label: 'Wiki: 状態/特性/ドリフト'
-  url: /wiki/state-trait-and-drift.html
-  description: 同じ日のスコアと日をまたいだ安定性の混同を避けるために、縦断的な読み取りを整理します。
-- label: 'Wiki: EEG 基礎モデルと事前トレーニング'
-  url: /wiki/eeg-foundation-models.html
-  description: ベンチマーク ルール、事前トレーニング コーパス、およびリーダーボードの解釈が曖昧になり始めた場合は、このページを使用してください。
-- label: 'Wiki: マルチモーダル統合の基本'
-  url: /wiki/multimodal-integration-basics.html
-  description: 脳波に追加することで何が補完できるのかを基礎から解説していきます。
-- label: 'Wiki: 標準/場所/バリデータ/ベンチマーク'
-  url: /wiki/standards-repositories-validators-and-benchmarks.html
-  description: BIDS、OpenNeuro、Validator、Benchmark の役割の違いを明確にします。
 recommended_pages:
 - label: 脳波検査の概要
-  url: /eeg_101.html
+  url: "/eeg_101.html"
 - label: 検証ベース
-  url: /verification.html
+  url: "/verification.html"
 - label: テクノロジーロードマップ
-  url: /tech_roadmap.html
+  url: "/tech_roadmap.html"
 ---
 <!-- 重要: この情報を削除したり上書きしたりしないでください。これはプロジェクトの恒久的な知識ベースです。 -->
 
@@ -122,7 +93,7 @@ recommended_pages:
 <div class="note-box">
 <strong>このページがどこに当てはまるかを知りたい場合</strong>
 <p>
-このページは、どこから開始するか、最小 L0 ループを完了する方法を決定するための実用的なエントリ ポイントです。 <a href="verification.html">検証プラットフォーム</a>は進捗としてカウントされる内容を処理し、検証プラットフォーム&lt;/a&gt;内の<a href="verification.html#casework">ケースワークセクションは他の分野の例を処理します。実践的なページがサイトの他の部分とどのように異なるのかについての 1 ページのガイドが必要な場合は、<a href="wiki/practical-pages-reading-guide.html">Wiki: 実践的なページを読むためのガイド</a> を参照してください。
+このページは、どこから開始するか、最小 L0 ループを完了する方法を決定するための実用的なエントリ ポイントです。 <a href="verification.html">検証プラットフォーム</a>は進捗としてカウントされる内容を処理し、検証プラットフォーム&lt;/a&gt;内の<a href="verification.html#casework">ケースワークセクションは他の分野の例を処理します。実践的なページがサイトの他の部分とどのように異なるのかについての 1 ページのガイドが必要な場合は、<a href="glossary.html">用語集</a> を参照してください。
 &lt;/p&gt;
 &lt;/div&gt;
 <div class="note-box">
@@ -175,13 +146,13 @@ recommended_pages:
 <div class="note-box">
 <strong>精度よりも先に見る</strong>
 <p>
-データセットの紹介を読むと、すぐに「どのようなスコアが達成されたのか?」というところに飛びつきたくなります。最初の質問は、<strong>トレーニング/テスト分割ユニットは何か</strong>、<strong>漏れがチェックされたかどうか</strong>、<strong>結果が単純なベースラインと比較されたかどうか</strong>です。これがまだ不明な場合は、最初に<a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータ漏洩</a> をお読みください。
+データセットの紹介を読むと、すぐに「どのようなスコアが達成されたのか?」というところに飛びつきたくなります。最初の質問は、<strong>トレーニング/テスト分割ユニットは何か</strong>、<strong>漏れがチェックされたかどうか</strong>、<strong>結果が単純なベースラインと比較されたかどうか</strong>です。これがまだ不明な場合は、最初に<a href="glossary.html">用語集</a> をお読みください。
 </p>
 </div>
 <div class="note-box">
 <strong>スコアが同じでも汎化条件が違えば意味が変わる</strong>
 <p>
-MOABB は、<strong>within-session</strong>、<strong>cross-session</strong>、および <strong>cross-subject</strong> を別個の評価ファミリーとして扱います。つまり、同じ70％であっても、「同日・同じ人・同じ段取り」で得られる70％と、「別の日」「別の人」でホールドアウトして得られる70％では、異なる成果となるのです。まず短期的な状態変動と長期的なドリフトを整理したい場合は、<a href="wiki/state-trait-and-drift.html">Wiki: state/trait/drift</a> もご覧ください。
+MOABB は、<strong>within-session</strong>、<strong>cross-session</strong>、および <strong>cross-subject</strong> を別個の評価ファミリーとして扱います。つまり、同じ70％であっても、「同日・同じ人・同じ段取り」で得られる70％と、「別の日」「別の人」でホールドアウトして得られる70％では、異なる成果となるのです。まず短期的な状態変動と長期的なドリフトを整理したい場合は、<a href="glossary.html">用語集</a> もご覧ください。
 </p>
 </div>
 <div class="note-box">
@@ -193,20 +164,20 @@ MOABB は、<strong>within-session</strong>、<strong>cross-session</strong>、�
 <div class="note-box">
 <strong>L0</strong> で何を買えばいいのか迷ったとき
 <p>
-データ名だけを決めても、入稿形式があいまいだと行き詰まってしまいがちです。 BIDS、バリデーター、QC ログ、分割ルール、ベースライン、実行ステップ、および失敗例を 1 ページで確認したい場合は、<a href="wiki/l0-minimum-artifact-pack.html">Wiki: Minimum L0 アーティファクト パック</a> を参照してください。
+データ名だけを決めても、入稿形式があいまいだと行き詰まってしまいがちです。 BIDS、バリデーター、QC ログ、分割ルール、ベースライン、実行ステップ、および失敗例を 1 ページで確認したい場合は、<a href="glossary.html">用語集</a> を参照してください。
 </p>
 </div>
 <div class="note-box">
 <strong>EEG から L0 までの順序全体を 1 つの直線で表示したい場合</strong>
 <p>
-EEG入門後、このページでデータを選択し、L0練習編で一周し、VerificationでL0であることを確認する流れを見たい場合は、<a href="wiki/eeg-to-l0-route.html">Wiki:EEGからL0</a>への直線パスをご覧ください。
+EEG入門後、このページでデータを選択し、L0練習編で一周し、VerificationでL0であることを確認する流れを見たい場合は、<a href="glossary.html">用語集</a>への直線パスをご覧ください。
 </p>
 </div>
 
 <div class="note-box">
 <strong>生の脳波検査では不十分</strong>
 <p>
-波形ファイルが公開されていても、<strong>イベント定義</strong>、<strong>刺激ログ</strong>、<strong>時刻同期</strong>、<strong>不良チャンネル/不良セグメント記録</strong>が弱いと、後で再度比較するのが困難になります。さらに、2026-03 年の再監査では、`events.tsv` があるだけではイベント セマンティクスは修正されず、LSL があるだけではハードウェア遅延は監査できないことをサイト ルールに追加しました。この点を最初から理解したい場合は、<a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期の基礎と観測ログ</a> を最初に参照してください。
+波形ファイルが公開されていても、<strong>イベント定義</strong>、<strong>刺激ログ</strong>、<strong>時刻同期</strong>、<strong>不良チャンネル/不良セグメント記録</strong>が弱いと、後で再度比較するのが困難になります。さらに、2026-03 年の再監査では、`events.tsv` があるだけではイベント セマンティクスは修正されず、LSL があるだけではハードウェア遅延は監査できないことをサイト ルールに追加しました。この点を最初から理解したい場合は、<a href="glossary.html">用語集</a> を最初に参照してください。
 </p>
 </div>
 
@@ -220,14 +191,14 @@ EEG入門後、このページでデータを選択し、L0練習編で一周し
 <div class="note-box">
 <strong>BIDS、デリバティブ、パイプライン、OpenNeuro、およびベンチマークは同じではありません</strong>
 <p>
-BIDS は生データ標準であり、BIDS Derivatives は処理された出力リネージュを明示的に保ち、OpenNeuro と PhysioNet はストレージ領域、Validator は正式なチェック、MNE-BIDS はローダー、MNE-BIDS-Pipeline または BIDS App はワークフロー レシピ、Benchmark は比較ルールです。この役割の違いを最初から整理したい場合は、<a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: Standards/Repositories/Validators/Benchmarks</a> をご利用ください。
+BIDS は生データ標準であり、BIDS Derivatives は処理された出力リネージュを明示的に保ち、OpenNeuro と PhysioNet はストレージ領域、Validator は正式なチェック、MNE-BIDS はローダー、MNE-BIDS-Pipeline または BIDS App はワークフロー レシピ、Benchmark は比較ルールです。この役割の違いを最初から整理したい場合は、<a href="glossary.html">用語集</a> をご利用ください。
 </p>
 </div>
 
 <div class="note-box">
 <strong>将来の拡張計画</strong>
 <p>
-開始するには EEG ベースの開始データセットで十分ですが、後で空間情報または構造情報を追加することが必要になる場合があります。まず EEG に何を追加できるかを計画したい場合は、<a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基礎</a> を参照してください。
+開始するには EEG ベースの開始データセットで十分ですが、後で空間情報または構造情報を追加することが必要になる場合があります。まず EEG に何を追加できるかを計画したい場合は、<a href="glossary.html">用語集</a> を参照してください。
 </p>
 </div>
 
@@ -1027,7 +998,7 @@ Mouthaanらによる系統的レビューでは、 (2019) によると、術前�
 <div class="note-box">
 <strong>公式ベンチマーク事後検証は脚注ではなく再現性の一部です</strong>
 <p>
-実際の作業では、ベンチマーク ページ、ルール ページ、提出制限、および最終リーダーボードのそれぞれが、スコアの意味の異なる部分を修正できます。 <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">ブルックシャーら。 (2024)</a> は、トランスレーショナル EEG におけるセグメントベースの相互検証により、トレーニング セットとテスト セットの間で被験者の情報が漏洩し、見出しのパフォーマンスが水増しされる可能性があることを示しています。後の TUH/TUSZ 保守記録には、下流での使用がすでに開始された後に <strong>主題の独占性</strong> および <strong>注釈の品質</strong> を修復する必要がある公開リリースのケースも文書化されています。そのため、このページでは、EEG 基礎モデルのベンチマークを、スプリット/リークの衛生状態だけでなく、<strong>ベンチマークの来歴</strong> を通じてもルーティングするようになりました。ベンチマークで進化するチャレンジ操作が使用されている場合は、ランキングを移植可能な一般化の証拠として扱う前に、<a href="wiki/eeg-foundation-models.html">Wiki: EEG 基礎モデルと事前トレーニング</a> および <a href="verification.html#pretraining-card">検証: 事前トレーニング カード</a> に直接進んでください。
+実際の作業では、ベンチマーク ページ、ルール ページ、提出制限、および最終リーダーボードのそれぞれが、スコアの意味の異なる部分を修正できます。 <a href="https://doi.org/10.3389/fnins.2024.1373515" target="_blank">ブルックシャーら。 (2024)</a> は、トランスレーショナル EEG におけるセグメントベースの相互検証により、トレーニング セットとテスト セットの間で被験者の情報が漏洩し、見出しのパフォーマンスが水増しされる可能性があることを示しています。後の TUH/TUSZ 保守記録には、下流での使用がすでに開始された後に <strong>主題の独占性</strong> および <strong>注釈の品質</strong> を修復する必要がある公開リリースのケースも文書化されています。そのため、このページでは、EEG 基礎モデルのベンチマークを、スプリット/リークの衛生状態だけでなく、<strong>ベンチマークの来歴</strong> を通じてもルーティングするようになりました。ベンチマークで進化するチャレンジ操作が使用されている場合は、ランキングを移植可能な一般化の証拠として扱う前に、<a href="glossary.html">用語集</a> および <a href="verification.html#pretraining-card">検証: 事前トレーニング カード</a> に直接進んでください。
 </p>
 </div>
 </section>
@@ -1056,7 +1027,7 @@ Mouthaanらによる系統的レビューでは、 (2019) によると、術前�
 <div class="note-box">
 <strong>2026-03-20 追記: パブリック L0 パックが同期されました</strong>
 <p>
-このページの弱点は、公開チェックリストが、Wiki ページの読者が L0 提出を組み立てる際に実際に使用するものよりも厳格になっていることでした。そのギャップは今では埋まっています。このページのルートだけでなく、提出シェイプ自体が必要な場合は、<a href="wiki/l0-minimum-artifact-pack.html">Wiki: L0</a> の最小アーティファクト パックに直接アクセスしてください。同期されたパックは、<strong>データセットのアイデンティティ</strong>、<strong>イベント忠実度</strong>、<strong>ラベル来歴</strong>、<strong>評価ファミリー + ホールドアウト祖先</strong>、<strong>取得分布を修正しました。概要</strong>、<strong>派生系統</strong>、および<strong></strong>を第一級の成果物として主張停止します。
+このページの弱点は、公開チェックリストが、読者が L0 提出を組み立てる際に実際に使用するものよりも厳格になっていることでした。そのギャップは今では埋まっています。このページのルートだけでなく、提出シェイプ自体が必要な場合は、<a href="glossary.html">用語集</a> の最小アーティファクト パックに直接アクセスしてください。同期されたパックは、<strong>データセットのアイデンティティ</strong>、<strong>イベント忠実度</strong>、<strong>ラベル来歴</strong>、<strong>評価ファミリー + ホールドアウト祖先</strong>、<strong>取得分布</strong>、<strong>派生系統</strong>を第一級の成果物として扱います。
 </p>
 </div>
 
@@ -1145,7 +1116,7 @@ SOTAを使うのではなく、まず再現しやすい比較軸を置きます�
 <tr>
 <td><strong>データバージョン</strong></td>
 <td>スナップショット / バージョン / DOI / 取得日は固定です</td>
-<td><a href="wiki/standards-repositories-validators-and-benchmarks.html">Wiki: 標準/リポジトリ/バリデータ/ベンチマーク</a></td>
+<td><a href="glossary.html">用語集</a></td>
 </tr>
 <tr>
 <td><strong>データ構造</strong></td>
@@ -1155,12 +1126,12 @@ SOTAを使うのではなく、まず再現しやすい比較軸を置きます�
 <tr>
 <td><strong>品質管理</strong></td>
 <td>QC ログと除外基準は残ります</td>
-<td><a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベントの同期と観察ログ</a></td>
+<td><a href="glossary.html">用語集</a></td>
 </tr>
 <tr>
 <td><strong>比較性</strong></td>
 <td>1 つのベースラインと評価ファミリ/トレーニング/テスト ルールが修正されています</td>
-<td><a href="wiki/dataset-splits-and-leakage.html">Wiki: データ分割とデータ漏洩</a></td>
+<td><a href="glossary.html">用語集</a></td>
 </tr>
 <tr>
 <td><strong>共有の準備</strong></td>

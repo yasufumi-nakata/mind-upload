@@ -10,19 +10,17 @@
 - `verification.html`: 検証条件、反証条件、再現性の基準
 - `tech_roadmap.html`: 技術ロードマップ
 - `datasets.html`: 公開データと L0 実践
-- `mind_uploading_papers.html`: 論文アーカイブ
 - `research_harvest_50.html`: 未解決課題と文献マップ
 - `classic_mu_archive.html`: ibiblio 版 Mind Uploading Home Page の日本語ガイド
 - `external/compcogneuro/`: compcogneuro 公開リポジトリ群の日本語全文翻訳
 - `external/netpyne/`: NetPyNE docs の日本語全文翻訳
 - `external/opensourcebrain/documentation/`: OpenSourceBrain Documentation の日本語全文翻訳
-- `wiki/`: 基礎学習、用語、読み方の補助ページ
 
 ## 公開範囲
 
 GitHub Pages には Jekyll が生成した `_site` だけを配信します。リポジトリ直下の設定ファイル、ビルド用スクリプト、GitHub Actions 設定は、公開ページとして配信しません。
 
-ページを追加する場合は、まず既存の公開ページまたは `wiki/` の学習ページに統合できるかを確認します。独立ページにするのは、読者の導線が明確に改善される場合だけです。
+ページを追加する場合は、まず既存の公開 HTML ページへ統合できるかを確認します。独立ページにするのは、読者の導線が明確に改善される場合だけです。
 
 ## ローカル確認
 
