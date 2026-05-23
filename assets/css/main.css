@@ -1476,7 +1476,7 @@ h5 {
 @media screen and (max-width: 860px) {
     :root {
         --page-gutter: 18px;
-        --header-height: auto;
+        --header-height: 112px;
         --content-width: 100%;
     }
 
@@ -1580,6 +1580,7 @@ h5 {
 @media screen and (max-width: 560px) {
     :root {
         --page-gutter: 14px;
+        --header-height: 144px;
     }
 
     body {
