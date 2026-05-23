@@ -11,8 +11,8 @@
     <meta property="og:image" content="{{ site.url }}/ogp.jpg">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F9E0;</text></svg>">
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
     {% feed_meta %}
 </head>
 
@@ -132,11 +132,23 @@
             <div class="topic-card topic-card-known">
                 <p class="topic-card-kicker">現段階で比較的明確なこと</p>
                 <h2>現在わかっていること</h2>
+                {% assign visible_known_points = 3 %}
+                {% assign extra_known_count = page.known_points | size | minus: visible_known_points %}
                 <ul class="topic-point-list">
-                    {% for item in page.known_points %}
+                    {% for item in page.known_points limit: visible_known_points %}
                     <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
+                {% if extra_known_count > 0 %}
+                <details class="topic-card-details">
+                    <summary>残り {{ extra_known_count }} 件を見る</summary>
+                    <ul class="topic-point-list topic-point-list-extra">
+                        {% for item in page.known_points offset: visible_known_points %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </details>
+                {% endif %}
             </div>
             {% endif %}
 
@@ -144,11 +156,23 @@
             <div class="topic-card topic-card-unknown">
                 <p class="topic-card-kicker">ここから先でまだ未解決のこと</p>
                 <h2>まだわかっていないこと</h2>
+                {% assign visible_unknown_points = 3 %}
+                {% assign extra_unknown_count = page.unknown_points | size | minus: visible_unknown_points %}
                 <ul class="topic-point-list">
-                    {% for item in page.unknown_points %}
+                    {% for item in page.unknown_points limit: visible_unknown_points %}
                     <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
+                {% if extra_unknown_count > 0 %}
+                <details class="topic-card-details">
+                    <summary>残り {{ extra_unknown_count }} 件を見る</summary>
+                    <ul class="topic-point-list topic-point-list-extra">
+                        {% for item in page.unknown_points offset: visible_unknown_points %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </details>
+                {% endif %}
             </div>
             {% endif %}
 

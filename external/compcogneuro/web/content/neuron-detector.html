@@ -75,6 +75,7 @@ a:hover { color: #0b3432; }
   padding: clamp(22px, 4vw, 46px);
   box-shadow: 0 14px 34px rgba(33, 43, 60, .08);
   min-width: 0;
+  overflow: hidden;
 }
 .kicker {
   color: var(--accent);
@@ -89,6 +90,8 @@ a:hover { color: #0b3432; }
   font-size: 40px;
   line-height: 1.2;
   font-weight: 800;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .description {
   margin: 14px 0 22px;
@@ -118,6 +121,39 @@ a:hover { color: #0b3432; }
 }
 .content {
   font-size: 16px;
+  min-width: 0;
+}
+.content :where(p, li, td, th, dd, figcaption, .note-box, .abstract-box, .key-points, .cta-box),
+.content a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.content pre,
+.content table {
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.content pre code {
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.content code {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.content :where(math, mjx-container, svg) {
+  max-width: 100%;
+}
+.content mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.content :where(sim-question, embed-page, sim-vor, sim-urakubo, sim-stability, sim-neuron, sim-inhib, sim-deepfsa, sim-bgventral, sim-bgdorsal) {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .content h1, .content h2, .content h3, .content h4 {
   line-height: 1.35;
@@ -237,6 +273,52 @@ a:hover { color: #0b3432; }
   .title { font-size: 30px; }
   .content h1 { font-size: 26px; }
   .content h2 { font-size: 22px; }
+  .content table { font-size: 14px; }
+}
+@media (max-width: 560px) {
+  body { line-height: 1.68; }
+  .topbar { position: static; }
+  .topbar-inner {
+    align-items: flex-start;
+    gap: 8px 12px;
+    padding: 10px 12px;
+  }
+  .brand {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+  .nav-link {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  .shell { padding: 12px 10px 34px; }
+  .paper {
+    padding: 18px 14px;
+    border-radius: 6px;
+    box-shadow: none;
+  }
+  .title { font-size: clamp(25px, 8vw, 30px); }
+  .description { font-size: 14.5px; }
+  .meta-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 18px 0 22px;
+  }
+  .meta-card, .note-box, .abstract-box, .key-points, .cta-box { padding: 14px; }
+  .content { font-size: 15px; }
+  .content h1 { font-size: 22px; }
+  .content h2 { font-size: 20px; }
+  .content h3 { font-size: 18px; }
+  .content pre {
+    padding: 12px;
+    font-size: 13px;
+  }
+  .content table { font-size: 14px; }
+  .side { padding: 14px; }
+  .side ul {
+    max-height: 34vh;
+    overflow: auto;
+  }
 }
 
 </style>
