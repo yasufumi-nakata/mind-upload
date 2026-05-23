@@ -1,33 +1,33 @@
 :root {
-    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
-    --font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
-    --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    --font-body: Inter, "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
+    --font-heading: "IBM Plex Serif", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif;
+    --font-mono: "SFMono-Regular", "JetBrains Mono", Consolas, "Liberation Mono", Menlo, monospace;
 
-    --color-page: #f6f8f6;
-    --color-ink: #151918;
-    --color-ink-soft: #33403c;
-    --color-muted: #68746f;
-    --color-surface: #ffffff;
-    --color-surface-subtle: #f8faf8;
-    --color-panel: #eef5f1;
-    --color-line: #dbe3df;
-    --color-line-strong: #bdcac5;
-    --color-accent: #118069;
-    --color-accent-strong: #075848;
-    --color-accent-soft: #e4f3ee;
-    --color-accent-ink: #062d28;
-    --color-gold: #b86e1d;
-    --color-gold-soft: #fff4e4;
-    --color-coral: #b85c4c;
-    --color-coral-soft: #fbebe7;
-    --color-indigo: #42526f;
-    --color-indigo-soft: #edf1f8;
+    --color-page: #080d0b;
+    --color-ink: #eef4f1;
+    --color-ink-soft: #c3d2cc;
+    --color-muted: #89a099;
+    --color-surface: #121a17;
+    --color-surface-subtle: #0d1512;
+    --color-panel: #16211d;
+    --color-line: #243330;
+    --color-line-strong: #3b514b;
+    --color-accent: #00c896;
+    --color-accent-strong: #00ffb3;
+    --color-accent-soft: #0d2b23;
+    --color-accent-ink: #d7fff4;
+    --color-gold: #f0a830;
+    --color-gold-soft: #28200a;
+    --color-coral: #ff735f;
+    --color-coral-soft: #301615;
+    --color-indigo: #7aa7ff;
+    --color-indigo-soft: #101b2d;
 
-    --shadow-soft: 0 10px 28px rgba(26, 37, 34, 0.06);
-    --shadow-small: 0 4px 14px rgba(26, 37, 34, 0.05);
-    --radius: 8px;
-    --radius-small: 6px;
-    --header-height: 66px;
+    --shadow-soft: 0 22px 58px rgba(0, 0, 0, 0.32);
+    --shadow-small: 0 14px 32px rgba(0, 0, 0, 0.26);
+    --radius: 4px;
+    --radius-small: 4px;
+    --header-height: 62px;
     --page-gutter: clamp(18px, 5vw, 74px);
     --max-width: 1180px;
     --content-width: 48rem;
@@ -39,6 +39,7 @@
 
 html {
     scroll-behavior: smooth;
+    color-scheme: dark;
 }
 
 html,
@@ -50,7 +51,11 @@ body {
 body {
     margin: 0;
     color: var(--color-ink);
-    background: var(--color-page);
+    background:
+        linear-gradient(90deg, rgba(0, 200, 150, 0.045) 1px, transparent 1px) 0 0 / 72px 72px,
+        linear-gradient(180deg, rgba(0, 200, 150, 0.035) 1px, transparent 1px) 0 0 / 72px 72px,
+        linear-gradient(145deg, rgba(0, 200, 150, 0.08), transparent 42%, rgba(240, 168, 48, 0.04)),
+        var(--color-page);
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.9;
@@ -59,8 +64,20 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(115deg, transparent 0 26%, rgba(240, 168, 48, 0.08) 26.1% 26.3%, transparent 26.4% 100%),
+        linear-gradient(0deg, transparent 0 62%, rgba(0, 200, 150, 0.07) 62.1% 62.3%, transparent 62.4% 100%);
+    opacity: 0.82;
+}
+
 ::selection {
-    background: rgba(17, 128, 105, 0.18);
+    background: rgba(0, 200, 150, 0.32);
 }
 
 img,
@@ -1416,10 +1433,309 @@ h5 {
     box-shadow: none;
 }
 
+/* Verification Dark redesign */
+.journal-header {
+    border-bottom-color: rgba(0, 200, 150, 0.24);
+    background: rgba(8, 13, 11, 0.88);
+    box-shadow: 0 1px 0 rgba(240, 168, 48, 0.18);
+}
+
+.site-title {
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.site-title::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-color: rgba(0, 255, 179, 0.42);
+    background:
+        linear-gradient(90deg, transparent 45%, rgba(0, 255, 179, 0.65) 46% 54%, transparent 55%),
+        linear-gradient(0deg, transparent 45%, rgba(0, 255, 179, 0.45) 46% 54%, transparent 55%),
+        var(--color-accent-soft);
+    box-shadow: inset 0 0 0 5px rgba(0, 200, 150, 0.07);
+}
+
+.journal-header nav a,
+.journal-header .site-nav .page-link {
+    border-radius: 2px;
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    font-weight: 700;
+}
+
+.journal-header nav a:hover,
+.journal-header nav a[aria-current="page"] {
+    border-color: rgba(0, 255, 179, 0.44);
+    background: rgba(0, 200, 150, 0.1);
+    color: var(--color-accent-strong);
+}
+
+.article-header {
+    border-color: rgba(0, 200, 150, 0.28);
+    background:
+        linear-gradient(90deg, rgba(0, 255, 179, 0.1) 1px, transparent 1px) 0 0 / 48px 48px,
+        linear-gradient(180deg, rgba(0, 255, 179, 0.07) 1px, transparent 1px) 0 0 / 48px 48px,
+        linear-gradient(135deg, rgba(18, 26, 23, 0.98), rgba(9, 17, 14, 0.96));
+    box-shadow: var(--shadow-soft);
+}
+
+.article-header::before {
+    inset: 0;
+    width: auto;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-gold), transparent);
+}
+
+.article-header::after {
+    content: "";
+    position: absolute;
+    right: clamp(18px, 4vw, 56px);
+    top: clamp(22px, 4vw, 54px);
+    width: min(36vw, 420px);
+    height: min(20vw, 220px);
+    max-height: 42%;
+    pointer-events: none;
+    opacity: 0.58;
+    background:
+        linear-gradient(90deg, transparent 0 18%, rgba(0, 255, 179, 0.72) 18.1% 18.4%, transparent 18.5% 100%),
+        linear-gradient(0deg, transparent 0 48%, rgba(240, 168, 48, 0.72) 48.1% 48.4%, transparent 48.5% 100%),
+        repeating-linear-gradient(8deg, rgba(0, 200, 150, 0.26) 0 1px, transparent 1px 18px);
+    border-right: 1px solid rgba(0, 255, 179, 0.42);
+    border-bottom: 1px solid rgba(0, 255, 179, 0.2);
+}
+
+.article-title {
+    max-width: 21ch;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.article-type,
+.page-guide-kicker,
+.section-map-kicker,
+.topic-card-kicker,
+.article-index-kicker,
+.booklet-kicker,
+.node-kicker,
+.flow-title {
+    color: var(--color-accent-strong);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.article-subtitle,
+.content-column p,
+.content-column li,
+.papers-page main p,
+.papers-page main li,
+.page-guide-lead,
+.page-guide-points li,
+.topic-point-list li,
+.topic-link-list li,
+.flow-sub,
+.figure-caption,
+.diagram-caption,
+.booklet-cover-lead {
+    color: var(--color-ink-soft);
+}
+
+.article-meta {
+    border-top-color: rgba(0, 200, 150, 0.22);
+}
+
+.article-meta span,
+.tag,
+.qa-id,
+.timeline-label {
+    border-color: rgba(0, 200, 150, 0.26);
+    background: rgba(0, 200, 150, 0.08);
+    color: var(--color-muted);
+}
+
+.page-guide-inner,
+.easy-guide-inner,
+.section-map-inner,
+.topic-card,
+.abstract-box,
+.key-points,
+.note-box,
+.question-box,
+.resolution-box,
+.cta-box,
+.article-index-card,
+.sidebar-box,
+.figure-box,
+.visual-diagram,
+.qa,
+.booklet-sheet,
+.flow-step,
+.booklet-card,
+.booklet-status-card,
+.booklet-step,
+.booklet-quote,
+.summary-booklet-page .article-header {
+    border-color: rgba(59, 81, 75, 0.86);
+    background: linear-gradient(180deg, rgba(18, 26, 23, 0.97), rgba(12, 19, 16, 0.97));
+    box-shadow: var(--shadow-small);
+}
+
+.page-guide-inner,
+.booklet-cover {
+    border-top-color: var(--color-accent);
+}
+
+.topic-card-known,
+.abstract-box,
+.question-box,
+.resolution-box,
+.cta-box {
+    border-left-color: var(--color-accent);
+}
+
+.topic-card-unknown,
+.note-box,
+.booklet-card-caution {
+    border-left-color: var(--color-gold);
+}
+
+.key-points {
+    border-left-color: var(--color-indigo);
+}
+
+.easy-guide-inner,
+.note-box {
+    background: linear-gradient(180deg, rgba(40, 32, 10, 0.82), rgba(18, 26, 23, 0.96));
+}
+
+.abstract-box,
+.question-box,
+.resolution-box,
+.cta-box,
+.booklet-status-card-strong,
+.booklet-quote {
+    background: linear-gradient(180deg, rgba(13, 43, 35, 0.88), rgba(18, 26, 23, 0.98));
+}
+
+.key-points {
+    background: linear-gradient(180deg, rgba(16, 27, 45, 0.9), rgba(18, 26, 23, 0.98));
+}
+
+.page-guide-link-list a,
+.btn-action,
+.btn,
+.cta-box a {
+    border-color: rgba(0, 255, 179, 0.38);
+    background: rgba(0, 200, 150, 0.08);
+    color: var(--color-accent-strong);
+    font-family: var(--font-mono);
+}
+
+.page-guide-link-list a:hover,
+.btn-action:hover,
+.btn:hover,
+.cta-box a:hover {
+    background: var(--color-accent);
+    color: #06100d;
+}
+
+.section-map-list a,
+.page-guide-details,
+.topic-card-details,
+.filter-input {
+    border-color: var(--color-line);
+    background: rgba(8, 13, 11, 0.7);
+    color: var(--color-ink-soft);
+}
+
+.section-map-index,
+.stage-number {
+    border: 1px solid rgba(0, 255, 179, 0.36);
+    background: rgba(0, 200, 150, 0.12);
+    color: var(--color-accent-strong);
+}
+
+code {
+    border-color: rgba(0, 200, 150, 0.26);
+    background: rgba(0, 200, 150, 0.08);
+    color: var(--color-accent-ink);
+}
+
+pre {
+    border-color: rgba(0, 200, 150, 0.28);
+    background: #07100d;
+    color: #d8eee8;
+}
+
+.data-table,
+.content-column table,
+.papers-page table {
+    border-color: var(--color-line);
+    background: var(--color-surface);
+}
+
+.data-table th,
+.content-column table th,
+.papers-page table th {
+    background: #18241f;
+    color: var(--color-ink);
+}
+
+.data-table td,
+.content-column table td,
+.papers-page table td {
+    color: var(--color-ink-soft);
+}
+
+.data-table tr:nth-child(even) td,
+.content-column table tr:nth-child(even) td,
+.papers-page table tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.figure-content,
+.qa-body,
+.booklet-section-header,
+.sidebar-box h4,
+.article-index-links li,
+.stage-list,
+.stage-item,
+.page-guide-links,
+.page-guide-facts div,
+.booklet-cover-band,
+.toc-section {
+    border-color: var(--color-line);
+}
+
+.timeline-dot {
+    background: #080d0b;
+}
+
+.timeline-dot.done {
+    background: var(--color-accent);
+}
+
+.timeline-dot.current {
+    box-shadow: 0 0 0 5px rgba(0, 200, 150, 0.16);
+}
+
+.booklet-cover-band {
+    background: rgba(8, 13, 11, 0.7);
+}
+
+.booklet-card-positive {
+    border-top-color: var(--color-accent);
+}
+
 .site-footer {
     padding: 36px var(--page-gutter);
-    border-top: 1px solid var(--color-line);
-    background: rgba(255, 255, 255, 0.78);
+    border-top: 1px solid rgba(0, 200, 150, 0.24);
+    background: #070c0a;
 }
 
 .site-footer .wrapper {
@@ -1529,6 +1845,10 @@ h5 {
     .article-header {
         margin-top: 16px;
         padding: 26px 22px;
+    }
+
+    .article-header::after {
+        display: none;
     }
 
     .article-title {
@@ -1663,8 +1983,34 @@ h5 {
 }
 
 @media print {
+    :root {
+        --color-page: #ffffff;
+        --color-ink: #111111;
+        --color-ink-soft: #333333;
+        --color-muted: #555555;
+        --color-surface: #ffffff;
+        --color-surface-subtle: #ffffff;
+        --color-line: #bbbbbb;
+        --color-line-strong: #777777;
+        --color-accent: #111111;
+        --color-accent-strong: #111111;
+        --color-accent-ink: #111111;
+        --color-accent-soft: #ffffff;
+        --color-gold: #111111;
+        --color-gold-soft: #ffffff;
+        --color-coral: #111111;
+        --color-coral-soft: #ffffff;
+        --color-indigo: #111111;
+        --color-indigo-soft: #ffffff;
+    }
+
     body {
         background: #fff;
+    }
+
+    body::before,
+    .article-header::after {
+        display: none;
     }
 
     .journal-header,
