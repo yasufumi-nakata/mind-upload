@@ -1,9 +1,0 @@
-.DS_Store
-**/.DS_Store
-._*
-**/._*
-
-.claude/
-node_modules/
-output/
-_site/
