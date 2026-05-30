@@ -27,6 +27,7 @@ automation/EegflowResolver.app/
 automation/node_modules/
 automation/run-codex.sh
 automation/run-gemini.sh
+.claude/scheduled_tasks.lock
 .claude/worktrees/
 
 # Python

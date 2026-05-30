@@ -7,7 +7,10 @@ require "erb"
 require "yaml"
 
 ROOT = File.expand_path("..", __dir__)
-OUTPUT_PATH = File.join(ROOT, "summary_booklet.html")
+OUTPUT_PATHS = [
+  File.join(ROOT, "summary_booklet.html"),
+  File.join(ROOT, "summary_booklet.md")
+].freeze
 SOURCE_PATHS = %w[
   index.html
   verification.html
@@ -674,7 +677,7 @@ class SummaryBookletTemplate
       <<~HTML
         <article class="booklet-card booklet-page-card">
           <h3><a href="#{page_data.url}">#{h(page_data.title)}</a></h3>
-          <p class="booklet-page-meta">#{h(page_role(page_data))} / #{h(page_data.reading_time)}</p>
+          <p class="booklet-page-meta">#{h([page_role(page_data), page_data.reading_time].reject(&:empty?).join(" / "))}</p>
           <p>#{page_data.abstract_html || h(page_data.page_intro)}</p>
           <ul class="booklet-list booklet-page-link-list">
             #{list_items(bullets)}
@@ -995,5 +998,5 @@ end
 
 pages = SOURCE_PATHS.map { |path| load_page(path) }
 output = SummaryBookletTemplate.new(pages).render
-File.write(OUTPUT_PATH, output)
-puts "生成しました: #{OUTPUT_PATH}"
+OUTPUT_PATHS.each { |path| File.write(path, output) }
+puts "生成しました: #{OUTPUT_PATHS.join(', ')}"

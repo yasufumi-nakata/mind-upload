@@ -51,9 +51,6 @@
         {% endif %}
         <div class="article-meta">
             <span>公開ページ</span>
-            {% if page.last_updated %}
-            <span>更新日: {{ page.last_updated }}</span>
-            {% endif %}
             {% if page.note %}
             <span>{{ page.note }}</span>
             {% endif %}
@@ -208,8 +205,8 @@
     <footer class="site-footer h-card">
         <data class="u-url" value="{{ '/' | relative_url }}"></data>
         <div class="wrapper">
-        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点、現在の統合、検証条件を置きます。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="{{ '/issue.html' | relative_url }}">参加ガイド</a> の基準に沿って整理してください。</p>
-        <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした検証コモンズです。公開ページには要点、現在の統合、検証条件を集約します。定義、根拠、限界を省略せず、読みやすく整理します。修正や改善提案は <a href="{{ '/issue.html' | relative_url }}">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p>&copy; Mind Uploading Research Project.</p>
         </div>
     </footer>
 

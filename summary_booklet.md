@@ -5,7 +5,7 @@ description: "サイトの公開ページから作成した、自動生成の A4
 article_type: "ブリーフィング冊子"
 subtitle: "公開ページの front matter と冒頭要約から再生成した A4 ブリーフィング"
 author: マインドアップロード研究プロジェクト
-last_updated: "2026-05-03"
+last_updated: "2026-05-24"
 note: "公開ページから自動生成"
 body_class: "summary-booklet-page"
 ---
@@ -19,13 +19,13 @@ body_class: "summary-booklet-page"
   <p class="booklet-kicker">マインドアップロード・コモンズ</p>
 <h2 class="booklet-cover-title">公開ページ要約冊子</h2>
   <p class="booklet-cover-lead">
-    このページは、Mind-Upload への主要なエントリ ポイントです。このサイトが何をしようとしているのか、どこから読み始めればよいのか、どのページが最初に重要なのかをできるだけ早く示すように設計されています。
+    このページは、Mind-Upload の全コンテンツへの入口を一か所に集めたプラットフォームです。このサイトが何を目指し、どの資料がどこにあるのかを、目的別に素早く見つけられるように設計されています。
   </p>
 
   <div class="booklet-cover-band">
     <div>
   <span>Reference Date</span>
-  <strong>2026-05-03</strong>
+  <strong>2026-05-24</strong>
 </div>
 <div>
   <span>Current Focus</span>
@@ -52,7 +52,7 @@ body_class: "summary-booklet-page"
 </article>
 <article class="booklet-card">
   <h3>Core Pages To Read Now</h3>
-  <p>マインドアップロード / 検証: マインドアップロード検証コモンズ / 技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する / マインドアップロードに向けて: 統合された技術的および理論的アプローチ / データとハンズオン: どこから始めて、どのようにして L0 に到達するか / 貢献ガイド</p>
+  <p>マインドアップロード / 検証: マインドアップロード検証コモンズ / 技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する / マインドアップロードに向けて: 統合された技術的および理論的アプローチ / データとハンズオン: どこから始めて、どのようにして L0 に到達するか / 参加と提案のガイド</p>
 </article>
 
   </div>
@@ -67,7 +67,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card">
   <h3>1. Site Scope</h3>
-  <p>このページは、Mind-Upload への主要なエントリ ポイントです。このサイトが何をしようとしているのか、どこから読み始めればよいのか、どのページが最初に重要なのかをできるだけ早く示すように設計されています。</p>
+  <p>このページは、Mind-Upload の全コンテンツへの入口を一か所に集めたプラットフォームです。このサイトが何を目指し、どの資料がどこにあるのかを、目的別に素早く見つけられるように設計されています。</p>
 </article>
 <article class="booklet-card">
   <h3>2. Known vs Unknown</h3>
@@ -79,14 +79,18 @@ body_class: "summary-booklet-page"
 </article>
 <article class="booklet-card">
   <h3>4. Support Routes</h3>
-  <p>このページは、マテリアルがサイト全体に散在しないように、パブリック コンテンツの配置先を決定するための運用ハブです。また、技術的なファストパスも提供されるため、文献の更新が年順だけで誤って配信されることがなくなります。</p>
+  <p>このページは、公開サイトの入口を少数の HTML ページに絞るための目録です。新しい内容は、原則として既存ページへ統合し、独立ページを増やしすぎないようにします。</p>
 </article>
 <article class="booklet-card">
-  <h3>5. Next Actions</h3>
-  <p>このページでは、Mind-Upload に参加する方法、問題のステータスを読み取る方法、および外部に依存したままのタスクから今すぐ実行できる変更を分離する方法について説明します。</p>
+  <h3>5. Release Package</h3>
+  <p>The release attaches a PDF booklet plus a natural-language corpus package for GPT and other LLM workflows.</p>
 </article>
 <article class="booklet-card">
-  <h3>6. Source Pages</h3>
+  <h3>6. Next Actions</h3>
+  <p>このページは、マインドアップロードに関する提案を、公開ページへ安全に統合できる形へ整えるためのガイドです。作業履歴ではなく、読者が次の提案を準備するための判断基準だけを残しています。</p>
+</article>
+<article class="booklet-card">
+  <h3>7. Source Pages</h3>
   <p>The booklet closes with a compact route back to the detailed public pages.</p>
 </article>
 
@@ -140,7 +144,7 @@ body_class: "summary-booklet-page"
     <tbody>
       <tr>
   <td>入口</td>
-  <td><strong><a href="/index.html">マインドアップロード</a></strong><br>このページは、Mind-Upload への主要なエントリ ポイントです。このサイトが何をしようとしているのか、どこから読み始めればよいのか、どのページが最初に重要なのかをできるだけ早く示すように設計されています。</td>
+  <td><strong><a href="/index.html">マインドアップロード</a></strong><br>このページは、Mind-Upload の全コンテンツへの入口を一か所に集めたプラットフォームです。このサイトが何を目指し、どの資料がどこにあるのかを、目的別に素早く見つけられるように設計されています。</td>
 </tr>
 <tr>
   <td>検証コモンズ</td>
@@ -248,8 +252,8 @@ body_class: "summary-booklet-page"
     <tbody>
       <tr>
   <td><a href="/index.html">マインドアップロード</a></td>
-  <td>ここから始めましょう - 最初に成功基準、基準、ベンチマーク、事前登録を定義します</td>
-  <td>このページは、Mind-Upload への主要なエントリ ポイントです。このサイトが何をしようとしているのか、どこから読み始めればよいのか、どのページが最初に重要なのかをできるだけ早く示すように設計されています。</td>
+  <td>知識プラットフォーム - 検証・ロードマップ・文献・データ・翻訳資料をひとつに集約した知識の集積地</td>
+  <td>このページは、Mind-Upload の全コンテンツへの入口を一か所に集めたプラットフォームです。このサイトが何を目指し、どの資料がどこにあるのかを、目的別に素早く見つけられるように設計されています。</td>
 </tr>
 <tr>
   <td><a href="/verification.html">検証: マインドアップロード検証コモンズ</a></td>
@@ -272,9 +276,9 @@ body_class: "summary-booklet-page"
   <td>このページは、「`Which public data should I start validation with first?&#39;&#39; and `「L0 再現性解析を行うにはどうすればよいですか?」の両方に 1 か所で答える実践的なガイドです。データセット名のリストにとどまりません。 BIDS、QC、分割、ベースラインを 1 つのパスで接続します。</td>
 </tr>
 <tr>
-  <td><a href="/issue.html">貢献ガイド</a></td>
-  <td>ガイド - リサーチ ワークフローに参加し、問題トラッカーを読んでください。</td>
-  <td>このページでは、Mind-Upload に参加する方法、問題のステータスを読み取る方法、および外部に依存したままのタスクから今すぐ実行できる変更を分離する方法について説明します。</td>
+  <td><a href="/issue.html">参加と提案のガイド</a></td>
+  <td>参加ガイド - 実行できる変更、外部依存、証拠の強さを分けて提案するための入口</td>
+  <td>このページは、マインドアップロードに関する提案を、公開ページへ安全に統合できる形へ整えるためのガイドです。作業履歴ではなく、読者が次の提案を準備するための判断基準だけを残しています。</td>
 </tr>
 
     </tbody>
@@ -283,8 +287,8 @@ body_class: "summary-booklet-page"
   <div class="booklet-card-grid booklet-card-grid-2">
     <article class="booklet-card booklet-page-card">
   <h3><a href="/index.html">マインドアップロード</a></h3>
-  <p class="booklet-page-meta">ここから始めましょう - 最初に成功基準、基準、ベンチマーク、事前登録を定義します / 5～10分</p>
-  <p>Mind-Upload は、「心はコンピューター上で再現できるか?」という大きな疑問を <strong>小さくてテスト可能なタスク</strong> に分割するためのサイトです。最終的な結論を急ぐのではなく、<strong>何が進捗としてカウントされるか</strong>、<strong>他の人が同じ結果を検証できるかどうか</strong>を定義することから始めます。</p>
+  <p class="booklet-page-meta">知識プラットフォーム - 検証・ロードマップ・文献・データ・翻訳資料をひとつに集約した知識の集積地</p>
+  <p><strong>マインドアップロード・コモンズ</strong>は、マインドアップロードと全脳エミュレーション (WBE) を <strong>検証可能な研究課題</strong> として読むための知識プラットフォームです。検証条件、技術ロードマップ、文献マップ、公開データ、入門と用語、外部資料の全文翻訳までを一か所に集約し、あらゆる主張を <strong>再現可能な成果物 (データ・コード・評価)</strong> に結び付けて確認できるようにします。</p>
   <ul class="booklet-list booklet-page-link-list">
     <li>Connectome が完了しても、エミュレーションが完了したことを意味するわけではありません。欠落しているメンテナンス状態変数は個別に監査する必要があります。</li><li>Temporal Validity Card は公開ワークフローの一部となっているため、同日の成功が暗黙のうちに日をまたぐ請求や長期請求に昇格することはありません。</li><li>人間の証拠は階層化されています：局所超微細構造、シナプス密度PET、受容体/輸送体アトラスの事前分布、選択された占有PETルート、チャレンジ制限変位/放出PETルート、5つの代謝物1H-MRSI類似性足場、高解像度1H-MRSI代謝物分布ルート、31P代謝物/pHバランス、31P MT交換フラックス、31P NAD含有量マッピング、31P機能的NADダイナミクスルート、重水素代謝物マッピング/絶対定量ルート、重水素運動速度イメージング、量で定義されたイオンプロキシファミリー、管スケールの伝達速度ルート、ミエリン感受性/組織健康感受性MRI比率ファミリー、マクロサーマル/摂動条件付きサーマルプロキシファミリー、BBB水交換プロキシ、トレーサー特異的BBB輸送プロキシ、血液CSFバリア/脈絡叢灌流 / 血液から CSF への輸送 / 水循環 / 見かけの交換代理、SMBT-1 MAO-B ターゲット検証 / 疾患コンテキスト / 定量化 / 生体内分布ルート、SL25.1188 MAO-B 定量化 / 重症度条件付きルート、I2BS ルート、TSPO 疾患コンテキスト / 検証境界内 PET、CSF1R ルート設定ターゲット定義 PET、COX-2酵素定義PET、および肉眼的CSF振動/実質-CSF水交換/呼吸条件付き正味流量/運動条件付き造影剤流入/髄膜リンパ流/くも膜下腔内トレーサー/CSFから血液へのクリアランス/CSF移動性/モデルベースのバイオマーカー流出経路は、1つのほぼ直接的な読み取り値ではない。</li>
   </ul>
@@ -347,15 +351,15 @@ body_class: "summary-booklet-page"
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/issue.html">貢献ガイド</a></h3>
-  <p class="booklet-page-meta">ガイド - リサーチ ワークフローに参加し、問題トラッカーを読んでください。 / 10～20分</p>
-  <p>Mind-Upload は、マインド アップロードを検証可能な研究に発展させるオープン コミュニティです。分野や経験を問わず、文章の改善や用語の整理、誤解の指摘など、再現性の向上に直結する業務にすぐに参加できます。</p>
+  <h3><a href="/issue.html">参加と提案のガイド</a></h3>
+  <p class="booklet-page-meta">参加ガイド - 実行できる変更、外部依存、証拠の強さを分けて提案するための入口 / 5～10分</p>
+  <p>このサイトでは、マインドアップロードに関する提案を、読者が検証できる形で扱います。新しい主張を追加する場合は、何を主張しているのか、どの証拠に基づくのか、どこまでが未解決なのかを分けてください。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>文章、用語、リンク構造の改善など、小さいながらも価値のある参加方法を紹介します。</li><li>これにより、ドキュメントレベルの反映と実装されたアーティファクトを混同することなく、問題のステータスを追跡できます。</li><li>曖昧な強い主張よりも、達成条件や反証条件が明確な問題を優先する。</li>
+    <li>提案は、主張、根拠、反証条件、統合先を分けて書きます。</li><li>このリポジトリ内で実行できる変更と、外部依存のある作業を混ぜません。</li><li>公開ページに載せる前に、マインドアップロードの検証や学習導線に直接関係するかを確認します。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証</a></li><li><a href="/glossary.html">用語集</a></li>
+  <li><a href="/verification.html">検証</a></li><li><a href="/content_hub.html">コンテンツ統合ハブ</a></li><li><a href="/research_harvest_50.html">文献マップ</a></li>
 </ul>
 
 </article>
@@ -399,9 +403,9 @@ body_class: "summary-booklet-page"
   <td>このページは、Mind-Upload でよく出てくる用語の用語集です。最初は短い日常用語の説明から始まり、必要に応じてより厳密なページに戻ります。</td>
 </tr>
 <tr>
-  <td><a href="/content_hub.html">パブリック コンテンツ統合ハブ</a></td>
-  <td>ナビゲーション - コンテンツの拡散と文献ルートの圧縮を防ぐ単一のルーティング層</td>
-  <td>このページは、マテリアルがサイト全体に散在しないように、パブリック コンテンツの配置先を決定するための運用ハブです。また、技術的なファストパスも提供されるため、文献の更新が年順だけで誤って配信されることがなくなります。</td>
+  <td><a href="/content_hub.html">公開コンテンツ</a></td>
+  <td>ナビゲーション - ページ数を増やさず、必要な入口だけを保つための案内</td>
+  <td>このページは、公開サイトの入口を少数の HTML ページに絞るための目録です。新しい内容は、原則として既存ページへ統合し、独立ページを増やしすぎないようにします。</td>
 </tr>
 
     </tbody>
@@ -461,20 +465,67 @@ body_class: "summary-booklet-page"
 
 </article>
 <article class="booklet-card booklet-page-card">
-  <h3><a href="/content_hub.html">パブリック コンテンツ統合ハブ</a></h3>
-  <p class="booklet-page-meta">ナビゲーション - コンテンツの拡散と文献ルートの圧縮を防ぐ単一のルーティング層 / 5～10分</p>
-  <p>このページは、公開コンテンツの<strong>統合対象</strong>および<strong>更新先</strong>を決定するためのハブです。新しい情報を追加する前に、ここで予定のテーブルを確認し、該当のページにマージすることを優先してください。</p>
+  <h3><a href="/content_hub.html">公開コンテンツ</a></h3>
+  <p class="booklet-page-meta">ナビゲーション - ページ数を増やさず、必要な入口だけを保つための案内 / 3分</p>
+  <p>公開サイトを、少数の読みやすい HTML ページとして保つための案内です。削除済みページ群へ分散していた導線は削除し、必要な文献・検証・入門情報は既存の中核ページへ寄せます。</p>
   <ul class="booklet-list booklet-page-link-list">
-    <li>各ドメインには、固定のメイン ページとサポート ページがあります。</li><li>新しいページを作成する前に、デフォルトでは、マテリアルを既存のページにマージできるかどうかがチェックされます。</li><li>パブリック ナビゲーションと操作の参照が 1 か所に表示されます。</li>
+    <li>公開ページはすべて HTML を基準にします。</li><li>削除済みページ群は運用対象から外し、文献整理は research_harvest_50.html に寄せます。</li><li>新規ページを作る前に、既存ページへの統合で足りるかを確認します。</li>
   </ul>
   <p class="booklet-page-meta">次に読む</p>
 <ul class="booklet-link-list booklet-page-link-list">
-  <li><a href="/index.html">始める</a></li><li><a href="/mind_uploading_papers.html">ペーパーコレクション</a></li><li><a href="/research_harvest_50.html">研究成果</a></li>
+  <li><a href="/index.html">はじめに</a></li><li><a href="/verification.html">検証</a></li><li><a href="/research_harvest_50.html">文献マップ</a></li>
 </ul>
 
 </article>
 
   </div>
+</section>
+
+<section class="booklet-sheet booklet-page-break">
+  <div class="booklet-section-header">
+    <p class="booklet-kicker">Release Package</p>
+    <h2>PDF Book and Natural-Language Package</h2>
+  </div>
+
+  <div class="booklet-card-grid booklet-card-grid-3">
+    <article class="booklet-card">
+  <h3>PDF Summary Book</h3>
+  <p>A4冊子として、サイト全体の目的、検証線、主要ページ、外部翻訳コーパスの構成を短く確認できます。</p>
+</article>
+<article class="booklet-card">
+  <h3>Natural-Language Corpus</h3>
+  <p>256件の公開HTMLを、JSONL、単一テキスト、ページ別テキストに変換します。</p>
+</article>
+<article class="booklet-card">
+  <h3>LLM/RAG Use</h3>
+  <p>GPT等へ渡す場合は、corpus.jsonl を1行1ページの文書集合として扱うのが最も素直です。</p>
+</article>
+
+  </div>
+
+  <table class="data-table booklet-table">
+    <thead>
+      <tr>
+        <th>Package Area</th>
+        <th>Included Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+  <td>Core site</td>
+  <td>14 public HTML pages, including the entry page, verification, roadmap, dataset map, FAQ, glossary, and this booklet.</td>
+</tr>
+<tr>
+  <td>External translations</td>
+  <td>242 translated HTML pages: compcogneuro 178, NetPyNE 8, OpenSourceBrain 56.</td>
+</tr>
+<tr>
+  <td>Release artifacts</td>
+  <td>mind-upload-summary-booklet-a4.pdf / mind-upload-language-package.tar.gz / corpus.jsonl / corpus.txt / manifest.json.</td>
+</tr>
+
+    </tbody>
+  </table>
 </section>
 
 <section class="booklet-sheet booklet-page-break">
@@ -493,16 +544,16 @@ body_class: "summary-booklet-page"
 </article>
 <article class="booklet-card">
   <h3>ヒト・プロキシ束を監査する</h3>
-  <p>はじめに: マインド アップロード / WBE を測定可能な問題にする -&gt; ヒト・プロキシ構成 -&gt; 測定スタック</p>
+  <p>はじめに: マインド アップロード / WBE を測定可能な問題にする -&gt; 検証: マインドアップロード検証コモンズ -&gt; 用語集</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/wiki/human-proxy-composition.html">ヒト・プロキシ構成</a></li><li><a href="/wiki/measurement-stack-and-claim-ceiling.html">測定スタック</a></li>
+    <li><a href="/wbe_101.html">WBE 101</a></li><li><a href="/verification.html">検証</a></li><li><a href="/glossary.html">用語集</a></li>
   </ul>
 </article>
 <article class="booklet-card">
   <h3>参加して統合する</h3>
-  <p>貢献ガイド / パブリック コンテンツ統合ハブ</p>
+  <p>参加と提案のガイド / 公開コンテンツ</p>
   <ul class="booklet-link-list booklet-page-link-list">
-    <li><a href="/index.html">スタートページ</a></li><li><a href="/verification.html">検証</a></li><li><a href="/glossary.html">用語集</a></li>
+    <li><a href="/verification.html">検証</a></li><li><a href="/content_hub.html">コンテンツ統合ハブ</a></li><li><a href="/research_harvest_50.html">文献マップ</a></li>
   </ul>
 </article>
 
@@ -511,7 +562,7 @@ body_class: "summary-booklet-page"
   <div class="booklet-status-grid">
     <div class="booklet-status-card booklet-status-card-strong">
   <span>Working Principle</span>
-  <strong>文章、用語、リンク構造の改善など、小さいながらも価値のある参加方法を紹介します。</strong>
+  <strong>提案は、主張、根拠、反証条件、統合先を分けて書きます。</strong>
 </div>
 <div class="booklet-status-card">
   <span>Update Rule</span>
@@ -522,7 +573,7 @@ body_class: "summary-booklet-page"
 
   <h3>Source Pages</h3>
   <ul class="booklet-link-list">
-    <li><a href="/index.html">マインドアップロード</a></li><li><a href="/verification.html">検証: マインドアップロード検証コモンズ</a></li><li><a href="/tech_roadmap.html">技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する</a></li><li><a href="/perspective.html">マインドアップロードに向けて: 統合された技術的および理論的アプローチ</a></li><li><a href="/datasets.html">データとハンズオン: どこから始めて、どのようにして L0 に到達するか</a></li><li><a href="/issue.html">貢献ガイド</a></li><li><a href="/content_hub.html">パブリック コンテンツ統合ハブ</a></li><li><a href="/wbe_101.html">はじめに: マインド アップロード / WBE を測定可能な問題にする</a></li><li><a href="/eeg_101.html">はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか</a></li><li><a href="/faq.html">FAQ: よくある質問と一般的な障害モード</a></li><li><a href="/glossary.html">用語集</a></li>
+    <li><a href="/index.html">マインドアップロード</a></li><li><a href="/verification.html">検証: マインドアップロード検証コモンズ</a></li><li><a href="/tech_roadmap.html">技術ロードマップ: 測定、再構築、実装を通じて WBE を理解する</a></li><li><a href="/perspective.html">マインドアップロードに向けて: 統合された技術的および理論的アプローチ</a></li><li><a href="/datasets.html">データとハンズオン: どこから始めて、どのようにして L0 に到達するか</a></li><li><a href="/issue.html">参加と提案のガイド</a></li><li><a href="/content_hub.html">公開コンテンツ</a></li><li><a href="/wbe_101.html">はじめに: マインド アップロード / WBE を測定可能な問題にする</a></li><li><a href="/eeg_101.html">はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか</a></li><li><a href="/faq.html">FAQ: よくある質問と一般的な障害モード</a></li><li><a href="/glossary.html">用語集</a></li>
   </ul>
 
   <div class="booklet-quote">

@@ -2,15 +2,12 @@
 layout: default
 title: マインドアップロード
 description: マインド アップロードと WBE を目に見える進歩を伴う科学に変えるための検証コモンズ。
-article_type: ここから始めましょう
-subtitle: 最初に成功基準、基準、ベンチマーク、事前登録を定義します
+article_type: 知識プラットフォーム
+subtitle: 検証・ロードマップ・文献・データ・翻訳資料をひとつに集約した知識の集積地
 author: マインドアップロード研究プロジェクト
-last_updated: '2026-05-16'
-note: ブログ型の入口ページ。読む順序、停止線、詳細ページへの導線を短く整理します。
 audience: 初めての訪問者、全体像だけを知りたい読者、明確な読む順序を知りたい人
-reading_time: 5～10分
-page_intro: このページは、Mind-Upload への主要なエントリ ポイントです。このサイトが何をしようとしているのか、どこから読み始めればよいのか、どのページが最初に重要なのかをできるだけ早く示すように設計されています。
-accuracy_note: このページでは、エントリ ポイントで必要なもののみを説明します。詳細な証拠と技術的条件については、リンク先のページを参照してください。
+page_intro: このページは、Mind-Upload の全コンテンツへの入口を一か所に集めたプラットフォームです。このサイトが何を目指し、どの資料がどこにあるのかを、目的別に素早く見つけられるように設計されています。
+accuracy_note: このページは各コンテンツへの入口の地図です。詳細な証拠と技術的条件については、各リンク先のページを参照してください。
 page_highlights:
 - Mind-Upload の核心は、大胆な結論ではなく、進捗状況を測定できる検証コモンズです。
 - どこから始めればよいかわからない場合は、「検証」→「ロードマップ」→「WBE/EEG 101」をお読みください。
@@ -105,25 +102,89 @@ recommended_pages:
 <article class="content-column">
 
 <div class="abstract-box">
-<h2>これは何ですか</h2>
+<h2>このプラットフォームについて</h2>
 <p>
-Mind-Upload は、「心はコンピューター上で再現できるか?」という大きな疑問を <strong>小さくてテスト可能なタスク</strong> に分割するためのサイトです。最終的な結論を急ぐのではなく、<strong>何が進捗としてカウントされるか</strong>、<strong>他の人が同じ結果を検証できるかどうか</strong>を定義することから始めます。
+<strong>マインドアップロード・コモンズ</strong>は、マインドアップロードと全脳エミュレーション (WBE) を <strong>検証可能な研究課題</strong> として読むための知識プラットフォームです。検証条件、技術ロードマップ、文献マップ、公開データ、入門と用語、外部資料の全文翻訳までを一か所に集約し、あらゆる主張を <strong>再現可能な成果物 (データ・コード・評価)</strong> に結び付けて確認できるようにします。
 </p>
 </div>
 
-<div class="key-points">
-<h4>このページで最初に学ぶこと</h4>
-<ul>
-<li><strong>このサイトの中心:</strong> WBE が機能するかどうかについてはすぐには確信が持てませんが、それをテストする方法については合意しています。</li>
-<li><strong>最短の読み取りパス:</strong> 概要だけが必要な場合は、以下の読み取り順序の項目 1 ～ 3 で十分です。</li>
-<li><strong>このページでできないこと:</strong> このページだけでは、アイデンティティや意識に関する最終的な問題は解決されません。</li>
-</ul>
-</div>
+<section class="section" id="library">
+<h2 class="section-title">全コンテンツ一覧</h2>
+<p>このサイトに収録された公開コンテンツを目的別に整理しています。各ページは独立して読めます。気になる入口から辿ってください。</p>
+
+<table class="data-table">
+<thead><tr><th colspan="2">核となる検証と設計</th></tr></thead>
+<tbody>
+<tr><td><a href="verification.html">検証</a></td><td>成功基準、反証条件、再現性、監査、主張の上限。</td></tr>
+<tr><td><a href="tech_roadmap.html">技術ロードマップ</a></td><td>測定 → 再構成 → 実装 → 検証を質問ツリーに分解。</td></tr>
+<tr><td><a href="perspective.html">視点</a></td><td>理論・技術ルート・異論を追う長文の研究ノート。</td></tr>
+<tr><td><a href="perspective.html#design-principles">設計フレームワーク</a></td><td>動的な過程としての意識の見方を設計要件へ変える。</td></tr>
+<tr><td><a href="verification.html#casework">検証ケースワーク</a></td><td>PDB / BIDS+OpenNeuro / PhysioNet / ImageNet / MLPerf / OSF から抽出した検証テンプレート。</td></tr>
+<tr><td><a href="verification.html#maintenance-state-error-budget">維持状態の停止線</a></td><td>コネクトーム・代謝・グリア・クリアランスを一つの解決済み行に圧縮しない。</td></tr>
+<tr><td><a href="verification.html#observability-budget">観測可能性の予算</a></td><td>何が直接観測で、何がプロキシなのかを切り分ける。</td></tr>
+</tbody>
+</table>
+
+<table class="data-table">
+<thead><tr><th colspan="2">入門と用語</th></tr></thead>
+<tbody>
+<tr><td><a href="wbe_101.html">WBE 101</a></td><td>成功条件と失敗条件を伴う測定可能な問題としての入門。</td></tr>
+<tr><td><a href="wbe_101.html#state-completeness">WBE 101: 隠れ状態</a></td><td>なぜ「配線図だけ」では足りないのかを短く確認する。</td></tr>
+<tr><td><a href="eeg_101.html">EEG 101</a></td><td>EEG でできること / できないことと分析フローの仕組み。</td></tr>
+<tr><td><a href="glossary.html">用語集</a></td><td>用語の取り違えとカテゴリエラーを防ぐコンパクトな辞書。</td></tr>
+<tr><td><a href="faq.html">FAQ</a></td><td>最も一般的な誤解を先に解消する。</td></tr>
+</tbody>
+</table>
+
+<table class="data-table">
+<thead><tr><th colspan="2">データと実践</th></tr></thead>
+<tbody>
+<tr><td><a href="datasets.html">データセットとベンチマーク</a></td><td>公開データセット、リポジトリ、確認チェックリスト。</td></tr>
+<tr><td><a href="datasets.html#l0-practice">L0 練習</a></td><td>再現可能な解析パッケージへの最短ルート。</td></tr>
+</tbody>
+</table>
+
+<table class="data-table">
+<thead><tr><th colspan="2">文献と未解決課題</th></tr></thead>
+<tbody>
+<tr><td><a href="research_harvest_50.html">文献マップ</a></td><td>マインドアップロード関連の文献を未解決課題に対応づけて整理。</td></tr>
+<tr><td><a href="issue.html#proposal-integration">統合技術提案</a></td><td>各提案・応答ステータス・証拠セクションを一つのフローに集約。</td></tr>
+</tbody>
+</table>
+
+<table class="data-table">
+<thead><tr><th colspan="2">参加と運用</th></tr></thead>
+<tbody>
+<tr><td><a href="issue.html">参加ガイド</a></td><td>主張・根拠・統合先を分けて提案・修正する。</td></tr>
+<tr><td><a href="issue.html#external-collaboration">外部依存とコラボレーション</a></td><td>サイト内で完了できない実験・審査・調達・法的判断の扱い。</td></tr>
+<tr><td><a href="issue.html#safe-publication">公開しないもの</a></td><td>公開対象外の情報の取り扱い方針。</td></tr>
+<tr><td><a href="content_hub.html">公開コンテンツ目録</a></td><td>公開ページの入口と、追加内容の統合先の案内。</td></tr>
+</tbody>
+</table>
+
+<table class="data-table">
+<thead><tr><th colspan="2">アーカイブと外部資料の全文翻訳</th></tr></thead>
+<tbody>
+<tr><td><a href="classic_mu_archive.html">古典 MU アーカイブ</a></td><td>ibiblio 版 Mind Uploading Home Page の日本語ガイド。</td></tr>
+<tr><td><a href="external/compcogneuro/">compcogneuro</a></td><td>Computational Cognitive Neuroscience 関連リポジトリ群の日本語全文翻訳。</td></tr>
+<tr><td><a href="external/netpyne/">NetPyNE</a></td><td>NetPyNE ドキュメントの日本語全文翻訳。</td></tr>
+<tr><td><a href="external/opensourcebrain/documentation/">OpenSourceBrain</a></td><td>OpenSourceBrain Documentation の日本語全文翻訳。</td></tr>
+</tbody>
+</table>
+
+<table class="data-table">
+<thead><tr><th colspan="2">読み物と配布物</th></tr></thead>
+<tbody>
+<tr><td><a href="summary_booklet.html">サマリー冊子</a></td><td>主要ページの要点をまとめた読み物。A4 PDF 冊子としても配布。</td></tr>
+<tr><td>言語パッケージ / コーパス</td><td>GitHub Release で配布。LLM・検索拡張生成 (RAG) で使いやすい自然言語パッケージ、JSON Lines コーパス、連結プレーンテキスト、ページ目録。</td></tr>
+</tbody>
+</table>
+</section>
 
 <div class="note-box">
 <strong>気になる未解決の質問がすでにわかっている場合</strong>
 <p>
-公開ページは方向レベルの入口です。気になる未解決課題がすでにある場合は、まず <a href="verification.html">検証</a> で主張の条件を確認し、その後 <a href="research_harvest_50.html">文献マップ</a> で関連文献と未解決点を追ってください。
+このプラットフォームは目的別に入口を束ねています。気になる未解決課題がすでにある場合は、まず <a href="verification.html">検証</a> で主張の条件を確認し、その後 <a href="research_harvest_50.html">文献マップ</a> で関連文献と未解決点を追ってください。
 </p>
 </div>
 
@@ -131,7 +192,7 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 <p class="article-index-kicker">詳細な検証メモ</p>
 <h2 id="frontdoor-stoplines-title">入口で誤読しやすい主張は、各ページで分けて読む</h2>
 <p>
-トップページでは、長い停止線メモを全文で浴びせず、まず読む順序だけを示します。技術的な根拠、測定上の限界、主張の上限は、以下のページで分けて確認してください。
+このページでは、長い停止線メモを全文で浴びせず、要点と入口だけを示します。技術的な根拠、測定上の限界、主張の上限は、以下のページで分けて確認してください。
 </p>
 <ul class="article-index-links">
 <li><a href="verification.html#maintenance-state-error-budget">維持状態の停止線</a><span>コネクトーム、代謝、グリア、クリアランスを一つの解決済み行に圧縮しないための確認先。</span></li>
@@ -187,7 +248,7 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 <thead>
 <tr>
 <th>このサイトが現在行っていること</th>
-<th>このランディング ページでまだ主張されていないこと</th>
+<th>このプラットフォームでまだ主張していないこと</th>
 </tr>
 </thead>
 <tbody>
@@ -202,139 +263,9 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 </tbody>
 </table>
 
-<section class="section" id="start">
-<h2 class="section-title">読む順序</h2>
-<div class="stage-list">
-<div class="stage-item">
-<div class="stage-number">01</div>
-<div class="stage-body">
-<h4>検証</h4>
-<p>このサイトが構築しようとしているもの (成功基準、標準、ベンチマーク、レジストリ) についての 1 ページの概要。</p>
-<a href="verification.html" class="btn-action">オープン検証</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">02</div>
-<div class="stage-body">
-<h4>ロードマップ</h4>
-<p>WBE を測定から再構築、実装、検証まで質問ツリーに分割します。</p>
-<a href="tech_roadmap.html" class="btn-action">ロードマップを開く</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">03</div>
-<div class="stage-body">
-<h4>視点</h4>
-<p>理論、技術的なルート、異論など、現在の状況を追跡する長い形式の研究ノート。</p>
-<a href="perspective.html" class="btn-action">オープンな視点</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">04</div>
-<div class="stage-body">
-<h4>フレームワーク</h4>
-<p>静的なコピーではなく、動的なプロセスとしての意識の見方を設計要件に変えるためのメモ。</p>
-<a href="perspective.html#design-principles" class="btn-action">オープン フレームワークの視点</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">05</div>
-<div class="stage-body">
-<h4>文献マップ</h4>
-<p>マインドアップロード関連の文献を、未解決課題と対応させて整理します。</p>
-<a href="research_harvest_50.html" class="btn-action">文献マップを開く</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">06</div>
-<div class="stage-body">
-<h4>統合された技術提案</h4>
-<p>問題 #46/#47/#48/#56/#58/#61/#62 の提案、応答ステータス、証拠セクションを 1 ページのフローに収集します。</p>
-<a href="issue.html#proposal-integration" class="btn-action">オープン統合提案</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">07</div>
-<div class="stage-body">
-<h4>外部依存関係とコラボレーション</h4>
-<p>この検証コモンズに接続できる可能性のある研究機関、プロジェクト、企業、資金提供プログラムに関するメモを優先します。</p>
-<a href="issue.html#external-collaboration" class="btn-action">オープンな外部コラボレーション プラン</a>
-</div>
-</div>
-</div>
-</section>
+<!-- 読む順序は冒頭の「このページの使い方」と「全コンテンツ一覧」に統合 -->
 
-<section class="section" id="beginner">
-<h2 class="section-title">15 分の初心者ルート</h2>
-<p>展望とロードマップはどちらも長いです。最初は多すぎる場合は、以下の入門ページから始めてください。</p>
-<div class="stage-list">
-<div class="stage-item">
-<div class="stage-number">A</div>
-<div class="stage-body">
-<h4>WBE 101</h4>
-<p>成功条件と失敗条件を伴う測定可能な問題としてマインド アップロードを扱うための短い紹介。</p>
-<a href="wbe_101.html" class="btn-action">WBE 101 を開く</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">B</div>
-<div class="stage-body">
-<h4>EEG 101</h4>
-<p>EEG でできることとできないこと、分析フローの仕組み、およびそれが Mind-Upload 内のどこに位置するか。</p>
-<a href="eeg_101.html" class="btn-action">オープンEEG 101</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">C</div>
-<div class="stage-body">
-<h4>用語集</h4>
-<p>一般的な用語の交換やカテゴリのエラーを防ぐためのコンパクトな辞書。</p>
-<a href="glossary.html" class="btn-action">用語集を開く</a>
-</div>
-</div>
-<div class="stage-item">
-<div class="stage-number">D</div>
-<div class="stage-body">
-<h4>データセットとベンチマーク</h4>
-<p>最初に何を検証するかについての実用的なガイド: 公開データセット、リポジトリ、チェックリスト。</p>
-<a href="datasets.html" class="btn-action">オープン データセット</a>
-</div>
-</div>
-
-</div>
-</section>
-
-<div class="cta-box">
-<h4>L0 の練習</h4>
-<p>L0 の再現可能な解析パッケージへの最短ルート。</p>
-<a href="datasets.html#l0-practice">L0 の練習を開く -&gt;</a>
-</div>
-
-<div class="cta-box">
-<h4>古典 MU ページの日本語ガイド</h4>
-<p>ibiblio の Mind Uploading Home Page から辿れる MU 関連ページを、歴史資料として日本語で確認する入口。</p>
-<a href="classic_mu_archive.html">古典資料を開く -&gt;</a>
-</div>
-
-<div class="cta-box">
-<h4>外部資料の日本語全文翻訳</h4>
-<p>compcogneuro リポジトリ群、NetPyNE docs、OpenSourceBrain Documentation を、原典の順序を保った日本語訳として読む入口。</p>
-<a href="external/compcogneuro/">compcogneuro を開く -&gt;</a>
-<a href="external/netpyne/">NetPyNE を開く -&gt;</a>
-<a href="external/opensourcebrain/documentation/">OpenSourceBrain を開く -&gt;</a>
-</div>
-
-<section class="section" id="cases">
-<h2 class="section-title">歴史的な事例</h2>
-<p>
-このセクションでは、PDB、BIDS + OpenNeuro、PhysioNet、ImageNet、MLPerf、および OSF から検証パターンを抽出し、それらを Mind-Upload の再利用可能なテンプレートとして扱います。その目的は、必要なコンポーネントを既知の成功事例と比較しやすくすることです。
-</p>
-<div class="cta-box">
-<h4>ケースワーク内部検証</h4>
-<p>標準化、ベンチマーク、事前登録によって、実際に進捗状況を測定できる状況がどのように生み出されたか。</p>
-<a href="verification.html#casework">ケースワークを開く -&gt;</a>
-</div>
-</section>
+<!-- 入門ルート・配布リンク・歴史的な事例は「全コンテンツ一覧」に統合 -->
 
 <section class="section" id="contribute">
 <h2 class="section-title">貢献</h2>
@@ -381,6 +312,7 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 <li><a href="external/opensourcebrain/documentation/">OpenSourceBrain 翻訳 -&gt;</a></li>
 <li><a href="issue.html#external-collaboration">外部依存 -&gt;</a></li>
 <li><a href="content_hub.html">コンテンツ ハブ -&gt;</a></li>
+<li><a href="summary_booklet.html">サマリー冊子 -&gt;</a></li>
 </ul>
 </div>
 
@@ -396,7 +328,7 @@ Mind-Upload は、「心はコンピューター上で再現できるか?」と�
 <h4>外部 WBE マテリアル</h4>
 <ul>
 <li><a href="https://carboncopies.org/" target="_blank" rel="noopener">カーボンコピー財団 ↗</a></li>
-<li><a href="https://carboncopies.org/Newsletter/December2025/" target="_blank" rel="noopener">2025 年 12 月ニュースレター ↗</a></li>
+<li><a href="https://carboncopies.org/Newsletter/" target="_blank" rel="noopener">カーボンコピー ニュースレター ↗</a></li>
 <li><a href="https://carboncopies.org/Research/BrainGenix/Challenge/Overview/" target="_blank" rel="noopener">ブレイン エミュレーション チャレンジ ↗</a></li>
 <li><a href="https://carboncopies.org/Events/JournalClubs/MemoryDecoding/" target="_blank" rel="noopener">記憶解読ジャーナルクラブ ↗</a></li>
 <li><a href="https://braingenix.org/" target="_blank" rel="noopener">ブレインジェニックス ↗</a></li>

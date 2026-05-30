@@ -45,6 +45,7 @@ exclude:
   - CODE_OF_CONDUCT.md
   - SECURITY.md
   - CHANGELOG.md
+  - mind_uploading_papers.md
   - requirements.txt
   - "*.json"
   - "*.csv"
