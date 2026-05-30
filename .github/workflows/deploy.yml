@@ -1,4 +1,4 @@
-name: Deploy static content to Pages
+name: Deploy plain HTML site to Pages
 
 on:
   push:
@@ -20,25 +20,15 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.2"
-          bundler-cache: true
-      - name: Generate summary booklet
-        run: ruby scripts/build_summary_booklet.rb
-      - name: Build site
-        run: bundle exec jekyll build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: '_site'
+          path: public
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4

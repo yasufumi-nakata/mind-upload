@@ -1,52 +1,9 @@
-thesis/
-*.aux
-*.log
-*.out
-*.toc
-*.bbl
-*.blg
-*.dvi
-*.synctex.gz
-*.fls
-*.fdb_latexmk
-.env
-.env.local
-
-# macOS
 .DS_Store
 **/.DS_Store
 ._*
 **/._*
 
-# Ignore directory for scripts and cache
-ignore/
-
-# Automation
-automation/logs/
-automation/EegflowResolver.app/
-automation/node_modules/
-automation/run-codex.sh
-automation/run-gemini.sh
-.claude/scheduled_tasks.lock
-.claude/worktrees/
-
-# Python
-*.pyc
-__pycache__/
-
-# Mind Uploading Collection Cache
-translations_cache.json
-papers_metadata.json
-
-# Jekyll
-_site/
-.jekyll-cache/
-.jekyll-metadata
-Gemfile.lock
-.bundle/
-vendor/
+.claude/
 node_modules/
 output/
-
-# Backup files
-backup/
+_site/
