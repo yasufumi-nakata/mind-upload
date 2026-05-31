@@ -25,7 +25,8 @@
     <section class="hero compact">
   <p class="eyebrow">データ</p>
   <h1>データは目的別に使う</h1>
-  <p class="lead">公開データは、マインドアップロードの完成を示すものではありません。再現手順、評価、仮説分離を練習するための基盤です。</p>
+  <p class="lead">公開データは、マインドアップロードの完成を示すものではありません。L0 の再実行、L1 の同条件比較、L2 の候補仮説分離を練習するための基盤です。</p>
+  <p>ここでの L0/L1/L2 は、<a href="project.html#claim-ladder">主張のレベル</a>に対応します。L0 は再実行、L1 は同条件比較、L2 は競合仮説を落とす検証です。</p>
 </section>
 
 <section id="data-use-cases">
@@ -123,6 +124,74 @@
       <tr><td>6</td><td>停止主張</td><td>L0 の上限、可観測性の上限、ショートカットの上限、時間的有効性の上限。</td><td>結果がどこまでで止まるかを明文化する。</td></tr>
     </tbody>
   </table>
+</section>
+
+<section id="l1-l2-upgrade-route">
+  <h2>公開データを L1 / L2 へ上げる追加ルート</h2>
+  <p>L0 は再実行の土台です。そこから L1 や L2 へ進むには、スコアを上げるだけでは足りません。同じデータから、何がショートカットで、何が候補内部状態の分離に効いたのかを分けます。</p>
+  <table>
+    <thead><tr><th>段階</th><th>研究で足すもの</th><th>前へ進む条件</th><th>まだ止める主張</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>L0 から L1</td>
+        <td>同じ raw ID、同じ分割、同じメトリックで、複数の前処理・特徴量・モデルを比較し、ショートカット対照を同じ表に置く。</td>
+        <td>ベンチマークカード、固定分割、メタデータのみベースライン、単純モデル、強いモデルを同じ表で比較できる。</td>
+        <td>最良モデルが真の内部状態を復元した、とはまだ言わない。</td>
+      </tr>
+      <tr>
+        <td>L1 から L2</td>
+        <td>競合仮説を先に書き、保持データ、状態遷移、摂動、負例で候補を落とす。</td>
+        <td>少なくとも一つの代替説明が、事前に定めた反証条件で落ちる。落ちなかった候補も候補集合として残す。</td>
+        <td>候補が一つに近づいても、全脳・長期・身体込みのエミュレーションとは数えない。</td>
+      </tr>
+      <tr>
+        <td>セッション間へ拡張</td>
+        <td>固定デコーダ、再校正デコーダ、追加ラベル量、日付、状態注釈、時間帯、睡眠や疲労の proxy を分ける。</td>
+        <td>性能低下、回復量、再校正負荷、ドリフト指標を一緒に出せる。</td>
+        <td>同じ被験者で性能が残ったことを、同じ内部状態の連続性とは読まない。</td>
+      </tr>
+      <tr>
+        <td>被験者間・施設間へ拡張</td>
+        <td>被験者 grouped holdout、施設 grouped holdout、装置・参照系・電極配置・サンプリング差の対照を入れる。</td>
+        <td>被験者識別、施設識別、デバイス識別だけで説明できる性能を差し引ける。</td>
+        <td>大規模データで高スコアが出たことを、汎用神経デコーダの成立とは扱わない。</td>
+      </tr>
+      <tr>
+        <td>マルチモーダルへ拡張</td>
+        <td>同一セッションの EEG/fMRI/PET/MRSI/行動を、共通因子、分岐因子、欠測、時間カーネルごとに分ける。</td>
+        <td><a href="verification-cards.html#fusion-card">Fusion Card</a> と <a href="verification-cards.html#human-proxy-composition-card">Human Proxy Composition Card</a> が埋まり、単一モダリティとの差分が説明できる。</td>
+        <td>複数 proxy の相関や予測改善を、潜在状態の一意復元とは言わない。</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="eeg-benchmark-card">
+  <h2>EEG ベンチマークカードで必ず分けるもの</h2>
+  <p>旧 EEG 101 の重要点は、EEG を過小評価することではなく、EEG の成果を正しい主張レベルへ置くことでした。特に、時間分解能の強さ、空間推定の弱さ、装置・被験者・状態のショートカットを同じカード内で監査します。</p>
+  <table>
+    <thead><tr><th>欄</th><th>書くこと</th><th>止める誤読</th></tr></thead>
+    <tbody>
+      <tr><td>測定フレーム</td><td>チャンネル数、電極配置、参照系、サンプリング、フィルタ、インピーダンス、不良チャンネル、同時記録の有無。</td><td>チャンネル数や高密度を、内部状態の一意復元と混ぜない。</td></tr>
+      <tr><td>イベント忠実度</td><td>onset、duration、sample、clock domain、trigger と物理刺激の差、遅延、ジッター、ラベル来歴。</td><td><code>events.tsv</code> があるだけで、イベント意味と同期が十分だとは読まない。</td></tr>
+      <tr><td>評価ファミリー</td><td>セッション内、セッション間、被験者間、施設間、few-shot、閉ループ参考軸を分ける。</td><td>同じスコアを、別日の耐久性や別人への一般化と混同しない。</td></tr>
+      <tr><td>メトリック意味</td><td>分類なら per-class、睡眠なら macro F1 / kappa / stage 別、発作なら感度・誤報・遅延・時間単位。</td><td>accuracy や AUROC だけで、実用性能や神経寄与を語らない。</td></tr>
+      <tr><td>ショートカット対照</td><td>EOG/EMG/動き、被験者 ID、セッション ID、施設、装置、参照系、窓漏洩、ラベル漏洩。</td><td>神経信号ではない識別手がかりを、神経デコードの成果として扱わない。</td></tr>
+      <tr><td>ソース推定の検証クラス</td><td>simulation、phantom、頭蓋内刺激、同時 SEEG、術後転帰など、何で検証したかを分ける。</td><td>ESI や inverse solution を、一般的な独自再構成として読みすぎない。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="public-data-priority-order">
+  <h2>公開データで最速に進む優先順</h2>
+  <p>最初から「アップロードに一番近そうなデータ」を探すと、主張が大きすぎて失敗理由が見えなくなります。公開データでは、低いレベルから順に、落とせる代替説明を増やします。</p>
+  <ol class="step-list">
+    <li><strong>Cue-locked EEG でイベントと分割を固める</strong><span>イベント時刻、ラベル、チャンネル、QC、窓漏洩を監査し、L0 の再実行パックを作ります。</span></li>
+    <li><strong>睡眠や長時間 EEG で状態ラベルと時間評価を扱う</strong><span>状態遷移、rare event、誤報、遅延、scorer 差を扱い、メトリックの意味を固定します。</span></li>
+    <li><strong>大規模臨床 EEG でショートカットを壊す</strong><span>施設、装置、参照系、被験者 ID、ラベル来歴の対照を入れ、L1 の比較が何を測ったかを狭めます。</span></li>
+    <li><strong>同一セッション・マルチモーダルで proxy を分解する</strong><span>EEG だけでなく、行動、fMRI、PET、MRSI などを使う場合は、共通因子と分岐因子を明示します。</span></li>
+    <li><strong>保持データや摂動で候補仮説を落とす</strong><span>ここで初めて L2 の候補内部状態分離に近づきます。落ちない候補は失敗ではなく、次の実験設計の入力として残します。</span></li>
+  </ol>
 </section>
 
   </main>

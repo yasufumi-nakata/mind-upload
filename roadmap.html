@@ -94,7 +94,7 @@
     <tbody>
       <tr>
         <td>L0/L1 公開データルート</td>
-        <td>BIDS/NWB、イベント同期、QC、分割、ベースライン、失敗例を含む <a href="verification-cards.html#l0-artifact-pack">L0 Artifact Pack</a>。</td>
+        <td>BIDS/NWB、イベント同期、QC、分割、ベースライン、失敗例を含む <a href="verification-cards.html#l0-artifact-pack">L0 Artifact Pack</a>。次に <a href="datasets.html#l1-l2-upgrade-route">L1/L2 への追加ルート</a>へ上げる。</td>
         <td>低コストで第三者が再実行でき、後の L2 以上の失敗理由を切り分けやすくします。</td>
         <td>高スコア、標準形式、きれいな可視化だけでは、内部状態の復元とは数えない。</td>
       </tr>
@@ -168,8 +168,8 @@
       <p>今もっとも現実的なのは、再現可能な解析、比較可能なベンチマーク、介入予測を積み上げる段階です。</p>
       <ul>
         <li>L0: 公開データを再解析し、イベント、同期、QC、保持条件を検証する。</li>
-        <li>L1: モデルや測定法を同じベンチマークで比較する。</li>
-        <li>L2: 摂動や状態遷移を使い、競合仮説を落とす。</li>
+        <li>L1: モデルや測定法を同じベンチマークで比較し、ショートカット対照を入れる。</li>
+        <li>L2: 摂動、状態遷移、保持データを使い、競合する内部状態仮説を落とす。</li>
       </ul>
     </article>
     <article>
