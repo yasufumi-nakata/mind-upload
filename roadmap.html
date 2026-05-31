@@ -40,6 +40,126 @@
   </ol>
 </section>
 
+<section id="pmrivd-map">
+  <h2>旧 Tech Roadmap の P/M/R/I/V/D を対応表へ置き換える</h2>
+  <p>削除前の Tech Roadmap は、WBE を P/M/R/I/V/D の依存関係として扱っていました。現在のサイトでは記号だけを復活させるのではなく、読者が研究計画へ落とせるように、各層を現在のページ、検証カード、停止条件へ接続します。</p>
+  <table>
+    <thead><tr><th>層</th><th>旧ロードマップの問い</th><th>現在の置き場所</th><th>先に決める停止条件</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>P: 進歩の定義</td>
+        <td>何を成功と数えるか。デコード、エミュレーション、同一性、社会運用を混ぜずに、主張の高さを決める。</td>
+        <td><a href="project.html#claim-ladder">L0-L5 の主張レベル</a>、<a href="research-priorities.html">研究優先順位</a>。</td>
+        <td>強い言葉を使う前に、失敗条件、棄権条件、外部検証条件を明示する。</td>
+      </tr>
+      <tr>
+        <td>M: 測定</td>
+        <td>構造、活動、代謝、分子、身体入力を、どの空間・時間単位で観測できるか。</td>
+        <td><a href="evidence.html#evidence-classes">根拠マップ</a>、<a href="deep-dives.html">深掘り</a>、<a href="verification-cards.html#observability-budget">可観測性予算</a>。</td>
+        <td>直接観測、proxy、モデル推定、未測定を分ける。ヒト proxy は、役割、成熟度、時間窓、モデル負荷を分ける。</td>
+      </tr>
+      <tr>
+        <td>R: 再構築</td>
+        <td>観測から、構造足場、高速状態、維持状態、潜在動力学をどこまで復元できるか。</td>
+        <td><a href="verification-cards.html#identifiability-card">識別可能性カード</a>、<a href="research-priorities.html#p4-connectome">P4 コネクトーム制約モデル</a>。</td>
+        <td>構造足場、即時活動、遅い維持状態を一つの「脳状態」にしない。候補モデル空間と曖昧性クラスを先に宣言する。</td>
+      </tr>
+      <tr>
+        <td>I: 実装</td>
+        <td>閉ループで動かすとき、遅延、ジッター、身体境界、内部環境、安全停止をどう扱うか。</td>
+        <td><a href="verification-cards.html#body-environment-boundary-card">Body / Environment Boundary Card</a>、<a href="verification-cards.html#temporal-validity-card">Temporal Validity Card</a>。</td>
+        <td>低遅延の装置成功を、生物学的タイミング状態や身体ループの保存と混同しない。</td>
+      </tr>
+      <tr>
+        <td>V: 検証</td>
+        <td>再現、反証、因果、同一個体内の継続性、外部検証をどうそろえるか。</td>
+        <td><a href="verification-cards.html">検証カード</a>、<a href="hypotheses.html">仮説検証</a>、<a href="datasets.html">データ</a>。</td>
+        <td>内部適合だけで上位主張へ進まない。保持データ、摂動、別条件、別解析者、棄権を含める。</td>
+      </tr>
+      <tr>
+        <td>D: 展開</td>
+        <td>技術結果を、同意、権利、コピー、更新、分岐、停止、セキュリティへどう接続するか。</td>
+        <td><a href="requirements.html">必要条件</a>、<a href="archive.html">旧内容統合</a>、<a href="research-priorities.html#p8-body-environment">P8 身体・環境</a>。</td>
+        <td>技術的復元、人格同一性、法制度、社会的同意を同じ成功指標にしない。</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="fast-route-portfolio">
+  <h2>最短で前へ進める技術ルート</h2>
+  <p>ここでの「最短」は、実現年の予測ではありません。<a href="https://www.ibm.com/roadmaps/ai/2026/">AI 2026</a> 型のロードマップ表現から借りるのは、マイルストーン、運用監視、セキュリティや失敗条件を同じ画面に置く読み方です。マインドアップロードでも、華やかな成果ではなく、次の主張レベルへ進めるかどうかで技術ルートを並べます。</p>
+  <table>
+    <thead><tr><th>ルート</th><th>最初に作る成果物</th><th>前へ進む理由</th><th>成功に見えても止めるもの</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>L0/L1 公開データルート</td>
+        <td>BIDS/NWB、イベント同期、QC、分割、ベースライン、失敗例を含む <a href="verification-cards.html#l0-artifact-pack">L0 Artifact Pack</a>。</td>
+        <td>低コストで第三者が再実行でき、後の L2 以上の失敗理由を切り分けやすくします。</td>
+        <td>高スコア、標準形式、きれいな可視化だけでは、内部状態の復元とは数えない。</td>
+      </tr>
+      <tr>
+        <td>P1 識別可能性ルート</td>
+        <td>候補モデル空間、曖昧性クラス、摂動、状態遷移、保持データ、棄権規則。</td>
+        <td>観測量を増やすよりも、同じ観測を説明する候補内部状態を減らすほうが、アップロード条件へ直接効きます。</td>
+        <td>最適化の再実行、長いフィット、同じレジームのパッシブデータ追加だけでは、候補集合が縮んだとは扱わない。</td>
+      </tr>
+      <tr>
+        <td>P3 ヒト proxy ルート</td>
+        <td>同一セッションの EEG/fMRI/PET/MRSI/行動を、共通因子、分岐因子、完全症例バイアス、時間カーネルつきで整理した Fusion Card。</td>
+        <td>生きた人間での可観測性の上限を、単一モダリティより厳密に測れます。</td>
+        <td>複数 proxy の相関や予測改善を、真の潜在状態の一意復元として読まない。</td>
+      </tr>
+      <tr>
+        <td>P4 コネクトーム制約ルート</td>
+        <td>構造足場、活動記録、タスク、摂動、未測定状態、残差候補集合を同じ表に置くモデルカード。</td>
+        <td>構造は候補空間を強く絞るので、動力学や維持状態を追加したときの増分を測りやすくします。</td>
+        <td>コネクトームがあることを、シナプス効率、放出確率、代謝、グリア、睡眠、身体ループの保存と扱わない。</td>
+      </tr>
+      <tr>
+        <td>P5 状態継続・閉ループルート</td>
+        <td>日跨ぎ、固定後、再校正、閉ループ遅延、安全停止を含む State-Continuity / Temporal Validity Card。</td>
+        <td>実装に近い主張へ進むには、同じ対象で何が時間をまたいで残るかを測る必要があります。</td>
+        <td>同じ被験者、同じ脳、同じデコーダ、同じ装置を、同じ状態と同一視しない。</td>
+      </tr>
+      <tr>
+        <td>P8 身体・環境ルート</td>
+        <td>保存する感覚・運動・内受容ループ、置換する環境、遅い内部環境、同意と停止条件の境界表。</td>
+        <td>脳だけのモデルが成功しても、身体、報酬、睡眠、恒常性、社会環境を抜くと上位主張が止まります。</td>
+        <td>低遅延入出力や仮想環境の完成度を、身体境界の完了や人格同一性の証拠として扱わない。</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="three-walls">
+  <h2>三つの壁を先に確認する</h2>
+  <p>旧 Tech Roadmap の「測定、特定、介入の三つの壁」は、今のサイトでも中核です。どのルートでも、次の三つを通らない限り、見かけの進歩は高い主張へ上がりません。</p>
+  <table>
+    <thead><tr><th>壁</th><th>よくある過読</th><th>確認すること</th><th>関連カード</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>測定粒度の壁</td>
+        <td>高密度・高解像・マルチモーダルなら、必要状態をほぼ測れたと読む。</td>
+        <td>直接観測、proxy、推定、未測定を分け、各測定の時間窓と数量タイプを明示する。</td>
+        <td><a href="verification-cards.html#observability-budget">可観測性予算</a>、<a href="verification-cards.html#human-proxy-composition-card">Human Proxy Composition Card</a>。</td>
+      </tr>
+      <tr>
+        <td>識別性の壁</td>
+        <td>予測精度が上がったので、内部状態も一意に決まったと読む。</td>
+        <td>候補モデル空間、曖昧性クラス、保持データ、摂動、棄権規則を事前に固定する。</td>
+        <td><a href="verification-cards.html#identifiability-card">識別可能性カード</a>、<a href="verification-cards.html#calibration-abstention-card">Calibration / Abstention Card</a>。</td>
+      </tr>
+      <tr>
+        <td>介入検証の壁</td>
+        <td>相関やオフラインデコードが良いので、因果的な再実装に近いと読む。</td>
+        <td>摂動応答、閉ループ、状態遷移、日跨ぎ安定性、安全停止、別条件検証を要求する。</td>
+        <td><a href="verification-cards.html#neural-contribution-card">Neural Contribution Card</a>、<a href="verification-cards.html#temporal-validity-card">Temporal Validity Card</a>、<a href="verification-cards.html#body-environment-boundary-card">Body / Environment Boundary Card</a>。</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 <section>
   <h2>現在・過去・未来で見るロードマップ</h2>
   <div class="timeline-grid">
