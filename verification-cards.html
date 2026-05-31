@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>検証カード | マインドアップロード</title>
+  <meta name="description" content="マインドアップロード研究で、観測、識別、維持状態、融合、状態継続、閉ループ、棄権を実験計画に落とすための検証カード集です。">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="index.html">マインドアップロード</a>
+    <nav class="primary-nav" aria-label="主要ページ">
+      <a href="index.html">全体像</a>
+      <a href="project.html">プロジェクト</a>
+      <a href="research-priorities.html">研究優先順位</a>
+      <a href="deep-dives.html">深掘り</a>
+      <a href="archive.html">旧内容統合</a>
+      <a href="hypotheses.html">仮説検証</a>
+      <a href="verification-cards.html" aria-current="page">検証カード</a>
+      <a href="evidence.html">根拠マップ</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero compact">
+      <p class="eyebrow">検証カード</p>
+      <h1>研究を進める前に、どの主張をどこまで許すかを固定する</h1>
+      <p class="lead">旧 Verification と旧 Wiki に散っていたカード群を、研究計画で使える形に整理し直して拡張します。目的は、文献を増やすことではなく、同じ結果を説明できる候補内部状態を減らし、まだ強い主張に上げてはいけない場所を明示することです。</p>
+    </section>
+
+    <section>
+      <h2>最初に使う順序</h2>
+      <p>カードは全部を同じ重さで使うものではありません。<a href="research-priorities.html">P1-P8 の研究優先順位</a>と<a href="project.html#claim-ladder">L0-L5 の主張レベル</a>を見ながら、まず P1 から P3 のボトルネックを落とすために使います。</p>
+      <table>
+        <thead><tr><th>研究判断</th><th>最初に使うカード</th><th>上げたい主張</th><th>止めるべき誤読</th></tr></thead>
+        <tbody>
+          <tr><td><a href="research-priorities.html#p1-identifiability">P1 識別可能性</a></td><td><a href="#observability-budget">可観測性予算</a>、<a href="#identifiability-card">識別可能性カード</a></td><td>候補内部状態が実際に減った。</td><td>測定量が増えたので一意に復元できた。</td></tr>
+          <tr><td><a href="research-priorities.html#p2-maintenance">P2 維持状態</a></td><td><a href="#maintenance-state-budget">維持状態バジェット</a></td><td>特定の機能に必要な遅い状態ファミリーを制約した。</td><td>コネクトームに全状態が含まれている。</td></tr>
+          <tr><td><a href="research-priorities.html#p3-multimodal">P3 同一個体マルチモーダル</a></td><td><a href="#fusion-card">Fusion Card</a>、<a href="#human-proxy-composition-card">Human Proxy Composition Card</a></td><td>同一被験者内で共通因子と分岐因子を分けた。</td><td>複数 proxy を足すと真の潜在状態になる。</td></tr>
+          <tr><td><a href="research-priorities.html#p4-connectome">P4 コネクトーム制約モデル</a></td><td><a href="#identifiability-card">識別可能性カード</a>、<a href="#maintenance-state-budget">維持状態バジェット</a>、<a href="#destructive-structure-route-card">Destructive-Structure Route Card</a></td><td>構造で消える候補と、構造だけでは残る候補を分けた。</td><td>コネクトーム制約で動力学まで一意に決まった。</td></tr>
+          <tr><td><a href="research-priorities.html#p5-continuity">P5 状態継続</a></td><td><a href="#state-continuity-bridge-card">State-Continuity Bridge Card</a>、<a href="#temporal-validity-card">Temporal Validity Card</a></td><td>何が時間をまたいで保たれたかを限定して示した。</td><td>同じ被験者・同じ脳なので同じ状態である。</td></tr>
+          <tr><td><a href="research-priorities.html#p6-decode">P6 デコード/BCI</a></td><td><a href="#neural-contribution-card">Neural Contribution Card</a>、<a href="#temporal-validity-card">Temporal Validity Card</a></td><td>神経寄与、事前分布、閉ループ、再校正負荷を分けた。</td><td>言語や運動を予測できたのでエミュレーションに近い。</td></tr>
+          <tr><td><a href="research-priorities.html#p7-public-data">P7 公開データ</a></td><td><a href="#l0-artifact-pack">L0 Artifact Pack</a>、<a href="#calibration-abstention-card">Calibration / Abstention Card</a></td><td>第三者が同じ条件で再実行できる。</td><td>高スコアなので主張レベルが上がる。</td></tr>
+          <tr><td><a href="research-priorities.html#p8-body-environment">P8 身体・環境</a></td><td><a href="#body-environment-boundary-card">Body / Environment Boundary Card</a></td><td>保存したループと置換したループを分けた。</td><td>低遅延の入出力があれば身体境界は閉じる。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>カードの読み方</h2>
+      <div class="card-grid">
+        <article>
+          <h3>主張の上限を決める</h3>
+          <p>カードは成功を宣言するためではなく、どこまでしか言えないかを先に固定するために使います。未測定状態、モデル負荷、レジーム差、棄権条件を空欄にしないことが中心です。</p>
+        </article>
+        <article>
+          <h3>カードは重ねる</h3>
+          <p>たとえば同一被験者の EEG/fMRI/PET 研究なら、Fusion Card だけでなく Human Proxy Composition、Temporal Validity、必要なら State-Continuity Bridge を重ねます。</p>
+        </article>
+        <article>
+          <h3>弱いカードは研究成果です</h3>
+          <p>カードが未完成なら、その研究は失敗ではありません。次に測るべき変数、必要な摂動、公開すべき保持データが明確になったという成果です。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="observability-budget">
+      <h2>1. 可観測性予算</h2>
+      <p>何が直接観測され、何が proxy で、何がモデル推定かを分けるカードです。測定スタックを増やす研究は、まずここから始めます。</p>
+      <table>
+        <thead><tr><th>欄</th><th>書くこと</th><th>弱い書き方</th></tr></thead>
+        <tbody>
+          <tr><td>対象機能</td><td>記憶、運動、言語、覚醒、価値判断など、再現したい機能を狭く書く。</td><td>人格、意識、人間らしさなど広い語だけで始める。</td></tr>
+          <tr><td>必要状態</td><td>構造、活動、重み、興奮性、代謝、睡眠、身体ループなどを列挙する。</td><td>必要状態を「脳状態」とまとめる。</td></tr>
+          <tr><td>直接観測</td><td>実際に測った量、空間単位、時間単位、取得条件を書く。</td><td>モダリティ名だけを書く。</td></tr>
+          <tr><td>proxy / 推定</td><td>代理指標、推定モデル、前処理、外部校正、モデル仮定を書く。</td><td>proxy を直接測定のように扱う。</td></tr>
+          <tr><td>未測定状態</td><td>この研究ではまだ残る候補状態ファミリーを書く。</td><td>未測定を沈黙させる。</td></tr>
+          <tr><td>主張上限</td><td>L0-L5 のどこまで許すかを宣言する。</td><td>観測量の多さをそのまま高い主張に変える。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="identifiability-card">
+      <h2>2. 識別可能性カード</h2>
+      <p>同じ観測を説明する候補内部状態を本当に減らせたかを見るカードです。このサイトでは、最優先の研究カードとして扱います。</p>
+      <table>
+        <thead><tr><th>欄</th><th>必ず固定すること</th><th>主張を上げてよい条件</th></tr></thead>
+        <tbody>
+          <tr><td>候補モデル空間</td><td>どのモデル、状態、パラメータを候補として許すか。</td><td>候補空間を事前に宣言し、後から都合よく変えない。</td></tr>
+          <tr><td>曖昧性クラス</td><td>対称性、再パラメータ化、狭いレジームの縮退、省略機構、表現曖昧性。</td><td>どの曖昧性を落としたかを別々に報告する。</td></tr>
+          <tr><td>入力と初期条件</td><td>既知入力、未知入力、初期状態、状態遷移の扱い。</td><td>未知入力を暗黙に固定しない。</td></tr>
+          <tr><td>分離実験</td><td>摂動、持続励起、状態遷移、タスク切替、保持データ。</td><td>同じパッシブデータのスコア改善だけにしない。</td></tr>
+          <tr><td>外部検証</td><td>別日、別個体、別装置、別条件、別解析者で候補が残るか。</td><td>内部適合だけで一意性を主張しない。</td></tr>
+          <tr><td>棄権</td><td>候補が重なる場合、どの主張で止めるか。</td><td>判断不能を成功側に寄せない。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="maintenance-state-budget">
+      <h2>3. 維持状態バジェット</h2>
+      <p>コネクトームに黙って含めてはいけない遅い状態を管理するカードです。対象機能ごとに、どの状態ファミリーが必要かを先に分けます。</p>
+      <table>
+        <thead><tr><th>状態ファミリー</th><th>なぜ必要か</th><th>最初に書く監査項目</th></tr></thead>
+        <tbody>
+          <tr><td>固有興奮性 / 恒常性設定点</td><td>同じ入力でも発火しやすさや状態遷移が変わる。</td><td>細胞タイプ、時間窓、摂動ルート、人間側 proxy、棄権。</td></tr>
+          <tr><td>シナプス効率 / 放出確率 / 短期可塑性</td><td>配線が同じでも伝達強度と履歴依存性が変わる。</td><td>測れる単位、刺激履歴、推定重み、保持データ。</td></tr>
+          <tr><td>ECM / PNN / 局所プロテオスタシス</td><td>長期安定化、再固定化、可塑性の境界に効く。</td><td>直接測定、turnover 窓、機能ターゲット、ヒト観測上限。</td></tr>
+          <tr><td>神経調節 / 受容体 / 輸送体</td><td>同じ回路のゲイン、学習、覚醒、報酬を変える。</td><td>伝達物質軸、占有、チャレンジ、時間窓、モデル負荷。</td></tr>
+          <tr><td>代謝 / ミトコンドリア / グリア基質</td><td>反復バースト、樹状突起可塑性、長期維持に効く。</td><td>コンパートメント、燃料、フラックス、空間単位、proxy クラス。</td></tr>
+          <tr><td>睡眠 / リプレイ / 低速内部環境</td><td>記憶の固定化、日跨ぎ変動、再校正負荷に効く。</td><td>睡眠状態、概日相、内分泌・代謝レジーム、状態注釈。</td></tr>
+          <tr><td>血管 / BBB / 免疫 / クリアランス</td><td>BOLD 解釈、支持状態、炎症、老廃物除去に関わる。</td><td>輸送対象、境界、トレーサー、疾患文脈、機能ターゲット。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="fusion-card">
+      <h2>4. Fusion Card</h2>
+      <p>EEG、fMRI、PET、MRSI、dMRI、行動を一つの強い証拠へ合成する前に使うカードです。融合は、観測性を上げることはあっても、自動的に一意性を作りません。</p>
+      <table>
+        <thead><tr><th>欄</th><th>書くこと</th><th>棄権する条件</th></tr></thead>
+        <tbody>
+          <tr><td>取得関係</td><td>同時、同一セッション、別日、順次、別対象か。</td><td>取得関係が曖昧で状態差を消せない。</td></tr>
+          <tr><td>同期と時間カーネル</td><td>各モダリティがどの時間窓を平均しているか。</td><td>速い神経状態と遅い proxy を同時状態として扱う。</td></tr>
+          <tr><td>数量タイプ</td><td>電位、血流、代謝物、受容体、構造、行動などの違い。</td><td>数量タイプの違いを一つの潜在変数に圧縮する。</td></tr>
+          <tr><td>共通ドライバー</td><td>覚醒、血管、自律神経、動作、装置、タスクの共通因子。</td><td>共通因子をターゲット神経変数と誤読する。</td></tr>
+          <tr><td>分岐因子</td><td>各モダリティ固有の残差、ノイズ、前処理依存性。</td><td>残差を隠して単一スコアだけにする。</td></tr>
+          <tr><td>完全症例の形</td><td>全モダリティがそろった対象数と欠測理由。</td><td>欠測が重症度、施設、耐容性に偏る。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="human-proxy-composition-card">
+      <h2>5. Human Proxy Composition Card</h2>
+      <p>生きた人間から得られる複数 proxy を束ねるときのカードです。人間側の証拠は貴重ですが、proxy の役割、成熟度、時間窓、モデル負荷が違うままでは状態完全な読み出しになりません。</p>
+      <table>
+        <thead><tr><th>欄</th><th>書くこと</th><th>例</th></tr></thead>
+        <tbody>
+          <tr><td>各行の役割</td><td>健常アトラス、断面対比、同一被験者ベースライン、変化証人、摂動応答証人を分ける。</td><td>SV2A PET、MRSI、BBB MRI、EEG-fMRI を同じ役割にしない。</td></tr>
+          <tr><td>proxy クラス</td><td>直接観測、密度 proxy、代謝類似性、輸送 proxy、モデル推定を分ける。</td><td>受容体密度と放出状態を混ぜない。</td></tr>
+          <tr><td>時間窓 / 状態軸</td><td>静的地図、分単位の動態、タスク誘発、日跨ぎ、夜間を分ける。</td><td>同一セッションでも有効窓が違う。</td></tr>
+          <tr><td>レジーム互換性</td><td>年齢、病理、薬理、覚醒、睡眠、代謝、施設差を記録する。</td><td>健康若年者と疾患群を一つのヒト baseline にしない。</td></tr>
+          <tr><td>増分価値</td><td>最強の単一行を超えて何が増えたかを示す。</td><td>行数だけで証拠が強くなったと扱わない。</td></tr>
+          <tr><td>不一致トポロジー</td><td>どのモダリティ、どの subgroup で不一致が集中したか。</td><td>不一致例を平均スコアへ吸収しない。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="state-continuity-bridge-card">
+      <h2>6. State-Continuity Bridge Card</h2>
+      <p>同じ被験者、同じ脳、同じデコーダ、同じ標本を、同じ状態と読み替えないためのカードです。</p>
+      <table>
+        <thead><tr><th>連続性</th><th>証明すべきこと</th><th>失敗例</th></tr></thead>
+        <tbody>
+          <tr><td>標本連続性</td><td>後のサンプルが同じ被験者または同じ脳領域に由来する。</td><td>標本が同じでも状態が変わっている。</td></tr>
+          <tr><td>時間連続性</td><td>経過時間と、その間に変化しうる状態ファミリーが開示されている。</td><td>ライブ測定から固定後測定までの遅延を中立に扱う。</td></tr>
+          <tr><td>レジーム連続性</td><td>タスク、覚醒、睡眠圧、概日相、薬理、代謝、摂動が対応している。</td><td>同じタスク名だけで生理状態の違いを消す。</td></tr>
+          <tr><td>座標連続性</td><td>ランドマーク、変形、登録誤差、残留不一致を示す。</td><td>同じ脳という語だけで位置対応を済ませる。</td></tr>
+          <tr><td>搬送物</td><td>ランドマーク、潜在多様体、表現幾何、指紋特徴など何が保たれたか。</td><td>何が残ったか不明なまま全状態の連続性を主張する。</td></tr>
+          <tr><td>救済ルート</td><td>再校正、アライメント、再学習がどの程度必要だったか。</td><td>救済後のスコアを生の連続性と混同する。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="destructive-structure-route-card">
+      <h2>7. Destructive-Structure Route Card</h2>
+      <p>固定、切片化、染色、電子顕微鏡などの破壊的構造測定を扱うカードです。高解像構造は強い足場ですが、生体内の現在状態をそのまま残すとは限りません。</p>
+      <table>
+        <thead><tr><th>欄</th><th>書くこと</th><th>主張上限</th></tr></thead>
+        <tbody>
+          <tr><td>保存ルート</td><td>固定法、灌流、凍結、染色、保存条件。</td><td>保存条件付きの構造足場。</td></tr>
+          <tr><td>live-to-fix 遅延</td><td>生体測定から固定までの時間と状態変化リスク。</td><td>同一状態ではなく、ブリッジ仮説。</td></tr>
+          <tr><td>登録範囲</td><td>どの live landmark がどの固定後 landmark に対応するか。</td><td>局所対応。全脳状態対応ではない。</td></tr>
+          <tr><td>切片損失 / セグメンテーション QA</td><td>欠落、誤分割、不確実性、修正ログ。</td><td>QA 範囲内の構造制約。</td></tr>
+          <tr><td>失われる状態</td><td>電気状態、代謝、放出確率、睡眠、グリア、免疫など。</td><td>省略状態を含むアップロード十分条件にはしない。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="temporal-validity-card">
+      <h2>8. Temporal Validity Card</h2>
+      <p>日跨ぎ、長期安定性、固定デコーダ、習慣化、睡眠を含む主張に使うカードです。長期に見える成功は、状態の安定、形質の安定、再校正救済、インターフェースの適応を分けます。</p>
+      <table>
+        <thead><tr><th>欄</th><th>書くこと</th><th>棄権する条件</th></tr></thead>
+        <tbody>
+          <tr><td>時間窓</td><td>同日、数時間、日跨ぎ、週、月、固定後のどれか。</td><td>期間だけがあり、状態注釈がない。</td></tr>
+          <tr><td>状態注釈</td><td>高速行動ラベルと低速内部環境を分ける。</td><td>タスク名だけで状態を固定したことにする。</td></tr>
+          <tr><td>固定デコーダ間隔</td><td>デコーダを本当に固定した期間と、更新の有無。</td><td>再学習済みの成功を固定成功と呼ぶ。</td></tr>
+          <tr><td>再校正負荷</td><td>頻度、時間、データ量、ユーザー負荷、失敗時の救済。</td><td>再校正が重いのに低負荷運用と読む。</td></tr>
+          <tr><td>ドリフト分解</td><td>生物学的ドリフト、装置ドリフト、モデルドリフト、行動ドリフトを分ける。</td><td>性能低下や回復の原因が不明。</td></tr>
+          <tr><td>転送上限</td><td>どの条件まで一般化したか、どこから別問題か。</td><td>一つの縦断成功を全状況へ広げる。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="neural-contribution-card">
+      <h2>9. Neural Contribution Card</h2>
+      <p>言語、音声、運動、治療的 BCI のデコードを、エミュレーションや内部状態復元に読み替えないためのカードです。</p>
+      <table>
+        <thead><tr><th>欄</th><th>書くこと</th><th>止める誤読</th></tr></thead>
+        <tbody>
+          <tr><td>タスク制約</td><td>候補セット、語彙、プロンプト、試行構造、被験者協力。</td><td>制約付きデコードを自由な思考読取と読む。</td></tr>
+          <tr><td>事前分布</td><td>言語モデル、運動 prior、候補バンク、人口 prior の寄与。</td><td>モデル prior の力を神経情報と誤読する。</td></tr>
+          <tr><td>対照</td><td>脳なし、LM なし、シャッフル、メタデータのみ、被験者識別 baseline。</td><td>ショートカットで高スコアになる。</td></tr>
+          <tr><td>閉ループ</td><td>オンライン性能、遅延、沈黙、最後の出力保持、安全停止。</td><td>オフライン性能を運用可能性と混同する。</td></tr>
+          <tr><td>耐久性</td><td>固定デコーダ期間、再校正、信号チェーンドリフト。</td><td>同一セッション成功を慢性運用と読む。</td></tr>
+          <tr><td>エミュレーション境界</td><td>介入応答、時間発展、状態変数の完全性がどこまで示されたか。</td><td>翻訳システムを全脳状態再実装と呼ぶ。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="body-environment-boundary-card">
+      <h2>10. Body / Environment Boundary Card</h2>
+      <p>閉ループ、身体置換、人工環境、内受容を扱うカードです。低遅延の入出力は重要ですが、身体と環境の境界を閉じたことにはなりません。</p>
+      <table>
+        <thead><tr><th>境界</th><th>開示すること</th><th>不足時の上限</th></tr></thead>
+        <tbody>
+          <tr><td>感覚入力</td><td>視覚、聴覚、触覚、前庭、固有受容、自己生成フィードバック。</td><td>狭い感覚代替タスク。</td></tr>
+          <tr><td>運動出力</td><td>運動指令、筋骨格、ロボット、仮想身体、遅延、ジッター。</td><td>局所コントローラー。</td></tr>
+          <tr><td>内受容</td><td>呼吸、心拍、血糖、ホルモン、睡眠圧、疲労、痛み。</td><td>身体境界未完了。</td></tr>
+          <tr><td>報酬 / 動機づけ</td><td>報酬ループ、罰、習慣化、探索、社会的フィードバック。</td><td>短期タスク性能。</td></tr>
+          <tr><td>遅い内部環境</td><td>概日相、代謝、グルココルチコイド、薬理、炎症。</td><td>同じ入出力でも異なる状態レジーム。</td></tr>
+          <tr><td>安全停止</td><td>停止条件、フォールバック、ユーザー権限、監査ログ。</td><td>実験室内の限定運用。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="calibration-abstention-card">
+      <h2>11. Calibration / Abstention Card</h2>
+      <p>不確実なときに強い主張を出さないためのカードです。マインドアップロード研究では、棄権は消極的な表現ではなく、誤った成功宣言を防ぐ安全装置です。</p>
+      <table>
+        <thead><tr><th>欄</th><th>書くこと</th><th>使い道</th></tr></thead>
+        <tbody>
+          <tr><td>点推定と区間</td><td>一点のスコアだけでなく、不確実性幅を出す。</td><td>候補集合が重なるか判断する。</td></tr>
+          <tr><td>校正分割</td><td>学習、校正、テストを分ける。</td><td>信頼度の過大評価を防ぐ。</td></tr>
+          <tr><td>被覆率</td><td>予測集合や区間が実際にどれだけ覆うか。</td><td>安全な棄権閾値を作る。</td></tr>
+          <tr><td>棄権閾値</td><td>どの条件で未識別、要再測定、要人間判定にするか。</td><td>判断不能を成功にしない。</td></tr>
+          <tr><td>フォールバック</td><td>沈黙、最後の出力保持、安全停止、追加測定、低い主張への降格。</td><td>閉ループや BCI の危険な誤出力を防ぐ。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="l0-artifact-pack">
+      <h2>12. L0 Artifact Pack</h2>
+      <p>公開データで最初に厚くするべき成果物です。L0 は低い主張ですが、ここが弱いと L1/L2 の比較と反証が崩れます。</p>
+      <table>
+        <thead><tr><th>パック項目</th><th>最低限必要な内容</th><th>不足すると起きること</th></tr></thead>
+        <tbody>
+          <tr><td>データセット同一性</td><td>バージョン、DOI、取得日、ライセンス、永続 URL。</td><td>同じ名前の別データを混ぜる。</td></tr>
+          <tr><td>標準形</td><td>BIDS / EEG-BIDS / NWB などの構造、validator、残警告。</td><td>第三者が測定条件を再構築できない。</td></tr>
+          <tr><td>イベント忠実度</td><td>オンセット、継続時間、サンプル、クロック、遅延、意味、ラベル来歴。</td><td>何を予測しているかが曖昧になる。</td></tr>
+          <tr><td>分割と保持</td><td>セッション内、セッション間、被験者間、適応、独立単位。</td><td>漏洩や被験者識別を神経証拠と誤読する。</td></tr>
+          <tr><td>ベンチマーク対象</td><td>予測対象、メトリック束、推論予算、ルールスナップショット。</td><td>同じスコアでも科学的意味が違う。</td></tr>
+          <tr><td>ベースライン</td><td>単純 baseline、メタデータのみ、ショートカット検出。</td><td>高スコアの原因を切り分けられない。</td></tr>
+          <tr><td>派生系統</td><td>生データ、前処理、設定、実行環境、乱数、再実行手順。</td><td>結果を再生できない。</td></tr>
+          <tr><td>失敗例</td><td>棄権、除外、既知の故障、主張停止位置。</td><td>成功だけが残り、次の研究が誤る。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>カードを研究計画に変える最小テンプレート</h2>
+      <table>
+        <thead><tr><th>研究計画の欄</th><th>書く内容</th><th>対応カード</th></tr></thead>
+        <tbody>
+          <tr><td>対象機能</td><td>何を再現または制約したいのか。</td><td>可観測性予算、維持状態バジェット。</td></tr>
+          <tr><td>候補内部状態</td><td>同じ観測を説明しうる競合候補。</td><td>識別可能性カード。</td></tr>
+          <tr><td>測定スタック</td><td>直接観測、proxy、推定、未測定。</td><td>可観測性予算、Fusion Card。</td></tr>
+          <tr><td>分離実験</td><td>どの摂動、状態遷移、保持データで候補を落とすか。</td><td>識別可能性カード、Neural Contribution Card。</td></tr>
+          <tr><td>時間と身体の境界</td><td>日跨ぎ、固定後、閉ループ、内受容、再校正。</td><td>Temporal Validity、State-Continuity、Body / Environment。</td></tr>
+          <tr><td>公開 artifact</td><td>再実行、分割、QC、ベースライン、失敗例。</td><td>L0 Artifact Pack、Calibration / Abstention。</td></tr>
+          <tr><td>主張停止位置</td><td>どの結果なら L0/L1/L2 に留めるか。</td><td>全カード共通。</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>このサイトは、マインドアップロードを検証可能な研究課題として整理するための公開ノートです。</p>
+    <nav class="footer-links" aria-label="補助ページ">
+      <a href="archive.html">旧内容統合</a>
+      <a href="verification-cards.html" aria-current="page">検証カード</a>
+      <a href="summary.html">要約</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
+    </nav>
+  </footer>
+</body>
+</html>

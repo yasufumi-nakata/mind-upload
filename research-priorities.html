@@ -17,6 +17,7 @@
       <a href="deep-dives.html">深掘り</a>
       <a href="archive.html">旧内容統合</a>
       <a href="hypotheses.html">仮説検証</a>
+      <a href="verification-cards.html">検証カード</a>
       <a href="evidence.html">根拠マップ</a>
     </nav>
   </header>
@@ -34,49 +35,49 @@
       <tr><th>優先</th><th>研究すること</th><th>なぜ先に進めるか</th><th>次に必要な実験</th></tr>
     </thead>
     <tbody>
-      <tr>
+      <tr id="p1-identifiability">
         <td>P1</td>
         <td>可観測性と識別可能性を分ける摂動設計</td>
         <td>測定量が増えても、同じ観測を説明する内部状態が複数残るならアップロード条件は閉じません。</td>
         <td>競合モデルを列挙し、状態遷移、持続励起、介入、保持データでどれが落ちるかを事前登録します。</td>
       </tr>
-      <tr>
+      <tr id="p2-maintenance">
         <td>P2</td>
         <td>維持状態ファミリーの状態カード化</td>
         <td>コネクトームだけでは、シナプス効率、固有興奮性、代謝、ECM/PNN、睡眠、グリア、血管、免疫を固定できません。</td>
         <td>各状態について、直接観測量、代理量、時間窓、摂動可能性、棄権境界を分けたカードを作ります。</td>
       </tr>
-      <tr>
+      <tr id="p3-multimodal">
         <td>P3</td>
         <td>同一個体マルチモーダル測定の分解</td>
         <td>EEG、fMRI、PET、MRSI、行動が同じ対象から取れても、共通因子とモダリティ固有因子は混ざります。</td>
         <td>同一セッションで、共通因子、分岐因子、装置固有誤差、状態ラベルのずれを分離します。</td>
       </tr>
-      <tr>
+      <tr id="p4-connectome">
         <td>P4</td>
         <td>コネクトーム制約モデルの残差監査</td>
         <td>構造は強力な足場ですが、動的パラメータや現在のシナプス状態を一意に決めるとは限りません。</td>
         <td>コネクトーム制約モデルに活動記録、摂動、外部タスクを追加し、まだ残る候補集合を明示します。</td>
       </tr>
-      <tr>
+      <tr id="p5-continuity">
         <td>P5</td>
         <td>状態継続ブリッジの検証</td>
         <td>同じ脳、同じ被験者、同じデコーダでも、日をまたぐ状態同一性や固定後の状態継続は別問題です。</td>
         <td>何が運ばれる対象か、許容誤差、失敗規則、再調整負荷、救済ルートを明示します。</td>
       </tr>
-      <tr>
+      <tr id="p6-decode">
         <td>P6</td>
         <td>デコードとエミュレーションの分離</td>
         <td>言語や運動を高精度に予測できても、内部状態を生成的に再実装できたことにはなりません。</td>
         <td>予測スコア、神経寄与、言語事前分布、閉ループ性能、長期安定性を別々に評価します。</td>
       </tr>
-      <tr>
+      <tr id="p7-public-data">
         <td>P7</td>
         <td>公開データで <a href="project.html#claim-ladder">L0 から L2</a> を厚くする</td>
         <td>大きな主張の前に、誰でも再現できる低レベル検証を厚くすると、後続研究の失敗コストが下がります。</td>
         <td>BIDS/NWB、イベントログ、同期、QC、保持データ、ベースライン、棄権ルールを一体で公開します。</td>
       </tr>
-      <tr>
+      <tr id="p8-body-environment">
         <td>P8</td>
         <td>身体・環境・内受容ループの境界条件</td>
         <td>脳単体の再現だけでは、感覚、運動、報酬、睡眠、恒常性の閉ループを保証できません。</td>
@@ -144,6 +145,7 @@
     <p>このサイトは、マインドアップロードを検証可能な研究課題として整理するための公開ノートです。</p>
     <nav class="footer-links" aria-label="補助ページ">
       <a href="archive.html">旧内容統合</a>
+      <a href="verification-cards.html">検証カード</a>
       <a href="summary.html">要約</a>
       <a href="requirements.html">必要条件</a>
       <a href="known-unknown.html">既知と未知</a>
