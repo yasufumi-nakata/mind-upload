@@ -12,13 +12,14 @@
     <a class="site-name" href="index.html">マインドアップロード</a>
     <nav aria-label="主要ページ">
       <a href="index.html">全体像</a>
-<a href="requirements.html">必要条件</a>
-<a href="known-unknown.html">既知と未知</a>
-<a href="hypotheses.html" aria-current="page">仮説検証</a>
-<a href="roadmap.html">ロードマップ</a>
-<a href="evidence.html">根拠マップ</a>
-<a href="datasets.html">データ</a>
-<a href="glossary.html">用語</a>
+      <a href="research-priorities.html">研究優先順位</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="hypotheses.html" aria-current="page">仮説検証</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="evidence.html">根拠マップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
     </nav>
   </header>
   <main>
@@ -56,6 +57,48 @@
     <article>
       <h3>外部検証</h3>
       <p>別データ、別実験者、別条件で結果が保たれるかを問います。内部の適合だけでは、研究課題として閉じません。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>検証カードを引き継ぐ</h2>
+  <p>日付付き補足として散らばっていた内容は、今後はカードとして扱います。カードは「何を主張してよいか」と「まだ上限を上げてはいけない理由」を同時に書くための形式です。</p>
+  <table>
+    <thead><tr><th>カード</th><th>使う場面</th><th>必ず書くこと</th></tr></thead>
+    <tbody>
+      <tr><td>可観測性予算</td><td>測定変数を増やす研究。</td><td>直接観測、代理観測、推定、未測定を分ける。</td></tr>
+      <tr><td>識別可能性カード</td><td>逆問題、モデルフィット、デコード。</td><td>同じ出力を生む競合モデル、対称性、再パラメータ化、保持データ。</td></tr>
+      <tr><td><a href="glossary.html#fusion-card">Fusion Card</a></td><td>EEG/fMRI/PET/MRSI などのマルチモーダル統合。</td><td>共通因子、モダリティ固有因子、数量の違い、融合後に残る候補集合。</td></tr>
+      <tr><td><a href="glossary.html#human-proxy-composition-card">Human Proxy Composition Card</a></td><td>生きた人間の複数 proxy を合成する主張。</td><td>各 proxy の役割、取得負担、モデル負担、外部校正、最強単一行からの増分。</td></tr>
+      <tr><td><a href="glossary.html#state-continuity-bridge-card">State-Continuity Bridge Card</a></td><td>同じ被験者、同じ脳、日跨ぎ、固定後をつなぐ主張。</td><td>運ばれる対象、証人、許容誤差、失敗規則、再調整負荷、救済ルート。</td></tr>
+      <tr><td><a href="glossary.html#destructive-structure-route-card">Destructive-Structure Route Card</a></td><td>固定後 EM や破壊的な超微細構造測定。</td><td>保存方法、遅延、登録範囲、校正、失われる状態、残せる主張。</td></tr>
+      <tr><td><a href="glossary.html#temporal-validity-card">Temporal Validity Card</a></td><td>長期安定性、固定デコーダ、習慣化、睡眠を含む主張。</td><td>時間窓、状態注釈、再校正、ドリフト、日跨ぎ転送の上限。</td></tr>
+      <tr><td>Body / Environment Boundary Card</td><td>閉ループ、身体置換、環境相互作用。</td><td>保存する入力、置換する出力、内受容、報酬、睡眠、恒常性の境界。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>よい仮説と弱い仮説</h2>
+  <div class="two-column">
+    <article>
+      <h3>よい仮説</h3>
+      <ul>
+        <li>競合する内部状態説明を先に列挙します。</li>
+        <li>どの摂動で候補が分かれるかを指定します。</li>
+        <li>別データや別日で残るかを評価します。</li>
+        <li>失敗条件と棄権条件を公開します。</li>
+      </ul>
+    </article>
+    <article>
+      <h3>弱い仮説</h3>
+      <ul>
+        <li>同じデータでスコアだけを上げます。</li>
+        <li>相関を因果や同一性へ昇格します。</li>
+        <li>複数 proxy を一つの真値のように合成します。</li>
+        <li>モデルに合ったことを復元成功と呼びます。</li>
+      </ul>
     </article>
   </div>
 </section>

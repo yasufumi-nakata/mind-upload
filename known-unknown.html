@@ -12,13 +12,14 @@
     <a class="site-name" href="index.html">マインドアップロード</a>
     <nav aria-label="主要ページ">
       <a href="index.html">全体像</a>
-<a href="requirements.html">必要条件</a>
-<a href="known-unknown.html" aria-current="page">既知と未知</a>
-<a href="hypotheses.html">仮説検証</a>
-<a href="roadmap.html">ロードマップ</a>
-<a href="evidence.html">根拠マップ</a>
-<a href="datasets.html">データ</a>
-<a href="glossary.html">用語</a>
+      <a href="research-priorities.html">研究優先順位</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html" aria-current="page">既知と未知</a>
+      <a href="hypotheses.html">仮説検証</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="evidence.html">根拠マップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
     </nav>
   </header>
   <main>
@@ -61,6 +62,50 @@
       <tr><td>再現</td><td>別の人が同じ手順で確認できる。</td><td>データ、コード、環境、評価の公開。</td></tr>
     </tbody>
   </table>
+</section>
+
+<section>
+  <h2>研究判断に必要な境界線</h2>
+  <table>
+    <thead><tr><th>論点</th><th>比較的言えること</th><th>まだ言えないこと</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>EEG / BCI デコード</td>
+        <td>一部の知覚、運動、言語、状態を予測する実用的な信号になり得ます。</td>
+        <td>予測スコアだけで、内部状態の一意な再構成やエミュレーションを示すことはできません。</td>
+      </tr>
+      <tr>
+        <td>コネクトーム</td>
+        <td>局所回路、構造制約、モデルの足場を強くします。</td>
+        <td>シナプスの現在効率、放出機構、代謝、グリア、睡眠依存の状態を自動的には返しません。</td>
+      </tr>
+      <tr>
+        <td>同一個体マルチモーダル測定</td>
+        <td>別々の proxy の誤差や共通因子を見やすくします。</td>
+        <td>同じ対象から取ったというだけで、一つの潜在状態サンプルにはなりません。</td>
+      </tr>
+      <tr>
+        <td>同じ脳の順次パイプライン</td>
+        <td>構造と機能の対応を強く制約できます。</td>
+        <td>保存、固定、登録、時間差を越えて、全状態が連続したとは言えません。</td>
+      </tr>
+      <tr>
+        <td>基礎モデル / 大規模事前学習</td>
+        <td>異なるデータセットへの転移や表現学習を改善する可能性があります。</td>
+        <td>事前分布、被験者識別、取得条件のショートカットを除かない限り、神経変数の証拠にはなりません。</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>未知を減らすための順序</h2>
+  <ol class="step-list">
+    <li><strong>観測可能な量を固定する</strong><span>信号、行動、画像、分子 proxy、介入結果を混ぜずに書きます。</span></li>
+    <li><strong>残る候補内部状態を列挙する</strong><span>同じ観測を説明できる代替モデルが何かを明示します。</span></li>
+    <li><strong>候補を落とす実験を設計する</strong><span>摂動、状態遷移、保持データ、別装置、別日を使います。</span></li>
+    <li><strong>まだ重なる場合は棄権する</strong><span>棄権は失敗ではなく、主張上限を守るための研究結果です。</span></li>
+  </ol>
 </section>
 
   </main>

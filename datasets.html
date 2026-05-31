@@ -12,13 +12,14 @@
     <a class="site-name" href="index.html">マインドアップロード</a>
     <nav aria-label="主要ページ">
       <a href="index.html">全体像</a>
-<a href="requirements.html">必要条件</a>
-<a href="known-unknown.html">既知と未知</a>
-<a href="hypotheses.html">仮説検証</a>
-<a href="roadmap.html">ロードマップ</a>
-<a href="evidence.html">根拠マップ</a>
-<a href="datasets.html" aria-current="page">データ</a>
-<a href="glossary.html">用語</a>
+      <a href="research-priorities.html">研究優先順位</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="hypotheses.html">仮説検証</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="evidence.html">根拠マップ</a>
+      <a href="datasets.html" aria-current="page">データ</a>
+      <a href="glossary.html">用語</a>
     </nav>
   </header>
   <main>
@@ -36,6 +37,31 @@
     <li>仮説分離データ: 同じ結果を生む複数モデルを分ける。</li>
     <li>外部検証データ: 別条件で結論が残るかを確認する。</li>
   </ul>
+</section>
+
+<section>
+  <h2>研究優先順位に対応するデータ設計</h2>
+  <table>
+    <thead><tr><th>目的</th><th>最低限必要な記録</th><th>不足すると何が起きるか</th></tr></thead>
+    <tbody>
+      <tr><td>識別可能性を上げる</td><td>競合モデル、摂動、保持データ、状態ラベル。</td><td>同じスコアを別の内部状態が説明しても見逃します。</td></tr>
+      <tr><td>EEG / BCI デコードを評価する</td><td>イベント定義、刺激ログ、同期、電極配置、不良チャンネル、別日データ。</td><td>被験者識別、装置差、事前分布のショートカットを神経証拠と誤読します。</td></tr>
+      <tr><td>マルチモーダル統合を評価する</td><td>同時刻同期、同一セッション状態、各モダリティの前処理履歴、欠測ポリシー。</td><td>共通因子とモダリティ固有因子を混ぜてしまいます。</td></tr>
+      <tr><td>状態継続を評価する</td><td>日付、状態注釈、再校正手順、デコーダ固定期間、ドリフト指標。</td><td>同じ被験者内の性能維持を、同じ内部状態の保持と誤読します。</td></tr>
+      <tr><td>破壊的構造測定を評価する</td><td>保存条件、遅延、固定方法、登録範囲、生体内測定との対応点。</td><td>固定後の構造を生体内の現在状態として扱ってしまいます。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>L0 最小ループ</h2>
+  <ol class="step-list">
+    <li><strong>公開データを一つ選ぶ</strong><span>最初は BIDS や NWB など、メタデータと検証ツールがある形式を優先します。</span></li>
+    <li><strong>イベント意味と時刻同期を確認する</strong><span>波形があるだけでは、何を比較しているかは固定されません。</span></li>
+    <li><strong>ベースラインを再現する</strong><span>論文スコアではなく、同じ分割、同じ前処理、同じ評価を再現します。</span></li>
+    <li><strong>代替説明を一つ落とす</strong><span>被験者識別、セッション識別、装置差、状態ラベルの漏れを最低一つ監査します。</span></li>
+    <li><strong>棄権を記録する</strong><span>判断不能な結果も、次のデータ設計を決める成果として残します。</span></li>
+  </ol>
 </section>
 
   </main>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>研究優先順位 | マインドアップロード</title>
+  <meta name="description" content="マインドアップロードを最速で進めるため、今優先すべき研究課題をボトルネック、根拠、次の実験に分けて整理します。">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="index.html">マインドアップロード</a>
+    <nav aria-label="主要ページ">
+      <a href="index.html">全体像</a>
+      <a href="research-priorities.html" aria-current="page">研究優先順位</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="hypotheses.html">仮説検証</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="evidence.html">根拠マップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero compact">
+  <p class="eyebrow">研究優先順位</p>
+  <h1>最速を狙う研究順序は「候補内部状態を減らす研究」から始まります</h1>
+  <p class="lead">WBE 101、検証、技術ロードマップ、Perspective、データセットで扱ってきた内容を、研究判断に使える形へ再配置しました。ここでの順位は流行や日付ではなく、未解決の大きさ、波及効果、検証可能性で決めます。</p>
+</section>
+
+<section>
+  <h2>優先順位の結論</h2>
+  <table>
+    <thead>
+      <tr><th>優先</th><th>研究すること</th><th>なぜ先に進めるか</th><th>次に必要な実験</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>P1</td>
+        <td>可観測性と識別可能性を分ける摂動設計</td>
+        <td>測定量が増えても、同じ観測を説明する内部状態が複数残るならアップロード条件は閉じません。</td>
+        <td>競合モデルを列挙し、状態遷移、持続励起、介入、保持データでどれが落ちるかを事前登録します。</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>維持状態ファミリーの状態カード化</td>
+        <td>コネクトームだけでは、シナプス効率、固有興奮性、代謝、ECM/PNN、睡眠、グリア、血管、免疫を固定できません。</td>
+        <td>各状態について、直接観測量、代理量、時間窓、摂動可能性、棄権境界を分けたカードを作ります。</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>同一個体マルチモーダル測定の分解</td>
+        <td>EEG、fMRI、PET、MRSI、行動が同じ対象から取れても、共通因子とモダリティ固有因子は混ざります。</td>
+        <td>同一セッションで、共通因子、分岐因子、装置固有誤差、状態ラベルのずれを分離します。</td>
+      </tr>
+      <tr>
+        <td>P4</td>
+        <td>コネクトーム制約モデルの残差監査</td>
+        <td>構造は強力な足場ですが、動的パラメータや現在のシナプス状態を一意に決めるとは限りません。</td>
+        <td>コネクトーム制約モデルに活動記録、摂動、外部タスクを追加し、まだ残る候補集合を明示します。</td>
+      </tr>
+      <tr>
+        <td>P5</td>
+        <td>状態継続ブリッジの検証</td>
+        <td>同じ脳、同じ被験者、同じデコーダでも、日をまたぐ状態同一性や固定後の状態継続は別問題です。</td>
+        <td>何が運ばれる対象か、許容誤差、失敗規則、再調整負荷、救済ルートを明示します。</td>
+      </tr>
+      <tr>
+        <td>P6</td>
+        <td>デコードとエミュレーションの分離</td>
+        <td>言語や運動を高精度に予測できても、内部状態を生成的に再実装できたことにはなりません。</td>
+        <td>予測スコア、神経寄与、言語事前分布、閉ループ性能、長期安定性を別々に評価します。</td>
+      </tr>
+      <tr>
+        <td>P7</td>
+        <td>公開データで L0 から L2 を厚くする</td>
+        <td>大きな主張の前に、誰でも再現できる低レベル検証を厚くすると、後続研究の失敗コストが下がります。</td>
+        <td>BIDS/NWB、イベントログ、同期、QC、保持データ、ベースライン、棄権ルールを一体で公開します。</td>
+      </tr>
+      <tr>
+        <td>P8</td>
+        <td>身体・環境・内受容ループの境界条件</td>
+        <td>脳単体の再現だけでは、感覚、運動、報酬、睡眠、恒常性の閉ループを保証できません。</td>
+        <td>どの身体ループを保存し、どれを置換し、どの遅い内部環境を合わせるかを実験ごとに開示します。</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>この順位の根拠</h2>
+  <div class="card-grid">
+    <article>
+      <h3>観測が増えても一意性は増えない場合がある</h3>
+      <p>可観測性と構造識別可能性は別問題です。同じ活動や同じ出力が異なる内部パラメータから生じるなら、研究は測定量ではなく候補集合の縮小を目標にすべきです。</p>
+    </article>
+    <article>
+      <h3>コネクトームは進歩だが十分条件ではない</h3>
+      <p>ハエ全脳やマウス視覚皮質の機能的コネクトミクスは強力な足場です。ただし、構造だけでは現在のシナプス状態、放出確率、代謝、グリア、睡眠、免疫を直接返しません。</p>
+    </article>
+    <article>
+      <h3>同じ対象の証拠は自動合成できない</h3>
+      <p>同一個体のマルチモーダル測定や同一脳の順次パイプラインは重要ですが、共通因子、分岐因子、固定・登録・時間ドリフトを別々に監査する必要があります。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>明日から始めるなら</h2>
+  <ol class="step-list">
+    <li><strong>一つの対象機能を選ぶ</strong><span>記憶、運動、言語、覚醒状態など、まず狭い対象にします。</span></li>
+    <li><strong>競合する内部状態説明を三つ以上書く</strong><span>同じ出力を別の仕組みで説明できる候補を先に出します。</span></li>
+    <li><strong>観測量ではなく分離実験を選ぶ</strong><span>どの測定や摂動が競合候補を最も落とすかを決めます。</span></li>
+    <li><strong>棄権条件を公開する</strong><span>候補集合が重なる場合は、成功ではなく未識別として扱います。</span></li>
+    <li><strong>公開データと小さな再現ループで始める</strong><span>L0 の再解析、L1 のベンチマーク、L2 の介入予測へ順に上げます。</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>これまでの内容から引き継ぐ主張</h2>
+  <ul class="rule-list">
+    <li>WBE 101 の中心は、コネクトーム、デコード、エミュレーション、維持状態、ヒト可観測性を混ぜないことです。</li>
+    <li>Verification の中心は、可観測性予算、識別カード、Fusion Card、Human Proxy Composition Card、State-Continuity Bridge Card を分けることです。</li>
+    <li>Tech Roadmap の中心は、測定、再構築、実装、検証、社会実装を依存関係として読むことです。</li>
+    <li>Datasets の中心は、データがあることではなく、イベント、同期、QC、保持条件、ベンチマーク統治をそろえることです。</li>
+  </ul>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <p>このサイトは、マインドアップロードを検証可能な研究課題として整理するための公開ノートです。</p>
+  </footer>
+</body>
+</html>

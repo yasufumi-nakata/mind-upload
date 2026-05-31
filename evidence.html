@@ -12,13 +12,14 @@
     <a class="site-name" href="index.html">マインドアップロード</a>
     <nav aria-label="主要ページ">
       <a href="index.html">全体像</a>
-<a href="requirements.html">必要条件</a>
-<a href="known-unknown.html">既知と未知</a>
-<a href="hypotheses.html">仮説検証</a>
-<a href="roadmap.html">ロードマップ</a>
-<a href="evidence.html" aria-current="page">根拠マップ</a>
-<a href="datasets.html">データ</a>
-<a href="glossary.html">用語</a>
+      <a href="research-priorities.html">研究優先順位</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="hypotheses.html">仮説検証</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="evidence.html" aria-current="page">根拠マップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
     </nav>
   </header>
   <main>
@@ -38,6 +39,72 @@
       <tr><td>摂動実験</td><td>因果関係、必要条件、競合仮説の分離。</td><td>全脳スケールでの十分性。</td></tr>
       <tr><td>計算モデル</td><td>候補機構、予測、実装可能性。</td><td>生物学的同一性の自動保証。</td></tr>
       <tr><td>公開データと標準</td><td>再現性、比較、外部検証。</td><td>理論的な未解決問題の自動解決。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>主要エビデンス</h2>
+  <p>ここでは文献を日付順ではなく、どの主張の上限を変えるかで並べます。リンクは原典または DOI です。</p>
+  <table>
+    <thead><tr><th>証拠クラス</th><th>代表例</th><th>強くなる主張</th><th>まだ閉じないもの</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>全脳または大規模コネクトーム</td>
+        <td><a href="https://www.nature.com/articles/s41586-024-07558-y">Dorkenwald et al. (2024)</a>、<a href="https://www.nature.com/articles/s41586-025-08790-w">MICrONS Consortium (2025)</a></td>
+        <td>構造足場、局所回路、同一脳の構造機能対応。</td>
+        <td>現在のシナプス効率、放出状態、代謝、グリア、全状態の同時捕捉。</td>
+      </tr>
+      <tr>
+        <td>コネクトーム制約モデル</td>
+        <td><a href="https://www.nature.com/articles/s41586-024-07939-3">Lappalainen et al. (2024)</a>、<a href="https://www.nature.com/articles/s41593-025-02080-4">Beiran and Litwin-Kumar (2025)</a></td>
+        <td>構造が活動予測をどこまで改善するか。</td>
+        <td>構造だけで動力学が一意に決まったという主張。</td>
+      </tr>
+      <tr>
+        <td>可観測性と識別可能性</td>
+        <td><a href="https://arxiv.org/abs/1812.04525">Villaverde (2019)</a>、<a href="https://doi.org/10.1038/nn1352">Prinz et al. (2004)</a>、<a href="https://experts.umn.edu/en/publications/similarity-in-evoked-responses-does-not-imply-similarity-in-macro/">Rasero et al. (2024)</a></td>
+        <td>測れること、区別できること、一意に決まることを分ける必要性。</td>
+        <td>観測量が多ければ内部状態が自動的に一意になるという主張。</td>
+      </tr>
+      <tr>
+        <td>同一個体マルチモーダル測定</td>
+        <td><a href="https://www.nature.com/articles/s41467-023-44363-z">Vafaii et al. (2024)</a>、<a href="https://www.nature.com/articles/s41467-025-64414-x">Chen et al. (2025)</a></td>
+        <td>共通パターンとモダリティ固有パターンを同時に見られる。</td>
+        <td>複数モダリティを足せば一つの真の潜在状態に届くという主張。</td>
+      </tr>
+      <tr>
+        <td>状態継続と時間ドリフト</td>
+        <td><a href="https://www.nature.com/articles/s41593-019-0555-4">Gallego et al. (2020)</a>、<a href="https://www.nature.com/articles/s41467-025-59652-y">Karpowicz et al. (2025)</a>、<a href="https://www.nature.com/articles/s41551-025-01536-z">Wilson et al. (2025)</a></td>
+        <td>潜在多様体やデコーダを、ドリフト下で安定化できる可能性。</td>
+        <td>安定した性能が、そのまま内部状態の同一性を保証するという主張。</td>
+      </tr>
+      <tr>
+        <td>破壊的構造測定の保存問題</td>
+        <td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10391564/">Lu et al. (2023)</a></td>
+        <td>固定・保存・染色が超微細構造と細胞外空間に与える影響を監査する必要性。</td>
+        <td>固定後の高解像構造が生体内の現在状態をそのまま残すという主張。</td>
+      </tr>
+      <tr>
+        <td>データ標準と再現性</td>
+        <td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4978148/">BIDS</a>、<a href="https://doi.org/10.1016/j.neuron.2015.10.025">NWB</a>、<a href="https://doi.org/10.7554/eLife.71774">OpenNeuro</a></td>
+        <td>第三者が同じデータを検証できる条件。</td>
+        <td>標準形式で置いたことだけで、仮説分離や同一性が解けるという主張。</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>証拠パターン別の読み方</h2>
+  <table>
+    <thead><tr><th>証拠パターン</th><th>改善すること</th><th>次に要求する監査</th></tr></thead>
+    <tbody>
+      <tr><td>同一セッションのマルチモーダル束</td><td>可観測性と誤差検出。</td><td><a href="glossary.html#fusion-card">Fusion Card</a> と <a href="glossary.html#human-proxy-composition-card">Human Proxy Composition Card</a>。</td></tr>
+      <tr><td>同一脳の順次パイプライン</td><td>局所的な構造機能対応。</td><td><a href="glossary.html#state-continuity-bridge-card">State-Continuity Bridge Card</a> と <a href="glossary.html#destructive-structure-route-card">Destructive-Structure Route Card</a>。</td></tr>
+      <tr><td>コネクトーム制約予測</td><td>候補モデルの制約。</td><td>識別可能性カード、追加活動記録、摂動保持データ。</td></tr>
+      <tr><td>高スコアのデコード</td><td>特定タスクでの予測性能。</td><td>神経寄与、事前分布、閉ループ、日跨ぎ安定性の分離。</td></tr>
+      <tr><td>公開ベンチマーク</td><td>比較と再現性。</td><td>データ分割、イベント意味、同期、QC、棄権規則。</td></tr>
     </tbody>
   </table>
 </section>

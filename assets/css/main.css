@@ -79,16 +79,22 @@ p { margin: 0 0 1.1rem; }
 }
 ul, ol { padding-left: 1.35rem; }
 li { margin: 0 0 0.45rem; }
-.timeline-grid, .card-grid, .two-column, .link-grid {
+.timeline-grid, .card-grid, .two-column, .link-grid, .priority-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
   margin-top: 24px;
 }
-.timeline-grid article, .card-grid article, .link-grid a {
+.timeline-grid article, .card-grid article, .link-grid a, .priority-grid article {
   border: 1px solid var(--line);
   background: var(--soft);
   padding: 18px;
+}
+.priority-grid article span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-weight: 700;
 }
 .link-grid a {
   display: block;
@@ -112,6 +118,18 @@ th { background: var(--soft); text-align: left; }
   max-width: 820px;
   border-left: 4px solid var(--accent);
   padding: 8px 0 8px 1.4rem;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 32px;
+}
+.tag-list span {
+  border: 1px solid var(--line);
+  background: var(--soft);
+  padding: 5px 9px;
+  font-size: 0.92rem;
 }
 .step-list {
   list-style: none;

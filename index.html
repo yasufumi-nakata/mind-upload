@@ -12,20 +12,21 @@
     <a class="site-name" href="index.html">マインドアップロード</a>
     <nav aria-label="主要ページ">
       <a href="index.html" aria-current="page">全体像</a>
-<a href="requirements.html">必要条件</a>
-<a href="known-unknown.html">既知と未知</a>
-<a href="hypotheses.html">仮説検証</a>
-<a href="roadmap.html">ロードマップ</a>
-<a href="evidence.html">根拠マップ</a>
-<a href="datasets.html">データ</a>
-<a href="glossary.html">用語</a>
+      <a href="research-priorities.html">研究優先順位</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="hypotheses.html">仮説検証</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="evidence.html">根拠マップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
     </nav>
   </header>
   <main>
     <section class="hero">
   <p class="eyebrow">現在・過去・未来で読む</p>
-  <h1>マインドアップロードに必要なものを、検証できる形に分解する</h1>
-  <p class="lead">このサイトは、マインドアップロードを「できる / できない」の印象論ではなく、必要条件、既知の証拠、未解決の穴、次に試す仮説へ分けて読むための入口です。</p>
+  <h1>最速を狙うなら、今どの研究を進めるべきか</h1>
+  <p class="lead">このサイトは、マインドアップロードを「できる / できない」の印象論ではなく、どの未解決問題を潰せば一番前に進むかへ分解する入口です。ここでの「最速」は年数予測ではなく、未解決の大きさ、波及効果、検証可能性から見た研究順序です。</p>
 </section>
 
 <section class="timeline-grid" aria-label="現在・過去・未来">
@@ -35,16 +36,16 @@
     <ul>
       <li>コネクトーム、神経活動、行動、分子状態は別々の観測対象です。</li>
       <li>相関、予測、識別、因果、再現は同じ強さの主張ではありません。</li>
-      <li>最重要の課題は、測定できる量と復元したい状態の間の差を明示することです。</li>
+      <li>最重要の課題は、測定できる量と復元したい状態の差を明示し、候補モデルが複数残る場所を減らすことです。</li>
     </ul>
   </article>
   <article>
     <h2>過去</h2>
-    <p>過去の研究は、脳を計算として扱う考え方、神経回路をモデル化する方法、脳信号から状態を推定する方法、公開データと再現手順の重要性を積み上げてきました。</p>
+    <p>過去の記載は、古典的な全脳エミュレーション構想、コネクトーム、EEG/BCI、検証コモンズ、データ標準、哲学的論点を広く扱っていました。ここではそれらを、研究判断に使える形へ圧縮します。</p>
     <ul>
       <li>全脳エミュレーションは、抽象的な哲学だけでなく測定と実装の問題になりました。</li>
       <li>一方で、配線図だけでは現在状態、可塑性、代謝、グリア、血管、免疫、記憶固定を閉じられないことも見えてきました。</li>
-      <li>過去の知見は、完成宣言ではなく、失敗条件を明確にする材料として読む必要があります。</li>
+      <li>過去の知見は、完成宣言ではなく、どの主張がどこで止まるかを決める材料として使います。</li>
     </ul>
   </article>
   <article>
@@ -53,14 +54,46 @@
     <ul>
       <li>「何を測れば成功か」と同時に「何が出たら失敗か」を先に定義します。</li>
       <li>候補モデルが複数残る場合は、棄権を結果として扱います。</li>
-      <li>最終目標は、データ、コード、評価、反証条件が揃った検証可能なロードマップです。</li>
+      <li>最終目標は、データ、コード、評価、反証条件が揃った検証可能な研究ロードマップです。</li>
     </ul>
   </article>
 </section>
 
 <section>
+  <h2>最初に見る五つのボトルネック</h2>
+  <div class="priority-grid">
+    <article>
+      <span>1</span>
+      <h3>識別可能性を上げる摂動設計</h3>
+      <p>より多く測る前に、同じ出力を生む複数の内部状態を分けられる実験を作ります。ここが閉じない限り、予測精度はアップロードの証拠に昇格しません。</p>
+    </article>
+    <article>
+      <span>2</span>
+      <h3>維持状態のルート分解</h3>
+      <p>記憶と人格を支える可能性のある興奮性、シナプス効率、ECM/PNN、代謝、グリア、血管、免疫、睡眠を、コネクトームとは別の状態として扱います。</p>
+    </article>
+    <article>
+      <span>3</span>
+      <h3>同一個体マルチモーダル測定</h3>
+      <p>EEG、fMRI、PET、MRSI、行動を同じ対象で集めても、自動的に同じ潜在状態にはなりません。共通因子、分岐因子、測定固有の誤差を分けます。</p>
+    </article>
+    <article>
+      <span>4</span>
+      <h3>コネクトーム制約モデルの限界検証</h3>
+      <p>構造は強い足場ですが、追加の活動記録や摂動なしに動力学を一意に決められるかは別問題です。構造と状態の責務を分離します。</p>
+    </article>
+    <article>
+      <span>5</span>
+      <h3>公開ベンチマークと棄権ルール</h3>
+      <p>成功条件だけでなく、どの結果なら主張を弱めるかを公開します。L0 から L2 の再現可能な検証を先に厚くします。</p>
+    </article>
+  </div>
+</section>
+
+<section>
   <h2>このサイトの読み方</h2>
   <div class="link-grid">
+    <a href="research-priorities.html"><strong>研究優先順位</strong><span>最速で前進するために、どの未解決問題から潰すか。</span></a>
     <a href="requirements.html"><strong>必要条件</strong><span>何が揃わないとマインドアップロードと言えないか。</span></a>
     <a href="known-unknown.html"><strong>既知と未知</strong><span>現在わかること、まだ閉じていないこと。</span></a>
     <a href="hypotheses.html"><strong>仮説検証</strong><span>未知を潰すための仮説の立て方。</span></a>

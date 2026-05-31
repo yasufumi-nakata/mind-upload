@@ -12,13 +12,14 @@
     <a class="site-name" href="index.html">マインドアップロード</a>
     <nav aria-label="主要ページ">
       <a href="index.html">全体像</a>
-<a href="requirements.html">必要条件</a>
-<a href="known-unknown.html">既知と未知</a>
-<a href="hypotheses.html">仮説検証</a>
-<a href="roadmap.html" aria-current="page">ロードマップ</a>
-<a href="evidence.html">根拠マップ</a>
-<a href="datasets.html">データ</a>
-<a href="glossary.html">用語</a>
+      <a href="research-priorities.html">研究優先順位</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="hypotheses.html">仮説検証</a>
+      <a href="roadmap.html" aria-current="page">ロードマップ</a>
+      <a href="evidence.html">根拠マップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
     </nav>
   </header>
   <main>
@@ -38,6 +39,53 @@
     <li><strong>実装する</strong><span>閉ループで動くモデルにし、短期予測だけでなく長期安定性を見る。</span></li>
     <li><strong>外部検証する</strong><span>別データ、別実験者、別装置、別条件で再確認します。</span></li>
   </ol>
+</section>
+
+<section>
+  <h2>現在・過去・未来で見るロードマップ</h2>
+  <div class="timeline-grid">
+    <article>
+      <h3>現在: L0 から L2 を厚くする</h3>
+      <p>今もっとも現実的なのは、再現可能な解析、比較可能なベンチマーク、介入予測を積み上げる段階です。</p>
+      <ul>
+        <li>L0: 公開データを再解析し、イベント、同期、QC、保持条件を検証する。</li>
+        <li>L1: モデルや測定法を同じベンチマークで比較する。</li>
+        <li>L2: 摂動や状態遷移を使い、競合仮説を落とす。</li>
+      </ul>
+    </article>
+    <article>
+      <h3>過去: 何を引き継ぐか</h3>
+      <p>古典的なアップロード構想は、ミクロトーム法、ナノ置換、非破壊測定、人工身体、人格同一性を論じていました。現在は、その問いを検証条件へ置き換えます。</p>
+      <ul>
+        <li>「脳を写す」は、構造・状態・動力学・身体境界へ分解する。</li>
+        <li>「コピーできるか」は、同一性の哲学と工学的検証を分ける。</li>
+        <li>「進歩したか」は、クレームラダーと失敗条件で判定する。</li>
+      </ul>
+    </article>
+    <article>
+      <h3>未来: L3 以降の条件</h3>
+      <p>実装や同一性に近い主張へ進むには、単一技術の成功ではなく、複数の監査が同時に通る必要があります。</p>
+      <ul>
+        <li>閉ループ実装で、身体・環境・内受容の境界を開示する。</li>
+        <li>同一個体内の長期ドリフト、再校正、状態遷移を評価する。</li>
+        <li>外部検証で候補内部状態が十分に狭まったことを示す。</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>研究テーマ別の依存関係</h2>
+  <table>
+    <thead><tr><th>テーマ</th><th>先に必要なもの</th><th>次の到達条件</th></tr></thead>
+    <tbody>
+      <tr><td>非侵襲的ヒト測定</td><td>proxy の役割分解、装置差、状態ラベル。</td><td>同じ潜在変数をどこまで制約したかを示す。</td></tr>
+      <tr><td>コネクトーム制約モデル</td><td>構造足場、活動記録、摂動、タスク条件。</td><td>構造だけで残る縮退と、追加記録で落ちる候補を分ける。</td></tr>
+      <tr><td>BCI / デコード</td><td>神経寄与、言語・運動事前分布、閉ループ評価。</td><td>予測ではなく、どの神経変数を制御しているかを示す。</td></tr>
+      <tr><td>維持状態</td><td>状態ファミリーごとの観測量、時間窓、摂動。</td><td>コネクトームに含められない状態のうち、どれが機能に必要かを切り分ける。</td></tr>
+      <tr><td>状態継続</td><td>同一対象のブリッジ、再校正負荷、失敗規則。</td><td>日跨ぎや固定後に何が同一として残ったのかを明示する。</td></tr>
+    </tbody>
+  </table>
 </section>
 
   </main>
