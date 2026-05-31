@@ -28,7 +28,7 @@
   <p class="lead">公開データは、マインドアップロードの完成を示すものではありません。再現手順、評価、仮説分離を練習するための基盤です。</p>
 </section>
 
-<section>
+<section id="data-use-cases">
   <h2>使い分け</h2>
   <ul class="rule-list">
     <li>入門データ: 解析手順と品質管理を学ぶ。</li>
@@ -38,7 +38,7 @@
   </ul>
 </section>
 
-<section>
+<section id="data-design">
   <h2>研究優先順位に対応するデータ設計</h2>
   <table>
     <thead><tr><th>目的</th><th>最低限必要な記録</th><th>不足すると何が起きるか</th></tr></thead>
@@ -52,8 +52,9 @@
   </table>
 </section>
 
-<section>
+<section id="l0-minimum-loop">
   <h2><a href="project.html#claim-ladder">L0</a> 最小ループ</h2>
+  <p>このページの L0 は三つに分けて読みます。この最小ループは実際の作業順、<a href="#l0-artifact-pack">L0 アーティファクトパック</a>は提出物、<a href="#eeg-to-l0">EEG から L0 へ進む 6 ゲート</a>はスコアを見る前に固定する監査順序です。</p>
   <ol class="step-list">
     <li><strong>公開データを一つ選ぶ</strong><span>最初は BIDS や NWB など、メタデータと検証ツールがある形式を優先します。</span></li>
     <li><strong>イベント意味と時刻同期を確認する</strong><span>波形があるだけでは、何を比較しているかは固定されません。</span></li>
@@ -61,6 +62,67 @@
     <li><strong>代替説明を一つ落とす</strong><span>被験者識別、セッション識別、装置差、状態ラベルの漏れを最低一つ監査します。</span></li>
     <li><strong>棄権を記録する</strong><span>判断不能な結果も、次のデータ設計を決める成果として残します。</span></li>
   </ol>
+</section>
+
+<section id="starter-datasets">
+  <h2>最初に使う公開データの選び方</h2>
+  <p>旧 Datasets / EEG 101 では、最初のデータ選びを「難しいものを選ぶ競争」ではなく、再実行できる小さな練習板を作る作業として扱っていました。現在のサイトでも同じです。下の候補は例示であり、データセット名だけではなく、タスク、ラベル来歴、分割単位、イベント忠実度、ベンチマークの意味を先に固定します。</p>
+  <table>
+    <thead><tr><th>やりたいこと</th><th>候補データ</th><th>練習できること</th><th>まだ主張しないこと</th></tr></thead>
+    <tbody>
+      <tr><td>前処理と分類の基礎を練習する</td><td><a href="https://physionet.org/content/eegmmidb/1.0.0/">EEG Motor Movement/Imagery Dataset</a> などの cue-locked EEG。</td><td>イベントロック、フィルタ、チャンネル処理、同一セッションの分類、単純ベースライン。</td><td>安定した内部状態復元、日跨ぎ耐久性、ソース完全性。</td></tr>
+      <tr><td>長時間記録とイベント検出を扱う</td><td><a href="https://physionet.org/content/chbmit/1.0.0/">CHB-MIT</a> などの長時間 EEG。</td><td>イベント感度、誤報、時間単位の評価、しきい値、除外ログ。</td><td>AUROC や精度だけで実用アラーム性能が示されたという主張。</td></tr>
+      <tr><td>状態遷移を扱う</td><td><a href="https://physionet.org/content/sleep-edfx/1.0.0/">Sleep-EDF</a> などの睡眠 EEG。</td><td>状態ラベル、段階ごとの性能、マクロ F1、Cohen's kappa、スコアラー依存性。</td><td>睡眠ラベルだけで統合や翌日保持が説明できたという主張。</td></tr>
+      <tr><td>大規模・臨床寄りの難しさを見る</td><td><a href="https://isip.piconepress.com/projects/tuh_eeg/">TUH EEG</a> などの大規模 EEG。</td><td>施設差、デバイス差、参照系、ラベル来歴、欠測、外部検証の難しさ。</td><td>大規模データで高スコアが出たことを、汎用神経デコーダの成立と読むこと。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="generalization-families">
+  <h2>同じスコアでも、評価ファミリーが違えば意味が変わる</h2>
+  <p>旧ページで繰り返し強調していたのは、スコアの数字よりも「何を独立にしたか」です。同じ 70% でも、同じ日の同じ被験者での 70% と、別日・別被験者・別デバイスでの 70% は、研究判断として別物です。</p>
+  <table>
+    <thead><tr><th>評価ファミリー</th><th>何をテストしているか</th><th>必要な開示</th><th>避けるべき誤読</th></tr></thead>
+    <tbody>
+      <tr><td>セッション内</td><td>同じ日の同じ取得条件で、対象ラベルを分けられるか。</td><td>同一録画からの窓漏洩、イベント単位、被験者単位集計。</td><td>日跨ぎ安定性や運用可能性の証拠とは読まない。</td></tr>
+      <tr><td>セッション間</td><td>同じ被験者の別セッションへ、表現やデコーダが残るか。</td><td>日付、時間帯、状態注釈、固定デコーダ期間、再校正の有無。</td><td>同じ内部状態が保持された証拠とは読まない。</td></tr>
+      <tr><td>被験者間</td><td>別の人へ一般化するか。</td><td>被験者分割、人口統計、装置・施設の分布、メタデータのみベースライン。</td><td>個人固有のアップロード条件が読めた証拠とは読まない。</td></tr>
+      <tr><td>適応 / few-shot</td><td>少量ラベルや再校正で性能を回復できるか。</td><td>追加ラベル量、適応時間、推論予算、失敗時の回復負荷。</td><td>固定デコーダの耐久性とは読まない。</td></tr>
+      <tr><td>閉ループ(公開データでは参考軸)</td><td>リアルタイムで状態推定や制御が使えるか。</td><td>遅延、ジッター、ドロップアウト、安全停止、ユーザー状態。</td><td>オフライン高スコアと同じ意味では読まない。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="l0-artifact-pack">
+  <h2>L0 アーティファクトパック</h2>
+  <p>旧 Wiki の L0 最小パックは、単なる「データ + コード + スコア」では弱すぎる、という結論でした。L0 はアップロードの証拠ではありませんが、L0 が弱いと、その上の L1/L2 の失敗理由を切り分けられません。</p>
+  <table>
+    <thead><tr><th>バンドル</th><th>最低限入れるもの</th><th>抜けた場合の問題</th></tr></thead>
+    <tbody>
+      <tr><td>同一性(Identity)</td><td>データセット名、バージョン、DOI または永続 URL、取得日、ライセンス、利用したサブセット。</td><td>同じ名前の別リリースや別サブセットを混ぜます。</td></tr>
+      <tr><td>可観測性(Observability)</td><td>BIDS / EEG-BIDS 構造、イベント忠実度、ラベル来歴、チャンネル・電極・参照系、同期ログ。</td><td>何を観測し、どのラベルを予測したのかが後から追えません。</td></tr>
+      <tr><td>評価(Evaluation)</td><td>評価ファミリー、独立ホールドアウト単位、予測対象、メトリックバンドル、ベンチマーク規則、ショートカット検査。</td><td>同じスコアが別の科学的対象を測っているように見えます。</td></tr>
+      <tr><td>時間的有効性(Temporal Validity)</td><td>日跨ぎや適応を扱う場合、状態注釈、固定デコーダ期間、再校正量、遅い内部環境を分けて記録する。</td><td>同日成功を長期耐久性として過読します。</td></tr>
+      <tr><td>系統(Lineage)</td><td>raw と derivative の境界、前処理レシピ、生成元、設定ファイル、環境、ランダムシード。</td><td>再実行できても、同じ入力・同じ処理だったかが不明になります。</td></tr>
+      <tr><td>再実行(Replay)</td><td>実行コマンド、ロックファイルまたはコンテナ、QC レポート、失敗例、主張停止文。</td><td>成功例だけが残り、L0 をより強い証拠として読みすぎます。</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="eeg-to-l0">
+  <h2>EEG から L0 へ進む 6 ゲート</h2>
+  <p>EEG の最初の実践は、モデルを先に走らせることではありません。旧 EEG to L0 ルートでは、スコアを見る前にベンチマーク対象、時間範囲、イベント意味、系統、停止主張を固定する順序にしていました。</p>
+  <table>
+    <thead><tr><th>順序</th><th>ゲート</th><th>ここで固定すること</th><th>次へ進む条件</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>測定上限</td><td>EEG が直接測るもの、推定に留まるもの、WBE に直結しないもの。</td><td>頭皮上で混合された集団電位の指標であり、細胞・回路の現在状態の直接観測ではない、と止める。</td></tr>
+      <tr><td>2</td><td>ベンチマーク対象</td><td>データセット、タスク、ターゲット、分割単位、メトリック、公式ルール。</td><td>短いベンチマークカードと<a href="verification-cards.html#l0-artifact-pack">L0 Artifact Pack</a>が書ける。</td></tr>
+      <tr><td>3</td><td>時間範囲</td><td>セッション内、同日、日跨ぎ、長期、固定デコーダ、再校正デコーダを分ける。</td><td><a href="verification-cards.html#temporal-validity-card">Temporal Validity Card</a> に必要な項目が埋まる。</td></tr>
+      <tr><td>4</td><td>観測ログ</td><td>イベント時刻、イベント意味、ラベル来歴、クロックドメイン、遅延・ジッター、不良セグメント。</td><td>波形、イベント、ラベル、同期を別々に監査できる。</td></tr>
+      <tr><td>5</td><td>再実行パック</td><td>raw ID、derivative ID、実行 ID、QC、ベースライン、失敗レジストリ。</td><td>第三者が同じ条件で再実行できる。</td></tr>
+      <tr><td>6</td><td>停止主張</td><td>L0 の上限、可観測性の上限、ショートカットの上限、時間的有効性の上限。</td><td>結果がどこまでで止まるかを明文化する。</td></tr>
+    </tbody>
+  </table>
 </section>
 
   </main>
