@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プロジェクト俯瞰 | マインドアップロード</title>
+  <meta name="description" content="マインドアップロード研究プロジェクトの全体像、読み方、成果物、AI 2026/AI 2027 的ロードマップ表現から取り入れる設計原則を整理します。">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="index.html">マインドアップロード</a>
+    <nav class="primary-nav" aria-label="主要ページ">
+      <a href="index.html">全体像</a>
+      <a href="project.html" aria-current="page">プロジェクト</a>
+      <a href="research-priorities.html">研究優先順位</a>
+      <a href="deep-dives.html">深掘り</a>
+      <a href="hypotheses.html">仮説検証</a>
+      <a href="evidence.html">根拠マップ</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero compact">
+      <p class="eyebrow">プロジェクト俯瞰</p>
+      <h1>このサイトは、マインドアップロード研究の「進め方」を決めるための地図です</h1>
+      <p class="lead">目的は、夢としてのアップロードを語ることではありません。何を測り、何をまだ測れず、どの仮説を潰せば一番前に進むのかを、研究ポートフォリオとして見えるようにすることです。</p>
+    </section>
+
+    <section>
+      <h2>一枚で見る目的</h2>
+      <div class="overview-grid">
+        <article>
+          <h3>作るもの</h3>
+          <p>マインドアップロードに必要な構造、状態、動力学、身体境界、検証条件を、実験可能な研究課題へ分解した公開ロードマップです。</p>
+        </article>
+        <article>
+          <h3>作らないもの</h3>
+          <p>「もうすぐ可能」「特定技術で解決済み」といった完成宣言は置きません。候補が重なる場合は、未識別として止めます。</p>
+        </article>
+        <article>
+          <h3>判断基準</h3>
+          <p>優先度は、未解決の大きさ、他領域への波及、検証可能性、失敗条件の書きやすさで決めます。</p>
+        </article>
+        <article>
+          <h3>読者の行動</h3>
+          <p>まず全体像を掴み、次に優先順位を見て、最後に深掘りカードで自分が進めるべき実験やデータ設計へ落とします。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="claim-ladder">
+      <h2>主張のレベル</h2>
+      <p>このサイトでは、進捗を L0 から L5 のクレームラダーで読みます。上位レベルの言葉を急ぐより、下位レベルを再現可能に厚くするほうが、現時点では研究の速度を上げます。</p>
+      <table>
+        <thead><tr><th>レベル</th><th>何を示すか</th><th>まだ言えないこと</th></tr></thead>
+        <tbody>
+          <tr><td>L0</td><td>公開データ、イベント、同期、QC、ベースラインが再現できる。</td><td>内部状態を識別できたとは言えない。</td></tr>
+          <tr><td>L1</td><td>複数手法を同じ条件で比較できる。</td><td>最良スコアが真の状態復元とは限らない。</td></tr>
+          <tr><td>L2</td><td>摂動や保持データで競合仮説を落とせる。</td><td>全脳・長期・身体込みの十分性はまだ別。</td></tr>
+          <tr><td>L3</td><td>閉ループ実装で、特定機能を安定して再現できる。</td><td>人格同一性や全体的な意識の主張には届かない。</td></tr>
+          <tr><td>L4</td><td>同一個体内で、状態継続と再校正負荷を説明できる。</td><td>コピー問題、社会的同意、長期倫理はまだ残る。</td></tr>
+          <tr><td>L5</td><td>技術、検証、運用、同意、停止条件が揃う。</td><td>哲学的同一性の立場まで自動解決するわけではない。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>AI 2026 / AI 2027 から借りるもの</h2>
+      <p><strong>ここでの参照は、マインドアップロードの時期予測ではありません。</strong> AI ロードマップやシナリオから借りるのは、読者が進捗を追跡できる表現です。IBM の <a href="https://www.ibm.com/roadmaps/ai/2026/">AI 2026 Technology Atlas</a> は、AI を実運用のソフトウェアとして扱い、AgentOps、監視、権限、セキュリティをロードマップ化しています。<a href="https://ai-2027.com/about">AI 2027</a> は、シナリオを明示し、後で検証可能な予測として扱う形式を採っています。</p>
+      <table>
+        <thead><tr><th>ロードマップ表現</th><th>このサイトでの使い方</th><th>借りないもの</th></tr></thead>
+        <tbody>
+          <tr><td>マイルストーン</td><td><a href="#claim-ladder">L0 から L5</a>まで、どの証拠なら主張を上げられるかを固定する。</td><td>年代だけを置いて「近い」と見せること。</td></tr>
+          <tr><td>運用監視</td><td>データ、モデル、摂動、再現、棄権を監査対象にする。</td><td>高いスコアを成功として単独表示すること。</td></tr>
+          <tr><td>シナリオ</td><td>複数の技術ルートが成功・停滞・分岐する場合を分ける。</td><td>一つの未来を既定路線として書くこと。</td></tr>
+          <tr><td>責任境界</td><td>身体、同意、安全性、コピー、停止条件を技術条件から分離して読む。</td><td>技術的な達成を人格同一性や社会受容と同一視すること。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>このサイトの二層構造</h2>
+      <table>
+        <thead><tr><th>層</th><th>読むページ</th><th>得られるもの</th></tr></thead>
+        <tbody>
+          <tr><td>俯瞰</td><td><a href="index.html">全体像</a>、このページ、<a href="summary.html">要約</a></td><td>現在・過去・未来、サイトの目的、最初に見るボトルネック。</td></tr>
+          <tr><td>意思決定</td><td><a href="research-priorities.html">研究優先順位</a>、<a href="roadmap.html">ロードマップ</a></td><td>どの研究を先に進めるか、何が前段依存なのか。</td></tr>
+          <tr><td>深掘り</td><td><a href="deep-dives.html">深掘り</a>、<a href="evidence.html">根拠マップ</a>、<a href="datasets.html">データ</a></td><td>各テーマの未解決点、代表エビデンス、次の実験設計。</td></tr>
+          <tr><td>検証</td><td><a href="requirements.html">必要条件</a>、<a href="known-unknown.html">既知と未知</a>、<a href="hypotheses.html">仮説検証</a></td><td>主張の上限、失敗条件、仮説カード。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>全体プロジェクトの成果物</h2>
+      <div class="card-grid">
+        <article><h3>研究優先順位表</h3><p>どの未解決問題を先に潰すべきかを、研究テーマと次の実験に分けます。</p></article>
+        <article><h3>深掘りカード</h3><p>構造、維持状態、ヒト可観測性、識別可能性、BCI、状態継続などを一枚ずつ整理します。</p></article>
+        <article><h3>エビデンスマップ</h3><p>文献を日付順ではなく、どの主張をどこまで支えるかで置きます。</p></article>
+        <article><h3>データ実行ループ</h3><p>公開データで <a href="#claim-ladder">L0 から L2</a> を再現可能に積み上げるためのチェックリストを置きます。</p></article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>このサイトは、マインドアップロードを検証可能な研究課題として整理するための公開ノートです。</p>
+    <nav class="footer-links" aria-label="補助ページ">
+      <a href="summary.html">要約</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
+    </nav>
+  </footer>
+</body>
+</html>

@@ -39,6 +39,12 @@ nav {
   font-size: 0.95rem;
 }
 nav a[aria-current="page"] { font-weight: 700; color: var(--text); }
+.footer-links {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+.footer-links a { color: var(--muted); }
+.footer-links a[aria-current="page"] { color: var(--text); }
 main {
   max-width: var(--max);
   margin: 0 auto;
@@ -79,16 +85,22 @@ p { margin: 0 0 1.1rem; }
 }
 ul, ol { padding-left: 1.35rem; }
 li { margin: 0 0 0.45rem; }
-.timeline-grid, .card-grid, .two-column, .link-grid, .priority-grid {
+.timeline-grid, .card-grid, .two-column, .link-grid, .priority-grid, .overview-grid, .deep-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
   margin-top: 24px;
 }
-.timeline-grid article, .card-grid article, .link-grid a, .priority-grid article {
+.timeline-grid article, .card-grid article, .link-grid a, .priority-grid article, .overview-grid article, .deep-card-grid article {
   border: 1px solid var(--line);
   background: var(--soft);
   padding: 18px;
+}
+.deep-card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.deep-card-grid article p {
+  margin-bottom: 0.8rem;
 }
 .priority-grid article span {
   display: inline-block;

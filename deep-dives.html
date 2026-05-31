@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>深掘り | マインドアップロード</title>
+  <meta name="description" content="マインドアップロード研究の主要テーマを、何がわかっているか、何が未解決か、次にどんな実験が必要かで深掘りします。">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="index.html">マインドアップロード</a>
+    <nav class="primary-nav" aria-label="主要ページ">
+      <a href="index.html">全体像</a>
+      <a href="project.html">プロジェクト</a>
+      <a href="research-priorities.html">研究優先順位</a>
+      <a href="deep-dives.html" aria-current="page">深掘り</a>
+      <a href="hypotheses.html">仮説検証</a>
+      <a href="evidence.html">根拠マップ</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero compact">
+      <p class="eyebrow">深掘り</p>
+      <h1>どのテーマを掘れば、研究が本当に前に進むのか</h1>
+      <p class="lead">ここでは、主要テーマを「現時点でわかること」「まだ閉じていないこと」「次に必要な実験」に分けます。深掘りの目的は、詳しく見せることではなく、次の研究判断を間違えないことです。</p>
+    </section>
+
+    <section>
+      <h2>深掘りの読み方</h2>
+      <ol class="step-list">
+        <li><strong>まず対象機能を決める</strong><span>記憶、言語、運動、覚醒状態、人格特徴など、対象を狭くします。</span></li>
+        <li><strong>必要状態を選ぶ</strong><span>構造、活動、維持状態、身体ループのうち、どれがその機能に必要かを書きます。</span></li>
+        <li><strong>現在の証拠上限を見る</strong><span>観測できるもの、推定に留まるもの、まだ proxy でしかないものを分けます。</span></li>
+        <li><strong>競合仮説を落とす</strong><span>測定を足すだけでなく、どの候補説明を除外できるかを評価します。</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>深掘りカード</h2>
+      <div class="deep-card-grid">
+        <article>
+          <h3>1. コネクトームと構造足場</h3>
+          <p><strong>わかること:</strong> 大規模コネクトームは局所回路、候補経路、モデル制約を大きく強めます。</p>
+          <p><strong>未解決:</strong> 構造だけでは現在のシナプス効率、放出確率、細胞外状態、代謝、グリア、睡眠状態を返しません。</p>
+          <p><strong>次の実験:</strong> 同じ構造制約の下で、活動記録と摂動を足したとき候補動力学がどれだけ減るかを測ります。</p>
+        </article>
+        <article>
+          <h3>2. 維持状態</h3>
+          <p><strong>わかること:</strong> 記憶や技能は、配線だけでなく興奮性、可塑性、ECM/PNN、代謝、免疫、睡眠などに依存します。</p>
+          <p><strong>未解決:</strong> どの維持状態がどの心的機能に必要十分か、ヒトでどこまで非破壊に読めるかは閉じていません。</p>
+          <p><strong>次の実験:</strong> 状態ファミリーごとに、直接観測、proxy、時間窓、摂動可能性、棄権境界をカード化します。</p>
+        </article>
+        <article>
+          <h3>3. ヒト可観測性</h3>
+          <p><strong>わかること:</strong> EEG、fMRI、PET、MRSI、dMRI はそれぞれ別の側面を制約します。</p>
+          <p><strong>未解決:</strong> 同じ被験者で複数測っても、同じ潜在状態を一意に復元したとは限りません。</p>
+          <p><strong>次の実験:</strong> 同一セッションで共通因子、分岐因子、装置固有誤差、状態ラベルのずれを分けます。</p>
+        </article>
+        <article>
+          <h3>4. 識別可能性と摂動</h3>
+          <p><strong>わかること:</strong> 観測量が多いことと、内部状態が一意に決まることは別です。</p>
+          <p><strong>未解決:</strong> 同じ出力を生む候補モデルがどれだけ残るかを、多くの研究が明示していません。</p>
+          <p><strong>次の実験:</strong> 状態遷移、持続励起、介入、保持データで競合仮説を落とせるかを先に設計します。</p>
+        </article>
+        <article>
+          <h3>5. BCI / デコード</h3>
+          <p><strong>わかること:</strong> 言語、運動、覚醒状態などの予測は進んでいます。</p>
+          <p><strong>未解決:</strong> 高スコアの予測は、内部状態の生成的再実装とは違います。言語事前分布や被験者識別のショートカットも残ります。</p>
+          <p><strong>次の実験:</strong> 神経寄与、閉ループ制御、日跨ぎ安定性、再校正負荷を分けて評価します。</p>
+        </article>
+        <article>
+          <h3>6. 状態継続</h3>
+          <p><strong>わかること:</strong> 同じ脳や同じ被験者のデータは、対応関係を強めます。</p>
+          <p><strong>未解決:</strong> 日跨ぎ、固定後、別レジームへの橋渡しでは、何が同じ状態として運ばれたかを別に示す必要があります。</p>
+          <p><strong>次の実験:</strong> 運ばれる対象、証人、許容誤差、失敗規則、救済ルートを State-Continuity Bridge Card に書きます。</p>
+        </article>
+        <article>
+          <h3>7. データ標準とベンチマーク</h3>
+          <p><strong>わかること:</strong> BIDS、NWB、OpenNeuro などは再現性の基盤を作ります。</p>
+          <p><strong>未解決:</strong> 標準形式に置いただけでは、イベント意味、同期、QC、仮説分離は自動的に解けません。</p>
+          <p><strong>次の実験:</strong> <a href="project.html#claim-ladder">L0 再解析、L1 比較、L2 介入予測</a>を同じデータ設計でつなげます。</p>
+        </article>
+        <article>
+          <h3>8. 身体・環境・倫理</h3>
+          <p><strong>わかること:</strong> 身体、内受容、報酬、睡眠、社会関係は神経状態を変えます。</p>
+          <p><strong>未解決:</strong> 脳だけを切り出した実装で、人物性や意識の継続を主張できるかは閉じていません。</p>
+          <p><strong>次の実験:</strong> 保存する身体ループ、置換する環境、同意、停止条件、コピー問題を技術条件から分離して書きます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>深掘りを研究計画へ変える</h2>
+      <table>
+        <thead><tr><th>研究計画の部品</th><th>書く内容</th><th>弱い計画の兆候</th></tr></thead>
+        <tbody>
+          <tr><td>対象機能</td><td>どの記憶、技能、言語、運動、状態を再現対象にするか。</td><td>「人間らしさ」など広すぎる対象。</td></tr>
+          <tr><td>必要状態</td><td>構造、活動、維持状態、身体境界のどれが必要か。</td><td>コネクトームに全状態を暗黙に含める。</td></tr>
+          <tr><td>競合仮説</td><td>同じ観測を別機構で説明する候補。</td><td>最初から一つのモデルだけを真とする。</td></tr>
+          <tr><td>分離実験</td><td>どの測定・摂動・状態遷移で候補を落とすか。</td><td>同じデータでスコアだけを上げる。</td></tr>
+          <tr><td>棄権境界</td><td>どの結果なら未識別として止めるか。</td><td>判断不能を成功側に寄せる。</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>このサイトは、マインドアップロードを検証可能な研究課題として整理するための公開ノートです。</p>
+    <nav class="footer-links" aria-label="補助ページ">
+      <a href="summary.html">要約</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
+    </nav>
+  </footer>
+</body>
+</html>

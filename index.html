@@ -10,16 +10,13 @@
 <body>
   <header class="site-header">
     <a class="site-name" href="index.html">マインドアップロード</a>
-    <nav aria-label="主要ページ">
+    <nav class="primary-nav" aria-label="主要ページ">
       <a href="index.html" aria-current="page">全体像</a>
+      <a href="project.html">プロジェクト</a>
       <a href="research-priorities.html">研究優先順位</a>
-      <a href="requirements.html">必要条件</a>
-      <a href="known-unknown.html">既知と未知</a>
+      <a href="deep-dives.html">深掘り</a>
       <a href="hypotheses.html">仮説検証</a>
-      <a href="roadmap.html">ロードマップ</a>
       <a href="evidence.html">根拠マップ</a>
-      <a href="datasets.html">データ</a>
-      <a href="glossary.html">用語</a>
     </nav>
   </header>
   <main>
@@ -27,6 +24,28 @@
   <p class="eyebrow">現在・過去・未来で読む</p>
   <h1>最速を狙うなら、今どの研究を進めるべきか</h1>
   <p class="lead">このサイトは、マインドアップロードを「できる / できない」の印象論ではなく、どの未解決問題を潰せば一番前に進むかへ分解する入口です。ここでの「最速」は年数予測ではなく、未解決の大きさ、波及効果、検証可能性から見た研究順序です。</p>
+</section>
+
+<section>
+  <h2>今すぐ潰すべき三つの未解決</h2>
+  <p>研究投資の入口は、巨大な全脳再現ではなく、主張の上限を一段ずつ上げる小さな検証です。最初に厚くするべき領域は次の三つです。</p>
+  <div class="card-grid">
+    <article>
+      <h3>1. 再現基盤</h3>
+      <p>公開データ、イベント同期、QC、保持データ、ベースラインを整え、第三者が同じ結果を再現できる状態にします。</p>
+      <p><a href="datasets.html">データ最小ループを見る</a></p>
+    </article>
+    <article>
+      <h3>2. 識別可能性</h3>
+      <p>測定値を増やすだけでなく、同じ観測を説明する競合内部状態を、摂動と保持データで落とします。</p>
+      <p><a href="research-priorities.html">優先順位を見る</a></p>
+    </article>
+    <article>
+      <h3>3. 状態継続</h3>
+      <p>同じ脳、同じ被験者、同じデコーダを使っても、時間・固定・再校正をまたいで何が同じ状態として残るかを監査します。</p>
+      <p><a href="deep-dives.html">深掘りを見る</a></p>
+    </article>
+  </div>
 </section>
 
 <section class="timeline-grid" aria-label="現在・過去・未来">
@@ -85,7 +104,7 @@
     <article>
       <span>5</span>
       <h3>公開ベンチマークと棄権ルール</h3>
-      <p>成功条件だけでなく、どの結果なら主張を弱めるかを公開します。L0 から L2 の再現可能な検証を先に厚くします。</p>
+      <p>成功条件だけでなく、どの結果なら主張を弱めるかを公開します。<a href="project.html#claim-ladder">L0 から L2</a> の再現可能な検証を先に厚くします。</p>
     </article>
   </div>
 </section>
@@ -93,7 +112,9 @@
 <section>
   <h2>このサイトの読み方</h2>
   <div class="link-grid">
+    <a href="project.html"><strong>プロジェクト</strong><span>全体の目的、成果物、AI 2026/AI 2027 型のロードマップ表現。</span></a>
     <a href="research-priorities.html"><strong>研究優先順位</strong><span>最速で前進するために、どの未解決問題から潰すか。</span></a>
+    <a href="deep-dives.html"><strong>深掘り</strong><span>構造、維持状態、ヒト可観測性、BCI、状態継続をテーマ別に読む。</span></a>
     <a href="requirements.html"><strong>必要条件</strong><span>何が揃わないとマインドアップロードと言えないか。</span></a>
     <a href="known-unknown.html"><strong>既知と未知</strong><span>現在わかること、まだ閉じていないこと。</span></a>
     <a href="hypotheses.html"><strong>仮説検証</strong><span>未知を潰すための仮説の立て方。</span></a>
@@ -101,9 +122,22 @@
   </div>
 </section>
 
+<section>
+  <h2>俯瞰と深掘りの地図</h2>
+  <p>全体像と詳細の対応関係は、<a href="project.html">プロジェクト俯瞰</a>にまとめています。入口だけ知りたい場合はこのページ、研究計画へ落とす場合は <a href="research-priorities.html">研究優先順位</a> と <a href="deep-dives.html">深掘り</a> を続けて読んでください。</p>
+</section>
+
   </main>
   <footer class="site-footer">
     <p>このサイトは、マインドアップロードを検証可能な研究課題として整理するための公開ノートです。</p>
+    <nav class="footer-links" aria-label="補助ページ">
+      <a href="summary.html">要約</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
+    </nav>
   </footer>
 </body>
 </html>
