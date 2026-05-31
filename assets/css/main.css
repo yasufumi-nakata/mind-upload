@@ -137,11 +137,15 @@ th { background: var(--soft); text-align: left; }
   gap: 8px;
   margin: 18px 0 32px;
 }
-.tag-list span {
+.tag-list span, .tag-list a {
   border: 1px solid var(--line);
   background: var(--soft);
   padding: 5px 9px;
   font-size: 0.92rem;
+}
+.tag-list a {
+  color: var(--text);
+  text-decoration: none;
 }
 .step-list {
   list-style: none;
@@ -175,4 +179,5 @@ th { background: var(--soft); text-align: left; }
 @media (max-width: 720px) {
   .site-header, main, .site-footer { padding-left: 16px; padding-right: 16px; }
   table { display: block; overflow-x: auto; white-space: normal; }
+  th, td { min-width: 10rem; }
 }
