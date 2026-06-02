@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Wiki: デコードとエミュレート | マインドアップロード</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Wiki: デコードとエミュレート" />
+<meta name="author" content="マインドアップロード研究プロジェクト" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="一次文献と各主張に必要な証拠を使用して、観察を翻訳するデコードと内部因果関係を再現するエミュレーションの違いを説明します。" />
+<meta property="og:description" content="一次文献と各主張に必要な証拠を使用して、観察を翻訳するデコードと内部因果関係を再現するエミュレーションの違いを説明します。" />
+<link rel="canonical" href="https://mind-upload.com/wiki/decode-vs-emulate.html" />
+<meta property="og:url" content="https://mind-upload.com/wiki/decode-vs-emulate.html" />
+<meta property="og:site_name" content="マインドアップロード" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wiki: デコードとエミュレート" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"マインドアップロード研究プロジェクト"},"description":"一次文献と各主張に必要な証拠を使用して、観察を翻訳するデコードと内部因果関係を再現するエミュレーションの違いを説明します。","headline":"Wiki: デコードとエミュレート","url":"https://mind-upload.com/wiki/decode-vs-emulate.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta property="og:image" content="https://mind-upload.com/ogp.jpg">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F9E0;</text></svg>">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="https://mind-upload.com/feed.xml" title="マインドアップロード" />
+</head>
+
+
+
+
+
+<body class="wiki-light" data-article-type="ウィキ" data-page-url="/wiki/decode-vs-emulate.html" data-wiki-mode="local" data-github-wiki-url="">
+    <a class="skip-link" href="#site-content">本文へ移動</a>
+
+    <!-- グローバルヘッダー -->
+    <header class="site-header journal-header" role="banner">
+        <div class="wrapper journal-header-inner">
+            <a class="site-title" rel="author" href="/">マインドアップロード・コモンズ</a>
+            <nav class="site-nav" aria-label="主要ナビゲーション">
+                <div class="trigger">
+                    <a class="page-link" href="/">はじめに</a>
+                    <a class="page-link" href="/verification.html">検証</a>
+                    <a class="page-link" href="/tech_roadmap.html">ロードマップ</a>
+                    <a class="page-link" href="/content_hub.html">公開コンテンツ</a>
+                    <a class="page-link" href="/wiki/">Wiki</a>
+                    <a class="page-link" href="/mind_uploading_papers.html">論文アーカイブ</a>
+                    <a class="page-link" href="/issue.html">参加</a>
+                </div>
+        </nav>
+        </div>
+    </header>
+
+    
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+        <p class="article-type">ウィキ</p>
+        <h1 class="article-title">Wiki: デコードとエミュレート</h1>
+        
+        <p class="article-subtitle">出力マッチングは入り口にすぎません。介入のマッチングと閉ループの安定性は別の壁です。</p>
+        
+        
+        <p class="author-info">
+            <span class="author-name">マインドアップロード研究プロジェクト</span>
+        </p>
+        
+        <div class="article-meta">
+            <span>公開ページ</span>
+            
+            <span>更新日: 2026-04-01</span>
+            
+            
+            <span>技術/自然科学のみ</span>
+            
+        </div>
+    </header>
+    
+
+    
+    <section class="page-guide" aria-label="このページの使い方">
+        <div class="page-guide-inner">
+            <div class="page-guide-main">
+                <p class="page-guide-kicker">このページの使い方</p>
+                <h2>迷わないために最初に読んでください</h2>
+                
+                <p class="page-guide-lead">このページは、Mind-Upload の重要な違いの 1 つであるデコードとエミュレートの違いを一次文献に基づいて整理した補助ガイドです。これにより、観察、介入、閉ループの証拠を使用して内部状態を移行するシステムから高性能のトランスレータが分離されます。
+</p>
+                
+                
+                
+                
+                <ul class="page-guide-points">
+                    
+                    <li>デコードでは、観察からラベルまたは文を割り当てます。エミュレートには、内部状態の時間的進化と介入に対するその応答が含まれます。</li>
+                    
+                    <li>d'Ascoli 2025 と Tang 2023 は非侵襲的解読の最前線を押し広げましたが、無制限の思考読み取りや状態再構成を確立したわけではありません。</li>
+                    
+                    <li>Littlejohn 2025 と Wairagkar 2025 は、ストリーミングおよび音声合成神経人工器官における大きな進歩ですが、これらは通信サブシステムの L2 ～ L3 の証拠であり、脳全体のエミュレーションではありません。</li>
+                    
+                </ul>
+                
+                <details class="page-guide-details">
+                    <summary>詳細な注意点を 5 件読む</summary>
+                    <ul class="page-guide-points page-guide-points-extra">
+                        
+                        <li>Chen 2024 が示したように、非因果的なデコーダーや発症後の聴覚フィードバックと混合したオフライン利得は、リアルタイム展開可能性として解釈されるべきではありません。</li>
+                        
+                        <li>同一セッション ストリーミングの成功と慢性的な展開可能性は別個の証拠クラスであり、固定デコーダ間隔、再調整負荷、および同一ニューロン監査の別個のログが必要です。</li>
+                        
+                        <li>Merk 2025 と Zhu 2026 は、治療的侵襲的デコードは別のルートであることを示しています。コネクトミクスに基づいた患者全体の症状のデコードと生理学的状態のガードは、1 つの汎用的な適応デコーダではありません。</li>
+                        
+                        <li>コネクトームに制約された予測は重要ですが、Beiran & Litwin-Kumar 2025 が示すように、パラメーターの縮退と未測定の状態が残ります。</li>
+                        
+                        <li>同一脳機能コネクトミクスとデジタル ツイン言語は、1 つの解決されたローカル ツインではなく、逐次的なローカル スキャフォールド、刺激条件付き予測子、および動的縮退監査に分割されるようになりました。</li>
+                        
+                    </ul>
+                </details>
+                
+                
+                
+                <div class="page-guide-links">
+                    <span>次に読むと役立つページ</span>
+                    <div class="page-guide-link-list">
+                        
+                        <a href="/wbe_101.html">WBE101</a>
+                        
+                        <a href="/verification.html">検証</a>
+                        
+                        <a href="/tech_roadmap.html">テクノロジーロードマップ</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <dl class="page-guide-facts">
+                
+                <div>
+                    <dt>対象読者</dt>
+                    <dd>技術的および自然科学的な証拠のみを使用して、デコードとエミュレートを区別したい人。</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>読了時間</dt>
+                    <dd>10～15分</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>正確性に関する注記</dt>
+                    <dd>ここで提示されているのは技術的な境界条件です。このページは、WBE 全体に関する十分条件に関する最終的な合意や成功の唯一の決定を提供するものではありません。
+</dd>
+                </div>
+                
+            </dl>
+        </div>
+    </section>
+    
+
+    
+    <section class="topic-status" aria-label="ここでわかっていることと追加学習先">
+        <div class="topic-status-inner">
+            
+            <div class="topic-card topic-card-known">
+                <p class="topic-card-kicker">現段階で比較的明確なこと</p>
+                <h2>現在わかっていること</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>デコードは主に L1 クレームですが、ローカル閉ループ パフォーマンスと介入応答は L2 ～ L3 に近いものになります。</li>
+                    
+                    <li>出力の一致だけでは、内部の因果構造や状態変数の十分性は確立されません。</li>
+                    
+                    <li>非侵襲的デコードは、言語事前分布、候補セット、被験者の協力が分離されていない限り、過大評価されやすくなります。</li>
+                    
+                    <li>音声デコードでは、因果パスと非因果パス、先読みウィンドウ、および聴覚フィードバックの汚染が分離されていない場合、オフライン スコアが展開可能なループとして誤読されやすくなります。</li>
+                    
+                    <li>テール レイテンシー、沈黙/棄権、および再キャリブレーション負荷は、オフライン精度とは別の軸であり、閉ループ クレームに必要なログです。</li>
+                    
+                    <li>治療用の侵襲的デコーダにも独自の分割が必要です。コネクトミクスに基づいた患者全体の症状のデコード、コントローラ ファミリ、および生理学的状態のガードは通信スループットから分離されています。</li>
+                    
+                    <li>微小電極システムでは、数日にわたって同じニューロンが存在することは観察された事実ではなく、動きの補正、分類、および確率的マッチングから構築された推定値です。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-unknown">
+                <p class="topic-card-kicker">ここから先でまだ未解決のこと</p>
+                <h2>まだわかっていないこと</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>十分にエミュレートされているとみなされるために、どの程度の介入マッチングと状態変数の完全性が必要かは不明です。</li>
+                    
+                    <li>局所回路の成功から脳全体のエミュレーションを推定するための公的ベンチマークはまだありません。</li>
+                    
+                    <li>縮退を十分に抑制するには、どれだけの同一脳機能と維持状態をコネクトーム制約モデルに追加する必要があるかは不明です。</li>
+                    
+                    <li>患者全体の治療の解読が、インプラントの適用範囲、症状群、日常の生理学的状況の変化にどこまで耐えられるかは、依然として不明である。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-wiki">
+                <p class="topic-card-kicker">基礎を学ぶ</p>
+                <h2>Wiki で基礎を確認する</h2>
+                <ul class="topic-link-list">
+                    
+                    <li>
+                        <a href="/wiki/claims-and-evidence.html" data-wiki-link="/wiki/claims-and-evidence.html">Wiki: 主張と証拠の読み方</a>
+                        
+                        <span>L0 ～ L5 の主張の強さと各レベルに必要な証拠に戻ります。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/connectome-is-not-enough.html" data-wiki-link="/wiki/connectome-is-not-enough.html">Wiki: 配線図だけでは不十分な理由</a>
+                        
+                        <span>状態の完全性のレベルで何が欠けているのかを明確にします。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/closed-loop-latency-jitter-and-safety-stops.html" data-wiki-link="/wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ、遅延、ジッター、安全停止</a>
+                        
+                        <span>L3 クレームに必要なエンドツーエンドの条件を追加します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/state-trait-and-drift.html" data-wiki-link="/wiki/state-trait-and-drift.html">Wiki: 状態/特性/ドリフト</a>
+                        
+                        <span>日をまたぐ請求および慢性的な請求におけるドリフトと再調整の負担を読み取る方法について説明します。</span>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+
+    <section id="easy-guide" class="easy-guide" hidden aria-label="平易な用語説明">
+        <div class="easy-guide-inner">
+            <h2>このページの平易な用語説明</h2>
+            <p id="easy-guide-status"></p>
+            <ul id="easy-term-list"></ul>
+            <p class="easy-guide-more">さらに見る: <a href="/glossary.html">用語集</a></p>
+        </div>
+    </section>
+
+    <section id="section-map" class="section-map" hidden aria-label="ページ構成">
+        <div class="section-map-inner">
+            <div class="section-map-header">
+                <p class="section-map-kicker">ページ構成</p>
+                <h2>全体を読む前に構造を確認する</h2>
+                <p id="section-map-status"></p>
+            </div>
+            <ol id="section-map-list" class="section-map-list"></ol>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="site-content" class="site-content-anchor" tabindex="-1"></div>
+    <main class="main-container">
+<article class="content-column">
+
+<div class="abstract-box">
+<h2>まずは一言で結論</h2>
+<p>
+デコードとは、「`to infer something from an observed signal,'' and emulate means `」「内部状態は時間の経過とともに進化し、条件や介入の変化に一貫して反応する」ことを意味します。たとえ視覚的な出力が類似していても、それが必ずしもそれらが同じ因果メカニズム<strong>によって動作していることを意味するわけではありません</strong>。
+</p>
+</div>
+
+<div class="note-box">
+<strong>このページの範囲</strong>
+<p>
+ここでは哲学や法制度について扱うつもりはありません。デコードがエミュレートして読み取れる条件をテクノロジーと自然科学の側面だけから明らかにします。
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03 文献監査の修正点</strong>
+<p>
+以前のバージョンの弱点は、デコードとエミュレートの原理的な違いは正しかったものの、2025 年の一次文献で推進されていた <strong> オープン語彙の非侵襲的デコード </strong>、<strong> ストリーミング / 音声合成神経人工装具 </strong>、<strong> コネクトーム制約予測 </strong> を阻止する <strong> サイト ルール </strong> のレベルに達していなかったことです。 <strong>言語優先</strong>、<strong>テールレイテンシ/沈黙/再キャリブレーション負担</strong>、<strong>固定デコーダ間隔</strong>、<strong>同一ニューロン追跡監査</strong>、および<strong>パラメータ縮退</strong>デコード/エミュレート境界での必須監査項目。
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-04-01 訂正: 治療的侵襲的デコードは通信ルートではありません</strong>
+<p>
+前のページでは、非侵襲的言語解読、音声神経補綴、およびコネクトーム制約予測を分割しましたが、それでも暗黙的すぎる 1 つの侵襲的ルート、<strong> コネクトミクスに基づく治療的解読 </strong> を残しました。 <a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">Merk et al. (2025) </a> は、<strong>56 の植込み患者 </strong> および <strong>1,480 個の ECoG チャネル </strong> において、患者個別のトレーニングを行わずに患者間の動きのデコードを示し、コネクトミクスに基づいたチャネル選択により、同じプラットフォームを感情および発作関連のユースケースに拡張しました。これは症状に関連した治療制御に向けた重要なステップですが、被験者を必要としない普遍的な解読や状態の完全な再構成とは異なります。 <a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">Zhu et al. (2026) </a> はその後、<strong>18 パーキンソン病 </strong> および <strong>18 ジストニア </strong> 患者において、目を閉じた生理機能が大脳基底核のシータ/アルファフィードバック信号を十分にシフトさせる可能性があることを示し、固定閾値では良性の状態変化を病理として扱う危険性があることを示しました。したがって、このサイトでは、<strong> 通信スループット </strong>、<strong> 転送支援初期化 </strong>、<strong> コネクトミクス情報に基づく全患者治療デコーディング </strong>、<strong> 生理学的状態ガード </strong>、および <strong> アダプティブ レスキュー </strong> を 1 つの侵襲的なデコード ラダーとして扱うのではなく、分離するようになりました。
+</p>
+</div>
+
+<section class="section" id="simple-table">
+<h2 class="section-title">最短差</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>ビューポイント</th>
+<th>デコード</th>
+<th>エミュレート</th>
+<th>最低限必要な検証</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>再現するもの</td>
+<td>観察から状態、刺激、意味、運動意図などを推測します。 </td>
+<td>内部状態は時間の経過とともに進化し、将来の出力と介入応答を生成します。 </td>
+<td>は教師付き予測精度だけでなく、時間発展や条件変化も評価します。 </td>
+</tr>
+<tr>
+<td>強み</td>
+<td>観測条件下で高いパフォーマンスを発揮しやすく、実用的なBCIに直結しやすい。 </td>
+<td>A は、介入、反事実、閉ループ制御に対してより強力なケースを作ることができます。 </td>
+<td>OOD 一般化、摂動マッチング、閉ループ安定性は個別に評価されます。 </td>
+</tr>
+<tr>
+<td>2025年に増える誤読</td>
+<td>オープンボキャブラリーの単語デコードやストリーミング音声出力を「自由思考読心」や「内部再生」として読みやすくなっています。 </td>
+<td>全脳エミュレーションの証拠として、コネクトーム制約付き予測とローカル閉ループを読み取るのは簡単です。 </td>
+<td>LM-only / no-brain / shuffle ベースライン、サブシステム スコープ、および状態の完全性が同時に発行されます。 </td>
+</tr>
+<tr>
+<td>不足時の誤読</td>
+<td>相関翻訳を「内部再現」と言い換えるのは簡単です。 </td>
+<td>出力を合わせただけでは「忠実再現」と誤解されやすい。 </td>
+<td>状態変数の完全性と識別可能性を個別に監査します。 </td>
+</tr>
+<tr>
+<td>典型的な故障モード</td>
+<td>科目内や課題内では精度が高くても、学習していない状況や日が変わると精度が崩れてしまいます。 </td>
+<td>動作が一致しているように見えても、内部パラメータが異なると同じ出力が生成される場合があります。 </td>
+<td> 分割単位、再校正回数、介入後のエラー、および棄権条件を開示します。 </td>
+</tr>
+<tr>
+<td>保存する最小ログ</td>
+<td>候補セット、LMの有無、被験者の協力、校正と棄権率、日をまたぐ劣化。 </td>
+<td>摂動ログ、P50/P95/P99 待ち時間、沈黙/棄権、再校正負担、潜在状態の残差。 </td>
+<td>速度、精度、安定性、および非表示状態を別の列として残します。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="paper-normalization">
+<h2 class="section-title">2026-03-17 追記：代表論文を同一座標系に並べる</h2>
+<p>
+現在のサイトに改善の余地が多かった点の 1 つは、自然なテキスト/音声出力を示す代表的な論文を同じ軸で簡単に比較できることでした。しかし、一次文献を見ると、知覚/想像内容の意味論的再構成、既知の開始単語の解読、プロンプト条件付き言語継続、音声コミュニケーションの試み、およびストリーミング音声合成は、トレーニングの深さ、対象ルート、事前の足場、および時間軸がすべて異なります。したがって、このページでは、主要な論文を 1 つの比較表に正規化し、直接表示されるものとまだ表示されていないものを固定します。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>代表紙</th>
+<th>シグナルと問題</th>
+<th>L一次文献によって直接示された制限</th>
+<th>このサイトの天井</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tangら(2023)</strong><br />意味的再構成</td>
+<td>fMRI から知覚音声 / 想像音声 / 無音ビデオの意味表現を再構築します。 </td>
+<td>被験者内では、回復された時点は 65 ～ 82% に達しましたが、被験者間では 1 ～ 5% に留まり、学習ゲインも約 7.5 時間で頭打ちになりました。 7つずつ数えたり、動物に名前を付けたりするなどの対策により、回復は0〜50％に減少しました。 </td>
+<td>サブジェクト協力タスク限定の意味論的再構成。主体のない思考読み取りや無制限の精神状態の読み取りには昇格しません。 </td>
+</tr>
+<tr>
+<td><strong>Défossez et al. (2023)</strong><br />M/EEG</td> からの音声セグメントの取得
+<td>参加者が自然な音声を受動的に聞いている間に記録された非侵襲性 M/EEG から、正しい 3 秒間の音声セグメントを特定します。 </td>
+<td> ルートは、EEG よりも MEG の方がはるかに優れたパフォーマンスで 1,000 を超える可能性から知覚された音声セグメントをデコードし、モデル予測は主に語彙および文脈上の意味表現を追跡しました。テスト時には依然として音声セグメントの固定候補バンクに依存していました。 </td>
+<td>C 知覚された音声の候補バンク セグメントの取得。自由形式の生成、実稼働デコード、または無制限の思考読み取りには昇格されません。 </td>
+</tr>
+<tr>
+<td><strong>d'Ascoli et al. (2025)</strong><br />オープン語彙単語解読</td>
+<td> 723 人の M/EEG と 500 万単語から、既知の単語の開始時の単語の同一性を推定します。 </td>
+<td>文レベルのコンテキストを使用した設計では、パフォーマンスは追加のトレーニング データ、テストの平均化、MEG &gt; に大きく依存していました。脳波と読書 &gt;リスニング。したがって、「オープンボキャブラリー」であっても、タスクの構造とモダリティの利点は残ります。 </td>
+<td>Open 語彙単語は、既知の開始条件と認識負荷の高い条件でデコードされます。私は、自由な思考による読書や無制限の言語生成を促進するつもりはありません。 </td>
+</tr>
+<tr>
+<td><strong>Ye ら(2025)</strong><br />生成言語再構成 + LLM</td>
+<td> fMRI 由来の表現とテキスト プロンプトを自己回帰 LLM にフィードして、固定された候補リストを再ランク付けするのではなく、継続を生成します。 </td>
+<td>BrainLLM は 3 つの fMRI データセットにわたって並べ替え脳制御を上回りましたが、パフォーマンスは依然としてプロンプトの長さ、LLM サイズ、データ量に依存していました。たとえ脳の入力がコントロールに比べて役に立ったとしても、言語類似性の指標によれば、プロンプトなしの生成は依然として困難でした。 </td>
+<td>プロンプト条件付き生成言語再構築。頭脳のみのテキスト生成や隠れ状態の回復には進みません。 </td>
+</tr>
+<tr>
+<td><strong>ウィレットら(2023)</strong><br />高性能音声神経人工装具</td>
+<td> 皮質内アレイから試みられた音声をデコードし、大量の語彙のテキスト出力を返します。 </td>
+<td> 125,000 ワードの語彙により、参加者固有の侵襲ルートの音声デコード試行で 62 ワード/分、23.8% の WER を達成しました。 </td>
+<td>高帯域通信サブシステムです。意味の自律性や脳全体の状態の再構築を促進するものではありません。 </td>
+</tr>
+<tr>
+<td><strong>Lリトルジョンら。 (2025)<br />Wairragkar et al. (2025)</strong><br />ストリーミング脳から音声への/瞬間音声合成</td>
+<td>Sストリーミング/低遅延を利用して侵入信号から自分の声に近い音声を合成します。 </td>
+<td>Littlejohn は 80 ミリ秒ごとの頭脳から音声へのストリーミングを示し、Wiragkar は 10 ミリ秒未満の推論と沈黙のフォールバックを示しました。一方、ワイラグカルでは、移植後 165 日目に固定されたデコーダーは、約 15 日後に著しく劣化しました。 </td>
+<td> 同一セッションから短距離への侵入通信ルート。固定デコーダの長期展開可能性や長期安定性は、Temporal Validity Card がなければ保証されません。 </td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>このテーブルが必要な理由</strong>
+<p>
+「自然言語出力」は同じに見えても、<strong>意味再構築</strong>、<strong>候補バンクセグメント検索</strong>、<strong>既知単語解読</strong>、<strong>プロンプト条件付き継続</strong>、<strong>音声通信試行</strong>、<strong>ストリーミング音声合成</strong>は異なるルートとなる。これらの領域を分離せずに並べて比較すると、単一被験者の深部 fMRI、広範な複数被験者の M/EEG、参加者固有の侵襲的 BCI、および LLM スキャフォールドを備えた生成システムが同じ強度の証拠であると誤って解釈されやすくなります。そこで、当サイトでは、自然な文章の出力を見る際に、まず<strong>タスクレジーム</strong>、<strong>トレーニング深度/主題ルート</strong>、<strong>事前足場</strong>、<strong>固定デコーダーホライズン</strong>を返し、媒体の派手さではなく証拠の種類に基づいて読み取ります。
+</p>
+</div>
+</section>
+
+<section class="section" id="chronic-communication-ceiling">
+<h2 class="section-title">2026-03-17 追記: 侵襲的通信経路の慢性的な上限</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>壁</th>
+<th>一次文献が現在サポートしているもの</th>
+<th>このページの見方</th>
+<th>まだ申し立てが行われていません</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>同一セッションストリーミング上限</strong></td>
+<td><a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">Lリトルジョンら。 (2025) </a> は頭脳から音声へのストリーミング、<a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">Wairragkar ら。 (2025)</a> は、瞬時の音声合成と無音フォールバックを進化させます。 </td>
+<td> は、強力な L2-L3 通信サブシステムの証拠として読み取れます。 </td>
+<td>当社は、固定デコーダーの長期保存または長期展開可能性を主張しません。 </td>
+</tr>
+<tr>
+<td><strong>再校正天井</strong></td>
+<td><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">ウィルソンら(2025) </a> は 1 か月間教師なし再校正をテストし、<a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">Pun et al. (2024) </a> は、ヒトの皮質内記録の慢性的な不安定性が BCI パフォーマンスの低下と強く関連していることを示しました。 </td>
+<td><code>最後の監視校正からの時間</code>、回復時間、および再校正負荷が個別のログに記録されるため、長期運用に向けた準備段階として読み取ることができます。 </td>
+<td>「その日はうまくいった」とは書かず、「再校正なしで長期間にわたって有効であった」と書きます。 </td>
+</tr>
+<tr>
+<td><strong>同じニューロン追跡上限</strong></td>
+<td><a href="https://doi.org/10.1126/science.abf4588" target="_blank">Steinmetz et al. (2021)</a>は動き補正で安定録画、<a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">パチタリウ他アル。 (2024)ドリフト/スプリット/マージを中心とした高度なソート機能を備えた</a>と、<a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">van Beestら。 (2025)</a> 高度な確率的クロスデイ ニューラル トラッキング。 </td>
+<td> 微小電極システムでは、同一ニューロンの主張は <code> ソート バージョン + ドリフト補正 + ユニット一致確率 </code> による推定値として読み取られます。 </td>
+<td>慢性的な解読の成功は、安定した単一ニューロン機構の直接読み取りとして記述することはできません。 </td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>このセクションの実践ルール</strong>
+<p>
+侵襲的音声 BCI をより高いレベルに推進する場合、同日ストリーミングのパフォーマンスだけでなく、<strong> 固定デコーダーの持続日数</strong>、<strong> 手動再キャリブレーションにどの程度依存するか</strong>、<strong> 微小電極システムの同一ニューロン追跡をどのように推定したか</strong>、<strong> インプラントの年齢 / 材料 / 形状 / 組織反応をどのように監査したかも考慮します。プロキシ</strong>。詳しい背景については、<a href="state-trait-and-drift.html">Wiki: state、trait、drift</a> を参照してください。
+</p>
+</div>
+</section>
+
+<section class="section" id="therapeutic-decoding-ceiling">
+<h2 class="section-title">2026-04-01 追記: 治療的侵襲的デコードには異なる上限がある</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>壁</th>
+<th>一次文献が現在サポートしているもの</th>
+<th>このページの見方</th>
+<th>まだ申し立てが行われていません</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>患者ネットワーク前天井</strong></td>
+<td><a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">Merk et al. (2025)</a> は、4 つのコホートにわたって <strong>56 人の患者</strong> と <strong>1,480 の ECoG チャネル</strong> を使用して、患者個別のトレーニングを行わずに動きを解読し、コネクトミクスベースのチャネル選択によりプラットフォームを感情および発作関連のユースケースに拡張しました。</td>
+<td> <strong> として読み取られます。コネクトミクス情報に基づいた症状に関連した侵襲的デコーディング</strong> 治療制御またはデコーダーの初期化用。</td>
+<td>これをサブジェクトフリーのユニバーサル デコード、無制限の内部状態の読み出し、または WBE レベルの状態の完全性まで引き上げないでください。</td>
+</tr>
+<tr>
+<td><strong>パーソナライズコントローラー天井</strong></td>
+<td><a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">Oehrn et al. (2024) </a> は、パーキンソン病患者 4 人の高ドーパミン作動性状態と低ドーパミン作動性状態の刺激に同調したガンマ マーカーを特定し、それらのデータ駆動型マーカーを使用して適応 DBS を推進しました。</td>
+<td><strong>と読み替えます。1つの疾患および1つのインプラント/制御レジーム内でのパーソナライズされたバイオマーカー/コントローラーの選択</strong>。</td>
+<td>成功した 1 つの適応コントローラーを、症状群、インプラントのターゲット、または日常の状況全体にわたる一般的な治療デコーダーの法則として扱わないでください。</td>
+</tr>
+<tr>
+<td><strong>生理状態ガード天井</strong></td>
+<td><a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">Zhu et al. (2026) </a> は、<strong>18 パーキンソン病 </strong> および <strong>18 ジストニア </strong> 患者において、目を閉じた生理機能が大脳基底核のシータ/アルファ バイオマーカーを十分にシフトさせる可能性があり、固定閾値では良性の状態の変化を病理と誤認する危険性があることを示しました。</td>
+<td>論文が開示した後にのみ適応制御を読み取ります<strong>状態認識/コンテキストガード</strong>、1つの振動閾値だけからではありません。</td>
+<td>警戒や日常の生理学的状況全体にわたる安定した病状のメーターとして 1 つの帯域限定バイオマーカーを作成しないでください。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>この追加の分割が必要な理由</strong>
+<p>
+ここでの重要な進歩は現実のものです。治療の解読には患者固有のトレーニングがあまり必要なくなる可能性があり、症状にリンクした適応制御はよりデータ主導型になりつつあります。しかし、オブジェクトは依然として <strong>、宣言されたインプラント カバレッジ、ネットワーク プリア、およびコントローラー ポリシー </strong> に基づいて、症状/状態のデコードと名付けられています。これはユニバーサル侵入型デコードよりもはるかに狭く、エミュレートよりもさらに狭いです。
+</p>
+</div>
+</section>
+
+<section class="section" id="speech-decode-scaffolds">
+<h2 class="section-title">2026-03-17 追記: 音声デコード</h2> の拡張を容易にする 4 つの足場
+<table class="data-table">
+<thead>
+<tr>
+<th>足場</th>
+<th>一次文献が現在サポートしているもの</th>
+<th>このページの見方</th>
+<th>まだ申し立てが行われていません</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>タスク/語彙足場</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">d'Ascoli et al. (2025) </a> は、オープンボキャブラリーの単語デコードを高度化しましたが、単語の始まり、タスク構造、モダリティ、トレーニング データの量、テストの平均化に応じてパフォーマンスが大幅に変化することも示しました。 </td>
+条件付き言語/通信デコードの進歩としての <td>Read。 </td>
+<td>I は、自由な思考の読書や状態の完全な再構築として投稿しません。 </td>
+</tr>
+<tr>
+<td><strong>因果的/非因果的足場</strong></td>
+<td><a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">チェンら(2024) </a> は、参加者 48 人の EEG 音声デコードにおいて、オフラインの非因果モデルは発症後の聴覚フィードバックを使用してパフォーマンスを向上させることができる一方、リアルタイムの因果モデルはパフォーマンスを向上させることができることを示しました。モデルにはより厳しい制約があることが示されました。 </td>
+<td>オフライン遡及デコードと因果リアルタイム ルートを個別に読み取ります。 </td>
+<td>先読みによるオフライン ゲインは、展開可能なストリーミング ループとして直接書き込むことはできません。 </td>
+</tr>
+<tr>
+<td><strong>移送/適応足場</strong></td>
+<td><a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">Singh et al. (2025) </a> は、分散型低侵襲録音を備えたグループ派生デコーダを使用した音素音声デコードの転移学習を高度にしましたが、共有タスク構造と音声ネットワーク カバレッジは依然として前提条件です。 </td>
+<td>Read as Decode エンジニアリングにより、臨床の拡張性が向上します。 </td>
+<td>I は、ゼロショットを一般的な思考デコーダーや主題のないユニバーサル リーダーとして宣伝するものではありません。 </td>
+</tr>
+<tr>
+<td><strong>LLM / プロンプト足場</strong></td>
+<td><a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">Yeら(2025)</a> は、fMRI から派生した表現をプロンプトおよび大規模な言語モデルに入力することによってテキストの継続を生成しました。 </td>
+<td>プロンプト条件付き生成言語再構築として読み取られます。 </td>
+<td>出力の流暢性と脳のみの再構成または隠れ状態の回復を直接同一視しないでください。 </td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>このセクションの批判</strong>
+<p>
+現在のニュースやデモでよくある誤解は、<strong>自然な出力</strong>、<strong>大語彙</strong>、<strong>効果的な転移学習</strong>、<strong>LLMドキュメンテーション</strong>の4つの進歩を「脳の内部状態をかなり直接的に読み取ることができた」と解釈することだが、一次文献が直接裏付けているのは、タスクの足場、因果的展開条件、適応ルート、言語事前が明確に分かる範囲でのデコードエンジニアリングの進歩である。 WBE に必要な状態の完全性そのものではなく、指定されています。
+</p>
+</div>
+</section>
+
+<section class="section" id="paper-ladder">
+<h2 class="section-title">一次文献に見られる境界例</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>例</th>
+<th>今できること</th>
+<th></th> をエミュレートしてみませんか
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tangら(2023)</strong><br />非侵襲的セマンティック デコーディング</td>
+<td>fMRI からの連続言語の意味的回復を示し、知覚された音声、想像上の音声、およびサイレント ビデオにわたるデコードを実証しました。 </td>
+<td>学習と応用の両方、および観察された意味表現の翻訳には被験者の協力が必要です。私たちは内部の因果構造や介入反応の再現を実証しません。 </td>
+</tr>
+<tr>
+<td><strong>Défossez et al. (2023)</strong><br />非侵襲的音声セグメント検索</td>
+<td>3 秒間の音声セグメントは、参加者が受動的に自然音声を聞いている間に、非侵襲性 MEG/EEG から識別され、EEG よりも MEG の方がはるかに優れたパフォーマンスを示しました。 </td>
+<td>これは、知覚された音声セグメントの候補バンク検索の証拠であり、固定比較バンクなしの無制限の単語レベルまたは文レベルの生成の証拠ではありません。 </td>
+</tr>
+<tr>
+<td><strong>d'Ascoli et al. (2025)</strong><br />オープンボキャブラリーの非侵襲的単語デコード</td>
+<td>私たちは、723 人の非侵襲的録音から個々の単語の解読を進め、トレーニング データの量、テストの平均化、モダリティ、およびタスクの依存性がパフォーマンスに大きく影響することを示しました。 </td>
+<td> これはオープンボキャブラリーの進歩ではありますが、単語の始まり、タスクの構造、および参加者の条件への依存が残っています。ここでの進歩は、状態を完全に再構成することではなく、通信ルートを解読することです。 </td>
+</tr>
+<tr>
+<td><strong>チェンら(2024)</strong><br />EEG音声デコード因果/非因果比較</td>
+<td>参加者48名の脳波を用いた音声復号化を比較し、非因果モデルの見かけ上のゲインの違いやリアルタイムの因果パスの制約を明らかにしました。 </td>
+<td>これは、オフラインの遡及スコアと展開可能なリアルタイム ルートを区別するための主要な証拠ですが、一般的な思考の読み取りを示すものではありません。 </td>
+</tr>
+<tr>
+<td><strong>Singh et al. (2025)</strong><br />分散脳記録による転移学習</td>
+<td>分散型低侵襲録音を使用して、グループ導出デコーダが音素音声デコードの信頼性を向上させることを示しています。 </td>
+<td>これは、主体のないユニバーサル デコーダではなく、共有タスク構造とキャリブレーション ルートを想定した転移学習の進歩です。これは、WBE の内部状態の識別や無制限のデコードに直接つながるものではありません。 </td>
+</tr>
+<tr>
+<td><strong>ウィレットら(2023)</strong><br />侵襲的音声 BCI</td>
+<td>62 ワード/分の大語彙音声デコードが、皮質内アレイからの 125,000 ワードの語彙を使用して実証されました。 </td>
+<td>高帯域幅であっても、主な焦点は試行された音声のデコードにあります。自律的な内部生成や、変化する条件との因果関係は示されません。 </td>
+</tr>
+<tr>
+<td><strong>リトルジョンら。 (2025) / ワイラグカールら。 (2025)</strong><br />ストリーミング脳から音声への/音声合成</td>
+<td>Lリトルジョンらは脳から音声へのストリーミングを 80 ミリ秒ごとに示し、Wiragkar らはは、ニューラルから音声へのアルゴリズムの固定デコーダーの 10 ミリ秒未満の推論、沈黙フォールバック、および短いホライズンを示しました。 </td>
+<td>これは通信サブシステムの強力な L2-L3 証拠ですが、全脳エミュレーションではありません。速度に加えて、テール レイテンシー、ドロップアウト、沈黙/誤った音声、再キャリブレーション負荷、および固定デコーダー ホライズンも提供しない限り、長期的な展開可能性を判断することはできません。 </td>
+</tr>
+<tr>
+<td><strong>Yeら(2025)</strong><br />生成言語再構成 + LLM</td>
+<td>fMRI 由来の脳表現とテキスト プロンプトが自己回帰 LLM 内で結合され、言語の継続が生成されました。 </td>
+<td>これは生成言語インターフェイスの進歩ですが、出力の流暢さは依然としてプロンプトと LLM スキャフォールドに大きく依存しており、プロンプトなしの生成は依然として困難です。ここから、すぐに脳だけの再構成やエミュレーションに進むことはできません。 </td>
+</tr>
+<tr>
+<td><strong>Flesher et al. (2021)</strong><br />双方向閉ループ BCI</td>
+<td>触覚フィードバックをモーターデコードに戻すことで、ロボットの掴み作業にかかる時間を20.9秒から10.2秒に短縮しました。 </td>
+<td>これは、デコードよりもさらに強力なローカル閉ループのデモンストレーションですが、感覚運動サブシステムをターゲットとしています。これは全脳エミュレーションというよりも、<strong> ローカル回路の L3 に近い証拠 </strong> と読むのが適切です。 </td>
+</tr>
+<tr>
+<td><strong>Merk et al. (2025) / 朱ら。 (2026)</strong><br />コネクトミクスに基づいた治療的解読</td>
+<td>A 患者個別のトレーニングを必要としない患者間での侵襲的デコードは動作について示された一方、生理学的状態のデコードは、指定された疾患およびインプラント管理下での適応 DBS フィードバック ガードについて示されました。 </td>
+<td>これは、<strong>症状および状態条件付けされた治療的解読</strong>における大きな進歩であるが、インプラントターゲット、ラベル、およびコントローラー条件付けのままである。それは、普遍的な侵襲的デコーダ、無制限の内部状態の読み出し、または因果的な脳のダイナミクスのエミュレーションを示していません。 </td>
+</tr>
+<tr>
+<td><strong>MICrONS (2025) / Billeh et al. (2020) / ベイラン＆amp; Litwin-Kumar (2025)</strong><br />刺激条件付きデジタルツイン / コネクトーム制約モデル</td>
+<td>逐次同一脳コネクトミクス データセット、マルチスケール モデル、およびコネクトーム制約付きリカレント ネットワークは、名前付きタスクと記録の下で高度なローカル条件付き予測を備えています。 </td>
+<td> これはエミュレートと同様の方向における重要な基盤ですが、範囲は依然としてローカルでレジームに制限されています。さらに、MICrONS (2025) として、Beiran &amp; Litwin-Kumar (2025)、および Prinz et al. (2004) によると、出力マッチングだけでは、未測定のパラメータ、未記録のニューロン、省略された状態ファミリーなどの縮退が残るため、忠実な再現や唯一の解決策とは言えません。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="audit-2026-03">
+<h2 class="section-title">2026-03 文献監査: ここでは 4 つの代替読書が禁止されています</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>危険な音訳</th>
+<th>なぜ危険なのか</th>
+<th>一次文献で現在サポートされている境界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>オープン語彙の非侵襲的解読 → 無制限の思考読み取り</strong></td>
+<td>2025 年の単語解読は確かに前進ですが、タスク構造、候補セット、参加者の協力、モダリティの違いに強く影響されます。 </td>
+<td>Tang (2023) と d'Ascoli (2025) から比較的強く言えることは、<strong> 条件付き言語/通信の解読</strong> が進歩したということです。そこから、内部状態の一般的な一意の復元や WBE に必要な状態の取得に直接進むことはできません。 </td>
+</tr>
+<tr>
+<td><strong>ストリーミング音声ニューロプロテーゼ → エミュレート / WBE</strong></td>
+<td>ストリーミングと音声合成は通信サブシステムの素晴らしい成果ですが、速く話せることと内部因果関係があることは別のことです。 </td>
+<td>Littlejohn (2025) と Wairagkar (2025) は、侵襲的通信ルート &lt;/strong&gt; の <strong>L2-L3 を推進しましたが、Wilson (2025) が示すように、長期的な再調整の負担がもう 1 つの障壁となっています。 &lt;/td&gt;
+&lt;/tr&gt;
+<tr>
+<td><strong>非因果的オフラインゲイン → 導入可能なリアルタイムループ</strong></td>
+将来のコンテキストまたは発症後の聴覚フィードバックを使用できる <td>Decoder は、閉ループで使用できる Causal Decoder よりも利点があります。 </td>
+<td>Chen (2024) から比較的強く言えることは、因果関係が別途報告されない限り、<strong>リアルタイムの主張はできないということです。</strong> </td>
+</tr>
+<tr>
+<td><strong>コネクトーム制約付き予測 → 独自の内部メカニズム</strong></td>
+<td>コネクトームや同一脳機能が含まれている場合でも、測定されていない生物物理学的パラメーターや隠れた状態が残っている場合、内部ダイナミクスは退化する可能性があります。 </td>
+<td>MICrONS (2025)、Billeh (2020)、および Beiran &amp; から比較的強く言えることLitwin-Kumar (2025) は、<strong> 構造制約が </strong> の予測に役立つと述べています。そこから、状態完全な再構築や固有の内部モデルに直接進むことはできません。 </td>
+</tr>
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/section&gt;
+
+<section class="section" id="gates">
+デコードをエミュレート&lt;/h2&gt;に置き換える前の<h2 class="section-title">Sixゲート
+<table class="data-table">
+<thead>
+<tr>
+<th>ゲート</th>
+<th>なぜ必要なのか</th>
+<th>必要な最低限の証拠</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>G1: 脳由来の情報は以前の</strong></td>を超えていますか
+<td>事前言語または候補セットが強力な場合、出力の流暢さのみに基づいて神経の寄与が誤られる可能性があります。 </td>
+<td><code>LM-only</code>、<code>no-brain</code>、タイムシャッフル、トライアルシャッフル、候補者セットのサイズ、参加者の協力開示。 </td>
+</tr>
+<tr>
+<td><strong>G2: 因果関係のある展開パスに従っていますか?</strong></td>
+<td>将来のフレーム、教師の強制、発症後の聴覚フィードバック、および非因果ウィンドウを使用すると、オフライン スコアはリアルタイムの上限を過大評価します。 </td>
+<td>因果関係/非因果関係、先読みウィンドウ、フィードバック汚染ガード、およびオンライン推論パスの開示。 </td>
+</tr>
+<tr>
+<td><strong>G3: 未学習状態とは別の日に保管する必要がありますか? </strong></td>
+<td>同じ被験者、同じ日、同じ課題で精度が高くても、仕組みが必ずしも一致するとは限りません。 </td>
+<td>OOD 条件、日をまたぐ、別個の刺激セット、被験者外の評価、固定デコーダ劣化曲線、棄権率。 </td>
+</tr>
+<tr>
+<td><strong>G4: 介入に応答</strong></td>
+<td> エミュレートを名乗る場合は、観測だけでなく摂動後の分岐も推測する必要があります。 </td>
+<td>刺激の変化、ICMS/TMS、薬理学、およびタスクルールの変化に対する予測マッチング。 </td>
+</tr>
+<tr>
+<td><strong>G5: 閉ループおよび長期動作で安定していますか?</strong></td>
+<td>出力が次の入力を変更した場合、オフライン精度は適用されなくなります。さらに、セッション内の速度と長期的な展開可能性も別の問題です。 </td>
+<td> <code>P50/P95/P99 でのエンドツーエンド レイテンシ</code>、テール レイテンシ、沈黙/棄権、ドロップアウト、<strong> 固定デコーダ間隔</strong>、<code> 最後に監視されたキャリブレーションからの時間</code>、再キャリブレーション負荷、回復時間、および治療用デコードの場合は、<strong> コントローラ ファミリ</strong> と任意の<strong>生理学的状態ガード</strong>.</td>
+</tr>
+<tr>
+<td><strong>G6: 十分な状態変数があり、縮退を監査しましたか? </strong></td>
+<td>同じ出力に異なる内部パラメータのセットを含めることができます。国家の赤字と模範家族の退廃を隠すと、それは誇張になってしまう。 </td>
+<td>コネクトームのみのベースラインと増強の比較、家族比較、不確実性、細胞タイプ/シナプス状態/遅延/神経調節/グリアの監査に加えて、慢性微小電極システムの<strong>ソーティングバージョン</strong>、<strong>ドリフト補正</strong>、および<strong>ユニットマッチ確率</strong>も記録します。 </td>
+</tr>
+</tbody>
+</table>
+&lt;/section&gt;
+
+<section class="section" id="site-rules">
+<h2 class="section-title">このサイトの運用ルール</h2>
+<div class="key-points">
+<h4>Rule</h4>
+<ul>
+<li><strong>decode:</strong>を記述するための条件これは、観測された信号から意味、刺激、動作、文章を予測することに焦点を当てたデモンストレーションを行う場合であり、<code>LM-only</code>またはシャッフルベースラインを超える神経寄与が示されても、介入マッチングや因果的リアルタイムパスは示されません。 </li>
+<li><strong>通信サブシステムのL2～L3として書かれた条件：音声BCIや触覚BCIなどのローカルループが確立されている場合でも、対象が限定されたサブシステムであることを明記し、因果デコーダパス、潜時/沈黙/<strong>固定デコーダ間隔</strong>/再校正負荷を含め、微小電極システムの場合はユニットアイデンティティ監査も含める。 &lt;/li&gt;
+<li><strong>治療的侵襲的解読として書かれた条件:</strong>論文が症状に関連した適応刺激または治療状態の認識を目的としている場合は、症状/状態ラベル、インプラントのターゲット/適用範囲、モデルが患者の個別トレーニングなしで機能するかウォームアップ後にのみ機能するかどうか、事前のコネクトミクス/ネットワーク、コントローラーファミリー、およびクレーム上限を上げる前に生理学的状態のガードに名前を付けます。 </li>
+<li><strong>ローカルエミュレーションを記述するための条件:</strong>ローカル回路が閉ループと因果的介入の両方を示し、置き換えられるものが限定的に指定される場合。 </li>
+<li><strong>WBE に近い書き込みの条件:</strong> 6 つのポイントが満たされた場合のみ: 以前の因果的展開ガードの超過、OOD/日を超えた一般化、摂動マッチング、閉ループの長期安定性、および状態変数の整合性監査。 </li>
+<li><strong>出力のみを一致させる場合:</strong>エミュレートではなく、アバター、動作クローン、デコーダ、言語インターフェースなどの式を使用します。 </li>
+<li><strong>Tコネクトーム制約による成功の治療: 予測利得、刺激条件付きデジタルツインモデル、およびコネクトーム制約による成功は、構造的/機能的足場の進歩として位置付けられており、唯一の解決策や状態完全な再構築とは説明されていません。 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+
+<section class="section" id="references">
+<h2 class="section-title">参考資料</h2>
+<ol>
+<li>Tang、J.、LeBel、A.、Jain、S. 他（2023年）。非侵襲的な脳記録からの意味的再構築。 <em>Nature Neuroscience</em>、26、858–866。 <a href="https://doi.org/10.1038/s41593-023-01304-9" target="_blank">doi:10.1038/s41593-023-01304-9</a></li>
+<li>Défossez, A.、Caucheteux, C.、Rapin, J. 他（2023年）。非侵襲的な脳記録から音声知覚を解読します。 <em>Nature Machine Intelligence</em>、5、1097–1107。 <a href="https://doi.org/10.1038/s42256-023-00714-5" target="_blank">doi:10.1038/s42256-023-00714-5</a></li>
+<li>d'Ascoli, S.、Bel, C.、Rapin, J.、他。 (2025年)。非侵襲的な脳記録から個々の単語を解読する方向へ。 <em>Nature Communications</em>、16、10521.<a href="https://doi.org/10.1038/s41467-025-65499-0" target="_blank">doi:10.1038/s41467-025-65499-0</a></li>
+<li>Chen、Z.、Yao、D.、Wang、M.、他。 （2024年）。深層学習と音声合成を活用したニューラル音声デコード フレームワーク。 <em>Nature Machine Intelligence</em>、6、1816 ～ 1827 年。 <a href="https://doi.org/10.1038/s42256-024-00837-5" target="_blank">doi:10.1038/s42256-024-00837-5</a></li>
+<li>Singh、V.、Papangelou、A.、Sharma、M.、他。 (2025年)。分散型脳記録による転移学習により、信頼性の高い音声デコードが可能になります。 <em>Nature Communications</em>、16、5364。<a href="https://doi.org/10.1038/s41467-025-63825-0" target="_blank">doi:10.1038/s41467-025-63825-0</a></li>
+<li>Willett, F. R.、Kunz, E.M.、Fan, C. 他（2023年）。高性能言語人工神経。 <em>ネイチャー</em>、620、1031–1036。 <a href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank">doi:10.1038/s41586-023-06377-x</a></li>
+<li>LLittlejohn, K.T.、Dabagia, M.、Ladwig, A. 他(2025年)。自然なコミュニケーションを復元するためのストリーミング脳から音声へのニューロプロテーゼ。 <em>Nature Neuroscience</em>、28、902–912。 <a href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank">doi:10.1038/s41593-025-01905-6</a></li>
+<li>Wairagkar, M.、Card, N.S.、Singer-Clark, T. 他(2025年)。瞬間的に音声を合成する神経人工器官。 <em>Nature</em>、644、145–152。 <a href="https://doi.org/10.1038/s41586-025-09127-3" target="_blank">doi:10.1038/s41586-025-09127-3</a></li>
+<li>Ye, Z.、Ai, Q.、Liu, Y.、de Rijke, M.、Zhang, M.、Lioma, C.、およびRuotsalo、T. (2025)。脳の記録からの生成言語の再構築。 <em>コミュニケーション生物学</em>、8、346。<a href="https://doi.org/10.1038/s42003-025-07731-7" target="_blank">doi:10.1038/s42003-025-07731-7</a></li>
+<li>Merk, T.、Li, N.-F.、Butenko, K. 他(2025年)。脳インプラント患者の神経解読のための侵襲性神経生理学と全脳コネクトミクス。 <em>Nature Biomedical Engineering</em>。 <a href="https://doi.org/10.1038/s41551-025-01467-9" target="_blank">doi:10.1038/s41551-025-01467-9</a></li>
+<li>Oehrn、C.R.、Roediger、J.、Diehl、A.、他。 （2024年）。パーキンソン病における慢性適応脳深部刺激と従来の刺激の比較: 盲検ランダム化実現可能性試験。 <em>Nature Medicine</em>、30、2613–2622。 <a href="https://doi.org/10.1038/s41591-024-03196-z" target="_blank">doi:10.1038/s41591-024-03196-z</a></li>
+<li>Zhu、G.-Y.、Merk、T.、Butenko、K.、他。 （2026年）。運動障害における適応型深部脳刺激フィードバック信号に対する視覚状態の影響を解読します。 <em>npj パーキンソン病</em>、12、61。<a href="https://doi.org/10.1038/s41531-026-01273-3" target="_blank">doi:10.1038/s41531-026-01273-3</a></li>
+<li>Wilson, G. H.、Stein, E. A.、Kamdar, F. 他(2025年)。隠れマルコフ モデルを使用した、カーソルベースの皮質内脳コンピューター インターフェイスの長期教師なし再調整。 <em>Nature Biomedical Engineering</em>。 <a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">doi:10.1038/s41551-025-01536-z</a></li>
+<li>Pun, T. K.、Khoshnevis, M.、Hosman, T. 他（2024年）。安定した長期にわたる脳とコンピューターのインターフェースに向けた慢性的な人間の皮質内神経記録の不安定性を測定します。 <em>コミュニケーション生物学</em>、7、1363。<a href="https://doi.org/10.1038/s42003-024-06784-4" target="_blank">doi:10.1038/s42003-024-06784-4</a></li>
+<li>Steinmetz, N.A.、Aydin, C.、Lebedeva, A. 他（2021年）。 Neuropixels 2.0: 安定した長期の脳記録のための小型高密度プローブ。 <em>Science</em>、372(6539)、eabf4588。 <a href="https://doi.org/10.1126/science.abf4588" target="_blank">doi:10.1126/science.abf4588</a></li>
+<li>Pachitariu、M.、Sridhar、S.、Pennington、J.、およびストリンガー、C. (2024)。 Kilosort4 によるスパイクソーティング。 <em>Nature Methods</em>、21、914–921。 <a href="https://doi.org/10.1038/s41592-024-02595-5" target="_blank">doi:10.1038/s41592-024-02595-5</a></li>
+<li>van Beest, E.H.、Bimbard, C.、Fabre、J.M.J. 他(2025年)。高密度プローブを使用して数日間にわたってニューロンを追跡します。 <em>Nature Methods</em>、22、778–787。 <a href="https://doi.org/10.1038/s41592-024-02440-1" target="_blank">doi:10.1038/s41592-024-02440-1</a></li>
+<li>Flesher、S.N.、Downey、J.E.、Weiss、J.M.、他（2021年）。触覚を呼び起こすブレイン コンピューター インターフェイスにより、ロボット アームの制御が向上します。 <em>Science</em>、372(6544)、831–836。 <a href="https://doi.org/10.1126/science.abd0380" target="_blank">doi:10.1126/science.abd0380</a></li>
+<li>MICrONSコンソーシアムほか(2025年)。マウス視覚野の複数の領域にわたる機能的コネクトミクス。 <em>Nature</em>、640、435–447。 <a href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank">doi:10.1038/s41586-025-08790-w</a></li>
+<li>ベイラン、M.、＆amp;リトウィン・クマール、A. (2025)。コネクトーム制約付きリカレント ネットワークにおける神経活動の予測。 <em>Nature Neuroscience</em>、28、1323–1334。 <a href="https://doi.org/10.1038/s41593-025-02080-4" target="_blank">doi:10.1038/s41593-025-02080-4</a></li>
+<li>Billeh, Y. N.、Cai, B.、Gratiy, S. L.、他（2020年）。マウス一次視覚野のマルチスケールモデルへの構造および機能データの体系的な統合。 <em>ニューロン</em>、106(3)、388–403.e18。 <a href="https://doi.org/10.1016/j.neuron.2020.01.040" target="_blank">doi:10.1016/j.neuron.2020.01.040</a></li>
+<li>Prinz、A.A.、Bucher、D.、およびマーダー、E. (2004)。異なる回路パラメータからの同様のネットワーク アクティビティ。 <em>Nature Neuroscience</em>、7、1345–1352。 <a href="https://doi.org/10.1038/nn1352" target="_blank">doi:10.1038/nn1352</a></li>
+</ol>
+</section>
+
+<section class="section" id="why-matters">
+<h2 class="section-title">この区別が重要な理由</h2>
+<p>
+この区別がなければ、「`we were able to produce sentences from brain signals,'' ``a little bit better with closed loop,'' and `『刺激条件付きデジタルツインが機能した』」などの個々の進歩が、WBE の全体的な成果として誤って解釈されてしまいます。マインドアップロードでは、この飛躍を避けるために、苦情のはしごと検証基盤を最優先にしました。
+</p>
+<div class="cta-box">
+<h4>次</h4>
+<p>主張の度合いや必要な証拠の強さを知りたい方はこちら。 </p>
+<a href="claims-and-evidence.html">クレームと証拠の読み方→</a>
+</div>
+</section>
+
+&lt;/article&gt;
+
+<aside class="sidebar-column">
+<div class="sidebar-box">
+<h4>関連Wiki</h4>
+<ul>
+<li><a href="claims-and-evidence.html">主張と証拠の読み方→</a></li>
+<li><a href="eeg-basics.html">EEGの基礎→</a></li>
+<li><a href="state-trait-and-drift.html">状態・特性・ドリフト→</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>公開ページ</h4>
+<ul>
+<li><a href="../wbe_101.html">WBE101→</a></li>
+<li><a href="../faq.html">FAQ →</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+</ul>
+</div>
+</aside>
+&lt;/main&gt;
+</strong></li></strong></li></ul></div></section></h2></section></strong></td></tr></tbody></table></section></article></main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer h-card">
+        <data class="u-url" value="/"></data>
+        <div class="wrapper">
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="/wiki/">Wiki</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="/issue.html">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var body = document.body;
+            var wikiMode = body ? body.getAttribute("data-wiki-mode") : "local";
+            var githubWikiUrl = body ? body.getAttribute("data-github-wiki-url") : "";
+            var pageUrl = body ? body.getAttribute("data-page-url") : "";
+            var isWikiPage = pageUrl.indexOf("/wiki/") === 0;
+
+            function splitHref(raw) {
+                var match = raw.match(/^([^?#]*)([?#].*)?$/);
+                if (!match) {
+                    return { path: raw, suffix: "" };
+                }
+                return { path: match[1], suffix: match[2] || "" };
+            }
+
+            function githubWikiTargetFromPath(path, suffix) {
+                var slug = path.replace(/^\/+/, "")
+                    .replace(/^wiki\//, "")
+                    .replace(/^\/wiki\//, "")
+                    .replace(/\.html$/, "")
+                    .replace(/\/$/, "");
+
+                if (!slug || slug === "index") {
+                    return githubWikiUrl + suffix;
+                }
+
+                return githubWikiUrl + "/" + slug + suffix;
+            }
+
+            function rewriteWikiLinksForMode() {
+                if (wikiMode !== "github" || !githubWikiUrl) {
+                    return;
+                }
+
+                var anchors = document.querySelectorAll("a[href]");
+                anchors.forEach(function (anchor) {
+                    var rawHref = anchor.getAttribute("href");
+                    if (!rawHref || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.charAt(0) === "#") {
+                        return;
+                    }
+
+                    if (rawHref.indexOf(githubWikiUrl) === 0) {
+                        return;
+                    }
+
+                    var resolved;
+                    try {
+                        resolved = new URL(rawHref, window.location.href);
+                    } catch (error) {
+                        return;
+                    }
+
+                    var targetHref = null;
+                    var split = splitHref(rawHref);
+
+                    if (resolved.origin === window.location.origin) {
+                        var resolvedPath = resolved.pathname;
+                        if (resolvedPath === "/wiki" || resolvedPath === "/wiki/" || resolvedPath === "/wiki/index.html") {
+                            targetHref = githubWikiUrl + resolved.search + resolved.hash;
+                        } else if (resolvedPath.indexOf("/wiki/") === 0) {
+                            targetHref = githubWikiTargetFromPath(resolvedPath, resolved.search + resolved.hash);
+                        }
+                    } else if (isWikiPage && /^(?:\.\/)?[^/]+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path, split.suffix);
+                    } else if (/^(?:\.\.\/)?wiki\/.+\.html$/.test(split.path) || /^\/wiki\/.+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path.replace(/^\.\.\//, ""), split.suffix);
+                    }
+
+                    if (!targetHref) {
+                        return;
+                    }
+
+                    anchor.setAttribute("href", targetHref);
+                    anchor.setAttribute("target", "_blank");
+                    anchor.setAttribute("rel", "noopener noreferrer");
+                });
+            }
+
+            rewriteWikiLinksForMode();
+
+            var terms = [
+                ["再現性", "同じ手順をもう一度実行し、おおむね同じ結果を得られること。"],
+                ["反証可能性", "間違いだと示せる形で主張を書くこと。"],
+                ["操作的定義", "実際にどう測るかによって用語を定義すること。"],
+                ["標準化", "共有されたデータ形式や手順を使うこと。"],
+                ["ベンチマーク", "同じ条件で方法を比べるための共有テスト。"],
+                ["メタデータ", "いつ、どのように測られたかなど、データを説明するデータ。"],
+                ["デコード", "脳に関係する信号から状態や内容を推定すること。"],
+                ["エミュレーション", "脳機能を別の計算基盤上で再現すること。"],
+                ["因果", "単に一緒に変わることではなく、何が何を引き起こすかに関すること。"],
+                ["相関", "二つのものが一緒に変わること。それだけでは因果を証明しません。"],
+                ["反事実", "条件を変えたら何が起こるかを確認すること。"],
+                ["閉ループ", "出力を次の入力へ戻す制御構成。"],
+                ["QC", "品質管理。データが使えるか、信頼できるかを確認すること。"],
+                ["BIDS", "神経生理データを整理し共有するための標準。"],
+                ["主張ラダー", "弱い主張と強い主張を段階に分ける方法。"],
+                ["人格同一性", "それが同じ人物と言えるかどうかという問い。"],
+                ["共有基盤", "データ、コード、評価ルールを共有するための共通土台。"],
+                ["追試", "別の人が作業を再実行し、結果が保たれるか確認すること。"],
+                ["ガバナンス", "何かを安全に運用するためのルールと監督。"]
+            ];
+
+            var contentRoot = document.querySelector(".content-column") || document.querySelector(".papers-page > main") || document.querySelector("main");
+            var guide = document.getElementById("easy-guide");
+            var list = document.getElementById("easy-term-list");
+            var status = document.getElementById("easy-guide-status");
+            var sectionMap = document.getElementById("section-map");
+            var sectionMapList = document.getElementById("section-map-list");
+            var sectionMapStatus = document.getElementById("section-map-status");
+
+            if (!contentRoot) {
+                return;
+            }
+
+            if (sectionMap && sectionMapList && sectionMapStatus) {
+                var headings = contentRoot.querySelectorAll("h2.section-title, h2.category-title, h3.year-title, h3.year-heading");
+                var sectionCount = 0;
+                var seenIds = {};
+
+                for (var k = 0; k < headings.length; k++) {
+                    var heading = headings[k];
+                    var targetId = heading.id;
+                    var parentSection = heading.closest("section");
+
+                    if (!targetId && parentSection && parentSection.id) {
+                        targetId = parentSection.id;
+                    }
+
+                    if (!targetId) {
+                        targetId = "section-map-" + (k + 1);
+                        heading.id = targetId;
+                    }
+
+                    if (seenIds[targetId]) {
+                        continue;
+                    }
+
+                    seenIds[targetId] = true;
+                    sectionCount += 1;
+
+                    var mapItem = document.createElement("li");
+                    var mapLink = document.createElement("a");
+                    mapLink.href = "#" + targetId;
+
+                    var index = document.createElement("span");
+                    index.className = "section-map-index";
+                    index.textContent = String(sectionCount).padStart(2, "0");
+
+                    var label = document.createElement("span");
+                    label.className = "section-map-label";
+                    label.textContent = heading.textContent.trim();
+
+                    mapLink.appendChild(index);
+                    mapLink.appendChild(label);
+                    mapItem.appendChild(mapLink);
+                    sectionMapList.appendChild(mapItem);
+                }
+
+                if (sectionCount >= 3) {
+                    sectionMapStatus.textContent = sectionCount + " 個のセクションがあります。任意のセクションへ移動できますが、全体構造を崩さず読むには上から順に読むのが安全です。";
+                    sectionMap.hidden = false;
+                }
+            }
+
+            if (!guide || !list || !status) {
+                return;
+            }
+
+            var text = (contentRoot.innerText || "").toLowerCase();
+            var found = [];
+
+            for (var i = 0; i < terms.length; i++) {
+                if (text.indexOf(terms[i][0].toLowerCase()) !== -1) {
+                    found.push(terms[i]);
+                }
+            }
+
+            if (found.length === 0) {
+                return;
+            }
+
+            var limit = Math.min(found.length, 10);
+            status.textContent = "最初の " + limit + " 件の用語を平易な言葉で表示しています。";
+
+            for (var j = 0; j < limit; j++) {
+                var item = document.createElement("li");
+                var term = document.createElement("strong");
+                term.textContent = found[j][0] + ":";
+                item.appendChild(term);
+                item.appendChild(document.createTextNode(" " + found[j][1]));
+                list.appendChild(item);
+            }
+
+            guide.hidden = false;
+        })();
+    </script>
+
+</body>
+
+</html>

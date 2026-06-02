@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Wiki: ID とコピーの問題 | マインドアップロード</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Wiki: ID とコピーの問題" />
+<meta name="author" content="マインドアップロード研究プロジェクト" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="「copying&#39;&#39; and 」転送との違い、なぜ身元特定が難しいのか、何が未解決なのかを最初から明らかにします。" />
+<meta property="og:description" content="「copying&#39;&#39; and 」転送との違い、なぜ身元特定が難しいのか、何が未解決なのかを最初から明らかにします。" />
+<link rel="canonical" href="https://mind-upload.com/wiki/personhood-and-copy-problem.html" />
+<meta property="og:url" content="https://mind-upload.com/wiki/personhood-and-copy-problem.html" />
+<meta property="og:site_name" content="マインドアップロード" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wiki: ID とコピーの問題" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"マインドアップロード研究プロジェクト"},"description":"「copying&#39;&#39; and 」転送との違い、なぜ身元特定が難しいのか、何が未解決なのかを最初から明らかにします。","headline":"Wiki: ID とコピーの問題","url":"https://mind-upload.com/wiki/personhood-and-copy-problem.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta property="og:image" content="https://mind-upload.com/ogp.jpg">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F9E0;</text></svg>">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="https://mind-upload.com/feed.xml" title="マインドアップロード" />
+</head>
+
+
+
+
+
+<body class="wiki-light" data-article-type="ウィキ" data-page-url="/wiki/personhood-and-copy-problem.html" data-wiki-mode="local" data-github-wiki-url="">
+    <a class="skip-link" href="#site-content">本文へ移動</a>
+
+    <!-- グローバルヘッダー -->
+    <header class="site-header journal-header" role="banner">
+        <div class="wrapper journal-header-inner">
+            <a class="site-title" rel="author" href="/">マインドアップロード・コモンズ</a>
+            <nav class="site-nav" aria-label="主要ナビゲーション">
+                <div class="trigger">
+                    <a class="page-link" href="/">はじめに</a>
+                    <a class="page-link" href="/verification.html">検証</a>
+                    <a class="page-link" href="/tech_roadmap.html">ロードマップ</a>
+                    <a class="page-link" href="/content_hub.html">公開コンテンツ</a>
+                    <a class="page-link" href="/wiki/">Wiki</a>
+                    <a class="page-link" href="/mind_uploading_papers.html">論文アーカイブ</a>
+                    <a class="page-link" href="/issue.html">参加</a>
+                </div>
+        </nav>
+        </div>
+    </header>
+
+    
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+        <p class="article-type">ウィキ</p>
+        <h1 class="article-title">Wiki: ID とコピーの問題</h1>
+        
+        <p class="article-subtitle">見た目は同じでも、同一人物かどうかは別問題です。</p>
+        
+        
+        <p class="author-info">
+            <span class="author-name">マインドアップロード研究プロジェクト</span>
+        </p>
+        
+        <div class="article-meta">
+            <span>公開ページ</span>
+            
+            <span>更新日: 2026-03-14</span>
+            
+            
+            <span>初心者ガイド</span>
+            
+        </div>
+    </header>
+    
+
+    
+    <section class="page-guide" aria-label="このページの使い方">
+        <div class="page-guide-inner">
+            <div class="page-guide-main">
+                <p class="page-guide-kicker">このページの使い方</p>
+                <h2>迷わないために最初に読んでください</h2>
+                
+                <p class="page-guide-lead">このページは、Mind-Uploadの議論でよく出てくる「`copying problem'' and `の真正性」を初期から整理したWikiです。哲学の固有名詞を覚える前に、なぜこの問題がテクノロジーから逃れられないのかを理解することを目指します。</p>
+                
+                
+                
+                
+                <ul class="page-guide-points">
+                    
+                    <li>「`acting the same way'' and `」と「同一人物」を区別してください。</li>
+                    
+                    <li>静的コピーと継続的移行が異なる扱いを受ける理由を説明します。</li>
+                    
+                    <li>エンジニアリング ページに戻ると、テスト対象が表示されます。</li>
+                    
+                </ul>
+                
+                
+                
+                <div class="page-guide-links">
+                    <span>次に読むと役立つページ</span>
+                    <div class="page-guide-link-list">
+                        
+                        <a href="/perspective.html#design-principles">理論フレーム</a>
+                        
+                        <a href="/wbe_101.html">WBE の概要</a>
+                        
+                        <a href="/verification.html">検証プラットフォーム</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <dl class="page-guide-facts">
+                
+                <div>
+                    <dt>対象読者</dt>
+                    <dd>アイデンティティ、コピーの問題、継続的な移行について話すとすぐに止められる人</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>読了時間</dt>
+                    <dd>10～15分</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>正確性に関する注記</dt>
+                    <dd>このページは分かりやすく解説しておりますが、その人物の身元について最終的な結論を導くページではありません。未解決のままであることを明確にします。</dd>
+                </div>
+                
+            </dl>
+        </div>
+    </section>
+    
+
+    
+    <section class="topic-status" aria-label="ここでわかっていることと追加学習先">
+        <div class="topic-status-inner">
+            
+            <div class="topic-card topic-card-known">
+                <p class="topic-card-kicker">現段階で比較的明確なこと</p>
+                <h2>現在わかっていること</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>たとえ行動が似ていても、それだけではその人の同一性を確認することはできません。</li>
+                    
+                    <li>複数のコピーが存在する状況では、どれが本人であるかは自動的には判断されません。</li>
+                    
+                    <li>したがって、Mind-Upload では、連続性をどのように検証するかは別の問題として扱います。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-unknown">
+                <p class="topic-card-kicker">ここから先でまだ未解決のこと</p>
+                <h2>まだわかっていないこと</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>2 人の人物が「同一人物」とみなされる条件については合意がありません。</li>
+                    
+                    <li>心理的連続性を重視するか、因果的連続性を重視するか、現象的意識を重視するかによって結論は変わります。</li>
+                    
+                    <li>また、継続的な移行設計がアイデンティティを適切に保護するかどうかも証明されていません。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-wiki">
+                <p class="topic-card-kicker">基礎を学ぶ</p>
+                <h2>Wiki で基礎を確認する</h2>
+                <ul class="topic-link-list">
+                    
+                    <li>
+                        <a href="/wiki/mind-upload-basics.html" data-wiki-link="/wiki/mind-upload-basics.html">Wiki: WBE の基本</a>
+                        
+                        <span>全体像からこの問題の位置を確認することができます。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/claims-and-evidence.html" data-wiki-link="/wiki/claims-and-evidence.html">Wiki: 主張と証拠の読み方</a>
+                        
+                        <span>L4 の ID 主張の強さを補います。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/identity-and-continuity-tests.html" data-wiki-link="/wiki/identity-and-continuity-tests.html">Wiki: アイデンティティ評価と連続性テスト</a>
+                        
+                        <span>哲学的な問題を整理して、事前に登録したテスト設計に戻します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/" data-wiki-link="/wiki/">ウィキホーム</a>
+                        
+                        <span>他の基本ページに戻ることができます。</span>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+
+    <section id="easy-guide" class="easy-guide" hidden aria-label="平易な用語説明">
+        <div class="easy-guide-inner">
+            <h2>このページの平易な用語説明</h2>
+            <p id="easy-guide-status"></p>
+            <ul id="easy-term-list"></ul>
+            <p class="easy-guide-more">さらに見る: <a href="/glossary.html">用語集</a></p>
+        </div>
+    </section>
+
+    <section id="section-map" class="section-map" hidden aria-label="ページ構成">
+        <div class="section-map-inner">
+            <div class="section-map-header">
+                <p class="section-map-kicker">ページ構成</p>
+                <h2>全体を読む前に構造を確認する</h2>
+                <p id="section-map-status"></p>
+            </div>
+            <ol id="section-map-list" class="section-map-list"></ol>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="site-content" class="site-content-anchor" tabindex="-1"></div>
+    <main class="main-container">
+<article class="content-column">
+
+<div class="abstract-box">
+<h2>第一区別</h2>
+<p>
+たとえ他の人とまったく同じ話し方、同じ記憶、同じ反応をしたとしても、それだけで同じ人間であるとは限りません。 Mind-Upload では、この違いが曖昧になることを避けるために、<strong> パフォーマンス マッチング </strong> と <strong> アイデンティティ アサーション </strong> を異なるレベルとして扱います。
+</p>
+</div>
+
+<section class="section" id="why-hard">
+<h2 class="section-title">なぜ難しいのか</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>質問</th>
+<th>なぜ難しいのか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>もし同じ思い出を共有できるとしたら、それは私でしょうか?</td>
+<td>記憶の再現と経験の連続性は同じではない可能性があるからです。 </td>
+</tr>
+<tr>
+<td>1枚のみの場合はご本人様</td>
+<td>を2つ作成した場合、同じロジックではどちらが本人であるかを判断することは困難です。 </td>
+</tr>
+<tr>
+<td>少しずつ交換した方が安全ですか？</td>
+<td>連続遷移は直感的には強そうですが、十分条件かどうかはまだわかりません。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="copy-vs-transfer">
+<h2 class="section-title">静的コピーと継続的移行の違い</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>考える</th>
+<th>注目すべき点</th>
+<th>残りの質問</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>静的コピー</strong></td>
+<td>ある時点の構造や情報をコピーすること。 </td>
+<td>複数枚持っているとどれが本人か分からなくなります。 </td>
+</tr>
+<tr>
+<td><strong>継続的移行</strong></td>
+<td>プロセスと対話を中断することなく引き継ぎます。 </td>
+<td>連続性がアイデンティティの十分条件であるかどうかはまだ証明されていません。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="what-can-test">
+<h2 class="section-title">エンジニアリングに戻り、何をテストしたいですか</h2>
+<p>
+この点を工学に戻しますと、単によく似ているかどうかだけを見るだけでは十分ではありません。事前に登録されたテストを通じて、記憶、価値観、学習履歴、状況の変化への対応の連続性を調べる必要があります。言い換えれば、哲学的な議論をそのまま放置するのではなく、&lt;/strong&gt; のアイデンティティの主張を保留する原因となる失敗がどのようなものであるかを定義する方向に進みます。
+</p>
+<p>最初にテスト設計の概要を見たい場合は、<a href="identity-and-continuity-tests.html">Wiki: ID 評価と継続性テスト</a> が補足コースです。 </p>
+<div class="cta-box">
+<h4>次</h4>
+<p>この問題を理論的なフレームとしてどのように扱うかをここで確認できます。 </p>
+<a href="../perspective.html#design-principles">理論フレームへ→</a>
+</div>
+</section>
+
+</article>
+
+<aside class="sidebar-column">
+<div class="sidebar-box">
+<h4>関連Wiki</h4>
+<ul>
+<li><a href="mind-upload-basics.html">WBE 基本→</a></li>
+<li><a href="claims-and-evidence.html">主張と証拠の読み方→</a></li>
+<li><a href="roadmap-reading-guide.html">ロードマップの見方→</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>公開ページ</h4>
+<ul>
+<li><a href="../perspective.html#design-principles">理論フレーム→</a></li>
+<li><a href="../wbe_101.html">WBE 101 →</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+</ul>
+</div>
+</aside>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer h-card">
+        <data class="u-url" value="/"></data>
+        <div class="wrapper">
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="/wiki/">Wiki</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="/issue.html">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var body = document.body;
+            var wikiMode = body ? body.getAttribute("data-wiki-mode") : "local";
+            var githubWikiUrl = body ? body.getAttribute("data-github-wiki-url") : "";
+            var pageUrl = body ? body.getAttribute("data-page-url") : "";
+            var isWikiPage = pageUrl.indexOf("/wiki/") === 0;
+
+            function splitHref(raw) {
+                var match = raw.match(/^([^?#]*)([?#].*)?$/);
+                if (!match) {
+                    return { path: raw, suffix: "" };
+                }
+                return { path: match[1], suffix: match[2] || "" };
+            }
+
+            function githubWikiTargetFromPath(path, suffix) {
+                var slug = path.replace(/^\/+/, "")
+                    .replace(/^wiki\//, "")
+                    .replace(/^\/wiki\//, "")
+                    .replace(/\.html$/, "")
+                    .replace(/\/$/, "");
+
+                if (!slug || slug === "index") {
+                    return githubWikiUrl + suffix;
+                }
+
+                return githubWikiUrl + "/" + slug + suffix;
+            }
+
+            function rewriteWikiLinksForMode() {
+                if (wikiMode !== "github" || !githubWikiUrl) {
+                    return;
+                }
+
+                var anchors = document.querySelectorAll("a[href]");
+                anchors.forEach(function (anchor) {
+                    var rawHref = anchor.getAttribute("href");
+                    if (!rawHref || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.charAt(0) === "#") {
+                        return;
+                    }
+
+                    if (rawHref.indexOf(githubWikiUrl) === 0) {
+                        return;
+                    }
+
+                    var resolved;
+                    try {
+                        resolved = new URL(rawHref, window.location.href);
+                    } catch (error) {
+                        return;
+                    }
+
+                    var targetHref = null;
+                    var split = splitHref(rawHref);
+
+                    if (resolved.origin === window.location.origin) {
+                        var resolvedPath = resolved.pathname;
+                        if (resolvedPath === "/wiki" || resolvedPath === "/wiki/" || resolvedPath === "/wiki/index.html") {
+                            targetHref = githubWikiUrl + resolved.search + resolved.hash;
+                        } else if (resolvedPath.indexOf("/wiki/") === 0) {
+                            targetHref = githubWikiTargetFromPath(resolvedPath, resolved.search + resolved.hash);
+                        }
+                    } else if (isWikiPage && /^(?:\.\/)?[^/]+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path, split.suffix);
+                    } else if (/^(?:\.\.\/)?wiki\/.+\.html$/.test(split.path) || /^\/wiki\/.+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path.replace(/^\.\.\//, ""), split.suffix);
+                    }
+
+                    if (!targetHref) {
+                        return;
+                    }
+
+                    anchor.setAttribute("href", targetHref);
+                    anchor.setAttribute("target", "_blank");
+                    anchor.setAttribute("rel", "noopener noreferrer");
+                });
+            }
+
+            rewriteWikiLinksForMode();
+
+            var terms = [
+                ["再現性", "同じ手順をもう一度実行し、おおむね同じ結果を得られること。"],
+                ["反証可能性", "間違いだと示せる形で主張を書くこと。"],
+                ["操作的定義", "実際にどう測るかによって用語を定義すること。"],
+                ["標準化", "共有されたデータ形式や手順を使うこと。"],
+                ["ベンチマーク", "同じ条件で方法を比べるための共有テスト。"],
+                ["メタデータ", "いつ、どのように測られたかなど、データを説明するデータ。"],
+                ["デコード", "脳に関係する信号から状態や内容を推定すること。"],
+                ["エミュレーション", "脳機能を別の計算基盤上で再現すること。"],
+                ["因果", "単に一緒に変わることではなく、何が何を引き起こすかに関すること。"],
+                ["相関", "二つのものが一緒に変わること。それだけでは因果を証明しません。"],
+                ["反事実", "条件を変えたら何が起こるかを確認すること。"],
+                ["閉ループ", "出力を次の入力へ戻す制御構成。"],
+                ["QC", "品質管理。データが使えるか、信頼できるかを確認すること。"],
+                ["BIDS", "神経生理データを整理し共有するための標準。"],
+                ["主張ラダー", "弱い主張と強い主張を段階に分ける方法。"],
+                ["人格同一性", "それが同じ人物と言えるかどうかという問い。"],
+                ["共有基盤", "データ、コード、評価ルールを共有するための共通土台。"],
+                ["追試", "別の人が作業を再実行し、結果が保たれるか確認すること。"],
+                ["ガバナンス", "何かを安全に運用するためのルールと監督。"]
+            ];
+
+            var contentRoot = document.querySelector(".content-column") || document.querySelector(".papers-page > main") || document.querySelector("main");
+            var guide = document.getElementById("easy-guide");
+            var list = document.getElementById("easy-term-list");
+            var status = document.getElementById("easy-guide-status");
+            var sectionMap = document.getElementById("section-map");
+            var sectionMapList = document.getElementById("section-map-list");
+            var sectionMapStatus = document.getElementById("section-map-status");
+
+            if (!contentRoot) {
+                return;
+            }
+
+            if (sectionMap && sectionMapList && sectionMapStatus) {
+                var headings = contentRoot.querySelectorAll("h2.section-title, h2.category-title, h3.year-title, h3.year-heading");
+                var sectionCount = 0;
+                var seenIds = {};
+
+                for (var k = 0; k < headings.length; k++) {
+                    var heading = headings[k];
+                    var targetId = heading.id;
+                    var parentSection = heading.closest("section");
+
+                    if (!targetId && parentSection && parentSection.id) {
+                        targetId = parentSection.id;
+                    }
+
+                    if (!targetId) {
+                        targetId = "section-map-" + (k + 1);
+                        heading.id = targetId;
+                    }
+
+                    if (seenIds[targetId]) {
+                        continue;
+                    }
+
+                    seenIds[targetId] = true;
+                    sectionCount += 1;
+
+                    var mapItem = document.createElement("li");
+                    var mapLink = document.createElement("a");
+                    mapLink.href = "#" + targetId;
+
+                    var index = document.createElement("span");
+                    index.className = "section-map-index";
+                    index.textContent = String(sectionCount).padStart(2, "0");
+
+                    var label = document.createElement("span");
+                    label.className = "section-map-label";
+                    label.textContent = heading.textContent.trim();
+
+                    mapLink.appendChild(index);
+                    mapLink.appendChild(label);
+                    mapItem.appendChild(mapLink);
+                    sectionMapList.appendChild(mapItem);
+                }
+
+                if (sectionCount >= 3) {
+                    sectionMapStatus.textContent = sectionCount + " 個のセクションがあります。任意のセクションへ移動できますが、全体構造を崩さず読むには上から順に読むのが安全です。";
+                    sectionMap.hidden = false;
+                }
+            }
+
+            if (!guide || !list || !status) {
+                return;
+            }
+
+            var text = (contentRoot.innerText || "").toLowerCase();
+            var found = [];
+
+            for (var i = 0; i < terms.length; i++) {
+                if (text.indexOf(terms[i][0].toLowerCase()) !== -1) {
+                    found.push(terms[i]);
+                }
+            }
+
+            if (found.length === 0) {
+                return;
+            }
+
+            var limit = Math.min(found.length, 10);
+            status.textContent = "最初の " + limit + " 件の用語を平易な言葉で表示しています。";
+
+            for (var j = 0; j < limit; j++) {
+                var item = document.createElement("li");
+                var term = document.createElement("strong");
+                term.textContent = found[j][0] + ":";
+                item.appendChild(term);
+                item.appendChild(document.createTextNode(" " + found[j][1]));
+                list.appendChild(item);
+            }
+
+            guide.hidden = false;
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Wiki: 検証後に従うべき 4 つのパス | マインドアップロード</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Wiki: 検証後に従うべき 4 つのパス" />
+<meta name="author" content="マインドアップロード研究プロジェクト" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="「検証」を読んだ後、L0 実装、L2 検証、L3 閉ループ、L4 ID のどこに進むべきかを整理します。" />
+<meta property="og:description" content="「検証」を読んだ後、L0 実装、L2 検証、L3 閉ループ、L4 ID のどこに進むべきかを整理します。" />
+<link rel="canonical" href="https://mind-upload.com/wiki/verification-next-routes.html" />
+<meta property="og:url" content="https://mind-upload.com/wiki/verification-next-routes.html" />
+<meta property="og:site_name" content="マインドアップロード" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wiki: 検証後に従うべき 4 つのパス" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"マインドアップロード研究プロジェクト"},"description":"「検証」を読んだ後、L0 実装、L2 検証、L3 閉ループ、L4 ID のどこに進むべきかを整理します。","headline":"Wiki: 検証後に従うべき 4 つのパス","url":"https://mind-upload.com/wiki/verification-next-routes.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta property="og:image" content="https://mind-upload.com/ogp.jpg">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F9E0;</text></svg>">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="https://mind-upload.com/feed.xml" title="マインドアップロード" />
+</head>
+
+
+
+
+
+<body class="wiki-light" data-article-type="ウィキ" data-page-url="/wiki/verification-next-routes.html" data-wiki-mode="local" data-github-wiki-url="">
+    <a class="skip-link" href="#site-content">本文へ移動</a>
+
+    <!-- グローバルヘッダー -->
+    <header class="site-header journal-header" role="banner">
+        <div class="wrapper journal-header-inner">
+            <a class="site-title" rel="author" href="/">マインドアップロード・コモンズ</a>
+            <nav class="site-nav" aria-label="主要ナビゲーション">
+                <div class="trigger">
+                    <a class="page-link" href="/">はじめに</a>
+                    <a class="page-link" href="/verification.html">検証</a>
+                    <a class="page-link" href="/tech_roadmap.html">ロードマップ</a>
+                    <a class="page-link" href="/content_hub.html">公開コンテンツ</a>
+                    <a class="page-link" href="/wiki/">Wiki</a>
+                    <a class="page-link" href="/mind_uploading_papers.html">論文アーカイブ</a>
+                    <a class="page-link" href="/issue.html">参加</a>
+                </div>
+        </nav>
+        </div>
+    </header>
+
+    
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+        <p class="article-type">ウィキ</p>
+        <h1 class="article-title">Wiki: 検証後に従うべき 4 つのパス</h1>
+        
+        <p class="article-subtitle">検証プラットフォームを読んだ後、迷わず次のページに進むためのガイド</p>
+        
+        
+        <p class="author-info">
+            <span class="author-name">マインドアップロード研究プロジェクト</span>
+        </p>
+        
+        <div class="article-meta">
+            <span>公開ページ</span>
+            
+            <span>更新日: 2026-03-14</span>
+            
+            
+            <span>読書ルート</span>
+            
+        </div>
+    </header>
+    
+
+    
+    <section class="page-guide" aria-label="このページの使い方">
+        <div class="page-guide-inner">
+            <div class="page-guide-main">
+                <p class="page-guide-kicker">このページの使い方</p>
+                <h2>迷わないために最初に読んでください</h2>
+                
+                <p class="page-guide-lead">このページは、検証を読んだ後に知りたいことに応じて、次にどのページを公開するかを決定するためのガイドです。次のページは、L0 実装、L2 介入検証、L3 閉ループ、または L4 ID のいずれに戻るかによって変わります。</p>
+                
+                
+                
+                
+                <ul class="page-guide-points">
+                    
+                    <li>Verificationを読んだ後、L0、L2、L3、L4の4つのルートに整理します。</li>
+                    
+                    <li>要求レベルが増加するにつれて、次に必要なページが変更されることを指定します。</li>
+                    
+                    <li>「検証プラットフォームを読んだけど、次は何を読めばいいのか分からない」という状況を軽減します。</li>
+                    
+                </ul>
+                
+                
+                
+                <div class="page-guide-links">
+                    <span>次に読むと役立つページ</span>
+                    <div class="page-guide-link-list">
+                        
+                        <a href="/verification.html">検証プラットフォーム</a>
+                        
+                        <a href="/datasets.html#l0-practice">実践的な</a>
+                        
+                        <a href="/tech_roadmap.html">技術ロードマップ</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <dl class="page-guide-facts">
+                
+                <div>
+                    <dt>対象読者</dt>
+                    <dd>検証を読んで次にどこに行けばいいか迷っている人</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>読了時間</dt>
+                    <dd>6～10分</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>正確性に関する注記</dt>
+                    <dd>ここが検証への次の入り口です。各路線の実情は必ずオリジナルページの本文でご確認ください。</dd>
+                </div>
+                
+            </dl>
+        </div>
+    </section>
+    
+
+    
+    <section class="topic-status" aria-label="ここでわかっていることと追加学習先">
+        <div class="topic-status-inner">
+            
+            <div class="topic-card topic-card-known">
+                <p class="topic-card-kicker">現段階で比較的明確なこと</p>
+                <h2>現在わかっていること</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>検証は全体の設計図なので、このままでは次のページが大きすぎます。</li>
+                    
+                    <li>戻るページは、L0 実装、L2 検証、L3 閉ループ、L4 ID によって異なります。</li>
+                    
+                    <li>検証後にルートを修正すると、読み取りがより安定します。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-unknown">
+                <p class="topic-card-kicker">ここから先でまだ未解決のこと</p>
+                <h2>まだわかっていないこと</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>最終的にどのルートが最も重要になるかは、プロジェクトの進行に応じて変わる可能性があります。</li>
+                    
+                    <li>L4とL5の最終条件はまだ決まっていない。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-wiki">
+                <p class="topic-card-kicker">基礎を学ぶ</p>
+                <h2>Wiki で基礎を確認する</h2>
+                <ul class="topic-link-list">
+                    
+                    <li>
+                        <a href="/wiki/claim-level-reading-routes.html" data-wiki-link="/wiki/claim-level-reading-routes.html">Wiki: L0～L5の各読み方</a>
+                        
+                        <span>これは、レベルの全体的なパスに戻りたい人向けです。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/practical-pages-reading-guide.html" data-wiki-link="/wiki/practical-pages-reading-guide.html">Wiki: 実用的なページを読むためのガイド</a>
+                        
+                        <span>これは、検証、データセット、ハンズオンの役割の違いを最初に確認したい人向けです。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/eeg-to-l0-route.html" data-wiki-link="/wiki/eeg-to-l0-route.html">Wiki: EEG から L0 への直線パス</a>
+                        
+                        <span>L0側の特定ルートだけをすぐに見たい人向けです。</span>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+
+    <section id="easy-guide" class="easy-guide" hidden aria-label="平易な用語説明">
+        <div class="easy-guide-inner">
+            <h2>このページの平易な用語説明</h2>
+            <p id="easy-guide-status"></p>
+            <ul id="easy-term-list"></ul>
+            <p class="easy-guide-more">さらに見る: <a href="/glossary.html">用語集</a></p>
+        </div>
+    </section>
+
+    <section id="section-map" class="section-map" hidden aria-label="ページ構成">
+        <div class="section-map-inner">
+            <div class="section-map-header">
+                <p class="section-map-kicker">ページ構成</p>
+                <h2>全体を読む前に構造を確認する</h2>
+                <p id="section-map-status"></p>
+            </div>
+            <ol id="section-map-list" class="section-map-list"></ol>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="site-content" class="site-content-anchor" tabindex="-1"></div>
+    <main class="main-container">
+<article class="content-column">
+
+<div class="abstract-box">
+<h2>次のページを決める</h2>
+<p>
+設計図として検証は重要ですが、ただ読むだけでは次の作業に向けて幅が広すぎます。ここでは<strong>・知りたいことは次</strong>をベースに4つのパスに分けて次のページを固定していきます。
+</p>
+</div>
+
+<section class="section" id="four-routes">
+<h2 class="section-title">検証後にたどる4つの道</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>知りたい</th>
+<th>次のページ</th>
+<th>そこで何を決めるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>I L0</strong></td> の実装を作成したい
+<td><a href="../datasets.html#l0-practice">ハンズオン</a></td>
+<td>入力、QC、前処理、ベースライン、および失敗ケースを接続する手順を修正します。 </td>
+</tr>
+<tr>
+<td><strong>L2介入/反事実検証について知りたい</strong></td>
+<td><a href="../tech_roadmap.html">ロードマップ</a></td>
+<td>依存関係を利用してどの問題が因果関係検証や生成予測につながるのかを確認します。 </td>
+</tr>
+<tr>
+<td><strong>I L3</strong></td>の閉ループ条件を知りたい
+<td><a href="../eeg_101.html">EEG 101</a> または <a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ/遅延/ジッター/安全停止</a></td>
+<td>オフラインの精度とリアルタイムの安定性の違いを分離します。 </td>
+</tr>
+<tr>
+<td><strong>I L4</strong></td>の正体を知りたい
+<td><a href="../wbe_101.html">WBE 101</a> または <a href="identity-and-continuity-tests.html">ID 評価および連続性テスト</a></td>
+<td>記憶、価値観、学習、分岐の観点から、連続しているものとみなしたいものにチェックを入れます。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="why">
+<h2 class="section-title">なぜこの部門なのか</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>way</th>
+<th>確認後にそのページに移動する理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L0実装</strong></td>
+<td>検証で決めた合格条件をハンズオンで実際の成果物に落とし込む必要があるためです。 </td>
+</tr>
+<tr>
+<td><strong>L2 検証</strong></td>
+<td>ロードマップを見てどの点に最初に取り組む必要があるかを確認しないと、介入や反事実に飛びつくのは簡単です。 </td>
+</tr>
+<tr>
+<td><strong>L3 閉ループ</strong></td>
+<td>閉ループの場合、検証設計を評価するだけでは十分ではありません。測定とリアルタイムの制約も考慮する必要があります。 </td>
+</tr>
+<tr>
+<td><strong>L4 パーソナリティ</strong></td>
+<td>これは、スコアだけでは自分のアイデンティティを評価できないためです。まず、事前登録してテストしたいものを整理する必要があります。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="helper-wiki">
+<h2 class="section-title">片道支援wiki</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>way</th>
+<th>一緒に見る価値のあるWiki</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L0実装</strong></td>
+<td><a href="eeg-to-l0-route.html">A EEG から L0</a> / <a href="l0-minimum-artifact-pack.html">L0</a></td> の最小アーティファクト パック
+</tr>
+<tr>
+<td><strong>L2 検証</strong></td>
+<td><a href="counterfactual-and-perturbation-verification.html">反事実、介入、摂動の検証</a> / <a href="observation-to-estimation.html">観察から推定まで</a></td>
+</tr>
+<tr>
+<td><strong>L3 閉ループ</strong></td>
+<td><a href="closed-loop-latency-jitter-and-safety-stops.html">閉ループ/遅延/ジッター/安全停止</a></td>
+</tr>
+<tr>
+<td><strong>L4 パーソナリティ</strong></td>
+<td><a href="identity-and-continuity-tests.html">人物像の評価と継続性テスト</a> / <a href="personhood-and-copy-problem.html">人物像とコピーの問題</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="common-mistakes">
+<h2 class="section-title">よくある迷い方</h2>
+<div class="key-points">
+<h4>間違い</h4>
+<ul>
+<li><strong>「検証」を読むだけで、次の行動が決まったような気分になります:</strong> 実は、ルートを 1 つに絞る必要があります。 </li>
+<li><strong>L0 と L2 の追跡を同時に開始:</strong> 最初に再現可能な分析を確立する方が、やり直しが少なくて済むため簡単です。 </li>
+<li><strong>L3 を精度の観点のみで考えてください:</strong> 閉ループには追加の遅延と安全停止が必要です。 </li>
+<li><strong>L4をスコアの延長として考える：</strong>個性的に連続すると思われるものをあらかじめ別途設計する必要がある。 </li>
+</ul>
+</div>
+</section>
+
+<section class="section" id="next-step">
+<h2 class="section-title">次に戻る場所</h2>
+<p>
+検証本文に戻る場合は<a href="../verification.html">Verificationbase</a>をご利用ください。レベル全体のルートに戻るには、<a href="claim-level-reading-routes.html">でL0～L5</a>の各L0を読み取る方法を使用してください。実践ページ間の役割の違いに戻るには、<a href="practical-pages-reading-guide.html">実践ページの読み方ガイド</a>を使用してください。
+</p>
+</section>
+
+</article>
+
+<aside class="sidebar-column">
+<div class="sidebar-box">
+<h4>関連Wiki</h4>
+<ul>
+<li><a href="claim-level-reading-routes.html">各L0～L5の読み方→</a></li>
+<li><a href="practical-pages-reading-guide.html">実践ページの読み方 →</a></li>
+<li><a href="eeg-to-l0-route.html">EEGからL0までの一本道→</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>公開ページ</h4>
+<ul>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン→</a></li>
+<li><a href="../tech_roadmap.html">技術ロードマップ→</a></li>
+</ul>
+</div>
+</aside>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer h-card">
+        <data class="u-url" value="/"></data>
+        <div class="wrapper">
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="/wiki/">Wiki</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="/issue.html">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var body = document.body;
+            var wikiMode = body ? body.getAttribute("data-wiki-mode") : "local";
+            var githubWikiUrl = body ? body.getAttribute("data-github-wiki-url") : "";
+            var pageUrl = body ? body.getAttribute("data-page-url") : "";
+            var isWikiPage = pageUrl.indexOf("/wiki/") === 0;
+
+            function splitHref(raw) {
+                var match = raw.match(/^([^?#]*)([?#].*)?$/);
+                if (!match) {
+                    return { path: raw, suffix: "" };
+                }
+                return { path: match[1], suffix: match[2] || "" };
+            }
+
+            function githubWikiTargetFromPath(path, suffix) {
+                var slug = path.replace(/^\/+/, "")
+                    .replace(/^wiki\//, "")
+                    .replace(/^\/wiki\//, "")
+                    .replace(/\.html$/, "")
+                    .replace(/\/$/, "");
+
+                if (!slug || slug === "index") {
+                    return githubWikiUrl + suffix;
+                }
+
+                return githubWikiUrl + "/" + slug + suffix;
+            }
+
+            function rewriteWikiLinksForMode() {
+                if (wikiMode !== "github" || !githubWikiUrl) {
+                    return;
+                }
+
+                var anchors = document.querySelectorAll("a[href]");
+                anchors.forEach(function (anchor) {
+                    var rawHref = anchor.getAttribute("href");
+                    if (!rawHref || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.charAt(0) === "#") {
+                        return;
+                    }
+
+                    if (rawHref.indexOf(githubWikiUrl) === 0) {
+                        return;
+                    }
+
+                    var resolved;
+                    try {
+                        resolved = new URL(rawHref, window.location.href);
+                    } catch (error) {
+                        return;
+                    }
+
+                    var targetHref = null;
+                    var split = splitHref(rawHref);
+
+                    if (resolved.origin === window.location.origin) {
+                        var resolvedPath = resolved.pathname;
+                        if (resolvedPath === "/wiki" || resolvedPath === "/wiki/" || resolvedPath === "/wiki/index.html") {
+                            targetHref = githubWikiUrl + resolved.search + resolved.hash;
+                        } else if (resolvedPath.indexOf("/wiki/") === 0) {
+                            targetHref = githubWikiTargetFromPath(resolvedPath, resolved.search + resolved.hash);
+                        }
+                    } else if (isWikiPage && /^(?:\.\/)?[^/]+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path, split.suffix);
+                    } else if (/^(?:\.\.\/)?wiki\/.+\.html$/.test(split.path) || /^\/wiki\/.+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path.replace(/^\.\.\//, ""), split.suffix);
+                    }
+
+                    if (!targetHref) {
+                        return;
+                    }
+
+                    anchor.setAttribute("href", targetHref);
+                    anchor.setAttribute("target", "_blank");
+                    anchor.setAttribute("rel", "noopener noreferrer");
+                });
+            }
+
+            rewriteWikiLinksForMode();
+
+            var terms = [
+                ["再現性", "同じ手順をもう一度実行し、おおむね同じ結果を得られること。"],
+                ["反証可能性", "間違いだと示せる形で主張を書くこと。"],
+                ["操作的定義", "実際にどう測るかによって用語を定義すること。"],
+                ["標準化", "共有されたデータ形式や手順を使うこと。"],
+                ["ベンチマーク", "同じ条件で方法を比べるための共有テスト。"],
+                ["メタデータ", "いつ、どのように測られたかなど、データを説明するデータ。"],
+                ["デコード", "脳に関係する信号から状態や内容を推定すること。"],
+                ["エミュレーション", "脳機能を別の計算基盤上で再現すること。"],
+                ["因果", "単に一緒に変わることではなく、何が何を引き起こすかに関すること。"],
+                ["相関", "二つのものが一緒に変わること。それだけでは因果を証明しません。"],
+                ["反事実", "条件を変えたら何が起こるかを確認すること。"],
+                ["閉ループ", "出力を次の入力へ戻す制御構成。"],
+                ["QC", "品質管理。データが使えるか、信頼できるかを確認すること。"],
+                ["BIDS", "神経生理データを整理し共有するための標準。"],
+                ["主張ラダー", "弱い主張と強い主張を段階に分ける方法。"],
+                ["人格同一性", "それが同じ人物と言えるかどうかという問い。"],
+                ["共有基盤", "データ、コード、評価ルールを共有するための共通土台。"],
+                ["追試", "別の人が作業を再実行し、結果が保たれるか確認すること。"],
+                ["ガバナンス", "何かを安全に運用するためのルールと監督。"]
+            ];
+
+            var contentRoot = document.querySelector(".content-column") || document.querySelector(".papers-page > main") || document.querySelector("main");
+            var guide = document.getElementById("easy-guide");
+            var list = document.getElementById("easy-term-list");
+            var status = document.getElementById("easy-guide-status");
+            var sectionMap = document.getElementById("section-map");
+            var sectionMapList = document.getElementById("section-map-list");
+            var sectionMapStatus = document.getElementById("section-map-status");
+
+            if (!contentRoot) {
+                return;
+            }
+
+            if (sectionMap && sectionMapList && sectionMapStatus) {
+                var headings = contentRoot.querySelectorAll("h2.section-title, h2.category-title, h3.year-title, h3.year-heading");
+                var sectionCount = 0;
+                var seenIds = {};
+
+                for (var k = 0; k < headings.length; k++) {
+                    var heading = headings[k];
+                    var targetId = heading.id;
+                    var parentSection = heading.closest("section");
+
+                    if (!targetId && parentSection && parentSection.id) {
+                        targetId = parentSection.id;
+                    }
+
+                    if (!targetId) {
+                        targetId = "section-map-" + (k + 1);
+                        heading.id = targetId;
+                    }
+
+                    if (seenIds[targetId]) {
+                        continue;
+                    }
+
+                    seenIds[targetId] = true;
+                    sectionCount += 1;
+
+                    var mapItem = document.createElement("li");
+                    var mapLink = document.createElement("a");
+                    mapLink.href = "#" + targetId;
+
+                    var index = document.createElement("span");
+                    index.className = "section-map-index";
+                    index.textContent = String(sectionCount).padStart(2, "0");
+
+                    var label = document.createElement("span");
+                    label.className = "section-map-label";
+                    label.textContent = heading.textContent.trim();
+
+                    mapLink.appendChild(index);
+                    mapLink.appendChild(label);
+                    mapItem.appendChild(mapLink);
+                    sectionMapList.appendChild(mapItem);
+                }
+
+                if (sectionCount >= 3) {
+                    sectionMapStatus.textContent = sectionCount + " 個のセクションがあります。任意のセクションへ移動できますが、全体構造を崩さず読むには上から順に読むのが安全です。";
+                    sectionMap.hidden = false;
+                }
+            }
+
+            if (!guide || !list || !status) {
+                return;
+            }
+
+            var text = (contentRoot.innerText || "").toLowerCase();
+            var found = [];
+
+            for (var i = 0; i < terms.length; i++) {
+                if (text.indexOf(terms[i][0].toLowerCase()) !== -1) {
+                    found.push(terms[i]);
+                }
+            }
+
+            if (found.length === 0) {
+                return;
+            }
+
+            var limit = Math.min(found.length, 10);
+            status.textContent = "最初の " + limit + " 件の用語を平易な言葉で表示しています。";
+
+            for (var j = 0; j < limit; j++) {
+                var item = document.createElement("li");
+                var term = document.createElement("strong");
+                term.textContent = found[j][0] + ":";
+                item.appendChild(term);
+                item.appendChild(document.createTextNode(" " + found[j][1]));
+                list.appendChild(item);
+            }
+
+            guide.hidden = false;
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Wiki: ロードマップ後にたどるべき 5 つの道 | マインドアップロード</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Wiki: ロードマップ後にたどるべき 5 つの道" />
+<meta name="author" content="マインドアップロード研究プロジェクト" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="技術ロードマップを読んだ上で、次に計測、再構成、実装、検証、社会実装のどこを深掘りすればよいのかを整理するためのガイドです。" />
+<meta property="og:description" content="技術ロードマップを読んだ上で、次に計測、再構成、実装、検証、社会実装のどこを深掘りすればよいのかを整理するためのガイドです。" />
+<link rel="canonical" href="https://mind-upload.com/wiki/roadmap-next-routes.html" />
+<meta property="og:url" content="https://mind-upload.com/wiki/roadmap-next-routes.html" />
+<meta property="og:site_name" content="マインドアップロード" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wiki: ロードマップ後にたどるべき 5 つの道" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"マインドアップロード研究プロジェクト"},"description":"技術ロードマップを読んだ上で、次に計測、再構成、実装、検証、社会実装のどこを深掘りすればよいのかを整理するためのガイドです。","headline":"Wiki: ロードマップ後にたどるべき 5 つの道","url":"https://mind-upload.com/wiki/roadmap-next-routes.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta property="og:image" content="https://mind-upload.com/ogp.jpg">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F9E0;</text></svg>">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="https://mind-upload.com/feed.xml" title="マインドアップロード" />
+</head>
+
+
+
+
+
+<body class="wiki-light" data-article-type="ウィキ" data-page-url="/wiki/roadmap-next-routes.html" data-wiki-mode="local" data-github-wiki-url="">
+    <a class="skip-link" href="#site-content">本文へ移動</a>
+
+    <!-- グローバルヘッダー -->
+    <header class="site-header journal-header" role="banner">
+        <div class="wrapper journal-header-inner">
+            <a class="site-title" rel="author" href="/">マインドアップロード・コモンズ</a>
+            <nav class="site-nav" aria-label="主要ナビゲーション">
+                <div class="trigger">
+                    <a class="page-link" href="/">はじめに</a>
+                    <a class="page-link" href="/verification.html">検証</a>
+                    <a class="page-link" href="/tech_roadmap.html">ロードマップ</a>
+                    <a class="page-link" href="/content_hub.html">公開コンテンツ</a>
+                    <a class="page-link" href="/wiki/">Wiki</a>
+                    <a class="page-link" href="/mind_uploading_papers.html">論文アーカイブ</a>
+                    <a class="page-link" href="/issue.html">参加</a>
+                </div>
+        </nav>
+        </div>
+    </header>
+
+    
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+        <p class="article-type">ウィキ</p>
+        <h1 class="article-title">Wiki: ロードマップ後にたどるべき 5 つの道</h1>
+        
+        <p class="article-subtitle">依存関係マップを見て次のページを決定するためのガイド</p>
+        
+        
+        <p class="author-info">
+            <span class="author-name">マインドアップロード研究プロジェクト</span>
+        </p>
+        
+        <div class="article-meta">
+            <span>公開ページ</span>
+            
+            <span>更新日: 2026-03-14</span>
+            
+            
+            <span>ロードマップのルート</span>
+            
+        </div>
+    </header>
+    
+
+    
+    <section class="page-guide" aria-label="このページの使い方">
+        <div class="page-guide-inner">
+            <div class="page-guide-main">
+                <p class="page-guide-kicker">このページの使い方</p>
+                <h2>迷わないために最初に読んでください</h2>
+                
+                <p class="page-guide-lead">このページは、技術ロードマップを読んだ後にどのような点を議論すべきかを整理するための補助的なガイドです。測定に戻るか、再構築と因果推定に行くか、実装に戻るか、検証条件に戻るか、システムと連携に戻るかによって、次のページが変わります。</p>
+                
+                
+                
+                
+                <ul class="page-guide-points">
+                    
+                    <li>ロードマップの後は、測定、再構築、実装、検証、社会実装の5つのルートに整理します。</li>
+                    
+                    <li>P/M/R/I/V/Dを見た後、次に何を読むべきかを目的別に固定します。</li>
+                    
+                    <li>マップが広すぎて見てから止まってしまう事態を軽減します。</li>
+                    
+                </ul>
+                
+                
+                
+                <div class="page-guide-links">
+                    <span>次に読むと役立つページ</span>
+                    <div class="page-guide-link-list">
+                        
+                        <a href="/tech_roadmap.html">テクノロジーロードマップ</a>
+                        
+                        <a href="/verification.html">検証ベース</a>
+                        
+                        <a href="/eeg_101.html">脳波検査の概要</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <dl class="page-guide-facts">
+                
+                <div>
+                    <dt>対象読者</dt>
+                    <dd>テクノロジーのロードマップを読んだ後、次にどこに行けばよいか混乱している人</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>読了時間</dt>
+                    <dd>6～10分</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>正確性に関する注記</dt>
+                    <dd>ここに示されているのは、ロードマップを読んだ後のエントリーポイントです。各ノードの公式ポイントや達成条件はロードマップ本文で必ずご確認ください。</dd>
+                </div>
+                
+            </dl>
+        </div>
+    </section>
+    
+
+    
+    <section class="topic-status" aria-label="ここでわかっていることと追加学習先">
+        <div class="topic-status-inner">
+            
+            <div class="topic-card topic-card-known">
+                <p class="topic-card-kicker">現段階で比較的明確なこと</p>
+                <h2>現在わかっていること</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>技術ロードマップは全体図なので、このままでは次のページが広すぎます。</li>
+                    
+                    <li>計測、再構成、実装、検証、社会実装で戻るページが異なります。</li>
+                    
+                    <li>ロードマップを読んだ後、ルートを1つに絞ると分かりやすく進みやすくなります。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-unknown">
+                <p class="topic-card-kicker">ここから先でまだ未解決のこと</p>
+                <h2>まだわかっていないこと</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>どのルートが最短で最も効果的かは、今後のデータやベンチの開発によって変わる可能性があります。</li>
+                    
+                    <li>VとDの最終条件にはまだ未解決の部分が多い。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-wiki">
+                <p class="topic-card-kicker">基礎を学ぶ</p>
+                <h2>Wiki で基礎を確認する</h2>
+                <ul class="topic-link-list">
+                    
+                    <li>
+                        <a href="/wiki/roadmap-reading-guide.html" data-wiki-link="/wiki/roadmap-reading-guide.html">Wiki: ロードマップの見方</a>
+                        
+                        <span>ロードマップそのものをもう一度読みたい人向け。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/claim-level-reading-routes.html" data-wiki-link="/wiki/claim-level-reading-routes.html">Wiki: L0～L5の各読み方</a>
+                        
+                        <span>主張レベルからリードを見たい人向け。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/verification-next-routes.html" data-wiki-link="/wiki/verification-next-routes.html">Wiki: 検証後の 4 つのパス</a>
+                        
+                        <span>Vシリーズに移行してさらにスキルを磨きたい人向けです。</span>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+
+    <section id="easy-guide" class="easy-guide" hidden aria-label="平易な用語説明">
+        <div class="easy-guide-inner">
+            <h2>このページの平易な用語説明</h2>
+            <p id="easy-guide-status"></p>
+            <ul id="easy-term-list"></ul>
+            <p class="easy-guide-more">さらに見る: <a href="/glossary.html">用語集</a></p>
+        </div>
+    </section>
+
+    <section id="section-map" class="section-map" hidden aria-label="ページ構成">
+        <div class="section-map-inner">
+            <div class="section-map-header">
+                <p class="section-map-kicker">ページ構成</p>
+                <h2>全体を読む前に構造を確認する</h2>
+                <p id="section-map-status"></p>
+            </div>
+            <ol id="section-map-list" class="section-map-list"></ol>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="site-content" class="site-content-anchor" tabindex="-1"></div>
+    <main class="main-container">
+<article class="content-column">
+
+<div class="abstract-box">
+<h2>地図を見てルートを決める</h2>
+<p>
+テクノロジーロードマップは「全体像」を把握するのには役立ちますが、次にどこに進むべきかという点では広すぎます。ここでは、今掘り下げたい内容に応じて5つのパスに分け、次のページを固定します。
+</p>
+</div>
+
+<section class="section" id="five-routes">
+<h2 class="section-title">ロードマップ後にたどるべき 5 つの道</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>次に知りたいこと</th>
+<th>次のページ</th>
+<th>わかること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>測定限界を下げたい</strong></td>
+<td><a href="../eeg_101.html">EEG 101</a> / <a href="../datasets.html">データセット</a></td>
+<td>Mシリーズの前提である、単体で測定できるものと測定できないものを確認できます。 </td>
+</tr>
+<tr>
+<td><strong>I再構成と因果推定をさらに掘り下げたい</strong></td>
+<td><a href="../verification.html">検証</a> / <a href="../perspective.html">視点</a></td>
+<td>Rシリーズが評価や因果関係検証につながるところがわかります。 </td>
+</tr>
+<tr>
+<td><strong>I 実装と L0 の作業に取り掛かりたい</strong></td>
+<td><a href="../datasets.html#l0-practice">ハンズオン</a> / <a href="../datasets.html">データセット</a></td>
+<td>I シリーズや入力データの選択に進む前に、最小ループを指定できます。 </td>
+</tr>
+<tr>
+<td><strong>検証条件を重視したい</strong></td>
+<td><a href="../verification.html">検証</a> / <a href="verification-next-routes.html">検証後の4つのパス</a></td>
+<td>V シリーズのアサーション レベルと、実践、クローズド ループ、アイデンティティの次のブランチを確認できます。 </td>
+</tr>
+<tr>
+<td><strong>システムと外部連携を確認したい</strong></td>
+<td><a href="../issue.html#external-collaboration">コラボレーション</a> / <a href="../issue.html">発行</a></td>
+<td>今できる準備とは別に、Dシリーズと外部依存関係を確認できます。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="why">
+<h2 class="section-title">なぜこの部門なのか</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>way</th>
+<th>ロードマップの後にそのページにアクセスする理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>測定</strong></td>
+<td>Mシリーズでは入力限界が決められているため、測定の基礎は別ページで確認しておくと読み間違いが少なくなります。 </td>
+</tr>
+<tr>
+<td><strong>再構成</strong></td>
+<td>Rシリーズは評価と因果関係の検証につながるため、検証と視点を補う必要があります。 </td>
+</tr>
+<tr>
+<td><strong>実装</strong></td>
+<td>Iシリーズは紙の上だけでなく、ハンズオンやデータセットなども含めて整理しないと先に進むことが難しいためです。 </td>
+</tr>
+<tr>
+<td><strong>検証</strong></td>
+<td>Vシリーズでは全体のデザインと主張レベルを合わせて見る必要があるため、検証側を深掘りする方が自然です。 </td>
+</tr>
+<tr>
+<td><strong>社会実装</strong></td>
+<td>Dシリーズはシステムや外部依存が大きいため、課題や連携を具体化すると実践しやすくなります。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="helper-wiki">
+<h2 class="section-title">途中でやめるときのサポートwiki</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>停車場所</th>
+<th>ウィキに戻る</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P/M/R/I/V/D自体の読み込みで停止</td>
+<td><a href="roadmap-reading-guide.html">ロードマップの読み方</a></td>
+</tr>
+<tr>
+<td>主張レベルから見てみたい</td>
+<td><a href="claim-level-reading-routes.html">各L0～L5の見方</a></td>
+</tr>
+<tr>
+<td>実用側に降順で停止</td>
+<td><a href="eeg-to-l0-route.html">EEG から L0 までの 1 つの直線パス</a> / <a href="verification-next-routes.html">検証後にたどる 4 つのパス</a></td>
+</tr>
+<tr>
+<td>理論面に戻る順に停止</td>
+<td><a href="wbe-to-theory-route.html">WBE を開始し、理論をさらに深く掘り下げるための 4 つのルート</a></td>
+</tr>
+<tr>
+<td>外部依存および参加パスにより停止</td>
+<td><a href="internal-prework-and-external-dependencies.html">社内生産と外部依存関係</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="common-mistakes">
+<h2 class="section-title">よくある迷い方</h2>
+<div class="key-points">
+<h4>間違い</h4>
+<ul>
+<li><strong>ロードマップを読むだけで、次の行動が決まったような気分になります：</strong>実際には、ルートを1つに絞る必要があります。 </li>
+<li><strong>SM と R をスキップして I と V に進む:</strong> これにより、入力と推定の制限内に留まりながら、より強力な議論に進むことが容易になります。 </li>
+<li><strong>D シリーズの要約はそのままにします:</strong> 準備を課題とコラボレーションに切り戻す方が現実的です。 </li>
+<li><strong>検証に行けばすべてわかります:</strong>Vシリーズ以降、L0、L3、L4に以下の分岐があります。 </li>
+</ul>
+</div>
+</section>
+
+<section class="section" id="next-step">
+<h2 class="section-title">次に戻る場所</h2>
+<p>
+ロードマップ本文に戻るには<a href="../tech_roadmap.html">テクノロジーロードマップ</a>、検証側に戻るには<a href="../verification.html">Verification Platform</a>、理論サイドブランチに戻るにはWBE入門からの<a href="wbe-to-theory-route.html">4ルート</a>を使用してください。
+</p>
+</section>
+
+</article>
+
+<aside class="sidebar-column">
+<div class="sidebar-box">
+<h4>関連Wiki</h4>
+<ul>
+<li><a href="roadmap-reading-guide.html">ロードマップの見方→</a></li>
+<li><a href="verification-next-routes.html">検証後の4つのパス→</a></li>
+<li><a href="eeg-to-l0-route.html">EEGからL0までの一本道→</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>公開ページ</h4>
+<ul>
+<li><a href="../tech_roadmap.html">テクノロジーロードマップ→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン→</a></li>
+</ul>
+</div>
+</aside>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer h-card">
+        <data class="u-url" value="/"></data>
+        <div class="wrapper">
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="/wiki/">Wiki</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="/issue.html">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var body = document.body;
+            var wikiMode = body ? body.getAttribute("data-wiki-mode") : "local";
+            var githubWikiUrl = body ? body.getAttribute("data-github-wiki-url") : "";
+            var pageUrl = body ? body.getAttribute("data-page-url") : "";
+            var isWikiPage = pageUrl.indexOf("/wiki/") === 0;
+
+            function splitHref(raw) {
+                var match = raw.match(/^([^?#]*)([?#].*)?$/);
+                if (!match) {
+                    return { path: raw, suffix: "" };
+                }
+                return { path: match[1], suffix: match[2] || "" };
+            }
+
+            function githubWikiTargetFromPath(path, suffix) {
+                var slug = path.replace(/^\/+/, "")
+                    .replace(/^wiki\//, "")
+                    .replace(/^\/wiki\//, "")
+                    .replace(/\.html$/, "")
+                    .replace(/\/$/, "");
+
+                if (!slug || slug === "index") {
+                    return githubWikiUrl + suffix;
+                }
+
+                return githubWikiUrl + "/" + slug + suffix;
+            }
+
+            function rewriteWikiLinksForMode() {
+                if (wikiMode !== "github" || !githubWikiUrl) {
+                    return;
+                }
+
+                var anchors = document.querySelectorAll("a[href]");
+                anchors.forEach(function (anchor) {
+                    var rawHref = anchor.getAttribute("href");
+                    if (!rawHref || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.charAt(0) === "#") {
+                        return;
+                    }
+
+                    if (rawHref.indexOf(githubWikiUrl) === 0) {
+                        return;
+                    }
+
+                    var resolved;
+                    try {
+                        resolved = new URL(rawHref, window.location.href);
+                    } catch (error) {
+                        return;
+                    }
+
+                    var targetHref = null;
+                    var split = splitHref(rawHref);
+
+                    if (resolved.origin === window.location.origin) {
+                        var resolvedPath = resolved.pathname;
+                        if (resolvedPath === "/wiki" || resolvedPath === "/wiki/" || resolvedPath === "/wiki/index.html") {
+                            targetHref = githubWikiUrl + resolved.search + resolved.hash;
+                        } else if (resolvedPath.indexOf("/wiki/") === 0) {
+                            targetHref = githubWikiTargetFromPath(resolvedPath, resolved.search + resolved.hash);
+                        }
+                    } else if (isWikiPage && /^(?:\.\/)?[^/]+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path, split.suffix);
+                    } else if (/^(?:\.\.\/)?wiki\/.+\.html$/.test(split.path) || /^\/wiki\/.+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path.replace(/^\.\.\//, ""), split.suffix);
+                    }
+
+                    if (!targetHref) {
+                        return;
+                    }
+
+                    anchor.setAttribute("href", targetHref);
+                    anchor.setAttribute("target", "_blank");
+                    anchor.setAttribute("rel", "noopener noreferrer");
+                });
+            }
+
+            rewriteWikiLinksForMode();
+
+            var terms = [
+                ["再現性", "同じ手順をもう一度実行し、おおむね同じ結果を得られること。"],
+                ["反証可能性", "間違いだと示せる形で主張を書くこと。"],
+                ["操作的定義", "実際にどう測るかによって用語を定義すること。"],
+                ["標準化", "共有されたデータ形式や手順を使うこと。"],
+                ["ベンチマーク", "同じ条件で方法を比べるための共有テスト。"],
+                ["メタデータ", "いつ、どのように測られたかなど、データを説明するデータ。"],
+                ["デコード", "脳に関係する信号から状態や内容を推定すること。"],
+                ["エミュレーション", "脳機能を別の計算基盤上で再現すること。"],
+                ["因果", "単に一緒に変わることではなく、何が何を引き起こすかに関すること。"],
+                ["相関", "二つのものが一緒に変わること。それだけでは因果を証明しません。"],
+                ["反事実", "条件を変えたら何が起こるかを確認すること。"],
+                ["閉ループ", "出力を次の入力へ戻す制御構成。"],
+                ["QC", "品質管理。データが使えるか、信頼できるかを確認すること。"],
+                ["BIDS", "神経生理データを整理し共有するための標準。"],
+                ["主張ラダー", "弱い主張と強い主張を段階に分ける方法。"],
+                ["人格同一性", "それが同じ人物と言えるかどうかという問い。"],
+                ["共有基盤", "データ、コード、評価ルールを共有するための共通土台。"],
+                ["追試", "別の人が作業を再実行し、結果が保たれるか確認すること。"],
+                ["ガバナンス", "何かを安全に運用するためのルールと監督。"]
+            ];
+
+            var contentRoot = document.querySelector(".content-column") || document.querySelector(".papers-page > main") || document.querySelector("main");
+            var guide = document.getElementById("easy-guide");
+            var list = document.getElementById("easy-term-list");
+            var status = document.getElementById("easy-guide-status");
+            var sectionMap = document.getElementById("section-map");
+            var sectionMapList = document.getElementById("section-map-list");
+            var sectionMapStatus = document.getElementById("section-map-status");
+
+            if (!contentRoot) {
+                return;
+            }
+
+            if (sectionMap && sectionMapList && sectionMapStatus) {
+                var headings = contentRoot.querySelectorAll("h2.section-title, h2.category-title, h3.year-title, h3.year-heading");
+                var sectionCount = 0;
+                var seenIds = {};
+
+                for (var k = 0; k < headings.length; k++) {
+                    var heading = headings[k];
+                    var targetId = heading.id;
+                    var parentSection = heading.closest("section");
+
+                    if (!targetId && parentSection && parentSection.id) {
+                        targetId = parentSection.id;
+                    }
+
+                    if (!targetId) {
+                        targetId = "section-map-" + (k + 1);
+                        heading.id = targetId;
+                    }
+
+                    if (seenIds[targetId]) {
+                        continue;
+                    }
+
+                    seenIds[targetId] = true;
+                    sectionCount += 1;
+
+                    var mapItem = document.createElement("li");
+                    var mapLink = document.createElement("a");
+                    mapLink.href = "#" + targetId;
+
+                    var index = document.createElement("span");
+                    index.className = "section-map-index";
+                    index.textContent = String(sectionCount).padStart(2, "0");
+
+                    var label = document.createElement("span");
+                    label.className = "section-map-label";
+                    label.textContent = heading.textContent.trim();
+
+                    mapLink.appendChild(index);
+                    mapLink.appendChild(label);
+                    mapItem.appendChild(mapLink);
+                    sectionMapList.appendChild(mapItem);
+                }
+
+                if (sectionCount >= 3) {
+                    sectionMapStatus.textContent = sectionCount + " 個のセクションがあります。任意のセクションへ移動できますが、全体構造を崩さず読むには上から順に読むのが安全です。";
+                    sectionMap.hidden = false;
+                }
+            }
+
+            if (!guide || !list || !status) {
+                return;
+            }
+
+            var text = (contentRoot.innerText || "").toLowerCase();
+            var found = [];
+
+            for (var i = 0; i < terms.length; i++) {
+                if (text.indexOf(terms[i][0].toLowerCase()) !== -1) {
+                    found.push(terms[i]);
+                }
+            }
+
+            if (found.length === 0) {
+                return;
+            }
+
+            var limit = Math.min(found.length, 10);
+            status.textContent = "最初の " + limit + " 件の用語を平易な言葉で表示しています。";
+
+            for (var j = 0; j < limit; j++) {
+                var item = document.createElement("li");
+                var term = document.createElement("strong");
+                term.textContent = found[j][0] + ":";
+                item.appendChild(term);
+                item.appendChild(document.createTextNode(" " + found[j][1]));
+                list.appendChild(item);
+            }
+
+            guide.hidden = false;
+        })();
+    </script>
+
+</body>
+
+</html>

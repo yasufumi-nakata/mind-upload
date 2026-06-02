@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか | マインドアップロード</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか" />
+<meta name="author" content="マインドアップロード研究プロジェクト" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="EEG の基礎、よくある誤解、分析ワークフロー、および WBE への現実的な貢献としての Mind-Upload 内での役割に関する入門書。" />
+<meta property="og:description" content="EEG の基礎、よくある誤解、分析ワークフロー、および WBE への現実的な貢献としての Mind-Upload 内での役割に関する入門書。" />
+<link rel="canonical" href="https://mind-upload.com/eeg_101.html" />
+<meta property="og:url" content="https://mind-upload.com/eeg_101.html" />
+<meta property="og:site_name" content="マインドアップロード" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"マインドアップロード研究プロジェクト"},"description":"EEG の基礎、よくある誤解、分析ワークフロー、および WBE への現実的な貢献としての Mind-Upload 内での役割に関する入門書。","headline":"はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか","url":"https://mind-upload.com/eeg_101.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta property="og:image" content="https://mind-upload.com/ogp.jpg">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F9E0;</text></svg>">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="https://mind-upload.com/feed.xml" title="マインドアップロード" />
+</head>
+
+
+
+
+
+<body class="wiki-light" data-article-type="プライマー" data-page-url="/eeg_101.html" data-wiki-mode="local" data-github-wiki-url="">
+    <a class="skip-link" href="#site-content">本文へ移動</a>
+
+    <!-- グローバルヘッダー -->
+    <header class="site-header journal-header" role="banner">
+        <div class="wrapper journal-header-inner">
+            <a class="site-title" rel="author" href="/">マインドアップロード・コモンズ</a>
+            <nav class="site-nav" aria-label="主要ナビゲーション">
+                <div class="trigger">
+                    <a class="page-link" href="/">はじめに</a>
+                    <a class="page-link" href="/verification.html">検証</a>
+                    <a class="page-link" href="/tech_roadmap.html">ロードマップ</a>
+                    <a class="page-link" href="/content_hub.html">公開コンテンツ</a>
+                    <a class="page-link" href="/wiki/">Wiki</a>
+                    <a class="page-link" href="/mind_uploading_papers.html">論文アーカイブ</a>
+                    <a class="page-link" href="/issue.html">参加</a>
+                </div>
+        </nav>
+        </div>
+    </header>
+
+    
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+        <p class="article-type">プライマー</p>
+        <h1 class="article-title">はじめに: EEG は何を測定するのか、何ができるのか、何ができないのか</h1>
+        
+        <p class="article-subtitle">脳波を魔法の読心術に変えることを拒否する現実的なガイド</p>
+        
+        
+        <p class="author-info">
+            <span class="author-name">マインドアップロード研究プロジェクト</span>
+        </p>
+        
+        <div class="article-meta">
+            <span>公開ページ</span>
+            
+            <span>更新日: 2026-04-04</span>
+            
+            
+            <span>ヒューマンファースト (録画フレーム契約のフロントドア同期で更新)</span>
+            
+        </div>
+    </header>
+    
+
+    
+    <section class="page-guide" aria-label="このページの使い方">
+        <div class="page-guide-inner">
+            <div class="page-guide-main">
+                <p class="page-guide-kicker">このページの使い方</p>
+                <h2>迷わないために最初に読んでください</h2>
+                
+                <p class="page-guide-lead">このページでは脳波測定が何を測定するのか、何が得意で何が苦手なのかを整理して紹介します。これは、EEG が Mind-Upload のどこに当てはまるかを説明しながら、EEG が単に心を読み取ることができるという誤解を避けるように設計されています。</p>
+                
+                
+                
+                
+                <ul class="page-guide-points">
+                    
+                    <li>EEG は時間的変化を追跡することに優れていますが、空間的原点を高精度に特定することには弱いのです。</li>
+                    
+                    <li>「信号に情報がある」、「内部状態が一意に固定されている」、「結果が長期使用に耐えられる」という質問には、異なる監査が必要です。</li>
+                    
+                    <li>スコアが同じ場合でも、眼球運動、筋電図、指示なしの動き、フィードバック、被験者/セッションのフィンガープリント、および部位/デバイス/参照/電極レイアウトなどの取得分配ショートカットからターゲット神経変数信号を分離する必要があります。</li>
+                    
+                </ul>
+                
+                <details class="page-guide-details">
+                    <summary>詳細な注意点を 26 件読む</summary>
+                    <ul class="page-guide-points page-guide-points-extra">
+                        
+                        <li>高密度EEGを使用しても、ソースイメージングの改善はソースクラスおよびベンチマーク条件に依存します。個々のMRI/FEMジオメトリ、可視限界、導電率校正、および名前付き検証クラスがすべて重要です。</li>
+                        
+                        <li>てんかんスタイルの設定における最近の深部ソースの向上は、条件付きの改善であり、頭皮脳波から任意の深部または基底ジェネレーターを読み取るための一般的なライセンスではありません。</li>
+                        
+                        <li>逆ソルバーを実行する前に、頭皮の可視性はソースの範囲、向き、皮質の折り畳み、キャンセル、および CSF を認識した頭部モデリングにすでに依存しています。</li>
+                        
+                        <li>ESI、シミュレーション/ファントム、頭蓋内刺激、同時 SEEG、および術後結果は、1 つの一般的な「検証済み」ボックスではなく、異なる検証クラスです。</li>
+                        
+                        <li>ESI の場合、クロスソルバー/クロスパラメーターの広がりまたは事後/アンサンブルの幅も示されていない限り、単一の最も見栄えの良い逆マップは安定した証拠として受け入れられません。</li>
+                        
+                        <li>電極数に関する議論では、チャネル数、カバレッジ、局所スーパーナイキスト効果、および WBE の十分性を 1 つの意味にまとめてはいけません。</li>
+                        
+                        <li>前処理と QC は表面上のクリーンアップではありません。これらは、どのクレームが許可されるかを決定する受諾条件です。</li>
+                        
+                        <li>`harmonized EEG` ブランチは 1 つのオブジェクトではありません。共通チャネルの削減、ターゲット モンタージュへの補間、および REST ベースの変換では、さまざまな測定オブジェクトが保持され、上限が要求されます。</li>
+                        
+                        <li>アーティファクトの除去とラインノイズの抑制は、それ自体ではソース漏洩を解決したり、指向性接続を原因にしたりするものではありません。</li>
+                        
+                        <li>基準システム、電極レイアウト、アンプ/フィルターチェーン、および記録場所は測定条件の一部であり、バックグラウンドノイズではありません。</li>
+                        
+                        <li>ここでは、セッション内スコアが高いことを、日をまたいだ堅牢性や展開可能性とはみなしません。</li>
+                        
+                        <li>日をまたぐまたは長期のクレームの場合、Temporal Validity Card は、固定デコーダ間隔、状態の注釈、および再調整の負担を個別に監査します。</li>
+                        
+                        <li>位相をターゲットとした EEG ループの場合、低遅延または平均位相誤差だけでは十分ではありません。振動の推定可能性、因果的ターゲティングベンチマークと事後的ターゲティングベンチマーク、下流効果、および位相安定性は、別個の証拠オブジェクトのままです。</li>
+                        
+                        <li>確率または予測セットを出力する結果の場合、キャリブレーションおよび棄権カードは、適合/キャリブレーション/テストの分離、評価ファミリー、およびカバレッジ リスクを修正します。</li>
+                        
+                        <li>大規模な事前トレーニングは有望ですが、事前トレーニング コーパス、オーバーラップ監査、チャネル マッピング、ベンチマーク オブジェクト、ベンチマーク バージョン、または適応レジームを隠す比較はここでは受け入れられません。</li>
+                        
+                        <li>基礎モデルのクレームについては、ベンチマーク オブジェクト、独立した予測ユニット、グループ化されたホールドアウト ユニット、および推論段階の予算は個別の開示フィールドのままです。</li>
+                        
+                        <li>任意の電極レイアウトを受け入れるモデルは、依然として共有された生理学的座標系ではありません。電極座標ルート、参照ファミリー、省略チャネルポリシーは引き続きクレームの一部です。</li>
+                        
+                        <li>大規模な事前トレーニング済み EEG モデルの場合、公式のベンチマーク操作と事後分析は証拠が含まれる条件として扱われるため、リーダーボードのランクは、分割構築、推論段階の予算、またはその後のオーガナイザーの修正とは別に読み取られません。</li>
+                        
+                        <li>メトリクスのセマンティクスは主張の一部です。発作タスクには感度 / 誤報 / 重複 / 遅延が必要で、睡眠ステージングには 1 つのヘッドラインの精度ではなく、マクロ F1 / コーエンのカッパ / ステージごとの一致が必要です。</li>
+                        
+                        <li>最近の睡眠ステージングのベンチマーク論文では、世界的な精度が向上した場合でも、領域外の一般化や人口統計学的/臨床的バイアスが残る可能性があることも示しています。</li>
+                        
+                        <li>マルチモーダルは 1 つのことではありません。同時取得、幾何学的融合、侵襲的キャリブレーション、アトラス事前分布は個別に読み取られます。</li>
+                        
+                        <li>同一セッションのマルチモーダル EEG 取得は自己検証されません。同期されたストリーム、共有されたクロスモーダルコンポーネント、および外部で校正された生物学的変数は、別個の成果です。</li>
+                        
+                        <li>ウェアラブル OPM-MEG は、持ち運び可能な自然主義的なフリーパスではありません。シールド クラス、フィールド ナリング、キャリブレーション / コアレジストレーション、解剖学的ルート、クロストーク、およびタスク レジームは依然として「動きに耐性がある」という意味を形作ります。</li>
+                        
+                        <li>EEG-fMRI または EEG-PET-MRI 因子を共有しても、1 つのターゲット状態を特定するのではなく、神経、自律神経、血管の寄与を混合することができます。</li>
+                        
+                        <li>マルチモーダルゲインは、依然として完全な症例のサブセット、欠落モダリティポリシー、およびセンター間転送に依存する可能性があるため、自動的にバンドルに強い証拠ではありません。</li>
+                        
+                        <li>Mind-Upload は、EEG をすべてを読み取るデバイスとしてではなく、巨視的な制約を提供するモダリティとして扱います。</li>
+                        
+                    </ul>
+                </details>
+                
+                
+                
+                <div class="page-guide-links">
+                    <span>次に読むと役立つページ</span>
+                    <div class="page-guide-link-list">
+                        
+                        <a href="/datasets.html">データとベンチマーク</a>
+                        
+                        <a href="/datasets.html#l0-practice">L0 練習</a>
+                        
+                        <a href="/faq.html">よくある質問</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <dl class="page-guide-facts">
+                
+                <div>
+                    <dt>対象読者</dt>
+                    <dd>まず EEG の長所と限界を理解し、過度の期待を避けたいと考えている読者</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>読了時間</dt>
+                    <dd>12～18分</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>正確性に関する注記</dt>
+                    <dd>EEG は重要な測定モダリティですが、それだけでは WBE が必要とするすべての情報を提供するわけではありません。 EEGでできることとできないことを分けて読んでください。</dd>
+                </div>
+                
+            </dl>
+        </div>
+    </section>
+    
+
+    
+    <section class="topic-status" aria-label="ここでわかっていることと追加学習先">
+        <div class="topic-status-inner">
+            
+            <div class="topic-card topic-card-known">
+                <p class="topic-card-kicker">現段階で比較的明確なこと</p>
+                <h2>現在わかっていること</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>EEG は時間的変化の観察に強く、状態推定とイベント検出の基礎を形成します。</li>
+                    
+                    <li>頭皮上で測定されるため、空間的位置特定と深部構造の推論には明確な制限があります。</li>
+                    
+                    <li>場の形成自体は選択的です。深さ、向き、皮質の折り畳み、線源の範囲、キャンセル、および組織の伝導率はすべて、使用可能な SNR で頭皮に到達する内容を変更します。</li>
+                    
+                    <li>厳密な検証条件の下で、特定の深部ソース付近の信号を再構築した研究もありますが、それは一般的な固有の回復と同じではありません。</li>
+                    
+                    <li>最近の深部ソースのゲインは条件付きです。深さ加重または伝導率校正されたパイプラインは一部のてんかん型の症例を改善しますが、ゲインは依然としてソースクラス、深さ、SNR、およびベンチマークファミリーに依存します。</li>
+                    
+                    <li>ESI の場合、シミュレーション / ファントム、刺激のグラウンド トゥルース、同時侵襲的記録、および術後結果は、さまざまなエラーの質問に答えるため、折りたたむべきではありません。</li>
+                    
+                    <li>ESI の場合、逆法、ソフトウェア パッケージ、パラメータ、および導電率の選択により、再構成されたソースが大きく変化する可能性があるため、ソルバーの不一致自体が結果の一部となります。</li>
+                    
+                    <li>基準の選択、電極の位置、デバイス側のフィルタリング、アーティファクトの処理、および保持率はすべて、ERP、接続性、およびデコードに関する結論を変える可能性があります。</li>
+                    
+                    <li>共通チャネルの交差、ターゲット モンタージュへの補間、および REST ベースの変換は、生に相当する 1 つの前処理ラベルではなく、異なる記録フレーム ブランチです。</li>
+                    
+                    <li>同じデコード スコアであっても、セッション内、セッション間、被験者間、および閉ループの評価では意味が異なります。</li>
+                    
+                    <li>位相ターゲット ループの場合、ターゲット帯域パワー/SNR ゲート、刺激なしレート、因果ベンチマーク対ポストホック ベンチマーク、ダウンストリーム コンパレータ、および優先位相安定性は、平均位相エラーまたはループ速度とは別の監査になります。</li>
+                    
+                    <li>高い EEG スコアは、ターゲット信号だけでなく、EOG / EMG / 運動 / フィードバック ルート、被験者 / セッション フィンガープリント、または取得と配信のショートカットを反映している可能性があります。</li>
+                    
+                    <li>基礎/自己教師ありEEGモデルは表現学習を改善しますが、事前トレーニングカードがなければ、ポータブルな堅牢性やソースを特定できる回復ではなく、依然として適格な転移証拠のままです。</li>
+                    
+                    <li>基礎 / 自己教師あり EEG モデルの場合、ベンチマークの来歴には、ベンチマーク オブジェクト / 監視ユニット、追加データの開示、事前トレーニングされたチェックポイント ID、微調整レジーム、分割ランダム性、非表示のグループ化、推論段階の制限、およびリーダーボードの解釈を変更する可能性がある後の事後分析が含まれます。</li>
+                    
+                    <li>レイアウトに依存しないデバイスや異種デバイスのサポートは記録フレームの進歩ですが、モンタージュ全体で参照不変または解剖学的不変の生理学を証明するものではありません。</li>
+                    
+                    <li>基礎モデルの結果の場合、トライアルレベル、エポックレベル、被験者レベルの出力は異なるオブジェクトであり、グループ化されたホールドアウトユニットには個別に名前を付ける必要があります。</li>
+                    
+                    <li>レアイベントおよびクラス不均衡な EEG タスクは、精度や AUROC だけでは安全に読み取ることができません。メトリック ファミリ自体がスコアの意味を変更します。</li>
+                    
+                    <li>発作タスクの場合、イベント感度、誤警報、オーバーラップ ロジック、レイテンシー、およびしきい値ポリシーは別個のパフォーマンス オブジェクトですが、睡眠ステージングにはコーエンのカッパ、マクロ F1、ステージごとのパフォーマンス、およびバイアス/サブグループ スライスも必要です。</li>
+                    
+                    <li>ソース空間の接続と有向接続には、ソースの位置特定自体よりもさらに強力な仮定と検証が必要です。</li>
+                    
+                    <li>wPLI はゼロラグミキシングをある程度軽減しますが、ソース漏洩、ゴーストインタラクション、観察と因果関係の制限は別個の監査項目のままです。</li>
+                    
+                    <li>調和ログとホールドアウト設計が明示的でない限り、クロスサイトまたはクロスデバイスのスコアは安全に解釈できません。</li>
+                    
+                    <li>同一セッションのマルチモーダル収集により 1 つのミスマッチが狭まりますが、それでも融合モデル、共有因子、またはターゲットの生物学的変数を単独で検証することはできません。</li>
+                    
+                    <li>ウェアラブル OPM-MEG の場合、移動耐性は依然としてルート条件付きです。シールド クラス、フィールド コントロール、キャリブレーション / 位置合わせ、解剖学的ルート、クロストーク、およびタスク レジームは引き続きクレームの一部です。</li>
+                    
+                    <li>低周波の多峰性一致は、依然として、覚醒、自律生理学、血管移動、またはその他の共有迷惑構造によって部分的に引き起こされる可能性があります。</li>
+                    
+                    <li>マルチモーダル バンドルは、ハード サブグループにおける完全なケース制限、転送の影響を受けやすい、または不一致が発生しやすい状態を維持しながら、予測を改善できます。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-unknown">
+                <p class="topic-card-kicker">ここから先でまだ未解決のこと</p>
+                <h2>まだわかっていないこと</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>非侵襲的EEGだけでWBEに十分なレベルで内部状態を再構築できるかどうかは未解決のままである。</li>
+                    
+                    <li>前処理の違いによって結論がどの程度変わるかは、タスクとデータセットによって異なります。</li>
+                    
+                    <li>どのソース イメージング設定が広範なタスク ファミリ全体を十分に深くカバーできるかは未解決のままです。</li>
+                    
+                    <li>条件付きディープソースゲインが現実的なノイズ、基底ソースレジーム、および非てんかんタスクにどれだけ耐えられるかは未解決のままです。</li>
+                    
+                    <li>ウェアラブル OPM-MEG が、シールドされた概念実証および狭いタスク領域から、より広範な自然主義的ソース再構成にどこまで移行できるかは未解決のままです。</li>
+                    
+                    <li>アーティファクトの抑制と信号の保存の間の最適なトレードオフも、タスクとメトリックによって異なります。</li>
+                    
+                    <li>当日の分離能力が後日または長期の運用にどの程度まで一般化するかは未解決のままです。</li>
+                    
+                    <li>異種レイアウトのサポートが参照ファミリーの変更、座標ルートの不一致、およびラベル制限のある臨床適応にどこまで耐えられるかは未解決のままです。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-wiki">
+                <p class="topic-card-kicker">基礎を学ぶ</p>
+                <h2>Wiki で基礎を確認する</h2>
+                <ul class="topic-link-list">
+                    
+                    <li>
+                        <a href="/wiki/eeg-basics.html" data-wiki-link="/wiki/eeg-basics.html">Wiki: 脳波の基礎</a>
+                        
+                        <span>脳波が測定するものと、脳波がノイズに弱い理由について説明します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/public-page-reading-guide.html" data-wiki-link="/wiki/public-page-reading-guide.html">Wiki: 公開ページのガイド</a>
+                        
+                        <span>データセット、L0 実践セクション、または検証のいずれに進むかを決定するのに役立ちます。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/eeg-preprocessing-and-qc.html" data-wiki-link="/wiki/eeg-preprocessing-and-qc.html">Wiki: EEG の前処理と QC</a>
+                        
+                        <span>参照スキーム、フィルター、アーティファクト処理を変更すると何が変わるかについて説明します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/measurement-and-modeling-terms.html" data-wiki-link="/wiki/measurement-and-modeling-terms.html">Wiki: 測定からモデリングまで</a>
+                        
+                        <span>EEG、BIDS、逆問題、ESI、DCM を 1 つのフローとして整理します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/event-sync-and-measurement-logs.html" data-wiki-link="/wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期と測定ログ</a>
+                        
+                        <span>イベント マーカー、スティミュラス ログ、同期、および不良セグメントについて説明します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/observation-to-estimation.html" data-wiki-link="/wiki/observation-to-estimation.html">Wiki: 観察から推定へ</a>
+                        
+                        <span>逆問題、ESI、DCM、SCM、および因果等価クラスを明確にします。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/uncertainty-confidence-and-abstention.html" data-wiki-link="/wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性、校正、および棄権</a>
+                        
+                        <span>点の見積もりを読みすぎないようにする方法を説明します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/state-trait-and-drift.html" data-wiki-link="/wiki/state-trait-and-drift.html">Wiki: 状態、特性、およびドリフト</a>
+                        
+                        <span>同日のスコアと日をまたいだ安定性を区別します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/eeg-foundation-models.html" data-wiki-link="/wiki/eeg-foundation-models.html">Wiki: EEG 基礎モデルと事前トレーニング</a>
+                        
+                        <span>トレーニング前コーパス、調和、適応レジーム、およびベンチマークの来歴を読み取る方法について説明します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/multimodal-integration-basics.html" data-wiki-link="/wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a>
+                        
+                        <span>EEG、MEG、fMRI、ECoG、および MRI がどのように相互に補完するかを紹介します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/closed-loop-latency-jitter-and-safety-stops.html" data-wiki-link="/wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: 閉ループ、レイテンシー、ジッター、および安全停止</a>
+                        
+                        <span>EEG を閉ループで使用する場合の遅延、ジッター、安全な停止の基本について説明します。</span>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+
+    <section id="easy-guide" class="easy-guide" hidden aria-label="平易な用語説明">
+        <div class="easy-guide-inner">
+            <h2>このページの平易な用語説明</h2>
+            <p id="easy-guide-status"></p>
+            <ul id="easy-term-list"></ul>
+            <p class="easy-guide-more">さらに見る: <a href="/glossary.html">用語集</a></p>
+        </div>
+    </section>
+
+    <section id="section-map" class="section-map" hidden aria-label="ページ構成">
+        <div class="section-map-inner">
+            <div class="section-map-header">
+                <p class="section-map-kicker">ページ構成</p>
+                <h2>全体を読む前に構造を確認する</h2>
+                <p id="section-map-status"></p>
+            </div>
+            <ol id="section-map-list" class="section-map-list"></ol>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="site-content" class="site-content-anchor" tabindex="-1"></div>
+    <!-- 重要: この情報を削除したり上書きしたりしないでください。これはプロジェクトの恒久的な知識ベースです。 -->
+
+<main class="main-container">
+<article class="content-column">
+
+<div class="abstract-box">
+<h2>TL;DR</h2>
+<p>
+脳波は脳の中を直接示すものではありません。頭皮の混合電気パターンを測定します。これにより、EEG に強力な時間分解能が与えられますが、空間的位置特定は弱くぼやけます。そのため、Mind-Upload では、データ品質管理 (QC) と BIDS などの共有データ編成ルールを何よりも優先します。
+</p>
+</div>
+
+<div class="key-points">
+<h4>誤読は早めにやめるべきです</h4>
+<ul>
+<li><strong>EEG は魔法の読心術ではありません:</strong> 観測された信号は混合されており、逆問題には厳しい制限があります。</li>
+<li><strong>しかし、EEG は役に立たないわけではありません。</strong> は一時的な変化と状態遷移の追跡に強力であるため、検証スタックの一部として役立ちます。</li>
+<li><strong>ログは重要です:</strong> QC、同期、レコードの前処理がなければ、他の誰も同じ結果をチェックできません。</li>
+<li><strong>マルチモーダルはエスケープハッチではありません:</strong> 同一セッションの融合、共有要素、および堅牢なバンドルの証拠には依然として個別の監査が必要です。</li>
+</ul>
+</div>
+
+<div class="note-box">
+<strong>用語をフローとして整理したい場合</strong>
+<p>
+EEG、QC、BIDS、逆問題、ESI、DCM などの単語が個別に表示され続け、つながりがないと感じる場合は、まず <a href="wiki/measurement-and-modeling-terms.html">Wiki: 測定からモデリングまでの用語ガイド</a> を読んでください。これにより、各用語がワークフローのどの段階に属しているかを簡単に確認できるようになります。
+</p>
+</div>
+<div class="note-box">
+<strong>この EEG の紹介の後、次にどこに行けばよいかわからない場合</strong>
+<p>
+EEG の制限を理解し、公開データセットを検討するかどうかを決定したい場合は、「データセット」の L0 実践セクションに直接移動するか、最初に「検証」を読んでください。<a href="wiki/public-page-reading-guide.html">Wiki: 公開ページのガイド</a> を参照してください。
+</p>
+</div>
+<div class="note-box">
+<strong>EEG以降の実践的なページだけを進めたい場合</strong>
+<p>
+検証、データセット、データセットの L0 実践セクション、および検証のケースワーク セクションの間でのみ決定したい場合は、<a href="wiki/practical-pages-reading-guide.html">Wiki: 実践ページのガイド</a> を参照してください。
+</p>
+</div>
+<div class="note-box">
+<strong>EEGからL0までの単一パスが必要な場合</strong>
+<p>
+この EEG の導入から、データセットの選択、必要なアーティファクト、および最終的な L0 確認までの 1 つの直線ルートが必要な場合は、<a href="wiki/eeg-to-l0-route.html">Wiki: EEG から L0</a> への 1 つの直線ルートを参照してください。
+</p>
+</div>
+<div class="note-box">
+<strong>議論が突然見積もりの問題になった場合</strong>
+<p>
+ESI または DCM が登場すると、話題は直接観察から仮定に基づく推論に移ります。この遷移を順問題、逆問題、因果等価クラスとともに整理したい場合は、<a href="wiki/observation-to-estimation.html">Wiki: 観測から推定まで</a> を最初に読んでください。
+</p>
+</div>
+<div class="note-box">
+<strong>不確実性について行き詰まったとき</strong>
+<p>
+信頼区間、信頼区間、推定幅、および信頼度が低い場合の棄権はすべて、誇張を避けるための手段です。そのための基本的な読書ガイドが必要な場合は、<a href="wiki/uncertainty-confidence-and-abstention.html">Wiki: 不確実性、校正、および棄権</a> を参照してください。
+</p>
+</div>
+<div class="note-box">
+<strong>高得点の結果で実際に何が示されたかを知りたい場合</strong>
+<p>
+EEG デコード番号の意味は、<strong>セッション内</strong>、<strong>クロスセッション</strong>、<strong>クロス被験者</strong>のいずれであるかによって異なります。同じ日の分離、日を越えた耐久性、他の人への一般化、および長期的な動作の安定性は別の問題です。実際の区別については、<a href="datasets.html#generalization-families">データセット: 一般化ファミリー</a> および <a href="wiki/state-trait-and-drift.html">Wiki: 状態、特性、およびドリフト</a> を参照してください。
+</p>
+</div>
+
+<div class="note-box">
+<strong>同じタスクラベルがまだ異なる測定条件を隠している場合</strong>
+<p>
+このサイトは以前、<strong>setup Effects</strong> よりも <strong>件名 / セッション フィンガープリント</strong> で明確に停止していました。それはEEGにとって弱すぎるままでした。公式の <a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">EEG-BIDS 仕様</a> では、<strong>電極</strong>、<strong>チャネル</strong>、<strong>座標系</strong>、および<strong>参照スキーム</strong>を表示メタデータとして扱うのではなく、すでに分離しています。 <a href="https://doi.org/10.1088/1741-2552/aaa13f" target="_blank">胡他。 (2018)</a> は、参照モンタージュと電極の設定によって測定された頭皮電位自体が変化することを示しました。<a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al。 (2017)</a> は、システム、被験者、およびセッションのそれぞれが EEG 記録に影響を与えることを示しました。<a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu et al。 (2020)</a> は、クロスデータセットの深層学習の結果がアンプ、キャップ、サンプリング レート、フィルタリングなどの環境変動に応じて変化することを示しました。 (2024)&lt;/a&gt; は、クロスロケーション比較には、データセットが単に調和されているという漠然とした記述ではなく、明示的な <strong>REST ベースのオフライン変換</strong> が必要であることを示しました。したがって、本サイトでは<strong>サイト/デバイス/基準系/電極配置/座標ルート/プロトコル</strong>を測定条件の一部として扱います。 <strong>これらのソースからの推論:</strong> <strong>コモンチャネル交差</strong>、<strong>ターゲットモンタージュへの補間</strong>、および<strong>RESTベースの変換</strong>は、異なるベンチマークオブジェクトと異なるクレーム上限を保持します。 <strong>`harmonized EEG`</strong> は、ここでは 1 つの生同等のオブジェクトとして読み取られません。元のチャネル マップ、座標ルート、生の参照と再参照ファミリー、省略/補間チャネル ポリシー、および調和ブランチを報告しないスコアは、ターゲットの神経変数のみが変化したという明確な証拠として読み取られません。
+</p>
+</div>
+
+<div class="note-box">
+<strong>大規模な事前学習済み EEG モデルが一般的なデコーダーのように見える場合</strong>
+<p>
+このサイトはスコアだけで基礎モデルの見出しを読み取ることはありません。 <a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas ら。 (2021)</a> は、異なるハードウェア、主題、タスクにわたる転送を中心的な課題としてすでに枠組み化しています。<a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024)</a> は、依然として開いている EEG 障壁として、電極の不一致、不等なサンプル長、多様なタスク設計、および低い SNR を明示的に列挙しました。 (2025)&lt;/a&gt;、<a href="https://arxiv.org/abs/2510.12515" target="_blank">チェンら。 (2025)</a>、<a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi 他。 (2025)</a> はその後、チャネル順列等分散、異種電極適応、セットアップに依存しない事前トレーニングを推進しました。 (2025)&lt;/a&gt; は、微調整下でも従来の深いベースラインを超えるわずかな利益しか見つかりませんでした。 <a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)</a> はさらに、追加の適応構造が追加されない限り、被験者レベルの監督が制限されている場合、EEG 基礎モデルの一般化が不十分になる可能性があることを示しました。 (2025)&lt;/a&gt; は、一貫性のない評価プロトコルによりモデル間比較の信頼性が低くなると主張しました。<a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は、狭いソースと多様なソースの事前トレーニングが線形プローブと微調整レジーム全体で場所を交換できることを示しました。 (2026)&lt;/a&gt; は、線形プローブでは不十分な場合が多く、専門家が最初から作成したモデルが競争力を維持していることを示しました。したがって、このサイトでは、`supports arbitrary layouts` は、宣言された座標ルート、参照ファミリー、および省略チャネル ポリシー&lt;/strong&gt; に基づく <strong> レコーディング フレームの互換性としてのみ解釈され、異なるモンタージュが 1 つの生理機能を保持する表現を既に共有していることの証拠としては解釈されません。大規模モデルの EEG 結果は、<a href="wiki/eeg-foundation-models.html#pretraining-card">Wiki: 事前トレーニング カード</a> および <a href="verification.html#pretraining-card">検証: 事前トレーニング カード</a> を通じて読み取られます。ダウンストリームの主張が単なるベンチマーク転送ではなくニューラル変数に関するものである場合は、<a href="verification.html#specificity-shortcut-card">Specificity および <a href="verification.html#specificity-shortcut-card">Specificity も渡す必要があります。ショートカット カード</a>。`works across setups` はまだ `stopped reading identity / setup shortcuts` と同じではありません。
+&lt;/p&gt;
+&lt;/div&gt;
+
+<div class="note-box">
+<strong>ファウンデーション モデルのベンチマークがすべて同じオブジェクトのスコアを示しているわけではありません</strong>
+<p>
+公式 <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge 2025 ホームページ</a> は、この分割を明示しています。<strong>Challenge 1</strong> は <strong>CCD 試行から反応時間を予測する</strong>課題であり、<strong>Challenge 2</strong> は <strong>複数パラダイムの EEG から外在化スコアを予測する</strong>課題です。公式<a href="https://eeg2025.github.io/rules/" target="_blank">ルール</a>では、Challenge 1 は<strong>試行ごと</strong>に採点され、提出は<strong>推論のみ</strong>で、モデルは<strong>20 GB メモリの単一 GPU</strong>で実行できる必要があることも示されています。<a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">Lee et al. (2025)</a> は<strong>記憶課題</strong>と<strong>睡眠段階分類</strong>を扱い、<a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)</a> は<strong>1 被験者抜きの被験者間評価</strong>と<strong>被験者内 few-shot 校正</strong>を対比し、<a href="https://arxiv.org/abs/2603.02268" target="_blank">Lahiri et al. (2026)</a> は、ベンチマーク不一致によって同一データセット上の順位が最大 <strong>24 パーセントポイント</strong>反転し得ることを示しています。したがって、このサイトでは、基盤モデルの結果を読むときに、ベンチマーク名だけでなく、<strong>予測対象</strong>、<strong>独立した予測単位</strong>、<strong>グループ化ホールドアウト単位</strong>、<strong>適応レジーム</strong>、<strong>運用予算</strong>を併記することを求めます。この区別がない場合、「タスク間で転移した」という表現は粗すぎ、1 つの汎用デコーダが成立したかのように過読しやすくなります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>ベンチマーク操作は結果の一部であり、管理上の詳細ではありません</strong>
+<p>
+公式 <a href="https://eeg2025.github.io/" target="_blank">EEG Challenge 2025 ホームページ</a> には、実行フェーズの変更に関して、チャレンジの文書はすでに古くなっていると記載されています。公式の <a href="https://eeg2025.github.io/submission/" target="_blank">提出ページ</a> では、このイベントを <strong>推論のみのコード コンテスト</strong> として修正していますが、<a href="https://eeg2025.github.io/rules/" target="_blank">ルール ページ</a> では、追加の事前トレーニング データセット、事前トレーニングされたチェックポイント、微調整方法、および <strong>シングル GPU 20 の開示が求められています。 GB</strong> 推論段階の予算。その後、最終的な <a href="https://eeg2025.github.io/leaderboard/" target="_blank">リーダーボード</a> では、チャレンジ 2 のサンプルがランダム化されていなかったため、一部のチームが連続トライアルの同一被験者構造を悪用することができ、主催者が賞を分割することになったことが明らかになりました。このサイトでは、<strong>ベンチマークの出自が証拠の一部</strong> であることを意味します。分割構築、非表示のグループ化、チェックポイント ポリシー、正規化、推論バジェット、およびその後の事後検証はすべて、リーダーボード スコアが意味できる内容を変更します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>メトリクスのセマンティクスは、後処理の詳細ではなく、EEG クレームの一部です</strong>
+<p>
+このページはすでに <strong>分割設計</strong>、<strong>ベンチマーク来歴</strong>、<strong>校正</strong> を分離していましたが、暗黙的すぎる弱いショートカットが 1 つ残されていました: <strong>タスクを要約するために許可されるスコア</strong>。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">斉藤＆amp; Rehmsmeier (2015)</a> は、クラスの不均衡が強い場合には、<strong>precision-recall</strong> ビューのほうが ROC サマリーよりも有益であることが多いことを示しました。発作課題では、<a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021)</a>、<a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)</a>、<a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal 他。 (2023)</a> は、実用的な値が <strong>感度</strong>、<strong>誤報</strong>、<strong>イベント重複ルール</strong>、<strong>遅延</strong>、および場合によってはオンになることを示します。 <strong>しきい値/キャリブレーション制御</strong> は、1 つの見出し番号ではありません。睡眠ステージングでは、<a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)</a>、<a href="https://doi.org/10.7554/eLife.70092" target="_blank">ヴァラット＆amp;ウォーカー (2021)</a>、<a href="https://doi.org/10.1038/s41746-025-02237-2" target="_blank">デイ・ロッシ他。 (2026)</a> は、<strong>コーエンのカッパ</strong>、<strong>マクロ-F1</strong>、<strong>ステージごとのパフォーマンス</strong>、および<strong>バイアス/ドメイン外スライス</strong>の答えが異なることを示します。質問。したがって、このサイトでは、クラスバランス、イベントコスト、またはステージ構造が重要な場合、<strong>accuracy</strong> または <strong>AUROC</strong> のみを一般的な脳波ヘッドラインとして受け入れません。
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>一般的な EEG タスク ファミリ</th>
+<th>このエントリ レベルの最小メトリック バンドル</th>
+<th>オーバーリードはここで停止しました</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>キューロック分類/状態デコード</strong></td>
+<td>バランスの取れた精度またはマクロ F1、混同行列、被験者ごとの集計、および確率が出力される場合の校正/棄権。</td>
+<td>堅牢なニューラル デコーディングを主張するには、1 つの精度数値で十分です。</td>
+</tr>
+<tr>
+<td><strong>発作検出/予測</strong></td>
+<td>イベントの感度またはリコール、時間または日ごとの誤警報、イベントの重複/開始ルール、遅延、およびしきい値または調整ポリシー。</td>
+<td>AUROC または精度だけが、臨床的に使用可能なアラーム動作を意味します。</td>
+</tr>
+<tr>
+<td><strong>睡眠ステージング</strong></td>
+<td>コーエンのカッパ、マクロ F1、ステージごとのリコール / 特に N1 の F1、混同行列、展開または臨床的主張が行われた場合のサブグループ スライス。</td>
+<td>プールされた精度は、睡眠段階と患者グループ全体で病期分類の信頼性が同等であることを意味します。</td>
+</tr>
+</tbody>
+</table>
+
+<section class="section" id="what-is-eeg">
+<h2 class="section-title">EEG とは大まかに言うと</h2>
+<p>
+EEG は、頭皮に配置された電極を使用して電圧の違いを記録します。観察されるものは、多くの神経活動が混合され、組織、頭蓋骨、頭皮を通して濾過された結果です。 EEG はミリ秒スケールで迅速に測定できますが、信号は空間的にぼやけているため、制限を無視すると簡単に過大解釈されます。
+</p>
+</section>
+
+<section class="section" id="strengths-limitations">
+<h2 class="section-title">脳波が強いところと弱いところ</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>脳波の得意分野</th>
+<th>脳波の弱点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>状態遷移、フェーズ、短い応答などの時間的変化の追跡</strong><br />
+<strong>閉ループ</strong> 制御への自然な接続
+</td>
+<td>
+特に深いソースの場合、<strong></strong> アクティビティが発生した正確な場所を記述します<br />
+「思考の内容」を直接読む、古典的なオーバークレーム
+</td>
+</tr>
+<tr>
+<td>
+比較的安価で拡張が容易<br />
+繰り返し測定や縦方向の追跡に最適
+</td>
+<td>
+まばたき、筋肉活動、ラインノイズ、動きなどのノイズやアーチファクトに対して非常に脆弱<br />
+参照の選択と前処理により、結果が大きく変わる可能性があります
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>重要</strong>
+<p>
+QC ログとメタデータが存在する場合、EEG はミリ秒スケールで状態変化を追跡できるため、実用的に価値があります。記録条件が欠けていると、一見もっともらしいモデルであっても再現性が失われます。
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>質問</th>
+<th>EEG だけで比較的適切にサポートできること</th>
+<th>追加のモダリティまたは条件が必要なもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>脳の状態は現在どのように変化しているか</td>
+<td>覚醒、睡眠、麻酔、または課題への反応の時間的変化は比較的アクセスしやすいです。</td>
+<td>どの深部構造または細胞集団がそのパターンを引き起こしたかについての強力な主張には、追加の構造情報または多峰性情報が必要です。</td>
+</tr>
+<tr>
+<td>脳のどこで活動が起こったか</td>
+<td>幅広い頭皮パターンと大まかな分布が観察できます。</td>
+<td>解剖学的または深い情報源に関する強力な主張には、MRI、MEG、侵襲的記録、または同様の証拠による裏付けが必要です。</td>
+</tr>
+<tr>
+<td>思考の内容そのもの</td>
+<td>タスク制約のある分類と状態推定がターゲットになる可能性があります。</td>
+<td>制約のない思考の読み取りに関する主張は、モデルの完成と容易に混合するため、反事実テストが必要です。</td>
+</tr>
+<tr>
+<td>その情報が WBE にとって十分かどうか</td>
+<td>EEG は、状態追跡のための巨視的な制約と足場を提供できます。</td>
+<td>シナプスまたは局所回路スケールでの詳細な再構成はEEGのみからは不可能であり、マルチモーダル統合が前提となります。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>「同じ脳波」が異なる結果をもたらす典型的な方法</strong>
+<p>
+<strong>参照スキーム</strong> を変更すると、見かけの頭皮分布が変わります。 <strong>電極の位置またはチャネル レイアウト</strong>を変更すると、どのフィールド パターンがサンプリングされるかさえ変わります。 <strong>フィルター設定</strong> または <strong>デバイス側チェーン</strong> を変更すると、どのコンポーネントが低速か高速かが変わります。 <strong>アーティファクト除去</strong> を締めると、保存したい神経信号も除去される可能性があります。そのため、取得条件や処理経路も結果と一緒に記録しておかないと結果を比較することができません。
+</p>
+</div>
+</section>
+
+<section class="section" id="information-theoretic-limits">
+<h2 class="section-title">EEG の情報理論上の限界と、それが WBE に与える影響</h2>
+<p>
+WBE のコンテキスト内に EEG を配置するには、テクノロジーによって改善される可能性がある制約と、物理学や数学からより根本的に従う制限を区別することが役立ちます。
+</p>
+
+<div class="key-points">
+<h4>空間解像度のギャップ</h4>
+<ul>
+<li><strong>頭皮脳波から直接得られるもの:</strong> 頭皮上の混合電圧分布。信号源推定を使用する場合でも、有効な分解能は電極密度、SNR、頭部モデルの品質、および電極座標誤差に大きく依存します。</li>
+<li><strong>高密度EEGの改善点:</strong>皮質表面付近の広範な活動に対する制約は改善されましたが、深部の信号源ときめの細かい局所回路は依然として独自に再構築できません。</li>
+<li><strong>WBE とのギャップ:</strong> WBE が細胞、シナプス、および局所回路のダイナミクスの保存を必要とする場合、頭皮 EEG は依然として桁違いに粗すぎるでしょう。センサーを増やすだけでは、このギャップは埋まりません。</li>
+</ul>
+</div>
+
+<div class="key-points">
+<h4>帯域幅の制約</h4>
+<ul>
+<li><strong>センサー数は独立情報と同じではありません:</strong> 256 チャンネルであっても、体積伝導と空間相関により、独立自由度は生のチャンネル数をはるかに下回ります。</li>
+<li><strong>EEG は低次元の投影を観察します。</strong> これは大規模な脳のダイナミクスを反映していますが、微視的な回路構造の完全な詳細は伝えられていません。</li>
+<li><strong>したがって、その役割は必然的に限定されます:</strong> EEG は、状態推定、遷移検出、閉ループ制御、および他のモダリティの制約には役立ちますが、回路全体を単独で再構成する場合には役に立ちません。</li>
+</ul>
+</div>
+
+<div class="key-points">
+<h4>基本的な物理的および数学的制約</h4>
+<ul>
+<li><strong>場の形成と体積伝導:</strong> 頭蓋内電流源から頭皮、頭蓋骨、脳脊髄液、頭皮まで、信号はローパスフィルター処理されるだけでなく、電流源の範囲、向き、皮質の折り畳み、キャンセルによって再形成されます。これは物理的な制限であり、より優れたハードウェアだけで解消されるものではありません。</li>
+<li><strong>逆設定逆問題:</strong> 複数の異なる内部ソース構成により、同じ頭皮電位パターンが生成される可能性があります。原則として、頭皮脳波は信号源の構成を一意に決定することができません (Hämäläinen &amp; Ilmoniemi、1994)。構造 MRI、fMRI、解剖学的制約などの事前情報が必要です。</li>
+</ul>
+</div>
+
+<div class="note-box">
+<strong>逆問題の前に、フィールド形成の可視性の壁がすでに存在します</strong>
+<p>
+早期に中止すべきもう 1 つの弱い解釈は、すべての重要な神経イベントがすでに頭皮に存在しており、ソース イメージングによってそれらをアルゴリズム的に回復するだけでよいと考えることです。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors ら。 (2010)</a> は、現実的な境界を使用して音源方向の感度を定量化し、最も感度の低い方向と最も感度の高い方向の間の中央値比が、EEG&lt;/strong&gt; では <strong>0.63 であるのに対し、MEG</strong> では <strong>0.06 にすぎないことを発見しました。 <a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)</a> は、拡張および分散されたソースが地表で実質的にキャンセルできることも示しました。 <a href="https://doi.org/10.1002/hbm.20571" target="_blank">ゴールデンホルツら。 (2009)</a> は、その後、音源の範囲と解剖学的構造が検出可能性にとって非常に重要であることを示しました。内側側頭葉では、約 <strong>3 cm<sup>2</sup></strong> 対 <strong>8 cm<sup>2</sup></strong> の音源パッチをシミュレートしました。 SNR ではおよそ <strong>10 dB</strong> の差があり、モダリティの好みは固定されたままではなく皮質全体で変化しました。 <a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)</a> は、詳細な FEM モデルを使用して、<strong>CSF コンパートメント</strong> を無視すると、EEG SNR が過大評価され、皮質/皮質下の感度が深さと方向に共同して依存することを示しました。したがって、頭皮に到達するものはすでに、<strong>幾何学および組織でフィルタリングされた脳活動のサブセット</strong>です。より多くのチャネルやより高度な逆ソルバーを使用しても、場の形成によってセンサーに配信されなかったソースの詳細を再現することはできません。
+&lt;/p&gt;
+&lt;/div&gt;
+
+<div class="note-box">
+<strong>結論: EEG だけでは WBE に十分な情報を提供できません</strong>
+<p>
+EEG の役割は、脳のダイナミクスに<strong>巨視的な制約</strong> を与えることです。具体的には、次のものが含まれます。
+</p>
+<ul>
+<li>覚醒、睡眠、麻酔などのグローバル状態の調整</li>
+<li>PCI スタイルの対策などの意識モニタリング</li>
+<li>縦方向の安定性追跡、数時間または数日にわたって変化したものと安定したままのものを分離</li>
+</ul>
+<p>
+ターゲットが WBE の場合、EEG は侵襲的記録、電子顕微鏡、分子プロファイリング、その他のより豊富な測定を補完する 1 つの巨視的モダリティに属します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>過小評価しないでください。厳密な条件下では、限られた深い推論が存在します</strong>
+<p>
+また、「深部のソースは完全に目に見えない」と言うのも不正確です。高密度EEG（256チャンネル）、個別のMRI、リアルな頭部モデル、および同時頭蓋内記録を組み合わせた研究では、頭皮EEGソース画像と視床または側坐核付近の信号との間に有意な一致があることが報告されている（Seeber et al., 2019）。 <a href="https://doi.org/10.1002/hbm.26720" target="_blank">アフナンら。 (2024)</a> はさらに、<strong>深度加重 cMEM</strong> が、<strong>5400 件の現実的なシミュレーション</strong> とてんかん患者データ全体で、深部発生源、特に近心側時間源の位置特定を改善することを示しました。しかし、頭蓋内電気刺激をグランドトゥルースとして使用した直接検証では、37電極の頭皮EEGでも、信号源の深さと頭蓋骨伝導率の最適化に応じて、<strong>10.3-26 mm</strong>の平均位置推定誤差が依然として示されました（Unnwongse et al.、2023）。したがって、正しい要約は「不可能」ではなく、「厳密に固定された条件下では限定的な推論が可能であり、誤差は音源クラス、音源深さ、SNR、および導電率の仮定に大きく依存する」ということになります。
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026 年 3 月現在、何を「改善」とみなすべきですか?</strong>
+<p>
+ソースイメージングの改善は、単にチャンネル数を増やすだけでは確立されません。少なくとも、<strong>個々の MRI または同等のジオメトリから構築された前方モデル</strong>、<strong>深さ/方向/範囲/キャンセル プロファイルを考慮してターゲットのソース クラスが頭皮に到達すると予想される可視性の議論</strong>、<strong>事後分布または信頼区間</strong>、<strong>前方および前方の感度分析を示す必要があります。組織モデル</strong>、および<strong>シミュレーション/ファントム、頭蓋内刺激、同時侵襲的記録、または術後結果</strong>などの名前付き検証クラスに対する検証。改善とは、「深い構造が見えるようになった」ということではなく、「どのソースクラスの、どのベンチマークファミリーで、どの条件下でエラーがどの程度減少したかをサードパーティが監査できるようになった」ことを意味します。
+</p>
+</div>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>検証クラス</th>
+<th>実際にチェックする内容</th>
+<th>このサイトの安全な読み方</th>
+<th>まだ言えないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>シミュレーション / ファントム</strong></td>
+<td>既知の生成条件下でのソルバーの動作、ジオメトリ感度、およびパイプライン回帰。</td>
+<td>ジオメトリ、カバレッジ、導電率、またはノイズが変化したときにエラーが正常に増大するかどうかを確認するのに役立ちます。</td>
+<td>これは生きた脳のグラウンドトゥルースではなく、それ自体では自然発生的または臨床的ソースの回復を検証しません。</td>
+</tr>
+<tr>
+<td><strong>頭蓋内刺激のグラウンドトゥルース</strong></td>
+<td>固定ジオメトリ下での既知の刺激部位および時間に対する位置特定エラー。ミクランらを参照。 （2020）およびUnnwongse et al。 (2023).</td>
+<td>導電率の仮定、電極数、ソースの深さによって誤差がどのように変化するかを調べるのに役立ちます。</td>
+<td>それ自体では、自発的な病理学的動態や普遍的な深部ソースの回復を検証するものではありません。</td>
+</tr>
+<tr>
+<td><strong>同時侵襲的記録</strong></td>
+<td>特定のコホートおよびイベント体制における同時実行の SEEG/ECoG との一致。ハオら。 (2025) は一例です。</td>
+<td>頭皮から発生源への推論が同じイベントの下で侵入活動を追跡する場合の監査に役立ちます。</td>
+<td>逆問題を固有にするものではなく、コホート、モンタージュ、または病理学を超えて自動的に一般化するものでもありません。</td>
+</tr>
+<tr>
+<td><strong>術後の転帰/臨床的一致</strong></td>
+<td>ESI が臨床的に関連する組織または切除ゾーンを指すかどうか。ビロットら。 (2014) はその一例です。</td>
+<td>術前ワークフローにおける意思決定支援の証拠として役立ちます。</td>
+<td>これは、真の発生源の位置や完全な内部状態の直接的なグラウンドトゥルース測定ではありません。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>スターター公開データセットから主張すべきではないもの</strong>
+<p>
+この種の検証には、個々の MRI、電極座標、および外部のグラウンド トゥルースが必要です。そのため、EEG Motor Movement/Imagery、CHB-MIT、Sleep-EDF、TUH EEG などのスターター データセットは、L0-L1 の練習とベンチマークには役立ちますが、直接のソース イメージング ベンチマークとしては役立ちません。ユースケースの分割については、<a href="datasets.html#dataset-audit">データセット: スターター データセット監査</a> を参照してください。
+</p>
+</div>
+&lt;/section&gt;
+
+<section class="section" id="claim-audit">
+<h2 class="section-title">2026-03 文献監査: EEG の主張は 4 つのゲートで削減</h2>
+<p>
+私たちが改善する必要があった主な弱点は、単一のスコアまたは単一のソース マップから脳波の進行状況を読み取りたいという誘惑でした。一次文献を並べると、少なくとも <strong>observability</strong>、<strong>specity</strong>、<strong>identifiability</strong>、<strong>deployability</strong> は個別の監査になります。 <strong>頭皮信号に何らかの情報が存在するという事実</strong>、<strong>その情報がターゲット神経変数から来ているという事実</strong>、<strong>内部ソースまたはネットワークが独自のソリューションに向けて絞り込まれていること</strong>、<strong>パフォーマンスが数日間または閉ループ内で持続するという事実</strong>同じ証拠によって裏付けられていません。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>ゲート</th>
+<th>ここで質問があります</th>
+<th>最低限の証拠が必要</th>
+<th>この門がまだ主張できないもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>可観測性</strong></td>
+<td>ターゲットの状態またはタスクの状態に関する情報は実際に頭皮脳波に存在しますか?</td>
+<td>同期されたイベント ログ、適切なホールドアウト、同時記録または外部参照、およびアーティファクト監査によるデコード/追跡。</td>
+<td>ソースの一意性、一般的な深部構造の回復、因果関係のあるネットワーク構造、または長期的な運用可能性を主張することはまだできません。</td>
+</tr>
+<tr>
+<td><strong>特異性</strong></td>
+<td>スコアはターゲットの神経変数を読み取りますか、それとも目の動き、筋電図、指示なしの動き、フィードバック、被験者の指紋などのショートカットを読み取りますか?</td>
+<td>EOG / EMG / 行動ログ、迷惑のみのベースライン、固定視線やフィードバックオフなどの対策、スライスごとのホールドアウト。</td>
+<td>「スコアが高いのでニューラル読み出しである」または「クラスが出現したので内部状態が理解できた」と書くことはまだできません。</td>
+</tr>
+<tr>
+<td><strong>識別性</strong></td>
+<td>内部ソースまたはネットワークをどの程度狭く、一意に観測から制限できますか?</td>
+<td>個々の MRI、測定された電極座標、フォワード モデル、導電率の仮定、不確実性の表示、およびファントム、頭蓋内刺激、または同時侵襲記録による外部検証。</td>
+<td>「目に見えるソースが真にユニークなソリューションである」または「ネットワーク図は回路図である」と書くことはまだできません。</td>
+</tr>
+<tr>
+<td><strong>展開可能性</strong></td>
+<td>数日間、再接続、長期のドリフト、閉ループの使用を経ても、パフォーマンスはどの程度持続しますか?</td>
+<td>クロスセッション/クロス被験者評価、固定デコーダ間隔、再キャリブレーション負担、開示されたレイテンシー、ジッター、棄権動作に加え、位相ロック制御が要求されている場合の位相ターゲットログ。</td>
+<td>高い同日スコアを現実世界の安定性または WBE 関連の持続的な制約と言い換えることはまだできません。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>この 4 方向分割によるサイト ルール</strong>
+<p>
+可観測性を通過した結果は、<strong>「信号には情報が含まれています」</strong> としてのみ記述されます。特異性の証拠が追加されて初めて、<strong>「情報はターゲットの神経変数に比較的特異的である」</strong> と書くことができます。識別可能性の証拠が追加された後でのみ、<strong>「ソース/ネットワークが推定された」</strong> と記述します。導入可能性の証拠が追加されて初めて、<strong>「このメソッドは数日間、長期間の使用、または閉ループで存続する可能性があります。」</strong> これが、H&auml;m&auml;l&auml;inen &amp; によって引かれた境界線のしくみです。 Ilmoniemi (1994)、Mostert et al. (2018)、Musall et al。 (2019)、Ma et al. (2022)、およびウィルソンら。 (2025)を本サイトの運用上の閲覧ルールとしています。
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-18 追記:「何かが見えた」は「ターゲットが見えた」とは異なります</strong>
+<p>
+<a href="https://doi.org/10.1523/ENEURO.0401-17.2018" target="_blank">Mostert ら。 (2018)</a> は、視覚作業記憶のデコーディングが眼球運動の交絡を保持する可能性があることを示しました。 (2005)&lt;/a&gt; は、EMG が初期の BCI セッションのパフォーマンスを向上させることができることを示しました。 (2024)&lt;/a&gt; は、発症後の聴覚フィードバックがオフライン音声復号化スコアを上昇させる可能性があることを示しました。さらに、<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto ら。 (2019)</a> は、反復測定が参加者間で共通でない場合に、診断モデルが同一性交絡シグナルを学習できることを示しました。 (2020)&lt;/a&gt; および <a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di ら。 (2021)</a> は、安静状態の脳波が時間堅牢な個人識別をサポートできることを示しました。そのため、このサイトのデコード/バイオマーカーの結果は、<a href="verification.html#specificity-shortcut-card">Verification: Specificity &amp; と組み合わせられています。 Shortcut Card</a> なので、ターゲット パスとショートカット パスは個別に監査されます。
+</p>
+</div>
+</section>
+
+<section class="section" id="generalization-gates">
+<h2 class="section-title">同じデコード スコアでも非常に異なる主張をサポートできる</h2>
+<p>
+最も一般的な EEG の誤読の 1 つは、<strong>同日/同じ被験者の分離</strong> を取り上げ、<strong>日数にわたって安定している</strong>、<strong>他の人に一般化している</strong>、または <strong>長期展開可能</strong> と暗黙的に言い換えることです。 MOABB ドキュメント自体は、`WithinSessionEvaluation`、`CrossSessionEvaluation`、および `CrossSubjectEvaluation` を分離しています。これらは異なる科学的な質問であるためです。
+</p>
+
+<table class="data-table">
+<thead>
+<tr>
+<th>評価ファミリー</th>
+<th>主にテストする内容</th>
+<th>まだ言えないこと</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>セッション内</strong></td>
+<td>同じ日にタスクとクラスをどのように分離してセットアップするか。</td>
+<td>日をまたぐ安定性、再付着に対する耐性、長期ドリフトの堅牢性は確立されていません。</td>
+</tr>
+<tr>
+<td><strong>クロスセッション</strong></td>
+<td>状態の変化や設定の変更にもかかわらず、同じ人に対して機能が日を超えてどの程度存続するか。</td>
+<td>被験者に依存しない一般化や再調整要件の欠如を確立するものではありません。</td>
+</tr>
+<tr>
+<td><strong>複数の主題</strong></td>
+<td>ある構造が人々の間で一般化され、コールドスタート ルートをサポートできるかどうか。</td>
+<td>これは、1 人の個人に適用されたデコーダーや個人の長期コントローラーと同じ強度の主張を確立するものではありません。</td>
+</tr>
+<tr>
+<td><strong>縦/閉ループ</strong></td>
+<td>固定デコーダが存続する日数、および再キャリブレーション負荷、レイテンシ、沈黙/棄権動作、および関連する場合の位相ターゲット ログ。</td>
+<td>オフラインの精度だけでは、展開可能なループと呼ぶには十分ではありません。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note-box">
+<strong>一次文献が実際に示していること</strong>
+<p>
+Ma らの 5 日間の MI データセットでは、 (2022) によると、被験者固有の平均精度は、セッション内の <strong>68.8%</strong> からセッション間では <strong>53.7%</strong> に低下し、その後、少量の対象セッション データを使用した適応により <strong>78.9%</strong> に上昇しました。したがって、同日のスコアと日をまたいだ耐久性は同じ成果ではありません。ムサルら。 (2019) さらに、課題中の神経力学は指示されていない動きによって強く形成される可能性があることを示しました。 (2025) は、活動パターン自体が時間の経過とともに変動するため、長期的な BCI 運用には <strong>頻繁な再校正</strong> が必要であることを示しました。
+</p>
+</div>
+
+<div class="note-box">
+<strong>このページを安全に読むためのルール</strong>
+<p>
+EEG スコアが高い場合は、少なくとも <strong>(1) 何が提示されたか</strong>、<strong>(2) 目の動き、筋肉の活動、および指示されていない動作がどのように監査されたか</strong>, <strong>(3) 対象日または対象者のデータが使用されたかどうか</strong>, <strong>(4) 何日間固定デコーダが保持されました</strong>、および<strong>(5) セットアップの多様性がクレーム</strong>の一部である場合、レイアウトまたはサイト間で記録フレームがどのように調整されたか。これらが欠落している場合、このサイトは結果を WBE 関連の状態の再構築や展開可能なループとしてではなく、<strong> 修飾されたデコード</strong> としてのみ読み取ります。
+</p>
+</div>
+</section>
+
+<section class="section" id="pipeline">
+<h2 class="section-title">Mind-Uploadが想定する分析フロー</h2>
+<div class="stage-list">
+<div class="stage-item">
+<div class="stage-number">01</div>
+<div class="stage-body">
+<h4>測定とQC</h4>
+<p>インピーダンス、ノイズフロア、遅延、ジッター、ドリフトなどの同期動作をログ形式で記録し、後の分析で使用できるようにします。</p>
+</div>
+</div>
+<div class="stage-item">
+<div class="stage-number">02</div>
+<div class="stage-body">
+<h4>前処理</h4>
+<p>フィルター、リファレンス スキーム、まばたき、筋肉活動、ライン ノイズのアーティファクト処理に加え、クロスセットアップ調和を適用しながら、座標ルート、リファレンス ファミリ、省略/補間チャネル ポリシー、および比較で共通チャネル リダクション、補間、REST、または別の明示的な変換を使用したかどうかを記録します。</p>
+</div>
+</div>
+<div class="stage-item">
+<div class="stage-number">03</div>
+<div class="stage-body">
+<h4>機能とメトリクスのバンドル</h4>
+<p>スペクトル、位相同期、複雑さの測定、状態遷移、および同様の記述子を計算し、1 つのヘッドライン スコアの代わりにタスクに一致するメトリクス バンドルを選択します。</p>
+</div>
+</div>
+<div class="stage-item">
+<div class="stage-number">04</div>
+<div class="stage-body">
+<h4>ソース見積もり (必要な場合)</h4>
+<p>頭部モデルまたは MRI を使用して皮質活動を推測しますが、これは逆問題であるため、不確実性は結果の一部として扱います。</p>
+</div>
+</div>
+<div class="stage-item">
+<div class="stage-number">05</div>
+<div class="stage-body">
+<h4>モデリングと検証</h4>
+<p>相関ベースのデコードに止まらないでください。変化した刺激または課題条件下での介入予測と反事実的行動をテストします。</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="qc-minimum">
+<h2 class="section-title">最低限の QC: それがないと比較は失敗します</h2>
+<p>Mind-Upload は、QC ログの存在をベンチマークに参加するための最低の下限として扱います。</p>
+<div class="key-points">
+<h4>最低 QC</h4>
+<ul>
+<li><strong>チャネル品質:</strong> チャネル欠落、飽和、インピーダンス、ブリッジの疑い</li>
+<li><strong>ノイズ:</strong> 回線周波数、ハードウェア ノイズ帯域、推定ノイズ フロア</li>
+<li><strong>アーティファクト:</strong> まばたき、眼球運動、筋活動、運動、心臓汚染</li>
+<li><strong>同期:</strong> 遅延、ジッター、ドリフト、理想的にはエンドツーエンドで測定</li>
+<li><strong>前処理ログ:</strong> フィルター設定、参照スキーム、拒否方法、しきい値、除外間隔</li>
+</ul>
+</div>
+<div class="note-box">
+<strong>同期とイベントも QC の一部</strong>
+<p>
+たとえきれいに見える波形であっても、刺激や応答のタイミングがあいまいであれば、信頼性が低くなります。イベント マーカー、スティミュラス ログ、不良セグメント レコードなどの最小限の測定ログが必要な場合は、<a href="wiki/event-sync-and-measurement-logs.html">Wiki: イベント同期と測定ログの基本</a> を参照してください。
+</p>
+</div>
+<div class="note-box">
+<strong>クローズドループの使用により、別の種類の困難が追加されます</strong>
+<p>
+EEG の時間分解能は閉ループにとって魅力的ですが、エンドツーエンドの遅延、ジッター、および安全停止ロジックが重要になります。位相ターゲット ループの場合、サイトでは、結果を 1 つのタイミング数値で要約する代わりに、<strong>発振推定性</strong>、<strong>ターゲット精度</strong>、<strong>ダウンストリーム効果</strong>、および<strong>位相安定性</strong>も分離するようになりました。この精度とオフライン精度の違いについては、<a href="wiki/closed-loop-latency-jitter-and-safety-stops.html">Wiki: クローズド ループ、レイテンシー、ジッター、および安全な停止</a> を参照してください。
+</p>
+</div>
+<div class="note-box">
+<strong>位相をターゲットとした EEG ループには、エントリ ページに 4 つの個別のログが必要です</strong>
+<p>
+これは、EEG 導入における残りの最前線の弱点でした。より深い Wiki ではすでにルールが修正されていますが、エントリ ページでは依然として位相ターゲット EEG を一般的な <strong>リアルタイム</strong> または <strong>低遅延</strong> 言語に圧縮できます。一次文献ではそのショートカットはサポートされていません。 <a href="https://doi.org/10.3389/fnins.2018.00877" target="_blank">マンスーリら。 (2018)</a> および <a href="https://doi.org/10.1016/j.brs.2017.11.016" target="_blank">Zrenner et al. (2018)</a> は、リアルタイム位相トリガーが実現可能であることを確立しましたが、<a href="https://doi.org/10.1016/j.neuroimage.2020.116761" target="_blank">Zrenner et al. (2020)</a> は、振動振幅と信号対雑音比が低い場合、意味のある位相推定自体が低下することを示しました。 <a href="https://doi.org/10.3389/fnhum.2021.691821" target="_blank">ゴードンら。 (2021)</a> その後、ポストホック ベンチマークとともに低シータとフェーズ リセットの除外を追加した後にのみ、前頭前野シータ ターゲティングが改善されました。 <a href="https://doi.org/10.1523/ENEURO.0050-23.2023" target="_blank">キムら。 (2023)</a> は、<strong>11 件の公開データセット</strong> および <strong>484 人の参加者</strong> にわたって、より良い予測は一般的な認知状態の問題ではなく、主に電力/SNR の問題であることを示しました。 <a href="https://doi.org/10.1111/ejn.14931" target="_blank">Vigu&eacute;-Guix et al. (2022)</a> は、一貫した行動上の利点を持たずに、信頼性の高い試験間のアルファ位相ロックを達成しました。 (2025)&lt;/a&gt; は、最適な感覚運動μ相がセッション内で変動し、テストと再テストの信頼性が低いことを示しました。したがって、このサイトでは、位相をターゲットとした EEG 結果は、<strong>平均位相誤差</strong> だけでは要約されません。
+</p>
+<ul>
+<li><strong>推定可能性:</strong> ターゲット帯域、チャネルまたは空間フィルター、パワー/SNR ゲート、位相リセット除去、および刺激なしレート。</li>
+<li><strong>ターゲティング精度:</strong> 因果推定量ファミリー、ポストホックベンチマーク、循環ターゲティングメトリクス、およびオフターゲットまたはランダム位相コンパレータ。</li>
+<li><strong>ダウンストリーム効果:</strong> 位相ロック単独ではなく、生理学的または行動的なコンパレータ。</li>
+<li><strong>位相の安定性:</strong> 優先位相が固定されたか適応的に更新されたかに加え、セッション内のドリフトとセッション間の信頼性。</li>
+</ul>
+<p>
+これらのログが欠落している場合、このサイトでは、検証済みのフェーズ固有の制御ではなく、<strong>探索的状態依存タイミング証拠</strong> で結果を保持します。より長い運用ルールは、<a href="wiki/closed-loop-latency-jitter-and-safety-stops.html#phase-targeting-wall">Wiki: フェーズ ターゲティング ウォール</a> および <a href="verification.html">Verification: Mind Uploading Verification Commons</a> にあります。
+</p>
+</div>
+</section>
+
+<section class="section" id="preprocessing-acceptance-gates">
+<h2 class="section-title">2026-03 文献監査: 前処理は表面的なものではなく、承認ゲートです</h2>
+<p>
+EEG の前処理は、後の数値を単に見栄えを良くするだけの段階ではありません。これは、信号のどの部分をニューラルとして扱うか、どのクレームを停止する必要があるかを決定する監査ステップです。 COBIDAS-MEEG および EEG-BIDS は、具体的なレポートフロアを定義します。 PREP パイプラインは、不良チャネルの処理と再参照をきれいに分離できないことを示し、Widmann らはフィルタ設計が波形形状とレイテンシを歪める可能性があることを示し、最近のデコード作業はアーチファクト補正が常にパフォーマンスを向上させるわけではないことを示しています。そのため、このサイトでは、前処理をプリファレンス調整としてではなく、<strong>受け入れゲート</strong>として扱います。
+</p>
+<table class="data-table">
+<thead>
+<tr>
+<th>ゲート</th>
+<th>2026-03 時点での読み方</th>
+<th>このページで申し立ては停止されました</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>メタデータ / レポート ゲート</strong></td>
+<td>比較を意味のあるものにする前に、リファレンス、グランド、フィルター、不良チャネル、電極座標、およびイベント タイミングを記録する必要があります。</td>
+<td>「きれいな脳波が利用できるため、結果は再現可能です。」とだけ書いてください。</td>
+</tr>
+<tr>
+<td><strong>基準ゲート</strong></td>
+<td>参照の選択は実装の小さな詳細ではありません。それはセンサー空間パターンと接続性測定の意味を変えます。</td>
+<td>参照スキームを隠しながら、地形やネットワークの測定から強力な結論を引き出します。</td>
+</tr>
+<tr>
+<td><strong>フィルター ゲート</strong></td>
+<td>カットオフだけでなく、順序、タイプ、因果関係と非因果関係の設計によっても、オンセットと波形形状を変更できます。</td>
+<td>フィルター設計を省略しながら、ERP 遅延または高周波数の増加について強く主張します。</td>
+</tr>
+<tr>
+<td><strong>アーティファクト ゲート</strong></td>
+<td>ICA、ICLabel、Autoreject、PREP が有力な候補ですが、精度を最大化することは、神経特異性を最大化することと同じではありません。</td>
+<td>デコード スコアが最も高いパイプラインを自動的に最良のパイプラインとして扱います。</td>
+</tr>
+<tr>
+<td><strong>リテンション/高周波ゲート</strong></td>
+<td>EMG は高ベータおよびガンマと重複しますが、積極的な洗浄は神経信号も除去する可能性があります。保持率とロークリーンの差分は数値で報告する必要があります。</td>
+<td>EMG 検査を行わずにガンマ出力を神経利得として読み取る。</td>
+</tr>
+</tbody>
+</table>
+<div class="note-box">
+<strong>この監査から派生したサイト ルール</strong>
+<p>
+少なくとも、<strong>生の参照</strong>、<strong>再参照スキーム</strong>、<strong>フィルター</strong>、<strong>不良チャネルと不良セグメント</strong>、<strong>削除されたコンポーネントの数、またはエポック</strong>、<strong>保持されたトライアルとチャネルの数</strong>、<strong>主要な生クリーンメトリクスデルタ</strong>、および可能であれば<strong>1つの代替パイプライン</strong>に対する感度分析。実際の詳細は、<a href="wiki/eeg-preprocessing-and-qc.html">Wiki: EEG 前処理と QC</a> に集中されています。
+</p>
+</div>
+<div class="note-box">
+<strong>接続性メトリクスは、名前だけでは漏れ防止や因果関係を示すものではありません</strong>
+<p>
+<a href="https://doi.org/10.1109/EMBC.2018.8512547" target="_blank">ASR</a> や <a href="https://doi.org/10.1016/j.neuroimage.2019.116356" target="_blank">ZapLine</a> などのアーティファクト クリーニング ツールやライン ノイズ ツールは、再現可能なクリーンアップには役立ちますが、<strong>体積伝導</strong>、<strong>ソース漏洩</strong>、<strong>方向性は解決しません。識別可能性</strong>。 <a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">ヴィンクら。 (2011)</a> は、ゼロラグ混合に対してコヒーレンスや PLV よりも wPLI を安全にしましたが、<a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">Haufe et al. (2013)</a> は、センサーと空間の接続が体積伝導によって依然として厳しく制限されていることを示しました。<a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">Palva et al. (2018)</a> は、漏れの影響を受けにくいソース空間測定でもゴースト相互作用が生じる可能性があることを示しました。 (2020)&lt;/a&gt; は、観察だけでは因果関係を特定することが難しいため、TMS の下で STE を評価しました。したがって、このサイトでは、<strong>wPLI、ソース空間接続、および STE は、命名規則による漏れ防止または因果関係の読み出しとしてではなく、明示的な上限を持つ監査可能な推定量</strong> として読み取られます。
+</p>
+</div>
+</section>
+
+<section class="section" id="why-eeg-for-wbe">
+<h2 class="section-title">EEG が現実的な方法で WBE に貢献できる場所</h2>
+<div class="key-points">
+<h4>現実的な貢献</h4>
+<ul>
+<li><strong>L0:</strong> 標準化と監査可能性を備えた、公開データに基づいた再現可能なパイプラインを構築します</li>
+<li><strong>L1:</strong> 覚醒、睡眠、麻酔、タスク状態などの状態を確実に推定します</li>
+<li><strong>L2:</strong> 変化した刺激や課題の下での時間的発達を予測できるモデルに移行</li>
+<li><strong>長期的な作業:</strong> 後のアイデンティティ関連の質問の基礎として、安定した機能を時間や日をまたいで変化する機能から分離します</li>
+</ul>
+</div>
+</section>
+
+<section class="section" id="common-misunderstandings">
+<h2 class="section-title">よくある誤解はここまで</h2>
+<div class="stage-list">
+<div class="stage-item">
+<div class="stage-number">A</div>
+<div class="stage-body">
+<h4>「脳波は思考を直接読み取ることができます」</h4>
+<p>実際には、出力はノイズ、個人差、トレーニングデータのバイアス、および言語モデルの事前分布に依存する可能性があります。本当に EEG から得られたものを区別するには、依然として反事実テストが必要です。</p>
+</div>
+</div>
+<div class="stage-item">
+<div class="stage-number">B</div>
+<div class="stage-body">
+<h4>「前処理は細かい部分なので、待つことができます」</h4>
+<p>結果は、前処理、参照の選択、および記録フレームの調和ブランチによって変わります。 Mind-Upload が最初に QC、メタデータ、複製手順を修正するのはそのためです。</p>
+</div>
+</div>
+<div class="stage-item">
+<div class="stage-number">C</div>
+<div class="stage-body">
+<h4>「精度が高いので他の日や他の人でも使えるはずです」</h4>
+<p>セッション内、セッション間、主題間、およびクローズドループは異なる質問です。同じスコアであっても、異なるホールドアウト条件と再校正負担により、異なる強度の主張がサポートされます。</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="esi-uncertainty">
+<h2 class="section-title">ESI について厳密に述べなければならないこと</h2>
+<p>
+このセクションの重要な点は、どのアルゴリズム名が使用されたかではなく、<strong>エラーを監査するためにどのような一連の証拠が使用されたか</strong>です。将来の約束と現在必要とされる最小限の証拠が混同されると、脳波ソースイメージングは​​過大評価されやすくなります。
+</p>
+
+<div class="key-points">
+<h4>開示すべき 5 段階の証拠</h4>
+<ul>
+<li><strong>可視性フロア:</strong> 逆選択の前に、ターゲットのジェネレーター クラスがそもそも頭皮に到達する必要がある理由を明らかにし、ソースの深さ、方向、範囲、キャンセル リスク、および CSF を認識した頭部モデリングが使用されたかどうかを指定します。より優れたソルバーは、フィールド形成が使用可能な SNR を下回ってフィルタリングされたソースを回復できません。</li>
+<li><strong>レポート フロア:</strong> COBIDAS-MEEG および EEG-BIDS の下で、参照スキーム、<code>SamplingFrequency</code>、<code>SoftwareFilters</code>、不良セグメント、前処理条件、電極座標、および座標系を公開します。 BIDS は必要ですが、それ自体がグラウンド トゥルースではありません。</li>
+<li><strong>幾何学フロア:</strong> 解剖学的情報源を主張する場合は、個々の MRI、測定された電極位置、フォワード モデル、および頭蓋骨の導電性に関する仮定を開示してください。テンプレート MRI を代用することもできますが、形状と導電率の不一致により依然として誤差が拡大します (Birot et al., 2014; Aydin et al., 2019)。</li>
+<li><strong>検証フロア:</strong> シミュレーション/ファントム、頭蓋内刺激、同時 SEEG/HD-EEG、または術後の結果を伴う臨床コホートなどの名前付き検証クラスに対する位置特定エラーまたは一致を報告します。点推定だけでは十分ではなく、「外部検証」は曖昧すぎます。</li>
+<li><strong>ソルバー安定性フロア:</strong> 標準逆ファミリまたは妥当なパラメータ ウィンドウが実質的に異なるソース位置を与える場合、広がりを報告します。見栄えの良い 1 つの地図だけでは十分ではありません。</li>
+</ul>
+</div>
+
+<div class="key-points">
+<h4>必要なものと有望なものを分離する</h4>
+<ul>
+<li><strong>必須:</strong> 説明されたフォワード モデル、電極の同時登録、前処理ログ、エラー メトリクス、公開された故障条件、および事後 / アンサンブル幅またはクロスソルバー / クロスパラメーター感度のいずれか。</li>
+<li><strong>有力な候補:</strong> ベイジアン不確実性マップ、シャンパン族手法、およびベイジアン頭蓋伝導率モデリングはすべて強力な選択肢ですが、2026 年 3 月の時点では、まだ単一の標準的な答えと呼べるものはありません。</li>
+<li><strong>レシピに凍結すべきではないもの:</strong> Michel &amp; Brunet (2019) は、自動アーティファクト除去に盲目的に依存することに対して明確に警告し、それと並行して目視検査を推奨しています。したがって、ASR と ZapLine-plus は、普遍的な必須の手順としてではなく、感度分析による監査の対象候補として扱われる方が適切です。</li>
+</ul>
+</div>
+
+<div class="note-box">
+<strong>2026-03-19 追記: 単一の最良の逆マップだけでは十分ではありません</strong>
+<p>
+残りの弱点は、ソリューション セット全体の代わりに 1 つのクリーンなソース マップを使用することでした。 <a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory ら。 (2017)</a> は、逆法とソフトウェア パッケージの選択により、EEG 音源位置特定、特に下流接続が大きく変化する可能性があることを示し、複数の音源イメージング手順で結果を検証することを明示的に推奨しました。 <a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">ミクランら。 (2020)</a> は、既知の頭蓋内刺激部位を使用し、テストされたすべてのパラメーターの組み合わせを考慮した場合、ベンチマークの定位距離は 1 つの安定した答えに集約されるのではなく、通常約 2 mm から 50 mm の範囲であることを示しました。 <a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk ら。 (2024)</a> はさらに、組織の導電性、特に頭蓋骨の導電性が不確実であると、再構成された深さと位置が変化する可能性があることを示しました。したがって、このサイトでは、論文が<strong>クロスソルバー/クロスパラメータースプレッド</strong>または<strong>事後/アンサンブル不確かさ幅</strong>も示していない限り、単一の最も見栄えの良い逆マップは安定した解剖学的証拠とはみなされません。
+</p>
+</div>
+<div class="note-box">
+<strong>2026-03-27 追記: 条件付きディープソースゲインは一般的なディープカバレッジライセンスではありません</strong>
+<p>
+阻止するための次の近道は、最近のすべてのディープソース論文を「パイプラインが十分に注意していればディープリカバリは基本的に解決される」という 1 つの印象に圧縮することです。一次文献はその解釈を裏付けていません。 <a href="https://doi.org/10.1002/hbm.26720" target="_blank">アフナンら。 (2024)</a> は、<strong>5400 件の現実的なシミュレーション</strong> とてんかん患者データにわたって、深部発生源の位置特定、特に近心側頭音源を改善しましたが、その論文は依然として、脳全体の深部回復可能性の一般的な証明ではなく、<strong>条件付き深部てんかんルート</strong> です。 <a href="https://doi.org/10.1111/epi.18552" target="_blank">ハオら。 (2025)</a> は、その後、<strong>29 件の同時 HD-EEG/SEEG 症例</strong> で、発作時 ESI が <strong>14.07 &plusmn; に留まったことを示しました。 4.62 mm</strong> 対 <strong>17.38 +発作間欠期 ESI では 4.16 mm</strong>、<strong>ソース深度</strong> および<strong>スパイク電力</strong> が依然として精度に重大な影響を与えています。 <a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk ら。 (2026)</a> はさらに、個別化された頭蓋骨伝導率推定により、ほとんどのシミュレートされた音源について音源位置の不確実性が <strong>数センチメートルから 1 センチメートル未満に減少する可能性があることを示しました</strong> 一方で、<strong>脳底部の音源はあまり改善されていない</strong> こと、および点推定がまだ残留を隠していることが明らかになりました。不確実性。したがって、このサイトでは、これらの論文は、頭皮脳波が任意の深層ジェネレーターを観察しているという一般的な証拠としてではなく、<strong>ソースクラスおよびベンチマーク条件付きエラー削減</strong>として解釈されます。
+</p>
+</div>
+
+<div class="key-points">
+<h4>現在測定された証拠によって示される上限</h4>
+<ul>
+<li><strong>フィールド形成はすでに情報を削除しています:</strong> 向き、折り畳み、ソース範囲、およびキャンセルによって、反転が始まる前にどのジェネレーターが使用可能な SNR で頭皮に到達するかが決まります。</li>
+<li><strong>ディープ検出は明示的な条件下でのみ機能します:</strong> Seeber et al. (2019) は、同時 DBS 記録を備えた 256 チャネル頭皮 EEG を使用し、視床領域および側坐核領域付近の一致を発見しました。これは、一般に深いソースが一意に回復可能であることを意味するものではありません。</li>
+<li><strong>刺激グラウンドトゥルース誤差は依然として仮定によって広がります:</strong> Unnwongse et al. (2023) 頭蓋内刺激をグラウンドトゥルースとして使用し、音源の深さと頭蓋骨の伝導率設定に応じて 10.3 ～ 26.0 mm の範囲の平均位置特定誤差を示しました。</li>
+<li><strong>同時侵入的参照は依然としてかなりのエラーを残します:</strong> Hao et al. (2025) 同時 HD-EEG/SEEG での発作時 ESI の平均位置推定誤差は 14.07 +/- 4.62 mm、発作間欠期 ESI の平均位置誤差は 17.38 +/- 4.16 mm であり、深度とソース出力がパフォーマンスに大きく影響すると報告しました。</li>
+<li><strong>導電率校正は役立ちますが、壁を消去しません:</strong> Vorwerk et al. (2026) 多くのシミュレートされた音源の位置特定の不確実性は減少しましたが、基礎的な音源はあまり改善されておらず、残存する不確実性には依然として明示的な処理が必要でした。</li>
+<li><strong>検証クラスは主張の一部です:</strong>刺激のグラウンドトゥルース、同時侵襲的記録、および術後の結果は、同じエラーの質問に答えません。このサイトでは、請求上限が引き上げられる前にベンチマーク クラスに名前を付ける必要があります。</li>
+<li><strong>臨床使用においてさえ、過信は危険です:</strong> MouthaanらによるE-PILEPSYの系統的レビューでは、 (2019) によると、ソース画像の要約感度は 82%、特異度は 53% でしたが、含まれたすべての研究には依然として何らかの形でバイアスが存在していました。比較的構造化された術前設定であっても、ソースイメージングは依然として意思決定支援であり、グラウンドトゥルースではありません。</li>
+</ul>
+</div>
+
+<div class="note-box">
+<strong>このページの結論</strong>
+<p>
+ESI の改善を主張したい場合、最初の質問は「どの方法を使用したか?」ではありません。しかし、<strong>どのベンチマークで、どのエラーについて、そのエラーはどのくらい減少しましたか?</strong> ソース イメージングに関する主張は、公開されているスターター データセット内だけで閉じるべきではありません。これらは、<a href="datasets.html#validation-ladder">Datasets: ソース イメージング検証ラダー</a> と一緒に読み取る必要があります。
+</p>
+</div>
+</section>
+
+<section class="section" id="multimodal-integration">
+<h2 class="section-title">マルチモーダル統合は近道ではありません。それは別の監査の問題です</h2>
+<p>
+EEG だけでは不十分であるため、他のモダリティを追加すると問題は自動的に解決されると言うのは十分ではありません。統合は便利ですが、<strong>各モダリティ独自のエラー ソース</strong> も追加します。
+</p>
+<div class="key-points">
+<h4>統合タイプ別の役割と制約</h4>
+<ul>
+<li><strong>EEG + fMRI:</strong> 時間と空間にわたる相補性は魅力的ですが、同時記録では磁場の強度に依存するアーティファクトと安全性の制約が追加されます。ホルヘらのように、 (2015) は、7T ではケーブルの長さや配置によってもノイズが大幅に変化する可能性があり、血行動態側では「空間解像度を追加するだけ」ではなく、血管状態/CVR の解釈が依然として必要であることを示しています。</li>
+<li><strong>EEG + MEG:</strong> 感度プロファイルは相補的であり、Aydin et al. (2014) は、EEG/MEG と現実的な頭部モデルおよび伝導率キャリブレーションを組み合わせることで信頼性を向上できることを示しました。しかし、その利点は頭蓋骨伝導率の校正と再登録の質にかかっています。</li>
+<li><strong>EEG + PET + MRI:</strong> の同時取得により、電気生理学、血行動態、代謝を 1 つのウィンドウで比較できますが、PET 定量化、血管解釈、共有因子特異性、およびバンドルの堅牢性は依然として明示的な監査項目のままです。</li>
+<li><strong>OPM-MEG:</strong> 移動耐性 MEG は非常に進歩していますが、シールド クラス、フィールド ヌリング、センサーの校正 / 位置合わせ、解剖学的ルート、クロストーク、およびタスク レジームがデータの意味を決定します。</li>
+</ul>
+</div>
+<div class="note-box">
+<strong>2026-04-01 追記: ウェアラブル OPM-MEG は 1 つのポータブル ルートではありません</strong>
+<p>
+このページでは、まだ 1 つのマルチモーダル ショートカットが開いたままになっています。現在の一次文献は、<strong></strong> ではなく、「動きに耐える」ということが自動的に遮蔽光、校正光、MRI 不要、および自然主義的光源有効測定を同時に意味するかのように、ウェアラブル OPM-MEG の読み取りをサポートしています。 <a href="https://doi.org/10.1038/nature26147" target="_blank">ボトら。 (2018)</a> はウェアラブルの実現可能性を確立しましたが、背景フィールド制御なしで頭部を動かすとセンサーが飽和することも明らかにしました。 <a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">レアら。 (2021)</a> および <a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">Mellor et al. (2022)</a> は、精密フィールド モデリングとヌリングが依然として中核的なエンジニアリング要件であることを示しています。<a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">Holmes et al. (2025)</a> は、シールドの軽量化は、通常の部屋での可搬性ではなく、依然としてアクティブ補償と tSSS に依存することを示しています。<a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes et al. (2025)</a> は、個人の MRI をゴールドスタンダードとして扱いながら、擬似 MRI がグループ研究に役立つことを示しています。 (2025)&lt;/a&gt; は、アレイのクロストークが依然として実用的な設計限界であることを示し、<a href="https://doi.org/10.3390/s25134160" target="_blank">Spedden らは、 (2025)</a> は、狭い感覚運動ベータパラダイムの下で、わずか 3 人の健康な参加者において全身ステッピングの実現可能性を示しました。したがって、このサイトでは、ウェアラブル OPM-MEG は、ポータブルで制約のない脳の読み出しや状態観察性の一般的なアップグレードとしてではなく、開示されたシールド、フィールド制御、校正 / 位置合わせ、解剖学的ルート、クロストーク、およびタスク レジームの下での <strong>運動耐性マクロ電気生理学</strong> として解釈されます。
+</p>
+</div>
+<div class="note-box">
+<strong>同一セッションのマルチモーダル EEG には依然として Fusion Card が必要です</strong>
+<p>
+このページの古い短いルールは、<strong>simultaneous</strong> または <strong>multimodal</strong> を主な文献でサポートされているものよりも自己検証に近いものにしていたため、依然として弱すぎました。 <a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">コーテら。 (2025)</a> は、LSL をデバイス側の遅延の真実ではなく、同期インフラストラクチャとして説明しています。<a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei et al. (2020)</a> は、EEG-fMRI 融合をモデル条件付き推論問題として扱います。<a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii et al. (2024)</a> は、同時マルチモーダル記録が共通の組織と発散的な組織の両方を保持していることを示し、<a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">Chen et al. (2025)</a> は、覚醒時とノンレム睡眠時の同時 EEG-PET-MRI におけるモダリティおよびネットワーク固有の構造と結合したグローバル ダイナミクスを示しています。したがって、同じセッションのマルチモーダル EEG 結果であっても、最も強いユニモーダルまたは事前条件付けされた天井を超えて読み取られる前に、<a href="verification.html#fusion-card">Fusion Card</a> が必要です。
+</p>
+</div>
+<div class="note-box">
+<strong>共有された多峰性因子でも生理学的に混合される可能性がある</strong>
+<p>
+論文で強力な共通コンポーネントが報告されている場合でも、そのコンポーネントはまだ自動的にターゲットの神経変数にはなりません。 <a href="https://doi.org/10.1162/imag_a_00287" target="_blank">ゴールドら。 (2024)</a> は、EEG-fMRI と自律神経の同時記録において、警戒が低下するにつれて fMRI と自律神経の共分散が増大することを示しています。 (2019)&lt;/a&gt; は、EEG でマークされた覚醒イベント中に交感神経活動が fMRI 信号に寄与することを示しました。 (2025)&lt;/a&gt; は、大幅な BOLD の変更が、タスク応答性皮質ボクセルの約 40% にわたる酸素代謝の変化に対抗する可能性があることを示しています。したがって、このサイトでは、共有 EEG-fMRI または EEG-PET-MRI 因子は、1 つの解決済み状態変数に直接プロモートされるのではなく、<strong>共有神経候補</strong>、<strong>生理学関連グローバル因子</strong>、または <strong>混合/未解決</strong> としてラベル付けする必要があります。
+</p>
+</div>
+<div class="note-box">
+<strong>モダリティを増やしても、デフォルトではバンドルが堅牢になるわけではありません</strong>
+<p>
+バンドル レベルのパフォーマンスの向上は確実ですが、それでも独自の停止ラインが必要です。 <a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut ら。 (2024)</a> は、多峰性評価により重度の脳損傷における不確実な症例を減らしながら神経予後を改善できることを示しています。しかし、<a href="https://doi.org/10.1093/brain/awac335" target="_blank">Amiri et al. (2023)</a> は、直接同一サンプルのマルチモーダル予測を急性 DoC コホート内の別個の分析として扱いました。 (2026)&lt;/a&gt; は、臨床的に困難なグループにおける欠損値置換およびより高いモダリティ間の不一致を伴うセンター間評価を報告しています。したがって、このサイトでは、バンドルがすでに可用性を問わない、転送が安定している、または最も困難な状況において一貫性があるかのように「モダリティが増えるとパフォーマンスが向上する」とは書かれていません。
+</p>
+</div>
+<div class="note-box">
+<strong>実装ルール</strong>
+<p>
+統合の価値は、「より多くのモダリティが使用された」ということではありません。価値は、座標調整エラー、遅延不一致、ノイズ構造の違い、共有コンポーネント ロジックと特定コンポーネント ロジック、可用性/完全ケース スライス、および不確実性の伝播を個別に記録し、どの特定のエラーが削減されたかを示すことにあります。統合後でも、各モダリティの生データとメタデータは個別に監査可能である必要があります。バンドルに PET、MRSI、サポート状態ルートなどの生きた人間のプロキシ クラスも混在している場合、このページでは、<strong>マルチモーダル</strong> という単語に暗黙的にその負担を負わせるのではなく、バンドルを <a href="verification.html#human-proxy-composition-card">人間プロキシ構成カード</a> にルーティングします。
+</p>
+</div>
+<div class="note-box">
+<strong>最初に入門レベルの画像だけが必要な場合</strong>
+<p>
+EEG、MEG、fMRI、ECoG、および MRI がそもそも結合される理由の基本的な説明が必要な場合は、まず <a href="wiki/multimodal-integration-basics.html">Wiki: マルチモーダル統合の基本</a> を読んでから、このセクションに戻ってください。
+</p>
+</div>
+</section>
+
+&lt;/article&gt;
+
+<aside class="sidebar-column">
+
+<div class="sidebar-box">
+<h4>次</h4>
+<ul>
+<li><a href="verification.html">検証→</a></li>
+<li><a href="datasets.html">データセット →</a></li>
+<li><a href="tech_roadmap.html#measurement">ロードマップ: 測定→</a></li>
+<li><a href="glossary.html">用語集 →</a></li>
+</ul>
+</div>
+
+<div class="sidebar-box">
+<h4>参考文献</h4>
+<ul>
+<li><a href="https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html" target="_blank">BIDS EEG 仕様</a></li>
+<li><a href="https://doi.org/10.1038/s41597-019-0104-8" target="_blank">EEG-BIDS (科学データ)</a></li>
+<li><a href="https://doi.org/10.1038/s41593-020-00709-0" target="_blank">COBIDAS-MEEG (自然神経科学)</a></li>
+<li><a href="https://doi.org/10.1016/j.jneumeth.2015.06.014" target="_blank">PREP パイプライン</a></li>
+<li><a href="https://doi.org/10.1016/j.jneumeth.2014.08.002" target="_blank">Widmann et al. (2015)</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2013.00138" target="_blank">ムトゥクマラスワミ (2013)</a></li>
+<li><a href="https://doi.org/10.1038/s42003-025-08464-3" target="_blank">ケスラーら。 (2025)</a></li>
+<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">斉藤＆amp;レームスマイヤー (2015)</a></li>
+<li><a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">ロイら。 (2021)</a></li>
+<li><a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)</a></li>
+<li><a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)</a></li>
+<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">ヴァラット＆amp;ウォーカー (2021)</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">シーガルら。 (2023)</a></li>
+<li><a href="https://doi.org/10.1038/s41746-025-02237-2" target="_blank">デイ・ロッシら。 (2026)、スリーピーランド</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2021.653659" target="_blank">Kostas ら。 (2021)、BENDR</a></li>
+<li><a href="https://proceedings.iclr.cc/paper_files/paper/2024/file/47393e8594c82ce8fd83adc672cf9872-Paper-Conference.pdf" target="_blank">Jiang et al. (2024)、LaBraM</a></li>
+<li><a href="https://arxiv.org/abs/2507.14141" target="_blank">ハンら。 (2025)、DIVER-0</a></li>
+<li><a href="https://arxiv.org/abs/2510.12515" target="_blank">チェンら。 (2025)、HEAR</a></li>
+<li><a href="https://arxiv.org/abs/2510.21585" target="_blank">El Ouahidi 他。 (2025)、REVE</a></li>
+<li><a href="https://proceedings.mlr.press/v267/lee25a.html" target="_blank">リーら。 (2025)、監査の微調整</a></li>
+<li><a href="https://arxiv.org/abs/2508.17742" target="_blank">Xiong et al. (2025)、EEG-FM-ベンチ</a></li>
+<li><a href="https://arxiv.org/abs/2602.17251" target="_blank">Ma et al. (2026)、範囲</a></li>
+<li><a href="https://arxiv.org/abs/2603.02268" target="_blank">ラヒリら。 (2026)、PRISM</a></li>
+<li><a href="https://arxiv.org/abs/2601.17883" target="_blank">Liu et al. (2026)、EEG 基礎モデルのベンチマーク</a></li>
+<li><a href="https://eeg2025.github.io/" target="_blank">EEG チャレンジ (2025)、公式ホームページ</a></li>
+<li><a href="https://eeg2025.github.io/data/" target="_blank">EEG チャレンジ (2025)、データ</a></li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG チャレンジ (2025)、ルール</a></li>
+<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG チャレンジ (2025)、提出</a></li>
+<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG チャレンジ (2025)、リーダーボード / 事後分析</a></li>
+<li><a href="https://doi.org/10.3389/fneur.2019.00325" target="_blank">ミシェル＆amp;ブルネット (2019)</a></li>
+<li><a href="https://doi.org/10.1007/s10548-010-0154-x" target="_blank">Ahlfors et al. (2010)、ソース指向の感度</a></li>
+<li><a href="https://doi.org/10.1002/hbm.20851" target="_blank">Ahlfors et al. (2010)、出典キャンセル</a></li>
+<li><a href="https://doi.org/10.1002/hbm.20571" target="_blank">ゴールデンホルツら。 (2009)、皮質 SNR マップ</a></li>
+<li><a href="https://doi.org/10.1002/hbm.25272" target="_blank">Piastra et al. (2021)、皮質/皮質下の感受性</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2011.01.055" target="_blank">ヴィンクら。 (2011)、wPLI</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2012.09.036" target="_blank">ハウフェら。 (2013)、接続シミュレーションの制限</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2018.02.032" target="_blank">パルバら。 (2018)、ゴースト インタラクション</a></li>
+<li><a href="https://doi.org/10.1016/j.neures.2019.09.003" target="_blank">Ye et al. (2020)、TMS</a></li> に基づく STE
+<li><a href="https://doi.org/10.1016/j.clinph.2025.03.043" target="_blank">Miljevic et al. (2025)、センサースペース FC ベンチマーク</a></li>
+<li><a href="https://doi.org/10.1016/j.nicl.2014.06.005" target="_blank">Birot et al. (2014)</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2019.00531" target="_blank">Aydin et al. (2019)、導電率の不確かさ</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2017.02.076" target="_blank">Mahjoory et al. (2017)、パイプライン間の一貫性</a></li>
+<li><a href="https://doi.org/10.1016/j.clinph.2018.12.016" target="_blank">Mouthaan et al. (2019)</a></li>
+<li><a href="https://doi.org/10.1016/1053-8119(94)90016-7" target="_blank">ハマライネン＆amp;イルモニエミ (1994)</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.WithinSessionEvaluation.html" target="_blank">MOABB ドキュメント: WithinSessionEvaluation</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSessionEvaluation.html" target="_blank">MOABB ドキュメント: CrossSessionEvaluation</a></li>
+<li><a href="https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSubjectEvaluation.html" target="_blank">MOABB ドキュメント: CrossSubjectEvaluation</a></li>
+<li><a href="https://doi.org/10.1038/s41597-022-01647-1" target="_blank">Ma et al. (2022)</a></li>
+<li><a href="https://doi.org/10.1038/s41593-019-0502-4" target="_blank">Musall et al. (2019)</a></li>
+<li><a href="https://doi.org/10.1038/s41551-025-01536-z" target="_blank">ウィルソンら。 (2025)</a></li>
+<li><a href="https://doi.org/10.1038/s41597-020-0467-x" target="_blank">ミクランら。 (2020)</a></li>
+<li><a href="https://doi.org/10.1038/s41467-019-08725-w" target="_blank">Seeber ら。 (2019)</a></li>
+<li><a href="https://doi.org/10.1002/hbm.26720" target="_blank">アフナンら。 (2024)、深度加重ディープソース位置推定</a></li>
+<li><a href="https://doi.org/10.1093/braincomms/fcad023" target="_blank">Unnwongse et al. (2023)</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2024.1335212" target="_blank">Vorwerk et al. (2024)、グローバル導電率感度</a></li>
+<li><a href="https://doi.org/10.1111/epi.18552" target="_blank">ハオら。 (2025)</a></li>
+<li><a href="https://doi.org/10.1088/1741-2552/ae2f01" target="_blank">Vorwerk et al. (2026)、頭蓋骨の導電率推定と残留不確かさ</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2014.10.055" target="_blank">ホルヘら。 (2015)</a></li>
+<li><a href="https://doi.org/10.1371/journal.pone.0093154" target="_blank">Aydin et al. (2014)</a></li>
+<li><a href="https://doi.org/10.1038/nature26147" target="_blank">Boto et al. (2018)</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2021.118401" target="_blank">レアら。 (2021)</a></li>
+<li><a href="https://doi.org/10.1109/TBME.2021.3100770" target="_blank">メラーら。 (2022)</a></li>
+<li><a href="https://doi.org/10.1109/TBME.2024.3465654" target="_blank">ホームズら。 (2025)、軽く遮蔽された環境</a></li>
+<li><a href="https://doi.org/10.1162/IMAG.a.8" target="_blank">Rhodes et al. (2025)、OPM-MEG</a></li> の擬似 MRI
+<li><a href="https://doi.org/10.1063/5.0273491" target="_blank">ウーら。 (2025)、OPM アレイのクロストーク低減</a></li>
+<li><a href="https://doi.org/10.3390/s25134160" target="_blank">Spedden et al. (2025)、人間のステップ中のウェアラブル MEG</a></li>
+<li><a href="https://doi.org/10.1162/IMAG.a.136" target="_blank">コーテら。 (2025)</a></li>
+<li><a href="https://doi.org/10.1016/j.neuroimage.2020.116595" target="_blank">Wei ら。 (2020)</a></li>
+<li><a href="https://doi.org/10.1038/s41467-023-44363-z" target="_blank">Vafaii ら。 (2024)</a></li>
+<li><a href="https://doi.org/10.1038/s41467-025-64414-x" target="_blank">チェンら。 (2025)</a></li>
+<li><a href="https://doi.org/10.1162/imag_a_00287" target="_blank">ゴールドら。 (2024)</a></li>
+<li><a href="https://doi.org/10.1038/s42003-019-0659-0" target="_blank">Özbay et al. (2019)</a></li>
+<li><a href="https://doi.org/10.1038/s41593-025-02132-9" target="_blank">エップら。 (2025)</a></li>
+<li><a href="https://doi.org/10.1038/s41591-024-03019-1" target="_blank">Rohaut et al. (2024)</a></li>
+<li><a href="https://doi.org/10.1093/brain/awac335" target="_blank">アミリ 他(2023)</a></li>
+<li><a href="https://doi.org/10.1093/brain/awaf412" target="_blank">マナソワら。 (2026)</a></li>
+</ul>
+</div>
+
+</aside>
+&lt;/main&gt;
+</strong></p></div></section></a></strong></p></div></article></main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer h-card">
+        <data class="u-url" value="/"></data>
+        <div class="wrapper">
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="/wiki/">Wiki</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="/issue.html">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var body = document.body;
+            var wikiMode = body ? body.getAttribute("data-wiki-mode") : "local";
+            var githubWikiUrl = body ? body.getAttribute("data-github-wiki-url") : "";
+            var pageUrl = body ? body.getAttribute("data-page-url") : "";
+            var isWikiPage = pageUrl.indexOf("/wiki/") === 0;
+
+            function splitHref(raw) {
+                var match = raw.match(/^([^?#]*)([?#].*)?$/);
+                if (!match) {
+                    return { path: raw, suffix: "" };
+                }
+                return { path: match[1], suffix: match[2] || "" };
+            }
+
+            function githubWikiTargetFromPath(path, suffix) {
+                var slug = path.replace(/^\/+/, "")
+                    .replace(/^wiki\//, "")
+                    .replace(/^\/wiki\//, "")
+                    .replace(/\.html$/, "")
+                    .replace(/\/$/, "");
+
+                if (!slug || slug === "index") {
+                    return githubWikiUrl + suffix;
+                }
+
+                return githubWikiUrl + "/" + slug + suffix;
+            }
+
+            function rewriteWikiLinksForMode() {
+                if (wikiMode !== "github" || !githubWikiUrl) {
+                    return;
+                }
+
+                var anchors = document.querySelectorAll("a[href]");
+                anchors.forEach(function (anchor) {
+                    var rawHref = anchor.getAttribute("href");
+                    if (!rawHref || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.charAt(0) === "#") {
+                        return;
+                    }
+
+                    if (rawHref.indexOf(githubWikiUrl) === 0) {
+                        return;
+                    }
+
+                    var resolved;
+                    try {
+                        resolved = new URL(rawHref, window.location.href);
+                    } catch (error) {
+                        return;
+                    }
+
+                    var targetHref = null;
+                    var split = splitHref(rawHref);
+
+                    if (resolved.origin === window.location.origin) {
+                        var resolvedPath = resolved.pathname;
+                        if (resolvedPath === "/wiki" || resolvedPath === "/wiki/" || resolvedPath === "/wiki/index.html") {
+                            targetHref = githubWikiUrl + resolved.search + resolved.hash;
+                        } else if (resolvedPath.indexOf("/wiki/") === 0) {
+                            targetHref = githubWikiTargetFromPath(resolvedPath, resolved.search + resolved.hash);
+                        }
+                    } else if (isWikiPage && /^(?:\.\/)?[^/]+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path, split.suffix);
+                    } else if (/^(?:\.\.\/)?wiki\/.+\.html$/.test(split.path) || /^\/wiki\/.+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path.replace(/^\.\.\//, ""), split.suffix);
+                    }
+
+                    if (!targetHref) {
+                        return;
+                    }
+
+                    anchor.setAttribute("href", targetHref);
+                    anchor.setAttribute("target", "_blank");
+                    anchor.setAttribute("rel", "noopener noreferrer");
+                });
+            }
+
+            rewriteWikiLinksForMode();
+
+            var terms = [
+                ["再現性", "同じ手順をもう一度実行し、おおむね同じ結果を得られること。"],
+                ["反証可能性", "間違いだと示せる形で主張を書くこと。"],
+                ["操作的定義", "実際にどう測るかによって用語を定義すること。"],
+                ["標準化", "共有されたデータ形式や手順を使うこと。"],
+                ["ベンチマーク", "同じ条件で方法を比べるための共有テスト。"],
+                ["メタデータ", "いつ、どのように測られたかなど、データを説明するデータ。"],
+                ["デコード", "脳に関係する信号から状態や内容を推定すること。"],
+                ["エミュレーション", "脳機能を別の計算基盤上で再現すること。"],
+                ["因果", "単に一緒に変わることではなく、何が何を引き起こすかに関すること。"],
+                ["相関", "二つのものが一緒に変わること。それだけでは因果を証明しません。"],
+                ["反事実", "条件を変えたら何が起こるかを確認すること。"],
+                ["閉ループ", "出力を次の入力へ戻す制御構成。"],
+                ["QC", "品質管理。データが使えるか、信頼できるかを確認すること。"],
+                ["BIDS", "神経生理データを整理し共有するための標準。"],
+                ["主張ラダー", "弱い主張と強い主張を段階に分ける方法。"],
+                ["人格同一性", "それが同じ人物と言えるかどうかという問い。"],
+                ["共有基盤", "データ、コード、評価ルールを共有するための共通土台。"],
+                ["追試", "別の人が作業を再実行し、結果が保たれるか確認すること。"],
+                ["ガバナンス", "何かを安全に運用するためのルールと監督。"]
+            ];
+
+            var contentRoot = document.querySelector(".content-column") || document.querySelector(".papers-page > main") || document.querySelector("main");
+            var guide = document.getElementById("easy-guide");
+            var list = document.getElementById("easy-term-list");
+            var status = document.getElementById("easy-guide-status");
+            var sectionMap = document.getElementById("section-map");
+            var sectionMapList = document.getElementById("section-map-list");
+            var sectionMapStatus = document.getElementById("section-map-status");
+
+            if (!contentRoot) {
+                return;
+            }
+
+            if (sectionMap && sectionMapList && sectionMapStatus) {
+                var headings = contentRoot.querySelectorAll("h2.section-title, h2.category-title, h3.year-title, h3.year-heading");
+                var sectionCount = 0;
+                var seenIds = {};
+
+                for (var k = 0; k < headings.length; k++) {
+                    var heading = headings[k];
+                    var targetId = heading.id;
+                    var parentSection = heading.closest("section");
+
+                    if (!targetId && parentSection && parentSection.id) {
+                        targetId = parentSection.id;
+                    }
+
+                    if (!targetId) {
+                        targetId = "section-map-" + (k + 1);
+                        heading.id = targetId;
+                    }
+
+                    if (seenIds[targetId]) {
+                        continue;
+                    }
+
+                    seenIds[targetId] = true;
+                    sectionCount += 1;
+
+                    var mapItem = document.createElement("li");
+                    var mapLink = document.createElement("a");
+                    mapLink.href = "#" + targetId;
+
+                    var index = document.createElement("span");
+                    index.className = "section-map-index";
+                    index.textContent = String(sectionCount).padStart(2, "0");
+
+                    var label = document.createElement("span");
+                    label.className = "section-map-label";
+                    label.textContent = heading.textContent.trim();
+
+                    mapLink.appendChild(index);
+                    mapLink.appendChild(label);
+                    mapItem.appendChild(mapLink);
+                    sectionMapList.appendChild(mapItem);
+                }
+
+                if (sectionCount >= 3) {
+                    sectionMapStatus.textContent = sectionCount + " 個のセクションがあります。任意のセクションへ移動できますが、全体構造を崩さず読むには上から順に読むのが安全です。";
+                    sectionMap.hidden = false;
+                }
+            }
+
+            if (!guide || !list || !status) {
+                return;
+            }
+
+            var text = (contentRoot.innerText || "").toLowerCase();
+            var found = [];
+
+            for (var i = 0; i < terms.length; i++) {
+                if (text.indexOf(terms[i][0].toLowerCase()) !== -1) {
+                    found.push(terms[i]);
+                }
+            }
+
+            if (found.length === 0) {
+                return;
+            }
+
+            var limit = Math.min(found.length, 10);
+            status.textContent = "最初の " + limit + " 件の用語を平易な言葉で表示しています。";
+
+            for (var j = 0; j < limit; j++) {
+                var item = document.createElement("li");
+                var term = document.createElement("strong");
+                term.textContent = found[j][0] + ":";
+                item.appendChild(term);
+                item.appendChild(document.createTextNode(" " + found[j][1]));
+                list.appendChild(item);
+            }
+
+            guide.hidden = false;
+        })();
+    </script>
+
+</body>
+
+</html>

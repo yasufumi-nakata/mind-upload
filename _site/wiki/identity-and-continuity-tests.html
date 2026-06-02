@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Wiki: アイデンティティ評価と連続性テスト | マインドアップロード</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Wiki: アイデンティティ評価と連続性テスト" />
+<meta name="author" content="マインドアップロード研究プロジェクト" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="L4のアイデンティティアサーションでは、何をどのようにテストしたいのかを、記憶、価値観、学習、分岐、縦断の観点から簡単に整理します。" />
+<meta property="og:description" content="L4のアイデンティティアサーションでは、何をどのようにテストしたいのかを、記憶、価値観、学習、分岐、縦断の観点から簡単に整理します。" />
+<link rel="canonical" href="https://mind-upload.com/wiki/identity-and-continuity-tests.html" />
+<meta property="og:url" content="https://mind-upload.com/wiki/identity-and-continuity-tests.html" />
+<meta property="og:site_name" content="マインドアップロード" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wiki: アイデンティティ評価と連続性テスト" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"マインドアップロード研究プロジェクト"},"description":"L4のアイデンティティアサーションでは、何をどのようにテストしたいのかを、記憶、価値観、学習、分岐、縦断の観点から簡単に整理します。","headline":"Wiki: アイデンティティ評価と連続性テスト","url":"https://mind-upload.com/wiki/identity-and-continuity-tests.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta property="og:image" content="https://mind-upload.com/ogp.jpg">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F9E0;</text></svg>">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="https://mind-upload.com/feed.xml" title="マインドアップロード" />
+</head>
+
+
+
+
+
+<body class="wiki-light" data-article-type="ウィキ" data-page-url="/wiki/identity-and-continuity-tests.html" data-wiki-mode="local" data-github-wiki-url="">
+    <a class="skip-link" href="#site-content">本文へ移動</a>
+
+    <!-- グローバルヘッダー -->
+    <header class="site-header journal-header" role="banner">
+        <div class="wrapper journal-header-inner">
+            <a class="site-title" rel="author" href="/">マインドアップロード・コモンズ</a>
+            <nav class="site-nav" aria-label="主要ナビゲーション">
+                <div class="trigger">
+                    <a class="page-link" href="/">はじめに</a>
+                    <a class="page-link" href="/verification.html">検証</a>
+                    <a class="page-link" href="/tech_roadmap.html">ロードマップ</a>
+                    <a class="page-link" href="/content_hub.html">公開コンテンツ</a>
+                    <a class="page-link" href="/wiki/">Wiki</a>
+                    <a class="page-link" href="/mind_uploading_papers.html">論文アーカイブ</a>
+                    <a class="page-link" href="/issue.html">参加</a>
+                </div>
+        </nav>
+        </div>
+    </header>
+
+    
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+        <p class="article-type">ウィキ</p>
+        <h1 class="article-title">Wiki: アイデンティティ評価と連続性テスト</h1>
+        
+        <p class="article-subtitle">予約条件を使用した哲学とテスト設計への回帰</p>
+        
+        
+        <p class="author-info">
+            <span class="author-name">マインドアップロード研究プロジェクト</span>
+        </p>
+        
+        <div class="article-meta">
+            <span>公開ページ</span>
+            
+            <span>更新日: 2026-03-06</span>
+            
+            
+            <span>学習ガイド</span>
+            
+        </div>
+    </header>
+    
+
+    
+    <section class="page-guide" aria-label="このページの使い方">
+        <div class="page-guide-inner">
+            <div class="page-guide-main">
+                <p class="page-guide-kicker">このページの使い方</p>
+                <h2>迷わないために最初に読んでください</h2>
+                
+                <p class="page-guide-lead">このページは哲学用語の紹介ではなく、Mind-UploadのL4「`Individuality Assertion'' from the perspective of `「何をどのようにテストしたいのですか?」をまとめたWikiです。 We will explain from the beginning how to reduce memory, values, learning, longitudinal stability, and handling of divergences to pre-registered continuity tests.</p>
+                
+                
+                
+                
+                <ul class="page-guide-points">
+                    
+                    <li>アイデンティティに関して言えば、単なる「類似性」の問題ではありません。自分の個性をどこで保留するかを決めることも重要です。</li>
+                    
+                    <li>私たちは、記憶、価値観、学習、分岐、縦方向のドリフトを個別に検討します。</li>
+                    
+                    <li>L4 では、事前登録と失敗条件が特に重要です。</li>
+                    
+                </ul>
+                
+                
+                
+                <div class="page-guide-links">
+                    <span>次に読むと役立つページ</span>
+                    <div class="page-guide-link-list">
+                        
+                        <a href="/wbe_101.html">WBE の概要</a>
+                        
+                        <a href="/verification.html">検証プラットフォーム</a>
+                        
+                        <a href="/tech_roadmap.html">技術ロードマップ</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <dl class="page-guide-facts">
+                
+                <div>
+                    <dt>対象読者</dt>
+                    <dd>自分のアイデンティティを気にしてエンジニアリングに戻りたい人、L4の読み方で止められやすい人</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>読了時間</dt>
+                    <dd>10～15分</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>正確性に関する注記</dt>
+                    <dd>ここで説明するのは評価設計の始まりです。どのような条件で最終的に二人が同一人物であると判断できるのかはまだ未解明であり、このページではその結論を示していません。</dd>
+                </div>
+                
+            </dl>
+        </div>
+    </section>
+    
+
+    
+    <section class="topic-status" aria-label="ここでわかっていることと追加学習先">
+        <div class="topic-status-inner">
+            
+            <div class="topic-card topic-card-known">
+                <p class="topic-card-kicker">現段階で比較的明確なこと</p>
+                <h2>現在わかっていること</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>同一性の主張は L0 ～ L3 よりも強く、単なる出力一致では十分ではありません。</li>
+                    
+                    <li>記憶、価値観、学習履歴、状況の変化に対する反応を個別に見る必要があります。</li>
+                    
+                    <li>分岐や長期にわたる漂流は、アイデンティティの主張をさらに困難にします。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-unknown">
+                <p class="topic-card-kicker">ここから先でまだ未解決のこと</p>
+                <h2>まだわかっていないこと</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>十分条件を構成するにはどのテストの組み合わせが満たされなければならないかはまだ未解決です。</li>
+                    
+                    <li>継続的な移行がアイデンティティを保護するのに十分であるかどうかはまだ証明されていません。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-wiki">
+                <p class="topic-card-kicker">基礎を学ぶ</p>
+                <h2>Wiki で基礎を確認する</h2>
+                <ul class="topic-link-list">
+                    
+                    <li>
+                        <a href="/wiki/personhood-and-copy-problem.html" data-wiki-link="/wiki/personhood-and-copy-problem.html">Wiki: ID とコピーの問題</a>
+                        
+                        <span>まずは哲学の基礎に立ち返りたい人向けです。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/claims-and-evidence.html" data-wiki-link="/wiki/claims-and-evidence.html">Wiki: 主張と証拠の読み方</a>
+                        
+                        <span>これは、L4 の主張の強さを補います。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/counterfactual-and-perturbation-verification.html" data-wiki-link="/wiki/counterfactual-and-perturbation-verification.html">Wiki: 反事実/介入/摂動</a>
+                        
+                        <span>これは、条件の変化に対する反応を確認する理由を説明します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/state-trait-and-drift.html" data-wiki-link="/wiki/state-trait-and-drift.html">Wiki: 状態/特性/ドリフト</a>
+                        
+                        <span>長期的な評価において短期的な状態と長期的な特性を区別する方法を補足します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/update-branching-and-stop-rules.html" data-wiki-link="/wiki/update-branching-and-stop-rules.html">Wiki: 更新/分岐/停止ルール</a>
+                        
+                        <span>ブランチログ、バージョン管理、停止条件の基本を補足します。</span>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+
+    <section id="easy-guide" class="easy-guide" hidden aria-label="平易な用語説明">
+        <div class="easy-guide-inner">
+            <h2>このページの平易な用語説明</h2>
+            <p id="easy-guide-status"></p>
+            <ul id="easy-term-list"></ul>
+            <p class="easy-guide-more">さらに見る: <a href="/glossary.html">用語集</a></p>
+        </div>
+    </section>
+
+    <section id="section-map" class="section-map" hidden aria-label="ページ構成">
+        <div class="section-map-inner">
+            <div class="section-map-header">
+                <p class="section-map-kicker">ページ構成</p>
+                <h2>全体を読む前に構造を確認する</h2>
+                <p id="section-map-status"></p>
+            </div>
+            <ol id="section-map-list" class="section-map-list"></ol>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="site-content" class="site-content-anchor" tabindex="-1"></div>
+    <main class="main-container">
+<article class="content-column">
+
+<div class="abstract-box">
+<h2>最短のアイデア</h2>
+<p>
+誰かのアイデンティティを尋ねるとき、必要なのは、その人が同じ話し方をしているかどうかを尋ねるだけではありません。まず、何が起こっているのか、問題が発生した場合に何を保留するのかを決めることが重要です。
+</p>
+</div>
+
+<section class="section" id="why-l4-is-hard">
+<h2 class="section-title">なぜL4が急に難しくなるのか</h2>
+<p>
+L1 と L2 には、精度や予測一致などの比較的明確な指標を入れることができます。しかし、L4では「`Is this memory match enough?'' ``If a person's values ​​change slightly, are they a different person?'' and `「学習による変化をどこまで許容すべきか」という問題が絡んでくる。つまり、測定だけでなく判定ルール自体も難しくなってしまうのです。
+</p>
+</section>
+
+<section class="section" id="what-to-separate">
+<h2 class="section-title">まずは分けて検討すべき5つの項目</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>アイテム</th>
+<th>何が見たいですか</th>
+<th>それだけでは不十分な理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>メモリ</strong></td>
+<td>自伝的記憶とエピソードの一貫性。 </td>
+<td>メモリー再生だけでは、必ずしも主観的な連続性を示すわけではありません。 </td>
+</tr>
+<tr>
+<td><strong>値/設定</strong></td>
+<td>判断の傾向と優先順位の一貫性。 </td>
+<td>短期的な気分の変動と長期的な性格傾向を区別する必要があります。 </td>
+</tr>
+<tr>
+<td><strong>学習履歴</strong></td>
+<td>新しい体験を取り入れ、以前のトレンドと結びつける方法。 </td>
+<td>学習すれば変化するのは当然であり、変化そのものを直ちにミスマッチとは言えません。 </td>
+</tr>
+<tr>
+<td><strong>状態の変化に対する反応</strong></td>
+<td>未学習の条件や介入の下で、反応はどのように分岐しますか? </td>
+<td>平常時は似ていても、分岐により大きく崩れる可能性があります。 </td>
+</tr>
+<tr>
+<td><strong>縦方向の安定性</strong></td>
+<td>1日内、日ごと、長期にわたって何が安定し、何が変動するのか？ </td>
+<td>一度の測定だけでは同一性の持続性を確認することはできません。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="example-tests">
+<h2 class="section-title">どのような導通テストを検討しますか</h2>
+<div class="key-points">
+<h4>T例として含めたいテスト</h4>
+<ul>
+<li><strong>自伝的記憶の調整: イベントの内容だけでなく、それらの関連性や優先順位も追跡します。 &lt;/li&gt;
+<li><strong>好みの安定性:</strong>価値判断と選択の傾向が短期的なノイズを超えて持続するかどうかを調べます。 </li>
+<li><strong>学習の継続性:</strong>新しい情報を与えた後、更新方法が元の傾向とつながっているかどうかを確認します。 </li>
+<li><strong>分岐検証:</strong>条件を変更する場合、別個体として扱うべき点を記録します。 </li>
+<li><strong>長期ドリフトモニタリング:</strong> 数日または数週間にわたって変化する特性と変化しない特性を追跡します。 </li>
+&lt;/ul&gt;
+&lt;/div&gt;
+<p>特に縦断評価の入口だけを先に整理したい場合は、<a href="state-trait-and-drift.html">Wiki:state/trait/drift</a>が補講となります。 </p>
+&lt;/section&gt;
+
+<section class="section" id="prereg">
+<h2 class="section-title">事前登録が特に重要な理由</h2>
+<p>
+人の性格の評価は、後から考えるとその人に都合の良いように解釈できます。そのため、<strong> </strong> ``what to consider as a match,'' ``to what degree of deviation to suspend,'' and ``どのブランチを別個体として扱うかを事前登録する必要があります。
+</p>
+<div class="note-box">
+<strong>まず決めるべきこと</strong>
+<p>
+試験項目、採点ルール、観察期間、故障条件、停止条件、分岐の扱いです。 L4ではこの部分があいまいだと全体の結論が揺らいでしまいます。
+</p>
+</div>
+</section>
+
+<section class="section" id="branching">
+<h2 class="section-title">分岐が発生すると大変なこと</h2>
+<p>
+2 つのシステムがある時点で別々に学習し始めた場合、最初はほぼ同じになる可能性がありますが、時間の経過とともに異なる履歴を持つことになります。現時点で問題となるのは、「`to what point should they be treated as the same evaluation unit?'' and `をどの時点で別個の存在として分離すべきか」だ。
+</p>
+<p>
+したがって、L4 を評価する際には、類似性だけでなく、<strong> ブランチログ </strong> および <strong> バージョン管理 </strong> も考慮することが重要です。
+</p>
+<p>
+分岐点、分岐ID、停止条件、キルスイッチの違いを先に明確にしたい場合は、<a href="update-branching-and-stop-rules.html">Wiki:更新・分岐・停止ルール</a>を補講とします。
+</p>
+</section>
+
+<section class="section" id="what-not-claim">
+<h2 class="section-title">この段階で言ってはいけないこと</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>誇張しやすい表現</th>
+<th>より安全に読書</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>本人確認済み</strong></td>
+<td> 事前に登録した導通テストグループでは、これまでのところ大きな差異はありません。 </td>
+</tr>
+<tr>
+<td><strong>同一人物が完全に保存されました</strong></td>
+<td>記憶、価値観、学習、分岐に関する事前評価が確立されています。 </td>
+</tr>
+<tr>
+<td><strong>長期的には同じ</strong></td>
+<td>観察期間内に、定義された指標に有意な変動は観察されませんでした。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="how-to-read">
+<h2 class="section-title">L4 ストーリーを読み取る際の最小限のチェック</h2>
+<div class="key-points">
+<h4>チェックリスト</h4>
+<ul>
+<li><strong>連続的とは何だと思いますか:</strong>記憶、価値観、学習、分岐、または長期的なものを見ているかどうか。 </li>
+<li><strong>事前登録はありますか?</strong>基準は後から変更されますか? </li>
+<li><strong>失敗条件はありますか?</strong>プロジェクトが保留される原因となる矛盾はありますか? </li>
+<li><strong>観察期間は十分ですか?</strong>単一の一致は長期的な同一性を示しますか? </li>
+</ul>
+</div>
+</section>
+
+<section class="section" id="return">
+<h2 class="section-title">次に戻る場所</h2>
+<p>
+理念志向の入り口に戻りたい場合は<a href="personhood-and-copy-problem.html">Identityとコピー問題</a>を、L4の位置に戻りたい場合は<a href="../wbe_101.html">WBE</a>を、検証設計に戻りたい場合は<a href="../verification.html">検証基盤</a>をご利用ください。
+</p>
+</section>
+
+&lt;/article&gt;
+
+<aside class="sidebar-column">
+<div class="sidebar-box">
+<h4>関連Wiki</h4>
+<ul>
+<li><a href="personhood-and-copy-problem.html">人物像とコピーの問題→</a></li>
+<li><a href="claims-and-evidence.html">主張と証拠の読み方→</a></li>
+<li><a href="counterfactual-and-perturbation-verification.html">反事実/介入/摂動 →</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>公開ページ</h4>
+<ul>
+<li><a href="../wbe_101.html">WBE入門→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+<li><a href="../tech_roadmap.html">技術ロードマップ→</a></li>
+</ul>
+</div>
+</aside>
+&lt;/main&gt;
+</strong></li></ul></div></section></article></main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer h-card">
+        <data class="u-url" value="/"></data>
+        <div class="wrapper">
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="/wiki/">Wiki</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="/issue.html">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var body = document.body;
+            var wikiMode = body ? body.getAttribute("data-wiki-mode") : "local";
+            var githubWikiUrl = body ? body.getAttribute("data-github-wiki-url") : "";
+            var pageUrl = body ? body.getAttribute("data-page-url") : "";
+            var isWikiPage = pageUrl.indexOf("/wiki/") === 0;
+
+            function splitHref(raw) {
+                var match = raw.match(/^([^?#]*)([?#].*)?$/);
+                if (!match) {
+                    return { path: raw, suffix: "" };
+                }
+                return { path: match[1], suffix: match[2] || "" };
+            }
+
+            function githubWikiTargetFromPath(path, suffix) {
+                var slug = path.replace(/^\/+/, "")
+                    .replace(/^wiki\//, "")
+                    .replace(/^\/wiki\//, "")
+                    .replace(/\.html$/, "")
+                    .replace(/\/$/, "");
+
+                if (!slug || slug === "index") {
+                    return githubWikiUrl + suffix;
+                }
+
+                return githubWikiUrl + "/" + slug + suffix;
+            }
+
+            function rewriteWikiLinksForMode() {
+                if (wikiMode !== "github" || !githubWikiUrl) {
+                    return;
+                }
+
+                var anchors = document.querySelectorAll("a[href]");
+                anchors.forEach(function (anchor) {
+                    var rawHref = anchor.getAttribute("href");
+                    if (!rawHref || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.charAt(0) === "#") {
+                        return;
+                    }
+
+                    if (rawHref.indexOf(githubWikiUrl) === 0) {
+                        return;
+                    }
+
+                    var resolved;
+                    try {
+                        resolved = new URL(rawHref, window.location.href);
+                    } catch (error) {
+                        return;
+                    }
+
+                    var targetHref = null;
+                    var split = splitHref(rawHref);
+
+                    if (resolved.origin === window.location.origin) {
+                        var resolvedPath = resolved.pathname;
+                        if (resolvedPath === "/wiki" || resolvedPath === "/wiki/" || resolvedPath === "/wiki/index.html") {
+                            targetHref = githubWikiUrl + resolved.search + resolved.hash;
+                        } else if (resolvedPath.indexOf("/wiki/") === 0) {
+                            targetHref = githubWikiTargetFromPath(resolvedPath, resolved.search + resolved.hash);
+                        }
+                    } else if (isWikiPage && /^(?:\.\/)?[^/]+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path, split.suffix);
+                    } else if (/^(?:\.\.\/)?wiki\/.+\.html$/.test(split.path) || /^\/wiki\/.+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path.replace(/^\.\.\//, ""), split.suffix);
+                    }
+
+                    if (!targetHref) {
+                        return;
+                    }
+
+                    anchor.setAttribute("href", targetHref);
+                    anchor.setAttribute("target", "_blank");
+                    anchor.setAttribute("rel", "noopener noreferrer");
+                });
+            }
+
+            rewriteWikiLinksForMode();
+
+            var terms = [
+                ["再現性", "同じ手順をもう一度実行し、おおむね同じ結果を得られること。"],
+                ["反証可能性", "間違いだと示せる形で主張を書くこと。"],
+                ["操作的定義", "実際にどう測るかによって用語を定義すること。"],
+                ["標準化", "共有されたデータ形式や手順を使うこと。"],
+                ["ベンチマーク", "同じ条件で方法を比べるための共有テスト。"],
+                ["メタデータ", "いつ、どのように測られたかなど、データを説明するデータ。"],
+                ["デコード", "脳に関係する信号から状態や内容を推定すること。"],
+                ["エミュレーション", "脳機能を別の計算基盤上で再現すること。"],
+                ["因果", "単に一緒に変わることではなく、何が何を引き起こすかに関すること。"],
+                ["相関", "二つのものが一緒に変わること。それだけでは因果を証明しません。"],
+                ["反事実", "条件を変えたら何が起こるかを確認すること。"],
+                ["閉ループ", "出力を次の入力へ戻す制御構成。"],
+                ["QC", "品質管理。データが使えるか、信頼できるかを確認すること。"],
+                ["BIDS", "神経生理データを整理し共有するための標準。"],
+                ["主張ラダー", "弱い主張と強い主張を段階に分ける方法。"],
+                ["人格同一性", "それが同じ人物と言えるかどうかという問い。"],
+                ["共有基盤", "データ、コード、評価ルールを共有するための共通土台。"],
+                ["追試", "別の人が作業を再実行し、結果が保たれるか確認すること。"],
+                ["ガバナンス", "何かを安全に運用するためのルールと監督。"]
+            ];
+
+            var contentRoot = document.querySelector(".content-column") || document.querySelector(".papers-page > main") || document.querySelector("main");
+            var guide = document.getElementById("easy-guide");
+            var list = document.getElementById("easy-term-list");
+            var status = document.getElementById("easy-guide-status");
+            var sectionMap = document.getElementById("section-map");
+            var sectionMapList = document.getElementById("section-map-list");
+            var sectionMapStatus = document.getElementById("section-map-status");
+
+            if (!contentRoot) {
+                return;
+            }
+
+            if (sectionMap && sectionMapList && sectionMapStatus) {
+                var headings = contentRoot.querySelectorAll("h2.section-title, h2.category-title, h3.year-title, h3.year-heading");
+                var sectionCount = 0;
+                var seenIds = {};
+
+                for (var k = 0; k < headings.length; k++) {
+                    var heading = headings[k];
+                    var targetId = heading.id;
+                    var parentSection = heading.closest("section");
+
+                    if (!targetId && parentSection && parentSection.id) {
+                        targetId = parentSection.id;
+                    }
+
+                    if (!targetId) {
+                        targetId = "section-map-" + (k + 1);
+                        heading.id = targetId;
+                    }
+
+                    if (seenIds[targetId]) {
+                        continue;
+                    }
+
+                    seenIds[targetId] = true;
+                    sectionCount += 1;
+
+                    var mapItem = document.createElement("li");
+                    var mapLink = document.createElement("a");
+                    mapLink.href = "#" + targetId;
+
+                    var index = document.createElement("span");
+                    index.className = "section-map-index";
+                    index.textContent = String(sectionCount).padStart(2, "0");
+
+                    var label = document.createElement("span");
+                    label.className = "section-map-label";
+                    label.textContent = heading.textContent.trim();
+
+                    mapLink.appendChild(index);
+                    mapLink.appendChild(label);
+                    mapItem.appendChild(mapLink);
+                    sectionMapList.appendChild(mapItem);
+                }
+
+                if (sectionCount >= 3) {
+                    sectionMapStatus.textContent = sectionCount + " 個のセクションがあります。任意のセクションへ移動できますが、全体構造を崩さず読むには上から順に読むのが安全です。";
+                    sectionMap.hidden = false;
+                }
+            }
+
+            if (!guide || !list || !status) {
+                return;
+            }
+
+            var text = (contentRoot.innerText || "").toLowerCase();
+            var found = [];
+
+            for (var i = 0; i < terms.length; i++) {
+                if (text.indexOf(terms[i][0].toLowerCase()) !== -1) {
+                    found.push(terms[i]);
+                }
+            }
+
+            if (found.length === 0) {
+                return;
+            }
+
+            var limit = Math.min(found.length, 10);
+            status.textContent = "最初の " + limit + " 件の用語を平易な言葉で表示しています。";
+
+            for (var j = 0; j < limit; j++) {
+                var item = document.createElement("li");
+                var term = document.createElement("strong");
+                term.textContent = found[j][0] + ":";
+                item.appendChild(term);
+                item.appendChild(document.createTextNode(" " + found[j][1]));
+                list.appendChild(item);
+            }
+
+            guide.hidden = false;
+        })();
+    </script>
+
+</body>
+
+</html>

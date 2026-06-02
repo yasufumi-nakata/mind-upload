@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Wiki: 提案とステータス ラベルの見方 | マインドアップロード</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Wiki: 提案とステータス ラベルの見方" />
+<meta name="author" content="マインドアップロード研究プロジェクト" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="これは、提案、承認、文書反映、実装、外部依存関係の違いを整理し、提案ページと論点の誤読を避けるための補助ページです。" />
+<meta property="og:description" content="これは、提案、承認、文書反映、実装、外部依存関係の違いを整理し、提案ページと論点の誤読を避けるための補助ページです。" />
+<link rel="canonical" href="https://mind-upload.com/wiki/proposal-status-reading.html" />
+<meta property="og:url" content="https://mind-upload.com/wiki/proposal-status-reading.html" />
+<meta property="og:site_name" content="マインドアップロード" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wiki: 提案とステータス ラベルの見方" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"マインドアップロード研究プロジェクト"},"description":"これは、提案、承認、文書反映、実装、外部依存関係の違いを整理し、提案ページと論点の誤読を避けるための補助ページです。","headline":"Wiki: 提案とステータス ラベルの見方","url":"https://mind-upload.com/wiki/proposal-status-reading.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta property="og:image" content="https://mind-upload.com/ogp.jpg">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F9E0;</text></svg>">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="https://mind-upload.com/feed.xml" title="マインドアップロード" />
+</head>
+
+
+
+
+
+<body class="wiki-light" data-article-type="ウィキ" data-page-url="/wiki/proposal-status-reading.html" data-wiki-mode="local" data-github-wiki-url="">
+    <a class="skip-link" href="#site-content">本文へ移動</a>
+
+    <!-- グローバルヘッダー -->
+    <header class="site-header journal-header" role="banner">
+        <div class="wrapper journal-header-inner">
+            <a class="site-title" rel="author" href="/">マインドアップロード・コモンズ</a>
+            <nav class="site-nav" aria-label="主要ナビゲーション">
+                <div class="trigger">
+                    <a class="page-link" href="/">はじめに</a>
+                    <a class="page-link" href="/verification.html">検証</a>
+                    <a class="page-link" href="/tech_roadmap.html">ロードマップ</a>
+                    <a class="page-link" href="/content_hub.html">公開コンテンツ</a>
+                    <a class="page-link" href="/wiki/">Wiki</a>
+                    <a class="page-link" href="/mind_uploading_papers.html">論文アーカイブ</a>
+                    <a class="page-link" href="/issue.html">参加</a>
+                </div>
+        </nav>
+        </div>
+    </header>
+
+    
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+        <p class="article-type">ウィキ</p>
+        <h1 class="article-title">Wiki: 提案とステータス ラベルの見方</h1>
+        
+        <p class="article-subtitle">「採用」と「採用」は別物</p>
+        
+        
+        <p class="author-info">
+            <span class="author-name">マインドアップロード研究プロジェクト</span>
+        </p>
+        
+        <div class="article-meta">
+            <span>公開ページ</span>
+            
+            <span>更新日: 2026-03-14</span>
+            
+            
+            <span>読書ガイド</span>
+            
+        </div>
+    </header>
+    
+
+    
+    <section class="page-guide" aria-label="このページの使い方">
+        <div class="page-guide-inner">
+            <div class="page-guide-main">
+                <p class="page-guide-kicker">このページの使い方</p>
+                <h2>迷わないために最初に読んでください</h2>
+                
+                <p class="page-guide-lead">このページは、Mind-Upload の提案ページと問題ページに表示されるステータス ラベルの読み間違いを防ぐための補助ページです。提案が受理されて実装されることと、外部合意が完了することには違いがありますので、その違いを日常用語で説明します。</p>
+                
+                
+                
+                
+                <ul class="page-guide-points">
+                    
+                    <li>提案、承認、ドキュメントの反映、実装、および外部依存関係が別の段階として説明されます。</li>
+                    
+                    <li>どのラベルを見れば、次にどこに戻ればよいかがわかります。</li>
+                    
+                    <li>これは、本文にあるから完結していると思わないための補助です。</li>
+                    
+                </ul>
+                
+                
+                
+                <div class="page-guide-links">
+                    <span>次に読むと役立つページ</span>
+                    <div class="page-guide-link-list">
+                        
+                        <a href="/issue.html#proposal-integration">技術提案</a>
+                        
+                        <a href="/issue.html">貢献ガイド</a>
+                        
+                        <a href="/verification.html">検証ベース</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <dl class="page-guide-facts">
+                
+                <div>
+                    <dt>対象読者</dt>
+                    <dd>提案ページや課題ステータスラベルを理解するのが難しい人</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>読了時間</dt>
+                    <dd>8～12分</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>正確性に関する注記</dt>
+                    <dd>ここでの説明は読みやすくするためのものです。必ず提案ページに戻って発行履歴を確認し、個々の提案の最新ステータスを確認してください。</dd>
+                </div>
+                
+            </dl>
+        </div>
+    </section>
+    
+
+    
+    <section class="topic-status" aria-label="ここでわかっていることと追加学習先">
+        <div class="topic-status-inner">
+            
+            <div class="topic-card topic-card-known">
+                <p class="topic-card-kicker">現段階で比較的明確なこと</p>
+                <h2>現在わかっていること</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>提案の受け入れや文書の反映は、自動的にコードや共同研究の完了を意味するものではありません。</li>
+                    
+                    <li>外部に依存するタスクについては、自分側の準備と相手側の契約を別々に読む必要があります。</li>
+                    
+                    <li>ステータスラベルは、実装および出版の場所を示すものであり、科学的確実性自体を示すものではありません。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-unknown">
+                <p class="topic-card-kicker">ここから先でまだ未解決のこと</p>
+                <h2>まだわかっていないこと</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>各提案が最終的にどの程度実施されるかは、作業が進むにつれて変わる可能性があります。</li>
+                    
+                    <li>外部依存タスクの完了タイミングや完了条件はラベルだけでは保証できません。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-wiki">
+                <p class="topic-card-kicker">基礎を学ぶ</p>
+                <h2>Wiki で基礎を確認する</h2>
+                <ul class="topic-link-list">
+                    
+                    <li>
+                        <a href="/wiki/literature-and-evidence-reading.html" data-wiki-link="/wiki/literature-and-evidence-reading.html">Wiki: 文献と証拠のページの読み方</a>
+                        
+                        <span>提案書ページと文献ページの違いを補います。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/internal-prework-and-external-dependencies.html" data-wiki-link="/wiki/internal-prework-and-external-dependencies.html">Wiki: 社内および外部の依存関係について最初に行うべきこと</a>
+                        
+                        <span>この本は、外部依存関係を今すぐに実行できる準備作業に分解したい人向けです。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/verification-basics.html" data-wiki-link="/wiki/verification-basics.html">Wiki: 検証インフラストラクチャの基本</a>
+                        
+                        <span>達成条件と不確認条件が最初に配置される理由がわかります。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/" data-wiki-link="/wiki/">ウィキホーム</a>
+                        
+                        <span>他の基本ページに戻ることができます。</span>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+
+    <section id="easy-guide" class="easy-guide" hidden aria-label="平易な用語説明">
+        <div class="easy-guide-inner">
+            <h2>このページの平易な用語説明</h2>
+            <p id="easy-guide-status"></p>
+            <ul id="easy-term-list"></ul>
+            <p class="easy-guide-more">さらに見る: <a href="/glossary.html">用語集</a></p>
+        </div>
+    </section>
+
+    <section id="section-map" class="section-map" hidden aria-label="ページ構成">
+        <div class="section-map-inner">
+            <div class="section-map-header">
+                <p class="section-map-kicker">ページ構成</p>
+                <h2>全体を読む前に構造を確認する</h2>
+                <p id="section-map-status"></p>
+            </div>
+            <ol id="section-map-list" class="section-map-list"></ol>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="site-content" class="site-content-anchor" tabindex="-1"></div>
+    <main class="main-container">
+<article class="content-column">
+
+<div class="abstract-box">
+<h2>まず区別したいのは</h2>
+<p>
+提案書のページでは、さまざまな段階が「`accepted as a good idea,'' ``written in the main text,'' ``worked into code,'' and `『外部の同意を得て完了』となっている。」この区別があいまいであると、進行中の作業とまだ保留中の作業が混同されます。
+</p>
+</div>
+
+<section class="section" id="labels">
+<h2 class="section-title">日常の言葉で状態ラベルを作成する</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>ラベルタイプ</th>
+<th>日常用語</th>
+<th>残り</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>提案書を公開</strong></td>
+<td> 提案として提出されており、議論が行われています。 </td>
+<td>有効性と優先度の検証は残ります。 </td>
+</tr>
+<tr>
+<td><strong>提案受理・方針反映</strong></td>
+方向性としては<td>を取る価値があると判断しました。 </td>
+<td>の実施方法、検証条件、公表資料が残っています。 </td>
+</tr>
+<tr>
+<td><strong>ドキュメントの反射</strong></td>
+<td>状態は本文記載の通りです。 </td>
+<td>コード、データ、ログが不完全な可能性があります。 </td>
+</tr>
+<tr>
+<td><strong>実装済み</strong></td>
+<td>実際に動くものがある状態です。 </td>
+<td>別途第三者による追加検査や監査が必要となる場合があります。 </td>
+</tr>
+<tr>
+<td><strong>外部依存関係</strong></td>
+<td>一人では完結できませんのでご了承ください。パートナーとシステムが必要です。 </td>
+<td>協定、契約、実験、資金などが残っています。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="what-not-mean">
+<h2 class="section-title">ラベルの意味しない</h2>
+<div class="key-points">
+<h4>意味がない</h4>
+<ul>
+<li><strong>提案受諾:</strong> これは、提案が科学的に完全に正しいことを意味するものではありません。 </li>
+<li><strong>文書反映:</strong> これで実施・共同研究が終了したわけではありません。 </li>
+<li><strong>実装済み:</strong> 社会実装やシステム開発が完了しているわけではありません。 </li>
+</ul>
+</div>
+</section>
+
+<section class="section" id="where-to-return">
+<h2 class="section-title">どこに戻ればいいですか</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>知りたい</th>
+<th>戻る</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>提案内容と根拠</td>
+<td><a href="../issue.html#proposal-integration">技術提案</a></td>
+</tr>
+<tr>
+<td>今誰が何を助けることができますか?</td>
+<td><a href="../issue.html">貢献ガイド</a></td>
+</tr>
+<tr>
+<td>達成条件と反証条件の仮定</td>
+<td><a href="../verification.html">検証インフラストラクチャ</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<div class="note-box">
+<strong>外部依存関係が「待ちボックス」になるのを避けるため </strong>
+<p>
+このページではステージの違いについて説明します。外部依存関係になった後に最初に作成できるものを整理したい場合は、<a href="internal-prework-and-external-dependencies.html">Wiki: 社内で最初に行うことと外部依存関係の分離</a> を参照してください。
+</p>
+</div>
+
+</article>
+
+<aside class="sidebar-column">
+<div class="sidebar-box">
+<h4>関連Wiki</h4>
+<ul>
+<li><a href="literature-and-evidence-reading.html">文献・エビデンスページの見方→</a></li>
+<li><a href="verification-basics.html">検証基盤の基礎→</a></li>
+<li><a href="roadmap-reading-guide.html">ロードマップの見方→</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>公開ページ</h4>
+<ul>
+<li><a href="../issue.html#proposal-integration">技術提案→</a></li>
+<li><a href="../issue.html">投稿ガイド→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+</ul>
+</div>
+</aside>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer h-card">
+        <data class="u-url" value="/"></data>
+        <div class="wrapper">
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="/wiki/">Wiki</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="/issue.html">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var body = document.body;
+            var wikiMode = body ? body.getAttribute("data-wiki-mode") : "local";
+            var githubWikiUrl = body ? body.getAttribute("data-github-wiki-url") : "";
+            var pageUrl = body ? body.getAttribute("data-page-url") : "";
+            var isWikiPage = pageUrl.indexOf("/wiki/") === 0;
+
+            function splitHref(raw) {
+                var match = raw.match(/^([^?#]*)([?#].*)?$/);
+                if (!match) {
+                    return { path: raw, suffix: "" };
+                }
+                return { path: match[1], suffix: match[2] || "" };
+            }
+
+            function githubWikiTargetFromPath(path, suffix) {
+                var slug = path.replace(/^\/+/, "")
+                    .replace(/^wiki\//, "")
+                    .replace(/^\/wiki\//, "")
+                    .replace(/\.html$/, "")
+                    .replace(/\/$/, "");
+
+                if (!slug || slug === "index") {
+                    return githubWikiUrl + suffix;
+                }
+
+                return githubWikiUrl + "/" + slug + suffix;
+            }
+
+            function rewriteWikiLinksForMode() {
+                if (wikiMode !== "github" || !githubWikiUrl) {
+                    return;
+                }
+
+                var anchors = document.querySelectorAll("a[href]");
+                anchors.forEach(function (anchor) {
+                    var rawHref = anchor.getAttribute("href");
+                    if (!rawHref || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.charAt(0) === "#") {
+                        return;
+                    }
+
+                    if (rawHref.indexOf(githubWikiUrl) === 0) {
+                        return;
+                    }
+
+                    var resolved;
+                    try {
+                        resolved = new URL(rawHref, window.location.href);
+                    } catch (error) {
+                        return;
+                    }
+
+                    var targetHref = null;
+                    var split = splitHref(rawHref);
+
+                    if (resolved.origin === window.location.origin) {
+                        var resolvedPath = resolved.pathname;
+                        if (resolvedPath === "/wiki" || resolvedPath === "/wiki/" || resolvedPath === "/wiki/index.html") {
+                            targetHref = githubWikiUrl + resolved.search + resolved.hash;
+                        } else if (resolvedPath.indexOf("/wiki/") === 0) {
+                            targetHref = githubWikiTargetFromPath(resolvedPath, resolved.search + resolved.hash);
+                        }
+                    } else if (isWikiPage && /^(?:\.\/)?[^/]+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path, split.suffix);
+                    } else if (/^(?:\.\.\/)?wiki\/.+\.html$/.test(split.path) || /^\/wiki\/.+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path.replace(/^\.\.\//, ""), split.suffix);
+                    }
+
+                    if (!targetHref) {
+                        return;
+                    }
+
+                    anchor.setAttribute("href", targetHref);
+                    anchor.setAttribute("target", "_blank");
+                    anchor.setAttribute("rel", "noopener noreferrer");
+                });
+            }
+
+            rewriteWikiLinksForMode();
+
+            var terms = [
+                ["再現性", "同じ手順をもう一度実行し、おおむね同じ結果を得られること。"],
+                ["反証可能性", "間違いだと示せる形で主張を書くこと。"],
+                ["操作的定義", "実際にどう測るかによって用語を定義すること。"],
+                ["標準化", "共有されたデータ形式や手順を使うこと。"],
+                ["ベンチマーク", "同じ条件で方法を比べるための共有テスト。"],
+                ["メタデータ", "いつ、どのように測られたかなど、データを説明するデータ。"],
+                ["デコード", "脳に関係する信号から状態や内容を推定すること。"],
+                ["エミュレーション", "脳機能を別の計算基盤上で再現すること。"],
+                ["因果", "単に一緒に変わることではなく、何が何を引き起こすかに関すること。"],
+                ["相関", "二つのものが一緒に変わること。それだけでは因果を証明しません。"],
+                ["反事実", "条件を変えたら何が起こるかを確認すること。"],
+                ["閉ループ", "出力を次の入力へ戻す制御構成。"],
+                ["QC", "品質管理。データが使えるか、信頼できるかを確認すること。"],
+                ["BIDS", "神経生理データを整理し共有するための標準。"],
+                ["主張ラダー", "弱い主張と強い主張を段階に分ける方法。"],
+                ["人格同一性", "それが同じ人物と言えるかどうかという問い。"],
+                ["共有基盤", "データ、コード、評価ルールを共有するための共通土台。"],
+                ["追試", "別の人が作業を再実行し、結果が保たれるか確認すること。"],
+                ["ガバナンス", "何かを安全に運用するためのルールと監督。"]
+            ];
+
+            var contentRoot = document.querySelector(".content-column") || document.querySelector(".papers-page > main") || document.querySelector("main");
+            var guide = document.getElementById("easy-guide");
+            var list = document.getElementById("easy-term-list");
+            var status = document.getElementById("easy-guide-status");
+            var sectionMap = document.getElementById("section-map");
+            var sectionMapList = document.getElementById("section-map-list");
+            var sectionMapStatus = document.getElementById("section-map-status");
+
+            if (!contentRoot) {
+                return;
+            }
+
+            if (sectionMap && sectionMapList && sectionMapStatus) {
+                var headings = contentRoot.querySelectorAll("h2.section-title, h2.category-title, h3.year-title, h3.year-heading");
+                var sectionCount = 0;
+                var seenIds = {};
+
+                for (var k = 0; k < headings.length; k++) {
+                    var heading = headings[k];
+                    var targetId = heading.id;
+                    var parentSection = heading.closest("section");
+
+                    if (!targetId && parentSection && parentSection.id) {
+                        targetId = parentSection.id;
+                    }
+
+                    if (!targetId) {
+                        targetId = "section-map-" + (k + 1);
+                        heading.id = targetId;
+                    }
+
+                    if (seenIds[targetId]) {
+                        continue;
+                    }
+
+                    seenIds[targetId] = true;
+                    sectionCount += 1;
+
+                    var mapItem = document.createElement("li");
+                    var mapLink = document.createElement("a");
+                    mapLink.href = "#" + targetId;
+
+                    var index = document.createElement("span");
+                    index.className = "section-map-index";
+                    index.textContent = String(sectionCount).padStart(2, "0");
+
+                    var label = document.createElement("span");
+                    label.className = "section-map-label";
+                    label.textContent = heading.textContent.trim();
+
+                    mapLink.appendChild(index);
+                    mapLink.appendChild(label);
+                    mapItem.appendChild(mapLink);
+                    sectionMapList.appendChild(mapItem);
+                }
+
+                if (sectionCount >= 3) {
+                    sectionMapStatus.textContent = sectionCount + " 個のセクションがあります。任意のセクションへ移動できますが、全体構造を崩さず読むには上から順に読むのが安全です。";
+                    sectionMap.hidden = false;
+                }
+            }
+
+            if (!guide || !list || !status) {
+                return;
+            }
+
+            var text = (contentRoot.innerText || "").toLowerCase();
+            var found = [];
+
+            for (var i = 0; i < terms.length; i++) {
+                if (text.indexOf(terms[i][0].toLowerCase()) !== -1) {
+                    found.push(terms[i]);
+                }
+            }
+
+            if (found.length === 0) {
+                return;
+            }
+
+            var limit = Math.min(found.length, 10);
+            status.textContent = "最初の " + limit + " 件の用語を平易な言葉で表示しています。";
+
+            for (var j = 0; j < limit; j++) {
+                var item = document.createElement("li");
+                var term = document.createElement("strong");
+                term.textContent = found[j][0] + ":";
+                item.appendChild(term);
+                item.appendChild(document.createTextNode(" " + found[j][1]));
+                list.appendChild(item);
+            }
+
+            guide.hidden = false;
+        })();
+    </script>
+
+</body>
+
+</html>

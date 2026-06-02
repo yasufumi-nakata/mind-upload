@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="only light">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Wiki: データの分割とデータ漏洩 | マインドアップロード</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Wiki: データの分割とデータ漏洩" />
+<meta name="author" content="マインドアップロード研究プロジェクト" />
+<meta property="og:locale" content="ja" />
+<meta name="description" content="トレーニング/テストの分割、サブジェクト/セッション/時間のリーク、取得と配布のショートカット、ベンチマークとガバナンスの障害モードを最初から説明します。" />
+<meta property="og:description" content="トレーニング/テストの分割、サブジェクト/セッション/時間のリーク、取得と配布のショートカット、ベンチマークとガバナンスの障害モードを最初から説明します。" />
+<link rel="canonical" href="https://mind-upload.com/wiki/dataset-splits-and-leakage.html" />
+<meta property="og:url" content="https://mind-upload.com/wiki/dataset-splits-and-leakage.html" />
+<meta property="og:site_name" content="マインドアップロード" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Wiki: データの分割とデータ漏洩" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"マインドアップロード研究プロジェクト"},"description":"トレーニング/テストの分割、サブジェクト/セッション/時間のリーク、取得と配布のショートカット、ベンチマークとガバナンスの障害モードを最初から説明します。","headline":"Wiki: データの分割とデータ漏洩","url":"https://mind-upload.com/wiki/dataset-splits-and-leakage.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta property="og:image" content="https://mind-upload.com/ogp.jpg">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1F9E0;</text></svg>">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="https://mind-upload.com/feed.xml" title="マインドアップロード" />
+</head>
+
+
+
+
+
+<body class="wiki-light" data-article-type="ウィキ" data-page-url="/wiki/dataset-splits-and-leakage.html" data-wiki-mode="local" data-github-wiki-url="">
+    <a class="skip-link" href="#site-content">本文へ移動</a>
+
+    <!-- グローバルヘッダー -->
+    <header class="site-header journal-header" role="banner">
+        <div class="wrapper journal-header-inner">
+            <a class="site-title" rel="author" href="/">マインドアップロード・コモンズ</a>
+            <nav class="site-nav" aria-label="主要ナビゲーション">
+                <div class="trigger">
+                    <a class="page-link" href="/">はじめに</a>
+                    <a class="page-link" href="/verification.html">検証</a>
+                    <a class="page-link" href="/tech_roadmap.html">ロードマップ</a>
+                    <a class="page-link" href="/content_hub.html">公開コンテンツ</a>
+                    <a class="page-link" href="/wiki/">Wiki</a>
+                    <a class="page-link" href="/mind_uploading_papers.html">論文アーカイブ</a>
+                    <a class="page-link" href="/issue.html">参加</a>
+                </div>
+        </nav>
+        </div>
+    </header>
+
+    
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+        <p class="article-type">ウィキ</p>
+        <h1 class="article-title">Wiki: データの分割とデータ漏洩</h1>
+        
+        <p class="article-subtitle">精度が高くても分類が甘ければ評価は崩れる</p>
+        
+        
+        <p class="author-info">
+            <span class="author-name">マインドアップロード研究プロジェクト</span>
+        </p>
+        
+        <div class="article-meta">
+            <span>公開ページ</span>
+            
+            <span>更新日: 2026-03-25</span>
+            
+            
+            <span>実践ガイド</span>
+            
+        </div>
+    </header>
+    
+
+    
+    <section class="page-guide" aria-label="このページの使い方">
+        <div class="page-guide-inner">
+            <div class="page-guide-main">
+                <p class="page-guide-kicker">このページの使い方</p>
+                <h2>迷わないために最初に読んでください</h2>
+                
+                <p class="page-guide-lead">このページはデータセットの分割方法とデータ漏洩がなぜ危険なのかを一から解説したWikiです。 2026-03 年の再監査では、もう 1 つの点が強化されました。きれいな分割は必要ですが、買収と分配の近道やベンチマークとガバナンスの失敗が隠されたままであれば、それだけではまだ十分ではありません。</p>
+                
+                
+                
+                
+                <ul class="page-guide-points">
+                    
+                    <li>単元を科目別、回別、時間別に分けるかによって難易度は大きく異なります。</li>
+                    
+                    <li>リークは「不正行為」だけでなく、善意による前処理や分割によっても発生します。</li>
+                    
+                    <li>4 つのスターター データセット間でも、主題、症例、夜間、セッションなど、独立した単位は異なります。</li>
+                    
+                </ul>
+                
+                <details class="page-guide-details">
+                    <summary>詳細な注意点を 3 件読む</summary>
+                    <ul class="page-guide-points page-guide-points-extra">
+                        
+                        <li>まず最初に注目すべきは、精度そのものよりも分割ルールとリーク対策です。</li>
+                        
+                        <li>クリーンな被験者/セッション分割でも、サイト、デバイス、参照システム、電極レイアウト、またはプロトコルの組み合わせなどの取得と分配のショートカットは無効になりません。</li>
+                        
+                        <li>ベンチマーク ガバナンスは漏洩制御の一部です。バージョン、ランダム化、非表示グループ化、追加データ ポリシー、事前トレーニングされたチェックポイント、推論段階の制限、およびオーガナイザーの事後分析はすべて、スコアの意味を変更する可能性があります。</li>
+                        
+                    </ul>
+                </details>
+                
+                
+                
+                <div class="page-guide-links">
+                    <span>次に読むと役立つページ</span>
+                    <div class="page-guide-link-list">
+                        
+                        <a href="/datasets.html">データとベンチ</a>
+                        
+                        <a href="/datasets.html#l0-practice">実践</a>
+                        
+                        <a href="/verification.html">検証ベース</a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <dl class="page-guide-facts">
+                
+                <div>
+                    <dt>対象読者</dt>
+                    <dd>公開データを利用して初期評価を作成する人、漏洩や分裂に混乱しやすい人</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>読了時間</dt>
+                    <dd>12～18分</dd>
+                </div>
+                
+                
+                <div>
+                    <dt>正確性に関する注記</dt>
+                    <dd>これらは運用ルールであり、万能の公式ではありません。最適な分割は依然としてタスクとデータ構造に依存しており、公式チャレンジの操作によってベンチマーク スコアの意味が大きく変わる可能性があります。</dd>
+                </div>
+                
+            </dl>
+        </div>
+    </section>
+    
+
+    
+    <section class="topic-status" aria-label="ここでわかっていることと追加学習先">
+        <div class="topic-status-inner">
+            
+            <div class="topic-card topic-card-known">
+                <p class="topic-card-kicker">現段階で比較的明確なこと</p>
+                <h2>現在わかっていること</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>トレーニングとテストの分離が緩い場合、精度は簡単に過大評価される可能性があります。</li>
+                    
+                    <li>同じ主題、同じセッション、近い時間の断片が両側に含まれている場合、見かけのパフォーマンスは向上する傾向があります。</li>
+                    
+                    <li>臨床 EEG では、レポート テキストおよびレポートから派生したラベルも漏洩源となる可能性があります。</li>
+                    
+                    <li>前処理、正規化、および特徴の選択も、すべてのデータを確認した後に実行すると、漏洩の原因となる可能性があります。</li>
+                    
+                    <li>粗い分割衛生を行った後でも、不整合性と調和性が開示されていない場合、サイト、アンプ、リファレンス、電極レイアウトなどのメタデータのショートカットが依然としてスコアを支配する可能性があります。</li>
+                    
+                    <li>リーダーボードとチャレンジの結果は、ベンチマークの来歴とその後の事後分析がスコアと一緒に実行されない限り、安定したオブジェクトではありません。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-unknown">
+                <p class="topic-card-kicker">ここから先でまだ未解決のこと</p>
+                <h2>まだわかっていないこと</h2>
+                <ul class="topic-point-list">
+                    
+                    <li>どの部門が将来の実運用に最も近いかは、タスクの設定や利用状況によって異なります。</li>
+                    
+                    <li>リークが完全に排除されたと主張するには、データ構造を深く理解し、監査する必要があります。</li>
+                    
+                    <li>シグナルのみのベンチマークからレポートから派生したラベルを標準化する方法は、まだ運用設計の途中です。</li>
+                    
+                    <li>どのベンチマーク ガバナンス バンドルを EEG リーダーボードのデフォルトの再利用可能なカードにするかは、まだ調整中です。</li>
+                    
+                </ul>
+            </div>
+            
+
+            
+            <div class="topic-card topic-card-wiki">
+                <p class="topic-card-kicker">基礎を学ぶ</p>
+                <h2>Wiki で基礎を確認する</h2>
+                <ul class="topic-link-list">
+                    
+                    <li>
+                        <a href="/wiki/eeg-preprocessing-and-qc.html" data-wiki-link="/wiki/eeg-preprocessing-and-qc.html">Wiki: EEG の前処理と QC</a>
+                        
+                        <span>前処理自体が結果を変更する部分を補正します。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/eeg-foundation-models.html" data-wiki-link="/wiki/eeg-foundation-models.html">Wiki: EEG 基礎モデルと事前トレーニング</a>
+                        
+                        <span>ベンチマーク ルール、追加の事前トレーニング、リーダーボードの解釈が曖昧になり始めた場合は、このページを使用してください。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/verification-basics.html" data-wiki-link="/wiki/verification-basics.html">Wiki: 検証インフラストラクチャの基本</a>
+                        
+                        <span>漏洩防止が「業務の一部」である理由をご覧ください。</span>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="/wiki/" data-wiki-link="/wiki/">ウィキホーム</a>
+                        
+                        <span>学習ページの全体マップに戻ることができます。</span>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    
+
+    <section id="easy-guide" class="easy-guide" hidden aria-label="平易な用語説明">
+        <div class="easy-guide-inner">
+            <h2>このページの平易な用語説明</h2>
+            <p id="easy-guide-status"></p>
+            <ul id="easy-term-list"></ul>
+            <p class="easy-guide-more">さらに見る: <a href="/glossary.html">用語集</a></p>
+        </div>
+    </section>
+
+    <section id="section-map" class="section-map" hidden aria-label="ページ構成">
+        <div class="section-map-inner">
+            <div class="section-map-header">
+                <p class="section-map-kicker">ページ構成</p>
+                <h2>全体を読む前に構造を確認する</h2>
+                <p id="section-map-status"></p>
+            </div>
+            <ol id="section-map-list" class="section-map-list"></ol>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="site-content" class="site-content-anchor" tabindex="-1"></div>
+    <main class="main-container">
+<article class="content-column">
+
+<div class="abstract-box">
+<h2>最短の説明</h2>
+<p>
+データ分割とは「答えを比較する前にどこまで調べられるかを決める」作業であり、データ漏洩とは、その境界線を誤って越えてしまい、学習や調整に本番では使えない情報が混入してしまうことを指します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>2026-03 再監査: スプリット衛生は必要ですが十分ではありません</strong>
+<p>
+このページの古いバージョンは、<strong> 件名 / セッション / 時間分割</strong> の説明に優れていましたが、依然として 2 つの実用的なショートカットが暗黙的に残されていました。まず、<a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Netoら。 (2019)</a>、<a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik 他(2017)</a>、<a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xu 他(2020)</a>、<a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di 他(2021)</a> を組み合わせると、粗い分割が立派に聞こえる場合でも、<strong> のアイデンティティと取得と配布のショートカット </strong> が維持できることがわかります。次に、<a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) の公式ホームページ </a>、<a href="https://eeg2025.github.io/rules/" target="_blank"> ルール </a>、<a href="https://eeg2025.github.io/submission/" target="_blank"> 提出ページ </a>、<a href="https://eeg2025.github.io/leaderboard/" target="_blank"> リーダーボード </a> は、<strong> ベンチマーク ガバナンス </strong> 自体がスコアの意味を変えることができることを示しています。したがって、このページでは、分割衛生、取得と流通の監査、およびベンチマークの来歴を、無関係な 3 つの補足事項ではなく、1 つの運用上のバンドルとして扱うようになりました。
+</p>
+</div>
+
+<section class="section" id="why-split-matters">
+<h2 class="section-title">パーティション分割がそれほど重要な理由</h2>
+<p>
+学校のテストでは、答えを見ながら問題演習をすると点数が上がります。しかし、そのスコアは真に新しい問題を解決する能力を示しているとは言えません。機械学習も同様で、学習中に見た情報がテスト側に滲み出てしまうと、数字だけが良く見えてしまいます。
+</p>
+</section>
+
+<section class="section" id="split-units">
+<h2 class="section-title">まずは割り算の単位を意識する</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>分割単位</th>
+<th>どんなシーンですか？</th>
+<th>メモ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>対象ユニット</strong></td>
+<td>初めての人に一般化できるかどうかを確認したいとき。 </td>
+<td>トレーニングとテストの両方に同じ人物のピースがある場合、見た目よりも簡単です。 </td>
+</tr>
+<tr>
+<td><strong>セッションあたり</strong></td>
+<td>同じ人が別の日に安定するかどうかを確認したいとき。 </td>
+<td>同日の記録だけで分けると日差や電極状態の違いを見落としてしまいます。 </td>
+</tr>
+<tr>
+<td><strong>時間単位</strong></td>
+<td>将来予測や継続的な運用を想定する場合。 </td>
+<td> 両側で同じような時間のウィンドウに入ると、ほぼ同じフラグメントが表示されることがあります。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="dataset-specific-units">
+<h2 class="section-title">4 スターター データ項目、独立したユニットは同じではありません</h2>
+<div class="note-box">
+<strong>最後の 2 つの列は、このサイトの運営上の理由です</strong>
+<p>
+下表の<strong>なぜ漏洩するのか</strong>および<strong>安全分類</strong>は、各データセットの公式説明や一次資料に示されている階層構造を基に当サイトが作成した運用ルールです。
+</p>
+</div>
+<table class="data-table">
+<thead>
+<tr>
+<th>データセット</th>
+<th>独立したユニットとして何を優先すべきか</th>
+<th>よくある誤分割</th>
+<th>なぜ漏れるのか</th>
+<th>安全側で分割する方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG モーターの動き/イメージ</strong></td>
+<td>件名、必要に応じて実行</td>
+<td>エポック/トライアルのランダム分割</td>
+<td>同じ被験者とセッションスパンのトレーニング/テストの信号特性とキュー構造。 </td>
+<td>まず、同じ科目内での評価であっても、科目単位と実行単位を分離します。 </td>
+</tr>
+<tr>
+<td><strong>CHB-MIT</strong></td>
+<td>主題と事件の年表</td>
+<td>ファイル別ランダム分割</td>
+<td><code>chb21</code> は <code>chb01</code> と同じ主題であり、ファイル間のギャップにもコンテキストがあります。 </td>
+<td>大文字と小文字の代わりに件名の対応をチェックし、順序とギャップを維持しながら分割します。 </td>
+</tr>
+<tr>
+<td><strong>スリープ-EDF</strong></td>
+<td>主題の夜</td>
+<td>エポックのランダム分割</td>
+<td>同じ夜のスパンのトレーニング/テストからの連続催眠計画と被験者固有の睡眠構造。 </td>
+<td>毎晩記録し、それが被験者間での一般化であるか、被験者内での一般化であるかを最初に宣言します。 </td>
+</tr>
+<tr>
+<td><strong>TUH 脳波 / TUSZ</strong></td>
+<td>患者 / セッション</td>
+<td>セグメント/ファイルのランダム分割、信号のみの評価、レポート付き</td>
+<td>これは、同じ患者の複数のセッションと匿名化されたレポートに、ラベルに近い情報が含まれているためです。 </td>
+<td> 患者/セッションごとの分割が必要、および <strong> レポート使用フラグ </strong>。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="common-leaks">
+<h2 class="section-title">7 一般的なリークパターン</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>よくある事故</th>
+<th>何が起こっている</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>同じ主題の断片が両側に入っています</strong></td>
+<td>その人特有の習慣が記憶され、初対面の人への汎化性がより高くなるそうです。 </td>
+</tr>
+<tr>
+<td><strong>隣接する時間ウィンドウを混合</strong></td>
+<td>ほぼ同じ波形スライスをトレーニング/テストに分離することで、将来を予測することの難しさを過小評価します。 </td>
+</tr>
+<tr>
+<td><strong>すべてのデータの特徴を正規化して選択</strong></td>
+<td>テスト側の統計はトレーニング中に使用され、情報は逆方向に流れます。 </td>
+</tr>
+<tr>
+<td><strong>テストでモデル選択を繰り返す</strong></td>
+<td>test は基本的に検証の役割を担っており、最終的なスコアは楽観的です。 </td>
+</tr>
+<tr>
+<td><strong>重複サンプルまたは派生サンプルの欠落</strong></td>
+<td> 元は同じレコードから切り取られたデータが両側に含まれているため、比較は独立したサンプルではありません。 </td>
+</tr>
+<tr>
+<td><strong>サイト/デバイス/リファレンス/レイアウトのショートカットを非表示</strong></td>
+<td>モデルは、ターゲットの神経変数の代わりに、アンプ、モンタージュ、参照システム、電極レイアウトなどの取得分配構造を学習します。 </td>
+</tr>
+<tr>
+<td><strong>変更されたチャレンジ操作を修正済みとして扱う</strong></td>
+<td>ランダム化、非表示グループ化、追加データ ポリシー、推論制限、またはオーガナイザーの事後分析により、ランキングが実際に測定する内容が変更される間、ベンチマーク名は変わりません。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="shortcut-families">
+<h2 class="section-title">分割衛生でも 4 つのショートカット ファミリーが残る</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>ショートカットファミリー</th>
+<th>進歩を装えるもの</th>
+<th>代わりに何を公開するか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>件名/セッションフィンガープリント</strong></td>
+<td>A スコアは一般化のように見えることがありますが、主に安定した主題固有またはセッション固有の構造を活用しています。 </td>
+<td> 独立したホールドアウト ユニット、生ウィンドウの祖先、およびサブジェクト/セッション識別子が完全に素であるかどうかを明らかにします。 </td>
+</tr>
+<tr>
+<td><strong>取得-配布ショートカット</strong></td>
+<td>A モデルは、要求された神経変数の代わりに、サイト、アンプ、キャップ、サンプリング レート、フィルター チェーン、参照システム、または電極レイアウトの違いに乗ることができます。 </td>
+<td>可能な限り、サイト/デバイス/参照/レイアウトの不整合、調和ログ、およびメタデータのみまたはセットアップのみのベースラインを公開します。 </td>
+</tr>
+<tr>
+<td><strong>レポート/メタデータのショートカット</strong></td>
+<td>A シグナルのみのクレームは、レポートから派生したラベル、トリアージ コンテキスト、またはすでに答えに近い構造化メタデータを継承できます。 </td>
+<td>レポートテキストまたは派生メタデータが使用されたかどうかを示し、マルチモーダル/メタデータ支援スコアボードからシグナルのみを分離します。 </td>
+</tr>
+<tr>
+<td><strong>ベンチマークとガバナンスのショートカット</strong></td>
+<td>A リーダーボードは、非表示のグループ化、ランダム化、追加データ ポリシー、チェックポイント ポリシー、または推論段階のルールによってベンチマークの測定結果が変更された場合でも、安定しているように見えます。 </td>
+<td>ベンチマーク バージョン、分割/ランダム化ルール、非表示グループ化、追加データおよび事前トレーニング済みチェックポイント ポリシー、推論段階の制限、およびその後の事後検証をスコアとともに公開します。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<div class="note-box">
+<strong>ベンチマークのガバナンスは漏洩管理の一部であり、管理の詳細ではない</strong>
+<p>
+<a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) の公式ホームページ </a> では、実行フェーズの変更後に元のプレプリントが古くなったため、Web サイトとスターター キットを最新のものとして扱う必要があると明示的に述べています。公式の <a href="https://eeg2025.github.io/rules/" target="_blank">rules</a> では、追加の事前トレーニング データセット、事前トレーニングされたモデルと微調整方法、推論段階でのコードの提出、および <strong> シングル GPU 20 GB</strong> の推論予算の開示が必要です。公式 <a href="https://eeg2025.github.io/submission/" target="_blank"> 提出ページ </a> では、このイベントが <strong> 推論のみのコード コンペティション </strong> としてさらに修正されています。その後、最終的な <a href="https://eeg2025.github.io/leaderboard/" target="_blank">leaderboard</a> は、チャレンジ 2 のサンプルがランダム化されていないことを明らかにし、連続試験の同じ被験者の構造がランキングに影響を与え、別々の賞を強制することを可能にしました。このサイトでは、ベンチマーク ガバナンスがスコアの後の脚注ではなく、分割衛生と同じチェックリストに含まれることを意味します。
+</p>
+</div>
+
+<div class="note-box">
+<strong>メトリックセマンティクスも漏洩防止レポートの一部</strong>
+<p>
+スプリットの衛生状態とベンチマークの来歴が明らかになった後でも、タスクがまれなイベントであるか、クラスの不均衡である場合、報告された数値は依然として誤解を招く可能性があります。 <a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">斉藤&amp; Rehmsmeier (2015)</a> は、不均衡が強い場合には、適合率と再現率のビューが ROC 概要よりも有益であることが多いことを示しました。発作課題では、<a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">Roy et al. (2021)</a> および <a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)</a> は、イベントの感度、オーバーラップ ロジック、および時間または日ごとの誤警報が同時に重要であることを示しています。一方、<a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal らは、 (2023)</a> は、誤警報制御自体が発作予測における設計目標であることを示しています。睡眠ステージングでは、<a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">Sun et al. (2017)</a>と<a href="https://doi.org/10.7554/eLife.70092" target="_blank">ヴァラット＆アンプ。 Walker (2021)</a> は、プールされたパフォーマンスがまだ少数段階の失敗を隠すことができることを示しています。したがって、このサイトでは、スプリット ハイジーンに加えて、<strong> タスクに一致するメトリック バンドル </strong> を要求するようになりました。
+</p>
+</div>
+
+<section class="section" id="dataset-specific-traps">
+<h2 class="section-title">今回追加されたデータセット固有のリーク警告</h2>
+<table class="data-table">
+<thead>
+<tr>
+<th>データセット</th>
+<th>今回修正する注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EEG 運動・画像</strong></td>
+<td> これはキューロック運動タスクであるため、分割がより厳密になったとしても、視覚キュー/眼球/筋電の寄与は依然として個別に監査されます。 </td>
+</tr>
+<tr>
+<td><strong>CHB-MIT</strong></td>
+<td>件名番号と事件番号を混同しないでください。ファイルをシャッフルしたり、ギャップや年表を Runbook に固定したりしないでください。 </td>
+</tr>
+<tr>
+<td><strong>スリープ-EDF</strong></td>
+<td> R&amp;K ヒプノグラムを AASM と同等のものとして黙って混合しないでください。ラベル マッピングを作成せずにデータセット間の比較を行うことはできません。 </td>
+</tr>
+<tr>
+<td><strong>TUH 脳波 / TUSZ</strong></td>
+<td>レポート テキスト、トリアージ、およびレポート キーワードから派生したセッション メタデータをシグナルのみのベンチマークの入力に混合しないでください。 </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="what-to-report">
+<h2 class="section-title">せめてこれだけは報告したい</h2>
+<div class="key-points">
+<h4>レポートアイテム</h4>
+<ul>
+<li><strong>評価ファミリー:</strong>結果がセッション内、セッション間、被験者間、または時間的/長期的かどうか。 </li>
+<li><strong>分割ルール:</strong>トレーニング/検証/校正/テストに配置されたアイテムの数と、独立したホールドアウト ユニットは何ですか? </li>
+<li><strong>ウィンドウの祖先:</strong>各分割を生成した主題、事件、夜、セッション、ファイル、レコードはどれですか?また、ほぼ隣接するウィンドウは離されていましたか? </li>
+<li><strong>メトリクス バンドル:</strong>タスクは、単一のヘッドライン番号ではなく、バランス/マクロ メトリクス、イベント感度と誤報、またはステージごとの合意に基づいて読み取られましたか? </li>
+<li><strong>レポート使用フラグ:</strong>クレームシグナルのみでしたか、それともレポートテキスト/メタデータ/マルチモーダルフィールドも使用されましたか? </li>
+<li><strong>取得配布監査:</strong>サイト、デバイス、参照システム、チャネルマップ、電極レイアウト、およびプロトコル配布は分離されているか、調和されているか、または混合されたままでしたか? </li>
+<li><strong>前処理境界:</strong>正規化、特徴選択、およびしきい値調整は、許可された分割のみを使用して適合しましたか? </li>
+<li><strong>ベンチマークの来歴:</strong>これがチャレンジまたはリーダーボードの結果である場合、ベンチマークのバージョン、ランダム化ルール、非表示のグループ化、追加データ/事前トレーニング済みチェックポイント ポリシー、推論段階の制限、およびその後の事後検証は何でしたか? </li>
+<li><strong>ベースライン:</strong>より単純なモデルまたはメタデータのみ/セットアップのみのベースラインと比較した改善点は何ですか? </li>
+<li><strong>失敗例 + 主張の停止:</strong>どのような状況で失敗しましたか、何が除外されましたか、そして明示的に行われていないより強力な主張はどれですか? </li>
+</ul>
+</div>
+</section>
+
+<section class="section" id="references">
+<h2 class="section-title">参考資料</h2>
+<ul>
+<li><a href="https://physionet.org/content/eegmmidb/1.0.0/" target="_blank">PhysioNet: EEG 運動動作/画像データセット</a></li>
+<li><a href="https://physionet.org/content/chbmit/1.0.0/" target="_blank">PhysioNet: CHB-MIT 頭皮脳波データベース</a></li>
+<li><a href="https://physionet.org/content/sleep-edfx/1.0.0/" target="_blank">PhysioNet: Sleep-EDF データベースの拡張</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2016.00196" target="_blank">Obeid＆amp; Picone (2016)、テンプル大学病院 EEG データ コーパス</a></li>
+<li><a href="https://doi.org/10.3389/fninf.2018.00083" target="_blank">シャーら(2018)、テンプル大学病院発作検出コーパス</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/19238800/" target="_blank">Moser et al. (2009)、AASM および Rechtschaffen &amp; に基づく睡眠分類。カレス</a></li>
+<li><a href="https://doi.org/10.1038/s41746-019-0178-x" target="_blank">Chaibub Neto et al. (2019)、機械学習ベースの診断アプリケーションに対する被験者の特性の影響の検出</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2017.00150" target="_blank">Melnik et al. (2017)、システム、主題、セッション: これらの要因はどの程度 EEG データに影響しますか?</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2020.00103" target="_blank">Xuら。 (2020)、深層学習を使用した EEG デコードにおけるデータセット間変動問題</a></li>
+<li><a href="https://doi.org/10.3389/fnhum.2021.672946" target="_blank">Di他(2021)、安静状態 EE</a></li> に基づく個人識別の時間ロバスト性分析
+<li><a href="https://doi.org/10.1371/journal.pone.0118432" target="_blank">斉藤＆amp; Rehmsmeier (2015)、不均衡なデータセットでバイナリ分類子を評価する場合、適合率-再現率プロットは ROC プロットよりも有益です</a></li>
+<li><a href="https://doi.org/10.1016/j.ebiom.2021.103275" target="_blank">ロイら(2021)、頭皮脳波データの迅速かつ正確な注釈により神経内科医を支援するための人工知能システムの評価</a></li>
+<li><a href="https://doi.org/10.1097/WNP.0000000000000709" target="_blank">Scheuer et al. (2021)、発作検出: 大規模なデータセットを使用したリーダー間の合意と検出アルゴリズムの評価</a></li>
+<li><a href="https://doi.org/10.3389/fnins.2023.1184990" target="_blank">Segal et al. (2023)、リスク管理予測キャリブレーションを利用しててんかん発作予測における誤警報率を削減</a></li>
+<li><a href="https://doi.org/10.1093/sleep/zsx139" target="_blank">サンら。 (2017)、大規模な自動睡眠ステージング</a></li>
+<li><a href="https://doi.org/10.7554/eLife.70092" target="_blank">ヴァラット＆アンプ; Walker (2021)、自動睡眠ステージングのためのオープンソースの高性能ツール</a></li>
+<li><a href="https://eeg2025.github.io/" target="_blank">EEG Challenge (2025) 公式ホームページ</a></li>
+<li><a href="https://eeg2025.github.io/rules/" target="_blank">EEG チャレンジ (2025) 公式ルール</a></li>
+<li><a href="https://eeg2025.github.io/submission/" target="_blank">EEG チャレンジ (2025) 公式提出ページ</a></li>
+<li><a href="https://eeg2025.github.io/leaderboard/" target="_blank">EEG チャレンジ (2025) 公式リーダーボード / 主催者事後分析</a></li>
+</ul>
+</section>
+
+<section class="section" id="beginner-rule">
+<h2 class="section-title">1冊目で迷った時の安全対策</h2>
+<p>
+迷った場合は、次の 3 つのポイントに従うのが安全です。 <strong> 被験者ごとにトレーニングとテストを分離する </strong> <strong> 最後までテストに触れない </strong> <strong> 正規化と特徴の選択については、train のみでフィッティングする </strong>たとえ厳しすぎるように見えても、派手な数字よりも信頼できる精度の方が価値があります。
+</p>
+</section>
+
+<section class="section" id="return">
+<h2 class="section-title">次に戻る場所</h2>
+<p>
+実際のスターター データを確認したい場合は <a href="../datasets.html">Data &amp; Bench</a> に戻り、最小限のループの作成に戻りたい場合は <a href="../datasets.html#l0-practice">Hands-on</a> に戻り、これが検証基盤の一部である理由を確認したい場合は <a href="../verification.html">Verification Foundation</a> に戻ってください。
+</p>
+</section>
+
+</article>
+
+<aside class="sidebar-column">
+<div class="sidebar-box">
+<h4>関連Wiki</h4>
+<ul>
+<li><a href="eeg-preprocessing-and-qc.html">EEG 前処理と QC →</a></li>
+<li><a href="eeg-foundation-models.html">EEG 基礎モデルと事前トレーニング →</a></li>
+<li><a href="verification-basics.html">検証基盤の基礎→</a></li>
+<li><a href="claims-and-evidence.html">クレームと証拠の読み方→</a></li>
+</ul>
+</div>
+<div class="sidebar-box">
+<h4>公開ページ</h4>
+<ul>
+<li><a href="../datasets.html">データ＆ベンチ→</a></li>
+<li><a href="../datasets.html#l0-practice">ハンズオン→</a></li>
+<li><a href="../verification.html">検証インフラ→</a></li>
+</ul>
+</div>
+</aside>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer h-card">
+        <data class="u-url" value="/"></data>
+        <div class="wrapper">
+        <p class="site-policy">このサイトは、再現性と透明性を中心にした研究ノートです。公開ページには要点と現在の統合を置き、初心者向けの詳しい説明は <a href="/wiki/">Wiki</a> に集約しています。定義、根拠、限界を省略せず、読みやすさのために更新します。修正や改善提案は <a href="/issue.html">参加ガイド</a> の基準に沿って整理してください。</p>
+        <p>&copy; 2024-2026 Mind Uploading Research Project.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var body = document.body;
+            var wikiMode = body ? body.getAttribute("data-wiki-mode") : "local";
+            var githubWikiUrl = body ? body.getAttribute("data-github-wiki-url") : "";
+            var pageUrl = body ? body.getAttribute("data-page-url") : "";
+            var isWikiPage = pageUrl.indexOf("/wiki/") === 0;
+
+            function splitHref(raw) {
+                var match = raw.match(/^([^?#]*)([?#].*)?$/);
+                if (!match) {
+                    return { path: raw, suffix: "" };
+                }
+                return { path: match[1], suffix: match[2] || "" };
+            }
+
+            function githubWikiTargetFromPath(path, suffix) {
+                var slug = path.replace(/^\/+/, "")
+                    .replace(/^wiki\//, "")
+                    .replace(/^\/wiki\//, "")
+                    .replace(/\.html$/, "")
+                    .replace(/\/$/, "");
+
+                if (!slug || slug === "index") {
+                    return githubWikiUrl + suffix;
+                }
+
+                return githubWikiUrl + "/" + slug + suffix;
+            }
+
+            function rewriteWikiLinksForMode() {
+                if (wikiMode !== "github" || !githubWikiUrl) {
+                    return;
+                }
+
+                var anchors = document.querySelectorAll("a[href]");
+                anchors.forEach(function (anchor) {
+                    var rawHref = anchor.getAttribute("href");
+                    if (!rawHref || rawHref.indexOf("mailto:") === 0 || rawHref.indexOf("javascript:") === 0 || rawHref.charAt(0) === "#") {
+                        return;
+                    }
+
+                    if (rawHref.indexOf(githubWikiUrl) === 0) {
+                        return;
+                    }
+
+                    var resolved;
+                    try {
+                        resolved = new URL(rawHref, window.location.href);
+                    } catch (error) {
+                        return;
+                    }
+
+                    var targetHref = null;
+                    var split = splitHref(rawHref);
+
+                    if (resolved.origin === window.location.origin) {
+                        var resolvedPath = resolved.pathname;
+                        if (resolvedPath === "/wiki" || resolvedPath === "/wiki/" || resolvedPath === "/wiki/index.html") {
+                            targetHref = githubWikiUrl + resolved.search + resolved.hash;
+                        } else if (resolvedPath.indexOf("/wiki/") === 0) {
+                            targetHref = githubWikiTargetFromPath(resolvedPath, resolved.search + resolved.hash);
+                        }
+                    } else if (isWikiPage && /^(?:\.\/)?[^/]+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path, split.suffix);
+                    } else if (/^(?:\.\.\/)?wiki\/.+\.html$/.test(split.path) || /^\/wiki\/.+\.html$/.test(split.path)) {
+                        targetHref = githubWikiTargetFromPath(split.path.replace(/^\.\.\//, ""), split.suffix);
+                    }
+
+                    if (!targetHref) {
+                        return;
+                    }
+
+                    anchor.setAttribute("href", targetHref);
+                    anchor.setAttribute("target", "_blank");
+                    anchor.setAttribute("rel", "noopener noreferrer");
+                });
+            }
+
+            rewriteWikiLinksForMode();
+
+            var terms = [
+                ["再現性", "同じ手順をもう一度実行し、おおむね同じ結果を得られること。"],
+                ["反証可能性", "間違いだと示せる形で主張を書くこと。"],
+                ["操作的定義", "実際にどう測るかによって用語を定義すること。"],
+                ["標準化", "共有されたデータ形式や手順を使うこと。"],
+                ["ベンチマーク", "同じ条件で方法を比べるための共有テスト。"],
+                ["メタデータ", "いつ、どのように測られたかなど、データを説明するデータ。"],
+                ["デコード", "脳に関係する信号から状態や内容を推定すること。"],
+                ["エミュレーション", "脳機能を別の計算基盤上で再現すること。"],
+                ["因果", "単に一緒に変わることではなく、何が何を引き起こすかに関すること。"],
+                ["相関", "二つのものが一緒に変わること。それだけでは因果を証明しません。"],
+                ["反事実", "条件を変えたら何が起こるかを確認すること。"],
+                ["閉ループ", "出力を次の入力へ戻す制御構成。"],
+                ["QC", "品質管理。データが使えるか、信頼できるかを確認すること。"],
+                ["BIDS", "神経生理データを整理し共有するための標準。"],
+                ["主張ラダー", "弱い主張と強い主張を段階に分ける方法。"],
+                ["人格同一性", "それが同じ人物と言えるかどうかという問い。"],
+                ["共有基盤", "データ、コード、評価ルールを共有するための共通土台。"],
+                ["追試", "別の人が作業を再実行し、結果が保たれるか確認すること。"],
+                ["ガバナンス", "何かを安全に運用するためのルールと監督。"]
+            ];
+
+            var contentRoot = document.querySelector(".content-column") || document.querySelector(".papers-page > main") || document.querySelector("main");
+            var guide = document.getElementById("easy-guide");
+            var list = document.getElementById("easy-term-list");
+            var status = document.getElementById("easy-guide-status");
+            var sectionMap = document.getElementById("section-map");
+            var sectionMapList = document.getElementById("section-map-list");
+            var sectionMapStatus = document.getElementById("section-map-status");
+
+            if (!contentRoot) {
+                return;
+            }
+
+            if (sectionMap && sectionMapList && sectionMapStatus) {
+                var headings = contentRoot.querySelectorAll("h2.section-title, h2.category-title, h3.year-title, h3.year-heading");
+                var sectionCount = 0;
+                var seenIds = {};
+
+                for (var k = 0; k < headings.length; k++) {
+                    var heading = headings[k];
+                    var targetId = heading.id;
+                    var parentSection = heading.closest("section");
+
+                    if (!targetId && parentSection && parentSection.id) {
+                        targetId = parentSection.id;
+                    }
+
+                    if (!targetId) {
+                        targetId = "section-map-" + (k + 1);
+                        heading.id = targetId;
+                    }
+
+                    if (seenIds[targetId]) {
+                        continue;
+                    }
+
+                    seenIds[targetId] = true;
+                    sectionCount += 1;
+
+                    var mapItem = document.createElement("li");
+                    var mapLink = document.createElement("a");
+                    mapLink.href = "#" + targetId;
+
+                    var index = document.createElement("span");
+                    index.className = "section-map-index";
+                    index.textContent = String(sectionCount).padStart(2, "0");
+
+                    var label = document.createElement("span");
+                    label.className = "section-map-label";
+                    label.textContent = heading.textContent.trim();
+
+                    mapLink.appendChild(index);
+                    mapLink.appendChild(label);
+                    mapItem.appendChild(mapLink);
+                    sectionMapList.appendChild(mapItem);
+                }
+
+                if (sectionCount >= 3) {
+                    sectionMapStatus.textContent = sectionCount + " 個のセクションがあります。任意のセクションへ移動できますが、全体構造を崩さず読むには上から順に読むのが安全です。";
+                    sectionMap.hidden = false;
+                }
+            }
+
+            if (!guide || !list || !status) {
+                return;
+            }
+
+            var text = (contentRoot.innerText || "").toLowerCase();
+            var found = [];
+
+            for (var i = 0; i < terms.length; i++) {
+                if (text.indexOf(terms[i][0].toLowerCase()) !== -1) {
+                    found.push(terms[i]);
+                }
+            }
+
+            if (found.length === 0) {
+                return;
+            }
+
+            var limit = Math.min(found.length, 10);
+            status.textContent = "最初の " + limit + " 件の用語を平易な言葉で表示しています。";
+
+            for (var j = 0; j < limit; j++) {
+                var item = document.createElement("li");
+                var term = document.createElement("strong");
+                term.textContent = found[j][0] + ":";
+                item.appendChild(term);
+                item.appendChild(document.createTextNode(" " + found[j][1]));
+                list.appendChild(item);
+            }
+
+            guide.hidden = false;
+        })();
+    </script>
+
+</body>
+
+</html>
