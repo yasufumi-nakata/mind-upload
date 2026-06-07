@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>研究まとめ＋未解決ギャップ集 | マインドアップロード</title>
+  <meta name="description" content="マインドアップロード研究のまとめ、未解決ギャップ、プロジェクトのgit来歴を一枚に統合したダイジェスト。">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="index.html">マインドアップロード</a>
+    <nav class="primary-nav" aria-label="主要ページ">
+      <a href="index.html">全体像</a>
+      <a href="project.html">プロジェクト</a>
+      <a href="research-priorities.html">研究優先順位</a>
+      <a href="deep-dives.html">深掘り</a>
+      <a href="archive.html">旧内容統合</a>
+      <a href="hypotheses.html">仮説検証</a>
+      <a href="verification-cards.html">検証カード</a>
+      <a href="evidence.html">根拠マップ</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero compact">
+      <p class="eyebrow">研究ダイジェスト</p>
+      <h1>研究まとめ ＋ 未解決ギャップ集</h1>
+      <p class="lead">このサイト全14ページと git 履歴（約1,200コミット）から、(1) これまでの研究のまとめ、(2) どこがまだできていないのか、(3) プロジェクト自体の来歴を一枚に統合したダイジェストです。</p>
+      <p style="color:var(--muted);font-size:0.92rem;">作成日: 2026-06-08 / 元データ: <code>git show HEAD:*.html</code></p>
+    </section>
+
+    <section>
+      <h2>0. 一文サマリ</h2>
+      <p>マインドアップロードを「できる／できない」の印象論ではなく、<strong>検証可能な研究ポートフォリオ</strong>へ分解するのがこのサイトの目的。中心命題は一貫して次の一点です。</p>
+      <ul class="rule-list">
+        <li><strong>いま最重要の課題は「可観測性（observability）」ではなく「識別可能性（identifiability）」である。</strong></li>
+        <li>測定量を増やしても、同じ観測を説明する競合内部状態が複数残るなら、アップロード条件は閉じない。</li>
+        <li>だから最速ルートは「もっと測る」ことではなく、<strong>摂動・保持データ・外部検証で候補内部状態を減らす</strong>ことにある。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>1. 過去の研究のまとめ</h2>
+
+      <h3>1.1 古典的系譜（1990年代〜）— Strout の Mind Uploading Home Page</h3>
+      <p>論点の起源は Joseph J. Strout の <em>Mind Uploading Home Page</em>（ibiblio 版）。当時の問いと、現在の読み替えは次の通り。</p>
+      <table>
+        <thead><tr><th>古典的論点</th><th>当時の問い</th><th>現在の読み替え</th></tr></thead>
+        <tbody>
+          <tr><td>物理主義</td><td>心は物理的な脳過程から生じるか</td><td>作業仮定としては必要。ただし復元対象・十分条件は決まらない</td></tr>
+          <tr><td>ミクロトーム / 破壊的スキャン</td><td>薄切り画像から脳を再構築できるか</td><td>構造足場は強まるが、固定・保存・染色・時間遅延・現在状態の喪失が残る</td></tr>
+          <tr><td>ナノ置換 / Moravec 型連続置換</td><td>徐々に置き換えれば同一性は保てるか</td><td>連続性は直感的に強いが、各段階で機能・状態・身体ループが本当に保たれたかは未検証</td></tr>
+          <tr><td>非破壊アップロード</td><td>MRI 等で生きたまま読み出せるか</td><td>解像度・逆問題・proxy 性・共有ドライバー・モデル負荷が上限になる</td></tr>
+          <tr><td>人格同一性と複製</td><td>コピーは本人か。複数コピーは許すか</td><td>技術的復元 / 心理的連続性 / 法的同一性 / 社会的同意は<strong>別問題</strong></td></tr>
+          <tr><td>人工現実 / 人工身体</td><td>アップロード後の環境・身体はどうあるべきか</td><td>身体・環境は周辺ではなく、内受容・報酬・睡眠・恒常性・社会関係を通じ状態を変える</td></tr>
+          <tr><td>社会影響</td><td>人口・資源・権力・犯罪・権利をどう扱うか</td><td>実現前から技術条件と制度条件を混ぜずに設計する必要</td></tr>
+        </tbody>
+      </table>
+
+      <h3>1.2 全脳エミュレーション（WBE）の現代的位置づけ</h3>
+      <p>WBE は「抽象的哲学」から「測定と実装の問題」へ移った。一方で、<strong>配線図（コネクトーム）だけでは現在状態・可塑性・代謝・グリア・血管・免疫・記憶固定を閉じられない</strong>ことも明確になった。</p>
+
+      <h3>1.3 現在の到達点（比較的わかっていること）</h3>
+      <ul>
+        <li>脳の情報処理は物理的基盤を持ち、測定可能な構造と活動に依存する。</li>
+        <li>一部の神経信号から、行動・知覚・運動・言語に関わる状態を<strong>予測</strong>できる。</li>
+        <li>公開データ・標準形式・再現可能な解析は、主張の検証力を上げる。</li>
+        <li><strong>単一の測定法だけでは、内部状態の一意性を閉じにくい</strong>ことがわかっている。</li>
+      </ul>
+
+      <h3>1.4 主張の強さを5段階で分ける（混同してはいけない）</h3>
+      <table>
+        <thead><tr><th>主張</th><th>意味</th><th>必要な追加証拠</th></tr></thead>
+        <tbody>
+          <tr><td>相関</td><td>二つの量が一緒に変わる</td><td>交絡・共通原因の確認</td></tr>
+          <tr><td>予測</td><td>ある信号から別の状態を当てられる</td><td>別条件・別個体・別装置での汎化</td></tr>
+          <tr><td>識別</td><td>候補状態を区別できる</td><td>競合モデルが残らないことの検証</td></tr>
+          <tr><td>因果</td><td>介入で結果が変わる</td><td>摂動・反事実・保持された検証条件</td></tr>
+          <tr><td>再現</td><td>別の人が同じ手順で確認できる</td><td>データ・コード・環境・評価の公開</td></tr>
+        </tbody>
+      </table>
+
+      <h3>1.5 クレームラダー L0–L5（進捗を読む物差し）</h3>
+      <table>
+        <thead><tr><th>レベル</th><th>何を示すか</th><th>まだ言えないこと</th></tr></thead>
+        <tbody>
+          <tr><td><strong>L0</strong></td><td>公開データ・イベント・同期・QC・ベースラインが再現できる</td><td>内部状態を識別できたとは言えない</td></tr>
+          <tr><td><strong>L1</strong></td><td>複数手法を同じ条件で比較できる</td><td>最良スコアが真の状態復元とは限らない</td></tr>
+          <tr><td><strong>L2</strong></td><td>摂動や保持データで競合仮説を落とせる</td><td>全脳・長期・身体込みの十分性はまだ別</td></tr>
+          <tr><td><strong>L3</strong></td><td>閉ループ実装で特定機能を安定再現できる</td><td>人格同一性や全体意識の主張には届かない</td></tr>
+          <tr><td><strong>L4</strong></td><td>同一個体内で状態継続と再校正負荷を説明できる</td><td>コピー問題・社会的同意・長期倫理は残る</td></tr>
+          <tr><td><strong>L5</strong></td><td>技術・検証・運用・同意・停止条件が揃う</td><td>哲学的同一性の立場まで自動解決はしない</td></tr>
+        </tbody>
+      </table>
+      <ul class="rule-list">
+        <li>設計思想: <strong>上位レベルの言葉を急ぐより、下位レベルを再現可能に厚くするほうが、現時点では研究速度を上げる。</strong></li>
+      </ul>
+
+      <h3>1.6 主要エビデンス（文献は日付でなく「支える主張」で読む）</h3>
+      <table>
+        <thead><tr><th>証拠クラス</th><th>代表例</th><th>強くなる主張</th><th>まだ閉じないもの</th></tr></thead>
+        <tbody>
+          <tr><td>全脳/大規模コネクトーム</td><td>Dorkenwald+ (2024), MICrONS Consortium (2025)</td><td>構造足場・局所回路・同一脳の構造機能対応</td><td>現在のシナプス効率・放出状態・代謝・グリア・全状態の同時捕捉</td></tr>
+          <tr><td>コネクトーム制約モデル</td><td>Lappalainen+ (2024), Beiran &amp; Litwin-Kumar (2025)</td><td>構造が活動予測をどこまで改善するか</td><td>構造だけで動力学が一意に決まったという主張</td></tr>
+          <tr><td>可観測性 / 識別可能性</td><td>Villaverde (2019), Prinz+ (2004), Rasero+ (2024)</td><td>測れる・区別できる・一意に決まるを分ける必要性</td><td>観測量が多ければ内部状態が自動的に一意になるという主張</td></tr>
+          <tr><td>同一個体マルチモーダル</td><td>Vafaii+ (2024), Chen+ (2025)</td><td>共通パターンとモダリティ固有パターンを同時に見られる</td><td>複数モダリティを足せば一つの真の潜在状態に届くという主張</td></tr>
+          <tr><td>状態継続 / 時間ドリフト</td><td>Gallego+ (2020), Karpowicz+ (2025), Wilson+ (2025)</td><td>潜在多様体・デコーダをドリフト下で安定化できる可能性</td><td>安定性能が内部状態の同一性を保証するという主張</td></tr>
+          <tr><td>破壊的構造測定の保存問題</td><td>Lu+ (2023)</td><td>固定・保存・染色が超微細構造/細胞外空間に与える影響の監査必要性</td><td>固定後構造が生体内の現在状態をそのまま残すという主張</td></tr>
+          <tr><td>データ標準と再現性</td><td>BIDS, NWB, OpenNeuro</td><td>第三者が同じデータを検証できる条件</td><td>標準形式に置いただけで仮説分離・同一性が解けるという主張</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>2. どこができていないのか（未解決ギャップ集）</h2>
+
+      <h3>2.1 まだわかっていないこと（コア4問）</h3>
+      <ol>
+        <li><strong>どの粒度の構造と状態が、個人らしさ・記憶の再現に必要十分か。</strong></li>
+        <li><strong>生きた人間から、必要な状態変数をどこまで非破壊に測れるか。</strong></li>
+        <li><strong>同じ出力を生む複数の内部モデルを、どの実験で分離できるか。</strong></li>
+        <li><strong>長期にわたる安定性・学習・睡眠・身体性をどう検証するか。</strong></li>
+      </ol>
+
+      <h3>2.2 三つの壁（どのルートも、ここを通らないと見かけの進歩で止まる）</h3>
+      <table>
+        <thead><tr><th>壁</th><th>よくある過読</th><th>確認すべきこと</th></tr></thead>
+        <tbody>
+          <tr><td><strong>測定粒度の壁</strong></td><td>高密度・高解像・マルチモーダルなら必要状態をほぼ測れたと読む</td><td>直接観測 / proxy / 推定 / 未測定を分け、各測定の時間窓と数量タイプを明示</td></tr>
+          <tr><td><strong>識別性の壁</strong></td><td>予測精度が上がったから内部状態も一意に決まったと読む</td><td>候補モデル空間・曖昧性クラス・保持データ・摂動・棄権規則を<strong>事前に</strong>固定</td></tr>
+          <tr><td><strong>介入検証の壁</strong></td><td>相関やオフラインデコードが良いから因果的再実装に近いと読む</td><td>摂動応答・閉ループ・状態遷移・日跨ぎ安定性・安全停止・別条件検証を要求</td></tr>
+        </tbody>
+      </table>
+
+      <h3>2.3 研究優先順位 P1–P8（＝未解決問題の優先リスト）</h3>
+      <p>順位は流行や日付ではなく、<strong>未解決の大きさ・波及効果・検証可能性</strong>で決める。</p>
+      <table>
+        <thead><tr><th>優先</th><th>未解決の中身（＝できていないこと）</th><th>次に必要な実験</th></tr></thead>
+        <tbody>
+          <tr><td><strong>P1 識別可能性</strong></td><td>測定量が増えても、同じ観測を説明する内部状態が複数残る</td><td>競合モデルを列挙し、状態遷移・持続励起・介入・保持データでどれが落ちるか事前登録</td></tr>
+          <tr><td><strong>P2 維持状態</strong></td><td>コネクトームではシナプス効率・固有興奮性・代謝・ECM/PNN・睡眠・グリア・血管・免疫を固定できない</td><td>各状態に、直接観測量・代理量・時間窓・摂動可能性・棄権境界を分けたカード化</td></tr>
+          <tr><td><strong>P3 同一個体マルチモーダル</strong></td><td>EEG/fMRI/PET/MRSI/行動が同一対象から取れても共通因子と固有因子が混ざる</td><td>同一セッションで共通因子・分岐因子・装置固有誤差・状態ラベルのずれを分離</td></tr>
+          <tr><td><strong>P4 コネクトーム制約モデルの残差</strong></td><td>構造は足場だが、動的パラメータ・現在のシナプス状態を一意に決めない</td><td>構造に活動記録・摂動・外部タスクを追加し、残る候補集合を明示</td></tr>
+          <tr><td><strong>P5 状態継続ブリッジ</strong></td><td>同じ脳・被験者・デコーダでも、日跨ぎ・固定後の状態同一性は別問題</td><td>運ばれる対象・許容誤差・失敗規則・再調整負荷・救済ルートを明示</td></tr>
+          <tr><td><strong>P6 デコード≠エミュレーション</strong></td><td>言語・運動を高精度予測できても、内部状態を生成的に再実装したことにならない</td><td>予測スコア・神経寄与・言語事前分布・閉ループ性能・長期安定性を別々に評価</td></tr>
+          <tr><td><strong>P7 公開データで L0→L2 を厚く</strong></td><td>大きな主張の前提となる低レベル再現性がまだ薄い</td><td>BIDS/NWB・イベントログ・同期・QC・保持データ・ベースライン・ショートカット対照・棄権規則を一体公開</td></tr>
+          <tr><td><strong>P8 身体・環境・内受容ループ</strong></td><td>脳単体の再現では感覚・運動・報酬・睡眠・恒常性の閉ループを保証できない</td><td>どの身体ループを保存/置換し、どの遅い内部環境を合わせるか実験ごとに開示</td></tr>
+        </tbody>
+      </table>
+
+      <h3>2.4 コネクトームに「黙って含めてはいけない」維持状態（P2 の中身）</h3>
+      <p>配線図だけで固定できない遅い状態のファミリー。どれが個別機能に必要十分かは未解決。</p>
+      <div class="tag-list">
+        <span>固有興奮性 / AIS / イオンチャネル</span>
+        <span>シナプス効率 / 放出確率 / 短期・長期可塑性</span>
+        <span>ECM / PNN / 局所プロテオスタシス</span>
+        <span>神経調節（DA/NA/ACh/5-HT/神経ペプチド）</span>
+        <span>転写 / クロマチン / RNA編集 / リン酸化</span>
+        <span>代謝 / ミトコンドリア / ATP / イオン環境 / 熱状態</span>
+        <span>ミエリン / 希突起膠細胞（伝導タイミング）</span>
+        <span>グリア基質 / アストロサイト</span>
+        <span>血管 / BBB / 免疫 / クリアランス</span>
+        <span>睡眠 / リプレイ / 概日 / 発火率設定点 / 日跨ぎドリフト</span>
+      </div>
+      <ul class="rule-list">
+        <li>共通の過読警告: <strong>proxy が多いこと ≠ 対象状態が一意に復元できること。</strong> 一つの代謝指標や血流補正で「支持状態全体を測れた」と読まない。</li>
+      </ul>
+
+      <h3>2.5 身体・環境・倫理のギャップ（P8 と L4/L5）</h3>
+      <ul>
+        <li>脳だけを切り出した実装で、人物性・意識の継続を主張できるかは閉じていない。</li>
+        <li>技術的復元 / 心理的連続性 / 法的同一性 / 社会的同意は<strong>別の成功指標</strong>として分離が必要。</li>
+        <li>未整理の制度条件: 同意・コピー数・分岐・更新・停止権・監査権限・悪用防止。</li>
+      </ul>
+
+      <h3>2.6 必要条件のうち「まだ閉じていない穴」</h3>
+      <table>
+        <thead><tr><th>条件</th><th>まだ閉じていない穴</th></tr></thead>
+        <tbody>
+          <tr><td>状態空間の閉鎖</td><td>どの維持状態が人格・記憶・技能に必要十分か</td></tr>
+          <tr><td>コネクトームの役割分離</td><td>現在のシナプス効率・放出確率・可塑性履歴・代謝状態は別途必要</td></tr>
+          <tr><td>ヒト可観測性の上限</td><td>PET/MRSI/dMRI/EEG/fMRI を組み合わせても一つの潜在状態へ自動合成できない</td></tr>
+          <tr><td>時間的妥当性</td><td>「同じ被験者/同じ脳」というラベルだけでは状態継続を保証しない</td></tr>
+          <tr><td>身体・環境境界</td><td>低遅延入出力だけでは遅い内部環境・身体性を閉じられない</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>3. 検証カード一覧（実験計画でギャップを潰す道具）</h2>
+      <p>散在していた監査項目を、研究計画にそのまま使える12枚のカードへ整理したもの。各カードの役割は「成功宣言」ではなく「<strong>どこまでしか言えないか（主張上限）を先に固定する</strong>」こと。</p>
+      <table>
+        <thead><tr><th>カード</th><th>使う場面</th></tr></thead>
+        <tbody>
+          <tr><td>可観測性予算</td><td>測定変数を増やす研究（直接観測 / proxy / 推定 / 未測定を分ける）</td></tr>
+          <tr><td>識別可能性カード</td><td>逆問題・モデルフィット・デコード（競合モデル・対称性・再パラメータ化・保持データ）</td></tr>
+          <tr><td>Fusion Card</td><td>EEG/fMRI/PET/MRSI のマルチモーダル統合（共通因子・固有因子・融合後の残候補）</td></tr>
+          <tr><td>Human Proxy Composition Card</td><td>生きた人間の複数 proxy 合成（各 proxy の役割・取得負担・外部校正・最強単一行からの増分）</td></tr>
+          <tr><td>State-Continuity Bridge Card</td><td>同一被験者/同一脳/日跨ぎ/固定後の橋渡し（運ばれる対象・証人・許容誤差・救済ルート）</td></tr>
+          <tr><td>Destructive-Structure Route Card</td><td>固定後 EM・破壊的超微細構造測定（保存法・遅延・登録範囲・失われる状態）</td></tr>
+          <tr><td>Temporal Validity Card</td><td>長期安定性・固定デコーダ・睡眠（時間窓・状態注釈・再校正・ドリフト上限）</td></tr>
+          <tr><td>維持状態バジェット</td><td>コネクトームに含められない遅い状態（状態ファミリー別の観測・proxy・摂動・棄権）</td></tr>
+          <tr><td>Neural Contribution Card</td><td>言語/音声/運動/治療 BCI のデコード（タスク制約・事前分布・脳なし対照・閉ループ）</td></tr>
+          <tr><td>Calibration / Abstention Card</td><td>不確実性が高い結果・閉ループ・予測集合・失敗時停止（区間・被覆率・棄権閾値）</td></tr>
+          <tr><td>L0 Artifact Pack</td><td>公開データでの再解析・ベンチマーク開始（データ同一性・イベント忠実度・分割・系統）</td></tr>
+          <tr><td>Body / Environment Boundary Card</td><td>閉ループ・身体置換・環境相互作用（保存入力・置換出力・内受容・報酬・睡眠の境界）</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>4. 明日から最速で進めるなら（実行手順）</h2>
+      <ol class="step-list">
+        <li><strong>対象機能を一つ選ぶ</strong><span>記憶・運動・言語・覚醒など、まず狭く。</span></li>
+        <li><strong>競合する内部状態説明を3つ以上書く</strong><span>同じ出力を別機構で説明する候補を先に出す。</span></li>
+        <li><strong>観測量ではなく分離実験を選ぶ</strong><span>どの測定/摂動が競合候補を最も落とすか。</span></li>
+        <li><strong>棄権条件を公開する</strong><span>候補集合が重なるなら「成功」でなく「未識別」として止める。</span></li>
+        <li><strong>公開データの小さな再現ループから</strong><span>L0 再解析 → L1 同条件ベンチ → L2 候補仮説分離。</span></li>
+      </ol>
+      <p>公開データルートの最短順: Cue-locked EEG（イベント/分割を固める）→ 睡眠・長時間 EEG（状態ラベル/時間評価）→ 大規模臨床 EEG（ショートカットを壊す）→ 同一セッション・マルチモーダル（proxy 分解）→ 保持データ・摂動（L2 候補分離）。</p>
+    </section>
+
+    <section>
+      <h2>5. プロジェクトの来歴（git 履歴）</h2>
+      <p>このサイトは <strong>EEG 解析プロジェクトから出発し、マインドアップロードの検証フレームワークへ発展</strong>した。約1,200コミット（2025-10〜2026-06）。</p>
+      <table>
+        <thead><tr><th>時期</th><th>コミット数</th><th>何が起きたか</th></tr></thead>
+        <tbody>
+          <tr><td><strong>2025-10</strong></td><td>11</td><td><strong>eegflow として開始。</strong>EEG ロードマップ + LaTeX 論文 + 初期ドキュメント。CNAME 設定。</td></tr>
+          <tr><td><strong>2025-12</strong></td><td>33</td><td><strong>マインドアップロードへ軸足を移す。</strong>「brain uploading site」化、Nature/Science 風 → ダークモード、EEG Flow と mind upload 解析の統合、index.html の問題点を issue 化。</td></tr>
+          <tr><td><strong>2026-01</strong></td><td>85</td><td><strong>WBE フレームワーク構築期。</strong>論文収集スクリプト、HTML レポート生成、Tech Roadmap ページ、意識研究の更新。学術的批判を issue 駆動で反映（#27 因果的相同性の数学的欠陥/Mind Captioning の限界、#31 WBE 理論再定義、#36 Cogitate 2025/Bayesian ESI/MIND Act、#37/#56/#57 識別可能性と反事実検証）。</td></tr>
+          <tr><td><strong>2026-02</strong></td><td>51</td><td><strong>EEGFlow → Mind-Upload へ改名。</strong>human-first ランディング、primers、verification commons、30-worker 研究分解。<strong>検証監査で180件の問題に対応</strong>、誤った DOI を修正。</td></tr>
+          <tr><td><strong>2026-03</strong></td><td><strong>838</strong></td><td><strong>最大の月。Research Harvest（U0–U15 未解決問題の文献バンク）を多ラウンドで深化</strong>（round 2〜36、60研究課題に核心文献付与）。巨大な Wiki 学習ポータルを構築。<strong>全主張に claim ceiling（主張上限）を付与</strong>する監査を徹底。</td></tr>
+          <tr><td><strong>2026-04</strong></td><td>155</td><td>継続的な深化・整備。</td></tr>
+          <tr><td><strong>2026-05</strong></td><td>33</td><td><strong>大幅スリム化。</strong>verification ダークテーマへ再設計、Wiki を撤去し<strong>プレーン HTML 構造へ単純化</strong>、GitHub Pages ルートから直接配信。</td></tr>
+          <tr><td><strong>2026-06</strong></td><td>12</td><td><strong>現在の14ページ構成へ再構成。</strong>プロジェクト俯瞰・研究優先順位の根拠マップ・検証カード playbook・archive 統合・WBE primer・公開データ L1/L2 ルートを整備。</td></tr>
+        </tbody>
+      </table>
+
+      <h3>設計思想の変遷（重要な転換点）</h3>
+      <ul>
+        <li><strong>U0–U15（Research Harvest の未解決問題番号）→ P1–P8（研究優先順位）への変換</strong>: 文献バンクを「研究者が着手しやすい優先順位」へ再配置。</li>
+        <li><strong>旧 Tech Roadmap の P/M/R/I/V/D（進歩定義/測定/再構築/実装/検証/展開）→ 各ページ・検証カード・停止条件へ接続</strong>。</li>
+        <li><strong>「ページ数や引用数」ではなく「どの主張の上限を変えるか」で厚みを作る</strong>方針への統一。</li>
+        <li>大量の Wiki 学習ページ → 主要ページ内の短い監査表へ圧縮（情報量を保ちつつ導線を単純化）。</li>
+      </ul>
+
+      <h3>現行14ページの構成</h3>
+      <table>
+        <thead><tr><th>層</th><th>ページ</th><th>役割</th></tr></thead>
+        <tbody>
+          <tr><td>俯瞰</td><td><a href="index.html">全体像</a> / <a href="project.html">プロジェクト</a> / <a href="summary.html">要約</a></td><td>サイトの目的・最初のボトルネック</td></tr>
+          <tr><td>意思決定</td><td><a href="research-priorities.html">研究優先順位</a> / <a href="roadmap.html">ロードマップ</a></td><td>どの研究を先に進めるか・前段依存</td></tr>
+          <tr><td>深掘り</td><td><a href="deep-dives.html">深掘り</a> / <a href="evidence.html">根拠マップ</a> / <a href="datasets.html">データ</a></td><td>各テーマの未解決点・代表エビデンス・次の実験設計</td></tr>
+          <tr><td>検証</td><td><a href="requirements.html">必要条件</a> / <a href="known-unknown.html">既知と未知</a> / <a href="hypotheses.html">仮説検証</a> / <a href="verification-cards.html">検証カード</a></td><td>主張の上限・失敗条件・実験計画の監査欄</td></tr>
+          <tr><td>統合</td><td><a href="archive.html">旧内容統合</a> / <a href="glossary.html">用語</a></td><td>旧サイト/古典 MU/旧 Wiki を現在の研究判断へ接続</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>このサイトは、マインドアップロードを検証可能な研究課題として整理するための公開ノートです。</p>
+    <nav class="footer-links" aria-label="補助ページ">
+      <a href="research-digest.html" aria-current="page">研究ダイジェスト</a>
+      <a href="archive.html">旧内容統合</a>
+      <a href="verification-cards.html">検証カード</a>
+      <a href="summary.html">要約</a>
+      <a href="requirements.html">必要条件</a>
+      <a href="known-unknown.html">既知と未知</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="datasets.html">データ</a>
+      <a href="glossary.html">用語</a>
+    </nav>
+  </footer>
+</body>
+</html>
