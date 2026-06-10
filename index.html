@@ -5,9 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>マインドアップロード — 検証可能な研究ポートフォリオ</title>
   <meta name="description" content="マインドアップロードを「できる/できない」の印象論ではなく、検証可能な研究課題へ分解する公開ノート。過去研究のまとめ、未解決ギャップ(P1-P8)、検証カード、プロジェクトの来歴を一枚に。">
+  <link rel="canonical" href="https://mind-upload.com/">
+  <meta name="theme-color" content="#0a0d14">
   <meta property="og:title" content="マインドアップロード — 検証可能な研究ポートフォリオ">
   <meta property="og:description" content="可観測性ではなく識別可能性。競合する内部状態を減らす研究順序を、未解決ギャップとして整理する。">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mind-upload.com/">
+  <meta property="og:image" content="https://mind-upload.com/assets/og-cover.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="マインドアップロード — 検証可能な研究ポートフォリオ">
+  <meta name="twitter:description" content="可観測性ではなく識別可能性。競合する内部状態を減らす研究順序を、未解決ギャップとして整理する。">
+  <meta name="twitter:image" content="https://mind-upload.com/assets/og-cover.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -468,9 +478,7 @@
         }
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['thesis','past','pipeline','ladder','gaps','cards','history'].forEach(id => {
-      const s = document.getElementById(id); if (s) spy.observe(s);
-    });
+    document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
 
     // mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
