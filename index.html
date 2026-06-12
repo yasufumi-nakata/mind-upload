@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>マインドアップロード — 検証可能な研究ポートフォリオ</title>
-  <meta name="description" content="マインドアップロードを「できる/できない」の印象論ではなく、検証可能な研究課題へ分解する公開ノート。過去研究のまとめ、未解決ギャップ(P1-P8)、検証カード、プロジェクトの来歴を一枚に。">
-  <meta property="og:title" content="マインドアップロード — 検証可能な研究ポートフォリオ">
-  <meta property="og:description" content="可観測性ではなく識別可能性。競合する内部状態を減らす研究順序を、未解決ギャップとして整理する。">
+  <title>マインドアップロード — わかっていること / わかっていないこと</title>
+  <meta name="description" content="マインドアップロードを「できる/できない」の印象論ではなく、8つの研究分野に分解する公開ノート。各分野について『研究の歴史』『わかっていること』『わかっていないこと』を分けて辿れるようにまとめた。">
+  <meta property="og:title" content="マインドアップロード — わかっていること / わかっていないこと">
+  <meta property="og:description" content="脳保存・コネクトミクス・神経動態・エミュレーションなど8分野ごとに、研究の歴史と、いま分かっていること／まだ分かっていないことを分けて辿る。">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,15 +18,14 @@
 
   <header class="site-header">
     <div class="nav-inner">
-      <a class="brand" href="#top"><span class="dot"></span>マインドアップロード</a>
+      <a class="brand" href="#top"><span class="dot"></span>マインドアップロード <small>field guide</small></a>
       <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
       <nav class="primary-nav" aria-label="主要セクション">
-        <a href="#thesis">概要</a>
-        <a href="#past">過去研究</a>
-        <a href="#pipeline">実装パイプライン</a>
+        <a href="#thesis">考え方</a>
+        <a href="#overview">全体像</a>
+        <a href="#areas">8つの分野</a>
         <a href="#ladder">主張レベル</a>
-        <a href="#gaps">未解決ギャップ</a>
-        <a href="#cards">検証カード</a>
+        <a href="#read">読み方</a>
         <a href="#history">来歴</a>
       </nav>
     </div>
@@ -35,252 +34,140 @@
   <main>
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="hero">
-      <span class="hero-badge"><span class="pulse"></span>検証可能な研究ノート / 公開中</span>
-      <h1>脳を「写す」前に、<br><span class="grad">何が測れていないか</span>を測る。</h1>
+      <span class="hero-badge"><span class="pulse"></span>研究フィールドガイド / 公開中</span>
+      <h1>脳を「写す」前に、<br><span class="grad">どこまで分かっていて</span><br>どこから分からないかを知る。</h1>
       <p class="hero-lead">
-        マインドアップロードを「できる／できない」の印象論ではなく、<strong>どの技術で・どう行い・どこで詰まるか</strong>へ分解する公開ノートです。
-        固定からエミュレーションまでの実装パイプライン、未解決ギャップ、実験に使える検証カードを一枚に集約しました。
+        マインドアップロードを「できる／できない」の印象論ではなく、<strong>8つの研究分野</strong>に分解した公開ノートです。
+        各分野について <strong>研究の歴史</strong>・<strong>わかっていること</strong>・<strong>わかっていないこと</strong> を分けて辿れるようにしました。
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#pipeline">実装パイプラインを見る →</a>
-        <a class="btn btn-ghost" href="#gaps">未解決ギャップ</a>
+        <a class="btn btn-primary" href="#areas">8つの分野を見る →</a>
+        <a class="btn btn-ghost" href="#overview">全体の到達点</a>
       </div>
       <div class="hero-stats reveal">
-        <div><div class="n">P1–P8</div><div class="l">研究優先順位</div></div>
+        <div><div class="n">8</div><div class="l">研究分野</div></div>
         <div><div class="n">L0–L5</div><div class="l">主張のレベル</div></div>
-        <div><div class="n">12</div><div class="l">検証カード</div></div>
-        <div><div class="n">~1,200</div><div class="l">プロジェクトのコミット</div></div>
+        <div><div class="n">3</div><div class="l">越えるべき壁</div></div>
+        <div><div class="n">既知/未知</div><div class="l">を分野ごとに分離</div></div>
       </div>
     </section>
 
     <!-- ===================== THESIS ===================== -->
     <section id="thesis">
-      <p class="eyebrow">中心命題</p>
-      <h2>最重要は「可観測性」ではなく<br>「識別可能性」だ。</h2>
+      <p class="eyebrow">このノートの考え方</p>
+      <h2>最重要は「もっと測ること」ではなく<br>「候補を絞り込めること」。</h2>
       <div class="callout reveal">
-        <div class="key">The one-line thesis</div>
-        <p>測定量を増やしても、同じ観測を説明する競合内部状態が複数残るなら、アップロード条件は閉じない。</p>
-        <p>だから最速ルートは「もっと測る」ことではなく、<strong>摂動・保持データ・外部検証で候補内部状態を減らす</strong>ことにある。</p>
+        <div class="key">ひとことで言うと</div>
+        <p>測定量を増やしても、同じ観測を説明できる脳の内部状態が複数残るなら、アップロードの条件は閉じない。</p>
+        <p>だから最速ルートは「もっと測る（可観測性）」ことではなく、<strong>摂動・保持データ・外部検証で候補の内部状態を減らす（識別可能性）</strong>こと。各分野のページは、この観点で「何がどこまで言えるか」を整理しています。</p>
       </div>
       <div class="grid cols-3">
-        <div class="card reveal"><h3>① 再現基盤</h3><p>公開データ・イベント同期・QC・ベースラインを整え、第三者が同じ結果を再現できる状態にする。</p></div>
-        <div class="card reveal"><h3>② 識別可能性</h3><p>測定値を増やすだけでなく、同じ観測を説明する競合内部状態を、摂動と保持データで落とす。</p></div>
-        <div class="card reveal"><h3>③ 状態継続</h3><p>同じ脳・被験者・デコーダでも、時間・固定・再校正をまたいで何が同じ状態として残るかを監査する。</p></div>
+        <div class="card reveal"><h3>① 研究の歴史で辿る</h3><p>各分野が、どの発見を積み重ねて今に至ったか。古典的な夢から測定・実装の問題へどう移ったかを年表で示す。</p></div>
+        <div class="card reveal"><h3>② 既知／未知を分ける</h3><p>同じページの中で「わかっていること」と「わかっていないこと」を別の枠に置く。進歩と願望を混ぜない。</p></div>
+        <div class="card reveal"><h3>③ 次の一手を置く</h3><p>未解決の各点に「どの実験なら候補を落とせるか」を添える。批判で終わらせず、前へ進める形にする。</p></div>
       </div>
     </section>
 
-    <!-- ===================== PAST ===================== -->
-    <section id="past">
-      <p class="eyebrow">過去の研究のまとめ</p>
-      <h2>古典的な夢から、測定と実装の問題へ。</h2>
-      <p class="section-lead">
-        論点の起源は 1990 年代の Strout <em>Mind Uploading Home Page</em>。当時の問いを、現在の検証条件へ読み替える。
-        全脳エミュレーション(WBE)は哲学から測定・実装の問題へ移ったが、<strong>配線図だけでは現在状態・可塑性・代謝・グリア・血管・免疫・記憶固定を閉じられない</strong>ことも明確になった。
-      </p>
-      <div class="table-wrap reveal"><div class="table-scroll">
-        <table>
-          <thead><tr><th>古典的論点</th><th>当時の問い</th><th>現在の読み替え</th></tr></thead>
-          <tbody>
-            <tr><td>物理主義</td><td>心は物理的な脳過程から生じるか</td><td>作業仮定としては必要。ただし復元対象・十分条件は決まらない</td></tr>
-            <tr><td>ミクロトーム / 破壊的スキャン</td><td>薄切り画像から脳を再構築できるか</td><td>構造足場は強まるが、固定・保存・染色・時間遅延・現在状態の喪失が残る</td></tr>
-            <tr><td>ナノ置換 / Moravec 型連続置換</td><td>徐々に置き換えれば同一性は保てるか</td><td>連続性は直感的に強いが、各段階で機能・状態・身体ループが保たれたかは未検証</td></tr>
-            <tr><td>非破壊アップロード</td><td>MRI 等で生きたまま読み出せるか</td><td>解像度・逆問題・proxy 性・共有ドライバー・モデル負荷が上限になる</td></tr>
-            <tr><td>人格同一性と複製</td><td>コピーは本人か。複数コピーは許すか</td><td>技術的復元 / 心理的連続性 / 法的同一性 / 社会的同意は<strong>別問題</strong></td></tr>
-            <tr><td>人工現実 / 人工身体</td><td>アップロード後の環境・身体はどうあるべきか</td><td>身体・環境は周辺でなく、内受容・報酬・睡眠・恒常性・社会関係を通じ状態を変える</td></tr>
-          </tbody>
-        </table>
-      </div></div>
-
-      <h3 style="margin-top:38px">主張の強さは5段階。混同してはいけない。</h3>
-      <div class="grid cols-3">
-        <div class="card reveal"><h3>相関</h3><p>二つの量が一緒に変わる。<br>→ 交絡・共通原因の確認が要る。</p></div>
-        <div class="card reveal"><h3>予測</h3><p>ある信号から別の状態を当てられる。<br>→ 別条件・別個体・別装置での汎化が要る。</p></div>
-        <div class="card reveal"><h3>識別</h3><p>候補状態を区別できる。<br>→ 競合モデルが残らないことの検証が要る。</p></div>
-        <div class="card reveal"><h3>因果</h3><p>介入で結果が変わる。<br>→ 摂動・反事実・保持された検証条件が要る。</p></div>
-        <div class="card reveal"><h3>再現</h3><p>別の人が同じ手順で確認できる。<br>→ データ・コード・環境・評価の公開が要る。</p></div>
-        <div class="card reveal"><h3 style="color:var(--accent)">読み方</h3><p>デコード・予測の高スコアを、識別・因果・再現へ<strong>勝手に昇格させない</strong>。</p></div>
+    <!-- ===================== OVERVIEW: master known/unknown ===================== -->
+    <section id="overview">
+      <p class="eyebrow">全体の到達点</p>
+      <h2>マインドアップロード全体で、<br>いま何が言えて何が言えないか。</h2>
+      <p class="section-lead">分野に入る前に、最も高い視点での既知／未知。詳しい根拠は各分野のページにあります。</p>
+      <div class="ku reveal">
+        <div class="ku-col known">
+          <div class="ku-head"><span class="ku-icon">✓</span>わかっていること</div>
+          <ul>
+            <li>脳の情報処理は<b>物理的な構造と活動に依存</b>し、測定できる。原理的に読み出し不能な魔法ではない。</li>
+            <li>小動物（線虫・ハエ）の<b>全脳コネクトーム</b>と、哺乳類・ヒト皮質の <b>1mm³ 構造</b>は実際に取得できている。</li>
+            <li>一部の神経信号から、運動・知覚・言語に関わる状態を<b>予測・デコード</b>できる。</li>
+            <li>公開データ・標準形式・再現可能な解析は、主張の<b>検証力を上げる</b>。</li>
+          </ul>
+        </div>
+        <div class="ku-col open">
+          <div class="ku-head"><span class="ku-icon">?</span>わかっていないこと</div>
+          <ul>
+            <li>個人らしさ・記憶の再現に、<b>どの粒度の構造と状態が必要十分か</b>。</li>
+            <li>生きた人間から、必要な状態変数を<b>どこまで非破壊に測れるか</b>（頭蓋越しには物理限界がある）。</li>
+            <li>同じ出力を生む複数の内部モデルを、<b>どの実験で分離できるか</b>（識別可能性）。</li>
+            <li>復元した心が「元と同じ」と言える<b>検証条件</b>。完璧な振る舞いと主観的連続を分ける物理測定は無い。</li>
+          </ul>
+        </div>
       </div>
+      <div class="note reveal"><b>いちばん誇張されやすい点:</b> 「コネクトーム（配線図）を取得した = 脳が走る」ではありません。構造マップ単体には、機能エミュレーションに要る神経調節・イオン・分子の<b>動的状態が欠けています</b>。これは <a href="areas/connectomics.html">構造取得</a> の成功が <a href="areas/inference.html">再構成</a> の成功を意味しない、という分野間のギャップです。</div>
     </section>
 
-    <!-- ===================== PIPELINE ===================== -->
-    <section id="pipeline">
-      <p class="eyebrow">完成技術とその実施</p>
-      <h2>実装パイプライン：実際にどう行うのか</h2>
+    <!-- ===================== AREAS ===================== -->
+    <section id="areas">
+      <p class="eyebrow">8つの研究分野</p>
+      <h2>分野ごとに、歴史と既知／未知を辿る。</h2>
       <p class="section-lead">
-        マインドアップロードは単一の発明ではなく、<strong>固定 → 走らせるまでの依存パイプライン</strong>です。
-        各段を「何をするか／どう行うか／現在地／実施の壁」に分けて検討する。前段が弱いまま後段へ進むと「見かけの進歩」になる。
+        マインドアップロードは単一の発明ではなく、<strong>固定 → 取得 → 再構成 → 走らせる → 検証</strong>の依存パイプラインです。
+        各カードから、その分野の<strong>研究の歴史・わかっていること・わかっていないこと</strong>のページへ入れます。
       </p>
-
-      <h3 style="margin-top:6px">まず、戦略は三つに分岐する</h3>
-      <div class="grid cols-3">
-        <div class="card reveal"><h3>破壊的スキャン</h3><p>固定 → 連続切片 → 電子顕微鏡。<b style="color:var(--text)">構造は最高解像度</b>だが、現在の動的状態は失われ、生体には不可逆。<br>適用: 段 01–02 を厚く。</p></div>
-        <div class="card reveal"><h3>非破壊測定</h3><p>生体のまま多モダリティで読み出す。<b style="color:var(--text)">可逆</b>だが、解像度・逆問題・proxy が上限。<br>適用: 段 03–04 を厚く。</p></div>
-        <div class="card reveal"><h3>漸進的置換 (Moravec 型)</h3><p>ニューロンを少しずつ人工素子へ置換。<b style="color:var(--text)">連続性は直感的に強い</b>が、各段階の機能保存を逐次検証する必要。<br>適用: 段 05–08 を反復。</p></div>
-      </div>
-      <p style="color:var(--muted);margin-top:18px;font-size:0.95rem">どのルートでも、下流（再構成 → エミュレーション → 検証）は共通。違うのは前半の取得方法と、何を失うかだ。</p>
-
       <div class="legend">
         <span><span class="dotr ok"></span>確立 — 実証済みの手法がある</span>
         <span><span class="dotr partial"></span>部分的 — 一部スケール／条件で実証</span>
         <span><span class="dotr no"></span>未確立 — 原理的・スケール的に未達</span>
       </div>
-
-      <div class="pipeline">
-        <!-- 01 -->
-        <div class="stage reveal">
-          <div class="stage-head">
-            <span class="stage-num"></span>
-            <h3 class="stage-title">生体保存・固定<span class="en">Preservation &amp; fixation</span></h3>
-            <span class="ready"><span class="dotr partial"></span>構造○ / 状態×</span>
-          </div>
-          <div class="stage-grid">
-            <div class="field"><span class="k">やること</span><p class="v">脳の超微細構造を、分解が始まる前に物理的に安定化して固定する。</p></div>
-            <div class="field"><span class="k">どう行うか</span><p class="v">血管経由でアルデヒドを<b>灌流固定</b> → アルデヒド安定化クライオ保存(ASC)や M22 ガラス化、または樹脂包埋。死後〜固定の遅延（虚血）を最小化。</p></div>
-            <div class="field"><span class="k">現在地</span><p class="v">ASC がブタ脳でシナプスレベルの構造保存を実証（McIntyre &amp; Fahy／大型哺乳類脳保存賞 2018）。</p></div>
-            <div class="field wall"><span class="k">実施の壁</span><p class="v">固定の瞬間に電気・代謝・放出確率・イオン環境など<b>「現在の動的状態」が失われる</b>。ヒト全脳で虚血前に均一灌流するのが難しい。</p></div>
-          </div>
-          <div class="stage-rel"><a href="#gaps">→ P2 維持状態</a><span>Destructive-Structure Route Card</span></div>
-        </div>
-
-        <!-- 02 -->
-        <div class="stage reveal">
-          <div class="stage-head">
-            <span class="stage-num"></span>
-            <h3 class="stage-title">構造取得（コネクトミクス）<span class="en">Volume EM connectomics</span></h3>
-            <span class="ready"><span class="dotr partial"></span>小〜中規模○ / ヒト全脳×</span>
-          </div>
-          <div class="stage-grid">
-            <div class="field"><span class="k">やること</span><p class="v">ニューロンとシナプスの全結線図（コネクトーム）を取得する。</p></div>
-            <div class="field"><span class="k">どう行うか</span><p class="v">マルチビーム電顕・Hot-Knife 切片化で 30–50nm 連続切片を撮像 → <b>Flood-Filling Networks</b> でAI自動セグメンテーション、SOFIMA で整列 → シナプス検出・配線再構成。</p></div>
-            <div class="field"><span class="k">現在地</span><p class="v">ハエ全脳 FlyWire（Dorkenwald 2024）、マウス視覚皮質 1mm³ MICrONS（2025）、ヒト側頭葉 1mm³ H01（Shapson-Coe 2024）。</p></div>
-            <div class="field wall"><span class="k">実施の壁</span><p class="v">ヒト全脳（~1,500cm³）は現行解像度で<b>ゼタバイト級・推定数十年</b>。形態だけからシナプスの符号・強度は完全には読めない。</p></div>
-          </div>
-          <div class="stage-rel"><a href="#gaps">→ P4 構造制約モデル</a><a href="#gaps">→ P7 公開データ</a></div>
-        </div>
-
-        <!-- 03 -->
-        <div class="stage reveal">
-          <div class="stage-head">
-            <span class="stage-num"></span>
-            <h3 class="stage-title">分子・維持状態の取得<span class="en">Molecular / synaptic-state capture</span></h3>
-            <span class="ready"><span class="dotr partial"></span>部分的</span>
-          </div>
-          <div class="stage-grid">
-            <div class="field"><span class="k">やること</span><p class="v">配線図に現れない分子状態（受容体・伝達物質・可塑性・代謝）を測る。</p></div>
-            <div class="field"><span class="k">どう行うか</span><p class="v">免疫EM・アレイトモグラフィ・拡張顕微鏡(ExM)・<b>Ex-EM</b> で構造と分子を共登録、MERFISH/BARseq 等の空間トランスクリプトミクス。</p></div>
-            <div class="field"><span class="k">現在地</span><p class="v">全マウス脳の空間トランスクリプトーム細胞型アトラス（Yao 2023）、EM からの神経伝達物質予測。</p></div>
-            <div class="field wall"><span class="k">実施の壁</span><p class="v">固定標本に「現在の」放出確率・興奮性・代謝・睡眠状態は残らない。<b>同一シナプスで分子と超微細構造を非破壊に共登録できない</b>。</p></div>
-          </div>
-          <div class="stage-rel"><a href="#gaps">→ P2 維持状態</a><span>維持状態バジェット</span></div>
-        </div>
-
-        <!-- 04 -->
-        <div class="stage reveal">
-          <div class="stage-head">
-            <span class="stage-num"></span>
-            <h3 class="stage-title">機能・動態の測定<span class="en">In-vivo functional / dynamics</span></h3>
-            <span class="ready"><span class="dotr partial"></span>動物○ / ヒト△</span>
-          </div>
-          <div class="stage-grid">
-            <div class="field"><span class="k">やること</span><p class="v">回路の動的パラメータと活動を、できれば生体で測る。</p></div>
-            <div class="field"><span class="k">どう行うか</span><p class="v">in vivo 2光子 Ca²⁺/電圧イメージング、高密度電気生理（Neuropixels 2.0）、同一脳の機能→構造パイプライン。ヒトは非侵襲 EEG/fMRI/PET/MRSI/<b>OPM-MEG</b>/機能的超音波(fUS)。</p></div>
-            <div class="field"><span class="k">現在地</span><p class="v">MICrONS は同一マウスで機能記録→コネクトーム。ヒト発話 BCI（Willett 2023; Metzger 2023）。</p></div>
-            <div class="field wall"><span class="k">実施の壁</span><p class="v">ヒトでは頭蓋越しに単一細胞・ミリ秒の活動を<b>非侵襲記録できない（物理限界）</b>。観測から内部状態は一意化しない。</p></div>
-          </div>
-          <div class="stage-rel"><a href="#gaps">→ P1 識別可能性</a><a href="#gaps">→ P3 マルチモーダル</a></div>
-        </div>
-
-        <!-- 05 -->
-        <div class="stage reveal">
-          <div class="stage-head">
-            <span class="stage-num"></span>
-            <h3 class="stage-title">再構成・パラメータ推論<span class="en">Reconstruction &amp; inference</span></h3>
-            <span class="ready"><span class="dotr partial"></span>縮退で停滞</span>
-          </div>
-          <div class="stage-grid">
-            <div class="field"><span class="k">やること</span><p class="v">測定データから、走らせられる回路モデルのパラメータを決める。</p></div>
-            <div class="field"><span class="k">どう行うか</span><p class="v"><b>シミュレーションベース推論(SBI)</b>、コネクトーム制約の深層機構モデル、逆問題/ベイズ推定。曖昧性クラスを宣言し、摂動・保持データで候補を落とす。</p></div>
-            <div class="field"><span class="k">現在地</span><p class="v">コネクトーム重みから直接、ハエ視覚・航法系の機構シミュレーション（Lappalainen 2024; Beiran &amp; Litwin-Kumar 2025）。</p></div>
-            <div class="field wall"><span class="k">実施の壁</span><p class="v"><b>パラメータ縮退</b> — 同じ基底発火を生む複数のイオンチャネル/神経調節状態が残り、構造だけからは一意推論できない（Prinz 2004）。</p></div>
-          </div>
-          <div class="stage-rel"><a href="#gaps">→ P1 / P4</a><span>識別可能性カード</span></div>
-        </div>
-
-        <!-- 06 -->
-        <div class="stage reveal">
-          <div class="stage-head">
-            <span class="stage-num"></span>
-            <h3 class="stage-title">エミュレーション基盤<span class="en">Emulation substrate</span></h3>
-            <span class="ready"><span class="dotr no"></span>スケール未達</span>
-          </div>
-          <div class="stage-grid">
-            <div class="field"><span class="k">やること</span><p class="v">再構成モデルを計算基盤で実時間に走らせる。</p></div>
-            <div class="field"><span class="k">どう行うか</span><p class="v">大規模生物物理シミュレーション（NEURON, Arbor, NEST）、ニューロモルフィック HW（<b>SpiNNaker 2, Intel Loihi 2, BrainScaleS-2</b>）、GPU/HPC。</p></div>
-            <div class="field"><span class="k">現在地</span><p class="v">Intel <b>Hala Point</b> が 11.5 億ニューロン規模の実時間研究システムを実現（2024）。線虫 OpenWorm 部分。</p></div>
-            <div class="field wall"><span class="k">実施の壁</span><p class="v">ヒトは ~860 億ニューロン・~10¹⁴–10¹⁵ シナプス。<b>スパイクのインターコネクト遅延・メモリ帯域・消費電力</b>・生物学的タイミング忠実度。</p></div>
-          </div>
-          <div class="stage-rel"><a href="#ladder">→ L3 閉ループ実装</a></div>
-        </div>
-
-        <!-- 07 -->
-        <div class="stage reveal">
-          <div class="stage-head">
-            <span class="stage-num"></span>
-            <h3 class="stage-title">身体・環境の接続<span class="en">Embodiment</span></h3>
-            <span class="ready"><span class="dotr partial"></span>部分的</span>
-          </div>
-          <div class="stage-grid">
-            <div class="field"><span class="k">やること</span><p class="v">感覚・運動・内受容・恒常性の閉ループを供給し、脳モデルを「身体」につなぐ。</p></div>
-            <div class="field"><span class="k">どう行うか</span><p class="v">仮想身体/環境（MuJoCo, Isaac Sim）、双方向 BCI、内受容・報酬・睡眠・恒常性ループのモデル化。</p></div>
-            <div class="field"><span class="k">現在地</span><p class="v">脳-脊髄インターフェースで自然な運動・感覚を回復（Lorach 2023）、双方向 BCI が進展。</p></div>
-            <div class="field wall"><span class="k">実施の壁</span><p class="v">どの身体ループを保存し、どれを置換するか。<b>低遅延の感覚フィードバックがないと脳状態が急速に発散</b>する。遅い内部環境の供給。</p></div>
-          </div>
-          <div class="stage-rel"><a href="#gaps">→ P8 身体・環境</a><span>Body / Environment Boundary Card</span></div>
-        </div>
-
-        <!-- 08 -->
-        <div class="stage reveal">
-          <div class="stage-head">
-            <span class="stage-num"></span>
-            <h3 class="stage-title">検証（同一性）<span class="en">Validation of identity</span></h3>
-            <span class="ready"><span class="dotr no"></span>未確立</span>
-          </div>
-          <div class="stage-grid">
-            <div class="field"><span class="k">やること</span><p class="v">再構成された心が「元と同じ」と言える条件を、操作的に確かめる。</p></div>
-            <div class="field"><span class="k">どう行うか</span><p class="v">行動的同一性テスト、摂動応答の一致、反事実検証、<b>段階的アブレーション</b>、保持データでの候補棄却。主張は L0–L5 で止める。</p></div>
-            <div class="field"><span class="k">現在地</span><p class="v">動物の局所回路では摂動応答比較が可能。全脳・人格レベルの検証法は未確立。</p></div>
-            <div class="field wall"><span class="k">実施の壁</span><p class="v"><b>経験的反証不能性</b> — 完璧に振る舞うコピー／哲学的ゾンビと、主観的経験の真の連続とを区別する物理測定が存在しない。</p></div>
-          </div>
-          <div class="stage-rel"><a href="#ladder">→ L4 / L5</a><span>仮説検証</span></div>
-        </div>
-
-        <!-- 09 -->
-        <div class="stage reveal">
-          <div class="stage-head">
-            <span class="stage-num"></span>
-            <h3 class="stage-title">倫理・運用ゲート<span class="en">Ethics &amp; operations</span></h3>
-            <span class="ready"><span class="dotr no"></span>未整備</span>
-          </div>
-          <div class="stage-grid">
-            <div class="field"><span class="k">やること</span><p class="v">技術的成功を、同意・権利・安全へ接続する。</p></div>
-            <div class="field"><span class="k">どう行うか</span><p class="v">同意プロトコル、コピー数・分岐・更新・<b>停止権</b>の規約、安全停止、悪用防止、監査権限。</p></div>
-            <div class="field"><span class="k">現在地</span><p class="v">制度設計は技術に先行して未整備。</p></div>
-            <div class="field wall"><span class="k">実施の壁</span><p class="v"><b>技術的復元 ≠ 法的・社会的同一性</b>。実現前から制度条件を技術条件と分けて設計する必要。</p></div>
-          </div>
-          <div class="stage-rel"><span>必要条件</span><a href="#gaps">→ P8</a></div>
-        </div>
+      <div class="areas reveal">
+        <a class="area-card" href="areas/preservation.html">
+          <div class="area-top"><span class="area-idx">01</span><span class="area-stat partial">構造○ / 状態×</span></div>
+          <h3>脳保存・固定</h3>
+          <p>分解が始まる前に、脳の超微細構造を物理的に安定化して固定する。すべての破壊的ルートの出発点。</p>
+          <div class="area-foot"><span>1962 冷凍保存 → 2018 ブタ脳</span><span class="go">歴史と既知/未知 →</span></div>
+        </a>
+        <a class="area-card" href="areas/connectomics.html">
+          <div class="area-top"><span class="area-idx">02</span><span class="area-stat partial">小動物○ / ヒト全脳×</span></div>
+          <h3>コネクトミクス（構造取得）</h3>
+          <p>ニューロンとシナプスの全結線図を電子顕微鏡で取得する。構造の地図づくり。</p>
+          <div class="area-foot"><span>1986 線虫 → 2024 ハエ全脳</span><span class="go">歴史と既知/未知 →</span></div>
+        </a>
+        <a class="area-card" href="areas/molecular.html">
+          <div class="area-top"><span class="area-idx">03</span><span class="area-stat partial">部分的</span></div>
+          <h3>分子・シナプス状態</h3>
+          <p>配線図に現れない分子状態（受容体・伝達物質・可塑性・代謝）を測る。</p>
+          <div class="area-foot"><span>2007 アレイトモグラフィ → 2023 全脳細胞型</span><span class="go">歴史と既知/未知 →</span></div>
+        </a>
+        <a class="area-card" href="areas/dynamics.html">
+          <div class="area-top"><span class="area-idx">04</span><span class="area-stat partial">動物○ / ヒト△</span></div>
+          <h3>機能計測・神経動態</h3>
+          <p>回路の動的パラメータと活動を、できれば生体で測る。EEG から Neuropixels・BCI まで。</p>
+          <div class="area-foot"><span>1924 EEG → 2023 発話 BCI</span><span class="go">歴史と既知/未知 →</span></div>
+        </a>
+        <a class="area-card" href="areas/inference.html">
+          <div class="area-top"><span class="area-idx">05</span><span class="area-stat no">縮退で停滞</span></div>
+          <h3>再構成・パラメータ推論</h3>
+          <p>測定データから、走らせられる回路モデルのパラメータを決める。逆問題の核心。</p>
+          <div class="area-foot"><span>2004 縮退の発見 → 2024 構造制約モデル</span><span class="go">歴史と既知/未知 →</span></div>
+        </a>
+        <a class="area-card" href="areas/emulation.html">
+          <div class="area-top"><span class="area-idx">06</span><span class="area-stat no">スケール未達</span></div>
+          <h3>エミュレーション基盤</h3>
+          <p>再構成したモデルを計算基盤で実時間に走らせる。シミュレータとニューロモルフィック。</p>
+          <div class="area-foot"><span>1952 H-H モデル → 2024 11.5億ニューロン</span><span class="go">歴史と既知/未知 →</span></div>
+        </a>
+        <a class="area-card" href="areas/embodiment.html">
+          <div class="area-top"><span class="area-idx">07</span><span class="area-stat partial">部分的</span></div>
+          <h3>身体性・環境</h3>
+          <p>感覚・運動・内受容・恒常性の閉ループを供給し、脳モデルを「身体」につなぐ。</p>
+          <div class="area-foot"><span>1998 皮質制御 → 2023 脳-脊髄ブリッジ</span><span class="go">歴史と既知/未知 →</span></div>
+        </a>
+        <a class="area-card" href="areas/identity.html">
+          <div class="area-top"><span class="area-idx">08</span><span class="area-stat no">未確立</span></div>
+          <h3>同一性・検証・哲学</h3>
+          <p>再構成された心が「元と同じ」と言える条件を、操作的に確かめられるか。</p>
+          <div class="area-foot"><span>1714 ライプニッツ → 2023 意識の対立協働</span><span class="go">歴史と既知/未知 →</span></div>
+        </a>
       </div>
-
-      <div class="note reveal"><b>popular coverage が最も誇張する点:</b> 「コネクトームを取得した = 脳が走る」ではない。構造マップ単体には、機能エミュレーションに要る神経調節・イオン・分子の<b>動的状態が欠けている（縮退ギャップ）</b>。段 02 の成功は段 05–06 の成功を意味しない。</div>
     </section>
 
     <!-- ===================== CLAIM LADDER ===================== -->
     <section id="ladder">
       <p class="eyebrow">主張のレベル</p>
-      <h2>クレームラダー L0 → L5</h2>
+      <h2>進歩は「印象」ではなく<br>クレームラダー L0 → L5 で読む。</h2>
       <p class="section-lead">
-        進捗は「印象」ではなく、どの証拠なら主張を一段上げられるかで読む。
-        <strong>上位レベルの言葉を急ぐより、下位レベルを再現可能に厚くするほうが、現時点では研究速度を上げる。</strong>
+        どの証拠が揃えば主張を一段上げられるかを物差しにする。各分野の「わかっていること」が、いまどの段にいるかを示します。
+        <strong>上位レベルの言葉を急ぐより、下位レベルを再現可能に厚くするほうが、現時点では研究速度を上げます。</strong>
       </p>
       <div class="ladder reveal">
         <div class="rung"><div class="lv">L0</div><div class="body"><p class="can">公開データ・イベント・同期・QC・ベースラインが再現できる。</p><p class="cant">内部状態を識別できたとは言えない。</p></div></div>
@@ -292,129 +179,42 @@
       </div>
     </section>
 
-    <!-- ===================== GAPS ===================== -->
-    <section id="gaps">
-      <p class="eyebrow">どこができていないのか</p>
-      <h2>未解決ギャップ：研究優先順位 P1–P8</h2>
-      <p class="section-lead">
-        順位は流行や日付ではなく、<strong>未解決の大きさ・波及効果・検証可能性</strong>で決める。まず「候補内部状態を減らす研究」から始める。
-      </p>
-
-      <h3 style="margin-top:6px">まず、まだわかっていないコア4問</h3>
-      <div class="grid cols-4">
-        <div class="card reveal"><p style="color:var(--accent);font-family:var(--mono);margin-bottom:8px">Q1</p><p>どの粒度の構造と状態が、個人らしさ・記憶の再現に<strong>必要十分</strong>か。</p></div>
-        <div class="card reveal"><p style="color:var(--accent);font-family:var(--mono);margin-bottom:8px">Q2</p><p>生きた人間から、必要な状態変数をどこまで<strong>非破壊に</strong>測れるか。</p></div>
-        <div class="card reveal"><p style="color:var(--accent);font-family:var(--mono);margin-bottom:8px">Q3</p><p>同じ出力を生む複数の内部モデルを、<strong>どの実験で分離</strong>できるか。</p></div>
-        <div class="card reveal"><p style="color:var(--accent);font-family:var(--mono);margin-bottom:8px">Q4</p><p>長期の安定性・学習・睡眠・<strong>身体性</strong>をどう検証するか。</p></div>
-      </div>
-
-      <h3 style="margin-top:40px">三つの壁 — ここを通らないと「見かけの進歩」で止まる</h3>
+    <!-- ===================== HOW TO READ ===================== -->
+    <section id="read">
+      <p class="eyebrow">読み方</p>
+      <h2>三つの壁 — ここを通らないと<br>「見かけの進歩」で止まる。</h2>
+      <p class="section-lead">どの分野のニュースも、この三点で読み替えると過大評価を避けられます。</p>
       <div class="grid cols-3">
-        <div class="card reveal"><h3>測定粒度の壁</h3><p><b style="color:var(--warn)">過読:</b> 高密度・高解像なら必要状態をほぼ測れた。</p><p><b style="color:var(--accent)">確認:</b> 直接観測 / proxy / 推定 / 未測定を分け、時間窓と数量タイプを明示。</p></div>
-        <div class="card reveal"><h3>識別性の壁</h3><p><b style="color:var(--warn)">過読:</b> 予測精度が上がったから内部状態も一意に決まった。</p><p><b style="color:var(--accent)">確認:</b> 候補モデル空間・曖昧性クラス・保持データ・摂動・棄権規則を事前固定。</p></div>
-        <div class="card reveal"><h3>介入検証の壁</h3><p><b style="color:var(--warn)">過読:</b> オフラインデコードが良いから因果的再実装に近い。</p><p><b style="color:var(--accent)">確認:</b> 摂動応答・閉ループ・状態遷移・日跨ぎ安定性・別条件検証を要求。</p></div>
+        <div class="card warn reveal"><h3>測定粒度の壁</h3><p><b style="color:var(--open)">過読:</b> 高密度・高解像なら必要状態をほぼ測れた。</p><p><b style="color:var(--brand)">確認:</b> 直接観測 / proxy / 推定 / 未測定を分け、時間窓と数量タイプを明示。</p></div>
+        <div class="card warn reveal"><h3>識別性の壁</h3><p><b style="color:var(--open)">過読:</b> 予測精度が上がったから内部状態も一意に決まった。</p><p><b style="color:var(--brand)">確認:</b> 候補モデル空間・曖昧性クラス・保持データ・摂動・棄権規則を事前に固定。</p></div>
+        <div class="card warn reveal"><h3>介入検証の壁</h3><p><b style="color:var(--open)">過読:</b> オフラインデコードが良いから因果的再実装に近い。</p><p><b style="color:var(--brand)">確認:</b> 摂動応答・閉ループ・状態遷移・日跨ぎ安定性・別条件検証を要求。</p></div>
       </div>
 
-      <h3 style="margin-top:40px">P1–P8：未解決の中身と「次の実験」</h3>
-      <div class="grid cols-2">
-        <div class="card pcard reveal"><span class="tag">P1</span><h3>識別可能性を上げる摂動設計</h3><p class="gap">測定量が増えても、同じ観測を説明する内部状態が複数残る。</p><p class="next"><b>次:</b> 競合モデルを列挙し、状態遷移・持続励起・介入・保持データでどれが落ちるか事前登録。</p></div>
-        <div class="card pcard reveal"><span class="tag">P2</span><h3>維持状態のカード化</h3><p class="gap">コネクトームではシナプス効率・興奮性・代謝・ECM/PNN・睡眠・グリア・血管・免疫を固定できない。</p><p class="next"><b>次:</b> 各状態に直接観測量・代理量・時間窓・摂動可能性・棄権境界を分けてカード化。</p></div>
-        <div class="card pcard reveal"><span class="tag">P3</span><h3>同一個体マルチモーダルの分解</h3><p class="gap">EEG/fMRI/PET/MRSI/行動が同一対象から取れても共通因子と固有因子が混ざる。</p><p class="next"><b>次:</b> 同一セッションで共通因子・分岐因子・装置固有誤差・状態ラベルのずれを分離。</p></div>
-        <div class="card pcard reveal"><span class="tag">P4</span><h3>コネクトーム制約モデルの残差監査</h3><p class="gap">構造は足場だが、動的パラメータ・現在のシナプス状態を一意に決めない。</p><p class="next"><b>次:</b> 構造に活動記録・摂動・外部タスクを追加し、残る候補集合を明示。</p></div>
-        <div class="card pcard reveal"><span class="tag">P5</span><h3>状態継続ブリッジの検証</h3><p class="gap">同じ脳・被験者・デコーダでも、日跨ぎ・固定後の状態同一性は別問題。</p><p class="next"><b>次:</b> 運ばれる対象・許容誤差・失敗規則・再調整負荷・救済ルートを明示。</p></div>
-        <div class="card pcard reveal"><span class="tag">P6</span><h3>デコードとエミュレーションの分離</h3><p class="gap">言語・運動を高精度予測できても、内部状態を生成的に再実装したことにならない。</p><p class="next"><b>次:</b> 予測スコア・神経寄与・言語事前分布・閉ループ性能・長期安定性を別々に評価。</p></div>
-        <div class="card pcard reveal"><span class="tag">P7</span><h3>公開データで L0→L2 を厚くする</h3><p class="gap">大きな主張の前提となる低レベル再現性がまだ薄い。</p><p class="next"><b>次:</b> BIDS/NWB・イベントログ・同期・QC・保持データ・ベースライン・ショートカット対照・棄権規則を一体公開。</p></div>
-        <div class="card pcard reveal"><span class="tag">P8</span><h3>身体・環境・内受容ループの境界</h3><p class="gap">脳単体の再現では感覚・運動・報酬・睡眠・恒常性の閉ループを保証できない。</p><p class="next"><b>次:</b> どの身体ループを保存/置換し、どの遅い内部環境を合わせるか実験ごとに開示。</p></div>
-      </div>
-    </section>
-
-    <!-- ===================== MAINTENANCE STATES ===================== -->
-    <section id="states">
-      <p class="eyebrow">維持状態 (P2 の中身)</p>
-      <h2>コネクトームに「黙って含めてはいけない」遅い状態</h2>
-      <p class="section-lead">配線図だけで固定できない状態ファミリー。どれが個別機能に必要十分かは未解決。</p>
-      <div class="chips reveal">
-        <span class="chip">固有興奮性 / AIS / イオンチャネル</span>
-        <span class="chip">シナプス効率 / 放出確率 / 短期・長期可塑性</span>
-        <span class="chip">ECM / PNN / 局所プロテオスタシス</span>
-        <span class="chip">神経調節 (DA / NA / ACh / 5-HT / 神経ペプチド)</span>
-        <span class="chip">転写 / クロマチン / RNA編集 / リン酸化</span>
-        <span class="chip">代謝 / ミトコンドリア / ATP / 熱状態</span>
-        <span class="chip">ミエリン / 希突起膠細胞 (伝導タイミング)</span>
-        <span class="chip">グリア基質 / アストロサイト</span>
-        <span class="chip">血管 / BBB / 免疫 / クリアランス</span>
-        <span class="chip">睡眠 / リプレイ / 概日 / 発火率設定点</span>
-      </div>
-      <div class="note reveal"><b>共通の過読警告:</b> proxy が多いこと ≠ 対象状態が一意に復元できること。一つの代謝指標や血流補正で「支持状態全体を測れた」と読まない。</div>
-    </section>
-
-    <!-- ===================== VERIFICATION CARDS ===================== -->
-    <section id="cards">
-      <p class="eyebrow">検証カード</p>
-      <h2>ギャップを潰す道具：12 枚のカード</h2>
-      <p class="section-lead">
-        各カードの役割は「成功宣言」ではなく、<strong>どこまでしか言えないか（主張上限）を先に固定する</strong>こと。未測定状態・モデル負荷・レジーム差・棄権条件を空欄にしない。
-      </p>
+      <h3 style="margin-top:42px">主張の強さは5段階。混同してはいけない。</h3>
       <div class="grid cols-3">
-        <div class="card reveal"><h3>可観測性予算</h3><p>測定変数を増やす研究。直接観測 / proxy / 推定 / 未測定を分ける。</p></div>
-        <div class="card reveal"><h3>識別可能性カード</h3><p>逆問題・モデルフィット・デコード。競合モデル・対称性・再パラメータ化・保持データ。</p></div>
-        <div class="card reveal"><h3>Fusion Card</h3><p>EEG/fMRI/PET/MRSI の統合。共通因子・固有因子・融合後の残候補集合。</p></div>
-        <div class="card reveal"><h3>Human Proxy Composition</h3><p>生きた人間の複数 proxy 合成。各役割・取得負担・外部校正・最強単一行からの増分。</p></div>
-        <div class="card reveal"><h3>State-Continuity Bridge</h3><p>同一被験者/脳/日跨ぎ/固定後の橋渡し。運ばれる対象・証人・許容誤差・救済ルート。</p></div>
-        <div class="card reveal"><h3>Destructive-Structure Route</h3><p>固定後 EM・破壊的超微細構造測定。保存法・遅延・登録範囲・失われる状態。</p></div>
-        <div class="card reveal"><h3>Temporal Validity</h3><p>長期安定性・固定デコーダ・睡眠。時間窓・状態注釈・再校正・ドリフト上限。</p></div>
-        <div class="card reveal"><h3>維持状態バジェット</h3><p>コネクトームに含められない遅い状態。状態ファミリー別の観測・proxy・摂動・棄権。</p></div>
-        <div class="card reveal"><h3>Neural Contribution</h3><p>言語/音声/運動/治療 BCI のデコード。タスク制約・事前分布・脳なし対照・閉ループ。</p></div>
-        <div class="card reveal"><h3>Calibration / Abstention</h3><p>不確実性が高い結果・閉ループ・予測集合。区間・被覆率・棄権閾値・フォールバック。</p></div>
-        <div class="card reveal"><h3>L0 Artifact Pack</h3><p>公開データでの再解析・ベンチマーク開始。データ同一性・イベント忠実度・分割・系統。</p></div>
-        <div class="card reveal"><h3>Body / Environment Boundary</h3><p>閉ループ・身体置換・環境相互作用。保存入力・置換出力・内受容・報酬・睡眠の境界。</p></div>
-      </div>
-
-      <h3 style="margin-top:44px">明日から最速で進めるなら</h3>
-      <div class="steps reveal">
-        <div class="step"><div><h3>対象機能を一つ選ぶ</h3><p>記憶・運動・言語・覚醒など、まず狭く。</p></div></div>
-        <div class="step"><div><h3>競合する内部状態説明を3つ以上書く</h3><p>同じ出力を別機構で説明する候補を先に出す。</p></div></div>
-        <div class="step"><div><h3>観測量ではなく分離実験を選ぶ</h3><p>どの測定/摂動が競合候補を最も落とすか。</p></div></div>
-        <div class="step"><div><h3>棄権条件を公開する</h3><p>候補集合が重なるなら「成功」でなく「未識別」として止める。</p></div></div>
-        <div class="step"><div><h3>公開データの小さな再現ループから</h3><p>L0 再解析 → L1 同条件ベンチ → L2 候補仮説分離。</p></div></div>
+        <div class="card reveal"><h3>相関</h3><p>二つの量が一緒に変わる。<br>→ 交絡・共通原因の確認が要る。</p></div>
+        <div class="card reveal"><h3>予測</h3><p>ある信号から別の状態を当てられる。<br>→ 別条件・別個体・別装置での汎化が要る。</p></div>
+        <div class="card reveal"><h3>識別</h3><p>候補状態を区別できる。<br>→ 競合モデルが残らないことの検証が要る。</p></div>
+        <div class="card reveal"><h3>因果</h3><p>介入で結果が変わる。<br>→ 摂動・反事実・保持された検証条件が要る。</p></div>
+        <div class="card reveal"><h3>再現</h3><p>別の人が同じ手順で確認できる。<br>→ データ・コード・環境・評価の公開が要る。</p></div>
+        <div class="card reveal"><h3 style="color:var(--brand)">読み方</h3><p>デコード・予測の高スコアを、識別・因果・再現へ<strong>勝手に昇格させない</strong>。</p></div>
       </div>
     </section>
 
-    <!-- ===================== EVIDENCE ===================== -->
-    <section id="evidence">
-      <p class="eyebrow">根拠マップ</p>
-      <h2>文献は日付でなく「支える主張」で読む</h2>
-      <p class="section-lead">新しさだけでは根拠の強さは決まらない。どの主張を、どこまで支えるか／何をまだ閉じないかを同じ行で読む。</p>
-      <div class="table-wrap reveal"><div class="table-scroll">
-        <table>
-          <thead><tr><th>証拠クラス</th><th>代表例</th><th>強くなる主張</th><th>まだ閉じないもの</th></tr></thead>
-          <tbody>
-            <tr><td>全脳/大規模コネクトーム</td><td>Dorkenwald+ (2024), MICrONS (2025)</td><td>構造足場・局所回路・同一脳の構造機能対応</td><td>現在のシナプス効率・放出状態・代謝・全状態の同時捕捉</td></tr>
-            <tr><td>コネクトーム制約モデル</td><td>Lappalainen+ (2024), Beiran &amp; Litwin-Kumar (2025)</td><td>構造が活動予測をどこまで改善するか</td><td>構造だけで動力学が一意に決まったという主張</td></tr>
-            <tr><td>可観測性 / 識別可能性</td><td>Villaverde (2019), Prinz+ (2004), Rasero+ (2024)</td><td>測れる・区別できる・一意に決まるを分ける必要性</td><td>観測量が多ければ内部状態が自動的に一意になるという主張</td></tr>
-            <tr><td>同一個体マルチモーダル</td><td>Vafaii+ (2024), Chen+ (2025)</td><td>共通パターンと固有パターンを同時に見られる</td><td>複数モダリティを足せば一つの真の潜在状態に届くという主張</td></tr>
-            <tr><td>状態継続 / 時間ドリフト</td><td>Gallego+ (2020), Karpowicz+ (2025), Wilson+ (2025)</td><td>潜在多様体・デコーダをドリフト下で安定化できる可能性</td><td>安定性能が内部状態の同一性を保証するという主張</td></tr>
-            <tr><td>破壊的構造測定の保存問題</td><td>Lu+ (2023)</td><td>固定・保存・染色が超微細構造に与える影響の監査必要性</td><td>固定後構造が生体内の現在状態をそのまま残すという主張</td></tr>
-            <tr><td>データ標準と再現性</td><td>BIDS, NWB, OpenNeuro</td><td>第三者が同じデータを検証できる条件</td><td>標準形式に置いただけで仮説分離・同一性が解けるという主張</td></tr>
-          </tbody>
-        </table>
-      </div></div>
-    </section>
-
-    <!-- ===================== HISTORY ===================== -->
+    <!-- ===================== HISTORY (project) ===================== -->
     <section id="history">
-      <p class="eyebrow">プロジェクトの来歴</p>
+      <p class="eyebrow">このノート自体の来歴</p>
       <h2>EEG 解析から、検証フレームワークへ。</h2>
-      <p class="section-lead">このノートは EEG 解析プロジェクトから出発し、マインドアップロードの検証フレームワークへ発展した。約 1,200 コミット（2025-10〜2026-06）。</p>
-      <div class="timeline reveal">
-        <div class="tl"><div class="when">2025-10<span class="ct">11 commits</span></div><h3><code>eegflow</code> として開始</h3><p>EEG ロードマップ + LaTeX 論文 + 初期ドキュメント。</p></div>
-        <div class="tl"><div class="when">2025-12<span class="ct">33 commits</span></div><h3>マインドアップロードへ軸足を移す</h3><p>「brain uploading site」化、ダークモード、EEG Flow と mind upload 解析の統合。</p></div>
-        <div class="tl"><div class="when">2026-01<span class="ct">85 commits</span></div><h3>WBE フレームワーク構築期</h3><p>論文収集、Tech Roadmap、学術的批判を issue 駆動で反映（因果的相同性の欠陥、識別可能性、反事実検証）。</p></div>
-        <div class="tl"><div class="when">2026-02<span class="ct">51 commits</span></div><h3>EEGFlow → Mind-Upload へ改名</h3><p>human-first ランディング、verification commons。検証監査で 180 件の問題に対応、誤った DOI を修正。</p></div>
-        <div class="tl big"><div class="when">2026-03<span class="ct">838 commits</span></div><h3>最大の月：Research Harvest と claim ceiling</h3><p>U0–U15 未解決問題の文献バンクを多ラウンドで深化（60 研究課題）。巨大な Wiki を構築し、<strong>全主張に主張上限を付与</strong>する監査を徹底。</p></div>
-        <div class="tl"><div class="when">2026-05<span class="ct">33 commits</span></div><h3>大幅スリム化</h3><p>verification ダークテーマへ再設計、Wiki を撤去しプレーン HTML 構造へ単純化。</p></div>
-        <div class="tl"><div class="when">2026-06<span class="ct">現在</span></div><h3>モダンダーク単一ページへ全面刷新</h3><p>U0–U15 → P1–P8、旧 P/M/R/I/V/D → 各セクションへ統合。「どの主張の上限を変えるか」で厚みを作る方針へ統一。</p></div>
-      </div>
+      <p class="section-lead">このノートは EEG 解析プロジェクトから出発し、マインドアップロードの検証フレームワークへ発展しました。約 1,200 コミット（2025-10〜2026-06）。</p>
+      <ol class="history reveal">
+        <li><span class="yr">2025-10</span><div class="tl-b"><h4><code>eegflow</code> として開始 <span class="src">11 commits</span></h4><p>EEG ロードマップ + LaTeX 論文 + 初期ドキュメント。</p></div></li>
+        <li><span class="yr">2025-12</span><div class="tl-b"><h4>マインドアップロードへ軸足を移す <span class="src">33 commits</span></h4><p>「brain uploading site」化、ダークモード、EEG Flow と mind upload 解析の統合。</p></div></li>
+        <li><span class="yr">2026-01</span><div class="tl-b"><h4>WBE フレームワーク構築期 <span class="src">85 commits</span></h4><p>論文収集、Tech Roadmap、学術的批判を issue 駆動で反映（因果的相同性の欠陥、識別可能性、反事実検証）。</p></div></li>
+        <li><span class="yr">2026-02</span><div class="tl-b"><h4>EEGFlow → Mind-Upload へ改名 <span class="src">51 commits</span></h4><p>human-first ランディング、verification commons。検証監査で 180 件の問題に対応、誤った DOI を修正。</p></div></li>
+        <li class="peak"><span class="yr">2026-03</span><div class="tl-b"><h4>最大の月：Research Harvest と claim ceiling <span class="src">838 commits</span></h4><p>U0–U15 未解決問題の文献バンクを多ラウンドで深化（60 研究課題）。巨大な Wiki を構築し、全主張に主張上限を付与する監査を徹底。</p></div></li>
+        <li><span class="yr">2026-05</span><div class="tl-b"><h4>大幅スリム化 <span class="src">33 commits</span></h4><p>verification ダークテーマへ再設計、Wiki を撤去しプレーン HTML 構造へ単純化。</p></div></li>
+        <li><span class="yr">2026-06</span><div class="tl-b"><h4>研究フィールドガイドへ再構成 <span class="src">現在</span></h4><p>8 分野ごとに「研究の歴史 / わかっていること / わかっていないこと」を分けて辿れる構成へ。ビジュアルと既知・未知の切り分けを刷新。</p></div></li>
+      </ol>
     </section>
   </main>
 
@@ -422,25 +222,23 @@
     <div class="footer-inner">
       <div class="footer-col">
         <a class="brand" href="#top"><span class="dot"></span>マインドアップロード</a>
-        <p>マインドアップロードを検証可能な研究課題として整理するための公開ノート。完成宣言ではなく、どの証拠が揃えば次の主張レベルへ上がれるかだけを置く。</p>
+        <p>マインドアップロードを 8 つの研究分野に分け、各分野の歴史と「わかっていること／わかっていないこと」を辿る公開ノート。完成宣言ではなく、どの証拠が揃えば次の主張レベルへ上がれるかを置く。</p>
         <p class="footer-meta">出典まとめ: RESEARCH-DIGEST.md / 元データ: git history (HEAD)</p>
       </div>
-      <nav class="footer-nav" aria-label="セクション">
-        <a href="#thesis">概要</a>
-        <a href="#past">過去研究</a>
-        <a href="#pipeline">実装パイプライン</a>
-        <a href="#ladder">主張レベル</a>
-        <a href="#gaps">未解決ギャップ</a>
-        <a href="#states">維持状態</a>
-        <a href="#cards">検証カード</a>
-        <a href="#evidence">根拠</a>
-        <a href="#history">来歴</a>
+      <nav class="footer-nav" aria-label="分野">
+        <a href="areas/preservation.html">01 脳保存・固定</a>
+        <a href="areas/connectomics.html">02 コネクトミクス</a>
+        <a href="areas/molecular.html">03 分子・シナプス状態</a>
+        <a href="areas/dynamics.html">04 機能計測・神経動態</a>
+        <a href="areas/inference.html">05 再構成・パラメータ推論</a>
+        <a href="areas/emulation.html">06 エミュレーション基盤</a>
+        <a href="areas/embodiment.html">07 身体性・環境</a>
+        <a href="areas/identity.html">08 同一性・検証・哲学</a>
       </nav>
     </div>
   </footer>
 
   <script>
-    // scroll progress bar
     const progress = document.getElementById('progress');
     const onScroll = () => {
       const h = document.documentElement;
@@ -450,13 +248,11 @@
     document.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    // reveal on scroll
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    // active nav highlight
     const navLinks = [...document.querySelectorAll('.primary-nav a')];
     const map = new Map(navLinks.map(a => [a.getAttribute('href').slice(1), a]));
     const spy = new IntersectionObserver((entries) => {
@@ -468,11 +264,10 @@
         }
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['thesis','past','pipeline','ladder','gaps','cards','history'].forEach(id => {
+    ['thesis','overview','areas','ladder','read','history'].forEach(id => {
       const s = document.getElementById(id); if (s) spy.observe(s);
     });
 
-    // mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.primary-nav');
     toggle.addEventListener('click', () => {
