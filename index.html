@@ -3,238 +3,495 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>マインドアップロード — わかっていること / わかっていないこと</title>
-  <meta name="description" content="マインドアップロードを「できる/できない」の印象論ではなく、8つの研究分野に分解する公開ノート。各分野について『研究の歴史』『わかっていること』『わかっていないこと』を分けて辿れるようにまとめた。">
-  <meta property="og:title" content="マインドアップロード — わかっていること / わかっていないこと">
-  <meta property="og:description" content="脳保存・コネクトミクス・神経動態・エミュレーションなど8分野ごとに、研究の歴史と、いま分かっていること／まだ分かっていないことを分けて辿る。">
-  <meta property="og:type" content="website">
+  <title>マインドアップロード — 2050年完成へのロードマップ</title>
+  <meta name="description" content="全脳エミュレーション（マインドアップロード）が2050年に完成するまでの技術発展のストーリーを、世界中の研究をもとにレビュー論文形式で整理したロードマップ。脳保存・コネクトミクス・神経動態・エミュレーション基盤・同一性検証までを段階的にたどる。">
+  <meta property="og:title" content="マインドアップロード — 2050年完成へのロードマップ">
+  <meta property="og:description" content="全脳エミュレーションが2050年に完成するまでの技術発展を、世界中の研究をもとにレビュー論文形式でたどるロードマップ。">
+  <meta property="og:type" content="article">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+  /* =========================================================
+     Mind Uploading — A Roadmap to 2050
+     Review-style single page. Self-contained dark theme.
+     ========================================================= */
+  :root{
+    --bg:#0a0d14; --bg-2:#080b11; --panel:#121829; --panel-2:#161e33;
+    --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.16);
+    --ink:#e9edf7; --muted:#9aa6bd; --faint:#6a7488;
+    --brand:#5ed8c6; --brand-2:#7aa2ff;
+    --done:#5fd6a4; --now:#f3b65b; --open:#f2748a;
+    --grad:linear-gradient(135deg,#5ed8c6 0%,#7aa2ff 100%);
+    --max:1080px;
+    --mono:"SF Mono","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+    --sans:"Inter","Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans",Meiryo,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{
+    margin:0;font-family:var(--sans);color:var(--ink);line-height:1.75;
+    background:
+      radial-gradient(1200px 640px at 82% -10%,rgba(122,162,255,.10),transparent 58%),
+      radial-gradient(1000px 560px at 8% 4%,rgba(94,216,198,.08),transparent 56%),
+      var(--bg);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  ::selection{background:rgba(94,216,198,.25)}
+
+  /* progress + header */
+  #progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;background:var(--grad)}
+  .site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
+    background:rgba(10,13,20,.72);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:var(--max);margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:20px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;letter-spacing:.2px}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--grad);box-shadow:0 0 16px rgba(94,216,198,.6)}
+  .brand small{color:var(--faint);font-weight:500;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+  .primary-nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+  .primary-nav a{text-decoration:none;color:var(--muted);font-size:.86rem;font-weight:500;
+    padding:7px 11px;border-radius:8px;transition:.18s}
+  .primary-nav a:hover{color:var(--ink);background:var(--panel)}
+  .primary-nav a.active{color:var(--brand)}
+  .nav-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--line-2);color:var(--ink);
+    border-radius:8px;padding:6px 11px;font-size:1.1rem;cursor:pointer}
+
+  main{max-width:var(--max);margin:0 auto;padding:0 22px}
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:0}
+  .eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--brand);margin:0 0 12px}
+  h1{font-size:clamp(2.1rem,5.4vw,3.4rem);line-height:1.12;letter-spacing:-.02em;margin:.2em 0 .35em;font-weight:800}
+  h2{font-size:clamp(1.5rem,3.2vw,2.1rem);line-height:1.22;letter-spacing:-.01em;margin:0 0 .5em;font-weight:700}
+  h3{font-size:1.06rem;margin:0 0 .4em;font-weight:700}
+  .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  p{margin:0 0 1em;color:#d3dae8}
+  .lead{font-size:1.12rem;color:var(--muted);max-width:62ch}
+  .muted{color:var(--muted)}
+  code{font-family:var(--mono);font-size:.86em;background:var(--panel);padding:.12em .4em;border-radius:5px;color:#bfe9e0}
+  sup a{color:var(--brand-2);text-decoration:none;font-weight:600;font-size:.72em;padding:0 .1em}
+  sup a:hover{text-decoration:underline}
+
+  /* hero */
+  .hero{padding-top:74px}
+  .badge{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;color:var(--brand);
+    background:rgba(94,216,198,.08);border:1px solid rgba(94,216,198,.25);padding:7px 14px;border-radius:999px}
+  .pulse{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 0 rgba(94,216,198,.5);
+    animation:pulse 2.2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(94,216,198,.5)}70%{box-shadow:0 0 0 9px rgba(94,216,198,0)}100%{box-shadow:0 0 0 0 rgba(94,216,198,0)}}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--faint);font-size:.82rem;margin-top:18px;font-family:var(--mono)}
+
+  /* abstract */
+  .abstract{background:linear-gradient(180deg,var(--panel),rgba(18,24,41,.5));
+    border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:14px;padding:26px 28px}
+  .abstract h3{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand)}
+  .abstract p:last-child{margin-bottom:0}
+
+  /* stat strip */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+  .stats div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 14px}
+  .stats .n{font-size:1.5rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stats .l{font-size:.78rem;color:var(--muted);margin-top:3px}
+
+  /* phase timeline */
+  .phases{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+  .phase{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 18px;overflow:hidden}
+  .phase::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--bar,var(--brand))}
+  .phase .yr{font-family:var(--mono);font-size:.86rem;color:var(--bar,var(--brand));font-weight:700}
+  .phase h3{margin:.4em 0 .3em;font-size:1rem}
+  .phase p{font-size:.88rem;color:var(--muted);margin:0}
+  .phase.p1{--bar:var(--done)} .phase.p2{--bar:var(--now)}
+  .phase.p3{--bar:var(--brand-2)} .phase.p4{--bar:var(--brand)}
+
+  /* tech sections */
+  .tech{display:grid;grid-template-columns:46px 1fr;gap:18px;padding:26px 0;border-top:1px dashed var(--line)}
+  .tech:first-of-type{border-top:0}
+  .tech .idx{font-family:var(--mono);font-size:1.4rem;font-weight:800;color:var(--faint);line-height:1}
+  .tech .tag{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;
+    padding:3px 9px;border-radius:999px;margin-left:10px;vertical-align:middle;font-weight:600}
+  .tag.done{color:var(--done);background:rgba(95,214,164,.12);border:1px solid rgba(95,214,164,.3)}
+  .tag.now{color:var(--now);background:rgba(243,182,91,.12);border:1px solid rgba(243,182,91,.3)}
+  .tag.open{color:var(--open);background:rgba(242,116,138,.12);border:1px solid rgba(242,116,138,.3)}
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+  .twocol .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px}
+  .twocol .box h4{margin:0 0 .45em;font-size:.82rem;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase}
+  .twocol .now h4{color:var(--now)} .twocol .next h4{color:var(--brand)}
+  .twocol .box p{font-size:.9rem;margin:0;color:#cdd5e4}
+
+  /* milestone rows */
+  .milestones{margin-top:6px;border-left:2px solid var(--line);padding-left:0}
+  .ms{position:relative;padding:14px 0 14px 28px;border-bottom:1px solid var(--line)}
+  .ms:last-child{border-bottom:0}
+  .ms::before{content:"";position:absolute;left:-7px;top:20px;width:12px;height:12px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--mc,var(--brand))}
+  .ms .yr{font-family:var(--mono);font-weight:700;color:var(--mc,var(--brand));font-size:.9rem}
+  .ms h4{margin:.25em 0 .3em;font-size:1rem}
+  .ms p{margin:0;font-size:.9rem;color:var(--muted)}
+  .ms.d1{--mc:var(--done)} .ms.d2{--mc:var(--now)} .ms.d3{--mc:var(--brand-2)} .ms.d4{--mc:var(--brand)}
+
+  /* callout / note */
+  .note{background:rgba(242,116,138,.06);border:1px solid rgba(242,116,138,.22);border-radius:12px;
+    padding:18px 20px;font-size:.94rem;color:#e4d2d6}
+  .note b{color:var(--open)}
+  .callout{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:6px}
+
+  /* references */
+  ol.refs{counter-reset:r;list-style:none;padding:0;margin:0;display:grid;gap:9px}
+  ol.refs li{counter-increment:r;position:relative;padding:11px 14px 11px 44px;background:var(--panel);
+    border:1px solid var(--line);border-radius:10px;font-size:.86rem;color:#cfd6e5;line-height:1.6}
+  ol.refs li::before{content:"["counter(r)"]";position:absolute;left:13px;top:11px;
+    font-family:var(--mono);font-size:.78rem;color:var(--brand);font-weight:700}
+  ol.refs i{color:var(--muted)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* footer */
+  .site-footer{border-top:1px solid var(--line);margin-top:30px;background:var(--bg-2)}
+  .footer-inner{max-width:var(--max);margin:0 auto;padding:34px 22px;color:var(--muted);font-size:.86rem}
+  .footer-inner .brand{margin-bottom:10px}
+  .disc{color:var(--faint);font-size:.78rem;margin-top:14px;max-width:70ch}
+
+  @media (max-width:860px){
+    .stats,.phases{grid-template-columns:repeat(2,1fr)}
+    .twocol{grid-template-columns:1fr}
+    .primary-nav{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;
+      background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px;margin:0}
+    .primary-nav.open{display:flex}
+    .nav-toggle{display:block}
+    .tech{grid-template-columns:1fr;gap:8px}
+    .tech .idx{font-size:1.1rem}
+  }
+  </style>
 </head>
 <body id="top">
   <div id="progress"></div>
 
   <header class="site-header">
     <div class="nav-inner">
-      <a class="brand" href="#top"><span class="dot"></span>マインドアップロード <small>field guide</small></a>
+      <a class="brand" href="#top"><span class="dot"></span>マインドアップロード <small>roadmap 2050</small></a>
       <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
       <nav class="primary-nav" aria-label="主要セクション">
-        <a href="#thesis">考え方</a>
-        <a href="#overview">全体像</a>
-        <a href="#areas">8つの分野</a>
-        <a href="#ladder">主張レベル</a>
-        <a href="#read">読み方</a>
-        <a href="#history">来歴</a>
+        <a href="#abstract">要旨</a>
+        <a href="#intro">序論</a>
+        <a href="#roadmap">全体像</a>
+        <a href="#tech">要素技術</a>
+        <a href="#timeline">マイルストーン</a>
+        <a href="#open">未解決</a>
+        <a href="#refs">参考文献</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- ===================== HERO ===================== -->
+    <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
-      <span class="hero-badge"><span class="pulse"></span>研究フィールドガイド / 公開中</span>
-      <h1>脳を「写す」前に、<br><span class="grad">どこまで分かっていて</span><br>どこから分からないかを知る。</h1>
-      <p class="hero-lead">
-        マインドアップロードを「できる／できない」の印象論ではなく、<strong>8つの研究分野</strong>に分解した公開ノートです。
-        各分野について <strong>研究の歴史</strong>・<strong>わかっていること</strong>・<strong>わかっていないこと</strong> を分けて辿れるようにしました。
+      <span class="badge"><span class="pulse"></span>レビュー / 技術ロードマップ</span>
+      <h1>脳を写し、心を走らせる。<br><span class="grad">2050年、全脳エミュレーション</span><br>はどう完成しうるか。</h1>
+      <p class="lead">
+        マインドアップロード=<strong>全脳エミュレーション（Whole Brain Emulation, WBE）</strong>は、
+        単一の発明ではなく <strong>固定 → 取得 → 再構成 → 走らせる → 検証</strong> という依存パイプラインです。
+        本ページは、世界中の研究の到達点をもとに、2050年の完成に向けた技術発展のストーリーをレビュー論文の形式で辿ります。
       </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#areas">8つの分野を見る →</a>
-        <a class="btn btn-ghost" href="#overview">全体の到達点</a>
+      <div class="hero-meta">
+        <span>形式: ナラティブ・レビュー</span>
+        <span>範囲: 全世界の公開研究</span>
+        <span>対象期: 〜2050</span>
+        <span>最終更新: 2026-06</span>
       </div>
-      <div class="hero-stats reveal">
-        <div><div class="n">8</div><div class="l">研究分野</div></div>
-        <div><div class="n">L0–L5</div><div class="l">主張のレベル</div></div>
-        <div><div class="n">3</div><div class="l">越えるべき壁</div></div>
-        <div><div class="n">既知/未知</div><div class="l">を分野ごとに分離</div></div>
+      <div class="stats reveal">
+        <div><div class="n">8</div><div class="l">要素技術</div></div>
+        <div><div class="n">4</div><div class="l">発展フェーズ</div></div>
+        <div><div class="n">~2050</div><div class="l">完成シナリオ</div></div>
+        <div><div class="n">18</div><div class="l">引用研究</div></div>
       </div>
     </section>
 
-    <!-- ===================== THESIS ===================== -->
-    <section id="thesis">
-      <p class="eyebrow">このノートの考え方</p>
-      <h2>最重要は「もっと測ること」ではなく<br>「候補を絞り込めること」。</h2>
+    <!-- ===== ABSTRACT ===== -->
+    <section id="abstract">
+      <p class="eyebrow">Abstract / 要旨</p>
+      <div class="abstract reveal">
+        <h3>要旨</h3>
+        <p>
+          全脳エミュレーション（WBE）とは、ある脳の構造と状態を十分な解像度で計測し、
+          その情報処理を計算基盤上で再現することで「心」を非生物的な基板へ移す構想である。
+          本レビューは、Sandberg と Bostrom が2008年に提示したロードマップ<sup><a href="#ref1">1</a></sup>の枠組みを土台に、
+          以後の約20年で世界の研究がどこまで到達したかを整理し、2050年の完成へ向けた発展のストーリーを描く。
+        </p>
+        <p>
+          結論を先取りすれば——<strong>構造の取得</strong>は線虫からハエ全脳、ヒト皮質1mm³まで実証が進み<sup><a href="#ref8">8</a><a href="#ref9">9</a></sup>、
+          <strong>計測と読み出し</strong>はNeuropixelsや発話BCIで臨床到達点に達した<sup><a href="#ref7">7</a><a href="#ref13">13</a></sup>。
+          一方で <strong>パラメータの一意な再構成</strong>（縮退問題）<sup><a href="#ref5">5</a></sup>、
+          <strong>生体からの非破壊全脳計測</strong>、そして <strong>同一性の検証</strong> が依然として原理的な壁として残る。
+          2050年完成は「自動的に訪れる未来」ではなく、これらの壁を順に越えた場合に成立する <em>条件付きのシナリオ</em> である。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== INTRODUCTION ===== -->
+    <section id="intro">
+      <p class="eyebrow">1. Introduction / 序論</p>
+      <h2>「心を写す」とは、何を写すことか。</h2>
+      <p>
+        マインドアップロードの中核仮説は <strong>計算主義（substrate-independence）</strong>——
+        心が脳という特定の物質ではなく、脳が実行する <em>情報処理の構造</em> に宿るならば、
+        その処理を別の基板で十分忠実に再現できれば心もまた再現される、という立場である。
+        この仮説のもとで WBE は「スキャン＆エミュレート」という工学問題に翻訳される<sup><a href="#ref1">1</a></sup>。
+      </p>
+      <p>
+        歴史的な出発点は二つある。ひとつは1952年の <strong>Hodgkin–Huxley モデル</strong><sup><a href="#ref3">3</a></sup>——
+        ニューロンの発火を微分方程式で定量再現できることを示し、「脳は計算で書ける」という確信を与えた。
+        もうひとつは1986年の <strong>線虫 C. elegans の全配線図</strong><sup><a href="#ref2">2</a></sup>——
+        302個のニューロンの全結線を顕微鏡で取り切り、「脳は地図にできる」ことを示した。
+        この <em>動態の方程式化</em> と <em>構造の地図化</em> の合流点に、WBE という構想が立っている。
+      </p>
       <div class="callout reveal">
-        <div class="key">ひとことで言うと</div>
-        <p>測定量を増やしても、同じ観測を説明できる脳の内部状態が複数残るなら、アップロードの条件は閉じない。</p>
-        <p>だから最速ルートは「もっと測る（可観測性）」ことではなく、<strong>摂動・保持データ・外部検証で候補の内部状態を減らす（識別可能性）</strong>こと。各分野のページは、この観点で「何がどこまで言えるか」を整理しています。</p>
-      </div>
-      <div class="grid cols-3">
-        <div class="card reveal"><h3>① 研究の歴史で辿る</h3><p>各分野が、どの発見を積み重ねて今に至ったか。古典的な夢から測定・実装の問題へどう移ったかを年表で示す。</p></div>
-        <div class="card reveal"><h3>② 既知／未知を分ける</h3><p>同じページの中で「わかっていること」と「わかっていないこと」を別の枠に置く。進歩と願望を混ぜない。</p></div>
-        <div class="card reveal"><h3>③ 次の一手を置く</h3><p>未解決の各点に「どの実験なら候補を落とせるか」を添える。批判で終わらせず、前へ進める形にする。</p></div>
+        <p style="margin:0">
+          <strong>本レビューの読み筋:</strong> 進歩は「できる／できない」の印象ではなく、依存関係で読む。
+          構造を取得できても（地図）、それを走らせる動的状態が欠ければ脳は動かない。
+          各要素技術が <em>どの実証段階にあり、2050へ向けて何が残っているか</em> を分けて辿る。
+        </p>
       </div>
     </section>
 
-    <!-- ===================== OVERVIEW: master known/unknown ===================== -->
-    <section id="overview">
-      <p class="eyebrow">全体の到達点</p>
-      <h2>マインドアップロード全体で、<br>いま何が言えて何が言えないか。</h2>
-      <p class="section-lead">分野に入る前に、最も高い視点での既知／未知。詳しい根拠は各分野のページにあります。</p>
-      <div class="ku reveal">
-        <div class="ku-col known">
-          <div class="ku-head"><span class="ku-icon">✓</span>わかっていること</div>
-          <ul>
-            <li>脳の情報処理は<b>物理的な構造と活動に依存</b>し、測定できる。原理的に読み出し不能な魔法ではない。</li>
-            <li>小動物（線虫・ハエ）の<b>全脳コネクトーム</b>と、哺乳類・ヒト皮質の <b>1mm³ 構造</b>は実際に取得できている。</li>
-            <li>一部の神経信号から、運動・知覚・言語に関わる状態を<b>予測・デコード</b>できる。</li>
-            <li>公開データ・標準形式・再現可能な解析は、主張の<b>検証力を上げる</b>。</li>
-          </ul>
-        </div>
-        <div class="ku-col open">
-          <div class="ku-head"><span class="ku-icon">?</span>わかっていないこと</div>
-          <ul>
-            <li>個人らしさ・記憶の再現に、<b>どの粒度の構造と状態が必要十分か</b>。</li>
-            <li>生きた人間から、必要な状態変数を<b>どこまで非破壊に測れるか</b>（頭蓋越しには物理限界がある）。</li>
-            <li>同じ出力を生む複数の内部モデルを、<b>どの実験で分離できるか</b>（識別可能性）。</li>
-            <li>復元した心が「元と同じ」と言える<b>検証条件</b>。完璧な振る舞いと主観的連続を分ける物理測定は無い。</li>
-          </ul>
-        </div>
-      </div>
-      <div class="note reveal"><b>いちばん誇張されやすい点:</b> 「コネクトーム（配線図）を取得した = 脳が走る」ではありません。構造マップ単体には、機能エミュレーションに要る神経調節・イオン・分子の<b>動的状態が欠けています</b>。これは <a href="areas/connectomics.html">構造取得</a> の成功が <a href="areas/inference.html">再構成</a> の成功を意味しない、という分野間のギャップです。</div>
-    </section>
-
-    <!-- ===================== AREAS ===================== -->
-    <section id="areas">
-      <p class="eyebrow">8つの研究分野</p>
-      <h2>分野ごとに、歴史と既知／未知を辿る。</h2>
-      <p class="section-lead">
-        マインドアップロードは単一の発明ではなく、<strong>固定 → 取得 → 再構成 → 走らせる → 検証</strong>の依存パイプラインです。
-        各カードから、その分野の<strong>研究の歴史・わかっていること・わかっていないこと</strong>のページへ入れます。
+    <!-- ===== ROADMAP OVERVIEW ===== -->
+    <section id="roadmap">
+      <p class="eyebrow">2. Roadmap / 全体像</p>
+      <h2>完成までを4つの発展フェーズで描く。</h2>
+      <p class="lead" style="margin-bottom:26px">
+        世界の研究の趨勢を外挿すると、2050年までの道のりは大きく4期に分けられる。
+        各期は前期の成果を前提に積み上がる。
       </p>
-      <div class="legend">
-        <span><span class="dotr ok"></span>確立 — 実証済みの手法がある</span>
-        <span><span class="dotr partial"></span>部分的 — 一部スケール／条件で実証</span>
-        <span><span class="dotr no"></span>未確立 — 原理的・スケール的に未達</span>
-      </div>
-      <div class="areas reveal">
-        <a class="area-card" href="areas/preservation.html">
-          <div class="area-top"><span class="area-idx">01</span><span class="area-stat partial">構造○ / 状態×</span></div>
-          <h3>脳保存・固定</h3>
-          <p>分解が始まる前に、脳の超微細構造を物理的に安定化して固定する。すべての破壊的ルートの出発点。</p>
-          <div class="area-foot"><span>1962 冷凍保存 → 2018 ブタ脳</span><span class="go">歴史と既知/未知 →</span></div>
-        </a>
-        <a class="area-card" href="areas/connectomics.html">
-          <div class="area-top"><span class="area-idx">02</span><span class="area-stat partial">小動物○ / ヒト全脳×</span></div>
-          <h3>コネクトミクス（構造取得）</h3>
-          <p>ニューロンとシナプスの全結線図を電子顕微鏡で取得する。構造の地図づくり。</p>
-          <div class="area-foot"><span>1986 線虫 → 2024 ハエ全脳</span><span class="go">歴史と既知/未知 →</span></div>
-        </a>
-        <a class="area-card" href="areas/molecular.html">
-          <div class="area-top"><span class="area-idx">03</span><span class="area-stat partial">部分的</span></div>
-          <h3>分子・シナプス状態</h3>
-          <p>配線図に現れない分子状態（受容体・伝達物質・可塑性・代謝）を測る。</p>
-          <div class="area-foot"><span>2007 アレイトモグラフィ → 2023 全脳細胞型</span><span class="go">歴史と既知/未知 →</span></div>
-        </a>
-        <a class="area-card" href="areas/dynamics.html">
-          <div class="area-top"><span class="area-idx">04</span><span class="area-stat partial">動物○ / ヒト△</span></div>
-          <h3>機能計測・神経動態</h3>
-          <p>回路の動的パラメータと活動を、できれば生体で測る。EEG から Neuropixels・BCI まで。</p>
-          <div class="area-foot"><span>1924 EEG → 2023 発話 BCI</span><span class="go">歴史と既知/未知 →</span></div>
-        </a>
-        <a class="area-card" href="areas/inference.html">
-          <div class="area-top"><span class="area-idx">05</span><span class="area-stat no">縮退で停滞</span></div>
-          <h3>再構成・パラメータ推論</h3>
-          <p>測定データから、走らせられる回路モデルのパラメータを決める。逆問題の核心。</p>
-          <div class="area-foot"><span>2004 縮退の発見 → 2024 構造制約モデル</span><span class="go">歴史と既知/未知 →</span></div>
-        </a>
-        <a class="area-card" href="areas/emulation.html">
-          <div class="area-top"><span class="area-idx">06</span><span class="area-stat no">スケール未達</span></div>
-          <h3>エミュレーション基盤</h3>
-          <p>再構成したモデルを計算基盤で実時間に走らせる。シミュレータとニューロモルフィック。</p>
-          <div class="area-foot"><span>1952 H-H モデル → 2024 11.5億ニューロン</span><span class="go">歴史と既知/未知 →</span></div>
-        </a>
-        <a class="area-card" href="areas/embodiment.html">
-          <div class="area-top"><span class="area-idx">07</span><span class="area-stat partial">部分的</span></div>
-          <h3>身体性・環境</h3>
-          <p>感覚・運動・内受容・恒常性の閉ループを供給し、脳モデルを「身体」につなぐ。</p>
-          <div class="area-foot"><span>1998 皮質制御 → 2023 脳-脊髄ブリッジ</span><span class="go">歴史と既知/未知 →</span></div>
-        </a>
-        <a class="area-card" href="areas/identity.html">
-          <div class="area-top"><span class="area-idx">08</span><span class="area-stat no">未確立</span></div>
-          <h3>同一性・検証・哲学</h3>
-          <p>再構成された心が「元と同じ」と言える条件を、操作的に確かめられるか。</p>
-          <div class="area-foot"><span>1714 ライプニッツ → 2023 意識の対立協働</span><span class="go">歴史と既知/未知 →</span></div>
-        </a>
+      <div class="phases reveal">
+        <div class="phase p1">
+          <div class="yr">〜2025 · 基盤確立</div>
+          <h3>地図と計測の時代</h3>
+          <p>小動物の全脳コネクトーム、ヒト皮質1mm³、高密度記録と臨床BCIが出揃う。「測れる・写せる」が実証された期。</p>
+        </div>
+        <div class="phase p2">
+          <div class="yr">2025–2035 · 統合</div>
+          <h3>マウス全脳への挑戦</h3>
+          <p>哺乳類スケールの構造＋機能の統合データ、分子状態の併記、縮退を抑える構造制約モデルが主戦場になる。</p>
+        </div>
+        <div class="phase p3">
+          <div class="yr">2035–2045 · 動かす</div>
+          <h3>機能エミュレーション</h3>
+          <p>哺乳類脳の領域〜全脳エミュレーションが身体ループ付きで走り、行動レベルで検証される段階。</p>
+        </div>
+        <div class="phase p4">
+          <div class="yr">2045–2050 · 個人化</div>
+          <h3>ヒト個体の再現</h3>
+          <p>特定個人の脳を保存・取得し、記憶と人格を伴う個人化エミュレーションと、その同一性検証へ到達するシナリオ。</p>
+        </div>
       </div>
     </section>
 
-    <!-- ===================== CLAIM LADDER ===================== -->
-    <section id="ladder">
-      <p class="eyebrow">主張のレベル</p>
-      <h2>進歩は「印象」ではなく<br>クレームラダー L0 → L5 で読む。</h2>
-      <p class="section-lead">
-        どの証拠が揃えば主張を一段上げられるかを物差しにする。各分野の「わかっていること」が、いまどの段にいるかを示します。
-        <strong>上位レベルの言葉を急ぐより、下位レベルを再現可能に厚くするほうが、現時点では研究速度を上げます。</strong>
+    <!-- ===== ENABLING TECHNOLOGIES ===== -->
+    <section id="tech">
+      <p class="eyebrow">3. Enabling Technologies / 要素技術</p>
+      <h2>8つの要素技術：現状と2050への軌跡。</h2>
+      <p class="lead" style="margin-bottom:14px">
+        各技術について、いま世界の研究が到達している水準（現状）と、2050に向けて埋めるべき距離（軌跡）を併記する。
       </p>
-      <div class="ladder reveal">
-        <div class="rung"><div class="lv">L0</div><div class="body"><p class="can">公開データ・イベント・同期・QC・ベースラインが再現できる。</p><p class="cant">内部状態を識別できたとは言えない。</p></div></div>
-        <div class="rung"><div class="lv">L1</div><div class="body"><p class="can">複数手法を同じ条件で比較できる。</p><p class="cant">最良スコアが真の状態復元とは限らない。</p></div></div>
-        <div class="rung"><div class="lv">L2</div><div class="body"><p class="can">摂動や保持データで競合仮説を落とせる。</p><p class="cant">全脳・長期・身体込みの十分性はまだ別。</p></div></div>
-        <div class="rung"><div class="lv">L3</div><div class="body"><p class="can">閉ループ実装で特定機能を安定して再現できる。</p><p class="cant">人格同一性や全体的な意識の主張には届かない。</p></div></div>
-        <div class="rung"><div class="lv">L4</div><div class="body"><p class="can">同一個体内で状態継続と再校正負荷を説明できる。</p><p class="cant">コピー問題・社会的同意・長期倫理は残る。</p></div></div>
-        <div class="rung"><div class="lv">L5</div><div class="body"><p class="can">技術・検証・運用・同意・停止条件が揃う。</p><p class="cant">哲学的同一性の立場まで自動解決はしない。</p></div></div>
+
+      <!-- 3.1 -->
+      <div class="tech reveal">
+        <div class="idx">3.1</div>
+        <div>
+          <h3>脳保存・構造固定<span class="tag now">部分実証</span></h3>
+          <p class="muted">分解が始まる前に脳の超微細構造を物理的に安定化する。すべての破壊的取得ルートの出発点。</p>
+          <div class="twocol">
+            <div class="box now"><h4>現状</h4><p>アルデヒド安定化＋低温保存（ASC）が、ブタ・ウサギ脳でシナプス解像度の超微細構造を全脳にわたり保つことを実証し、Brain Preservation 賞を受賞<sup><a href="#ref6">6</a></sup>。</p></div>
+            <div class="box next"><h4>2050への軌跡</h4><p>保存が守るのは構造であって動的状態ではない。ヒト全脳での再現性・室温長期保存・取得との接続性が課題。倫理的合意のもとでの手続き標準化が要る。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.2 -->
+      <div class="tech reveal">
+        <div class="idx">3.2</div>
+        <div>
+          <h3>コネクトミクス（構造取得）<span class="tag now">小動物○ / ヒト全脳×</span></h3>
+          <p class="muted">電子顕微鏡でニューロンとシナプスの全結線図を取得する。脳の「配線地図」づくり。</p>
+          <div class="twocol">
+            <div class="box now"><h4>現状</h4><p>線虫（1986）<sup><a href="#ref2">2</a></sup>からショウジョウバエ <em>成虫全脳</em>（FlyWire, 約14万ニューロン・5千万シナプス, 2024）<sup><a href="#ref9">9</a><a href="#ref10">10</a></sup>、ヒト皮質1mm³のペタボクセル再構成（H01, 2024）<sup><a href="#ref8">8</a></sup>、マウス視覚野の機能＋構造統合（MICrONS, 2025）<sup><a href="#ref11">11</a></sup>まで到達。</p></div>
+            <div class="box next"><h4>2050への軌跡</h4><p>ヒト全脳は皮質1mm³の約100万倍。撮像スループット・自動再構成・保管の桁違いのスケーリングが必要。マウス全脳（〜2030年代）が中間目標。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.3 -->
+      <div class="tech reveal">
+        <div class="idx">3.3</div>
+        <div>
+          <h3>分子・シナプス状態<span class="tag now">部分的</span></h3>
+          <p class="muted">配線図に現れない分子状態——受容体・伝達物質の種類・シナプス強度・可塑性・代謝——を読み出す。</p>
+          <div class="twocol">
+            <div class="box now"><h4>現状</h4><p>アレイトモグラフィや空間トランスクリプトミクスで、シナプスのタンパク質組成や全脳の細胞型地図が取得可能に。EMから一部のシナプス強度の指標が読める。</p></div>
+            <div class="box next"><h4>2050への軌跡</h4><p>「配線図＝脳が走る」ではない。EM画像から機能的なシナプス重みや神経調節状態へ写像する手法が未確立で、エミュレーション忠実度の律速になりうる。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.4 -->
+      <div class="tech reveal">
+        <div class="idx">3.4</div>
+        <div>
+          <h3>神経動態の計測とBCI<span class="tag done">臨床到達</span></h3>
+          <p class="muted">回路の動的パラメータと活動を、できれば生体で測る。基準となる「正解の振る舞い」を供給する。</p>
+          <div class="twocol">
+            <div class="box now"><h4>現状</h4><p>Neuropixelsが数千点同時記録を標準化（2017）<sup><a href="#ref7">7</a></sup>。麻痺患者から手書き・発話を高速デコードする皮質内BCI（2021–2023）<sup><a href="#ref12">12</a><a href="#ref13">13</a><a href="#ref14">14</a></sup>、脳–脊髄ブリッジによる随意歩行の回復<sup><a href="#ref15">15</a></sup>。</p></div>
+            <div class="box next"><h4>2050への軌跡</h4><p>頭蓋を越えた非侵襲計測には物理限界がある。デコード精度の向上は「内部状態が一意に決まった」ことを意味しない（次項）。全脳・長期・身体込みの同時計測が遠い。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.5 -->
+      <div class="tech reveal">
+        <div class="idx">3.5</div>
+        <div>
+          <h3>再構成・パラメータ推論<span class="tag open">縮退で停滞</span></h3>
+          <p class="muted">計測データから、実際に走らせられる回路モデルのパラメータを一意に決める。WBEの逆問題の核心。</p>
+          <div class="twocol">
+            <div class="box now"><h4>現状</h4><p>Hodgkin–Huxley型の精密モデルは確立<sup><a href="#ref3">3</a></sup>。Blue Brainは生物学的制約からラットの皮質微小回路を再構成・シミュレートした<sup><a href="#ref4">4</a></sup>。構造制約を使った同定が前進。</p></div>
+            <div class="box next"><h4>2050への軌跡</h4><p><strong>縮退問題</strong>——大きく異なるパラメータ群が同一の活動を生む<sup><a href="#ref5">5</a></sup>。同じ観測から複数の内部状態が残る限り、忠実な再構成は閉じない。摂動・保持データ・外部検証で候補を絞る方法論が最大の難所。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.6 -->
+      <div class="tech reveal">
+        <div class="idx">3.6</div>
+        <div>
+          <h3>エミュレーション基盤<span class="tag now">スケール途上</span></h3>
+          <p class="muted">再構成したモデルを計算基盤で（できれば実時間で）走らせる。シミュレータとニューロモルフィック・ハードウェア。</p>
+          <div class="twocol">
+            <div class="box now"><h4>現状</h4><p>SpiNNaker<sup><a href="#ref16">16</a></sup>やIntel Loihi<sup><a href="#ref17">17</a></sup>などニューロモルフィック計算機が大規模スパイキングネットを省電力で実行。スパコン上の数十億ニューロン級シミュレーションも実現。</p></div>
+            <div class="box next"><h4>2050への軌跡</h4><p>ヒト脳は約860億ニューロン・100兆シナプス。実時間・低電力での全脳エミュレーションには、現行から数桁のスケーリングと新アーキテクチャが必要。ムーアの法則の鈍化が逆風。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.7 -->
+      <div class="tech reveal">
+        <div class="idx">3.7</div>
+        <div>
+          <h3>身体性・環境<span class="tag now">部分的</span></h3>
+          <p class="muted">感覚・運動・内受容・恒常性の閉ループを供給し、脳モデルを「身体」につなぐ。脳は孤立では正常に動かない。</p>
+          <div class="twocol">
+            <div class="box now"><h4>現状</h4><p>BCIによる外部効果器の制御、脳–脊髄ブリッジによる閉ループ運動回復<sup><a href="#ref15">15</a></sup>、仮想アバター制御<sup><a href="#ref14">14</a></sup>など、感覚運動ループの一部は実装段階。</p></div>
+            <div class="box next"><h4>2050への軌跡</h4><p>内受容・ホルモン・恒常性まで含む全身ループの忠実な供給は未開拓。身体入力が欠けると、エミュレートされた心の長期安定性が保証されない。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.8 -->
+      <div class="tech reveal">
+        <div class="idx">3.8</div>
+        <div>
+          <h3>同一性・意識・検証<span class="tag open">未確立</span></h3>
+          <p class="muted">再構成された心が「元と同じ」「意識を持つ」と言える条件を、操作的に確かめられるか。</p>
+          <div class="twocol">
+            <div class="box now"><h4>現状</h4><p>意識の理論（統合情報理論<sup><a href="#ref18">18</a></sup>、グローバル・ワークスペース<sup><a href="#ref19">19</a></sup>）の対立を実験で検証する敵対的協働が進行<sup><a href="#ref20">20</a></sup>。だが決着には至っていない。</p></div>
+            <div class="box next"><h4>2050への軌跡</h4><p>完璧な振る舞いの再現と <em>主観的連続性</em> を分ける物理測定は存在しない。コピー問題（元が残ったまま複製が走る）、社会的同意、停止条件など、技術では閉じない論点が残る。</p></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ===================== HOW TO READ ===================== -->
-    <section id="read">
-      <p class="eyebrow">読み方</p>
-      <h2>三つの壁 — ここを通らないと<br>「見かけの進歩」で止まる。</h2>
-      <p class="section-lead">どの分野のニュースも、この三点で読み替えると過大評価を避けられます。</p>
-      <div class="grid cols-3">
-        <div class="card warn reveal"><h3>測定粒度の壁</h3><p><b style="color:var(--open)">過読:</b> 高密度・高解像なら必要状態をほぼ測れた。</p><p><b style="color:var(--brand)">確認:</b> 直接観測 / proxy / 推定 / 未測定を分け、時間窓と数量タイプを明示。</p></div>
-        <div class="card warn reveal"><h3>識別性の壁</h3><p><b style="color:var(--open)">過読:</b> 予測精度が上がったから内部状態も一意に決まった。</p><p><b style="color:var(--brand)">確認:</b> 候補モデル空間・曖昧性クラス・保持データ・摂動・棄権規則を事前に固定。</p></div>
-        <div class="card warn reveal"><h3>介入検証の壁</h3><p><b style="color:var(--open)">過読:</b> オフラインデコードが良いから因果的再実装に近い。</p><p><b style="color:var(--brand)">確認:</b> 摂動応答・閉ループ・状態遷移・日跨ぎ安定性・別条件検証を要求。</p></div>
-      </div>
-
-      <h3 style="margin-top:42px">主張の強さは5段階。混同してはいけない。</h3>
-      <div class="grid cols-3">
-        <div class="card reveal"><h3>相関</h3><p>二つの量が一緒に変わる。<br>→ 交絡・共通原因の確認が要る。</p></div>
-        <div class="card reveal"><h3>予測</h3><p>ある信号から別の状態を当てられる。<br>→ 別条件・別個体・別装置での汎化が要る。</p></div>
-        <div class="card reveal"><h3>識別</h3><p>候補状態を区別できる。<br>→ 競合モデルが残らないことの検証が要る。</p></div>
-        <div class="card reveal"><h3>因果</h3><p>介入で結果が変わる。<br>→ 摂動・反事実・保持された検証条件が要る。</p></div>
-        <div class="card reveal"><h3>再現</h3><p>別の人が同じ手順で確認できる。<br>→ データ・コード・環境・評価の公開が要る。</p></div>
-        <div class="card reveal"><h3 style="color:var(--brand)">読み方</h3><p>デコード・予測の高スコアを、識別・因果・再現へ<strong>勝手に昇格させない</strong>。</p></div>
+    <!-- ===== TIMELINE / MILESTONES ===== -->
+    <section id="timeline">
+      <p class="eyebrow">4. Milestones / マイルストーン</p>
+      <h2>到達点と、2050へ向けた予測マイルストーン。</h2>
+      <p class="lead" style="margin-bottom:22px">
+        実線（〜2025）は世界の研究で <strong>実証済み</strong> の到達点。点線（2025〜）は趨勢からの <strong>予測シナリオ</strong> であり、確約ではない。
+      </p>
+      <div class="milestones reveal">
+        <div class="ms d1"><div class="yr">1952</div><h4>Hodgkin–Huxley モデル<sup><a href="#ref3">3</a></sup></h4><p>ニューロン発火を微分方程式で定量再現。「脳は計算で書ける」基礎。</p></div>
+        <div class="ms d1"><div class="yr">1986</div><h4>C. elegans 全配線図<sup><a href="#ref2">2</a></sup></h4><p>302ニューロンの全結線を完成。「脳は地図にできる」最初の証明。</p></div>
+        <div class="ms d1"><div class="yr">2008</div><h4>WBEロードマップ<sup><a href="#ref1">1</a></sup></h4><p>スキャン＆エミュレートの要件と段階を体系化した出発点の文書。</p></div>
+        <div class="ms d1"><div class="yr">2015</div><h4>皮質微小回路の再構成<sup><a href="#ref4">4</a></sup> / ASC受賞<sup><a href="#ref6">6</a></sup></h4><p>生物学的制約からの回路シミュレーションと、シナプス解像度の脳保存が実証。</p></div>
+        <div class="ms d1"><div class="yr">2021–2024</div><h4>ヒト皮質1mm³<sup><a href="#ref8">8</a></sup> / ハエ全脳<sup><a href="#ref9">9</a></sup> / 発話BCI<sup><a href="#ref13">13</a></sup></h4><p>構造取得とリアルタイム読み出しが、それぞれ新しいスケールに到達。</p></div>
+        <div class="ms d2"><div class="yr">~2030s（予測）</div><h4>マウス全脳コネクトーム＋機能統合</h4><p>哺乳類スケールの構造・機能・分子の統合データセット。縮退を抑える構造制約推論が成熟。</p></div>
+        <div class="ms d3"><div class="yr">~2040s（予測）</div><h4>哺乳類脳の機能エミュレーション</h4><p>身体ループ付きで行動レベルの再現・検証。ニューロモルフィック基盤が実時間スケールへ。</p></div>
+        <div class="ms d4"><div class="yr">~2050（予測）</div><h4>個人化ヒトエミュレーション＋同一性検証</h4><p>特定個人の保存・取得・再構成と、記憶・人格を伴うエミュレーション、その操作的検証へ到達するシナリオ。</p></div>
       </div>
     </section>
 
-    <!-- ===================== HISTORY (project) ===================== -->
-    <section id="history">
-      <p class="eyebrow">このノート自体の来歴</p>
-      <h2>EEG 解析から、検証フレームワークへ。</h2>
-      <p class="section-lead">このノートは EEG 解析プロジェクトから出発し、マインドアップロードの検証フレームワークへ発展しました。約 1,200 コミット（2025-10〜2026-06）。</p>
-      <ol class="history reveal">
-        <li><span class="yr">2025-10</span><div class="tl-b"><h4><code>eegflow</code> として開始 <span class="src">11 commits</span></h4><p>EEG ロードマップ + LaTeX 論文 + 初期ドキュメント。</p></div></li>
-        <li><span class="yr">2025-12</span><div class="tl-b"><h4>マインドアップロードへ軸足を移す <span class="src">33 commits</span></h4><p>「brain uploading site」化、ダークモード、EEG Flow と mind upload 解析の統合。</p></div></li>
-        <li><span class="yr">2026-01</span><div class="tl-b"><h4>WBE フレームワーク構築期 <span class="src">85 commits</span></h4><p>論文収集、Tech Roadmap、学術的批判を issue 駆動で反映（因果的相同性の欠陥、識別可能性、反事実検証）。</p></div></li>
-        <li><span class="yr">2026-02</span><div class="tl-b"><h4>EEGFlow → Mind-Upload へ改名 <span class="src">51 commits</span></h4><p>human-first ランディング、verification commons。検証監査で 180 件の問題に対応、誤った DOI を修正。</p></div></li>
-        <li class="peak"><span class="yr">2026-03</span><div class="tl-b"><h4>最大の月：Research Harvest と claim ceiling <span class="src">838 commits</span></h4><p>U0–U15 未解決問題の文献バンクを多ラウンドで深化（60 研究課題）。巨大な Wiki を構築し、全主張に主張上限を付与する監査を徹底。</p></div></li>
-        <li><span class="yr">2026-05</span><div class="tl-b"><h4>大幅スリム化 <span class="src">33 commits</span></h4><p>verification ダークテーマへ再設計、Wiki を撤去しプレーン HTML 構造へ単純化。</p></div></li>
-        <li><span class="yr">2026-06</span><div class="tl-b"><h4>研究フィールドガイドへ再構成 <span class="src">現在</span></h4><p>8 分野ごとに「研究の歴史 / わかっていること / わかっていないこと」を分けて辿れる構成へ。ビジュアルと既知・未知の切り分けを刷新。</p></div></li>
+    <!-- ===== OPEN CHALLENGES ===== -->
+    <section id="open">
+      <p class="eyebrow">5. Open Challenges / 残る壁</p>
+      <h2>2050が「条件付き」である理由。</h2>
+      <p class="lead" style="margin-bottom:20px">外挿だけでは越えられない、原理的・社会的な3つの壁。ここが解けない限り、完成シナリオは前倒しできない。</p>
+      <div class="note reveal" style="margin-bottom:14px">
+        <b>① 識別可能性の壁。</b> 計測を増やしても、同じ観測を説明する内部状態が複数残るなら再構成は一意に閉じない<sup><a href="#ref5">5</a></sup>。最速ルートは「もっと測る」ことではなく「候補状態を減らす」摂動・検証の方法論である。
+      </div>
+      <div class="note reveal" style="margin-bottom:14px">
+        <b>② 非破壊・スケールの壁。</b> 生きたヒトから必要な状態変数を頭蓋越しに測る物理限界、そしてヒト全脳の構造取得・計算に要する数桁のスケーリング。破壊的取得を前提にするなら、保存と倫理の問題に直結する。
+      </div>
+      <div class="note reveal">
+        <b>③ 同一性・倫理の壁。</b> 完璧な振る舞いの再現と主観的連続性を分ける測定は存在しない。コピー問題、本人同意、社会的地位、停止条件——技術の成功だけでは決して閉じない論点が最後に残る。
+      </div>
+    </section>
+
+    <!-- ===== CONCLUSION ===== -->
+    <section id="conclusion">
+      <p class="eyebrow">6. Conclusion / 結論</p>
+      <h2>2050は約束ではなく、依存関係の関数である。</h2>
+      <p>
+        過去20年で、世界の研究は <strong>「測れる」「写せる」</strong> を疑いの余地なく実証した——
+        小動物の全脳配線図、ヒト皮質のナノスケール再構成、臨床で動くBCI。
+        これらは2008年のロードマップ<sup><a href="#ref1">1</a></sup>が「初期段階」と位置づけた地点を、現実が追い越したことを意味する。
+      </p>
+      <p>
+        だが完成を決めるのは、最も進んだ技術ではなく <strong>最も遅れた依存項</strong> である。
+        構造取得がいかに速くても、縮退を断つ再構成、全脳スケールの計算、そして同一性の検証が揃わなければパイプラインは閉じない。
+        したがって2050年完成は、これら律速段階を順に越えた場合に成立する <strong>条件付きシナリオ</strong> として読むのが正確だ。
+        本レビューが示したのは到達予言ではなく、<em>どの壁を越えれば、その未来が手前に近づくか</em> という地図である。
+      </p>
+    </section>
+
+    <!-- ===== REFERENCES ===== -->
+    <section id="refs">
+      <p class="eyebrow">References / 参考文献</p>
+      <h2>引用研究。</h2>
+      <p class="muted" style="margin-bottom:18px">世界の公開研究から、各要素技術の代表的到達点を抜粋。年・掲載誌は刊行情報に基づく。</p>
+      <ol class="refs reveal">
+        <li id="ref1">Sandberg, A., &amp; Bostrom, N. (2008). <i>Whole Brain Emulation: A Roadmap.</i> Technical Report #2008-3, Future of Humanity Institute, University of Oxford.</li>
+        <li id="ref2">White, J. G., Southgate, E., Thomson, J. N., &amp; Brenner, S. (1986). The structure of the nervous system of the nematode <i>Caenorhabditis elegans. Philosophical Transactions of the Royal Society B,</i> 314(1165), 1–340.</li>
+        <li id="ref3">Hodgkin, A. L., &amp; Huxley, A. F. (1952). A quantitative description of membrane current and its application to conduction and excitation in nerve. <i>The Journal of Physiology,</i> 117(4), 500–544.</li>
+        <li id="ref4">Markram, H., et al. (2015). Reconstruction and simulation of neocortical microcircuitry. <i>Cell,</i> 163(2), 456–492.</li>
+        <li id="ref5">Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <i>Nature Neuroscience,</i> 7(12), 1345–1352.</li>
+        <li id="ref6">McIntyre, R. L., &amp; Fahy, G. M. (2015). Aldehyde-stabilized cryopreservation. <i>Cryobiology,</i> 71(3), 448–458.</li>
+        <li id="ref7">Jun, J. J., et al. (2017). Fully integrated silicon probes for high-density recording of neural activity. <i>Nature,</i> 551(7679), 232–236.</li>
+        <li id="ref8">Shapson-Coe, A., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <i>Science,</i> 384(6696), eadk4858.</li>
+        <li id="ref9">Dorkenwald, S., et al. (The FlyWire Consortium) (2024). Neuronal wiring diagram of an adult brain. <i>Nature,</i> 634, 124–138.</li>
+        <li id="ref10">Schlegel, P., et al. (2024). Whole-brain annotation and multi-connectome cell typing of <i>Drosophila. Nature,</i> 634, 139–152.</li>
+        <li id="ref11">The MICrONS Consortium (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <i>Nature,</i> 640, 435–447.</li>
+        <li id="ref12">Willett, F. R., et al. (2021). High-performance brain-to-text communication via handwriting. <i>Nature,</i> 593, 249–254.</li>
+        <li id="ref13">Willett, F. R., et al. (2023). A high-performance speech neuroprosthesis. <i>Nature,</i> 620, 1031–1036.</li>
+        <li id="ref14">Metzger, S. L., et al. (2023). A high-performance neuroprosthesis for speech decoding and avatar control. <i>Nature,</i> 620, 1037–1046.</li>
+        <li id="ref15">Lorach, H., et al. (2023). Walking naturally after spinal cord injury using a brain–spine interface. <i>Nature,</i> 618, 126–133.</li>
+        <li id="ref16">Furber, S. B., Galluppi, F., Temple, S., &amp; Plana, L. A. (2014). The SpiNNaker project. <i>Proceedings of the IEEE,</i> 102(5), 652–665.</li>
+        <li id="ref17">Davies, M., et al. (2018). Loihi: A neuromorphic manycore processor with on-chip learning. <i>IEEE Micro,</i> 38(1), 82–99.</li>
+        <li id="ref18">Tononi, G. (2004). An information integration theory of consciousness. <i>BMC Neuroscience,</i> 5, 42.</li>
+        <li id="ref19">Dehaene, S., &amp; Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. <i>Neuron,</i> 70(2), 200–227.</li>
+        <li id="ref20">Cogitate Consortium; Ferrante, O., et al. (2025). Adversarial testing of global neuronal workspace and integrated information theories of consciousness. <i>Nature,</i> 642, 133–142.</li>
       </ol>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-col">
-        <a class="brand" href="#top"><span class="dot"></span>マインドアップロード</a>
-        <p>マインドアップロードを 8 つの研究分野に分け、各分野の歴史と「わかっていること／わかっていないこと」を辿る公開ノート。完成宣言ではなく、どの証拠が揃えば次の主張レベルへ上がれるかを置く。</p>
-        <p class="footer-meta">出典まとめ: RESEARCH-DIGEST.md / 元データ: git history (HEAD)</p>
-      </div>
-      <nav class="footer-nav" aria-label="分野">
-        <a href="areas/preservation.html">01 脳保存・固定</a>
-        <a href="areas/connectomics.html">02 コネクトミクス</a>
-        <a href="areas/molecular.html">03 分子・シナプス状態</a>
-        <a href="areas/dynamics.html">04 機能計測・神経動態</a>
-        <a href="areas/inference.html">05 再構成・パラメータ推論</a>
-        <a href="areas/emulation.html">06 エミュレーション基盤</a>
-        <a href="areas/embodiment.html">07 身体性・環境</a>
-        <a href="areas/identity.html">08 同一性・検証・哲学</a>
-      </nav>
+      <a class="brand" href="#top"><span class="dot"></span>マインドアップロード — roadmap 2050</a>
+      <p>全脳エミュレーション（マインドアップロード）が2050年に完成するまでの技術発展を、世界中の公開研究をもとにレビュー論文形式で辿るロードマップ。</p>
+      <p class="disc">
+        免責: 本ページは公開研究に基づく科学コミュニケーションを目的とした <strong>ナラティブ・レビュー</strong> です。
+        2025年以降のマイルストーンは研究趨勢からの予測シナリオであり、特定の成果や時期を保証するものではありません。
+        意識・人格同一性の検証など、技術だけでは解決しない論点が含まれます。
+      </p>
     </div>
   </footer>
 
@@ -264,7 +521,7 @@
         }
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['thesis','overview','areas','ladder','read','history'].forEach(id => {
+    ['abstract','intro','roadmap','tech','timeline','open','refs'].forEach(id => {
       const s = document.getElementById(id); if (s) spy.observe(s);
     });
 
