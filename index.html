@@ -3,54 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>マインドアップロード — 2050年完成へのロードマップ</title>
-  <meta name="description" content="全脳エミュレーション（マインドアップロード）が2050年に完成するまでの技術発展のストーリーを、世界中の研究をもとにレビュー論文形式で整理したロードマップ。脳保存・コネクトミクス・神経動態・エミュレーション基盤・同一性検証までを段階的にたどる。">
-  <meta property="og:title" content="マインドアップロード — 2050年完成へのロードマップ">
-  <meta property="og:description" content="全脳エミュレーションが2050年に完成するまでの技術発展を、世界中の研究をもとにレビュー論文形式でたどるロードマップ。">
+  <title>マインドアップロード 2050 — 全脳エミュレーション・シナリオ</title>
+  <meta name="description" content="マインドアップロード（全脳エミュレーション）が2050年に完成するまでを、世界中の研究をもとに年表シナリオとして描く。AI 2027形式の、年ごとに具体化したロードマップ。31の実在研究を引用。">
+  <meta property="og:title" content="マインドアップロード 2050 — 全脳エミュレーション・シナリオ">
+  <meta property="og:description" content="2026→2050。脳の地図化・再構成・エミュレーション・検証が、年ごとにどう積み上がりうるか。世界中の研究をもとにした年表シナリオ。">
   <meta property="og:type" content="article">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
   /* =========================================================
-     Mind Uploading — A Roadmap to 2050
-     Review-style single page. Self-contained dark theme.
+     Mind Uploading 2050 — a dated scenario timeline
+     Self-contained dark theme. Scrollytelling roadmap.
      ========================================================= */
   :root{
-    --bg:#0a0d14; --bg-2:#080b11; --panel:#121829; --panel-2:#161e33;
+    --bg:#0a0d14; --bg-2:#070a10; --panel:#121829; --panel-2:#161e33; --panel-3:#0f1422;
     --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.16);
-    --ink:#e9edf7; --muted:#9aa6bd; --faint:#6a7488;
+    --ink:#e9edf7; --muted:#9aa6bd; --faint:#697389;
     --brand:#5ed8c6; --brand-2:#7aa2ff;
-    --done:#5fd6a4; --now:#f3b65b; --open:#f2748a;
+    --done:#5fd6a4; --now:#f3b65b; --soon:#7aa2ff; --far:#c89bff; --open:#f2748a;
     --grad:linear-gradient(135deg,#5ed8c6 0%,#7aa2ff 100%);
-    --max:1080px;
+    --max:1140px;
     --mono:"SF Mono","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
     --sans:"Inter","Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans",Meiryo,sans-serif;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+  html{scroll-behavior:smooth;scroll-padding-top:78px;-webkit-text-size-adjust:100%}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
   body{
-    margin:0;font-family:var(--sans);color:var(--ink);line-height:1.75;
+    margin:0;font-family:var(--sans);color:var(--ink);line-height:1.72;
     background:
-      radial-gradient(1200px 640px at 82% -10%,rgba(122,162,255,.10),transparent 58%),
-      radial-gradient(1000px 560px at 8% 4%,rgba(94,216,198,.08),transparent 56%),
+      radial-gradient(1200px 640px at 84% -8%,rgba(122,162,255,.10),transparent 58%),
+      radial-gradient(1000px 560px at 6% 2%,rgba(94,216,198,.08),transparent 56%),
       var(--bg);
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit}
   ::selection{background:rgba(94,216,198,.25)}
 
-  /* progress + header */
   #progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;background:var(--grad)}
   .site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
-    background:rgba(10,13,20,.72);border-bottom:1px solid var(--line)}
-  .nav-inner{max-width:var(--max);margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:20px}
+    background:rgba(8,11,17,.78);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:var(--max);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:18px}
   .brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;letter-spacing:.2px}
   .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--grad);box-shadow:0 0 16px rgba(94,216,198,.6)}
-  .brand small{color:var(--faint);font-weight:500;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
-  .primary-nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
-  .primary-nav a{text-decoration:none;color:var(--muted);font-size:.86rem;font-weight:500;
+  .brand small{color:var(--faint);font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+  .primary-nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+  .primary-nav a{text-decoration:none;color:var(--muted);font-size:.85rem;font-weight:500;
     padding:7px 11px;border-radius:8px;transition:.18s}
   .primary-nav a:hover{color:var(--ink);background:var(--panel)}
   .primary-nav a.active{color:var(--brand)}
@@ -58,111 +57,158 @@
     border-radius:8px;padding:6px 11px;font-size:1.1rem;cursor:pointer}
 
   main{max-width:var(--max);margin:0 auto;padding:0 22px}
-  section{padding:64px 0;border-top:1px solid var(--line)}
+  section{padding:60px 0;border-top:1px solid var(--line)}
   section:first-of-type{border-top:0}
-  .eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--brand);margin:0 0 12px}
-  h1{font-size:clamp(2.1rem,5.4vw,3.4rem);line-height:1.12;letter-spacing:-.02em;margin:.2em 0 .35em;font-weight:800}
-  h2{font-size:clamp(1.5rem,3.2vw,2.1rem);line-height:1.22;letter-spacing:-.01em;margin:0 0 .5em;font-weight:700}
+  .eyebrow{font-family:var(--mono);font-size:.73rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin:0 0 12px}
+  h1{font-size:clamp(2.1rem,5.4vw,3.5rem);line-height:1.1;letter-spacing:-.02em;margin:.2em 0 .35em;font-weight:800}
+  h2{font-size:clamp(1.5rem,3.2vw,2.15rem);line-height:1.2;letter-spacing:-.01em;margin:0 0 .5em;font-weight:700}
   h3{font-size:1.06rem;margin:0 0 .4em;font-weight:700}
   .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   p{margin:0 0 1em;color:#d3dae8}
-  .lead{font-size:1.12rem;color:var(--muted);max-width:62ch}
+  .lead{font-size:1.1rem;color:var(--muted);max-width:64ch}
   .muted{color:var(--muted)}
   code{font-family:var(--mono);font-size:.86em;background:var(--panel);padding:.12em .4em;border-radius:5px;color:#bfe9e0}
-  sup a{color:var(--brand-2);text-decoration:none;font-weight:600;font-size:.72em;padding:0 .1em}
+  sup{line-height:0}
+  sup a{color:var(--brand-2);text-decoration:none;font-weight:600;font-size:.7em;padding:0 .06em}
   sup a:hover{text-decoration:underline}
 
   /* hero */
-  .hero{padding-top:74px}
-  .badge{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:600;color:var(--brand);
+  .hero{padding-top:70px}
+  .badge{display:inline-flex;align-items:center;gap:9px;font-size:.77rem;font-weight:600;color:var(--brand);
     background:rgba(94,216,198,.08);border:1px solid rgba(94,216,198,.25);padding:7px 14px;border-radius:999px}
-  .pulse{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 0 rgba(94,216,198,.5);
-    animation:pulse 2.2s infinite}
+  .pulse{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 0 rgba(94,216,198,.5);animation:pulse 2.2s infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(94,216,198,.5)}70%{box-shadow:0 0 0 9px rgba(94,216,198,0)}100%{box-shadow:0 0 0 0 rgba(94,216,198,0)}}
-  .hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--faint);font-size:.82rem;margin-top:18px;font-family:var(--mono)}
-
-  /* abstract */
-  .abstract{background:linear-gradient(180deg,var(--panel),rgba(18,24,41,.5));
-    border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:14px;padding:26px 28px}
-  .abstract h3{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand)}
-  .abstract p:last-child{margin-bottom:0}
-
-  /* stat strip */
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
-  .stats div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 14px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--faint);font-size:.81rem;margin-top:18px;font-family:var(--mono)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+  .stats div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 14px}
   .stats .n{font-size:1.5rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .stats .l{font-size:.78rem;color:var(--muted);margin-top:3px}
+  .stats .l{font-size:.77rem;color:var(--muted);margin-top:3px}
 
-  /* phase timeline */
-  .phases{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
-  .phase{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 18px;overflow:hidden}
-  .phase::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--bar,var(--brand))}
-  .phase .yr{font-family:var(--mono);font-size:.86rem;color:var(--bar,var(--brand));font-weight:700}
-  .phase h3{margin:.4em 0 .3em;font-size:1rem}
-  .phase p{font-size:.88rem;color:var(--muted);margin:0}
-  .phase.p1{--bar:var(--done)} .phase.p2{--bar:var(--now)}
-  .phase.p3{--bar:var(--brand-2)} .phase.p4{--bar:var(--brand)}
+  .abstract{background:linear-gradient(180deg,var(--panel),rgba(18,24,41,.5));
+    border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:14px;padding:24px 26px}
+  .abstract h3{font-family:var(--mono);font-size:.77rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand)}
+  .abstract p:last-child{margin-bottom:0}
+  .callout{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
 
-  /* tech sections */
-  .tech{display:grid;grid-template-columns:46px 1fr;gap:18px;padding:26px 0;border-top:1px dashed var(--line)}
-  .tech:first-of-type{border-top:0}
-  .tech .idx{font-family:var(--mono);font-size:1.4rem;font-weight:800;color:var(--faint);line-height:1}
-  .tech .tag{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;
-    padding:3px 9px;border-radius:999px;margin-left:10px;vertical-align:middle;font-weight:600}
-  .tag.done{color:var(--done);background:rgba(95,214,164,.12);border:1px solid rgba(95,214,164,.3)}
-  .tag.now{color:var(--now);background:rgba(243,182,91,.12);border:1px solid rgba(243,182,91,.3)}
-  .tag.open{color:var(--open);background:rgba(242,116,138,.12);border:1px solid rgba(242,116,138,.3)}
-  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
-  .twocol .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px}
-  .twocol .box h4{margin:0 0 .45em;font-size:.82rem;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase}
-  .twocol .now h4{color:var(--now)} .twocol .next h4{color:var(--brand)}
-  .twocol .box p{font-size:.9rem;margin:0;color:#cdd5e4}
+  /* growth chart */
+  .chart-wrap{background:var(--panel-3);border:1px solid var(--line);border-radius:16px;padding:18px 16px 8px;overflow:hidden}
+  .chart-wrap svg{width:100%;height:auto;display:block}
+  .chart-legend{display:flex;flex-wrap:wrap;gap:14px 22px;margin-top:10px;padding:0 8px 8px;font-size:.8rem;color:var(--muted)}
+  .chart-legend span{display:inline-flex;align-items:center;gap:7px}
+  .lg-dot{width:10px;height:10px;border-radius:50%}
+  .lg-line{width:18px;height:0;border-top:2px solid}
 
-  /* milestone rows */
-  .milestones{margin-top:6px;border-left:2px solid var(--line);padding-left:0}
-  .ms{position:relative;padding:14px 0 14px 28px;border-bottom:1px solid var(--line)}
-  .ms:last-child{border-bottom:0}
-  .ms::before{content:"";position:absolute;left:-7px;top:20px;width:12px;height:12px;border-radius:50%;
-    background:var(--bg);border:2px solid var(--mc,var(--brand))}
-  .ms .yr{font-family:var(--mono);font-weight:700;color:var(--mc,var(--brand));font-size:.9rem}
-  .ms h4{margin:.25em 0 .3em;font-size:1rem}
-  .ms p{margin:0;font-size:.9rem;color:var(--muted)}
-  .ms.d1{--mc:var(--done)} .ms.d2{--mc:var(--now)} .ms.d3{--mc:var(--brand-2)} .ms.d4{--mc:var(--brand)}
+  /* mini era axis */
+  .axis{display:flex;width:100%;border-radius:10px;overflow:hidden;border:1px solid var(--line);margin-top:6px}
+  .axis a{flex:1;text-decoration:none;padding:11px 8px;text-align:center;font-size:.72rem;color:#0a0d14;font-weight:700;
+    transition:.18s;border-right:1px solid rgba(0,0,0,.25)}
+  .axis a:last-child{border-right:0}
+  .axis a small{display:block;font-weight:600;font-size:.66rem;opacity:.78;margin-top:1px}
+  .axis a:hover{filter:brightness(1.08)}
+  .axis .s1{background:#5fd6a4}.axis .s2{background:#74c8b6}.axis .s3{background:#7aa2ff}
+  .axis .s4{background:#9a9bf0}.axis .s5{background:#bf9bef}.axis .s6{background:#e08ad0}
 
-  /* callout / note */
-  .note{background:rgba(242,116,138,.06);border:1px solid rgba(242,116,138,.22);border-radius:12px;
-    padding:18px 20px;font-size:.94rem;color:#e4d2d6}
+  /* scrollytelling */
+  .scrolly{display:grid;grid-template-columns:1fr 300px;gap:42px;align-items:start;margin-top:8px}
+  .narrative{min-width:0}
+  .rail{position:sticky;top:90px}
+  .rail-card{background:linear-gradient(180deg,var(--panel),var(--panel-3));border:1px solid var(--line-2);
+    border-radius:16px;padding:20px 18px}
+  .rail-ylabel{font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;color:var(--faint);text-transform:uppercase}
+  .rail-year{font-size:2.5rem;font-weight:800;line-height:1;letter-spacing:-.02em;margin:2px 0 2px;
+    font-variant-numeric:tabular-nums;transition:color .3s}
+  .rail-era{color:var(--brand);font-weight:700;font-size:.96rem;min-height:1.4em}
+  .rail-track{position:relative;margin:16px 0 16px;padding-left:6px}
+  .rail-track::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:2px;background:var(--line-2)}
+  .rail-fill{position:absolute;left:10px;top:6px;width:2px;background:var(--grad);height:0;transition:height .35s ease}
+  .rail-node{display:flex;align-items:center;gap:11px;background:none;border:0;color:var(--muted);
+    width:100%;text-align:left;padding:6px 0;cursor:pointer;font-family:var(--sans);font-size:.83rem;transition:.2s}
+  .rn-dot{position:relative;z-index:1;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--line-2);flex:none;transition:.2s}
+  .rail-node:hover{color:var(--ink)}
+  .rail-node.done .rn-dot{border-color:var(--brand);background:var(--brand)}
+  .rail-node.active{color:var(--ink);font-weight:700}
+  .rail-node.active .rn-dot{border-color:var(--brand);background:var(--brand);box-shadow:0 0 0 4px rgba(94,216,198,.18)}
+  .rail-metric{border-top:1px solid var(--line);padding-top:13px}
+  .rail-metric b{display:block;font-size:1.35rem;font-weight:800;font-variant-numeric:tabular-nums;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .rail-metric small{color:var(--muted);font-size:.76rem}
+
+  /* current-state grounded card */
+  .now-card{background:rgba(95,214,164,.05);border:1px solid rgba(95,214,164,.22);border-radius:14px;padding:20px 22px;margin-bottom:30px}
+  .now-card .flag{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--done);
+    background:rgba(95,214,164,.12);border:1px solid rgba(95,214,164,.3);padding:3px 9px;border-radius:999px;margin-bottom:10px}
+  .now-card ul{margin:0;padding-left:0;list-style:none;display:grid;gap:9px}
+  .now-card li{padding-left:22px;position:relative;font-size:.92rem;color:#d3dae8}
+  .now-card li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--done)}
+
+  /* era blocks */
+  .era{padding:18px 0 34px;scroll-margin-top:84px}
+  .era-head{margin-bottom:14px}
+  .era-kicker{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
+  .era-num{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--faint)}
+  .era-yr{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--era,var(--brand))}
+  .era-flag{font-family:var(--mono);font-size:.66rem;letter-spacing:.05em;padding:2px 8px;border-radius:999px;
+    color:var(--far);background:rgba(200,155,255,.1);border:1px solid rgba(200,155,255,.28)}
+  .era h3{font-size:1.35rem;letter-spacing:-.01em}
+  .era-sub{color:var(--muted);font-size:.96rem;margin:.1em 0 0}
+  .era.e1{--era:#5fd6a4}.era.e2{--era:#74c8b6}.era.e3{--era:#7aa2ff}
+  .era.e4{--era:#9a9bf0}.era.e5{--era:#bf9bef}.era.e6{--era:#e08ad0}
+  .beats{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+  .beat{position:relative;padding:13px 0 13px 26px}
+  .beat::before{content:"";position:absolute;left:-7px;top:18px;width:12px;height:12px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--era,var(--brand))}
+  .beat-date{font-family:var(--mono);font-weight:700;color:var(--era,var(--brand));font-size:.86rem}
+  .beat h4{margin:.22em 0 .3em;font-size:1.02rem;font-weight:700}
+  .beat p{margin:0;font-size:.93rem;color:#cdd5e4}
+
+  /* fork / endings */
+  .fork-tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+  .ftab{font-family:var(--sans);font-size:.9rem;font-weight:600;color:var(--muted);cursor:pointer;
+    background:var(--panel);border:1px solid var(--line-2);border-radius:10px;padding:11px 16px;transition:.18s}
+  .ftab:hover{color:var(--ink)}
+  .ftab.active{color:var(--ink);border-color:transparent}
+  .ftab[data-route="a"].active{background:rgba(95,214,164,.16);box-shadow:inset 0 0 0 1px rgba(95,214,164,.4)}
+  .ftab[data-route="b"].active{background:rgba(242,116,138,.14);box-shadow:inset 0 0 0 1px rgba(242,116,138,.4)}
+  .fork-panel{border:1px solid var(--line);border-radius:14px;padding:22px 24px;background:var(--panel)}
+  .fork-panel[data-route="a"]{border-left:3px solid var(--done)}
+  .fork-panel[data-route="b"]{border-left:3px solid var(--open)}
+  .fork-panel h4{margin:0 0 .4em;font-size:1.1rem}
+  .fork-panel .verdict{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+  .fork-panel[data-route="a"] .verdict{color:var(--done)}
+  .fork-panel[data-route="b"] .verdict{color:var(--open)}
+
+  /* open challenges note */
+  .note{background:rgba(242,116,138,.06);border:1px solid rgba(242,116,138,.22);border-radius:12px;padding:17px 20px;font-size:.93rem;color:#e4d2d6}
   .note b{color:var(--open)}
-  .callout{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:6px}
 
   /* references */
-  ol.refs{counter-reset:r;list-style:none;padding:0;margin:0;display:grid;gap:9px}
-  ol.refs li{counter-increment:r;position:relative;padding:11px 14px 11px 44px;background:var(--panel);
-    border:1px solid var(--line);border-radius:10px;font-size:.86rem;color:#cfd6e5;line-height:1.6}
-  ol.refs li::before{content:"["counter(r)"]";position:absolute;left:13px;top:11px;
-    font-family:var(--mono);font-size:.78rem;color:var(--brand);font-weight:700}
+  ol.refs{counter-reset:r;list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  ol.refs li{counter-increment:r;position:relative;padding:10px 13px 10px 42px;background:var(--panel);
+    border:1px solid var(--line);border-radius:10px;font-size:.82rem;color:#cfd6e5;line-height:1.55}
+  ol.refs li::before{content:"["counter(r)"]";position:absolute;left:12px;top:10px;font-family:var(--mono);font-size:.74rem;color:var(--brand);font-weight:700}
   ol.refs i{color:var(--muted)}
 
-  /* reveal */
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
 
-  /* footer */
-  .site-footer{border-top:1px solid var(--line);margin-top:30px;background:var(--bg-2)}
-  .footer-inner{max-width:var(--max);margin:0 auto;padding:34px 22px;color:var(--muted);font-size:.86rem}
+  .site-footer{border-top:1px solid var(--line);margin-top:24px;background:var(--bg-2)}
+  .footer-inner{max-width:var(--max);margin:0 auto;padding:32px 22px;color:var(--muted);font-size:.85rem}
   .footer-inner .brand{margin-bottom:10px}
-  .disc{color:var(--faint);font-size:.78rem;margin-top:14px;max-width:70ch}
+  .disc{color:var(--faint);font-size:.78rem;margin-top:14px;max-width:74ch}
 
-  @media (max-width:860px){
-    .stats,.phases{grid-template-columns:repeat(2,1fr)}
-    .twocol{grid-template-columns:1fr}
-    .primary-nav{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;
+  @media (max-width:920px){
+    .scrolly{grid-template-columns:1fr;gap:0}
+    .rail{display:none}
+  }
+  @media (max-width:760px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    ol.refs{grid-template-columns:1fr}
+    .axis a{font-size:.6rem;padding:9px 3px}
+    .axis a small{display:none}
+    .primary-nav{display:none;position:absolute;top:58px;left:0;right:0;flex-direction:column;
       background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px;margin:0}
     .primary-nav.open{display:flex}
     .nav-toggle{display:block}
-    .tech{grid-template-columns:1fr;gap:8px}
-    .tech .idx{font-size:1.1rem}
   }
   </style>
 </head>
@@ -171,16 +217,15 @@
 
   <header class="site-header">
     <div class="nav-inner">
-      <a class="brand" href="#top"><span class="dot"></span>マインドアップロード <small>roadmap 2050</small></a>
+      <a class="brand" href="#top"><span class="dot"></span>マインドアップロード <small>scenario 2050</small></a>
       <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
       <nav class="primary-nav" aria-label="主要セクション">
         <a href="#abstract">要旨</a>
-        <a href="#intro">序論</a>
-        <a href="#roadmap">全体像</a>
-        <a href="#tech">要素技術</a>
-        <a href="#timeline">マイルストーン</a>
-        <a href="#open">未解決</a>
-        <a href="#refs">参考文献</a>
+        <a href="#scale">規模</a>
+        <a href="#scenario">シナリオ</a>
+        <a href="#fork">2050分岐</a>
+        <a href="#open">壁</a>
+        <a href="#refs">文献</a>
       </nav>
     </div>
   </header>
@@ -188,24 +233,24 @@
   <main>
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
-      <span class="badge"><span class="pulse"></span>レビュー / 技術ロードマップ</span>
-      <h1>脳を写し、心を走らせる。<br><span class="grad">2050年、全脳エミュレーション</span><br>はどう完成しうるか。</h1>
+      <span class="badge"><span class="pulse"></span>シナリオ年表 / 2026 → 2050</span>
+      <h1>線虫から、ヒトへ。<br><span class="grad">マインドアップロードが</span><br>完成する2050年までの年表。</h1>
       <p class="lead">
-        マインドアップロード=<strong>全脳エミュレーション（Whole Brain Emulation, WBE）</strong>は、
-        単一の発明ではなく <strong>固定 → 取得 → 再構成 → 走らせる → 検証</strong> という依存パイプラインです。
-        本ページは、世界中の研究の到達点をもとに、2050年の完成に向けた技術発展のストーリーをレビュー論文の形式で辿ります。
+        マインドアップロード=<strong>全脳エミュレーション（WBE）</strong>は、ある脳の構造と状態を計測し、その情報処理を計算機上で再現する構想です。
+        本ページは <a href="https://ai-2027.com" target="_blank" rel="noopener">AI 2027</a> にならい、世界中の研究の到達点を起点に、
+        <strong>2026年から2050年の完成まで</strong>を「年ごとに何が起こりうるか」のシナリオ年表として描きます。実証済みの事実と、そこからの予測を分けて。
       </p>
       <div class="hero-meta">
-        <span>形式: ナラティブ・レビュー</span>
+        <span>形式: 年表シナリオ</span>
         <span>範囲: 全世界の公開研究</span>
-        <span>対象期: 〜2050</span>
-        <span>最終更新: 2026-06</span>
+        <span>区間: 2026–2050</span>
+        <span>引用: 31研究</span>
       </div>
       <div class="stats reveal">
-        <div><div class="n">8</div><div class="l">要素技術</div></div>
-        <div><div class="n">4</div><div class="l">発展フェーズ</div></div>
-        <div><div class="n">~2050</div><div class="l">完成シナリオ</div></div>
-        <div><div class="n">18</div><div class="l">引用研究</div></div>
+        <div><div class="n">302 → 8.6×10¹⁰</div><div class="l">写し取るニューロン数（線虫→ヒト）</div></div>
+        <div><div class="n">6</div><div class="l">発展フェーズ</div></div>
+        <div><div class="n">2050</div><div class="l">完成シナリオ（条件付き）</div></div>
+        <div><div class="n">31</div><div class="l">引用した実在研究</div></div>
       </div>
     </section>
 
@@ -215,282 +260,325 @@
       <div class="abstract reveal">
         <h3>要旨</h3>
         <p>
-          全脳エミュレーション（WBE）とは、ある脳の構造と状態を十分な解像度で計測し、
-          その情報処理を計算基盤上で再現することで「心」を非生物的な基板へ移す構想である。
-          本レビューは、Sandberg と Bostrom が2008年に提示したロードマップ<sup><a href="#ref1">1</a></sup>の枠組みを土台に、
-          以後の約20年で世界の研究がどこまで到達したかを整理し、2050年の完成へ向けた発展のストーリーを描く。
+          全脳エミュレーション（WBE）は、Sandberg と Bostrom が2008年に体系化した「スキャン＆エミュレート」<sup><a href="#ref1">1</a></sup>という工学問題である。
+          以後の約20年で、世界の研究は <strong>構造の地図化</strong>を線虫（302ニューロン）<sup><a href="#ref2">2</a></sup>からハエ成虫の全脳（約14万ニューロン）<sup><a href="#ref7">7</a></sup>、
+          ヒト皮質1mm³<sup><a href="#ref9">9</a></sup>まで押し上げ、<strong>読み出し</strong>は会話速度の発話BCI<sup><a href="#ref21">21</a><a href="#ref23">23</a></sup>に到達した。
         </p>
         <p>
-          結論を先取りすれば——<strong>構造の取得</strong>は線虫からハエ全脳、ヒト皮質1mm³まで実証が進み<sup><a href="#ref8">8</a><a href="#ref9">9</a></sup>、
-          <strong>計測と読み出し</strong>はNeuropixelsや発話BCIで臨床到達点に達した<sup><a href="#ref7">7</a><a href="#ref13">13</a></sup>。
-          一方で <strong>パラメータの一意な再構成</strong>（縮退問題）<sup><a href="#ref5">5</a></sup>、
-          <strong>生体からの非破壊全脳計測</strong>、そして <strong>同一性の検証</strong> が依然として原理的な壁として残る。
-          2050年完成は「自動的に訪れる未来」ではなく、これらの壁を順に越えた場合に成立する <em>条件付きのシナリオ</em> である。
+          本レビューは、この曲線を外挿し、2026→2050を6フェーズの年表シナリオとして描く——
+          <strong>地図の自動化 → 哺乳類の全脳 → 走らせる → ヒトへの跳躍 → 個人の再構成 → 完成と分岐</strong>。
+          各フェーズは前を前提に積み上がる。2050年完成は確約ではなく、<strong>縮退（再構成の一意性）</strong><sup><a href="#ref16">16</a></sup>、
+          <strong>全脳スケール</strong>、<strong>同一性の検証</strong>という律速段階を越えた場合に成立する <em>条件付きシナリオ</em>であり、
+          最後は「継続」と「複製問題」に分岐する<sup><a href="#ref31">31</a></sup>。
         </p>
       </div>
     </section>
 
-    <!-- ===== INTRODUCTION ===== -->
-    <section id="intro">
-      <p class="eyebrow">1. Introduction / 序論</p>
-      <h2>「心を写す」とは、何を写すことか。</h2>
-      <p>
-        マインドアップロードの中核仮説は <strong>計算主義（substrate-independence）</strong>——
-        心が脳という特定の物質ではなく、脳が実行する <em>情報処理の構造</em> に宿るならば、
-        その処理を別の基板で十分忠実に再現できれば心もまた再現される、という立場である。
-        この仮説のもとで WBE は「スキャン＆エミュレート」という工学問題に翻訳される<sup><a href="#ref1">1</a></sup>。
-      </p>
-      <p>
-        歴史的な出発点は二つある。ひとつは1952年の <strong>Hodgkin–Huxley モデル</strong><sup><a href="#ref3">3</a></sup>——
-        ニューロンの発火を微分方程式で定量再現できることを示し、「脳は計算で書ける」という確信を与えた。
-        もうひとつは1986年の <strong>線虫 C. elegans の全配線図</strong><sup><a href="#ref2">2</a></sup>——
-        302個のニューロンの全結線を顕微鏡で取り切り、「脳は地図にできる」ことを示した。
-        この <em>動態の方程式化</em> と <em>構造の地図化</em> の合流点に、WBE という構想が立っている。
-      </p>
-      <div class="callout reveal">
-        <p style="margin:0">
-          <strong>本レビューの読み筋:</strong> 進歩は「できる／できない」の印象ではなく、依存関係で読む。
-          構造を取得できても（地図）、それを走らせる動的状態が欠ければ脳は動かない。
-          各要素技術が <em>どの実証段階にあり、2050へ向けて何が残っているか</em> を分けて辿る。
-        </p>
-      </div>
-    </section>
-
-    <!-- ===== ROADMAP OVERVIEW ===== -->
-    <section id="roadmap">
-      <p class="eyebrow">2. Roadmap / 全体像</p>
-      <h2>完成までを4つの発展フェーズで描く。</h2>
-      <p class="lead" style="margin-bottom:26px">
-        世界の研究の趨勢を外挿すると、2050年までの道のりは大きく4期に分けられる。
-        各期は前期の成果を前提に積み上がる。
-      </p>
-      <div class="phases reveal">
-        <div class="phase p1">
-          <div class="yr">〜2025 · 基盤確立</div>
-          <h3>地図と計測の時代</h3>
-          <p>小動物の全脳コネクトーム、ヒト皮質1mm³、高密度記録と臨床BCIが出揃う。「測れる・写せる」が実証された期。</p>
-        </div>
-        <div class="phase p2">
-          <div class="yr">2025–2035 · 統合</div>
-          <h3>マウス全脳への挑戦</h3>
-          <p>哺乳類スケールの構造＋機能の統合データ、分子状態の併記、縮退を抑える構造制約モデルが主戦場になる。</p>
-        </div>
-        <div class="phase p3">
-          <div class="yr">2035–2045 · 動かす</div>
-          <h3>機能エミュレーション</h3>
-          <p>哺乳類脳の領域〜全脳エミュレーションが身体ループ付きで走り、行動レベルで検証される段階。</p>
-        </div>
-        <div class="phase p4">
-          <div class="yr">2045–2050 · 個人化</div>
-          <h3>ヒト個体の再現</h3>
-          <p>特定個人の脳を保存・取得し、記憶と人格を伴う個人化エミュレーションと、その同一性検証へ到達するシナリオ。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ENABLING TECHNOLOGIES ===== -->
-    <section id="tech">
-      <p class="eyebrow">3. Enabling Technologies / 要素技術</p>
-      <h2>8つの要素技術：現状と2050への軌跡。</h2>
-      <p class="lead" style="margin-bottom:14px">
-        各技術について、いま世界の研究が到達している水準（現状）と、2050に向けて埋めるべき距離（軌跡）を併記する。
-      </p>
-
-      <!-- 3.1 -->
-      <div class="tech reveal">
-        <div class="idx">3.1</div>
-        <div>
-          <h3>脳保存・構造固定<span class="tag now">部分実証</span></h3>
-          <p class="muted">分解が始まる前に脳の超微細構造を物理的に安定化する。すべての破壊的取得ルートの出発点。</p>
-          <div class="twocol">
-            <div class="box now"><h4>現状</h4><p>アルデヒド安定化＋低温保存（ASC）が、ブタ・ウサギ脳でシナプス解像度の超微細構造を全脳にわたり保つことを実証し、Brain Preservation 賞を受賞<sup><a href="#ref6">6</a></sup>。</p></div>
-            <div class="box next"><h4>2050への軌跡</h4><p>保存が守るのは構造であって動的状態ではない。ヒト全脳での再現性・室温長期保存・取得との接続性が課題。倫理的合意のもとでの手続き標準化が要る。</p></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3.2 -->
-      <div class="tech reveal">
-        <div class="idx">3.2</div>
-        <div>
-          <h3>コネクトミクス（構造取得）<span class="tag now">小動物○ / ヒト全脳×</span></h3>
-          <p class="muted">電子顕微鏡でニューロンとシナプスの全結線図を取得する。脳の「配線地図」づくり。</p>
-          <div class="twocol">
-            <div class="box now"><h4>現状</h4><p>線虫（1986）<sup><a href="#ref2">2</a></sup>からショウジョウバエ <em>成虫全脳</em>（FlyWire, 約14万ニューロン・5千万シナプス, 2024）<sup><a href="#ref9">9</a><a href="#ref10">10</a></sup>、ヒト皮質1mm³のペタボクセル再構成（H01, 2024）<sup><a href="#ref8">8</a></sup>、マウス視覚野の機能＋構造統合（MICrONS, 2025）<sup><a href="#ref11">11</a></sup>まで到達。</p></div>
-            <div class="box next"><h4>2050への軌跡</h4><p>ヒト全脳は皮質1mm³の約100万倍。撮像スループット・自動再構成・保管の桁違いのスケーリングが必要。マウス全脳（〜2030年代）が中間目標。</p></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3.3 -->
-      <div class="tech reveal">
-        <div class="idx">3.3</div>
-        <div>
-          <h3>分子・シナプス状態<span class="tag now">部分的</span></h3>
-          <p class="muted">配線図に現れない分子状態——受容体・伝達物質の種類・シナプス強度・可塑性・代謝——を読み出す。</p>
-          <div class="twocol">
-            <div class="box now"><h4>現状</h4><p>アレイトモグラフィや空間トランスクリプトミクスで、シナプスのタンパク質組成や全脳の細胞型地図が取得可能に。EMから一部のシナプス強度の指標が読める。</p></div>
-            <div class="box next"><h4>2050への軌跡</h4><p>「配線図＝脳が走る」ではない。EM画像から機能的なシナプス重みや神経調節状態へ写像する手法が未確立で、エミュレーション忠実度の律速になりうる。</p></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3.4 -->
-      <div class="tech reveal">
-        <div class="idx">3.4</div>
-        <div>
-          <h3>神経動態の計測とBCI<span class="tag done">臨床到達</span></h3>
-          <p class="muted">回路の動的パラメータと活動を、できれば生体で測る。基準となる「正解の振る舞い」を供給する。</p>
-          <div class="twocol">
-            <div class="box now"><h4>現状</h4><p>Neuropixelsが数千点同時記録を標準化（2017）<sup><a href="#ref7">7</a></sup>。麻痺患者から手書き・発話を高速デコードする皮質内BCI（2021–2023）<sup><a href="#ref12">12</a><a href="#ref13">13</a><a href="#ref14">14</a></sup>、脳–脊髄ブリッジによる随意歩行の回復<sup><a href="#ref15">15</a></sup>。</p></div>
-            <div class="box next"><h4>2050への軌跡</h4><p>頭蓋を越えた非侵襲計測には物理限界がある。デコード精度の向上は「内部状態が一意に決まった」ことを意味しない（次項）。全脳・長期・身体込みの同時計測が遠い。</p></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3.5 -->
-      <div class="tech reveal">
-        <div class="idx">3.5</div>
-        <div>
-          <h3>再構成・パラメータ推論<span class="tag open">縮退で停滞</span></h3>
-          <p class="muted">計測データから、実際に走らせられる回路モデルのパラメータを一意に決める。WBEの逆問題の核心。</p>
-          <div class="twocol">
-            <div class="box now"><h4>現状</h4><p>Hodgkin–Huxley型の精密モデルは確立<sup><a href="#ref3">3</a></sup>。Blue Brainは生物学的制約からラットの皮質微小回路を再構成・シミュレートした<sup><a href="#ref4">4</a></sup>。構造制約を使った同定が前進。</p></div>
-            <div class="box next"><h4>2050への軌跡</h4><p><strong>縮退問題</strong>——大きく異なるパラメータ群が同一の活動を生む<sup><a href="#ref5">5</a></sup>。同じ観測から複数の内部状態が残る限り、忠実な再構成は閉じない。摂動・保持データ・外部検証で候補を絞る方法論が最大の難所。</p></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3.6 -->
-      <div class="tech reveal">
-        <div class="idx">3.6</div>
-        <div>
-          <h3>エミュレーション基盤<span class="tag now">スケール途上</span></h3>
-          <p class="muted">再構成したモデルを計算基盤で（できれば実時間で）走らせる。シミュレータとニューロモルフィック・ハードウェア。</p>
-          <div class="twocol">
-            <div class="box now"><h4>現状</h4><p>SpiNNaker<sup><a href="#ref16">16</a></sup>やIntel Loihi<sup><a href="#ref17">17</a></sup>などニューロモルフィック計算機が大規模スパイキングネットを省電力で実行。スパコン上の数十億ニューロン級シミュレーションも実現。</p></div>
-            <div class="box next"><h4>2050への軌跡</h4><p>ヒト脳は約860億ニューロン・100兆シナプス。実時間・低電力での全脳エミュレーションには、現行から数桁のスケーリングと新アーキテクチャが必要。ムーアの法則の鈍化が逆風。</p></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3.7 -->
-      <div class="tech reveal">
-        <div class="idx">3.7</div>
-        <div>
-          <h3>身体性・環境<span class="tag now">部分的</span></h3>
-          <p class="muted">感覚・運動・内受容・恒常性の閉ループを供給し、脳モデルを「身体」につなぐ。脳は孤立では正常に動かない。</p>
-          <div class="twocol">
-            <div class="box now"><h4>現状</h4><p>BCIによる外部効果器の制御、脳–脊髄ブリッジによる閉ループ運動回復<sup><a href="#ref15">15</a></sup>、仮想アバター制御<sup><a href="#ref14">14</a></sup>など、感覚運動ループの一部は実装段階。</p></div>
-            <div class="box next"><h4>2050への軌跡</h4><p>内受容・ホルモン・恒常性まで含む全身ループの忠実な供給は未開拓。身体入力が欠けると、エミュレートされた心の長期安定性が保証されない。</p></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3.8 -->
-      <div class="tech reveal">
-        <div class="idx">3.8</div>
-        <div>
-          <h3>同一性・意識・検証<span class="tag open">未確立</span></h3>
-          <p class="muted">再構成された心が「元と同じ」「意識を持つ」と言える条件を、操作的に確かめられるか。</p>
-          <div class="twocol">
-            <div class="box now"><h4>現状</h4><p>意識の理論（統合情報理論<sup><a href="#ref18">18</a></sup>、グローバル・ワークスペース<sup><a href="#ref19">19</a></sup>）の対立を実験で検証する敵対的協働が進行<sup><a href="#ref20">20</a></sup>。だが決着には至っていない。</p></div>
-            <div class="box next"><h4>2050への軌跡</h4><p>完璧な振る舞いの再現と <em>主観的連続性</em> を分ける物理測定は存在しない。コピー問題（元が残ったまま複製が走る）、社会的同意、停止条件など、技術では閉じない論点が残る。</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== TIMELINE / MILESTONES ===== -->
-    <section id="timeline">
-      <p class="eyebrow">4. Milestones / マイルストーン</p>
-      <h2>到達点と、2050へ向けた予測マイルストーン。</h2>
+    <!-- ===== SCALE / GROWTH CHART ===== -->
+    <section id="scale">
+      <p class="eyebrow">1. The Exponential / 規模の指数</p>
+      <h2>脳マッピングは、すでに指数で登っている。</h2>
       <p class="lead" style="margin-bottom:22px">
-        実線（〜2025）は世界の研究で <strong>実証済み</strong> の到達点。点線（2025〜）は趨勢からの <strong>予測シナリオ</strong> であり、確約ではない。
+        シナプス解像度で再構成された脳の最大規模を対数軸で並べると、線虫からヒトまでは <strong>約9桁</strong>。
+        実線は実証済み、点線は本シナリオの予測。完成はこの曲線が天井（ヒト全脳）に届く点として読める。
       </p>
-      <div class="milestones reveal">
-        <div class="ms d1"><div class="yr">1952</div><h4>Hodgkin–Huxley モデル<sup><a href="#ref3">3</a></sup></h4><p>ニューロン発火を微分方程式で定量再現。「脳は計算で書ける」基礎。</p></div>
-        <div class="ms d1"><div class="yr">1986</div><h4>C. elegans 全配線図<sup><a href="#ref2">2</a></sup></h4><p>302ニューロンの全結線を完成。「脳は地図にできる」最初の証明。</p></div>
-        <div class="ms d1"><div class="yr">2008</div><h4>WBEロードマップ<sup><a href="#ref1">1</a></sup></h4><p>スキャン＆エミュレートの要件と段階を体系化した出発点の文書。</p></div>
-        <div class="ms d1"><div class="yr">2015</div><h4>皮質微小回路の再構成<sup><a href="#ref4">4</a></sup> / ASC受賞<sup><a href="#ref6">6</a></sup></h4><p>生物学的制約からの回路シミュレーションと、シナプス解像度の脳保存が実証。</p></div>
-        <div class="ms d1"><div class="yr">2021–2024</div><h4>ヒト皮質1mm³<sup><a href="#ref8">8</a></sup> / ハエ全脳<sup><a href="#ref9">9</a></sup> / 発話BCI<sup><a href="#ref13">13</a></sup></h4><p>構造取得とリアルタイム読み出しが、それぞれ新しいスケールに到達。</p></div>
-        <div class="ms d2"><div class="yr">~2030s（予測）</div><h4>マウス全脳コネクトーム＋機能統合</h4><p>哺乳類スケールの構造・機能・分子の統合データセット。縮退を抑える構造制約推論が成熟。</p></div>
-        <div class="ms d3"><div class="yr">~2040s（予測）</div><h4>哺乳類脳の機能エミュレーション</h4><p>身体ループ付きで行動レベルの再現・検証。ニューロモルフィック基盤が実時間スケールへ。</p></div>
-        <div class="ms d4"><div class="yr">~2050（予測）</div><h4>個人化ヒトエミュレーション＋同一性検証</h4><p>特定個人の保存・取得・再構成と、記憶・人格を伴うエミュレーション、その操作的検証へ到達するシナリオ。</p></div>
+      <div class="chart-wrap reveal">
+        <svg viewBox="0 0 820 380" role="img" aria-label="シナプス解像度で再構成された脳の最大規模（ニューロン数、対数）の年次推移">
+          <!-- projection background band -->
+          <rect x="499.5" y="44" width="288.5" height="268" fill="rgba(122,162,255,0.05)"/>
+          <line x1="499.5" y1="36" x2="499.5" y2="324" stroke="rgba(122,162,255,0.35)" stroke-dasharray="3 4"/>
+          <text x="505" y="58" fill="#7aa2ff" font-size="11" font-family="monospace">予測 →</text>
+          <text x="494" y="58" fill="#5fd6a4" font-size="11" font-family="monospace" text-anchor="end">← 実証済み</text>
+
+          <!-- y gridlines: 10^2,4,6,8,10 -->
+          <g stroke="rgba(255,255,255,0.07)">
+            <line x1="72" y1="312" x2="788" y2="312"/>
+            <line x1="72" y1="252.4" x2="788" y2="252.4"/>
+            <line x1="72" y1="192.9" x2="788" y2="192.9"/>
+            <line x1="72" y1="133.3" x2="788" y2="133.3"/>
+            <line x1="72" y1="73.8" x2="788" y2="73.8"/>
+          </g>
+          <g fill="#697389" font-size="11" font-family="monospace" text-anchor="end">
+            <text x="64" y="316">10²</text>
+            <text x="64" y="256">10⁴</text>
+            <text x="64" y="197">10⁶</text>
+            <text x="64" y="137">10⁸</text>
+            <text x="64" y="78">10¹⁰</text>
+          </g>
+          <!-- x ticks -->
+          <g fill="#697389" font-size="11" font-family="monospace" text-anchor="middle">
+            <text x="125" y="332">1990</text>
+            <text x="286" y="332">2005</text>
+            <text x="499" y="332">2025</text>
+            <text x="660" y="332">2040</text>
+            <text x="767" y="332">2050</text>
+          </g>
+          <text x="20" y="180" fill="#9aa6bd" font-size="12" transform="rotate(-90 20 180)" text-anchor="middle">再構成ニューロン数</text>
+
+          <!-- real (solid) -->
+          <polyline points="82.7,297.7 446,240.5 488.7,218.2 499.5,213.7" fill="none" stroke="#5fd6a4" stroke-width="2.5"/>
+          <!-- projection (dashed) -->
+          <polyline points="499.5,213.7 552.9,137.8 713.2,46.1 766.6,46.1" fill="none" stroke="#7aa2ff" stroke-width="2.5" stroke-dasharray="6 6"/>
+
+          <!-- real points -->
+          <g>
+            <circle cx="82.7" cy="297.7" r="5" fill="#5fd6a4"/>
+            <text x="90" y="293" fill="#cfd6e5" font-size="11">線虫 302（1986）</text>
+            <circle cx="446" cy="240.5" r="5" fill="#5fd6a4"/>
+            <text x="438" y="234" fill="#cfd6e5" font-size="11" text-anchor="end">ハエ脳中枢 2.5万（2020）</text>
+            <circle cx="488.7" cy="218.2" r="5" fill="#5fd6a4"/>
+            <circle cx="499.5" cy="213.7" r="5.5" fill="#5fd6a4" stroke="#0a0d14" stroke-width="1.5"/>
+            <text x="468" y="203" fill="#cfd6e5" font-size="11" text-anchor="end">ハエ全脳14万・マウス1mm³（2024–25）</text>
+          </g>
+          <!-- projected points -->
+          <g>
+            <circle cx="552.9" cy="137.8" r="5" fill="#7aa2ff"/>
+            <text x="560" y="133" fill="#aab6cf" font-size="11">マウス全脳 7×10⁷（~2030）</text>
+            <circle cx="713.2" cy="46.1" r="6" fill="#c89bff"/>
+            <text x="705" y="40" fill="#d8c7f2" font-size="11" text-anchor="end">ヒト全脳 8.6×10¹⁰（~2045）</text>
+            <path d="M766.6 38 l3.5 7 7.5 .8 -5.7 5 1.8 7.4 -7.1 -4 -7.1 4 1.8 -7.4 -5.7 -5 7.5 -.8z" fill="#5ed8c6"/>
+            <text x="767" y="78" fill="#5ed8c6" font-size="11" text-anchor="middle" font-weight="700">完成</text>
+          </g>
+        </svg>
+        <div class="chart-legend">
+          <span><span class="lg-line" style="border-color:#5fd6a4"></span>実証済み（〜2025）</span>
+          <span><span class="lg-line" style="border-color:#7aa2ff;border-top-style:dashed"></span>予測シナリオ（2026〜）</span>
+          <span><span class="lg-dot" style="background:#c89bff"></span>ヒト全脳スケール</span>
+        </div>
+      </div>
+      <div class="callout reveal" style="margin-top:18px">
+        <p style="margin:0">
+          <strong>読み筋:</strong> WBE は単一の発明ではなく <strong>固定 → 取得 → 再構成 → 走らせる → 検証</strong> の依存パイプライン。
+          上の曲線は「取得（地図化）」の軸にすぎず、構造を写し取っても、走らせる動的状態と検証が揃わなければ脳は動かない。
+          以下の年表は、各年に <em>どの軸が前進し、何が残るか</em> を追う。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== SCENARIO TIMELINE ===== -->
+    <section id="scenario">
+      <p class="eyebrow">2. The Scenario / シナリオ年表</p>
+      <h2>2026 → 2050、6つのフェーズ。</h2>
+      <p class="lead" style="margin-bottom:14px">右の年号パネルはスクロールに追従し、いまどのフェーズを読んでいるかを示す。クリックで各フェーズへ移動。</p>
+      <nav class="axis reveal" aria-label="フェーズ早送り">
+        <a class="s1" href="#era1">26–28<small>地図の自動化</small></a>
+        <a class="s2" href="#era2">29–32<small>哺乳類全脳</small></a>
+        <a class="s3" href="#era3">33–37<small>走らせる</small></a>
+        <a class="s4" href="#era4">38–43<small>ヒトへ</small></a>
+        <a class="s5" href="#era5">44–48<small>個人再構成</small></a>
+        <a class="s6" href="#era6">49–50<small>完成と分岐</small></a>
+      </nav>
+
+      <div class="scrolly">
+        <div class="narrative">
+          <!-- grounded present -->
+          <div class="now-card reveal">
+            <span class="flag">現在地 2026 ・ 実証済み</span>
+            <p style="margin:.2em 0 .8em;color:#d3dae8">外挿の前に、土台となる事実。これらは <strong>世界中で実際に達成済み</strong>。</p>
+            <ul>
+              <li>線虫の全配線図は両性・発達段階まで取得済み<sup><a href="#ref2">2</a><a href="#ref3">3</a><a href="#ref4">4</a></sup>。ショウジョウバエは幼虫<sup><a href="#ref5">5</a></sup>・成虫全脳（約14万ニューロン・5千万シナプス）<sup><a href="#ref6">6</a><a href="#ref7">7</a><a href="#ref8">8</a></sup>まで完成。</li>
+              <li>哺乳類はヒト皮質1mm³のペタボクセル再構成<sup><a href="#ref9">9</a></sup>と、マウス視覚野の構造＋機能統合（MICrONS）<sup><a href="#ref10">10</a></sup>。全脳の細胞型地図も整備<sup><a href="#ref11">11</a><a href="#ref12">12</a></sup>。</li>
+              <li>計測は数千点同時記録のNeuropixels<sup><a href="#ref18">18</a><a href="#ref19">19</a></sup>、麻痺患者の手書き・発話を高速デコードするBCI<sup><a href="#ref20">20</a><a href="#ref21">21</a><a href="#ref22">22</a><a href="#ref23">23</a></sup>、脳–脊髄ブリッジによる歩行回復<sup><a href="#ref24">24</a></sup>。</li>
+              <li>保存はアルデヒド安定化＋低温保存（ASC）がブタ脳でシナプス構造を保持<sup><a href="#ref17">17</a></sup>。再構成の基礎は皮質微小回路シミュレーション<sup><a href="#ref15">15</a></sup>。</li>
+            </ul>
+          </div>
+
+          <!-- ERA 1 -->
+          <div class="era e1" id="era1" data-year="2026–2028" data-era="地図の自動化" data-metric="≈2×10⁵" data-metric-label="最大再構成ニューロン数">
+            <div class="era-head">
+              <div class="era-kicker"><span class="era-num">フェーズ 1</span><span class="era-yr">2026–2028</span><span class="era-flag">予測シナリオ</span></div>
+              <h3>地図の自動化</h3>
+              <p class="era-sub">AIによる電子顕微鏡再構成の自動化が、配線図づくりのコストを桁で押し下げる。</p>
+            </div>
+            <ol class="beats">
+              <li class="beat"><span class="beat-date">2026</span><h4>EM再構成がAIで律速解除</h4><p>フラッドフィリング／Transformer系の自動セグメンテーションが、ペタバイト級EM画像の人手コストを激減させる。FlyWire・H01・MICrONSで実証されたパイプライン<sup><a href="#ref7">7</a><a href="#ref9">9</a><a href="#ref10">10</a></sup>が標準化し、再構成スループットが取得の主律速でなくなる。</p></li>
+              <li class="beat"><span class="beat-date">2027</span><h4>マウス全脳プロジェクトの始動</h4><p>公的（BRAIN Initiative等）と民間の連合が、約7,000万ニューロンの <em>マウス全脳コネクトーム</em> を明確な中間目標に掲げ、全脳EM撮像を開始。1mm³から全脳へ、約3桁のスケールアップに着手。</p></li>
+              <li class="beat"><span class="beat-date">2027</span><h4>発話BCIが会話速度へ</h4><p>皮質内発話ニューロプロステーシス<sup><a href="#ref21">21</a><a href="#ref22">22</a><a href="#ref23">23</a></sup>が日常会話に耐える速度・安定性に達し、複数チームで再現。「神経活動から状態を読む」読み出し能力が臨床標準になる。</p></li>
+              <li class="beat"><span class="beat-date">2028</span><h4>マウス全脳の撮像完了</h4><p>全脳EMデータ取得が完了し、自動再構成フェーズへ。分子・細胞型アトラス<sup><a href="#ref11">11</a><a href="#ref12">12</a></sup>や拡張顕微鏡<sup><a href="#ref13">13</a></sup>との重ね合わせ準備が進む。</p></li>
+            </ol>
+          </div>
+
+          <!-- ERA 2 -->
+          <div class="era e2" id="era2" data-year="2029–2032" data-era="最初の哺乳類・全脳" data-metric="≈7×10⁷" data-metric-label="マウス全脳ニューロン数">
+            <div class="era-head">
+              <div class="era-kicker"><span class="era-num">フェーズ 2</span><span class="era-yr">2029–2032</span><span class="era-flag">予測シナリオ</span></div>
+              <h3>最初の哺乳類・全脳</h3>
+              <p class="era-sub">線虫からマウスへ。構造の軸で初めて哺乳類の全脳が閉じる。</p>
+            </div>
+            <ol class="beats">
+              <li class="beat"><span class="beat-date">2030</span><h4>マウス全脳コネクトーム（初版）</h4><p>約7,000万ニューロン・約10¹¹シナプスの全配線図ドラフトが公開。線虫→ハエ→マウスの跳躍で、哺乳類の <em>構造</em> 軸が一段落する。</p></li>
+              <li class="beat"><span class="beat-date">2031</span><h4>マルチモーダルなマウス脳</h4><p>配線図に、全脳の細胞型（トランスクリプトミクス）<sup><a href="#ref11">11</a></sup>とNeuropixels級の機能記録<sup><a href="#ref19">19</a></sup>を重ね合わせ。「構造＋分子＋活動」が同一座標で揃う初の哺乳類データセット。</p></li>
+              <li class="beat"><span class="beat-date">2031</span><h4>動態のファウンデーションモデル</h4><p>構造から活動を予測する大規模モデル（“仮想マウス脳”）が、感覚運動回路で機能を再現し始める。Blue Brainの微小回路再構成<sup><a href="#ref15">15</a></sup>がデータ駆動で全脳級へ拡張。</p></li>
+              <li class="beat"><span class="beat-date">2032</span><h4>臨床グレードの脳保存</h4><p>ASC由来の手続き<sup><a href="#ref17">17</a></sup>が標準化し、終末期・研究プロトコル下で <em>ヒト全脳</em> をシナプス解像度で保存する事例が現れる。将来の取得に向けた「原本」の確保が始まる。</p></li>
+            </ol>
+          </div>
+
+          <!-- ERA 3 -->
+          <div class="era e3" id="era3" data-year="2033–2037" data-era="走らせる：機能エミュレーション" data-metric="リアルタイム" data-metric-label="マウス脳エミュレーション速度">
+            <div class="era-head">
+              <div class="era-kicker"><span class="era-num">フェーズ 3</span><span class="era-yr">2033–2037</span><span class="era-flag">予測シナリオ</span></div>
+              <h3>走らせる：機能エミュレーション</h3>
+              <p class="era-sub">地図を「動かす」段階。身体ループと、再構成の一意性が主戦場になる。</p>
+            </div>
+            <ol class="beats">
+              <li class="beat"><span class="beat-date">2034</span><h4>ニューロモルフィックがマウス級を実時間で</h4><p>SpiNNaker系<sup><a href="#ref25">25</a></sup>・Loihi系<sup><a href="#ref26">26</a></sup>・NorthPole系<sup><a href="#ref27">27</a></sup>とエクサスケール計算が、マウス規模のスパイキング網を低電力・実時間で走らせる。</p></li>
+              <li class="beat"><span class="beat-date">2035</span><h4>身体ループを閉じる</h4><p>領域スケール、続いてマウス全脳の機能エミュレーションが、仮想／ロボット身体の感覚運動ループ<sup><a href="#ref24">24</a></sup>の中で特定行動を再現。脳は孤立では正常動作しないため、身体性が忠実度の条件になる。</p></li>
+              <li class="beat"><span class="beat-date">2036</span><h4>縮退問題に標準的な答え</h4><p>「異なるパラメータが同一活動を生む」縮退<sup><a href="#ref16">16</a></sup>に対し、<strong>摂動応答＋保持データ検証</strong>のベンチマークが証明の標準に。多くの“一致”が棄却され、再構成が反証可能になる。</p></li>
+              <li class="beat"><span class="beat-date">2037</span><h4>合意されたマウス・エミュレーション</h4><p>行動＋摂動の保持テスト群を通過するマウス脳エミュレーションが合意水準に到達。同時に問いが鋭くなる——<em>振る舞いの一致は、内部状態の一致を意味するのか</em>。</p></li>
+            </ol>
+          </div>
+
+          <!-- ERA 4 -->
+          <div class="era e4" id="era4" data-year="2038–2043" data-era="ヒトへの跳躍" data-metric="≈8.6×10¹⁰" data-metric-label="ヒト全脳ニューロン数（構造）">
+            <div class="era-head">
+              <div class="era-kicker"><span class="era-num">フェーズ 4</span><span class="era-yr">2038–2043</span><span class="era-flag">予測シナリオ</span></div>
+              <h3>ヒトへの跳躍</h3>
+              <p class="era-sub">マウスからヒトへ、さらに3桁。保存された脳から、全脳構造を取得する。</p>
+            </div>
+            <ol class="beats">
+              <li class="beat"><span class="beat-date">2039</span><h4>ヒト全脳の構造取得</h4><p>保存ドナー脳から、H01の1mm³断片<sup><a href="#ref9">9</a></sup>を全臓器へスケールしたエクサスケール構造コネクトームが得られ始める。約860億ニューロン・100兆シナプスの地図化に着手。</p></li>
+              <li class="beat"><span class="beat-date">2040</span><h4>構造からの状態推論が成熟</h4><p>EM形態から機能的シナプス重み・神経調節状態へ写像する手法が、動態を初期化できる水準に。構造だけでは欠けていた「動的状態」の溝を縮める。</p></li>
+              <li class="beat"><span class="beat-date">2041–42</span><h4>部分的ヒト・エミュレーション</h4><p>感覚野・海馬の記憶回路など部分系が、生前の記録や行動データと照合して検証される。全脳ではないが、ヒト回路が初めて「走る」。</p></li>
+              <li class="beat"><span class="beat-date">2043</span><h4>エミュレーション社会の経済学が政策課題に</h4><p>Hanson『The Age of Em』<sup><a href="#ref31">31</a></sup>が描いたエミュレーション経済・社会の論点が現実味を帯び、コピー権・労働・人格の統治枠組みの起草が始まる。</p></li>
+            </ol>
+          </div>
+
+          <!-- ERA 5 -->
+          <div class="era e5" id="era5" data-year="2044–2048" data-era="個人の再構成" data-metric="個人特異的" data-metric-label="記憶・人格を伴う再現">
+            <div class="era-head">
+              <div class="era-kicker"><span class="era-num">フェーズ 5</span><span class="era-yr">2044–2048</span><span class="era-flag">予測シナリオ</span></div>
+              <h3>個人の再構成</h3>
+              <p class="era-sub">パイプライン全体を、ひとりの個人について通す。</p>
+            </div>
+            <ol class="beats">
+              <li class="beat"><span class="beat-date">2045</span><h4>パイプラインの統合</h4><p>固定 → 取得 → 再構成 → 走らせる → 身体化 → 検証 が、特定個人について初めて端から端まで接続される。</p></li>
+              <li class="beat"><span class="beat-date">2046</span><h4>記憶と人格の再現</h4><p>全脳ヒト・エミュレーション候補が、ドナー特異的な記憶・性格マーカーを盲検テスト下で再現し始める。</p></li>
+              <li class="beat"><span class="beat-date">2047</span><h4>同一性検証バッテリの配備</h4><p>同一性の <em>連続性</em> を操作的に試す検証バッテリが運用される。同時に、法的地位・本人同意・コピー問題が現実の政策論点になる。</p></li>
+              <li class="beat"><span class="beat-date">2048</span><h4>「完成」を操作的に定義</h4><p>標準化団体が、形而上学的主張とは切り離した <strong>検証バッテリの通過</strong> として「完成」を定義する。</p></li>
+            </ol>
+          </div>
+
+          <!-- ERA 6 -->
+          <div class="era e6" id="era6" data-year="2049–2050" data-era="完成、そして分岐" data-metric="検証通過" data-metric-label="工学的完成の達成">
+            <div class="era-head">
+              <div class="era-kicker"><span class="era-num">フェーズ 6</span><span class="era-yr">2049–2050</span><span class="era-flag">予測シナリオ</span></div>
+              <h3>完成、そして分岐</h3>
+              <p class="era-sub">工学的には到達する。だが哲学的な問いは、ここで二つに割れる。</p>
+            </div>
+            <ol class="beats">
+              <li class="beat"><span class="beat-date">2049</span><h4>検証バッテリの通過</h4><p>ある全脳ヒト・エミュレーションが、合意された行動＋摂動＋記憶の検証バッテリを通過する。<strong>工学的な意味での「完成」</strong>に到達。</p></li>
+              <li class="beat"><span class="beat-date">2050</span><h4>分岐——振る舞いは検証できる、主観は測れない</h4><p>行動上の同一性は検証された。しかし完璧な振る舞いの再現と <em>主観的連続性</em> を分ける物理測定は存在しない<sup><a href="#ref28">28</a><a href="#ref29">29</a><a href="#ref30">30</a></sup>。ここで未来は二つのルートに分岐する（下記）。</p></li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- sticky rail -->
+        <aside class="rail" aria-hidden="true">
+          <div class="rail-card">
+            <div class="rail-ylabel">Year</div>
+            <div class="rail-year" id="rail-year">2026</div>
+            <div class="rail-era" id="rail-era">現在地・実証済み</div>
+            <div class="rail-track">
+              <div class="rail-fill" id="rail-fill"></div>
+              <button class="rail-node" data-i="0"><span class="rn-dot"></span>2026 地図の自動化</button>
+              <button class="rail-node" data-i="1"><span class="rn-dot"></span>2029 哺乳類の全脳</button>
+              <button class="rail-node" data-i="2"><span class="rn-dot"></span>2033 走らせる</button>
+              <button class="rail-node" data-i="3"><span class="rn-dot"></span>2038 ヒトへの跳躍</button>
+              <button class="rail-node" data-i="4"><span class="rn-dot"></span>2044 個人の再構成</button>
+              <button class="rail-node" data-i="5"><span class="rn-dot"></span>2049 完成と分岐</button>
+            </div>
+            <div class="rail-metric">
+              <b id="rail-metric">≈2×10⁵</b>
+              <small id="rail-metric-label">最大再構成ニューロン数</small>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== FORK ===== -->
+    <section id="fork">
+      <p class="eyebrow">3. The Fork / 2050の分岐</p>
+      <h2>完成の先で、未来は二つに割れる。</h2>
+      <p class="lead" style="margin-bottom:18px">技術が成功しても、同一性の問いは技術だけでは閉じない。AI 2027が「競争」と「減速」に分岐したように、ここでは検証の解釈で二つのルートが生まれる。</p>
+      <div class="fork reveal">
+        <div class="fork-tabs">
+          <button class="ftab active" data-route="a">ルートA・継続</button>
+          <button class="ftab" data-route="b">ルートB・複製問題</button>
+        </div>
+        <div class="fork-panel" data-route="a">
+          <div class="verdict">機能的・心理的連続性を採用</div>
+          <h4>アップロードは「本人の継続」とみなされる</h4>
+          <p>社会は、検証バッテリが示す <strong>機能的・心理的連続性</strong>を同一性の基準として受け入れる。エミュレーションは法的人格を得て、本人の継続として扱われる。破壊的コピーよりも、ニューロンを少しずつ置換していく <em>段階的アップロード</em>（テセウスの船型）が、連続性を保つ手続きとして好まれる。</p>
+          <p style="margin:0">論点は「いつ・どの条件で人格が継続するか」へ移り、技術と検証の精緻化が前進を続ける。</p>
+        </div>
+        <div class="fork-panel" data-route="b" hidden>
+          <div class="verdict">主観的連続性は未証明のまま</div>
+          <h4>アップロードは「後継者の作成」にとどまる</h4>
+          <p>主観的連続性を保証する測定が最後まで現れず、<strong>コピー問題</strong>が解けない。元の脳が残ったまま複製が走る事例が、両者を「別個の存在」として可視化する。アップロードは生存ではなく <em>相続人・分身の作成</em>として再定義され、法と倫理は原本と複製を区別する方向に進む。</p>
+          <p style="margin:0">工学的完成は揺るがないが、「自分が生き延びる手段」という当初の動機づけは満たされない、という結論になる。</p>
+        </div>
       </div>
     </section>
 
     <!-- ===== OPEN CHALLENGES ===== -->
     <section id="open">
-      <p class="eyebrow">5. Open Challenges / 残る壁</p>
+      <p class="eyebrow">4. Why Conditional / 残る壁</p>
       <h2>2050が「条件付き」である理由。</h2>
-      <p class="lead" style="margin-bottom:20px">外挿だけでは越えられない、原理的・社会的な3つの壁。ここが解けない限り、完成シナリオは前倒しできない。</p>
-      <div class="note reveal" style="margin-bottom:14px">
-        <b>① 識別可能性の壁。</b> 計測を増やしても、同じ観測を説明する内部状態が複数残るなら再構成は一意に閉じない<sup><a href="#ref5">5</a></sup>。最速ルートは「もっと測る」ことではなく「候補状態を減らす」摂動・検証の方法論である。
-      </div>
-      <div class="note reveal" style="margin-bottom:14px">
-        <b>② 非破壊・スケールの壁。</b> 生きたヒトから必要な状態変数を頭蓋越しに測る物理限界、そしてヒト全脳の構造取得・計算に要する数桁のスケーリング。破壊的取得を前提にするなら、保存と倫理の問題に直結する。
-      </div>
-      <div class="note reveal">
-        <b>③ 同一性・倫理の壁。</b> 完璧な振る舞いの再現と主観的連続性を分ける測定は存在しない。コピー問題、本人同意、社会的地位、停止条件——技術の成功だけでは決して閉じない論点が最後に残る。
-      </div>
-    </section>
-
-    <!-- ===== CONCLUSION ===== -->
-    <section id="conclusion">
-      <p class="eyebrow">6. Conclusion / 結論</p>
-      <h2>2050は約束ではなく、依存関係の関数である。</h2>
-      <p>
-        過去20年で、世界の研究は <strong>「測れる」「写せる」</strong> を疑いの余地なく実証した——
-        小動物の全脳配線図、ヒト皮質のナノスケール再構成、臨床で動くBCI。
-        これらは2008年のロードマップ<sup><a href="#ref1">1</a></sup>が「初期段階」と位置づけた地点を、現実が追い越したことを意味する。
-      </p>
-      <p>
-        だが完成を決めるのは、最も進んだ技術ではなく <strong>最も遅れた依存項</strong> である。
-        構造取得がいかに速くても、縮退を断つ再構成、全脳スケールの計算、そして同一性の検証が揃わなければパイプラインは閉じない。
-        したがって2050年完成は、これら律速段階を順に越えた場合に成立する <strong>条件付きシナリオ</strong> として読むのが正確だ。
-        本レビューが示したのは到達予言ではなく、<em>どの壁を越えれば、その未来が手前に近づくか</em> という地図である。
-      </p>
+      <p class="lead" style="margin-bottom:18px">外挿だけでは越えられない3つの律速。ここが解けなければ、シナリオは前倒しできない。</p>
+      <div class="note reveal" style="margin-bottom:12px"><b>① 識別可能性の壁。</b> 計測を増やしても、同じ観測を説明する内部状態が複数残るなら再構成は一意に閉じない<sup><a href="#ref16">16</a></sup>。鍵は「もっと測る」ことより、摂動と保持データで <strong>候補状態を減らす</strong>方法論。</div>
+      <div class="note reveal" style="margin-bottom:12px"><b>② スケールと非破壊の壁。</b> ヒト全脳は皮質1mm³<sup><a href="#ref9">9</a></sup>の約100万倍。撮像・再構成・計算の数桁スケーリングと、生体からの非破壊計測の物理限界。破壊的取得なら保存と倫理に直結する。</div>
+      <div class="note reveal"><b>③ 同一性・倫理の壁。</b> 完璧な振る舞いと主観的連続性を分ける測定は存在しない<sup><a href="#ref28">28</a><a href="#ref30">30</a></sup>。コピー問題・本人同意・社会的地位・停止条件——技術の成功だけでは閉じない論点が最後に残る<sup><a href="#ref31">31</a></sup>。</div>
     </section>
 
     <!-- ===== REFERENCES ===== -->
     <section id="refs">
       <p class="eyebrow">References / 参考文献</p>
-      <h2>引用研究。</h2>
-      <p class="muted" style="margin-bottom:18px">世界の公開研究から、各要素技術の代表的到達点を抜粋。年・掲載誌は刊行情報に基づく。</p>
+      <h2>引用研究（31件）。</h2>
+      <p class="muted" style="margin-bottom:16px">世界の公開研究から、各軸の代表的到達点を抜粋。2026年以降のマイルストーンはこれらの趨勢からの予測であり、引用は実証済みの土台を示す。</p>
       <ol class="refs reveal">
-        <li id="ref1">Sandberg, A., &amp; Bostrom, N. (2008). <i>Whole Brain Emulation: A Roadmap.</i> Technical Report #2008-3, Future of Humanity Institute, University of Oxford.</li>
-        <li id="ref2">White, J. G., Southgate, E., Thomson, J. N., &amp; Brenner, S. (1986). The structure of the nervous system of the nematode <i>Caenorhabditis elegans. Philosophical Transactions of the Royal Society B,</i> 314(1165), 1–340.</li>
-        <li id="ref3">Hodgkin, A. L., &amp; Huxley, A. F. (1952). A quantitative description of membrane current and its application to conduction and excitation in nerve. <i>The Journal of Physiology,</i> 117(4), 500–544.</li>
-        <li id="ref4">Markram, H., et al. (2015). Reconstruction and simulation of neocortical microcircuitry. <i>Cell,</i> 163(2), 456–492.</li>
-        <li id="ref5">Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <i>Nature Neuroscience,</i> 7(12), 1345–1352.</li>
-        <li id="ref6">McIntyre, R. L., &amp; Fahy, G. M. (2015). Aldehyde-stabilized cryopreservation. <i>Cryobiology,</i> 71(3), 448–458.</li>
-        <li id="ref7">Jun, J. J., et al. (2017). Fully integrated silicon probes for high-density recording of neural activity. <i>Nature,</i> 551(7679), 232–236.</li>
-        <li id="ref8">Shapson-Coe, A., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <i>Science,</i> 384(6696), eadk4858.</li>
-        <li id="ref9">Dorkenwald, S., et al. (The FlyWire Consortium) (2024). Neuronal wiring diagram of an adult brain. <i>Nature,</i> 634, 124–138.</li>
-        <li id="ref10">Schlegel, P., et al. (2024). Whole-brain annotation and multi-connectome cell typing of <i>Drosophila. Nature,</i> 634, 139–152.</li>
-        <li id="ref11">The MICrONS Consortium (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <i>Nature,</i> 640, 435–447.</li>
-        <li id="ref12">Willett, F. R., et al. (2021). High-performance brain-to-text communication via handwriting. <i>Nature,</i> 593, 249–254.</li>
-        <li id="ref13">Willett, F. R., et al. (2023). A high-performance speech neuroprosthesis. <i>Nature,</i> 620, 1031–1036.</li>
-        <li id="ref14">Metzger, S. L., et al. (2023). A high-performance neuroprosthesis for speech decoding and avatar control. <i>Nature,</i> 620, 1037–1046.</li>
-        <li id="ref15">Lorach, H., et al. (2023). Walking naturally after spinal cord injury using a brain–spine interface. <i>Nature,</i> 618, 126–133.</li>
-        <li id="ref16">Furber, S. B., Galluppi, F., Temple, S., &amp; Plana, L. A. (2014). The SpiNNaker project. <i>Proceedings of the IEEE,</i> 102(5), 652–665.</li>
-        <li id="ref17">Davies, M., et al. (2018). Loihi: A neuromorphic manycore processor with on-chip learning. <i>IEEE Micro,</i> 38(1), 82–99.</li>
-        <li id="ref18">Tononi, G. (2004). An information integration theory of consciousness. <i>BMC Neuroscience,</i> 5, 42.</li>
-        <li id="ref19">Dehaene, S., &amp; Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. <i>Neuron,</i> 70(2), 200–227.</li>
-        <li id="ref20">Cogitate Consortium; Ferrante, O., et al. (2025). Adversarial testing of global neuronal workspace and integrated information theories of consciousness. <i>Nature,</i> 642, 133–142.</li>
+        <li id="ref1">Sandberg, A., &amp; Bostrom, N. (2008). <i>Whole Brain Emulation: A Roadmap.</i> Tech. Report #2008-3, Future of Humanity Institute, Univ. of Oxford.</li>
+        <li id="ref2">White, J. G., et al. (1986). The structure of the nervous system of <i>C. elegans. Phil. Trans. R. Soc. B,</i> 314, 1–340.</li>
+        <li id="ref3">Cook, S. J., et al. (2019). Whole-animal connectomes of both <i>C. elegans</i> sexes. <i>Nature,</i> 571, 63–71.</li>
+        <li id="ref4">Witvliet, D., et al. (2021). Connectomes across development reveal principles of brain maturation. <i>Nature,</i> 596, 257–261.</li>
+        <li id="ref5">Winding, M., et al. (2023). The connectome of an insect brain (<i>Drosophila</i> larva). <i>Science,</i> 379, eadd9330.</li>
+        <li id="ref6">Scheffer, L. K., et al. (2020). A connectome and analysis of the adult <i>Drosophila</i> central brain (hemibrain). <i>eLife,</i> 9, e57443.</li>
+        <li id="ref7">Dorkenwald, S., et al. (FlyWire Consortium) (2024). Neuronal wiring diagram of an adult brain. <i>Nature,</i> 634, 124–138.</li>
+        <li id="ref8">Schlegel, P., et al. (2024). Whole-brain annotation and multi-connectome cell typing of <i>Drosophila. Nature,</i> 634, 139–152.</li>
+        <li id="ref9">Shapson-Coe, A., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <i>Science,</i> 384, eadk4858.</li>
+        <li id="ref10">The MICrONS Consortium (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <i>Nature,</i> 640.</li>
+        <li id="ref11">Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of the whole mouse brain. <i>Nature,</i> 624, 317–332.</li>
+        <li id="ref12">Siletti, K., et al. (2023). Transcriptomic diversity of cell types across the adult human brain. <i>Science,</i> 382, eadd7046.</li>
+        <li id="ref13">Chen, F., Tillberg, P. W., &amp; Boyden, E. S. (2015). Expansion microscopy. <i>Science,</i> 347, 543–548.</li>
+        <li id="ref14">Hodgkin, A. L., &amp; Huxley, A. F. (1952). A quantitative description of membrane current… <i>J. Physiol.,</i> 117, 500–544.</li>
+        <li id="ref15">Markram, H., et al. (2015). Reconstruction and simulation of neocortical microcircuitry. <i>Cell,</i> 163, 456–492.</li>
+        <li id="ref16">Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <i>Nat. Neurosci.,</i> 7, 1345–1352.</li>
+        <li id="ref17">McIntyre, R. L., &amp; Fahy, G. M. (2015). Aldehyde-stabilized cryopreservation. <i>Cryobiology,</i> 71, 448–458.</li>
+        <li id="ref18">Jun, J. J., et al. (2017). Fully integrated silicon probes for high-density recording of neural activity. <i>Nature,</i> 551, 232–236.</li>
+        <li id="ref19">Steinmetz, N. A., et al. (2021). Neuropixels 2.0: a miniaturized high-density probe. <i>Science,</i> 372, eabf4588.</li>
+        <li id="ref20">Willett, F. R., et al. (2021). High-performance brain-to-text communication via handwriting. <i>Nature,</i> 593, 249–254.</li>
+        <li id="ref21">Willett, F. R., et al. (2023). A high-performance speech neuroprosthesis. <i>Nature,</i> 620, 1031–1036.</li>
+        <li id="ref22">Metzger, S. L., et al. (2023). A high-performance neuroprosthesis for speech decoding and avatar control. <i>Nature,</i> 620, 1037–1046.</li>
+        <li id="ref23">Card, N. S., et al. (2024). An accurate and rapidly calibrating speech neuroprosthesis. <i>N. Engl. J. Med.,</i> 391, 609–618.</li>
+        <li id="ref24">Lorach, H., et al. (2023). Walking naturally after spinal cord injury using a brain–spine interface. <i>Nature,</i> 618, 126–133.</li>
+        <li id="ref25">Furber, S. B., et al. (2014). The SpiNNaker project. <i>Proc. IEEE,</i> 102, 652–665.</li>
+        <li id="ref26">Davies, M., et al. (2018). Loihi: a neuromorphic manycore processor with on-chip learning. <i>IEEE Micro,</i> 38, 82–99.</li>
+        <li id="ref27">Modha, D. S., et al. (2023). Neural inference at the frontier of energy, space, and time (NorthPole). <i>Science,</i> 382, 329–335.</li>
+        <li id="ref28">Tononi, G. (2004). An information integration theory of consciousness. <i>BMC Neuroscience,</i> 5, 42.</li>
+        <li id="ref29">Dehaene, S., &amp; Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. <i>Neuron,</i> 70, 200–227.</li>
+        <li id="ref30">Cogitate Consortium; Ferrante, O., et al. (2025). Adversarial testing of global neuronal workspace and integrated information theories. <i>Nature.</i></li>
+        <li id="ref31">Hanson, R. (2016). <i>The Age of Em: Work, Love, and Life when Robots Rule the Earth.</i> Oxford University Press.</li>
       </ol>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="brand" href="#top"><span class="dot"></span>マインドアップロード — roadmap 2050</a>
-      <p>全脳エミュレーション（マインドアップロード）が2050年に完成するまでの技術発展を、世界中の公開研究をもとにレビュー論文形式で辿るロードマップ。</p>
+      <a class="brand" href="#top"><span class="dot"></span>マインドアップロード — scenario 2050</a>
+      <p>全脳エミュレーション（マインドアップロード）が2050年に完成するまでを、世界中の公開研究をもとに年表シナリオとして描くロードマップ。AI 2027 形式。</p>
       <p class="disc">
-        免責: 本ページは公開研究に基づく科学コミュニケーションを目的とした <strong>ナラティブ・レビュー</strong> です。
-        2025年以降のマイルストーンは研究趨勢からの予測シナリオであり、特定の成果や時期を保証するものではありません。
-        意識・人格同一性の検証など、技術だけでは解決しない論点が含まれます。
+        免責: 本ページは公開研究に基づく <strong>シナリオ・レビュー</strong>です。2026年以降の年次マイルストーンは研究趨勢からの予測であり、特定の成果・時期を保証しません。
+        意識・人格同一性の検証など、技術だけでは解決しない論点を含み、結末は「継続」「複製問題」に分岐します。
       </p>
     </div>
   </footer>
@@ -510,6 +598,7 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+    // nav scrollspy
     const navLinks = [...document.querySelectorAll('.primary-nav a')];
     const map = new Map(navLinks.map(a => [a.getAttribute('href').slice(1), a]));
     const spy = new IntersectionObserver((entries) => {
@@ -521,10 +610,48 @@
         }
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['abstract','intro','roadmap','tech','timeline','open','refs'].forEach(id => {
+    ['abstract','scale','scenario','fork','open','refs'].forEach(id => {
       const s = document.getElementById(id); if (s) spy.observe(s);
     });
 
+    // era rail scrollytelling
+    const eras = [...document.querySelectorAll('.era')];
+    const railYear = document.getElementById('rail-year');
+    const railEra = document.getElementById('rail-era');
+    const railMetric = document.getElementById('rail-metric');
+    const railMetricLabel = document.getElementById('rail-metric-label');
+    const railFill = document.getElementById('rail-fill');
+    const nodes = [...document.querySelectorAll('.rail-node')];
+    const eraColors = ['#5fd6a4','#74c8b6','#7aa2ff','#9a9bf0','#bf9bef','#e08ad0'];
+    function setActive(i){
+      const era = eras[i]; if(!era) return;
+      railYear.textContent = era.dataset.year;
+      railYear.style.color = eraColors[i];
+      railEra.textContent = era.dataset.era;
+      railEra.style.color = eraColors[i];
+      railMetric.textContent = era.dataset.metric;
+      railMetricLabel.textContent = era.dataset.metricLabel;
+      nodes.forEach((n,k)=>{ n.classList.toggle('active',k===i); n.classList.toggle('done',k<i); });
+      railFill.style.height = (((i+0.5)/eras.length)*100) + '%';
+    }
+    const eraSpy = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ setActive(eras.indexOf(e.target)); } });
+    }, { rootMargin:'-45% 0px -45% 0px', threshold:0 });
+    eras.forEach(e=>eraSpy.observe(e));
+    nodes.forEach((n,i)=>n.addEventListener('click',()=>{ setActive(i); eras[i].scrollIntoView({behavior:'smooth',block:'start'}); }));
+    // initialise rail to first phase
+    setActive(0);
+
+    // fork tabs
+    const ftabs = [...document.querySelectorAll('.ftab')];
+    const fpanels = [...document.querySelectorAll('.fork-panel')];
+    ftabs.forEach(t=>t.addEventListener('click',()=>{
+      ftabs.forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      fpanels.forEach(p=>p.hidden = (p.dataset.route !== t.dataset.route));
+    }));
+
+    // mobile nav
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.primary-nav');
     toggle.addEventListener('click', () => {
