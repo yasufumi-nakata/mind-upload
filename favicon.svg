@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="mind-upload.com icon">
+  <defs>
+    <linearGradient id="g" x1="12" y1="10" x2="52" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5ed8c6"/>
+      <stop offset="1" stop-color="#7aa2ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0a0d14"/>
+  <path d="M18 41c-4-5-5-14 0-20 6-8 19-8 26 0 5 6 4 15 0 20-3 4-7 6-13 6s-10-2-13-6z" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 31h20M28 22v20M36 22v20" stroke="#e9edf7" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+</svg>

@@ -5,9 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>マインドアップロード 2050 — 全脳エミュレーション・シナリオ</title>
   <meta name="description" content="マインドアップロード（全脳エミュレーション）が2050年に完成するまでを、世界中の研究をもとに年表シナリオとして描く。AI 2027形式の、年ごとに具体化したロードマップ。31の実在研究を引用。">
+  <link rel="canonical" href="https://mind-upload.com/">
   <meta property="og:title" content="マインドアップロード 2050 — 全脳エミュレーション・シナリオ">
   <meta property="og:description" content="2026→2050。脳の地図化・再構成・エミュレーション・検証が、年ごとにどう積み上がりうるか。世界中の研究をもとにした年表シナリオ。">
   <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mind-upload.com/">
+  <meta property="og:image" content="https://mind-upload.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="マインドアップロード 2050 のシナリオ年表と脳マッピング規模の曲線">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="マインドアップロード 2050 — 全脳エミュレーション・シナリオ">
+  <meta name="twitter:description" content="2026→2050。脳の地図化・再構成・エミュレーション・検証がどう積み上がりうるかを描く年表シナリオ。">
+  <meta name="twitter:image" content="https://mind-upload.com/assets/og-image.png">
+  <meta name="theme-color" content="#0a0d14">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -45,7 +58,7 @@
   .site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
     background:rgba(8,11,17,.78);border-bottom:1px solid var(--line)}
   .nav-inner{max-width:var(--max);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:18px}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;letter-spacing:.2px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;letter-spacing:.2px;white-space:nowrap}
   .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--grad);box-shadow:0 0 16px rgba(94,216,198,.6)}
   .brand small{color:var(--faint);font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
   .primary-nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
@@ -186,6 +199,8 @@
   ol.refs li{counter-increment:r;position:relative;padding:10px 13px 10px 42px;background:var(--panel);
     border:1px solid var(--line);border-radius:10px;font-size:.82rem;color:#cfd6e5;line-height:1.55}
   ol.refs li::before{content:"["counter(r)"]";position:absolute;left:12px;top:10px;font-family:var(--mono);font-size:.74rem;color:var(--brand);font-weight:700}
+  ol.refs a.ref-link{color:inherit;text-decoration:none}
+  ol.refs a.ref-link:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--brand);text-underline-offset:3px}
   ol.refs i{color:var(--muted)}
 
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
@@ -201,6 +216,10 @@
     .rail{display:none}
   }
   @media (max-width:760px){
+    .nav-inner{padding:10px 14px;gap:10px}
+    .site-header .brand{font-size:.86rem;gap:7px}
+    .site-header .brand small{font-size:.58rem;letter-spacing:.09em}
+    h1{font-size:1.88rem;line-height:1.16}
     .stats{grid-template-columns:repeat(2,1fr)}
     ol.refs{grid-template-columns:1fr}
     .axis a{font-size:.6rem;padding:9px 3px}
@@ -211,6 +230,28 @@
     .nav-toggle{display:block}
   }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "マインドアップロード 2050 — 全脳エミュレーション・シナリオ",
+    "description": "マインドアップロード（全脳エミュレーション）が2050年に完成するまでを、世界中の研究をもとに年表シナリオとして描く。",
+    "inLanguage": "ja",
+    "url": "https://mind-upload.com/",
+    "mainEntityOfPage": "https://mind-upload.com/",
+    "image": "https://mind-upload.com/assets/og-image.png",
+    "dateModified": "2026-07-02",
+    "genre": ["scenario", "review", "whole brain emulation"],
+    "about": ["マインドアップロード", "全脳エミュレーション", "コネクトミクス", "脳シミュレーション"],
+    "citation": [
+      "https://ora.ox.ac.uk/objects/uuid:a6880196-34c7-47a0-80f1-74d32ab98788",
+      "https://doi.org/10.1038/s41586-024-07558-y",
+      "https://doi.org/10.1126/science.adk4858",
+      "https://doi.org/10.1038/s41586-025-08790-w",
+      "https://doi.org/10.1038/s41586-025-08888-1"
+    ]
+  }
+  </script>
 </head>
 <body id="top">
   <div id="progress"></div>
@@ -283,7 +324,9 @@
         実線は実証済み、点線は本シナリオの予測。完成はこの曲線が天井（ヒト全脳）に届く点として読める。
       </p>
       <div class="chart-wrap reveal">
-        <svg viewBox="0 0 820 380" role="img" aria-label="シナプス解像度で再構成された脳の最大規模（ニューロン数、対数）の年次推移">
+        <svg viewBox="0 0 820 380" role="img" aria-labelledby="scale-chart-title scale-chart-desc">
+          <title id="scale-chart-title">シナプス解像度で再構成された脳の最大規模</title>
+          <desc id="scale-chart-desc">線虫302ニューロンからヒト全脳8.6×10¹⁰ニューロンまでを対数軸で示し、2025年までを実証済み、2026年以降を予測シナリオとして描く。</desc>
           <!-- projection background band -->
           <rect x="499.5" y="44" width="288.5" height="268" fill="rgba(122,162,255,0.05)"/>
           <line x1="499.5" y1="36" x2="499.5" y2="324" stroke="rgba(122,162,255,0.35)" stroke-dasharray="3 4"/>
@@ -421,7 +464,7 @@
               <p class="era-sub">地図を「動かす」段階。身体ループと、再構成の一意性が主戦場になる。</p>
             </div>
             <ol class="beats">
-              <li class="beat"><span class="beat-date">2034</span><h4>ニューロモルフィックがマウス級を実時間で</h4><p>SpiNNaker系<sup><a href="#ref25">25</a></sup>・Loihi系<sup><a href="#ref26">26</a></sup>・NorthPole系<sup><a href="#ref27">27</a></sup>とエクサスケール計算が、マウス規模のスパイキング網を低電力・実時間で走らせる。</p></li>
+              <li class="beat"><span class="beat-date">2034</span><h4>ニューロモルフィックがマウス級を実時間で</h4><p>Hodgkin-Huxley型の膜電流モデル<sup><a href="#ref14">14</a></sup>を抽象化したスパイキング網を、SpiNNaker系<sup><a href="#ref25">25</a></sup>・Loihi系<sup><a href="#ref26">26</a></sup>・NorthPole系<sup><a href="#ref27">27</a></sup>とエクサスケール計算が、マウス規模で低電力・実時間に走らせる。</p></li>
               <li class="beat"><span class="beat-date">2035</span><h4>身体ループを閉じる</h4><p>領域スケール、続いてマウス全脳の機能エミュレーションが、仮想／ロボット身体の感覚運動ループ<sup><a href="#ref24">24</a></sup>の中で特定行動を再現。脳は孤立では正常動作しないため、身体性が忠実度の条件になる。</p></li>
               <li class="beat"><span class="beat-date">2036</span><h4>縮退問題に標準的な答え</h4><p>「異なるパラメータが同一活動を生む」縮退<sup><a href="#ref16">16</a></sup>に対し、<strong>摂動応答＋保持データ検証</strong>のベンチマークが証明の標準に。多くの“一致”が棄却され、再構成が反証可能になる。</p></li>
               <li class="beat"><span class="beat-date">2037</span><h4>合意されたマウス・エミュレーション</h4><p>行動＋摂動の保持テスト群を通過するマウス脳エミュレーションが合意水準に到達。同時に問いが鋭くなる——<em>振る舞いの一致は、内部状態の一致を意味するのか</em>。</p></li>
@@ -535,39 +578,39 @@
     <section id="refs">
       <p class="eyebrow">References / 参考文献</p>
       <h2>引用研究（31件）。</h2>
-      <p class="muted" style="margin-bottom:16px">世界の公開研究から、各軸の代表的到達点を抜粋。2026年以降のマイルストーンはこれらの趨勢からの予測であり、引用は実証済みの土台を示す。</p>
+      <p class="muted" style="margin-bottom:16px">世界の公開研究から、各軸の代表的到達点を抜粋。2026年以降のマイルストーンはこれらの趨勢からの予測であり、引用は実証済みの土台を示す。各項目は原典または安定した書誌ページへリンクしている。</p>
       <ol class="refs reveal">
-        <li id="ref1">Sandberg, A., &amp; Bostrom, N. (2008). <i>Whole Brain Emulation: A Roadmap.</i> Tech. Report #2008-3, Future of Humanity Institute, Univ. of Oxford.</li>
-        <li id="ref2">White, J. G., et al. (1986). The structure of the nervous system of <i>C. elegans. Phil. Trans. R. Soc. B,</i> 314, 1–340.</li>
-        <li id="ref3">Cook, S. J., et al. (2019). Whole-animal connectomes of both <i>C. elegans</i> sexes. <i>Nature,</i> 571, 63–71.</li>
-        <li id="ref4">Witvliet, D., et al. (2021). Connectomes across development reveal principles of brain maturation. <i>Nature,</i> 596, 257–261.</li>
-        <li id="ref5">Winding, M., et al. (2023). The connectome of an insect brain (<i>Drosophila</i> larva). <i>Science,</i> 379, eadd9330.</li>
-        <li id="ref6">Scheffer, L. K., et al. (2020). A connectome and analysis of the adult <i>Drosophila</i> central brain (hemibrain). <i>eLife,</i> 9, e57443.</li>
-        <li id="ref7">Dorkenwald, S., et al. (FlyWire Consortium) (2024). Neuronal wiring diagram of an adult brain. <i>Nature,</i> 634, 124–138.</li>
-        <li id="ref8">Schlegel, P., et al. (2024). Whole-brain annotation and multi-connectome cell typing of <i>Drosophila. Nature,</i> 634, 139–152.</li>
-        <li id="ref9">Shapson-Coe, A., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <i>Science,</i> 384, eadk4858.</li>
-        <li id="ref10">The MICrONS Consortium (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <i>Nature,</i> 640.</li>
-        <li id="ref11">Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of the whole mouse brain. <i>Nature,</i> 624, 317–332.</li>
-        <li id="ref12">Siletti, K., et al. (2023). Transcriptomic diversity of cell types across the adult human brain. <i>Science,</i> 382, eadd7046.</li>
-        <li id="ref13">Chen, F., Tillberg, P. W., &amp; Boyden, E. S. (2015). Expansion microscopy. <i>Science,</i> 347, 543–548.</li>
-        <li id="ref14">Hodgkin, A. L., &amp; Huxley, A. F. (1952). A quantitative description of membrane current… <i>J. Physiol.,</i> 117, 500–544.</li>
-        <li id="ref15">Markram, H., et al. (2015). Reconstruction and simulation of neocortical microcircuitry. <i>Cell,</i> 163, 456–492.</li>
-        <li id="ref16">Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <i>Nat. Neurosci.,</i> 7, 1345–1352.</li>
-        <li id="ref17">McIntyre, R. L., &amp; Fahy, G. M. (2015). Aldehyde-stabilized cryopreservation. <i>Cryobiology,</i> 71, 448–458.</li>
-        <li id="ref18">Jun, J. J., et al. (2017). Fully integrated silicon probes for high-density recording of neural activity. <i>Nature,</i> 551, 232–236.</li>
-        <li id="ref19">Steinmetz, N. A., et al. (2021). Neuropixels 2.0: a miniaturized high-density probe. <i>Science,</i> 372, eabf4588.</li>
-        <li id="ref20">Willett, F. R., et al. (2021). High-performance brain-to-text communication via handwriting. <i>Nature,</i> 593, 249–254.</li>
-        <li id="ref21">Willett, F. R., et al. (2023). A high-performance speech neuroprosthesis. <i>Nature,</i> 620, 1031–1036.</li>
-        <li id="ref22">Metzger, S. L., et al. (2023). A high-performance neuroprosthesis for speech decoding and avatar control. <i>Nature,</i> 620, 1037–1046.</li>
-        <li id="ref23">Card, N. S., et al. (2024). An accurate and rapidly calibrating speech neuroprosthesis. <i>N. Engl. J. Med.,</i> 391, 609–618.</li>
-        <li id="ref24">Lorach, H., et al. (2023). Walking naturally after spinal cord injury using a brain–spine interface. <i>Nature,</i> 618, 126–133.</li>
-        <li id="ref25">Furber, S. B., et al. (2014). The SpiNNaker project. <i>Proc. IEEE,</i> 102, 652–665.</li>
-        <li id="ref26">Davies, M., et al. (2018). Loihi: a neuromorphic manycore processor with on-chip learning. <i>IEEE Micro,</i> 38, 82–99.</li>
-        <li id="ref27">Modha, D. S., et al. (2023). Neural inference at the frontier of energy, space, and time (NorthPole). <i>Science,</i> 382, 329–335.</li>
-        <li id="ref28">Tononi, G. (2004). An information integration theory of consciousness. <i>BMC Neuroscience,</i> 5, 42.</li>
-        <li id="ref29">Dehaene, S., &amp; Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. <i>Neuron,</i> 70, 200–227.</li>
-        <li id="ref30">Cogitate Consortium; Ferrante, O., et al. (2025). Adversarial testing of global neuronal workspace and integrated information theories. <i>Nature.</i></li>
-        <li id="ref31">Hanson, R. (2016). <i>The Age of Em: Work, Love, and Life when Robots Rule the Earth.</i> Oxford University Press.</li>
+        <li id="ref1"><a class="ref-link" href="https://ora.ox.ac.uk/objects/uuid:a6880196-34c7-47a0-80f1-74d32ab98788" target="_blank" rel="noopener">Sandberg, A., &amp; Bostrom, N. (2008). <i>Whole Brain Emulation: A Roadmap.</i> Tech. Report #2008-3, Future of Humanity Institute, Univ. of Oxford.</a></li>
+        <li id="ref2"><a class="ref-link" href="https://doi.org/10.1098/rstb.1986.0056" target="_blank" rel="noopener">White, J. G., et al. (1986). The structure of the nervous system of <i>C. elegans. Phil. Trans. R. Soc. B,</i> 314, 1–340.</a></li>
+        <li id="ref3"><a class="ref-link" href="https://doi.org/10.1038/s41586-019-1352-7" target="_blank" rel="noopener">Cook, S. J., et al. (2019). Whole-animal connectomes of both <i>C. elegans</i> sexes. <i>Nature,</i> 571, 63–71.</a></li>
+        <li id="ref4"><a class="ref-link" href="https://doi.org/10.1038/s41586-021-03778-8" target="_blank" rel="noopener">Witvliet, D., et al. (2021). Connectomes across development reveal principles of brain maturation. <i>Nature,</i> 596, 257–261.</a></li>
+        <li id="ref5"><a class="ref-link" href="https://doi.org/10.1126/science.add9330" target="_blank" rel="noopener">Winding, M., et al. (2023). The connectome of an insect brain (<i>Drosophila</i> larva). <i>Science,</i> 379, eadd9330.</a></li>
+        <li id="ref6"><a class="ref-link" href="https://doi.org/10.7554/eLife.57443" target="_blank" rel="noopener">Scheffer, L. K., et al. (2020). A connectome and analysis of the adult <i>Drosophila</i> central brain (hemibrain). <i>eLife,</i> 9, e57443.</a></li>
+        <li id="ref7"><a class="ref-link" href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank" rel="noopener">Dorkenwald, S., et al. (FlyWire Consortium) (2024). Neuronal wiring diagram of an adult brain. <i>Nature,</i> 634, 124–138.</a></li>
+        <li id="ref8"><a class="ref-link" href="https://doi.org/10.1038/s41586-024-07686-5" target="_blank" rel="noopener">Schlegel, P., et al. (2024). Whole-brain annotation and multi-connectome cell typing of <i>Drosophila. Nature,</i> 634, 139–152.</a></li>
+        <li id="ref9"><a class="ref-link" href="https://doi.org/10.1126/science.adk4858" target="_blank" rel="noopener">Shapson-Coe, A., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <i>Science,</i> 384, eadk4858.</a></li>
+        <li id="ref10"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank" rel="noopener">The MICrONS Consortium (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <i>Nature,</i> 640.</a></li>
+        <li id="ref11"><a class="ref-link" href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank" rel="noopener">Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <i>Nature,</i> 624, 317–332.</a></li>
+        <li id="ref12"><a class="ref-link" href="https://doi.org/10.1126/science.add7046" target="_blank" rel="noopener">Siletti, K., et al. (2023). Transcriptomic diversity of cell types across the adult human brain. <i>Science,</i> 382, eadd7046.</a></li>
+        <li id="ref13"><a class="ref-link" href="https://doi.org/10.1126/science.1260088" target="_blank" rel="noopener">Chen, F., Tillberg, P. W., &amp; Boyden, E. S. (2015). Expansion microscopy. <i>Science,</i> 347, 543–548.</a></li>
+        <li id="ref14"><a class="ref-link" href="https://doi.org/10.1113/jphysiol.1952.sp004764" target="_blank" rel="noopener">Hodgkin, A. L., &amp; Huxley, A. F. (1952). A quantitative description of membrane current… <i>J. Physiol.,</i> 117, 500–544.</a></li>
+        <li id="ref15"><a class="ref-link" href="https://doi.org/10.1016/j.cell.2015.09.029" target="_blank" rel="noopener">Markram, H., et al. (2015). Reconstruction and simulation of neocortical microcircuitry. <i>Cell,</i> 163, 456–492.</a></li>
+        <li id="ref16"><a class="ref-link" href="https://doi.org/10.1038/nn1352" target="_blank" rel="noopener">Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <i>Nat. Neurosci.,</i> 7, 1345–1352.</a></li>
+        <li id="ref17"><a class="ref-link" href="https://doi.org/10.1016/j.cryobiol.2015.09.003" target="_blank" rel="noopener">McIntyre, R. L., &amp; Fahy, G. M. (2015). Aldehyde-stabilized cryopreservation. <i>Cryobiology,</i> 71, 448–458.</a></li>
+        <li id="ref18"><a class="ref-link" href="https://doi.org/10.1038/nature24636" target="_blank" rel="noopener">Jun, J. J., et al. (2017). Fully integrated silicon probes for high-density recording of neural activity. <i>Nature,</i> 551, 232–236.</a></li>
+        <li id="ref19"><a class="ref-link" href="https://doi.org/10.1126/science.abf4588" target="_blank" rel="noopener">Steinmetz, N. A., et al. (2021). Neuropixels 2.0: a miniaturized high-density probe. <i>Science,</i> 372, eabf4588.</a></li>
+        <li id="ref20"><a class="ref-link" href="https://doi.org/10.1038/s41586-021-03506-2" target="_blank" rel="noopener">Willett, F. R., et al. (2021). High-performance brain-to-text communication via handwriting. <i>Nature,</i> 593, 249–254.</a></li>
+        <li id="ref21"><a class="ref-link" href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank" rel="noopener">Willett, F. R., et al. (2023). A high-performance speech neuroprosthesis. <i>Nature,</i> 620, 1031–1036.</a></li>
+        <li id="ref22"><a class="ref-link" href="https://doi.org/10.1038/s41586-023-06443-4" target="_blank" rel="noopener">Metzger, S. L., et al. (2023). A high-performance neuroprosthesis for speech decoding and avatar control. <i>Nature,</i> 620, 1037–1046.</a></li>
+        <li id="ref23"><a class="ref-link" href="https://doi.org/10.1056/NEJMoa2314132" target="_blank" rel="noopener">Card, N. S., et al. (2024). An accurate and rapidly calibrating speech neuroprosthesis. <i>N. Engl. J. Med.,</i> 391, 609–618.</a></li>
+        <li id="ref24"><a class="ref-link" href="https://doi.org/10.1038/s41586-023-06094-5" target="_blank" rel="noopener">Lorach, H., et al. (2023). Walking naturally after spinal cord injury using a brain–spine interface. <i>Nature,</i> 618, 126–133.</a></li>
+        <li id="ref25"><a class="ref-link" href="https://doi.org/10.1109/JPROC.2014.2304638" target="_blank" rel="noopener">Furber, S. B., et al. (2014). The SpiNNaker project. <i>Proc. IEEE,</i> 102, 652–665.</a></li>
+        <li id="ref26"><a class="ref-link" href="https://doi.org/10.1109/MM.2018.112130359" target="_blank" rel="noopener">Davies, M., et al. (2018). Loihi: a neuromorphic manycore processor with on-chip learning. <i>IEEE Micro,</i> 38, 82–99.</a></li>
+        <li id="ref27"><a class="ref-link" href="https://doi.org/10.1126/science.adh1174" target="_blank" rel="noopener">Modha, D. S., et al. (2023). Neural inference at the frontier of energy, space, and time (NorthPole). <i>Science,</i> 382, 329–335.</a></li>
+        <li id="ref28"><a class="ref-link" href="https://doi.org/10.1186/1471-2202-5-42" target="_blank" rel="noopener">Tononi, G. (2004). An information integration theory of consciousness. <i>BMC Neuroscience,</i> 5, 42.</a></li>
+        <li id="ref29"><a class="ref-link" href="https://doi.org/10.1016/j.neuron.2011.03.018" target="_blank" rel="noopener">Dehaene, S., &amp; Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. <i>Neuron,</i> 70, 200–227.</a></li>
+        <li id="ref30"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08888-1" target="_blank" rel="noopener">Cogitate Consortium; Ferrante, O., et al. (2025). Adversarial testing of global neuronal workspace and integrated information theories. <i>Nature.</i></a></li>
+        <li id="ref31"><a class="ref-link" href="https://global.oup.com/academic/product/the-age-of-em-9780198754626" target="_blank" rel="noopener">Hanson, R. (2016). <i>The Age of Em: Work, Love, and Life when Robots Rule the Earth.</i> Oxford University Press.</a></li>
       </ol>
     </section>
   </main>
