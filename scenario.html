@@ -6,6 +6,9 @@
   <title>別冊 シナリオ2050 — 全脳エミュレーション・シナリオ年表 | マインドアップロード総合ガイド</title>
   <meta name="description" content="マインドアップロード（全脳エミュレーション）が2050年に完成するまでを、世界中の研究をもとに年表シナリオとして描く。AI 2027形式の、年ごとに具体化した条件付きロードマップ。総合ガイドの別冊。">
   <link rel="canonical" href="https://mind-upload.com/scenario.html">
+  <link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/">
+  <link rel="alternate" hreflang="en" href="https://mind-upload.com/">
+  <link rel="alternate" hreflang="x-default" href="https://mind-upload.com/">
   <meta property="og:title" content="別冊 シナリオ2050 — 全脳エミュレーション・シナリオ年表">
   <meta property="og:description" content="2026→2050。脳の地図化・再構成・エミュレーション・検証が、年ごとにどう積み上がりうるか。世界中の研究をもとにした条件付きシナリオ年表。">
   <meta property="og:type" content="article">
@@ -25,6 +28,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- shared components (.tbl / .chip / .key / .lang-switch); the page's own rules below override where they differ -->
+  <link rel="stylesheet" href="/assets/site.css?v=20260808">
   <style>
   /* =========================================================
      Mind Uploading 2050 — a dated scenario timeline
@@ -207,6 +212,25 @@
   html.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
   html.js .reveal.in{opacity:1;transform:none}
 
+  /* derivation of the dates */
+  .why{background:rgba(122,162,255,.06);border:1px solid rgba(122,162,255,.22);border-radius:12px;
+    padding:14px 18px;margin:14px 0 0;font-size:.9rem;color:#cfd6e5}
+  .why .tag{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--brand-2);margin-bottom:7px}
+  .why p{margin:0 0 .55em;font-size:.9rem;color:#cfd6e5}
+  .why p:last-child{margin:0}
+  .why b{color:#dce6ff}
+  .math{font-family:var(--mono);font-size:.84em;color:#bfe9e0;background:var(--panel-3);
+    border:1px solid var(--line);border-radius:8px;padding:.7em .9em;display:block;margin:.7em 0;
+    line-height:1.75;white-space:pre-wrap;word-break:break-word}
+  @media(max-width:640px){.math{font-size:.76em}}
+  .law{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--brand-2);
+    border-radius:12px;padding:18px 22px;margin:0 0 14px}
+  .law h4{margin:0 0 .3em;font-size:1.04rem}
+  .law .lead-in{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  .law p{font-size:.93rem;margin:0 0 .7em}
+  .law p:last-child{margin:0}
+
   .site-footer{border-top:1px solid var(--line);margin-top:24px;background:var(--bg-2)}
   .footer-inner{max-width:var(--max);margin:0 auto;padding:32px 22px;color:var(--muted);font-size:.85rem}
   .footer-inner .brand{margin-bottom:10px}
@@ -261,17 +285,22 @@
 
   <header class="site-header">
     <div class="nav-inner">
-      <a class="brand" href="/"><span class="dot"></span>マインドアップロード <small>scenario 2050</small></a>
-      <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
+      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード <small>scenario 2050</small></a>
       <nav class="primary-nav" aria-label="主要セクション">
         <a href="/">← 総合ガイド</a>
         <a href="#abstract">要旨</a>
         <a href="#scale">規模</a>
+        <a href="#basis">根拠</a>
         <a href="#scenario">シナリオ</a>
         <a href="#fork">2050分岐</a>
         <a href="#open">壁</a>
         <a href="#refs">文献</a>
       </nav>
+      <div class="lang-switch" role="group" aria-label="Language / 言語">
+        <a href="/" hreflang="en" lang="en">EN</a>
+        <a href="/ja/" hreflang="ja" aria-current="true">日本語</a>
+      </div>
+      <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
     </div>
   </header>
 
@@ -289,11 +318,12 @@
         <span>形式: 年表シナリオ</span>
         <span>範囲: 全世界の公開研究</span>
         <span>区間: 2026–2050</span>
-        <span>引用: 31研究</span>
+        <span>年号の導出: 4つの外挿則</span>
+        <span>引用: 44研究</span>
       </div>
       <div class="callout" style="margin-top:24px">
         <p style="margin:0">
-          <strong>本ページは<a href="/" style="color:var(--brand)">総合ガイド</a>の別冊（思考実験）です。</strong>
+          <strong>本ページは<a href="/ja/" style="color:var(--brand)">総合ガイド</a>の別冊（思考実験）です。</strong>
           実証済みの事実の整理は<a href="/progress.html" style="color:var(--brand)">第3章 現在地</a>、予測の比較は<a href="/future.html" style="color:var(--brand)">第4章 未来</a>へ。
           以下の年表は「楽観側の条件がすべて揃った場合」に何が起こりうるかを描く<strong>条件付きシナリオ</strong>であり、予測値（中央値2070年頃）より意図的に速い。
         </p>
@@ -317,7 +347,7 @@
           ヒト皮質1mm³<sup><a href="#ref9">9</a></sup>まで押し上げ、<strong>読み出し</strong>は会話速度の発話BCI<sup><a href="#ref21">21</a><a href="#ref23">23</a></sup>に到達した。
         </p>
         <p>
-          本レビューは、この曲線を外挿し、2026→2050を6フェーズの年表シナリオとして描く——
+          本レビューは、この曲線を外挿し、2026→2050を6フェーズの年表シナリオとして描く。各フェーズの年号は<a class="ref-link" style="color:var(--brand)" href="#basis">4つの外挿則</a>から導出し、計算過程と「崩れる条件」をすべて開示する——
           <strong>地図の自動化 → 哺乳類の全脳 → 走らせる → ヒトへの跳躍 → 個人の再構成 → 完成と分岐</strong>。
           各フェーズは前を前提に積み上がる。2050年完成は確約ではなく、<strong>縮退（再構成の一意性）</strong><sup><a href="#ref16">16</a></sup>、
           <strong>全脳スケール</strong>、<strong>同一性の検証</strong>という律速段階を越えた場合に成立する <em>条件付きシナリオ</em>であり、
@@ -409,9 +439,139 @@
       </div>
     </section>
 
+    <!-- ===== DERIVATION / なぜこの時期なのか ===== -->
+    <section id="basis">
+      <p class="eyebrow">2. The Derivation / 年号の根拠</p>
+      <h2>なぜ、この時期なのか。</h2>
+      <p class="lead" style="margin-bottom:22px">
+        シナリオの年号は雰囲気で置いたものではない。<strong>3つの外挿則</strong>から各フェーズの所要年数を求め、それを積み上げた結果が2050年である。
+        ここでは計算を全部開示する——<em>どこが堅く、どこが賭けなのか</em>を読者が自分で判定できるようにするためである。
+      </p>
+
+      <div class="law reveal">
+        <span class="lead-in">Law 1 — Scale</span>
+        <h4>地図化の規模則：全コネクトームの最大ニューロン数</h4>
+        <p>実測点は4つしかないが、傾きははっきりしている。</p>
+        <span class="math">1986: 302（線虫）<sup><a href="#ref2">2</a></sup> → 2020: 2.5万（ハエ中心脳）<sup><a href="#ref6">6</a></sup> → 2024: 13.9万（ハエ全脳）<sup><a href="#ref7">7</a></sup> → 2025: 16.7万（雄ハエCNS）<sup><a href="#ref32">32</a></sup>
+長期平均（1986→2024）: 2.66桁 ÷ 38年 = <b>0.070 桁/年</b>（1桁に14.3年）
+直近（2020→2024）  : 0.75桁 ÷ 4年  = <b>0.187 桁/年</b>（1桁に5.4年）</span>
+        <p>
+          この2つのレートを当てると、次の目標までの年数はこうなる。
+        </p>
+        <span class="math">ハエ13.9万 → マウス7×10⁷ : 2.70桁 → 長期レートで38.6年（2063年）／直近レートで14.4年（<b>2038年</b>）
+マウス → ヒト8.6×10¹⁰    : 3.09桁 → 直近レートで16.5年</span>
+        <p style="margin:0">
+          <b>読みどころ:</b> シナリオが置く「マウス全脳2030年」は、直近レートのさらに<b>約2.4倍</b>の加速を要求する。
+          一方で「マウス2030 → ヒト2045」は15年で3.09桁＝0.21桁/年と、<b>直近レートとほぼ同じ</b>である。
+          つまり本シナリオの賭けは、ほぼ全てフェーズ2（マウス全脳）の一点に集中している。
+        </p>
+      </div>
+
+      <div class="law reveal">
+        <span class="lead-in">Law 2 — Data</span>
+        <h4>データ量の則：H01（ヒト皮質1mm³ = 1.4ペタバイト）を単位に換算する</h4>
+        <p>撮像量は体積に比例する。ヒト皮質1mm³の再構成データが1.4PBだったことから<sup><a href="#ref9">9</a></sup>、必要量は単純な掛け算で出る。</p>
+        <span class="math">ハエ全脳  ≈ 0.08 mm³   → 約 110 テラバイト
+マウス全脳 ≈ 500 mm³    → 約 0.7 <b>エクサ</b>バイト（ハエの約6,000倍）
+ヒト全脳  ≈ 1.2×10⁶ mm³ → 約 1.7 <b>ゼタ</b>バイト（ハエの約1,500万倍）</span>
+        <p style="margin:0">
+          現行の最速EM（マルチビームSEM）を前提とした試算では、マウス全脳の撮像・再構成だけで<b>10年超</b>という見積もりがある<sup><a href="#ref33">33</a></sup>。
+          シナリオが「2027開始 → 2028撮像完了 → 2030初版公開」とするのは、装置の並列化とスループット改善で<b>5倍前後に加速する</b>という想定に立っている。
+          現在進行中の10mm³規模のパイロット（マウス全脳の約2%）<sup><a href="#ref34">34</a></sup>が、この想定の可否を最初に教えてくれる指標になる。
+        </p>
+      </div>
+
+      <div class="law reveal">
+        <span class="lead-in">Law 3 — Compute</span>
+        <h4>計算の則：エクサ級はすでに到達済み、次の4桁に約19年</h4>
+        <p>2008年ロードマップの見積もりでは、スパイキング水準のヒト全脳が約10¹⁸ FLOPS、電気生理水準が約10²² FLOPS<sup><a href="#ref1">1</a></sup>。</p>
+        <span class="math">TOP500首位の伸び: 2008年 1 ペタFLOPS → 2022年 1 エクサFLOPS<sup><a href="#ref35">35</a></sup>
+             = 3桁 ÷ 14年 = <b>0.21 桁/年</b>
+スパイキング水準（10¹⁸）: <b>2022年に到達済み</b>
+電気生理水準（10²²）   : 4桁 ÷ 0.21 = 約19年 → <b>2041–2045年頃</b></span>
+        <p style="margin:0">
+          <b>読みどころ:</b> 計算資源は<b>本シナリオの律速ではない</b>。ヒト全脳を高解像度で走らせる計算能力は、地図が完成する時期と自然に揃う。
+          真の壁は演算量ではなく、10¹⁴シナプスの状態を保持・更新するメモリと帯域、そしてゼタバイト級データの処理パイプラインである。
+        </p>
+      </div>
+
+      <div class="law reveal">
+        <span class="lead-in">Law 4 — Automation</span>
+        <h4>校正の則：ここだけは「外挿」ではなく「2桁のブレイクスルー」が要る</h4>
+        <p>
+          自動セグメンテーションの出力は、そのままでは配線図にならない。ハエ全脳では自動処理の後に、
+          コミュニティによる数百万回規模の人手編集——延べにして<b>数十人年</b>と見積もられる校正が投入された<sup><a href="#ref7">7</a><a href="#ref36">36</a></sup>。
+        </p>
+        <span class="math">ハエ13.9万ニューロン: 校正 延べ数十人年
+マウス7×10⁷（500倍）を単純外挿: <b>1万人年規模</b> → 現実的でない</span>
+        <p style="margin:0">
+          したがってフェーズ1（2026–28）の「地図の自動化」は、他のフェーズと性質が違う。
+          外挿ではなく、<b>校正コストを2桁下げる</b>という達成を前提に置いている。
+          E11 Bioのタンパク質バーコード（PRISM）<sup><a href="#ref37">37</a></sup>のような、そもそも校正を要らなくする設計がこの前提の担い手である。
+          <b>ここが崩れれば、シナリオ全体が Law 1 の長期レート（マウス2063年）側へ滑り落ちる。</b>
+        </p>
+      </div>
+
+      <h3 style="font-size:1.15rem;margin:30px 0 12px">フェーズごとの根拠と、崩れる条件</h3>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>フェーズ</th><th>年</th><th>年号の導出</th><th>前提（これが崩れると遅れる）</th><th>確度</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>1. 地図の自動化</b></td><td class="num">2026–28</td>
+              <td>新発見を必要とせず、FlyWire・MICrONSで実証済みのパイプライン<sup><a href="#ref7">7</a><a href="#ref10">10</a></sup>を標準化するだけの区間。所要は普及の速度で決まる</td>
+              <td>Law 4（校正コスト2桁減）。資金の連続性</td>
+              <td><span class="chip done">高い</span></td>
+            </tr>
+            <tr>
+              <td><b>2. 哺乳類の全脳</b></td><td class="num">2029–32</td>
+              <td>Law 1 を直近レートの2.4倍で外挿。10mm³パイロットが3年で完了し、その50倍へ横展開に3年という配分</td>
+              <td>撮像スループット5倍、校正の完全自動化、10年連続の資金。<b>いずれか一つでも欠けると2038年前後へ後退</b></td>
+              <td><span class="chip open">最も脆い</span></td>
+            </tr>
+            <tr>
+              <td><b>3. 走らせる</b></td><td class="num">2033–37</td>
+              <td>ハエでは「モデル<sup><a href="#ref38">38</a></sup>→身体化<sup><a href="#ref39">39</a></sup>」に2年しか要さなかった。マウスは560倍だが Law 3 より計算は律速でないため、モデル化の科学に5年を配分</td>
+              <td>構造から動態（シナプス重み・神経修飾）を推定する手法の確立。<b>新しい科学が必要な唯一の区間</b>で、見積もりの不確実性が最大</td>
+              <td><span class="chip now">科学次第</span></td>
+            </tr>
+            <tr>
+              <td><b>4. ヒトへの跳躍</b></td><td class="num">2038–43</td>
+              <td>Law 1 の直近レートをそのまま適用（マウス→ヒトで約16年）。マウス完了を待たず並行着手する前提で2039年開始とする。Law 3 の電気生理水準到達（2041–45）とも整合</td>
+              <td>保存脳の供給（フェーズ2で臨床グレード保存が始まる想定に依存）、倫理・法の枠組み</td>
+              <td><span class="chip soon">条件つき</span></td>
+            </tr>
+            <tr>
+              <td><b>5. 個人の再構成</b></td><td class="num">2044–48</td>
+              <td>技術ではなく<b>合意形成</b>の時間として5年を配分。検証バッテリの設計・多施設での再現・標準化団体による採択という手続きの所要</td>
+              <td>検証基準そのものの合意。現在この軸は事実上ゼロからの出発</td>
+              <td><span class="chip open">未着手</span></td>
+            </tr>
+            <tr>
+              <td><b>6. 完成と分岐</b></td><td class="num">2049–50</td>
+              <td>上記の<b>単純な積み上げの終端</b>。切りのいい2050年を先に決めて逆算したのではなく、各フェーズの所要年数の和がここに落ちる</td>
+              <td>—</td>
+              <td><span class="chip far">終端</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note" style="margin-top:20px">
+        <p style="margin:0">
+          <b>この2050年を、外部の予測とどう突き合わせるか。</b>
+          予測コミュニティ（Metaculus）の中央値は<b>2070年頃</b><sup><a href="#ref40">40</a></sup>、2025年の分野内レビューは<b>最短でも30–40年（2055–65年以降）</b>と評価している<sup><a href="#ref41">41</a></sup>。
+          本シナリオの2050年はそれらより15〜20年早い。差はどこから来るのか——上の表を見れば分かるとおり、
+          <b>ほぼ全てフェーズ2と3</b>、すなわち「マウス全脳の地図化速度」と「構造から動態を推定する科学が5年で片づくか」の2点に由来する。
+          この2つを保守的に見積もれば、本シナリオの年表はそのまま2065–70年へ平行移動する。
+          つまり本ページは予測ではなく、<b>「どの2つの仮定を信じるかで、未来が20年動く」ことを示すための道具</b>である。
+        </p>
+      </div>
+    </section>
+
     <!-- ===== SCENARIO TIMELINE ===== -->
     <section id="scenario">
-      <p class="eyebrow">2. The Scenario / シナリオ年表</p>
+      <p class="eyebrow">3. The Scenario / シナリオ年表</p>
       <h2>2026 → 2050、6つのフェーズ。</h2>
       <p class="lead" style="margin-bottom:14px">右の年号パネルはスクロールに追従し、いまどのフェーズを読んでいるかを示す。クリックで各フェーズへ移動。</p>
       <nav class="axis reveal" aria-label="フェーズ早送り">
@@ -446,10 +606,16 @@
             </div>
             <ol class="beats">
               <li class="beat"><span class="beat-date">2026</span><h4>EM再構成がAIで律速解除</h4><p>フラッドフィリング／Transformer系の自動セグメンテーションが、ペタバイト級EM画像の人手コストを激減させる。FlyWire・H01・MICrONSで実証されたパイプライン<sup><a href="#ref7">7</a><a href="#ref9">9</a><a href="#ref10">10</a></sup>が標準化し、再構成スループットが取得の主律速でなくなる。</p></li>
-              <li class="beat"><span class="beat-date">2027</span><h4>マウス全脳プロジェクトの始動</h4><p>公的（BRAIN Initiative等）と民間の連合が、約7,000万ニューロンの <em>マウス全脳コネクトーム</em> を明確な中間目標に掲げ、全脳EM撮像を開始。1mm³から全脳へ、約3桁のスケールアップに着手。</p></li>
+              <li class="beat"><span class="beat-date">2027</span><h4>マウス全脳プロジェクトの始動</h4><p>公的（BRAIN Initiative等）と民間の連合が、約7,000万ニューロンの <em>マウス全脳コネクトーム</em> を明確な中間目標に掲げ、全脳EM撮像を開始。2023年に始まったBRAIN CONNECTSの10mm³パイロット<sup><a href="#ref34">34</a></sup>が土台になり、1mm³から全脳へ約3桁のスケールアップに着手する。</p></li>
               <li class="beat"><span class="beat-date">2027</span><h4>発話BCIが会話速度へ</h4><p>皮質内発話ニューロプロステーシス<sup><a href="#ref21">21</a><a href="#ref22">22</a><a href="#ref23">23</a></sup>が日常会話に耐える速度・安定性に達し、複数チームで再現。「神経活動から状態を読む」読み出し能力が臨床標準になる。</p></li>
               <li class="beat"><span class="beat-date">2028</span><h4>マウス全脳の撮像完了</h4><p>全脳EMデータ取得が完了し、自動再構成フェーズへ。分子・細胞型アトラス<sup><a href="#ref11">11</a><a href="#ref12">12</a></sup>や拡張顕微鏡<sup><a href="#ref13">13</a></sup>との重ね合わせ準備が進む。</p></li>
             </ol>
+            <div class="why">
+              <span class="tag">なぜ2026–2028か</span>
+              <p><b>導出:</b> この区間だけは外挿ではない。FlyWire<sup><a href="#ref7">7</a></sup>とMICrONS<sup><a href="#ref10">10</a></sup>で
+              <b>すでに動いているパイプラインを標準化する</b>だけなので、所要年数は新発見ではなく普及の速度で決まる。3年はその普及に要する時間。</p>
+              <p style="margin:0"><b>崩れる条件:</b> Law 4（校正コストを2桁下げる）が達成できないこと。ここが動かなければ以降のフェーズは全て長期レート側へ滑る。</p>
+            </div>
           </div>
 
           <!-- ERA 2 -->
@@ -460,11 +626,19 @@
               <p class="era-sub">線虫からマウスへ。構造の軸で初めて哺乳類の全脳が閉じる。</p>
             </div>
             <ol class="beats">
-              <li class="beat"><span class="beat-date">2030</span><h4>マウス全脳コネクトーム（初版）</h4><p>約7,000万ニューロン・約10¹¹シナプスの全配線図ドラフトが公開。線虫→ハエ→マウスの跳躍で、哺乳類の <em>構造</em> 軸が一段落する。</p></li>
+              <li class="beat"><span class="beat-date">2030</span><h4>マウス全脳コネクトーム（初版）</h4><p>約7,000万ニューロン・約10¹¹シナプスの全配線図ドラフトが公開。データ量は約0.7エクサバイト（Law 2）。線虫→ハエ→マウスの跳躍で、哺乳類の <em>構造</em> 軸が一段落する<sup><a href="#ref33">33</a><a href="#ref34">34</a></sup>。</p></li>
               <li class="beat"><span class="beat-date">2031</span><h4>マルチモーダルなマウス脳</h4><p>配線図に、全脳の細胞型（トランスクリプトミクス）<sup><a href="#ref11">11</a></sup>とNeuropixels級の機能記録<sup><a href="#ref19">19</a></sup>を重ね合わせ。「構造＋分子＋活動」が同一座標で揃う初の哺乳類データセット。</p></li>
-              <li class="beat"><span class="beat-date">2031</span><h4>動態のファウンデーションモデル</h4><p>構造から活動を予測する大規模モデル（“仮想マウス脳”）が、感覚運動回路で機能を再現し始める。Blue Brainの微小回路再構成<sup><a href="#ref15">15</a></sup>がデータ駆動で全脳級へ拡張。</p></li>
+              <li class="beat"><span class="beat-date">2031</span><h4>動態のファウンデーションモデル</h4><p>構造から活動を予測する大規模モデル（“仮想マウス脳”）が、感覚運動回路で機能を再現し始める。2025年に視覚野で実証された基盤モデル型デジタルツイン<sup><a href="#ref42">42</a></sup>と、Blue Brainの微小回路再構成<sup><a href="#ref15">15</a></sup>が、データ駆動で全脳級へ拡張される。</p></li>
               <li class="beat"><span class="beat-date">2032</span><h4>臨床グレードの脳保存</h4><p>ASC由来の手続き<sup><a href="#ref17">17</a></sup>が標準化し、終末期・研究プロトコル下で <em>ヒト全脳</em> をシナプス解像度で保存する事例が現れる。将来の取得に向けた「原本」の確保が始まる。</p></li>
             </ol>
+            <div class="why">
+              <span class="tag">なぜ2029–2032か ・ <b>本シナリオで最も脆い接合部</b></span>
+              <p><b>導出:</b> Law 1 の直近レート（0.187桁/年）をそのまま当てるとマウス全脳は2038年になる。
+              2030年に置くには <b>約2.4倍の加速</b>が要る。内訳の想定は、進行中の10mm³パイロット<sup><a href="#ref34">34</a></sup>が3年で完了し、
+              その50倍への横展開にさらに3年——撮像スループット5倍と校正自動化が同時に効いた場合の値である。</p>
+              <p style="margin:0"><b>崩れる条件:</b> スループット・自動化・資金の10年連続性のうち<b>一つでも欠ければ2038年前後へ後退</b>し、
+              以降のフェーズがまとめて8年ずれる。第3章の<a class="ref-link" style="color:var(--brand)" href="/progress.html#watch">ウォッチリスト</a>でこの区間を追う理由がここにある。</p>
+            </div>
           </div>
 
           <!-- ERA 3 -->
@@ -476,10 +650,18 @@
             </div>
             <ol class="beats">
               <li class="beat"><span class="beat-date">2034</span><h4>ニューロモルフィックがマウス級を実時間で</h4><p>Hodgkin-Huxley型の膜電流モデル<sup><a href="#ref14">14</a></sup>を抽象化したスパイキング網を、SpiNNaker系<sup><a href="#ref25">25</a></sup>・Loihi系<sup><a href="#ref26">26</a></sup>・NorthPole系<sup><a href="#ref27">27</a></sup>とエクサスケール計算が、マウス規模で低電力・実時間に走らせる。</p></li>
-              <li class="beat"><span class="beat-date">2035</span><h4>身体ループを閉じる</h4><p>領域スケール、続いてマウス全脳の機能エミュレーションが、仮想／ロボット身体の感覚運動ループ<sup><a href="#ref24">24</a></sup>の中で特定行動を再現。脳は孤立では正常動作しないため、身体性が忠実度の条件になる。</p></li>
+              <li class="beat"><span class="beat-date">2035</span><h4>身体ループを閉じる</h4><p>領域スケール、続いてマウス全脳の機能エミュレーションが、仮想／ロボット身体の感覚運動ループ<sup><a href="#ref24">24</a></sup>の中で特定行動を再現。2026年にハエで実証された身体化エミュレーション<sup><a href="#ref39">39</a></sup>の哺乳類版にあたる。脳は孤立では正常動作しないため、身体性が忠実度の条件になる。</p></li>
               <li class="beat"><span class="beat-date">2036</span><h4>縮退問題に標準的な答え</h4><p>「異なるパラメータが同一活動を生む」縮退<sup><a href="#ref16">16</a></sup>に対し、<strong>摂動応答＋保持データ検証</strong>のベンチマークが証明の標準に。多くの“一致”が棄却され、再構成が反証可能になる。</p></li>
-              <li class="beat"><span class="beat-date">2037</span><h4>合意されたマウス・エミュレーション</h4><p>行動＋摂動の保持テスト群を通過するマウス脳エミュレーションが合意水準に到達。同時に問いが鋭くなる——<em>振る舞いの一致は、内部状態の一致を意味するのか</em>。</p></li>
+              <li class="beat"><span class="beat-date">2037</span><h4>合意されたマウス・エミュレーション</h4><p>行動＋摂動の保持テスト群を通過するマウス脳エミュレーションが合意水準に到達。ZAPBench<sup><a href="#ref43">43</a></sup>で始まった活動予測ベンチマークの文化が、哺乳類の合格基準として制度化された形である。同時に問いが鋭くなる——<em>振る舞いの一致は、内部状態の一致を意味するのか</em>。</p></li>
             </ol>
+            <div class="why">
+              <span class="tag">なぜ2033–2037か</span>
+              <p><b>導出:</b> ハエでは「コネクトームからのモデル」<sup><a href="#ref38">38</a></sup>から「身体つきで自律的に動く」<sup><a href="#ref39">39</a></sup>まで
+              <b>わずか2年</b>だった。マウスはニューロン数で560倍だが、Law 3 より計算資源は律速にならない。
+              したがって5年という配分は、装置ではなく<b>モデル化の科学</b>（構造→シナプス重み・神経修飾）に充てた時間である。</p>
+              <p style="margin:0"><b>崩れる条件:</b> ここは本シナリオで<b>新しい科学を必要とする唯一の区間</b>であり、見積もりの不確実性が最も大きい。
+              静的構造から動的状態が復元できないと判明すれば、5年では済まず、必要な計測手法の発明から始まることになる。</p>
+            </div>
           </div>
 
           <!-- ERA 4 -->
@@ -491,10 +673,18 @@
             </div>
             <ol class="beats">
               <li class="beat"><span class="beat-date">2039</span><h4>ヒト全脳の構造取得</h4><p>保存ドナー脳から、H01の1mm³断片<sup><a href="#ref9">9</a></sup>を全臓器へスケールしたエクサスケール構造コネクトームが得られ始める。約860億ニューロン・100兆シナプスの地図化に着手。</p></li>
-              <li class="beat"><span class="beat-date">2040</span><h4>構造からの状態推論が成熟</h4><p>EM形態から機能的シナプス重み・神経調節状態へ写像する手法が、動態を初期化できる水準に。構造だけでは欠けていた「動的状態」の溝を縮める。</p></li>
-              <li class="beat"><span class="beat-date">2041–42</span><h4>部分的ヒト・エミュレーション</h4><p>感覚野・海馬の記憶回路など部分系が、生前の記録や行動データと照合して検証される。全脳ではないが、ヒト回路が初めて「走る」。</p></li>
+              <li class="beat"><span class="beat-date">2040</span><h4>構造からの状態推論が成熟</h4><p>EM形態から機能的シナプス重み・神経調節状態へ写像する手法が、動態を初期化できる水準に。縮退<sup><a href="#ref16">16</a></sup>を摂動応答で削り込む方法論と、デジタルツイン型の学習<sup><a href="#ref42">42</a></sup>の統合により、構造だけでは欠けていた「動的状態」の溝を縮める。</p></li>
+              <li class="beat"><span class="beat-date">2041–42</span><h4>部分的ヒト・エミュレーション</h4><p>感覚野・海馬の記憶回路など部分系が、生前の記録や行動データと照合して検証される。照合の材料は、この頃までに臨床標準となった皮質内BCIの長期記録<sup><a href="#ref21">21</a><a href="#ref23">23</a></sup>である。全脳ではないが、ヒト回路が初めて「走る」。</p></li>
               <li class="beat"><span class="beat-date">2043</span><h4>エミュレーション社会の経済学が政策課題に</h4><p>Hanson『The Age of Em』<sup><a href="#ref31">31</a></sup>が描いたエミュレーション経済・社会の論点が現実味を帯び、コピー権・労働・人格の統治枠組みの起草が始まる。</p></li>
             </ol>
+            <div class="why">
+              <span class="tag">なぜ2038–2043か</span>
+              <p><b>導出:</b> マウス→ヒトは3.09桁。Law 1 の直近レートをそのまま当てると約16.5年で、
+              ここは<b>加速を仮定していない</b>——シナリオ中で最も素直な外挿区間である。マウス完了を待たず並行着手する前提で2039年に構造取得を置いた。
+              Law 3 が示す電気生理水準（10²² FLOPS）の到達時期2041–45年とも自然に揃う。</p>
+              <p style="margin:0"><b>崩れる条件:</b> 技術ではなく<b>供給</b>。シナプス解像度で保存されたヒト脳がこの時点で存在している必要があり、
+              それはフェーズ2（2032年の臨床グレード保存）が実現していることに依存する。倫理・法の枠組みが整わなければ、ここで止まる。</p>
+            </div>
           </div>
 
           <!-- ERA 5 -->
@@ -505,11 +695,19 @@
               <p class="era-sub">パイプライン全体を、ひとりの個人について通す。</p>
             </div>
             <ol class="beats">
-              <li class="beat"><span class="beat-date">2045</span><h4>パイプラインの統合</h4><p>固定 → 取得 → 再構成 → 走らせる → 身体化 → 検証 が、特定個人について初めて端から端まで接続される。</p></li>
+              <li class="beat"><span class="beat-date">2045</span><h4>パイプラインの統合</h4><p>固定 → 取得 → 再構成 → 走らせる → 身体化 → 検証 が、特定個人について初めて端から端まで接続される。入口となる保存は、2020年代に確立したASC系プロトコル<sup><a href="#ref17">17</a><a href="#ref44">44</a></sup>で十数年前に固定された脳である。</p></li>
               <li class="beat"><span class="beat-date">2046</span><h4>記憶と人格の再現</h4><p>全脳ヒト・エミュレーション候補が、ドナー特異的な記憶・性格マーカーを盲検テスト下で再現し始める。</p></li>
-              <li class="beat"><span class="beat-date">2047</span><h4>同一性検証バッテリの配備</h4><p>同一性の <em>連続性</em> を操作的に試す検証バッテリが運用される。同時に、法的地位・本人同意・コピー問題が現実の政策論点になる。</p></li>
+              <li class="beat"><span class="beat-date">2047</span><h4>同一性検証バッテリの配備</h4><p>同一性の <em>連続性</em> を操作的に試す検証バッテリが運用される。意識の理論そのものは決着していない<sup><a href="#ref30">30</a></sup>ため、バッテリは形而上学を避け、行動・記憶・摂動応答の一致のみを問う設計になる。同時に、法的地位・本人同意・コピー問題が現実の政策論点になる。</p></li>
               <li class="beat"><span class="beat-date">2048</span><h4>「完成」を操作的に定義</h4><p>標準化団体が、形而上学的主張とは切り離した <strong>検証バッテリの通過</strong> として「完成」を定義する。</p></li>
             </ol>
+            <div class="why">
+              <span class="tag">なぜ2044–2048か</span>
+              <p><b>導出:</b> この5年は技術の所要時間ではなく<b>合意形成の所要時間</b>である。
+              検証バッテリの設計 → 多施設での再現 → 標準化団体による採択、という手続きに要する期間として置いた。
+              医療機器や臨床試験の標準が確立するまでの期間を参照している。</p>
+              <p style="margin:0"><b>崩れる条件:</b> 検証という軸は2026年時点で事実上ゼロからの出発であり<sup><a href="#ref43">43</a></sup>、
+              5年は楽観的な配分である。合格基準そのものが合意されなければ、「完成した」と誰も言えないまま技術だけが進む状態になる。</p>
+            </div>
           </div>
 
           <!-- ERA 6 -->
@@ -520,9 +718,17 @@
               <p class="era-sub">工学的には到達する。だが哲学的な問いは、ここで二つに割れる。</p>
             </div>
             <ol class="beats">
-              <li class="beat"><span class="beat-date">2049</span><h4>検証バッテリの通過</h4><p>ある全脳ヒト・エミュレーションが、合意された行動＋摂動＋記憶の検証バッテリを通過する。<strong>工学的な意味での「完成」</strong>に到達。</p></li>
+              <li class="beat"><span class="beat-date">2049</span><h4>検証バッテリの通過</h4><p>ある全脳ヒト・エミュレーションが、合意された行動＋摂動＋記憶の検証バッテリを通過する。<strong>工学的な意味での「完成」</strong>に到達。ここまでの所要年数は、Law 1〜4 を積み上げた結果であって、目標として置かれた年ではない。</p></li>
               <li class="beat"><span class="beat-date">2050</span><h4>分岐——振る舞いは検証できる、主観は測れない</h4><p>行動上の同一性は検証された。しかし完璧な振る舞いの再現と <em>主観的連続性</em> を分ける物理測定は存在しない<sup><a href="#ref28">28</a><a href="#ref29">29</a><a href="#ref30">30</a></sup>。ここで未来は二つのルートに分岐する（下記）。</p></li>
             </ol>
+            <div class="why">
+              <span class="tag">なぜ2049–2050か</span>
+              <p><b>導出:</b> 切りのいい2050年から逆算したのではない。
+              3 + 4 + 5 + 6 + 5 年という各フェーズの所要年数を2026年から積み上げると、終端がここに落ちる。
+              年号が「2050」になったのは結果であって、目標ではない。</p>
+              <p style="margin:0"><b>外部予測との差:</b> Metaculusの中央値2070年頃<sup><a href="#ref40">40</a></sup>、分野内レビューの2055–65年以降<sup><a href="#ref41">41</a></sup>との
+              15〜20年の差は、<b>フェーズ2と3の仮定だけ</b>から生じている。その2つを保守側に取れば、この年表はそのまま2065–70年へ平行移動する。</p>
+            </div>
           </div>
         </div>
 
@@ -552,7 +758,7 @@
 
     <!-- ===== FORK ===== -->
     <section id="fork">
-      <p class="eyebrow">3. The Fork / 2050の分岐</p>
+      <p class="eyebrow">4. The Fork / 2050の分岐</p>
       <h2>完成の先で、未来は二つに割れる。</h2>
       <p class="lead" style="margin-bottom:18px">技術が成功しても、同一性の問いは技術だけでは閉じない。AI 2027が「競争」と「減速」に分岐したように、ここでは検証の解釈で二つのルートが生まれる。</p>
       <div class="fork reveal">
@@ -577,7 +783,7 @@
 
     <!-- ===== OPEN CHALLENGES ===== -->
     <section id="open">
-      <p class="eyebrow">4. Why Conditional / 残る壁</p>
+      <p class="eyebrow">5. Why Conditional / 残る壁</p>
       <h2>2050が「条件付き」である理由。</h2>
       <p class="lead" style="margin-bottom:18px">外挿だけでは越えられない3つの律速。ここが解けなければ、シナリオは前倒しできない。</p>
       <div class="note reveal" style="margin-bottom:12px"><b>① 識別可能性の壁。</b> 計測を増やしても、同じ観測を説明する内部状態が複数残るなら再構成は一意に閉じない<sup><a href="#ref16">16</a></sup>。鍵は「もっと測る」ことより、摂動と保持データで <strong>候補状態を減らす</strong>方法論。</div>
@@ -588,7 +794,7 @@
     <!-- ===== REFERENCES ===== -->
     <section id="refs">
       <p class="eyebrow">References / 参考文献</p>
-      <h2>引用研究（31件）。</h2>
+      <h2>引用研究（44件）。</h2>
       <p class="muted" style="margin-bottom:16px">世界の公開研究から、各軸の代表的到達点を抜粋。2026年以降のマイルストーンはこれらの趨勢からの予測であり、引用は実証済みの土台を示す。各項目は原典または安定した書誌ページへリンクしている。</p>
       <ol class="refs reveal">
         <li id="ref1"><a class="ref-link" href="https://ora.ox.ac.uk/objects/uuid:a6880196-34c7-47a0-80f1-74d32ab98788" target="_blank" rel="noopener">Sandberg, A., &amp; Bostrom, N. (2008). <i>Whole Brain Emulation: A Roadmap.</i> Tech. Report #2008-3, Future of Humanity Institute, Univ. of Oxford.</a></li>
@@ -622,16 +828,29 @@
         <li id="ref29"><a class="ref-link" href="https://doi.org/10.1016/j.neuron.2011.03.018" target="_blank" rel="noopener">Dehaene, S., &amp; Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. <i>Neuron,</i> 70, 200–227.</a></li>
         <li id="ref30"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08888-1" target="_blank" rel="noopener">Cogitate Consortium; Ferrante, O., et al. (2025). Adversarial testing of global neuronal workspace and integrated information theories. <i>Nature.</i></a></li>
         <li id="ref31"><a class="ref-link" href="https://global.oup.com/academic/product/the-age-of-em-9780198754626" target="_blank" rel="noopener">Hanson, R. (2016). <i>The Age of Em: Work, Love, and Life when Robots Rule the Earth.</i> Oxford University Press.</a></li>
+        <li id="ref32"><a class="ref-link" href="https://www.janelia.org/project-team/flyem/male-cns-connectome" target="_blank" rel="noopener">Janelia FlyEM (2025). Male CNS Connectome（雄ハエの脳＋腹側神経索、16.7万ニューロン）.</a></li>
+        <li id="ref33"><a class="ref-link" href="https://www.biotechniques.com/neuroscience/mapping-the-brain-from-mice-to-mankind/" target="_blank" rel="noopener">BioTechniques (2024). Building a comprehensive mouse brain connectome.（マウス全脳の所要年数・データ量の試算を含む解説）</a></li>
+        <li id="ref34"><a class="ref-link" href="https://research.google/blog/google-research-embarks-on-effort-to-map-a-mouse-brain/" target="_blank" rel="noopener">Google Research / Harvard / Allen Institute (2023–). BRAIN CONNECTS: マウス海馬10mm³および皮質-基底核ループのコネクトーム計画.</a></li>
+        <li id="ref35"><a class="ref-link" href="https://www.top500.org/" target="_blank" rel="noopener">TOP500 Supercomputer Sites. 首位性能の推移（2008年 Roadrunner 1 PFLOPS → 2022年 Frontier 1 EFLOPS → 2024年 El Capitan 1.74 EFLOPS）.</a></li>
+        <li id="ref36"><a class="ref-link" href="https://www.lesswrong.com/posts/DGsBfcEQKuNPmQizQ/notable-progress-has-been-made-in-whole-brain-emulation" target="_blank" rel="noopener">Notable progress has been made in whole brain emulation (2025). LessWrong.（FlyWireの校正工数と自動化ボトルネックの二次分析。査読外）</a></li>
+        <li id="ref37"><a class="ref-link" href="https://www.e11.bio/blog/prism" target="_blank" rel="noopener">E11 Bio (2024–25). PRISM: タンパク質バーコード＋膨張顕微鏡による自己校正型コネクトミクス.</a></li>
+        <li id="ref38"><a class="ref-link" href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank" rel="noopener">Shiu, P. K., et al. (2024). A <i>Drosophila</i> computational brain model reveals sensorimotor processing. <i>Nature,</i> 634, 210–219.</a></li>
+        <li id="ref39"><a class="ref-link" href="https://eon.systems/updates/embodied-brain-emulation" target="_blank" rel="noopener">Eon Systems (2026-03-07). How the Eon team produced a virtual embodied fly.（初の身体化された全脳エミュレーション）</a></li>
+        <li id="ref40"><a class="ref-link" href="https://www.metaculus.com/questions/2813/when-will-the-first-whole-human-brain-be-successfully-emulated/" target="_blank" rel="noopener">Metaculus. Date of first human whole brain emulation.（コミュニティ予測、中央値は2070年前後で推移）</a></li>
+        <li id="ref41"><a class="ref-link" href="https://arxiv.org/abs/2510.15745" target="_blank" rel="noopener">Zanichelli, N., Schons, M., Freeman, I., Shiu, P. K., &amp; Arkhipov, A. (2025). <i>State of Brain Emulation Report 2025.</i> arXiv:2510.15745.</a></li>
+        <li id="ref42"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08829-y" target="_blank" rel="noopener">Wang, E. Y., et al. (2025). Foundation model of neural activity predicts response to new stimulus types. <i>Nature,</i> 640.（デジタルツイン）</a></li>
+        <li id="ref43"><a class="ref-link" href="https://research.google/blog/improving-brain-models-with-zapbench/" target="_blank" rel="noopener">Google Research, Janelia &amp; Harvard (2025). ZAPBench: ゼブラフィッシュ幼生の全脳活動予測ベンチマーク.</a></li>
+        <li id="ref44"><a class="ref-link" href="https://nectome.com/research" target="_blank" rel="noopener">Nectome (2026). Ultrastructural preservation of a whole large mammal brain with a protocol compatible with human physician-assisted death.（前刷り）</a></li>
       </ol>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="brand" href="/"><span class="dot"></span>マインドアップロード — scenario 2050</a>
+      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード — scenario 2050</a>
       <p>全脳エミュレーション（マインドアップロード）が2050年に完成するまでを、世界中の公開研究をもとに年表シナリオとして描くロードマップ。AI 2027 形式。総合ガイドの別冊。</p>
       <p style="margin:6px 0 0">
-        <a href="/" style="color:var(--muted);text-decoration:none">ホーム</a> ・
+        <a href="/ja/" style="color:var(--muted);text-decoration:none">ホーム</a> ・
         <a href="/history.html" style="color:var(--muted);text-decoration:none">1. 歴史</a> ・
         <a href="/science.html" style="color:var(--muted);text-decoration:none">2. 科学</a> ・
         <a href="/progress.html" style="color:var(--muted);text-decoration:none">3. 現在地</a> ・
@@ -675,7 +894,7 @@
         }
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['abstract','scale','scenario','fork','open','refs'].forEach(id => {
+    ['abstract','scale','basis','scenario','fork','open','refs'].forEach(id => {
       const s = document.getElementById(id); if (s) spy.observe(s);
     });
 

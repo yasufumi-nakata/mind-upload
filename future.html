@@ -6,6 +6,9 @@
   <title>第4章 未来 — 予測と条件、そしてAGIとの関係 | マインドアップロード総合ガイド</title>
   <meta name="description" content="マインドアップロードはいつ実現するか。モラヴェック1988からMetaculus 2070、専門家調査2025まで予測を総覧し、依存マイルストーン、加速・減速要因、AGIとの競合と補完、実現後の社会像を整理する。">
   <link rel="canonical" href="https://mind-upload.com/future.html">
+  <link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/">
+  <link rel="alternate" hreflang="en" href="https://mind-upload.com/">
+  <link rel="alternate" hreflang="x-default" href="https://mind-upload.com/">
   <meta property="og:title" content="第4章 未来 — マインドアップロード総合ガイド">
   <meta property="og:description" content="実現時期の予測総覧と、その前提条件。加速要因・減速要因・AGIとの関係・実現後の社会まで。">
   <meta property="og:type" content="article">
@@ -30,8 +33,7 @@
 
   <header class="site-header">
     <div class="nav-inner">
-      <a class="brand" href="/"><span class="dot"></span>マインドアップロード <small>integrated guide</small></a>
-      <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
+      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード <small>integrated guide</small></a>
       <nav class="primary-nav" aria-label="章立て">
         <a href="/history.html">1. 歴史</a>
         <a href="/science.html">2. 科学</a>
@@ -41,24 +43,29 @@
         <a href="/action.html">6. 行動</a>
         <a href="/resources.html">資料</a>
       </nav>
+      <div class="lang-switch" role="group" aria-label="Language / 言語">
+        <a href="/" hreflang="en" lang="en">EN</a>
+        <a href="/ja/" hreflang="ja" aria-current="true">日本語</a>
+      </div>
+      <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
     </div>
   </header>
 
   <main>
     <section class="ch-hero">
-      <a class="badge" href="/">総合ガイド ・ 第4章</a>
+      <a class="badge" href="/ja/">総合ガイド ・ 第4章</a>
       <h1>未来 — <span class="grad">「いつ」を、条件つきで語る。</span></h1>
       <p class="lead">
         実現時期の予測はこの分野で最も誤解されやすい話題である。この章では、まず主要な予測を出典・根拠つきで並べ、
         次に「どの中間目標がどの順で必要か」という依存構造に翻訳する。年号ではなく<strong>条件</strong>で未来を読むのが本章の目的である。
         年ごとの物語が読みたい読者は<a class="inline" href="/scenario.html">別冊シナリオ 2026→2050</a>へ。
       </p>
-      <div class="ch-meta"><span>予測: 10件を比較</span><span>引用: 16件</span></div>
+      <div class="ch-meta"><span>予測: 10件を比較</span><span>導出: 4つの外挿則</span><span>引用: 20件</span></div>
       <div class="toc">
         <span class="tag">この章の目次</span>
         <ol>
           <li><a href="#forecasts">4.1 予測の総覧</a></li>
-          <li><a href="#milestones">4.2 依存マイルストーン</a></li>
+          <li><a href="#milestones">4.2 依存マイルストーン と 4つの外挿則</a></li>
           <li><a href="#factors">4.3 加速要因と減速要因</a></li>
           <li><a href="#agi">4.4 AGIとの関係</a></li>
           <li><a href="#society">4.5 実現後の社会</a></li>
@@ -110,6 +117,44 @@
             <tr><td class="num">M6</td><td><b>ヒトWBEの実行と検証</b></td><td><span class="chip open">最速2050年代、中央値2070年頃</span></td><td>—（ここが終点。ただし同一性・意識の問いは残る→第5章）</td></tr>
           </tbody>
         </table>
+      </div>
+
+      <h3>推定時期はどう出したか — 4つの外挿則</h3>
+      <p>上の表の年数は勘ではなく、次の4つの経験則から導いている。計算過程の全文と各フェーズへの適用は<a class="inline" href="/scenario.html#basis">別冊の「年号の根拠」</a>にある。</p>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>則</th><th>実測から得られる傾き</th><th>そこから出る帰結</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>① 規模則</b><br><span class="small muted">全コネクトームの最大ニューロン数</span></td>
+              <td class="num">長期（1986→2024）: 0.070 桁/年<br>直近（2020→2024）: 0.187 桁/年</td>
+              <td>ハエ→マウスは2.70桁。直近レートなら<b>14年（2038年）</b>、長期レートなら39年（2063年）。マウス→ヒトは3.09桁で直近レートなら約16.5年</td>
+            </tr>
+            <tr>
+              <td><b>② データ量則</b><br><span class="small muted">H01: ヒト皮質1mm³ = 1.4 PB<sup><a href="#ref17">17</a></sup></span></td>
+              <td class="num">体積に比例</td>
+              <td>マウス全脳 ≈ 0.7 エクサバイト、ヒト全脳 ≈ 1.7 ゼタバイト。現行EMではマウス全脳の撮像だけで<b>10年超</b>との試算<sup><a href="#ref18">18</a></sup></td>
+            </tr>
+            <tr>
+              <td><b>③ 計算則</b><br><span class="small muted">TOP500首位の推移<sup><a href="#ref20">20</a></sup></span></td>
+              <td class="num">0.21 桁/年<br>（2008 ペタ → 2022 エクサ）</td>
+              <td>スパイキング水準（10¹⁸ FLOPS）は<b>到達済み</b>。電気生理水準（10²²）は4桁上で<b>2041–45年頃</b>。<b>計算は律速ではない</b></td>
+            </tr>
+            <tr>
+              <td><b>④ 校正則</b><br><span class="small muted">自動再構成後の人手編集量</span></td>
+              <td class="num">ハエ13.9万で延べ数十人年<sup><a href="#ref19">19</a></sup></td>
+              <td>マウスへ単純外挿すると<b>1万人年規模</b>で成立しない。唯一「外挿ではなくブレイクスルーが要る」則であり、M3の実質的な律速</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="key">
+        <span class="tag">この導出から読み取れること</span>
+        <ul>
+          <li><b>計算資源はもう問題ではない。</b> ③より、ヒト全脳を高解像度で走らせる能力は地図が揃う時期と自然に一致する。2010年代までの「計算が足りない」という語り口は、すでに時代遅れになっている。</li>
+          <li><b>不確実性はM3（マウス）とM4（検証つきエミュレーション）に集中する。</b> ①の直近レートを信じるか長期レートを信じるかで、マウス全脳だけで<b>25年の差</b>（2038年か2063年か）が出る。この一点が下流のすべてを支配する。</li>
+          <li><b>予測の分布は、この2択の反映である。</b> 楽観側（2040–50年代）は直近レート＋④のブレイクスルーを織り込み、集合知（2070年頃）は両者を保守的に見る。予測者の意見が割れているというより、<b>同じ数式に別の係数を入れている</b>と理解するのが正確である。</li>
+        </ul>
       </div>
     </section>
 
@@ -177,7 +222,7 @@
 
     <section id="refs">
       <p class="eyebrow">References / 文献</p>
-      <h2>第4章の文献（16件）。</h2>
+      <h2>第4章の文献（20件）。</h2>
       <ol class="refs reveal">
         <li id="ref1"><a class="ref-link" href="https://www.hup.harvard.edu/books/9780674576186" target="_blank" rel="noopener">Moravec, H. (1988). <i>Mind Children.</i> Harvard Univ. Press.</a></li>
         <li id="ref2"><a class="ref-link" href="https://en.wikipedia.org/wiki/The_Singularity_Is_Nearer" target="_blank" rel="noopener">Kurzweil, R. (2005). <i>The Singularity Is Near</i>; (2024). <i>The Singularity Is Nearer.</i> Viking.</a></li>
@@ -195,13 +240,17 @@
         <li id="ref14"><a class="ref-link" href="https://arxiv.org/abs/2411.18526" target="_blank" rel="noopener">Mineault, P., et al. (2024). NeuroAI for AI safety. arXiv:2411.18526.</a></li>
         <li id="ref15"><a class="ref-link" href="https://foresight.org/" target="_blank" rel="noopener">Foresight Institute. Whole Brain Emulation Workshop（2023–, AI安全文脈でのWBE加速提言）.</a></li>
         <li id="ref16"><a class="ref-link" href="https://ai-2027.com/" target="_blank" rel="noopener">Kokotajlo, D., et al. (2025). <i>AI 2027.</i>（別冊シナリオの形式上の参照元）</a></li>
+        <li id="ref17"><a class="ref-link" href="https://doi.org/10.1126/science.adk4858" target="_blank" rel="noopener">Shapson-Coe, A., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <i>Science,</i> 384, eadk4858.（1mm³ = 1.4PBの出典）</a></li>
+        <li id="ref18"><a class="ref-link" href="https://www.biotechniques.com/neuroscience/mapping-the-brain-from-mice-to-mankind/" target="_blank" rel="noopener">BioTechniques (2024). Building a comprehensive mouse brain connectome.（マウス全脳の所要年数の試算）</a></li>
+        <li id="ref19"><a class="ref-link" href="https://www.lesswrong.com/posts/DGsBfcEQKuNPmQizQ/notable-progress-has-been-made-in-whole-brain-emulation" target="_blank" rel="noopener">Notable progress has been made in whole brain emulation (2025). LessWrong.（FlyWireの校正工数の二次分析。査読外の推定であることに注意）</a></li>
+        <li id="ref20"><a class="ref-link" href="https://www.top500.org/" target="_blank" rel="noopener">TOP500 Supercomputer Sites. 首位性能の推移.</a></li>
       </ol>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="brand" href="/"><span class="dot"></span>マインドアップロード <small>integrated guide</small></a>
+      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード <small>integrated guide</small></a>
       <nav class="footer-nav" aria-label="フッターナビゲーション">
         <a href="/history.html">1. 歴史</a>
         <a href="/science.html">2. 科学的基礎</a>
