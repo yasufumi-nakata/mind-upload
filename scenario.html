@@ -1,282 +1,47 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>別冊 シナリオ2050 — 全脳エミュレーション・シナリオ年表 | マインドアップロード総合ガイド</title>
-  <meta name="description" content="マインドアップロード（全脳エミュレーション）が2050年に完成するまでを、世界中の研究をもとに年表シナリオとして描く。AI 2027形式の、年ごとに具体化した条件付きロードマップ。総合ガイドの別冊。">
+  <title>Companion · Scenario 2050 — A Dated Whole Brain Emulation Timeline | Mind Uploading</title>
+  <meta name="description" content="A year-by-year conditional scenario in which whole brain emulation is completed by 2050, extrapolated from world research. Every date is derived from four measured trends, with the assumptions and failure conditions stated. The companion volume to the integrated guide.">
   <link rel="canonical" href="https://mind-upload.com/scenario.html">
-  <link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/">
-  <link rel="alternate" hreflang="en" href="https://mind-upload.com/">
-  <link rel="alternate" hreflang="x-default" href="https://mind-upload.com/">
-  <meta property="og:title" content="別冊 シナリオ2050 — 全脳エミュレーション・シナリオ年表">
-  <meta property="og:description" content="2026→2050。脳の地図化・再構成・エミュレーション・検証が、年ごとにどう積み上がりうるか。世界中の研究をもとにした条件付きシナリオ年表。">
+  <link rel="alternate" hreflang="en" href="https://mind-upload.com/scenario.html">
+  <link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/scenario.html">
+  <link rel="alternate" hreflang="x-default" href="https://mind-upload.com/scenario.html">
+  <meta property="og:title" content="Companion · Scenario 2050 — A Dated WBE Timeline">
+  <meta property="og:description" content="2026 → 2050. How mapping, reconstruction, emulation and validation could stack up year by year — with the derivation behind every date.">
   <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://mind-upload.com/scenario.html">
   <meta property="og:image" content="https://mind-upload.com/assets/og-image.png?v=20260702">
-  <meta property="og:image:secure_url" content="https://mind-upload.com/assets/og-image.png?v=20260702">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="マインドアップロード 2050 のシナリオ年表と脳マッピング規模の曲線">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="別冊 シナリオ2050 — 全脳エミュレーション・シナリオ年表">
-  <meta name="twitter:description" content="2026→2050。脳の地図化・再構成・エミュレーション・検証がどう積み上がりうるかを描く年表シナリオ。">
+  <meta name="twitter:title" content="Companion · Scenario 2050">
+  <meta name="twitter:description" content="A conditional year-by-year timeline for whole brain emulation, with every date derived and every assumption stated.">
   <meta name="twitter:image" content="https://mind-upload.com/assets/og-image.png?v=20260702">
   <meta name="theme-color" content="#0a0d14">
   <link rel="icon" href="/favicon.svg?v=20260702" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- shared components (.tbl / .chip / .key / .lang-switch); the page's own rules below override where they differ -->
   <link rel="stylesheet" href="/assets/site.css?v=20260808">
-  <style>
-  /* =========================================================
-     Mind Uploading 2050 — a dated scenario timeline
-     Self-contained dark theme. Scrollytelling roadmap.
-     ========================================================= */
-  :root{
-    --bg:#0a0d14; --bg-2:#070a10; --panel:#121829; --panel-2:#161e33; --panel-3:#0f1422;
-    --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.16);
-    --ink:#e9edf7; --muted:#9aa6bd; --faint:#697389;
-    --brand:#5ed8c6; --brand-2:#7aa2ff;
-    --done:#5fd6a4; --now:#f3b65b; --soon:#7aa2ff; --far:#c89bff; --open:#f2748a;
-    --grad:linear-gradient(135deg,#5ed8c6 0%,#7aa2ff 100%);
-    --max:1140px;
-    --mono:"SF Mono","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-    --sans:"Inter","Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans",Meiryo,sans-serif;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth;scroll-padding-top:78px;-webkit-text-size-adjust:100%}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-  body{
-    margin:0;font-family:var(--sans);color:var(--ink);line-height:1.72;
-    background:
-      radial-gradient(1200px 640px at 84% -8%,rgba(122,162,255,.10),transparent 58%),
-      radial-gradient(1000px 560px at 6% 2%,rgba(94,216,198,.08),transparent 56%),
-      var(--bg);
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:inherit}
-  ::selection{background:rgba(94,216,198,.25)}
-
-  #progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;background:var(--grad)}
-  .site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
-    background:rgba(8,11,17,.78);border-bottom:1px solid var(--line)}
-  .nav-inner{max-width:var(--max);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:18px}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;letter-spacing:.2px;white-space:nowrap}
-  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--grad);box-shadow:0 0 16px rgba(94,216,198,.6)}
-  .brand small{color:var(--faint);font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
-  .primary-nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
-  .primary-nav a{text-decoration:none;color:var(--muted);font-size:.85rem;font-weight:500;
-    padding:7px 11px;border-radius:8px;transition:.18s}
-  .primary-nav a:hover{color:var(--ink);background:var(--panel)}
-  .primary-nav a.active{color:var(--brand)}
-  .nav-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--line-2);color:var(--ink);
-    border-radius:8px;padding:6px 11px;font-size:1.1rem;cursor:pointer}
-
-  main{max-width:var(--max);margin:0 auto;padding:0 22px}
-  section{padding:60px 0;border-top:1px solid var(--line)}
-  section:first-of-type{border-top:0}
-  .eyebrow{font-family:var(--mono);font-size:.73rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin:0 0 12px}
-  h1{font-size:clamp(2.1rem,5.4vw,3.5rem);line-height:1.1;letter-spacing:-.02em;margin:.2em 0 .35em;font-weight:800}
-  h2{font-size:clamp(1.5rem,3.2vw,2.15rem);line-height:1.2;letter-spacing:-.01em;margin:0 0 .5em;font-weight:700}
-  h3{font-size:1.06rem;margin:0 0 .4em;font-weight:700}
-  .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  p{margin:0 0 1em;color:#d3dae8}
-  .lead{font-size:1.1rem;color:var(--muted);max-width:64ch}
-  .muted{color:var(--muted)}
-  code{font-family:var(--mono);font-size:.86em;background:var(--panel);padding:.12em .4em;border-radius:5px;color:#bfe9e0}
-  sup{line-height:0}
-  sup a{color:var(--brand-2);text-decoration:none;font-weight:600;font-size:.7em;padding:0 .06em}
-  sup a:hover{text-decoration:underline}
-
-  /* hero */
-  .hero{padding-top:70px}
-  .badge{display:inline-flex;align-items:center;gap:9px;font-size:.77rem;font-weight:600;color:var(--brand);
-    background:rgba(94,216,198,.08);border:1px solid rgba(94,216,198,.25);padding:7px 14px;border-radius:999px}
-  .pulse{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 0 rgba(94,216,198,.5);animation:pulse 2.2s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(94,216,198,.5)}70%{box-shadow:0 0 0 9px rgba(94,216,198,0)}100%{box-shadow:0 0 0 0 rgba(94,216,198,0)}}
-  .hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--faint);font-size:.81rem;margin-top:18px;font-family:var(--mono)}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
-  .stats div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 14px}
-  .stats .n{font-size:1.5rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .stats .l{font-size:.77rem;color:var(--muted);margin-top:3px}
-
-  .abstract{background:linear-gradient(180deg,var(--panel),rgba(18,24,41,.5));
-    border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:14px;padding:24px 26px}
-  .abstract h3{font-family:var(--mono);font-size:.77rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand)}
-  .abstract p:last-child{margin-bottom:0}
-  .callout{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
-
-  /* growth chart */
-  .chart-wrap{background:var(--panel-3);border:1px solid var(--line);border-radius:16px;padding:18px 16px 8px;overflow:hidden}
-  .chart-wrap svg{width:100%;height:auto;display:block}
-  .chart-legend{display:flex;flex-wrap:wrap;gap:14px 22px;margin-top:10px;padding:0 8px 8px;font-size:.8rem;color:var(--muted)}
-  .chart-legend span{display:inline-flex;align-items:center;gap:7px}
-  .lg-dot{width:10px;height:10px;border-radius:50%}
-  .lg-line{width:18px;height:0;border-top:2px solid}
-
-  /* mini era axis */
-  .axis{display:flex;width:100%;border-radius:10px;overflow:hidden;border:1px solid var(--line);margin-top:6px}
-  .axis a{flex:1;text-decoration:none;padding:11px 8px;text-align:center;font-size:.72rem;color:#0a0d14;font-weight:700;
-    transition:.18s;border-right:1px solid rgba(0,0,0,.25)}
-  .axis a:last-child{border-right:0}
-  .axis a small{display:block;font-weight:600;font-size:.66rem;opacity:.78;margin-top:1px}
-  .axis a:hover{filter:brightness(1.08)}
-  .axis .s1{background:#5fd6a4}.axis .s2{background:#74c8b6}.axis .s3{background:#7aa2ff}
-  .axis .s4{background:#9a9bf0}.axis .s5{background:#bf9bef}.axis .s6{background:#e08ad0}
-
-  /* scrollytelling */
-  .scrolly{display:grid;grid-template-columns:1fr 300px;gap:42px;align-items:start;margin-top:8px}
-  .narrative{min-width:0}
-  .rail{position:sticky;top:90px}
-  .rail-card{background:linear-gradient(180deg,var(--panel),var(--panel-3));border:1px solid var(--line-2);
-    border-radius:16px;padding:20px 18px}
-  .rail-ylabel{font-family:var(--mono);font-size:.68rem;letter-spacing:.22em;color:var(--faint);text-transform:uppercase}
-  .rail-year{font-size:2.5rem;font-weight:800;line-height:1;letter-spacing:-.02em;margin:2px 0 2px;
-    font-variant-numeric:tabular-nums;transition:color .3s}
-  .rail-era{color:var(--brand);font-weight:700;font-size:.96rem;min-height:1.4em}
-  .rail-track{position:relative;margin:16px 0 16px;padding-left:6px}
-  .rail-track::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:2px;background:var(--line-2)}
-  .rail-fill{position:absolute;left:10px;top:6px;width:2px;background:var(--grad);height:0;transition:height .35s ease}
-  .rail-node{display:flex;align-items:center;gap:11px;background:none;border:0;color:var(--muted);
-    width:100%;text-align:left;padding:6px 0;cursor:pointer;font-family:var(--sans);font-size:.83rem;transition:.2s}
-  .rn-dot{position:relative;z-index:1;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--line-2);flex:none;transition:.2s}
-  .rail-node:hover{color:var(--ink)}
-  .rail-node.done .rn-dot{border-color:var(--brand);background:var(--brand)}
-  .rail-node.active{color:var(--ink);font-weight:700}
-  .rail-node.active .rn-dot{border-color:var(--brand);background:var(--brand);box-shadow:0 0 0 4px rgba(94,216,198,.18)}
-  .rail-metric{border-top:1px solid var(--line);padding-top:13px}
-  .rail-metric b{display:block;font-size:1.35rem;font-weight:800;font-variant-numeric:tabular-nums;
-    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .rail-metric small{color:var(--muted);font-size:.76rem}
-
-  /* current-state grounded card */
-  .now-card{background:rgba(95,214,164,.05);border:1px solid rgba(95,214,164,.22);border-radius:14px;padding:20px 22px;margin-bottom:30px}
-  .now-card .flag{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--done);
-    background:rgba(95,214,164,.12);border:1px solid rgba(95,214,164,.3);padding:3px 9px;border-radius:999px;margin-bottom:10px}
-  .now-card ul{margin:0;padding-left:0;list-style:none;display:grid;gap:9px}
-  .now-card li{padding-left:22px;position:relative;font-size:.92rem;color:#d3dae8}
-  .now-card li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--done)}
-
-  /* era blocks */
-  .era{padding:18px 0 34px;scroll-margin-top:84px}
-  .era-head{margin-bottom:14px}
-  .era-kicker{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
-  .era-num{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--faint)}
-  .era-yr{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--era,var(--brand))}
-  .era-flag{font-family:var(--mono);font-size:.66rem;letter-spacing:.05em;padding:2px 8px;border-radius:999px;
-    color:var(--far);background:rgba(200,155,255,.1);border:1px solid rgba(200,155,255,.28)}
-  .era h3{font-size:1.35rem;letter-spacing:-.01em}
-  .era-sub{color:var(--muted);font-size:.96rem;margin:.1em 0 0}
-  .era.e1{--era:#5fd6a4}.era.e2{--era:#74c8b6}.era.e3{--era:#7aa2ff}
-  .era.e4{--era:#9a9bf0}.era.e5{--era:#bf9bef}.era.e6{--era:#e08ad0}
-  .beats{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
-  .beat{position:relative;padding:13px 0 13px 26px}
-  .beat::before{content:"";position:absolute;left:-7px;top:18px;width:12px;height:12px;border-radius:50%;
-    background:var(--bg);border:2px solid var(--era,var(--brand))}
-  .beat-date{font-family:var(--mono);font-weight:700;color:var(--era,var(--brand));font-size:.86rem}
-  .beat h4{margin:.22em 0 .3em;font-size:1.02rem;font-weight:700}
-  .beat p{margin:0;font-size:.93rem;color:#cdd5e4}
-
-  /* fork / endings */
-  .fork-tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
-  .ftab{font-family:var(--sans);font-size:.9rem;font-weight:600;color:var(--muted);cursor:pointer;
-    background:var(--panel);border:1px solid var(--line-2);border-radius:10px;padding:11px 16px;transition:.18s}
-  .ftab:hover{color:var(--ink)}
-  .ftab.active{color:var(--ink);border-color:transparent}
-  .ftab[data-route="a"].active{background:rgba(95,214,164,.16);box-shadow:inset 0 0 0 1px rgba(95,214,164,.4)}
-  .ftab[data-route="b"].active{background:rgba(242,116,138,.14);box-shadow:inset 0 0 0 1px rgba(242,116,138,.4)}
-  .fork-panel{border:1px solid var(--line);border-radius:14px;padding:22px 24px;background:var(--panel)}
-  .fork-panel[data-route="a"]{border-left:3px solid var(--done)}
-  .fork-panel[data-route="b"]{border-left:3px solid var(--open)}
-  .fork-panel h4{margin:0 0 .4em;font-size:1.1rem}
-  .fork-panel .verdict{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
-  .fork-panel[data-route="a"] .verdict{color:var(--done)}
-  .fork-panel[data-route="b"] .verdict{color:var(--open)}
-
-  /* open challenges note */
-  .note{background:rgba(242,116,138,.06);border:1px solid rgba(242,116,138,.22);border-radius:12px;padding:17px 20px;font-size:.93rem;color:#e4d2d6}
-  .note b{color:var(--open)}
-
-  /* references */
-  ol.refs{counter-reset:r;list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:9px}
-  ol.refs li{counter-increment:r;position:relative;padding:10px 13px 10px 42px;background:var(--panel);
-    border:1px solid var(--line);border-radius:10px;font-size:.82rem;color:#cfd6e5;line-height:1.55}
-  ol.refs li::before{content:"["counter(r)"]";position:absolute;left:12px;top:10px;font-family:var(--mono);font-size:.74rem;color:var(--brand);font-weight:700}
-  ol.refs a.ref-link{color:inherit;text-decoration:none}
-  ol.refs a.ref-link:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--brand);text-underline-offset:3px}
-  ol.refs i{color:var(--muted)}
-
-  html.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-  html.js .reveal.in{opacity:1;transform:none}
-
-  /* derivation of the dates */
-  .why{background:rgba(122,162,255,.06);border:1px solid rgba(122,162,255,.22);border-radius:12px;
-    padding:14px 18px;margin:14px 0 0;font-size:.9rem;color:#cfd6e5}
-  .why .tag{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--brand-2);margin-bottom:7px}
-  .why p{margin:0 0 .55em;font-size:.9rem;color:#cfd6e5}
-  .why p:last-child{margin:0}
-  .why b{color:#dce6ff}
-  .math{font-family:var(--mono);font-size:.84em;color:#bfe9e0;background:var(--panel-3);
-    border:1px solid var(--line);border-radius:8px;padding:.7em .9em;display:block;margin:.7em 0;
-    line-height:1.75;white-space:pre-wrap;word-break:break-word}
-  @media(max-width:640px){.math{font-size:.76em}}
-  .law{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--brand-2);
-    border-radius:12px;padding:18px 22px;margin:0 0 14px}
-  .law h4{margin:0 0 .3em;font-size:1.04rem}
-  .law .lead-in{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
-  .law p{font-size:.93rem;margin:0 0 .7em}
-  .law p:last-child{margin:0}
-
-  .site-footer{border-top:1px solid var(--line);margin-top:24px;background:var(--bg-2)}
-  .footer-inner{max-width:var(--max);margin:0 auto;padding:32px 22px;color:var(--muted);font-size:.85rem}
-  .footer-inner .brand{margin-bottom:10px}
-  .disc{color:var(--faint);font-size:.78rem;margin-top:14px;max-width:74ch}
-
-  @media (max-width:920px){
-    .scrolly{grid-template-columns:1fr;gap:0}
-    .rail{display:none}
-  }
-  @media (max-width:760px){
-    .nav-inner{padding:10px 14px;gap:10px}
-    .site-header .brand{font-size:.86rem;gap:7px}
-    .site-header .brand small{font-size:.58rem;letter-spacing:.09em}
-    h1{font-size:1.88rem;line-height:1.16}
-    .stats{grid-template-columns:repeat(2,1fr)}
-    ol.refs{grid-template-columns:1fr}
-    .axis a{font-size:.6rem;padding:9px 3px}
-    .axis a small{display:none}
-    .primary-nav{display:none;position:absolute;top:58px;left:0;right:0;flex-direction:column;
-      background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px;margin:0}
-    .primary-nav.open{display:flex}
-    .nav-toggle{display:block}
-  }
-  </style>
+  <link rel="stylesheet" href="/assets/scenario.css?v=20260808">
   <script>document.documentElement.classList.add("js")</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "別冊 シナリオ2050 — 全脳エミュレーション・シナリオ年表",
-    "description": "マインドアップロード（全脳エミュレーション）が2050年に完成するまでを、世界中の研究をもとに年表シナリオとして描く。総合ガイドの別冊。",
-    "inLanguage": "ja",
+    "headline": "Companion · Scenario 2050 — A Dated Whole Brain Emulation Timeline",
+    "description": "A conditional year-by-year scenario for whole brain emulation through 2050, with every date derived from measured trends.",
+    "inLanguage": "en",
     "url": "https://mind-upload.com/scenario.html",
     "mainEntityOfPage": "https://mind-upload.com/scenario.html",
-    "isPartOf": {"@type": "WebSite", "name": "マインドアップロード総合ガイド", "url": "https://mind-upload.com/"},
+    "isPartOf": {"@type": "WebSite", "name": "Mind Uploading: An Integrated Guide", "url": "https://mind-upload.com/"},
     "image": "https://mind-upload.com/assets/og-image.png?v=20260702",
     "dateModified": "2026-08-08",
-    "genre": ["scenario", "review", "whole brain emulation"],
-    "about": ["マインドアップロード", "全脳エミュレーション", "コネクトミクス", "脳シミュレーション"],
-    "citation": [
-      "https://ora.ox.ac.uk/objects/uuid:a6880196-34c7-47a0-80f1-74d32ab98788",
-      "https://doi.org/10.1038/s41586-024-07558-y",
-      "https://doi.org/10.1126/science.adk4858",
-      "https://doi.org/10.1038/s41586-025-08790-w",
-      "https://doi.org/10.1038/s41586-025-08888-1"
-    ]
+    "genre": ["scenario", "review", "whole brain emulation"]
   }
   </script>
 </head>
@@ -285,96 +50,100 @@
 
   <header class="site-header">
     <div class="nav-inner">
-      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード <small>scenario 2050</small></a>
-      <nav class="primary-nav" aria-label="主要セクション">
-        <a href="/">← 総合ガイド</a>
-        <a href="#abstract">要旨</a>
-        <a href="#scale">規模</a>
-        <a href="#basis">根拠</a>
-        <a href="#scenario">シナリオ</a>
-        <a href="#fork">2050分岐</a>
-        <a href="#open">壁</a>
-        <a href="#refs">文献</a>
+      <a class="brand" href="/"><span class="dot"></span>Mind Uploading <small>scenario 2050</small></a>
+      <nav class="primary-nav" aria-label="Sections">
+        <a href="/">← Guide</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#scale">Scale</a>
+        <a href="#basis">Derivation</a>
+        <a href="#scenario">Timeline</a>
+        <a href="#fork">The fork</a>
+        <a href="#open">Barriers</a>
+        <a href="#refs">References</a>
       </nav>
       <div class="lang-switch" role="group" aria-label="Language / 言語">
-        <a href="/" hreflang="en" lang="en">EN</a>
-        <a href="/ja/" hreflang="ja" aria-current="true">日本語</a>
+        <a href="/scenario.html" hreflang="en" aria-current="true">EN</a>
+        <a href="/ja/scenario.html" hreflang="ja" lang="ja">日本語</a>
       </div>
-      <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
     </div>
   </header>
 
   <main>
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
-      <span class="badge"><span class="pulse"></span>シナリオ年表 / 2026 → 2050</span>
-      <h1>線虫から、ヒトへ。<br><span class="grad">マインドアップロードが</span><br>完成する2050年までの年表。</h1>
+      <span class="badge"><span class="pulse"></span>Dated scenario / 2026 → 2050</span>
+      <h1>From a worm to a human.<br><span class="grad">A timeline to the year</span><br>mind uploading is finished.</h1>
       <p class="lead">
-        マインドアップロード=<strong>全脳エミュレーション（WBE）</strong>は、ある脳の構造と状態を計測し、その情報処理を計算機上で再現する構想です。
-        本ページは <a href="https://ai-2027.com" target="_blank" rel="noopener">AI 2027</a> にならい、世界中の研究の到達点を起点に、
-        <strong>2026年から2050年の完成まで</strong>を「年ごとに何が起こりうるか」のシナリオ年表として描きます。実証済みの事実と、そこからの予測を分けて。
+        Mind uploading — <strong>whole brain emulation (WBE)</strong> — means measuring the structure and state of a brain and
+        reproducing its information processing on a computer. Following the format of
+        <a href="https://ai-2027.com" target="_blank" rel="noopener">AI 2027</a>, this page starts from where research actually
+        stands worldwide and asks <strong>what could happen in each year from 2026 to completion in 2050</strong>,
+        keeping demonstrated fact and projection clearly apart.
       </p>
       <div class="hero-meta">
-        <span>形式: 年表シナリオ</span>
-        <span>範囲: 全世界の公開研究</span>
-        <span>区間: 2026–2050</span>
-        <span>年号の導出: 4つの外挿則</span>
-        <span>引用: 44研究</span>
+        <span>Format: dated scenario</span>
+        <span>Scope: published research worldwide</span>
+        <span>Span: 2026–2050</span>
+        <span>Dates derived from: four laws</span>
+        <span>44 references</span>
       </div>
       <div class="callout" style="margin-top:24px">
         <p style="margin:0">
-          <strong>本ページは<a href="/ja/" style="color:var(--brand)">総合ガイド</a>の別冊（思考実験）です。</strong>
-          実証済みの事実の整理は<a href="/progress.html" style="color:var(--brand)">第3章 現在地</a>、予測の比較は<a href="/future.html" style="color:var(--brand)">第4章 未来</a>へ。
-          以下の年表は「楽観側の条件がすべて揃った場合」に何が起こりうるかを描く<strong>条件付きシナリオ</strong>であり、予測値（中央値2070年頃）より意図的に速い。
+          <strong>This is the companion volume to the <a href="/" style="color:var(--brand)">integrated guide</a>, and it is a thought experiment.</strong>
+          For the factual record see <a href="/progress.html" style="color:var(--brand)">Chapter 3 · Current status</a>; for a comparison of forecasts see
+          <a href="/future.html" style="color:var(--brand)">Chapter 4</a>.
+          The timeline below is a <strong>conditional scenario</strong> in which every optimistic assumption holds, and it is deliberately
+          faster than the consensus forecast (median around 2070).
         </p>
       </div>
       <div class="stats reveal">
-        <div><div class="n">302 → 8.6×10¹⁰</div><div class="l">写し取るニューロン数（線虫→ヒト）</div></div>
-        <div><div class="n">6</div><div class="l">発展フェーズ</div></div>
-        <div><div class="n">2050</div><div class="l">完成シナリオ（条件付き）</div></div>
-        <div><div class="n">31</div><div class="l">引用した実在研究</div></div>
+        <div><div class="n">302 → 8.6×10¹⁰</div><div class="l">Neurons to copy (nematode → human)</div></div>
+        <div><div class="n">6</div><div class="l">Phases</div></div>
+        <div><div class="n">2050</div><div class="l">Completion (conditional)</div></div>
+        <div><div class="n">44</div><div class="l">Real studies cited</div></div>
       </div>
     </section>
 
     <!-- ===== ABSTRACT ===== -->
     <section id="abstract">
-      <p class="eyebrow">Abstract / 要旨</p>
+      <p class="eyebrow">Abstract</p>
       <div class="abstract reveal">
-        <h3>要旨</h3>
+        <h3>Abstract</h3>
         <p>
-          全脳エミュレーション（WBE）は、Sandberg と Bostrom が2008年に体系化した「スキャン＆エミュレート」<sup><a href="#ref1">1</a></sup>という工学問題である。
-          以後の約20年で、世界の研究は <strong>構造の地図化</strong>を線虫（302ニューロン）<sup><a href="#ref2">2</a></sup>からハエ成虫の全脳（約14万ニューロン）<sup><a href="#ref7">7</a></sup>、
-          ヒト皮質1mm³<sup><a href="#ref9">9</a></sup>まで押し上げ、<strong>読み出し</strong>は会話速度の発話BCI<sup><a href="#ref21">21</a><a href="#ref23">23</a></sup>に到達した。
+          Whole brain emulation is the engineering problem of "scan and emulate", systematised by Sandberg and Bostrom in 2008<sup><a href="#ref1">1</a></sup>.
+          In the twenty years since, research worldwide has pushed <strong>structural mapping</strong> from the nematode (302 neurons)<sup><a href="#ref2">2</a></sup>
+          to the whole adult fly brain (about 140,000 neurons)<sup><a href="#ref7">7</a></sup> and 1 mm³ of human cortex<sup><a href="#ref9">9</a></sup>,
+          while <strong>readout</strong> has reached speech BCIs operating at conversational rates<sup><a href="#ref21">21</a><a href="#ref23">23</a></sup>.
         </p>
         <p>
-          本レビューは、この曲線を外挿し、2026→2050を6フェーズの年表シナリオとして描く。各フェーズの年号は<a class="ref-link" style="color:var(--brand)" href="#basis">4つの外挿則</a>から導出し、計算過程と「崩れる条件」をすべて開示する——
-          <strong>地図の自動化 → 哺乳類の全脳 → 走らせる → ヒトへの跳躍 → 個人の再構成 → 完成と分岐</strong>。
-          各フェーズは前を前提に積み上がる。2050年完成は確約ではなく、<strong>縮退（再構成の一意性）</strong><sup><a href="#ref16">16</a></sup>、
-          <strong>全脳スケール</strong>、<strong>同一性の検証</strong>という律速段階を越えた場合に成立する <em>条件付きシナリオ</em>であり、
-          最後は「継続」と「複製問題」に分岐する<sup><a href="#ref31">31</a></sup>。
+          This review extrapolates that curve and draws 2026 → 2050 as a six-phase dated scenario.
+          Every date is derived from <a class="ref-link" style="color:var(--brand)" href="#basis">four extrapolation laws</a>, with the arithmetic and the failure conditions fully disclosed:
+          <strong>automating the map → the first mammalian whole brain → running it → the jump to humans → reconstructing an individual → completion and the fork</strong>.
+          Each phase builds on the last. Completion in 2050 is not a promise but a <em>conditional scenario</em> that holds only if three
+          rate limiters are passed — <strong>degeneracy</strong> (uniqueness of reconstruction)<sup><a href="#ref16">16</a></sup>,
+          <strong>whole-brain scale</strong>, and <strong>validating identity</strong> — and it ends by splitting into "continuation" and "the copy problem"<sup><a href="#ref31">31</a></sup>.
         </p>
       </div>
     </section>
 
     <!-- ===== SCALE / GROWTH CHART ===== -->
     <section id="scale">
-      <p class="eyebrow">1. The Exponential / 規模の指数</p>
-      <h2>脳マッピングは、すでに指数で登っている。</h2>
+      <p class="eyebrow">1. The Exponential</p>
+      <h2>Brain mapping is already climbing exponentially.</h2>
       <p class="lead" style="margin-bottom:22px">
-        シナプス解像度で再構成された脳の最大規模を対数軸で並べると、線虫からヒトまでは <strong>約9桁</strong>。
-        実線は実証済み、点線は本シナリオの予測。完成はこの曲線が天井（ヒト全脳）に届く点として読める。
+        Plotted logarithmically, the largest brain reconstructed at synaptic resolution spans <strong>about nine orders of magnitude</strong>
+        from nematode to human. The solid line is demonstrated; the dashed line is this scenario's projection.
+        Completion can be read as the point where the curve reaches the ceiling of a whole human brain.
       </p>
       <div class="chart-wrap reveal">
         <svg viewBox="0 0 820 380" role="img" aria-labelledby="scale-chart-title scale-chart-desc">
-          <title id="scale-chart-title">シナプス解像度で再構成された脳の最大規模</title>
-          <desc id="scale-chart-desc">線虫302ニューロンからヒト全脳8.6×10¹⁰ニューロンまでを対数軸で示し、2025年までを実証済み、2026年以降を予測シナリオとして描く。</desc>
-          <!-- projection background band -->
+          <title id="scale-chart-title">Largest brain reconstructed at synaptic resolution</title>
+          <desc id="scale-chart-desc">A logarithmic plot from the nematode's 302 neurons to a whole human brain of 8.6×10¹⁰ neurons, showing results demonstrated up to 2025 and projected from 2026 onward.</desc>
           <rect x="499.5" y="44" width="288.5" height="268" fill="rgba(122,162,255,0.05)"/>
           <line x1="499.5" y1="36" x2="499.5" y2="324" stroke="rgba(122,162,255,0.35)" stroke-dasharray="3 4"/>
-          <text x="505" y="58" fill="#7aa2ff" font-size="11" font-family="monospace">予測 →</text>
-          <text x="494" y="58" fill="#5fd6a4" font-size="11" font-family="monospace" text-anchor="end">← 実証済み</text>
-
-          <!-- y gridlines: 10^2,4,6,8,10 -->
+          <text x="505" y="58" fill="#7aa2ff" font-size="11" font-family="monospace">projected →</text>
+          <text x="494" y="58" fill="#5fd6a4" font-size="11" font-family="monospace" text-anchor="end">← demonstrated</text>
           <g stroke="rgba(255,255,255,0.07)">
             <line x1="72" y1="312" x2="788" y2="312"/>
             <line x1="72" y1="252.4" x2="788" y2="252.4"/>
@@ -389,7 +158,6 @@
             <text x="64" y="137">10⁸</text>
             <text x="64" y="78">10¹⁰</text>
           </g>
-          <!-- x ticks -->
           <g fill="#697389" font-size="11" font-family="monospace" text-anchor="middle">
             <text x="125" y="332">1990</text>
             <text x="286" y="332">2005</text>
@@ -397,161 +165,157 @@
             <text x="660" y="332">2040</text>
             <text x="767" y="332">2050</text>
           </g>
-          <text x="20" y="180" fill="#9aa6bd" font-size="12" transform="rotate(-90 20 180)" text-anchor="middle">再構成ニューロン数</text>
-
-          <!-- real (solid) -->
+          <text x="20" y="180" fill="#9aa6bd" font-size="12" transform="rotate(-90 20 180)" text-anchor="middle">Neurons reconstructed</text>
           <polyline points="82.7,297.7 446,240.5 488.7,218.2 499.5,213.7" fill="none" stroke="#5fd6a4" stroke-width="2.5"/>
-          <!-- projection (dashed) -->
           <polyline points="499.5,213.7 552.9,137.8 713.2,46.1 766.6,46.1" fill="none" stroke="#7aa2ff" stroke-width="2.5" stroke-dasharray="6 6"/>
-
-          <!-- real points -->
           <g>
             <circle cx="82.7" cy="297.7" r="5" fill="#5fd6a4"/>
-            <text x="90" y="293" fill="#cfd6e5" font-size="11">線虫 302（1986）</text>
+            <text x="90" y="293" fill="#cfd6e5" font-size="11">Nematode 302 (1986)</text>
             <circle cx="446" cy="240.5" r="5" fill="#5fd6a4"/>
-            <text x="438" y="234" fill="#cfd6e5" font-size="11" text-anchor="end">ハエ脳中枢 2.5万（2020）</text>
+            <text x="438" y="234" fill="#cfd6e5" font-size="11" text-anchor="end">Fly central brain 25K (2020)</text>
             <circle cx="488.7" cy="218.2" r="5" fill="#5fd6a4"/>
             <circle cx="499.5" cy="213.7" r="5.5" fill="#5fd6a4" stroke="#0a0d14" stroke-width="1.5"/>
-            <text x="468" y="203" fill="#cfd6e5" font-size="11" text-anchor="end">ハエ全脳14万・マウス1mm³（2024–25）</text>
+            <text x="468" y="203" fill="#cfd6e5" font-size="11" text-anchor="end">Whole fly 140K · mouse 1mm³ (2024–25)</text>
           </g>
-          <!-- projected points -->
           <g>
             <circle cx="552.9" cy="137.8" r="5" fill="#7aa2ff"/>
-            <text x="560" y="133" fill="#aab6cf" font-size="11">マウス全脳 7×10⁷（~2030）</text>
+            <text x="560" y="133" fill="#aab6cf" font-size="11">Whole mouse 7×10⁷ (~2030)</text>
             <circle cx="713.2" cy="46.1" r="6" fill="#c89bff"/>
-            <text x="705" y="40" fill="#d8c7f2" font-size="11" text-anchor="end">ヒト全脳 8.6×10¹⁰（~2045）</text>
+            <text x="705" y="40" fill="#d8c7f2" font-size="11" text-anchor="end">Whole human 8.6×10¹⁰ (~2045)</text>
             <path d="M766.6 38 l3.5 7 7.5 .8 -5.7 5 1.8 7.4 -7.1 -4 -7.1 4 1.8 -7.4 -5.7 -5 7.5 -.8z" fill="#5ed8c6"/>
-            <text x="767" y="78" fill="#5ed8c6" font-size="11" text-anchor="middle" font-weight="700">完成</text>
+            <text x="767" y="78" fill="#5ed8c6" font-size="11" text-anchor="middle" font-weight="700">done</text>
           </g>
         </svg>
         <div class="chart-legend">
-          <span><span class="lg-line" style="border-color:#5fd6a4"></span>実証済み（〜2025）</span>
-          <span><span class="lg-line" style="border-color:#7aa2ff;border-top-style:dashed"></span>予測シナリオ（2026〜）</span>
-          <span><span class="lg-dot" style="background:#c89bff"></span>ヒト全脳スケール</span>
+          <span><span class="lg-line" style="border-color:#5fd6a4"></span>Demonstrated (to 2025)</span>
+          <span><span class="lg-line" style="border-color:#7aa2ff;border-top-style:dashed"></span>Projected (2026 onward)</span>
+          <span><span class="lg-dot" style="background:#c89bff"></span>Whole human scale</span>
         </div>
       </div>
       <div class="callout reveal" style="margin-top:18px">
         <p style="margin:0">
-          <strong>読み筋:</strong> WBE は単一の発明ではなく <strong>固定 → 取得 → 再構成 → 走らせる → 検証</strong> の依存パイプライン。
-          上の曲線は「取得（地図化）」の軸にすぎず、構造を写し取っても、走らせる動的状態と検証が揃わなければ脳は動かない。
-          以下の年表は、各年に <em>どの軸が前進し、何が残るか</em> を追う。
+          <strong>How to read it:</strong> WBE is not a single invention but a dependency pipeline —
+          <strong>fix → acquire → reconstruct → run → validate</strong>.
+          The curve above tracks only the acquisition axis. Copying structure does nothing on its own without the dynamical state
+          and the validation to go with it. The timeline that follows asks, year by year, <em>which axis advances and what is left over</em>.
         </p>
       </div>
     </section>
 
-    <!-- ===== DERIVATION / なぜこの時期なのか ===== -->
+    <!-- ===== DERIVATION ===== -->
     <section id="basis">
-      <p class="eyebrow">2. The Derivation / 年号の根拠</p>
-      <h2>なぜ、この時期なのか。</h2>
+      <p class="eyebrow">2. The Derivation</p>
+      <h2>Why these dates?</h2>
       <p class="lead" style="margin-bottom:22px">
-        シナリオの年号は雰囲気で置いたものではない。<strong>3つの外挿則</strong>から各フェーズの所要年数を求め、それを積み上げた結果が2050年である。
-        ここでは計算を全部開示する——<em>どこが堅く、どこが賭けなのか</em>を読者が自分で判定できるようにするためである。
+        The years in this scenario were not chosen by feel. Each phase's duration comes from <strong>four extrapolation laws</strong>,
+        and 2050 is what the sum produces. The arithmetic is fully disclosed here so that readers can judge for themselves
+        <em>which parts are solid and which are a bet</em>.
       </p>
 
       <div class="law reveal">
         <span class="lead-in">Law 1 — Scale</span>
-        <h4>地図化の規模則：全コネクトームの最大ニューロン数</h4>
-        <p>実測点は4つしかないが、傾きははっきりしている。</p>
-        <span class="math">1986: 302（線虫）<sup><a href="#ref2">2</a></sup> → 2020: 2.5万（ハエ中心脳）<sup><a href="#ref6">6</a></sup> → 2024: 13.9万（ハエ全脳）<sup><a href="#ref7">7</a></sup> → 2025: 16.7万（雄ハエCNS）<sup><a href="#ref32">32</a></sup>
-長期平均（1986→2024）: 2.66桁 ÷ 38年 = <b>0.070 桁/年</b>（1桁に14.3年）
-直近（2020→2024）  : 0.75桁 ÷ 4年  = <b>0.187 桁/年</b>（1桁に5.4年）</span>
-        <p>
-          この2つのレートを当てると、次の目標までの年数はこうなる。
-        </p>
-        <span class="math">ハエ13.9万 → マウス7×10⁷ : 2.70桁 → 長期レートで38.6年（2063年）／直近レートで14.4年（<b>2038年</b>）
-マウス → ヒト8.6×10¹⁰    : 3.09桁 → 直近レートで16.5年</span>
+        <h4>Mapping scale: the largest complete connectome, in neurons</h4>
+        <p>There are only four measured points, but the slope is unambiguous.</p>
+        <span class="math">1986: 302 (nematode)<sup><a href="#ref2">2</a></sup> → 2020: 25K (fly central brain)<sup><a href="#ref6">6</a></sup> → 2024: 139K (whole fly)<sup><a href="#ref7">7</a></sup> → 2025: 167K (male fly CNS)<sup><a href="#ref32">32</a></sup>
+Long run (1986→2024): 2.66 OOM ÷ 38 yr = <b>0.070 OOM/yr</b> (14.3 yr per order)
+Recent   (2020→2024): 0.75 OOM ÷ 4 yr  = <b>0.187 OOM/yr</b> (5.4 yr per order)</span>
+        <p>Applying each rate to the next target gives:</p>
+        <span class="math">Fly 139K → mouse 7×10⁷ : 2.70 OOM → 38.6 yr at the long-run rate (2063); 14.4 yr at the recent rate (<b>2038</b>)
+Mouse → human 8.6×10¹⁰  : 3.09 OOM → 16.5 yr at the recent rate</span>
         <p style="margin:0">
-          <b>読みどころ:</b> シナリオが置く「マウス全脳2030年」は、直近レートのさらに<b>約2.4倍</b>の加速を要求する。
-          一方で「マウス2030 → ヒト2045」は15年で3.09桁＝0.21桁/年と、<b>直近レートとほぼ同じ</b>である。
-          つまり本シナリオの賭けは、ほぼ全てフェーズ2（マウス全脳）の一点に集中している。
+          <b>The thing to notice:</b> placing the whole mouse brain at 2030 demands roughly <b>2.4× the recent rate</b>.
+          But "mouse 2030 → human 2045" is 3.09 orders in 15 years, or 0.21 OOM/yr — <b>essentially the recent rate itself</b>.
+          In other words, almost the entire bet in this scenario is concentrated in phase 2, the mouse.
         </p>
       </div>
 
       <div class="law reveal">
         <span class="lead-in">Law 2 — Data</span>
-        <h4>データ量の則：H01（ヒト皮質1mm³ = 1.4ペタバイト）を単位に換算する</h4>
-        <p>撮像量は体積に比例する。ヒト皮質1mm³の再構成データが1.4PBだったことから<sup><a href="#ref9">9</a></sup>、必要量は単純な掛け算で出る。</p>
-        <span class="math">ハエ全脳  ≈ 0.08 mm³   → 約 110 テラバイト
-マウス全脳 ≈ 500 mm³    → 約 0.7 <b>エクサ</b>バイト（ハエの約6,000倍）
-ヒト全脳  ≈ 1.2×10⁶ mm³ → 約 1.7 <b>ゼタ</b>バイト（ハエの約1,500万倍）</span>
+        <h4>Data volume: converting from H01 (1 mm³ of human cortex = 1.4 petabytes)</h4>
+        <p>Imaging volume scales with tissue volume. Since reconstructing 1 mm³ of human cortex produced 1.4 PB<sup><a href="#ref9">9</a></sup>, the requirement is simple multiplication.</p>
+        <span class="math">Whole fly brain   ≈ 0.08 mm³    → about 110 terabytes
+Whole mouse brain ≈ 500 mm³     → about 0.7 <b>exabytes</b>   (≈6,000× the fly)
+Whole human brain ≈ 1.2×10⁶ mm³ → about 1.7 <b>zettabytes</b> (≈15,000,000× the fly)</span>
         <p style="margin:0">
-          現行の最速EM（マルチビームSEM）を前提とした試算では、マウス全脳の撮像・再構成だけで<b>10年超</b>という見積もりがある<sup><a href="#ref33">33</a></sup>。
-          シナリオが「2027開始 → 2028撮像完了 → 2030初版公開」とするのは、装置の並列化とスループット改善で<b>5倍前後に加速する</b>という想定に立っている。
-          現在進行中の10mm³規模のパイロット（マウス全脳の約2%）<sup><a href="#ref34">34</a></sup>が、この想定の可否を最初に教えてくれる指標になる。
+          Estimates assuming today's fastest EM (multibeam SEM) put <b>more than ten years</b> on imaging and reconstructing a whole mouse
+          brain alone<sup><a href="#ref33">33</a></sup>. This scenario's "start in 2027, finish imaging in 2028, publish in 2030" rests on the assumption of a
+          <b>roughly fivefold acceleration</b> through instrument parallelism and throughput gains. The 10 mm³ pilots now underway
+          (about 2% of a mouse brain)<sup><a href="#ref34">34</a></sup> will be the first indicator of whether that holds.
         </p>
       </div>
 
       <div class="law reveal">
         <span class="lead-in">Law 3 — Compute</span>
-        <h4>計算の則：エクサ級はすでに到達済み、次の4桁に約19年</h4>
-        <p>2008年ロードマップの見積もりでは、スパイキング水準のヒト全脳が約10¹⁸ FLOPS、電気生理水準が約10²² FLOPS<sup><a href="#ref1">1</a></sup>。</p>
-        <span class="math">TOP500首位の伸び: 2008年 1 ペタFLOPS → 2022年 1 エクサFLOPS<sup><a href="#ref35">35</a></sup>
-             = 3桁 ÷ 14年 = <b>0.21 桁/年</b>
-スパイキング水準（10¹⁸）: <b>2022年に到達済み</b>
-電気生理水準（10²²）   : 4桁 ÷ 0.21 = 約19年 → <b>2041–2045年頃</b></span>
+        <h4>Compute: exascale is already here; the next four orders take about 19 years</h4>
+        <p>The 2008 roadmap estimated a spiking-level human brain at about 10¹⁸ FLOPS and an electrophysiological-level one at about 10²² FLOPS<sup><a href="#ref1">1</a></sup>.</p>
+        <span class="math">TOP500 leader: 2008 1 petaFLOPS → 2022 1 exaFLOPS<sup><a href="#ref35">35</a></sup>
+             = 3 OOM ÷ 14 yr = <b>0.21 OOM/yr</b>
+Spiking level (10¹⁸):        <b>reached in 2022</b>
+Electrophysiological (10²²): 4 OOM ÷ 0.21 = about 19 yr → <b>around 2041–2045</b></span>
         <p style="margin:0">
-          <b>読みどころ:</b> 計算資源は<b>本シナリオの律速ではない</b>。ヒト全脳を高解像度で走らせる計算能力は、地図が完成する時期と自然に揃う。
-          真の壁は演算量ではなく、10¹⁴シナプスの状態を保持・更新するメモリと帯域、そしてゼタバイト級データの処理パイプラインである。
+          <b>The thing to notice:</b> compute is <b>not the rate limiter in this scenario</b>. The capacity to run a whole human brain at high
+          resolution arrives naturally at the same time as the map. The real wall is not arithmetic but the memory and bandwidth to hold
+          and update 10¹⁴ synaptic states, and the pipeline to process zettabyte-scale data.
         </p>
       </div>
 
       <div class="law reveal">
         <span class="lead-in">Law 4 — Automation</span>
-        <h4>校正の則：ここだけは「外挿」ではなく「2桁のブレイクスルー」が要る</h4>
+        <h4>Proofreading: the one place that needs a two-order breakthrough, not an extrapolation</h4>
         <p>
-          自動セグメンテーションの出力は、そのままでは配線図にならない。ハエ全脳では自動処理の後に、
-          コミュニティによる数百万回規模の人手編集——延べにして<b>数十人年</b>と見積もられる校正が投入された<sup><a href="#ref7">7</a><a href="#ref36">36</a></sup>。
+          The output of automatic segmentation is not yet a wiring diagram. For the whole fly brain, automatic processing was followed by
+          millions of community edits — proofreading estimated at <b>tens of person-years</b><sup><a href="#ref7">7</a><a href="#ref36">36</a></sup>.
         </p>
-        <span class="math">ハエ13.9万ニューロン: 校正 延べ数十人年
-マウス7×10⁷（500倍）を単純外挿: <b>1万人年規模</b> → 現実的でない</span>
+        <span class="math">Fly, 139K neurons: proofreading on the order of tens of person-years
+Naive scaling to mouse, 7×10⁷ (500×): <b>on the order of 10,000 person-years</b> → not viable</span>
         <p style="margin:0">
-          したがってフェーズ1（2026–28）の「地図の自動化」は、他のフェーズと性質が違う。
-          外挿ではなく、<b>校正コストを2桁下げる</b>という達成を前提に置いている。
-          E11 Bioのタンパク質バーコード（PRISM）<sup><a href="#ref37">37</a></sup>のような、そもそも校正を要らなくする設計がこの前提の担い手である。
-          <b>ここが崩れれば、シナリオ全体が Law 1 の長期レート（マウス2063年）側へ滑り落ちる。</b>
+          Phase 1 (2026–28), "automating the map", is therefore different in kind from the others.
+          It is not an extrapolation but an assumption that proofreading cost falls by <b>two orders of magnitude</b>.
+          Designs that remove the need for proofreading altogether — E11 Bio's protein barcoding (PRISM)<sup><a href="#ref37">37</a></sup> — are what would carry that assumption.
+          <b>If it fails, the whole scenario slides toward Law 1's long-run rate, and the mouse arrives in 2063.</b>
         </p>
       </div>
 
-      <h3 style="font-size:1.15rem;margin:30px 0 12px">フェーズごとの根拠と、崩れる条件</h3>
+      <h3 style="font-size:1.15rem;margin:30px 0 12px">Phase by phase: the derivation and the failure conditions</h3>
       <div class="tbl reveal">
         <table>
-          <thead><tr><th>フェーズ</th><th>年</th><th>年号の導出</th><th>前提（これが崩れると遅れる）</th><th>確度</th></tr></thead>
+          <thead><tr><th>Phase</th><th>Years</th><th>How the date is derived</th><th>Assumptions (which, if broken, delay it)</th><th>Confidence</th></tr></thead>
           <tbody>
             <tr>
-              <td><b>1. 地図の自動化</b></td><td class="num">2026–28</td>
-              <td>新発見を必要とせず、FlyWire・MICrONSで実証済みのパイプライン<sup><a href="#ref7">7</a><a href="#ref10">10</a></sup>を標準化するだけの区間。所要は普及の速度で決まる</td>
-              <td>Law 4（校正コスト2桁減）。資金の連続性</td>
-              <td><span class="chip done">高い</span></td>
+              <td><b>1. Automating the map</b></td><td class="num">2026–28</td>
+              <td>Requires no new discovery: this is standardising pipelines already demonstrated by FlyWire and MICrONS<sup><a href="#ref7">7</a><a href="#ref10">10</a></sup>. Duration is set by adoption speed</td>
+              <td>Law 4 (two-order reduction in proofreading cost); continuity of funding</td>
+              <td><span class="chip done">High</span></td>
             </tr>
             <tr>
-              <td><b>2. 哺乳類の全脳</b></td><td class="num">2029–32</td>
-              <td>Law 1 を直近レートの2.4倍で外挿。10mm³パイロットが3年で完了し、その50倍へ横展開に3年という配分</td>
-              <td>撮像スループット5倍、校正の完全自動化、10年連続の資金。<b>いずれか一つでも欠けると2038年前後へ後退</b></td>
-              <td><span class="chip open">最も脆い</span></td>
+              <td><b>2. The first mammalian whole brain</b></td><td class="num">2029–32</td>
+              <td>Law 1 extrapolated at 2.4× the recent rate. Assumes the 10 mm³ pilot completes in three years and scaling to 50× that takes three more</td>
+              <td>Fivefold imaging throughput, fully automated proofreading, a decade of continuous funding. <b>Losing any one pushes this to around 2038</b></td>
+              <td><span class="chip open">Most fragile</span></td>
             </tr>
             <tr>
-              <td><b>3. 走らせる</b></td><td class="num">2033–37</td>
-              <td>ハエでは「モデル<sup><a href="#ref38">38</a></sup>→身体化<sup><a href="#ref39">39</a></sup>」に2年しか要さなかった。マウスは560倍だが Law 3 より計算は律速でないため、モデル化の科学に5年を配分</td>
-              <td>構造から動態（シナプス重み・神経修飾）を推定する手法の確立。<b>新しい科学が必要な唯一の区間</b>で、見積もりの不確実性が最大</td>
-              <td><span class="chip now">科学次第</span></td>
+              <td><b>3. Running it</b></td><td class="num">2033–37</td>
+              <td>In the fly, "model<sup><a href="#ref38">38</a></sup> → embodied<sup><a href="#ref39">39</a></sup>" took only two years. The mouse is 560× larger, but by Law 3 compute is not limiting, so five years is allocated to the science of modelling</td>
+              <td>Establishing methods to infer dynamics — synaptic weights, neuromodulation — from structure. <b>The only phase requiring new science</b>, so the estimate carries maximum uncertainty</td>
+              <td><span class="chip now">Science-dependent</span></td>
             </tr>
             <tr>
-              <td><b>4. ヒトへの跳躍</b></td><td class="num">2038–43</td>
-              <td>Law 1 の直近レートをそのまま適用（マウス→ヒトで約16年）。マウス完了を待たず並行着手する前提で2039年開始とする。Law 3 の電気生理水準到達（2041–45）とも整合</td>
-              <td>保存脳の供給（フェーズ2で臨床グレード保存が始まる想定に依存）、倫理・法の枠組み</td>
-              <td><span class="chip soon">条件つき</span></td>
+              <td><b>4. The jump to humans</b></td><td class="num">2038–43</td>
+              <td>Law 1's recent rate applied unchanged (about 16 years mouse to human). Assumes work begins in parallel rather than waiting for the mouse, hence a 2039 start. Consistent with Law 3's electrophysiological level arriving 2041–45</td>
+              <td>Supply of preserved brains (depends on clinical-grade preservation beginning in phase 2); ethical and legal frameworks</td>
+              <td><span class="chip soon">Conditional</span></td>
             </tr>
             <tr>
-              <td><b>5. 個人の再構成</b></td><td class="num">2044–48</td>
-              <td>技術ではなく<b>合意形成</b>の時間として5年を配分。検証バッテリの設計・多施設での再現・標準化団体による採択という手続きの所要</td>
-              <td>検証基準そのものの合意。現在この軸は事実上ゼロからの出発</td>
-              <td><span class="chip open">未着手</span></td>
+              <td><b>5. Reconstructing an individual</b></td><td class="num">2044–48</td>
+              <td>Five years allocated to <b>consensus formation</b> rather than technology: designing a validation battery, replicating it across institutions, and having a standards body adopt it</td>
+              <td>Agreement on validation criteria themselves. This axis effectively starts from zero today</td>
+              <td><span class="chip open">Not started</span></td>
             </tr>
             <tr>
-              <td><b>6. 完成と分岐</b></td><td class="num">2049–50</td>
-              <td>上記の<b>単純な積み上げの終端</b>。切りのいい2050年を先に決めて逆算したのではなく、各フェーズの所要年数の和がここに落ちる</td>
+              <td><b>6. Completion and the fork</b></td><td class="num">2049–50</td>
+              <td><b>Simply where the sum lands.</b> The round number 2050 was not chosen and worked backwards from; it is what the phase durations add up to</td>
               <td>—</td>
-              <td><span class="chip far">終端</span></td>
+              <td><span class="chip far">Endpoint</span></td>
             </tr>
           </tbody>
         </table>
@@ -559,175 +323,159 @@
 
       <div class="note" style="margin-top:20px">
         <p style="margin:0">
-          <b>この2050年を、外部の予測とどう突き合わせるか。</b>
-          予測コミュニティ（Metaculus）の中央値は<b>2070年頃</b><sup><a href="#ref40">40</a></sup>、2025年の分野内レビューは<b>最短でも30–40年（2055–65年以降）</b>と評価している<sup><a href="#ref41">41</a></sup>。
-          本シナリオの2050年はそれらより15〜20年早い。差はどこから来るのか——上の表を見れば分かるとおり、
-          <b>ほぼ全てフェーズ2と3</b>、すなわち「マウス全脳の地図化速度」と「構造から動態を推定する科学が5年で片づくか」の2点に由来する。
-          この2つを保守的に見積もれば、本シナリオの年表はそのまま2065–70年へ平行移動する。
-          つまり本ページは予測ではなく、<b>「どの2つの仮定を信じるかで、未来が20年動く」ことを示すための道具</b>である。
+          <b>How to reconcile 2050 with outside forecasts.</b>
+          The forecasting community's median is around <b>2070</b><sup><a href="#ref40">40</a></sup>, and the 2025 review from inside the field puts it at
+          <b>30–40 years at minimum (2055–65 onward)</b><sup><a href="#ref41">41</a></sup>. This scenario is 15 to 20 years faster.
+          Where does the difference come from? As the table shows, <b>almost entirely from phases 2 and 3</b> — the speed of mapping a whole
+          mouse brain, and whether the science of inferring dynamics from structure resolves in five years.
+          Estimate those two conservatively and this timeline translates directly to 2065–70.
+          This page is therefore not a forecast but <b>an instrument for showing that two assumptions move the future by twenty years</b>.
         </p>
       </div>
     </section>
 
     <!-- ===== SCENARIO TIMELINE ===== -->
     <section id="scenario">
-      <p class="eyebrow">3. The Scenario / シナリオ年表</p>
-      <h2>2026 → 2050、6つのフェーズ。</h2>
-      <p class="lead" style="margin-bottom:14px">右の年号パネルはスクロールに追従し、いまどのフェーズを読んでいるかを示す。クリックで各フェーズへ移動。</p>
-      <nav class="axis reveal" aria-label="フェーズ早送り">
-        <a class="s1" href="#era1">26–28<small>地図の自動化</small></a>
-        <a class="s2" href="#era2">29–32<small>哺乳類全脳</small></a>
-        <a class="s3" href="#era3">33–37<small>走らせる</small></a>
-        <a class="s4" href="#era4">38–43<small>ヒトへ</small></a>
-        <a class="s5" href="#era5">44–48<small>個人再構成</small></a>
-        <a class="s6" href="#era6">49–50<small>完成と分岐</small></a>
+      <p class="eyebrow">3. The Scenario</p>
+      <h2>2026 → 2050, in six phases.</h2>
+      <p class="lead" style="margin-bottom:14px">The year panel on the right follows your scroll and shows which phase you are reading. Click to jump.</p>
+      <nav class="axis reveal" aria-label="Phase navigation">
+        <a class="s1" href="#era1">26–28<small>Automating the map</small></a>
+        <a class="s2" href="#era2">29–32<small>Mammalian brain</small></a>
+        <a class="s3" href="#era3">33–37<small>Running it</small></a>
+        <a class="s4" href="#era4">38–43<small>To humans</small></a>
+        <a class="s5" href="#era5">44–48<small>An individual</small></a>
+        <a class="s6" href="#era6">49–50<small>Completion</small></a>
       </nav>
 
       <div class="scrolly">
         <div class="narrative">
-          <!-- grounded present -->
           <div class="now-card reveal">
-            <span class="flag">現在地 2026 ・ 実証済み</span>
-            <p style="margin:.2em 0 .8em;color:#d3dae8">外挿の前に、土台となる事実。これらは <strong>世界中で実際に達成済み</strong>。</p>
+            <span class="flag">Where we are · 2026 · demonstrated</span>
+            <p style="margin:.2em 0 .8em;color:#d3dae8">Before extrapolating, the foundation. All of the following has <strong>actually been achieved</strong>.</p>
             <ul>
-              <li>線虫の全配線図は両性・発達段階まで取得済み<sup><a href="#ref2">2</a><a href="#ref3">3</a><a href="#ref4">4</a></sup>。ショウジョウバエは幼虫<sup><a href="#ref5">5</a></sup>・成虫全脳（約14万ニューロン・5千万シナプス）<sup><a href="#ref6">6</a><a href="#ref7">7</a><a href="#ref8">8</a></sup>まで完成。</li>
-              <li>哺乳類はヒト皮質1mm³のペタボクセル再構成<sup><a href="#ref9">9</a></sup>と、マウス視覚野の構造＋機能統合（MICrONS）<sup><a href="#ref10">10</a></sup>。全脳の細胞型地図も整備<sup><a href="#ref11">11</a><a href="#ref12">12</a></sup>。</li>
-              <li>計測は数千点同時記録のNeuropixels<sup><a href="#ref18">18</a><a href="#ref19">19</a></sup>、麻痺患者の手書き・発話を高速デコードするBCI<sup><a href="#ref20">20</a><a href="#ref21">21</a><a href="#ref22">22</a><a href="#ref23">23</a></sup>、脳–脊髄ブリッジによる歩行回復<sup><a href="#ref24">24</a></sup>。</li>
-              <li>保存はアルデヒド安定化＋低温保存（ASC）がブタ脳でシナプス構造を保持<sup><a href="#ref17">17</a></sup>。再構成の基礎は皮質微小回路シミュレーション<sup><a href="#ref15">15</a></sup>。</li>
+              <li>Complete nematode wiring diagrams exist for both sexes and across development<sup><a href="#ref2">2</a><a href="#ref3">3</a><a href="#ref4">4</a></sup>. In <i>Drosophila</i>, both the larva<sup><a href="#ref5">5</a></sup> and the whole adult brain (about 140,000 neurons, 50 million synapses) are complete<sup><a href="#ref6">6</a><a href="#ref7">7</a><a href="#ref8">8</a></sup>.</li>
+              <li>In mammals, 1 mm³ of human cortex has been reconstructed at petavoxel scale<sup><a href="#ref9">9</a></sup>, and mouse visual cortex has been mapped structurally and functionally together (MICrONS)<sup><a href="#ref10">10</a></sup>. Whole-brain cell-type atlases exist<sup><a href="#ref11">11</a><a href="#ref12">12</a></sup>.</li>
+              <li>Measurement includes Neuropixels recording thousands of sites at once<sup><a href="#ref18">18</a><a href="#ref19">19</a></sup>, BCIs decoding handwriting and speech at speed in paralysed patients<sup><a href="#ref20">20</a><a href="#ref21">21</a><a href="#ref22">22</a><a href="#ref23">23</a></sup>, and restored walking via a brain–spine bridge<sup><a href="#ref24">24</a></sup>.</li>
+              <li>Preservation by aldehyde-stabilized cryopreservation retains synaptic structure in whole pig brains<sup><a href="#ref17">17</a></sup>. The basis for reconstruction is cortical microcircuit simulation<sup><a href="#ref15">15</a></sup>.</li>
             </ul>
           </div>
 
           <!-- ERA 1 -->
-          <div class="era e1" id="era1" data-year="2026–2028" data-era="地図の自動化" data-metric="≈2×10⁵" data-metric-label="最大再構成ニューロン数">
+          <div class="era e1" id="era1" data-year="2026–2028" data-era="Automating the map" data-metric="≈2×10⁵" data-metric-label="Largest reconstruction, neurons">
             <div class="era-head">
-              <div class="era-kicker"><span class="era-num">フェーズ 1</span><span class="era-yr">2026–2028</span><span class="era-flag">予測シナリオ</span></div>
-              <h3>地図の自動化</h3>
-              <p class="era-sub">AIによる電子顕微鏡再構成の自動化が、配線図づくりのコストを桁で押し下げる。</p>
+              <div class="era-kicker"><span class="era-num">Phase 1</span><span class="era-yr">2026–2028</span><span class="era-flag">projected</span></div>
+              <h3>Automating the map</h3>
+              <p class="era-sub">AI-driven electron microscopy reconstruction drops the cost of wiring diagrams by orders of magnitude.</p>
             </div>
             <ol class="beats">
-              <li class="beat"><span class="beat-date">2026</span><h4>EM再構成がAIで律速解除</h4><p>フラッドフィリング／Transformer系の自動セグメンテーションが、ペタバイト級EM画像の人手コストを激減させる。FlyWire・H01・MICrONSで実証されたパイプライン<sup><a href="#ref7">7</a><a href="#ref9">9</a><a href="#ref10">10</a></sup>が標準化し、再構成スループットが取得の主律速でなくなる。</p></li>
-              <li class="beat"><span class="beat-date">2027</span><h4>マウス全脳プロジェクトの始動</h4><p>公的（BRAIN Initiative等）と民間の連合が、約7,000万ニューロンの <em>マウス全脳コネクトーム</em> を明確な中間目標に掲げ、全脳EM撮像を開始。2023年に始まったBRAIN CONNECTSの10mm³パイロット<sup><a href="#ref34">34</a></sup>が土台になり、1mm³から全脳へ約3桁のスケールアップに着手する。</p></li>
-              <li class="beat"><span class="beat-date">2027</span><h4>発話BCIが会話速度へ</h4><p>皮質内発話ニューロプロステーシス<sup><a href="#ref21">21</a><a href="#ref22">22</a><a href="#ref23">23</a></sup>が日常会話に耐える速度・安定性に達し、複数チームで再現。「神経活動から状態を読む」読み出し能力が臨床標準になる。</p></li>
-              <li class="beat"><span class="beat-date">2028</span><h4>マウス全脳の撮像完了</h4><p>全脳EMデータ取得が完了し、自動再構成フェーズへ。分子・細胞型アトラス<sup><a href="#ref11">11</a><a href="#ref12">12</a></sup>や拡張顕微鏡<sup><a href="#ref13">13</a></sup>との重ね合わせ準備が進む。</p></li>
+              <li class="beat"><span class="beat-date">2026</span><h4>AI removes the reconstruction bottleneck</h4><p>Flood-filling and transformer-based automatic segmentation slash the human cost of petabyte-scale EM imagery. The pipelines demonstrated on FlyWire, H01 and MICrONS<sup><a href="#ref7">7</a><a href="#ref9">9</a><a href="#ref10">10</a></sup> become standard, and reconstruction throughput stops being the main limiter on acquisition.</p></li>
+              <li class="beat"><span class="beat-date">2027</span><h4>A whole-mouse-brain project starts</h4><p>Public bodies such as the BRAIN Initiative and private consortia adopt a <em>whole mouse connectome</em> of about 70 million neurons as an explicit intermediate goal and begin whole-brain EM imaging. The 10 mm³ BRAIN CONNECTS pilots begun in 2023<sup><a href="#ref34">34</a></sup> provide the foundation for a roughly three-order scale-up from 1 mm³.</p></li>
+              <li class="beat"><span class="beat-date">2027</span><h4>Speech BCIs reach conversational speed</h4><p>Intracortical speech neuroprostheses<sup><a href="#ref21">21</a><a href="#ref22">22</a><a href="#ref23">23</a></sup> reach speed and stability adequate for everyday conversation and are replicated by multiple teams. Reading state from neural activity becomes a clinical standard.</p></li>
+              <li class="beat"><span class="beat-date">2028</span><h4>Whole-mouse imaging completes</h4><p>Whole-brain EM acquisition finishes and the automatic reconstruction phase begins. Preparations advance for overlaying molecular and cell-type atlases<sup><a href="#ref11">11</a><a href="#ref12">12</a></sup> and expansion microscopy<sup><a href="#ref13">13</a></sup>.</p></li>
             </ol>
             <div class="why">
-              <span class="tag">なぜ2026–2028か</span>
-              <p><b>導出:</b> この区間だけは外挿ではない。FlyWire<sup><a href="#ref7">7</a></sup>とMICrONS<sup><a href="#ref10">10</a></sup>で
-              <b>すでに動いているパイプラインを標準化する</b>だけなので、所要年数は新発見ではなく普及の速度で決まる。3年はその普及に要する時間。</p>
-              <p style="margin:0"><b>崩れる条件:</b> Law 4（校正コストを2桁下げる）が達成できないこと。ここが動かなければ以降のフェーズは全て長期レート側へ滑る。</p>
+              <span class="tag">Why 2026–2028</span>
+              <p><b>Derivation:</b> this phase alone is not an extrapolation. It standardises pipelines <b>already running</b> at FlyWire<sup><a href="#ref7">7</a></sup> and MICrONS<sup><a href="#ref10">10</a></sup>, so the duration is set by adoption rather than discovery. Three years is what adoption takes.</p>
+              <p style="margin:0"><b>Failure condition:</b> Law 4 — failing to cut proofreading cost by two orders of magnitude. If that does not move, every later phase slides toward the long-run rate.</p>
             </div>
           </div>
 
           <!-- ERA 2 -->
-          <div class="era e2" id="era2" data-year="2029–2032" data-era="最初の哺乳類・全脳" data-metric="≈7×10⁷" data-metric-label="マウス全脳ニューロン数">
+          <div class="era e2" id="era2" data-year="2029–2032" data-era="The first mammalian whole brain" data-metric="≈7×10⁷" data-metric-label="Whole mouse brain, neurons">
             <div class="era-head">
-              <div class="era-kicker"><span class="era-num">フェーズ 2</span><span class="era-yr">2029–2032</span><span class="era-flag">予測シナリオ</span></div>
-              <h3>最初の哺乳類・全脳</h3>
-              <p class="era-sub">線虫からマウスへ。構造の軸で初めて哺乳類の全脳が閉じる。</p>
+              <div class="era-kicker"><span class="era-num">Phase 2</span><span class="era-yr">2029–2032</span><span class="era-flag">projected</span></div>
+              <h3>The first mammalian whole brain</h3>
+              <p class="era-sub">From worm to mouse. On the structural axis, a mammalian brain closes for the first time.</p>
             </div>
             <ol class="beats">
-              <li class="beat"><span class="beat-date">2030</span><h4>マウス全脳コネクトーム（初版）</h4><p>約7,000万ニューロン・約10¹¹シナプスの全配線図ドラフトが公開。データ量は約0.7エクサバイト（Law 2）。線虫→ハエ→マウスの跳躍で、哺乳類の <em>構造</em> 軸が一段落する<sup><a href="#ref33">33</a><a href="#ref34">34</a></sup>。</p></li>
-              <li class="beat"><span class="beat-date">2031</span><h4>マルチモーダルなマウス脳</h4><p>配線図に、全脳の細胞型（トランスクリプトミクス）<sup><a href="#ref11">11</a></sup>とNeuropixels級の機能記録<sup><a href="#ref19">19</a></sup>を重ね合わせ。「構造＋分子＋活動」が同一座標で揃う初の哺乳類データセット。</p></li>
-              <li class="beat"><span class="beat-date">2031</span><h4>動態のファウンデーションモデル</h4><p>構造から活動を予測する大規模モデル（“仮想マウス脳”）が、感覚運動回路で機能を再現し始める。2025年に視覚野で実証された基盤モデル型デジタルツイン<sup><a href="#ref42">42</a></sup>と、Blue Brainの微小回路再構成<sup><a href="#ref15">15</a></sup>が、データ駆動で全脳級へ拡張される。</p></li>
-              <li class="beat"><span class="beat-date">2032</span><h4>臨床グレードの脳保存</h4><p>ASC由来の手続き<sup><a href="#ref17">17</a></sup>が標準化し、終末期・研究プロトコル下で <em>ヒト全脳</em> をシナプス解像度で保存する事例が現れる。将来の取得に向けた「原本」の確保が始まる。</p></li>
+              <li class="beat"><span class="beat-date">2030</span><h4>Whole mouse connectome, first release</h4><p>A draft wiring diagram of about 70 million neurons and 10¹¹ synapses is published, amounting to roughly 0.7 exabytes (Law 2). With the jump from nematode to fly to mouse, the mammalian <em>structural</em> axis reaches a resting point<sup><a href="#ref33">33</a><a href="#ref34">34</a></sup>.</p></li>
+              <li class="beat"><span class="beat-date">2031</span><h4>A multimodal mouse brain</h4><p>The wiring diagram is overlaid with whole-brain cell types from transcriptomics<sup><a href="#ref11">11</a></sup> and Neuropixels-class functional recording<sup><a href="#ref19">19</a></sup> — the first mammalian dataset in which structure, molecules and activity share one coordinate frame.</p></li>
+              <li class="beat"><span class="beat-date">2031</span><h4>Foundation models of dynamics</h4><p>Large models predicting activity from structure — a "virtual mouse brain" — begin reproducing function in sensorimotor circuits. The foundation-model digital twins demonstrated in visual cortex in 2025<sup><a href="#ref42">42</a></sup> and Blue Brain's microcircuit reconstructions<sup><a href="#ref15">15</a></sup> scale, data-driven, toward the whole brain.</p></li>
+              <li class="beat"><span class="beat-date">2032</span><h4>Clinical-grade brain preservation</h4><p>Procedures derived from ASC<sup><a href="#ref17">17</a></sup> are standardised, and cases appear in which <em>whole human brains</em> are preserved at synaptic resolution under end-of-life and research protocols. Securing "originals" for future acquisition begins.</p></li>
             </ol>
             <div class="why">
-              <span class="tag">なぜ2029–2032か ・ <b>本シナリオで最も脆い接合部</b></span>
-              <p><b>導出:</b> Law 1 の直近レート（0.187桁/年）をそのまま当てるとマウス全脳は2038年になる。
-              2030年に置くには <b>約2.4倍の加速</b>が要る。内訳の想定は、進行中の10mm³パイロット<sup><a href="#ref34">34</a></sup>が3年で完了し、
-              その50倍への横展開にさらに3年——撮像スループット5倍と校正自動化が同時に効いた場合の値である。</p>
-              <p style="margin:0"><b>崩れる条件:</b> スループット・自動化・資金の10年連続性のうち<b>一つでも欠ければ2038年前後へ後退</b>し、
-              以降のフェーズがまとめて8年ずれる。第3章の<a class="ref-link" style="color:var(--brand)" href="/progress.html#watch">ウォッチリスト</a>でこの区間を追う理由がここにある。</p>
+              <span class="tag">Why 2029–2032 · <b>the most fragile joint in this scenario</b></span>
+              <p><b>Derivation:</b> Law 1's recent rate (0.187 OOM/yr) applied unchanged puts the whole mouse brain at 2038. Placing it in 2030 requires about <b>2.4× acceleration</b>. The assumed breakdown: the 10 mm³ pilot<sup><a href="#ref34">34</a></sup> completes in three years, and scaling 50× takes three more — the figures you get when fivefold throughput and automated proofreading land together.</p>
+              <p style="margin:0"><b>Failure condition:</b> lose any one of throughput, automation, or a decade of continuous funding and this <b>reverts to around 2038</b>, shifting every later phase by eight years. That is why Chapter 3's <a class="ref-link" style="color:var(--brand)" href="/progress.html#watch">watchlist</a> tracks this stretch.</p>
             </div>
           </div>
 
           <!-- ERA 3 -->
-          <div class="era e3" id="era3" data-year="2033–2037" data-era="走らせる：機能エミュレーション" data-metric="リアルタイム" data-metric-label="マウス脳エミュレーション速度">
+          <div class="era e3" id="era3" data-year="2033–2037" data-era="Running it: functional emulation" data-metric="real time" data-metric-label="Mouse emulation speed">
             <div class="era-head">
-              <div class="era-kicker"><span class="era-num">フェーズ 3</span><span class="era-yr">2033–2037</span><span class="era-flag">予測シナリオ</span></div>
-              <h3>走らせる：機能エミュレーション</h3>
-              <p class="era-sub">地図を「動かす」段階。身体ループと、再構成の一意性が主戦場になる。</p>
+              <div class="era-kicker"><span class="era-num">Phase 3</span><span class="era-yr">2033–2037</span><span class="era-flag">projected</span></div>
+              <h3>Running it: functional emulation</h3>
+              <p class="era-sub">The stage of making the map move. The body loop and the uniqueness of reconstruction become the main battleground.</p>
             </div>
             <ol class="beats">
-              <li class="beat"><span class="beat-date">2034</span><h4>ニューロモルフィックがマウス級を実時間で</h4><p>Hodgkin-Huxley型の膜電流モデル<sup><a href="#ref14">14</a></sup>を抽象化したスパイキング網を、SpiNNaker系<sup><a href="#ref25">25</a></sup>・Loihi系<sup><a href="#ref26">26</a></sup>・NorthPole系<sup><a href="#ref27">27</a></sup>とエクサスケール計算が、マウス規模で低電力・実時間に走らせる。</p></li>
-              <li class="beat"><span class="beat-date">2035</span><h4>身体ループを閉じる</h4><p>領域スケール、続いてマウス全脳の機能エミュレーションが、仮想／ロボット身体の感覚運動ループ<sup><a href="#ref24">24</a></sup>の中で特定行動を再現。2026年にハエで実証された身体化エミュレーション<sup><a href="#ref39">39</a></sup>の哺乳類版にあたる。脳は孤立では正常動作しないため、身体性が忠実度の条件になる。</p></li>
-              <li class="beat"><span class="beat-date">2036</span><h4>縮退問題に標準的な答え</h4><p>「異なるパラメータが同一活動を生む」縮退<sup><a href="#ref16">16</a></sup>に対し、<strong>摂動応答＋保持データ検証</strong>のベンチマークが証明の標準に。多くの“一致”が棄却され、再構成が反証可能になる。</p></li>
-              <li class="beat"><span class="beat-date">2037</span><h4>合意されたマウス・エミュレーション</h4><p>行動＋摂動の保持テスト群を通過するマウス脳エミュレーションが合意水準に到達。ZAPBench<sup><a href="#ref43">43</a></sup>で始まった活動予測ベンチマークの文化が、哺乳類の合格基準として制度化された形である。同時に問いが鋭くなる——<em>振る舞いの一致は、内部状態の一致を意味するのか</em>。</p></li>
+              <li class="beat"><span class="beat-date">2034</span><h4>Neuromorphic hardware runs mouse scale in real time</h4><p>Spiking networks abstracted from Hodgkin–Huxley membrane currents<sup><a href="#ref14">14</a></sup> run at mouse scale in real time and at low power on SpiNNaker-class<sup><a href="#ref25">25</a></sup>, Loihi-class<sup><a href="#ref26">26</a></sup> and NorthPole-class<sup><a href="#ref27">27</a></sup> hardware alongside exascale compute.</p></li>
+              <li class="beat"><span class="beat-date">2035</span><h4>Closing the body loop</h4><p>Regional and then whole-mouse functional emulations reproduce specific behaviours inside sensorimotor loops with virtual or robotic bodies<sup><a href="#ref24">24</a></sup> — the mammalian counterpart of the embodied fly emulation demonstrated in 2026<sup><a href="#ref39">39</a></sup>. Since a brain does not function in isolation, embodiment becomes a condition of fidelity.</p></li>
+              <li class="beat"><span class="beat-date">2036</span><h4>A standard answer to degeneracy</h4><p>Against degeneracy — different parameters producing identical activity<sup><a href="#ref16">16</a></sup> — <strong>perturbation response plus held-out data validation</strong> becomes the standard of proof. Many apparent matches are rejected, and reconstruction becomes falsifiable.</p></li>
+              <li class="beat"><span class="beat-date">2037</span><h4>An agreed mouse emulation</h4><p>A mouse brain emulation passing a suite of behavioural and perturbation held-out tests reaches consensus. This is the benchmark culture begun by ZAPBench<sup><a href="#ref43">43</a></sup> institutionalised as mammalian pass criteria. The question sharpens at the same time: <em>does matching behaviour imply matching internal states?</em></p></li>
             </ol>
             <div class="why">
-              <span class="tag">なぜ2033–2037か</span>
-              <p><b>導出:</b> ハエでは「コネクトームからのモデル」<sup><a href="#ref38">38</a></sup>から「身体つきで自律的に動く」<sup><a href="#ref39">39</a></sup>まで
-              <b>わずか2年</b>だった。マウスはニューロン数で560倍だが、Law 3 より計算資源は律速にならない。
-              したがって5年という配分は、装置ではなく<b>モデル化の科学</b>（構造→シナプス重み・神経修飾）に充てた時間である。</p>
-              <p style="margin:0"><b>崩れる条件:</b> ここは本シナリオで<b>新しい科学を必要とする唯一の区間</b>であり、見積もりの不確実性が最も大きい。
-              静的構造から動的状態が復元できないと判明すれば、5年では済まず、必要な計測手法の発明から始まることになる。</p>
+              <span class="tag">Why 2033–2037</span>
+              <p><b>Derivation:</b> in the fly, going from a connectome-based model<sup><a href="#ref38">38</a></sup> to autonomous embodied behaviour<sup><a href="#ref39">39</a></sup> took <b>only two years</b>. The mouse is 560× larger in neurons, but by Law 3 compute is not limiting. The five-year allocation is therefore time for <b>the science of modelling</b> — structure to synaptic weights and neuromodulation — not for equipment.</p>
+              <p style="margin:0"><b>Failure condition:</b> this is the <b>only phase requiring new science</b>, and its estimate is the most uncertain. If dynamical state turns out not to be recoverable from static structure, five years will not do it, and the work restarts from inventing the necessary measurements.</p>
             </div>
           </div>
 
           <!-- ERA 4 -->
-          <div class="era e4" id="era4" data-year="2038–2043" data-era="ヒトへの跳躍" data-metric="≈8.6×10¹⁰" data-metric-label="ヒト全脳ニューロン数（構造）">
+          <div class="era e4" id="era4" data-year="2038–2043" data-era="The jump to humans" data-metric="≈8.6×10¹⁰" data-metric-label="Human brain neurons (structure)">
             <div class="era-head">
-              <div class="era-kicker"><span class="era-num">フェーズ 4</span><span class="era-yr">2038–2043</span><span class="era-flag">予測シナリオ</span></div>
-              <h3>ヒトへの跳躍</h3>
-              <p class="era-sub">マウスからヒトへ、さらに3桁。保存された脳から、全脳構造を取得する。</p>
+              <div class="era-kicker"><span class="era-num">Phase 4</span><span class="era-yr">2038–2043</span><span class="era-flag">projected</span></div>
+              <h3>The jump to humans</h3>
+              <p class="era-sub">Three more orders of magnitude from mouse to human, acquiring whole-brain structure from preserved brains.</p>
             </div>
             <ol class="beats">
-              <li class="beat"><span class="beat-date">2039</span><h4>ヒト全脳の構造取得</h4><p>保存ドナー脳から、H01の1mm³断片<sup><a href="#ref9">9</a></sup>を全臓器へスケールしたエクサスケール構造コネクトームが得られ始める。約860億ニューロン・100兆シナプスの地図化に着手。</p></li>
-              <li class="beat"><span class="beat-date">2040</span><h4>構造からの状態推論が成熟</h4><p>EM形態から機能的シナプス重み・神経調節状態へ写像する手法が、動態を初期化できる水準に。縮退<sup><a href="#ref16">16</a></sup>を摂動応答で削り込む方法論と、デジタルツイン型の学習<sup><a href="#ref42">42</a></sup>の統合により、構造だけでは欠けていた「動的状態」の溝を縮める。</p></li>
-              <li class="beat"><span class="beat-date">2041–42</span><h4>部分的ヒト・エミュレーション</h4><p>感覚野・海馬の記憶回路など部分系が、生前の記録や行動データと照合して検証される。照合の材料は、この頃までに臨床標準となった皮質内BCIの長期記録<sup><a href="#ref21">21</a><a href="#ref23">23</a></sup>である。全脳ではないが、ヒト回路が初めて「走る」。</p></li>
-              <li class="beat"><span class="beat-date">2043</span><h4>エミュレーション社会の経済学が政策課題に</h4><p>Hanson『The Age of Em』<sup><a href="#ref31">31</a></sup>が描いたエミュレーション経済・社会の論点が現実味を帯び、コピー権・労働・人格の統治枠組みの起草が始まる。</p></li>
+              <li class="beat"><span class="beat-date">2039</span><h4>Human whole-brain structural acquisition</h4><p>Exascale structural connectomes begin to emerge from preserved donor brains, scaling H01's 1 mm³ fragment<sup><a href="#ref9">9</a></sup> to a whole organ. Mapping of roughly 86 billion neurons and 100 trillion synapses begins.</p></li>
+              <li class="beat"><span class="beat-date">2040</span><h4>State inference from structure matures</h4><p>Methods mapping EM morphology to functional synaptic weights and neuromodulatory state reach a level sufficient to initialise dynamics. Combining perturbation-based elimination of degeneracy<sup><a href="#ref16">16</a></sup> with digital-twin learning<sup><a href="#ref42">42</a></sup> narrows the gap left by structure alone.</p></li>
+              <li class="beat"><span class="beat-date">2041–42</span><h4>Partial human emulation</h4><p>Subsystems such as sensory cortex and hippocampal memory circuits are validated against pre-mortem recordings and behavioural data — material drawn from the intracortical BCI records that had become clinically standard<sup><a href="#ref21">21</a><a href="#ref23">23</a></sup>. Not a whole brain, but human circuitry runs for the first time.</p></li>
+              <li class="beat"><span class="beat-date">2043</span><h4>The economics of emulation reaches policy</h4><p>The questions Hanson raised in <i>The Age of Em</i><sup><a href="#ref31">31</a></sup> about an emulation economy become concrete, and drafting begins on governance of copying rights, labour and personhood.</p></li>
             </ol>
             <div class="why">
-              <span class="tag">なぜ2038–2043か</span>
-              <p><b>導出:</b> マウス→ヒトは3.09桁。Law 1 の直近レートをそのまま当てると約16.5年で、
-              ここは<b>加速を仮定していない</b>——シナリオ中で最も素直な外挿区間である。マウス完了を待たず並行着手する前提で2039年に構造取得を置いた。
-              Law 3 が示す電気生理水準（10²² FLOPS）の到達時期2041–45年とも自然に揃う。</p>
-              <p style="margin:0"><b>崩れる条件:</b> 技術ではなく<b>供給</b>。シナプス解像度で保存されたヒト脳がこの時点で存在している必要があり、
-              それはフェーズ2（2032年の臨床グレード保存）が実現していることに依存する。倫理・法の枠組みが整わなければ、ここで止まる。</p>
+              <span class="tag">Why 2038–2043</span>
+              <p><b>Derivation:</b> mouse to human is 3.09 orders. Law 1's recent rate gives about 16.5 years, and <b>no acceleration is assumed here</b> — this is the most straightforward extrapolation in the scenario. Structural acquisition is placed at 2039 on the assumption of parallel starts rather than waiting for the mouse. It also aligns naturally with Law 3's electrophysiological level (10²² FLOPS) arriving 2041–45.</p>
+              <p style="margin:0"><b>Failure condition:</b> supply, not technology. Human brains preserved at synaptic resolution must exist by this point, which depends on clinical-grade preservation having arrived in phase 2 (2032). Without ethical and legal frameworks, this is where it stops.</p>
             </div>
           </div>
 
           <!-- ERA 5 -->
-          <div class="era e5" id="era5" data-year="2044–2048" data-era="個人の再構成" data-metric="個人特異的" data-metric-label="記憶・人格を伴う再現">
+          <div class="era e5" id="era5" data-year="2044–2048" data-era="Reconstructing an individual" data-metric="individual-specific" data-metric-label="Memory and personality reproduced">
             <div class="era-head">
-              <div class="era-kicker"><span class="era-num">フェーズ 5</span><span class="era-yr">2044–2048</span><span class="era-flag">予測シナリオ</span></div>
-              <h3>個人の再構成</h3>
-              <p class="era-sub">パイプライン全体を、ひとりの個人について通す。</p>
+              <div class="era-kicker"><span class="era-num">Phase 5</span><span class="era-yr">2044–2048</span><span class="era-flag">projected</span></div>
+              <h3>Reconstructing an individual</h3>
+              <p class="era-sub">Running the entire pipeline, end to end, for one person.</p>
             </div>
             <ol class="beats">
-              <li class="beat"><span class="beat-date">2045</span><h4>パイプラインの統合</h4><p>固定 → 取得 → 再構成 → 走らせる → 身体化 → 検証 が、特定個人について初めて端から端まで接続される。入口となる保存は、2020年代に確立したASC系プロトコル<sup><a href="#ref17">17</a><a href="#ref44">44</a></sup>で十数年前に固定された脳である。</p></li>
-              <li class="beat"><span class="beat-date">2046</span><h4>記憶と人格の再現</h4><p>全脳ヒト・エミュレーション候補が、ドナー特異的な記憶・性格マーカーを盲検テスト下で再現し始める。</p></li>
-              <li class="beat"><span class="beat-date">2047</span><h4>同一性検証バッテリの配備</h4><p>同一性の <em>連続性</em> を操作的に試す検証バッテリが運用される。意識の理論そのものは決着していない<sup><a href="#ref30">30</a></sup>ため、バッテリは形而上学を避け、行動・記憶・摂動応答の一致のみを問う設計になる。同時に、法的地位・本人同意・コピー問題が現実の政策論点になる。</p></li>
-              <li class="beat"><span class="beat-date">2048</span><h4>「完成」を操作的に定義</h4><p>標準化団体が、形而上学的主張とは切り離した <strong>検証バッテリの通過</strong> として「完成」を定義する。</p></li>
+              <li class="beat"><span class="beat-date">2045</span><h4>The pipeline connects</h4><p>Fix → acquire → reconstruct → run → embody → validate is joined end to end for a specific individual for the first time. The entry point is a brain fixed a decade or more earlier under the ASC-family protocols established in the 2020s<sup><a href="#ref17">17</a><a href="#ref44">44</a></sup>.</p></li>
+              <li class="beat"><span class="beat-date">2046</span><h4>Memory and personality reproduced</h4><p>Candidate whole-brain human emulations begin reproducing donor-specific memories and personality markers under blinded testing.</p></li>
+              <li class="beat"><span class="beat-date">2047</span><h4>An identity validation battery is deployed</h4><p>A battery operationally testing the <em>continuity</em> of identity enters use. Because theories of consciousness remain unsettled<sup><a href="#ref30">30</a></sup>, the battery is designed to avoid metaphysics and ask only about agreement in behaviour, memory and perturbation response. Legal status, consent and the copy problem become live policy questions at the same time.</p></li>
+              <li class="beat"><span class="beat-date">2048</span><h4>"Completion" defined operationally</h4><p>A standards body defines completion as <strong>passing the validation battery</strong>, explicitly decoupled from metaphysical claims.</p></li>
             </ol>
             <div class="why">
-              <span class="tag">なぜ2044–2048か</span>
-              <p><b>導出:</b> この5年は技術の所要時間ではなく<b>合意形成の所要時間</b>である。
-              検証バッテリの設計 → 多施設での再現 → 標準化団体による採択、という手続きに要する期間として置いた。
-              医療機器や臨床試験の標準が確立するまでの期間を参照している。</p>
-              <p style="margin:0"><b>崩れる条件:</b> 検証という軸は2026年時点で事実上ゼロからの出発であり<sup><a href="#ref43">43</a></sup>、
-              5年は楽観的な配分である。合格基準そのものが合意されなければ、「完成した」と誰も言えないまま技術だけが進む状態になる。</p>
+              <span class="tag">Why 2044–2048</span>
+              <p><b>Derivation:</b> these five years are not technical time but <b>time for consensus</b> — designing a validation battery, replicating it across institutions, and having a standards body adopt it, benchmarked against how long medical-device and clinical-trial standards take to establish.</p>
+              <p style="margin:0"><b>Failure condition:</b> the validation axis effectively starts from zero as of 2026<sup><a href="#ref43">43</a></sup>, so five years is a generous allocation. Without agreement on pass criteria, the technology advances while nobody is in a position to say it is finished.</p>
             </div>
           </div>
 
           <!-- ERA 6 -->
-          <div class="era e6" id="era6" data-year="2049–2050" data-era="完成、そして分岐" data-metric="検証通過" data-metric-label="工学的完成の達成">
+          <div class="era e6" id="era6" data-year="2049–2050" data-era="Completion, and the fork" data-metric="battery passed" data-metric-label="Engineering completion">
             <div class="era-head">
-              <div class="era-kicker"><span class="era-num">フェーズ 6</span><span class="era-yr">2049–2050</span><span class="era-flag">予測シナリオ</span></div>
-              <h3>完成、そして分岐</h3>
-              <p class="era-sub">工学的には到達する。だが哲学的な問いは、ここで二つに割れる。</p>
+              <div class="era-kicker"><span class="era-num">Phase 6</span><span class="era-yr">2049–2050</span><span class="era-flag">projected</span></div>
+              <h3>Completion, and the fork</h3>
+              <p class="era-sub">Engineering arrives. The philosophical question splits in two.</p>
             </div>
             <ol class="beats">
-              <li class="beat"><span class="beat-date">2049</span><h4>検証バッテリの通過</h4><p>ある全脳ヒト・エミュレーションが、合意された行動＋摂動＋記憶の検証バッテリを通過する。<strong>工学的な意味での「完成」</strong>に到達。ここまでの所要年数は、Law 1〜4 を積み上げた結果であって、目標として置かれた年ではない。</p></li>
-              <li class="beat"><span class="beat-date">2050</span><h4>分岐——振る舞いは検証できる、主観は測れない</h4><p>行動上の同一性は検証された。しかし完璧な振る舞いの再現と <em>主観的連続性</em> を分ける物理測定は存在しない<sup><a href="#ref28">28</a><a href="#ref29">29</a><a href="#ref30">30</a></sup>。ここで未来は二つのルートに分岐する（下記）。</p></li>
+              <li class="beat"><span class="beat-date">2049</span><h4>The battery is passed</h4><p>A whole-brain human emulation passes the agreed battery of behavioural, perturbation and memory tests, reaching <strong>completion in the engineering sense</strong>. The years taken were the sum of Laws 1 through 4, not a target set in advance.</p></li>
+              <li class="beat"><span class="beat-date">2050</span><h4>The fork — behaviour can be verified, subjectivity cannot be measured</h4><p>Behavioural identity is confirmed. But no physical measurement separates a perfect reproduction of behaviour from <em>subjective continuity</em><sup><a href="#ref28">28</a><a href="#ref29">29</a><a href="#ref30">30</a></sup>. Here the future splits into two routes (below).</p></li>
             </ol>
             <div class="why">
-              <span class="tag">なぜ2049–2050か</span>
-              <p><b>導出:</b> 切りのいい2050年から逆算したのではない。
-              3 + 4 + 5 + 6 + 5 年という各フェーズの所要年数を2026年から積み上げると、終端がここに落ちる。
-              年号が「2050」になったのは結果であって、目標ではない。</p>
-              <p style="margin:0"><b>外部予測との差:</b> Metaculusの中央値2070年頃<sup><a href="#ref40">40</a></sup>、分野内レビューの2055–65年以降<sup><a href="#ref41">41</a></sup>との
-              15〜20年の差は、<b>フェーズ2と3の仮定だけ</b>から生じている。その2つを保守側に取れば、この年表はそのまま2065–70年へ平行移動する。</p>
+              <span class="tag">Why 2049–2050</span>
+              <p><b>Derivation:</b> not worked backwards from a round number. Adding the phase durations — 3 + 4 + 5 + 6 + 5 years — from 2026 lands the endpoint here. That the year reads "2050" is an outcome, not an objective.</p>
+              <p style="margin:0"><b>Against outside forecasts:</b> the 15-to-20-year gap against the Metaculus median of about 2070<sup><a href="#ref40">40</a></sup> and the field review's 2055–65<sup><a href="#ref41">41</a></sup> comes <b>entirely from the assumptions in phases 2 and 3</b>. Take those conservatively and this timeline translates directly to 2065–70.</p>
             </div>
           </div>
         </div>
@@ -737,19 +485,19 @@
           <div class="rail-card">
             <div class="rail-ylabel">Year</div>
             <div class="rail-year" id="rail-year">2026</div>
-            <div class="rail-era" id="rail-era">現在地・実証済み</div>
+            <div class="rail-era" id="rail-era">Where we are</div>
             <div class="rail-track">
               <div class="rail-fill" id="rail-fill"></div>
-              <button class="rail-node" data-i="0"><span class="rn-dot"></span>2026 地図の自動化</button>
-              <button class="rail-node" data-i="1"><span class="rn-dot"></span>2029 哺乳類の全脳</button>
-              <button class="rail-node" data-i="2"><span class="rn-dot"></span>2033 走らせる</button>
-              <button class="rail-node" data-i="3"><span class="rn-dot"></span>2038 ヒトへの跳躍</button>
-              <button class="rail-node" data-i="4"><span class="rn-dot"></span>2044 個人の再構成</button>
-              <button class="rail-node" data-i="5"><span class="rn-dot"></span>2049 完成と分岐</button>
+              <button class="rail-node" data-i="0"><span class="rn-dot"></span>2026 Automating the map</button>
+              <button class="rail-node" data-i="1"><span class="rn-dot"></span>2029 Mammalian brain</button>
+              <button class="rail-node" data-i="2"><span class="rn-dot"></span>2033 Running it</button>
+              <button class="rail-node" data-i="3"><span class="rn-dot"></span>2038 To humans</button>
+              <button class="rail-node" data-i="4"><span class="rn-dot"></span>2044 An individual</button>
+              <button class="rail-node" data-i="5"><span class="rn-dot"></span>2049 Completion</button>
             </div>
             <div class="rail-metric">
               <b id="rail-metric">≈2×10⁵</b>
-              <small id="rail-metric-label">最大再構成ニューロン数</small>
+              <small id="rail-metric-label">Largest reconstruction, neurons</small>
             </div>
           </div>
         </aside>
@@ -758,44 +506,44 @@
 
     <!-- ===== FORK ===== -->
     <section id="fork">
-      <p class="eyebrow">4. The Fork / 2050の分岐</p>
-      <h2>完成の先で、未来は二つに割れる。</h2>
-      <p class="lead" style="margin-bottom:18px">技術が成功しても、同一性の問いは技術だけでは閉じない。AI 2027が「競争」と「減速」に分岐したように、ここでは検証の解釈で二つのルートが生まれる。</p>
+      <p class="eyebrow">4. The Fork</p>
+      <h2>Past completion, the future splits.</h2>
+      <p class="lead" style="margin-bottom:18px">Even if the technology succeeds, the question of identity does not close on technical grounds. Just as AI 2027 forks into "race" and "slowdown", here two routes emerge from how the validation is interpreted.</p>
       <div class="fork reveal">
         <div class="fork-tabs">
-          <button class="ftab active" data-route="a">ルートA・継続</button>
-          <button class="ftab" data-route="b">ルートB・複製問題</button>
+          <button class="ftab active" data-route="a">Route A · Continuation</button>
+          <button class="ftab" data-route="b">Route B · The copy problem</button>
         </div>
         <div class="fork-panel" data-route="a">
-          <div class="verdict">機能的・心理的連続性を採用</div>
-          <h4>アップロードは「本人の継続」とみなされる</h4>
-          <p>社会は、検証バッテリが示す <strong>機能的・心理的連続性</strong>を同一性の基準として受け入れる。エミュレーションは法的人格を得て、本人の継続として扱われる。破壊的コピーよりも、ニューロンを少しずつ置換していく <em>段階的アップロード</em>（テセウスの船型）が、連続性を保つ手続きとして好まれる。</p>
-          <p style="margin:0">論点は「いつ・どの条件で人格が継続するか」へ移り、技術と検証の精緻化が前進を続ける。</p>
+          <div class="verdict">Functional and psychological continuity adopted</div>
+          <h4>Uploading is treated as the person continuing</h4>
+          <p>Society accepts the <strong>functional and psychological continuity</strong> demonstrated by the validation battery as the criterion of identity. Emulations acquire legal personhood and are treated as continuations of the original. <em>Gradual uploading</em> — replacing neurons a few at a time, in the manner of the Ship of Theseus — is preferred over destructive copying as the procedure that preserves continuity.</p>
+          <p style="margin:0">The debate moves to when and under what conditions a person continues, and technical and validation work keeps advancing.</p>
         </div>
         <div class="fork-panel" data-route="b" hidden>
-          <div class="verdict">主観的連続性は未証明のまま</div>
-          <h4>アップロードは「後継者の作成」にとどまる</h4>
-          <p>主観的連続性を保証する測定が最後まで現れず、<strong>コピー問題</strong>が解けない。元の脳が残ったまま複製が走る事例が、両者を「別個の存在」として可視化する。アップロードは生存ではなく <em>相続人・分身の作成</em>として再定義され、法と倫理は原本と複製を区別する方向に進む。</p>
-          <p style="margin:0">工学的完成は揺るがないが、「自分が生き延びる手段」という当初の動機づけは満たされない、という結論になる。</p>
+          <div class="verdict">Subjective continuity never demonstrated</div>
+          <h4>Uploading remains the creation of a successor</h4>
+          <p>No measurement guaranteeing subjective continuity ever appears and <strong>the copy problem</strong> stays unsolved. Cases in which a duplicate runs while the original brain persists make the two visible as separate beings. Uploading is redefined as <em>creating an heir or a double</em> rather than survival, and law and ethics move toward distinguishing original from copy.</p>
+          <p style="margin:0">The engineering achievement stands, but the original motivation — a means of surviving one's own death — goes unfulfilled.</p>
         </div>
       </div>
     </section>
 
     <!-- ===== OPEN CHALLENGES ===== -->
     <section id="open">
-      <p class="eyebrow">5. Why Conditional / 残る壁</p>
-      <h2>2050が「条件付き」である理由。</h2>
-      <p class="lead" style="margin-bottom:18px">外挿だけでは越えられない3つの律速。ここが解けなければ、シナリオは前倒しできない。</p>
-      <div class="note reveal" style="margin-bottom:12px"><b>① 識別可能性の壁。</b> 計測を増やしても、同じ観測を説明する内部状態が複数残るなら再構成は一意に閉じない<sup><a href="#ref16">16</a></sup>。鍵は「もっと測る」ことより、摂動と保持データで <strong>候補状態を減らす</strong>方法論。</div>
-      <div class="note reveal" style="margin-bottom:12px"><b>② スケールと非破壊の壁。</b> ヒト全脳は皮質1mm³<sup><a href="#ref9">9</a></sup>の約100万倍。撮像・再構成・計算の数桁スケーリングと、生体からの非破壊計測の物理限界。破壊的取得なら保存と倫理に直結する。</div>
-      <div class="note reveal"><b>③ 同一性・倫理の壁。</b> 完璧な振る舞いと主観的連続性を分ける測定は存在しない<sup><a href="#ref28">28</a><a href="#ref30">30</a></sup>。コピー問題・本人同意・社会的地位・停止条件——技術の成功だけでは閉じない論点が最後に残る<sup><a href="#ref31">31</a></sup>。</div>
+      <p class="eyebrow">5. Why Conditional</p>
+      <h2>Why 2050 is conditional.</h2>
+      <p class="lead" style="margin-bottom:18px">Three rate limiters that extrapolation alone does not clear. Until they are solved, the scenario cannot be pulled forward.</p>
+      <div class="note reveal" style="margin-bottom:12px"><b>1. The identifiability barrier.</b> If multiple internal states explain the same observations no matter how much you measure, reconstruction never closes uniquely<sup><a href="#ref16">16</a></sup>. The key is not "measure more" but methodology that <strong>reduces the candidate states</strong> through perturbation and held-out data.</div>
+      <div class="note reveal" style="margin-bottom:12px"><b>2. Scale and destructiveness.</b> A whole human brain is about a million times 1 mm³ of cortex<sup><a href="#ref9">9</a></sup>. That means scaling imaging, reconstruction and compute by several orders of magnitude, against the physical limits of non-destructive measurement in living tissue. Destructive acquisition ties the problem directly to preservation and ethics.</div>
+      <div class="note reveal"><b>3. Identity and ethics.</b> No measurement separates perfect behaviour from subjective continuity<sup><a href="#ref28">28</a><a href="#ref30">30</a></sup>. The copy problem, consent, social status, conditions for shutdown — the questions that technical success alone does not close remain at the end<sup><a href="#ref31">31</a></sup>.</div>
     </section>
 
     <!-- ===== REFERENCES ===== -->
     <section id="refs">
-      <p class="eyebrow">References / 参考文献</p>
-      <h2>引用研究（44件）。</h2>
-      <p class="muted" style="margin-bottom:16px">世界の公開研究から、各軸の代表的到達点を抜粋。2026年以降のマイルストーンはこれらの趨勢からの予測であり、引用は実証済みの土台を示す。各項目は原典または安定した書誌ページへリンクしている。</p>
+      <p class="eyebrow">References</p>
+      <h2>Cited research (44).</h2>
+      <p class="muted" style="margin-bottom:16px">Representative results on each axis, drawn from published research worldwide. Milestones from 2026 onward are projections from these trends; the citations establish the demonstrated foundation. Each entry links to the original or to a stable bibliographic page.</p>
       <ol class="refs reveal">
         <li id="ref1"><a class="ref-link" href="https://ora.ox.ac.uk/objects/uuid:a6880196-34c7-47a0-80f1-74d32ab98788" target="_blank" rel="noopener">Sandberg, A., &amp; Bostrom, N. (2008). <i>Whole Brain Emulation: A Roadmap.</i> Tech. Report #2008-3, Future of Humanity Institute, Univ. of Oxford.</a></li>
         <li id="ref2"><a class="ref-link" href="https://doi.org/10.1098/rstb.1986.0056" target="_blank" rel="noopener">White, J. G., et al. (1986). The structure of the nervous system of <i>C. elegans. Phil. Trans. R. Soc. B,</i> 314, 1–340.</a></li>
@@ -828,121 +576,46 @@
         <li id="ref29"><a class="ref-link" href="https://doi.org/10.1016/j.neuron.2011.03.018" target="_blank" rel="noopener">Dehaene, S., &amp; Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. <i>Neuron,</i> 70, 200–227.</a></li>
         <li id="ref30"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08888-1" target="_blank" rel="noopener">Cogitate Consortium; Ferrante, O., et al. (2025). Adversarial testing of global neuronal workspace and integrated information theories. <i>Nature.</i></a></li>
         <li id="ref31"><a class="ref-link" href="https://global.oup.com/academic/product/the-age-of-em-9780198754626" target="_blank" rel="noopener">Hanson, R. (2016). <i>The Age of Em: Work, Love, and Life when Robots Rule the Earth.</i> Oxford University Press.</a></li>
-        <li id="ref32"><a class="ref-link" href="https://www.janelia.org/project-team/flyem/male-cns-connectome" target="_blank" rel="noopener">Janelia FlyEM (2025). Male CNS Connectome（雄ハエの脳＋腹側神経索、16.7万ニューロン）.</a></li>
-        <li id="ref33"><a class="ref-link" href="https://www.biotechniques.com/neuroscience/mapping-the-brain-from-mice-to-mankind/" target="_blank" rel="noopener">BioTechniques (2024). Building a comprehensive mouse brain connectome.（マウス全脳の所要年数・データ量の試算を含む解説）</a></li>
-        <li id="ref34"><a class="ref-link" href="https://research.google/blog/google-research-embarks-on-effort-to-map-a-mouse-brain/" target="_blank" rel="noopener">Google Research / Harvard / Allen Institute (2023–). BRAIN CONNECTS: マウス海馬10mm³および皮質-基底核ループのコネクトーム計画.</a></li>
-        <li id="ref35"><a class="ref-link" href="https://www.top500.org/" target="_blank" rel="noopener">TOP500 Supercomputer Sites. 首位性能の推移（2008年 Roadrunner 1 PFLOPS → 2022年 Frontier 1 EFLOPS → 2024年 El Capitan 1.74 EFLOPS）.</a></li>
-        <li id="ref36"><a class="ref-link" href="https://www.lesswrong.com/posts/DGsBfcEQKuNPmQizQ/notable-progress-has-been-made-in-whole-brain-emulation" target="_blank" rel="noopener">Notable progress has been made in whole brain emulation (2025). LessWrong.（FlyWireの校正工数と自動化ボトルネックの二次分析。査読外）</a></li>
-        <li id="ref37"><a class="ref-link" href="https://www.e11.bio/blog/prism" target="_blank" rel="noopener">E11 Bio (2024–25). PRISM: タンパク質バーコード＋膨張顕微鏡による自己校正型コネクトミクス.</a></li>
+        <li id="ref32"><a class="ref-link" href="https://www.janelia.org/project-team/flyem/male-cns-connectome" target="_blank" rel="noopener">Janelia FlyEM (2025). Male CNS Connectome (brain + ventral nerve cord, 166,000 neurons).</a></li>
+        <li id="ref33"><a class="ref-link" href="https://www.biotechniques.com/neuroscience/mapping-the-brain-from-mice-to-mankind/" target="_blank" rel="noopener">BioTechniques (2024). Building a comprehensive mouse brain connectome. (includes duration and data-volume estimates)</a></li>
+        <li id="ref34"><a class="ref-link" href="https://research.google/blog/google-research-embarks-on-effort-to-map-a-mouse-brain/" target="_blank" rel="noopener">Google Research / Harvard / Allen Institute (2023–). BRAIN CONNECTS: 10 mm³ mouse hippocampus and cortico-basal ganglia connectome projects.</a></li>
+        <li id="ref35"><a class="ref-link" href="https://www.top500.org/" target="_blank" rel="noopener">TOP500 Supercomputer Sites. Leading system performance over time (2008 Roadrunner 1 PFLOPS → 2022 Frontier 1 EFLOPS → 2024 El Capitan 1.74 EFLOPS).</a></li>
+        <li id="ref36"><a class="ref-link" href="https://www.lesswrong.com/posts/DGsBfcEQKuNPmQizQ/notable-progress-has-been-made-in-whole-brain-emulation" target="_blank" rel="noopener">Notable progress has been made in whole brain emulation (2025). LessWrong. (secondary analysis of FlyWire proofreading effort and the automation bottleneck; not peer reviewed)</a></li>
+        <li id="ref37"><a class="ref-link" href="https://www.e11.bio/blog/prism" target="_blank" rel="noopener">E11 Bio (2024–25). PRISM: self-proofreading connectomics via protein barcoding and expansion microscopy.</a></li>
         <li id="ref38"><a class="ref-link" href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank" rel="noopener">Shiu, P. K., et al. (2024). A <i>Drosophila</i> computational brain model reveals sensorimotor processing. <i>Nature,</i> 634, 210–219.</a></li>
-        <li id="ref39"><a class="ref-link" href="https://eon.systems/updates/embodied-brain-emulation" target="_blank" rel="noopener">Eon Systems (2026-03-07). How the Eon team produced a virtual embodied fly.（初の身体化された全脳エミュレーション）</a></li>
-        <li id="ref40"><a class="ref-link" href="https://www.metaculus.com/questions/2813/when-will-the-first-whole-human-brain-be-successfully-emulated/" target="_blank" rel="noopener">Metaculus. Date of first human whole brain emulation.（コミュニティ予測、中央値は2070年前後で推移）</a></li>
+        <li id="ref39"><a class="ref-link" href="https://eon.systems/updates/embodied-brain-emulation" target="_blank" rel="noopener">Eon Systems (7 March 2026). How the Eon team produced a virtual embodied fly. (the first embodied whole-brain emulation)</a></li>
+        <li id="ref40"><a class="ref-link" href="https://www.metaculus.com/questions/2813/when-will-the-first-whole-human-brain-be-successfully-emulated/" target="_blank" rel="noopener">Metaculus. Date of first human whole brain emulation. (community forecast; median has tracked around 2070)</a></li>
         <li id="ref41"><a class="ref-link" href="https://arxiv.org/abs/2510.15745" target="_blank" rel="noopener">Zanichelli, N., Schons, M., Freeman, I., Shiu, P. K., &amp; Arkhipov, A. (2025). <i>State of Brain Emulation Report 2025.</i> arXiv:2510.15745.</a></li>
-        <li id="ref42"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08829-y" target="_blank" rel="noopener">Wang, E. Y., et al. (2025). Foundation model of neural activity predicts response to new stimulus types. <i>Nature,</i> 640.（デジタルツイン）</a></li>
-        <li id="ref43"><a class="ref-link" href="https://research.google/blog/improving-brain-models-with-zapbench/" target="_blank" rel="noopener">Google Research, Janelia &amp; Harvard (2025). ZAPBench: ゼブラフィッシュ幼生の全脳活動予測ベンチマーク.</a></li>
-        <li id="ref44"><a class="ref-link" href="https://nectome.com/research" target="_blank" rel="noopener">Nectome (2026). Ultrastructural preservation of a whole large mammal brain with a protocol compatible with human physician-assisted death.（前刷り）</a></li>
+        <li id="ref42"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08829-y" target="_blank" rel="noopener">Wang, E. Y., et al. (2025). Foundation model of neural activity predicts response to new stimulus types. <i>Nature,</i> 640. (digital twin)</a></li>
+        <li id="ref43"><a class="ref-link" href="https://research.google/blog/improving-brain-models-with-zapbench/" target="_blank" rel="noopener">Google Research, Janelia &amp; Harvard (2025). ZAPBench: whole-brain activity prediction benchmark in larval zebrafish.</a></li>
+        <li id="ref44"><a class="ref-link" href="https://nectome.com/research" target="_blank" rel="noopener">Nectome (2026). Ultrastructural preservation of a whole large mammal brain with a protocol compatible with human physician-assisted death. (preprint)</a></li>
       </ol>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード — scenario 2050</a>
-      <p>全脳エミュレーション（マインドアップロード）が2050年に完成するまでを、世界中の公開研究をもとに年表シナリオとして描くロードマップ。AI 2027 形式。総合ガイドの別冊。</p>
+      <a class="brand" href="/"><span class="dot"></span>Mind Uploading — scenario 2050</a>
+      <p>A conditional year-by-year roadmap to whole brain emulation by 2050, extrapolated from published research worldwide in the AI 2027 format. The companion volume to the integrated guide.</p>
       <p style="margin:6px 0 0">
-        <a href="/ja/" style="color:var(--muted);text-decoration:none">ホーム</a> ・
-        <a href="/history.html" style="color:var(--muted);text-decoration:none">1. 歴史</a> ・
-        <a href="/science.html" style="color:var(--muted);text-decoration:none">2. 科学</a> ・
-        <a href="/progress.html" style="color:var(--muted);text-decoration:none">3. 現在地</a> ・
-        <a href="/future.html" style="color:var(--muted);text-decoration:none">4. 未来</a> ・
-        <a href="/philosophy.html" style="color:var(--muted);text-decoration:none">5. 哲学と倫理</a> ・
-        <a href="/action.html" style="color:var(--muted);text-decoration:none">6. 行動</a> ・
-        <a href="/resources.html" style="color:var(--muted);text-decoration:none">資料集</a>
+        <a href="/ja/scenario.html" style="color:var(--muted);text-decoration:none">日本語版</a> ·
+        <a href="/" style="color:var(--muted);text-decoration:none">Home</a> ·
+        <a href="/history.html" style="color:var(--muted);text-decoration:none">1. History</a> ·
+        <a href="/science.html" style="color:var(--muted);text-decoration:none">2. Science</a> ·
+        <a href="/progress.html" style="color:var(--muted);text-decoration:none">3. Status</a> ·
+        <a href="/future.html" style="color:var(--muted);text-decoration:none">4. Forecasts</a> ·
+        <a href="/philosophy.html" style="color:var(--muted);text-decoration:none">5. Philosophy</a> ·
+        <a href="/action.html" style="color:var(--muted);text-decoration:none">6. Action</a> ·
+        <a href="/resources.html" style="color:var(--muted);text-decoration:none">Resources</a>
       </p>
       <p class="disc">
-        免責: 本ページは公開研究に基づく <strong>シナリオ・レビュー</strong>です。2026年以降の年次マイルストーンは研究趨勢からの予測であり、特定の成果・時期を保証しません。
-        意識・人格同一性の検証など、技術だけでは解決しない論点を含み、結末は「継続」「複製問題」に分岐します。
+        Disclaimer: this page is a <strong>scenario review</strong> based on published research. Milestones from 2026 onward are projections from
+        research trends and guarantee no particular result or date. It includes questions technology alone does not settle, such as validating
+        consciousness and personal identity, and it ends by forking into "continuation" and "the copy problem". Last updated 2026-08-08.
       </p>
     </div>
   </footer>
 
-  <script>
-    document.documentElement.classList.add('js');
-    const progress = document.getElementById('progress');
-    const onScroll = () => {
-      const h = document.documentElement;
-      const max = h.scrollHeight - h.clientHeight;
-      progress.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
-    };
-    document.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // nav scrollspy
-    const navLinks = [...document.querySelectorAll('.primary-nav a')];
-    const map = new Map(navLinks.map(a => [a.getAttribute('href').slice(1), a]));
-    const spy = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          navLinks.forEach(a => a.classList.remove('active'));
-          const link = map.get(e.target.id);
-          if (link) link.classList.add('active');
-        }
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    ['abstract','scale','basis','scenario','fork','open','refs'].forEach(id => {
-      const s = document.getElementById(id); if (s) spy.observe(s);
-    });
-
-    // era rail scrollytelling
-    const eras = [...document.querySelectorAll('.era')];
-    const railYear = document.getElementById('rail-year');
-    const railEra = document.getElementById('rail-era');
-    const railMetric = document.getElementById('rail-metric');
-    const railMetricLabel = document.getElementById('rail-metric-label');
-    const railFill = document.getElementById('rail-fill');
-    const nodes = [...document.querySelectorAll('.rail-node')];
-    const eraColors = ['#5fd6a4','#74c8b6','#7aa2ff','#9a9bf0','#bf9bef','#e08ad0'];
-    function setActive(i){
-      const era = eras[i]; if(!era) return;
-      railYear.textContent = era.dataset.year;
-      railYear.style.color = eraColors[i];
-      railEra.textContent = era.dataset.era;
-      railEra.style.color = eraColors[i];
-      railMetric.textContent = era.dataset.metric;
-      railMetricLabel.textContent = era.dataset.metricLabel;
-      nodes.forEach((n,k)=>{ n.classList.toggle('active',k===i); n.classList.toggle('done',k<i); });
-      railFill.style.height = (((i+0.5)/eras.length)*100) + '%';
-    }
-    const eraSpy = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ setActive(eras.indexOf(e.target)); } });
-    }, { rootMargin:'-45% 0px -45% 0px', threshold:0 });
-    eras.forEach(e=>eraSpy.observe(e));
-    nodes.forEach((n,i)=>n.addEventListener('click',()=>{ setActive(i); eras[i].scrollIntoView({behavior:'smooth',block:'start'}); }));
-    // initialise rail to first phase
-    setActive(0);
-
-    // fork tabs
-    const ftabs = [...document.querySelectorAll('.ftab')];
-    const fpanels = [...document.querySelectorAll('.fork-panel')];
-    ftabs.forEach(t=>t.addEventListener('click',()=>{
-      ftabs.forEach(x=>x.classList.remove('active'));
-      t.classList.add('active');
-      fpanels.forEach(p=>p.hidden = (p.dataset.route !== t.dataset.route));
-    }));
-
-    // mobile nav
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.primary-nav');
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-    nav.addEventListener('click', e => { if (e.target.tagName === 'A') nav.classList.remove('open'); });
-  </script>
+  <script src="/assets/scenario.js?v=20260808"></script>
 </body>
 </html>

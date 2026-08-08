@@ -21,48 +21,144 @@
   </url>
   <url>
     <loc>https://mind-upload.com/history.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/history.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/history.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/history.html"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mind-upload.com/ja/history.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/history.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/history.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/history.html"/>
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mind-upload.com/science.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/science.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/science.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/science.html"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mind-upload.com/ja/science.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/science.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/science.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/science.html"/>
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mind-upload.com/progress.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/progress.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/progress.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/progress.html"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mind-upload.com/ja/progress.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/progress.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/progress.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/progress.html"/>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mind-upload.com/future.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/future.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/future.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/future.html"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mind-upload.com/ja/future.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/future.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/future.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/future.html"/>
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mind-upload.com/philosophy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/philosophy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/philosophy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/philosophy.html"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mind-upload.com/ja/philosophy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/philosophy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/philosophy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/philosophy.html"/>
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mind-upload.com/action.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/action.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/action.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/action.html"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mind-upload.com/ja/action.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/action.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/action.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/action.html"/>
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mind-upload.com/resources.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/resources.html"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mind-upload.com/ja/resources.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/resources.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/resources.html"/>
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mind-upload.com/scenario.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/scenario.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/scenario.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/scenario.html"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mind-upload.com/ja/scenario.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mind-upload.com/scenario.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/scenario.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mind-upload.com/scenario.html"/>
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

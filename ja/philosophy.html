@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第5章 哲学と倫理 — コピーは自分か、機械に意識は宿るか | マインドアップロード総合ガイド</title>
+  <meta name="description" content="マインドアップロードの哲学的・倫理的問題を整理。人格の同一性（コピー問題・漸進的置換）、意識の理論（機能主義・IIT・GNWT）、エミュレーションの福祉と同意、法的地位。技術が成功しても残る問いの教科書。">
+  <link rel="canonical" href="https://mind-upload.com/ja/philosophy.html">
+  <link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/philosophy.html">
+  <link rel="alternate" hreflang="en" href="https://mind-upload.com/philosophy.html">
+  <link rel="alternate" hreflang="x-default" href="https://mind-upload.com/philosophy.html">
+  <meta property="og:title" content="第5章 哲学と倫理 — マインドアップロード総合ガイド">
+  <meta property="og:description" content="コピーは自分か。機械に意識は宿るか。エミュレーションに苦痛はあるか。未決着の問いを立場ごと整理する。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mind-upload.com/ja/philosophy.html">
+  <meta property="og:image" content="https://mind-upload.com/assets/og-image.png?v=20260702">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0d14">
+  <link rel="icon" href="/favicon.svg?v=20260702" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css?v=20260808">
+  <script>document.documentElement.classList.add("js")</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"マインドアップロードの哲学と倫理","inLanguage":"ja",
+   "url":"https://mind-upload.com/ja/philosophy.html","dateModified":"2026-08-08",
+   "isPartOf":{"@type":"WebSite","name":"マインドアップロード総合ガイド","url":"https://mind-upload.com/ja/"}}
+  </script>
+</head>
+<body id="top">
+  <div id="progress"></div>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード <small>integrated guide</small></a>
+      <nav class="primary-nav" aria-label="章立て">
+        <a href="/ja/history.html">1. 歴史</a>
+        <a href="/ja/science.html">2. 科学</a>
+        <a href="/ja/progress.html">3. 現在地</a>
+        <a href="/ja/future.html">4. 未来</a>
+        <a href="/ja/philosophy.html">5. 哲学と倫理</a>
+        <a href="/ja/action.html">6. 行動</a>
+        <a href="/ja/resources.html">資料</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / 言語">
+        <a href="/philosophy.html" hreflang="en" lang="en">EN</a>
+        <a href="/ja/philosophy.html" hreflang="ja" aria-current="true">日本語</a>
+      </div>
+      <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="ch-hero">
+      <a class="badge" href="/ja/">総合ガイド ・ 第5章</a>
+      <h1>哲学と倫理 — <span class="grad">技術が成功しても残る問い。</span></h1>
+      <p class="lead">
+        仮に第3章の6軸がすべて完成しても、「それは本人の生存か」「そこに意識はあるか」「その存在に何をしてよいか」という3つの問いは自動的には解けない。
+        この章は答えを断定せず、<strong>主要な立場とその含意</strong>を並べる。読者が自分の直観を検査するための地図である。
+      </p>
+      <div class="ch-meta"><span>スタンス: 中立・両論併記</span><span>引用: 18件</span></div>
+      <div class="toc">
+        <span class="tag">この章の目次</span>
+        <ol>
+          <li><a href="#identity">5.1 人格の同一性 — コピーは自分か</a></li>
+          <li><a href="#consciousness">5.2 意識 — 機械に主観は宿るか</a></li>
+          <li><a href="#ethics">5.3 倫理 — エミュレーションに何をしてよいか</a></li>
+          <li><a href="#law">5.4 法と社会制度</a></li>
+          <li><a href="#map">5.5 立場の地図</a></li>
+          <li><a href="#summary">5.6 この章の要点</a></li>
+          <li><a href="#refs">文献</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="identity">
+      <p class="eyebrow">5.1 Personal Identity</p>
+      <h2>人格の同一性 — コピーは自分か。</h2>
+      <div class="def">
+        <span class="tag">問題の定式化</span>
+        <p>脳を走査し、完全な機能的複製を計算機上で起動したとする。複製は記憶・性格・自己意識を持ち、「私は本人だ」と主張する。このとき<strong>（a）本人は生き延びたのか、（b）本人によく似た別人が生まれたのか</strong>。これがコピー問題（人格の同一性問題）である。走査が破壊的なら賭け金は生死そのものになり、非破壊なら「本人が2人いる」分岐問題になる。</p>
+      </div>
+      <h3>主要な立場</h3>
+      <ul class="plain">
+        <li><strong>心理的連続性説（パターン主義）</strong> — 自己の本質は記憶・性格・心理のパターンであり、それが十分連続していれば基質（ニューロンかシリコンか）は問わない。パーフィットは、同一性の「事実」は心理的連続性以上のものではなく、<em>生存にとって重要なのは同一性そのものではない</em>とまで論じた<sup><a href="#ref1">1</a></sup>。この立場ではアップロードは原理的に生存でありうる。</li>
+        <li><strong>生物学的説（動物主義）</strong> — 私は特定の生物有機体であり、有機体が死ねば私は死ぬ。複製は私についての精巧な記録にすぎない。この立場では破壊的アップロードは常に死＋別人の誕生である。</li>
+        <li><strong>物理的連続性説</strong> — 同一性は物質・過程の時空間的な連続に宿る。瞬間的なコピーは連続を断つが、<strong>漸進的置換</strong>（後述）なら保たれうる、と考える余地がある。</li>
+      </ul>
+      <h3>思考実験の道具箱</h3>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>思考実験</th><th>設定</th><th>突きつけるもの</th></tr></thead>
+          <tbody>
+            <tr><td><b>テレポーター（パーフィット）</b><sup><a href="#ref1">1</a></sup></td><td>身体を走査・破壊し火星で再構成する。ある日、破壊が失敗し地球の「原本」が残る</td><td>「複製＝生存」の直観は、原本が残った瞬間に崩れる。破壊的アップロードはこの装置と論理的に同型</td></tr>
+            <tr><td><b>漸進的置換（モラヴェック）</b><sup><a href="#ref2">2</a></sup></td><td>ニューロンを1個ずつ機能的等価物に置換する。意識は途切れず、本人は変化に気づかない</td><td>どの1個の置換で「別人」になるのか。テセウスの船。多くの人が瞬間コピーより生存らしいと感じる——その直観に理論的根拠はあるか</td></tr>
+            <tr><td><b>分岐（イーガン）</b><sup><a href="#ref3">3</a></sup></td><td>非破壊スキャンで複製を起動。本人と複製が同時に存在する</td><td>同一性は1対1関係のはず。2人とも「本人」なら同一性概念自体が破綻し、パーフィット的「同一性は重要でない」へ押し出される</td></tr>
+            <tr><td><b>半球接続（渡辺）</b><sup><a href="#ref4">4</a></sup></td><td>生きているうちに脳半球を機械半球とBMIで接続し、統合された意識として経験を共有してから生体側を失う</td><td>「接続→統合→移行」なら主観的連続性が保たれるという主張。漸進的置換の工学的具体化であり、検証可能性が論点</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">
+        <span class="tag">現在の到達点</span>
+        <p>2,000年来の問題だが、アップロードの文脈での実務的な合意は「<strong>瞬間的な破壊的コピーを生存とみなせるかは直観が真っ二つに割れ、漸進的な移行はより多くの立場で生存と認められやすい</strong>」という非対称性の確認である。だからこそ工学側でも、段階的な置換・接続（モラヴェック手順、半球接続案）が「同一性に優しい」経路として繰り返し再発明されている。</p>
+      </div>
+    </section>
+
+    <section id="consciousness">
+      <p class="eyebrow">5.2 Consciousness</p>
+      <h2>意識 — 機械に主観は宿るか。</h2>
+      <p class="lead">エミュレーションが行動上完璧でも、内側の主観的経験（クオリア）があるかは別問題である。主要理論は予測が割れており、これは「未解決」ではなく「<strong>理論選択自体が未決着</strong>」という状況である。</p>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>理論・立場</th><th>エミュレーションの意識</th><th>根拠と課題</th></tr></thead>
+          <tbody>
+            <tr><td><b>機能主義／計算主義</b>（チャーマーズら）</td><td><span class="chip done">宿る</span></td><td>意識は機能的組織に付随する。ニューロンを1個ずつ置換しても経験が「徐々に消える」「踊る」のは不合理という論証（fading/dancing qualia）<sup><a href="#ref5">5</a></sup>。基質独立性の理論的支柱。</td></tr>
+            <tr><td><b>グローバル・ワークスペース理論（GNWT）</b>（デハーネら）</td><td><span class="chip done">宿りうる</span></td><td>意識＝情報の全域放送というアーキテクチャの性質。同じアーキテクチャを実装すれば基質を問わない<sup><a href="#ref6">6</a></sup>。</td></tr>
+            <tr><td><b>統合情報理論（IIT）</b>（トノーニら）</td><td><span class="chip open">宿らない可能性が高い</span></td><td>意識は因果構造の統合度（Φ）に宿り、ノイマン型計算機上のシミュレーションは機能を再現してもΦがほぼゼロになりうると理論の提唱者自身が明言<sup><a href="#ref7">7</a></sup>。ニューロモルフィック実装なら別、という含意も重要。</td></tr>
+            <tr><td><b>生物学的自然主義</b>（サール）／生命基盤説（セスら）</td><td><span class="chip open">宿らない</span></td><td>意識は生体の因果的性質（あるいは生命過程そのもの）に依存し、計算の実装では足りない<sup><a href="#ref8">8</a></sup>。反証も証明も困難。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        2025年、IITとGNWTを同一実験で対決させる大規模な敵対的協働（Cogitate）が報告され、<strong>両理論の中核予測がともに部分的に外れる</strong>という結果になった<sup><a href="#ref9">9</a></sup>。
+        意識科学は前進しているが、「エミュレーションに意識があるか」を判定できる理論はまだ選ばれていない。
+        さらに根本的には、他我問題——行動と構造から主観の存在を<em>外側から</em>確定する手段の不在——が残る。
+        シュナイダーらはチップ置換時の主観報告を使う実践的テストを提案しているが、決定打とは見なされていない<sup><a href="#ref10">10</a></sup>。
+      </p>
+    </section>
+
+    <section id="ethics">
+      <p class="eyebrow">5.3 Ethics</p>
+      <h2>倫理 — エミュレーションに何をしてよいか。</h2>
+      <ul class="plain">
+        <li><strong>失敗作の苦痛（s-リスクの入口）</strong> — 開発途中の不完全なエミュレーションは、壊れた主観・持続する苦痛を持つかもしれない。サンドバーグは動物・ヒトエミュレーション研究に実験動物福祉と同型の枠組み（苦痛の推定・停止基準・麻酔相当の状態制御）を先回りで適用すべきと論じた<sup><a href="#ref11">11</a></sup>。メッツィンガーはさらに強く、人工的な現象学（合成主観）の生成自体を2050年までモラトリアムにせよと提案している<sup><a href="#ref12">12</a></sup>。</li>
+        <li><strong>最初の被験者は動物</strong> — ハエ・エミュレーション（2026）は既にこの問題の入口にある。ハエに保護すべき主観があるかは不明だが、「不明のまま数百万コピーを走らせてよいか」という形で問いは既に現実である。AI福祉を真剣に扱うべきとする議論は2024年以降、主流の研究課題になりつつある<sup><a href="#ref13">13</a></sup>。</li>
+        <li><strong>同意</strong> — 死後の脳走査・エミュレーション起動に、生前のどんな同意が必要十分か。幇助死と結合した保存（2026年のNectomeプロトコル<sup><a href="#ref14">14</a></sup>）は、終末期医療の意思決定に「復活の見込みが不確実な選択肢」を持ち込む。誇大な期待の混入しない同意設計が、現在まさに必要とされている数少ない「今の倫理課題」である。</li>
+        <li><strong>停止・削除・コピーの権利</strong> — 意識があるなら、停止は麻酔か殺人か。バックアップからの再起動は蘇生か新生か。コピー間の財産・責任・関係の帰属は。エミュレーション自身の同意なくコピー・編集・実験してよいか。</li>
+        <li><strong>格差と強制</strong> — 高価な保存・アップロードが階級財になる問題、雇用主や国家がエミュレーション化を事実上強制する問題（ハンソンのem経済はこの圧力を明示的に描く<sup><a href="#ref15">15</a></sup>）。</li>
+      </ul>
+      <div class="warn">
+        <span class="tag">現在進行形の倫理課題（未来の話ではないもの）</span>
+        <p>(1) 保存サービスの<strong>広告と科学的根拠の乖離</strong>の監視、(2) 幇助死適合プロトコルの<strong>同意設計と審査</strong>、(3) 動物エミュレーションの<strong>福祉ガイドライン</strong>の起草、(4) コネクトームデータの<strong>プライバシー</strong>（脳データは究極の個人情報である）。この4つは2026年時点で既に実務の問題である。</p>
+      </div>
+    </section>
+
+    <section id="law">
+      <p class="eyebrow">5.4 Law</p>
+      <h2>法と社会制度 — 受け皿はまだない。</h2>
+      <p>
+        どの法域にも、エミュレーションを直接扱う法は存在しない（2026年現在）。想定される争点は、法人格の付与（自然人・法人のどちらの類推か）、
+        死の定義との整合（保存された脳は死体か患者か）、停止・削除の刑法上の扱い、選挙権と「1人」の算定（コピーは各1票か）、
+        労働法（可変速労働・無限複製と最低賃金）、相続（本人が「続いている」なら相続は発生するか）、管轄（サーバ所在地か国籍か）。
+        現行の脳神経科学と法の接点では「ニューロライツ」（脳データの権利保護）の立法が最も近い先行例であり、チリの憲法改正（2021）などが参照点になる。
+        制度設計の思考実験としては、ハンソンのem社会分析<sup><a href="#ref15">15</a></sup>と、デジタルマインドの権利に関する近年の政策研究<sup><a href="#ref13">13</a><a href="#ref16">16</a></sup>が出発点である。
+      </p>
+    </section>
+
+    <section id="map">
+      <p class="eyebrow">5.5 Position Map</p>
+      <h2>立場の地図 — 自分の直観はどこにいるか。</h2>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>大分類</th><th>同一性</th><th>意識</th><th>帰結</th><th>代表的論者</th></tr></thead>
+          <tbody>
+            <tr><td><b>楽観的パターン主義</b></td><td>心理的連続性で十分</td><td>機能主義</td><td>アップロードは生存。破壊的スキャンも原理的に許容</td><td>カーツワイル、コーエネ、ゼレズニコウ＝ジョンストン<sup><a href="#ref17">17</a></sup></td></tr>
+            <tr><td><b>漸進主義</b></td><td>連続性の保持が本質</td><td>機能主義寄り（実装依存に注意）</td><td>瞬間コピーは危険、漸進的置換・接続なら生存でありうる</td><td>モラヴェック、チャーマーズ（条件付き）<sup><a href="#ref5">5</a></sup>、渡辺<sup><a href="#ref4">4</a></sup></td></tr>
+            <tr><td><b>同一性デフレ主義</b></td><td>「同一性」は重要でない</td><td>—</td><td>問いを立て直す: 残るべきは関係と心理の連続だけ</td><td>パーフィット<sup><a href="#ref1">1</a></sup></td></tr>
+            <tr><td><b>基質懐疑</b></td><td>—</td><td>IIT／生物学的自然主義</td><td>デジタル・エミュレーションは意識なき複製（ゾンビ）でありうる</td><td>トノーニ<sup><a href="#ref7">7</a></sup>、サール<sup><a href="#ref8">8</a></sup></td></tr>
+            <tr><td><b>生物学的保守</b></td><td>動物主義</td><td>生命基盤説</td><td>アップロードは定義上、死＋記録の作成</td><td>オルソン系の形而上学、セス（意識について）<sup><a href="#ref8">8</a></sup></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="summary">
+      <p class="eyebrow">5.6 Summary</p>
+      <h2>この章の要点。</h2>
+      <div class="key reveal">
+        <span class="tag">要点</span>
+        <ul>
+          <li>コピー問題は未解決だが構造は明確: <strong>瞬間的コピーと漸進的移行への直観は非対称</strong>であり、工学はその非対称に沿って「同一性に優しい」経路を探している。</li>
+          <li>意識については理論間で予測が正反対に割れ、2025年の対決実験でも決着しなかった。<strong>「エミュレーションに意識があるか」は現時点で判定不能</strong>——この不確実性こそが倫理的慎重さの根拠になる。</li>
+          <li>倫理は未来の話ではない: 保存の同意設計、動物エミュレーションの福祉、脳データのプライバシーは<strong>2026年時点で現実の課題</strong>である（→<a class="inline" href="/ja/action.html">第6章</a>）。</li>
+        </ul>
+      </div>
+      <div class="pager">
+        <a href="/ja/future.html" class="prev"><span class="dir">← 前章</span><span class="t">第4章 未来</span></a>
+        <a href="/ja/action.html" class="next"><span class="dir">次章 →</span><span class="t">第6章 いま何をすべきか</span></a>
+      </div>
+    </section>
+
+    <section id="refs">
+      <p class="eyebrow">References / 文献</p>
+      <h2>第5章の文献（18件）。</h2>
+      <ol class="refs reveal">
+        <li id="ref1"><a class="ref-link" href="https://global.oup.com/academic/product/reasons-and-persons-9780198249085" target="_blank" rel="noopener">Parfit, D. (1984). <i>Reasons and Persons.</i> Oxford Univ. Press.（邦訳『理由と人格』）</a></li>
+        <li id="ref2"><a class="ref-link" href="https://www.hup.harvard.edu/books/9780674576186" target="_blank" rel="noopener">Moravec, H. (1988). <i>Mind Children.</i> Harvard Univ. Press.（漸進的置換手順の初出）</a></li>
+        <li id="ref3"><a class="ref-link" href="https://en.wikipedia.org/wiki/Permutation_City" target="_blank" rel="noopener">Egan, G. (1994). <i>Permutation City.</i>（分岐問題の文学的展開）</a></li>
+        <li id="ref4"><a class="ref-link" href="https://www.kodansha.co.jp/book/products/0000393864" target="_blank" rel="noopener">渡辺正峰 (2024). 『意識の脳科学 — 「デジタル不老不死」の扉を開く』講談社現代新書.（半球接続による漸進移行案）</a></li>
+        <li id="ref5"><a class="ref-link" href="https://consc.net/papers/uploading.pdf" target="_blank" rel="noopener">Chalmers, D. (2014). Mind uploading: a philosophical analysis.（fading/dancing qualia論証とアップロードへの適用）</a></li>
+        <li id="ref6"><a class="ref-link" href="https://doi.org/10.1016/j.neuron.2011.03.018" target="_blank" rel="noopener">Dehaene, S., &amp; Changeux, J.-P. (2011). Experimental and theoretical approaches to conscious processing. <i>Neuron,</i> 70, 200–227.</a></li>
+        <li id="ref7"><a class="ref-link" href="https://doi.org/10.1098/rstb.2014.0167" target="_blank" rel="noopener">Tononi, G., &amp; Koch, C. (2015). Consciousness: here, there and everywhere? <i>Phil. Trans. R. Soc. B,</i> 370.（IITはデジタル計算機上のエミュレーションの意識を否定しうると明言）</a></li>
+        <li id="ref8"><a class="ref-link" href="https://plato.stanford.edu/entries/consciousness/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy. Consciousness／Biological Naturalism（サール、生命基盤説の整理）.</a></li>
+        <li id="ref9"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08888-1" target="_blank" rel="noopener">Cogitate Consortium (2025). Adversarial testing of global neuronal workspace and integrated information theories. <i>Nature.</i></a></li>
+        <li id="ref10"><a class="ref-link" href="https://press.princeton.edu/books/hardcover/9780691180144/artificial-you" target="_blank" rel="noopener">Schneider, S. (2019). <i>Artificial You: AI and the Future of Your Mind.</i> Princeton Univ. Press.</a></li>
+        <li id="ref11"><a class="ref-link" href="https://doi.org/10.1080/0952813X.2014.895113" target="_blank" rel="noopener">Sandberg, A. (2014). Ethics of brain emulations. <i>J. Exp. Theor. Artif. Intell.,</i> 26, 439–457.</a></li>
+        <li id="ref12"><a class="ref-link" href="https://doi.org/10.1142/S270507852150003X" target="_blank" rel="noopener">Metzinger, T. (2021). Artificial suffering: an argument for a global moratorium on synthetic phenomenology. <i>J. Artif. Intell. Consci.,</i> 8, 43–66.</a></li>
+        <li id="ref13"><a class="ref-link" href="https://arxiv.org/abs/2411.00986" target="_blank" rel="noopener">Long, R., Sebo, J., et al. (2024). Taking AI welfare seriously. arXiv:2411.00986.</a></li>
+        <li id="ref14"><a class="ref-link" href="https://nectome.com/research" target="_blank" rel="noopener">Nectome Research (2026). 幇助死適合の全脳保存プロトコル（前刷り）.</a></li>
+        <li id="ref15"><a class="ref-link" href="https://global.oup.com/academic/product/the-age-of-em-9780198754626" target="_blank" rel="noopener">Hanson, R. (2016). <i>The Age of Em.</i> Oxford Univ. Press.</a></li>
+        <li id="ref16"><a class="ref-link" href="https://arxiv.org/abs/2508.00536" target="_blank" rel="noopener">Caviola, L., &amp; Saad, B. (2025). Futures with digital minds: expert forecasts in 2025. arXiv:2508.00536.</a></li>
+        <li id="ref17"><a class="ref-link" href="https://en.wikipedia.org/wiki/The_Future_Loves_You" target="_blank" rel="noopener">Zeleznikow-Johnston, A. (2024). <i>The Future Loves You.</i> Penguin.（パターン主義からの保存擁護論）</a></li>
+        <li id="ref18"><a class="ref-link" href="https://plato.stanford.edu/entries/identity-personal/" target="_blank" rel="noopener">Stanford Encyclopedia of Philosophy. Personal Identity.（同一性論争の標準的整理）</a></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード <small>integrated guide</small></a>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="/ja/history.html">1. 歴史</a>
+        <a href="/ja/science.html">2. 科学的基礎</a>
+        <a href="/ja/progress.html">3. 現在地</a>
+        <a href="/ja/future.html">4. 未来</a>
+        <a href="/ja/philosophy.html">5. 哲学と倫理</a>
+        <a href="/ja/action.html">6. 行動</a>
+        <a href="/ja/resources.html">資料集</a>
+        <a href="/ja/scenario.html">別冊: シナリオ2050</a>
+      </nav>
+      <p class="disc">免責: 本サイトは公開研究にもとづく教育目的の情報サイトです。最終更新: 2026-08-08。</p>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js?v=20260808"></script>
+</body>
+</html>

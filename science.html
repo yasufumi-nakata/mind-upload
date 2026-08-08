@@ -1,17 +1,18 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>第2章 科学的基礎 — 何を、どの解像度で写せば「心」になるのか | マインドアップロード総合ガイド</title>
-  <meta name="description" content="全脳エミュレーションの科学的基礎。脳の基本数値、WBEパイプラインの6段階、必要な解像度の論争、スキャン技術の比較、計算量・データ量の見積もり、主要な科学的反論を教科書的に整理する。">
+  <title>Chapter 2 · Scientific Fundamentals — What Must Be Copied, and at What Resolution | Mind Uploading</title>
+  <meta name="description" content="The scientific fundamentals of whole brain emulation: the numbers that describe a brain, the six stages of the WBE pipeline, the unresolved resolution question, a comparison of scanning technologies, compute and data estimates, and the serious scientific objections.">
   <link rel="canonical" href="https://mind-upload.com/science.html">
-  <link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/">
-  <link rel="alternate" hreflang="en" href="https://mind-upload.com/">
-  <link rel="alternate" hreflang="x-default" href="https://mind-upload.com/">
-  <meta property="og:title" content="第2章 科学的基礎 — マインドアップロード総合ガイド">
-  <meta property="og:description" content="脳の数値、パイプライン、解像度問題、スキャン技術、計算量、科学的反論。WBEを工学問題として分解する。">
+  <link rel="alternate" hreflang="en" href="https://mind-upload.com/science.html">
+  <link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/science.html">
+  <link rel="alternate" hreflang="x-default" href="https://mind-upload.com/science.html">
+  <meta property="og:title" content="Chapter 2 · Scientific Fundamentals">
+  <meta property="og:description" content="Brain numbers, the pipeline, the resolution problem, scanning technologies, compute, and the objections. WBE decomposed as an engineering problem.">
   <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://mind-upload.com/science.html">
   <meta property="og:image" content="https://mind-upload.com/assets/og-image.png?v=20260702">
   <meta name="twitter:card" content="summary_large_image">
@@ -23,9 +24,9 @@
   <link rel="stylesheet" href="/assets/site.css?v=20260808">
   <script>document.documentElement.classList.add("js")</script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","headline":"マインドアップロードの科学的基礎","inLanguage":"ja",
+  {"@context":"https://schema.org","@type":"Article","headline":"Scientific Fundamentals of Whole Brain Emulation","inLanguage":"en",
    "url":"https://mind-upload.com/science.html","dateModified":"2026-08-08",
-   "isPartOf":{"@type":"WebSite","name":"マインドアップロード総合ガイド","url":"https://mind-upload.com/"}}
+   "isPartOf":{"@type":"WebSite","name":"Mind Uploading: An Integrated Guide","url":"https://mind-upload.com/"}}
   </script>
 </head>
 <body id="top">
@@ -33,183 +34,187 @@
 
   <header class="site-header">
     <div class="nav-inner">
-      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード <small>integrated guide</small></a>
-      <nav class="primary-nav" aria-label="章立て">
-        <a href="/history.html">1. 歴史</a>
-        <a href="/science.html">2. 科学</a>
-        <a href="/progress.html">3. 現在地</a>
-        <a href="/future.html">4. 未来</a>
-        <a href="/philosophy.html">5. 哲学と倫理</a>
-        <a href="/action.html">6. 行動</a>
-        <a href="/resources.html">資料</a>
+      <a class="brand" href="/"><span class="dot"></span>Mind Uploading <small>integrated guide</small></a>
+      <nav class="primary-nav" aria-label="Chapters">
+        <a href="/history.html">1. History</a>
+        <a href="/science.html">2. Science</a>
+        <a href="/progress.html">3. Status</a>
+        <a href="/future.html">4. Forecasts</a>
+        <a href="/philosophy.html">5. Philosophy</a>
+        <a href="/action.html">6. Action</a>
+        <a href="/resources.html">Resources</a>
       </nav>
       <div class="lang-switch" role="group" aria-label="Language / 言語">
-        <a href="/" hreflang="en" lang="en">EN</a>
-        <a href="/ja/" hreflang="ja" aria-current="true">日本語</a>
+        <a href="/science.html" hreflang="en" aria-current="true">EN</a>
+        <a href="/ja/science.html" hreflang="ja" lang="ja">日本語</a>
       </div>
-      <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
     </div>
   </header>
 
   <main>
     <section class="ch-hero">
-      <a class="badge" href="/ja/">総合ガイド ・ 第2章</a>
-      <h1>科学的基礎 — <span class="grad">何を、どの解像度で写せば</span>「心」になるのか。</h1>
+      <a class="badge" href="/">Integrated Guide · Chapter 2</a>
+      <h1>Scientific fundamentals — <span class="grad">what must be copied,</span> and at what resolution.</h1>
       <p class="lead">
-        全脳エミュレーション（WBE）は「脳をスキャンしてコンピュータで動かす」という一文に要約されるが、
-        その一文は6つの独立した工学問題に分解できる。この章では、対象である脳の基本数値、パイプラインの各段階、
-        最大の未解決問題である「解像度の決定」、利用可能なスキャン技術、必要な計算量、そして主要な科学的反論を順に整理する。
+        Whole brain emulation can be summarised in one sentence — scan a brain, run it on a computer — but that sentence
+        decomposes into six independent engineering problems. This chapter covers the numbers that describe the object,
+        the stages of the pipeline, the field's largest open question (deciding the required resolution), the available
+        scanning technologies, the compute and data requirements, and the serious scientific objections.
       </p>
-      <div class="ch-meta"><span>難易度: 中（前提知識不要）</span><span>引用: 28件</span></div>
+      <div class="ch-meta"><span>Level: intermediate, no prerequisites</span><span>28 references</span></div>
       <div class="toc">
-        <span class="tag">この章の目次</span>
+        <span class="tag">In this chapter</span>
         <ol>
-          <li><a href="#numbers">2.1 対象を知る — 脳の基本数値</a></li>
-          <li><a href="#pipeline">2.2 WBEパイプラインの6段階</a></li>
-          <li><a href="#resolution">2.3 解像度問題 — 何を写せば十分か</a></li>
-          <li><a href="#scanning">2.4 スキャン技術の比較</a></li>
-          <li><a href="#compute">2.5 計算量とデータ量</a></li>
-          <li><a href="#objections">2.6 科学的反論と現在の応答</a></li>
-          <li><a href="#summary">2.7 この章の要点</a></li>
-          <li><a href="#refs">文献</a></li>
+          <li><a href="#numbers">2.1 The object: brains in numbers</a></li>
+          <li><a href="#pipeline">2.2 The six-stage WBE pipeline</a></li>
+          <li><a href="#resolution">2.3 The resolution problem</a></li>
+          <li><a href="#scanning">2.4 Scanning technologies compared</a></li>
+          <li><a href="#compute">2.5 Compute and data</a></li>
+          <li><a href="#objections">2.6 Objections, and current responses</a></li>
+          <li><a href="#summary">2.7 Chapter summary</a></li>
+          <li><a href="#refs">References</a></li>
         </ol>
       </div>
     </section>
 
     <section id="numbers">
       <p class="eyebrow">2.1 The Object</p>
-      <h2>対象を知る — 脳の基本数値。</h2>
+      <h2>The object: brains in numbers.</h2>
       <div class="def">
-        <span class="tag">定義</span>
-        <p><strong>全脳エミュレーション（WBE）</strong>: 特定の脳の関連する構造・状態を十分な解像度で計測し、その因果的な情報処理を別の計算基盤上で再現すること。抽象的な「脳型AI」と異なり、<em>特定個体</em>の再現を目指す点が本質<sup><a href="#ref1">1</a></sup>。<strong>シミュレーション</strong>（一般的な脳のモデル実験）と<strong>エミュレーション</strong>（特定の脳の機能的複製）は区別される。</p>
+        <span class="tag">Definition</span>
+        <p><strong>Whole brain emulation (WBE)</strong>: measuring the relevant structure and state of a particular brain at sufficient resolution and reproducing its causal information processing on another computational substrate. Unlike abstract brain-inspired AI, the defining feature is reproducing <em>one specific individual</em><sup><a href="#ref1">1</a></sup>. <strong>Simulation</strong> (modelling brains in general) and <strong>emulation</strong> (functionally copying a particular brain) are distinct.</p>
       </div>
       <div class="tbl reveal">
         <table>
-          <thead><tr><th>生物</th><th>ニューロン数</th><th>シナプス数（概算）</th><th>脳体積（概算）</th><th>備考</th></tr></thead>
+          <thead><tr><th>Organism</th><th>Neurons</th><th>Synapses (approx.)</th><th>Brain volume (approx.)</th><th>Notes</th></tr></thead>
           <tbody>
-            <tr><td><b>線虫</b> <i>C. elegans</i></td><td class="num">302</td><td class="num">≈7×10³</td><td class="num">—（全身1mm）</td><td>唯一「全個体」の配線図が完成<sup><a href="#ref2">2</a></sup></td></tr>
-            <tr><td><b>ハエ成虫</b>（脳）</td><td class="num">139,255</td><td class="num">≈5.5×10⁷</td><td class="num">≈0.08 mm³</td><td>全脳コネクトーム完成（2024）<sup><a href="#ref3">3</a></sup></td></tr>
-            <tr><td><b>ゼブラフィッシュ幼生</b></td><td class="num">≈1×10⁵</td><td class="num">≈10⁸</td><td class="num">≈0.1 mm³</td><td>全脳活動記録が可能な最大の脳</td></tr>
-            <tr><td><b>マウス</b></td><td class="num">≈7×10⁷</td><td class="num">≈10¹¹</td><td class="num">≈500 mm³</td><td>1mm³のみ構造地図あり<sup><a href="#ref4">4</a></sup></td></tr>
-            <tr><td><b>ヒト</b></td><td class="num">8.6×10¹⁰</td><td class="num">≈1.5×10¹⁴</td><td class="num">≈1.2×10⁶ mm³</td><td>ニューロン数はHerculano-Houzelらの計測<sup><a href="#ref5">5</a></sup>。消費電力約20W</td></tr>
+            <tr><td><b>Nematode</b> <i>C. elegans</i></td><td class="num">302</td><td class="num">≈7×10³</td><td class="num">— (1 mm body)</td><td>The only complete whole-animal wiring diagram<sup><a href="#ref2">2</a></sup></td></tr>
+            <tr><td><b>Adult fly</b> (brain)</td><td class="num">139,255</td><td class="num">≈5.5×10⁷</td><td class="num">≈0.08 mm³</td><td>Whole-brain connectome completed 2024<sup><a href="#ref3">3</a></sup></td></tr>
+            <tr><td><b>Larval zebrafish</b></td><td class="num">≈1×10⁵</td><td class="num">≈10⁸</td><td class="num">≈0.1 mm³</td><td>Largest brain whose activity can be recorded whole</td></tr>
+            <tr><td><b>Mouse</b></td><td class="num">≈7×10⁷</td><td class="num">≈10¹¹</td><td class="num">≈500 mm³</td><td>Structural map exists for 1 mm³ only<sup><a href="#ref4">4</a></sup></td></tr>
+            <tr><td><b>Human</b></td><td class="num">8.6×10¹⁰</td><td class="num">≈1.5×10¹⁴</td><td class="num">≈1.2×10⁶ mm³</td><td>Neuron count from Herculano-Houzel et al.<sup><a href="#ref5">5</a></sup>; runs on about 20 watts</td></tr>
           </tbody>
         </table>
       </div>
       <p>
-        重要なのは絶対数より<strong>桁の距離</strong>である。構造地図が完成しているのはハエ（10⁵）まで。マウスまで残り約3桁、ヒトまでさらに3桁。
-        そして体積あたりのデータ量は一定なので、ヒト全脳はハエ全脳の約<strong>1,500万倍</strong>の撮像・処理を意味する。
-        一方でニューロンの動作原理（膜電位・シナプス伝達・神経修飾）は種を越えてよく保存されており、小さい脳で確立した手法は原理的にスケールする。
-        この「桁は遠いが、道は連続している」という構図が本分野の基本感覚である。
+        What matters is not the absolute numbers but <strong>the distance in orders of magnitude</strong>. Complete structural maps
+        reach the fly (10⁵). The mouse is about three orders further, the human three beyond that. Since data volume scales with
+        tissue volume, a whole human brain means roughly <strong>15 million times</strong> the imaging and processing of a whole fly brain.
+        Working the other way, the operating principles of neurons — membrane potentials, synaptic transmission, neuromodulation —
+        are well conserved across species, so methods established in small brains do scale in principle.
+        "The distance is large but the road is continuous" is the basic intuition of this field.
       </p>
     </section>
 
     <section id="pipeline">
       <p class="eyebrow">2.2 The Pipeline</p>
-      <h2>WBEパイプラインの6段階。</h2>
-      <p class="lead">2008年のロードマップ<sup><a href="#ref1">1</a></sup>以来、WBEは次の依存パイプラインとして理解されている。各段階は前段の出力を入力とし、どれか一つでも欠ければ全体が成立しない。</p>
+      <h2>The six-stage WBE pipeline.</h2>
+      <p class="lead">Since the 2008 roadmap<sup><a href="#ref1">1</a></sup>, WBE has been understood as the following dependency pipeline. Each stage consumes the output of the previous one, and the whole collapses if any single one is missing.</p>
       <div class="tbl reveal">
         <table>
-          <thead><tr><th>段階</th><th>内容</th><th>代表的技術</th><th>主な難所</th></tr></thead>
+          <thead><tr><th>Stage</th><th>What it does</th><th>Representative technology</th><th>Principal difficulty</th></tr></thead>
           <tbody>
-            <tr><td><b>① 保存・固定</b></td><td>脳の微細構造を劣化させずに固定し、長期保存する</td><td>灌流固定、アルデヒド安定化低温保存（ASC）<sup><a href="#ref6">6</a></sup></td><td>死後劣化との時間競争、全脳を隙間なく固定する灌流品質</td></tr>
-            <tr><td><b>② 撮像（スキャン）</b></td><td>シナプスが見える解像度（数nm〜数十nm）で全体積を撮像する</td><td>電子顕微鏡（EM）各方式、膨張顕微鏡＋光学<sup><a href="#ref7">7</a></sup></td><td>スループット。現行EMではヒト全脳に数百年〜（並列化前提）</td></tr>
-            <tr><td><b>③ 再構成</b></td><td>画像から全ニューロンの形状と全シナプスを抽出し配線図にする</td><td>AIセグメンテーション＋人手校正<sup><a href="#ref3">3</a></sup></td><td>校正コスト（ハエで延べ数十人年）。誤りの連鎖</td></tr>
-            <tr><td><b>④ モデル化</b></td><td>静的な配線図に、シナプス重み・伝達物質・動作パラメータを与える</td><td>構造からの推論、分子アノテーション、デジタルツイン学習<sup><a href="#ref8">8</a></sup></td><td><strong>最大の科学的不確実性。</strong>静的構造にどこまで動的情報が含まれるか未知</td></tr>
-            <tr><td><b>⑤ 実行</b></td><td>モデルを計算機上で走らせ、身体・環境と接続する</td><td>スパイキングシミュレータ、物理シミュレーション身体<sup><a href="#ref9">9</a></sup></td><td>ヒト規模のリアルタイム実行、身体・環境の忠実度</td></tr>
-            <tr><td><b>⑥ 検証</b></td><td>エミュレーションが元の脳と「同じ」であることを示す</td><td>行動一致、摂動応答、活動予測ベンチマーク<sup><a href="#ref10">10</a></sup></td><td>合格基準の未確立。個人同一性の検証は原理的難問（第5章）</td></tr>
+            <tr><td><b>1. Preserve / fix</b></td><td>Fix the brain's fine structure without degradation and store it</td><td>Perfusion fixation; aldehyde-stabilized cryopreservation (ASC)<sup><a href="#ref6">6</a></sup></td><td>Racing post-mortem decay; achieving uniform perfusion across a whole brain</td></tr>
+            <tr><td><b>2. Image (scan)</b></td><td>Image the full volume at a resolution where synapses are visible (single to tens of nm)</td><td>Electron microscopy in its various forms; expansion microscopy with optics<sup><a href="#ref7">7</a></sup></td><td>Throughput. At current EM rates a human brain takes centuries without massive parallelism</td></tr>
+            <tr><td><b>3. Reconstruct</b></td><td>Extract every neuron's shape and every synapse from the images to produce a wiring diagram</td><td>AI segmentation with human proofreading<sup><a href="#ref3">3</a></sup></td><td>Proofreading cost — tens of person-years for the fly. Errors propagate</td></tr>
+            <tr><td><b>4. Model</b></td><td>Assign synaptic weights, transmitters and dynamical parameters to the static wiring diagram</td><td>Inference from structure, molecular annotation, digital-twin learning<sup><a href="#ref8">8</a></sup></td><td><strong>The greatest scientific uncertainty.</strong> How much dynamical information static structure contains is unknown</td></tr>
+            <tr><td><b>5. Run</b></td><td>Execute the model and couple it to a body and environment</td><td>Spiking simulators; physics-simulated bodies<sup><a href="#ref9">9</a></sup></td><td>Human-scale real-time execution; fidelity of body and environment</td></tr>
+            <tr><td><b>6. Validate</b></td><td>Show that the emulation is "the same as" the original brain</td><td>Behavioural matching, perturbation response, activity-prediction benchmarks<sup><a href="#ref10">10</a></sup></td><td>No agreed pass criteria. Validating personal identity is a problem in principle (Chapter 5)</td></tr>
           </tbody>
         </table>
       </div>
       <div class="note">
-        <span class="tag">読み方</span>
-        <p>ニュースで「脳マッピングの快挙」を見たら、まず<strong>この表のどの段階の話か</strong>を確認するとよい。②③（地図化）の進歩は速いが、④（モデル化）と⑥（検証）は桁で遅れている。この非対称が、進捗報道と専門家の慎重な時期見積もりのギャップの正体である。</p>
+        <span class="tag">How to read the news</span>
+        <p>When you see a headline about a brain-mapping breakthrough, the first useful question is <strong>which stage of this table it belongs to</strong>. Stages 2 and 3 (mapping) are advancing quickly; stages 4 (modelling) and 6 (validation) lag by orders of magnitude. That asymmetry is the whole explanation for the gap between excited coverage and cautious expert timelines.</p>
       </div>
     </section>
 
     <section id="resolution">
       <p class="eyebrow">2.3 Resolution</p>
-      <h2>解像度問題 — 何を写せば十分か。</h2>
+      <h2>The resolution problem: what is enough to copy?</h2>
       <p class="lead">
-        WBE最大の未解決問題は装置ではなく<strong>仕様</strong>である。「心を再現するにはどの物理量までコピーすべきか」に、まだ実験的な答えがない。
-        ロードマップはこれをレベル分けで整理した<sup><a href="#ref1">1</a></sup>。
+        WBE's biggest open problem is not an instrument but a <strong>specification</strong>. There is still no experimental answer to
+        the question of which physical quantities must be copied in order to reproduce a mind. The roadmap organised this as a
+        hierarchy of levels<sup><a href="#ref1">1</a></sup>.
       </p>
       <div class="tbl reveal">
         <table>
-          <thead><tr><th>エミュレーション水準</th><th>写し取る対象</th><th>必要計算量（概算）</th><th>現在の位置づけ</th></tr></thead>
+          <thead><tr><th>Emulation level</th><th>What is copied</th><th>Compute required (approx.)</th><th>Current standing</th></tr></thead>
           <tbody>
-            <tr><td><b>スパイキング・ネットワーク</b></td><td>全ニューロンの発火と全シナプスの重み</td><td class="num">≈10¹⁸ FLOPS</td><td><span class="chip done">作業仮説の下限</span> ハエではこの水準で行動関連の応答再現に成功<sup><a href="#ref9">9</a></sup></td></tr>
-            <tr><td><b>電気生理学的詳細</b></td><td>樹状突起の区画ごとの膜電位（HH型）<sup><a href="#ref11">11</a></sup></td><td class="num">≈10²² FLOPS</td><td><span class="chip now">有力な安全側仮説</span> 皮質微小回路で実証例<sup><a href="#ref12">12</a></sup></td></tr>
-            <tr><td><b>代謝・分子動態</b></td><td>受容体分布、神経修飾物質、細胞内シグナル</td><td class="num">10²⁵–10²⁷ FLOPS</td><td><span class="chip far">必要性は部分的</span> 全面的に必要なら実現は大幅に遠のく</td></tr>
-            <tr><td><b>分子レベルの確率過程</b></td><td>個々の分子の挙動</td><td class="num">≈10⁴³ FLOPS</td><td><span class="chip open">実質不可能</span> ここまで必要という証拠は現在ない</td></tr>
+            <tr><td><b>Spiking network</b></td><td>Every neuron's firing and every synaptic weight</td><td class="num">≈10¹⁸ FLOPS</td><td><span class="chip done">Working lower bound</span> The fly reproduced behaviourally relevant responses at this level<sup><a href="#ref9">9</a></sup></td></tr>
+            <tr><td><b>Electrophysiological detail</b></td><td>Membrane potentials per dendritic compartment (Hodgkin–Huxley type)<sup><a href="#ref11">11</a></sup></td><td class="num">≈10²² FLOPS</td><td><span class="chip now">Plausible safe assumption</span> Demonstrated for cortical microcircuits<sup><a href="#ref12">12</a></sup></td></tr>
+            <tr><td><b>Metabolic / molecular dynamics</b></td><td>Receptor distributions, neuromodulators, intracellular signalling</td><td class="num">10²⁵–10²⁷ FLOPS</td><td><span class="chip far">Partially necessary</span> If required in full, feasibility recedes substantially</td></tr>
+            <tr><td><b>Stochastic molecular level</b></td><td>The behaviour of individual molecules</td><td class="num">≈10⁴³ FLOPS</td><td><span class="chip open">Effectively impossible</span> There is currently no evidence this level is needed</td></tr>
           </tbody>
         </table>
       </div>
-      <h3>「コネクトームだけでは足りない」— 何が欠けるか</h3>
-      <p>配線図（コネクトーム）は必要条件だが十分条件ではない。静的なEM画像から直接は読めない、あるいは読めるか未確定の要素が残る。</p>
+      <h3>"The connectome is not enough" — what is missing</h3>
+      <p>A wiring diagram is necessary but not sufficient. The following are either invisible in static EM images or of uncertain recoverability from them.</p>
       <ul class="plain">
-        <li><strong>シナプス重み</strong> — EMではシナプスの面積・小胞数など形態的代理変数しか見えない。形態と機能的強度の対応は部分的<sup><a href="#ref4">4</a></sup>。</li>
-        <li><strong>神経修飾物質</strong> — ドーパミンやセロトニンなどは同じ配線の回路を文脈依存で「別の回路」に組み替える。甲殻類の胃神経節研究が示した古典的教訓<sup><a href="#ref13">13</a><a href="#ref14">14</a></sup>。</li>
-        <li><strong>電気シナプス（ギャップ結合）と体積伝達</strong> — EMで見落とされやすく、シナプス外への拡散伝達は配線図の外にある。</li>
-            <li><strong>グリア細胞</strong> — 脳細胞の約半数を占め、シナプス強度調節や恒常性維持に関与。エミュレーションにどの精度で含めるべきか未確定。</li>
-        <li><strong>可塑性と学習則</strong> — 「その瞬間の脳」を写しても、変化し続けるための規則（可塑性）を正しく実装しなければ、人格は時間とともに乖離しうる。</li>
-        <li><strong>縮退（degeneracy）</strong> — 異なるパラメータの組が同一の観測活動を生みうるため、計測を増やしても解が一意に決まらない可能性<sup><a href="#ref13">13</a></sup>。摂動実験と予測検証で候補を絞る方法論が必要。</li>
+        <li><strong>Synaptic weights.</strong> EM shows only morphological proxies such as contact area and vesicle counts. The mapping from morphology to functional strength is partial<sup><a href="#ref4">4</a></sup>.</li>
+        <li><strong>Neuromodulators.</strong> Dopamine, serotonin and others reconfigure a circuit with fixed wiring into effectively different circuits depending on context — the classic lesson of crustacean stomatogastric ganglion work<sup><a href="#ref13">13</a><a href="#ref14">14</a></sup>.</li>
+        <li><strong>Electrical synapses and volume transmission.</strong> Gap junctions are easily missed in EM, and diffusion-based extrasynaptic signalling lies outside the wiring diagram entirely.</li>
+        <li><strong>Glia.</strong> Roughly half of brain cells, involved in synaptic modulation and homeostasis. The precision at which they must enter an emulation is unsettled.</li>
+        <li><strong>Plasticity and learning rules.</strong> Copying the brain at an instant is not enough; without correctly implementing the rules by which it changes, a personality will diverge over time.</li>
+        <li><strong>Degeneracy.</strong> Different parameter sets can produce identical observed activity, so more measurement does not necessarily converge on a unique solution<sup><a href="#ref13">13</a></sup>. Narrowing candidates requires perturbation experiments and predictive validation.</li>
       </ul>
       <div class="warn">
-        <span class="tag">線虫の逆説 — この分野で最も重要な教訓</span>
-        <p>線虫のコネクトームは1986年から存在するのに、40年たっても検証済みの線虫エミュレーションはない。理由は明快で、(1) 配線図に重みがない、(2) 線虫ニューロンは主に非スパイク型で電気生理データが乏しい、(3) 神経修飾への依存が大きい、からである<sup><a href="#ref2">2</a><a href="#ref14">14</a></sup>。一方、ニューロン数が460倍のハエでは、スパイク型ニューロンと豊富な行動データのおかげで単純なLIFモデルでも検証可能な再現が得られた<sup><a href="#ref9">9</a></sup>。<strong>教訓: 難しさは大きさではなく、地図と動態の距離で決まる。</strong></p>
+        <span class="tag">The nematode paradox — the field's most important lesson</span>
+        <p>The nematode connectome has existed since 1986, yet forty years later there is no validated nematode emulation. The reasons are clear: (1) the wiring diagram carries no weights, (2) nematode neurons are largely non-spiking and electrophysiological data are scarce, and (3) the circuit depends heavily on neuromodulation<sup><a href="#ref2">2</a><a href="#ref14">14</a></sup>. Meanwhile the fly, with 460 times more neurons, yielded a validated reproduction from a simple leaky integrate-and-fire model, thanks to spiking neurons and abundant behavioural data<sup><a href="#ref9">9</a></sup>. <strong>The lesson: difficulty is set not by size but by the distance between the map and the dynamics.</strong></p>
       </div>
     </section>
 
     <section id="scanning">
       <p class="eyebrow">2.4 Scanning</p>
-      <h2>スキャン技術の比較。</h2>
+      <h2>Scanning technologies compared.</h2>
       <div class="tbl reveal">
         <table>
-          <thead><tr><th>技術</th><th>解像度</th><th>実績</th><th>強み / 限界</th></tr></thead>
+          <thead><tr><th>Technology</th><th>Resolution</th><th>Track record</th><th>Strengths / limits</th></tr></thead>
           <tbody>
-            <tr><td><b>連続切片EM（ssTEM/SEM）</b></td><td class="num">≈4 nm</td><td>FlyWire（ハエ全脳）<sup><a href="#ref3">3</a></sup></td><td>シナプス確実に可視 / 切片化が破壊的・低速</td></tr>
-            <tr><td><b>マルチビームSEM（mSEM）</b></td><td class="num">≈4 nm</td><td>H01（ヒト皮質1mm³＝1.4PB）<sup><a href="#ref15">15</a></sup></td><td>最速のEM / それでもヒト全脳には桁不足</td></tr>
-            <tr><td><b>FIB-SEM</b></td><td class="num">≈8 nm等方</td><td>ヘミブレイン<sup><a href="#ref16">16</a></sup></td><td>3D品質最高 / 対象体積が小さい</td></tr>
-            <tr><td><b>膨張顕微鏡＋光シート（ExM+LM）</b></td><td class="num">実効≈10–60 nm</td><td>ハエ脳・皮質で実証<sup><a href="#ref7">7</a></sup></td><td>高速・分子ラベル可能 / 単独では配線の連続性追跡が弱い</td></tr>
-            <tr><td><b>タンパク質バーコード（PRISM）</b></td><td class="num">光学＋バーコード</td><td>マウス海馬10⁷μm³（E11 Bio）<sup><a href="#ref17">17</a></sup></td><td>校正コストを桁で削減する設計 / 大規模実証はこれから</td></tr>
-            <tr><td><b>X線ナノトモグラフィ（XNH）</b></td><td class="num">≈100 nm</td><td>マウス・ハエ神経束<sup><a href="#ref18">18</a></sup></td><td>切片不要で高速 / 単独ではシナプス解像度に届かない</td></tr>
-            <tr><td><b>DNAバーコード（MAPseq等）</b></td><td class="num">細胞単位</td><td>マウス投射地図<sup><a href="#ref19">19</a></sup></td><td>超高速・安価 / シナプスレベルの配線は不可</td></tr>
-            <tr><td><b>MRI／拡散MRI</b></td><td class="num">≈0.5–1 mm</td><td>ヒト全脳（Human Connectome Project）</td><td>非破壊・生体可 / 必要解像度の約10⁵倍粗い</td></tr>
+            <tr><td><b>Serial-section EM (ssTEM/SEM)</b></td><td class="num">≈4 nm</td><td>FlyWire (whole fly brain)<sup><a href="#ref3">3</a></sup></td><td>Synapses reliably visible / sectioning is destructive and slow</td></tr>
+            <tr><td><b>Multibeam SEM</b></td><td class="num">≈4 nm</td><td>H01 (1 mm³ human cortex = 1.4 PB)<sup><a href="#ref15">15</a></sup></td><td>Fastest available EM / still orders of magnitude short of a human brain</td></tr>
+            <tr><td><b>FIB-SEM</b></td><td class="num">≈8 nm isotropic</td><td>Hemibrain<sup><a href="#ref16">16</a></sup></td><td>Best 3D quality / small accessible volumes</td></tr>
+            <tr><td><b>Expansion microscopy + light sheet</b></td><td class="num">effective ≈10–60 nm</td><td>Demonstrated in fly brain and cortex<sup><a href="#ref7">7</a></sup></td><td>Fast, allows molecular labelling / weak at tracing connectivity alone</td></tr>
+            <tr><td><b>Protein barcoding (PRISM)</b></td><td class="num">optical + barcodes</td><td>10⁷ μm³ of mouse hippocampus (E11 Bio)<sup><a href="#ref17">17</a></sup></td><td>Designed to cut proofreading cost by orders of magnitude / large-scale demonstration still ahead</td></tr>
+            <tr><td><b>X-ray nanotomography (XNH)</b></td><td class="num">≈100 nm</td><td>Mouse and fly nerve bundles<sup><a href="#ref18">18</a></sup></td><td>Fast and section-free / does not reach synaptic resolution alone</td></tr>
+            <tr><td><b>DNA barcoding (MAPseq etc.)</b></td><td class="num">cellular</td><td>Mouse projection maps<sup><a href="#ref19">19</a></sup></td><td>Very fast and cheap / cannot resolve synapse-level wiring</td></tr>
+            <tr><td><b>MRI / diffusion MRI</b></td><td class="num">≈0.5–1 mm</td><td>Whole human brain (Human Connectome Project)</td><td>Non-destructive, works in vivo / about five orders of magnitude too coarse</td></tr>
           </tbody>
         </table>
       </div>
       <div class="warn">
-        <span class="tag">非破壊スキャンの壁</span>
-        <p>生きたヒト脳をシナプス解像度で読み出す物理的手段は、既知の物理の範囲で存在しない。光は約1mmで散乱し、MRIは分解能が5桁足りず、電磁波で深部のnm構造を選択的に読む方法は原理から見つかっていない。したがって現実のWBE計画は<strong>「保存された脳の破壊的スキャン」</strong>を前提とする（これが保存技術と倫理が本題になる理由。第3章・第5章）。例外的な代替案として、BMIで脳と機械を長期接続し記憶・機能を漸進的に移す構想（渡辺の半球接続案など<sup><a href="#ref20">20</a></sup>）があるが、必要なBMI帯域も未達成である。</p>
+        <span class="tag">The non-destructive scanning barrier</span>
+        <p>Within known physics, there is no physical means of reading a living human brain at synaptic resolution. Light scatters within about a millimetre, MRI is five orders of magnitude short, and no method exists in principle for selectively reading nanometre structures at depth with electromagnetic radiation. Every realistic WBE plan therefore assumes <strong>destructive scanning of a preserved brain</strong> — which is why preservation technology and ethics become central rather than peripheral (Chapters 3 and 5). The exceptional alternative is to connect brain and machine through a long-lived interface and migrate function gradually (as in Watanabe's hemisphere-connection proposal<sup><a href="#ref20">20</a></sup>), but the required interface bandwidth has not been achieved either.</p>
       </div>
     </section>
 
     <section id="compute">
       <p class="eyebrow">2.5 Compute &amp; Data</p>
-      <h2>計算量とデータ量。</h2>
+      <h2>Compute and data.</h2>
       <ul class="plain">
-        <li><strong>生スキャンデータ</strong> — ヒト皮質1mm³のEM画像が1.4ペタバイト<sup><a href="#ref15">15</a></sup>。単純換算でヒト全脳（約120万mm³）は<strong>1〜2ゼタバイト</strong>。これは2020年代中盤の全世界年間データ生成量の数%に相当し、保存より「撮りながら圧縮・再構成する」計算パイプラインが必須になる。</li>
-        <li><strong>実行時の計算量</strong> — ロードマップの見積もりでスパイキング水準≈10¹⁸ FLOPS<sup><a href="#ref1">1</a></sup>。スパコンは2022年以降エクサ級（10¹⁸）に到達しており<sup><a href="#ref21">21</a></sup>、<strong>演算量だけならヒト1人分の下限仮説に既に触れている</strong>。独立の見積もり（Carlsmith 2020）は脳の機能実現に10¹³〜10¹⁷ FLOP/sと、より低い可能性も示す<sup><a href="#ref22">22</a></sup>。</li>
-        <li><strong>本当のボトルネック</strong> — スパイキング網の計算は演算より<strong>メモリ容量・帯域・通信</strong>に律速される。10¹⁴シナプスの状態（数十〜数百TB）を毎ミリ秒更新し配送する構造は、FLOPS値ほど簡単ではない。</li>
-        <li><strong>ニューロモルフィック計算</strong> — スパイク通信に特化したハードウェア（SpiNNaker系<sup><a href="#ref23">23</a></sup>、Intel Hala Point：11.5億ニューロン規模<sup><a href="#ref24">24</a></sup>、DeepSouth：毎秒228兆シナプス演算<sup><a href="#ref25">25</a></sup>）が、低電力の全脳規模実行の候補として並走している。</li>
-        <li><strong>AIによる圧縮という新経路</strong> — 2025年の「デジタルツイン」研究は、詳細な生物物理を陽に解かず、大量の活動データから応答関数を学習する道を示した<sup><a href="#ref8">8</a></sup>。忠実度の定義を「機構の複製」から「入出力の複製」へ緩めれば、必要計算量は桁で下がりうる——ただしそれを「その人」と呼べるかは第5章の問題になる。</li>
+        <li><strong>Raw scan data.</strong> One cubic millimetre of human cortex is 1.4 petabytes of EM imagery<sup><a href="#ref15">15</a></sup>. Scaled naively, a whole human brain (about 1.2 million mm³) is <strong>1 to 2 zettabytes</strong> — a few percent of annual global data creation in the mid-2020s. Storing it matters less than building a pipeline that compresses and reconstructs while imaging.</li>
+        <li><strong>Runtime compute.</strong> The roadmap estimated ≈10¹⁸ FLOPS at spiking level<sup><a href="#ref1">1</a></sup>. Supercomputers passed exascale (10¹⁸) in 2022<sup><a href="#ref21">21</a></sup>, so <strong>in raw arithmetic we already touch the lower-bound hypothesis for one human</strong>. An independent estimate puts the functional requirement lower still, at 10¹³–10¹⁷ FLOP/s<sup><a href="#ref22">22</a></sup>.</li>
+        <li><strong>The real bottleneck.</strong> Spiking network simulation is limited by <strong>memory capacity, bandwidth and communication</strong> rather than arithmetic. Holding the state of 10¹⁴ synapses (tens to hundreds of terabytes) and updating and routing it every millisecond is harder than the FLOPS figure suggests.</li>
+        <li><strong>Neuromorphic computing.</strong> Hardware specialised for spike communication — SpiNNaker<sup><a href="#ref23">23</a></sup>, Intel's Hala Point at 1.15 billion neurons<sup><a href="#ref24">24</a></sup>, DeepSouth at 228 trillion synaptic operations per second<sup><a href="#ref25">25</a></sup> — runs alongside as a candidate for low-power whole-brain execution.</li>
+        <li><strong>AI compression as a new route.</strong> The 2025 digital-twin work showed a path that does not solve detailed biophysics explicitly, instead learning response functions from large volumes of activity data<sup><a href="#ref8">8</a></sup>. Relaxing the fidelity criterion from "copy the mechanism" to "copy the input–output relation" could cut compute by orders of magnitude — though whether the result deserves to be called that person is the subject of Chapter 5.</li>
       </ul>
     </section>
 
     <section id="objections">
       <p class="eyebrow">2.6 Objections</p>
-      <h2>科学的反論と現在の応答。</h2>
-      <p class="lead">教科書として、反対論は撫でずに正面から載せる。各論点の現在のステータスを示す。</p>
+      <h2>Objections, and current responses.</h2>
+      <p class="lead">A textbook should present the case against without softening it. Each objection is given with its current status.</p>
       <div class="tbl reveal">
         <table>
-          <thead><tr><th>反論</th><th>代表的論者</th><th>現在の応答とステータス</th></tr></thead>
+          <thead><tr><th>Objection</th><th>Representative proponent</th><th>Current response and status</th></tr></thead>
           <tbody>
-            <tr><td><b>「規模的に数世紀先」</b></td><td>K. ミラー（2015）<sup><a href="#ref26">26</a></sup></td><td>撮像・校正の桁数不足は事実。ただしAI自動化はミラーの想定を超えて進行中（ハエ全脳は2015年時点の予想より早く完成）。<span class="chip now">部分的に有効</span></td></tr>
-            <tr><td><b>「脳は計算可能ではない」</b></td><td>M. ニコレリス<sup><a href="#ref27">27</a></sup></td><td>脳の物理過程が計算でシミュレートできないという主張には実証的根拠が乏しく、HH以来の定量神経科学の成功と衝突する。少数派。<span class="chip far">少数派</span></td></tr>
-            <tr><td><b>「量子効果が本質的」</b></td><td>ペンローズ＆ハメロフ</td><td>脳内の量子コヒーレンスは熱雑音で即座に壊れるとの反論（テグマーク）が標準的<sup><a href="#ref28">28</a></sup>。実験的支持は限定的で神経科学の主流仮説ではないが、完全決着もしていない。<span class="chip far">少数派</span></td></tr>
-            <tr><td><b>「コネクトームでは足りない」</b></td><td>マーダー、バーグマンら<sup><a href="#ref13">13</a><a href="#ref14">14</a></sup></td><td><strong>正しい</strong>。WBE側もこれを認め、構造＋分子＋活動の統合計測と摂動検証を組み込む方向に進化した。反論というより設計要件。<span class="chip done">合意済みの要件</span></td></tr>
-            <tr><td><b>「身体と環境が不可欠」</b></td><td>身体性認知の系譜</td><td>同意が主流。ロードマップも身体・環境モデルを構成要素に含み、2026年のハエ実証は最初から身体つきで行われた<sup><a href="#ref9">9</a></sup>。<span class="chip done">設計に吸収済み</span></td></tr>
-            <tr><td><b>「機能を再現しても意識は宿らない」</b></td><td>サール、セスら</td><td>実証問題ではなく哲学の問題として未決着。理論間で予測が割れる（IITは否定側、機能主義は肯定側）。<a class="inline" href="/philosophy.html">第5章</a>で詳述。<span class="chip open">未決着</span></td></tr>
+            <tr><td><b>"Centuries away on scale alone"</b></td><td>K. Miller (2015)<sup><a href="#ref26">26</a></sup></td><td>The shortfall in imaging and proofreading is real. But AI automation has outrun Miller's assumptions — the whole fly brain arrived earlier than his 2015 framing implied. <span class="chip now">Partly valid</span></td></tr>
+            <tr><td><b>"The brain is not computable"</b></td><td>M. Nicolelis<sup><a href="#ref27">27</a></sup></td><td>The claim that the brain's physical processes cannot be simulated computationally has little empirical support and conflicts with the success of quantitative neuroscience since Hodgkin–Huxley. <span class="chip far">Minority view</span></td></tr>
+            <tr><td><b>"Quantum effects are essential"</b></td><td>Penrose &amp; Hameroff</td><td>The standard rebuttal is that quantum coherence in the brain decoheres almost instantly under thermal noise (Tegmark)<sup><a href="#ref28">28</a></sup>. Experimental support is limited and it is not a mainstream hypothesis, though not conclusively settled either. <span class="chip far">Minority view</span></td></tr>
+            <tr><td><b>"The connectome is not enough"</b></td><td>Marder, Bargmann and others<sup><a href="#ref13">13</a><a href="#ref14">14</a></sup></td><td><strong>Correct</strong>. The WBE side accepts this and has evolved toward integrated structural, molecular and activity measurement with perturbation-based validation. Less an objection than a design requirement. <span class="chip done">Accepted requirement</span></td></tr>
+            <tr><td><b>"Body and environment are indispensable"</b></td><td>The embodied-cognition tradition</td><td>Broadly agreed. The roadmap already included body and environment models, and the 2026 fly demonstration was embodied from the outset<sup><a href="#ref9">9</a></sup>. <span class="chip done">Absorbed into design</span></td></tr>
+            <tr><td><b>"Reproducing function does not produce consciousness"</b></td><td>Searle, Seth and others</td><td>Not an empirical question but a philosophical one, and unsettled: theories make opposite predictions (IIT says no, functionalism says yes). Treated in <a class="inline" href="/philosophy.html">Chapter 5</a>. <span class="chip open">Unsettled</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -217,28 +222,28 @@
 
     <section id="summary">
       <p class="eyebrow">2.7 Summary</p>
-      <h2>この章の要点。</h2>
+      <h2>Chapter summary.</h2>
       <div class="key reveal">
-        <span class="tag">要点</span>
+        <span class="tag">Key points</span>
         <ul>
-          <li>WBEは <strong>保存→撮像→再構成→モデル化→実行→検証</strong> の6段パイプライン。地図化（②③）は速く、モデル化（④）と検証（⑥）が遅い。</li>
-          <li>最大の未解決問題は装置ではなく<strong>仕様</strong>: 必要解像度は未確定で、スパイキング〜電気生理水準が作業仮説。全面的に分子水準が必要なら実現は大幅に遠のく。</li>
-          <li>計算はエクサ級到達で<strong>下限仮説の桁に入った</strong>。真の壁はデータ量（ヒト全脳≈1–2ZB）、メモリ帯域、そして自動校正。</li>
-          <li>生体の非破壊スキャンは物理的に見通しがなく、現実路線は<strong>保存脳の破壊的スキャン</strong>。ゆえに保存技術と倫理が科学の中心課題になる。</li>
-          <li>「コネクトームだけでは足りない」は反論ではなく<strong>確立した設計要件</strong>。線虫の逆説がその証明である。</li>
+          <li>WBE is a six-stage pipeline: <strong>preserve → image → reconstruct → model → run → validate</strong>. Mapping (2–3) is fast; modelling (4) and validation (6) are slow.</li>
+          <li>The largest open problem is not an instrument but a <strong>specification</strong>: the required resolution is undetermined, with spiking-to-electrophysiological levels as the working hypothesis. If molecular detail turns out to be necessary throughout, feasibility recedes sharply.</li>
+          <li>Compute has <strong>reached the order of magnitude of the lower-bound hypothesis</strong>. The real walls are data volume (≈1–2 ZB for a human), memory bandwidth, and automated proofreading.</li>
+          <li>Non-destructive scanning of a living brain has no visible physical path, so the realistic route is <strong>destructive scanning of preserved brains</strong> — which makes preservation and ethics central scientific questions.</li>
+          <li>"The connectome is not enough" is not an objection but an <strong>established design requirement</strong>, and the nematode paradox is its proof.</li>
         </ul>
       </div>
       <div class="pager">
-        <a href="/history.html" class="prev"><span class="dir">← 前章</span><span class="t">第1章 歴史</span></a>
-        <a href="/progress.html" class="next"><span class="dir">次章 →</span><span class="t">第3章 現在地（2026年8月）</span></a>
+        <a href="/history.html" class="prev"><span class="dir">← Previous</span><span class="t">Chapter 1 · History</span></a>
+        <a href="/progress.html" class="next"><span class="dir">Next →</span><span class="t">Chapter 3 · Current status</span></a>
       </div>
     </section>
 
     <section id="refs">
-      <p class="eyebrow">References / 文献</p>
-      <h2>第2章の文献（28件）。</h2>
+      <p class="eyebrow">References</p>
+      <h2>Chapter 2 references (28).</h2>
       <ol class="refs reveal">
-        <li id="ref1"><a class="ref-link" href="https://ora.ox.ac.uk/objects/uuid:a6880196-34c7-47a0-80f1-74d32ab98788" target="_blank" rel="noopener">Sandberg, A., &amp; Bostrom, N. (2008). <i>Whole Brain Emulation: A Roadmap.</i> FHI Tech. Report #2008-3.</a></li>
+        <li id="ref1"><a class="ref-link" href="https://ora.ox.ac.uk/objects/uuid:a6880196-34c7-47a0-80f1-74d32ab98788" target="_blank" rel="noopener">Sandberg, A., &amp; Bostrom, N. (2008). <i>Whole Brain Emulation: A Roadmap.</i> FHI Technical Report #2008-3.</a></li>
         <li id="ref2"><a class="ref-link" href="https://doi.org/10.1038/s41586-019-1352-7" target="_blank" rel="noopener">Cook, S. J., et al. (2019). Whole-animal connectomes of both <i>C. elegans</i> sexes. <i>Nature,</i> 571, 63–71.</a></li>
         <li id="ref3"><a class="ref-link" href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank" rel="noopener">Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. <i>Nature,</i> 634, 124–138.</a></li>
         <li id="ref4"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank" rel="noopener">The MICrONS Consortium (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <i>Nature,</i> 640.</a></li>
@@ -247,24 +252,24 @@
         <li id="ref7"><a class="ref-link" href="https://doi.org/10.1126/science.1260088" target="_blank" rel="noopener">Chen, F., Tillberg, P. W., &amp; Boyden, E. S. (2015). Expansion microscopy. <i>Science,</i> 347, 543–548.</a></li>
         <li id="ref8"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08829-y" target="_blank" rel="noopener">Wang, E. Y., et al. (2025). Foundation model of neural activity predicts response to new stimulus types. <i>Nature,</i> 640.</a></li>
         <li id="ref9"><a class="ref-link" href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank" rel="noopener">Shiu, P. K., et al. (2024). A <i>Drosophila</i> computational brain model reveals sensorimotor processing. <i>Nature,</i> 634, 210–219.</a></li>
-        <li id="ref10"><a class="ref-link" href="https://research.google/blog/improving-brain-models-with-zapbench/" target="_blank" rel="noopener">Google Research (2025). ZAPBench: 全脳活動予測ベンチマーク（ゼブラフィッシュ幼生）.</a></li>
+        <li id="ref10"><a class="ref-link" href="https://research.google/blog/improving-brain-models-with-zapbench/" target="_blank" rel="noopener">Google Research (2025). ZAPBench: a whole-brain activity prediction benchmark (larval zebrafish).</a></li>
         <li id="ref11"><a class="ref-link" href="https://doi.org/10.1113/jphysiol.1952.sp004764" target="_blank" rel="noopener">Hodgkin, A. L., &amp; Huxley, A. F. (1952). A quantitative description of membrane current. <i>J. Physiol.,</i> 117, 500–544.</a></li>
         <li id="ref12"><a class="ref-link" href="https://doi.org/10.1016/j.cell.2015.09.029" target="_blank" rel="noopener">Markram, H., et al. (2015). Reconstruction and simulation of neocortical microcircuitry. <i>Cell,</i> 163, 456–492.</a></li>
         <li id="ref13"><a class="ref-link" href="https://doi.org/10.1038/nn1352" target="_blank" rel="noopener">Prinz, A. A., Bucher, D., &amp; Marder, E. (2004). Similar network activity from disparate circuit parameters. <i>Nat. Neurosci.,</i> 7, 1345–1352.</a></li>
         <li id="ref14"><a class="ref-link" href="https://doi.org/10.1002/bies.201100185" target="_blank" rel="noopener">Bargmann, C. I. (2012). Beyond the connectome: how neuromodulators shape neural circuits. <i>BioEssays,</i> 34, 458–465.</a></li>
         <li id="ref15"><a class="ref-link" href="https://doi.org/10.1126/science.adk4858" target="_blank" rel="noopener">Shapson-Coe, A., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <i>Science,</i> 384, eadk4858.</a></li>
         <li id="ref16"><a class="ref-link" href="https://doi.org/10.7554/eLife.57443" target="_blank" rel="noopener">Scheffer, L. K., et al. (2020). A connectome and analysis of the adult <i>Drosophila</i> central brain. <i>eLife,</i> 9, e57443.</a></li>
-        <li id="ref17"><a class="ref-link" href="https://www.e11.bio/blog/prism" target="_blank" rel="noopener">E11 Bio (2024). PRISM: Scalable connectomics via protein barcoding + expansion microscopy.</a></li>
+        <li id="ref17"><a class="ref-link" href="https://www.e11.bio/blog/prism" target="_blank" rel="noopener">E11 Bio (2024). PRISM: scalable connectomics via protein barcoding and expansion microscopy.</a></li>
         <li id="ref18"><a class="ref-link" href="https://doi.org/10.1038/s41593-020-0704-9" target="_blank" rel="noopener">Kuan, A. T., et al. (2020). Dense neuronal reconstruction through X-ray holographic nano-tomography. <i>Nat. Neurosci.,</i> 23, 1637–1643.</a></li>
-        <li id="ref19"><a class="ref-link" href="https://doi.org/10.1016/j.neuron.2016.07.036" target="_blank" rel="noopener">Kebschull, J. M., et al. (2016). High-throughput mapping of single-neuron projections by sequencing of barcoded RNA (MAPseq). <i>Neuron,</i> 91, 975–987.</a></li>
-        <li id="ref20"><a class="ref-link" href="https://www.kodansha.co.jp/book/products/0000393864" target="_blank" rel="noopener">渡辺正峰 (2024). 『意識の脳科学 — 「デジタル不老不死」の扉を開く』講談社現代新書.</a></li>
-        <li id="ref21"><a class="ref-link" href="https://www.top500.org/" target="_blank" rel="noopener">TOP500 (2024–). El Capitan 実効1.74エクサFLOPS（2024年11月〜首位）.</a></li>
+        <li id="ref19"><a class="ref-link" href="https://doi.org/10.1016/j.neuron.2016.07.036" target="_blank" rel="noopener">Kebschull, J. M., et al. (2016). High-throughput mapping of single-neuron projections by sequencing of barcoded RNA. <i>Neuron,</i> 91, 975–987.</a></li>
+        <li id="ref20"><a class="ref-link" href="https://www.kodansha.co.jp/book/products/0000393864" target="_blank" rel="noopener">Watanabe, M. (2024). <i>The Neuroscience of Consciousness.</i> Kodansha. (in Japanese; hemisphere-connection proposal)</a></li>
+        <li id="ref21"><a class="ref-link" href="https://www.top500.org/" target="_blank" rel="noopener">TOP500 (2024–). El Capitan, 1.74 exaFLOPS sustained.</a></li>
         <li id="ref22"><a class="ref-link" href="https://www.openphilanthropy.org/research/how-much-computational-power-does-it-take-to-match-the-human-brain/" target="_blank" rel="noopener">Carlsmith, J. (2020). How much computational power does it take to match the human brain? Open Philanthropy.</a></li>
         <li id="ref23"><a class="ref-link" href="https://doi.org/10.1109/JPROC.2014.2304638" target="_blank" rel="noopener">Furber, S. B., et al. (2014). The SpiNNaker project. <i>Proc. IEEE,</i> 102, 652–665.</a></li>
-        <li id="ref24"><a class="ref-link" href="https://www.intel.com/content/www/us/en/newsroom/news/intel-builds-worlds-largest-neuromorphic-system.html" target="_blank" rel="noopener">Intel (2024). Hala Point: 11.5億ニューロン規模のニューロモルフィックシステム.</a></li>
-        <li id="ref25"><a class="ref-link" href="https://www.westernsydney.edu.au/icns/research/deepsouth" target="_blank" rel="noopener">Western Sydney Univ. ICNS (2024). DeepSouth: 毎秒228兆シナプス演算のニューロモルフィック機.</a></li>
+        <li id="ref24"><a class="ref-link" href="https://www.intel.com/content/www/us/en/newsroom/news/intel-builds-worlds-largest-neuromorphic-system.html" target="_blank" rel="noopener">Intel (2024). Hala Point: a 1.15-billion-neuron neuromorphic system.</a></li>
+        <li id="ref25"><a class="ref-link" href="https://www.westernsydney.edu.au/icns/research/deepsouth" target="_blank" rel="noopener">Western Sydney Univ. ICNS (2024). DeepSouth: 228 trillion synaptic operations per second.</a></li>
         <li id="ref26"><a class="ref-link" href="https://www.nytimes.com/2015/10/11/opinion/sunday/will-you-ever-be-able-to-upload-your-brain.html" target="_blank" rel="noopener">Miller, K. D. (2015). Will you ever be able to upload your brain? <i>New York Times.</i></a></li>
-        <li id="ref27"><a class="ref-link" href="https://www.technologyreview.com/2013/02/18/253732/the-brain-is-not-computable/" target="_blank" rel="noopener">Regalado, A. (2013). The brain is not computable（ニコレリスへの取材）. <i>MIT Technology Review.</i></a></li>
+        <li id="ref27"><a class="ref-link" href="https://www.technologyreview.com/2013/02/18/253732/the-brain-is-not-computable/" target="_blank" rel="noopener">Regalado, A. (2013). The brain is not computable (interview with Nicolelis). <i>MIT Technology Review.</i></a></li>
         <li id="ref28"><a class="ref-link" href="https://doi.org/10.1103/PhysRevE.61.4194" target="_blank" rel="noopener">Tegmark, M. (2000). Importance of quantum decoherence in brain processes. <i>Phys. Rev. E,</i> 61, 4194.</a></li>
       </ol>
     </section>
@@ -272,18 +277,19 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード <small>integrated guide</small></a>
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <a href="/history.html">1. 歴史</a>
-        <a href="/science.html">2. 科学的基礎</a>
-        <a href="/progress.html">3. 現在地</a>
-        <a href="/future.html">4. 未来</a>
-        <a href="/philosophy.html">5. 哲学と倫理</a>
-        <a href="/action.html">6. 行動</a>
-        <a href="/resources.html">資料集</a>
-        <a href="/scenario.html">別冊: シナリオ2050</a>
+      <a class="brand" href="/"><span class="dot"></span>Mind Uploading <small>integrated guide</small></a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/ja/science.html">日本語版</a>
+        <a href="/history.html">1. History</a>
+        <a href="/science.html">2. Science</a>
+        <a href="/progress.html">3. Status</a>
+        <a href="/future.html">4. Forecasts</a>
+        <a href="/philosophy.html">5. Philosophy</a>
+        <a href="/action.html">6. Action</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/scenario.html">Companion: Scenario 2050</a>
       </nav>
-      <p class="disc">免責: 本サイトは公開研究にもとづく教育目的の情報サイトです。最終更新: 2026-08-08。</p>
+      <p class="disc">Disclaimer: an educational site based on published research. Last updated 2026-08-08.</p>
     </div>
   </footer>
 

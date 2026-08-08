@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第3章 現在地（2026年8月）— マインドアップロードはどこまで進んだか | マインドアップロード総合ガイド</title>
+  <meta name="description" content="全脳エミュレーションの進捗を6つの軸（地図化・読み出し・シミュレーション・保存・計算・検証）で定量評価。ハエ全脳エミュレーションの実証、マウス全脳コネクトーム計画、脳保存の現状、主要プロジェクト一覧。2026年8月の定点観測。">
+  <link rel="canonical" href="https://mind-upload.com/ja/progress.html">
+  <link rel="alternate" hreflang="ja" href="https://mind-upload.com/ja/progress.html">
+  <link rel="alternate" hreflang="en" href="https://mind-upload.com/progress.html">
+  <link rel="alternate" hreflang="x-default" href="https://mind-upload.com/progress.html">
+  <meta property="og:title" content="第3章 現在地（2026年8月）— マインドアップロード総合ガイド">
+  <meta property="og:description" content="6軸×達成済み/進行中/未着手で測る全脳エミュレーションの現在。一次文献つき定点観測。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mind-upload.com/ja/progress.html">
+  <meta property="og:image" content="https://mind-upload.com/assets/og-image.png?v=20260702">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0d14">
+  <link rel="icon" href="/favicon.svg?v=20260702" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css?v=20260808">
+  <script>document.documentElement.classList.add("js")</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"マインドアップロードの現在地（2026年8月）","inLanguage":"ja",
+   "url":"https://mind-upload.com/ja/progress.html","dateModified":"2026-08-08",
+   "isPartOf":{"@type":"WebSite","name":"マインドアップロード総合ガイド","url":"https://mind-upload.com/ja/"}}
+  </script>
+</head>
+<body id="top">
+  <div id="progress"></div>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード <small>integrated guide</small></a>
+      <nav class="primary-nav" aria-label="章立て">
+        <a href="/ja/history.html">1. 歴史</a>
+        <a href="/ja/science.html">2. 科学</a>
+        <a href="/ja/progress.html">3. 現在地</a>
+        <a href="/ja/future.html">4. 未来</a>
+        <a href="/ja/philosophy.html">5. 哲学と倫理</a>
+        <a href="/ja/action.html">6. 行動</a>
+        <a href="/ja/resources.html">資料</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / 言語">
+        <a href="/progress.html" hreflang="en" lang="en">EN</a>
+        <a href="/ja/progress.html" hreflang="ja" aria-current="true">日本語</a>
+      </div>
+      <button class="nav-toggle" aria-label="メニュー" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="ch-hero">
+      <a class="badge" href="/ja/">総合ガイド ・ 第3章 ・ 定点観測</a>
+      <h1>現在地 — <span class="grad">2026年8月、どこまで進んだか。</span></h1>
+      <p class="lead">
+        この章は本サイトの中核であり、更新のたびに書き換わる「定点観測」である。
+        第2章のパイプラインに沿って6つの軸を立て、それぞれを<strong>達成済み／進行中／未着手</strong>に分けて一次文献つきで評価する。
+      </p>
+      <div class="ch-meta"><span>基準日: 2026-08-08</span><span>評価軸: 6</span><span>引用: 39件</span></div>
+      <div class="key" style="margin-top:22px">
+        <span class="tag">2026年8月の総合評価（3行）</span>
+        <ul>
+          <li><strong>構造の地図化</strong>は昆虫（13.9万〜16.7万ニューロン）で完了し、哺乳類（マウス）で組織的スケールアップが始まった。ヒトは体積比で約100万分の1のみ。</li>
+          <li><strong>動かす</strong>段階はハエで初めて実証された：2024年に全脳スパイキングモデルが実験と整合し、2026年に仮想身体つきで自然な行動が創発した。ただし可塑性・神経修飾は含まれない。</li>
+          <li><strong>ヒトのWBE</strong>はどの軸でも実装段階に入っていない。研究者による2025年の包括レビューは「最も楽観的でも数十年」と評価し、予測市場の中央値は2070年頃にある。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="axes">
+      <p class="eyebrow">3.1 Six Axes</p>
+      <h2>軸別評価。</h2>
+
+      <h3>軸① 構造の地図化（コネクトミクス） <span class="chip done">昆虫完了</span> <span class="chip now">哺乳類始動</span></h3>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>状態</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr><td><b>達成済み</b></td><td>線虫の雌雄・発達段階を含む全配線図（1986→2019→2021）<sup><a href="#ref1">1</a><a href="#ref2">2</a></sup>。ハエ幼虫3,016ニューロン（2023）<sup><a href="#ref3">3</a></sup>。ハエ成虫の全脳139,255ニューロン・約5,000万シナプス（FlyWire 2024）<sup><a href="#ref4">4</a></sup>。雄ハエの脳＋腹側神経索16.7万ニューロン——首の接続が保たれた初の中枢神経系まるごとの配線図（2025）<sup><a href="#ref5">5</a></sup>。ヒト皮質1mm³＝1.4ペタバイト・5.7万細胞・1.5億シナプス（H01, 2024）<sup><a href="#ref6">6</a></sup>。マウス視覚野1mm³＝約20万細胞・5.23億シナプス＋7万超ニューロンの活動記録（MICrONS, 2025）<sup><a href="#ref7">7</a></sup>。全脳の細胞型アトラス（マウス2023・ヒト2023）<sup><a href="#ref8">8</a></sup>。</td></tr>
+            <tr><td><b>進行中</b></td><td>ゼブラフィッシュ幼生の全脳：約7万ニューロンの活動記録済み個体のEM画像取得が完了し、コネクトーム再構成が進行（Google・Janelia・Harvard）<sup><a href="#ref9">9</a></sup>。マウス海馬10mm³（Harvard主導、約3,300万ドル、Google・Allen等と連携）<sup><a href="#ref10">10</a></sup>と皮質-基底核ループ10mm³（Allen）<sup><a href="#ref11">11</a></sup>。E11 BioのPRISM（タンパク質バーコード＋膨張顕微鏡）が海馬パイロットデータを公開し、校正コストの桁削減を狙う<sup><a href="#ref12">12</a></sup>。</td></tr>
+            <tr><td><b>未着手</b></td><td>マウス全脳（約7,000万ニューロン、推定500ペタバイト〜1エクサバイト）。現行技術の単純延長では撮像・校正に10年超との試算<sup><a href="#ref13">13</a></sup>。ヒト全脳（推定1〜2ゼタバイト）は撮像手段の目処自体が未確立。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted">規模感: ハエ全脳の校正には自動セグメンテーション後も延べ数十人年・数百万回の人手編集を要した<sup><a href="#ref4">4</a></sup>。マウスへの単純外挿は数千人年となるため、校正の完全自動化（AI）が前提条件になる。</p>
+
+      <h3>軸② 機能の読み出し（記録・BCI） <span class="chip now">急速に進行</span></h3>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>状態</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr><td><b>達成済み</b></td><td>Neuropixelsによる数千点同時記録の標準化<sup><a href="#ref14">14</a></sup>。ゼブラフィッシュ幼生では行動課題中の約7万ニューロン＝実質全脳の活動記録（ZAPBench）<sup><a href="#ref9">9</a></sup>。ヒトでは皮質内BCIによる発話再建が毎分60〜78語・単語誤り率数%に到達し<sup><a href="#ref15">15</a><a href="#ref16">16</a></sup>、2025年にはほぼ実時間の音声ストリーミング合成が実証された<sup><a href="#ref17">17</a></sup>。脳-脊髄インターフェースによる歩行回復（2023）<sup><a href="#ref18">18</a></sup>。埋め込みBCIの臨床は拡大し、Neuralinkは2026年6月までに26人へ埋め込み<sup><a href="#ref19">19</a></sup>、Synchron・Paradromics・Precision Neuroscienceも臨床試験を進める<sup><a href="#ref20">20</a></sup>。</td></tr>
+            <tr><td><b>進行中</b></td><td>電極の高密度化・量産化（Neuralinkの自動手術・量産計画<sup><a href="#ref19">19</a></sup>）、数千〜1万チャネル級のヒト皮質記録、非侵襲手法の帯域改善。</td></tr>
+            <tr><td><b>未着手</b></td><td>哺乳類全脳の全ニューロン同時記録。ヒトでの10万チャネル級の長期安定記録。「読み出し」でアップロードに必要な情報量（第2章）に達する経路は未確立。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>軸③ 動かす（シミュレーション／エミュレーション） <span class="chip now">ハエで初実証</span></h3>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>状態</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr><td><b>達成済み</b></td><td><strong>ハエ</strong>: 全脳コネクトームに基づくスパイキング（LIF）モデルが、味覚刺激→摂食運動、機械刺激→グルーミングなどの回路応答を実験と整合するかたちで再現（2024）<sup><a href="#ref21">21</a></sup>。2026年3月、Eon Systemsが同モデルを物理シミュレーション身体（NeuroMechFly v2）と結合し、行動を明示的にプログラムせずに歩行・グルーミング等が創発する<strong>初の身体化全脳エミュレーション</strong>を実証<sup><a href="#ref22">22</a><a href="#ref23">23</a></sup>。<strong>線虫</strong>: 脳・身体・環境を閉ループで統合したMetaWormが走化性行動を再現（2024）<sup><a href="#ref24">24</a></sup>。<strong>哺乳類</strong>: 皮質微小回路の生物物理シミュレーション（2015）<sup><a href="#ref25">25</a></sup>、視覚野の応答を新規刺激まで予測する基盤モデル型デジタルツイン（2025）<sup><a href="#ref26">26</a></sup>。</td></tr>
+            <tr><td><b>進行中</b></td><td>Eonによるマウス全脳エミュレーション計画（ニューロン数でハエの約560倍）<sup><a href="#ref22">22</a></sup>。ZAPBenchでの全脳活動予測モデルの改善競争<sup><a href="#ref9">9</a></sup>。Blue Brain資産を引き継いだOpen Brain Institute・EBRAINSのシミュレーション基盤整備<sup><a href="#ref27">27</a></sup>。</td></tr>
+            <tr><td><b>未着手</b></td><td>可塑性（学習）・神経修飾・発達を含むエミュレーション。検証基準を満たした線虫エミュレーション。哺乳類のいかなる全脳エミュレーション。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">
+        <span class="tag">現在の最重要成果の位置づけ</span>
+        <p>2026年のハエ身体化エミュレーションは「構造だけからどこまで機能が出るか」という第2章の核心的問いに対する、史上初の全脳スケールの部分的肯定である。ただし再現されたのは反射的・定型的行動であり、学習・動機づけ・内部状態は含まれない。「ハエの一生を再現した」わけではない点に注意。</p>
+      </div>
+
+      <h3>軸④ 保存（固定・長期保存） <span class="chip now">臨床応用が論点に</span></h3>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>状態</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr><td><b>達成済み</b></td><td>アルデヒド安定化低温保存（ASC）がウサギ全脳（2016年BPF小型哺乳類賞）・ブタ全脳（2018年大型哺乳類賞）でシナプス微細構造の保持を第三者評価で実証<sup><a href="#ref28">28</a><a href="#ref29">29</a></sup>。2026年3月、Nectomeが医師幇助死（オレゴン州等で合法）と適合する手順でブタ全脳の微細構造保存を報告する前刷りを公開<sup><a href="#ref30">30</a></sup>。実運用では、Oregon Brain Preservationが化学固定ベースの保存を低コストで、Tomorrow Bio（欧州）・Alcor・Cryonics Instituteが従来型の低温保存を提供中<sup><a href="#ref31">31</a></sup>。</td></tr>
+            <tr><td><b>進行中</b></td><td>ヒト死後脳でのASC品質検証、保存脳からの大規模コネクトーム取得デモ、プロトコルの標準化・第三者監査の枠組みづくり。</td></tr>
+            <tr><td><b>未着手</b></td><td><strong>「保存した脳に記憶・人格の情報が実際に残っており、読み出せる」ことの実証</strong>。これは保存論の根幹だが、記憶の物理的基盤の特定（シナプス強度＋α）自体が現役の研究課題であり、現時点の保存はあくまで「構造を保つ」までを保証するものである。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>軸⑤ 計算資源 <span class="chip done">下限仮説の桁に到達</span></h3>
+      <p>
+        スパコンの実効性能は10¹⁸ FLOPS（エクサ級）に到達し<sup><a href="#ref32">32</a></sup>、2008年ロードマップが見積もったスパイキング水準のヒト全脳（≈10¹⁸ FLOPS）と同じ桁に入った。
+        AIデータセンターの低精度演算はさらに2〜3桁上を走る。ニューロモルフィック機（Intel Hala Point：11.5億ニューロン規模、DeepSouth：毎秒228兆シナプス演算）も全脳規模スパイキングの実行環境として整いつつある。
+        残る課題は演算量ではなく、10¹⁴シナプスの状態を保持・更新・配送する<strong>メモリと通信のアーキテクチャ</strong>、およびゼタバイト級スキャンデータの処理である（詳細は<a class="inline" href="/ja/science.html#compute">第2章2.5</a>）。
+      </p>
+
+      <h3>軸⑥ 検証・理論 <span class="chip open">最大の遅れ</span></h3>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>状態</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr><td><b>達成済み</b></td><td>初の標準ベンチマーク：ZAPBench（同一個体の全脳活動を予測させ、モデルを定量比較）<sup><a href="#ref9">9</a></sup>。ハエではモデル予測→光遺伝学実験での照合というループが回り始めた<sup><a href="#ref21">21</a></sup>。分野の自己評価も更新された（State of Brain Emulation Report 2025：記録・地図化・エミュレーションの3能力で整理し、ヒトWBEは楽観シナリオでも数十年先と評価）<sup><a href="#ref33">33</a></sup>。</td></tr>
+            <tr><td><b>進行中</b></td><td>行動・摂動・保持データによる「エミュレーション合格基準」の設計。種を越えた検証プロトコルの標準化の議論。</td></tr>
+            <tr><td><b>未着手</b></td><td>個人同一性の検証手続き（何をもって「本人」とするか）。意識の判定：主要理論（IIT対GNWT）の対決実験（2025）は両理論の予測に反する結果を含み、理論選択は未決着のまま<sup><a href="#ref34">34</a></sup>。この軸は技術ではなく科学と哲学の問題であり、<a class="inline" href="/ja/philosophy.html">第5章</a>に接続する。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="ladder">
+      <p class="eyebrow">3.2 The Ladder</p>
+      <h2>生物のはしご — 種ごとの到達点。</h2>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>生物（ニューロン数）</th><th>構造地図</th><th>動態データ</th><th>エミュレーション</th><th>一言評価</th></tr></thead>
+          <tbody>
+            <tr><td><b>線虫</b>（302）</td><td><span class="chip done">完了</span> 雌雄・発達込み</td><td>部分（全脳Ca計測可、電気生理は希少）</td><td>部分（MetaWormが行動再現、検証途上）</td><td>「地図はあるのに動かせない」教訓の原点</td></tr>
+            <tr><td><b>ハエ幼虫</b>（3,016）</td><td><span class="chip done">完了</span> 2023</td><td>限定的</td><td>未</td><td>回路解析の教材として活用中</td></tr>
+            <tr><td><b>ハエ成虫</b>（139,255）</td><td><span class="chip done">完了</span> 雌2024・雄CNS2025</td><td>豊富（光遺伝学・行動）</td><td><span class="chip now">初期実証</span> 2024モデル→2026身体化</td><td><strong>現在の最前線</strong></td></tr>
+            <tr><td><b>ゼブラフィッシュ幼生</b>（≈10⁵）</td><td><span class="chip now">再構成中</span></td><td><span class="chip done">全脳活動 約7万ニューロン</span></td><td>予測モデル競争中（ZAPBench）</td><td>唯一「活動→構造」の逆順で進む種</td></tr>
+            <tr><td><b>マウス</b>（≈7×10⁷）</td><td>0.2%（1mm³）＋10mm³計画</td><td>大規模部分記録（数千〜万単位）</td><td>領域デジタルツイン（視覚野）</td><td>今後10年の主戦場</td></tr>
+            <tr><td><b>マーモセット</b>（≈6×10⁸）</td><td>メゾスケール地図（Brain/MINDS）</td><td>部分</td><td>未</td><td>霊長類の足がかり（日本が主導）</td></tr>
+            <tr><td><b>ヒト</b>（8.6×10¹⁰）</td><td>≈10⁻⁶（皮質1mm³）</td><td>BCIによる点計測のみ</td><td>未</td><td>構造取得の手段自体が未確立</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="players">
+      <p class="eyebrow">3.3 Projects &amp; Players</p>
+      <h2>主要プロジェクトとプレイヤー。</h2>
+      <div class="tbl reveal">
+        <table>
+          <thead><tr><th>主体</th><th>種別</th><th>何をしているか</th><th>直近の到達点</th></tr></thead>
+          <tbody>
+            <tr><td><b>Janelia FlyEM</b>（HHMI）</td><td>研究所</td><td>ハエのEMコネクトーム量産</td><td>雄CNS 16.7万ニューロン（2025）<sup><a href="#ref5">5</a></sup></td></tr>
+            <tr><td><b>FlyWire / Seungラボ</b>（Princeton）</td><td>大学＋市民科学</td><td>AI＋コミュニティ校正の全脳再構成</td><td>成虫全脳コネクトーム（2024）<sup><a href="#ref4">4</a></sup></td></tr>
+            <tr><td><b>Google Research Connectomics</b></td><td>民間</td><td>自動セグメンテーション、H01、ZAPBench、マウス計画</td><td>ゼブラフィッシュ全脳ベンチマーク（2025）<sup><a href="#ref9">9</a></sup></td></tr>
+            <tr><td><b>MICrONSコンソーシアム</b>（Allen・Princeton・Baylor）</td><td>公的連合</td><td>構造＋機能の統合コネクトミクス</td><td>マウス視覚野1mm³ Nature特集（2025）<sup><a href="#ref7">7</a></sup></td></tr>
+            <tr><td><b>BRAIN CONNECTS</b>（NIH）</td><td>公的</td><td>マウス全脳への技術開発（1.5億ドル・11課題）</td><td>海馬10mm³・皮質基底核10mm³が進行<sup><a href="#ref10">10</a><a href="#ref11">11</a></sup></td></tr>
+            <tr><td><b>Lichtmanラボ</b>（Harvard）</td><td>大学</td><td>ヒト皮質EM（H01）、海馬計画</td><td>H01公開（2024）<sup><a href="#ref6">6</a></sup></td></tr>
+            <tr><td><b>E11 Bio</b></td><td>非営利研究所</td><td>PRISM：バーコード＋膨張顕微鏡で校正コスト1/100を狙う</td><td>海馬パイロットデータ公開（2025）<sup><a href="#ref12">12</a></sup></td></tr>
+            <tr><td><b>Eon Systems</b></td><td>スタートアップ</td><td>エミュレーション実行（「Upload the Human Mind」を掲げる）</td><td>身体化ハエ全脳エミュ実証（2026）<sup><a href="#ref22">22</a></sup></td></tr>
+            <tr><td><b>OpenWorm / MetaWorm</b></td><td>オープンソース</td><td>線虫の統合シミュレーション</td><td>脳-身体-環境の閉ループ再現（2024）<sup><a href="#ref24">24</a></sup></td></tr>
+            <tr><td><b>EBRAINS / Open Brain Institute</b></td><td>公的・非営利</td><td>HBP・Blue Brainの後継シミュレーション基盤</td><td>Blue Brain資産のオープンソース化（2024–25）<sup><a href="#ref27">27</a></sup></td></tr>
+            <tr><td><b>Cortical Labs / FinalSpark</b></td><td>民間</td><td>培養ニューロン計算（ウェットな対照実験系）</td><td>CL1発売・クラウド提供（2025）<sup><a href="#ref35">35</a></sup></td></tr>
+            <tr><td><b>Neuralink・Synchron・Paradromics・Precision</b></td><td>民間</td><td>ヒト侵襲BCIの臨床化</td><td>Neuralink累計26人（2026-06）<sup><a href="#ref19">19</a><a href="#ref20">20</a></sup></td></tr>
+            <tr><td><b>Nectome</b></td><td>民間研究</td><td>ヒト適用可能なASC保存プロトコル研究</td><td>ブタ全脳・幇助死適合プロトコル前刷り（2026）<sup><a href="#ref30">30</a></sup></td></tr>
+            <tr><td><b>BPF・Carboncopies</b></td><td>非営利</td><td>保存の第三者評価、WBEロードマップ啓発</td><td>評価基準・教育資料の整備継続<sup><a href="#ref29">29</a></sup></td></tr>
+            <tr><td><b>Brain/MINDS 2.0</b>（日本・AMED）</td><td>公的</td><td>マーモセット脳地図とデジタル脳開発</td><td>マーモセット標準脳アトラスv2（2025）<sup><a href="#ref36">36</a></sup></td></tr>
+            <tr><td><b>MinD in a Device / 渡辺研</b>（日本）</td><td>民間＋大学</td><td>BMIによる意識の機械への漸進移行（半球接続案）</td><td>構想と要素研究の段階<sup><a href="#ref37">37</a></sup></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="funding">
+      <p class="eyebrow">3.4 Funding</p>
+      <h2>資金と体制 — 重心は公的から民間・慈善へ。</h2>
+      <ul class="plain">
+        <li><strong>米BRAIN Initiative</strong>はFY2023の約6.8億ドルをピークにFY2025には約3.2億ドルまで半減し、コネクトミクス大型課題も影響を受けた<sup><a href="#ref38">38</a></sup>。FY2026予算では一転して33%増となり回復基調にある<sup><a href="#ref39">39</a></sup>。政治要因による資金の変動が、マウス全脳計画の最大の外生リスクであることが露呈した。</li>
+        <li><strong>民間・慈善の台頭</strong>: E11 Bio（慈善資金による非営利研究所）、Eon Systems（VC資金のスタートアップ）、Google Research（企業研究）が、公的資金の空白を埋める形で最前線の一部を担い始めた。営利動機の参入は開発を速める一方、データ公開・誇大広告・安全性の規律という新しい統治課題を持ち込む。</li>
+        <li><strong>日本</strong>: Brain/MINDS（2014–2023）がマーモセットで霊長類のメゾスケール地図を築き、後継のBrain/MINDS 2.0（2024–）が種横断の「デジタル脳」基盤を開発中<sup><a href="#ref36">36</a></sup>。シナプス解像度の大型コネクトミクスでは米国勢に規模で劣るが、霊長類データと理論で独自の位置を持つ。</li>
+      </ul>
+    </section>
+
+    <section id="watch">
+      <p class="eyebrow">3.5 Watchlist</p>
+      <h2>次の12ヶ月で見るべき指標。</h2>
+      <div class="cards reveal">
+        <div class="card"><span class="k">地図化</span><h4>ゼブラフィッシュ全脳コネクトーム公開</h4><p>公開されれば「全脳活動＋全脳構造」が同一個体で揃う史上初のデータセットになり、モデル化研究が一段跳ねる。</p></div>
+        <div class="card"><span class="k">地図化</span><h4>マウス海馬10mm³の進捗</h4><p>マウス全脳（500mm³超）への技術実証。取得速度と校正自動化率が「マウス全脳は2030年代前半か後半か」を決める。</p></div>
+        <div class="card"><span class="k">動かす</span><h4>Eonのマウス計画の最初の中間発表</h4><p>ハエ→マウスは560倍のスケールアップ。部分回路でも検証つきで動けば、哺乳類エミュレーションの時間軸が具体化する。</p></div>
+        <div class="card"><span class="k">読み出し</span><h4>BCIの帯域と患者数</h4><p>Neuralinkの量産・自動手術体制、Paradromics・Precisionの規模拡大。年間埋め込み数が3桁に乗るかが臨床標準化の分水嶺。</p></div>
+        <div class="card"><span class="k">保存</span><h4>Nectome前刷りの査読と規制反応</h4><p>幇助死適合プロトコルが査読を通るか、州・学会がどう応答するか。保存の「医療化」が進むか止まるかの試金石。</p></div>
+        <div class="card"><span class="k">検証</span><h4>ZAPBenchのスコア推移</h4><p>コネクトーム情報を使うモデルが純粋な統計モデルに勝てるか。「構造は動態予測に効く」の定量実証は分野全体の根拠になる。</p></div>
+      </div>
+    </section>
+
+    <section id="summary">
+      <p class="eyebrow">3.6 Summary</p>
+      <h2>この章の要点。</h2>
+      <div class="key reveal">
+        <span class="tag">要点</span>
+        <ul>
+          <li>6軸のうち<strong>地図化・読み出し・計算</strong>は指数的に進み、<strong>モデル化・検証</strong>が律速。保存は技術的には成熟しつつあり、社会実装が論点に移った。</li>
+          <li>2024–2026年の転換: 分野は「地図を作る」から<strong>「地図を動かして検証する」</strong>へ主題を移した（ハエ実証・ZAPBench・デジタルツイン）。</li>
+          <li>ヒトWBEに対する誠実な要約: <strong>構造で6桁、実証で1種（ハエ）、検証基準はゼロ本</strong>。楽観の根拠（自動化の速度）と悲観の根拠（モデル化の未知）が両方実在する。</li>
+        </ul>
+      </div>
+      <div class="pager">
+        <a href="/ja/science.html" class="prev"><span class="dir">← 前章</span><span class="t">第2章 科学的基礎</span></a>
+        <a href="/ja/future.html" class="next"><span class="dir">次章 →</span><span class="t">第4章 未来 — 予測と条件</span></a>
+      </div>
+    </section>
+
+    <section id="refs">
+      <p class="eyebrow">References / 文献</p>
+      <h2>第3章の文献（39件）。</h2>
+      <ol class="refs reveal">
+        <li id="ref1"><a class="ref-link" href="https://doi.org/10.1038/s41586-019-1352-7" target="_blank" rel="noopener">Cook, S. J., et al. (2019). Whole-animal connectomes of both <i>C. elegans</i> sexes. <i>Nature,</i> 571, 63–71.</a></li>
+        <li id="ref2"><a class="ref-link" href="https://doi.org/10.1038/s41586-021-03778-8" target="_blank" rel="noopener">Witvliet, D., et al. (2021). Connectomes across development reveal principles of brain maturation. <i>Nature,</i> 596, 257–261.</a></li>
+        <li id="ref3"><a class="ref-link" href="https://doi.org/10.1126/science.add9330" target="_blank" rel="noopener">Winding, M., et al. (2023). The connectome of an insect brain. <i>Science,</i> 379, eadd9330.</a></li>
+        <li id="ref4"><a class="ref-link" href="https://doi.org/10.1038/s41586-024-07558-y" target="_blank" rel="noopener">Dorkenwald, S., et al. (FlyWire) (2024). Neuronal wiring diagram of an adult brain. <i>Nature,</i> 634, 124–138.</a></li>
+        <li id="ref5"><a class="ref-link" href="https://www.janelia.org/project-team/flyem/male-cns-connectome" target="_blank" rel="noopener">Janelia FlyEM (2025). Male CNS Connectome（脳＋腹側神経索、16.7万ニューロン）.</a></li>
+        <li id="ref6"><a class="ref-link" href="https://doi.org/10.1126/science.adk4858" target="_blank" rel="noopener">Shapson-Coe, A., et al. (2024). A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution. <i>Science,</i> 384, eadk4858.</a></li>
+        <li id="ref7"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08790-w" target="_blank" rel="noopener">The MICrONS Consortium (2025). Functional connectomics spanning multiple areas of mouse visual cortex. <i>Nature,</i> 640.</a></li>
+        <li id="ref8"><a class="ref-link" href="https://doi.org/10.1038/s41586-023-06812-z" target="_blank" rel="noopener">Yao, Z., et al. (2023). A high-resolution transcriptomic and spatial atlas of cell types in the whole mouse brain. <i>Nature,</i> 624, 317–332.</a></li>
+        <li id="ref9"><a class="ref-link" href="https://research.google/blog/improving-brain-models-with-zapbench/" target="_blank" rel="noopener">Google Research, Janelia &amp; Harvard (2025). ZAPBench: 同一個体ゼブラフィッシュの全脳活動予測ベンチマーク（コネクトーム構築中）.</a></li>
+        <li id="ref10"><a class="ref-link" href="https://research.google/blog/google-research-embarks-on-effort-to-map-a-mouse-brain/" target="_blank" rel="noopener">Google Research (2023–). Harvard主導のマウス海馬10mm³コネクトーム計画（BRAIN CONNECTS）.</a></li>
+        <li id="ref11"><a class="ref-link" href="https://alleninstitute.org/news/projects-launch-to-map-brain-connections-in-mouse-and-macaque" target="_blank" rel="noopener">Allen Institute (2023–). マウス皮質-基底核ループとマカクの接続地図計画.</a></li>
+        <li id="ref12"><a class="ref-link" href="https://www.e11.bio/blog/prism" target="_blank" rel="noopener">E11 Bio (2024–25). PRISM技術と海馬パイロットデータ（AWS公開）.</a></li>
+        <li id="ref13"><a class="ref-link" href="https://www.biotechniques.com/neuroscience/mapping-the-brain-from-mice-to-mankind/" target="_blank" rel="noopener">BioTechniques (2024). Building a comprehensive mouse brain connectome（所要年数の試算を含む解説）.</a></li>
+        <li id="ref14"><a class="ref-link" href="https://doi.org/10.1126/science.abf4588" target="_blank" rel="noopener">Steinmetz, N. A., et al. (2021). Neuropixels 2.0. <i>Science,</i> 372, eabf4588.</a></li>
+        <li id="ref15"><a class="ref-link" href="https://doi.org/10.1038/s41586-023-06377-x" target="_blank" rel="noopener">Willett, F. R., et al. (2023). A high-performance speech neuroprosthesis. <i>Nature,</i> 620, 1031–1036.</a></li>
+        <li id="ref16"><a class="ref-link" href="https://doi.org/10.1056/NEJMoa2314132" target="_blank" rel="noopener">Card, N. S., et al. (2024). An accurate and rapidly calibrating speech neuroprosthesis. <i>N. Engl. J. Med.,</i> 391, 609–618.</a></li>
+        <li id="ref17"><a class="ref-link" href="https://doi.org/10.1038/s41593-025-01905-6" target="_blank" rel="noopener">Littlejohn, K. T., et al. (2025). A streaming brain-to-voice neuroprosthesis. <i>Nat. Neurosci.,</i> 28.</a></li>
+        <li id="ref18"><a class="ref-link" href="https://doi.org/10.1038/s41586-023-06094-5" target="_blank" rel="noopener">Lorach, H., et al. (2023). Walking naturally after spinal cord injury using a brain–spine interface. <i>Nature,</i> 618, 126–133.</a></li>
+        <li id="ref19"><a class="ref-link" href="https://thedebrief.org/neuralink-reaches-21-patients-as-elon-musk-continues-push-for-high-volume-brain-chip-production/" target="_blank" rel="noopener">The Debrief (2026). Neuralinkの埋め込み患者数と量産方針（2026年6月時点で26人）.</a></li>
+        <li id="ref20"><a class="ref-link" href="https://www.paradromics.com/" target="_blank" rel="noopener">Paradromics（2025年に初のヒト埋め込み）・Synchron・Precision Neuroscience 各社公式.</a></li>
+        <li id="ref21"><a class="ref-link" href="https://doi.org/10.1038/s41586-024-07763-9" target="_blank" rel="noopener">Shiu, P. K., et al. (2024). A <i>Drosophila</i> computational brain model reveals sensorimotor processing. <i>Nature,</i> 634, 210–219.</a></li>
+        <li id="ref22"><a class="ref-link" href="https://eon.systems/updates/embodied-brain-emulation" target="_blank" rel="noopener">Eon Systems (2026-03-07). How the Eon team produced a virtual embodied fly.</a></li>
+        <li id="ref23"><a class="ref-link" href="https://www.theregister.com/2026/03/16/digital_fruit_fly_brain_model/" target="_blank" rel="noopener">The Register (2026). Digital fruit fly brain model walks and cleans its feelers（第三者報道）.</a></li>
+        <li id="ref24"><a class="ref-link" href="https://doi.org/10.1038/s43588-024-00738-w" target="_blank" rel="noopener">Zhao, M., et al. (2024). An integrative data-driven model simulating <i>C. elegans</i> brain, body and environment interactions. <i>Nat. Comput. Sci.</i></a></li>
+        <li id="ref25"><a class="ref-link" href="https://doi.org/10.1016/j.cell.2015.09.029" target="_blank" rel="noopener">Markram, H., et al. (2015). Reconstruction and simulation of neocortical microcircuitry. <i>Cell,</i> 163, 456–492.</a></li>
+        <li id="ref26"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08829-y" target="_blank" rel="noopener">Wang, E. Y., et al. (2025). Foundation model of neural activity predicts response to new stimulus types. <i>Nature,</i> 640.</a></li>
+        <li id="ref27"><a class="ref-link" href="https://www.openbraininstitute.org/" target="_blank" rel="noopener">Open Brain Institute (2025–) / EBRAINS. Blue Brain後継のシミュレーション基盤.</a></li>
+        <li id="ref28"><a class="ref-link" href="https://doi.org/10.1016/j.cryobiol.2015.09.003" target="_blank" rel="noopener">McIntyre, R. L., &amp; Fahy, G. M. (2015). Aldehyde-stabilized cryopreservation. <i>Cryobiology,</i> 71, 448–458.</a></li>
+        <li id="ref29"><a class="ref-link" href="https://www.brainpreservation.org/" target="_blank" rel="noopener">Brain Preservation Foundation. 小型哺乳類賞（2016）・大型哺乳類賞（2018）の評価記録.</a></li>
+        <li id="ref30"><a class="ref-link" href="https://nectome.com/research" target="_blank" rel="noopener">Nectome (2026). Ultrastructural preservation of a whole large mammal brain… （前刷り・研究ページ）.</a></li>
+        <li id="ref31"><a class="ref-link" href="https://oregonbrainpreservation.org/" target="_blank" rel="noopener">Oregon Brain Preservation / Tomorrow Bio / Alcor / Cryonics Institute（提供中の保存サービス）.</a></li>
+        <li id="ref32"><a class="ref-link" href="https://www.top500.org/" target="_blank" rel="noopener">TOP500. El Capitan（実効1.74エクサFLOPS）ほか.</a></li>
+        <li id="ref33"><a class="ref-link" href="https://arxiv.org/abs/2510.15745" target="_blank" rel="noopener">Zanichelli, N., et al. (2025). <i>State of Brain Emulation Report 2025.</i> arXiv:2510.15745.</a></li>
+        <li id="ref34"><a class="ref-link" href="https://doi.org/10.1038/s41586-025-08888-1" target="_blank" rel="noopener">Cogitate Consortium (2025). Adversarial testing of global neuronal workspace and integrated information theories. <i>Nature.</i></a></li>
+        <li id="ref35"><a class="ref-link" href="https://corticallabs.com/cl1" target="_blank" rel="noopener">Cortical Labs (2025). CL1: 培養ヒトニューロン計算機（約20万ニューロン）.</a></li>
+        <li id="ref36"><a class="ref-link" href="https://brainminds.jp/" target="_blank" rel="noopener">Brain/MINDS 2.0（AMED, 2024–）. マーモセット脳地図とデジタル脳開発.</a></li>
+        <li id="ref37"><a class="ref-link" href="https://neurotechjp.com/jp/blog/watanabe-ut/" target="_blank" rel="noopener">NeurotechJP (2023). 渡辺正峰インタビュー: 意識の科学と意識のアップロード.</a></li>
+        <li id="ref38"><a class="ref-link" href="https://www.thetransmitter.org/funding/278-million-cut-in-brain-initiative-funding-leaves-neuroscientists-in-limbo/" target="_blank" rel="noopener">The Transmitter (2025). $278 million cut in BRAIN Initiative funding.</a></li>
+        <li id="ref39"><a class="ref-link" href="https://www.thetransmitter.org/funding/neuroscience-brain-initiative-gain-budget-in-bad-nih-funding-bill/" target="_blank" rel="noopener">The Transmitter (2026). BRAIN Initiative gains 33% budget increase in FY2026 bill.</a></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand" href="/ja/"><span class="dot"></span>マインドアップロード <small>integrated guide</small></a>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="/ja/history.html">1. 歴史</a>
+        <a href="/ja/science.html">2. 科学的基礎</a>
+        <a href="/ja/progress.html">3. 現在地</a>
+        <a href="/ja/future.html">4. 未来</a>
+        <a href="/ja/philosophy.html">5. 哲学と倫理</a>
+        <a href="/ja/action.html">6. 行動</a>
+        <a href="/ja/resources.html">資料集</a>
+        <a href="/ja/scenario.html">別冊: シナリオ2050</a>
+      </nav>
+      <p class="disc">免責: 本サイトは公開研究にもとづく教育目的の情報サイトです。最終更新: 2026-08-08。</p>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js?v=20260808"></script>
+</body>
+</html>
