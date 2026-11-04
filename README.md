@@ -1,96 +1,40 @@
-# Mind Uploading: An Integrated Guide
+# Mind Uploading Research Guide
 
-This is the source repository for [`mind-upload.com`](https://mind-upload.com/), a static reference site about mind uploading (whole brain emulation, or WBE). It brings together the field's history, scientific foundations, current progress, forecasts, philosophy and ethics, and practical next steps, with an emphasis on primary sources.
+Source for [mind-upload.com](https://mind-upload.com/) and its [Japanese edition](https://mind-upload.com/ja/). The November 2026 edition covers the technical foundations of whole-brain emulation, current experimental evidence, Carboncopies Foundation research, validation, research projects, and a searchable literature catalogue. Philosophy, ethics, and fictional timelines are outside this edition's scope.
 
-The site distinguishes established facts, conditional extrapolations, and philosophical or speculative arguments. English is the primary language; Japanese is provided as a secondary, chapter-matched translation.
+## Editing and preview
 
-## Live site
+Edit the bilingual text in `content/site_content.py` and bibliographic records in `content/references.json`. Do not edit generated HTML directly.
 
-- [English site — primary](https://mind-upload.com/)
-- [Japanese site — secondary](https://mind-upload.com/ja/)
-
-## Site map
-
-| Content | English | Japanese |
-| --- | --- | --- |
-| Home | [`index.html`](index.html) | [`ja/index.html`](ja/index.html) |
-| Chapter 1: History | [`history.html`](history.html) | [`ja/history.html`](ja/history.html) |
-| Chapter 2: Scientific foundations | [`science.html`](science.html) | [`ja/science.html`](ja/science.html) |
-| Chapter 3: Current status and progress dashboard | [`progress.html`](progress.html) | [`ja/progress.html`](ja/progress.html) |
-| Chapter 4: Forecasts | [`future.html`](future.html) | [`ja/future.html`](ja/future.html) |
-| Chapter 5: Philosophy and ethics | [`philosophy.html`](philosophy.html) | [`ja/philosophy.html`](ja/philosophy.html) |
-| Chapter 6: What to do now | [`action.html`](action.html) | [`ja/action.html`](ja/action.html) |
-| Appendix: Resources, glossary, and FAQ | [`resources.html`](resources.html) | [`ja/resources.html`](ja/resources.html) |
-| Companion: Scenario 2050 | [`scenario.html`](scenario.html) | [`ja/scenario.html`](ja/scenario.html) |
-
-## Repository layout
-
-```text
-.
-├── index.html              # English home page
-├── *.html                  # English chapters and appendices
-├── ja/*.html               # Japanese chapters and appendices
-├── assets/
-│   ├── site.css            # Shared site design
-│   ├── site.js             # Shared interactions
-│   ├── scenario.css        # Scenario page styles
-│   ├── scenario.js         # Scenario page interactions
-│   ├── favicon.svg
-│   └── og-image.*
-├── CNAME                   # Custom domain: mind-upload.com
-├── robots.txt
-├── sitemap.xml
-└── .claude/launch.json     # Local launch configuration, port 8099
-```
-
-## Local preview
-
-No package installation or build step is required. From the repository root, start a static file server:
-
-```bash
+```sh
+python3 scripts/build_site.py
+python3 scripts/check_site.py
 python3 -m http.server 8099
 ```
 
-Then open:
+Open `http://localhost:8099/` or `http://localhost:8099/ja/`. Python 3's standard library is sufficient for building and checking the site. The site itself has no package dependencies or external JavaScript services.
 
-- <http://localhost:8099/>
-- <http://localhost:8099/ja/>
-- <http://localhost:8099/scenario.html>
+## Structure
 
-The pages use root-relative paths such as `/assets/` and `/ja/`. Serve the repository root rather than opening HTML files directly with `file://`.
+Each language contains nine matched pages: home, science, progress, Carboncopies, validation, roadmap, research projects, history, and resources. Legacy philosophy and scenario URLs redirect to validation and the technical roadmap. `assets/research.js` implements bibliography filtering and an illustrative data-volume calculator. `assets/figures/` contains credited scientific figures and original explanatory diagrams.
 
-## Updating the site
+The generator resolves `[[REFERENCE_ID]]` to numbered references local to each page, renders `{{FIGURE_ID}}` with captions, exports BibTeX/JSON, and updates the sitemap and language metadata. Update the edition date in the generator and the dated prose together. Verify the calculator, library filters, navigation, and representative desktop/mobile layouts in Chrome after substantial changes.
 
-1. When changing an English chapter, review and update its matching Japanese chapter.
-2. Check the page body as well as `title`, description, canonical URL, `hreflang`, Open Graph metadata, and JSON-LD.
-3. When changing the site date, keep the visible date, structured data, and `lastmod` values in [`sitemap.xml`](sitemap.xml) consistent.
-4. Test chapter links, the English/Japanese switcher, the mobile navigation, and the scenario page's scroll interactions locally.
-5. Run the following check before and after changes:
+## Editorial and source policy
 
-   ```bash
-   git diff --check
-   ```
+- Support experimental claims with primary papers and organizational claims with official pages.
+- Distinguish experiments, theoretical models, preprints, historical proposals, and our own suggested research designs.
+- Record the organism, anatomical boundary, measured variables, and validation conditions. A structural connectome does not establish complete functional emulation.
+- The catalogue is a scoped discovery collection, not an exhaustive systematic review. Retrieval status does not mean a paper was read in full or independently reproduced.
+- Keep full texts, private collection manifests, browser logs, and Drive identifiers outside the public repository. Public records link to legitimate distribution sources.
+- Keep English and Japanese claims, citations, figure credits, and metadata synchronized.
 
-There is currently no automated build or test suite. Before publishing, check the main pages in a browser for broken links and layout issues.
+## Hosting and rights
 
-## Editorial policy
+GitHub Pages serves `main` from the repository root. `CNAME` preserves `mind-upload.com`. Check the deployed revision and actual public pages after pushing.
 
-- Link claims to peer-reviewed papers, official announcements, or other primary sources whenever possible.
-- Make it clear when a claim relies only on secondary reporting.
-- Keep fact, extrapolation, and speculation separate. Treat forecasts as conditional estimates.
-- Maintain the progress dashboard (Chapter 3) as a dated snapshot, and label editorial estimates as such.
-- Information about brain-preservation services, medicine, and end-of-life decisions is informational only; it is not a recommendation or medical advice.
+Figure sources and reuse conditions are documented in [assets/figures/README.md](assets/figures/README.md) and individual captions. Third-party CC BY figures retain their attribution; their licenses do not license the rest of this repository. No blanket repository license is granted here.
 
-## Hosting
+## 日本語
 
-[`CNAME`](CNAME) declares the custom domain `mind-upload.com`. If the hosting configuration changes, keep the canonical URLs, alternate-language URLs, Open Graph URLs, [`robots.txt`](robots.txt), and [`sitemap.xml`](sitemap.xml) consistent.
-
-## License
-
-There is currently no `LICENSE` file in this repository. Check the rights and license of the relevant copyright holder before reusing the text, artwork, or cited materials.
-
-## 日本語（概要）
-
-本リポジトリは、マインドアップロード（全脳エミュレーション）を扱う静的なリファレンスサイト [`mind-upload.com`](https://mind-upload.com/) のソースです。英語版をメインとし、日本語版を[`/ja/`](https://mind-upload.com/ja/)で提供しています。
-
-歴史、科学的基礎、現在の進捗、未来予測、哲学・倫理、行動指針、資料集、シナリオ2050を、一次資料を中心に整理しています。ローカル確認、更新時の英日同期、メタデータ・サイトマップの整合、免責事項については、上記の英語版説明をご確認ください。
+全脳エミュレーションを実験・測定・検証の課題として整理する技術研究ガイドです。2026年11月版ではCarboncopies Foundationの公開研究計画、周辺技術の文献カタログ、検証設計、技術ロードマップを追加しています。公式団体サイトではありません。本文の更新元は `content/site_content.py`、引用情報は `content/references.json` です。公開前に英日対応、引用、図版、リンク、画面を確認してください。

@@ -62,7 +62,7 @@
       toggle.setAttribute('aria-expanded', open);
     });
     nav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') nav.classList.remove('open');
+      if (e.target.closest('a')) { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
     });
   }
 })();
