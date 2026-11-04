@@ -81,6 +81,14 @@ def main():
     for r in refs:
         if not r.get('title') or not r.get('url'):
             errors.append(f'Incomplete citation: {r["id"]}')
+        if not r.get('citation_eligible') or r.get('reading_status') != 'fulltext_reviewed':
+            errors.append(f'Unavailable or unread citation: {r["id"]}')
+        if r.get('fulltext_status') not in ('pdf', 'text') or not r.get('review_scope'):
+            errors.append(f'Missing full-text review scope: {r["id"]}')
+    published_ids = {r['id'] for r in refs}
+    cited_ids = {x[4:] for d in docs.values() for x in d.ids if x.startswith('ref-')}
+    if published_ids != cited_ids:
+        errors.append(f'Catalogue and used citations differ: {published_ids ^ cited_ids}')
     sitemap = ET.parse(ROOT/'sitemap.xml')
     if len(sitemap.getroot()) != 18:
         errors.append('Expected 18 canonical sitemap pages')

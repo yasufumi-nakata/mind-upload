@@ -3,7 +3,7 @@ from html import escape
 
 
 def render(key, lang, definition):
-    if key not in ('state', 'inverse', 'scopes', 'validation', 'carboncopies'):
+    if key not in ('state', 'inverse', 'scopes', 'validation', 'carboncopies', 'individual'):
         return None
     ja = lang == 'ja'
     title, labels, note = (definition[0], definition[2], definition[4]) if ja else (definition[1], definition[3], definition[5])
@@ -17,7 +17,22 @@ def render(key, lang, definition):
     def rect(x,y,w,h,stroke='#42617a',fill='#17283d',rx=14):
         p.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" stroke="{stroke}" fill="{fill}"/>')
     text(45,45,title,22,anchor='start')
-    if key == 'state':
+    if key == 'individual':
+        for y,label in ((105,labels[0]),(215,labels[1])):
+            rect(45,y-25,260,56)
+            text(175,y+10,label,17)
+            line(305,y+3,370,171)
+        rect(370,132,215,78)
+        text(477,166,'同じ課題への予測' if ja else 'Predictions on the',17)
+        text(477,192,'各モデルを別々に評価' if ja else 'same tasks',15,'#b5c9de')
+        line(585,171,650,210)
+        rect(650,80,305,50)
+        text(802,111,'個体Aの未使用データ' if ja else 'Held-out data from A',18)
+        line(802,130,802,169)
+        rect(650,169,305,88)
+        text(802,202,'予測誤差・介入応答を比較' if ja else 'Compare prediction error',17)
+        text(802,232,'元の個体との対応を判定' if ja else 'and intervention responses',16,'#b5c9de')
+    elif key == 'state':
         for i,label in enumerate(labels):
             x=60+i*310; rect(x,80,280,180)
             if i==0:
@@ -27,7 +42,9 @@ def render(key, lang, definition):
             elif i==1:
                 line(x+40,173,x+240,173,'#42617a')
                 p.append(f'<path d="M{x+40} 163h30l8 -9 8 13 9 -58 9 75 10 -20h33l9 -7 8 8 9 -42 9 51 9 -10h40" stroke="#6ce0cc" stroke-width="3" fill="none"/>')
-            else: text(x+140,153,'x′ = F(x, u; θ)',25,'#a7c4ff')
+            else:
+                text(x+140,136,'xₜ₊₁ = F(xₜ, uₜ; θₜ)',20,'#a7c4ff')
+                text(x+140,177,'θₜ₊₁ = G(θₜ, xₜ, uₜ)',20,'#a7c4ff')
             text(x+140,233,label,19)
     elif key == 'scopes':
         for i,label in enumerate(labels):

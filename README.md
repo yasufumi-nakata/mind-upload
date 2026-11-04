@@ -25,7 +25,8 @@ The generator resolves `[[REFERENCE_ID]]` to numbered references local to each p
 - Support experimental claims with primary papers and organizational claims with official pages.
 - Distinguish experiments, theoretical models, preprints, historical proposals, and our own suggested research designs.
 - Record the organism, anatomical boundary, measured variables, and validation conditions. A structural connectome does not establish complete functional emulation.
-- The catalogue is a scoped discovery collection, not an exhaustive systematic review. Retrieval status does not mean a paper was read in full or independently reproduced.
+- Publish only sources whose acquired full text was read and whose claims were checked. The November 2026 revision uses 36 papers, reports and chapters plus 10 official or historical web sources. Each catalogue entry records its review scope; separate supplements absent from the supplied version are not claimed as reviewed.
+- Exclude unavailable material and stored-but-unread papers from public claims, references and BibTeX/JSON. The private storage inventory is separate. This is a scoped guide, not an exhaustive systematic review or an experimental replication.
 - Keep full texts, private collection manifests, browser logs, and Drive identifiers outside the public repository. Public records link to legitimate distribution sources.
 - Keep English and Japanese claims, citations, figure credits, and metadata synchronized.
 
@@ -37,4 +38,4 @@ Figure sources and reuse conditions are documented in [assets/figures/README.md]
 
 ## 日本語
 
-全脳エミュレーションを実験・測定・検証の課題として整理する技術研究ガイドです。2026年11月版ではCarboncopies Foundationの公開研究計画、周辺技術の文献カタログ、検証設計、技術ロードマップを追加しています。公式団体サイトではありません。本文の更新元は `content/site_content.py`、引用情報は `content/references.json` です。公開前に英日対応、引用、図版、リンク、画面を確認してください。
+全脳エミュレーションを実験・測定・検証の課題として整理する技術研究ガイドです。2026年11月の改訂では、保存版の本文を確認した36資料と公式・歴史的ウェブ資料10件を使用しています。未取得資料と保管のみの未読資料は公開引用から除外し、各資料の確認範囲を記載しています。Carboncopiesの研究計画、個体固有の応答の検証、研究の里程標と最初の実験を解説します。公式団体サイトではありません。本文の更新元は `content/site_content.py`、引用情報は `content/references.json` です。公開前に英日対応、引用、図版、リンク、画面を確認してください。

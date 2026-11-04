@@ -13,12 +13,15 @@ content = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(content)
 PAGES = content.PAGES
 REFS = json.loads((ROOT / 'content/references.json').read_text())
+for source_id, source in REFS.items():
+    if not source.get('citation_eligible') or source.get('reading_status') != 'fulltext_reviewed':
+        raise ValueError(f'Unreviewed or unavailable source cannot be published: {source_id}')
 DATE = '2026-11-04'
 BASE = 'https://mind-upload.com'
 H = html.escape
 NAV = [('science', '科学', 'Science'), ('progress', '到達点', 'Evidence'),
        ('carboncopies', 'Carboncopies', 'Carboncopies'), ('validation', '検証', 'Validation'),
-       ('future', 'ロードマップ', 'Roadmap'), ('action', '研究を始める', 'Research'),
+       ('future', '戦略と展望', 'Strategy'), ('action', '研究を始める', 'Research'),
        ('history', '歴史', 'History'), ('resources', '文献', 'Library')]
 
 DIAGRAMS = {
@@ -27,8 +30,8 @@ DIAGRAMS = {
               ['Measure', 'Reconstruct', 'Infer state & rules', 'Run & embody', 'Validate'],
               '不足する情報を、検証結果から計測へ戻します', 'Use failures to decide what to measure next'),
  'state': ('脳モデルの三つの記述', 'Three descriptions of a brain model',
-           ['構造 θ：接続・型', '状態 x：電位・適応', '規則 F：応答・学習'],
-           ['Structure θ: wiring', 'State x: voltage', 'Rules F: response'],
+           ['特性 θ(t)：接続・伝達', '状態 x(t)：電位・適応', '規則 F・G：応答・学習'],
+           ['Properties θ(t)', 'State x(t)', 'Rules F & G'],
            '入力 u と身体・環境との相互作用を含めて評価します', 'Evaluate inputs and the body–environment loop'),
  'inverse': ('同じ観測に合う、複数のモデル', 'Different models can fit the same observations',
              ['観測データ', '候補モデル A / B / C', '新しい刺激・介入', '候補を比較'],
@@ -62,6 +65,10 @@ DIAGRAMS = {
                   ['Roadmap：課題を整理', 'BrainGenix：実験基盤', 'Challenge：方法を比較'],
                   ['Roadmap: requirements', 'BrainGenix: platform', 'Challenge: comparison'],
                   '公式情報をもとにした模式図です。達成度を示す図ではありません', 'Schematic based on official sources; not a maturity rating'),
+ 'individual': ('元の個体に固有の情報を、対照と比べます', 'Test information specific to the original individual',
+                ['A由来のモデル', '他個体・平均モデル', '各モデルの予測', 'Aの未使用データと比較'],
+                ['Model derived from A', 'Other / average models', 'Predictions from each model', 'Compare with held-out data from A'],
+                '評価する記憶の答えを、モデルの学習へ持ち込まない設計にします', 'Keep the answers to memory tests out of model fitting'),
 }
 
 def diagram_svg(key, lang):
@@ -90,7 +97,7 @@ def figure(key, lang):
     if key in DIAGRAMS:
         title = DIAGRAMS[key][0 if lang == 'ja' else 1]
         src = f'/assets/figures/{key}-{lang}.svg'
-        credit = '本サイト作成の概念図。実測データや完成率を表す図ではありません。' if lang == 'ja' else 'Original schematic by this site; not measured data or a completion score.'
+        credit = '本サイト作成の概念図。' if lang == 'ja' else 'Original schematic by this site. '
         if key == 'carboncopies': credit += ' [[CCRESEARCH]][[CCCHALLENGE]][[CCROADMAP]]'
         elif key in ('fidelity','validation'): credit += ' [[XKB4CG64]]'
         elif key == 'inverse': credit += ' [[274IXB72]]'
@@ -123,7 +130,12 @@ def citation_record(ref, lang='en'):
     date = ref.get('year') or 'n.d.'
     title = H(ref['title'])
     if ref.get('url'): title = f'<a class="ref-link" href="{H(ref["url"],quote=True)}">{title}</a>'
-    txt = f'{H(author.rstrip("."))}. {title}. <i>{H(venue)}</i>. {H(str(date))}'
+    if ref.get('type') == 'bookSection':
+        editor = '; '.join(ref.get('editor_display', []))
+        editor_text = f' In: {H(editor)}, ed. ' if editor else ' In: '
+        txt = f'{H(author.rstrip("."))}. {title}.' + editor_text + f'<i>{H(venue)}</i>. {H(ref.get("publisher", ""))}; {H(str(date))}'
+    else:
+        txt = f'{H(author.rstrip("."))}. {title}. <i>{H(venue)}</i>. {H(str(date))}'
     if vi: txt += ';' + H(vi)
     txt = txt.rstrip('.') + '.'
     if ref.get('doi'): txt += f' <a href="https://doi.org/{H(ref["doi"],quote=True)}">doi:{H(ref["doi"])}</a>.'
@@ -132,6 +144,14 @@ def citation_record(ref, lang='en'):
     return txt
 
 def publication_type(r, lang):
+    labels = {'peer_reviewed': ('査読論文', 'Peer-reviewed article'),
+              'peer_reviewed_conference': ('査読会議論文', 'Peer-reviewed conference paper'),
+              'preprint': ('プレプリント', 'Preprint'),
+              'technical_report': ('技術報告・総説', 'Technical report / review'),
+              'book_chapter': ('書籍の章', 'Book chapter'),
+              'official_web': ('公式ウェブ資料', 'Official web resource')}
+    if r.get('publication_status') in labels:
+        return labels[r['publication_status']][0 if lang == 'ja' else 1]
     if r.get('type') == 'webpage': return 'ウェブ資料' if lang=='ja' else 'Web resource'
     if any(t in (r.get('venue','')+' '+r.get('url','')+' '+r.get('doi','')).lower() for t in ('arxiv','10.1101','10.64898','biorxiv')):
         return 'プレプリント／公開原稿' if lang=='ja' else 'Preprint / public manuscript'
@@ -149,20 +169,23 @@ def library(lang):
     rows=[]
     for r in sorted(candidates,key=lambda r:(str(r.get('year','')),r['title']),reverse=True):
         cat=r.get('category','')
-        evidence = r.get('fulltext_status','')
-        status = {'pdf':'PDF取得・形式確認済み','text':'Chrome本文保存版あり','partial':'部分本文・要旨を確認','metadata':'書誌情報のみ'} if lang=='ja' else {'pdf':'PDF retrieved and format checked','text':'Chrome text capture available','partial':'Partial text / abstract checked','metadata':'Bibliographic record only'}
-        rows.append(f'<li class="library-record" data-category="{H(cat)}" data-search="{H((r["title"]+" "+" ".join(r.get("authors",[]))+" "+r.get("doi","")).lower(),quote=True)}"><p class="record-tags"><span>{H(cat if lang=="ja" else cat_translation.get(cat,cat))}</span><span>{publication_type(r,lang)}</span><span>{status.get(evidence,status["metadata"])}</span></p><p>{citation_record(r,lang)}</p></li>')
+        status = '本文確認済み・解説に使用' if lang=='ja' else 'Full text reviewed; used in this guide'
+        scope = r.get('review_scope',{}).get(lang,'')
+        scope_html = f'<p class="small">{H(scope)}</p>' if scope else ''
+        rows.append(f'<li class="library-record" data-category="{H(cat)}" data-search="{H((r["title"]+" "+" ".join(r.get("authors",[]))+" "+r.get("doi","")).lower(),quote=True)}"><p class="record-tags"><span>{H(cat if lang=="ja" else cat_translation.get(cat,cat))}</span><span>{publication_type(r,lang)}</span><span>{status}</span></p><p>{citation_record(r,lang)}</p>{scope_html}</li>')
     return f'<div class="library-controls"><label>{label}<input id="library-search" type="search" placeholder="connectome, Koene, 10.1038…"></label><label>{cat_label}<select id="library-category"><option value="">{all_label}</option>{options}</select></label></div><p id="library-count" role="status" aria-live="polite">{len(candidates)} '+('件' if lang=='ja' else 'records')+f'</p><p><a href="/assets/references.bib" download>BibTeX</a> · <a href="/assets/references.json" download>JSON</a></p><ol class="library-list">'+''.join(rows)+'</ol><p id="library-empty" hidden>'+('該当する文献がありません。検索語か分野を変更してください。' if lang=='ja' else 'No matching records. Change the query or category.')+'</p>'
 
 def calculator(lang):
-    fields=[('volume', '撮像体積 (mm³)', 'Imaged volume (mm³)',1,0.001,2000000,'any'),
-            ('voxel', '等方ボクセル幅 (nm)', 'Isotropic voxel size (nm)',10,1,1000,'any'),
-            ('bytes-voxel', 'ボクセル当たり (byte)', 'Bytes per voxel',1,1,16,1),
-            ('synapses', 'シナプス数', 'Synapse count',50000000,1,1e16,1),
-            ('bytes-synapse', 'シナプス当たり状態量 (byte)', 'State bytes per synapse',16,1,4096,1),
-            ('frequency', '全シナプスの更新回数 (回/秒)', 'Dense updates per second',1000,1,1000000,1)]
+    fields=[('volume', '撮像体積 V (mm³)', 'Imaged volume V (mm³)',1,0.001,2000000,'any'),
+            ('voxel-x', 'ボクセル幅 dₓ (nm)', 'Voxel width dₓ (nm)',10,1,1000,'any'),
+            ('voxel-y', 'ボクセル幅 dᵧ (nm)', 'Voxel width dᵧ (nm)',10,1,1000,'any'),
+            ('voxel-z', 'ボクセル厚 dᶻ (nm)', 'Voxel depth dᶻ (nm)',10,1,1000,'any'),
+            ('bytes-voxel', 'ボクセル当たり b (byte)', 'Bytes per voxel b',1,1,16,1),
+            ('synapses', 'シナプス数 S', 'Synapse count S',50000000,1,1e16,1),
+            ('bytes-synapse', 'シナプス当たり状態量 m (byte)', 'State bytes per synapse m',16,1,4096,1),
+            ('frequency', '1シナプス当たりの更新頻度 f (Hz)', 'Update frequency per synapse f (Hz)',1000,1,1000000,1)]
     labels=''.join(f'<label for="calc-{k}">{H(ja if lang=="ja" else en)}<input id="calc-{k}" type="number" value="{value:g}" min="{lo:g}" max="{hi:g}" step="{step}" required></label>' for k,ja,en,value,lo,hi,step in fields)
-    return '<div class="calculator" id="scale-calculator"><div class="calc-fields">'+labels+'</div><div id="calc-result" role="status" aria-live="polite"></div><p class="small"><code>V × (10⁶ / d)³ × b</code> '+('byte（無圧縮画像）' if lang=='ja' else 'bytes (raw image)')+'<br><code>S × m</code> '+('byte（シナプス状態のみ）' if lang=='ja' else 'bytes (synapse states only)')+'<br><code>S × f</code> '+('回/秒（密な更新。FLOPSではありません）' if lang=='ja' else 'updates/s (dense update count, not FLOPS)')+'</p></div>'
+    return '<div class="calculator" id="scale-calculator"><div class="calc-fields">'+labels+'</div><div id="calc-result" role="status" aria-live="polite"></div><p class="small"><code>V × 10¹⁸ / (dₓ × dᵧ × dᶻ) × b</code> '+('byte（無圧縮画像）' if lang=='ja' else 'bytes (raw image)')+'<br><code>S × m</code> '+('byte（シナプス状態のみ）' if lang=='ja' else 'bytes (synapse states only)')+'<br><code>S × f</code> '+('回/秒（密な更新。FLOPSではありません）' if lang=='ja' else 'updates/s (dense update count, not FLOPS)')+'</p></div>'
 
 def expand_body(body,lang):
     return re.sub(r'\{\{([a-z]+)\}\}', lambda m: library(lang) if m[1]=='library' else calculator(lang) if m[1]=='calculator' else figure(m[1],lang),body)
@@ -194,11 +217,11 @@ def build_page(key,p,lang):
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{H(title)} | Mind Uploading</title><meta name="description" content="{H(desc,quote=True)}">
 <link rel="canonical" href="{BASE+path}"><link rel="alternate" hreflang="en" href="{BASE+enpath}"><link rel="alternate" hreflang="ja" href="{BASE+japath}"><link rel="alternate" hreflang="x-default" href="{BASE+enpath}">
-<meta property="og:title" content="{H(title,quote=True)}"><meta property="og:description" content="{H(desc,quote=True)}"><meta property="og:type" content="{'website' if key=='index' else 'article'}"><meta property="og:url" content="{BASE+path}"><meta property="og:locale" content="{'ja_JP' if lang=='ja' else 'en_US'}"><meta property="og:image" content="{BASE}/assets/og-image.png?v=20261104"><meta property="og:image:alt" content="Mind Uploading Research Guide"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0a0d14">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css?v=20261104"><link rel="stylesheet" href="/assets/research.css?v=20261104"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><script src="/assets/site.js?v=20261104" defer></script><script src="/assets/research.js?v=20261104" defer></script></head>
+<meta property="og:title" content="{H(title,quote=True)}"><meta property="og:description" content="{H(desc,quote=True)}"><meta property="og:type" content="{'website' if key=='index' else 'article'}"><meta property="og:url" content="{BASE+path}"><meta property="og:locale" content="{'ja_JP' if lang=='ja' else 'en_US'}"><meta property="og:image" content="{BASE}/assets/og-image.png?v=20261104-r2"><meta property="og:image:alt" content="Mind Uploading Research Guide"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0a0d14">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css?v=20261104-r2"><link rel="stylesheet" href="/assets/research.css?v=20261104-r2"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><script src="/assets/site.js?v=20261104-r2" defer></script><script src="/assets/research.js?v=20261104-r2" defer></script></head>
 <body id="top"><a class="skip-link" href="#main">{'本文へ移動' if lang=='ja' else 'Skip to content'}</a><div id="progress"></div>
 <header class="site-header"><div class="nav-inner"><a class="brand" href="{prefix}"><span class="dot"></span>Mind Uploading</a><nav class="primary-nav" aria-label="{'主要ページ' if lang=='ja' else 'Main pages'}">{nav}</nav><div class="lang-switch" role="group" aria-label="Language / 言語"><a href="{enpath}" hreflang="en" {'aria-current="true"' if lang=='en' else ''}>EN</a><a href="{japath}" hreflang="ja" lang="ja" {'aria-current="true"' if lang=='ja' else ''}>日本語</a></div><button class="nav-toggle" aria-label="{'メニュー' if lang=='ja' else 'Menu'}" aria-expanded="false">☰</button></div></header>
-<main id="main"><section class="ch-hero"><span class="badge">{badge}</span><h1>{H(title)}</h1><p class="lead">{H(desc)}</p><div class="ch-meta"><span>{'資料確認日' if lang=='ja' else 'Sources checked'}: {DATE}</span><span>{'一次資料に基づく技術解説' if lang=='ja' else 'Technical guide grounded in primary sources'}</span></div>{toc}</section>{''.join(sections)}{refs}</main>
+<main id="main"><section class="ch-hero"><span class="badge">{badge}</span><h1>{H(title)}</h1><p class="lead">{H(desc)}</p><div class="ch-meta"><span>{'資料確認日' if lang=='ja' else 'Sources checked'}: {DATE}</span><span>{'研究論文・技術報告・公式情報を区別して解説' if lang=='ja' else 'Research, technical reviews and official statements distinguished'}</span></div>{toc}</section>{''.join(sections)}{refs}</main>
 <footer class="site-footer"><div class="footer-inner"><a class="brand" href="{prefix}">Mind Uploading</a><p>{footer}</p><nav class="footer-nav">{nav}</nav><p class="small">{'図版の出典・利用条件は各図の下に記載しています。' if lang=='ja' else 'Figure sources and reuse terms appear in each caption.'} · <a href="#top">{'ページ上部へ' if lang=='ja' else 'Back to top'}</a></p></div></footer></body></html>'''
     dest=ROOT/('ja' if lang=='ja' else '')/(key+'.html')
     dest.parent.mkdir(exist_ok=True)
@@ -223,11 +246,17 @@ def build():
     for k,r in REFS.items():
         vals={'title':r['title'],'author':' and '.join(r.get('bibtex_authors') or ['{'+a+'}' for a in r.get('authors',[])]),'year':r.get('year',''),'journal':r.get('venue',''),'volume':r.get('volume',''),'number':r.get('issue',''),'pages':r.get('pages',''),'doi':r.get('doi',''),'url':r.get('url',''),'urldate':DATE,'note':r.get('note','')}
         vals={key:str(value).replace('\\','\\textbackslash{}').replace('&','\\&').replace('%','\\%').replace('_','\\_') for key,value in vals.items() if value}
-        kind = {'book':'book', 'bookSection':'incollection', 'webpage':'misc', 'report':'techreport'}.get(r.get('type'), 'article' if r.get('venue') else 'misc')
+        kind = {'book':'book', 'bookSection':'incollection', 'conferencePaper':'inproceedings', 'webpage':'misc', 'report':'techreport'}.get(r.get('type'), 'article' if r.get('venue') else 'misc')
         if kind == 'book' and 'journal' in vals:
             vals['publisher'] = vals.pop('journal')
         if kind == 'techreport' and 'journal' in vals:
             vals['institution'] = vals.pop('journal')
+        if kind == 'incollection' and 'journal' in vals:
+            vals['booktitle'] = vals.pop('journal')
+            if r.get('publisher'): vals['publisher'] = r['publisher']
+            if r.get('editors'): vals['editor'] = ' and '.join(r['editors'])
+        if kind == 'inproceedings' and 'journal' in vals:
+            vals['booktitle'] = vals.pop('journal')
         bib.append('@'+kind+'{'+k+',\n'+',\n'.join('  '+name+' = {'+value+'}' for name,value in vals.items())+'\n}')
     (ROOT/'assets/references.bib').write_text('\n\n'.join(bib)+'\n')
     print(f'Built {len(paths)} pages, 4 legacy redirects, {len(DIAGRAMS)*2} localized diagrams, {len(REFS)} reference records.')

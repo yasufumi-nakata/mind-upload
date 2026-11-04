@@ -37,9 +37,9 @@
         out.appendChild(error); return;
       }
       var v = fields.map(function (field) { return Number(field.value); });
-      var imageBytes = v[0] * Math.pow(1e6 / v[1], 3) * v[2];
-      var stateBytes = v[3] * v[4];
-      var updates = v[3] * v[5];
+      var imageBytes = v[0] * 1e18 / (v[1] * v[2] * v[3]) * v[4];
+      var stateBytes = v[5] * v[6];
+      var updates = v[5] * v[7];
       [[ja ? '無圧縮画像の量' : 'Raw image size', quantity(imageBytes,['B','kB','MB','GB','TB','PB','EB','ZB'])],
        [ja ? 'シナプス状態のみ' : 'Synapse states only', quantity(stateBytes,['B','kB','MB','GB','TB','PB','EB','ZB'])],
        [ja ? '密な状態更新' : 'Dense state updates', quantity(updates,['/s','k/s','M/s','G/s','T/s','P/s','E/s'])]].forEach(function (item) {
