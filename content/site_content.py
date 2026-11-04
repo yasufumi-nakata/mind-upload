@@ -1,4 +1,10 @@
 """Bilingual editorial source. [[ID]] resolves a citation; {{figure}} inserts an original or credited figure."""
+from pathlib import Path
+import runpy
+
+_dashboard = runpy.run_path(str(Path(__file__).with_name('dashboard.py')))
+status_grid = _dashboard['status_grid']
+horizon = _dashboard['horizon']
 PAGES = {}
 
 def page(key, ja_title, en_title, ja_lead, en_lead, sections):
@@ -12,6 +18,9 @@ page('index',
      'Make mind uploading an experimental science.',
      '脳を測り、モデルを作り、同じ条件で確かめる。全脳エミュレーションの実現に必要な技術と、次に解くべき問題を一次資料から整理します。',
      'Measure a brain, build a model, and test both under matched conditions. A source-grounded guide to the technologies and experiments needed for whole-brain emulation.', [
+    s('at-a-glance', 'いま、どこまで来ましたか', 'Where are we now?',
+      '<p class="dashboard-lead"><strong>地図化と限定的な機能予測は実証済み。</strong>次の核心は、測った脳から、その個体の記憶や学習を再現して確かめることです。</p>' + status_grid('ja') + '<p class="small">各ラベルは、確認した文献に基づく到達段階です。人の全脳再現を何％完成したかという尺度ではありません。</p><h3>2050年を目標に、五つの判定点へ</h3>' + horizon('ja') + '<p class="small">年は本サイトの研究計画案です。各段階の通過条件を満たすことを前提にします。</p><p><a class="button" href="/ja/history.html#dashboard">現在地・残る12課題・2050年の道筋を見る →</a></p>',
+      '<p class="dashboard-lead"><strong>Wiring maps and limited functional predictions have been demonstrated.</strong> The next core challenge is to recover and test the original individual’s memory and learning from measured brain data.</p>' + status_grid('en') + '<p class="small">Labels summarise stages supported by the reviewed evidence. They are not percentages of completed human whole-brain emulation.</p><h3>Five review gates toward a 2050 target</h3>' + horizon('en') + '<p class="small">Dates are this site’s proposed planning targets, conditional on passing each gate.</p><p><a class="button" href="/history.html#dashboard">Explore the current position, 12 tasks and the path to 2050 →</a></p>'),
     s('starting-point',
       '何を実現したいのでしょうか',
       'What are we trying to build?',
@@ -167,6 +176,9 @@ page('future',
      'Research strategy and outlook: evidence for the next step',
      '計測、再構成、同定、計算、検証のどこで誤差と費用が増えるのかを明らかにします。',
      'Identify where errors and costs grow across measurement, reconstruction, identification, computation, and validation.', [
+    s('timeline2050', '現在地と年次の目標を先に見る', 'See the current position and planning windows',
+      '<p><a href="/ja/history.html#dashboard">6領域の進捗と12課題</a>、<a href="/ja/history.html#roadmap2050">2050年を目標とする五つの段階</a>を歴史ページにまとめています。このページでは、その前半を支えるM1〜M4の実験条件と、計算量の見積もりを詳しく説明します。</p>',
+      '<p>The history page brings together <a href="/history.html#dashboard">six domains and 12 open tasks</a> and <a href="/history.html#roadmap2050">five stages targeting 2050</a>. This page explains the M1–M4 tests underlying the early stages and how to estimate computational scale.</p>'),
     s('gates',
       '四つの里程標と、通過の判定',
       'Four milestones and decision rules',
@@ -217,10 +229,25 @@ page('action',
 ])
 
 page('history',
-     '構想から、測定と検証の研究へ',
-     'From a proposal to measurement and validation',
-     '歴史的な見通しと、実際に成立した技術を区別してたどります。',
-     'Trace the difference between historical expectations and experimentally established capabilities.', [
+     '歴史と現在地：2050年までに何を越えるか',
+     'History and current progress: the gates to 2050',
+     'できたこと、残る主要課題、次へ進む条件を一つの画面からたどります。2050年を技術的な完成目標に置いた、条件付きの研究計画です。',
+     'See what works, what remains, and the evidence needed to advance. A conditional research plan targeting technical completion in 2050.', [
+    s('overview', '現在地を一目で', 'The current position at a glance',
+      '<div class="dashboard-totals"><p><strong>6</strong>研究領域を点検</p><p><strong>12</strong>主要な未解決課題</p><p><strong>5</strong>2050年までの判定点</p></div><div class="key"><p><strong>現在地：</strong>小型動物の接続図、哺乳類の局所的な構造・活動対応、限定された機能の予測まで進んでいます。次に必要なのは、これらを同じ個体でつなぎ、学習済みの情報を保持する再現を検証することです。[[ADD196]][[6TNZ57MZ]][[V4GV7JAJ]][[XMYSQXY8]]</p><p><strong>最大の未解決：</strong>どの情報をどの精度で取得すれば、元の個体の機能と記憶を再現するのに十分なのか。確認した文献では、人の個体固有の記憶を保持する全脳再現は未実証です。[[XKB4CG64]][[REPORTFINAL]]</p></div><p class="small">6領域と12課題は本サイトの整理です。課題の数は研究量や成功確率を表しません。確認日：2026年11月4日。</p>',
+      '<div class="dashboard-totals"><p><strong>6</strong>research domains</p><p><strong>12</strong>major open tasks</p><p><strong>5</strong>review gates to 2050</p></div><div class="key"><p><strong>Current position:</strong> small-animal wiring maps, local mammalian structure–activity pairing, and predictions of limited functions. The next step is to connect these in the same individual and test reproduction that retains previously learned information.[[ADD196]][[6TNZ57MZ]][[V4GV7JAJ]][[XMYSQXY8]]</p><p><strong>The central gap:</strong> what information, measured at what precision, is sufficient to recover an individual’s functions and memories? The reviewed literature does not demonstrate human whole-brain reproduction retaining individual memories.[[XKB4CG64]][[REPORTFINAL]]</p></div><p class="small">The six domains and 12 tasks are this site’s organisation of the problem. Task counts do not measure research effort or probability of success. Checked 4 November 2026.</p>'),
+    s('dashboard', '6領域の到達点と、残る12課題', 'Six domains and 12 remaining tasks',
+      '<p>上段にできたこと、下段に次の壁を示します。各カードを開くと、次に実証する主要課題を確認できます。課題は並行して研究し、測定とモデルの結果を互いに返します。</p>' + status_grid('ja', detail=True),
+      '<p>Each card shows demonstrated capabilities and the next barrier. Expand it for the major tasks that still need evidence. Work proceeds in parallel, with measurements and models informing each other.</p>' + status_grid('en', detail=True)),
+    s('roadmap2050', '2050年から逆算する、五つの段階', 'Five stages working back from 2050',
+      '<p><strong>以下の年は、本サイトが提案する目標時期です。</strong>文献から得た完成予測や、Carboncopies Foundationの公式日程ではありません。前段階の条件が満たされなければ、後段階の日程も変更します。研究の開始年ではなく、成果を判定する節目を示しています。</p>' + horizon('ja', detail=True) + '<p>2030・2035年の段階は、<a href="/ja/future.html#gates">M1〜M4の検証課題</a>に対応します。後半はそれを大規模化し、人へ適用できる条件を検査する本サイトの提案です。小型動物での成功だけで、人でも成立すると判定しません。</p><p>土台にしているのは、走査・解釈・シミュレーションを分けた2008年ロードマップと、現在の機能評価・測定研究です。これらの文献が、上記の年表を保証しているわけではありません。[[9B7EMU3K]][[XKB4CG64]][[EVWH7H32]]</p>',
+      '<p><strong>These are proposed target windows set by this site.</strong> They are not completion forecasts derived from the literature or Carboncopies Foundation’s official schedule. If an earlier gate remains unmet, later dates change. Windows mark reviews of achieved capabilities, not the first year work begins.</p>' + horizon('en', detail=True) + '<p>The 2030 and 2035 stages correspond to <a href="/future.html#gates">M1–M4</a>. Later stages propose scaling those tests and establishing conditions for human application. Success in a small animal alone does not establish transfer to humans.</p><p>The technical foundation is the 2008 roadmap’s separation of scanning, interpretation and simulation, together with current measurement and fidelity research. These sources do not establish the dates above.[[9B7EMU3K]][[XKB4CG64]][[EVWH7H32]]</p>'),
+    s('target', 'ここでいう「2050年の完成」とは', 'What the 2050 completion target means',
+      '<p>目標は、<strong>特定の人の脳の測定情報に基づく全脳モデルが、事前に定めた機能・時間尺度で、その人の活動、学習済み情報、学習能力、身体との相互作用に対応すること</strong>です。これは技術的な研究目標であり、あらゆる状況を完全に再現したという認定ではありません。個体の記憶と技能を含める考え方は2008年ロードマップ、用途ごとの機能検証は忠実度研究を参照しています。[[9B7EMU3K]][[XKB4CG64]]</p><ul><li><strong>測定から復元まで：</strong>どの個体のどの範囲を測り、何を省略・推定したかが追跡できます。</li><li><strong>個体との対応：</strong>学習に使わない刺激・介入・記憶課題で、平均・他個体モデルとの比較が成立します。評価の答えを追加学習で与えません。</li><li><strong>継続して働く：</strong>保持・忘却・新たな学習を含め、決めた期間と入出力条件で動作を維持します。</li><li><strong>独立に確かめる：</strong>別チームが再現でき、許容誤差、費用、遅延、未検証範囲を公開できます。</li></ul><p>δ・εなどの数値は、生体の反復測定と対象機能から事前に決めます。設計の詳細は<a href="/ja/validation.html#protocol">検証手順</a>へ進んでください。上記は本サイトの達成条件案で、既存の認証規格ではありません。</p>',
+      '<p>The target is <strong>a whole-brain model based on measurements of a particular person that corresponds to their activity, previously learned information, learning capacity and body interaction over prespecified functions and timescales</strong>. This is a technical research target, not certification of perfect reproduction in every situation. Individual memories and skills are part of the 2008 roadmap’s criteria; purpose-dependent tests draw on fidelity research.[[9B7EMU3K]][[XKB4CG64]]</p><ul><li><strong>Traceable reconstruction:</strong> identify the individual, measured boundary, omissions and inferred information.</li><li><strong>Individual correspondence:</strong> compare with average and other-individual models on held-out stimuli, interventions and memory tasks, without teaching the evaluation answers.</li><li><strong>Continued operation:</strong> maintain function over specified periods and input/output conditions, including retention, forgetting and new learning.</li><li><strong>Independent verification:</strong> enable replication by another team and report tolerances, cost, latency and untested scope.</li></ul><p>Set numerical margins such as δ and ε in advance from biological repeats and the target function; see the <a href="/validation.html#protocol">validation procedure</a>. These are proposed success criteria, not an existing certification standard.</p>'),
+    s('hardest-gaps', '2050年へ向けて、特に越える必要がある壁', 'The barriers that make 2050 demanding',
+      '<div class="cards"><article class="card"><h3>1. 情報が十分に残るか</h3><p>構造がきれいに残っていても、機能に必要な状態を失っていれば復元できるとは限りません。保存研究と記憶課題をつなぐ実験が必要です。[[SDSWEA5J]][[LP5F3H2Q]]</p></article><article class="card"><h3>2. 地図から動作を決められるか</h3><p>同じ観測に合うモデルが複数あり得ます。未知の介入への応答まで比較し、必要な追加測定を選びます。[[274IXB72]][[XKB4CG64]]</p></article><article class="card"><h3>3. 全工程を実行できるか</h3><p>撮像速度だけでなく、試料処理、接続の追跡・校正、分子計測、モデル化、実行、独立検証をつなぐ必要があります。[[EVWH7H32]][[9B7EMU3K]]</p></article></div><p><strong>期限を厳しくする根拠：</strong>Collinsらの2025年の方式比較は、拡大顕微鏡とライトシート法による<strong>人の接続図</strong>についても、2025年の時点で、追加の技術進歩があれば約25〜50年後にプロジェクトが実行可能になるかもしれないと論じ、強い不確実性を明記しています。これは技術の成熟時期についての著者の見通しで、1回の撮像に要する時間でもWBEの完成予測でもありません。2050年に全工程の検証まで目指すには、取得・再構成の短縮と機能・記憶の実証を並行して進める必要があります。[[EVWH7H32]]</p><p><strong>取得経路の前提：</strong>本案は、固定後の構造取得を含む経路を中心にしています。生体を維持したまま全脳の必要情報を読む方式を選ぶ場合は、その計測能力も別の通過条件になります。保存で失われる情報を後から必ず補えるとは仮定しません。[[9B7EMU3K]][[SDSWEA5J]]</p>',
+      '<div class="cards"><article class="card"><h3>1. Does sufficient information survive?</h3><p>Well-preserved structure need not retain every state required for function. Experiments must connect preservation to memory tests.[[SDSWEA5J]][[LP5F3H2Q]]</p></article><article class="card"><h3>2. Can a map determine function?</h3><p>Several models can fit the same observations. Compare unseen interventions to select the additional measurements that matter.[[274IXB72]][[XKB4CG64]]</p></article><article class="card"><h3>3. Can the whole workflow run?</h3><p>Imaging speed must be joined to tissue processing, tracing and correction, molecular measurements, modelling, execution and independent validation.[[EVWH7H32]][[9B7EMU3K]]</p></article></div><p><strong>Why the deadline is demanding:</strong> Collins et al.’s 2025 comparison suggests that even a <strong>human connectome</strong> project using expansion and light-sheet microscopy might become feasible roughly 25–50 years after 2025, conditional on further technical advances and with substantial uncertainty. This is the authors’ projection of technological readiness, not the duration of a single imaging run or a WBE completion forecast. A 2050 end-to-end validation target would require faster acquisition/reconstruction and parallel evidence for function and memory.[[EVWH7H32]]</p><p><strong>Acquisition-route assumption:</strong> this plan centres on routes that can include post-fixation structural measurements. A route that keeps the biological brain functioning while acquiring all necessary information requires an additional measurement capability. We do not assume that information lost during preservation can always be recovered later.[[9B7EMU3K]][[SDSWEA5J]]</p>'),
     s('early',
       '古い構想を、現在の証拠と混ぜない',
       'Keep historical proposals in their context',
@@ -236,6 +263,9 @@ page('history',
       'Use reviews as entry points',
       '<p><em>State of Brain Emulation Report 2025</em>は関連技術を整理した総説です。本サイトは、2026年公開の最終版（182ページ）を参照しています。題名の「2025」と最終版の公開年を区別してください。技術の見通しや費用の推定を、個別実験で達成した結果とは分けて読みます。[[REPORTFINAL]]</p>',
       "<p><em>State of Brain Emulation Report 2025</em> is a broad technical review. This guide uses the 182-page final report released in 2026; the title's “2025” is distinct from that release year. Projections and cost estimates should be separated from experimentally achieved results.[[REPORTFINAL]]</p>"),
+    s('contribute', '現在の研究を、次の判定へつなぐ', 'Connect today’s work to the next gate',
+      '<p>Carboncopiesは、更新ロードマップで課題を整理し、BrainGenixとBrain Emulation Challengeで測定からモデルへの変換・評価の基盤を整えています。公式ページに示された活動と、このページの2050年案は区別してください。[[CCROADMAP]][[CCRESEARCH]][[CCCHALLENGE]]</p><p>今すぐ始めるなら、<a href="/ja/action.html">既存の接続図モデルを再現し、誤差が機能予測をどう変えるか調べる研究</a>が、2030年段階の具体的な入口です。進捗は「新しい論文の数」だけでなく、どの通過条件が新たに満たされたかで更新します。</p>',
+      '<p>Carboncopies organises open questions through its roadmap update and develops measurement-to-model and evaluation infrastructure through BrainGenix and the Brain Emulation Challenge. Distinguish those officially described activities from this page’s 2050 plan.[[CCROADMAP]][[CCRESEARCH]][[CCCHALLENGE]]</p><p>A concrete entry point for the 2030 stage is <a href="/action.html">reproducing an existing connectome model and testing how reconstruction errors alter functional predictions</a>. Track which gates gain evidence, alongside new publications.</p>'),
 ])
 
 page('resources',

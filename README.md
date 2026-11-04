@@ -1,10 +1,10 @@
 # Mind Uploading Research Guide
 
-Source for [mind-upload.com](https://mind-upload.com/) and its [Japanese edition](https://mind-upload.com/ja/). The November 2026 edition covers the technical foundations of whole-brain emulation, current experimental evidence, Carboncopies Foundation research, validation, research projects, and a searchable literature catalogue. Philosophy, ethics, and fictional timelines are outside this edition's scope.
+Source for [mind-upload.com](https://mind-upload.com/) and its [Japanese edition](https://mind-upload.com/ja/). The November 2026 edition covers the technical foundations of whole-brain emulation, current experimental evidence, Carboncopies Foundation research, validation, research projects, and a searchable literature catalogue. Philosophy and ethics are outside this edition's scope. The 2050 roadmap is a conditional research plan, with explicit evidence gates, not a forecast or an official organisational schedule.
 
 ## Editing and preview
 
-Edit the bilingual text in `content/site_content.py` and bibliographic records in `content/references.json`. Do not edit generated HTML directly.
+Edit the bilingual text in `content/site_content.py`, the shared six-domain dashboard and five planning windows in `content/dashboard.py`, and bibliographic records in `content/references.json`. Do not edit generated HTML directly.
 
 ```sh
 python3 scripts/build_site.py

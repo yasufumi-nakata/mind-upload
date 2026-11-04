@@ -22,7 +22,7 @@ H = html.escape
 NAV = [('science', '科学', 'Science'), ('progress', '到達点', 'Evidence'),
        ('carboncopies', 'Carboncopies', 'Carboncopies'), ('validation', '検証', 'Validation'),
        ('future', '戦略と展望', 'Strategy'), ('action', '研究を始める', 'Research'),
-       ('history', '歴史', 'History'), ('resources', '文献', 'Library')]
+       ('history', '歴史・2050', 'History & 2050'), ('resources', '文献', 'Library')]
 
 DIAGRAMS = {
  'pipeline': ('測定と再現を結ぶ研究工程', 'The measurement-to-emulation pipeline',
@@ -209,6 +209,11 @@ def build_page(key,p,lang):
     refs='<section id="references"><h2>'+('参考文献' if lang=='ja' else 'References')+'</h2><ol class="refs">'+''.join(f'<li id="ref-{k}">{citation_record(REFS[k],lang)}</li>' for k in used)+'</ol></section>'
     nav=''.join(f'<a href="{prefix+k}.html"'+(' aria-current="page"' if k==key else '')+f'>{ja if lang=="ja" else en}</a>' for k,ja,en in NAV)
     toc='<nav class="toc" aria-label="'+('目次' if lang=='ja' else 'On this page')+'"><span class="tag">'+('このページの内容' if lang=='ja' else 'On this page')+'</span><ol>'+''.join(f'<li><a href="#{s["id"]}">{H(s["title"][lang])}</a></li>' for s in p['sections'])+'</ol></nav>'
+    if key == 'index':
+        toc = ''
+    elif key == 'history':
+        jump = [('dashboard', '6領域の進捗', 'Six-domain status'), ('roadmap2050', '2050年への道筋', 'Path to 2050'), ('target', '完成の条件', 'Success criteria'), ('timeline', '技術の歴史', 'Technical history')]
+        toc = '<nav class="overview-nav" aria-label="'+('このページの内容' if lang=='ja' else 'On this page')+'">'+''.join(f'<a href="#{sid}">{ja if lang=="ja" else en}</a>' for sid,ja,en in jump)+'</nav>'
     schema={'@context':'https://schema.org','@type':'WebSite' if key=='index' else 'Article','name':title,'headline':title,'description':desc,'url':BASE+path,'inLanguage':lang,'dateModified':DATE,'isPartOf':{'@type':'WebSite','name':'Mind Uploading Research Guide','url':BASE+'/'},'citation':[REFS[k]['url'] for k in used if REFS[k].get('url')]}
     other='/ja/' if lang=='en' else '/'
     badge='研究ガイド · 2026年11月版' if lang=='ja' else 'Research guide · November 2026'
@@ -217,9 +222,9 @@ def build_page(key,p,lang):
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{H(title)} | Mind Uploading</title><meta name="description" content="{H(desc,quote=True)}">
 <link rel="canonical" href="{BASE+path}"><link rel="alternate" hreflang="en" href="{BASE+enpath}"><link rel="alternate" hreflang="ja" href="{BASE+japath}"><link rel="alternate" hreflang="x-default" href="{BASE+enpath}">
-<meta property="og:title" content="{H(title,quote=True)}"><meta property="og:description" content="{H(desc,quote=True)}"><meta property="og:type" content="{'website' if key=='index' else 'article'}"><meta property="og:url" content="{BASE+path}"><meta property="og:locale" content="{'ja_JP' if lang=='ja' else 'en_US'}"><meta property="og:image" content="{BASE}/assets/og-image.png?v=20261104-r2"><meta property="og:image:alt" content="Mind Uploading Research Guide"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0a0d14">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css?v=20261104-r2"><link rel="stylesheet" href="/assets/research.css?v=20261104-r2"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><script src="/assets/site.js?v=20261104-r2" defer></script><script src="/assets/research.js?v=20261104-r2" defer></script></head>
-<body id="top"><a class="skip-link" href="#main">{'本文へ移動' if lang=='ja' else 'Skip to content'}</a><div id="progress"></div>
+<meta property="og:title" content="{H(title,quote=True)}"><meta property="og:description" content="{H(desc,quote=True)}"><meta property="og:type" content="{'website' if key=='index' else 'article'}"><meta property="og:url" content="{BASE+path}"><meta property="og:locale" content="{'ja_JP' if lang=='ja' else 'en_US'}"><meta property="og:image" content="{BASE}/assets/og-image.png?v=20261104-r3"><meta property="og:image:alt" content="Mind Uploading Research Guide"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0a0d14">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css?v=20261104-r3"><link rel="stylesheet" href="/assets/research.css?v=20261104-r3"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><script src="/assets/site.js?v=20261104-r3" defer></script><script src="/assets/research.js?v=20261104-r3" defer></script></head>
+<body id="top" data-page="{key}"><a class="skip-link" href="#main">{'本文へ移動' if lang=='ja' else 'Skip to content'}</a><div id="progress"></div>
 <header class="site-header"><div class="nav-inner"><a class="brand" href="{prefix}"><span class="dot"></span>Mind Uploading</a><nav class="primary-nav" aria-label="{'主要ページ' if lang=='ja' else 'Main pages'}">{nav}</nav><div class="lang-switch" role="group" aria-label="Language / 言語"><a href="{enpath}" hreflang="en" {'aria-current="true"' if lang=='en' else ''}>EN</a><a href="{japath}" hreflang="ja" lang="ja" {'aria-current="true"' if lang=='ja' else ''}>日本語</a></div><button class="nav-toggle" aria-label="{'メニュー' if lang=='ja' else 'Menu'}" aria-expanded="false">☰</button></div></header>
 <main id="main"><section class="ch-hero"><span class="badge">{badge}</span><h1>{H(title)}</h1><p class="lead">{H(desc)}</p><div class="ch-meta"><span>{'資料確認日' if lang=='ja' else 'Sources checked'}: {DATE}</span><span>{'研究論文・技術報告・公式情報を区別して解説' if lang=='ja' else 'Research, technical reviews and official statements distinguished'}</span></div>{toc}</section>{''.join(sections)}{refs}</main>
 <footer class="site-footer"><div class="footer-inner"><a class="brand" href="{prefix}">Mind Uploading</a><p>{footer}</p><nav class="footer-nav">{nav}</nav><p class="small">{'図版の出典・利用条件は各図の下に記載しています。' if lang=='ja' else 'Figure sources and reuse terms appear in each caption.'} · <a href="#top">{'ページ上部へ' if lang=='ja' else 'Back to top'}</a></p></div></footer></body></html>'''
