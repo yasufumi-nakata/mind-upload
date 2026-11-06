@@ -33,19 +33,17 @@ def render(key, lang, definition):
         text(802,202,'予測誤差・介入応答を比較' if ja else 'Compare prediction error',17)
         text(802,232,'元の個体との対応を判定' if ja else 'and intervention responses',16,'#b5c9de')
     elif key == 'state':
-        for i,label in enumerate(labels):
-            x=60+i*310; rect(x,80,280,180)
-            if i==0:
-                nodes=[(x+95,120),(x+175,112),(x+140,164),(x+205,167),(x+72,172)]
-                for a,b in [(0,1),(0,2),(1,2),(2,3),(0,4),(4,2)]: line(*nodes[a],*nodes[b])
-                for node in nodes:circle(*node)
-            elif i==1:
-                line(x+40,173,x+240,173,'#42617a')
-                p.append(f'<path d="M{x+40} 163h30l8 -9 8 13 9 -58 9 75 10 -20h33l9 -7 8 8 9 -42 9 51 9 -10h40" stroke="#6ce0cc" stroke-width="3" fill="none"/>')
-            else:
-                text(x+140,136,'xₜ₊₁ = F(xₜ, uₜ; θₜ)',20,'#a7c4ff')
-                text(x+140,177,'θₜ₊₁ = G(θₜ, xₜ, uₜ)',20,'#a7c4ff')
-            text(x+140,233,label,19)
+        rect(45,80,440,168)
+        text(265,111,'脳の状態と更新' if ja else 'Brain states and updates',19)
+        text(265,150,'xₜ₊₁ = F(xₜ, uₜ; θₜ)',22,'#a7c4ff')
+        text(265,191,'θₜ₊₁ = Gψ(θₜ, xₜ, uₜ)',22,'#a7c4ff')
+        text(265,226,'x: 状態 / θ: 特性 / u: 入力' if ja else 'x: state / θ: properties / u: input',17)
+        line(485,164,540,164)
+        rect(540,80,415,168)
+        text(747,111,'測定と前処理 Hφ' if ja else 'Measurement and processing Hφ',19)
+        text(747,157,'yₖ = Hφ(x≤tₖ) + ηₖ',23,'#6ce0cc')
+        text(747,196,'φ: 較正 / η: 観測誤差' if ja else 'φ: calibration / η: observation error',17)
+        text(747,227,'y: 実際に観測する信号' if ja else 'y: the signal actually observed',17)
     elif key == 'scopes':
         for i,label in enumerate(labels):
             x=40+240*i;rect(x,85,220,175)

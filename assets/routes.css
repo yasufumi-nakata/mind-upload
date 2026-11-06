@@ -78,3 +78,14 @@
   .research-routes .route-actions{display:block}
   .research-routes .route-actions a{margin-right:18px}
 }
+
+/* Evidence-based score: numerals, labels and table data also work without colour. */
+.progress-summary{padding:1.5rem;border:1px solid var(--line,#39546b);border-radius:1rem;margin:1.5rem 0;background:var(--panel,#122033)}
+.progress-summary .progress-number{font-size:clamp(2.5rem,6vw,4rem);font-weight:750;line-height:1;margin:.8rem 0}
+.progress-summary progress{display:block;width:100%;height:1.1rem;accent-color:#64d7c2}
+.score-item{margin:.7rem 0;padding:.8rem;border:1px solid var(--line,#39546b);border-radius:.5rem}
+.score-item summary{font-weight:650;cursor:pointer}
+.acquisition-foundation{margin-top:1.5rem;border-style:dashed}
+.acquisition-foundation .route-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+@media(max-width:700px){.acquisition-foundation .route-steps{grid-template-columns:1fr}.progress-summary{padding:1rem}.score-item summary{overflow-wrap:anywhere}}
+@media print{.progress-summary{background:white;color:black;break-inside:avoid}.score-item{break-inside:avoid}.score-item::details-content{content-visibility:visible;height:auto}.acquisition-foundation .route-steps{grid-template-columns:1fr}}

@@ -52,7 +52,7 @@
   }
   var acquisition = document.getElementById('acquisition-calculator');
   if (acquisition) {
-    var acquisitionFields = ['volume', 'rate', 'instruments', 'target'].map(function (name) {
+    var acquisitionFields = ['volume', 'rate', 'instruments', 'target', 'availability'].map(function (name) {
       return document.getElementById('acq-' + name);
     });
     var acquisitionOutput = document.getElementById('acq-result');
@@ -66,17 +66,23 @@
       })) {
         var error = document.createElement('p');
         error.className = 'error';
-        error.textContent = ja ? '範囲内の正の値を入力し、装置の台数は整数にしてください。' : 'Enter positive values within the ranges and a whole number of instruments.';
+        error.textContent = ja ? '体積・速度・年数は正の値，台数は正の整数，追加の稼働割合は0〜1を入力してください。' : 'Use positive volume, rate and years; a positive integer instrument count; and availability between 0 and 1.';
         acquisitionOutput.appendChild(error);
         return;
       }
       var values = acquisitionFields.map(function (field) { return Number(field.value); });
-      var years = values[0] / (12 * values[1] * values[2]);
+      if (values[4] === 0) {
+        var stopped = document.createElement('p');
+        stopped.textContent = ja ? '撮像が進みません。有限の所要時間は計算できません。' : 'Imaging makes no progress. No finite duration is available.';
+        acquisitionOutput.appendChild(stopped);
+        return;
+      }
+      var years = values[0] / (12 * values[1] * values[2] * values[4]);
       var requiredRate = values[0] / (12 * values[3]);
       var multiplier = years / values[3];
       [
         [ja ? '撮像だけに必要な期間' : 'Imaging time alone', formatNumber(years) + (ja ? ' 年' : ' years')],
-        [ja ? '目標期間に必要な総速度' : 'Aggregate throughput needed for the target', formatNumber(requiredRate) + (ja ? ' mm³/月' : ' mm³/month')],
+        [ja ? '目標期間に必要な実効総速度（休止込み）' : 'Required realized aggregate throughput (including downtime)', formatNumber(requiredRate) + (ja ? ' mm³/月' : ' mm³/month')],
         [ja ? '入力した総速度に対する必要倍率' : 'Required rate / entered aggregate rate', formatNumber(multiplier) + '×']
       ].forEach(function (item) {
         var row = document.createElement('p');
@@ -91,7 +97,7 @@
     Array.from(acquisition.querySelectorAll('[data-acq-preset]')).forEach(function (button) {
       button.addEventListener('click', function () {
         var em = button.dataset.acqPreset === 'em';
-        [1200000, em ? 0.3 : 8.8, em ? 200 : 333, 5].forEach(function (value, index) {
+        [1200000, em ? 0.3 : 8.8, em ? 200 : 333, 5, 1].forEach(function (value, index) {
           acquisitionFields[index].value = value;
         });
         updateAcquisition();

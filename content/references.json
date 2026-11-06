@@ -3083,6 +3083,9 @@
       "HHMI Janelia Research Campus"
     ],
     "title": "Male CNS connectome: data download",
+    "search_aliases": [
+      "MaleCNS"
+    ],
     "year": "n.d.",
     "venue": "Web resource",
     "url": "https://male-cns.janelia.org/download/",
@@ -4136,5 +4139,175 @@
       "ja": "PMCの全文XML：本文・Methods・図説明・掲載された式・参考文献を確認しました。図像自体、別添補足、元データは今回確認していません。",
       "en": "PMC full-text XML: article text, Methods, captions, displayed equations and references reviewed. Figure images, separate supplements and source data were not inspected in this update."
     }
+  },
+  "NEW_PHIPSON2010": {
+    "id": "NEW_PHIPSON2010",
+    "title": "Permutation P-values Should Never Be Zero: Calculating Exact P-values When Permutations Are Randomly Drawn",
+    "authors": [
+      "Phipson Belinda",
+      "Smyth Gordon K."
+    ],
+    "year": "2010",
+    "doi": "10.2202/1544-6115.1585",
+    "venue": "Statistical Applications in Genetics and Molecular Biology",
+    "volume": "9",
+    "issue": "1",
+    "pages": "Article 39",
+    "type": "journalArticle",
+    "url": "https://doi.org/10.2202/1544-6115.1585",
+    "category": "同定・検証・逆問題",
+    "accessed": "2026-11-07",
+    "author_display": [
+      "Phipson B",
+      "Smyth GK"
+    ],
+    "bibtex_authors": [
+      "Phipson, Belinda",
+      "Smyth, Gordon K."
+    ],
+    "metadata_verified": "Crossref DOI metadata and saved full-text front matter, 2026-11-07",
+    "fulltext_status": "pdf",
+    "citation_eligible": true,
+    "reading_status": "fulltext_reviewed",
+    "review_scope": {
+      "ja": "著者公開の2011年2月9日訂正版PDF全12頁の要旨・本文・方法の数式・表の抽出テキスト・図説明・考察・参考文献を確認しました。図画像の目視と計算の再実行はしていません。",
+      "en": "All 12 pages of the author-hosted PDF corrected on 9 February 2011: abstract, main text, methodological equations, extracted table text, captions, discussion and references. Figure pixels and computational reproduction were not reviewed."
+    },
+    "publication_status": "peer_reviewed"
+  },
+  "NEW_CONFAVREUX2023": {
+    "id": "NEW_CONFAVREUX2023",
+    "title": "Meta-learning families of plasticity rules in recurrent spiking networks using simulation-based inference",
+    "authors": [
+      "Confavreux Basile",
+      "Ramesh Poornima",
+      "Gonçalves Pedro J.",
+      "Macke Jakob H.",
+      "Vogels Tim P."
+    ],
+    "year": "2023",
+    "doi": "10.52202/075280-0597",
+    "venue": "Advances in Neural Information Processing Systems",
+    "volume": "36",
+    "issue": "",
+    "pages": "13545–13558",
+    "type": "conferencePaper",
+    "url": "https://doi.org/10.52202/075280-0597",
+    "category": "同定・検証・逆問題",
+    "accessed": "2026-11-07",
+    "author_display": [
+      "Confavreux B",
+      "Ramesh P",
+      "Gonçalves PJ",
+      "Macke JH",
+      "Vogels TP"
+    ],
+    "bibtex_authors": [
+      "Confavreux, Basile",
+      "Ramesh, Poornima",
+      "Gonçalves, Pedro J.",
+      "Macke, Jakob H.",
+      "Vogels, Tim P."
+    ],
+    "metadata_verified": "Crossref DOI metadata and saved full-text front matter, 2026-11-07",
+    "fulltext_status": "pdf",
+    "citation_eligible": true,
+    "reading_status": "fulltext_reviewed",
+    "review_scope": {
+      "ja": "会議公式PDF全14頁の要旨・本文・方法・図説明・考察・参考文献を確認しました。別添補足資料は未取得・未読です。図画像の目視とコード実行はしていません。",
+      "en": "All 14 pages of the official conference PDF: abstract, main text, methods, captions, discussion and references. Separate supplementary material was not acquired or read. Figure pixels and code execution were not reviewed."
+    },
+    "publication_status": "peer_reviewed_conference"
+  },
+  "NEW_MEHTA2024": {
+    "id": "NEW_MEHTA2024",
+    "title": "Model-based inference of synaptic plasticity rules",
+    "authors": [
+      "Mehta Yash",
+      "Tyulmankov Danil",
+      "Rajagopalan Adithya E.",
+      "Turner Glenn C.",
+      "Fitzgerald James E.",
+      "Funke Jan"
+    ],
+    "year": "2024",
+    "doi": "10.52202/079017-1537",
+    "venue": "Advances in Neural Information Processing Systems",
+    "volume": "37",
+    "issue": "",
+    "pages": "48519–48540",
+    "type": "conferencePaper",
+    "url": "https://doi.org/10.52202/079017-1537",
+    "category": "同定・検証・逆問題",
+    "accessed": "2026-11-07",
+    "author_display": [
+      "Mehta Y",
+      "Tyulmankov D",
+      "Rajagopalan AE",
+      "Turner GC",
+      "Fitzgerald JE",
+      "Funke J"
+    ],
+    "bibtex_authors": [
+      "Mehta, Yash",
+      "Tyulmankov, Danil",
+      "Rajagopalan, Adithya E.",
+      "Turner, Glenn C.",
+      "Fitzgerald, James E.",
+      "Funke, Jan"
+    ],
+    "metadata_verified": "Crossref DOI metadata and saved full-text front matter, 2026-11-07",
+    "fulltext_status": "pdf",
+    "citation_eligible": true,
+    "reading_status": "fulltext_reviewed",
+    "review_scope": {
+      "ja": "会議公式PDF全22頁の要旨・本文・図説明・表の抽出テキスト・限界・参考文献・Appendix A（方法・時間分割評価）・Appendix Bを確認しました。図画像の目視、別配布コード・データの確認と実行はしていません。",
+      "en": "All 22 pages of the official conference PDF: abstract, main text, captions, extracted tables, limitations, references, Appendix A including methods and temporal held-out evaluation, and Appendix B. Figure pixels, separately distributed code/data and computational reproduction were not reviewed."
+    },
+    "publication_status": "peer_reviewed_conference"
+  },
+  "NEW_HIGE2015": {
+    "id": "NEW_HIGE2015",
+    "title": "Heterosynaptic Plasticity Underlies Aversive Olfactory Learning in Drosophila",
+    "authors": [
+      "Hige Toshihide",
+      "Aso Yoshinori",
+      "Modi Mehrab N.",
+      "Rubin Gerald M.",
+      "Turner Glenn C."
+    ],
+    "year": "2015",
+    "doi": "10.1016/j.neuron.2015.11.003",
+    "venue": "Neuron",
+    "volume": "88",
+    "issue": "5",
+    "pages": "985–998",
+    "type": "journalArticle",
+    "url": "https://doi.org/10.1016/j.neuron.2015.11.003",
+    "category": "同定・検証・逆問題",
+    "accessed": "2026-11-07",
+    "author_display": [
+      "Hige T",
+      "Aso Y",
+      "Modi MN",
+      "Rubin GM",
+      "Turner GC"
+    ],
+    "bibtex_authors": [
+      "Hige, Toshihide",
+      "Aso, Yoshinori",
+      "Modi, Mehrab N.",
+      "Rubin, Gerald M.",
+      "Turner, Glenn C."
+    ],
+    "metadata_verified": "Crossref DOI metadata and saved full-text front matter, 2026-11-07",
+    "fulltext_status": "pdf",
+    "citation_eligible": true,
+    "reading_status": "fulltext_reviewed",
+    "review_scope": {
+      "ja": "Janeliaが公開する出版社版PDF全15頁（表紙と誌面985–998頁）の要旨・本文・図説明・考察・実験手順・参考文献を確認しました。別添Supplemental Experimental Procedures・7図は未取得・未読です。図画像の目視はしていません。",
+      "en": "All 15 pages of the publisher PDF hosted by Janelia, comprising the cover and journal pages 985–998: summary, main text, captions, discussion, experimental procedures and references. Separate Supplemental Experimental Procedures and seven supplementary figures were not acquired or read. Figure pixels were not inspected."
+    },
+    "publication_status": "peer_reviewed"
   }
 }

@@ -1,7 +1,8 @@
-"""Single source for the edition date; source access dates remain per-reference."""
+"""Site identity and edition date; source access dates remain per-reference."""
 from datetime import date
 
-DATE = '2026-11-06'
+SITE_TITLE = 'Mind Uploading Research Guide'
+DATE = '2026-11-07'
 
 _date = date.fromisoformat(DATE)
 _months = ('January', 'February', 'March', 'April', 'May', 'June',

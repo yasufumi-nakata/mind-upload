@@ -1,0 +1,736 @@
+{
+  "rubric_version": "1.0",
+  "reviewed": "2026-11-07",
+  "score": {
+    "earned": 10.0,
+    "total": 100.0,
+    "percent": 10.0,
+    "unknown": 55,
+    "added": 0.0
+  },
+  "stages": [
+    {
+      "id": "S1",
+      "title": [
+        "要素技術と復元手法",
+        "Components and reconstruction methods"
+      ],
+      "year": "2030",
+      "milestones": [
+        "M1",
+        "M2"
+      ],
+      "tasks": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R07",
+        "R09",
+        "R11",
+        "R12"
+      ],
+      "routes": [
+        "structure",
+        "state",
+        "acquisition"
+      ],
+      "description": [
+        "測定と予測の成果をつなぎ，復元手法と誤差の範囲を確かめます。",
+        "Connect measurement and prediction; test reconstruction methods and error tolerances."
+      ]
+    },
+    {
+      "id": "S2",
+      "title": [
+        "個体の情報と記憶",
+        "Individual information and memory"
+      ],
+      "year": "2035",
+      "milestones": [
+        "M3",
+        "M4"
+      ],
+      "tasks": [
+        "R04",
+        "R06",
+        "R08",
+        "R11",
+        "R12"
+      ],
+      "routes": [
+        "structure",
+        "state",
+        "integration",
+        "acquisition"
+      ],
+      "description": [
+        "元の個体の応答と，学習済みの記憶を評価用データで確かめます。",
+        "Test original-individual responses and previously acquired memories on held-out data."
+      ]
+    },
+    {
+      "id": "S3",
+      "title": [
+        "哺乳類の全脳での継続動作",
+        "Sustained mammalian whole-brain function"
+      ],
+      "year": "2040",
+      "milestones": [
+        "M3",
+        "M4"
+      ],
+      "tasks": [
+        "R01",
+        "R02",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12"
+      ],
+      "routes": [
+        "structure",
+        "state",
+        "integration",
+        "acquisition"
+      ],
+      "description": [
+        "未知条件で確かめた学習則Gを組み込み，全脳での身体相互作用と長期学習を検証します。",
+        "Integrate learning rules G tested on unseen conditions; test whole-brain body interaction and long-term learning."
+      ]
+    },
+    {
+      "id": "S4",
+      "title": [
+        "人の全工程と独立検証",
+        "Human workflow and independent validation"
+      ],
+      "year": "2045 / 2050",
+      "milestones": [
+        "M3",
+        "M4"
+      ],
+      "tasks": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10",
+        "R11",
+        "R12"
+      ],
+      "routes": [
+        "structure",
+        "state",
+        "integration",
+        "acquisition"
+      ],
+      "description": [
+        "同一人物の取得から実行までをつなぎ，別チームが検証します。",
+        "Connect acquisition to execution for one person, with independent-team validation."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "F-STRUCTURE",
+      "stage": "S1",
+      "points": 2.5,
+      "title": [
+        "小動物の全脳コネクトーム",
+        "Small-animal whole-brain connectome"
+      ],
+      "scope": [
+        "成体ハエ脳・化学シナプスの再構成",
+        "Adult fly brain; reconstructed chemical synapses"
+      ],
+      "criterion": [
+        "全脳を対象とする再構成データと手法が公開され，校正方法・対象範囲・誤りの評価が報告されていること。全シナプス無欠損は条件に含めません。",
+        "Public whole-brain reconstruction data and methods, with reported proofreading, scope and error assessment. Zero missing synapses is not required."
+      ],
+      "status": "met",
+      "evidence": [
+        "FlyWireは139,255ニューロンを再構成し，公開データと品質評価を提供しています。電気シナプスや全状態の取得を加点したものではありません。",
+        "FlyWire reports 139,255 reconstructed neurons, public data and quality assessment. This does not award credit for electrical synapses or all state variables."
+      ],
+      "refs": [
+        "ADD196"
+      ],
+      "tasks": [
+        "R01",
+        "R02"
+      ],
+      "routes": [
+        "structure",
+        "acquisition"
+      ],
+      "milestone": null,
+      "domains": [
+        "structure"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "F-PAIRED",
+      "stage": "S1",
+      "points": 2.5,
+      "title": [
+        "同じ標本の構造・活動対応",
+        "Paired structure and activity"
+      ],
+      "scope": [
+        "マウス視覚野の局所体積",
+        "Local mouse visual cortex"
+      ],
+      "criterion": [
+        "同一個体で生体活動と取得後の構造を細胞対応付きで公開し，対応数と空間・時間範囲を報告すること。",
+        "Public same-individual activity and subsequent structure, with cell correspondences, matched counts and spatial/temporal scope."
+      ],
+      "status": "met",
+      "evidence": [
+        "MICrONSは機能記録とEMで15,439細胞を手作業対応付けしています。局所体積での達成です。",
+        "MICrONS manually matched 15,439 cells between functional recordings and EM. The result is local, not whole-brain."
+      ],
+      "refs": [
+        "6TNZ57MZ"
+      ],
+      "tasks": [
+        "R03",
+        "R04"
+      ],
+      "routes": [
+        "state",
+        "acquisition"
+      ],
+      "milestone": null,
+      "domains": [
+        "recording"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "F-PREDICTION",
+      "stage": "S1",
+      "points": 2.5,
+      "title": [
+        "接続を用いた限定機能の予測",
+        "Connectome-based prediction of limited function"
+      ],
+      "scope": [
+        "ハエの感覚運動・視覚課題",
+        "Fly sensorimotor and visual tasks"
+      ],
+      "criterion": [
+        "公開モデルが接続情報を用い，モデル調整に使わない実験条件との比較を報告すること。対象機能と対照条件を明示すること。",
+        "A public connectome-based model reports comparison with experimental conditions not used for model fitting, with explicit functions and controls."
+      ],
+      "status": "met",
+      "evidence": [
+        "Shiuらの感覚運動予測とLappalainenらの視覚応答検証が根拠です。異なる表現・課題のモデルです。元の個体の記憶には加点しません。",
+        "Supported by Shiu et al. sensorimotor predictions and Lappalainen et al. visual-response tests. The models use different representations and tasks; no individual-memory credit is awarded."
+      ],
+      "refs": [
+        "V4GV7JAJ",
+        "XMYSQXY8"
+      ],
+      "tasks": [
+        "R05"
+      ],
+      "routes": [
+        "structure"
+      ],
+      "milestone": null,
+      "domains": [
+        "dynamics"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "F-PRESERVATION",
+      "stage": "S1",
+      "points": 2.5,
+      "title": [
+        "保存後の微細構造の検証",
+        "Ultrastructure after preservation"
+      ],
+      "scope": [
+        "ウサギ・ブタ脳の検査部位",
+        "Examined regions of rabbit and pig brains"
+      ],
+      "criterion": [
+        "保存・復温後の神経組織を電子顕微鏡で評価し，手法と検査範囲を公開すること。記憶や機能の保存は別条件です。",
+        "Electron-microscopic assessment after preservation and rewarming, with public methods and sampled scope. Memory and function are separate criteria."
+      ],
+      "status": "met",
+      "evidence": [
+        "ASCの報告で微細構造の保存が確認されています。全分子状態の保存や記憶の復元を実証したものではありません。",
+        "ASC reports preserved ultrastructure. It does not establish preservation of all molecular states or recovery of memory."
+      ],
+      "refs": [
+        "SDSWEA5J"
+      ],
+      "tasks": [
+        "R07"
+      ],
+      "routes": [
+        "acquisition"
+      ],
+      "milestone": null,
+      "domains": [
+        "preservation"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "M1",
+      "stage": "S1",
+      "points": 5,
+      "title": [
+        "復元手法の検証",
+        "Validate reconstruction methods"
+      ],
+      "scope": [
+        "正解既知の人工回路",
+        "Synthetic circuits with known truth"
+      ],
+      "criterion": [
+        "観測過程・ノイズ・欠損・測定項目を変え，推定の被覆確率と未使用介入の予測を評価します。観測信号と潜在状態を分け，独立実装で追試します。",
+        "Vary observation processes, noise, missingness and modalities; test interval coverage and held-out interventions. Evaluate observed signals and latent states separately and replicate independently."
+      ],
+      "status": "not_met",
+      "evidence": [
+        "Challengeと推定研究は足場になりますが，この全条件を一つの検証工程で満たした報告は今回確認した資料にありません。",
+        "The Challenge and inference research provide foundations, but the reviewed sources do not demonstrate this complete validation workflow."
+      ],
+      "refs": [
+        "CCCHALLENGE",
+        "ISSUE285_GONCALVES2020",
+        "NEW_CONFAVREUX2023",
+        "NEW_MEHTA2024"
+      ],
+      "tasks": [
+        "R03",
+        "R05",
+        "R11",
+        "R12"
+      ],
+      "routes": [
+        "state"
+      ],
+      "milestone": "M1",
+      "domains": [
+        "recording",
+        "dynamics",
+        "validation"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "M2",
+      "stage": "S1",
+      "points": 5,
+      "title": [
+        "構造誤差と機能の関係",
+        "Relate structural error to function"
+      ],
+      "scope": [
+        "表現の異なる二つの回路モデル",
+        "Two circuit models with different representations"
+      ],
+      "criterion": [
+        "固定条件で構造を乱す感度と，再同定できる範囲を分けます。C0–C3をモデル別に定義し，未使用課題で評価します。共通の誤差尺度がなければ第二モデルでは傾向の一般性を検証します。",
+        "Separate fixed-model sensitivity from robustness after refitting. Define model-specific C0–C3 and evaluate held-out tasks. Without a common error scale, test generality of trends in the second model."
+      ],
+      "status": "not_met",
+      "evidence": [
+        "既存論文には構造や重みの対照がありますが，本サイトが提案する全比較工程の完了ではありません。",
+        "Published controls test structure or weights, but do not complete this guide’s full comparative protocol."
+      ],
+      "refs": [
+        "V4GV7JAJ",
+        "XMYSQXY8"
+      ],
+      "tasks": [
+        "R01",
+        "R02",
+        "R05",
+        "R12"
+      ],
+      "routes": [
+        "structure",
+        "acquisition"
+      ],
+      "milestone": "M2",
+      "domains": [
+        "structure",
+        "dynamics",
+        "validation"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "M3",
+      "stage": "S2",
+      "points": 10,
+      "title": [
+        "元の個体への対応",
+        "Original-individual correspondence"
+      ],
+      "scope": [
+        "同一個体の対データを持つ独立個体群",
+        "Independent individuals with paired data"
+      ],
+      "criterion": [
+        "平均・他個体対照より元個体を良く予測し，事前の効果量・同等性基準を満たします。個体交換検定の分解能と検出力を計画し，別チームが追試します。",
+        "Outperform average/other-individual controls under prespecified effect and equivalence criteria. Plan individual-permutation resolution and power, and replicate with another team."
+      ],
+      "status": "not_met",
+      "evidence": [
+        "MICrONS等の対応データだけでは，この個体識別と追試の全条件は満たしません。",
+        "Paired resources such as MICrONS alone do not meet the complete identification and replication criteria."
+      ],
+      "refs": [
+        "6TNZ57MZ",
+        "ISSUE284_SCHLEGEL2024"
+      ],
+      "tasks": [
+        "R04",
+        "R11",
+        "R12"
+      ],
+      "routes": [
+        "structure",
+        "state"
+      ],
+      "milestone": "M3",
+      "domains": [
+        "recording",
+        "validation"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "M4",
+      "stage": "S2",
+      "points": 15,
+      "title": [
+        "学習済み情報の復元",
+        "Recover previously learned information"
+      ],
+      "scope": [
+        "履歴の異なる学習済み個体",
+        "Trained individuals with different histories"
+      ],
+      "criterion": [
+        "記憶課題の答えを学習・調整に使わず，取得情報から既得記憶を復元します。保持・忘却・再学習が事前の同等性マージン内で対応することを確かめます。情報損失と独立追試も報告します。",
+        "Recover prior memory from acquired information without training or tuning on the memory-test answers. Verify retention, forgetting and relearning within prespecified equivalence margins, with information-loss assessment and independent replication."
+      ],
+      "status": "not_met",
+      "evidence": [
+        "局所の可塑性，学習則推定，神経補綴の成果は，取得情報から元の記憶を復元する全条件とは異なります。",
+        "Local plasticity, learning-rule inference and neuroprostheses do not meet this complete memory-recovery criterion."
+      ],
+      "refs": [
+        "NEW_HIGE2015",
+        "NEW_MEHTA2024",
+        "JHS9IFXX"
+      ],
+      "tasks": [
+        "R06",
+        "R08",
+        "R11",
+        "R12"
+      ],
+      "routes": [
+        "state",
+        "integration",
+        "acquisition"
+      ],
+      "milestone": "M4",
+      "domains": [
+        "dynamics",
+        "preservation",
+        "validation"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "MAM-FUNCTION",
+      "stage": "S3",
+      "points": 10,
+      "title": [
+        "哺乳類全脳の機能対応",
+        "Mammalian whole-brain function"
+      ],
+      "scope": [
+        "同一哺乳類の全脳",
+        "Whole brain of one mammal"
+      ],
+      "criterion": [
+        "必要な構造・状態情報を全脳で取得し，M3の比較を全脳の事前指定機能で満たします。欠落範囲と取得誤差を公開します。",
+        "Acquire necessary structure and state across a mammalian whole brain; meet M3 comparisons for prespecified whole-brain functions, disclosing missing coverage and errors."
+      ],
+      "status": "not_assessed",
+      "evidence": [
+        "初期採点では，この全条件を満たす証拠の項目別審査を行っていません。実証の不存在を断定する状態ではありません。",
+        "This initial review has not audited evidence against every condition of this item. This is not a claim that no demonstration exists."
+      ],
+      "refs": [],
+      "tasks": [
+        "R01",
+        "R02",
+        "R04",
+        "R05",
+        "R07",
+        "R11"
+      ],
+      "routes": [
+        "structure",
+        "state",
+        "integration",
+        "acquisition"
+      ],
+      "milestone": "M3 / M4",
+      "domains": [
+        "structure",
+        "recording",
+        "dynamics",
+        "preservation",
+        "validation"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "MAM-LEARNING",
+      "stage": "S3",
+      "points": 10,
+      "title": [
+        "長期の保持・忘却・学習",
+        "Long-term retention, forgetting and learning"
+      ],
+      "scope": [
+        "同じ哺乳類とモデルの長期比較",
+        "Long-term comparison of the same mammal and model"
+      ],
+      "criterion": [
+        "事前登録した時間尺度でM4を拡張し，既得記憶の保持・忘却と新規学習が対応します。評価課題の追加学習で差を隠しません。",
+        "Extend M4 over preregistered timescales to retention, forgetting and new learning, without hiding discrepancies by training on evaluation tasks."
+      ],
+      "status": "not_assessed",
+      "evidence": [
+        "初期採点では，この全条件を満たす証拠の項目別審査を行っていません。実証の不存在を断定する状態ではありません。",
+        "This initial review has not audited evidence against every condition of this item. This is not a claim that no demonstration exists."
+      ],
+      "refs": [],
+      "tasks": [
+        "R06",
+        "R08",
+        "R11"
+      ],
+      "routes": [
+        "structure",
+        "state",
+        "integration",
+        "acquisition"
+      ],
+      "milestone": "M3 / M4",
+      "domains": [
+        "dynamics",
+        "preservation",
+        "validation"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "MAM-BODY",
+      "stage": "S3",
+      "points": 5,
+      "title": [
+        "身体相互作用と保存・再開",
+        "Body interaction and save/resume"
+      ],
+      "scope": [
+        "哺乳類全脳モデルの継続動作",
+        "Sustained mammalian whole-brain operation"
+      ],
+      "criterion": [
+        "共通の身体・環境で感覚フィードバックを評価し，状態保存・再開後も事前基準を満たします。遅延・費用・制御器の寄与を分離します。",
+        "Evaluate sensory feedback in a matched body/environment and meet criteria after state save/resume; separate latency, costs and controller contributions."
+      ],
+      "status": "not_assessed",
+      "evidence": [
+        "初期採点では，この全条件を満たす証拠の項目別審査を行っていません。実証の不存在を断定する状態ではありません。",
+        "This initial review has not audited evidence against every condition of this item. This is not a claim that no demonstration exists."
+      ],
+      "refs": [],
+      "tasks": [
+        "R09",
+        "R10",
+        "R12"
+      ],
+      "routes": [
+        "structure",
+        "state",
+        "integration",
+        "acquisition"
+      ],
+      "milestone": "M3 / M4",
+      "domains": [
+        "compute",
+        "validation"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "HUM-ACQUIRE",
+      "stage": "S4",
+      "points": 5,
+      "title": [
+        "人の全脳の必要情報取得",
+        "Acquire necessary information across a human brain"
+      ],
+      "scope": [
+        "人の全脳・同一人物",
+        "Whole human brain; one individual"
+      ],
+      "criterion": [
+        "機能検証で必要と判定した情報を全脳から取得します。生前記録との対応，保存損失，処理時間，校正と費用を公開します。",
+        "Acquire functionally necessary information across a human brain; disclose correspondence with prior recordings, preservation losses, time, proofreading and costs."
+      ],
+      "status": "not_assessed",
+      "evidence": [
+        "初期採点では，この全条件を満たす証拠の項目別審査を行っていません。実証の不存在を断定する状態ではありません。",
+        "This initial review has not audited evidence against every condition of this item. This is not a claim that no demonstration exists."
+      ],
+      "refs": [],
+      "tasks": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R07",
+        "R08"
+      ],
+      "routes": [
+        "structure",
+        "state",
+        "integration",
+        "acquisition"
+      ],
+      "milestone": null,
+      "domains": [
+        "structure",
+        "recording",
+        "preservation"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "HUM-INTEGRATE",
+      "stage": "S4",
+      "points": 15,
+      "title": [
+        "人の取得・復元・実行の統合",
+        "Integrate human acquisition, reconstruction and execution"
+      ],
+      "scope": [
+        "同一人物とその全脳モデル",
+        "One person and their whole-brain model"
+      ],
+      "criterion": [
+        "同一人物の取得から実行を接続し，事前指定の活動・既得記憶・学習能力・身体相互作用が対応します。全脳範囲と継続動作を確認します。",
+        "Connect acquisition to execution for one person; meet prespecified activity, prior-memory, learning and body-interaction criteria with whole-brain coverage and sustained operation."
+      ],
+      "status": "not_assessed",
+      "evidence": [
+        "初期採点では，この全条件を満たす証拠の項目別審査を行っていません。実証の不存在を断定する状態ではありません。",
+        "This initial review has not audited evidence against every condition of this item. This is not a claim that no demonstration exists."
+      ],
+      "refs": [],
+      "tasks": [
+        "R04",
+        "R05",
+        "R06",
+        "R08",
+        "R09",
+        "R10",
+        "R11"
+      ],
+      "routes": [
+        "structure",
+        "state",
+        "integration",
+        "acquisition"
+      ],
+      "milestone": null,
+      "domains": [
+        "recording",
+        "dynamics",
+        "preservation",
+        "compute",
+        "validation"
+      ],
+      "reviewed": "2026-11-07"
+    },
+    {
+      "id": "HUM-INDEPENDENT",
+      "stage": "S4",
+      "points": 10,
+      "title": [
+        "独立追試と運用条件の公開",
+        "Independent replication and operating conditions"
+      ],
+      "scope": [
+        "人の統合工程・別チーム",
+        "Integrated human workflow; independent team"
+      ],
+      "criterion": [
+        "別チームが人の統合結果を追試します。許容誤差，未検証範囲，費用，遅延，再開条件を公開し，他の必須項目も満たします。",
+        "An independent team replicates the integrated human result; publish tolerances, untested scope, cost, latency and restart conditions, with every other required item met."
+      ],
+      "status": "not_assessed",
+      "evidence": [
+        "初期採点では，この全条件を満たす証拠の項目別審査を行っていません。実証の不存在を断定する状態ではありません。",
+        "This initial review has not audited evidence against every condition of this item. This is not a claim that no demonstration exists."
+      ],
+      "refs": [],
+      "tasks": [
+        "R09",
+        "R10",
+        "R11",
+        "R12"
+      ],
+      "routes": [
+        "structure",
+        "state",
+        "integration",
+        "acquisition"
+      ],
+      "milestone": null,
+      "domains": [
+        "compute",
+        "validation"
+      ],
+      "reviewed": "2026-11-07"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-11-07",
+      "type": "initial_rubric",
+      "rubric": "1.0",
+      "earned": 10.0
+    }
+  ]
+}

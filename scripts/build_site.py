@@ -5,6 +5,7 @@ import importlib.util
 import json
 import re
 import runpy
+from html.parser import HTMLParser
 from pathlib import Path
 from diagrams import render as render_diagram
 
@@ -19,7 +20,10 @@ for source_id, source in REFS.items():
         raise ValueError(f'Unreviewed or unavailable source cannot be published: {source_id}')
 EDITION = runpy.run_path(str(ROOT / 'content/edition.py'))
 DATE = EDITION['DATE']
+SITE_TITLE = EDITION['SITE_TITLE']
 ASSET_VERSION = EDITION['ASSET_VERSION']
+TERMINOLOGY = runpy.run_path(str(ROOT / 'content/terms.py'))
+TERMS = TERMINOLOGY['TERMS']
 BASE = 'https://mind-upload.com'
 H = html.escape
 NAV = [('science', '科学', 'Science'), ('progress', '到達点', 'Evidence'),
@@ -32,10 +36,10 @@ DIAGRAMS = {
               ['保存・計測', '回路の再構成', '状態・規則の推定', '実行と身体', '独立した検証'],
               ['Measure', 'Reconstruct', 'Infer state & rules', 'Run & embody', 'Validate'],
               '不足する情報を、検証結果から計測へ戻します', 'Use failures to decide what to measure next'),
- 'state': ('脳モデルの三つの記述', 'Three descriptions of a brain model',
-           ['特性 θ(t)：接続・伝達', '状態 x(t)：電位・適応', '規則 F・G：応答・学習'],
-           ['Properties θ(t)', 'State x(t)', 'Rules F & G'],
-           '入力 u と身体・環境との相互作用を含めて評価します', 'Evaluate inputs and the body–environment loop'),
+ 'state': ('脳モデルと観測過程', 'Brain model and observation process',
+           ['状態 x(t)：電位・適応', '特性 θ(t)：接続・伝達', '規則 F・G：応答・学習', '観測 Hφ → y：信号への写像'],
+           ['State x(t)', 'Properties θ(t)', 'Rules F & G', 'Observation Hφ → y'],
+           '観測 y_k = Hφ(x≤t_k) + η_k をモデルの状態と区別します', 'Distinguish observations y_k = Hφ(x≤t_k) + η_k from model states'),
  'inverse': ('同じ観測に合う、複数のモデル', 'Different models can fit the same observations',
              ['観測データ', '候補モデル A / B / C', '新しい刺激・介入', '候補を比較'],
              ['Observed data', 'Models A / B / C', 'New interventions', 'Compare models'],
@@ -123,7 +127,7 @@ def figure(key, lang):
     enlarge = '図を大きく表示' if lang == 'ja' else 'Open full-size figure'
     return f'<figure class="research-figure"><a href="{src}" aria-label="{H(enlarge+": "+title)}"><img src="{src}" alt="{H(title)}" {wh} loading="lazy" decoding="async"></a><figcaption><strong>{H(title)}</strong><br>{credit} <a href="{src}">{enlarge}</a></figcaption></figure>'
 
-def citation_record(ref, lang='en'):
+def citation_record(ref, lang='en', include_accessed=True):
     authors = ref.get('author_display') or ref.get('authors') or []
     author = ', '.join(authors[:6]) + (', et al.' if len(authors) > 6 else '')
     venue = ref.get('venue','')
@@ -142,7 +146,7 @@ def citation_record(ref, lang='en'):
     if vi: txt += ';' + H(vi)
     txt = txt.rstrip('.') + '.'
     if ref.get('doi'): txt += f' <a href="https://doi.org/{H(ref["doi"],quote=True)}">doi:{H(ref["doi"])}</a>.'
-    if ref.get('type') == 'webpage': txt += (' 確認日：' if lang=='ja' else ' Accessed: ') + H(ref.get('accessed') or DATE) + '.'
+    if include_accessed and ref.get('type') == 'webpage': txt += (' 確認日：' if lang=='ja' else ' Accessed: ') + H(ref.get('accessed') or DATE) + '.'
     if ref.get('note'): txt += ' <span class="small">'+H(ref['note'])+'</span>'
     return txt
 
@@ -163,21 +167,29 @@ def publication_type(r, lang):
     return '論文・技術資料' if lang=='ja' else 'Article / technical resource'
 
 def library(lang):
-    candidates = [r for r in REFS.values() if r.get('category') != 'organizations']
+    candidates = list(REFS.values())
     cats = sorted(set(r.get('category','') for r in candidates))
     label = '題名・著者・DOIで検索' if lang=='ja' else 'Search title, authors, or DOI'
     all_label = 'すべての分野' if lang=='ja' else 'All categories'
     cat_label = '分野' if lang=='ja' else 'Category'
     cat_translation = {'シミュレーション・計算基盤':'Simulation and computing','構造・コネクトミクス':'Structure and connectomics','理論・逆問題':'Theory and inverse problems','計測・顕微鏡':'Measurement and microscopy','同定・検証':'Identification and validation','神経プロテーゼ・BCI':'Neuroprosthetics and BCI','記憶・可塑性':'Memory and plasticity','保存・読み出し':'Preservation and readout','保存・生体状態':'Preservation and biological state','同定・検証・逆問題':'Identification, validation and inverse problems','理論・基礎':'Theory and foundations','計測・画像再構成':'Measurement and image reconstruction','閉ループ・神経補綴':'Closed-loop systems and neuroprosthetics'}
-    options = ''.join(f'<option value="{H(c)}">{H(c if lang=="ja" else cat_translation.get(c,c))}</option>' for c in cats)
+    def category_label(category):
+        if category == 'organizations':
+            return '公式・歴史ウェブ資料' if lang == 'ja' else 'Official & historical web sources'
+        return category if lang == 'ja' else cat_translation.get(category, category)
+    options = ''.join(f'<option value="{H(c)}">{H(category_label(c))}</option>' for c in cats)
     rows=[]
     for r in sorted(candidates,key=lambda r:(str(r.get('year','')),r['title']),reverse=True):
         cat=r.get('category','')
         status = '本文確認済み・解説に使用' if lang=='ja' else 'Full text reviewed; used in this guide'
         scope = r.get('review_scope',{}).get(lang,'')
-        scope_html = f'<p class="small">{H(scope)}</p>' if scope else ''
-        rows.append(f'<li class="library-record" data-category="{H(cat)}" data-search="{H((r["title"]+" "+" ".join(r.get("authors",[]))+" "+r.get("doi","")).lower(),quote=True)}"><p class="record-tags"><span>{H(cat if lang=="ja" else cat_translation.get(cat,cat))}</span><span>{publication_type(r,lang)}</span><span>{status}</span></p><p>{citation_record(r,lang)}</p>{scope_html}</li>')
-    return f'<div class="library-controls"><label>{label}<input id="library-search" type="search" placeholder="connectome, Koene, 10.1038…"></label><label>{cat_label}<select id="library-category"><option value="">{all_label}</option>{options}</select></label></div><p id="library-count" role="status" aria-live="polite">{len(candidates)} '+('件' if lang=='ja' else 'records')+f'</p><p><a href="/assets/references.bib" download>BibTeX</a> · <a href="/assets/references.json" download>JSON</a></p><ol class="library-list">'+''.join(rows)+'</ol><p id="library-empty" hidden>'+('該当する文献がありません。検索語か分野を変更してください。' if lang=='ja' else 'No matching records. Change the query or category.')+'</p>'
+        scope_html = f'<p class="small review-scope">{H(scope)}</p>' if scope else ''
+        accessed = r.get('accessed', '')
+        accessed_html = ('確認日：' if lang == 'ja' else 'Reviewed: ') + (f'<time datetime="{H(accessed, quote=True)}">{H(accessed)}</time>' if accessed else ('未記録' if lang == 'ja' else 'not recorded'))
+        search_text = ' '.join([r['title'], *r.get('authors', []), *r.get('author_display', []), *r.get('search_aliases', []), r.get('doi') or '']).lower()
+        rows.append(f'<li class="library-record" data-reference-id="{H(r["id"],quote=True)}" data-category="{H(cat)}" data-search="{H(search_text,quote=True)}"><p class="record-tags"><span>{H(category_label(cat))}</span><span>{publication_type(r,lang)}</span><span>{status}</span></p><p>{citation_record(r,lang,include_accessed=False)}</p><p class="small">{accessed_html}</p>{scope_html}</li>')
+    coverage = '一覧・検索・BibTeX／JSONには、論文・報告・公式／歴史ウェブ資料の同じ全件を収録しています。検索や分野の指定で絞っても、ダウンロードは全件です。' if lang == 'ja' else 'The catalogue, search, BibTeX and JSON cover the same complete set of papers, reports, and official or historical web sources. Downloads retain every record when search or category filters are applied.'
+    return f'<p class="small">{coverage}</p><div class="library-controls"><label>{label}<input id="library-search" type="search" placeholder="connectome, Koene, 10.1038…"></label><label>{cat_label}<select id="library-category"><option value="">{all_label}</option>{options}</select></label></div><p id="library-count" role="status" aria-live="polite">{len(candidates)} '+('件' if lang=='ja' else 'records')+f'</p><p><a href="/assets/references.bib" download>BibTeX</a> · <a href="/assets/references.json" download>JSON</a></p><ol class="library-list">'+''.join(rows)+'</ol><p id="library-empty" hidden>'+('該当する文献がありません。検索語か分野を変更してください。' if lang=='ja' else 'No matching records. Change the query or category.')+'</p>'
 
 def calculator(lang):
     fields=[('volume', '撮像体積 V (mm³)', 'Imaged volume V (mm³)',1,0.001,2000000,'any'),
@@ -191,9 +203,146 @@ def calculator(lang):
     labels=''.join(f'<label for="calc-{k}">{H(ja if lang=="ja" else en)}<input id="calc-{k}" type="number" value="{value:g}" min="{lo:g}" max="{hi:g}" step="{step}" required></label>' for k,ja,en,value,lo,hi,step in fields)
     return '<div class="calculator" id="scale-calculator"><div class="calc-fields">'+labels+'</div><div id="calc-result" role="status" aria-live="polite"></div><p class="small"><code>V × 10¹⁸ / (dₓ × dᵧ × dᶻ) × b</code> '+('byte（無圧縮画像）' if lang=='ja' else 'bytes (raw image)')+'<br><code>S × m</code> '+('byte（シナプス状態のみ）' if lang=='ja' else 'bytes (synapse states only)')+'<br><code>S × f</code> '+('回/秒（密な更新。FLOPSではありません）' if lang=='ja' else 'updates/s (dense update count, not FLOPS)')+'</p></div>'
 
+def glossary(lang):
+    """Render the shared bilingual terminology with stable link targets."""
+    parts = ['<dl class="glossary" data-term-glossary="true">']
+    for term in TERMS:
+        label = term['label'][lang]
+        if lang == 'ja' and label != term['label']['en']:
+            label += ' / ' + term['label']['en']
+        if term['abbreviations']:
+            label += ' (' + ', '.join(term['abbreviations']) + ')'
+        citations = ''.join('[[' + key + ']]' for key in term['refs'])
+        parts.append(f'<dt id="term-{term["id"]}">{H(label)}</dt><dd>{H(term["definition"][lang])}{citations}</dd>')
+    return ''.join(parts) + '</dl>'
+
+
+def _term_pattern(lang):
+    """Prefer the longest phrase; Latin token boundaries protect names/IDs."""
+    entries = []
+    for term in TERMS:
+        for alias in dict.fromkeys((*term['aliases'][lang], *term['abbreviations'])):
+            expression = re.escape(alias)
+            if alias not in term['abbreviations']:
+                expression = '(?i:' + expression + ')'
+            if re.match(r'[A-Za-z0-9]', alias):
+                expression = r'(?<![A-Za-z0-9_])' + expression
+            if re.search(r'[A-Za-z0-9]$', alias):
+                expression += r'(?![A-Za-z0-9_])'
+            entries.append((alias, expression, term))
+    entries.sort(key=lambda entry: len(entry[0]), reverse=True)
+    pattern = '|'.join(f'(?P<t{i}>{entry[1]})' for i, entry in enumerate(entries))
+    return re.compile(pattern), {f't{i}': entry[2] for i, entry in enumerate(entries)}
+
+
+TERM_PATTERNS = {lang: _term_pattern(lang) for lang in ('ja', 'en')}
+
+
+class TermAnnotator(HTMLParser):
+    """Link a page's first prose use without rewriting markup or source titles."""
+    PROTECTED = {'a', 'abbr', 'script', 'style', 'code', 'pre', 'svg', 'math',
+                 'title', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'summary',
+                 'figure', 'thead', 'th', 'button', 'label', 'select', 'textarea'}
+    VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link',
+            'meta', 'param', 'source', 'track', 'wbr'}
+
+    def __init__(self, lang, seen=None, source=''):
+        super().__init__(convert_charrefs=False)
+        self.lang = lang
+        self.seen = seen if seen is not None else set()
+        self.parts, self.stack = [], []
+        self.source = source
+        self.line_offsets = [0]
+        for line in source.splitlines(keepends=True):
+            self.line_offsets.append(self.line_offsets[-1] + len(line))
+
+    @property
+    def protected(self):
+        return bool(self.stack and self.stack[-1][1])
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        blocked = (self.protected or tag in self.PROTECTED or
+                   'data-no-terms' in a or 'data-term-glossary' in a or
+                   a.get('id') in {'references', 'citation-rights'} or
+                   bool({'library-record', 'refs'} & set(a.get('class', '').split())))
+        self.parts.append(self.get_starttag_text())
+        if tag not in self.VOID:
+            self.stack.append((tag, blocked))
+
+    def handle_startendtag(self, tag, attrs):
+        self.parts.append(self.get_starttag_text())
+
+    def handle_endtag(self, tag):
+        self.parts.append(f'</{tag}>')
+        for i in range(len(self.stack) - 1, -1, -1):
+            if self.stack[i][0] == tag:
+                del self.stack[i:]
+                break
+
+    def handle_data(self, data):
+        if self.protected:
+            self.parts.append(data)
+            return
+        pattern, lookup = TERM_PATTERNS[self.lang]
+
+        def annotate(match):
+            term = lookup[match.lastgroup]
+            if term['id'] in self.seen:
+                return match[0]
+            self.seen.add(term['id'])
+            word = match[0]
+            abbreviations = term['abbreviations']
+            if abbreviations:
+                line, column = self.getpos()
+                tail = self.source[self.line_offsets[line - 1] + column + match.end():][:500]
+                # Inline emphasis may separate a full name from its existing
+                # parenthetical abbreviation. Do not add the abbreviation twice.
+                tail = re.sub(r'</?(?:a|abbr|b|em|i|span|strong|sub|sup)(?:\s[^>]*)?>', '', tail)
+                tail = html.unescape(tail)
+                following = re.match(r'\s*[（(]([^）)]{1,160})[）)]', tail)
+                explanation = following[1].casefold() if following else ''
+                if word in abbreviations:
+                    explained = any(alias.casefold() in explanation for alias in
+                                    (*term['aliases'][self.lang], term['expansion'][self.lang]))
+                    if not explained:
+                        name = term['expansion'][self.lang]
+                        word = f'{name}（{word}）' if self.lang == 'ja' else f'{name} ({word})'
+                elif not (any(abbr.casefold() in explanation for abbr in abbreviations) or
+                          re.match(r'\s*(?:' + '|'.join(map(re.escape, abbreviations)) + r')(?![A-Za-z0-9_])', tail)):
+                    word += f'（{abbreviations[0]}）' if self.lang == 'ja' else f' ({abbreviations[0]})'
+            prefix = '/ja/' if self.lang == 'ja' else '/'
+            return (f'<a class="term-link" data-term="{term["id"]}" '
+                    f'href="{prefix}science.html#term-{term["id"]}" '
+                    f'title="{H(term["definition"][self.lang], quote=True)}">{H(word)}</a>')
+
+        self.parts.append(pattern.sub(annotate, data))
+
+    def handle_entityref(self, name):
+        self.parts.append('&' + name + ';')
+
+    def handle_charref(self, name):
+        self.parts.append('&#' + name + ';')
+
+    def handle_comment(self, data):
+        self.parts.append('<!--' + data + '-->')
+
+    def handle_decl(self, decl):
+        self.parts.append('<!' + decl + '>')
+
+
+def annotate_terms(body, lang, seen=None):
+    parser = TermAnnotator(lang, seen, body)
+    parser.feed(body)
+    parser.close()
+    return ''.join(parser.parts)
+
+
 def expand_body(body,lang):
-    body = body.replace('{{edition_date}}', DATE)
-    return re.sub(r'\{\{([a-z_]+)\}\}', lambda m: library(lang) if m[1]=='library' else calculator(lang) if m[1]=='calculator' else figure(m[1],lang),body)
+    body = body.replace('{{edition_date}}', H(EDITION['DATE_JA' if lang == 'ja' else 'DATE_EN']))
+    body = body.replace('{{site_title}}', H(SITE_TITLE))
+    renderers = {'library': library, 'calculator': calculator, 'glossary': glossary}
+    return re.sub(r'\{\{([a-z_]+)\}\}', lambda m: renderers[m[1]](lang) if m[1] in renderers else figure(m[1],lang),body)
 
 def build_page(key,p,lang):
     prefix='/ja/' if lang=='ja' else '/'
@@ -201,6 +350,8 @@ def build_page(key,p,lang):
     enpath='/' if key=='index' else '/'+key+'.html'
     japath='/ja/' if key=='index' else '/ja/'+key+'.html'
     title=p['title'][lang];desc=p['lead'][lang]
+    terms_seen = set()
+    lead = annotate_terms(H(desc), lang, terms_seen)
     used=[]
     def cite(m):
         k=m[1]
@@ -210,6 +361,8 @@ def build_page(key,p,lang):
     sections=[]
     for section in p['sections']:
         body=re.sub(r'\[\[([A-Z0-9_]+)\]\]',cite,expand_body(section['body'][lang],lang))
+        if section['id'] != 'citation-rights':
+            body=annotate_terms(body,lang,terms_seen)
         sections.append(f'<section id="{section["id"]}"><h2>{H(section["title"][lang])}</h2>{body}</section>')
     refs='<section id="references"><h2>'+('参考文献' if lang=='ja' else 'References')+'</h2><ol class="refs">'+''.join(f'<li id="ref-{k}">{citation_record(REFS[k],lang)}</li>' for k in used)+'</ol></section>'
     nav=''.join(f'<a href="{prefix+k}.html"'+(' aria-current="page"' if k==key else '')+f'>{ja if lang=="ja" else en}</a>' for k,ja,en in NAV)
@@ -219,7 +372,7 @@ def build_page(key,p,lang):
     elif key == 'history':
         jump = [('distance', '実現までの距離', 'Distance to the goal'), ('dashboard', '6領域の進捗', 'Six-domain status'), ('roadmap2050', '2050年への道筋', 'Path to 2050'), ('target', '完成の条件', 'Success criteria'), ('timeline', '技術の歴史', 'Technical history')]
         toc = '<nav class="overview-nav" aria-label="'+('このページの内容' if lang=='ja' else 'On this page')+'">'+''.join(f'<a href="#{sid}">{ja if lang=="ja" else en}</a>' for sid,ja,en in jump)+'</nav>'
-    schema={'@context':'https://schema.org','@type':'WebSite' if key=='index' else 'Article','name':title,'headline':title,'description':desc,'url':BASE+path,'inLanguage':lang,'dateModified':DATE,'author':{'@type':'Person','name':'yasufumi-nakata','url':'https://github.com/yasufumi-nakata'},'isPartOf':{'@type':'WebSite','name':'Mind Uploading Research Guide','url':BASE+'/'},'citation':[REFS[k]['url'] for k in used if REFS[k].get('url')]}
+    schema={'@context':'https://schema.org','@type':'WebSite' if key=='index' else 'Article','name':SITE_TITLE if key=='index' else title,'headline':title,'description':desc,'url':BASE+path,'inLanguage':lang,'dateModified':DATE,'author':{'@type':'Person','name':'yasufumi-nakata','url':'https://github.com/yasufumi-nakata'},'isPartOf':{'@type':'WebSite','name':SITE_TITLE,'url':BASE+'/'},'citation':[REFS[k]['url'] for k in used if REFS[k].get('url')]}
     other='/ja/' if lang=='en' else '/'
     badge=('研究ガイド · ' + EDITION['EDITION_JA']) if lang=='ja' else ('Research guide · ' + EDITION['EDITION_EN'])
     footer='yasufumi-nakataによる個人サイトです。Carboncopies Foundationの公開資料を引用し、実証研究・理論・公開計画を区別して紹介しています。同財団の公式サイトではありません。' if lang=='ja' else 'A personal site by yasufumi-nakata, citing public materials from the Carboncopies Foundation. Experiments, theory and published plans are distinguished. This is not an official Foundation website.'
@@ -228,11 +381,11 @@ def build_page(key,p,lang):
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{H(title)} | Mind Uploading</title><meta name="description" content="{H(desc,quote=True)}">
 <link rel="canonical" href="{BASE+path}"><link rel="alternate" hreflang="en" href="{BASE+enpath}"><link rel="alternate" hreflang="ja" href="{BASE+japath}"><link rel="alternate" hreflang="x-default" href="{BASE+enpath}">
-<meta property="og:title" content="{H(title,quote=True)}"><meta property="og:description" content="{H(desc,quote=True)}"><meta property="og:type" content="{'website' if key=='index' else 'article'}"><meta property="og:url" content="{BASE+path}"><meta property="og:locale" content="{'ja_JP' if lang=='ja' else 'en_US'}"><meta property="og:image" content="{BASE}/assets/og-image.png?v={ASSET_VERSION}"><meta property="og:image:alt" content="Mind Uploading Research Guide"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0a0d14">
+<meta property="og:title" content="{H(title,quote=True)}"><meta property="og:description" content="{H(desc,quote=True)}"><meta property="og:type" content="{'website' if key=='index' else 'article'}"><meta property="og:url" content="{BASE+path}"><meta property="og:locale" content="{'ja_JP' if lang=='ja' else 'en_US'}"><meta property="og:image" content="{BASE}/assets/og-image.png?v={ASSET_VERSION}"><meta property="og:image:alt" content="{H(SITE_TITLE,quote=True)}"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0a0d14">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/research.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/routes.css?v={ASSET_VERSION}"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><script src="/assets/site.js?v={ASSET_VERSION}" defer></script><script src="/assets/research.js?v={ASSET_VERSION}" defer></script></head>
 <body id="top" data-page="{key}"><a class="skip-link" href="#main">{'本文へ移動' if lang=='ja' else 'Skip to content'}</a><div id="progress"></div>
 <header class="site-header"><div class="nav-inner"><a class="brand" href="{prefix}"><span class="dot"></span>Mind Uploading</a><nav class="primary-nav" aria-label="{'主要ページ' if lang=='ja' else 'Main pages'}">{nav}</nav><div class="lang-switch" role="group" aria-label="Language / 言語"><a href="{enpath}" hreflang="en" {'aria-current="true"' if lang=='en' else ''}>EN</a><a href="{japath}" hreflang="ja" lang="ja" {'aria-current="true"' if lang=='ja' else ''}>日本語</a></div><button class="nav-toggle" aria-label="{'メニュー' if lang=='ja' else 'Menu'}" aria-expanded="false">☰</button></div></header>
-<main id="main"><section class="ch-hero"><span class="badge">{badge}</span><h1>{H(title)}</h1><p class="lead">{H(desc)}</p><div class="ch-meta"><span>{'更新日' if lang=='ja' else 'Updated'}: {DATE}</span><span>{'研究論文・技術報告・公式情報を区別して解説' if lang=='ja' else 'Research, technical reviews and official statements distinguished'}</span></div>{toc}</section>{''.join(sections)}{refs}</main>
+<main id="main"><section class="ch-hero"><span class="badge">{badge}</span><h1>{H(title)}</h1><p class="lead">{lead}</p><div class="ch-meta"><span>{'更新日' if lang=='ja' else 'Updated'}: {H(EDITION['DATE_JA' if lang=='ja' else 'DATE_EN'])}</span><span>{'研究論文・技術報告・公式情報を区別して解説' if lang=='ja' else 'Research, technical reviews and official statements distinguished'}</span></div>{toc}</section>{''.join(sections)}{refs}</main>
 <footer class="site-footer"><div class="footer-inner"><a class="brand" href="{prefix}">Mind Uploading</a><p>{footer}</p><nav class="footer-nav">{nav}</nav><p class="small">{footer_links}</p><p class="small">{'図版の出典・利用条件は各図の下に記載しています。' if lang=='ja' else 'Figure sources and reuse terms appear in each caption.'} · <a href="#top">{'ページ上部へ' if lang=='ja' else 'Back to top'}</a></p></div></footer></body></html>'''
     dest=ROOT/('ja' if lang=='ja' else '')/(key+'.html')
     dest.parent.mkdir(exist_ok=True)
@@ -304,7 +457,7 @@ def citation_cff():
     """Generate site citation metadata with the same version as the edition."""
     return f'''cff-version: "1.2.0"
 message: "Please cite the online guide using preferred-citation below, and cite the original papers for their findings."
-title: "Mind Uploading: A Personal Research Guide"
+title: {json.dumps(SITE_TITLE, ensure_ascii=False)}
 authors:
   - name: "yasufumi-nakata"
 version: "{DATE}"
@@ -313,7 +466,7 @@ url: "{BASE}/"
 repository-code: "https://github.com/yasufumi-nakata/mind-upload"
 preferred-citation:
   type: website
-  title: "Mind Uploading: A Personal Research Guide"
+  title: {json.dumps(SITE_TITLE, ensure_ascii=False)}
   authors:
     - name: "yasufumi-nakata"
   version: "{DATE}"
@@ -339,6 +492,9 @@ def build():
     bib = [bibtex_entry(key, ref) for key, ref in REFS.items()]
     (ROOT/'assets/references.bib').write_text('\n\n'.join(bib)+'\n')
     (ROOT/'CITATION.cff').write_text(citation_cff())
+    research_plan = runpy.run_path(str(ROOT/'content/research_plan.py'))
+    (ROOT/'data').mkdir(exist_ok=True)
+    (ROOT/'data/progress.json').write_text(json.dumps(research_plan['export_data'](), ensure_ascii=False, indent=2) + '\n')
     print(f'Built {len(paths)} pages, 4 legacy redirects, {len(DIAGRAMS)*2} localized diagrams, {len(REFS)} reference records.')
 
 if __name__=='__main__': build()
