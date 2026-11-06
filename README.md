@@ -1,6 +1,6 @@
 # Mind Uploading Research Guide
 
-Source for [mind-upload.com](https://mind-upload.com/) and its [Japanese edition](https://mind-upload.com/ja/). The November 2026 edition covers the technical foundations of whole-brain emulation, current experimental evidence, Carboncopies Foundation research, validation, research projects, and a searchable literature catalogue. Philosophy and ethics are outside this edition's scope. The 2050 roadmap is a conditional research plan, with explicit evidence gates, not a forecast or an official organisational schedule.
+Source for [mind-upload.com](https://mind-upload.com/) and its [Japanese edition](https://mind-upload.com/ja/), a personal research guide written and edited by [yasufumi-nakata](https://github.com/yasufumi-nakata). Carboncopies Foundation material is cited as a source; the Foundation is not the publisher or editorial supervisor of this site. The November 2026 edition covers the technical foundations of whole-brain emulation, experimental evidence, validation, research projects, and a searchable literature catalogue. Philosophy and institutional ethics are outside this edition's scope; review, consent and sample access appear only as prerequisites for research data acquisition. The 2050 roadmap is a conditional research plan with editorial review windows, not a forecast or an official organisational schedule.
 
 ## Editing and preview
 
@@ -9,26 +9,29 @@ Edit the bilingual text in `content/site_content.py`, the shared six-domain dash
 ```sh
 python3 scripts/build_site.py
 python3 scripts/check_site.py
+python3 -m unittest discover -s tests
 python3 -m http.server 8099
 ```
 
-Open `http://localhost:8099/` or `http://localhost:8099/ja/`. Python 3's standard library is sufficient for building and checking the site. The site itself has no package dependencies or external JavaScript services.
+Open `http://localhost:8099/` or `http://localhost:8099/ja/`. Python 3's standard library is sufficient for building and checking the site. The optional `scripts/render_share_image.py` image regeneration requires Matplotlib; ordinary builds use the existing image. The site itself has no package dependencies or external JavaScript services.
 
 ## Structure
 
-Each language contains nine matched pages: home, science, progress, Carboncopies, validation, roadmap, research projects, history, and resources. Legacy philosophy and scenario URLs redirect to validation and the technical roadmap. `assets/research.js` implements bibliography filtering and an illustrative data-volume calculator. `assets/figures/` contains credited scientific figures and original explanatory diagrams.
+Each language contains nine matched pages: home, science, progress, Carboncopies, validation, roadmap, research projects, history, and resources. Legacy philosophy and scenario URLs redirect to validation and the technical roadmap. `assets/research.js` implements bibliography filtering, an illustrative data-volume calculator, and an imaging-throughput calculator. `assets/figures/` contains credited scientific figures and original explanatory diagrams.
 
-The generator resolves `[[REFERENCE_ID]]` to numbered references local to each page, renders `{{FIGURE_ID}}` with captions, exports BibTeX/JSON, and updates the sitemap and language metadata. Update the edition date in the generator and the dated prose together. Verify the calculator, library filters, navigation, and representative desktop/mobile layouts in Chrome after substantial changes.
+The generator resolves `[[REFERENCE_ID]]` to numbered references local to each page, renders `{{FIGURE_ID}}` with captions, exports BibTeX/JSON and `CITATION.cff`, and updates the sitemap and language metadata. Set the edition date only in `content/edition.py`; individual source access dates remain in their reference records. Use `{{edition_date}}` for edition dates inside page bodies. Verify calculators, library filters, navigation, and representative desktop/mobile layouts in Chrome after substantial changes. CI runs the regression checks, rebuilds, rejects generated-file drift, and checks the site.
 
 ## Editorial and source policy
 
 - Support experimental claims with primary papers and organizational claims with official pages.
 - Distinguish experiments, theoretical models, preprints, historical proposals, and our own suggested research designs.
 - Record the organism, anatomical boundary, measured variables, and validation conditions. A structural connectome does not establish complete functional emulation.
-- Publish only sources whose acquired full text was read and whose claims were checked. The November 2026 revision uses 36 papers, reports and chapters plus 10 official or historical web sources. Each catalogue entry records its review scope; separate supplements absent from the supplied version are not claimed as reviewed.
+- Publish only sources whose acquired full text was read and whose claims were checked. The November 2026 revision uses 47 papers, reports, chapters and commentaries plus 10 official or historical web sources. Each catalogue entry records its review scope; caption reading, visual inspection and separate supplements are distinguished.
 - Exclude unavailable material and stored-but-unread papers from public claims, references and BibTeX/JSON. The private storage inventory is separate. This is a scoped guide, not an exhaustive systematic review or an experimental replication.
 - Keep full texts, private collection manifests, browser logs, and Drive identifiers outside the public repository. Public records link to legitimate distribution sources.
 - Keep English and Japanese claims, citations, figure credits, and metadata synchronized.
+
+The 6 November update addresses Issues #282–292. A focused Scopus query of 20 candidate DOIs returned 19 records. Eleven additional sources were adopted after full-text review from legitimate distribution sources. Search matches and download notifications alone do not establish retrieval or review. White (1986) is attributed through the reviewed Cook (2019) account; the unreviewed White original and Markram (2015) candidate are not new catalogue entries. This update adds no experimental results or simulations.
 
 ## Hosting and rights
 
@@ -36,6 +39,8 @@ GitHub Pages serves `main` from the repository root. `CNAME` preserves `mind-upl
 
 Figure sources and reuse conditions are documented in [assets/figures/README.md](assets/figures/README.md) and individual captions. Third-party CC BY figures retain their attribution; their licenses do not license the rest of this repository. No blanket repository license is granted here.
 
+Use [CITATION.cff](CITATION.cff) to cite the guide, adding the specific page, access date and a commit permalink when a fixed version is needed. No DOI is assigned. Questions and correction requests belong in [GitHub Issues](https://github.com/yasufumi-nakata/mind-upload/issues), with the affected statement and supporting evidence. Accepted changes remain visible in the commit history. Earlier editions and third-party materials should be consulted with their own attached terms.
+
 ## 日本語
 
-全脳エミュレーションを実験・測定・検証の課題として整理する技術研究ガイドです。2026年11月の改訂では、保存版の本文を確認した36資料と公式・歴史的ウェブ資料10件を使用しています。未取得資料と保管のみの未読資料は公開引用から除外し、各資料の確認範囲を記載しています。Carboncopiesの研究計画、個体固有の応答の検証、研究の里程標と最初の実験を解説します。公式団体サイトではありません。本文の更新元は `content/site_content.py`、引用情報は `content/references.json` です。公開前に英日対応、引用、図版、リンク、画面を確認してください。
+yasufumi-nakataが執筆・編集する個人の技術研究ガイドです。Carboncopies Foundationの公開資料を引用元として扱います。2026年11月の改訂では、取得した本文を確認した47資料と公式・歴史的ウェブ資料10件を使用しています。未取得資料と保管のみの未読資料は公開引用から除外し、図説明・図像・別添補足の確認範囲を区別しています。11月6日の追補はIssue #282–292に対応し、追加11資料を採用しました。本文は `content/site_content.py`、版の日付は `content/edition.py`、引用情報は `content/references.json` で管理します。本サイト全体への包括的な再利用許諾は付与していません。公開前に英日対応、引用、図版、リンク、画面を確認してください。

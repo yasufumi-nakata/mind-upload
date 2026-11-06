@@ -4,6 +4,7 @@ import html
 import importlib.util
 import json
 import re
+import runpy
 from pathlib import Path
 from diagrams import render as render_diagram
 
@@ -16,7 +17,9 @@ REFS = json.loads((ROOT / 'content/references.json').read_text())
 for source_id, source in REFS.items():
     if not source.get('citation_eligible') or source.get('reading_status') != 'fulltext_reviewed':
         raise ValueError(f'Unreviewed or unavailable source cannot be published: {source_id}')
-DATE = '2026-11-04'
+EDITION = runpy.run_path(str(ROOT / 'content/edition.py'))
+DATE = EDITION['DATE']
+ASSET_VERSION = EDITION['ASSET_VERSION']
 BASE = 'https://mind-upload.com'
 H = html.escape
 NAV = [('science', '科学', 'Science'), ('progress', '到達点', 'Evidence'),
@@ -139,12 +142,13 @@ def citation_record(ref, lang='en'):
     if vi: txt += ';' + H(vi)
     txt = txt.rstrip('.') + '.'
     if ref.get('doi'): txt += f' <a href="https://doi.org/{H(ref["doi"],quote=True)}">doi:{H(ref["doi"])}</a>.'
-    if ref.get('type') == 'webpage': txt += (' 確認日：' if lang=='ja' else ' Accessed: ') + DATE + '.'
+    if ref.get('type') == 'webpage': txt += (' 確認日：' if lang=='ja' else ' Accessed: ') + H(ref.get('accessed') or DATE) + '.'
     if ref.get('note'): txt += ' <span class="small">'+H(ref['note'])+'</span>'
     return txt
 
 def publication_type(r, lang):
     labels = {'peer_reviewed': ('査読論文', 'Peer-reviewed article'),
+              'commentary': ('論説', 'Commentary'),
               'peer_reviewed_conference': ('査読会議論文', 'Peer-reviewed conference paper'),
               'preprint': ('プレプリント', 'Preprint'),
               'technical_report': ('技術報告・総説', 'Technical report / review'),
@@ -188,7 +192,8 @@ def calculator(lang):
     return '<div class="calculator" id="scale-calculator"><div class="calc-fields">'+labels+'</div><div id="calc-result" role="status" aria-live="polite"></div><p class="small"><code>V × 10¹⁸ / (dₓ × dᵧ × dᶻ) × b</code> '+('byte（無圧縮画像）' if lang=='ja' else 'bytes (raw image)')+'<br><code>S × m</code> '+('byte（シナプス状態のみ）' if lang=='ja' else 'bytes (synapse states only)')+'<br><code>S × f</code> '+('回/秒（密な更新。FLOPSではありません）' if lang=='ja' else 'updates/s (dense update count, not FLOPS)')+'</p></div>'
 
 def expand_body(body,lang):
-    return re.sub(r'\{\{([a-z]+)\}\}', lambda m: library(lang) if m[1]=='library' else calculator(lang) if m[1]=='calculator' else figure(m[1],lang),body)
+    body = body.replace('{{edition_date}}', DATE)
+    return re.sub(r'\{\{([a-z_]+)\}\}', lambda m: library(lang) if m[1]=='library' else calculator(lang) if m[1]=='calculator' else figure(m[1],lang),body)
 
 def build_page(key,p,lang):
     prefix='/ja/' if lang=='ja' else '/'
@@ -204,7 +209,7 @@ def build_page(key,p,lang):
         return f'<sup><a href="#ref-{k}" aria-label="{H(REFS[k]["title"],quote=True)}">[{used.index(k)+1}]</a></sup>'
     sections=[]
     for section in p['sections']:
-        body=re.sub(r'\[\[([A-Z0-9]+)\]\]',cite,expand_body(section['body'][lang],lang))
+        body=re.sub(r'\[\[([A-Z0-9_]+)\]\]',cite,expand_body(section['body'][lang],lang))
         sections.append(f'<section id="{section["id"]}"><h2>{H(section["title"][lang])}</h2>{body}</section>')
     refs='<section id="references"><h2>'+('参考文献' if lang=='ja' else 'References')+'</h2><ol class="refs">'+''.join(f'<li id="ref-{k}">{citation_record(REFS[k],lang)}</li>' for k in used)+'</ol></section>'
     nav=''.join(f'<a href="{prefix+k}.html"'+(' aria-current="page"' if k==key else '')+f'>{ja if lang=="ja" else en}</a>' for k,ja,en in NAV)
@@ -214,24 +219,108 @@ def build_page(key,p,lang):
     elif key == 'history':
         jump = [('dashboard', '6領域の進捗', 'Six-domain status'), ('roadmap2050', '2050年への道筋', 'Path to 2050'), ('target', '完成の条件', 'Success criteria'), ('timeline', '技術の歴史', 'Technical history')]
         toc = '<nav class="overview-nav" aria-label="'+('このページの内容' if lang=='ja' else 'On this page')+'">'+''.join(f'<a href="#{sid}">{ja if lang=="ja" else en}</a>' for sid,ja,en in jump)+'</nav>'
-    schema={'@context':'https://schema.org','@type':'WebSite' if key=='index' else 'Article','name':title,'headline':title,'description':desc,'url':BASE+path,'inLanguage':lang,'dateModified':DATE,'isPartOf':{'@type':'WebSite','name':'Mind Uploading Research Guide','url':BASE+'/'},'citation':[REFS[k]['url'] for k in used if REFS[k].get('url')]}
+    schema={'@context':'https://schema.org','@type':'WebSite' if key=='index' else 'Article','name':title,'headline':title,'description':desc,'url':BASE+path,'inLanguage':lang,'dateModified':DATE,'author':{'@type':'Person','name':'yasufumi-nakata','url':'https://github.com/yasufumi-nakata'},'isPartOf':{'@type':'WebSite','name':'Mind Uploading Research Guide','url':BASE+'/'},'citation':[REFS[k]['url'] for k in used if REFS[k].get('url')]}
     other='/ja/' if lang=='en' else '/'
-    badge='研究ガイド · 2026年11月版' if lang=='ja' else 'Research guide · November 2026'
-    footer='実証研究、理論、公開計画を区別して読むための資料集です。Carboncopies Foundationの公式サイトではありません。' if lang=='ja' else 'A guide that distinguishes experiments, theory, and published plans. This is not an official Carboncopies Foundation website.'
+    badge=('研究ガイド · ' + EDITION['EDITION_JA']) if lang=='ja' else ('Research guide · ' + EDITION['EDITION_EN'])
+    footer='yasufumi-nakataによる個人サイトです。Carboncopies Foundationの公開資料を引用し、実証研究・理論・公開計画を区別して紹介しています。同財団の公式サイトではありません。' if lang=='ja' else 'A personal site by yasufumi-nakata, citing public materials from the Carboncopies Foundation. Experiments, theory and published plans are distinguished. This is not an official Foundation website.'
+    footer_links=f'<a href="{prefix}resources.html#repository">'+('作成者・ソース' if lang=='ja' else 'Author &amp; source')+f'</a> · <a href="{prefix}resources.html#citation-rights">'+('引用・利用条件' if lang=='ja' else 'Citation &amp; reuse')+'</a> · <a href="/CITATION.cff">CITATION.cff</a>'
     out=f'''<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{H(title)} | Mind Uploading</title><meta name="description" content="{H(desc,quote=True)}">
 <link rel="canonical" href="{BASE+path}"><link rel="alternate" hreflang="en" href="{BASE+enpath}"><link rel="alternate" hreflang="ja" href="{BASE+japath}"><link rel="alternate" hreflang="x-default" href="{BASE+enpath}">
-<meta property="og:title" content="{H(title,quote=True)}"><meta property="og:description" content="{H(desc,quote=True)}"><meta property="og:type" content="{'website' if key=='index' else 'article'}"><meta property="og:url" content="{BASE+path}"><meta property="og:locale" content="{'ja_JP' if lang=='ja' else 'en_US'}"><meta property="og:image" content="{BASE}/assets/og-image.png?v=20261104-r3"><meta property="og:image:alt" content="Mind Uploading Research Guide"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0a0d14">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css?v=20261104-r3"><link rel="stylesheet" href="/assets/research.css?v=20261104-r3"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><script src="/assets/site.js?v=20261104-r3" defer></script><script src="/assets/research.js?v=20261104-r3" defer></script></head>
+<meta property="og:title" content="{H(title,quote=True)}"><meta property="og:description" content="{H(desc,quote=True)}"><meta property="og:type" content="{'website' if key=='index' else 'article'}"><meta property="og:url" content="{BASE+path}"><meta property="og:locale" content="{'ja_JP' if lang=='ja' else 'en_US'}"><meta property="og:image" content="{BASE}/assets/og-image.png?v={ASSET_VERSION}"><meta property="og:image:alt" content="Mind Uploading Research Guide"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0a0d14">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css?v={ASSET_VERSION}"><link rel="stylesheet" href="/assets/research.css?v={ASSET_VERSION}"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><script src="/assets/site.js?v={ASSET_VERSION}" defer></script><script src="/assets/research.js?v={ASSET_VERSION}" defer></script></head>
 <body id="top" data-page="{key}"><a class="skip-link" href="#main">{'本文へ移動' if lang=='ja' else 'Skip to content'}</a><div id="progress"></div>
 <header class="site-header"><div class="nav-inner"><a class="brand" href="{prefix}"><span class="dot"></span>Mind Uploading</a><nav class="primary-nav" aria-label="{'主要ページ' if lang=='ja' else 'Main pages'}">{nav}</nav><div class="lang-switch" role="group" aria-label="Language / 言語"><a href="{enpath}" hreflang="en" {'aria-current="true"' if lang=='en' else ''}>EN</a><a href="{japath}" hreflang="ja" lang="ja" {'aria-current="true"' if lang=='ja' else ''}>日本語</a></div><button class="nav-toggle" aria-label="{'メニュー' if lang=='ja' else 'Menu'}" aria-expanded="false">☰</button></div></header>
-<main id="main"><section class="ch-hero"><span class="badge">{badge}</span><h1>{H(title)}</h1><p class="lead">{H(desc)}</p><div class="ch-meta"><span>{'資料確認日' if lang=='ja' else 'Sources checked'}: {DATE}</span><span>{'研究論文・技術報告・公式情報を区別して解説' if lang=='ja' else 'Research, technical reviews and official statements distinguished'}</span></div>{toc}</section>{''.join(sections)}{refs}</main>
-<footer class="site-footer"><div class="footer-inner"><a class="brand" href="{prefix}">Mind Uploading</a><p>{footer}</p><nav class="footer-nav">{nav}</nav><p class="small">{'図版の出典・利用条件は各図の下に記載しています。' if lang=='ja' else 'Figure sources and reuse terms appear in each caption.'} · <a href="#top">{'ページ上部へ' if lang=='ja' else 'Back to top'}</a></p></div></footer></body></html>'''
+<main id="main"><section class="ch-hero"><span class="badge">{badge}</span><h1>{H(title)}</h1><p class="lead">{H(desc)}</p><div class="ch-meta"><span>{'更新日' if lang=='ja' else 'Updated'}: {DATE}</span><span>{'研究論文・技術報告・公式情報を区別して解説' if lang=='ja' else 'Research, technical reviews and official statements distinguished'}</span></div>{toc}</section>{''.join(sections)}{refs}</main>
+<footer class="site-footer"><div class="footer-inner"><a class="brand" href="{prefix}">Mind Uploading</a><p>{footer}</p><nav class="footer-nav">{nav}</nav><p class="small">{footer_links}</p><p class="small">{'図版の出典・利用条件は各図の下に記載しています。' if lang=='ja' else 'Figure sources and reuse terms appear in each caption.'} · <a href="#top">{'ページ上部へ' if lang=='ja' else 'Back to top'}</a></p></div></footer></body></html>'''
     dest=ROOT/('ja' if lang=='ja' else '')/(key+'.html')
     dest.parent.mkdir(exist_ok=True)
     dest.write_text(out)
     return path
+
+def bibtex_text(value, preserve_braces=False):
+    """Escape prose once, while retaining explicit name groups when requested."""
+    replacements = {'\\': r'\textbackslash{}', '&': r'\&', '%': r'\%',
+                    '_': r'\_', '#': r'\#', '{': r'\{', '}': r'\}'}
+    if preserve_braces:
+        replacements.pop('{')
+        replacements.pop('}')
+    return ''.join(replacements.get(char, char) for char in str(value))
+
+
+def bibtex_entry(key, ref):
+    """Export interoperable BibTeX without changing identifier field contents."""
+    preprint = ref.get('publication_status') == 'preprint'
+    kind = 'misc' if preprint else {
+        'book': 'book', 'bookSection': 'incollection',
+        'conferencePaper': 'inproceedings', 'webpage': 'misc',
+        'report': 'techreport',
+    }.get(ref.get('type'), 'article' if ref.get('venue') else 'misc')
+    authors = ref.get('bibtex_authors') or ['{' + a + '}' for a in ref.get('authors', [])]
+    vals = {
+        # Protect the supplied title, including scientific names and acronyms,
+        # from case-changing bibliography styles.
+        'title': '{' + bibtex_text(ref['title']) + '}',
+        'author': bibtex_text(' and '.join(authors), preserve_braces=True),
+    }
+    year = str(ref.get('year') or '')
+    if re.fullmatch(r'\d{4}[a-z]?', year):
+        vals['year'] = year
+    for name in ('volume', 'pages'):
+        if ref.get(name):
+            vals[name] = bibtex_text(ref[name])
+    venue = ref.get('venue', '')
+    if kind == 'article':
+        vals['journal'] = bibtex_text(venue)
+        vals['number'] = bibtex_text(ref.get('issue', ''))
+    elif kind == 'book':
+        vals['publisher'] = bibtex_text(ref.get('publisher') or venue)
+    elif kind == 'techreport':
+        vals['institution'] = bibtex_text(ref.get('institution') or venue)
+        vals['number'] = bibtex_text(ref.get('report_number') or ref.get('issue') or '')
+    elif kind in ('incollection', 'inproceedings'):
+        vals['booktitle'] = bibtex_text(venue)
+        if ref.get('publisher'):
+            vals['publisher'] = bibtex_text(ref['publisher'])
+        if ref.get('editors'):
+            vals['editor'] = bibtex_text(' and '.join(ref['editors']), preserve_braces=True)
+    else:
+        vals['howpublished'] = bibtex_text((venue + ' preprint').strip() if preprint else venue or 'Web resource')
+    for name in ('doi', 'url'):
+        if ref.get(name):
+            vals[name] = str(ref[name])
+    vals['urldate'] = ref.get('accessed') or DATE
+    note = ref.get('note') or ''
+    if preprint:
+        note = (note.rstrip('. ') + '. ' if note else '') + 'Preprint; not peer reviewed.'
+    if note:
+        vals['note'] = bibtex_text(note)
+    fields = ',\n'.join('  ' + name + ' = {' + value + '}' for name, value in vals.items() if value)
+    return '@' + kind + '{' + key + ',\n' + fields + '\n}'
+
+
+def citation_cff():
+    """Generate site citation metadata with the same version as the edition."""
+    return f'''cff-version: "1.2.0"
+message: "Please cite the online guide using preferred-citation below, and cite the original papers for their findings."
+title: "Mind Uploading: A Personal Research Guide"
+authors:
+  - name: "yasufumi-nakata"
+version: "{DATE}"
+date-released: "{DATE}"
+url: "{BASE}/"
+repository-code: "https://github.com/yasufumi-nakata/mind-upload"
+preferred-citation:
+  type: website
+  title: "Mind Uploading: A Personal Research Guide"
+  authors:
+    - name: "yasufumi-nakata"
+  version: "{DATE}"
+  date-released: "{DATE}"
+  url: "{BASE}/"
+'''
+
 
 def build():
     (ROOT/'assets/figures').mkdir(exist_ok=True)
@@ -247,23 +336,9 @@ def build():
             (ROOT/('ja' if lang=='ja' else '')/(old+'.html')).write_text(f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url={target}"><link rel="canonical" href="{BASE+target}"><meta name="robots" content="noindex"><title>Mind Uploading — updated page</title></head><body><p>{msg} <a href="{target}">{H(PAGES[new]["title"][lang])}</a></p></body></html>')
     (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{BASE+p}</loc><lastmod>{DATE}</lastmod></url>' for p in paths)+'</urlset>')
     (ROOT/'assets/references.json').write_text(json.dumps(list(REFS.values()),ensure_ascii=False,indent=2))
-    bib=[]
-    for k,r in REFS.items():
-        vals={'title':r['title'],'author':' and '.join(r.get('bibtex_authors') or ['{'+a+'}' for a in r.get('authors',[])]),'year':r.get('year',''),'journal':r.get('venue',''),'volume':r.get('volume',''),'number':r.get('issue',''),'pages':r.get('pages',''),'doi':r.get('doi',''),'url':r.get('url',''),'urldate':DATE,'note':r.get('note','')}
-        vals={key:str(value).replace('\\','\\textbackslash{}').replace('&','\\&').replace('%','\\%').replace('_','\\_') for key,value in vals.items() if value}
-        kind = {'book':'book', 'bookSection':'incollection', 'conferencePaper':'inproceedings', 'webpage':'misc', 'report':'techreport'}.get(r.get('type'), 'article' if r.get('venue') else 'misc')
-        if kind == 'book' and 'journal' in vals:
-            vals['publisher'] = vals.pop('journal')
-        if kind == 'techreport' and 'journal' in vals:
-            vals['institution'] = vals.pop('journal')
-        if kind == 'incollection' and 'journal' in vals:
-            vals['booktitle'] = vals.pop('journal')
-            if r.get('publisher'): vals['publisher'] = r['publisher']
-            if r.get('editors'): vals['editor'] = ' and '.join(r['editors'])
-        if kind == 'inproceedings' and 'journal' in vals:
-            vals['booktitle'] = vals.pop('journal')
-        bib.append('@'+kind+'{'+k+',\n'+',\n'.join('  '+name+' = {'+value+'}' for name,value in vals.items())+'\n}')
+    bib = [bibtex_entry(key, ref) for key, ref in REFS.items()]
     (ROOT/'assets/references.bib').write_text('\n\n'.join(bib)+'\n')
+    (ROOT/'CITATION.cff').write_text(citation_cff())
     print(f'Built {len(paths)} pages, 4 legacy redirects, {len(DIAGRAMS)*2} localized diagrams, {len(REFS)} reference records.')
 
 if __name__=='__main__': build()

@@ -50,4 +50,53 @@
     fields.forEach(function (field) { field.addEventListener('input', update); });
     update();
   }
+  var acquisition = document.getElementById('acquisition-calculator');
+  if (acquisition) {
+    var acquisitionFields = ['volume', 'rate', 'instruments', 'target'].map(function (name) {
+      return document.getElementById('acq-' + name);
+    });
+    var acquisitionOutput = document.getElementById('acq-result');
+    function formatNumber(value) {
+      return value.toLocaleString(ja ? 'ja-JP' : 'en-US', {maximumSignificantDigits: 4});
+    }
+    function updateAcquisition() {
+      acquisitionOutput.replaceChildren();
+      if (acquisitionFields.some(function (field) {
+        return !field.checkValidity() || !Number.isFinite(Number(field.value));
+      })) {
+        var error = document.createElement('p');
+        error.className = 'error';
+        error.textContent = ja ? '範囲内の正の値を入力し、装置の台数は整数にしてください。' : 'Enter positive values within the ranges and a whole number of instruments.';
+        acquisitionOutput.appendChild(error);
+        return;
+      }
+      var values = acquisitionFields.map(function (field) { return Number(field.value); });
+      var years = values[0] / (12 * values[1] * values[2]);
+      var requiredRate = values[0] / (12 * values[3]);
+      var multiplier = years / values[3];
+      [
+        [ja ? '撮像だけに必要な期間' : 'Imaging time alone', formatNumber(years) + (ja ? ' 年' : ' years')],
+        [ja ? '目標期間に必要な総速度' : 'Aggregate throughput needed for the target', formatNumber(requiredRate) + (ja ? ' mm³/月' : ' mm³/month')],
+        [ja ? '入力した総速度に対する必要倍率' : 'Required rate / entered aggregate rate', formatNumber(multiplier) + '×']
+      ].forEach(function (item) {
+        var row = document.createElement('p');
+        var value = document.createElement('strong');
+        value.textContent = item[1];
+        row.appendChild(value);
+        row.appendChild(document.createTextNode(item[0]));
+        acquisitionOutput.appendChild(row);
+      });
+    }
+    acquisitionFields.forEach(function (field) { field.addEventListener('input', updateAcquisition); });
+    Array.from(acquisition.querySelectorAll('[data-acq-preset]')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        var em = button.dataset.acqPreset === 'em';
+        [1200000, em ? 0.3 : 8.8, em ? 200 : 333, 5].forEach(function (value, index) {
+          acquisitionFields[index].value = value;
+        });
+        updateAcquisition();
+      });
+    });
+    updateAcquisition();
+  }
 })();

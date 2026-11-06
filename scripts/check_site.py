@@ -2,12 +2,14 @@
 """Validate local navigation, citations, assets and bilingual page metadata."""
 import json
 import re
+import runpy
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
+DATE = runpy.run_path(str(ROOT / 'content/edition.py'))['DATE']
 
 
 class Document(HTMLParser):
@@ -47,7 +49,7 @@ def main():
         if path.stem not in ('philosophy', 'scenario'):
             if set(d.langs) != {'en', 'ja', 'x-default'}:
                 errors.append(f'{label}: language alternates missing')
-            if '2026-11-04' not in path.read_text():
+            if DATE not in path.read_text():
                 errors.append(f'{label}: edition date missing')
         for a in d.images:
             if not a.get('alt', '').strip():
@@ -67,7 +69,7 @@ def main():
             elif u.fragment and target in docs and unquote(u.fragment) not in docs[target].ids:
                 errors.append(f'{label}: broken fragment {href}')
         body = path.read_text()
-        if re.search(r'\[\[[A-Z0-9]+\]\]|\{\{[a-z]+\}\}', body):
+        if re.search(r'\[\[[A-Z0-9_]+\]\]|\{\{[a-z_]+\}\}', body):
             errors.append(f'{label}: unresolved template')
         if any(x in body for x in ('/Users/', 'link_6a23', 'drive.google.com/drive/folders/')):
             errors.append(f'{label}: private collection detail leaked')
@@ -92,6 +94,8 @@ def main():
     sitemap = ET.parse(ROOT/'sitemap.xml')
     if len(sitemap.getroot()) != 18:
         errors.append('Expected 18 canonical sitemap pages')
+    if any(node.text != DATE for node in sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod')):
+        errors.append('Sitemap dates do not match the edition')
     if errors:
         raise SystemExit('\n'.join(errors))
     print(f'PASS: {len(docs)} pages; local links/fragments/assets, alternative languages, reference parity, {len(refs)} citations, sitemap, and private-data checks.')
