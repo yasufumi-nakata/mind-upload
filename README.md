@@ -1,10 +1,12 @@
 # Mind Uploading Research Guide
 
+This site's purpose is to help turn the idea of mind uploading into a concrete research programme: show the foundations already available, the routes worth pursuing, the experiments that connect them, and what each successful step would make possible. Readers should be able to see where the field stands and how they can help it advance. The editorial principles are recorded in [AGENTS.md](AGENTS.md).
+
 Source for [mind-upload.com](https://mind-upload.com/) and its [Japanese edition](https://mind-upload.com/ja/), a personal research guide written and edited by [yasufumi-nakata](https://github.com/yasufumi-nakata). Carboncopies Foundation material is cited as a source; the Foundation is not the publisher or editorial supervisor of this site. The November 2026 edition covers the technical foundations of whole-brain emulation, experimental evidence, validation, research projects, and a searchable literature catalogue. Philosophy and institutional ethics are outside this edition's scope; review, consent and sample access appear only as prerequisites for research data acquisition. The 2050 roadmap is a conditional research plan with editorial review windows, not a forecast or an official organisational schedule.
 
 ## Editing and preview
 
-Edit the bilingual text in `content/site_content.py`, the shared six-domain dashboard and five planning windows in `content/dashboard.py`, and bibliographic records in `content/references.json`. Do not edit generated HTML directly.
+Edit the bilingual text in `content/site_content.py`, the shared six-domain dashboard and five planning windows in `content/dashboard.py`, the complementary research routes in `content/routes.py`, and bibliographic records in `content/references.json`. Do not edit generated HTML directly.
 
 ```sh
 python3 scripts/build_site.py
@@ -42,5 +44,7 @@ Figure sources and reuse conditions are documented in [assets/figures/README.md]
 Use [CITATION.cff](CITATION.cff) to cite the guide, adding the specific page, access date and a commit permalink when a fixed version is needed. No DOI is assigned. Questions and correction requests belong in [GitHub Issues](https://github.com/yasufumi-nakata/mind-upload/issues), with the affected statement and supporting evidence. Accepted changes remain visible in the commit history. Earlier editions and third-party materials should be consulted with their own attached terms.
 
 ## 日本語
+
+理念は「SFを現実にするために、マインドアップロードの実現へ向けた技術的な道筋を示すこと」です。現在の成果から出発し、複数の研究ルート、残る実証、次に行える研究、その成功が開く可能性を分かりやすく示します。達成率を推測で置く代わりに、実現までの距離を具体的な段階と接続で表します。詳しい編集方針は [AGENTS.md](AGENTS.md) に記載しています。
 
 yasufumi-nakataが執筆・編集する個人の技術研究ガイドです。Carboncopies Foundationの公開資料を引用元として扱います。2026年11月の改訂では、取得した本文を確認した47資料と公式・歴史的ウェブ資料10件を使用しています。未取得資料と保管のみの未読資料は公開引用から除外し、図説明・図像・別添補足の確認範囲を区別しています。11月6日の追補はIssue #282–292に対応し、追加11資料を採用しました。本文は `content/site_content.py`、版の日付は `content/edition.py`、引用情報は `content/references.json` で管理します。本サイト全体への包括的な再利用許諾は付与していません。公開前に英日対応、引用、図版、リンク、画面を確認してください。

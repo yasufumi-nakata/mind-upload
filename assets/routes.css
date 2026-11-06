@@ -1,0 +1,80 @@
+/* Complementary research routes: the main path is visible without interaction. */
+.distance-path{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;list-style:none;margin:24px 0;padding:0;counter-reset:distance}
+.distance-path>li{position:relative;min-width:0;padding:18px;background:var(--panel);border:1px solid var(--line-2);border-top:3px solid var(--brand-2);border-radius:0 0 12px 12px;counter-increment:distance}
+.distance-path>li:first-child{border-top-color:var(--brand)}
+.distance-path>li::before{content:counter(distance,decimal-leading-zero);display:block;font:600 .78rem var(--mono);color:var(--brand);margin-bottom:10px}
+.distance-path span{font-size:.73rem;color:var(--muted)}
+.distance-path h3{font-size:1rem;line-height:1.55;margin:8px 0}
+.distance-path p{font-size:.8rem;line-height:1.75;margin:0}
+.research-routes{margin:24px 0;overflow-wrap:anywhere}
+.route-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.research-routes .route-card{min-width:0;padding:22px;background:var(--panel);border:1px solid var(--line-2);border-top:3px solid var(--brand);border-radius:14px;scroll-margin-top:110px}
+.route-overview .route-card{display:flex;flex-direction:column}
+.research-routes .route-number{margin:0 0 8px;font:600 .76rem var(--mono);color:var(--brand)}
+.research-routes .route-card h3{margin:0 0 16px;font-size:1.12rem;line-height:1.5;text-wrap:balance}
+.research-routes .route-steps{list-style:none;margin:0;padding:0;counter-reset:route-step}
+.research-routes .route-steps>li{position:relative;min-width:0;margin:0;padding:0 0 20px 22px;border-left:1px solid #4b6177;counter-increment:route-step}
+.research-routes .route-steps>li::before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--brand);left:-5px;top:7px}
+.research-routes .route-steps>li:last-child{padding-bottom:0;border-color:transparent}
+.research-routes .route-steps h4{margin:0 0 6px;font-size:.78rem;font-weight:700;color:var(--brand);line-height:1.6}
+.research-routes .route-steps p{margin:0;font-size:.88rem;line-height:1.8;color:#d3dae8}
+.research-routes .route-card-link{margin:20px 0 0;font-size:.85rem}
+.route-overview .route-card-link{margin-top:auto;padding-top:20px}
+.research-routes .route-card-link a,.research-routes .route-actions a{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;color:var(--brand);text-underline-offset:4px;text-decoration-thickness:1px}
+.research-routes a:focus-visible,.research-routes summary:focus-visible{outline:3px solid var(--brand);outline-offset:4px;border-radius:3px}
+.research-routes .route-convergence{margin-top:22px;padding:24px;border:1px solid #39556e;border-left:4px solid var(--brand-2);border-radius:12px;background:var(--panel-3)}
+.research-routes .route-convergence h3{margin:0 0 12px;font-size:1.15rem;line-height:1.5}
+.research-routes .route-convergence p{max-width:90ch;margin:0 0 12px;font-size:.9rem;line-height:1.85}
+.research-routes .route-actions{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:4px}
+.research-routes .route-actions a{font-size:.87rem}
+.route-details .route-intro{max-width:88ch;margin-bottom:24px}
+.route-details .route-card+.route-card{margin-top:22px}
+.route-details .route-heading>p:last-child{margin:0 0 22px;color:var(--muted);font-size:.95rem}
+.route-details .route-heading h3{margin-bottom:7px;font-size:1.28rem}
+.route-details .route-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.route-details .route-steps>li{padding-bottom:0;border-color:#4b6177}
+.route-details .route-steps h4{font-size:.85rem}
+.research-routes .route-support{margin-top:24px;border-top:1px solid var(--line-2)}
+.research-routes .route-support summary{min-height:44px;padding:12px 0;cursor:pointer;color:var(--brand);font-size:.88rem;line-height:1.7}
+.research-routes .route-support-content{padding:0 0 4px}
+.research-routes .route-support-content h4{margin:12px 0 6px;font-size:.88rem;color:var(--ink)}
+.research-routes .route-support-content p{margin:0 0 14px;font-size:.88rem;line-height:1.85;max-width:90ch}
+@media(max-width:900px){
+  .distance-path{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .route-grid{grid-template-columns:1fr;gap:14px}
+  .route-overview .route-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .route-overview .route-steps>li{padding-bottom:0;border-color:#4b6177}
+  .route-overview .route-card-link{margin-top:14px;padding-top:0}
+}
+@media(max-width:680px){
+  .distance-path{gap:10px}
+  .distance-path>li{padding:14px}
+  .distance-path h3{font-size:.9rem}
+  .research-routes .route-card{padding:18px}
+  .route-overview .route-steps,.route-details .route-steps{display:block}
+  .research-routes .route-steps>li{padding-bottom:20px}
+  .research-routes .route-steps>li:last-child{padding-bottom:0;border-color:transparent}
+  .research-routes .route-convergence{padding:20px}
+  .research-routes .route-actions{display:grid;gap:0}
+  .route-details .route-heading h3{font-size:1.16rem}
+}
+@media print{
+  .distance-path{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .distance-path>li{break-inside:avoid;background:#fff;border-color:#555}
+  .distance-path>li::before,.distance-path span,.distance-path h3{color:#111}
+  .research-routes{color:#111}
+  .route-grid,.route-details .route-steps,.route-overview .route-steps{display:block}
+  .research-routes .route-card,.research-routes .route-convergence{background:#fff;border-color:#555;border-radius:0;margin-bottom:16px;padding:14px;box-shadow:none}
+  .research-routes .route-number,.research-routes .route-steps h4,.research-routes .route-card h3,.research-routes .route-convergence h3,.research-routes .route-heading>p:last-child,.research-routes .route-support-content h4,.research-routes .route-support summary{color:#111}
+  .research-routes .route-steps p,.research-routes .route-convergence p,.research-routes .route-support-content p{color:#111}
+  .research-routes .route-steps>li{break-inside:avoid;padding-bottom:12px;border-color:#777}
+  .research-routes .route-steps>li::before{background:#333}
+  .research-routes .route-heading{break-after:avoid}
+  .research-routes .route-card-link a,.research-routes .route-actions a{color:#111;min-height:0}
+  .research-routes .route-support{border-color:#777}
+  .research-routes .route-support summary{font-weight:700;cursor:default}
+  .research-routes .route-support::details-content{display:block!important;content-visibility:visible!important;block-size:auto!important}
+  .research-routes .route-support:not([open])>.route-support-content{display:block!important}
+  .research-routes .route-actions{display:block}
+  .research-routes .route-actions a{margin-right:18px}
+}

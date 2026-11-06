@@ -117,21 +117,21 @@ def status_grid(lang, detail=False):
             for j,t in enumerate(d['tasks'],1):
                 parts.append(f'<li><span class="task-id">R{2*(i-1)+j:02}</span> {t[n]}</li>')
             parts.append('</ol></details>')
-        parts.append('<p class="status-next"><b>'+('次の壁' if n==0 else 'Next barrier')+'</b> '+d['next'][n]+'</p></article>')
+        parts.append('<p class="status-next"><b>'+('次の一歩' if n==0 else 'Next step')+'</b> '+d['next'][n]+'</p></article>')
     parts.append('</div>')
     return ''.join(parts)
 
 def horizon(lang, detail=False):
     n=0 if lang=='ja' else 1
-    note=('各年は、研究の進捗を比較しやすくするために本サイトが5年刻みで置いた点検時期です。実測速度や成功確率から導いた完成年ではなく、条件が満たされなければ後ろへ移します。',
-          'Each year is an editorial review window spaced five years apart to compare progress. These are not completion dates derived from measured throughput or success probabilities; unmet conditions move later windows back.')
-    parts=['<p class="small">'+note[n]+'</p><ol class="horizon'+(' horizon-detail' if detail else ' horizon-mini')+'">']
+    note=('5年刻みの年は、本サイトの研究計画を見直す節目です。実測速度や成功確率から導いた完成予測、Carboncopies Foundationの公式日程ではありません。前段階の条件が満たされなければ、後段階の日程も見直します。',
+          'The five-year windows are this site’s research-planning checkpoints, not completion forecasts derived from throughput or success probabilities, or an official Carboncopies Foundation schedule. Unmet conditions require revising later windows.')
+    parts=['<ol class="horizon'+(' horizon-detail' if detail else ' horizon-mini')+'">']
     for p in PHASES:
         parts.append('<li><span class="horizon-year">'+p['year']+('年の点検' if n==0 else ' review')+'</span><h3>'+p['title'][n]+'</h3><p>'+p['short'][n]+'</p>')
         if detail:
             parts.append('<details><summary>'+('達成条件と見直し' if n==0 else 'Gate and fallback')+'</summary><p><strong>'+p['window']+'</strong> '+p['work'][n]+'</p><p><strong>'+('通過条件：' if n==0 else 'Pass: ')+ '</strong>'+p['gate'][n]+'</p><p><strong>'+('未達の場合：' if n==0 else 'If unmet: ')+'</strong>'+p['stop'][n]+'</p></details>')
         parts.append('</li>')
-    parts.append('</ol>')
+    parts.append('</ol><p class="small">'+note[n]+'</p>')
     return ''.join(parts)
 
 
