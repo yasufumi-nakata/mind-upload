@@ -1,0 +1,4479 @@
+{
+  "edition": "2026-11-09",
+  "scope": "Reviewed public sources only; discovery candidates are excluded.",
+  "counts": {
+    "total": 67,
+    "literature": 57,
+    "official_or_historical_web": 10,
+    "by_category": {
+      "organizations": 10,
+      "シミュレーション・計算基盤": 8,
+      "保存・生体状態": 2,
+      "同定・検証・逆問題": 20,
+      "構造・コネクトミクス": 12,
+      "理論・基礎": 4,
+      "神経プロテーゼ・BCI": 4,
+      "計測・顕微鏡": 3,
+      "記憶・可塑性": 4
+    }
+  },
+  "records": [
+    {
+      "id": "PWIYMZP7",
+      "title": "Infrequent strong connections constrain connectomic predictions of neuronal function",
+      "authors": [
+        "Currier Timothy A.",
+        "Clandinin Thomas R."
+      ],
+      "year": "2025",
+      "accessed": "2026-11-04",
+      "doi": "10.1016/j.cell.2025.05.007",
+      "url": "https://doi.org/10.1016/j.cell.2025.05.007",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全31頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 31 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#models"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#models"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        }
+      ]
+    },
+    {
+      "id": "FHPYMIG8",
+      "title": "ZAPBench: A Benchmark for Whole-Brain Activity Prediction in Zebrafish",
+      "authors": [
+        "Lueckmann Jan-Matthis",
+        "Immer Alexander",
+        "Chen Alex Bo-Yuan",
+        "Li Peter H.",
+        "Petkova Mariela D.",
+        "Iyer Nirmala A.",
+        "Hesselink Luuk Willem",
+        "Dev Aparna",
+        "Ihrke Gudrun",
+        "Park Woohyun",
+        "Petruncio Alyson",
+        "Weigel Aubrey",
+        "Korff Wyatt",
+        "Engert Florian",
+        "Lichtman Jeff W.",
+        "Ahrens Misha B.",
+        "Januszewski Michał",
+        "Jain Viren"
+      ],
+      "year": "2025",
+      "accessed": "2026-11-04",
+      "doi": "10.48550/arxiv.2503.02618",
+      "url": "https://doi.org/10.48550/arXiv.2503.02618",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed_conference",
+      "review_scope": {
+        "ja": "ICLR 2025会議論文のarXiv著者版v1（2025-03-04）、全38頁と付録A–F。",
+        "en": "ICLR 2025 paper, arXiv author version v1 (2025-03-04), all 38 pages including appendices A–F."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#milestones"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#milestones"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#state"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#state"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#models"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#models"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#individual"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#individual"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#benchmarks"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#benchmarks"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#protocol"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#protocol"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#next"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#next"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#start"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#start"
+        }
+      ]
+    },
+    {
+      "id": "JHS9IFXX",
+      "title": "Developing a hippocampal neural prosthetic to facilitate human memory encoding and recall",
+      "authors": [
+        "Hampson Robert E",
+        "Song Dong",
+        "Robinson Brian S",
+        "Fetterhoff Dustin",
+        "Dakos Alexander S",
+        "Roeder Brent M",
+        "She Xiwei",
+        "Wicks Robert T",
+        "Witcher Mark R",
+        "Couture Daniel E",
+        "Laxton Adrian W",
+        "Munger-Clary Heidi",
+        "Popli Gautam",
+        "Sollman Myriam J",
+        "Whitlow Christopher T",
+        "Marmarelis Vasilis Z",
+        "Berger Theodore W",
+        "Deadwyler Sam A"
+      ],
+      "year": "2018",
+      "accessed": "2026-11-04",
+      "doi": "10.1088/1741-2552/aaaed7",
+      "url": "https://doi.org/10.1088/1741-2552/aaaed7",
+      "category": "神経プロテーゼ・BCI",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全16頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 16 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#interfaces"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#interfaces"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        }
+      ]
+    },
+    {
+      "id": "6TNZ57MZ",
+      "title": "Functional connectomics spanning multiple areas of mouse visual cortex",
+      "authors": [
+        "The MICrONS Consortium"
+      ],
+      "year": "2025",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s41586-025-08790-w",
+      "url": "https://doi.org/10.1038/s41586-025-08790-w",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全34頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 34 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#at-a-glance"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#at-a-glance"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#milestones"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#milestones"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#measurement"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#measurement"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#maps"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#maps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#individual"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#individual"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#benchmarks"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#benchmarks"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#next"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#next"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#overview"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#overview"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        }
+      ]
+    },
+    {
+      "id": "9B7EMU3K",
+      "title": "Whole Brain Emulation: A Roadmap",
+      "authors": [
+        "Sandberg Anders",
+        "Bostrom Nick"
+      ],
+      "year": "2008",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://files.givewell.org/files/labs/AI/SandbergandBostrom2008.pdf",
+      "category": "理論・基礎",
+      "publication_status": "technical_report",
+      "review_scope": {
+        "ja": "保存PDF全130頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 130 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#roadmap2050"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#roadmap2050"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#target"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#target"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#hardest-gaps"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#hardest-gaps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#early"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#early"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#start"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#start"
+        }
+      ]
+    },
+    {
+      "id": "LP5F3H2Q",
+      "title": "Synaptic architecture of a memory engram in the mouse hippocampus",
+      "authors": [
+        "Uytiepo Marco",
+        "Zhu Yongchuan",
+        "Bushong Eric",
+        "Chou Katherine",
+        "Polli Filip Souza",
+        "Zhao Elise",
+        "Kim Keun-Young",
+        "Luu Danielle",
+        "Chang Lyanne",
+        "Yang Dong",
+        "Ma Tsz Ching",
+        "Kim Mingi",
+        "Zhang Yuting",
+        "Walton Grant",
+        "Quach Tom",
+        "Haberl Matthias",
+        "Patapoutian Luca",
+        "Shahbazi Arya",
+        "Zhang Yuxuan",
+        "Beutter Elizabeth",
+        "Zhang Weiheng",
+        "Dong Brian",
+        "Khoury Aureliano",
+        "Gu Alton",
+        "McCue Elle",
+        "Stowers Lisa",
+        "Ellisman Mark",
+        "Maximov Anton"
+      ],
+      "year": "2025",
+      "accessed": "2026-11-04",
+      "doi": "10.1126/science.ado8316",
+      "url": "https://doi.org/10.1126/science.ado8316",
+      "category": "記憶・可塑性",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PMC著者原稿全37頁。Methods要約、主図と説明を含みます。別冊の詳細Methods・補足図・データ・動画は未確認です。",
+        "en": "All 37 pages of the PMC author manuscript, including the Methods summary and main figures. Separate detailed Methods, supplementary figures, data and videos were not reviewed."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#memory"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#memory"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#hardest-gaps"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#hardest-gaps"
+        }
+      ]
+    },
+    {
+      "id": "XKB4CG64",
+      "title": "Functional Tests Guide Complex “Fidelity” Tradeoffs in Whole-Brain Emulation",
+      "authors": [
+        "Linssen Charl",
+        "Koene Randal"
+      ],
+      "year": "2025",
+      "accessed": "2026-11-04",
+      "doi": "10.55613/jeet.v35i1.152",
+      "url": "https://doi.org/10.55613/jeet.v35i1.152",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全14頁。本サイトで用いるのは機能評価に関する理論的・技術的議論です。",
+        "en": "All 14 pages of the saved paper; this site uses its theoretical and technical discussion of functional evaluation."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#starting-point"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#starting-point"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#state"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#state"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/carboncopies.html#roadmap"
+        },
+        {
+          "lang": "en",
+          "url": "/carboncopies.html#roadmap"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#levels"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#levels"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#bottlenecks"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#bottlenecks"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#overview"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#overview"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#roadmap2050"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#roadmap2050"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#target"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#target"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#hardest-gaps"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#hardest-gaps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#start"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#start"
+        }
+      ]
+    },
+    {
+      "id": "EVWH7H32",
+      "title": "Comparative prospects of imaging methods for whole-brain mammalian connectomics",
+      "authors": [
+        "Collins Logan Thrasher",
+        "Huffman Todd",
+        "Koene Randal"
+      ],
+      "year": "2025",
+      "accessed": "2026-11-04",
+      "doi": "10.1016/j.crmeth.2025.100988",
+      "url": "https://doi.org/10.1016/j.crmeth.2025.100988",
+      "category": "計測・顕微鏡",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全11頁と表1–3。見通し論文です。計算詳細の別冊補足は未確認です。",
+        "en": "All 11 pages of the saved perspective, including Tables 1–3. The separate supplement containing calculation details was not reviewed."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#measurement"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#measurement"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/carboncopies.html#roadmap"
+        },
+        {
+          "lang": "en",
+          "url": "/carboncopies.html#roadmap"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#scaling"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#scaling"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#bottlenecks"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#bottlenecks"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#choose-route"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#choose-route"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#roadmap2050"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#roadmap2050"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#quantitative-conditions"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#quantitative-conditions"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#hardest-gaps"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#hardest-gaps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#start"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#start"
+        }
+      ]
+    },
+    {
+      "id": "UCZQB8EG",
+      "title": "A petavoxel fragment of human cerebral cortex reconstructed at nanoscale resolution",
+      "authors": [
+        "Shapson-Coe Alexander",
+        "Januszewski Michał",
+        "Berger Daniel R.",
+        "Pope Art",
+        "Wu Yuelong",
+        "Blakely Tim",
+        "Schalek Richard L.",
+        "Li Peter H.",
+        "Wang Shuohong",
+        "Maitin-Shepard Jeremy",
+        "Karlupia Neha",
+        "Dorkenwald Sven",
+        "Sjostedt Evelina",
+        "Leavitt Laramie",
+        "Lee Dongil",
+        "Troidl Jakob",
+        "Collman Forrest",
+        "Bailey Luke",
+        "Fitzmaurice Angerica",
+        "Kar Rohin",
+        "Field Benjamin",
+        "Wu Hank",
+        "Wagner-Carena Julian",
+        "Aley David",
+        "Lau Joanna",
+        "Lin Zudi",
+        "Wei Donglai",
+        "Pfister Hanspeter",
+        "Peleg Adi",
+        "Jain Viren",
+        "Lichtman Jeff W."
+      ],
+      "year": "2024",
+      "accessed": "2026-11-04",
+      "doi": "10.1126/science.adk4858",
+      "url": "https://doi.org/10.1126/science.adk4858",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "著者原稿全32頁。本文内Methods・主図と説明を含みます。別冊補足は未確認です。",
+        "en": "All 32 pages of the author manuscript, including its Methods and main figures. Separate supplements were not reviewed."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#maps"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#maps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#human-validation"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#human-validation"
+        }
+      ]
+    },
+    {
+      "id": "V4GV7JAJ",
+      "title": "A Drosophila computational brain model reveals sensorimotor processing",
+      "authors": [
+        "Shiu Philip K.",
+        "Sterne Gabriella R.",
+        "Spiller Nico",
+        "Franconville Romain",
+        "Sandoval Andrea",
+        "Zhou Joie",
+        "Simha Neha",
+        "Kang Chan Hyuk",
+        "Yu Seongbong",
+        "Kim Jinseop S.",
+        "Dorkenwald Sven",
+        "Matsliah Arie",
+        "Schlegel Philipp",
+        "Yu Szi-chieh",
+        "McKellar Claire E.",
+        "Sterling Amy",
+        "Costa Marta",
+        "Eichler Katharina",
+        "Bates Alexander Shakeel",
+        "Eckstein Nils",
+        "Funke Jan",
+        "Jefferis Gregory S. X. E.",
+        "Murthy Mala",
+        "Bidaye Salil S.",
+        "Hampel Stefanie",
+        "Seeds Andrew M.",
+        "Scott Kristin"
+      ],
+      "year": "2024",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s41586-024-07763-9",
+      "url": "https://doi.org/10.1038/s41586-024-07763-9",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全23頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 23 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#at-a-glance"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#at-a-glance"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#milestones"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#milestones"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#models"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#models"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#choose-route"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#choose-route"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#projects"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#projects"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#overview"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#overview"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        }
+      ]
+    },
+    {
+      "id": "EB493XBG",
+      "title": "NETT: solving inverse problems with deep neural networks",
+      "authors": [
+        "Li Housen",
+        "Schwab Johannes",
+        "Antholzer Stephan",
+        "Haltmeier Markus"
+      ],
+      "year": "2020",
+      "accessed": "2026-11-04",
+      "doi": "10.1088/1361-6420/ab6d57",
+      "url": "https://doi.org/10.1088/1361-6420/ab6d57",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全24頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 24 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#inverse"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#inverse"
+        }
+      ]
+    },
+    {
+      "id": "VC2JX6XE",
+      "title": "Neural System Identification",
+      "authors": [
+        "Stanley Garrett B."
+      ],
+      "year": "2005",
+      "accessed": "2026-11-04",
+      "doi": "10.1007/0-306-48610-5_11",
+      "url": "https://doi.org/10.1007/0-306-48610-5_11",
+      "category": "同定・検証・逆問題",
+      "publication_status": "book_chapter",
+      "review_scope": {
+        "ja": "『Neural Engineering』第11章全体：印刷367–388頁、保存PDF373–394頁。書籍全体の読了ではありません。",
+        "en": "Complete chapter 11 of Neural Engineering, printed pp.367–388 (PDF pp.373–394); not the entire book."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#state"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#state"
+        }
+      ]
+    },
+    {
+      "id": "Q8SGY2SV",
+      "title": "Modernizing the NEURON Simulator for Sustainability, Portability, and Performance",
+      "authors": [
+        "Awile Omar",
+        "Kumbhar Pramod",
+        "Cornu Nicolas",
+        "Dura-Bernal Salvador",
+        "King James Gonzalo",
+        "Lupton Olli",
+        "Magkanaris Ioannis",
+        "McDougal Robert A.",
+        "Newton Adam J. H.",
+        "Pereira Fernando",
+        "Săvulescu Alexandru",
+        "Carnevale Nicholas T.",
+        "Lytton William W.",
+        "Hines Michael L.",
+        "Schürmann Felix"
+      ],
+      "year": "2022",
+      "accessed": "2026-11-04",
+      "doi": "10.3389/fninf.2022.884046",
+      "url": "https://doi.org/10.3389/fninf.2022.884046",
+      "category": "シミュレーション・計算基盤",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全21頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 21 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#choose-route"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#choose-route"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#next"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#next"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        }
+      ]
+    },
+    {
+      "id": "9DXWPDVH",
+      "title": "Brain Modeling ToolKit: An open source software suite for multiscale modeling of brain circuits",
+      "authors": [
+        "Dai Kael",
+        "Gratiy Sergey L.",
+        "Billeh Yazan N.",
+        "Xu Richard",
+        "Cai Binghuang",
+        "Cain Nicholas",
+        "Rimehaug Atle E.",
+        "Stasik Alexander J.",
+        "Einevoll Gaute T.",
+        "Mihalas Stefan",
+        "Koch Christof",
+        "Arkhipov Anton"
+      ],
+      "year": "2020",
+      "accessed": "2026-11-04",
+      "doi": "10.1371/journal.pcbi.1008386",
+      "url": "https://doi.org/10.1371/journal.pcbi.1008386",
+      "category": "シミュレーション・計算基盤",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全23頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 23 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#choose-route"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#choose-route"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#next"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#next"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        }
+      ]
+    },
+    {
+      "id": "8ZGBRSYV",
+      "title": "OpenWorm: an open-science approach to modeling Caenorhabditis elegans",
+      "authors": [
+        "Szigeti Balázs",
+        "Gleeson Padraig",
+        "Vella Michael",
+        "Khayrulin Sergey",
+        "Palyanov Andrey",
+        "Hokanson Jim",
+        "Currie Michael",
+        "Cantarelli Matteo",
+        "Idili Giovanni",
+        "Larson Stephen"
+      ],
+      "year": "2014",
+      "accessed": "2026-11-04",
+      "doi": "10.3389/fncom.2014.00137",
+      "url": "https://doi.org/10.3389/fncom.2014.00137",
+      "category": "シミュレーション・計算基盤",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "2014年のPerspective全7頁。当時の基盤と計画の説明であり、現在のソフトウェア状態の検査ではありません。",
+        "en": "All 7 pages of the 2014 perspective. Describes infrastructure and plans at that time, not a check of the current software."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        }
+      ]
+    },
+    {
+      "id": "SDSWEA5J",
+      "title": "Aldehyde-stabilized cryopreservation",
+      "authors": [
+        "Song Aurelia",
+        "Fahy Gregory M."
+      ],
+      "year": "2015",
+      "accessed": "2026-11-04",
+      "doi": "10.1016/j.cryobiol.2015.09.003",
+      "url": "https://doi.org/10.1016/j.cryobiol.2015.09.003",
+      "category": "保存・生体状態",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全11頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 11 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#preservation"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#preservation"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#human-validation"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#human-validation"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#assumptions"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#assumptions"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#hardest-gaps"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#hardest-gaps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        }
+      ]
+    },
+    {
+      "id": "274IXB72",
+      "title": "System identification of neural systems: If we got it right, would we know?",
+      "authors": [
+        "Han Yena",
+        "Poggio Tomaso",
+        "Cheung Brian"
+      ],
+      "year": "2023",
+      "accessed": "2026-11-04",
+      "doi": "10.48550/arxiv.2302.06677",
+      "url": "https://doi.org/10.48550/arXiv.2302.06677",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed_conference",
+      "review_scope": {
+        "ja": "ICML 2023会議論文のarXiv著者版v2（2023-08-30）、全15頁と付録。",
+        "en": "ICML 2023 paper, arXiv author version v2 (2023-08-30), all 15 pages and appendices."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#inverse"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#inverse"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#levels"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#levels"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#bottlenecks"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#bottlenecks"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#hardest-gaps"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#hardest-gaps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#start"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#start"
+        }
+      ]
+    },
+    {
+      "id": "XMYSQXY8",
+      "title": "Connectome-constrained networks predict neural activity across the fly visual system",
+      "authors": [
+        "Lappalainen Janne K.",
+        "Tschopp Fabian D.",
+        "Prakhya Sridhama",
+        "McGill Mason",
+        "Nern Aljoscha",
+        "Shinomiya Kazunori",
+        "Takemura Shin-ya",
+        "Gruntman Eyal",
+        "Macke Jakob H.",
+        "Turaga Srinivas C."
+      ],
+      "year": "2024",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s41586-024-07939-3",
+      "url": "https://doi.org/10.1038/s41586-024-07939-3",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全26頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 26 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#milestones"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#milestones"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#inverse"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#inverse"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#models"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#models"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#choose-route"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#choose-route"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#projects"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#projects"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#overview"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#overview"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#start"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#start"
+        }
+      ]
+    },
+    {
+      "id": "ADD187",
+      "title": "Beyond the connectome: How neuromodulators shape neural circuits",
+      "authors": [
+        "Bargmann Cornelia I."
+      ],
+      "year": "2012",
+      "accessed": "2026-11-04",
+      "doi": "10.1002/bies.201100185",
+      "url": "https://doi.org/10.1002/bies.201100185",
+      "category": "記憶・可塑性",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "総説の保存PDF全8頁。一般的な技術論の根拠として使用し、総説が引用する全原著を確認したとは扱いません。",
+        "en": "All 8 pages of the saved review. Used for its general technical synthesis, not as verification of every original study it cites."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#state"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#state"
+        }
+      ]
+    },
+    {
+      "id": "ADD188",
+      "title": "Sexual dimorphism in the complete Drosophila male central nervous system connectome",
+      "authors": [
+        "Berg Stuart",
+        "Beckett Isabella R.",
+        "Costa Marta",
+        "Schlegel Philipp",
+        "Januszewski Michał",
+        "Marin Elizabeth C.",
+        "Nern Aljoscha",
+        "Preibisch Stephan",
+        "Qiu Wei",
+        "Takemura Shin-ya",
+        "Fragniere Alexandra M.C.",
+        "Champion Andrew S.",
+        "Adjavon Diane-Yayra",
+        "Cook Michael",
+        "Gkantia Marina",
+        "Hayworth Kenneth J.",
+        "Huang Gary B.",
+        "Katz William T.",
+        "Kämpf Florian",
+        "Lu Zhiyuan",
+        "Ordish Christopher",
+        "Paterson Tyler",
+        "Stürner Tomke",
+        "Trautman Eric T.",
+        "Whittle Catherine R.",
+        "Burnett Laura E.",
+        "Hoeller Judith",
+        "Li Feng",
+        "Loesche Frank",
+        "Morris Billy J.",
+        "Pietzsch Tobias",
+        "Pleijzier Markus W.",
+        "Silva Valeria",
+        "Yin Yijie",
+        "Ali Iris",
+        "Badalamente Griffin",
+        "Bates Alexander Shakeel",
+        "Beresford Rory J.",
+        "Bogovic John",
+        "Brooks Paul",
+        "Cachero Sebastian",
+        "Canino Brandon S.",
+        "Chaisrisawatsuk Bhumpanya",
+        "Clements Jody",
+        "Crowe Arthur",
+        "de Haan Vicente Inês",
+        "Dempsey Georgia",
+        "Donà Erika",
+        "Dos Santos Márcia",
+        "Dreher Marisa",
+        "Dunne Christopher R.",
+        "Eichler Katharina",
+        "Finley-May Samantha",
+        "Flynn Miriam A.",
+        "Hameed Imran",
+        "Hopkins Gary Patrick",
+        "Hubbard Philip M.",
+        "Kiassat Ladann",
+        "Kovalyak Julie",
+        "Lauchie Shirley A.",
+        "Leonard Meghan",
+        "Lohff Alanna",
+        "Longden Kit D.",
+        "Maldonado Charli A.",
+        "Moitra Ilina",
+        "Moon Sung Soo",
+        "Mooney Caroline",
+        "Munnelly Eva J.",
+        "Okeoma Nneoma",
+        "Olbris Donald J.",
+        "Pai Anika",
+        "Patel Birava",
+        "Phillips Emily M.",
+        "Plaza Stephen M.",
+        "Richards Alana",
+        "Rivas Salinas Jennifer",
+        "Roberts Ruairí J.V.",
+        "Rogers Edward M.",
+        "Scott Ashley L.",
+        "Scuderi Louis A.",
+        "Seenivasan Pavithraa",
+        "Serratosa Capdevila Laia",
+        "Smith Claire",
+        "Svirskas Rob",
+        "Takemura Satoko",
+        "Tastekin Ibrahim",
+        "Thomson Alexander",
+        "Umayam Lowell",
+        "Walsh John J.",
+        "Whittome Holly",
+        "Xu C. Shan",
+        "Yakal Emily A.",
+        "Yang Tansy",
+        "Zhao Arthur",
+        "George Reed",
+        "Jain Viren",
+        "Jayaraman Vivek",
+        "Korff Wyatt",
+        "Meissner Geoffrey W.",
+        "Romani Sandro",
+        "Funke Jan",
+        "Knecht Christopher",
+        "Saalfeld Stephan",
+        "Scheffer Louis K.",
+        "Waddell Scott",
+        "Card Gwyneth M.",
+        "Ribeiro Carlos",
+        "Reiser Michael B.",
+        "Hess Harald F.",
+        "Rubin Gerald M.",
+        "Jefferis Gregory S.X.E."
+      ],
+      "year": "2026",
+      "accessed": "2026-11-04",
+      "doi": "10.1016/j.cell.2026.08.015",
+      "url": "https://doi.org/10.1016/j.cell.2026.08.015",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全39頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 39 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#milestones"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#milestones"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#maps"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#maps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#latest"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#latest"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#projects"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#projects"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        }
+      ]
+    },
+    {
+      "id": "ADD190",
+      "title": "Similar network activity from disparate circuit parameters",
+      "authors": [
+        "Prinz Astrid A",
+        "Bucher Dirk",
+        "Marder Eve"
+      ],
+      "year": "2004",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/nn1352",
+      "url": "https://doi.org/10.1038/nn1352",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全8頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 8 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#inverse"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#inverse"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        }
+      ]
+    },
+    {
+      "id": "ADD192",
+      "title": "Whole-animal connectomes of both Caenorhabditis elegans sexes",
+      "authors": [
+        "Cook Steven J.",
+        "Jarrell Travis A.",
+        "Brittin Christopher A.",
+        "Wang Yi",
+        "Bloniarz Adam E.",
+        "Yakovlev Maksim A.",
+        "Nguyen Ken C. Q.",
+        "Tang Leo T.-H.",
+        "Bayer Emily A.",
+        "Duerr Janet S.",
+        "Bülow Hannes E.",
+        "Hobert Oliver",
+        "Hall David H.",
+        "Emmons Scott W."
+      ],
+      "year": "2019",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s41586-019-1352-7",
+      "url": "https://doi.org/10.1038/s41586-019-1352-7",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全29頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 29 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#maps"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#maps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#changes"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#changes"
+        }
+      ]
+    },
+    {
+      "id": "ADD195",
+      "title": "A high-performance speech neuroprosthesis",
+      "authors": [
+        "Willett Francis R.",
+        "Kunz Erin M.",
+        "Fan Chaofei",
+        "Avansino Donald T.",
+        "Wilson Guy H.",
+        "Choi Eun Young",
+        "Kamdar Foram",
+        "Glasser Matthew F.",
+        "Hochberg Leigh R.",
+        "Druckmann Shaul",
+        "Shenoy Krishna V.",
+        "Henderson Jaimie M."
+      ],
+      "year": "2023",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s41586-023-06377-x",
+      "url": "https://doi.org/10.1038/s41586-023-06377-x",
+      "category": "神経プロテーゼ・BCI",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "配布PDF全18頁（本文・Extended Data・Reporting Summary）。独立したMethods節と別冊補足はこの保存版に含まれず、未確認です。",
+        "en": "All 18 pages of the supplied PDF (main text, Extended Data and Reporting Summary). A separate Methods section and supplementary files are absent from this version and were not reviewed."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#interfaces"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#interfaces"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        }
+      ]
+    },
+    {
+      "id": "ADD196",
+      "title": "Neuronal wiring diagram of an adult brain",
+      "authors": [
+        "Dorkenwald Sven",
+        "Matsliah Arie",
+        "Sterling Amy R",
+        "Schlegel Philipp",
+        "Yu Szi-chieh",
+        "McKellar Claire E",
+        "Lin Albert",
+        "Costa Marta",
+        "Eichler Katharina",
+        "Yin Yijie",
+        "Silversmith Will",
+        "Schneider-Mizell Casey",
+        "Jordan Chris S",
+        "Brittain Derrick",
+        "Halageri Akhilesh",
+        "Kuehner Kai",
+        "Ogedengbe Oluwaseun",
+        "Morey Ryan",
+        "Gager Jay",
+        "Kruk Krzysztof",
+        "Perlman Eric",
+        "Yang Runzhe",
+        "Deutsch David",
+        "Bland Doug",
+        "Sorek Marissa",
+        "Lu Ran",
+        "Macrina Thomas",
+        "Lee Kisuk",
+        "Bae J Alexander",
+        "Mu Shang",
+        "Nehoran Barak",
+        "Mitchell Eric",
+        "Popovych Sergiy",
+        "Wu Jingpeng",
+        "Jia Zhen",
+        "Castro Manuel A",
+        "Kemnitz Nico",
+        "Ih Dodam",
+        "Bates Alexander Shakeel",
+        "Eckstein Nils",
+        "Funke Jan",
+        "Collman Forrest",
+        "Bock Davi D",
+        "Jefferis Gregory S X E",
+        "Seung H Sebastian",
+        "Murthy Mala",
+        "The FlyWire Consortium"
+      ],
+      "year": "2024",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s41586-024-07558-y",
+      "url": "https://doi.org/10.1038/s41586-024-07558-y",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全32頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 32 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#at-a-glance"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#at-a-glance"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#milestones"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#milestones"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#maps"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#maps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#choose-route"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#choose-route"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#overview"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#overview"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        }
+      ]
+    },
+    {
+      "id": "ADD197",
+      "title": "Foundation model of neural activity predicts response to new stimulus types",
+      "authors": [
+        "Wang Eric Y",
+        "Fahey Paul G",
+        "Ding Zhuokun",
+        "Papadopoulos Stelios",
+        "Ponder Kayla",
+        "Weis Marissa A",
+        "Chang Andersen",
+        "Muhammad Taliah",
+        "Patel Saumil",
+        "Ding Zhiwei",
+        "Tran Dat",
+        "Fu Jiakun",
+        "Schneider-Mizell Casey M",
+        "MICrONS Consortium",
+        "Reid R Clay",
+        "Collman Forrest",
+        "da Costa Nuno Maçarico",
+        "Franke Katrin",
+        "Ecker Alexander S",
+        "Reimer Jacob",
+        "Pitkow Xaq",
+        "Sinz Fabian H",
+        "Tolias Andreas S"
+      ],
+      "year": "2025",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s41586-025-08829-y",
+      "url": "https://doi.org/10.1038/s41586-025-08829-y",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全24頁。2025年論文で、保存版にmodified publication 2026の表示があります。別冊資料・改訂履歴は未確認です。",
+        "en": "All 24 pages of the saved 2025 paper, which displays “modified publication 2026”. Separate supplements and the revision history were not reviewed."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#models"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#models"
+        }
+      ]
+    },
+    {
+      "id": "ADD198",
+      "title": "Light-microscopy-based connectomic reconstruction of mammalian brain tissue",
+      "authors": [
+        "Tavakoli Mojtaba R.",
+        "Lyudchik Julia",
+        "Januszewski Michał",
+        "Vistunou Vitali",
+        "Agudelo Dueñas Nathalie",
+        "Vorlaufer Jakob",
+        "Sommer Christoph",
+        "Kreuzinger Caroline",
+        "Oliveira Bárbara",
+        "Cenameri Alban",
+        "Novarino Gaia",
+        "Jain Viren",
+        "Danzl Johann G."
+      ],
+      "year": "2025",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s41586-025-08985-1",
+      "url": "https://doi.org/10.1038/s41586-025-08985-1",
+      "category": "計測・顕微鏡",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全43頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 43 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#measurement"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#measurement"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#choose-route"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#choose-route"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#start"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#start"
+        }
+      ]
+    },
+    {
+      "id": "ADD199",
+      "title": "Distributed control circuits across a brain-and-cord connectome",
+      "authors": [
+        "Bates Alexander S",
+        "Phelps Jasper S",
+        "Kim Minsu",
+        "Yang Helen H",
+        "Matsliah Arie",
+        "Ajabi Zaki",
+        "Perlman Eric",
+        "Delgado Kevin M",
+        "Osman Mohammed Abdal Monium",
+        "Salmon Christopher K",
+        "Gager Jay",
+        "Silverman Benjamin",
+        "Renauld Sophia",
+        "Salman Farzaan",
+        "Patel Janki",
+        "Collie Matthew F",
+        "Fan Jingxuan",
+        "Pacheco Diego A",
+        "Zhao Yunzhi",
+        "Zhang Wenyi",
+        "Serratosa Capdevila Laia",
+        "Roberts Ruairí J V",
+        "Munnelly Eva J",
+        "Griggs Nina",
+        "Langley Helen",
+        "Moya-Llamas Borja",
+        "Zhang Zuoyu",
+        "Maloney Ryan T",
+        "Yu Szi-chieh",
+        "Sterling Amy R",
+        "Sorek Marissa",
+        "Kruk Krzysztof",
+        "Serafetinidis Nikitas",
+        "Dhawan Serene",
+        "Klemm Finja",
+        "Brooks Paul",
+        "Lesser Ellen",
+        "Jones Jessica M",
+        "Pierce-Lundgren Sara E",
+        "Lee Su-Yee",
+        "Luo Yichen",
+        "Cook Andrew P",
+        "McKim Theresa H",
+        "Giakoumas Dimitrios Stasi",
+        "Gorko Benjamin",
+        "Ellis-Joyce Justin",
+        "Zhang Jiayi",
+        "Kophs Emily C",
+        "Falt Tjalda",
+        "Negron-Morales Alexa M",
+        "Burke Austin",
+        "Hebditch James",
+        "Willie Kyle P",
+        "Willie Ryan",
+        "Popovych Sergiy",
+        "Kemnitz Nico",
+        "Ih Dodam",
+        "Lee Kisuk",
+        "Lu Ran",
+        "Halageri Akhilesh",
+        "Bae J Alexander",
+        "Jourdan Ben",
+        "Schwartzman Gregory",
+        "Demarest Damian D",
+        "Behnke Emily",
+        "Bland Doug",
+        "Kristiansen Anne",
+        "Skelton Jaime",
+        "Stocks Tom",
+        "Garner Dustin",
+        "Hernandez Anthony",
+        "Kumar Sandeep",
+        "The BANC-FlyWire Consortium",
+        "Daly Kevin C",
+        "Dorkenwald Sven",
+        "Collman Forrest",
+        "Suver Marie P",
+        "Fenk Lisa M",
+        "Pankratz Michael J",
+        "Yao Zepeng",
+        "Wang Fei",
+        "Huston Stephen J",
+        "Stürner Tomke",
+        "Jefferis Gregory S X E",
+        "Eichler Katharina",
+        "Seeds Andrew M",
+        "Hampel Stefanie",
+        "Agrawal Sweta",
+        "Okubo Tatsuo S",
+        "Zandawala Meet",
+        "Macrina Thomas",
+        "Adjavon Diane-Yayra",
+        "Funke Jan",
+        "Tuthill John C",
+        "Azevedo Anthony",
+        "Seung H Sebastian",
+        "de Bivort Benjamin L",
+        "Murthy Mala",
+        "Drugowitsch Jan",
+        "Wilson Rachel I",
+        "Lee Wei-Chung Allen"
+      ],
+      "year": "2026",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s41586-026-10735-w",
+      "url": "https://doi.org/10.1038/s41586-026-10735-w",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全44頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 44 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#milestones"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#milestones"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#maps"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#maps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#latest"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#latest"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#projects"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#projects"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        }
+      ]
+    },
+    {
+      "id": "ADD202",
+      "title": "A streaming brain-to-voice neuroprosthesis to restore naturalistic communication",
+      "authors": [
+        "Littlejohn Kaylo T.",
+        "Cho Cheol Jun",
+        "Liu Jessie R.",
+        "Silva Alexander B.",
+        "Yu Bohan",
+        "Anderson Vanessa R.",
+        "Kurtz-Miott Cady M.",
+        "Brosler Samantha",
+        "Kashyap Anshul P.",
+        "Hallinan Irina P.",
+        "Shah Adit",
+        "Tu-Chan Adelyn",
+        "Ganguly Karunesh",
+        "Moses David A.",
+        "Chang Edward F.",
+        "Anumanchipalli Gopala K."
+      ],
+      "year": "2025",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s41593-025-01905-6",
+      "url": "https://doi.org/10.1038/s41593-025-01905-6",
+      "category": "神経プロテーゼ・BCI",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全29頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 29 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#interfaces"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#interfaces"
+        }
+      ]
+    },
+    {
+      "id": "ADD203",
+      "title": "An integrative data-driven model simulating C. elegans brain, body and environment interactions",
+      "authors": [
+        "Zhao Mengdi",
+        "Wang Ning",
+        "Jiang Xinrui",
+        "Ma Xiaoyang",
+        "Ma Haixin",
+        "He Gan",
+        "Du Kai",
+        "Ma Lei",
+        "Huang Tiejun"
+      ],
+      "year": "2024",
+      "accessed": "2026-11-04",
+      "doi": "10.1038/s43588-024-00738-w",
+      "url": "https://doi.org/10.1038/s43588-024-00738-w",
+      "category": "シミュレーション・計算基盤",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全16頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 16 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#embodiment"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#embodiment"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#choose-route"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#choose-route"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        }
+      ]
+    },
+    {
+      "id": "ADD204",
+      "title": "An Accurate and Rapidly Calibrating Speech Neuroprosthesis",
+      "authors": [
+        "Card Nicholas S.",
+        "Wairagkar Maitreyee",
+        "Iacobacci Carrina",
+        "Hou Xianda",
+        "Singer-Clark Tyler",
+        "Willett Francis R.",
+        "Kunz Erin M.",
+        "Fan Chaofei",
+        "Vahdati Nia Maryam",
+        "Deo Darrel R.",
+        "Srinivasan Aparna",
+        "Choi Eun Young",
+        "Glasser Matthew F.",
+        "Hochberg Leigh R.",
+        "Henderson Jaimie M.",
+        "Shahlaie Kiarash",
+        "Stavisky Sergey D.",
+        "Brandman David M."
+      ],
+      "year": "2024",
+      "accessed": "2026-11-04",
+      "doi": "10.1056/nejmoa2314132",
+      "url": "https://doi.org/10.1056/nejmoa2314132",
+      "category": "神経プロテーゼ・BCI",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全10頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 10 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#interfaces"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#interfaces"
+        }
+      ]
+    },
+    {
+      "id": "ADD206",
+      "title": "The SpiNNaker Project",
+      "authors": [
+        "Furber Steve B.",
+        "Galluppi Francesco",
+        "Temple Steve",
+        "Plana Luis A."
+      ],
+      "year": "2014",
+      "accessed": "2026-11-04",
+      "doi": "10.1109/jproc.2014.2304638",
+      "url": "https://doi.org/10.1109/jproc.2014.2304638",
+      "category": "シミュレーション・計算基盤",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全14頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 14 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#next"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#next"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        }
+      ]
+    },
+    {
+      "id": "ADD207",
+      "title": "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+      "authors": [
+        "Hodgkin A. L.",
+        "Huxley A. F."
+      ],
+      "year": "1952",
+      "accessed": "2026-11-04",
+      "doi": "10.1113/jphysiol.1952.sp004764",
+      "url": "https://doi.org/10.1113/jphysiol.1952.sp004764",
+      "category": "理論・基礎",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全48頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 48 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#state"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#state"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        }
+      ]
+    },
+    {
+      "id": "ADD209",
+      "title": "The connectome of an insect brain",
+      "authors": [
+        "Winding Michael",
+        "Pedigo Benjamin D.",
+        "Barnes Christopher L.",
+        "Patsolic Heather G.",
+        "Park Youngser",
+        "Kazimiers Tom",
+        "Fushiki Akira",
+        "Andrade Ingrid V.",
+        "Khandelwal Avinash",
+        "Valdes-Aleman Javier",
+        "Li Feng",
+        "Randel Nadine",
+        "Barsotti Elizabeth",
+        "Correia Ana",
+        "Fetter Richard D.",
+        "Hartenstein Volker",
+        "Priebe Carey E.",
+        "Vogelstein Joshua T.",
+        "Cardona Albert",
+        "Zlatic Marta"
+      ],
+      "year": "2023",
+      "accessed": "2026-11-04",
+      "doi": "10.1126/science.add9330",
+      "url": "https://doi.org/10.1126/science.add9330",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "著者原稿全44頁。本文内Methods・主図と説明を含みます。別冊補足は未確認です。",
+        "en": "All 44 pages of the author manuscript, including its Methods and main figures. Separate supplements were not reviewed."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#maps"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#maps"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        }
+      ]
+    },
+    {
+      "id": "ADD210",
+      "title": "What are memories made of? A survey of neuroscientists on the structural basis of long-term memory",
+      "authors": [
+        "Zeleznikow-Johnston Ariel",
+        "Kendziorra Emil F.",
+        "McKenzie Andrew T."
+      ],
+      "year": "2025",
+      "accessed": "2026-11-04",
+      "doi": "10.1371/journal.pone.0326920",
+      "url": "https://doi.org/10.1371/journal.pone.0326920",
+      "category": "記憶・可塑性",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "保存PDF全17頁。保存版に含まれる本文・方法・結果・考察・付録が確認対象です。別ファイルの補足資料は含みません。",
+        "en": "All 17 pages of the saved PDF, including the text and any methods, results, discussion and appendices it contains. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#memory"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#memory"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#assumptions"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#assumptions"
+        }
+      ]
+    },
+    {
+      "id": "ADD213",
+      "title": "The female larval fly CNS connectome: first draft",
+      "authors": [
+        "Mohinta Samia",
+        "Franco-Barranco Daniel",
+        "Lee Shi Yan",
+        "Gómez-Gálvez Pedro",
+        "Agrawal Shaurya",
+        "Clayton Michael",
+        "Barnes Christopher L.",
+        "Randel Nadine",
+        "Correia Ana",
+        "Ceffa Nicolo",
+        "Velichkova Nadia Stoichkova",
+        "Nielsen Katrin",
+        "Hess Harald",
+        "Pang Song",
+        "Xu C. Shan",
+        "Berni Jimena",
+        "Januszewski Michał",
+        "Zlatic Marta",
+        "Cardona Albert"
+      ],
+      "year": "2026",
+      "accessed": "2026-11-04",
+      "doi": "10.64898/2026.09.28.754924",
+      "url": "https://doi.org/10.64898/2026.09.28.754924",
+      "category": "構造・コネクトミクス",
+      "publication_status": "preprint",
+      "review_scope": {
+        "ja": "bioRxivの2026-10-02版、全14頁。査読前の初稿です。",
+        "en": "All 14 pages of the bioRxiv version posted on 2026-10-02; a pre-review draft."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#latest"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#latest"
+        }
+      ]
+    },
+    {
+      "id": "CCFAQ",
+      "title": "Frequently Asked Questions",
+      "authors": [
+        "Carboncopies Foundation"
+      ],
+      "year": "n.d.",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://carboncopies.org/About/FAQ/",
+      "category": "organizations",
+      "publication_status": "official_web",
+      "review_scope": {
+        "ja": "当該ウェブページの本文を確認しました。組織・プロジェクトの公式説明を示す資料です。",
+        "en": "The cited webpage text was reviewed. It documents an organisation’s or project’s own account."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#starting-point"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#starting-point"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/carboncopies.html#mission"
+        },
+        {
+          "lang": "en",
+          "url": "/carboncopies.html#mission"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#method"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#method"
+        }
+      ]
+    },
+    {
+      "id": "CCRESEARCH",
+      "title": "Research",
+      "authors": [
+        "Carboncopies Foundation"
+      ],
+      "year": "n.d.",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://carboncopies.org/Research/",
+      "category": "organizations",
+      "publication_status": "official_web",
+      "review_scope": {
+        "ja": "当該ウェブページの本文を確認しました。組織・プロジェクトの公式説明を示す資料です。",
+        "en": "The cited webpage text was reviewed. It documents an organisation’s or project’s own account."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#carboncopies"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#carboncopies"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/carboncopies.html#mission"
+        },
+        {
+          "lang": "en",
+          "url": "/carboncopies.html#mission"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#contribute"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#contribute"
+        }
+      ]
+    },
+    {
+      "id": "CCROADMAP",
+      "title": "Whole Brain Emulation Roadmap",
+      "authors": [
+        "Carboncopies Foundation"
+      ],
+      "year": "n.d.",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://carboncopies.org/Research/Roadmap/About/",
+      "category": "organizations",
+      "publication_status": "official_web",
+      "review_scope": {
+        "ja": "当該ウェブページの本文を確認しました。組織・プロジェクトの公式説明を示す資料です。",
+        "en": "The cited webpage text was reviewed. It documents an organisation’s or project’s own account."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/carboncopies.html#roadmap"
+        },
+        {
+          "lang": "en",
+          "url": "/carboncopies.html#roadmap"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#contribute"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#contribute"
+        }
+      ]
+    },
+    {
+      "id": "CCCHALLENGE",
+      "title": "The Brain Emulation Challenge: Overview",
+      "authors": [
+        "Carboncopies Foundation"
+      ],
+      "year": "n.d.",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://carboncopies.org/Research/BrainGenix/Challenge/Overview/",
+      "category": "organizations",
+      "publication_status": "official_web",
+      "review_scope": {
+        "ja": "当該ウェブページの本文を確認しました。組織・プロジェクトの公式説明を示す資料です。",
+        "en": "The cited webpage text was reviewed. It documents an organisation’s or project’s own account."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#milestones"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#milestones"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#carboncopies"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#carboncopies"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/carboncopies.html#challenge"
+        },
+        {
+          "lang": "en",
+          "url": "/carboncopies.html#challenge"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/carboncopies.html#participate"
+        },
+        {
+          "lang": "en",
+          "url": "/carboncopies.html#participate"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#benchmarks"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#benchmarks"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#choose-route"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#choose-route"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#next"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#next"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#contribute"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#contribute"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#start"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#start"
+        }
+      ]
+    },
+    {
+      "id": "CCBRAINGENIX",
+      "title": "BrainGenix",
+      "authors": [
+        "Carboncopies Foundation"
+      ],
+      "year": "n.d.",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://carboncopies.org/Research/BrainGenix/About/",
+      "category": "organizations",
+      "publication_status": "official_web",
+      "review_scope": {
+        "ja": "当該ウェブページの本文を確認しました。組織・プロジェクトの公式説明を示す資料です。",
+        "en": "The cited webpage text was reviewed. It documents an organisation’s or project’s own account."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/carboncopies.html#participate"
+        },
+        {
+          "lang": "en",
+          "url": "/carboncopies.html#participate"
+        }
+      ]
+    },
+    {
+      "id": "CCFLY",
+      "title": "A Fruit Fly Has Not Been Uploaded",
+      "authors": [
+        "Carboncopies Foundation"
+      ],
+      "year": "n.d.",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://carboncopies.org/Blog/Posts/FruitFlyNotUploaded/Post/",
+      "category": "organizations",
+      "publication_status": "official_web",
+      "review_scope": {
+        "ja": "当該ウェブページの本文を確認しました。組織・プロジェクトの公式説明を示す資料です。",
+        "en": "The cited webpage text was reviewed. It documents an organisation’s or project’s own account."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#embodiment"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#embodiment"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        }
+      ]
+    },
+    {
+      "id": "CCLIBRARY",
+      "title": "Carboncopies Foundation Research: public Zotero library",
+      "authors": [
+        "Carboncopies Foundation"
+      ],
+      "year": "n.d.",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://www.zotero.org/groups/5667770/carboncopies_foundation_research/collections/BNAFBJW6/collection",
+      "category": "organizations",
+      "publication_status": "official_web",
+      "review_scope": {
+        "ja": "公開ライブラリーの索引と収録情報を確認しました。収録論文すべての本文確認を意味しません。",
+        "en": "The public library index and listings were reviewed, not the full text of every listed paper."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/carboncopies.html#participate"
+        },
+        {
+          "lang": "en",
+          "url": "/carboncopies.html#participate"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#method"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#method"
+        }
+      ]
+    },
+    {
+      "id": "STROUT",
+      "title": "Mind Uploading Home Page",
+      "authors": [
+        "Strout Joseph J."
+      ],
+      "year": "2006",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://ibiblio.org/jstrout/uploading/MUHomePage.html",
+      "category": "organizations",
+      "publication_status": "official_web",
+      "review_scope": {
+        "ja": "2006年更新と表示される歴史的ウェブページの本文。現在の技術水準の根拠には使用しません。",
+        "en": "Text of the historical webpage displaying a 2006 update; not evidence for current technical capability."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#early"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#early"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#method"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#method"
+        }
+      ]
+    },
+    {
+      "id": "EON",
+      "title": "Technical highlights of our embodied brain emulation",
+      "authors": [
+        "Eon Systems"
+      ],
+      "year": "2026",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://eon.systems/updates/embodied-brain-emulation",
+      "category": "organizations",
+      "publication_status": "official_web",
+      "review_scope": {
+        "ja": "当該ウェブページの本文を確認しました。組織・プロジェクトの公式説明を示す資料です。",
+        "en": "The cited webpage text was reviewed. It documents an organisation’s or project’s own account."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#embodiment"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#embodiment"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        }
+      ]
+    },
+    {
+      "id": "REPORTFINAL",
+      "title": "State of Brain Emulation Report 2025",
+      "authors": [
+        "Zanichelli Niccolò",
+        "Schons Maximilian",
+        "Freeman Isaak",
+        "Shiu Philip",
+        "Arkhipov Anton"
+      ],
+      "year": "2026",
+      "accessed": "2026-11-04",
+      "doi": "10.5281/zenodo.18377594",
+      "url": "https://doi.org/10.5281/zenodo.18377594",
+      "category": "理論・基礎",
+      "publication_status": "technical_report",
+      "review_scope": {
+        "ja": "2026年公開の最終報告書全182頁。題名の2025と公開年を区別しています。二次的な技術総説として使用します。",
+        "en": "All 182 pages of the final report released in 2026, distinguished from the 2025 in its title. Used as a secondary technical review."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#starting-point"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#starting-point"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#preservation"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#preservation"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#overview"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#overview"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#review"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#review"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#start"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#start"
+        }
+      ]
+    },
+    {
+      "id": "MALEDATA",
+      "title": "Male CNS connectome: data download",
+      "authors": [
+        "HHMI Janelia Research Campus"
+      ],
+      "year": "n.d.",
+      "accessed": "2026-11-04",
+      "doi": "",
+      "url": "https://male-cns.janelia.org/download/",
+      "category": "organizations",
+      "publication_status": "official_web",
+      "review_scope": {
+        "ja": "当該ウェブページの本文を確認しました。組織・プロジェクトの公式説明を示す資料です。",
+        "en": "The cited webpage text was reviewed. It documents an organisation’s or project’s own account."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#latest"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#latest"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE284_SCHLEGEL2024",
+      "title": "Whole-brain annotation and multi-connectome cell typing of Drosophila",
+      "authors": [
+        "Schlegel Philipp",
+        "Yin Yijie",
+        "Bates Alexander S",
+        "Dorkenwald Sven",
+        "Eichler Katharina",
+        "Brooks Paul",
+        "Han Daniel S",
+        "Gkantia Marina",
+        "Dos Santos Marcia",
+        "Munnelly Eva J",
+        "Badalamente Griffin",
+        "Serratosa Capdevila Laia",
+        "Sane Varun A",
+        "Fragniere Alexandra M C",
+        "Kiassat Ladann",
+        "Pleijzier Markus W",
+        "Stürner Tomke",
+        "Tamimi Imaan F M",
+        "Dunne Christopher R",
+        "Salgarella Irene",
+        "Javier Alexandre",
+        "Fang Siqi",
+        "Perlman Eric",
+        "Kazimiers Tom",
+        "Jagannathan Sridhar R",
+        "Matsliah Arie",
+        "Sterling Amy R",
+        "Yu Szi-Chieh",
+        "McKellar Claire E",
+        "FlyWire Consortium",
+        "Costa Marta",
+        "Seung H Sebastian",
+        "Murthy Mala",
+        "Hartenstein Volker",
+        "Bock Davi D",
+        "Jefferis Gregory S X E"
+      ],
+      "year": "2024",
+      "accessed": "2026-11-06",
+      "doi": "10.1038/s41586-024-07686-5",
+      "url": "https://doi.org/10.1038/s41586-024-07686-5",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PMC保存XMLの要旨・本文全節・Methods・Extended Data図1–12の説明文・データ/コード提供記載・参考文献を確認しました。図そのものの目視確認、別ファイルの補足資料、データ/コードの再解析は実施していません。",
+        "en": "All article text in the saved PMC XML, including the abstract, main text, Methods, Extended Data figure 1–12 captions, availability statements and references. Figure images, separate supplementary files and data/code reanalysis are outside the review scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#individual"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#individual"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#projects"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#projects"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE285_GONCALVES2020",
+      "title": "Training deep neural density estimators to identify mechanistic models of neural dynamics",
+      "authors": [
+        "Gonçalves Pedro J",
+        "Lueckmann Jan-Matthis",
+        "Deistler Michael",
+        "Nonnenmacher Marcel",
+        "Öcal Kaan",
+        "Bassetto Giacomo",
+        "Chintaluri Chaitanya",
+        "Podlaski William F",
+        "Haddad Sara A",
+        "Vogels Tim P",
+        "Greenberg David S",
+        "Macke Jakob H"
+      ],
+      "year": "2020",
+      "accessed": "2026-11-06",
+      "doi": "10.7554/elife.56261",
+      "url": "https://doi.org/10.7554/elife.56261",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PMC保存XMLの要旨・本文・材料と方法・Appendix 1（図説明を含む）・データ提供記載・参考文献を確認しました。図そのものの目視確認、別ファイルの補足資料、コードの実行は実施していません。",
+        "en": "All article text in the saved PMC XML, including the abstract, main text, Materials and methods, Appendix 1 and its captions, data availability and references. Figure images, separate supplementary files and code execution are outside the review scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#inverse"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#inverse"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#routes"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#routes"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#choose-route"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#choose-route"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE286_LAKENS2017",
+      "title": "Equivalence Tests: A Practical Primer for t Tests, Correlations, and Meta-Analyses",
+      "authors": [
+        "Lakens Daniël"
+      ],
+      "year": "2017",
+      "accessed": "2026-11-06",
+      "doi": "10.1177/1948550617697177",
+      "url": "https://doi.org/10.1177/1948550617697177",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PMC保存XMLの要旨・本文全節（各種TOST、同等性限界の設定）・考察・注・参考文献のテキストを確認しました。図と数式の組版を目視確認したものではなく、別ファイルの補足資料・ソフトウェアの実行は含みません。",
+        "en": "Abstract, all main sections on TOST and equivalence bounds, Discussion, notes and references in the saved PMC XML were read as text. Figure images and typeset equations were not visually inspected; separate supplementary files and software execution are outside scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#protocol"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#protocol"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE286_SCHOPPE2016",
+      "title": "Measuring the Performance of Neural Models",
+      "authors": [
+        "Schoppe Oliver",
+        "Harper Nicol S",
+        "Willmore Ben D B",
+        "King Andrew J",
+        "Schnupp Jan W H"
+      ],
+      "year": "2016",
+      "accessed": "2026-11-06",
+      "doi": "10.3389/fncom.2016.00010",
+      "url": "https://doi.org/10.3389/fncom.2016.00010",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PMC保存XMLの要旨・本文全節・数式のXMLテキスト・実験検証・結論・参考文献を確認しました。図と数式の組版の目視確認、別ファイルの補足資料、データ/コードの再解析は実施していません。",
+        "en": "All article text in the saved PMC XML, including the abstract, theory, equations as XML text, experimental validation, conclusion and references. Figure images, typeset equations, separate supplementary files and data/code reanalysis are outside scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#protocol"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#protocol"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE286_POSPISIL2021",
+      "title": "The unbiased estimation of the fraction of variance explained by a model",
+      "authors": [
+        "Pospisil Dean A",
+        "Bair Wyeth"
+      ],
+      "year": "2021",
+      "accessed": "2026-11-06",
+      "doi": "10.1371/journal.pcbi.1009212",
+      "url": "https://doi.org/10.1371/journal.pcbi.1009212",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PMC保存XMLの要旨・本文・結果・考察・Materials and methods（証明・既存推定量との比較を含む）・データ提供記載・参考文献を確認しました。図と数式の組版の目視確認、コード実行、外部データの再解析は実施していません。",
+        "en": "All article text in the saved PMC XML, including the abstract, Results, Discussion, Materials and methods with proofs and estimator comparisons, data availability and references. Figure images and typeset equations were not visually inspected; code execution and reanalysis of external data are outside scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#protocol"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#protocol"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE286_ROBERTS2017",
+      "title": "Cross‐validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure",
+      "authors": [
+        "Roberts David R.",
+        "Bahn Volker",
+        "Ciuti Simone",
+        "Boyce Mark S.",
+        "Elith Jane",
+        "Guillera‐Arroita Gurutzeta",
+        "Hauenstein Severin",
+        "Lahoz‐Monfort José J.",
+        "Schröder Boris",
+        "Thuiller Wilfried",
+        "Warton David I.",
+        "Wintle Brendan A.",
+        "Hartig Florian",
+        "Dormann Carsten F."
+      ],
+      "year": "2017",
+      "accessed": "2026-11-06",
+      "doi": "10.1111/ecog.02881",
+      "url": "https://doi.org/10.1111/ecog.02881",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "著者所属大学が公開する保存PDF全17頁（誌面913–929頁）の本文・Box 1–4・図表説明・参考文献を抽出テキストで確認しました。図表の目視確認、別ファイルのAppendix 1–6、コードの実行・データ再解析は実施していません。",
+        "en": "All 17 pages (journal pages 913–929) of the saved author-institution PDF were read as extracted text, including main text, Boxes 1–4, figure/table captions and references. Figures/tables were not visually inspected. Separate Appendices 1–6, code execution and data reanalysis are outside scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#protocol"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#protocol"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE283_WILLIAMSON2025",
+      "title": "Learning-associated astrocyte ensembles regulate memory recall",
+      "authors": [
+        "Williamson Michael R.",
+        "Kwon Wookbong",
+        "Woo Junsung",
+        "Ko Yeunjung",
+        "Maleki Ehson",
+        "Yu Kwanha",
+        "Murali Sanjana",
+        "Sardar Debosmita",
+        "Deneen Benjamin"
+      ],
+      "year": "2025",
+      "accessed": "2026-11-06",
+      "doi": "10.1038/s41586-024-08170-w",
+      "url": "https://doi.org/10.1038/s41586-024-08170-w",
+      "category": "記憶・可塑性",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PMC著者原稿HTMLの本文・Methods・主図1–5とExtended Data 1–14の説明文・参考文献・データ公開記載を確認しました。図像の目視検査、別添Supplementary Table 1（XLSX）およびsource dataの確認は含みません。",
+        "en": "Full text of the PMC author manuscript HTML, including Methods, captions for main Figures 1–5 and Extended Data 1–14, references and data-availability statements. Visual figure inspection, the separate Supplementary Table 1 (XLSX) and source data were not reviewed."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#measurement"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#measurement"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#memory"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#negative"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#negative"
+        }
+      ]
+    },
+    {
+      "id": "ZHENG2018",
+      "title": "A Complete Electron Microscopy Volume of the Brain of Adult Drosophila melanogaster",
+      "authors": [
+        "Zheng Zhihao",
+        "Lauritzen J Scott",
+        "Perlman Eric",
+        "Robinson Camenzind G",
+        "Nichols Matthew",
+        "Milkie Daniel",
+        "Torrens Omar",
+        "Price John",
+        "Fisher Corey B",
+        "Sharifi Nadiya",
+        "Calle-Schuler Steven A",
+        "Kmecova Lucia",
+        "Ali Iqbal J",
+        "Karsh Bill",
+        "Trautman Eric T",
+        "Bogovic John A",
+        "Hanslovsky Philipp",
+        "Jefferis Gregory SXE",
+        "Kazhdan Michael",
+        "Khairy Khaled",
+        "Saalfeld Stephan",
+        "Fetter Richard D",
+        "Bock Davi D"
+      ],
+      "year": "2018",
+      "accessed": "2026-11-06",
+      "doi": "10.1016/j.cell.2018.06.019",
+      "url": "https://doi.org/10.1016/j.cell.2018.06.019",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PMC本文XMLの要約、序論、結果、考察、STAR Methods、掲載図説・表の文字、参考文献、付随情報を確認。画像自体、別ファイルの補足表S1–S2、動画は未確認です。",
+        "en": "Reviewed the PMC article XML: abstract, introduction, results, discussion, STAR Methods, included figure captions and table text, references, and accompanying information. Figure images, separate supplementary Tables S1–S2, and videos were not inspected."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        }
+      ]
+    },
+    {
+      "id": "SCHEFFER2020",
+      "title": "A connectome and analysis of the adult Drosophila central brain",
+      "authors": [
+        "Scheffer Louis K",
+        "Xu C Shan",
+        "Januszewski Michal",
+        "Lu Zhiyuan",
+        "Takemura Shin-ya",
+        "Hayworth Kenneth J",
+        "Huang Gary B",
+        "Shinomiya Kazunori",
+        "Maitlin-Shepard Jeremy",
+        "Berg Stuart",
+        "Clements Jody",
+        "Hubbard Philip M",
+        "Katz William T",
+        "Umayam Lowell",
+        "Zhao Ting",
+        "Ackerman David",
+        "Blakely Tim",
+        "Bogovic John",
+        "Dolafi Tom",
+        "Kainmueller Dagmar",
+        "Kawase Takashi",
+        "Khairy Khaled A",
+        "Leavitt Laramie",
+        "Li Peter H",
+        "Lindsey Larry",
+        "Neubarth Nicole",
+        "Olbris Donald J",
+        "Otsuna Hideo",
+        "Trautman Eric T",
+        "Ito Masayoshi",
+        "Bates Alexander S",
+        "Goldammer Jens",
+        "Wolff Tanya",
+        "Svirskas Robert",
+        "Schlegel Philipp",
+        "Neace Erika",
+        "Knecht Christopher J",
+        "Alvarado Chelsea X",
+        "Bailey Dennis A",
+        "Ballinger Samantha",
+        "Borycz Jolanta A",
+        "Canino Brandon S",
+        "Cheatham Natasha",
+        "Cook Michael",
+        "Dreher Marisa",
+        "Duclos Octave",
+        "Eubanks Bryon",
+        "Fairbanks Kelli",
+        "Finley Samantha",
+        "Forknall Nora",
+        "Francis Audrey",
+        "Hopkins Gary Patrick",
+        "Joyce Emily M",
+        "Kim SungJin",
+        "Kirk Nicole A",
+        "Kovalyak Julie",
+        "Lauchie Shirley A",
+        "Lohff Alanna",
+        "Maldonado Charli",
+        "Manley Emily A",
+        "McLin Sari",
+        "Mooney Caroline",
+        "Ndama Miatta",
+        "Ogundeyi Omotara",
+        "Okeoma Nneoma",
+        "Ordish Christopher",
+        "Padilla Nicholas",
+        "Patrick Christopher M",
+        "Paterson Tyler",
+        "Phillips Elliott E",
+        "Phillips Emily M",
+        "Rampally Neha",
+        "Ribeiro Caitlin",
+        "Robertson Madelaine K",
+        "Rymer Jon Thomson",
+        "Ryan Sean M",
+        "Sammons Megan",
+        "Scott Anne K",
+        "Scott Ashley L",
+        "Shinomiya Aya",
+        "Smith Claire",
+        "Smith Kelsey",
+        "Smith Natalie L",
+        "Sobeski Margaret A",
+        "Suleiman Alia",
+        "Swift Jackie",
+        "Takemura Satoko",
+        "Talebi Iris",
+        "Tarnogorska Dorota",
+        "Tenshaw Emily",
+        "Tokhi Temour",
+        "Walsh John J",
+        "Yang Tansy",
+        "Horne Jane Anne",
+        "Li Feng",
+        "Parekh Ruchi",
+        "Rivlin Patricia K",
+        "Jayaraman Vivek",
+        "Costa Marta",
+        "Jefferis Gregory SXE",
+        "Ito Kei",
+        "Saalfeld Stephan",
+        "George Reed",
+        "Meinertzhagen Ian A",
+        "Rubin Gerald M",
+        "Hess Harald F",
+        "Jain Viren",
+        "Plaza Stephen M"
+      ],
+      "year": "2020",
+      "accessed": "2026-11-06",
+      "doi": "10.7554/elife.57443",
+      "url": "https://doi.org/10.7554/eLife.57443",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PMC本文XMLの要約・eLife digest、本文、Methods、Appendix 1全体、掲載図説・表の文字、参考文献、査読通知・著者回答、付随情報を確認。画像自体、別ファイルのsource data・補足スプレッドシート・動画は未確認です。",
+        "en": "Reviewed the PMC article XML: abstract and eLife digest, full text, Methods, all of Appendix 1, included figure captions and table text, references, decision letter, author response, and accompanying information. Figure images and separate source-data files, supplementary spreadsheets, and videos were not inspected."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#projects"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#projects"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE282_ABBOTT2020",
+      "title": "The Mind of a Mouse",
+      "authors": [
+        "Abbott Larry F.",
+        "Bock Davi D.",
+        "Callaway Edward M.",
+        "Denk Winfried",
+        "Dulac Catherine",
+        "Fairhall Adrienne L.",
+        "Fiete Ila",
+        "Harris Kristen M.",
+        "Helmstaedter Moritz",
+        "Jain Viren",
+        "Kasthuri Narayanan",
+        "LeCun Yann",
+        "Lichtman Jeff W.",
+        "Littlewood Peter B.",
+        "Luo Liqun",
+        "Maunsell John H.R.",
+        "Reid R. Clay",
+        "Rosen Bruce R.",
+        "Rubin Gerald M.",
+        "Sejnowski Terrence J.",
+        "Seung H. Sebastian",
+        "Svoboda Karel",
+        "Tank David W.",
+        "Tsao Doris",
+        "Van Essen David C."
+      ],
+      "year": "2020",
+      "accessed": "2026-11-06",
+      "doi": "10.1016/j.cell.2020.08.010",
+      "url": "https://doi.org/10.1016/j.cell.2020.08.010",
+      "category": "理論・基礎",
+      "publication_status": "commentary",
+      "review_scope": {
+        "ja": "著者の大学公開PDF全5頁（pp.1372–1376）の本文・参考文献を確認しました。論説です。図1は説明文のみ確認し、図像の目視検査は完了扱いにしていません。別ファイルの補足資料は含みません。",
+        "en": "All five pages (1372–1376) of the author-hosted published PDF, including main text and references. This is a commentary. Figure 1 caption was read; visual figure inspection is not claimed. Separate supplementary files are outside this scope."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#timeline"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#timeline"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE283_RANDI2023",
+      "title": "Neural signal propagation atlas of Caenorhabditis elegans",
+      "authors": [
+        "Randi Francesco",
+        "Sharma Anuj K",
+        "Dvali Sophie",
+        "Leifer Andrew M"
+      ],
+      "year": "2023",
+      "accessed": "2026-11-06",
+      "doi": "10.1038/s41586-023-06683-4",
+      "url": "https://doi.org/10.1038/s41586-023-06683-4",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PMCの全文XML：本文・Methods・図説明・掲載された式・参考文献を確認しました。図像自体、別添補足、元データは今回確認していません。",
+        "en": "PMC full-text XML: article text, Methods, captions, displayed equations and references reviewed. Figure images, separate supplements and source data were not inspected in this update."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#measurement"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#measurement"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#negative"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#negative"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        }
+      ]
+    },
+    {
+      "id": "NEW_PHIPSON2010",
+      "title": "Permutation P-values Should Never Be Zero: Calculating Exact P-values When Permutations Are Randomly Drawn",
+      "authors": [
+        "Phipson Belinda",
+        "Smyth Gordon K."
+      ],
+      "year": "2010",
+      "accessed": "2026-11-07",
+      "doi": "10.2202/1544-6115.1585",
+      "url": "https://doi.org/10.2202/1544-6115.1585",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "著者公開の2011年2月9日訂正版PDF全12頁の要旨・本文・方法の数式・表の抽出テキスト・図説明・考察・参考文献を確認しました。図画像の目視と計算の再実行はしていません。",
+        "en": "All 12 pages of the author-hosted PDF corrected on 9 February 2011: abstract, main text, methodological equations, extracted table text, captions, discussion and references. Figure pixels and computational reproduction were not reviewed."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#individual"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#individual"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/validation.html#protocol"
+        },
+        {
+          "lang": "en",
+          "url": "/validation.html#protocol"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        }
+      ]
+    },
+    {
+      "id": "NEW_CONFAVREUX2023",
+      "title": "Meta-learning families of plasticity rules in recurrent spiking networks using simulation-based inference",
+      "authors": [
+        "Confavreux Basile",
+        "Ramesh Poornima",
+        "Gonçalves Pedro J.",
+        "Macke Jakob H.",
+        "Vogels Tim P."
+      ],
+      "year": "2023",
+      "accessed": "2026-11-07",
+      "doi": "10.52202/075280-0597",
+      "url": "https://doi.org/10.52202/075280-0597",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed_conference",
+      "review_scope": {
+        "ja": "会議公式PDF全14頁の要旨・本文・方法・図説明・考察・参考文献を確認しました。別添補足資料は未取得・未読です。図画像の目視とコード実行はしていません。",
+        "en": "All 14 pages of the official conference PDF: abstract, main text, methods, captions, discussion and references. Separate supplementary material was not acquired or read. Figure pixels and code execution were not reviewed."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#learning-rules"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#learning-rules"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        }
+      ]
+    },
+    {
+      "id": "NEW_MEHTA2024",
+      "title": "Model-based inference of synaptic plasticity rules",
+      "authors": [
+        "Mehta Yash",
+        "Tyulmankov Danil",
+        "Rajagopalan Adithya E.",
+        "Turner Glenn C.",
+        "Fitzgerald James E.",
+        "Funke Jan"
+      ],
+      "year": "2024",
+      "accessed": "2026-11-07",
+      "doi": "10.52202/079017-1537",
+      "url": "https://doi.org/10.52202/079017-1537",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed_conference",
+      "review_scope": {
+        "ja": "会議公式PDF全22頁の要旨・本文・図説明・表の抽出テキスト・限界・参考文献・Appendix A（方法・時間分割評価）・Appendix Bを確認しました。図画像の目視、別配布コード・データの確認と実行はしていません。",
+        "en": "All 22 pages of the official conference PDF: abstract, main text, captions, extracted tables, limitations, references, Appendix A including methods and temporal held-out evaluation, and Appendix B. Figure pixels, separately distributed code/data and computational reproduction were not reviewed."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#learning-rules"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#learning-rules"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/future.html#gates"
+        },
+        {
+          "lang": "en",
+          "url": "/future.html#gates"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        }
+      ]
+    },
+    {
+      "id": "NEW_HIGE2015",
+      "title": "Heterosynaptic Plasticity Underlies Aversive Olfactory Learning in Drosophila",
+      "authors": [
+        "Hige Toshihide",
+        "Aso Yoshinori",
+        "Modi Mehrab N.",
+        "Rubin Gerald M.",
+        "Turner Glenn C."
+      ],
+      "year": "2015",
+      "accessed": "2026-11-07",
+      "doi": "10.1016/j.neuron.2015.11.003",
+      "url": "https://doi.org/10.1016/j.neuron.2015.11.003",
+      "category": "同定・検証・逆問題",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "Janeliaが公開する出版社版PDF全15頁（表紙と誌面985–998頁）の要旨・本文・図説明・考察・実験手順・参考文献を確認しました。別添Supplemental Experimental Procedures・7図は未取得・未読です。図画像の目視はしていません。",
+        "en": "All 15 pages of the publisher PDF hosted by Janelia, comprising the cover and journal pages 985–998: summary, main text, captions, discussion, experimental procedures and references. Separate Supplemental Experimental Procedures and seven supplementary figures were not acquired or read. Figure pixels were not inspected."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/science.html#learning-rules"
+        },
+        {
+          "lang": "en",
+          "url": "/science.html#learning-rules"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#score-ledger"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#score-ledger"
+        }
+      ]
+    },
+    {
+      "id": "WANG2026_VOLTAGE",
+      "title": "Voltage imaging of neurons distributed across entire brains of larval zebrafish",
+      "authors": [
+        "Wang, Zeguan",
+        "Zhang, Jie",
+        "Symvoulidis, Panagiotis",
+        "Guo, Wei",
+        "Deng, Davy",
+        "Amsterdam, Adam",
+        "Zhang, Lige",
+        "Honda, Takato",
+        "Roche, Steven",
+        "Wilson, Matthew A.",
+        "Boyden, Edward S."
+      ],
+      "year": "2026",
+      "accessed": "2026-11-09",
+      "doi": "10.1038/s41592-026-03179-7",
+      "url": "https://doi.org/10.1038/s41592-026-03179-7",
+      "category": "計測・顕微鏡",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "出版社HTMLの本文・結果・考察・解析方法を確認しました。装置の組立手順は独立監査していません。今回の追補に必要な本文を確認しました。関連する図説明を読みました。図像の目視、別添補足、元データ、コードの実行・追試は確認範囲に含みません。",
+        "en": "Publisher HTML: main text, results, discussion and analysis methods; hardware protocols were not independently audited. Scoped full-text review for this update. Figure captions were read where relevant; figure pixels, separate supplements, raw data and executable code were not independently inspected or reproduced."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#acquisition-2026"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#acquisition-2026"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        }
+      ]
+    },
+    {
+      "id": "DORKENWALD2025_CAVE",
+      "title": "CAVE: Connectome Annotation Versioning Engine",
+      "authors": [
+        "Dorkenwald, Sven",
+        "Schneider-Mizell, Casey M.",
+        "Brittain, Derrick",
+        "Halageri, Akhilesh",
+        "Jordan, Chris",
+        "Kemnitz, Nico",
+        "Castro, Manual A.",
+        "Silversmith, William",
+        "Maitin-Shephard, Jeremy",
+        "Troidl, Jakob",
+        "Pfister, Hanspeter",
+        "Gillet, Valentin",
+        "Xenes, Daniel",
+        "Bae, J. Alexander",
+        "Bodor, Agnes L.",
+        "Buchanan, JoAnn",
+        "Bumbarger, Daniel J.",
+        "Elabbady, Leila",
+        "Jia, Zhen",
+        "Kapner, Daniel",
+        "Kinn, Sam",
+        "Lee, Kisuk",
+        "Li, Kai",
+        "Lu, Ran",
+        "Macrina, Thomas",
+        "Mahalingam, Gayathri",
+        "Mitchell, Eric",
+        "Mondal, Shanka Subhra",
+        "Mu, Shang",
+        "Nehoran, Barak",
+        "Popovych, Sergiy",
+        "Takeno, Marc",
+        "Torres, Russel",
+        "Turner, Nicholas L.",
+        "Wong, William",
+        "Wu, Jingpeng",
+        "Yin, Wenjing",
+        "Yu, Szi-chieh",
+        "Reid, R. Clay",
+        "da Costa, Nuno Maçarico",
+        "Seung, H. Sebastian",
+        "Collman, Forrest"
+      ],
+      "year": "2025",
+      "accessed": "2026-11-09",
+      "doi": "10.1038/s41592-024-02426-z",
+      "url": "https://doi.org/10.1038/s41592-024-02426-z",
+      "category": "構造・コネクトミクス",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "出版社HTMLの導入・校正と版管理の結果・注釈の問い合わせ・考察を確認しました。配備実装は監査していません。今回の追補に必要な本文を確認しました。関連する図説明を読みました。図像の目視、別添補足、元データ、コードの実行・追試は確認範囲に含みません。",
+        "en": "Publisher HTML: introduction, proofreading/versioning results, annotation queries and discussion; deployment implementation was not audited. Scoped full-text review for this update. Figure captions were read where relevant; figure pixels, separate supplements, raw data and executable code were not independently inspected or reproduced."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#reproducible-sources"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#reproducible-sources"
+        }
+      ]
+    },
+    {
+      "id": "DAI2020_SONATA",
+      "title": "The SONATA data format for efficient description of large-scale network models",
+      "authors": [
+        "Kael Dai",
+        "Juan Hernando",
+        "Yazan N. Billeh",
+        "Sergey L. Gratiy",
+        "Judit Planas",
+        "Andrew P. Davison",
+        "Salvador Dura-Bernal",
+        "Padraig Gleeson",
+        "Adrien Devresse",
+        "Benjamin K. Dichter",
+        "Michael Gevaert",
+        "James G. King",
+        "Werner A. H. Van Geit",
+        "Arseny V. Povolotsky",
+        "Eilif Muller",
+        "Jean-Denis Courcol",
+        "Anton Arkhipov"
+      ],
+      "year": "2020",
+      "accessed": "2026-11-09",
+      "doi": "10.1371/journal.pcbi.1007696",
+      "url": "https://doi.org/10.1371/journal.pcbi.1007696",
+      "category": "シミュレーション・計算基盤",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "出版社HTMLの形式定義・シミュレーター相互運用・考察・ベンチマーク方法を確認しました。今回の追補に必要な本文を確認しました。関連する図説明を読みました。図像の目視、別添補足、元データ、コードの実行・追試は確認範囲に含みません。",
+        "en": "Publisher HTML: format definitions, simulator interoperability, discussion and benchmarking methods. Scoped full-text review for this update. Figure captions were read where relevant; figure pixels, separate supplements, raw data and executable code were not independently inspected or reproduced."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#reproducible-sources"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#reproducible-sources"
+        }
+      ]
+    },
+    {
+      "id": "WANGCHEN2024_NMF2",
+      "title": "NeuroMechFly v2: simulating embodied sensorimotor control in adult Drosophila",
+      "authors": [
+        "Wang-Chen, Sibo",
+        "Stimpfling, Victor Alfred",
+        "Lam, Thomas Ka Chung",
+        "Özdil, Pembe Gizem",
+        "Genoud, Louise",
+        "Hurtak, Femke",
+        "Ramdya, Pavan"
+      ],
+      "year": "2024",
+      "accessed": "2026-11-09",
+      "doi": "10.1038/s41592-024-02497-y",
+      "url": "https://doi.org/10.1038/s41592-024-02497-y",
+      "category": "シミュレーション・計算基盤",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "著者公開の出版版PDFの導入・感覚運動制御の例・考察・FlyGymと歩行の方法を確認しました。出版社の書誌とデータ・コード公開記述も確認しました。今回の追補に必要な本文を確認しました。関連する図説明を読みました。図像の目視、別添補足、元データ、コードの実行・追試は確認範囲に含みません。",
+        "en": "Author-hosted published PDF: introduction, sensorimotor-control examples, discussion and FlyGym/locomotion methods. Publisher metadata and data/code availability statements were checked. Scoped full-text review for this update. Figure captions were read where relevant; figure pixels, separate supplements, raw data and executable code were not independently inspected or reproduced."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#reproducible-sources"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#reproducible-sources"
+        }
+      ]
+    },
+    {
+      "id": "GERMAN2026_VITRIFICATION",
+      "title": "Functional recovery of the adult murine hippocampus after cryopreservation by vitrification",
+      "authors": [
+        "German, Alexander",
+        "Akdaş, Enes Yağız",
+        "Flügel-Koch, Cassandra",
+        "Erterek, Ezgi",
+        "Frischknecht, Renato",
+        "Fejtova, Anna",
+        "Winkler, Jürgen",
+        "Alzheimer, Christian",
+        "Zheng, Fang"
+      ],
+      "year": "2026",
+      "accessed": "2026-11-09",
+      "doi": "10.1073/pnas.2516848123",
+      "url": "https://doi.org/10.1073/pnas.2516848123",
+      "category": "保存・生体状態",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "PNASのHTML本文、海馬の電気生理とin situ保存の結果、考察、本文内の方法を確認しました。今回の追補に必要な本文を確認しました。関連する図説明を読みました。図像の目視、別添補足、元データ、コードの実行・追試は確認範囲に含みません。",
+        "en": "PNAS full-text HTML: hippocampal electrophysiology and in situ results, discussion and in-article methods. Scoped full-text review for this update. Figure captions were read where relevant; figure pixels, separate supplements, raw data and executable code were not independently inspected or reproduced."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/index.html#domains"
+        },
+        {
+          "lang": "en",
+          "url": "/index.html#domains"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/progress.html#acquisition-2026"
+        },
+        {
+          "lang": "en",
+          "url": "/progress.html#acquisition-2026"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/history.html#dashboard"
+        },
+        {
+          "lang": "en",
+          "url": "/history.html#dashboard"
+        }
+      ]
+    },
+    {
+      "id": "RUBEL2022_NWB",
+      "title": "The Neurodata Without Borders ecosystem for neurophysiological data science",
+      "authors": [
+        "Oliver Rübel",
+        "Andrew Tritt",
+        "Ryan Ly",
+        "Benjamin K Dichter",
+        "Satrajit Ghosh",
+        "Lawrence Niu",
+        "Pamela Baker",
+        "Ivan Soltesz",
+        "Lydia Ng",
+        "Karel Svoboda",
+        "Loren Frank",
+        "Kristofer E Bouchard"
+      ],
+      "year": "2022",
+      "accessed": "2026-11-09",
+      "doi": "10.7554/elife.78362",
+      "url": "https://doi.org/10.7554/eLife.78362",
+      "category": "シミュレーション・計算基盤",
+      "publication_status": "peer_reviewed",
+      "review_scope": {
+        "ja": "eLifeのHTMLの導入、共通時刻にそろえた多モダリティ記録の結果、考察、ソフトウェア構成の方法を確認しました。今回の追補に必要な本文を確認しました。関連する図説明を読みました。図像の目視、別添補足、元データ、コードの実行・追試は確認範囲に含みません。",
+        "en": "eLife full-text HTML: introduction, multimodal/common-clock results, discussion and software-architecture methods. Scoped full-text review for this update. Figure captions were read where relevant; figure pixels, separate supplements, raw data and executable code were not independently inspected or reproduced."
+      },
+      "mentions": [
+        {
+          "lang": "ja",
+          "url": "/ja/action.html#collection-experiments"
+        },
+        {
+          "lang": "en",
+          "url": "/action.html#collection-experiments"
+        },
+        {
+          "lang": "ja",
+          "url": "/ja/resources.html#reproducible-sources"
+        },
+        {
+          "lang": "en",
+          "url": "/resources.html#reproducible-sources"
+        }
+      ]
+    }
+  ]
+}
