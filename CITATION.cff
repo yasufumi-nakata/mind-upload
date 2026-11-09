@@ -3,8 +3,8 @@ message: "Please cite the online guide using preferred-citation below, and cite 
 title: "Mind Uploading Research Guide"
 authors:
   - name: "yasufumi-nakata"
-version: "2026-11-07"
-date-released: "2026-11-07"
+version: "2026-11-09"
+date-released: "2026-11-09"
 url: "https://mind-upload.com/"
 repository-code: "https://github.com/yasufumi-nakata/mind-upload"
 preferred-citation:
@@ -12,6 +12,6 @@ preferred-citation:
   title: "Mind Uploading Research Guide"
   authors:
     - name: "yasufumi-nakata"
-  version: "2026-11-07"
-  date-released: "2026-11-07"
+  version: "2026-11-09"
+  date-released: "2026-11-09"
   url: "https://mind-upload.com/"

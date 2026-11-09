@@ -15,6 +15,10 @@ content = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(content)
 PAGES = content.PAGES
 REFS = json.loads((ROOT / 'content/references.json').read_text())
+LITERATURE = runpy.run_path(str(ROOT / 'content/literature_index.py'))
+reference_errors = LITERATURE['validate_references'](REFS)
+if reference_errors:
+    raise ValueError('\n'.join(reference_errors))
 for source_id, source in REFS.items():
     if not source.get('citation_eligible') or source.get('reading_status') != 'fulltext_reviewed':
         raise ValueError(f'Unreviewed or unavailable source cannot be published: {source_id}')
@@ -495,6 +499,8 @@ def build():
     research_plan = runpy.run_path(str(ROOT/'content/research_plan.py'))
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data/progress.json').write_text(json.dumps(research_plan['export_data'](), ensure_ascii=False, indent=2) + '\n')
+    (ROOT/'data/literature-index.json').write_text(json.dumps(
+        LITERATURE['make_index'](REFS, PAGES, DATE), ensure_ascii=False, indent=2) + '\n')
     print(f'Built {len(paths)} pages, 4 legacy redirects, {len(DIAGRAMS)*2} localized diagrams, {len(REFS)} reference records.')
 
 if __name__=='__main__': build()
