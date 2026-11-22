@@ -2,7 +2,7 @@
 from datetime import date
 
 SITE_TITLE = 'Mind Uploading Research Guide'
-DATE = '2026-11-07'
+DATE = '2026-11-09'
 
 _date = date.fromisoformat(DATE)
 _months = ('January', 'February', 'March', 'April', 'May', 'June',

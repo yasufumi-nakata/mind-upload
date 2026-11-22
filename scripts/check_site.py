@@ -312,6 +312,23 @@ def main():
         if r.get('fulltext_status') not in ('pdf', 'text') or not r.get('review_scope'):
             errors.append(f'Missing full-text review scope: {r["id"]}')
     published_ids = {r['id'] for r in refs}
+    index_tools = runpy.run_path(str(ROOT/'content/literature_index.py'))
+    page_sources = runpy.run_path(str(ROOT/'content/site_content.py'))['PAGES']
+    source_refs = json.loads((ROOT/'content/references.json').read_text())
+    errors.extend(index_tools['validate_references'](source_refs))
+    index_path = ROOT/'data/literature-index.json'
+    try:
+        index_data = json.loads(index_path.read_text())
+        if index_data != index_tools['make_index'](source_refs, page_sources, DATE):
+            errors.append('Literature index differs from adopted sources or citation locations')
+        for record in index_data.get('records', []):
+            for mention in record['mentions']:
+                path, anchor = mention['url'].split('#', 1)
+                document = docs.get(ROOT/path.lstrip('/'))
+                if not document or anchor not in document.ids:
+                    errors.append(f"Literature index has an invalid citation location: {record['id']}")
+    except (OSError, ValueError, KeyError) as exc:
+        errors.append(f'Invalid literature index: {exc}')
     sources = json.loads((ROOT/'content/references.json').read_text())
     if {r['id']: r for r in refs} != sources:
         errors.append('Public JSON bibliography differs from the source records')

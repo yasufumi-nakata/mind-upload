@@ -63,14 +63,13 @@ DOMAINS = [{'key': 'structure',
              'forgetting and relearning. <a href="/science.html#learning-rules">Learning-rule experiments</a>'))},
  {'key': 'preservation',
   'title': ('必要な情報を残す', 'Preserve the needed information'),
-  'status': ('微細構造の保存を実証', 'Ultrastructure preserved'),
-  'short': ('動物組織の微細構造を保存', 'Preserved ultrastructure in animal tissue'),
+  'status': ('微細構造と局所機能の保存', 'Structure and local functional recovery'),
+  'short': ('微細構造保存とマウス海馬の局所機能', 'Preserved structure; local mouse hippocampal function'),
   'next': ('記憶に必要な情報が残るかの実証', 'Show that memory-relevant information survives'),
-  'evidence': ('ASCはウサギ・ブタの脳組織で微細構造の保存を示しました。保存後に機能や記憶を復元した研究ではありません。エングラムの局所構造の研究も、任意の記憶を読み出す手法とは区別します。',
+  'evidence': ('ASCはウサギ・ブタの脳組織で微細構造の保存を示しました。保存後に機能や記憶を復元した研究ではありません。別のガラス化研究は保存後のマウス海馬切片で電気生理機能を示しましたが、個体の記憶や全脳機能の復元ではありません。エングラムの局所構造も任意の記憶の読出しとは区別します。',
                'ASC demonstrated preserved ultrastructure in rabbit and pig brain tissue, not restored function '
-               'or memory. Local engram-structure studies are also distinct from methods for reading arbitrary '
-               'memories.'),
-  'refs': '[[SDSWEA5J]][[LP5F3H2Q]]',
+               'or memory. A separate vitrification study demonstrated electrophysiological recovery in post-preservation mouse hippocampal slices, not individual memory or whole-brain function. Local engram structure is also distinct from reading arbitrary memories.'),
+  'refs': '[[SDSWEA5J]][[LP5F3H2Q]][[GERMAN2026_VITRIFICATION]]',
   'tasks': (('保存・固定・撮像で何が失われるかを、構造と分子状態ごとに評価する。グリアやシナプス外伝達についても、形態の保存と機能に必要な状態の保存を区別する。',
              'Measure structural and molecular losses during preservation, fixation and imaging. For glia and '
              'extrasynaptic signalling, distinguish retained morphology from retained functionally necessary '
